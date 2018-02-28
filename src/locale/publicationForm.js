@@ -455,40 +455,33 @@ export default {
             fieldLabels: {
                 documentTitle: {
                     floatingLabelText: 'Title',
-                    hintText: 'Thesis title',
-                    errorMessage: 'Thesis title is required'
+                    hintText: 'Thesis title'
                 },
                 orgName: {
                     floatingLabelText: 'Institution name',
-                    hintText: '',
-                    errorMessage: 'Institution name is required'
+                    hintText: ''
                 },
                 orgUnitName: {
                     floatingLabelText: 'Enrolling unit',
-                    hintText: 'Enrolling unit, eg. School of Business',
-                    errorMessage: 'Enrolling unit is required'
+                    hintText: 'Enrolling unit, eg. School of Business'
                 },
                 date: {
                     title: 'Publication date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year',
-                    errorMessage: 'Publication date is required'
+                    year: 'Year'
                 },
                 thesisType: {
-                    label: 'Thesis type',
-                    errorMessage: 'Thesis type is required'
+                    label: 'Thesis type'
                 },
                 author: {
                     floatingLabelText: 'Author name',
-                    hintText: '',
-                    errorMessage: 'Author name is required'
+                    hintText: ''
                 }
             }
         },
         supervisors: {
-            ...txt.components.supervisors,
-            errorMessage: 'Supervisor are required'
+            ...txt.components.supervisors
         },
         fieldOfResearch: {
             title: 'Field of research',
@@ -497,8 +490,7 @@ export default {
                 text: 'Some help',
                 buttonLabel: 'OK'
             },
-            description: 'Select up to 3 Field of Research (FoR) codes',
-            errorMessage: 'Field of research (FoR) is required'
+            description: 'Select up to 3 Field of Research (FoR) codes'
         },
         keywords: {
             title: 'Keywords',
@@ -507,8 +499,7 @@ export default {
                 text: 'Some help',
                 buttonLabel: 'OK'
             },
-            description: 'Add up to 10 keywords that describe the content of the thesis',
-            errorMessage: 'Keywords are required'
+            description: 'Add up to 10 keywords that describe the content of the thesis'
         },
         optional: {
             title: 'Optional information',
@@ -528,8 +519,7 @@ export default {
                 },
                 abstract: {
                     floatingLabelText: 'Abstract',
-                    hintText: 'Provide an abstract or summary of the work',
-                    errorMessage: 'Abstract is required'
+                    hintText: 'Provide an abstract or summary of the work'
                 },
                 notes: {
                     floatingLabelText: 'Notes (not publicly viewable)',
@@ -1056,8 +1046,7 @@ export default {
             title: 'Upload files',
             text: 'file help...',
             buttonLabel: 'OK'
-        },
-        errorMessage: 'File submission is mandatory'
+        }
     },
     cancelWorkflowConfirmation: {
         confirmationTitle: 'Abandon workflow',
@@ -1099,7 +1088,7 @@ export default {
                 buttonLabel: 'OK'
             },
             locale: {
-                instructions: 'You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)',
+                instructions: '',
                 accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
                 validation: {
                     ['folder']: 'Invalid files ([filenames])',
@@ -1111,10 +1100,9 @@ export default {
                 fileUploadRestrictionHeading: (<h3><span className="requiredField"><label>&nbsp;</label></span>File upload restrictions</h3>),
                 fileUploadRestrictions: (
                     <div>
+                        Maximum file size is 5Gb. <br/>
                         PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf</b>.
                         Stages of examination are: submission, or correctedthesis, or finalthesis.
-                        Please refer to <a href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination" target="_blank">HDR submission guidelines</a> for file naming conventions.
-                        File submission is mandatory.
                         For example:
                         <ul>
                             <li>s1234567_phd_thesis.pdf</li>
@@ -1129,7 +1117,6 @@ export default {
             text: (
                 <div>
                     <span className="requiredField"><label>&nbsp;</label></span>
-
                 </div>
             )
         },

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component ContributorsEditor rendering full component with a defined className 1`] = `
+exports[`ContributorsEditor tests  rendering full component with a defined className 1`] = `
 <Provider
   store={
     Object {
@@ -70,16 +70,12 @@ exports[`Component ContributorsEditor rendering full component with a defined cl
           }
         }
         className="requiredField"
-        contributors={Array []}
-        disabled={false}
         locale={
           Object {
             "errorMessage": "Unable to add an item with the same identifier.",
             "errorTitle": "Error",
           }
         }
-        meta={null}
-        onChange={[MockFunction]}
         showContributorAssignment={false}
         showIdentifierLookup={false}
       >
@@ -87,7 +83,6 @@ exports[`Component ContributorsEditor rendering full component with a defined cl
           className="requiredField"
         >
           <Connect(ContributorForm)
-            disabled={false}
             onAdd={[Function]}
             showContributorAssignment={false}
             showIdentifierLookup={false}
@@ -102,7 +97,6 @@ exports[`Component ContributorsEditor rendering full component with a defined cl
                 }
               }
               authorsList={Array []}
-              disabled={false}
               locale={
                 Object {
                   "addButton": "Add author",
@@ -1736,7 +1730,7 @@ exports[`Component ContributorsEditor rendering full component with a defined cl
 </Provider>
 `;
 
-exports[`Component ContributorsEditor rendering full component with identifier lookup 1`] = `
+exports[`ContributorsEditor tests  rendering full component with identifier lookup 1`] = `
 <Provider
   store={
     Object {
@@ -1805,25 +1799,17 @@ exports[`Component ContributorsEditor rendering full component with identifier l
             "aut_id": 1,
           }
         }
-        className={null}
-        contributors={Array []}
-        disabled={false}
         locale={
           Object {
             "errorMessage": "Unable to add an item with the same identifier.",
             "errorTitle": "Error",
           }
         }
-        meta={null}
-        onChange={[MockFunction]}
         showContributorAssignment={false}
         showIdentifierLookup={true}
       >
-        <div
-          className={null}
-        >
+        <div>
           <Connect(ContributorForm)
-            disabled={false}
             onAdd={[Function]}
             showContributorAssignment={false}
             showIdentifierLookup={true}
@@ -1838,7 +1824,6 @@ exports[`Component ContributorsEditor rendering full component with identifier l
                 }
               }
               authorsList={Array []}
-              disabled={false}
               locale={
                 Object {
                   "addButton": "Add author",
@@ -5000,18 +4985,14 @@ exports[`Component ContributorsEditor rendering full component with identifier l
 </Provider>
 `;
 
-exports[`Component ContributorsEditor renders 3 contributor rows with no infinite scroll 1`] = `
-<div
-  className={null}
->
+exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite scroll 1`] = `
+<div>
   <Connect(ContributorForm)
-    disabled={false}
     onAdd={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
   />
   <ContributorRowHeader
-    disabled={false}
     isInfinite={false}
     locale={
       Object {
@@ -5042,7 +5023,6 @@ exports[`Component ContributorsEditor renders 3 contributor rows with no infinit
           "displayName": 1,
         }
       }
-      disabled={false}
       disabledContributorAssignment={false}
       index={0}
       key="0"
@@ -5090,7 +5070,6 @@ exports[`Component ContributorsEditor renders 3 contributor rows with no infinit
           "displayName": 2,
         }
       }
-      disabled={false}
       disabledContributorAssignment={false}
       index={1}
       key="1"
@@ -5138,7 +5117,6 @@ exports[`Component ContributorsEditor renders 3 contributor rows with no infinit
           "displayName": 3,
         }
       }
-      disabled={false}
       disabledContributorAssignment={false}
       index={2}
       key="2"
@@ -5182,18 +5160,14 @@ exports[`Component ContributorsEditor renders 3 contributor rows with no infinit
 </div>
 `;
 
-exports[`Component ContributorsEditor renders 4 contributor rows wrapped in an infinite scroll 1`] = `
-<div
-  className={null}
->
+exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infinite scroll 1`] = `
+<div>
   <Connect(ContributorForm)
-    disabled={false}
     onAdd={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
   />
   <ContributorRowHeader
-    disabled={false}
     isInfinite={true}
     locale={
       Object {
@@ -5237,7 +5211,6 @@ exports[`Component ContributorsEditor renders 4 contributor rows wrapped in an i
           "displayName": 1,
         }
       }
-      disabled={false}
       disabledContributorAssignment={false}
       index={0}
       key="0"
@@ -5285,7 +5258,6 @@ exports[`Component ContributorsEditor renders 4 contributor rows wrapped in an i
           "displayName": 2,
         }
       }
-      disabled={false}
       disabledContributorAssignment={false}
       index={1}
       key="1"
@@ -5333,7 +5305,6 @@ exports[`Component ContributorsEditor renders 4 contributor rows wrapped in an i
           "displayName": 3,
         }
       }
-      disabled={false}
       disabledContributorAssignment={false}
       index={2}
       key="2"
@@ -5381,7 +5352,6 @@ exports[`Component ContributorsEditor renders 4 contributor rows wrapped in an i
           "displayName": 4,
         }
       }
-      disabled={false}
       disabledContributorAssignment={false}
       index={3}
       key="3"
@@ -5425,12 +5395,9 @@ exports[`Component ContributorsEditor renders 4 contributor rows wrapped in an i
 </div>
 `;
 
-exports[`Component ContributorsEditor renders no contributor rows with no infinite scroll 1`] = `
-<div
-  className={null}
->
+exports[`ContributorsEditor tests  renders no contributor rows with no infinite scroll 1`] = `
+<div>
   <Connect(ContributorForm)
-    disabled={false}
     onAdd={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
@@ -5439,7 +5406,7 @@ exports[`Component ContributorsEditor renders no contributor rows with no infini
 </div>
 `;
 
-exports[`Component ContributorsEditor should show validation error 1`] = `
+exports[`ContributorsEditor tests  should show validation error 1`] = `
 <Provider
   store={
     Object {
@@ -5508,9 +5475,7 @@ exports[`Component ContributorsEditor should show validation error 1`] = `
             "aut_id": 1,
           }
         }
-        className={null}
         contributors={Array []}
-        disabled={false}
         locale={
           Object {
             "errorMessage": "Unable to add an item with the same identifier.",
@@ -5522,15 +5487,11 @@ exports[`Component ContributorsEditor should show validation error 1`] = `
             "error": "This is a test error",
           }
         }
-        onChange={[MockFunction]}
         showContributorAssignment={false}
         showIdentifierLookup={false}
       >
-        <div
-          className={null}
-        >
+        <div>
           <Connect(ContributorForm)
-            disabled={false}
             onAdd={[Function]}
             showContributorAssignment={false}
             showIdentifierLookup={false}
@@ -5545,7 +5506,6 @@ exports[`Component ContributorsEditor should show validation error 1`] = `
                 }
               }
               authorsList={Array []}
-              disabled={false}
               locale={
                 Object {
                   "addButton": "Add author",

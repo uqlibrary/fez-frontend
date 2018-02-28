@@ -1,5 +1,4 @@
 import {ContributorForm} from './ContributorForm';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import {authorsSearch} from 'mock/data';
 
 function setup(testProps, isShallow = true) {
@@ -13,10 +12,6 @@ function setup(testProps, isShallow = true) {
     };
     return getElement(ContributorForm, props, isShallow);
 }
-
-beforeAll(() => {
-    injectTapEventPlugin();
-});
 
 describe('Component ContributorForm', () => {
 

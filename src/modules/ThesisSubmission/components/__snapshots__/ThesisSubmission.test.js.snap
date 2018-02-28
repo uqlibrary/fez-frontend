@@ -130,6 +130,11 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             disabled={false}
             height={50}
             name="thesisTitle"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
           />
         </div>
       </div>
@@ -143,7 +148,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             className="requiredField"
             component={[Function]}
             disabled={false}
-            errorMessage="Author name is required"
             floatingLabelText="Author name"
             fullWidth={true}
             hintText=""
@@ -173,7 +177,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             }
             locale={
               Object {
-                "errorMessage": "Thesis type is required",
                 "label": "Thesis type",
               }
             }
@@ -190,34 +193,15 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
         className="columns"
       >
         <div
-          className="column is-half"
-        >
-          <Field
-            className="requiredField"
-            component={[Function]}
-            disabled={false}
-            errorMessage="Enrolling unit is required"
-            floatingLabelText="Enrolling unit"
-            hintText="Enrolling unit, eg. School of Business"
-            name="fez_record_search_key_org_unit_name.rek_org_unit_name"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </div>
-        <div
           className="column"
         >
           <Field
             className="requiredField"
             component={[Function]}
             disabled={false}
-            errorMessage="Institution name is required"
-            floatingLabelText="Institution name"
-            hintText=""
-            name="fez_record_search_key_org_name.rek_org_name"
+            floatingLabelText="Enrolling unit"
+            hintText="Enrolling unit, eg. School of Business"
+            name="fez_record_search_key_org_unit_name.rek_org_unit_name"
             validate={
               Array [
                 [Function],
@@ -246,6 +230,11 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             component={[Function]}
             disabled={false}
             name="thesisAbstract"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
           />
         </div>
       </div>
@@ -261,9 +250,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
       }
       title="Supervisors"
     >
-      <div>
-        List your current supervisors
-      </div>
+      <div />
       <Field
         className="requiredField"
         component={[Function]}
@@ -273,6 +260,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             "form": Object {
               "locale": Object {
                 "addButton": "Add supervisor",
+                "descriptionStep1NoStep2": "List your current supervisors",
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedHint": "",
                 "nameAsPublishedLabel": "Enter each supervisor’s name on a separate line e.g. Firstname Surname",
@@ -295,6 +283,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "ariaLabel": "Select this supervisor ([name]) to assign it as you",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -304,6 +293,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                 },
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
+                "notSelectedLabelSuffix": "- select to confirm this supervisor is you",
                 "ordinalData": Array [
                   "First",
                   "Second",
@@ -316,6 +306,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                   "Ninth",
                   "Tenth",
                 ],
+                "selectedLabelSuffix": "- assigned as you",
                 "suffix": " listed supervisor",
               },
             },
@@ -406,6 +397,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
         Add up to 10 keywords that describe the content of the thesis
       </div>
       <Field
+        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -413,8 +405,8 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             "form": Object {
               "locale": Object {
                 "addButtonLabel": "Add",
-                "inputFieldHint": "Type keyword",
-                "inputFieldLabel": "Keyword",
+                "inputFieldHint": "Type keywords",
+                "inputFieldLabel": "Keywords",
               },
             },
             "header": Object {
@@ -493,18 +485,13 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
               File upload restrictions
             </h3>,
             "fileUploadRestrictions": <div>
+              Maximum file size is 5Gb. 
+              <br />
               PDF files must be saved using the following naming structure 
               <b>
                 &lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf
               </b>
-              . Stages of examination are: submission, or correctedthesis, or finalthesis. Please refer to 
-              <a
-                href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination"
-                target="_blank"
-              >
-                HDR submission guidelines
-              </a>
-               for file naming conventions. File submission is mandatory. For example:
+              . Stages of examination are: submission, or correctedthesis, or finalthesis. For example:
               <ul>
                 <li>
                   s1234567_phd_thesis.pdf
@@ -514,7 +501,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                 </li>
               </ul>
             </div>,
-            "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+            "instructions": "",
             "validation": Object {
               "fileName": "File(s) ([filenames]) have invalid file name",
               "folder": "Invalid files ([filenames])",
@@ -662,6 +649,11 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             disabled={false}
             height={50}
             name="thesisTitle"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
           />
         </div>
       </div>
@@ -675,7 +667,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             className="requiredField"
             component={[Function]}
             disabled={false}
-            errorMessage="Author name is required"
             floatingLabelText="Author name"
             fullWidth={true}
             hintText=""
@@ -705,7 +696,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             }
             locale={
               Object {
-                "errorMessage": "Thesis type is required",
                 "label": "Thesis type",
               }
             }
@@ -722,34 +712,15 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
         className="columns"
       >
         <div
-          className="column is-half"
-        >
-          <Field
-            className="requiredField"
-            component={[Function]}
-            disabled={false}
-            errorMessage="Enrolling unit is required"
-            floatingLabelText="Enrolling unit"
-            hintText="Enrolling unit, eg. School of Business"
-            name="fez_record_search_key_org_unit_name.rek_org_unit_name"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </div>
-        <div
           className="column"
         >
           <Field
             className="requiredField"
             component={[Function]}
             disabled={false}
-            errorMessage="Institution name is required"
-            floatingLabelText="Institution name"
-            hintText=""
-            name="fez_record_search_key_org_name.rek_org_name"
+            floatingLabelText="Enrolling unit"
+            hintText="Enrolling unit, eg. School of Business"
+            name="fez_record_search_key_org_unit_name.rek_org_unit_name"
             validate={
               Array [
                 [Function],
@@ -778,6 +749,11 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             component={[Function]}
             disabled={false}
             name="thesisAbstract"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
           />
         </div>
       </div>
@@ -793,9 +769,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
       }
       title="Supervisors"
     >
-      <div>
-        List your current supervisors
-      </div>
+      <div />
       <Field
         className="requiredField"
         component={[Function]}
@@ -805,6 +779,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             "form": Object {
               "locale": Object {
                 "addButton": "Add supervisor",
+                "descriptionStep1NoStep2": "List your current supervisors",
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedHint": "",
                 "nameAsPublishedLabel": "Enter each supervisor’s name on a separate line e.g. Firstname Surname",
@@ -827,6 +802,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "ariaLabel": "Select this supervisor ([name]) to assign it as you",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -836,6 +812,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                 },
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
+                "notSelectedLabelSuffix": "- select to confirm this supervisor is you",
                 "ordinalData": Array [
                   "First",
                   "Second",
@@ -848,6 +825,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                   "Ninth",
                   "Tenth",
                 ],
+                "selectedLabelSuffix": "- assigned as you",
                 "suffix": " listed supervisor",
               },
             },
@@ -938,6 +916,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
         Add up to 10 keywords that describe the content of the thesis
       </div>
       <Field
+        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -945,8 +924,8 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             "form": Object {
               "locale": Object {
                 "addButtonLabel": "Add",
-                "inputFieldHint": "Type keyword",
-                "inputFieldLabel": "Keyword",
+                "inputFieldHint": "Type keywords",
+                "inputFieldLabel": "Keywords",
               },
             },
             "header": Object {
@@ -1025,18 +1004,13 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
               File upload restrictions
             </h3>,
             "fileUploadRestrictions": <div>
+              Maximum file size is 5Gb. 
+              <br />
               PDF files must be saved using the following naming structure 
               <b>
                 &lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf
               </b>
-              . Stages of examination are: submission, or correctedthesis, or finalthesis. Please refer to 
-              <a
-                href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination"
-                target="_blank"
-              >
-                HDR submission guidelines
-              </a>
-               for file naming conventions. File submission is mandatory. For example:
+              . Stages of examination are: submission, or correctedthesis, or finalthesis. For example:
               <ul>
                 <li>
                   s1234567_phd_thesis.pdf
@@ -1046,7 +1020,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                 </li>
               </ul>
             </div>,
-            "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+            "instructions": "",
             "validation": Object {
               "fileName": "File(s) ([filenames]) have invalid file name",
               "folder": "Invalid files ([filenames])",

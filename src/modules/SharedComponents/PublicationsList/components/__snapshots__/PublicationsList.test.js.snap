@@ -394,6 +394,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -824,6 +825,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -1369,6 +1371,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -1767,6 +1770,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -2456,6 +2460,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -3070,6 +3075,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -3651,6 +3657,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -4246,6 +4253,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -4760,6 +4768,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -5323,6 +5332,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -5863,6 +5873,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -6415,6 +6426,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -6921,6 +6933,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -7844,6 +7857,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -8397,6 +8411,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -8810,6 +8825,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -9167,6 +9183,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -9510,6 +9527,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -9895,6 +9913,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -10329,6 +10348,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -10812,6 +10832,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
@@ -11127,6 +11148,7 @@ exports[`PublicationsList renders  component with items 1`] = `
       }
     }
     showDefaultActions={false}
+    showSources={false}
   />
 </div>
 `;

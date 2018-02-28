@@ -22,17 +22,44 @@ describe('Backend routes method', () => {
         })
     });
 
-    it('should return facets params', () => {
+    it('should return facets params for filters', () => {
         const testCases = {
-            one: 'one key',
-            two: 'two key',
-            three: 'three key',
+            filters: {
+                one: 'one key',
+                two: 'two key',
+                three: 'three key'
+            }
         };
 
         const expected = {
             [`filters[facets][one]`]: 'one key',
             [`filters[facets][two]`]: 'two key',
             [`filters[facets][three]`]: 'three key'
+        };
+
+        expect(routes.getFacetsParams(testCases)).toEqual(expected);
+    });
+
+    it('should return facets params for filters and ranges', () => {
+        const testCases = {
+            filters: {
+                one: 'one key',
+                two: 'two key',
+                three: 'three key'
+            },
+            ranges: {
+                four: {
+                    from: 2000,
+                    to: 2013
+                }
+            }
+        };
+
+        const expected = {
+            [`filters[facets][one]`]: 'one key',
+            [`filters[facets][two]`]: 'two key',
+            [`filters[facets][three]`]: 'three key',
+            ['ranges[facets][four]']: '[2000 TO 2013]'
         };
 
         expect(routes.getFacetsParams(testCases)).toEqual(expected);
@@ -101,7 +128,7 @@ describe('Backend routes method', () => {
                 }
             },
             {
-                values: {page: 2, pageSize: 30, sortBy: 'score', sortDirection:'asc', facets : { one: 'one facet'}},
+                values: {page: 2, pageSize: 30, sortBy: 'score', sortDirection:'asc', facets : { filters: { one: 'one facet'}}},
                 expected: {
                     apiUrl: 'records/search',
                     options: {
@@ -141,7 +168,7 @@ describe('Backend routes method', () => {
                 }
             },
             {
-                values: {searchQuery: 'title search', page: 2, pageSize: 30, sortBy: 'score', sortDirection:'asc', facets : { one: 'one facet'}},
+                values: {searchQuery: 'title search', page: 2, pageSize: 30, sortBy: 'score', sortDirection:'asc', facets : { filters: { one: 'one facet' }}},
                 expected: {
                     apiUrl: 'records/search',
                     options: {
@@ -175,7 +202,7 @@ describe('Backend routes method', () => {
                 }
             },
             {
-                values: {page: 2, pageSize: 30, sortBy: 'score', sortDirection:'asc', facets : { one: 'one facet'}},
+                values: {page: 2, pageSize: 30, sortBy: 'score', sortDirection:'asc', facets : { filters: {one: 'one facet'}}},
                 expected: {
                     order_by: 'asc',
                     page: 2,
@@ -227,7 +254,7 @@ describe('Backend routes method', () => {
                 }
             },
             {
-                values: {facets: { one: 'one facet', two: 'two facets'}},
+                values: {facets: { filters: {one: 'one facet', two: 'two facets'}}},
                 expected: {
 
                     apiUrl: 'records/search',

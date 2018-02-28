@@ -1,35 +1,31 @@
 import {ContributorsEditor} from './ContributorsEditor';
 import {authorsSearch} from 'mock/data';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps, isShallow = true){
     const props = {
         ...testProps,
-        contributors: testProps.contributors || [],
-        showIdentifierLookup: testProps.showIdentifierLookup || false,
-        showContributorAssignment: testProps.showContributorAssignment || false,
-        className: testProps.className || null,
-        disabled: testProps.disabled || false,
-        author: testProps.author || { aut_id: 1 },
-        onChange: testProps.onChange || jest.fn(),
-        meta: testProps.meta || null
+        author: testProps.author || { aut_id: 1 }, // : PropTypes.object,
+        // showIdentifierLookup: PropTypes.bool,
+        // showContributorAssignment: PropTypes.bool,
+        // className: PropTypes.string,
+        // disabled: PropTypes.bool,
+        // meta: PropTypes.object,
+        // author: PropTypes.object,
+        // onChange: PropTypes.func,
+        // locale: PropTypes.object,
+        // input: PropTypes.object
     };
     return getElement(ContributorsEditor, props, isShallow);
 }
 
-beforeAll(() => {
-    injectTapEventPlugin();
-});
-
-describe('Component ContributorsEditor', () => {
-
+describe('ContributorsEditor tests ', () => {
     it('rendering full component with a defined className', () => {
-        const wrapper = setup({className: 'requiredField' }, false);
+        const wrapper = setup({ className: 'requiredField' }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('rendering full component with identifier lookup', () => {
-        const wrapper = setup({showIdentifierLookup: true}, false);
+        const wrapper = setup({ showIdentifierLookup: true }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

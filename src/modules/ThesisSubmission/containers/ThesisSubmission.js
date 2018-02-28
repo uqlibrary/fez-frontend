@@ -1,10 +1,9 @@
 import {connect} from 'react-redux';
-import {reduxForm, getFormValues, stopSubmit, SubmissionError} from 'redux-form/immutable';
+import {reduxForm, getFormValues, SubmissionError, getFormSyncErrors} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import ThesisSubmission from '../components/ThesisSubmission';
 import {submitThesis} from 'actions';
 import {general} from 'config';
-import {default as formLocale} from 'locale/publicationForm';
 
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 
@@ -27,61 +26,9 @@ const onSubmit = (values, dispatch, props) => {
         });
 };
 
-const validate = (values) => {
-    // add only multi field validations
-    // single field validations should be implemented using validate prop: <Field validate={[validation.required]} />
-    // reset global errors, eg form submit failure
-    stopSubmit(FORM_NAME, null);
-
-    const data = values.toJS();
-    const errors = [];
-    const txt = formLocale.thesis;
-    if (!data.thesisTitle || !data.thesisTitle.plainText) {
-        errors.push(txt.information.fieldLabels.documentTitle.errorMessage);
-    }
-
-    if (!data.fez_record_search_key_org_unit_name || !data.fez_record_search_key_org_unit_name.rek_org_unit_name) {
-        errors.push(txt.information.fieldLabels.orgUnitName.errorMessage);
-    }
-
-    if (!data.fez_record_search_key_org_name || !data.fez_record_search_key_org_name.rek_org_name) {
-        errors.push(txt.information.fieldLabels.orgName.errorMessage);
-    }
-
-    if (!data.rek_genre_type) {
-        errors.push(txt.information.fieldLabels.thesisType.errorMessage);
-    }
-
-    if (!data.currentAuthor || data.currentAuthor.length === 0 || !data.currentAuthor[0].nameAsPublished) {
-        errors.push(txt.information.fieldLabels.author.errorMessage);
-    }
-
-    if (!data.thesisAbstract || !data.thesisAbstract.plainText) {
-        errors.push(txt.optional.fieldLabels.abstract.errorMessage);
-    }
-
-    if (!data.supervisors || data.supervisors.length === 0) {
-        errors.push(txt.supervisors.errorMessage);
-    }
-
-    if (!data.fieldOfResearch || data.fieldOfResearch.length === 0) {
-        errors.push(txt.fieldOfResearch.errorMessage);
-    }
-
-    if (!data.fez_record_search_key_keywords || data.fez_record_search_key_keywords.length === 0) {
-        errors.push(txt.keywords.errorMessage);
-    }
-
-    if (!data.files || data.files.queue.length === 0) {
-        errors.push(formLocale.fileUpload.errorMessage);
-    }
-
-    return errors.length > 0 ? {_error: errors} : null;
-};
-
 let ThesisSubmissionContainer = reduxForm({
     form: FORM_NAME,
-    validate,
+    // validate,
     onSubmit
 })(confirmDiscardFormChanges(ThesisSubmission, FORM_NAME));
 
@@ -102,6 +49,7 @@ const mapStateToProps = (state, props) => {
 
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
+        formErrors: getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({}),
         initialValues: initialValues,
         author: currentAuthor,
         isHdrThesis: props.isHdrThesis,

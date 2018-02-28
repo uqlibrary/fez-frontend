@@ -12,7 +12,7 @@ import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 
 import {ThesisSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
-import {OrgNameField, OrgUnitNameField, FilteredFieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
+import {OrgUnitNameField, FilteredFieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {ListEditorField} from 'uqlibrary-react-toolbox/build/ListEditor';
 import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
@@ -38,35 +38,6 @@ export default class ThesisSubmission extends Component {
     constructor(props) {
         super(props);
     }
-
-    getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error, submitSucceeded = false, alertLocale = {}}) => {
-        let alertProps = null;
-        if (submitFailed && error) {
-            alertProps = {
-                ...alertLocale.errorAlert,
-                message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error
-            };
-        } else if (dirty && invalid) {
-            const message = (
-                <span>
-                    {alertLocale.validationAlert.message}
-                    <ul>
-                        {
-                            error && error.length > 0 && error.map((item, index) => (
-                                <li key={`validation-${index}`}>{item}</li>
-                            ))
-                        }
-                    </ul>
-                </span>);
-
-            alertProps = {...alertLocale.validationAlert, message: message};
-        } else if (submitting) {
-            alertProps = {...alertLocale.progressAlert};
-        } else if (submitSucceeded) {
-            alertProps = {...alertLocale.successAlert};
-        }
-        return alertProps ? (<Alert {...alertProps} />) : null;
-    };
 
     cancelSubmit = () => {
         window.location.assign(formLocale.thesisSubmission.cancelLink);
@@ -99,6 +70,8 @@ export default class ThesisSubmission extends Component {
                 </StandardPage>
             );
         }
+        console.log(this.props);
+        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: formLocale});
         return (
             <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
                 <p>{formLocale.thesisSubmission.text}</p>
@@ -116,7 +89,7 @@ export default class ThesisSubmission extends Component {
                                     name="thesisTitle"
                                     disabled={this.props.submitting}
                                     height={50}
-                                />
+                                    validate={[validation.required]}/>
                             </div>
                         </div>
                         <div className="columns">
@@ -144,7 +117,7 @@ export default class ThesisSubmission extends Component {
                             </div>
                         </div>
                         <div className="columns">
-                            <div className="column is-half">
+                            <div className="column">
                                 <Field
                                     component={OrgUnitNameField}
                                     name="fez_record_search_key_org_unit_name.rek_org_unit_name"
@@ -154,15 +127,6 @@ export default class ThesisSubmission extends Component {
                                     {...txt.information.fieldLabels.orgUnitName}
                                 />
                             </div>
-                            <div className="column">
-                                <Field
-                                    component={OrgNameField}
-                                    disabled={this.props.submitting}
-                                    name="fez_record_search_key_org_name.rek_org_name"
-                                    className="requiredField"
-                                    validate={[validation.required]}
-                                    {...txt.information.fieldLabels.orgName}/>
-                            </div>
                         </div>
                         <div className="columns" style={{marginTop: '6px'}}>
                             <div className="column requiredField">
@@ -171,7 +135,7 @@ export default class ThesisSubmission extends Component {
                                     component={RichEditorField}
                                     disabled={this.props.submitting}
                                     name="thesisAbstract"
-                                />
+                                    validate={[validation.required]}/>
                             </div>
                         </div>
                     </StandardCard>
@@ -208,6 +172,7 @@ export default class ThesisSubmission extends Component {
                         <Field
                             component={ListEditorField}
                             name="fez_record_search_key_keywords"
+                            className="requiredField"
                             maxCount={10}
                             validate={[validation.requiredList]}
                             searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
@@ -226,7 +191,8 @@ export default class ThesisSubmission extends Component {
                     </StandardCard>
 
                     {
-                        this.getAlert({...this.props, alertLocale: formLocale})
+                        alertProps &&
+                        <Alert {...alertProps} />
                     }
 
                     <div className="columns action-buttons">

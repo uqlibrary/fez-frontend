@@ -7,7 +7,9 @@ export {
     TOKEN_NAME,
     ORCID_BASE_URL,
     ORCID_CLIENT_ID,
-    ORCID_AUTHORIZATION_URL
+    ORCID_AUTHORIZATION_URL,
+    FACET_TYPE_FILTER,
+    FACET_TYPE_RANGE
 } from './general';
 
 export {api, generateCancelToken, cache} from './axios';

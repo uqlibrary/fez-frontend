@@ -27,8 +27,11 @@
     font-size: $text-body-normal !important;
     line-height: $text-line-height-small !important;
     font-weight: $text-weight-normal !important;
-    &.disabled { opacity: 0.5; }
-    & > div > div, &.disabled {
+    &.disabled {
+      opacity: 0.5;
+    }
+    & > div > div,
+    &.disabled {
       padding: 8px !important;
       & > svg {
         margin-top: 6px !important;
@@ -44,5 +47,10 @@
         padding: 8px 8px 8px 56px !important;
       }
     }
+  }
+}
+.dateRange {
+  .columns {
+    margin-top: -24px !important;
   }
 }

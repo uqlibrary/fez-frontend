@@ -3,7 +3,14 @@ import React from 'react';
 export default {
     components: {
         facetsFilter: {
-            resetButtonText: 'Reset'
+            resetButtonText: 'Reset',
+            yearPublishedCategory: 'Year published',
+            yearPublishedFacet: {
+                displayTitle: 'Published year range',
+                fromFieldLabel: 'From',
+                toFieldLabel: 'To',
+                rangeSubmitButtonLabel: 'Go'
+            }
         },
         publicationStats: {
             publicationStatsTitle1: 'eSpace publications indexed in:',
@@ -48,8 +55,8 @@ export default {
             field: {
                 form: {
                     locale: {
-                        inputFieldLabel: 'Keyword',
-                        inputFieldHint: 'Type keyword',
+                        inputFieldLabel: 'Keywords',
+                        inputFieldHint: 'Type keywords',
                         addButtonLabel: 'Add'
                     }
                 },
@@ -494,10 +501,10 @@ export default {
                 text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
                 buttonLabel: 'OK'
             },
-            description: 'List your current supervisors',
             field: {
                 form: {
                     locale: {
+                        descriptionStep1NoStep2: 'List your current supervisors',
                         nameAsPublishedLabel: 'Enter each supervisor’s name on a separate line e.g. Firstname Surname',
                         nameAsPublishedHint: '',
                         identifierLabel: 'UQ identifier (if available)',
@@ -526,6 +533,9 @@ export default {
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                        selectedLabelSuffix: '- assigned as you',
+                        notSelectedLabelSuffix: '- select to confirm this supervisor is you',
+                        ariaLabel: 'Select this supervisor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',

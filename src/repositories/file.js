@@ -17,10 +17,7 @@ export function putUploadFile(pid, file, dispatch) {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },
-                onUploadProgress: event => {
-                    const completed = Math.floor((event.loaded * 100) / event.total);
-                    dispatch(fileUploadActions.notifyProgress(file.name, completed));
-                },
+                onUploadProgress: fileUploadActions.notifyFileUploadProgress(file.name, dispatch),
                 cancelToken: generateCancelToken().token
             };
             const fileUrl = Array.isArray(uploadUrl) && uploadUrl.length > 0 ? uploadUrl[0] : uploadUrl;
@@ -28,16 +25,20 @@ export function putUploadFile(pid, file, dispatch) {
         })
         .then(uploadResponse => (Promise.resolve(uploadResponse)))
         .catch(error => {
-            const issue = {issue:
-                    `File upload failed: app: ${navigator.appVersion}, 
+            // only send issues for PIDs
+            if (/^UQ:\d+/g.test(pid)) {
+                const issue = {issue:
+                        `File upload failed: app: ${navigator.appVersion}, 
                     connection downlink: ${navigator.connection ? navigator.connection.downlink : 'n/a'},
                     connection type: ${navigator.connection ? navigator.connection.effectiveType : 'n/a'}, 
                     user agent: ${navigator.userAgent}
                     error status: ${error.status}
                     error message: ${error.message}
                     file name: ${file.name}`
-            };
-            post(routes.RECORDS_ISSUES_API({pid: pid}), issue);
+                };
+
+                post(routes.RECORDS_ISSUES_API({pid: pid}), issue).catch(() => {});
+            }
             if (fileUploadActions) {
                 dispatch(fileUploadActions.notifyUploadFailed(file.name));
             }

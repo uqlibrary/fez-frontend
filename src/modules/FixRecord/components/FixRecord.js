@@ -16,7 +16,7 @@ import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPromp
 import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
 import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
 
-import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
+import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {validation, routes} from 'config';
 import {locale} from 'locale';
 

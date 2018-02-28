@@ -111,7 +111,8 @@ export default class RecordsSearchResults extends React.Component {
                                 publicationsList={this.props.publicationsList}
                                 customActions={actions}
                                 publicationsListSubset={unclaimablePublicationsList}
-                                subsetCustomActions={unclaimable} />
+                                subsetCustomActions={unclaimable}
+                                showSources />
                         </StandardCard>
                     }
                     {
