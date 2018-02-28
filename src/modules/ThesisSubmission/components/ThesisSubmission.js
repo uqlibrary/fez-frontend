@@ -39,35 +39,6 @@ export default class ThesisSubmission extends Component {
         super(props);
     }
 
-    getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error, submitSucceeded = false, alertLocale = {}}) => {
-        let alertProps = null;
-        if (submitFailed && error) {
-            alertProps = {
-                ...alertLocale.errorAlert,
-                message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error
-            };
-        } else if (dirty && invalid) {
-            const message = (
-                <span className="validationMessage">
-                    {alertLocale.validationAlert.message}
-                    <ul className="validationList">
-                        {
-                            error && error.length > 0 && error.map((item, index) => (
-                                <li className="validationItem" key={`validation-${index}`}>{item}</li>
-                            ))
-                        }
-                    </ul>
-                </span>);
-
-            alertProps = {...alertLocale.validationAlert, message: message};
-        } else if (submitting) {
-            alertProps = {...alertLocale.progressAlert};
-        } else if (submitSucceeded) {
-            alertProps = {...alertLocale.successAlert};
-        }
-        return alertProps ? (<Alert {...alertProps} />) : null;
-    };
-
     cancelSubmit = () => {
         window.location.assign(formLocale.thesisSubmission.cancelLink);
     }
@@ -99,6 +70,8 @@ export default class ThesisSubmission extends Component {
                 </StandardPage>
             );
         }
+        console.log(this.props);
+        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: formLocale});
         return (
             <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
                 <p>{formLocale.thesisSubmission.text}</p>
@@ -116,7 +89,7 @@ export default class ThesisSubmission extends Component {
                                     name="thesisTitle"
                                     disabled={this.props.submitting}
                                     height={50}
-                                />
+                                    validate={[validation.required]}/>
                             </div>
                         </div>
                         <div className="columns">
@@ -162,7 +135,7 @@ export default class ThesisSubmission extends Component {
                                     component={RichEditorField}
                                     disabled={this.props.submitting}
                                     name="thesisAbstract"
-                                />
+                                    validate={[validation.required]}/>
                             </div>
                         </div>
                     </StandardCard>
@@ -218,7 +191,8 @@ export default class ThesisSubmission extends Component {
                     </StandardCard>
 
                     {
-                        this.getAlert({...this.props, alertLocale: formLocale})
+                        alertProps &&
+                        <Alert {...alertProps} />
                     }
 
                     <div className="columns action-buttons">

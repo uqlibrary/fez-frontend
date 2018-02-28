@@ -264,7 +264,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_12"
-        path="/author-identifiers/google-scholar/link/"
+        path="/author-identifiers/google-scholar/link"
       />
       <Route
         key="route_13"
@@ -542,7 +542,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_12"
-        path="/author-identifiers/google-scholar/link/"
+        path="/author-identifiers/google-scholar/link"
       />
       <Route
         key="route_13"
@@ -980,7 +980,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_12"
-        path="/author-identifiers/google-scholar/link/"
+        path="/author-identifiers/google-scholar/link"
       />
       <Route
         key="route_13"
@@ -1274,7 +1274,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_12"
-        path="/author-identifiers/google-scholar/link/"
+        path="/author-identifiers/google-scholar/link"
       />
       <Route
         key="route_13"

@@ -88,33 +88,6 @@ describe('ThesisSubmission test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should display alert', () => {
-        const wrapper = setup({}).instance();
-        const testCases = [
-            {
-                parameters: {submitFailed: true, error: true, alertLocale: {errorAlert: {title: 'submitFailed' }}},
-                expected: 'submitFailed'
-            },
-            {
-                parameters: {dirty: true, invalid: true, error: ['one', 'two'], alertLocale: {validationAlert: {title: 'validationFailed'}}},
-                expected: 'validationFailed'
-            },
-            {
-                parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting' }}},
-                expected: 'submitting'
-            },
-            {
-                parameters: {submitSucceeded: true, alertLocale: {successAlert: {title: 'submitSucceeded' }}},
-                expected: 'submitSucceeded'
-            }
-        ];
-
-        testCases.forEach(testCase => {
-            const alert = wrapper.getAlert({...testCase.parameters});
-            expect(alert.props.title).toEqual(testCase.expected);
-        });
-    });
-
     it('should redirect to cancel page', () => {
         window.location.assign = jest.fn();
         const wrapper = setup({}).instance().cancelSubmit();
