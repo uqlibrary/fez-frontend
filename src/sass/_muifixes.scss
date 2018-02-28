@@ -118,3 +118,11 @@ button[type=button] {
 .scrollbar-spacer{
   width: 17px !important;
 }
+
+.validationMessage {
+  .validationList {
+    margin: 6px 0;
+    .validationItem {
+    }
+  }
+}

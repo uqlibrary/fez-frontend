@@ -98,7 +98,7 @@ export default {
                 type: 'error',
                 title: 'Error',
                 message: 'This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at espace.admin@email.com.au'
-            }
+            },
         },
         unclaimPublicationForm: {
             title: 'Remove this record from my profile',

@@ -1,5 +1,3 @@
-jest.dontMock('./ClaimRecord');
-
 import ClaimRecord from './ClaimRecord';
 import Immutable from 'immutable';
 import {journalArticle} from 'mock/data/testing/records';
@@ -73,7 +71,7 @@ describe('Component ClaimRecord ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render claim form if publication doesn\'t have a PID and but current author was assigned (author linking component should not be rendered)', () => {
+    it('should render claim form if publication doesn\'t have a PID but current author was assigned (author linking component should not be rendered)', () => {
             const testArticle = {
                 ...journalArticle,
                 rek_pid: null,
@@ -150,41 +148,26 @@ describe('Component ClaimRecord ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render alert message depending on form status', () => {
-        const wrapper = setup({}).instance();
+    it('should return and render alert message depending on form status', () => {
         const testCases = [
             {
-                parameters: {submitFailed: true, error: true, txt: {errorAlert: {title: 'submitFailed' }}},
-                expected: 'submitFailed'
+                parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting', message: 'submitting', type: 'info', showLoader: true }}}
             },
             {
-                parameters: {dirty: true, invalid: true, txt: {validationAlert: {title: 'validationFailed'}}},
-                expected: 'validationFailed'
+                parameters: {submitSucceeded: true, alertLocale: {successAlert: {title: 'submitSucceeded', message: 'submitSucceeded', type: 'done' }}}
             },
             {
-                parameters: {submitting: true, txt: {progressAlert: {title: 'submitting' }}},
-                expected: 'submitting'
+                parameters: {submitFailed: true, error: 'This is an error', alertLocale: {errorAlert: {title: 'submitFailed', message: jest.fn(), type: 'error' }}}
             },
             {
-                parameters: {submitSucceeded: true, txt: {successAlert: {title: 'submitSucceeded' }}},
-                expected: 'submitSucceeded'
-            },
-            {
-                parameters: {authorLinked: true, txt: {alreadyClaimedAlert: {title: 'alreadyClaimed' }}},
-                expected: 'alreadyClaimed'
+                parameters: {dirty: true, invalid: true, error: null, formErrors: {rek_title: 'one', rek_date: 'two'}, alertLocale: {validationAlert: {title: 'validationError', message: 'validationError', type: 'warning'}}}
             }
         ];
 
         testCases.forEach(testCase => {
-            const alert = wrapper.getAlert({...testCase.parameters});
-            expect(alert.props.title).toEqual(testCase.expected);
+            const wrapper = setup({...testCase.parameters}).find('Alert').dive();
+            expect(toJson(wrapper)).toMatchSnapshot();
         });
-    });
-
-    it('should not render any alerts if not required', () => {
-        const wrapper = setup({}).instance();
-        const noAlert = wrapper.getAlert({});
-        expect(noAlert).toEqual(null);
     });
 
     it('should set local variables', () => {

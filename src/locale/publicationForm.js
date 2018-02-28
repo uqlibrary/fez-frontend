@@ -1054,6 +1054,7 @@ export default {
         cancelButtonLabel: 'No',
         confirmButtonLabel: 'Yes'
     },
+
     validationAlert: {
         type: 'warning',
         title: 'Validation',

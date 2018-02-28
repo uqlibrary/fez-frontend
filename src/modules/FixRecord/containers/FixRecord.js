@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {reduxForm, getFormValues, stopSubmit, SubmissionError} from 'redux-form/immutable';
+import {reduxForm, getFormValues, getFormSyncErrors, SubmissionError} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import FixRecord from '../components/FixRecord';
 import {withRouter} from 'react-router-dom';
@@ -31,14 +31,8 @@ const onSubmit = (values, dispatch, props) => {
         });
 };
 
-const validate = () => {
-    // reset global errors, eg form submit failure
-    stopSubmit(FORM_NAME, null);
-};
-
 let FixRecordContainer = reduxForm({
     form: FORM_NAME,
-    validate,
     onSubmit
 })(confirmDiscardFormChanges(FixRecord, FORM_NAME));
 
@@ -46,7 +40,8 @@ const mapStateToProps = (state) => {
     return {
         ...state.get('fixRecordReducer'),
         ...state.get('accountReducer'),
-        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({})
+        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
+        formErrors: getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({}),
     };
 };
 
