@@ -29,8 +29,6 @@ export default class ContributorRow extends React.PureComponent {
             deleteHint: 'Remove this record',
             ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
             selectHint: 'Select this record ([name]) to assign it to you',
-            selectedLabelSuffix: '- assigned as you',
-            notSelectedLabelSuffix: '- select as you',
             deleteRecordConfirmation: {
                 confirmationTitle: 'Delete record',
                 confirmationMessage: 'Are you sure you want to delete this record?',
@@ -100,14 +98,11 @@ export default class ContributorRow extends React.PureComponent {
                     <div className="column no-overflow">
                         {
                             this.props.showContributorAssignment && !this.props.disabledContributorAssignment ?
-                                // ------------------------------------------------------------------------------------------
-
                                 <div className="columns is-gapless contributorDetails"
                                     onClick={this._onContributorAssigned}
                                     onKeyDown={this._onContributorAssignedKeyboard}
                                     aria-label={ariaLabel}
-                                    tabIndex="0"
-                                >
+                                    tabIndex="0" >
                                     <div className="column is-narrow is-hidden-mobile">
                                         <FontIcon className="authorIcon material-icons">{this.props.contributor.selected ? 'person' : 'person_outline'}</FontIcon>
                                     </div>
@@ -129,7 +124,6 @@ export default class ContributorRow extends React.PureComponent {
                                         </div>
                                     }
                                 </div>
-                                // ------------------------------------------------------------------------------------------
                                 :
                                 <div className="columns is-gapless contributorDetails is-mobile">
                                     <div className="column is-narrow is-hidden-mobile">
@@ -148,8 +142,6 @@ export default class ContributorRow extends React.PureComponent {
                                         </div>
                                     }
                                 </div>
-                            // ----------------------------------------------------------------------------------------------
-
                         }
                     </div>
                     <div className="column is-narrow">
