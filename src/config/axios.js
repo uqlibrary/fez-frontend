@@ -1,9 +1,10 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import {setupCache} from 'axios-cache-adapter';
-import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME} from './general';
+import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME, AUTH_URL_LOGIN} from './general';
 import {store} from 'config/store';
 import {logout} from 'actions/account';
+import {pathConfig} from 'config/routes';
 
 export const cache = setupCache({
     maxAge: 15 * 60 * 1000,
@@ -51,6 +52,11 @@ api.interceptors.response.use(response => {
     return Promise.resolve(response.data);
 }, error => {
     if (error.response && error.response.status === 403) {
+        if (window.location.pathname === pathConfig.hdrSubmission || window.location.hash === `#${pathConfig.hdrSubmission}`) {
+            const returnUrl = window.btoa(window.location.href);
+            window.location.assign(`${AUTH_URL_LOGIN}?return=${returnUrl}`);
+        }
+
         if (process.env.NODE_ENV === 'test') {
             global.mockActionsStore.dispatch(logout());
         } else {
