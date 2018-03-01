@@ -86,6 +86,10 @@ button[type=button] {
   }
   & div.body-1 {
     padding: 0px !important;
+    @include mobile {
+      -ms-word-break: break-all;
+      word-break: break-all;
+    }
   }
 }
 
