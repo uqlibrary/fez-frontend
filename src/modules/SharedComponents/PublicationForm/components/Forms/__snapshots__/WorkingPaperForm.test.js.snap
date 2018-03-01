@@ -4,13 +4,6 @@ exports[`WorkingPaperForm renders  component 1`] = `
 <div>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Working paper information",
-      }
-    }
     title="Working paper information"
   >
     <div
@@ -149,16 +142,11 @@ exports[`WorkingPaperForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "Help text...",
-        "title": "Adding contributors",
-      }
-    }
     title="Authors"
   >
-    <div />
+    <div>
+      Please provide a list of authors and then select your name from the list.
+    </div>
     <Field
       className="requiredField"
       component={[Function]}
@@ -261,13 +249,6 @@ exports[`WorkingPaperForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Other publication details",
-      }
-    }
     title="Other publication details"
   >
     <div

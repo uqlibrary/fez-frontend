@@ -68,15 +68,18 @@
     }
 
     .citationIcon {
-      height: $text-body-normal !important;
-      width: $text-body-normal !important;
+      height: $text-body-small !important;
+      width: $text-body-small !important;
+      font-size: $text-body-small !important;
     }
   }
 
   .openExternalUrlIcon {
-    width: 12px !important;
-    height: 12px !important;
+    height: $text-body-small !important;
+    width: $text-body-small !important;
+    font-size: $text-body-small !important;
     fill: $accent-color !important;
+    color: $accent-color !important;
     margin: 0 2px;
     vertical-align: top;
   }

@@ -124,23 +124,10 @@ exports[`VideoDocumentForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Creators",
-      }
-    }
     title="Creators"
   >
     <div>
-      <p>
-        Please provide a list of creators and contributors then 
-        <b>
-          select your name once from the list of creators or contributors
-        </b>
-        .
-      </p>
+      Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name once from the list of creators or contributors.
     </div>
     <Field
       className="requiredField"
@@ -345,13 +332,6 @@ exports[`VideoDocumentForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "text...",
-        "title": "Optional information",
-      }
-    }
     title="Optional information"
   >
     <div

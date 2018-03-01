@@ -4,13 +4,6 @@ exports[`CreativeWorkForm renders  component 1`] = `
 <div>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Creative work information",
-      }
-    }
     title="Creative work information"
   >
     <div
@@ -111,16 +104,11 @@ exports[`CreativeWorkForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "Help text...",
-        "title": "Adding contributors",
-      }
-    }
     title="Authors"
   >
-    <div />
+    <div>
+      Please provide a list of authors and then select your name from the list.
+    </div>
     <Field
       className="requiredField"
       component={[Function]}
@@ -223,13 +211,6 @@ exports[`CreativeWorkForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "Help...",
-        "title": "Optional information",
-      }
-    }
     title="Optional information"
   >
     <div

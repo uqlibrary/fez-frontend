@@ -4,13 +4,6 @@ exports[`PatentForm renders  component 1`] = `
 <div>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Patent information",
-      }
-    }
     title="Patent information"
   >
     <div
@@ -113,16 +106,11 @@ exports[`PatentForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Creators",
-      }
-    }
     title="Creators"
   >
-    <div />
+    <div>
+      Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name from the list.
+    </div>
     <Field
       className="requiredField"
       component={[Function]}
@@ -225,13 +213,6 @@ exports[`PatentForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Other patent details",
-      }
-    }
     title="Other patent details"
   >
     <div

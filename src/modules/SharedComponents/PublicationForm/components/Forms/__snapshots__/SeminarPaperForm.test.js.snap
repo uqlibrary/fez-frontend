@@ -4,13 +4,6 @@ exports[`SeminarPaperForm renders  component 1`] = `
 <div>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "Some help",
-        "title": "Seminar paper information",
-      }
-    }
     title="Seminar paper information"
   >
     <div
@@ -101,16 +94,11 @@ exports[`SeminarPaperForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "Help text...",
-        "title": "Adding contributors",
-      }
-    }
     title="Authors"
   >
-    <div />
+    <div>
+      Please provide a list of authors and then select your name from the list.
+    </div>
     <Field
       className="requiredField"
       component={[Function]}
@@ -213,13 +201,6 @@ exports[`SeminarPaperForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "Some help",
-        "title": "Optional information help",
-      }
-    }
     title="Optional information"
   >
     <div

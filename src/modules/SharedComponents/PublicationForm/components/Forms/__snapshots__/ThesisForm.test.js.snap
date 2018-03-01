@@ -4,13 +4,6 @@ exports[`ThesisForm  should render component 1`] = `
 <div>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "Some help",
-        "title": "Thesis information",
-      }
-    }
     title="Thesis information"
   >
     <div
@@ -151,13 +144,6 @@ exports[`ThesisForm  should render component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.",
-        "title": "Supervisors help",
-      }
-    }
     title="Supervisors"
   >
     <Field
@@ -261,13 +247,6 @@ exports[`ThesisForm  should render component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "Some help",
-        "title": "Field of research help",
-      }
-    }
     title="Field of research"
   >
     <div>
@@ -317,13 +296,6 @@ exports[`ThesisForm  should render component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "Some help",
-        "title": "Optional information help",
-      }
-    }
     title="Optional information"
   >
     <div

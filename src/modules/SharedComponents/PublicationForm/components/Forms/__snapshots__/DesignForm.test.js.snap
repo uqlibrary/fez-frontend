@@ -4,13 +4,6 @@ exports[`DesignForm renders  component 1`] = `
 <div>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Design information",
-      }
-    }
     title="Design information"
   >
     <div
@@ -141,13 +134,6 @@ exports[`DesignForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "Enter designers in the order and form they appear on the published paper. Additional boxes will appear for more authors.",
-        "title": "Designers",
-      }
-    }
     title="Designer name"
   >
     <Field
@@ -252,13 +238,6 @@ exports[`DesignForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "text...",
-        "title": "Optional information",
-      }
-    }
     title="Optional information"
   >
     <div

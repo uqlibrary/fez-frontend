@@ -123,18 +123,6 @@ export const getRecordSupervisorsSearchKey = (supervisors) => {
     };
 };
 
-export const getRecordSubjectSearchKey = (subjects) => {
-    if (!subjects || subjects.length === 0) return {};
-    return {
-        fez_record_search_key_subject: subjects.map((item, index) => (
-            {
-                rek_subject: item.rek_value.key,
-                rek_subject_order: index + 1
-            }
-        ))
-    };
-};
-
 /* getRecordAuthorsIdSearchKey - returns authors id object formatted for record request
 * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410} or
 * {rek_author_id_id: null, rek_author_id_pid: "UQ:678742", rek_author_id: 683, rek_author_id_order: 12}
@@ -264,6 +252,23 @@ export const getRecordContributorsIdSearchKey = (authors, defaultAuthorId) => {
                     }
             )
         )
+    };
+};
+
+/* getRecordFieldsOfResearchSearchKey - returns fields of research for record request
+ * @param {array} of objects in format {rek_value: {key: id, value: value}, rek_order}
+ * @returns {Object} formatted {fez_record_search_key_fields_of_research} for record request
+ */
+export const getRecordFieldsOfResearchSearchKey = (fieldsOfResearch) => {
+    if (!fieldsOfResearch || fieldsOfResearch.length === 0) return {};
+
+    return {
+        fez_record_search_key_fields_of_research: fieldsOfResearch.map((item) => (
+            {
+                rek_fields_of_research: item.rek_value.key,
+                rek_fields_of_research_order: item.rek_order
+            }
+        ))
     };
 };
 
