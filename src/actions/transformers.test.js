@@ -455,7 +455,7 @@ describe('getRecordFieldsOfResearchSearchKey test ', () => {
             {rek_order: 3, rek_value: {key: 451801, value: "010101 Mathematical Sciences"}}
         ];
         const expected = {
-            fez_record_search_key_subject: [
+            fez_record_search_key_fields_of_research: [
                 {
                     rek_fields_of_research: 451799,
                     rek_fields_of_research_order: 1
