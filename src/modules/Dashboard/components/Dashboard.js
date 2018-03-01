@@ -16,10 +16,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import {routes} from 'config';
 import {locale} from 'locale';
-
-// Icons
-import EditorFormatQuote from 'material-ui/svg-icons/editor/format-quote'; // format_quote
-import ActionOpenInNew from 'material-ui/svg-icons/action/open-in-new'; // open_in_new
+import FontIcon from 'material-ui/FontIcon';
 
 class Dashboard extends React.Component {
     static propTypes = {
@@ -249,7 +246,9 @@ class Dashboard extends React.Component {
                                                                     <div className="column">
                                                                         <div className="citationContent">
                                                                             <h3 className="publicationTitle">{recordValue.title}</h3>
-                                                                            <EditorFormatQuote className="material-icons citationIcon" data-place="left" />
+                                                                            <FontIcon className="material-icons citationIcon" data-place="left">
+                                                                                format_quote
+                                                                            </FontIcon>
                                                                             {recordValue.authors} ({recordValue.rek_date.substring(0, 4)})
                                                                         </div>
                                                                         <div className="citationCounts">
@@ -262,7 +261,9 @@ class Dashboard extends React.Component {
                                                                                     title={locale.global.linkWillOpenInNewWindow.replace('[destination]', recordValue.title)}>
                                                                                     <div className="columns is-mobile is-gapless">
                                                                                         <div className="column is-narrow citationCountNumber">{txt.myTrendingPublications.viewFullCitationLinkTitle}
-                                                                                            <ActionOpenInNew className="citationCountIcon material-icons" />
+                                                                                            <FontIcon className="material-icons citationIcon openExternalUrlIcon" data-place="left">
+                                                                                                open_in_new
+                                                                                            </FontIcon>
                                                                                         </div>
                                                                                     </div>
                                                                                 </a>
