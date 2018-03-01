@@ -124,13 +124,6 @@ exports[`AudioDocumentForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Creators",
-      }
-    }
     title="Creators"
   >
     <div>
@@ -273,13 +266,6 @@ exports[`AudioDocumentForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "help...",
-        "title": "Optional information",
-      }
-    }
     title="Optional information"
   >
     <div

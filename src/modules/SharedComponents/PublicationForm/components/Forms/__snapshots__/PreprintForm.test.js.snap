@@ -4,13 +4,6 @@ exports[`PreprintForm renders  component 1`] = `
 <div>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "Help...",
-        "title": "Preprint information",
-      }
-    }
     title="Preprint information"
   >
     <div
@@ -64,13 +57,6 @@ exports[`PreprintForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "Help text...",
-        "title": "Adding contributors",
-      }
-    }
     title="Authors"
   >
     <div>
@@ -144,13 +130,6 @@ exports[`PreprintForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Optional publication details",
-      }
-    }
     title="Optional publication details"
   >
     <div

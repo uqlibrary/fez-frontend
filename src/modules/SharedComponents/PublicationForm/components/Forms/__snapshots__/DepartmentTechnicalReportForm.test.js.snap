@@ -4,13 +4,6 @@ exports[`GenericDocumentForm renders  component 1`] = `
 <div>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Department technical report information",
-      }
-    }
     title="Department technical report information"
   >
     <div
@@ -135,13 +128,6 @@ exports[`GenericDocumentForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "Help text...",
-        "title": "Adding contributors",
-      }
-    }
     title="Authors"
   >
     <div>
@@ -215,13 +201,6 @@ exports[`GenericDocumentForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Other publication details",
-      }
-    }
     title="Other publication details"
   >
     <div

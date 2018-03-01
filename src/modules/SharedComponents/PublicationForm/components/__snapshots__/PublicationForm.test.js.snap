@@ -14,13 +14,6 @@ exports[`PublicationForm test should render component initialised with just one 
   />
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "Help about publication types, eg journal article, book, conference paper etc",
-        "title": "Publication type",
-      }
-    }
     title="Publication type"
   >
     <Field

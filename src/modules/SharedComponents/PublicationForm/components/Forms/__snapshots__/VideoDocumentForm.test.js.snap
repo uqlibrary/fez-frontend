@@ -124,13 +124,6 @@ exports[`VideoDocumentForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Creators",
-      }
-    }
     title="Creators"
   >
     <div>
@@ -273,13 +266,6 @@ exports[`VideoDocumentForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "text...",
-        "title": "Optional information",
-      }
-    }
     title="Optional information"
   >
     <div
