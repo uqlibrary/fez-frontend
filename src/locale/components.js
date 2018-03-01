@@ -89,11 +89,11 @@ export default {
         isbnForm: {
             title: 'ISBN',
             text: 'You can add up to five ISBN values',
-            help: {
-                title: 'ISBN value',
-                text: 'Acceptable ISBN formats are....',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'ISBN value',
+            //     text: 'Acceptable ISBN formats are....',
+            //     buttonLabel: 'OK'
+            // },
             field: {
                 form: {
                     locale: {
@@ -133,11 +133,11 @@ export default {
         issnForm: {
             title: 'ISSN',
             text: 'You can add up to five ISSN values',
-            help: {
-                title: 'ISSN value',
-                text: 'Acceptable ISSN formats are....',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'ISSN value',
+            //     text: 'Acceptable ISSN formats are....',
+            //     buttonLabel: 'OK'
+            // },
             field: {
                 form: {
                     locale: {
@@ -178,11 +178,11 @@ export default {
             title: 'Authors',
             description: 'Please provide a list of authors and then select your name from the list.',
             descriptionAuthorOrEditor: 'Please provide a list of authors and then select your name once from the list of authors or editors.',
-            help: {
-                title: 'Adding contributors',
-                text: 'Help text...',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Adding contributors',
+            //     text: 'Help text...',
+            //     buttonLabel: 'OK'
+            // },
             field: {
                 form: {
                     locale: {
@@ -229,11 +229,11 @@ export default {
             title: 'Editors',
             description: 'Please provide a list of editors and then select your name from the list.',
             descriptionAuthorOrEditor: 'Please provide a list of editors and then select your name once from the list of authors or editors.',
-            help: {
-                title: 'Editors',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Editors',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             field: {
                 form: {
                     locale: {
@@ -277,11 +277,11 @@ export default {
         },
         creators: {
             title: 'Creators',
-            help: {
-                title: 'Creators',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Creators',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             description: 'Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name from the list.',
             descriptionCreatorOrContributor: 'Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name once from the list of creators or contributors.',
             field: {
@@ -328,11 +328,11 @@ export default {
         designers: {
             title: 'Designer name',
             description: 'Please provide a list of designers and then select your name from the list.',
-            help: {
-                title: 'Designers',
-                text: 'Enter designers in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Designers',
+            //     text: 'Enter designers in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+            //     buttonLabel: 'OK'
+            // },
             field: {
                 form: {
                     locale: {
@@ -376,11 +376,11 @@ export default {
         },
         supervisors: {
             title: 'Supervisors',
-            help: {
-                title: 'Supervisors help',
-                text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Supervisors help',
+            //     text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
+            //     buttonLabel: 'OK'
+            // },
             description: 'Please provide a list of supervisors and then select your name from the list.',
             field: {
                 form: {
@@ -425,11 +425,11 @@ export default {
         },
         thesisSubmissionSupervisors: {
             title: 'Supervisors',
-            help: {
-                title: 'Supervisors help',
-                text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Supervisors help',
+            //     text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
+            //     buttonLabel: 'OK'
+            // },
             description: 'List your current supervisors',
             field: {
                 form: {
@@ -525,11 +525,11 @@ export default {
         fieldOfResearchForm: {
             title: 'Field of research',
             text: 'Select up to 3 Field of Research (FoR) codes at the 4 digit level',
-            help: {
-                title: 'Field of research',
-                text: 'more info',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Field of research',
+            //     text: 'more info',
+            //     buttonLabel: 'OK'
+            // },
             field: {
                 form: {
                     locale: {
