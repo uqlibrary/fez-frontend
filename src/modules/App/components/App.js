@@ -88,7 +88,7 @@ export default class App extends React.Component {
 
     redirectUserToLogin = (isAuthorizedUser = false, redirectToCurrentLocation = false) => () => {
         const redirectUrl = isAuthorizedUser ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
-        const returnUrl = isAuthorizedUser && !redirectToCurrentLocation  ? APP_URL : window.location.href;
+        const returnUrl = redirectToCurrentLocation || !isAuthorizedUser ? window.location.href : APP_URL;
         window.location.assign(`${redirectUrl}?return=${window.btoa(returnUrl)}`);
     };
 
