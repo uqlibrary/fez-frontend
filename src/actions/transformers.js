@@ -267,6 +267,23 @@ export const getRecordContributorsIdSearchKey = (authors, defaultAuthorId) => {
     };
 };
 
+/* getFieldsOfResearchSearchKey - returns fields of research for record request
+ * @param {array} of objects in format {rek_value: {key: id, value: value}, rek_order}
+ * @returns {Object} formatted {fez_record_search_key_fields_of_research} for record request
+ */
+export const getRecordFieldsOfResearchSearchKey = (fieldsOfResearch) => {
+    if (!fieldsOfResearch || fieldsOfResearch.length === 0) return {};
+
+    return {
+        fez_record_search_key_fields_of_research: fieldsOfResearch.map((item) => (
+            {
+                rek_fields_of_research: item.rek_value.key,
+                rek_fields_of_research_order: item.rek_order
+            }
+        ))
+    };
+};
+
 /*
 * getAuthorIdentifierOrcidPatchRequest - returns author patch request to update author identifier with new orcid id
 * @param {string} authorId - fez-authors id (eg 1671)
