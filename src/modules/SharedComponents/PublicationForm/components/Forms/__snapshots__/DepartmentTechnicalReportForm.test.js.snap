@@ -207,7 +207,6 @@ exports[`GenericDocumentForm renders  component 1`] = `
           },
           "row": Object {
             "locale": Object {
-              "ariaLabel": "Select this author ([name]) to assign it as you",
               "deleteHint": "Remove this item",
               "deleteRecordConfirmation": Object {
                 "cancelButtonLabel": "No",
@@ -217,7 +216,6 @@ exports[`GenericDocumentForm renders  component 1`] = `
               },
               "moveDownHint": "Move item down the order",
               "moveUpHint": "Move item up the order",
-              "notSelectedLabelSuffix": "- select to confirm this author is you",
               "ordinalData": Array [
                 "First",
                 "Second",
@@ -230,8 +228,8 @@ exports[`GenericDocumentForm renders  component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
+              "selectHint": "Select this author ([name]) to assign it as you",
               "selectedHint": "This is you",
-              "selectedLabelSuffix": "- assigned as you",
               "suffix": " listed author",
               "unselectedHint": "Select this to confirm [identifier] is you",
             },

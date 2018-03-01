@@ -227,9 +227,7 @@ export default {
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
-                        selectedLabelSuffix: '- assigned as you',
-                        notSelectedLabelSuffix: '- select to confirm this author is you',
-                        ariaLabel: 'Select this author ([name]) to assign it as you',
+                        selectHint: 'Select this author ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -292,9 +290,7 @@ export default {
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
-                        selectedLabelSuffix: '- assigned as you',
-                        notSelectedLabelSuffix: '- select to confirm this editor is you',
-                        ariaLabel: 'Select this editor ([name]) to assign it as you',
+                        selectHint: 'Select this editor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -355,9 +351,7 @@ export default {
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
-                        selectedLabelSuffix: '- assigned as you',
-                        notSelectedLabelSuffix: '- select to confirm this creator is you',
-                        ariaLabel: 'Select this creator ([name]) to assign it as you',
+                        selectHint: 'Select this creator ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -418,9 +412,7 @@ export default {
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
-                        selectedLabelSuffix: '- assigned as you',
-                        notSelectedLabelSuffix: '- select to confirm this designer is you',
-                        ariaLabel: 'Select this designer ([name]) to assign it as you',
+                        selectHint: 'Select this designer ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -481,9 +473,7 @@ export default {
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
-                        selectedLabelSuffix: '- assigned as you',
-                        notSelectedLabelSuffix: '- select to confirm this supervisor is you',
-                        ariaLabel: 'Select this supervisor ([name]) to assign it as you',
+                        selectHint: 'Select this supervisor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -504,6 +494,7 @@ export default {
             field: {
                 form: {
                     locale: {
+                        descriptionStep1: '',
                         descriptionStep1NoStep2: 'List your current supervisors',
                         nameAsPublishedLabel: 'Enter each supervisor’s name on a separate line e.g. Firstname Surname',
                         nameAsPublishedHint: '',
@@ -513,6 +504,7 @@ export default {
                 },
                 header: {
                     locale: {
+                        descriptionStep2: '',
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Supervisor\'s name',
                         identifierColumn: 'UQ identifier',
@@ -533,9 +525,7 @@ export default {
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
-                        selectedLabelSuffix: '- assigned as you',
-                        notSelectedLabelSuffix: '- select to confirm this supervisor is you',
-                        ariaLabel: 'Select this supervisor ([name]) to assign it as you',
+                        selectHint: 'Select this supervisor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -595,9 +585,7 @@ export default {
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
-                        selectedLabelSuffix: '- assigned as you',
-                        notSelectedLabelSuffix: '- select to confirm this contributor is you',
-                        ariaLabel: 'Select this contributor ([name]) to assign it as you',
+                        selectHint: 'Select this contributor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',

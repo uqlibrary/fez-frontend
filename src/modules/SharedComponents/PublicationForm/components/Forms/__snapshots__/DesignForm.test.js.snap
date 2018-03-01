@@ -212,7 +212,6 @@ exports[`DesignForm renders  component 1`] = `
           },
           "row": Object {
             "locale": Object {
-              "ariaLabel": "Select this designer ([name]) to assign it as you",
               "deleteHint": "Remove this item",
               "deleteRecordConfirmation": Object {
                 "cancelButtonLabel": "No",
@@ -222,7 +221,6 @@ exports[`DesignForm renders  component 1`] = `
               },
               "moveDownHint": "Move item down the order",
               "moveUpHint": "Move item up the order",
-              "notSelectedLabelSuffix": "- select to confirm this designer is you",
               "ordinalData": Array [
                 "First",
                 "Second",
@@ -235,8 +233,8 @@ exports[`DesignForm renders  component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
+              "selectHint": "Select this designer ([name]) to assign it as you",
               "selectedHint": "This is you",
-              "selectedLabelSuffix": "- assigned as you",
               "suffix": " listed designer",
               "unselectedHint": "Select this to confirm this designer is you",
             },

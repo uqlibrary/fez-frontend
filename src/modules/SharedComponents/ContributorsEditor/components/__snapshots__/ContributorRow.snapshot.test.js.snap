@@ -22,10 +22,10 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
     className="columns is-gapless is-mobile"
   >
     <div
-      className="column"
+      className="column no-overflow"
     >
       <div
-        aria-label="Select this record to assign it to you"
+        aria-label="Select this record (J. Smith) to assign it to you"
         className="columns is-gapless contributorDetails"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -43,21 +43,26 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
           </FontIcon>
         </div>
         <div
-          className="column datalist-text"
+          className="column datalist-text contributor"
         >
-          <span
-            className="contributorName"
+          <div
+            className="contributorName no-overflow"
           >
-            J. Smith
-          </span>
-          <span
-            className="contributorNotSelectedSuffix"
-          />
-          <span
+            <div
+              className="columns is-gapless is-mobile"
+            >
+              <div
+                className="column is-narrow name"
+              >
+                J. Smith
+              </div>
+            </div>
+          </div>
+          <div
             className="contributorSubtitle datalist-text-subtitle"
           >
             First  listed contributor
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -69,7 +74,28 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
       >
         <div
           className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
-        />
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
         <div
           className="column is-narrow contributorDelete datalist-buttons"
         >
@@ -121,10 +147,10 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
     className="columns is-gapless is-mobile"
   >
     <div
-      className="column"
+      className="column no-overflow"
     >
       <div
-        className="columns is-gapless contributorDetails"
+        className="columns is-gapless contributorDetails is-mobile"
       >
         <div
           className="column is-narrow is-hidden-mobile"
@@ -138,18 +164,18 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
           </FontIcon>
         </div>
         <div
-          className="column datalist-text"
+          className="column datalist-text contributor"
         >
-          <span
-            className="contributorName"
+          <div
+            className="contributorName no-overflow"
           >
             J. Smith
-          </span>
-          <span
+          </div>
+          <div
             className="contributorSubtitle datalist-text-subtitle"
           >
             First  listed contributor
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -161,7 +187,28 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
       >
         <div
           className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
-        />
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
         <div
           className="column is-narrow contributorDelete datalist-buttons"
         >
@@ -213,10 +260,10 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
     className="columns is-gapless is-mobile"
   >
     <div
-      className="column"
+      className="column no-overflow"
     >
       <div
-        className="columns is-gapless contributorDetails"
+        className="columns is-gapless contributorDetails is-mobile"
       >
         <div
           className="column is-narrow is-hidden-mobile"
@@ -230,18 +277,18 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
           </FontIcon>
         </div>
         <div
-          className="column datalist-text"
+          className="column datalist-text contributor"
         >
-          <span
-            className="contributorName"
+          <div
+            className="contributorName no-overflow"
           >
             A. Smith
-          </span>
-          <span
+          </div>
+          <div
             className="contributorSubtitle datalist-text-subtitle"
           >
             First  listed contributor
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -253,7 +300,28 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
       >
         <div
           className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
-        />
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
         <div
           className="column is-narrow contributorDelete datalist-buttons"
         >
@@ -305,10 +373,10 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
     className="columns is-gapless is-mobile"
   >
     <div
-      className="column"
+      className="column no-overflow"
     >
       <div
-        aria-label="Select this record to assign it to you"
+        aria-label="Select this record (J. Smith) to assign it to you"
         className="columns is-gapless contributorDetails"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -326,21 +394,26 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
           </FontIcon>
         </div>
         <div
-          className="column datalist-text"
+          className="column datalist-text contributor"
         >
-          <span
-            className="contributorName"
+          <div
+            className="contributorName no-overflow"
           >
-            J. Smith
-          </span>
-          <span
-            className="contributorNotSelectedSuffix"
-          />
-          <span
+            <div
+              className="columns is-gapless is-mobile"
+            >
+              <div
+                className="column is-narrow name"
+              >
+                J. Smith
+              </div>
+            </div>
+          </div>
+          <div
             className="contributorSubtitle datalist-text-subtitle"
           >
             First  listed contributor
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -372,6 +445,10 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
               keyboard_arrow_up
             </FontIcon>
           </IconButton>
+        </div>
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
           <IconButton
             aria-label="Move record down the order"
             className="reorderDown"
@@ -443,10 +520,10 @@ exports[`Component ContributorRow  a row with index and contributor with author 
     className="columns is-gapless is-mobile"
   >
     <div
-      className="column"
+      className="column no-overflow"
     >
       <div
-        className="columns is-gapless contributorDetails"
+        className="columns is-gapless contributorDetails is-mobile"
       >
         <div
           className="column is-narrow is-hidden-mobile"
@@ -460,25 +537,28 @@ exports[`Component ContributorRow  a row with index and contributor with author 
           </FontIcon>
         </div>
         <div
-          className="column datalist-text"
+          className="column datalist-text contributor"
         >
-          <span
-            className="contributorName"
+          <div
+            className="contributorName no-overflow"
           />
-          <span
+          <div
             className="contributorSubtitle datalist-text-subtitle"
           >
             First  listed contributor
-          </span>
+          </div>
         </div>
         <div
-          className="column is-3-desktop is-3-tablet is-5-mobile contributorIdentifier datalist-text"
+          className="column contributorIdentifier datalist-text is-hidden-mobile"
         >
-          <strong>
+          <div
+            className="identifierName"
+          >
              
-          </strong>
-          <br />
-          <small />
+          </div>
+          <div
+            className="identifierSubtitle datalist-text-subtitle"
+          />
         </div>
       </div>
     </div>
@@ -490,7 +570,28 @@ exports[`Component ContributorRow  a row with index and contributor with author 
       >
         <div
           className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
-        />
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
         <div
           className="column is-narrow contributorDelete datalist-buttons"
         >
@@ -542,10 +643,10 @@ exports[`Component ContributorRow  a row with index and contributor with author 
     className="columns is-gapless is-mobile"
   >
     <div
-      className="column"
+      className="column no-overflow"
     >
       <div
-        className="columns is-gapless contributorDetails"
+        className="columns is-gapless contributorDetails is-mobile"
       >
         <div
           className="column is-narrow is-hidden-mobile"
@@ -559,29 +660,32 @@ exports[`Component ContributorRow  a row with index and contributor with author 
           </FontIcon>
         </div>
         <div
-          className="column datalist-text"
+          className="column datalist-text contributor"
         >
-          <span
-            className="contributorName"
+          <div
+            className="contributorName no-overflow"
           >
             J. Smith
-          </span>
-          <span
+          </div>
+          <div
             className="contributorSubtitle datalist-text-subtitle"
           >
             First  listed contributor
-          </span>
+          </div>
         </div>
         <div
-          className="column is-3-desktop is-3-tablet is-5-mobile contributorIdentifier datalist-text"
+          className="column contributorIdentifier datalist-text is-hidden-mobile"
         >
-          <strong>
+          <div
+            className="identifierName"
+          >
             Mr
              
             Christopher Christoff
-          </strong>
-          <br />
-          <small />
+          </div>
+          <div
+            className="identifierSubtitle datalist-text-subtitle"
+          />
         </div>
       </div>
     </div>
@@ -593,7 +697,28 @@ exports[`Component ContributorRow  a row with index and contributor with author 
       >
         <div
           className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
-        />
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
         <div
           className="column is-narrow contributorDelete datalist-buttons"
         >

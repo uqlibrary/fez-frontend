@@ -117,9 +117,15 @@ button[type=button] {
 // Class to space elements against scroll bars
 .scrollbar-spacer{
   width: 6px;
+  @include mobile {
+    width: 6px !important;
+  }
 }
 .scrollbar-spacer-infinite{
     width: 20px !important;
+  @include mobile {
+    width: 6px;
+  }
 }
 
 // Styles to restyle the react-tooltip component
@@ -153,4 +159,9 @@ margin-top: 6px !important;
     .validationItem {
     }
   }
+}
+
+.no-overflow {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
 }

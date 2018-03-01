@@ -28,9 +28,9 @@ export default class ContributorRow extends React.PureComponent {
             moveDownHint: 'Move record down the order',
             deleteHint: 'Remove this record',
             ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
-            selectTooltip: '- select to assign this record as you',
-            selectedTooltip: '- assigned as you',
-            ariaLabel: 'Select this record to assign it to you',
+            selectHint: 'Select this record ([name]) to assign it to you',
+            selectedLabelSuffix: '- assigned as you',
+            notSelectedLabelSuffix: '- select as you',
             deleteRecordConfirmation: {
                 confirmationTitle: 'Delete record',
                 confirmationMessage: 'Are you sure you want to delete this record?',
@@ -89,6 +89,7 @@ export default class ContributorRow extends React.PureComponent {
         const {ordinalData, deleteRecordConfirmation} = this.props.locale;
         const contributorOrder = (this.props.index < ordinalData.length ?
             ordinalData[this.props.index] : (this.props.index + 1)) + ' ' + this.props.locale.suffix;
+        const ariaLabel = this.props.locale.selectHint && this.props.locale.selectHint.indexOf('[name]') > -1 ? this.props.locale.selectHint.replace('[name]', this.props.contributor.nameAsPublished) : null;
         return (
             <div id={this.props.index} className={`contributorsRow datalist datalist-row ${this.props.contributor.selected ? 'selected' : ''}` }>
                 <ConfirmDialogBox
@@ -96,83 +97,91 @@ export default class ContributorRow extends React.PureComponent {
                     onAction={this._deleteRecord}
                     locale={deleteRecordConfirmation} />
                 <div className="columns is-gapless is-mobile">
-                    <div className="column">
+                    <div className="column no-overflow">
                         {
                             this.props.showContributorAssignment && !this.props.disabledContributorAssignment ?
+                                // ------------------------------------------------------------------------------------------
+
                                 <div className="columns is-gapless contributorDetails"
                                     onClick={this._onContributorAssigned}
                                     onKeyDown={this._onContributorAssignedKeyboard}
-                                    aria-label={this.props.locale.ariaLabel.replace('[name]', this.props.contributor.nameAsPublished)}
+                                    aria-label={ariaLabel}
                                     tabIndex="0"
                                 >
                                     <div className="column is-narrow is-hidden-mobile">
                                         <FontIcon className="authorIcon material-icons">{this.props.contributor.selected ? 'person' : 'person_outline'}</FontIcon>
                                     </div>
-                                    <div className="column datalist-text">
-                                        <span className="contributorName">{this.props.contributor.nameAsPublished}</span>
-                                        {this.props.contributor.selected ?
-                                            <span className="contributorSelectedSuffix">{this.props.locale.selectedLabelSuffix}</span>
-                                            :
-                                            <span className="contributorNotSelectedSuffix">{this.props.locale.notSelectedLabelSuffix}</span>
-                                        }
-                                        <span className="contributorSubtitle datalist-text-subtitle">{contributorOrder}</span>
+                                    <div className="column datalist-text contributor">
+                                        <div className="contributorName no-overflow">
+                                            <div className="columns is-gapless is-mobile">
+                                                <div className="column is-narrow name">
+                                                    {this.props.contributor.nameAsPublished}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="contributorSubtitle datalist-text-subtitle">{contributorOrder}</div>
                                     </div>
                                     {
                                         this.props.showIdentifierLookup &&
-                                        <div
-                                            className="column is-3-desktop is-3-tablet is-5-mobile contributorIdentifier datalist-text">
-                                            <strong>{this.props.contributor.aut_title} {this.props.contributor.aut_display_name}</strong>
-                                            <br/>
-                                            <small>{this.props.contributor.aut_org_username || this.props.contributor.aut_student_username}</small>
+                                        <div className="column contributorIdentifier datalist-text">
+                                            <div className="identifierName">{this.props.contributor.aut_title} {this.props.contributor.aut_display_name}</div>
+                                            <div className="identifierSubtitle datalist-text-subtitle">{this.props.contributor.aut_org_username || this.props.contributor.aut_student_username}</div>
                                         </div>
                                     }
                                 </div>
+                                // ------------------------------------------------------------------------------------------
                                 :
-                                <div className="columns is-gapless contributorDetails">
+                                <div className="columns is-gapless contributorDetails is-mobile">
                                     <div className="column is-narrow is-hidden-mobile">
                                         <FontIcon className="authorIcon material-icons">person_outline</FontIcon>
                                     </div>
-                                    <div className="column datalist-text">
-                                        <span className="contributorName">{this.props.contributor.nameAsPublished}</span>
-                                        <span
-                                            className="contributorSubtitle datalist-text-subtitle">{contributorOrder}</span>
+                                    <div className="column datalist-text contributor">
+                                        <div className="contributorName no-overflow">{this.props.contributor.nameAsPublished}</div>
+                                        <div className="contributorSubtitle datalist-text-subtitle">{contributorOrder}</div>
                                     </div>
                                     {
                                         this.props.showIdentifierLookup &&
                                         <div
-                                            className="column is-3-desktop is-3-tablet is-5-mobile contributorIdentifier datalist-text">
-                                            <strong>{this.props.contributor.aut_title} {this.props.contributor.aut_display_name}</strong>
-                                            <br/>
-                                            <small>{this.props.contributor.aut_org_username || this.props.contributor.aut_student_username}</small>
+                                            className="column contributorIdentifier datalist-text is-hidden-mobile">
+                                            <div className="identifierName">{this.props.contributor.aut_title} {this.props.contributor.aut_display_name}</div>
+                                            <div className="identifierSubtitle datalist-text-subtitle">{this.props.contributor.aut_org_username || this.props.contributor.aut_student_username}</div>
                                         </div>
                                     }
                                 </div>
+                            // ----------------------------------------------------------------------------------------------
+
                         }
                     </div>
                     <div className="column is-narrow">
                         <div className="columns is-gapless contributorActions">
                             <div className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons">
-                                {this.props.canMoveUp &&
-                                <IconButton
-                                    tooltip={this.props.locale.moveUpHint}
-                                    tooltipPosition="bottom-left"
-                                    onTouchTap={this._onMoveUp}
-                                    className="reorderUp"
-                                    disabled={this.props.disabled}
-                                    aria-label={this.props.locale.moveUpHint}>
-                                    <FontIcon className="material-icons">keyboard_arrow_up</FontIcon>
-                                </IconButton>
+                                {this.props.canMoveUp ?
+                                    <IconButton
+                                        tooltip={this.props.locale.moveUpHint}
+                                        tooltipPosition="bottom-left"
+                                        onTouchTap={this._onMoveUp}
+                                        className="reorderUp"
+                                        disabled={this.props.disabled}
+                                        aria-label={this.props.locale.moveUpHint}>
+                                        <FontIcon className="material-icons">keyboard_arrow_up</FontIcon>
+                                    </IconButton>
+                                    :
+                                    <div style={{width: '50px', height: '50px'}} />
                                 }
-                                {this.props.canMoveDown &&
-                                <IconButton
-                                    tooltip={this.props.locale.moveDownHint}
-                                    tooltipPosition="bottom-left"
-                                    onTouchTap={this._onMoveDown}
-                                    className="reorderDown"
-                                    disabled={this.props.disabled}
-                                    aria-label={this.props.locale.moveDownHint}>
-                                    <FontIcon className="material-icons">keyboard_arrow_down</FontIcon>
-                                </IconButton>
+                            </div>
+                            <div className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons">
+                                {this.props.canMoveDown ?
+                                    <IconButton
+                                        tooltip={this.props.locale.moveDownHint}
+                                        tooltipPosition="bottom-left"
+                                        onTouchTap={this._onMoveDown}
+                                        className="reorderDown"
+                                        disabled={this.props.disabled}
+                                        aria-label={this.props.locale.moveDownHint}>
+                                        <FontIcon className="material-icons">keyboard_arrow_down</FontIcon>
+                                    </IconButton>
+                                    :
+                                    <div style={{width: '50px', height: '50px'}} />
                                 }
                             </div>
                             <div className="column is-narrow contributorDelete datalist-buttons">

@@ -1,13 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component ContributorRowHeader header for contributor editor control with all options 1`] = `
-<div
-  style={
-    Object {
-      "paddingTop": 12,
-    }
-  }
->
+<div>
+  <div>
+    <br />
+    Step 2 - Select your name from the list below
+  </div>
   <div
     className="columns is-gapless is-mobile contributorsHeader datalist datalist-header"
   >
@@ -25,12 +23,15 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       onRef={[Function]}
     />
     <div
-      className="column description"
+      className="column is-narrow iconSpacer is-hidden-mobile"
+    />
+    <div
+      className="column description datalist-title"
     >
-      Step 2 - Select your name from the list below
+      Name as published
     </div>
     <div
-      className="column is-3-desktop is-3-tablet is-5-mobile identifier datalist-title"
+      className="column identifier datalist-title is-hidden-mobile"
     >
       UQ identifier
     </div>
@@ -61,20 +62,14 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       </IconButton>
     </div>
     <div
-      className="column is-narrow scrollbar-spacer is-hidden-mobile"
+      className="column is-narrow scrollbar-spacer"
     />
   </div>
 </div>
 `;
 
 exports[`Component ContributorRowHeader header for contributor editor control with delete all disabled 1`] = `
-<div
-  style={
-    Object {
-      "paddingTop": 12,
-    }
-  }
->
+<div>
   <div
     className="columns is-gapless is-mobile contributorsHeader datalist datalist-header"
   >
@@ -92,8 +87,13 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       onRef={[Function]}
     />
     <div
-      className="column description"
+      className="column is-narrow iconSpacer is-hidden-mobile"
     />
+    <div
+      className="column description datalist-title"
+    >
+      Name as published
+    </div>
     <div
       className="column is-narrow is-hidden-mobile order datalist-title"
     >
@@ -121,20 +121,14 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       </IconButton>
     </div>
     <div
-      className="column is-narrow scrollbar-spacer is-hidden-mobile"
+      className="column is-narrow scrollbar-spacer"
     />
   </div>
 </div>
 `;
 
 exports[`Component ContributorRowHeader header for contributor editor control with name and delete all button only 1`] = `
-<div
-  style={
-    Object {
-      "paddingTop": 12,
-    }
-  }
->
+<div>
   <div
     className="columns is-gapless is-mobile contributorsHeader datalist datalist-header"
   >
@@ -152,8 +146,13 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       onRef={[Function]}
     />
     <div
-      className="column description"
+      className="column is-narrow iconSpacer is-hidden-mobile"
     />
+    <div
+      className="column description datalist-title"
+    >
+      Name as published
+    </div>
     <div
       className="column is-narrow is-hidden-mobile order datalist-title"
     >
@@ -181,7 +180,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       </IconButton>
     </div>
     <div
-      className="column is-narrow scrollbar-spacer is-hidden-mobile"
+      className="column is-narrow scrollbar-spacer"
     />
   </div>
 </div>

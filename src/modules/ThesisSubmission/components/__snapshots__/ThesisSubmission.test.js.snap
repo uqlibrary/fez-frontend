@@ -260,6 +260,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             "form": Object {
               "locale": Object {
                 "addButton": "Add supervisor",
+                "descriptionStep1": "",
                 "descriptionStep1NoStep2": "List your current supervisors",
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedHint": "",
@@ -276,6 +277,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                   "confirmationMessage": "Are you sure you want to delete all items?",
                   "confirmationTitle": "Delete all",
                 },
+                "descriptionStep2": "",
                 "identifierColumn": "UQ identifier",
                 "nameColumn": "Supervisor's name",
                 "reorderColumn": "Reorder items",
@@ -283,7 +285,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             },
             "row": Object {
               "locale": Object {
-                "ariaLabel": "Select this supervisor ([name]) to assign it as you",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -293,7 +294,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                 },
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
-                "notSelectedLabelSuffix": "- select to confirm this supervisor is you",
                 "ordinalData": Array [
                   "First",
                   "Second",
@@ -306,7 +306,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                   "Ninth",
                   "Tenth",
                 ],
-                "selectedLabelSuffix": "- assigned as you",
+                "selectHint": "Select this supervisor ([name]) to assign it as you",
                 "suffix": " listed supervisor",
               },
             },
@@ -779,6 +779,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             "form": Object {
               "locale": Object {
                 "addButton": "Add supervisor",
+                "descriptionStep1": "",
                 "descriptionStep1NoStep2": "List your current supervisors",
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedHint": "",
@@ -795,6 +796,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                   "confirmationMessage": "Are you sure you want to delete all items?",
                   "confirmationTitle": "Delete all",
                 },
+                "descriptionStep2": "",
                 "identifierColumn": "UQ identifier",
                 "nameColumn": "Supervisor's name",
                 "reorderColumn": "Reorder items",
@@ -802,7 +804,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             },
             "row": Object {
               "locale": Object {
-                "ariaLabel": "Select this supervisor ([name]) to assign it as you",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -812,7 +813,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                 },
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
-                "notSelectedLabelSuffix": "- select to confirm this supervisor is you",
                 "ordinalData": Array [
                   "First",
                   "Second",
@@ -825,7 +825,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                   "Ninth",
                   "Tenth",
                 ],
-                "selectedLabelSuffix": "- assigned as you",
+                "selectHint": "Select this supervisor ([name]) to assign it as you",
                 "suffix": " listed supervisor",
               },
             },

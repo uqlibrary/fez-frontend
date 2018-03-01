@@ -85,7 +85,9 @@ exports[`ContributorForm tests  should render display name field and identifier 
         onAdd={[MockFunction]}
         showIdentifierLookup={true}
       >
-        <div>
+        <div
+          className="contributorForm"
+        >
           <div>
             Please 
             <b>
@@ -97,7 +99,7 @@ exports[`ContributorForm tests  should render display name field and identifier 
             className="columns"
           >
             <div
-              className="column"
+              className="column contributor"
             >
               <TextField
                 className="mui-long-labels-fix"
@@ -1524,7 +1526,7 @@ exports[`ContributorForm tests  should render display name field and identifier 
               </TextField>
             </div>
             <div
-              className="column"
+              className="column identifier"
             >
               <AutoComplete
                 anchorOrigin={
@@ -3295,7 +3297,9 @@ exports[`ContributorForm tests  should render display name field only 1`] = `
         }
         onAdd={[MockFunction]}
       >
-        <div>
+        <div
+          className="contributorForm"
+        >
           <div>
             Please 
             <b>
@@ -3307,7 +3311,7 @@ exports[`ContributorForm tests  should render display name field only 1`] = `
             className="columns"
           >
             <div
-              className="column"
+              className="column contributor"
             >
               <TextField
                 className="mui-long-labels-fix"

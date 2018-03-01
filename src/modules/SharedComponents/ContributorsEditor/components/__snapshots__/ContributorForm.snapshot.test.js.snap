@@ -86,7 +86,9 @@ exports[`Component ContributorForm rendering display name field and identifier f
         onAdd={[MockFunction]}
         showIdentifierLookup={true}
       >
-        <div>
+        <div
+          className="contributorForm"
+        >
           <div>
             Please 
             <b>
@@ -98,7 +100,7 @@ exports[`Component ContributorForm rendering display name field and identifier f
             className="columns"
           >
             <div
-              className="column"
+              className="column contributor"
             >
               <TextField
                 className="mui-long-labels-fix"
@@ -1525,7 +1527,7 @@ exports[`Component ContributorForm rendering display name field and identifier f
               </TextField>
             </div>
             <div
-              className="column"
+              className="column identifier"
             >
               <AutoComplete
                 anchorOrigin={
@@ -3298,7 +3300,9 @@ exports[`Component ContributorForm rendering display name field only 1`] = `
         onAdd={[MockFunction]}
         showIdentifierLookup={false}
       >
-        <div>
+        <div
+          className="contributorForm"
+        >
           <div>
             Please 
             <b>
@@ -3310,7 +3314,7 @@ exports[`Component ContributorForm rendering display name field only 1`] = `
             className="columns"
           >
             <div
-              className="column"
+              className="column contributor"
             >
               <TextField
                 className="mui-long-labels-fix"

@@ -185,7 +185,6 @@ exports[`PatentForm renders  component 1`] = `
           },
           "row": Object {
             "locale": Object {
-              "ariaLabel": "Select this creator ([name]) to assign it as you",
               "deleteHint": "Remove this item",
               "deleteRecordConfirmation": Object {
                 "cancelButtonLabel": "No",
@@ -195,7 +194,6 @@ exports[`PatentForm renders  component 1`] = `
               },
               "moveDownHint": "Move item down the order",
               "moveUpHint": "Move item up the order",
-              "notSelectedLabelSuffix": "- select to confirm this creator is you",
               "ordinalData": Array [
                 "First",
                 "Second",
@@ -208,8 +206,8 @@ exports[`PatentForm renders  component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
+              "selectHint": "Select this creator ([name]) to assign it as you",
               "selectedHint": "This is you",
-              "selectedLabelSuffix": "- assigned as you",
               "suffix": " listed creator",
               "unselectedHint": "Select this to confirm this creator is you",
             },

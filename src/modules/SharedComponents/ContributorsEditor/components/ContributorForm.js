@@ -93,12 +93,11 @@ export class ContributorForm extends React.PureComponent {
     render() {
         const autoCompleteDataFormat = {text: 'displayName', value: 'aut_id'};
         const description = this.props.showContributorAssignment ? this.props.locale.descriptionStep1 : this.props.locale.descriptionStep1NoStep2;
-
         return (
-            <div>
+            <div className="contributorForm">
                 {description}
                 <div className="columns">
-                    <div className="column">
+                    <div className="column contributor">
                         <TextField
                             fullWidth
                             ref="nameAsPublishedField"
@@ -114,7 +113,7 @@ export class ContributorForm extends React.PureComponent {
                     </div>
                     {
                         this.props.showIdentifierLookup &&
-                        <div className="column">
+                        <div className="column identifier">
                             <AutoComplete
                                 disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
                                 listStyle={{maxHeight: 200, overflow: 'auto'}}

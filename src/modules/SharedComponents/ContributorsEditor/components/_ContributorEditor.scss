@@ -4,6 +4,13 @@
   font-weight: $text-weight-bold;
   color: $theme-color-lighter;
 }
+.contributorForm{
+  .identifier {
+    @include mobile {
+      margin-top: -24px;
+    }
+  }
+}
 .contributorsHeader {
   &.datalist.datalist-header {
     margin-top: 6px !important;
@@ -13,36 +20,77 @@
     width: 48px;
   }
   .description {
-    padding-bottom: 6px !important;
-    margin-bottom: 6px !important;
-    margin-top: -6px !important;
+    text-indent: 6px !important;
   }
-}
-.validationErrorMessage {
-  color: $error-color;
-  font-size: $text-body-small;
-  margin: 12px 0 0 0;
+  .identifier {
+    text-indent: 0 !important;
+  }
+  .order {
+    width: 100px;
+  }
+  .iconSpacer {
+    width: 50px;
+  }
 }
 .contributorsRow {
   padding: 0;
   > .columns {
     margin-bottom: 0 !important;
   }
+  .contributor {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    .contributorName, .contributorSubtitle {
+      max-width: 100% !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      white-space: nowrap !important;
+      .columns, .column, .name {
+        max-width: 100% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+      }
+    }
+  }
+  .contributorIdentifier {
+    width: calc(100% - 16px) !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    .identifierName, .identifierSubtitle {
+      font-weight: bold;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      white-space: nowrap !important;
+      @include mobile {
+        font-size: $text-body-xsmall !important;
+        font-weight: normal !important;
+      }
+    }
+    .identifierName {
+      @include mobile {
+        &::before {
+          content: 'UQ Id: ';
+        }
+      }
+    }
+    .identifierSubtitle {
+      @include mobile {
+        &::before {
+          content: 'UQ Username: ';
+        }
+      }
+    }
+  }
   .contributorDetails {
-    padding: 6px;
-    overflow: hidden;
+    margin: 6px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
     @include mobile {
       padding-left: 4px;
-    }
-    .contributorNotSelectedSuffix {
-      display: none;
-    }
-    &:hover, &:focus {
-      .contributorNotSelectedSuffix {
-        padding-left: 4px;
-        display: inline-block;
-        opacity: 0.66;
-      }
     }
   }
   .contributorActions {
@@ -72,13 +120,16 @@
   &.selected {
     background-color: $accent-color-light;
     .datalist-text {
+      test-indent: 12px !important;
       color: $text-color-reverse;
       .datalist-text-subtitle {
         color: $text-color-reverse !important;
       }
       .contributorSelectedSuffix {
-        padding-left: 4px;
+        text-indent: 4px;
         opacity: 0.66;
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
     }
     .material-icons {
@@ -97,4 +148,9 @@
   @include mobile {
     padding-left: 0;
   }
+}
+.validationErrorMessage {
+  color: $error-color;
+  font-size: $text-body-small;
+  margin: 12px 0 0 0;
 }

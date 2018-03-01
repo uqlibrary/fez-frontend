@@ -256,7 +256,6 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
           },
           "row": Object {
             "locale": Object {
-              "ariaLabel": "Select this editor ([name]) to assign it as you",
               "deleteHint": "Remove this item",
               "deleteRecordConfirmation": Object {
                 "cancelButtonLabel": "No",
@@ -266,7 +265,6 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
               },
               "moveDownHint": "Move item down the order",
               "moveUpHint": "Move item up the order",
-              "notSelectedLabelSuffix": "- select to confirm this editor is you",
               "ordinalData": Array [
                 "First",
                 "Second",
@@ -279,8 +277,8 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
+              "selectHint": "Select this editor ([name]) to assign it as you",
               "selectedHint": "This is you",
-              "selectedLabelSuffix": "- assigned as you",
               "suffix": " listed editor",
               "unselectedHint": "Select this to confirm this editor is you",
             },
