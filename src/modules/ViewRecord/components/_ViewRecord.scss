@@ -1,6 +1,7 @@
 @import '../../../sass/variables';
 
 .viewRecord {
+  margin-top: -12px !important;
   .publicationCitation {
     padding-top: 0 !important;
     border-bottom: none !important;
@@ -11,6 +12,11 @@
       font-size: $title-large !important;
       line-height: $title-large + 6px !important;
       color: $theme-color !important;
+      margin-top: 0 !important;
+      @include mobile {
+        font-size: $title-medium !important;
+        line-height: $title-medium + 6px !important;
+      }
     }
   }
   .openExternalUrlIcon {
