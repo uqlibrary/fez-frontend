@@ -1096,7 +1096,9 @@ export default {
                     ['maxFileSize']: 'File(s) ([filenames]) exceed maximum allowed upload file size',
                     ['maxFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) Files ([filenames]) will not be uploaded',
                 },
-                errorTitle: 'Upload Errors',
+                errorTitle: 'Upload errors',
+                successTitle: 'Success',
+                successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
                 fileUploadRestrictionHeading: (<h3><span className="requiredField"><label>&nbsp;</label></span>File upload restrictions</h3>),
                 fileUploadRestrictions: (
                     <div>

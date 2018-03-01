@@ -61,21 +61,21 @@ mock
         if (config.params.source === 'pubmed' && config.params.id) return [200, mockData.externalPubMedSearchResultsList];
     })
     .onGet(routes.CURRENT_USER_RECORDS_API({}).apiUrl).reply(config => {
-    // CURRENT_USER_RECORDS_API
-    if (config.params.rule === 'mine') return [200, mockData.myRecordsList];
-    // POSSIBLE_RECORDS_API
-    if (config.params.rule === 'possible') return [200, mockData.possibleUnclaimedList];
-    // if (config.params.rule === 'possible') return [500, ['ERROR POSSIBLE_RECORDS_API']];
-    // SEARCH_KEY_LOOKUP_API
-    if (config.params.rule === 'lookup') {
-        return [200, mockData.searchKeyList[config.params.search_key]];
-    }
-    // SEARCH_INTERNAL_RECORDS_API
-    if (config.params.id || config.params.doi || config.params.title) {
-        return [200, mockData.internalTitleSearchList];
-    }
-    return [404, ['Request not found']];
-})
+        // CURRENT_USER_RECORDS_API
+        if (config.params.rule === 'mine') return [200, mockData.myRecordsList];
+        // POSSIBLE_RECORDS_API
+        if (config.params.rule === 'possible') return [200, mockData.possibleUnclaimedList];
+        // if (config.params.rule === 'possible') return [500, ['ERROR POSSIBLE_RECORDS_API']];
+        // SEARCH_KEY_LOOKUP_API
+        if (config.params.rule === 'lookup') {
+            return [200, mockData.searchKeyList[config.params.search_key]];
+        }
+        // SEARCH_INTERNAL_RECORDS_API
+        if (config.params.id || config.params.doi || config.params.title) {
+            return [200, mockData.internalTitleSearchList];
+        }
+        return [404, ['Request not found']];
+    })
     .onGet(routes.GET_ACML_QUICK_TEMPLATES_API().apiUrl)
     .reply(200, mockData.quickTemplates)
     .onGet(routes.AUTHORS_SEARCH_API({query: '.*'}).apiUrl)
@@ -83,7 +83,12 @@ mock
     .onGet(routes.GET_PUBLICATION_TYPES_API().apiUrl)
     .reply(200, mockData.recordsTypeList)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
-    .reply(200, {data: {...mockData.record}})
+    .reply(config => {
+        if (config.url.indexOf('UQ:164935') >= 0) {
+            return [200, {data: {...mockData.recordWithMap}}];
+        }
+        return [200, {data: {...mockData.record}}];
+    })
     // .reply(500, ['ERROR in EXISTING_RECORD_API'])
     .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({id: '.*'}).apiUrl)))
     .reply((config) => {
@@ -111,8 +116,8 @@ mock
     .reply(200, {data: {}})
     // .reply(500, ['ERROR HIDE_POSSIBLE_RECORD_API'])
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
-    // .reply(200, {data: {}});
-    .reply(500, {message: 'error - failed NEW_RECORD_API'});
+    .reply(200, {data: {}});
+    // .reply(500, {message: 'error - failed NEW_RECORD_API'});
 
 mock
     .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))

@@ -468,7 +468,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
         locale={
           Object {
             "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-            "errorTitle": "Upload Errors",
+            "errorTitle": "Upload errors",
             "fileUploadInstruction": <p>
               Click here to select files, or drag files into this area to upload
             </p>,
@@ -500,6 +500,8 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
               </ul>
             </div>,
             "instructions": "",
+            "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+            "successTitle": "Success",
             "validation": Object {
               "fileName": "File(s) ([filenames]) have invalid file name",
               "folder": "Invalid files ([filenames])",
@@ -985,7 +987,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
         locale={
           Object {
             "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-            "errorTitle": "Upload Errors",
+            "errorTitle": "Upload errors",
             "fileUploadInstruction": <p>
               Click here to select files, or drag files into this area to upload
             </p>,
@@ -1017,6 +1019,8 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
               </ul>
             </div>,
             "instructions": "",
+            "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+            "successTitle": "Success",
             "validation": Object {
               "fileName": "File(s) ([filenames]) have invalid file name",
               "folder": "Invalid files ([filenames])",
