@@ -39,6 +39,15 @@ export const generateCancelToken = () => {
 api.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
 api.isCancel = axios.isCancel; // needed for cancelling requests and the instance created does not have this method
 
+export const isThesisSubmissionRoute = (location) => {
+    return (
+        location.pathname === pathConfig.hdrSubmission ||
+        location.hash === `#${pathConfig.hdrSubmission}` ||
+        location.pathname === pathConfig.sbsSubmission ||
+        location.hash === `#${pathConfig.sbsSubmission}`
+    );
+};
+
 let isGet = null;
 api.interceptors.request.use(request => {
     isGet = request.method === 'get';
@@ -52,7 +61,7 @@ api.interceptors.response.use(response => {
     return Promise.resolve(response.data);
 }, error => {
     if (error.response && error.response.status === 403) {
-        if (window.location.pathname === pathConfig.hdrSubmission || window.location.hash === `#${pathConfig.hdrSubmission}`) {
+        if (isThesisSubmissionRoute(window.location)) {
             const returnUrl = window.btoa(window.location.href);
             window.location.assign(`${AUTH_URL_LOGIN}?return=${returnUrl}`);
         }

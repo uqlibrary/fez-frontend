@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
-import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
+import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL, isThesisSubmissionRoute} from 'config';
 import {locale} from 'locale';
 
 // application components
@@ -88,7 +88,12 @@ export default class App extends React.Component {
 
     redirectUserToLogin = () => {
         const redirectUrl = (!this.props.accountLoading && this.props.account !== null) ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
-        const returnUrl = window.btoa((!this.props.accountLoading && this.props.account !== null) ? APP_URL : window.location.href);
+        let returnUrl = window.btoa((!this.props.accountLoading && this.props.account !== null) ? APP_URL : window.location.href);
+
+        if (!(this.props.author && this.props.author.aut_student_username) && isThesisSubmissionRoute(location)) {
+            returnUrl = window.location.href;
+        }
+
         window.location.assign(`${redirectUrl}?return=${returnUrl}`);
     };
 

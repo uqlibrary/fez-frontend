@@ -12,7 +12,7 @@ export {
     FACET_TYPE_RANGE
 } from './general';
 
-export {api, generateCancelToken, cache} from './axios';
+export {api, generateCancelToken, cache, isThesisSubmissionRoute} from './axios';
 export {default as theme} from './theme';
 export * as validation from './validation';
 export * as general from './general';
