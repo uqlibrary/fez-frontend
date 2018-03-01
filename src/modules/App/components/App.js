@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
-import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL, isThesisSubmissionRoute} from 'config';
+import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
 import {locale} from 'locale';
 
 // application components
@@ -86,15 +86,11 @@ export default class App extends React.Component {
         });
     };
 
-    redirectUserToLogin = () => {
+    redirectUserToLogin = (isCurrentLocation = false) => () => {
         const redirectUrl = (!this.props.accountLoading && this.props.account !== null) ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
-        let returnUrl = window.btoa((!this.props.accountLoading && this.props.account !== null) ? APP_URL : window.location.href);
+        const returnUrl = !isCurrentLocation ? APP_URL : window.location.href;
 
-        if (!(this.props.author && this.props.author.aut_student_username) && isThesisSubmissionRoute(location)) {
-            returnUrl = window.location.href;
-        }
-
-        window.location.assign(`${redirectUrl}?return=${returnUrl}`);
+        window.location.assign(`${redirectUrl}?return=${window.btoa(returnUrl)}`);
     };
 
     redirectToOrcid = () => {
@@ -135,12 +131,17 @@ export default class App extends React.Component {
         const containerStyle = showMenu && this.state.docked ? {paddingLeft: 340} : {};
         const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
 
+        if (!isAuthorizedUser && isThesisSubmissionPage) {
+            this.redirectUserToLogin()();
+            return (<div/>);
+        }
+
         let userStatusAlert = null;
         if(!this.props.accountLoading && !this.props.account) {
             // user is not logged in
             userStatusAlert = {
                 ...locale.global.loginAlert,
-                action: this.redirectUserToLogin
+                action: this.redirectUserToLogin()
             };
         } else if (!isPublicPage && !isAuthorLoading && this.props.account && !this.props.author) {
             // user is logged in, but doesn't have eSpace author identifier
@@ -159,6 +160,7 @@ export default class App extends React.Component {
                 ...locale.global.forceOrcidLinkAlert
             };
         }
+
         return (
             <div className="layout-fill align-stretch">
                 <AppBar
@@ -183,7 +185,7 @@ export default class App extends React.Component {
                             <AuthButton
                                 isAuthorizedUser={isAuthorizedUser}
                                 hoveredStyle={appBarButtonStyles}
-                                onClick={this.redirectUserToLogin}
+                                onClick={this.redirectUserToLogin(isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
                                 signInTooltipText={locale.global.authentication.signInText}
                                 signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''} />
                         </div>

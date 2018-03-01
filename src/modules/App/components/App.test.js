@@ -133,7 +133,7 @@ describe('Application component', () => {
 
     it('should redirect to login page', () => {
         window.location.assign = jest.fn();
-        const wrapper = setup({}).instance().redirectUserToLogin();
+        const wrapper = setup({}).instance().redirectUserToLogin()();
         expect(window.location.assign).toBeCalledWith(expect.stringContaining(AUTH_URL_LOGIN));
     });
 
@@ -142,8 +142,16 @@ describe('Application component', () => {
         const wrapper = setup({
             account: account,
             author: author
-        }).instance().redirectUserToLogin();
+        }).instance().redirectUserToLogin()();
         expect(window.location.assign).toBeCalledWith(expect.stringContaining(AUTH_URL_LOGOUT));
+    });
+
+    it('should redirect to login page with correct return url if rhd submission route accessed', () => {
+        window.location.assign = jest.fn();
+        window.btoa = jest.fn(() => routes.pathConfig.hdrSubmission);
+
+        const wrapper = setup({}).instance().redirectUserToLogin(true)();
+        expect(window.location.assign).toBeCalledWith(expect.stringContaining(routes.pathConfig.hdrSubmission));
     });
 
     it('should handleResize', () => {
