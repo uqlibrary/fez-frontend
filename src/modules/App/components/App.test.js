@@ -142,7 +142,7 @@ describe('Application component', () => {
         const wrapper = setup({
             account: account,
             author: author
-        }).instance().redirectUserToLogin()();
+        }).instance().redirectUserToLogin(true)();
         expect(window.location.assign).toBeCalledWith(expect.stringContaining(AUTH_URL_LOGOUT));
     });
 
@@ -150,7 +150,7 @@ describe('Application component', () => {
         window.location.assign = jest.fn();
         window.btoa = jest.fn(() => routes.pathConfig.hdrSubmission);
 
-        const wrapper = setup({}).instance().redirectUserToLogin(true)();
+        const wrapper = setup({}).instance().redirectUserToLogin(true, true)();
         expect(window.location.assign).toBeCalledWith(expect.stringContaining(routes.pathConfig.hdrSubmission));
     });
 

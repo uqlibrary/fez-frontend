@@ -86,10 +86,9 @@ export default class App extends React.Component {
         });
     };
 
-    redirectUserToLogin = (isCurrentLocation = false) => () => {
-        const redirectUrl = (!this.props.accountLoading && this.props.account !== null) ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
-        const returnUrl = !isCurrentLocation ? APP_URL : window.location.href;
-
+    redirectUserToLogin = (isAuthorizedUser = false, redirectToCurrentLocation = false) => () => {
+        const redirectUrl = isAuthorizedUser ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
+        const returnUrl = isAuthorizedUser && !redirectToCurrentLocation  ? APP_URL : window.location.href;
         window.location.assign(`${redirectUrl}?return=${window.btoa(returnUrl)}`);
     };
 
@@ -185,7 +184,7 @@ export default class App extends React.Component {
                             <AuthButton
                                 isAuthorizedUser={isAuthorizedUser}
                                 hoveredStyle={appBarButtonStyles}
-                                onClick={this.redirectUserToLogin(isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
+                                onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
                                 signInTooltipText={locale.global.authentication.signInText}
                                 signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''} />
                         </div>
