@@ -56,8 +56,8 @@ export default class ViewRecord extends Component {
         }
 
         return (
-            <StandardPage>
-                <PublicationCitation publication={this.props.recordToView}/>
+            <StandardPage className="viewRecord">
+                <PublicationCitation publication={this.props.recordToView} />
                 <StandardCard title={'Links'}>
                     Include PubmedCentral link if available: <PubmedCentralLink pubmedCentralId={'PMC123232'} />
                 </StandardCard>

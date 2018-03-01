@@ -54,6 +54,12 @@ describe('PublicationCitation ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render component with a linked title', () => {
+        const publicationWithSources = {...mockRecordToFix, "sources": [{source: "espace", id: "UQ:224457"}]};
+        const wrapper = setup({publication: publicationWithSources, showSources: true, linkedTitle: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should check if props changed', () => {
         const wrapper = setup({});
         let shouldUpdate = wrapper.instance().shouldComponentUpdate({publication: {...mockRecordToFix, "sources": [{source: "espace", id: "UQ:224457"}]}});

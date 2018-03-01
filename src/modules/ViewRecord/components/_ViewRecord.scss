@@ -1,0 +1,26 @@
+@import '../../../sass/variables';
+
+.viewRecord {
+  .publicationCitation {
+    padding-top: 0 !important;
+    border-bottom: none !important;
+    h1.pageTitle {
+      display: none;
+    }
+    h3.publicationTitle {
+      font-size: $title-large !important;
+      line-height: $title-large + 6px !important;
+      color: $theme-color !important;
+    }
+  }
+  .openExternalUrlIcon {
+    height: $text-body-small !important;
+    width: $text-body-small !important;
+    font-size: $text-body-small !important;
+    fill: $accent-color !important;
+    color: $accent-color !important;
+    margin: 0 2px;
+    vertical-align: top;
+  }
+}
+
