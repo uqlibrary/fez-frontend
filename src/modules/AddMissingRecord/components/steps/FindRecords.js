@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 // forms & custom components
 import {PublicationSearchForm} from 'modules/SharedComponents/PublicationSearchForm';
-import {locale, routes} from 'config';
+import {routes} from 'config';
+import {locale} from 'locale';
 
 export default class FindRecords extends React.Component {
     static propTypes = {

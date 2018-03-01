@@ -1,9 +1,10 @@
 import {connect} from 'react-redux';
-import {reduxForm, getFormValues, stopSubmit, SubmissionError, reset} from 'redux-form/immutable';
+import {reduxForm, getFormValues, getFormSyncErrors, stopSubmit, SubmissionError, reset} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import PublicationForm from '../components/PublicationForm';
 import {createNewRecord} from 'actions';
-import {locale, general} from 'config';
+import {general} from 'config';
+import {locale} from 'locale';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 
 const FORM_NAME = 'PublicationForm';
@@ -63,7 +64,8 @@ let PublicationFormContainer = reduxForm({
 
 const mapStateToProps = (state) => {
     return {
-        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({})
+        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
+        formErrors: getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({})
     };
 };
 

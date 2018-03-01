@@ -1,0 +1,279 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Date range  should render component with values set 1`] = `
+<ListItem
+  autoGenerateNestedIndicator={true}
+  className="dateRange active  "
+  containerElement="span"
+  disableKeyboardFocus={false}
+  disabled={false}
+  initiallyOpen={false}
+  insetChildren={false}
+  nestedItems={
+    Array [
+      <ListItem
+        autoGenerateNestedIndicator={true}
+        className="dateRage active  "
+        containerElement="span"
+        disableKeyboardFocus={false}
+        disabled={false}
+        initiallyOpen={false}
+        insetChildren={false}
+        leftIcon={
+          <NavigationClose
+            disabled={undefined}
+          />
+        }
+        nestedItems={Array []}
+        nestedLevel={0}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onNestedListToggle={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
+        open={null}
+        primaryText="2010 - 2016"
+        primaryTogglesNestedList={false}
+        secondaryTextLines={1}
+      />,
+    ]
+  }
+  nestedLevel={0}
+  onKeyboardFocus={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onNestedListToggle={[Function]}
+  onTouchEnd={[Function]}
+  onTouchStart={[Function]}
+  open={null}
+  primaryText="Date range"
+  primaryTogglesNestedList={true}
+  secondaryTextLines={1}
+/>
+`;
+
+exports[`Date range  should render disabled component 1`] = `
+<ListItem
+  autoGenerateNestedIndicator={true}
+  className="dateRange  disabled"
+  containerElement="span"
+  disableKeyboardFocus={false}
+  disabled={true}
+  initiallyOpen={false}
+  insetChildren={false}
+  nestedItems={
+    Array [
+      <ListItem
+        autoGenerateNestedIndicator={true}
+        className="dateRage  disabled"
+        containerElement="span"
+        disableKeyboardFocus={false}
+        disabled={true}
+        initiallyOpen={false}
+        insetChildren={false}
+        leftIcon={null}
+        nestedItems={Array []}
+        nestedLevel={0}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onNestedListToggle={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
+        open={null}
+        primaryText=""
+        primaryTogglesNestedList={false}
+        secondaryTextLines={1}
+      >
+        <div
+          className="yearPublished columns is-gapless"
+        >
+          <div
+            className="dateRangeFrom column"
+          >
+            <TextField
+              disabled={true}
+              floatingLabelFixed={false}
+              floatingLabelText="From"
+              fullWidth={true}
+              multiLine={false}
+              onChange={[Function]}
+              rows={1}
+              type="number"
+              underlineShow={true}
+              value={2008}
+            />
+          </div>
+          <div
+            className="dateRangeSeparator column is-narrow"
+          />
+          <div
+            className="dateRangeTo column"
+          >
+            <TextField
+              disabled={true}
+              floatingLabelFixed={false}
+              floatingLabelText="To"
+              fullWidth={true}
+              multiLine={false}
+              onChange={[Function]}
+              rows={1}
+              type="number"
+              underlineShow={true}
+              value={2023}
+            />
+          </div>
+          <div
+            className="dateRangeSeparator column is-narrow"
+          />
+          <div
+            className="dateRangeGo column is-narrow"
+          >
+            <FlatButton
+              className="is-mui-spacing-button"
+              disabled={true}
+              fullWidth={true}
+              label="Go"
+              labelPosition="after"
+              labelStyle={Object {}}
+              onClick={[Function]}
+              onKeyboardFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onTouchStart={[Function]}
+              primary={false}
+              secondary={false}
+            />
+          </div>
+        </div>
+      </ListItem>,
+    ]
+  }
+  nestedLevel={0}
+  onKeyboardFocus={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onNestedListToggle={[Function]}
+  onTouchEnd={[Function]}
+  onTouchStart={[Function]}
+  open={null}
+  primaryText="Date range"
+  primaryTogglesNestedList={true}
+  secondaryTextLines={1}
+/>
+`;
+
+exports[`Date range  should render empty component 1`] = `
+<ListItem
+  autoGenerateNestedIndicator={true}
+  className="dateRange  "
+  containerElement="span"
+  disableKeyboardFocus={false}
+  disabled={false}
+  initiallyOpen={false}
+  insetChildren={false}
+  nestedItems={
+    Array [
+      <ListItem
+        autoGenerateNestedIndicator={true}
+        className="dateRage  "
+        containerElement="span"
+        disableKeyboardFocus={false}
+        disabled={false}
+        initiallyOpen={false}
+        insetChildren={false}
+        leftIcon={null}
+        nestedItems={Array []}
+        nestedLevel={0}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onNestedListToggle={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
+        open={null}
+        primaryText=""
+        primaryTogglesNestedList={false}
+        secondaryTextLines={1}
+      >
+        <div
+          className="yearPublished columns is-gapless"
+        >
+          <div
+            className="dateRangeFrom column"
+          >
+            <TextField
+              disabled={false}
+              floatingLabelFixed={false}
+              floatingLabelText="From"
+              fullWidth={true}
+              multiLine={false}
+              onChange={[Function]}
+              rows={1}
+              type="number"
+              underlineShow={true}
+              value={2008}
+            />
+          </div>
+          <div
+            className="dateRangeSeparator column is-narrow"
+          />
+          <div
+            className="dateRangeTo column"
+          >
+            <TextField
+              disabled={false}
+              floatingLabelFixed={false}
+              floatingLabelText="To"
+              fullWidth={true}
+              multiLine={false}
+              onChange={[Function]}
+              rows={1}
+              type="number"
+              underlineShow={true}
+              value={2023}
+            />
+          </div>
+          <div
+            className="dateRangeSeparator column is-narrow"
+          />
+          <div
+            className="dateRangeGo column is-narrow"
+          >
+            <FlatButton
+              className="is-mui-spacing-button"
+              disabled={false}
+              fullWidth={true}
+              label="Go"
+              labelPosition="after"
+              labelStyle={Object {}}
+              onClick={[Function]}
+              onKeyboardFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onTouchStart={[Function]}
+              primary={false}
+              secondary={false}
+            />
+          </div>
+        </div>
+      </ListItem>,
+    ]
+  }
+  nestedLevel={0}
+  onKeyboardFocus={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onNestedListToggle={[Function]}
+  onTouchEnd={[Function]}
+  onTouchStart={[Function]}
+  open={null}
+  primaryText="Date range"
+  primaryTogglesNestedList={true}
+  secondaryTextLines={1}
+/>
+`;

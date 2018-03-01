@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {reduxForm, getFormValues, stopSubmit, SubmissionError} from 'redux-form/immutable';
+import {reduxForm, getFormValues, getFormSyncErrors, SubmissionError} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import ClaimRecord from '../components/ClaimRecord';
 import {withRouter} from 'react-router-dom';
@@ -25,24 +25,19 @@ const onSubmit = (values, dispatch) => {
         });
 };
 
-const validate = () => {
-    // reset global errors, eg form submit failure
-    stopSubmit(FORM_NAME, null);
-};
-
 let ClaimPublicationFormContainer = reduxForm({
     form: FORM_NAME,
-    validate,
     onSubmit
 })(confirmDiscardFormChanges(ClaimRecord, FORM_NAME));
 
 const mapStateToProps = (state) => {
     return {
-        publicationToClaimFileUploadingError: state.get('claimPublicationReducer').publicationToClaimFileUploadingError,
+        publicationToClaimFileUploadingError: state && state.get('claimPublicationReducer') ? state.get('claimPublicationReducer').publicationToClaimFileUploadingError : null,
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
+        formErrors: getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({}),
         initialValues: {
-            publication: state.get('claimPublicationReducer').publicationToClaim,
-            author: state.get('accountReducer').author
+            publication: state && state.get('claimPublicationReducer') ? state.get('claimPublicationReducer').publicationToClaim : null,
+            author: state && state.get('accountReducer') ? state.get('accountReducer').author : null
         }
     };
 };

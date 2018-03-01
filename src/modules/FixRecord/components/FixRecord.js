@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
@@ -6,24 +6,37 @@ import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
 import MenuItem from 'material-ui/MenuItem';
 
-import {SelectField, TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, NavigationDialogBox,
-    FileUploadField, InlineLoader} from 'uqlibrary-react-toolbox';
-import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
-import {validation, locale, routes} from 'config';
+import {SelectField} from 'uqlibrary-react-toolbox/build/SelectField';
+import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
+import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
+import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPrompt';
+import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
+import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
 
-export default class FixRecord extends Component {
+import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
+import {validation, routes} from 'config';
+import {locale} from 'locale';
+
+export default class FixRecord extends React.PureComponent {
     static propTypes = {
         ...propTypes, // all redux-form props
 
         recordToFix: PropTypes.object,
-        recordToFixLoading: PropTypes.bool,
+        loadingRecordToFix: PropTypes.bool,
 
         author: PropTypes.object,
-        authorLoading: PropTypes.bool,
+        accountAuthorLoading: PropTypes.bool,
 
         history: PropTypes.object.isRequired,
         match: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired
+        actions: PropTypes.object.isRequired,
+
+        publicationToFixFileUploadingError: PropTypes.bool,
+
+        errors: PropTypes.object,
     };
 
     static contextTypes = {
@@ -38,24 +51,12 @@ export default class FixRecord extends Component {
         };
     }
 
-    componentWillMount() {
-        const {recordToFix, author} = this.props;
-
-        const isAuthorLinked = author && recordToFix && this.isLoggedInUserLinked(author, recordToFix, 'fez_record_search_key_author_id', 'rek_author_id');
-        const isContributorLinked = author && recordToFix && this.isLoggedInUserLinked(author, recordToFix, 'fez_record_search_key_contributor_id', 'rek_contributor_id');
-
-        if (!(this.props.authorLoading || this.props.recordToFixLoading) && !isAuthorLinked && !isContributorLinked) {
-            // if either author or publication data is missing, abandon form
-            this.props.history.go(-1);
-        }
-    }
-
     componentDidMount() {
-        if (!this.props.recordToFixLoading && !this.props.recordToFix) {
+        if (this.props.actions &&
+            !this.props.recordToFix &&
+            this.props.match.params &&
+            this.props.match.params.pid) {
             this.props.actions.loadRecordToFix(this.props.match.params.pid);
-        }
-        if (!this.props.authorLoading && !this.props.author) {
-            this.props.actions.loadCurrentAccount();
         }
     }
 
@@ -65,13 +66,25 @@ export default class FixRecord extends Component {
         }
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props !== nextProps || this.state !== nextState;
+    }
+
     componentWillUnmount() {
         // clear previously selected recordToFix for a fix
-        this.props.actions.clearFixRecord();
+        if (this.props.actions) this.props.actions.clearFixRecord();
     }
 
     isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
-        return recordToFix[searchKey] && recordToFix[searchKey].length > 0 && recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
+        return !!author && !!recordToFix && recordToFix[searchKey] && recordToFix[searchKey].length > 0
+            && recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
+    };
+
+    isAuthorLinked = () => {
+        const isAuthorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_author_id', 'rek_author_id');
+        const isContributorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_contributor_id', 'rek_contributor_id');
+
+        return isAuthorLinked || isContributorLinked;
     };
 
     _navigateToMyResearch = () => {
@@ -95,40 +108,28 @@ export default class FixRecord extends Component {
         }
     };
 
-    getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error,
-        submitSucceeded = false, alertLocale = {}}) => {
-        let alertProps = null;
-        if (submitFailed && error) {
-            alertProps = {...alertLocale.errorAlert, message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error};
-        } else if (!submitFailed && dirty && invalid) {
-            alertProps = {...alertLocale.validationAlert};
-        } else if (submitting) {
-            alertProps = {...alertLocale.progressAlert};
-        } else if (submitSucceeded) {
-            alertProps = {...alertLocale.successAlert};
-        }
-        return alertProps ? (<Alert {...alertProps} />) : null;
-    };
-
     _setSuccessConfirmation = (ref) => {
         this.successConfirmationBox = ref;
     };
 
     render() {
+        // if author is not linked to this record, abandon form
+        if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
+            this.props.history.go(-1);
+            return <div />;
+        }
+
         const txt = locale.pages.fixRecord;
         const txtFixForm = locale.forms.fixPublicationForm;
         const txtUnclaimForm = locale.forms.unclaimPublicationForm;
 
-        if(this.props.authorLoading || this.props.recordToFixLoading) {
+        if(this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
             return (
                 <div className="is-centered">
                     <InlineLoader message={txt.loadingMessage}/>
                 </div>
             );
         }
-
-        const {recordToFix, author} = this.props;
-        if (!recordToFix || !author) return (<div />);
 
         const fixOptions = txt.actionsOptions.map((item, index) => (
             <MenuItem
@@ -139,15 +140,18 @@ export default class FixRecord extends Component {
 
         // set confirmation message depending on file upload status
         const saveConfirmationLocale = {...txtFixForm.successWorkflowConfirmation};
-        if (this.props.publicationToFixFileUploadingError) {
-            saveConfirmationLocale.confirmationMessage = saveConfirmationLocale.fileFailConfirmationMessage;
-        }
-
+        saveConfirmationLocale.confirmationMessage = (
+            <div>
+                {this.props.publicationToFixFileUploadingError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
+                {saveConfirmationLocale.confirmationMessage}
+            </div>
+        );
+        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txtFixForm});
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
                     <StandardCard title={txt.subTitle} help={txt.help}>
-                        <PublicationCitation publication={recordToFix}/>
+                        <PublicationCitation publication={this.props.recordToFix}/>
 
                         <Field
                             component={SelectField}
@@ -197,7 +201,7 @@ export default class FixRecord extends Component {
                                     name="files"
                                     component={FileUploadField}
                                     disabled={this.props.submitting}
-                                    requireFileAccess
+                                    requireOpenAccessStatus
                                     validate={[validation.validFileUpload]}
                                 />
                             </StandardCard>
@@ -218,7 +222,7 @@ export default class FixRecord extends Component {
                     }
 
                     {
-                        this.getAlert({...this.props, alertLocale: txtFixForm})
+                        alertProps && <Alert {...alertProps} />
                     }
 
                     <div className="columns action-buttons">

@@ -140,8 +140,8 @@ describe('Controlled vocabularies reducer', () => {
         expect(state[123456].itemsLoadingError).toBeFalsy();
     });
 
-    // it('should return unmodiifed state if action doesn\'t have a handler', () => {
-        // const state = controlledVocabulariesReducer({abc: 'abc'}, {type: 'someotheraction'});
-        // expect(state).toEqual({abc: 'abc'});
-    // });
+    it('should return unmodiifed state if action doesn\'t have a handler', () => {
+        const state = controlledVocabulariesReducer({abc: 'abc'}, {type: 'INVALID_ACTION_TYPE'});
+        expect(state).toEqual({abc: 'abc'});
+    });
 });

@@ -2,21 +2,21 @@ import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     recordToFix: null,
-    recordToFixLoading: false,
+    loadingRecordToFix: true,
     recordToFixError: null
 };
 
 const handlers = {
     [actions.FIX_RECORD_LOADING]: () => (
         {
-            ...initialState,
-            recordToFixLoading: true
+            ...initialState
         }
     ),
 
     [actions.FIX_RECORD_LOADED]: (state, action) => (
         {
             ...initialState,
+            loadingRecordToFix: false,
             recordToFix: action.payload
         }
     ),
@@ -24,6 +24,7 @@ const handlers = {
     [actions.FIX_RECORD_LOAD_FAILED]: (state, action) => (
         {
             ...initialState,
+            loadingRecordToFix: false,
             recordToFixError: action.payload
         }
     ),
@@ -31,6 +32,7 @@ const handlers = {
     [actions.FIX_RECORD_SET]: (state, action) => (
         {
             ...initialState,
+            loadingRecordToFix: false,
             recordToFix: action.payload
         }
     ),
@@ -42,7 +44,7 @@ const handlers = {
     )
 };
 
-export default function fixRecordReducer(state = initialState, action) {
+export default function fixRecordReducer(state = {...initialState}, action) {
     const handler = handlers[action.type];
     if (!handler) {
         return state;

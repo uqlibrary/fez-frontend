@@ -10,7 +10,8 @@ const mapStateToProps = (state) => {
         ...state.get('academicStatsReducer'),
         ...state.get('appReducer'),
         ...state.get('publicationsReducer'),
-        possiblyYourPublicationsCount: state.get('claimPublicationReducer').possibleCounts
+        possiblyYourPublicationsCount: state.get('claimPublicationReducer').possibleCounts,
+        possiblyYourPublicationsCountLoading: state.get('claimPublicationReducer').loadingPossibleCounts,
     };
 };
 

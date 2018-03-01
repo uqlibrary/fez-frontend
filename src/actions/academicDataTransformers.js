@@ -14,15 +14,10 @@ export function getPublicationsPerType(data, keepPublicationTypes) {
             return a;
         }, {});
 
-    // transform object to array
-    const publicationTypesCount = [];
-    Object.keys(publicationTypesCountObject)
-        .map(publicationType => {
-            publicationTypesCount.push([publicationType, publicationTypesCountObject[publicationType]]);
-        })
-        .sort((item1, item2) => {
-            return item1[1] - item2[1];
-        });
+    // transform object to array and sort in descending order
+    const publicationTypesCount = Object.keys(publicationTypesCountObject)
+        .map(publicationType => [publicationType, publicationTypesCountObject[publicationType]])
+        .sort((item1, item2) => item2[1] - item1[1]);
 
     if (!keepPublicationTypes || publicationTypesCount.length <= keepPublicationTypes) {
         return publicationTypesCount;
@@ -105,7 +100,7 @@ export function getPublicationsPerYearSeries(data, topPublicationTypes) {
  * @returns {object}
  */
 export function getPublicationsStats(data) {
-    const rawData = [...data];
+    const rawData = {...data};
     const years = rawData.aggregations.date_year_t.buckets
         .map(item => { return item.key; })
         .sort((item1, item2) => { return item1 - item2; });
@@ -113,7 +108,6 @@ export function getPublicationsStats(data) {
         thomson_citation_count_i: {
             ...rawData.aggregations.thomson_citation_count_i,
             years: `${years[0]} - ${years[years.length - 1]}`
-
         },
         scopus_citation_count_i: {
             ...rawData.aggregations.scopus_citation_count_i,

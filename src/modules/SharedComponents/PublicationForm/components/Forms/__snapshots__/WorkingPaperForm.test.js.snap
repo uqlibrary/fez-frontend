@@ -138,7 +138,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Abstract"
           fullWidth={true}
-          hintText="Please provide an abstract or summary of the work."
+          hintText="Provide an abstract or summary of the work."
           multiLine={true}
           name="rek_description"
           rows={3}
@@ -159,7 +159,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
     title="Authors"
   >
     <div>
-      Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.
+      Please provide a list of authors and then select your name from the list.
     </div>
     <Field
       className="requiredField"
@@ -171,8 +171,8 @@ exports[`WorkingPaperForm renders  component 1`] = `
             "locale": Object {
               "addButton": "Add author",
               "identifierLabel": "UQ identifier (if available)",
-              "nameAsPublishedHint": "Please type the name exactly as published",
-              "nameAsPublishedLabel": "Author's name as published",
+              "nameAsPublishedHint": "Type the name exactly as published",
+              "nameAsPublishedLabel": "Enter each author's name as published",
             },
           },
           "header": Object {
@@ -249,7 +249,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          hintText="Please, add any additional information here"
+          hintText="Add any additional information here"
           multiLine={true}
           name="fez_record_search_key_notes.rek_notes"
           rows={1}
@@ -268,7 +268,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Link"
           fullWidth={true}
-          hintText="Please, type URL for this publication"
+          hintText="Type URL for this publication"
           name="rek_link"
           type="text"
           validate={

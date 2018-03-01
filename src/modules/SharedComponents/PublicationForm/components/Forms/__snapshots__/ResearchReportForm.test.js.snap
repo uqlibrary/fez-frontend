@@ -31,7 +31,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Title"
           fullWidth={true}
-          hintText="Please, type title of research report"
+          hintText="Type title of research report"
           multiLine={true}
           name="rek_title"
           rows={1}
@@ -60,7 +60,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Place of publication"
           fullWidth={true}
-          hintText="Please, type the place of publication"
+          hintText="Type the place of publication"
           name="fez_record_search_key_place_of_publication.rek_place_of_publication"
           type="text"
         />
@@ -73,7 +73,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Publisher"
           fullWidth={true}
-          hintText="Please, type the name of the publisher"
+          hintText="Type the name of the publisher"
           name="fez_record_search_key_publisher.rek_publisher"
           type="text"
         />
@@ -91,7 +91,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Total pages"
           fullWidth={true}
-          hintText="Please, type total number of pages in the publication"
+          hintText="Type total number of pages in the publication"
           name="fez_record_search_key_total_pages.rek_total_pages"
           normalize={[Function]}
           type="text"
@@ -149,7 +149,7 @@ exports[`ResearchReportForm renders  component 1`] = `
     title="Authors"
   >
     <div>
-      Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.
+      Please provide a list of authors and then select your name from the list.
     </div>
     <Field
       className="requiredField"
@@ -161,8 +161,8 @@ exports[`ResearchReportForm renders  component 1`] = `
             "locale": Object {
               "addButton": "Add author",
               "identifierLabel": "UQ identifier (if available)",
-              "nameAsPublishedHint": "Please type the name exactly as published",
-              "nameAsPublishedLabel": "Author's name as published",
+              "nameAsPublishedHint": "Type the name exactly as published",
+              "nameAsPublishedLabel": "Enter each author's name as published",
             },
           },
           "header": Object {
@@ -233,7 +233,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButtonLabel": "Add ISBN",
-              "inputFieldHint": "Please, type ISBN value",
+              "inputFieldHint": "Type ISBN value",
               "inputFieldLabel": "ISBN value",
             },
           },
@@ -291,7 +291,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButtonLabel": "Add ISSN",
-              "inputFieldHint": "Please, type ISSN value",
+              "inputFieldHint": "Type ISSN value",
               "inputFieldLabel": "ISSN value",
             },
           },
@@ -355,7 +355,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Abstract"
           fullWidth={true}
-          hintText="Please, provide an abstract or summary of the work"
+          hintText="Type an abstract or summary of the work"
           multiLine={true}
           name="rek_description"
           rows={1}
@@ -374,7 +374,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          hintText="Please, add any additional information here"
+          hintText="Add any additional information here"
           multiLine={true}
           name="fez_record_search_key_notes.rek_notes"
           rows={1}
@@ -393,7 +393,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Link"
           fullWidth={true}
-          hintText="Please, type URL for this publication"
+          hintText="Type URL for this publication"
           name="rek_link"
           type="text"
           validate={

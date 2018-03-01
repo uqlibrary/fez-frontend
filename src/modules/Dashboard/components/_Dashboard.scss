@@ -106,23 +106,24 @@
     margin: auto -24px auto 0;
     height: auto;
     .noOfArticles {
-      font-size: 110px;
+      font-size: 100px;
       line-height: 80px;
       font-weight: $text-weight-light;
     }
     .articlesFrom {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 26px;
-      opacity: 0.75;
+      opacity: 0.9;
       font-weight: $text-weight-light;
     }
     .dateRange {
-      font-size: 30px;
+      font-size: 28px;
       line-height: 30px;
-      font-weight: $text-weight-light;
+      font-weight: $text-weight-normal;
       & span {
         font-size: 24px;
-        opacity: 0.75;
+        opacity: 0.9;
+        font-weight: $text-weight-light;
       }
     }
   }
@@ -165,10 +166,12 @@ h2.trendingPubsSource {
     text-align: right;
     margin-left: 24px !important;
     font-size: $title-large;
+    line-height: $title-large;
   }
   .trendingPubsDifference {
     color: $secondary-color;
     font-size: $title-small;
+    line-height: $title-small;
     vertical-align: top;
   }
 }
@@ -182,7 +185,6 @@ h2.trendingPubsSource {
 
 // Mobile
 @include mobile {
-
   .possiblePublicationLure {
     margin: -16px 0 0 0 !important;
     .alertWrapper {

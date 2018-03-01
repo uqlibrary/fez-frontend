@@ -65,7 +65,7 @@ exports[`DesignForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Project description"
           fullWidth={true}
-          hintText="Please provide a summary/description of the project."
+          hintText="Provide a summary/description of the project."
           multiLine={true}
           name="rek_description"
           rows={1}
@@ -84,7 +84,7 @@ exports[`DesignForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Publisher"
           fullWidth={true}
-          hintText="Please enter the name of the publisher."
+          hintText="Type the name of the publisher."
           name="fez_record_search_key_publisher.rek_publisher"
           type="text"
         />
@@ -97,7 +97,7 @@ exports[`DesignForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Place of publication"
           fullWidth={true}
-          hintText="Please enter the geographical location for the publisher."
+          hintText="Type the geographical location for the publisher."
           name="fez_record_search_key_place_of_publication.rek_place_of_publication"
           type="text"
         />
@@ -114,7 +114,7 @@ exports[`DesignForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Location"
           fullWidth={true}
-          hintText="Please enter the geographical location for the design itself."
+          hintText="Type the geographical location for the design itself."
           name="fez_record_search_key_location[0].rek_location"
           type="text"
         />
@@ -151,7 +151,7 @@ exports[`DesignForm renders  component 1`] = `
     title="Designer name"
   >
     <div>
-      Enter designers in the order and form they appear on the published paper. Additional boxes will appear for more authors.
+      Please provide a list of designers and then select your name from the list.
     </div>
     <Field
       className="requiredField"
@@ -163,8 +163,8 @@ exports[`DesignForm renders  component 1`] = `
             "locale": Object {
               "addButton": "Add designer",
               "identifierLabel": "UQ identifier (if available)",
-              "nameAsPublishedHint": "Please type the name exactly as published",
-              "nameAsPublishedLabel": "Designer name as published",
+              "nameAsPublishedHint": "Type the name exactly as published",
+              "nameAsPublishedLabel": "Enter each designer's name as published",
             },
           },
           "header": Object {
@@ -241,7 +241,7 @@ exports[`DesignForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          hintText="Please add any additional information here."
+          hintText="Add any additional information here."
           multiLine={true}
           name="fez_record_search_key_notes.rek_notes"
           rows={1}

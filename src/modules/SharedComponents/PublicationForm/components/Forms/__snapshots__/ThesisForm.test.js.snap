@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ThesisForm renders  component 1`] = `
+exports[`ThesisForm  should render component 1`] = `
 <div>
   <StandardCard
     className=""
@@ -54,8 +54,8 @@ exports[`ThesisForm renders  component 1`] = `
           className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="School, Institute or Centre"
-          hintText=""
+          floatingLabelText="Enrolling unit"
+          hintText="Enrolling unit, eg. School of Business"
           name="fez_record_search_key_org_unit_name.rek_org_unit_name"
           validate={
             Array [
@@ -161,7 +161,7 @@ exports[`ThesisForm renders  component 1`] = `
     title="Supervisors"
   >
     <div>
-      Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.
+      Please provide a list of supervisors and then select your name from the list.
     </div>
     <Field
       className="requiredField"
@@ -174,7 +174,7 @@ exports[`ThesisForm renders  component 1`] = `
               "addButton": "Add supervisor",
               "identifierLabel": "UQ identifier (if available)",
               "nameAsPublishedHint": "",
-              "nameAsPublishedLabel": "Supervisor's name as published",
+              "nameAsPublishedLabel": "Enter each supervisor's name as published",
             },
           },
           "header": Object {
@@ -234,7 +234,7 @@ exports[`ThesisForm renders  component 1`] = `
       Object {
         "buttonLabel": "OK",
         "text": "Some help",
-        "title": "Optional information help",
+        "title": "Field of research help",
       }
     }
     title="Field of research"
@@ -251,7 +251,7 @@ exports[`ThesisForm renders  component 1`] = `
         Object {
           "form": Object {
             "locale": Object {
-              "inputFieldHint": "Please, type field of research value then select a value from the list",
+              "inputFieldHint": "Start typing code or field name and select from list",
               "inputFieldLabel": "Field of research",
             },
           },

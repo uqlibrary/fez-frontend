@@ -6,15 +6,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 const port = 3000;
-let url = 'localhost';
-let useMock = false;
+const url = process.env.URL || 'localhost';
+const useMock = !!process.env.USE_MOCK || false;
+const publicPath = '';
 
-if (process.env.URL)
-    url = process.env.URL;
-
-if (process.env.USE_MOCK)
-    useMock = process.env.USE_MOCK;
-
+const orcidUrl = 'https://sandbox.orcid.org';
+const orcidClientId = 'APP-OXX6M6MBQ77GUVWX';
 
 module.exports = {
     context: path.resolve(__dirname),
@@ -29,7 +26,7 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname),
         pathinfo: true,
-        publicPath: `http://${url}:${port}/`,
+        publicPath: `http://${url}:${port}/${publicPath}`,
     },
     devServer: {
         clientLogLevel: 'info',
@@ -45,7 +42,7 @@ module.exports = {
         noInfo: true,
         open: false,
         port: port,
-        publicPath: '/',
+        publicPath: `/${publicPath}`,
         quiet: false,
         stats: 'errors-only',
         watchContentBase: false,
@@ -55,13 +52,19 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
+                exclude: [
+                    /node_modules/,
+                    /custom_modules/
+                ],
                 enforce: 'pre',
                 use: 'eslint-loader'
             },
             {
                 test: /\.js?$/,
-                exclude: /node_modules/,
+                exclude: [
+                    /node_modules/,
+                    /custom_modules/
+                ],
                 include: [
                     path.resolve(__dirname, 'src')
                 ],
@@ -73,6 +76,7 @@ module.exports = {
                 test: /\.json$/,
                 exclude: [
                     /node_modules/,
+                    /custom_modules/
                 ],
                 use: [
                     'json-loader',
@@ -147,7 +151,10 @@ module.exports = {
         new webpack.DefinePlugin({
             __DEVELOPMENT__: true,
             'process.env.NODE_ENV': JSON.stringify('development'),
-            'process.env.USE_MOCK': JSON.stringify(useMock)
+            'process.env.USE_MOCK': JSON.stringify(useMock),
+            'process.env.APP_URL': JSON.stringify(`http://${url}/`),
+            'process.env.ORCID_URL': JSON.stringify(orcidUrl),
+            'process.env.ORCID_CLIENT_ID': JSON.stringify(orcidClientId)
         })
     ],
     resolve: {
@@ -163,6 +170,7 @@ module.exports = {
         modules: [
             'src',
             'node_modules',
+            'custom_modules'
         ]
     },
 };

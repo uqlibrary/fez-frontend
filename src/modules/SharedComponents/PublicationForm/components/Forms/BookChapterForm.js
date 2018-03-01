@@ -1,10 +1,17 @@
 import React, {Component} from 'react';
 import {Field} from 'redux-form/immutable';
 
-import {TextField, StandardCard, ListEditorField, PartialDateField} from 'uqlibrary-react-toolbox';
+import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {PartialDateField} from 'uqlibrary-react-toolbox/build/PartialDate';
+import {ListEditorField} from 'uqlibrary-react-toolbox/build/ListEditor';
+
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {PublicationSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
-import {validation, locale} from 'config';
+import {validation} from 'config';
+import {locale} from 'locale';
+import {default as formLocale} from 'locale/publicationForm';
+
 import PropTypes from 'prop-types';
 
 export default class BookChapterForm extends Component {
@@ -18,7 +25,7 @@ export default class BookChapterForm extends Component {
     }
 
     render() {
-        const txt = locale.forms.publicationForm.bookChapter;
+        const txt = formLocale.bookChapter;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
@@ -106,7 +113,7 @@ export default class BookChapterForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                    <div>{txt.authors.description}</div>
+                    <div>{txt.authors.descriptionAuthorOrEditor}</div>
                     <Field
                         component={ContributorsEditorField}
                         name="authors"
@@ -118,7 +125,7 @@ export default class BookChapterForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.editors.title} help={txt.editors.help}>
-                    <div>{txt.editors.description}</div>
+                    <div>{txt.editors.descriptionAuthorOrEditor}</div>
                     <Field
                         component={ContributorsEditorField}
                         name="editors"

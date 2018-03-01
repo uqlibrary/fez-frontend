@@ -1,15 +1,15 @@
-import {default as locale} from './locale';
-const {validationErrors} = locale;
+import React from 'react';
+import {locale} from 'locale';
 
 // Min Length
-export const maxLength = max => value => value && value.length > max ? validationErrors.maxLength.replace('[max]', max) : undefined;
+export const maxLength = max => value => value && value.length > max ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;
 export const maxLength10 = maxLength(10);
 export const maxLength255 = maxLength(255);
 export const maxLength1000 = maxLength(1000);
 export const maxLength2000 = maxLength(2000); // URL's must be under 2000 characters
 
 // Max Length
-export const minLength = min => value => value && value.trim().length < min ? validationErrors.minLength.replace('[min]', min) : undefined;
+export const minLength = min => value => value && value.trim().length < min ? locale.validationErrors.minLength.replace('[min]', min) : undefined;
 export const minLength10 = minLength(10);
 
 // TODO: fix validation, make it generic etc....
@@ -39,28 +39,33 @@ export const isValidPublicationTitle = value => {
 };
 
 // Generic
-export const required = value => value ? undefined : validationErrors.required;
-export const requiredList = value => (value && value.length > 0 ? undefined : validationErrors.required);
-export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? validationErrors.email : undefined;
-export const url = (value) => value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value) ? validationErrors.url : maxLength2000(value);
-export const doi = (value) => !!value && !isValidDOIValue(value) ? validationErrors.doi : undefined;
+export const required = value => value ? undefined : locale.validationErrors.required;
+export const requiredList = value => (value && value.length > 0 ? undefined : locale.validationErrors.required);
+export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
+export const url = (value) => value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value) ? locale.validationErrors.url : maxLength2000(value);
+export const doi = (value) => !!value && !isValidDOIValue(value) ? locale.validationErrors.doi : undefined;
+export const forRequired = (itemList) => !itemList || itemList.length === 0 ? locale.validationErrors.forRequired : undefined;
 
-export const peopleRequired = (itemList, validationError, checkSelected = true) =>  (
+export const peopleRequired = (itemList, validationError, checkSelected = true) => (
     !itemList || itemList.length === 0 || (checkSelected && itemList && itemList.filter(item => (item.selected)).length === 0)
         ? validationError : undefined
 );
 
-export const authorRequired = (authors) => peopleRequired(authors, validationErrors.authorRequired, true);
-export const editorRequired = (editors) => peopleRequired(editors, validationErrors.editorRequired, true);
-export const supervisorRequired = (supervisors) => peopleRequired(supervisors, validationErrors.supervisorRequired, false);
+export const authorRequired = (authors) => peopleRequired(authors, locale.validationErrors.authorRequired, true);
+export const editorRequired = (editors) => peopleRequired(editors, locale.validationErrors.editorRequired, true);
+export const supervisorRequired = (supervisors) => peopleRequired(supervisors, locale.validationErrors.supervisorRequired, false);
 
 // DateTime
-export const dateTimeDay = value => value && (isNaN(value) || parseInt(value, 10) < 0 || parseInt(value, 10) > 31) ? validationErrors.dateTimeDay : undefined;
-export const dateTimeYear = value => !value || value.length === 0 || isNaN(value) || parseInt(value, 10) > (new Date()).getFullYear() ? validationErrors.dateTimeYear : undefined;
-
+export const dateTimeDay = value => value && (isNaN(value) || parseInt(value, 10) < 0 || parseInt(value, 10) > 31) ? locale.validationErrors.dateTimeDay : undefined;
+export const dateTimeYear = value => !value || value.length === 0 || isNaN(value) || parseInt(value, 10) > (new Date()).getFullYear() ? locale.validationErrors.dateTimeYear : undefined;
 export const validFileUpload = value => {
-    return value && value.hasOwnProperty('isValid') && !value.isValid ? validationErrors.fileUpload : undefined;
+    return value && value.hasOwnProperty('isValid') && !value.isValid ? locale.validationErrors.fileUpload : undefined;
 };
+
+export const fileUploadRequired = value => {
+    return value === undefined || value.queue.length === 0 ? locale.validationErrors.fileUploadRequired : undefined;
+};
+
 export const isValidIssn = subject => {
     const regex = /^([ep]{0,1}ISSN |)[\d]{4}(\-|)[\d]{3}(\d|\S){1}$/;
     if (subject.trim().length === 0 || regex.test(subject)) {
@@ -83,4 +88,64 @@ export const isValidAuthorLink = (link) => {
 
 export const isValidContributorLink = (link) => {
     return link.valid ? '' : locale.validationErrors.contributorLinking;
+};
+
+// Google Scholar ID
+export const isValidGoogleScholarId = id => {
+    const regex = /^\w{12}$/;
+    if (regex.test(id)) {
+        return '';
+    } else {
+        return locale.validationErrors.googleScholarId;
+    }
+};
+
+export const translateFormErrorsToText = (formErrors) => {
+    let errorMessagesList = [];
+
+    Object.keys(formErrors).map(key => {
+        const value = formErrors[key];
+        if (typeof value === 'object') {
+            const errorMessage = translateFormErrorsToText(value);
+            if (errorMessage) {
+                errorMessagesList = errorMessagesList.concat(errorMessage);
+            }
+        }
+
+        if (locale.validationErrorsSummary.hasOwnProperty(key)) {
+            errorMessagesList.push(locale.validationErrorsSummary[key]);
+        }
+    });
+
+    return errorMessagesList.length > 0 ? errorMessagesList : null;
+};
+
+export const getErrorAlertProps = ({submitFailed = false, dirty = false, invalid = false, submitting = false,
+    error, formErrors, submitSucceeded = false, alertLocale = {}}) => {
+    let alertProps = null;
+    if (submitFailed && error) {
+        alertProps = {
+            ...alertLocale.errorAlert,
+            message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error
+        };
+    } else if (dirty && invalid && !error) {
+        const errorMessagesList = formErrors ? translateFormErrorsToText(formErrors) : null;
+        const message = (
+            <span>
+                {alertLocale.validationAlert.message}
+                <ul>
+                    {
+                        errorMessagesList && errorMessagesList.length > 0 && errorMessagesList.map((item, index) => (
+                            <li key={`validation-summary-${index}`}>{item}</li>
+                        ))
+                    }
+                </ul>
+            </span>);
+        alertProps = {...alertLocale.validationAlert, message: message};
+    } else if (submitting) {
+        alertProps = {...alertLocale.progressAlert};
+    } else if (submitSucceeded) {
+        alertProps = {...alertLocale.successAlert};
+    }
+    return alertProps;
 };

@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
-import {Alert} from 'uqlibrary-react-toolbox';
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import Infinite from 'react-infinite';
 
 export class ContributorsEditor extends Component {
@@ -178,7 +178,7 @@ export class ContributorsEditor extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        author: state.get('accountReducer').author
+        author: state && state.get('accountReducer') ? state.get('accountReducer').author : null
     };
 };
 

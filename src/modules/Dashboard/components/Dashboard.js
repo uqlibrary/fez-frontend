@@ -1,22 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {
-    AuthorsPublicationsPerYearChart,
-    AuthorsPublicationTypesCountChart,
-    Alert,
-    InlineLoader,
-    StandardCard,
-    StandardPage,
-    HelpIcon
-} from 'uqlibrary-react-toolbox';
+import {AuthorsPublicationsPerYearChart} from 'uqlibrary-react-toolbox/build/Charts';
+import {AuthorsPublicationTypesCountChart} from 'uqlibrary-react-toolbox/build/Charts';
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
+import {HelpIcon} from 'uqlibrary-react-toolbox/build/HelpDrawer';
+
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
 import {PublicationStats} from 'modules/SharedComponents/PublicationStats';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Tabs, Tab} from 'material-ui/Tabs';
-import FontIcon from 'material-ui/FontIcon';
-import {locale, routes} from 'config';
+import {routes} from 'config';
+import {locale} from 'locale';
+
+// Icons
+import EditorFormatQuote from 'material-ui/svg-icons/editor/format-quote'; // format_quote
+import ActionOpenInNew from 'material-ui/svg-icons/action/open-in-new'; // open_in_new
 
 class Dashboard extends React.Component {
     static propTypes = {
@@ -24,7 +27,7 @@ class Dashboard extends React.Component {
         account: PropTypes.object.isRequired,
         authorDetails: PropTypes.object,
         author: PropTypes.object,
-        loadingAuthorDetails: PropTypes.bool,
+        accountAuthorDetailsLoading: PropTypes.bool,
 
         // graph data
         loadingPublicationsByYear: PropTypes.bool,
@@ -33,6 +36,7 @@ class Dashboard extends React.Component {
 
         // lure data
         possiblyYourPublicationsCount: PropTypes.number,
+        possiblyYourPublicationsCountLoading: PropTypes.bool,
         hidePossiblyYourPublicationsLure: PropTypes.bool,
 
         // wos/scopus data
@@ -67,8 +71,18 @@ class Dashboard extends React.Component {
         }
     }
 
+    shouldComponentUpdate(nextProps) {
+        return !(nextProps.loadingPublicationsByYear || nextProps.accountAuthorDetailsLoading
+            || nextProps.loadingPublicationsStats || nextProps.loadingTrendingPublications
+            || nextProps.loadingLatestPublications);
+    }
+
     _claimYourPublications = () => {
         this.props.history.push(routes.pathConfig.records.possible);
+    };
+
+    _addPublication = () => {
+        this.props.history.push(routes.pathConfig.records.add.new);
     };
 
     _viewYourResearch = () => {
@@ -77,10 +91,10 @@ class Dashboard extends React.Component {
 
     render() {
         const txt = locale.pages.dashboard;
-        const loading = this.props.loadingPublicationsByYear || this.props.loadingAuthorDetails
+        const loading = this.props.loadingPublicationsByYear || this.props.accountAuthorDetailsLoading
             || this.props.loadingPublicationsStats || this.props.loadingTrendingPublications
             || this.props.loadingLatestPublications;
-        const barChart = !loading && this.props.publicationsByYear
+        const barChart = !loading && this.props.publicationsByYear && this.props.publicationsByYear.series.length > 0
             ? (
                 <StandardCard className="barChart" title={txt.publicationsByYearChart.title}>
                     <AuthorsPublicationsPerYearChart
@@ -89,7 +103,7 @@ class Dashboard extends React.Component {
                         yAxisTitle={txt.publicationsByYearChart.yAxisTitle}/>
                 </StandardCard>
             ) : null;
-        const donutChart = !loading && this.props.publicationTypesCount
+        const donutChart = !loading && this.props.publicationTypesCount && this.props.publicationTypesCount.length > 0
             ? (
                 <StandardCard
                     className="donutChart"
@@ -123,21 +137,29 @@ class Dashboard extends React.Component {
                     <div className="columns is-multiline is-gapless">
                         <div className="column is-12 is-hidden-mobile">
                             <div className="is-hidden-mobile">
-                                <DashboardAuthorProfile authorDetails={this.props.authorDetails} author={this.props.author} />
+                                <DashboardAuthorProfile authorDetails={this.props.authorDetails} author={this.props.author} history={this.props.history} />
                             </div>
                         </div>
                         <div className="column is-12 possiblePublicationLure">
                             {
                                 !this.props.hidePossiblyYourPublicationsLure
-                                && this.props.possiblyYourPublicationsCount > 0 &&
-                                <Alert
-                                    title={txt.possiblePublicationsLure.title}
-                                    message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount)}
-                                    type={txt.possiblePublicationsLure.type}
-                                    actionButtonLabel={txt.possiblePublicationsLure.actionButtonLabel}
-                                    action={this._claimYourPublications}
-                                    allowDismiss
-                                    dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
+                                && !this.props.possiblyYourPublicationsCountLoading
+                                && this.props.possiblyYourPublicationsCount > 0 ?
+                                    <Alert
+                                        title={txt.possiblePublicationsLure.title}
+                                        message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount)}
+                                        type={txt.possiblePublicationsLure.type}
+                                        actionButtonLabel={txt.possiblePublicationsLure.actionButtonLabel}
+                                        action={this._claimYourPublications}
+                                        allowDismiss
+                                        dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
+                                    :
+                                    !this.props.possiblyYourPublicationsCountLoading
+                                    && !this.props.hidePossiblyYourPublicationsLure
+                                    && !this.props.possiblyYourPublicationsCount &&
+                                    <Alert
+                                        {...txt.nothingToClaimLure}
+                                        action={this._addPublication}/>
                             }
                         </div>
                     </div>
@@ -177,13 +199,13 @@ class Dashboard extends React.Component {
                         </div>
                     </div>
                 }
-
                 {
                     !loading
                     && ((this.props.latestPublicationsList && this.props.latestPublicationsList.length > 0) ||
                         (this.props.trendingPublicationsList && this.props.trendingPublicationsList.length > 0)) &&
                     <StandardCard className="card-paddingless">
-                        <Tabs className="publicationTabs">
+                        <Tabs className="publicationTabs"
+                            inkBarStyle={{height: '4px', marginTop: '-4px'}}>
                             {
                                 this.props.latestPublicationsList.length > 0 &&
                                 <Tab label={txt.myPublications.title} value="myPublications"
@@ -227,9 +249,7 @@ class Dashboard extends React.Component {
                                                                     <div className="column">
                                                                         <div className="citationContent">
                                                                             <h3 className="publicationTitle">{recordValue.title}</h3>
-                                                                            <FontIcon className="material-icons citationIcon" data-place="left">
-                                                                                format_quote
-                                                                            </FontIcon>
+                                                                            <EditorFormatQuote className="material-icons citationIcon" data-place="left" />
                                                                             {recordValue.authors} ({recordValue.rek_date.substring(0, 4)})
                                                                         </div>
                                                                         <div className="citationCounts">
@@ -241,7 +261,9 @@ class Dashboard extends React.Component {
                                                                                     rel="noopener noreferrer"
                                                                                     title={locale.global.linkWillOpenInNewWindow.replace('[destination]', recordValue.title)}>
                                                                                     <div className="columns is-mobile is-gapless">
-                                                                                        <div className="column is-narrow citationCountNumber">{txt.myTrendingPublications.viewFullCitationLinkTitle}<FontIcon className="citationCountIcon material-icons">open_in_new</FontIcon></div>
+                                                                                        <div className="column is-narrow citationCountNumber">{txt.myTrendingPublications.viewFullCitationLinkTitle}
+                                                                                            <ActionOpenInNew className="citationCountIcon material-icons" />
+                                                                                        </div>
                                                                                     </div>
                                                                                 </a>
                                                                             </div>
@@ -275,5 +297,4 @@ class Dashboard extends React.Component {
         );
     }
 }
-
 export default Dashboard;

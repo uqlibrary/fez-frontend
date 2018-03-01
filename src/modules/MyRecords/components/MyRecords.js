@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {StandardPage, StandardRighthandCard, StandardCard, InlineLoader} from 'uqlibrary-react-toolbox';
-import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
-import {locale, routes} from 'config';
 
+import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
+import {StandardRighthandCard} from 'uqlibrary-react-toolbox/build/StandardRighthandCard';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
+
+import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
+import {locale} from 'locale';
+import {routes} from 'config';
 export default class MyRecords extends React.Component {
     static propTypes = {
         publicationsList: PropTypes.array,
@@ -27,7 +32,10 @@ export default class MyRecords extends React.Component {
             pageSize: 20,
             sortBy: locale.components.sorting.sortBy[0].value,
             sortDirection: locale.components.sorting.sortDirection[0],
-            activeFacets: {}
+            activeFacets: {
+                filters: {},
+                ranges: {}
+            }
         };
     }
 
@@ -41,6 +49,12 @@ export default class MyRecords extends React.Component {
         if (!this.state.allowResultsPaging && !newProps.loadingPublicationsList && newProps.publicationsList.length > 0) {
             this.setState({ allowResultsPaging: true });
         }
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props.accountLoading !== nextProps.accountLoading
+            || this.props.loadingPublicationsList !== nextProps.loadingPublicationsList
+            || this.state !== nextState;
     }
 
     componentWillUpdate(nextProps, nextState) {
@@ -94,9 +108,9 @@ export default class MyRecords extends React.Component {
 
     render() {
         const txt = locale.pages.myResearch;
-
+        const pagingData = this.props.publicationsListPagingData;
         return (
-            <StandardPage title={txt.title}>
+            <StandardPage title={txt.pageTitle}>
                 {
                     (this.props.accountLoading || (!this.state.allowResultsPaging && this.props.loadingPublicationsList)) &&
                     <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
@@ -111,18 +125,27 @@ export default class MyRecords extends React.Component {
                         </div>
                     }
                     {
-                        !this.props.accountLoading && this.state.allowResultsPaging &&
+                        !this.props.accountLoading && this.state.allowResultsPaging && this.props.publicationsList.length > 0 &&
                         <div className="column">
-                            <StandardCard {...txt}>
-                                <div>{txt.text}</div>
+                            <StandardCard>
+                                {
+                                    pagingData && pagingData.to && pagingData.from && pagingData.total &&
+                                        <span>
+                                            {txt.recordCount
+                                                .replace('[recordsTotal]', pagingData.total)
+                                                .replace('[recordsFrom]', pagingData.from)
+                                                .replace('[recordsTo]', pagingData.to)}
+                                        </span>
+                                }
+                                {txt.text}
                                 <PublicationsListSorting
-                                    pagingData={this.props.publicationsListPagingData}
+                                    pagingData={pagingData}
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
                                     disabled={this.props.loadingPublicationsList} />
                                 <PublicationsListPaging
                                     loading={this.props.loadingPublicationsList}
-                                    pagingData={this.props.publicationsListPagingData}
+                                    pagingData={pagingData}
                                     onPageChanged={this.pageChanged}
                                     disabled={this.props.loadingPublicationsList} />
                                 {
@@ -137,15 +160,18 @@ export default class MyRecords extends React.Component {
                                 }
                                 <PublicationsListPaging
                                     loading={this.props.loadingPublicationsList}
-                                    pagingData={this.props.publicationsListPagingData}
+                                    pagingData={pagingData}
                                     onPageChanged={this.pageChanged}
                                     disabled={this.props.loadingPublicationsList} />
                             </StandardCard>
                         </div>
                     }
                     {
-                        !this.props.accountLoading && this.state.allowResultsPaging && this.props.publicationsListFacets
-                        && Object.keys(this.props.publicationsListFacets).length > 0 &&
+                        !this.props.accountLoading && this.state.allowResultsPaging && (
+                            (this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0) ||
+                            Object.keys(this.state.activeFacets.filters).length > 0 ||
+                            Object.keys(this.state.activeFacets.ranges).length > 0
+                        ) &&
                         <div className="column is-3 is-hidden-mobile">
                             <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                 <FacetsFilter
@@ -153,7 +179,8 @@ export default class MyRecords extends React.Component {
                                     onFacetsChanged={this.facetsChanged}
                                     activeFacets={this.state.activeFacets}
                                     disabled={this.props.loadingPublicationsList}
-                                    excludeFacetsList={txt.facetsFilter.excludeFacetsList} />
+                                    excludeFacetsList={txt.facetsFilter.excludeFacetsList}
+                                    renameFacetsList={txt.facetsFilter.renameFacetsList} />
                             </StandardRighthandCard>
                         </div>
                     }

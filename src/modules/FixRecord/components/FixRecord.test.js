@@ -1,79 +1,40 @@
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import FixRecord from './FixRecord';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-import Immutable from 'immutable';
 import {mockRecordToFix} from 'mock/data/testing/records';
-import {MemoryRouter } from 'react-router-dom'
-import {Provider} from 'react-redux';
+import Immutable from 'immutable';
 
-
-const create = () => {
-    const initialState = Immutable.Map();
-
-    const store = {
-        getState: jest.fn(() => (initialState)),
-        dispatch: jest.fn(),
-        subscribe: jest.fn()
-    };
-    const next = jest.fn();
-    const invoke = (action) => thunk(store)(next)(action);
-    return {store, next, invoke}
-};
-
-function setup({recordToFix = mockRecordToFix, recordToFixLoading, authorLoading, handleSubmit, match,
-                   initialValues, actions, author = {aut_id: 410}, history = {go: jest.fn()}, isShallow = true}){
+function setup(testProps, isShallow = true) {
     const props = {
-        recordToFix: recordToFix,
-        recordToFixLoading: recordToFixLoading || false,
+        ...testProps,
+        recordToFix: testProps.recordToFix,
+        loadingRecordToFix: testProps.loadingRecordToFix || false,
 
-        authorLoading: authorLoading || false,
-        author: author,
+        accountAuthorLoading: testProps.accountAuthorLoading || false,
+        author: testProps.author || {aut_id: 410},
 
-        handleSubmit: handleSubmit || jest.fn(),
-        initialValues: initialValues ||
+        handleSubmit: testProps.handleSubmit || jest.fn(),
+        initialValues: testProps.initialValues ||
             Immutable.Map({
-                publication: Immutable.Map(recordToFix),
-                author: Immutable.Map(author)
+                publication: Immutable.Map(testProps.recordToFix || mockRecordToFix),
+                author: Immutable.Map(testProps.author || {aut_id: 410})
             }),
-        actions: actions || {},
-        history: history || {},
-        match: match || {}
+        actions: testProps.actions || {},
+        history: testProps.history || {go: jest.fn()},
+        match: testProps.match || {},
+
+        publicationToFixFileUploadingError: testProps.publicationToFixFileUploadingError || false
     };
-
-    if(isShallow) {
-        return shallow(<FixRecord {...props} />);
-    }
-
-    return mount(
-        <Provider store={create().store}>
-            <MemoryRouter><FixRecord {...props} /></MemoryRouter>
-        </Provider>, {
-            context: {
-                muiTheme: getMuiTheme()
-            },
-            childContextTypes: {
-                muiTheme: PropTypes.object.isRequired
-            }
-        });
+    return getElement(FixRecord, props, isShallow);
 }
 
-beforeAll(() => {
-    injectTapEventPlugin();
-});
+describe('Component FixRecord', () => {
 
-
-describe('Component FixRecord ', () => {
     it('should render loader when author is loading', () => {
-        const wrapper = setup({authorLoading: true});
+        const wrapper = setup({recordToFix: mockRecordToFix, accountAuthorLoading: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render loader when record is loading', () => {
-        const wrapper = setup({recordToFixLoading: true});
+        const wrapper = setup({recordToFix: mockRecordToFix, loadingRecordToFix: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -84,16 +45,7 @@ describe('Component FixRecord ', () => {
     });
 
     it('should render record citation, two actions in select field and a cancel button', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        expect(wrapper.find('MenuItem').length).toEqual(2);
-        expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
-        expect(wrapper.find('RaisedButton').length).toEqual(1);
-    });
-
-    it('should render record citation, two actions in select field and a cancel button', () => {
-        const wrapper = setup({});
+        const wrapper = setup({recordToFix: mockRecordToFix});
         expect(toJson(wrapper)).toMatchSnapshot();
 
         expect(wrapper.find('MenuItem').length).toEqual(2);
@@ -102,22 +54,21 @@ describe('Component FixRecord ', () => {
     });
 
     it('should render fix record form', () => {
-        const wrapper = setup({});
+        const wrapper = setup({recordToFix: mockRecordToFix});
         wrapper.setState({selectedRecordAction: 'fix'});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(4);
         expect(wrapper.find('RaisedButton').length).toEqual(2);
-
     });
 
     it('should set action for form', () => {
-        const wrapper = setup({});
+        const wrapper = setup({recordToFix: mockRecordToFix});
         wrapper.instance()._actionSelected('', 'fix');
         expect(wrapper.state().selectedRecordAction).toEqual('fix');
     });
 
     it('should render unclaim form', () => {
-        const wrapper = setup({});
+        const wrapper = setup({recordToFix: mockRecordToFix});
         wrapper.setState({selectedRecordAction: 'unclaim'});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('RaisedButton').length).toEqual(2);
@@ -125,7 +76,7 @@ describe('Component FixRecord ', () => {
     });
 
     it('should set local variables', () => {
-        const wrapper = setup({});
+        const wrapper = setup({recordToFix: mockRecordToFix});
         wrapper.setState({selectedRecordAction: 'unclaim'});
         wrapper.instance()._setSuccessConfirmation('successBox');
         expect(wrapper.instance().successConfirmationBox).toEqual('successBox');
@@ -133,7 +84,7 @@ describe('Component FixRecord ', () => {
 
     it('should submit form when user hits Enter', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({handleSubmit: testMethod});
+        const wrapper = setup({recordToFix: mockRecordToFix, handleSubmit: testMethod});
         wrapper.setState({selectedRecordAction: 'unclaim'});
         wrapper.instance()._handleKeyboardFormSubmit({key: 'Enter', preventDefault: jest.fn()});
         expect(testMethod).toHaveBeenCalled();
@@ -141,7 +92,7 @@ describe('Component FixRecord ', () => {
 
     it('should not submit form when user hits shift+Enter', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({handleSubmit: testMethod});
+        const wrapper = setup({recordToFix: mockRecordToFix, handleSubmit: testMethod});
         wrapper.setState({selectedRecordAction: 'unclaim'});
         wrapper.instance()._handleKeyboardFormSubmit({key: 'Enter', shiftKey: true, preventDefault: jest.fn()});
         expect(testMethod).not.toHaveBeenCalled();
@@ -150,7 +101,7 @@ describe('Component FixRecord ', () => {
     it('should redirect to other pages', () => {
         const testMethod = jest.fn();
 
-        const wrapper = setup({history: {push: testMethod}});
+        const wrapper = setup({recordToFix: mockRecordToFix, history: {push: testMethod}});
         wrapper.instance()._navigateToMyResearch();
         expect(testMethod).toHaveBeenCalledWith('/records/mine');
 
@@ -158,58 +109,63 @@ describe('Component FixRecord ', () => {
         expect(testMethod).toHaveBeenCalledWith('/dashboard');
     });
 
-    it('should display alert', () => {
-        const wrapper = setup({}).instance();
+    it('should return and render the alert details correctly', () => {
         const testCases = [
             {
-                parameters: {submitFailed: true, error: true, alertLocale: {errorAlert: {title: 'submitFailed' }}},
-                expected: 'submitFailed'
+                parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting', message: 'submitting', type: 'info'}}},
             },
             {
-                parameters: {dirty: true, invalid: true, alertLocale: {validationAlert: {title: 'validationFailed'}}},
-                expected: 'validationFailed'
+                parameters: {submitSucceeded: true, alertLocale: {successAlert: {title: 'submitSucceeded', message: 'submitSucceeded', type: 'done'}}},
             },
             {
-                parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting' }}},
-                expected: 'submitting'
+                parameters: {submitFailed: true, error: 'This is an error', alertLocale: {errorAlert: {title: 'submitFailed', message: jest.fn(), type: 'error'}}},
             },
             {
-                parameters: {submitSucceeded: true, alertLocale: {successAlert: {title: 'submitSucceeded' }}},
-                expected: 'submitSucceeded'
+                parameters: {invalid: true, dirty: true, formErrors: {rek_title: 'one', comments: 'two'}, alertLocale: {validationAlert: {title: 'validationError'}}},
             }
         ];
 
         testCases.forEach(testCase => {
-            const alert = wrapper.getAlert({...testCase.parameters});
-            expect(alert.props.title).toEqual(testCase.expected);
+            const wrapper = setup({...testCase.parameters, recordToFix: mockRecordToFix}).find('Alert').dive();
+            expect(toJson(wrapper)).toMatchSnapshot();
         });
     });
 
     it('should clear record to fix when leaving the form', () => {
         const actionFunction = jest.fn();
-        const wrapper = setup({actions: {clearFixRecord: actionFunction}});
+        const wrapper = setup({recordToFix: mockRecordToFix, actions: {clearFixRecord: actionFunction}});
         wrapper.instance().componentWillUnmount();
-        expect(actionFunction).toHaveBeenCalled();
-    });
-
-    it('should load author if author is not loaded', () => {
-        const actionFunction = jest.fn();
-        const wrapper = setup({isShallow: false, authorLoading: false, author: null, actions: {loadCurrentAccount: actionFunction}});
         expect(actionFunction).toHaveBeenCalled();
     });
 
     it('should load record if record is not loaded', () => {
         const actionFunction = jest.fn();
-        const wrapper = setup({isShallow: false, recordToFixLoading: false,
-            recordToFix: null, actions: {loadRecordToFix: actionFunction}, match: {params: {pid: 'UQ:1001'}}});
-        expect(actionFunction).toHaveBeenCalled();
+        const wrapper = setup({loadingRecordToFix: false, recordToFix: null, actions: {loadRecordToFix: actionFunction}, match: {params: {pid: 'UQ:1001'}}});
+        // console.log(wrapper.instance().props.match.params.pid);
+        wrapper.update;
+        wrapper.instance().componentDidMount();
+        expect(actionFunction).toHaveBeenCalledWith('UQ:1001');
     });
 
     it('should display confirmation box after successful submission', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({});
+        const wrapper = setup({recordToFix: mockRecordToFix});
         wrapper.instance().successConfirmationBox = {showConfirmation: testMethod};
         wrapper.instance().componentWillReceiveProps({submitSucceeded: true});
         expect(testMethod).toHaveBeenCalled();
+    });
+
+    it('should render the confirm dialog box with an alert due to a file upload failure', () => {
+        const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: true});
+        wrapper.setState({selectedRecordAction: 'fix'});
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+    });
+
+    it('should render the confirm dialog box without an alert due to a file upload success', () => {
+        const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
+        wrapper.setState({selectedRecordAction: 'fix'});
+        expect(toJson(wrapper)).toMatchSnapshot();
+
     });
 });

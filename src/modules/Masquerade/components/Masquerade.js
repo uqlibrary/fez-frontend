@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
-import {StandardPage, StandardCard} from 'uqlibrary-react-toolbox';
-import {locale} from 'config';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
+import {locale} from 'locale';
 
 export default class Masquerade extends Component {
     static propTypes = {
@@ -47,7 +48,9 @@ export default class Masquerade extends Component {
                         hintText={txt.labels.hint}
                         value={this.state.userName}
                         onChange={this._usernameChanged}
-                        onKeyPress={this._masqueradeAs} />
+                        onKeyPress={this._masqueradeAs}
+                        className="mui-long-labels-fix"
+                    />
                 </StandardCard>
                 <div className="columns action-buttons">
                     <div className="column is-hidden-mobile"/>

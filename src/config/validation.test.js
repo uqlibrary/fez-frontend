@@ -1,7 +1,7 @@
 import React from 'react';
 import * as validation from './validation';
 import {accounts} from 'mock/data/account';
-import {locale} from '.';
+import {locale} from 'locale';
 import {APP_URL} from 'config';
 
 describe('Validation method', () => {
@@ -93,21 +93,21 @@ describe('Validation method', () => {
     });
 
 
-    it('it should validate doi correctly', () => {
+    it('should validate doi', () => {
         expect(validation.isValidDOIValue(' 10.1007/978-3-319-60492-3_52 ')).toBeTruthy();
         expect(validation.isValidDOIValue(' 10.1007/something ')).toBeTruthy();
     });
 
-    it('it should validate pubmed id correctly', () => {
+    it('should validate pubmed id', () => {
         expect(validation.isValidPubMedValue(' 2342523452 ')).toBeTruthy();
     });
 
-    it('it should validate publication title correctly', () => {
+    it('should validate publication title', () => {
         expect(validation.isValidPublicationTitle(' global    ')).toBeFalsy();
         expect(validation.isValidPublicationTitle(' global war ')).toBeTruthy();
     });
 
-    it('it should validate person selected correctly', () => {
+    it('should validate person selected', () => {
         expect(validation.peopleRequired([], 'Error', true)).toEqual('Error');
         expect(validation.peopleRequired([{name: 'First person'}], 'Error', true)).toEqual('Error');
         expect(validation.peopleRequired([{name: 'First person', selected: true}], 'Error', true)).toBeFalsy();
@@ -115,14 +115,76 @@ describe('Validation method', () => {
         expect(validation.peopleRequired([{name: 'First person'}], 'Error', false)).toBeFalsy();
     });
 
-    it('it should validate author/contributor link correctly', () => {
+    it('should validate author/contributor link', () => {
         const contributorLinkValid = {"authors":[{"rek_contributor_id_id":null,"rek_contributor_id_pid":"UQ:641272","rek_contributor_id":410,"rek_contributor_id_order":1}],"valid":true};
         const authorLinkValid = {"authors":[{"rek_contributor_id_id":null,"rek_contributor_id_pid":"UQ:641272","rek_contributor_id":410,"rek_contributor_id_order":1}],"valid":true};
 
         expect(validation.isValidAuthorLink(authorLinkValid)).toEqual('');
-        expect(validation.isValidAuthorLink('Invalid data')).toEqual('Please, select and confirm an author');
+        expect(validation.isValidAuthorLink('Invalid data')).toEqual(locale.validationErrors.authorLinking);
         expect(validation.isValidContributorLink(contributorLinkValid)).toEqual('');
-        expect(validation.isValidContributorLink('Invalid data')).toEqual('Please, select and confirm a contributor');
+        expect(validation.isValidContributorLink('Invalid data')).toEqual(locale.validationErrors.contributorLinking);
     });
+});
+
+describe('getErrorAlertProps ', () => {
+    it('should return props for alert', () => {
+        const testCases = [
+            {
+                parameters: {submitFailed: true, error: true, alertLocale: {errorAlert: {title: 'submitFailed' }}},
+                expected: 'submitFailed'
+            },
+            {
+                parameters: {dirty: true, invalid: true, formErrors: [{'rek_title': 'This field is required'}], alertLocale: {validationAlert: {title: 'validationFailed'}}},
+                expected: 'validationFailed'
+            },
+            {
+                parameters: {submitFailed: true, dirty: true, invalid: true, formErrors: [{'rek_title': 'This field is required'}], alertLocale: {validationAlert: {title: 'validationFailed'}}},
+                expected: 'validationFailed'
+            },
+            {
+                parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting' }}},
+                expected: 'submitting'
+            },
+            {
+                parameters: {submitSucceeded: true, alertLocale: {successAlert: {title: 'submitSucceeded' }}},
+                expected: 'submitSucceeded'
+            }
+        ];
+
+        testCases.forEach(testCase => {
+            const alertProps = validation.getErrorAlertProps({...testCase.parameters});
+            expect(alertProps.title).toEqual(testCase.expected);
+        });
+    });
+
+    it('should return correct validation error summary', () => {
+        const testCases = [
+            {
+                parameters: {'rek_title': 'This field is required'},
+                expected: 'Title is required'
+            },
+            {
+                parameters: {'fez_record_search_key_journal_name': {'rek_journal_name': 'This field is required'}},
+                expected: 'Journal name is required'
+            }
+        ];
+
+        testCases.forEach(testCase => {
+            const errorMsgs = validation.translateFormErrorsToText(testCase.parameters);
+            expect(errorMsgs[0]).toEqual(testCase.expected);
+        });
+
+        const nonExistingFieldTestCase = {
+            parameters: {'some_nonexisting_field': 'This field is required'},
+            expected: null
+        };
+
+        const testMessage = validation.translateFormErrorsToText(nonExistingFieldTestCase.parameters);
+        expect(testMessage).toBeNull();
+
+        const emptyMessage = validation.translateFormErrorsToText('');
+        expect(emptyMessage).toBeNull();
+    });
+
 });
 

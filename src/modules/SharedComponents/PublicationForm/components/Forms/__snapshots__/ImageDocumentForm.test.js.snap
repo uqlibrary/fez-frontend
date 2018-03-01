@@ -70,7 +70,7 @@ exports[`ImageDocumentForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Abstract"
           fullWidth={true}
-          hintText="Please provide an abstract or summary of the work."
+          hintText="Provide an abstract or summary of the work."
           multiLine={true}
           name="rek_description"
           rows={3}
@@ -91,7 +91,7 @@ exports[`ImageDocumentForm renders  component 1`] = `
     title="Creators"
   >
     <div>
-      This is the author or creator of the work, e.g. producer or performer (if self-produced). Please enter creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.
+      Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name from the list.
     </div>
     <Field
       className="requiredField"
@@ -103,8 +103,8 @@ exports[`ImageDocumentForm renders  component 1`] = `
             "locale": Object {
               "addButton": "Add creator",
               "identifierLabel": "UQ identifier (if available)",
-              "nameAsPublishedHint": "Please type the name exactly as published",
-              "nameAsPublishedLabel": "Creator's name as published",
+              "nameAsPublishedHint": "Type the name exactly as published",
+              "nameAsPublishedLabel": "Enter each creator's name as published",
             },
           },
           "header": Object {
@@ -181,7 +181,7 @@ exports[`ImageDocumentForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          hintText="Please add any additional information here."
+          hintText="Add any additional information here."
           multiLine={true}
           name="fez_record_search_key_notes.rek_notes"
           rows={1}

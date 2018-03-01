@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Add new record should not render publication form if author is not loaded 1`] = `<span />`;
+exports[`Add new record should not render publication form if author is not loaded  1`] = `<span />`;
 
 exports[`Add new record should render stepper and a publication form 1`] = `
 <div>
@@ -10,23 +10,32 @@ exports[`Add new record should render stepper and a publication form 1`] = `
       Object {
         "cancelButtonLabel": "Add another missing record",
         "confirmButtonLabel": "Go to my research",
-        "confirmationMessage": <p>
-          Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.
-        </p>,
+        "confirmationMessage": <div>
+          <Alert
+            allowDismiss={false}
+            message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
+            showLoader={false}
+            title="File upload failed"
+            type="info"
+          />
+          <p>
+            Your record has been saved.
+            <br />
+            <br />
+            Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+          </p>
+        </div>,
         "confirmationTitle": "Your record has been submitted",
-        "fileFailConfirmationMessage": <p>
-          Your record has been saved. 
+        "fileFailConfirmationAlert": Object {
+          "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
+          "title": "File upload failed",
+          "type": "info",
+        },
+        "recordSuccessConfirmationMessage": <p>
+          Your record has been saved.
           <br />
           <br />
-          <strong>
-            Please note, file upload has failed. Retry uploading files via "Fix record" screen or contact eSpace administrators. 
-          </strong>
-          <br />
-          <br />
-          Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.
-        </p>,
-        "successConfirmationMessage": <p>
-          Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.
+          Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
         </p>,
       }
     }
@@ -34,7 +43,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
     onCancelAction={[Function]}
     onRef={[Function]}
   />
-  <Connect(ReduxForm)
+  <PublicationForm
     initialValues={
       Object {
         "currentAuthor": Array [
@@ -51,3 +60,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
   />
 </div>
 `;
+
+exports[`Add new record should render the confirm dialog with an alert for failed file upload 1`] = `<span />`;
+
+exports[`Add new record should render the confirm dialog with without an alert for successful file upload 1`] = `<span />`;
