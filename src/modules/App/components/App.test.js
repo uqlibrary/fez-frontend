@@ -133,7 +133,7 @@ describe('Application component', () => {
 
     it('should redirect to login page', () => {
         window.location.assign = jest.fn();
-        const wrapper = setup({}).instance().redirectUserToLogin();
+        const wrapper = setup({}).instance().redirectUserToLogin()();
         expect(window.location.assign).toBeCalledWith(expect.stringContaining(AUTH_URL_LOGIN));
     });
 
@@ -142,7 +142,7 @@ describe('Application component', () => {
         const wrapper = setup({
             account: account,
             author: author
-        }).instance().redirectUserToLogin();
+        }).instance().redirectUserToLogin()();
         expect(window.location.assign).toBeCalledWith(expect.stringContaining(AUTH_URL_LOGOUT));
     });
 
