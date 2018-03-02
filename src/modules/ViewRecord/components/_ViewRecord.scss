@@ -1,0 +1,19 @@
+@import '../../../sass/variables';
+
+.viewRecord {
+  margin-top: -12px !important;
+  .publicationCitation {
+    padding-top: 0 !important;
+    border-bottom: none !important;
+  }
+  .openExternalUrlIcon {
+    height: $text-body-small !important;
+    width: $text-body-small !important;
+    font-size: $text-body-small !important;
+    fill: $accent-color !important;
+    color: $accent-color !important;
+    margin: 0 2px;
+    vertical-align: top;
+  }
+}
+
