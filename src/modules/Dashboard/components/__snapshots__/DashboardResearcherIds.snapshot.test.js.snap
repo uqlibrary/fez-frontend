@@ -65,6 +65,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
     <a
       onClick={[Function]}
       onKeyPress={[Function]}
+      tabIndex="0"
       title="You are not linked to Google Scholar - Click to amend"
     >
       <div
@@ -80,6 +81,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
     <a
       onClick={[Function]}
       onKeyPress={[Function]}
+      tabIndex="0"
       title="You are not linked to ORCID - Click to amend"
     >
       <div

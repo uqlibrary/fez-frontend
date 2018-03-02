@@ -1272,6 +1272,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
             className="citationDoiLink"
             href="https://doi.org/10.14264/uql.2016.841"
             rel="noopener noreferrer"
+            tabIndex="0"
             target="_blank"
             title="Open this DOI in an new window"
           >
@@ -2594,6 +2595,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             className="citationDoiLink"
             href="https://doi.org/10.14264/uql.2016.841"
             rel="noopener noreferrer"
+            tabIndex="0"
             target="_blank"
             title="Open this DOI in an new window"
           >
@@ -3916,6 +3918,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             className="citationDoiLink"
             href="https://doi.org/10.14264/uql.2016.841"
             rel="noopener noreferrer"
+            tabIndex="0"
             target="_blank"
             title="Open this DOI in an new window"
           >
@@ -5099,6 +5102,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             className="citationDoiLink"
             href="https://doi.org/10.14264/uql.2016.841"
             rel="noopener noreferrer"
+            tabIndex="0"
             target="_blank"
             title="Open this DOI in an new window"
           >
@@ -6421,6 +6425,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             className="citationDoiLink"
             href="https://doi.org/10.14264/uql.2016.841"
             rel="noopener noreferrer"
+            tabIndex="0"
             target="_blank"
             title="Open this DOI in an new window"
           >
@@ -8985,6 +8990,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             className="citationDoiLink"
             href="https://doi.org/10.14264/uql.2016.841"
             rel="noopener noreferrer"
+            tabIndex="0"
             target="_blank"
             title="Open this DOI in an new window"
           >
