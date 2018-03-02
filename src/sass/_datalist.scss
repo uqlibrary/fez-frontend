@@ -11,7 +11,7 @@
   // Header
   &.datalist-header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    margin: 24px 0 12px 0 !important;
+    margin: 24px 0 12px 0;
 
     .datalist-title {
       color: rgba($text-color, 0.66);
@@ -34,17 +34,6 @@
         font-size: $text-body-small;
         margin-top: -4px;
         color: rgba($text-color, 0.8);
-      }
-    }
-  }
-}
-
-@include mobile {
-  .datalist {
-    // Header
-    &.datalist-header {
-      .datalist-buttons button {
-        margin: 0 16px 0 0 !important;
       }
     }
   }

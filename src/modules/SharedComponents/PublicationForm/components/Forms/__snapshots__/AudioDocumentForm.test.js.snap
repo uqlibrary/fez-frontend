@@ -124,18 +124,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Creators",
-      }
-    }
     title="Creators"
   >
-    <div>
-      Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name once from the list of creators or contributors.
-    </div>
     <Field
       className="requiredField"
       component={[Function]}
@@ -145,9 +135,28 @@ exports[`AudioDocumentForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButton": "Add creator",
+              "descriptionStep1": <div>
+                <span
+                  className="authorSteps"
+                >
+                  Step 1 of 2
+                </span>
+                 - Please 
+                <b>
+                  add to a list of creators below
+                </b>
+                , in the format and order that they are published.
+              </div>,
+              "descriptionStep1NoStep2": <div>
+                Please 
+                <b>
+                  add to a list of creators below
+                </b>
+                , in the format and order that they are published.
+              </div>,
               "identifierLabel": "UQ identifier (if available)",
               "nameAsPublishedHint": "Type the name exactly as published",
-              "nameAsPublishedLabel": "Enter each creator's name as published",
+              "nameAsPublishedLabel": "Enter each creator's name as published (eg. Smith, John)",
             },
           },
           "header": Object {
@@ -160,6 +169,18 @@ exports[`AudioDocumentForm renders  component 1`] = `
                 "confirmationMessage": "Are you sure you want to delete all items?",
                 "confirmationTitle": "Delete all",
               },
+              "descriptionStep2": <div>
+                <span
+                  className="authorSteps"
+                >
+                  Step 2 of 2
+                </span>
+                 - Please 
+                <b>
+                  select your name
+                </b>
+                 from the list below (if applicable).
+              </div>,
               "identifierColumn": "UQ identifier",
               "nameColumn": "Creator's name as published",
               "reorderColumn": "Reorder items",
@@ -188,7 +209,10 @@ exports[`AudioDocumentForm renders  component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
+              "selectHint": "Select this creator ([name]) to assign it as you",
+              "selectedHint": "This is you",
               "suffix": " listed creator",
+              "unselectedHint": "Select this to confirm this creator is you",
             },
           },
         }
@@ -208,9 +232,6 @@ exports[`AudioDocumentForm renders  component 1`] = `
     }
     title="Contributors"
   >
-    <div>
-      Please provide a list of contributors (e.g. producer or performer if self-produced) and then select your name once from the list of creators or contributors.
-    </div>
     <Field
       component={[Function]}
       disabled={false}
@@ -219,9 +240,28 @@ exports[`AudioDocumentForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButton": "Add contributor",
+              "descriptionStep1": <div>
+                <span
+                  className="authorSteps"
+                >
+                  Step 1 of 2
+                </span>
+                 - Please 
+                <b>
+                  add to a list of contributors below
+                </b>
+                , in the format and order that they are published.
+              </div>,
+              "descriptionStep1NoStep2": <div>
+                Please 
+                <b>
+                  add to a list of contributors below
+                </b>
+                , in the format and order that they are published.
+              </div>,
               "identifierLabel": "UQ identifier (if available)",
               "nameAsPublishedHint": "Type the name exactly as published",
-              "nameAsPublishedLabel": "Enter each contributor's name as published",
+              "nameAsPublishedLabel": "Enter each contributor's name as published (eg. Smith, John)",
             },
           },
           "header": Object {
@@ -234,6 +274,18 @@ exports[`AudioDocumentForm renders  component 1`] = `
                 "confirmationMessage": "Are you sure you want to delete all items?",
                 "confirmationTitle": "Delete all",
               },
+              "descriptionStep2": <div>
+                <span
+                  className="authorSteps"
+                >
+                  Step 2 of 2
+                </span>
+                 - Please 
+                <b>
+                  select your name
+                </b>
+                 from the list below (if applicable).
+              </div>,
               "identifierColumn": "UQ identifier",
               "nameColumn": "Contributor's name as published",
               "reorderColumn": "Reorder items",
@@ -262,7 +314,10 @@ exports[`AudioDocumentForm renders  component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
+              "selectHint": "Select this contributor ([name]) to assign it as you",
+              "selectedHint": "This is you",
               "suffix": " listed contributor",
+              "unselectedHint": "Select this to confirm this contributor is you",
             },
           },
         }
@@ -273,13 +328,6 @@ exports[`AudioDocumentForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "help...",
-        "title": "Optional information",
-      }
-    }
     title="Optional information"
   >
     <div

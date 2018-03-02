@@ -82,7 +82,7 @@ describe('ContributorsEditor tests ', () => {
 
     it('deleting all contributors from a list', () => {
         const wrapper = setup({});
-        wrapper.setState({ contributors: [ {}, {}, {}], isCurrentAuthorSelected: true });
+        wrapper.setState({ contributors: [{"nameAsPublished":"One","disabled":false},{"nameAsPublished":"Two","disabled":false},{"nameAsPublished":"Three","disabled":false}], isCurrentAuthorSelected: true });
         expect(wrapper.state().contributors.length).toEqual(3);
         wrapper.instance().deleteAllContributors();
         expect(wrapper.state().contributors.length).toEqual(0);
@@ -108,4 +108,36 @@ describe('ContributorsEditor tests ', () => {
         expect(wrapper.state().contributors.length).toEqual(3);
         expect(wrapper.state().contributors[1].displayName).toEqual(3);
     });
+
+    // Tests for infinite scroll appear or not
+    it('renders no contributor rows with no infinite scroll', () => {
+        const wrapper = setup({contributors: []});
+        wrapper.setState({ contributors: []});
+        expect(wrapper.find('ContributorRow').length).toEqual(0);
+        expect(wrapper.find('Infinite').length).toEqual(0);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('renders 3 contributor rows with no infinite scroll', () => {
+        const wrapper = setup({contributors: []});
+        wrapper.setState({ contributors: [ {displayName: 1}, {displayName: 2}, {displayName: 3}]});
+        expect(wrapper.find('ContributorRow').length).toEqual(3);
+        expect(wrapper.find('Infinite').length).toEqual(0);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('renders 4 contributor rows wrapped in an infinite scroll', () => {
+        const wrapper = setup({contributors: []});
+        wrapper.setState({ contributors: [ {displayName: 1}, {displayName: 2}, {displayName: 3}, {displayName: 4}]});
+        expect(wrapper.find('ContributorRow').length).toEqual(4);
+        expect(wrapper.find('Infinite').length).toEqual(1);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should show validation error', () => {
+        const wrapper = setup({contributors: [], meta: {error: 'This is a test error'}}, false);
+        expect(wrapper.find('.validationErrorMessage').length).toEqual(1);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 });

@@ -107,7 +107,6 @@ export default class ThesisForm extends Component {
                     </div>
                 </StandardCard>
                 <StandardCard title={txt.supervisors.title} help={txt.supervisors.help}>
-                    <div>{txt.supervisors.description}</div>
                     <Field
                         component={ContributorsEditorField}
                         className="requiredField"
