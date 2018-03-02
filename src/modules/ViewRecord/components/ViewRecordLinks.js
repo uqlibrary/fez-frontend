@@ -2,14 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {PubmedCentralLink} from 'modules/SharedComponents/PubmedCentralLink';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
-import {
-    Table,
-    TableBody,
-    TableHeader,
-    TableHeaderColumn,
-    TableRow,
-    TableRowColumn,
-} from 'material-ui/Table';
+import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 // import {locale} from 'locale';
 
@@ -31,7 +24,7 @@ export default class ViewRecordLinks extends PureComponent {
                         <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="tableHeader">
                             <TableRow>
                                 <TableHeaderColumn className="rowLink">Link (will open in a new window)</TableHeaderColumn>
-                                <TableHeaderColumn className="rowDescription">Description</TableHeaderColumn>
+                                <TableHeaderColumn className="rowDescription is-hidden-mobile">Description</TableHeaderColumn>
                                 <TableHeaderColumn className="rowOA align-right">OA Status</TableHeaderColumn>
                             </TableRow>
                         </TableHeader>
@@ -41,7 +34,7 @@ export default class ViewRecordLinks extends PureComponent {
                                     <TableRowColumn className="rowLink">
                                         <PubmedCentralLink pubmedCentralId={record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id}/>
                                     </TableRowColumn>
-                                    <TableRowColumn className="rowDescription">PubmedCentral link</TableRowColumn>
+                                    <TableRowColumn className="rowDescription is-hidden-mobile">PubmedCentral link</TableRowColumn>
                                     <TableRowColumn className="rowOA align-right">
                                         <div className="fez-icon openAccess large"/>
                                     </TableRowColumn>
@@ -51,9 +44,9 @@ export default class ViewRecordLinks extends PureComponent {
                             record.fez_record_search_key_link.map((item, index) => (
                                 <TableRow key={index + 1}>
                                     <TableRowColumn className="rowLink">
-                                        <ExternalLink href={item.rek_link}>{item.rek_link}</ExternalLink>
+                                        <ExternalLink href={item.rek_link} title={record.fez_record_search_key_link_description[index].rek_link_description || 'Click to open this link'}>{item.rek_link}</ExternalLink>
                                     </TableRowColumn>
-                                    <TableRowColumn className="rowDescription">{record.fez_record_search_key_link_description[index].rek_link_description || 'Default message'}</TableRowColumn>
+                                    <TableRowColumn className="rowDescription is-hidden-mobile">{record.fez_record_search_key_link_description[index].rek_link_description || 'Default message'}</TableRowColumn>
                                     <TableRowColumn className="rowOA align-right">
                                         <div className="fez-icon openAccess large"/>
                                     </TableRowColumn>

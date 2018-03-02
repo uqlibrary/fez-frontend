@@ -56,8 +56,10 @@ export default class ViewRecord extends Component {
             <StandardPage className="viewRecord" title={this.props.recordToView && this.props.recordToView.rek_title}>
                 <PublicationCitation publication={this.props.recordToView} hideTitle />
                 {
-                    this.props.recordToView && this.props.recordToView.fez_record_search_key_link && this.props.recordToView.fez_record_search_key_link.length > 0 &&
-                        <ViewRecordLinks recordToView={this.props.recordToView}/>
+                    this.props.recordToView &&
+                    this.props.recordToView.fez_record_search_key_link &&
+                    this.props.recordToView.fez_record_search_key_link.length > 0 &&
+                        <ViewRecordLinks {...this.props} />
                 }
                 <StandardCard title={'Files'} />
                 <StandardCard title={'Additional information'} />

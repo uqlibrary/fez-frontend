@@ -20,6 +20,9 @@
   margin-top: 24px !important;
   .rowLink {
     width: 50%;
+    @include mobile {
+      width: 80% !important;
+    }
   }
   .rowDescription {
     text-indent: 12px !important;
