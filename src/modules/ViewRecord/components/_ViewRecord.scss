@@ -16,4 +16,37 @@
     vertical-align: top;
   }
 }
-
+.viewRecordLinks {
+  margin-top: 24px !important;
+  .rowLink {
+    width: 50%;
+  }
+  .rowDescription {
+    text-indent: 12px !important;
+  }
+  .rowOA {
+    text-align: right !important;
+  }
+  .tableHeader {
+      tr {
+        height: 24px !important;
+        th {
+          height: $text-line-height-small !important;
+          line-height: $text-line-height-small !important;
+          padding: 0 !important;
+          color: lighten($secondary-color, 33%) !important;
+          font-weight: $text-weight-normal !important;
+        }
+      }
+    }
+    .tableData {
+      tr {
+        height: 30px !important;
+        td {
+          padding: 0 !important;
+          height: $text-line-height-small !important;
+          line-height: $text-line-height-small !important;
+        }
+      }
+    }
+}

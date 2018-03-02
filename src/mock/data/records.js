@@ -3839,8 +3839,52 @@ export const record = {
     }],
     "fez_record_search_key_language_of_journal_name": [],
     "fez_record_search_key_language_of_title": [],
-    "fez_record_search_key_link": [],
-    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_link": [
+        {
+            "rek_link_id": 3240198,
+            "rek_link_pid": "UQ:795347",
+            "rek_link_xsdmf_id": null,
+            "rek_link": "http://www.thisisatest.com",
+            "rek_link_order": 1
+        },
+        {
+            "rek_link_id": 3240199,
+            "rek_link_pid": "UQ:795347",
+            "rek_link_xsdmf_id": null,
+            "rek_link": "http://www.thisisanothertest.com",
+            "rek_link_order": 2
+        },
+        {
+            "rek_link_id": 3240200,
+            "rek_link_pid": "UQ:795347",
+            "rek_link_xsdmf_id": null,
+            "rek_link": "http://www.nodescription.com",
+            "rek_link_order": 2
+        }
+    ],
+    "fez_record_search_key_link_description": [
+        {
+            "rek_link_description_id": 3240198,
+            "rek_link_description_pid": "UQ:795347",
+            "rek_link_description_xsdmf_id": null,
+            "rek_link_description": "Link to publication",
+            "rek_link_description_order": 1
+        },
+        {
+            "rek_link_description_id": 3240199,
+            "rek_link_description_pid": "UQ:795347",
+            "rek_link_description_xsdmf_id": null,
+            "rek_link_description": "Another link to publication",
+            "rek_link_description_order": 1
+        },
+        {
+            "rek_link_description_id": 3240200,
+            "rek_link_description_pid": "UQ:795347",
+            "rek_link_description_xsdmf_id": null,
+            "rek_link_description": null,
+            "rek_link_description_order": 1
+        }
+    ],
     "fez_record_search_key_native_script_journal_name": null,
     "fez_record_search_key_native_script_title": null,
     "fez_record_search_key_notes": null,
@@ -3864,7 +3908,9 @@ export const record = {
         "rek_publisher_xsdmf_id": 9626,
         "rek_publisher": "Oxford University Press"
     },
-    "fez_record_search_key_pubmed_id": null,
+    "fez_record_search_key_pubmed_central_id": {
+        "rek_pubmed_central_id": '1234567'
+    },
     "fez_record_search_key_refereed": {
         "rek_refereed_id": 2587133,
         "rek_refereed_pid": "UQ:396321",
@@ -4149,8 +4195,8 @@ export const myRecordsList = {
             "fez_record_search_key_language_of_title": [],
             "fez_record_search_key_length": null,
             "fez_record_search_key_license": null,
-            "fez_record_search_key_link": [],
-            "fez_record_search_key_link_description": [],
+            // "fez_record_search_key_link": [],
+            // "fez_record_search_key_link_description": [],
             "fez_record_search_key_location": [],
             "fez_record_search_key_native_script_book_title": null,
             "fez_record_search_key_native_script_conference_name": null,
