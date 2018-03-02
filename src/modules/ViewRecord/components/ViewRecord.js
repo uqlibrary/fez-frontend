@@ -1,14 +1,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-
 import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
 import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
-
 import ViewRecordLinks from './ViewRecordLinks';
-
 import {locale} from 'locale';
 
 export default class ViewRecord extends Component {
@@ -58,9 +55,10 @@ export default class ViewRecord extends Component {
         return (
             <StandardPage className="viewRecord" title={this.props.recordToView && this.props.recordToView.rek_title}>
                 <PublicationCitation publication={this.props.recordToView} hideTitle />
-                <StandardCard title={'Links'}>
-                    <ViewRecordLinks recordToView={this.props.recordToView} />
-                </StandardCard>
+                {
+                    this.props.recordToView && this.props.recordToView.fez_record_search_key_link && this.props.recordToView.fez_record_search_key_link.length > 0 &&
+                        <ViewRecordLinks recordToView={this.props.recordToView}/>
+                }
                 <StandardCard title={'Files'} />
                 <StandardCard title={'Additional information'} />
             </StandardPage>
