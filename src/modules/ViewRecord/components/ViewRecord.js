@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 
 import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
 import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
-import {PubmedCentralLink} from 'modules/SharedComponents/PubmedCentralLink';
 
 import {locale} from 'locale';
 
@@ -56,13 +54,8 @@ export default class ViewRecord extends Component {
         }
 
         return (
-            <StandardPage>
+            <StandardPage title={this.props.recordToView ? this.props.recordToView.rek_title : ''}>
                 <PublicationCitation publication={this.props.recordToView}/>
-                <StandardCard title={'Links'}>
-                    Include PubmedCentral link if available: <PubmedCentralLink pubmedCentralId={'PMC123232'} />
-                </StandardCard>
-                <StandardCard title={'Files'} />
-                <StandardCard title={'Additional information'} />
             </StandardPage>
         );
     }

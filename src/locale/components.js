@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default {
     components: {
         facetsFilter: {
@@ -174,6 +176,7 @@ export default {
                 }
             }
         },
+
         authors: {
             title: 'Authors',
             description: 'Please provide a list of authors and then select your name from the list.',
@@ -186,7 +189,13 @@ export default {
             field: {
                 form: {
                     locale: {
-                        nameAsPublishedLabel: 'Enter each author\'s name as published',
+                        descriptionStep1: (
+                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of authors below</b>, in the format and order that they are published.</div>
+                        ),
+                        descriptionStep1NoStep2: (
+                            <div>Please <b>add to a list of authors below</b>, in the format and order that they are published.</div>
+                        ),
+                        nameAsPublishedLabel: 'Enter each author\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add author'
@@ -194,6 +203,9 @@ export default {
                 },
                 header: {
                     locale: {
+                        descriptionStep2: (
+                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                        ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Author\'s name as published',
                         identifierColumn: 'UQ identifier',
@@ -210,10 +222,13 @@ export default {
                 row: {
                     locale: {
                         suffix: ' listed author',
+                        unselectedHint: 'Select this to confirm [identifier] is you',
+                        selectedHint: 'This is you',
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                        selectHint: 'Select this author ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -237,7 +252,13 @@ export default {
             field: {
                 form: {
                     locale: {
-                        nameAsPublishedLabel: 'Enter each editor\'s name as published',
+                        descriptionStep1: (
+                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of editors below</b>, in the format and order that they are published.</div>
+                        ),
+                        descriptionStep1NoStep2: (
+                            <div>Please <b>add to a list of editors below</b>, in the format and order that they are published.</div>
+                        ),
+                        nameAsPublishedLabel: 'Enter each editor\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add editor'
@@ -245,6 +266,9 @@ export default {
                 },
                 header: {
                     locale: {
+                        descriptionStep2: (
+                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                        ),
                         contributorAssignmentColumn: 'Select your name (if applicable)',
                         nameColumn: 'Editor\'s name as published',
                         identifierColumn: 'UQ identifier',
@@ -261,10 +285,13 @@ export default {
                 row: {
                     locale: {
                         suffix: ' listed editor',
+                        unselectedHint: 'Select this to confirm this editor is you',
+                        selectedHint: 'This is you',
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                        selectHint: 'Select this editor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -287,7 +314,13 @@ export default {
             field: {
                 form: {
                     locale: {
-                        nameAsPublishedLabel: 'Enter each creator\'s name as published',
+                        descriptionStep1: (
+                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of creators below</b>, in the format and order that they are published.</div>
+                        ),
+                        descriptionStep1NoStep2: (
+                            <div>Please <b>add to a list of creators below</b>, in the format and order that they are published.</div>
+                        ),
+                        nameAsPublishedLabel: 'Enter each creator\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add creator'
@@ -295,6 +328,9 @@ export default {
                 },
                 header: {
                     locale: {
+                        descriptionStep2: (
+                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                        ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Creator\'s name as published',
                         identifierColumn: 'UQ identifier',
@@ -311,10 +347,13 @@ export default {
                 row: {
                     locale: {
                         suffix: ' listed creator',
+                        unselectedHint: 'Select this to confirm this creator is you',
+                        selectedHint: 'This is you',
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                        selectHint: 'Select this creator ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -336,7 +375,13 @@ export default {
             field: {
                 form: {
                     locale: {
-                        nameAsPublishedLabel: 'Enter each designer\'s name as published',
+                        descriptionStep1: (
+                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of designers below</b>, in the format and order that they are published.</div>
+                        ),
+                        descriptionStep1NoStep2: (
+                            <div>Please <b>add to a list of designers below</b>, in the format and order that they are published.</div>
+                        ),
+                        nameAsPublishedLabel: 'Enter each designer\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add designer'
@@ -344,6 +389,9 @@ export default {
                 },
                 header: {
                     locale: {
+                        descriptionStep2: (
+                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                        ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Designers name as published',
                         identifierColumn: 'UQ identifier',
@@ -360,10 +408,13 @@ export default {
                 row: {
                     locale: {
                         suffix: ' listed designer',
+                        unselectedHint: 'Select this to confirm this designer is you',
+                        selectedHint: 'This is you',
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                        selectHint: 'Select this designer ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -385,7 +436,13 @@ export default {
             field: {
                 form: {
                     locale: {
-                        nameAsPublishedLabel: 'Enter each supervisor\'s name as published',
+                        descriptionStep1: (
+                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of supervisors below</b>, in the format and order that they are published.</div>
+                        ),
+                        descriptionStep1NoStep2: (
+                            <div>Please <b>add to a list of supervisors below</b>, in the format and order that they are published.</div>
+                        ),
+                        nameAsPublishedLabel: 'Enter each supervisor\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: '',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add supervisor'
@@ -393,6 +450,9 @@ export default {
                 },
                 header: {
                     locale: {
+                        descriptionStep2: (
+                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                        ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Supervisor\'s name as published',
                         identifierColumn: 'UQ identifier',
@@ -409,10 +469,13 @@ export default {
                 row: {
                     locale: {
                         suffix: ' listed supervisor',
+                        unselectedHint: 'Select this to confirm this supervisor is you',
+                        selectedHint: 'This is you',
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                        selectHint: 'Select this supervisor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -434,6 +497,8 @@ export default {
             field: {
                 form: {
                     locale: {
+                        descriptionStep1: '',
+                        descriptionStep1NoStep2: 'List your current supervisors',
                         nameAsPublishedLabel: 'Enter each supervisor’s name on a separate line e.g. Firstname Surname',
                         nameAsPublishedHint: '',
                         identifierLabel: 'UQ identifier (if available)',
@@ -442,6 +507,7 @@ export default {
                 },
                 header: {
                     locale: {
+                        descriptionStep2: '',
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Supervisor\'s name',
                         identifierColumn: 'UQ identifier',
@@ -462,6 +528,7 @@ export default {
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                        selectHint: 'Select this supervisor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -474,8 +541,6 @@ export default {
         },
         contributors: {
             title: 'Contributors',
-            description: 'Please provide a list of contributors (e.g. producer or performer if self-produced) and then select your name from the list.',
-            descriptionCreatorOrContributor: 'Please provide a list of contributors (e.g. producer or performer if self-produced) and then select your name once from the list of creators or contributors.',
             help: {
                 title: 'Contributors',
                 text: 'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
@@ -484,7 +549,13 @@ export default {
             field: {
                 form: {
                     locale: {
-                        nameAsPublishedLabel: 'Enter each contributor\'s name as published',
+                        descriptionStep1: (
+                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>
+                        ),
+                        descriptionStep1NoStep2: (
+                            <div>Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>
+                        ),
+                        nameAsPublishedLabel: 'Enter each contributor\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add contributor'
@@ -492,6 +563,9 @@ export default {
                 },
                 header: {
                     locale: {
+                        descriptionStep2: (
+                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                        ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Contributor\'s name as published',
                         identifierColumn: 'UQ identifier',
@@ -508,10 +582,13 @@ export default {
                 row: {
                     locale: {
                         suffix: ' listed contributor',
+                        unselectedHint: 'Select this to confirm this contributor is you',
+                        selectedHint: 'This is you',
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                        selectHint: 'Select this contributor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -522,6 +599,7 @@ export default {
                 }
             }
         },
+
         fieldOfResearchForm: {
             title: 'Field of research',
             text: 'Select up to 3 Field of Research (FoR) codes at the 4 digit level',

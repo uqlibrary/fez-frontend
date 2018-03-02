@@ -248,6 +248,8 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             "form": Object {
               "locale": Object {
                 "addButton": "Add supervisor",
+                "descriptionStep1": "",
+                "descriptionStep1NoStep2": "List your current supervisors",
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedHint": "",
                 "nameAsPublishedLabel": "Enter each supervisor’s name on a separate line e.g. Firstname Surname",
@@ -263,6 +265,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                   "confirmationMessage": "Are you sure you want to delete all items?",
                   "confirmationTitle": "Delete all",
                 },
+                "descriptionStep2": "",
                 "identifierColumn": "UQ identifier",
                 "nameColumn": "Supervisor's name",
                 "reorderColumn": "Reorder items",
@@ -291,6 +294,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                   "Ninth",
                   "Tenth",
                 ],
+                "selectHint": "Select this supervisor ([name]) to assign it as you",
                 "suffix": " listed supervisor",
               },
             },
@@ -736,6 +740,8 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             "form": Object {
               "locale": Object {
                 "addButton": "Add supervisor",
+                "descriptionStep1": "",
+                "descriptionStep1NoStep2": "List your current supervisors",
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedHint": "",
                 "nameAsPublishedLabel": "Enter each supervisor’s name on a separate line e.g. Firstname Surname",
@@ -751,6 +757,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                   "confirmationMessage": "Are you sure you want to delete all items?",
                   "confirmationTitle": "Delete all",
                 },
+                "descriptionStep2": "",
                 "identifierColumn": "UQ identifier",
                 "nameColumn": "Supervisor's name",
                 "reorderColumn": "Reorder items",
@@ -779,6 +786,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                   "Ninth",
                   "Tenth",
                 ],
+                "selectHint": "Select this supervisor ([name]) to assign it as you",
                 "suffix": " listed supervisor",
               },
             },

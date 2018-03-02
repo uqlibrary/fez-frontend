@@ -146,9 +146,6 @@ exports[`ThesisForm  should render component 1`] = `
     className=""
     title="Supervisors"
   >
-    <div>
-      Please provide a list of supervisors and then select your name from the list.
-    </div>
     <Field
       className="requiredField"
       component={[Function]}
@@ -158,9 +155,28 @@ exports[`ThesisForm  should render component 1`] = `
           "form": Object {
             "locale": Object {
               "addButton": "Add supervisor",
+              "descriptionStep1": <div>
+                <span
+                  className="authorSteps"
+                >
+                  Step 1 of 2
+                </span>
+                 - Please 
+                <b>
+                  add to a list of supervisors below
+                </b>
+                , in the format and order that they are published.
+              </div>,
+              "descriptionStep1NoStep2": <div>
+                Please 
+                <b>
+                  add to a list of supervisors below
+                </b>
+                , in the format and order that they are published.
+              </div>,
               "identifierLabel": "UQ identifier (if available)",
               "nameAsPublishedHint": "",
-              "nameAsPublishedLabel": "Enter each supervisor's name as published",
+              "nameAsPublishedLabel": "Enter each supervisor's name as published (eg. Smith, John)",
             },
           },
           "header": Object {
@@ -173,6 +189,18 @@ exports[`ThesisForm  should render component 1`] = `
                 "confirmationMessage": "Are you sure you want to delete all items?",
                 "confirmationTitle": "Delete all",
               },
+              "descriptionStep2": <div>
+                <span
+                  className="authorSteps"
+                >
+                  Step 2 of 2
+                </span>
+                 - Please 
+                <b>
+                  select your name
+                </b>
+                 from the list below (if applicable).
+              </div>,
               "identifierColumn": "UQ identifier",
               "nameColumn": "Supervisor's name as published",
               "reorderColumn": "Reorder items",
@@ -201,7 +229,10 @@ exports[`ThesisForm  should render component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
+              "selectHint": "Select this supervisor ([name]) to assign it as you",
+              "selectedHint": "This is you",
               "suffix": " listed supervisor",
+              "unselectedHint": "Select this to confirm this supervisor is you",
             },
           },
         }

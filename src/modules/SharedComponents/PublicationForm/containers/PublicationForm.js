@@ -46,13 +46,13 @@ const validate = (values) => {
                 (data.authors && data.authors.filter(item => (item.selected)).length === 0 &&
                     (!data.editors || (data.editors && data.editors.filter(item => (item.selected)).length === 0)))
             ) {
-                errors.authors = locale.validationErrors.authorEditorRequired;
+                errors.authors = locale.validationErrors.authorRequired;
+                errors.editors = locale.validationErrors.editorRequired;
             }
             break;
         default:
             break;
     }
-
     return errors;
 };
 

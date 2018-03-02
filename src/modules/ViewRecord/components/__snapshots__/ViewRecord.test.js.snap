@@ -3,25 +3,9 @@
 exports[`Component ViewRecord  should render default props 1`] = `
 <StandardPage
   className=""
+  title=""
 >
   <withRouter(Connect(PublicationCitation)) />
-  <StandardCard
-    className=""
-    title="Links"
-  >
-    Include PubmedCentral link if available: 
-    <PubmedCentralLink
-      pubmedCentralId="PMC123232"
-    />
-  </StandardCard>
-  <StandardCard
-    className=""
-    title="Files"
-  />
-  <StandardCard
-    className=""
-    title="Additional information"
-  />
 </StandardPage>
 `;
 
@@ -51,6 +35,7 @@ exports[`Component ViewRecord  should render loader 1`] = `
 exports[`Component ViewRecord  should render record view 1`] = `
 <StandardPage
   className=""
+  title="Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth"
 >
   <withRouter(Connect(PublicationCitation))
     publication={
@@ -446,23 +431,6 @@ exports[`Component ViewRecord  should render record view 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-  />
-  <StandardCard
-    className=""
-    title="Links"
-  >
-    Include PubmedCentral link if available: 
-    <PubmedCentralLink
-      pubmedCentralId="PMC123232"
-    />
-  </StandardCard>
-  <StandardCard
-    className=""
-    title="Files"
-  />
-  <StandardCard
-    className=""
-    title="Additional information"
   />
 </StandardPage>
 `;

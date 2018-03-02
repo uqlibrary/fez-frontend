@@ -117,7 +117,6 @@ export default class DesignForm extends Component {
                     </div>
                 </StandardCard>
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                    <div>{txt.authors.description}</div>
                     <Field
                         component={ContributorsEditorField}
                         showContributorAssignment
