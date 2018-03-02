@@ -16,8 +16,9 @@ import {default as formLocale} from 'locale/publicationForm';
 export default class BookForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
-        subtypeVocabId: PropTypes.number
-    }
+        subtypeVocabId: PropTypes.number,
+        formValues: PropTypes.object
+    };
 
     constructor(props) {
         super(props);
@@ -25,6 +26,10 @@ export default class BookForm extends Component {
 
     render() {
         const txt = formLocale.book;
+        const editors = this.props.formValues && this.props.formValues.get('editors');
+        const editorSelected = !!editors && editors.filter((editor) => editor.selected).length > 0;
+        const authors = this.props.formValues && this.props.formValues.get('authors');
+        const authorSelected = !!authors && authors.filter((author) => author.selected).length > 0;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
@@ -96,21 +101,19 @@ export default class BookForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                    <div>{txt.authors.descriptionAuthorOrEditor}</div>
                     <Field
                         component={ContributorsEditorField}
                         name="authors"
                         locale={txt.authors.field}
-                        showContributorAssignment
+                        showContributorAssignment={!editorSelected}
                         className="requiredField"
                         disabled={this.props.submitting} />
                 </StandardCard>
 
                 <StandardCard title={txt.editors.title} help={txt.editors.help}>
-                    <div>{txt.editors.descriptionAuthorOrEditor}</div>
                     <Field
                         component={ContributorsEditorField}
-                        showContributorAssignment
+                        showContributorAssignment={!authorSelected}
                         name="editors"
                         locale={txt.editors.field}
                         disabled={this.props.submitting} />

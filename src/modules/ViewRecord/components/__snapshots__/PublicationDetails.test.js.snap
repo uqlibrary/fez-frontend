@@ -95,7 +95,7 @@ exports[`Publication Details Component  should render component 1`] = `
               key="collection-0"
             >
               <a
-                href="#/records/UQ:3825"
+                href="#"
               >
                 School of Chemistry and Molecular Biosciences
               </a>
@@ -104,7 +104,7 @@ exports[`Publication Details Component  should render component 1`] = `
               key="collection-1"
             >
               <a
-                href="#/records/UQ:218311"
+                href="#"
               >
                 HERDC Pre-Audit
               </a>
@@ -113,7 +113,7 @@ exports[`Publication Details Component  should render component 1`] = `
               key="collection-2"
             >
               <a
-                href="#/records/UQ:171723"
+                href="#"
               >
                 UQ Centre for Clinical Research Publications
               </a>

@@ -14,9 +14,9 @@ import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
 import {PublicationStats} from 'modules/SharedComponents/PublicationStats';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Tabs, Tab} from 'material-ui/Tabs';
-import FontIcon from 'material-ui/FontIcon';
 import {routes} from 'config';
 import {locale} from 'locale';
+import FontIcon from 'material-ui/FontIcon';
 
 class Dashboard extends React.Component {
     static propTypes = {
@@ -260,7 +260,11 @@ class Dashboard extends React.Component {
                                                                                     rel="noopener noreferrer"
                                                                                     title={locale.global.linkWillOpenInNewWindow.replace('[destination]', recordValue.title)}>
                                                                                     <div className="columns is-mobile is-gapless">
-                                                                                        <div className="column is-narrow citationCountNumber">{txt.myTrendingPublications.viewFullCitationLinkTitle}<FontIcon className="citationCountIcon material-icons">open_in_new</FontIcon></div>
+                                                                                        <div className="column is-narrow citationCountNumber">{txt.myTrendingPublications.viewFullCitationLinkTitle}
+                                                                                            <FontIcon className="material-icons citationIcon openExternalUrlIcon" data-place="left">
+                                                                                                open_in_new
+                                                                                            </FontIcon>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </a>
                                                                             </div>

@@ -8,20 +8,20 @@ export default {
         title: 'Publication type',
         inputLabelText: 'Publication type',
         hintText: 'Select a publication type from the dropdown list',
-        help: {
-            title: 'Publication type',
-            text: 'Help about publication types, eg journal article, book, conference paper etc',
-            buttonLabel: 'OK'
-        }
+        // help: {
+        //     title: 'Publication type',
+        //     text: 'Help about publication types, eg journal article, book, conference paper etc',
+        //     buttonLabel: 'OK'
+        // }
     },
     generic: {
         information: {
             title: 'Generic document information',
-            help: {
-                title: 'General document information',
-                text: 'Text...',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'General document information',
+            //     text: 'Text...',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 documentTitle: {
                     floatingLabelText: 'Title',
@@ -50,11 +50,11 @@ export default {
         authors: txt.components.authors,
         optional: {
             title: 'Optional information',
-            help: {
-                title: 'Optional Information',
-                text: 'Text...',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Optional Information',
+            //     text: 'Text...',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 notes: {
                     floatingLabelText: 'Notes (not publicly viewable)',
@@ -71,11 +71,11 @@ export default {
     journalArticle: {
         information: {
             title: 'Journal article information',
-            help: {
-                title: 'Journal article information',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Journal article information',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 documentTitle: {
                     floatingLabelText: 'Title',
@@ -97,11 +97,11 @@ export default {
         authors: txt.components.authors,
         optional: {
             title: 'Optional publication details',
-            help: {
-                title: 'Optional publication details',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Optional publication details',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 volume: 'Volume',
                 issue: 'Issue',
@@ -116,11 +116,11 @@ export default {
     book: {
         information: {
             title: 'Book information',
-            help: {
-                title: 'Book information',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Book information',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 bookTitle: 'Book title',
                 subtype: 'Publication subtype',
@@ -153,11 +153,11 @@ export default {
     bookChapter: {
         information: {
             title: 'Book chapter information',
-            help: {
-                title: 'Book chapter information',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Book chapter information',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 bookChapterTitle: 'Book chapter title',
                 bookTitle: 'Book title',
@@ -176,11 +176,11 @@ export default {
         editors: txt.components.editors,
         other: {
             title: 'Other publication details',
-            help: {
-                title: 'Other publication details',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Other publication details',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 edition: 'Edition',
                 startPage: 'Start page',
@@ -193,11 +193,11 @@ export default {
     conferencePaper: {
         information: {
             title: 'Conference paper information',
-            help: {
-                title: 'Conference paper information',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Conference paper information',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 title: 'Title of paper',
                 conferenceName: 'Conference name',
@@ -218,11 +218,11 @@ export default {
         authors: txt.components.authors,
         other: {
             title: 'Other publication details',
-            help: {
-                title: 'Other publication details',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Other publication details',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 startPage: 'Start page',
                 endPage: 'End page',
@@ -234,11 +234,11 @@ export default {
     researchReport: {
         information: {
             title: 'Research report information',
-            help: {
-                title: 'Research report information',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Research report information',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 documentTitle: {
                     floatingLabelText: 'Title',
@@ -271,11 +271,11 @@ export default {
         authors: txt.components.authors,
         other: {
             title: 'Other publication details',
-            help: {
-                title: 'Other publication details',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Other publication details',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 abstract: {
                     floatingLabelText: 'Abstract',
@@ -339,11 +339,11 @@ export default {
         contributor: txt.components.contributors,
         optional: {
             title: 'Optional information',
-            help: {
-                title: 'Optional information',
-                text: 'help...',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Optional information',
+            //     text: 'help...',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 notes: {
                     floatingLabelText: 'Notes (not publicly viewable)',
@@ -359,11 +359,11 @@ export default {
     patent: {
         information: {
             title: 'Patent information',
-            help: {
-                title: 'Patent information',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Patent information',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 title: 'Title of patent',
                 patentNumber: 'Patent number',
@@ -380,11 +380,11 @@ export default {
         authors: txt.components.creators,
         other: {
             title: 'Other patent details',
-            help: {
-                title: 'Other patent details',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Other patent details',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 notes: 'Notes (not publicly viewable)',
                 url: 'Enter URL for this patent'
@@ -394,11 +394,11 @@ export default {
     seminarPaper: {
         information: {
             title: 'Seminar paper information',
-            help: {
-                title: 'Seminar paper information',
-                text: 'Some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Seminar paper information',
+            //     text: 'Some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 documentTitle: {
                     floatingLabelText: 'Title',
@@ -427,11 +427,11 @@ export default {
         authors: txt.components.authors,
         optional: {
             title: 'Optional information',
-            help: {
-                title: 'Optional information help',
-                text: 'Some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Optional information help',
+            //     text: 'Some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 notes: {
                     floatingLabelText: 'Notes (not publicly viewable)',
@@ -447,11 +447,11 @@ export default {
     thesis: {
         information: {
             title: 'Thesis information',
-            help: {
-                title: 'Thesis information',
-                text: 'Some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Thesis information',
+            //     text: 'Some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 documentTitle: {
                     floatingLabelText: 'Title',
@@ -485,29 +485,29 @@ export default {
         },
         fieldOfResearch: {
             title: 'Field of research',
-            help: {
-                title: 'Field of research help',
-                text: 'Some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Field of research help',
+            //     text: 'Some help',
+            //     buttonLabel: 'OK'
+            // },
             description: 'Select up to 3 Field of Research (FoR) codes'
         },
         keywords: {
             title: 'Keywords',
-            help: {
-                title: 'Optional information help',
-                text: 'Some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Optional information help',
+            //     text: 'Some help',
+            //     buttonLabel: 'OK'
+            // },
             description: 'Add up to 10 keywords that describe the content of the thesis'
         },
         optional: {
             title: 'Optional information',
-            help: {
-                title: 'Optional information help',
-                text: 'Some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Optional information help',
+            //     text: 'Some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 doi: {
                     floatingLabelText: 'DOI',
@@ -531,11 +531,11 @@ export default {
     preprint: {
         information: {
             title: 'Preprint information',
-            help: {
-                title: 'Preprint information',
-                text: 'Help...',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Preprint information',
+            //     text: 'Help...',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 documentTitle: {
                     floatingLabelText: 'Title',
@@ -552,11 +552,11 @@ export default {
         authors: txt.components.authors,
         optional: {
             title: 'Optional publication details',
-            help: {
-                title: 'Optional publication details',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Optional publication details',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 notes: {
                     floatingLabelText: 'Notes (not publicly viewable)',
@@ -572,11 +572,11 @@ export default {
     creativeWork: {
         information: {
             title: 'Creative work information',
-            help: {
-                title: 'Creative work information',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Creative work information',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 articleTitle: {
                     floatingLabelText: 'Title',
@@ -605,11 +605,11 @@ export default {
         authors: txt.components.authors,
         optional: {
             title: 'Optional information',
-            help: {
-                title: 'Optional information',
-                text: 'Help...',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Optional information',
+            //     text: 'Help...',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 notes: {
                     floatingLabelText: 'Notes (not publicly viewable)',
@@ -669,11 +669,11 @@ export default {
         contributor: txt.components.contributors,
         optional: {
             title: 'Optional information',
-            help: {
-                title: 'Optional information',
-                text: 'text...',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Optional information',
+            //     text: 'text...',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 notes: {
                     floatingLabelText: 'Notes (not publicly viewable)',
@@ -689,11 +689,11 @@ export default {
     imageDocument: {
         information: {
             title: 'Image information',
-            help: {
-                title: 'Image information',
-                text: 'Some text.',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Image information',
+            //     text: 'Some text.',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 documentTitle: {
                     floatingLabelText: 'Title',
@@ -714,11 +714,11 @@ export default {
         creator: txt.components.creators,
         optional: {
             title: 'Optional information',
-            help: {
-                title: 'Optional information',
-                text: 'Text...',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Optional information',
+            //     text: 'Text...',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 notes: {
                     floatingLabelText: 'Notes (not publicly viewable)',
@@ -734,11 +734,11 @@ export default {
     design: {
         information: {
             title: 'Design information',
-            help: {
-                title: 'Design information',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Design information',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 articleTitle: {
                     floatingLabelText: 'Title',
@@ -775,11 +775,11 @@ export default {
         authors: txt.components.designers,
         optional: {
             title: 'Optional information',
-            help: {
-                title: 'Optional information',
-                text: 'text...',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Optional information',
+            //     text: 'text...',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 notes: {
                     floatingLabelText: 'Notes (not publicly viewable)',
@@ -795,11 +795,11 @@ export default {
     newspaperArticle: {
         information: {
             title: 'Newspaper article information',
-            help: {
-                title: 'Newspaper article information',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Newspaper article information',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 documentTitle: {
                     floatingLabelText: 'Title',
@@ -828,11 +828,11 @@ export default {
         authors: txt.components.authors,
         optional: {
             title: 'Optional publication details',
-            help: {
-                title: 'Optional publication details',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Optional publication details',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 notes: {
                     floatingLabelText: 'Notes (not publicly viewable)',
@@ -848,11 +848,11 @@ export default {
     departmentTechnicalReport: {
         information: {
             title: 'Department technical report information',
-            help: {
-                title: 'Department technical report information',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Department technical report information',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 documentTitle: {
                     floatingLabelText: 'Title',
@@ -893,11 +893,11 @@ export default {
         authors: txt.components.authors,
         other: {
             title: 'Other publication details',
-            help: {
-                title: 'Other publication details',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Other publication details',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 notes: {
                     floatingLabelText: 'Notes (not publicly viewable)',
@@ -913,11 +913,11 @@ export default {
     workingPaper: {
         information: {
             title: 'Working paper information',
-            help: {
-                title: 'Working paper information',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Working paper information',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 documentTitle: {
                     floatingLabelText: 'Title',
@@ -958,11 +958,11 @@ export default {
         authors: txt.components.authors,
         other: {
             title: 'Other publication details',
-            help: {
-                title: 'Other publication details',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Other publication details',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 notes: {
                     floatingLabelText: 'Notes (not publicly viewable)',
@@ -978,11 +978,11 @@ export default {
     conferenceProceedings: {
         information: {
             title: 'Conference proceedings information',
-            help: {
-                title: 'Conference proceedings information',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Conference proceedings information',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 title: {
                     floatingLabelText: 'Title',
@@ -1023,11 +1023,11 @@ export default {
         editors: txt.components.editors,
         other: {
             title: 'Other publication details',
-            help: {
-                title: 'Other publication details',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Other publication details',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 notes: {
                     floatingLabelText: 'Notes (not publicly viewable)',
@@ -1042,11 +1042,11 @@ export default {
     },
     fileUpload: {
         title: 'Upload files',
-        help: {
-            title: 'Upload files',
-            text: 'file help...',
-            buttonLabel: 'OK'
-        }
+        // help: {
+        //     title: 'Upload files',
+        //     text: 'file help...',
+        //     buttonLabel: 'OK'
+        // }
     },
     cancelWorkflowConfirmation: {
         confirmationTitle: 'Abandon workflow',
@@ -1054,6 +1054,7 @@ export default {
         cancelButtonLabel: 'No',
         confirmButtonLabel: 'Yes'
     },
+
     validationAlert: {
         type: 'warning',
         title: 'Validation',
@@ -1069,7 +1070,8 @@ export default {
     progressAlert: {
         type: 'info_outline',
         title: 'Saving',
-        message: 'Creating new publication is in progress.'
+        message: 'Creating new publication is in progress.',
+        showLoader: true
     },
     successAlert: {
         type: 'done',
@@ -1082,33 +1084,36 @@ export default {
         text: (<span>Required fields are marked with <span className="requiredField"><label>&nbsp;</label></span></span>),
         fileUpload: {
             title: 'Upload files',
-            help: {
-                title: 'Upload files',
-                text: 'file help...',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Upload files',
+            //     text: 'file help...',
+            //     buttonLabel: 'OK'
+            // },
             locale: {
                 instructions: '',
                 accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
                 validation: {
-                    ['folder']: 'Invalid files ([filenames])',
+                    ['folder']: 'Invalid file(s) ([filenames])',
                     ['fileName']: 'File(s) ([filenames]) have invalid file name',
                     ['maxFileSize']: 'File(s) ([filenames]) exceed maximum allowed upload file size',
-                    ['maxFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) Files ([filenames]) will not be uploaded',
+                    ['maxFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([filenames]) will not be uploaded',
                 },
+                successTitle: 'Success',
+                successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
                 errorTitle: 'Upload Errors',
                 fileUploadRestrictionHeading: (<h3><span className="requiredField"><label>&nbsp;</label></span>File upload restrictions</h3>),
                 fileUploadRestrictions: (
                     <div>
-                        File submission is mandatory. Maximum file size is 5Gb. <br/>
+                        Maximum file size is 5Gb. <br/>
                         PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf</b>.
                         Stages of examination are: submission, or correctedthesis, or finalthesis.
-                        Please refer to <a href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination" target="_blank">HDR submission guidelines</a> for file naming conventions.
                         For example:
                         <ul>
                             <li>s1234567_phd_thesis.pdf</li>
                             <li>s1234567_phd_abstract.pdf</li>
                         </ul>
+                        Supplementary audio files are to be in MP 3 format. <br />
+                        Supplementary video files are to be in WMV or AVI format. <br />
                     </div>
                 ),
                 fileUploadInstruction: (

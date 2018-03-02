@@ -2,9 +2,11 @@
 
 exports[`Component ViewRecord  should render default props 1`] = `
 <StandardPage
-  className=""
+  className="viewRecord"
 >
-  <withRouter(Connect(PublicationCitation)) />
+  <withRouter(Connect(PublicationCitation))
+    hideTitle={true}
+  />
   <StandardCard
     className=""
     title="Links"
@@ -22,7 +24,6 @@ exports[`Component ViewRecord  should render default props 1`] = `
     className=""
     title="Additional information"
   />
-  <PublicationDetails />
 </StandardPage>
 `;
 
@@ -33,7 +34,7 @@ exports[`Component ViewRecord  should render error 1`] = `
   <Alert
     allowDismiss={false}
     message="PID not found"
-    title="Error"
+    showLoader={false}
     type="error"
   />
 </StandardPage>
@@ -51,9 +52,11 @@ exports[`Component ViewRecord  should render loader 1`] = `
 
 exports[`Component ViewRecord  should render record view 1`] = `
 <StandardPage
-  className=""
+  className="viewRecord"
+  title="Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth"
 >
   <withRouter(Connect(PublicationCitation))
+    hideTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -465,7 +468,16 @@ exports[`Component ViewRecord  should render record view 1`] = `
     className=""
     title="Additional information"
   />
-  <PublicationDetails
+</StandardPage>
+`;
+
+exports[`Component ViewRecord  should render record view without a title 1`] = `
+<StandardPage
+  className="viewRecord"
+  title="Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth"
+>
+  <withRouter(Connect(PublicationCitation))
+    hideTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -859,6 +871,23 @@ exports[`Component ViewRecord  should render record view 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
+  />
+  <StandardCard
+    className=""
+    title="Links"
+  >
+    Include PubmedCentral link if available: 
+    <PubmedCentralLink
+      pubmedCentralId="PMC123232"
+    />
+  </StandardCard>
+  <StandardCard
+    className=""
+    title="Files"
+  />
+  <StandardCard
+    className=""
+    title="Additional information"
   />
 </StandardPage>
 `;

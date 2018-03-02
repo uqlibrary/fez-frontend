@@ -101,6 +101,8 @@ export const isValidGoogleScholarId = id => {
 };
 
 export const translateFormErrorsToText = (formErrors) => {
+    if (!formErrors) return null;
+
     let errorMessagesList = [];
 
     Object.keys(formErrors).map(key => {

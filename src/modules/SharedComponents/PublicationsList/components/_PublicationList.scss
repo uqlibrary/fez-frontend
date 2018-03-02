@@ -40,6 +40,7 @@
 
   .publicationTitle {
     margin-bottom: 6px;
+    color: $theme-color;
   }
 
   .citationContent {
@@ -68,14 +69,18 @@
     }
 
     .citationIcon {
-      font-size: $text-body-normal !important;
+      height: $text-body-small !important;
+      width: $text-body-small !important;
+      font-size: $text-body-small !important;
     }
   }
 
   .openExternalUrlIcon {
-    width: 12px !important;
-    height: 12px !important;
+    height: $text-body-small !important;
+    width: $text-body-small !important;
+    font-size: $text-body-small !important;
     fill: $accent-color !important;
+    color: $accent-color !important;
     margin: 0 2px;
     vertical-align: top;
   }
@@ -97,6 +102,8 @@
         &.material-icons {
           margin: 1px 3px 0 0 !important;
           font-size: $text-body-small !important;
+          height: $text-body-normal !important;
+          width: $text-body-normal !important;
           line-height: 12px !important;
         }
       }

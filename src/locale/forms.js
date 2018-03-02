@@ -86,7 +86,8 @@ export default {
             progressAlert: {
                 type: 'info_outline',
                 title: 'Saving',
-                message: 'Claim publication is being processed.'
+                message: 'Claim publication is being processed.',
+                showLoader: true
             },
             successAlert: {
                 type: 'done',
@@ -97,7 +98,7 @@ export default {
                 type: 'error',
                 title: 'Error',
                 message: 'This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at espace.admin@email.com.au'
-            }
+            },
         },
         unclaimPublicationForm: {
             title: 'Remove this record from my profile',
@@ -180,7 +181,8 @@ export default {
             progressAlert: {
                 type: 'info_outline',
                 title: 'Saving',
-                message: 'Request is being processed.'
+                message: 'Request is being processed.',
+                showLoader: true
             },
             successAlert: {
                 type: 'done',
