@@ -6059,6 +6059,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
     <Alert
       allowDismiss={false}
       message="This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at espace.admin@email.com.au"
+      showLoader={false}
       title="Error"
       type="error"
     />
@@ -6970,6 +6971,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               <Alert
                 allowDismiss={false}
                 message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
+                showLoader={false}
                 title="File upload failed"
                 type="info"
               />
@@ -8406,22 +8408,23 @@ exports[`Component ClaimRecord  should return and render alert message depending
     <div
       className="column is-narrow alertIcon"
     >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        info_outline
-      </FontIcon>
+      <CircularProgress
+        className="alertSpinner"
+        max={100}
+        min={0}
+        mode="indeterminate"
+        size={32}
+        thickness={4}
+        value={0}
+      />
     </div>
     <div
       className="column alertText"
     >
       <div>
         <b>
-          Saving
+          Saving - 
         </b>
-         - 
         Claim publication is being processed.
       </div>
     </div>
@@ -8452,9 +8455,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
     >
       <div>
         <b>
-          Success
+          Success - 
         </b>
-         - 
         Publication claim has been submitted successfully.
       </div>
     </div>
@@ -8485,9 +8487,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
     >
       <div>
         <b>
-          Error
+          Error - 
         </b>
-         - 
         Error has occurred during request and request cannot be processed. This is an error Please contact eSpace administrators or try again later.
       </div>
     </div>
@@ -8518,9 +8519,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
     >
       <div>
         <b>
-          Validation
+          Validation - 
         </b>
-         - 
         <span>
           Form cannot be submitted until all fields are valid. Please review all input fields.
           <ul>
