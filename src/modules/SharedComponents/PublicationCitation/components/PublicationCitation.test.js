@@ -54,9 +54,9 @@ describe('PublicationCitation ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render component with a linked title', () => {
+    it('should render component without a title', () => {
         const publicationWithSources = {...mockRecordToFix, "sources": [{source: "espace", id: "UQ:224457"}]};
-        const wrapper = setup({publication: publicationWithSources, showSources: true, linkedTitle: true});
+        const wrapper = setup({publication: publicationWithSources, showSources: true, hideTitle: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

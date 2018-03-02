@@ -7,7 +7,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="1"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -400,7 +399,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="2"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -832,7 +830,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="3"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -1379,7 +1376,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="4"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -1779,7 +1775,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="5"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -2470,7 +2465,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="6"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -3086,7 +3080,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="7"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -3669,7 +3662,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="8"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -4266,7 +4258,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="9"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -4782,7 +4773,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="10"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -5347,7 +5337,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="11"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -5889,7 +5878,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="12"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -6443,7 +6431,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="13"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -6951,7 +6938,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="14"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -7876,7 +7862,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="15"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -8431,7 +8416,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="16"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -8846,7 +8830,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="17"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -9205,7 +9188,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="18"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -9550,7 +9532,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="19"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -9937,7 +9918,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="20"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -10373,7 +10353,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="21"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -10858,7 +10837,6 @@ exports[`PublicationsList renders  component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     key="22"
-    linkTitle={true}
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,

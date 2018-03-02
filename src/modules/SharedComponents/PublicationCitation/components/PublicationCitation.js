@@ -42,14 +42,14 @@ export default class PublicationCitation extends PureComponent {
         className: PropTypes.string,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
-        linkTitle: PropTypes.bool
+        hideTitle: PropTypes.bool
     };
 
     static defaultProps = {
         showDefaultActions: false,
         showSources: false,
         className: '',
-        linkTitle: false
+        hideTitle: false
     };
 
     constructor(props) {
@@ -92,8 +92,8 @@ export default class PublicationCitation extends PureComponent {
     }
 
     renderTitle = () => {
-        return this.props.publication.rek_pid && this.props.linkTitle
-            ? (<a href="#" onClick={this.viewRecord} onKeyPress={this.viewRecord}>{this.props.publication.rek_title}</a>)
+        return this.props.publication.rek_pid
+            ? !this.props.hideTitle && (<a href="#" onClick={this.viewRecord} onKeyPress={this.viewRecord}>{this.props.publication.rek_title}</a>)
             : (this.props.publication.rek_title);
     }
 

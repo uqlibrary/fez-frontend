@@ -5,19 +5,6 @@
   .publicationCitation {
     padding-top: 0 !important;
     border-bottom: none !important;
-    h1.pageTitle {
-      display: none;
-    }
-    h3.publicationTitle {
-      font-size: $title-large !important;
-      line-height: $title-large + 6px !important;
-      color: $theme-color !important;
-      margin-top: 0 !important;
-      @include mobile {
-        font-size: $title-medium !important;
-        line-height: $title-medium + 6px !important;
-      }
-    }
   }
   .openExternalUrlIcon {
     height: $text-body-small !important;

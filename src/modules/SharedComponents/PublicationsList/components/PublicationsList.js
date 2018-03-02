@@ -27,7 +27,6 @@ export default class PublicationsList extends PureComponent {
         const publications = this.props.publicationsList.map((publication, index) => {
             return (
                 <PublicationCitation
-                    linkTitle
                     key={index + 1}
                     publication={publication}
                     customActions={!publication.rek_pid || this.props.publicationsListSubset.indexOf(publication.rek_pid) === -1 ? this.props.customActions : this.props.subsetCustomActions}
