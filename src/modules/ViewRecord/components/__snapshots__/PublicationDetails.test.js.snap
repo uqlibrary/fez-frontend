@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Publication Details Component  should render component 1`] = `
+<StandardCard
+  className=""
+  title="Publication details"
+>
+  <Table
+    allRowsSelected={false}
+    className="publicationDetails"
+    fixedFooter={true}
+    fixedHeader={true}
+    height="inherit"
+    multiSelectable={false}
+    selectable={false}
+  >
+    <TableBody
+      allRowsSelected={false}
+      deselectOnClickaway={true}
+      displayRowCheckbox={false}
+      multiSelectable={false}
+      preScanRows={true}
+      selectable={true}
+      style={Object {}}
+    >
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Publication Type
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          Journal Article
+        </TableRowColumn>
+      </TableRow>
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Sub-type
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          Article (original research)
+        </TableRowColumn>
+      </TableRow>
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Collections
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          <ul
+            className="is-paddingless is-marginless"
+            style={
+              Object {
+                "listStyleType": "none",
+              }
+            }
+          >
+            <li
+              key="collection-0"
+            >
+              <a
+                href="#/records/UQ:3825"
+              >
+                School of Chemistry and Molecular Biosciences
+              </a>
+            </li>
+            <li
+              key="collection-1"
+            >
+              <a
+                href="#/records/UQ:218311"
+              >
+                HERDC Pre-Audit
+              </a>
+            </li>
+            <li
+              key="collection-2"
+            >
+              <a
+                href="#/records/UQ:171723"
+              >
+                UQ Centre for Clinical Research Publications
+              </a>
+            </li>
+          </ul>
+        </TableRowColumn>
+      </TableRow>
+    </TableBody>
+  </Table>
+</StandardCard>
+`;

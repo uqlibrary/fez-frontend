@@ -1,0 +1,17 @@
+@import '../../../sass/variables';
+
+.publicationDetails {
+  .tableRow, .headingColumn, .dataColumn {
+    height: 0 !important;
+    padding: 0.5em 0 0.5em 0.5em !important;
+  }
+
+  .headingColumn {
+    width: 95px;
+    vertical-align: top;
+  }
+
+  .dataColumn {
+    font-weight: 700;
+  }
+}
