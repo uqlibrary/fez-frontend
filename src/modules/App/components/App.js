@@ -86,10 +86,10 @@ export default class App extends React.Component {
         });
     };
 
-    redirectUserToLogin = () => {
-        const redirectUrl = (!this.props.accountLoading && this.props.account !== null) ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
-        const returnUrl = window.btoa((!this.props.accountLoading && this.props.account !== null) ? APP_URL : window.location.href);
-        window.location.assign(`${redirectUrl}?return=${returnUrl}`);
+    redirectUserToLogin = (isAuthorizedUser = false, redirectToCurrentLocation = false) => () => {
+        const redirectUrl = isAuthorizedUser ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
+        const returnUrl = redirectToCurrentLocation || !isAuthorizedUser ? window.location.href : APP_URL;
+        window.location.assign(`${redirectUrl}?return=${window.btoa(returnUrl)}`);
     };
 
     redirectToOrcid = () => {
@@ -130,12 +130,17 @@ export default class App extends React.Component {
         const containerStyle = showMenu && this.state.docked ? {paddingLeft: 340} : {};
         const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
 
+        if (!isAuthorizedUser && isThesisSubmissionPage) {
+            this.redirectUserToLogin()();
+            return (<div/>);
+        }
+
         let userStatusAlert = null;
         if(!this.props.accountLoading && !this.props.account) {
             // user is not logged in
             userStatusAlert = {
                 ...locale.global.loginAlert,
-                action: this.redirectUserToLogin
+                action: this.redirectUserToLogin()
             };
         } else if (!isPublicPage && !isAuthorLoading && this.props.account && !this.props.author) {
             // user is logged in, but doesn't have eSpace author identifier
@@ -154,6 +159,7 @@ export default class App extends React.Component {
                 ...locale.global.forceOrcidLinkAlert
             };
         }
+
         return (
             <div className="layout-fill align-stretch">
                 <AppBar
@@ -178,7 +184,7 @@ export default class App extends React.Component {
                             <AuthButton
                                 isAuthorizedUser={isAuthorizedUser}
                                 hoveredStyle={appBarButtonStyles}
-                                onClick={this.redirectUserToLogin}
+                                onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
                                 signInTooltipText={locale.global.authentication.signInText}
                                 signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''} />
                         </div>
