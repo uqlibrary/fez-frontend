@@ -141,7 +141,6 @@ export default class ThesisSubmission extends Component {
 
 
                     <StandardCard title={txtSupervisors.title} help={txtSupervisors.help}>
-                        <div>{txtSupervisors.description}</div>
                         <Field
                             component={ContributorsEditorField}
                             className="requiredField"
