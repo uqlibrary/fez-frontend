@@ -6100,6 +6100,7 @@ export const mockRecordToFix = {
     "rek_description":null,
     "rek_display_type_xsdmf_id":3673,
     "rek_display_type":179,
+    "rek_display_type_lookup": "Journal Article",
     "rek_status_xsdmf_id":3680,
     "rek_status":2,
     "rek_date_xsdmf_id":6386,
