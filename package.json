@@ -41,6 +41,7 @@
     "jest-cli": "^22.4.2",
     "jsdom": "^11.6.2",
     "jsdom-global": "^3.0.2",
+    "istanbul-lib-coverage": "1.9.2",
     "node-sass": "^4.7.2",
     "postcss-loader": "^2.1.0",
     "preloader-html-webpack-plugin": "github:uqlibrary/preloader-html-webpack-plugin#0.0.2",
