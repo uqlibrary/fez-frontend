@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import locale from 'locale/viewRecord';
+import {pathConfig} from 'config/routes';
 import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 
 export default class PublicationDetails extends Component {
     static propTypes = {
-        displayType: PropTypes.string.isRequired,
-        subType: PropTypes.string.isRequired,
-        collections: PropTypes.array
+        publication: PropTypes.object.isRequired
     };
 
     constructor(props) {
@@ -28,25 +28,27 @@ export default class PublicationDetails extends Component {
     }
 
     render() {
-        // TODO: update link href to collection view link
         return (
             <StandardCard title={'Publication details'}>
                 <Table selectable={false} className="publicationDetails">
                     <TableBody displayRowCheckbox={false}>
                         {
-                            this.props.displayType && this.renderRow('Publication Type', this.props.displayType)
+                            this.props.publication.rek_display_type_lookup &&
+                            this.renderRow(locale.viewRecord.publicationDetails.rek_display_type, this.props.publication.rek_display_type_lookup)
                         }
                         {
-                            this.props.subType && this.renderRow('Sub-type', this.props.subType)
+                            this.props.publication.rek_subtype &&
+                            this.renderRow(locale.viewRecord.publicationDetails.rek_subtype, this.props.publication.rek_subtype)
                         }
                         {
-                            this.props.collections && this.props.collections.length > 0 && this.renderRow('Collections', (
+                            this.props.publication.fez_record_search_key_ismemberof && this.props.publication.fez_record_search_key_ismemberof.length > 0 &&
+                            this.renderRow(locale.viewRecord.publicationDetails.fez_record_search_key_ismemberof, (
                                 <ul className="is-paddingless is-marginless" style={{listStyleType: 'none'}}>
                                     {
-                                        this.props.collections.map((collection, index)=>(
+                                        this.props.publication.fez_record_search_key_ismemberof.map((collection, index)=>(
                                             collection.rek_ismemberof && collection.rek_ismemberof_lookup &&
                                             <li key={`collection-${index}`}>
-                                                <a href="#">{collection.rek_ismemberof_lookup}</a>
+                                                <a href={pathConfig.collection.view(this.props.publication.rek_pid)}>{collection.rek_ismemberof_lookup}</a>
                                             </li>
                                         ))
                                     }

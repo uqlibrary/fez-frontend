@@ -64,11 +64,8 @@ export default class ViewRecord extends Component {
                 <StandardCard title={'Files'} />
                 <StandardCard title={'Additional information'} />
                 {
-                    this.props.recordToView && this.props.recordToView.rek_display_type_lookup && this.props.recordToView.rek_subtype &&
-                    <PublicationDetails
-                        displayType={this.props.recordToView.rek_display_type_lookup}
-                        subType={this.props.recordToView.rek_subtype}
-                        collections={this.props.recordToView.fez_record_search_key_ismemberof}/>
+                    this.props.recordToView && this.props.recordToView.rek_display_type_lookup &&
+                    <PublicationDetails publication={this.props.recordToView} />
                 }
             </StandardPage>
         );

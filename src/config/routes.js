@@ -19,6 +19,9 @@ export const pathConfig =  {
             new: '/records/add/new',
         }
     },
+    collection: {
+        view: (pid) => (`/collection/${pid}`),
+    },
     admin: {
         masquerade: '/admin/masquerade'
     },
