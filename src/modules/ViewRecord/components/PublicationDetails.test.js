@@ -1,5 +1,6 @@
 import {publicationDetails} from 'mock/data/testing/records';
 import PublicationDetails from "./PublicationDetails";
+import toJson from "enzyme-to-json";
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -14,6 +15,11 @@ function setup(testProps, isShallow = true){
 describe('Publication Details Component ', () => {
     it('should render component', () => {
         const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with empty publication', () => {
+        const wrapper = setup({publication: {}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
