@@ -3422,7 +3422,7 @@ export const record = {
     "rek_depositor_xsdmf_id": 7578,
     "rek_depositor": 5371,
     "rek_created_date_xsdmf_id": 3677,
-    "rek_created_date": "2016-07-15T11:49:38Z",
+    "rek_created_date": "2018-03-05T11:49:38Z",
     "rek_updated_date_xsdmf_id": 3678,
     "rek_updated_date": "2017-10-01T04:24:51Z",
     "rek_file_downloads": 0,
@@ -3888,7 +3888,9 @@ export const record = {
     "fez_record_search_key_native_script_journal_name": null,
     "fez_record_search_key_native_script_title": null,
     "fez_record_search_key_notes": null,
-    "fez_record_search_key_oa_embargo_days": null,
+    "fez_record_search_key_oa_embargo_days": {
+        rek_embargo_days: 1
+    },
     "fez_record_search_key_oa_notes": null,
     "fez_record_search_key_oa_status": {
         "rek_oa_status_id": 281706,
@@ -3909,8 +3911,11 @@ export const record = {
         "rek_publisher": "Oxford University Press"
     },
     "fez_record_search_key_pubmed_central_id": {
-        "rek_pubmed_central_id": '1234567'
-    },
+        "rek_pubmed_central_id_id": 12345678901,
+        "rek_pubmed_central_id_pid": "UQ:1234",
+        "rek_pubmed_central_id_xsdmf_id": 1234,
+        "rek_pubmed_central_id": 'PMC5179926'
+},
     "fez_record_search_key_refereed": {
         "rek_refereed_id": 2587133,
         "rek_refereed_pid": "UQ:396321",
@@ -4122,7 +4127,19 @@ export const myRecordsList = {
             "fez_record_search_key_date_photo_taken": null,
             "fez_record_search_key_date_recorded": null,
             "fez_record_search_key_date_scanned": null,
-            "fez_record_search_key_doi": null,
+            "fez_record_search_key_doi": {
+                "rek_doi_id": 1492141,
+                "rek_doi_pid": "UQ:252001",
+                "rek_doi_xsdmf_id": 16514,
+                "rek_doi": "10.1093/ae/53.4.198"
+            },
+            "fez_record_search_key_oa_status": {
+                "rek_oa_status_id": 286835,
+                "rek_oa_status_pid": "UQ:252001",
+                "rek_oa_status_xsdmf_id": 16607,
+                "rek_oa_status": 453693,
+                "rek_oa_status_lookup": "DOI"
+            },
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": {
@@ -4205,9 +4222,8 @@ export const myRecordsList = {
             "fez_record_search_key_native_script_title": null,
             "fez_record_search_key_newspaper": null,
             "fez_record_search_key_notes": null,
-            "fez_record_search_key_oa_embargo_days": null,
+            "fez_record_search_key_oa_embargo_days": 12,
             "fez_record_search_key_oa_notes": null,
-            "fez_record_search_key_oa_status": null,
             "fez_record_search_key_org_name": null,
             "fez_record_search_key_org_unit_name": null,
             "fez_record_search_key_original_format": null,

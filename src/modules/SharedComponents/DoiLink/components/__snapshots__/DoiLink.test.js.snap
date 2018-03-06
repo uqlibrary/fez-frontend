@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DoiLink test  should render component with DOI link 1`] = `
+<ExternalLink
+  aria-label="Open this DOI in an new window"
+  className="pubmedCentralLinkUrl"
+  href="https://doi.org/12345"
+  openInNewIcon={true}
+  rel="noopener noreferrer"
+  target="_blank"
+  title="Open this DOI in an new window"
+>
+  https://doi.org/12345
+</ExternalLink>
+`;
+
+exports[`DoiLink test  should render component with empty span 1`] = `
+<span
+  className="DoiLinkUrl empty"
+/>
+`;

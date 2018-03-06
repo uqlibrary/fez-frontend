@@ -1,0 +1,445 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component ViewRecord  should render a PubMed Central link 1`] = `
+<StandardCard
+  className=""
+  title="Links"
+>
+  <div
+    className="viewRecordLinks"
+  >
+    <Table
+      allRowsSelected={false}
+      fixedFooter={true}
+      fixedHeader={true}
+      height="inherit"
+      multiSelectable={false}
+      selectable={false}
+    >
+      <TableHeader
+        adjustForCheckbox={false}
+        className="tableHeader"
+        displaySelectAll={false}
+        enableSelectAll={true}
+        selectAllSelected={false}
+      >
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
+        >
+          <TableHeaderColumn
+            className="rowLink"
+          >
+            Link (will open in a new window)
+          </TableHeaderColumn>
+          <TableHeaderColumn
+            className="rowDescription is-hidden-mobile"
+          >
+            Description
+          </TableHeaderColumn>
+          <TableHeaderColumn
+            className="rowOA align-right"
+          >
+             
+          </TableHeaderColumn>
+        </TableRow>
+      </TableHeader>
+      <TableBody
+        allRowsSelected={false}
+        className="tableData"
+        deselectOnClickaway={true}
+        displayRowCheckbox={false}
+        multiSelectable={false}
+        preScanRows={true}
+        selectable={true}
+        style={Object {}}
+      >
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
+        >
+          <TableRowColumn
+            className="rowLink"
+            hoverable={false}
+          >
+            <PubmedCentralLink
+              pubmedCentralId="PMC5179926"
+            />
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowDescription is-hidden-mobile"
+            hoverable={false}
+          >
+            Pubmed Central link
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowOA align-right"
+            hoverable={false}
+          >
+            <div
+              className="fez-icon openAccess large"
+            />
+          </TableRowColumn>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </div>
+</StandardCard>
+`;
+
+exports[`Component ViewRecord  should render empty div 1`] = `
+<div
+  className="empty"
+/>
+`;
+
+exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
+<StandardCard
+  className=""
+  title="Links"
+>
+  <div
+    className="viewRecordLinks"
+  >
+    <Table
+      allRowsSelected={false}
+      fixedFooter={true}
+      fixedHeader={true}
+      height="inherit"
+      multiSelectable={false}
+      selectable={false}
+    >
+      <TableHeader
+        adjustForCheckbox={false}
+        className="tableHeader"
+        displaySelectAll={false}
+        enableSelectAll={true}
+        selectAllSelected={false}
+      >
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
+        >
+          <TableHeaderColumn
+            className="rowLink"
+          >
+            Link (will open in a new window)
+          </TableHeaderColumn>
+          <TableHeaderColumn
+            className="rowDescription is-hidden-mobile"
+          >
+            Description
+          </TableHeaderColumn>
+          <TableHeaderColumn
+            className="rowOA align-right"
+          >
+             
+          </TableHeaderColumn>
+        </TableRow>
+      </TableHeader>
+      <TableBody
+        allRowsSelected={false}
+        className="tableData"
+        deselectOnClickaway={true}
+        displayRowCheckbox={false}
+        multiSelectable={false}
+        preScanRows={true}
+        selectable={true}
+        style={Object {}}
+      >
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          key="0"
+          selectable={true}
+          striped={false}
+        >
+          <TableRowColumn
+            className="rowLink"
+            hoverable={false}
+          >
+            <ExternalLink
+              className="externalLink"
+              href="http://www.thisisatest.com"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Link to publication"
+            >
+              http://www.thisisatest.com
+            </ExternalLink>
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowDescription is-hidden-mobile"
+            hoverable={false}
+          >
+            Link to publication
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowOA align-right"
+            hoverable={false}
+          >
+            <div
+              className="fez-icon openAccess large"
+              title="Open Access - DOI - Free to read (embargo date might apply)"
+            />
+          </TableRowColumn>
+        </TableRow>
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          key="1"
+          selectable={true}
+          striped={false}
+        >
+          <TableRowColumn
+            className="rowLink"
+            hoverable={false}
+          >
+            <ExternalLink
+              className="externalLink"
+              href="http://www.thisisanothertest.com"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Another link to publication"
+            >
+              http://www.thisisanothertest.com
+            </ExternalLink>
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowDescription is-hidden-mobile"
+            hoverable={false}
+          >
+            Another link to publication
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowOA align-right"
+            hoverable={false}
+          >
+            <div
+              className="fez-icon openAccess large"
+              title="Open Access - DOI - Free to read (embargo date might apply)"
+            />
+          </TableRowColumn>
+        </TableRow>
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          key="2"
+          selectable={true}
+          striped={false}
+        >
+          <TableRowColumn
+            className="rowLink"
+            hoverable={false}
+          >
+            <ExternalLink
+              className="externalLink"
+              href="http://www.nodescription.com"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Click to open link in a new window"
+            >
+              http://www.nodescription.com
+            </ExternalLink>
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowDescription is-hidden-mobile"
+            hoverable={false}
+          >
+            No description avalable
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowOA align-right"
+            hoverable={false}
+          >
+            <div
+              className="fez-icon openAccess large"
+              title="Open Access - DOI - Free to read (embargo date might apply)"
+            />
+          </TableRowColumn>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </div>
+</StandardCard>
+`;
+
+exports[`Component ViewRecord  should render list of links without OA icons 1`] = `
+<StandardCard
+  className=""
+  title="Links"
+>
+  <div
+    className="viewRecordLinks"
+  >
+    <Table
+      allRowsSelected={false}
+      fixedFooter={true}
+      fixedHeader={true}
+      height="inherit"
+      multiSelectable={false}
+      selectable={false}
+    >
+      <TableHeader
+        adjustForCheckbox={false}
+        className="tableHeader"
+        displaySelectAll={false}
+        enableSelectAll={true}
+        selectAllSelected={false}
+      >
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
+        >
+          <TableHeaderColumn
+            className="rowLink"
+          >
+            Link (will open in a new window)
+          </TableHeaderColumn>
+          <TableHeaderColumn
+            className="rowDescription is-hidden-mobile"
+          >
+            Description
+          </TableHeaderColumn>
+          <TableHeaderColumn
+            className="rowOA align-right"
+          >
+             
+          </TableHeaderColumn>
+        </TableRow>
+      </TableHeader>
+      <TableBody
+        allRowsSelected={false}
+        className="tableData"
+        deselectOnClickaway={true}
+        displayRowCheckbox={false}
+        multiSelectable={false}
+        preScanRows={true}
+        selectable={true}
+        style={Object {}}
+      >
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          key="0"
+          selectable={true}
+          striped={false}
+        >
+          <TableRowColumn
+            className="rowLink"
+            hoverable={false}
+          >
+            <ExternalLink
+              className="externalLink"
+              href="http://www.thisisatest.com"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Link to publication"
+            >
+              http://www.thisisatest.com
+            </ExternalLink>
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowDescription is-hidden-mobile"
+            hoverable={false}
+          >
+            Link to publication
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowOA align-right"
+            hoverable={false}
+          />
+        </TableRow>
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          key="1"
+          selectable={true}
+          striped={false}
+        >
+          <TableRowColumn
+            className="rowLink"
+            hoverable={false}
+          >
+            <ExternalLink
+              className="externalLink"
+              href="http://www.thisisanothertest.com"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Another link to publication"
+            >
+              http://www.thisisanothertest.com
+            </ExternalLink>
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowDescription is-hidden-mobile"
+            hoverable={false}
+          >
+            Another link to publication
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowOA align-right"
+            hoverable={false}
+          />
+        </TableRow>
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          key="2"
+          selectable={true}
+          striped={false}
+        >
+          <TableRowColumn
+            className="rowLink"
+            hoverable={false}
+          >
+            <ExternalLink
+              className="externalLink"
+              href="http://www.nodescription.com"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Click to open link in a new window"
+            >
+              http://www.nodescription.com
+            </ExternalLink>
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowDescription is-hidden-mobile"
+            hoverable={false}
+          >
+            No description avalable
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowOA align-right"
+            hoverable={false}
+          />
+        </TableRow>
+      </TableBody>
+    </Table>
+  </div>
+</StandardCard>
+`;

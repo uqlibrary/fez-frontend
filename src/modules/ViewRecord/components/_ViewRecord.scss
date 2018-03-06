@@ -15,22 +15,21 @@
     margin: 0 2px;
     vertical-align: top;
   }
-}
-.viewRecordLinks {
-  margin-top: 24px !important;
-  .rowLink {
-    width: 50%;
-    @include mobile {
-      width: 80% !important;
+  .viewRecordLinks {
+    margin-top: 24px !important;
+    .rowLink {
+      width: 50%;
+      @include mobile {
+        width: 80% !important;
+      }
     }
-  }
-  .rowDescription {
-    text-indent: 12px !important;
-  }
-  .rowOA {
-    text-align: right !important;
-  }
-  .tableHeader {
+    .rowDescription {
+      text-indent: 12px !important;
+    }
+    .rowOA {
+      text-align: right !important;
+    }
+    .tableHeader {
       tr {
         height: 24px !important;
         th {
@@ -52,4 +51,5 @@
         }
       }
     }
+  }
 }

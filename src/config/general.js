@@ -243,11 +243,14 @@ export const publicationTypes = (components) => [
 ];
 
 export const openAccessIdLookup = {
+    453692: 'Not yet assessed',
     453693: 'DOI',
     453694: 'Link (no DOI)',
     453695: 'File (Publisher version)',
     453696: 'File (Author post-print)',
     453697: 'Other',
+    453698: 'Not Open Access',
+    453700: 'Mediated Access'
 };
 
 export const thesisSubtypes = [
