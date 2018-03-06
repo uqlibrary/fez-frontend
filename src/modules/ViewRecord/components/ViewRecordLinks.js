@@ -28,7 +28,7 @@ export default class ViewRecordLinks extends PureComponent {
         if(!record) return (<div className="empty" />);
         const showIcon = () => {
             if(!record.fez_record_search_key_oa_embargo_days) {
-                return false;
+                return true;
             } else {
                 const currentDate = moment().utc();
                 const embargoDate = moment(moment().format(record.rek_created_date))
@@ -38,10 +38,12 @@ export default class ViewRecordLinks extends PureComponent {
         };
         const showLink = () => {
             return!(
-                record.fez_record_search_key_oa_status.rek_oa_status === 453692 || // Not yet assessed
-                record.fez_record_search_key_oa_status.rek_oa_status === 453692 || // Link (no DOI)
-                record.fez_record_search_key_oa_status.rek_oa_status === 453698 || // Mediated access
-                record.fez_record_search_key_oa_status.rek_oa_status === 453700    // Not open access
+                (record && record.fez_record_search_key_oa_status && (
+                    record.fez_record_search_key_oa_status.rek_oa_status === 453692 || // Not yet assessed
+                    record.fez_record_search_key_oa_status.rek_oa_status === 453692 || // Link (no DOI)
+                    record.fez_record_search_key_oa_status.rek_oa_status === 453698 || // Mediated access
+                    record.fez_record_search_key_oa_status.rek_oa_status === 453700    // Not open access
+                )) || !record.fez_record_search_key_oa_status
             );
         };
         return (

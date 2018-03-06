@@ -250,7 +250,8 @@ export const openAccessIdLookup = {
     453696: 'File (Author post-print)',
     453697: 'Other',
     453698: 'Not Open Access',
-    453700: 'Mediated Access'
+    453700: 'Mediated Access',
+    453954: 'PMC'
 };
 
 export const thesisSubtypes = [
