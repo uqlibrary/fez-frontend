@@ -60,8 +60,7 @@ export default class ViewRecord extends Component {
                     record && (
                         (record.fez_record_search_key_link && record.fez_record_search_key_link.length > 0) ||
                         (record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi) ||
-                        (record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id)
-                    ) &&
+                        (record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id)) &&
                         <ViewRecordLinks {...this.props} />
                 }
                 <StandardCard title={'Files'} />

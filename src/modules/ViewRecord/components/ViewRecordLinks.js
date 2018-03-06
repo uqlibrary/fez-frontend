@@ -25,7 +25,6 @@ export default class ViewRecordLinks extends PureComponent {
     render() {
         const record = this.props.recordToView;
         const txt = locale.components.viewRecord.viewRecordLinks;
-        if(!record) return (<div className="empty" />);
         const showIcon = () => {
             if(!record.fez_record_search_key_oa_embargo_days) {
                 return true;
@@ -46,6 +45,10 @@ export default class ViewRecordLinks extends PureComponent {
                 )) || !record.fez_record_search_key_oa_status
             );
         };
+        const showPMC = () => {
+            return (record && record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id);
+        };
+        if(!record || !(showLink() || showPMC())) return (<div className="empty"/>);
         return (
             <StandardCard title="Links">
                 <div className="viewRecordLinks">
@@ -80,8 +83,7 @@ export default class ViewRecordLinks extends PureComponent {
                             }
                             {/* Generate PubMed Central link if an ID exists */}
                             {
-                                record.fez_record_search_key_pubmed_central_id &&
-                                record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id &&
+                                showPMC() &&
                                 <TableRow>
                                     <TableRowColumn className="rowLink">
                                         <PubmedCentralLink pubmedCentralId={record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id}/>

@@ -3889,7 +3889,7 @@ export const record = {
     "fez_record_search_key_native_script_title": null,
     "fez_record_search_key_notes": null,
     "fez_record_search_key_oa_embargo_days": {
-        rek_embargo_days: 1
+        rek_embargo_days: 2
     },
     "fez_record_search_key_oa_notes": null,
     "fez_record_search_key_oa_status": {
@@ -3915,7 +3915,7 @@ export const record = {
         "rek_pubmed_central_id_pid": "UQ:1234",
         "rek_pubmed_central_id_xsdmf_id": 1234,
         "rek_pubmed_central_id": 'PMC5179926'
-},
+    },
     "fez_record_search_key_refereed": {
         "rek_refereed_id": 2587133,
         "rek_refereed_pid": "UQ:396321",
