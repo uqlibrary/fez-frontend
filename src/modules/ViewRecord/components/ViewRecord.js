@@ -10,6 +10,7 @@ import {PubmedCentralLink} from 'modules/SharedComponents/PubmedCentralLink';
 
 import {locale} from 'locale';
 import PublicationDetails from './PublicationDetails';
+import AdditionalInformation from './AdditionalInformation';
 
 export default class ViewRecord extends Component {
     static propTypes = {
@@ -55,6 +56,7 @@ export default class ViewRecord extends Component {
                 </StandardPage>
             );
         }
+
         return (
             <StandardPage className="viewRecord" title={this.props.recordToView && this.props.recordToView.rek_title}>
                 <PublicationCitation publication={this.props.recordToView} hideTitle />
@@ -62,7 +64,16 @@ export default class ViewRecord extends Component {
                     Include PubmedCentral link if available: <PubmedCentralLink pubmedCentralId={'PMC123232'} />
                 </StandardCard>
                 <StandardCard title={'Files'} />
-                <StandardCard title={'Additional information'} />
+                {
+                    this.props.recordToView && this.props.recordToView.rek_formatted_abstract &&
+                    <StandardCard title={locale.viewRecord.sections.abstract}>
+                        <p dangerouslySetInnerHTML={{__html: this.props.recordToView.rek_formatted_abstract}} />
+                    </StandardCard>
+                }
+                {
+                    this.props.recordToView && this.props.recordToView.rek_display_type_lookup &&
+                    <AdditionalInformation publication={this.props.recordToView} />
+                }
                 {
                     this.props.recordToView && this.props.recordToView.rek_display_type_lookup &&
                     <PublicationDetails publication={this.props.recordToView} />

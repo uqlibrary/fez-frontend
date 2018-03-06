@@ -83,14 +83,7 @@ exports[`Publication Details Component  should render component 1`] = `
           className="dataColumn"
           hoverable={false}
         >
-          <ul
-            className="is-paddingless is-marginless"
-            style={
-              Object {
-                "listStyleType": "none",
-              }
-            }
-          >
+          <ul>
             <li
               key="collection-0"
             >
@@ -264,14 +257,7 @@ exports[`Publication Details Component  should render with publication without s
           className="dataColumn"
           hoverable={false}
         >
-          <ul
-            className="is-paddingless is-marginless"
-            style={
-              Object {
-                "listStyleType": "none",
-              }
-            }
-          >
+          <ul>
             <li
               key="collection-0"
             >

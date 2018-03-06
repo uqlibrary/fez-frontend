@@ -10,13 +10,12 @@ export default {
             default: {
                 rek_title: 'Title',
                 rek_date: 'Publication date',
-                rek_subtype: 'Sub-type',
                 rek_genre: 'Type',
                 rek_genre_type: 'Genre type',
+                rek_description: 'Description',
                 fez_record_search_key_author: 'Author(s)',
                 fez_record_search_key_contributor: 'Editor(s)',
                 fez_record_search_key_supervisor: 'Supervisor(s)',
-                fez_record_search_key_formatted_title: 'Formatted title',
                 fez_record_search_key_translated_title: 'Translated title',
                 fez_record_search_key_language_of_title: 'Language of title',
                 fez_record_search_key_alternative_title: 'Alternative title',
@@ -59,14 +58,12 @@ export default {
                 fez_record_search_key_notes: 'Additional notes',
                 fez_record_search_key_org_unit_name: 'School, Department or Center',
                 fez_record_search_key_org_name: 'Institution',
-                fez_record_search_key_description: 'Description',
                 fez_record_search_key_access_conditions: 'Access conditions',
                 fez_record_search_key_collection_type: 'Collection type',
                 fez_record_search_key_contact_details_email: 'Contact email',
                 fez_record_search_key_author_role: 'Author(s) role',
                 fez_record_search_key_data_volume: 'Data Volume',
                 fez_record_search_key_fields_of_research: 'ANZSRC Field of Research (FoR) Code',
-                fez_record_search_key_grant_id: 'Grant ID',
                 fez_record_search_key_project_description: 'Project description',
                 fez_record_search_key_project_name: 'Project name',
                 fez_record_search_key_license: 'Licencing and terms of access',
@@ -109,6 +106,12 @@ export default {
                     rek_display_type: 'Publication type',
                     rek_subtype: 'Sub-type',
                     fez_record_search_key_ismemberof: 'Collections'
+                },
+                grantInformation: {
+                    fez_record_search_key_grant_agency: 'Grant Agency',
+                    fez_record_search_key_grant_agency_id: 'Grant Agency ID',
+                    fez_record_search_key_grant_id: 'Grant ID',
+                    fez_record_search_key_grant_text: 'Grant Text'
                 }
             },
             'Book': {
@@ -161,7 +164,7 @@ export default {
                 rek_date: 'Publication year',
                 rek_genre: 'Collection type',
                 rek_title: 'Dataset name',
-                fez_record_search_key_description: 'Dataset description',
+                rek_description: 'Dataset description',
                 fez_record_search_key_author: 'Creator name',
                 fez_record_search_key_contributor: 'Contact name',
                 fez_record_search_key_author_role: 'Creator(s) role'
@@ -175,7 +178,7 @@ export default {
             },
             'Journal': {
                 rek_title: 'Title of journal',
-                fez_record_search_key_description: 'Summary/Description'
+                rek_description: 'Summary/Description'
             },
             'Patent': {
                 rek_title: 'Patent title',
