@@ -236,9 +236,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
       className=""
       title="Supervisors"
     >
-      <div>
-        List your current supervisors
-      </div>
       <Field
         className="requiredField"
         component={[Function]}
@@ -728,9 +725,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
       className=""
       title="Supervisors"
     >
-      <div>
-        List your current supervisors
-      </div>
       <Field
         className="requiredField"
         component={[Function]}
