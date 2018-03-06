@@ -54,6 +54,7 @@ export function putUploadFile(pid, file, dispatch) {
  * @returns {Promise.all}
  */
 export function putUploadFiles(pid, files, dispatch) {
+    dispatch(fileUploadActions.startFileUpload());
     const uploadFilesPromises = files.map(file => {
         return putUploadFile(pid, file, dispatch);
     });

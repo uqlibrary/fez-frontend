@@ -173,6 +173,7 @@ describe('Fix record actions', () => {
 
             const expectedActions = [
                 actions.FIX_RECORD_PROCESSING,
+                'FILE_UPLOAD_STARTED',
                 actions.FIX_RECORD_SUCCESS
             ];
 

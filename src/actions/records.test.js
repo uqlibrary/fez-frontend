@@ -112,6 +112,7 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
+                'FILE_UPLOAD_STARTED',
                 actions.CREATE_RECORD_SUCCESS
             ];
 
@@ -212,6 +213,7 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
+                'FILE_UPLOAD_STARTED',
                 actions.CREATE_RECORD_SUCCESS
             ];
 
@@ -332,6 +334,7 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
+                'FILE_UPLOAD_STARTED',
                 actions.CREATE_RECORD_SUCCESS
             ];
 
@@ -350,6 +353,7 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
+                'FILE_UPLOAD_STARTED',
                 'FILE_UPLOADED_FAILED@test.txt',
                 actions.CREATE_RECORD_FAILED
             ];
@@ -375,6 +379,7 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
+                'FILE_UPLOAD_STARTED',
                 actions.CREATE_RECORD_FAILED
             ];
 
@@ -393,6 +398,7 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
+                'FILE_UPLOAD_STARTED',
                 actions.CURRENT_ACCOUNT_ANONYMOUS,
                 'FILE_UPLOADED_FAILED@test.txt',
                 actions.CREATE_RECORD_FAILED
