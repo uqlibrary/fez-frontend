@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
+import {Link} from 'react-router-dom';
 
 import {locale} from 'locale';
 import {routes, publicationTypes} from 'config';
@@ -83,15 +84,13 @@ export default class PublicationCitation extends PureComponent {
         }
     };
 
-    viewRecord = (event) => {
-        event.preventDefault();
-        this.props.history.push(routes.pathConfig.records.view(this.props.publication.rek_pid));
+    viewRecord = () => {
         this.props.actions.setRecordToView(this.props.publication);
     }
 
     renderTitle = () => {
         return this.props.publication.rek_pid
-            ? (<a href="#" onClick={this.viewRecord} onKeyPress={this.viewRecord}>{this.props.publication.rek_title}</a>)
+            ? (<Link to={routes.pathConfig.records.view(this.props.publication.rek_pid)} onClick={this.viewRecord}>{this.props.publication.rek_title}</Link>)
             : (this.props.publication.rek_title);
     }
 
