@@ -4,14 +4,11 @@ import {mockRecordToFix} from 'mock/data/testing/records';
 function setup(testProps, isShallow = true){
     const props = {
         ...testProps,
-        // recordToView: PropTypes.object,
-        // loadingRecordToView: PropTypes.bool,
-        // recordToViewError: PropTypes.string,
         match: testProps.match || { params: {pid: 'UQ:12344'}},
         actions: testProps.actions || {
-                loadRecordToView: jest.fn(),
-                clearRecordToView: jest.fn()
-            }
+            loadRecordToView: jest.fn(),
+            clearRecordToView: jest.fn()
+        }
     };
     return getElement(ViewRecord, props, isShallow);
 }
@@ -34,6 +31,11 @@ describe('Component ViewRecord ', () => {
 
     it('should render record view', () => {
         const wrapper = setup({recordToView: mockRecordToFix});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render record view without a title', () => {
+        const wrapper = setup({recordToView: mockRecordToFix, hideTitle: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

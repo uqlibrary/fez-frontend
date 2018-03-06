@@ -415,6 +415,7 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
             className="googleCitationCount"
             href="https://scholar.google.com/scholar?q=intitle:[id]Reducing%20preventable%20health%20disadvantage%20for%20people%20with%20disabilities%20through%20physical%20activity%20promotion"
             rel="noopener noreferrer"
+            tabIndex="0"
             target="_blank"
             title="Link to Reducing preventable health disadvantage for people with disabilities through physical activity promotion (Google scholar) will open in a new window."
           >
@@ -480,6 +481,7 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
             className="wosCitationCount"
             href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
             rel="noopener noreferrer"
+            tabIndex="0"
             target="_blank"
             title="Link to undefined (Web of science) will open in a new window."
           >
@@ -518,6 +520,7 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
             className="scopusCitationCount"
             href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
             rel="noopener noreferrer"
+            tabIndex="0"
             target="_blank"
             title="Link to undefined (Scopus) will open in a new window."
           >
@@ -556,6 +559,7 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
             className="altmetricCitationCount"
             href="http://www.altmetric.com/details.php?citation_id=12345"
             rel="noopener noreferrer"
+            tabIndex="0"
             target="_blank"
             title="Link to undefined (Altmetric) will open in a new window."
           >
@@ -594,6 +598,7 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
             className="googleCitationCount"
             href="https://scholar.google.com/scholar?q=intitle:[id]undefined"
             rel="noopener noreferrer"
+            tabIndex="0"
             target="_blank"
             title="Link to undefined (Google scholar) will open in a new window."
           >
@@ -637,6 +642,7 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
               className="externalLink"
               href="https://app.library.uq.edu.au/#/authors/view/pid:111"
               rel="noopener noreferrer"
+              tabIndex="0"
               target="_blank"
             >
               View full statistics
@@ -740,6 +746,7 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
             className="wosCitationCount"
             href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
             rel="noopener noreferrer"
+            tabIndex="0"
             target="_blank"
             title="Link to undefined (Web of science) will open in a new window."
           >
@@ -778,6 +785,7 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
             className="scopusCitationCount"
             href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
             rel="noopener noreferrer"
+            tabIndex="0"
             target="_blank"
             title="Link to undefined (Scopus) will open in a new window."
           >
@@ -816,6 +824,7 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
             className="altmetricCitationCount"
             href="http://www.altmetric.com/details.php?citation_id=12345"
             rel="noopener noreferrer"
+            tabIndex="0"
             target="_blank"
             title="Link to undefined (Altmetric) will open in a new window."
           >
@@ -854,6 +863,7 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
             className="googleCitationCount"
             href="https://scholar.google.com/scholar?q=intitle:[id]undefined"
             rel="noopener noreferrer"
+            tabIndex="0"
             target="_blank"
             title="Link to undefined (Google scholar) will open in a new window."
           >
@@ -889,6 +899,7 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
               className="externalLink"
               href="https://app.library.uq.edu.au/#/authors/view/pid:111"
               rel="noopener noreferrer"
+              tabIndex="0"
               target="_blank"
             >
               View full statistics
