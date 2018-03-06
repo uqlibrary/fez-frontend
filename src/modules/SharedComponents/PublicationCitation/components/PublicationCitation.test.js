@@ -71,8 +71,7 @@ describe('PublicationCitation ', () => {
 
     it('should handle view record link', () => {
         const wrapper = setup({});
-        wrapper.instance().viewRecord({preventDefault: jest.fn()});
-        expect(wrapper.instance().props.history.push).toHaveBeenCalled();
+        wrapper.instance().viewRecord();
         expect(wrapper.instance().props.actions.setRecordToView).toHaveBeenCalled();
     });
 

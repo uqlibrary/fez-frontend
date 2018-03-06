@@ -493,7 +493,6 @@ export default {
             //     text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
             //     buttonLabel: 'OK'
             // },
-            description: 'List your current supervisors',
             field: {
                 form: {
                     locale: {

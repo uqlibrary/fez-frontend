@@ -6,6 +6,7 @@ import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import ViewRecordLinks from './ViewRecordLinks';
+
 import {locale} from 'locale';
 
 export default class ViewRecord extends Component {
@@ -36,7 +37,7 @@ export default class ViewRecord extends Component {
 
     render() {
         const txt = locale.pages.viewRecord;
-
+        const record = this.props.recordToView;
         if(this.props.loadingRecordToView) {
             return (
                 <div className="is-centered">
@@ -53,12 +54,14 @@ export default class ViewRecord extends Component {
             );
         }
         return (
-            <StandardPage className="viewRecord" title={this.props.recordToView && this.props.recordToView.rek_title}>
-                <PublicationCitation publication={this.props.recordToView} hideTitle />
+            <StandardPage className="viewRecord" title={record && record.rek_title}>
+                <PublicationCitation publication={record} hideTitle />
                 {
-                    this.props.recordToView &&
-                    this.props.recordToView.fez_record_search_key_link &&
-                    this.props.recordToView.fez_record_search_key_link.length > 0 &&
+                    record && (
+                        (record.fez_record_search_key_link && record.fez_record_search_key_link.length > 0) ||
+                        (record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi) ||
+                        (record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id)
+                    ) &&
                         <ViewRecordLinks {...this.props} />
                 }
                 <StandardCard title={'Files'} />
