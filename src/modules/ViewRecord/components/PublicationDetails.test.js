@@ -1,6 +1,5 @@
 import {publicationDetails} from 'mock/data/testing/records';
 import PublicationDetails from "./PublicationDetails";
-import toJson from "enzyme-to-json";
 
 function setup(testProps, isShallow = true){
     const props = {

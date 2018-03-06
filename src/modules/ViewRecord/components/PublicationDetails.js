@@ -29,20 +29,20 @@ export default class PublicationDetails extends Component {
 
     render() {
         return (
-            <StandardCard title={'Publication details'}>
+            <StandardCard title={locale.viewRecord.sections.publicationDetails}>
                 <Table selectable={false} className="publicationDetails">
                     <TableBody displayRowCheckbox={false}>
                         {
                             this.props.publication.rek_display_type_lookup &&
-                            this.renderRow(locale.viewRecord.publicationDetails.rek_display_type, this.props.publication.rek_display_type_lookup)
+                            this.renderRow(locale.viewRecord.fields.default.publicationDetails.rek_display_type, this.props.publication.rek_display_type_lookup)
                         }
                         {
                             this.props.publication.rek_subtype &&
-                            this.renderRow(locale.viewRecord.publicationDetails.rek_subtype, this.props.publication.rek_subtype)
+                            this.renderRow(locale.viewRecord.fields.default.publicationDetails.rek_subtype, this.props.publication.rek_subtype)
                         }
                         {
                             this.props.publication.fez_record_search_key_ismemberof && this.props.publication.fez_record_search_key_ismemberof.length > 0 &&
-                            this.renderRow(locale.viewRecord.publicationDetails.fez_record_search_key_ismemberof, (
+                            this.renderRow(locale.viewRecord.fields.default.publicationDetails.fez_record_search_key_ismemberof, (
                                 <ul className="is-paddingless is-marginless" style={{listStyleType: 'none'}}>
                                     {
                                         this.props.publication.fez_record_search_key_ismemberof.map((collection, index)=>(
