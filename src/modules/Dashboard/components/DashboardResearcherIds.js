@@ -43,7 +43,7 @@ const DashboardResearcherIds = ({values, history}) => {
 
                     {/* Internal URL's - will be non-linked ID's only */}
                     {!values[item] && link.notLinkedUrl[item].indexOf('http') === -1 &&
-                        <a onClick={(event) => navigateToRoute(event, item)} onKeyPress={(event) => navigateToRoute(event, item)}
+                        <a tabIndex="0" onClick={(event) => navigateToRoute(event, item)} onKeyPress={(event) => navigateToRoute(event, item)}
                             title={txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])} >
                             <div title={txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}
                                 className={'fez-icon ' + item + ' dashboard'}/>
@@ -60,7 +60,9 @@ const DashboardResearcherIds = ({values, history}) => {
                     href={txt.orcidUrlPrefix + values.orcid}
                     target="_blank"
                     aria-label={txt.orcidlinkLabel}
-                    title={txt.orcidlinkLabel}>
+                    title={txt.orcidlinkLabel}
+                    tabIndex="0"
+                >
                     {txt.orcidLinkPrefix}{values.orcid}
                 </a>
             </div>

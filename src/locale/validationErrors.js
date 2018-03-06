@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default {
     validationErrors: {
         publicationSearch: 'Type a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',
@@ -16,10 +18,9 @@ export default {
         minLength: 'Must be at least [min] characters',
         authorLinking: 'Please select and confirm an author',
         contributorLinking: 'Please select and confirm a contributor',
-        authorRequired: 'Please provide a list of authors/creators of the publication and link an author name to the current user',
-        authorEditorRequired: 'Please provide a list of authors/creators and/or editors/contributors of the publication and link one author or editor to the current user',
+        authorRequired: (<span>Please <b>provide a list of authors/creators</b> of the publication and <b>select an author/creator or editor/contributor</b> as you</span>),
+        editorRequired: (<span>Please <b>provide a list of editors/contributors</b> of the publication and <b>select an editor/contributor or author/creator</b> as you</span>),
         supervisorRequired: 'Please provide a list of supervisors',
-        editorRequired: 'Please provide a list of editors of the publication and link an editor name to the current user',
         googleScholarId: 'Please provide a valid 12 character Google Scholar ID',
     },
     validationErrorsSummary: {

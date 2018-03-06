@@ -44,6 +44,21 @@ describe('Application component', () => {
         };
     });
 
+    it('should redirect to login page with correct return url if rhd submission route accessed', () => {
+        window.location.assign = jest.fn();
+
+        // current URL is set to testUrl which is set in package.json as http://fez-staging.library.uq.edu.au
+        const wrapper = setup({});
+        wrapper.instance().redirectUserToLogin(true, true)();
+
+        const currentUrl = window.btoa(window.location.href);
+        expect(window.location.assign).toBeCalledWith(expect.stringContaining(currentUrl));
+
+        const appUrl = window.btoa('https://fez-staging.library.uq.edu.au/');
+        wrapper.instance().redirectUserToLogin(true, false)();
+        expect(window.location.assign).toBeCalledWith(expect.stringContaining(appUrl));
+    });
+
     it('should render for anon user', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -133,7 +148,7 @@ describe('Application component', () => {
 
     it('should redirect to login page', () => {
         window.location.assign = jest.fn();
-        const wrapper = setup({}).instance().redirectUserToLogin();
+        const wrapper = setup({}).instance().redirectUserToLogin()();
         expect(window.location.assign).toBeCalledWith(expect.stringContaining(AUTH_URL_LOGIN));
     });
 
@@ -142,7 +157,7 @@ describe('Application component', () => {
         const wrapper = setup({
             account: account,
             author: author
-        }).instance().redirectUserToLogin();
+        }).instance().redirectUserToLogin(true)();
         expect(window.location.assign).toBeCalledWith(expect.stringContaining(AUTH_URL_LOGOUT));
     });
 

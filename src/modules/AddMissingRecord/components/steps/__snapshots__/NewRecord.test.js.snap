@@ -11,13 +11,6 @@ exports[`Add new record should render stepper and a publication form 1`] = `
         "cancelButtonLabel": "Add another missing record",
         "confirmButtonLabel": "Go to my research",
         "confirmationMessage": <div>
-          <Alert
-            allowDismiss={false}
-            message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
-            showLoader={false}
-            title="File upload failed"
-            type="info"
-          />
           <p>
             Your record has been saved.
             <br />

@@ -4575,6 +4575,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
             className="citationDoiLink"
             href="https://doi.org/10.1242/jcs.196659"
             rel="noopener noreferrer"
+            tabIndex="0"
             target="_blank"
             title="Open this DOI in an new window"
           >

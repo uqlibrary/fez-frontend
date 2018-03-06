@@ -70,7 +70,6 @@ export default class ThesisSubmission extends Component {
                 </StandardPage>
             );
         }
-        console.log(this.props);
         const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: formLocale});
         return (
             <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
@@ -142,7 +141,6 @@ export default class ThesisSubmission extends Component {
 
 
                     <StandardCard title={txtSupervisors.title} help={txtSupervisors.help}>
-                        <div>{txtSupervisors.description}</div>
                         <Field
                             component={ContributorsEditorField}
                             className="requiredField"

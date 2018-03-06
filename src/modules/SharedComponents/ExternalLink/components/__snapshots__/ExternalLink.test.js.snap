@@ -12,6 +12,7 @@ exports[`ExternalLink test  should render component with open-in-new window icon
     className="externalLink"
     href="www.google.com"
     rel="noopener noreferrer"
+    tabIndex="0"
     target="_blank"
   >
     Google
@@ -64,6 +65,7 @@ exports[`ExternalLink test  should render component without open-in-new window i
     className="externalLink"
     href="www.google.com"
     rel="noopener noreferrer"
+    tabIndex="0"
     target="_blank"
   >
     Google

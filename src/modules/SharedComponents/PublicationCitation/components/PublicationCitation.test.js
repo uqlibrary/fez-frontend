@@ -54,6 +54,12 @@ describe('PublicationCitation ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render component without a title', () => {
+        const publicationWithSources = {...mockRecordToFix, "sources": [{source: "espace", id: "UQ:224457"}]};
+        const wrapper = setup({publication: publicationWithSources, showSources: true, hideTitle: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should check if props changed', () => {
         const wrapper = setup({});
         let shouldUpdate = wrapper.instance().shouldComponentUpdate({publication: {...mockRecordToFix, "sources": [{source: "espace", id: "UQ:224457"}]}});
@@ -65,8 +71,7 @@ describe('PublicationCitation ', () => {
 
     it('should handle view record link', () => {
         const wrapper = setup({});
-        wrapper.instance().viewRecord({preventDefault: jest.fn()});
-        expect(wrapper.instance().props.history.push).toHaveBeenCalled();
+        wrapper.instance().viewRecord();
         expect(wrapper.instance().props.actions.setRecordToView).toHaveBeenCalled();
     });
 

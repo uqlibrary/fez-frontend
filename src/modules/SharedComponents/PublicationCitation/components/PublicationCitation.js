@@ -42,13 +42,15 @@ export default class PublicationCitation extends PureComponent {
         customActions: PropTypes.array,
         className: PropTypes.string,
         history: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired
+        actions: PropTypes.object.isRequired,
+        hideTitle: PropTypes.bool
     };
 
     static defaultProps = {
         showDefaultActions: false,
         showSources: false,
-        className: ''
+        className: '',
+        hideTitle: false
     };
 
     constructor(props) {
@@ -159,9 +161,12 @@ export default class PublicationCitation extends PureComponent {
             <div className={`publicationCitation ${this.props.className}`}>
                 <div className="columns is-gapless is-mobile">
                     <div className="column">
-                        <h3 className="publicationTitle">
-                            {this.renderTitle()}
-                        </h3>
+                        {
+                            !this.props.hideTitle &&
+                            <h3 className="publicationTitle">
+                                {this.renderTitle()}
+                            </h3>
+                        }
 
                         {this.renderCitation(this.props.publication.rek_display_type)}
 

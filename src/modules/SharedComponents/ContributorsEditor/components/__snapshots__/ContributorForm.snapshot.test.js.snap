@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContributorForm tests  should render display name field and identifier field 1`] = `
+exports[`Component ContributorForm rendering display name field and identifier field 1`] = `
 <Provider
   store={
     Object {
@@ -55,6 +55,7 @@ exports[`ContributorForm tests  should render display name field and identifier 
       <ContributorForm
         actions={Object {}}
         authorsList={Array []}
+        disabled={false}
         locale={
           Object {
             "addButton": "Add author",
@@ -3213,7 +3214,7 @@ exports[`ContributorForm tests  should render display name field and identifier 
 </Provider>
 `;
 
-exports[`ContributorForm tests  should render display name field only 1`] = `
+exports[`Component ContributorForm rendering display name field only 1`] = `
 <Provider
   store={
     Object {
@@ -3268,6 +3269,7 @@ exports[`ContributorForm tests  should render display name field only 1`] = `
       <ContributorForm
         actions={Object {}}
         authorsList={Array []}
+        disabled={false}
         locale={
           Object {
             "addButton": "Add author",
@@ -3296,6 +3298,7 @@ exports[`ContributorForm tests  should render display name field only 1`] = `
           }
         }
         onAdd={[MockFunction]}
+        showIdentifierLookup={false}
       >
         <div
           className="contributorForm"
