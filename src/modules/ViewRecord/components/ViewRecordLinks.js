@@ -70,7 +70,9 @@ export default class ViewRecordLinks extends PureComponent {
                                     <TableRowColumn className="rowLink">
                                         <DoiLink DoiId={record.fez_record_search_key_doi.rek_doi}/>
                                     </TableRowColumn>
-                                    <TableRowColumn className="rowDescription is-hidden-mobile">{openAccessIdLookup[record.fez_record_search_key_oa_status.rek_oa_status]}</TableRowColumn>
+                                    <TableRowColumn className="rowDescription is-hidden-mobile">
+                                        {openAccessIdLookup[record.fez_record_search_key_oa_status.rek_oa_status]}
+                                    </TableRowColumn>
                                     <TableRowColumn className="rowOA align-right">
                                         {
                                             showIcon() &&
