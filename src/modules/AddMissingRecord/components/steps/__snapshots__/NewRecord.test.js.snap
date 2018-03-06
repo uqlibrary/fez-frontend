@@ -11,13 +11,6 @@ exports[`Add new record should render stepper and a publication form 1`] = `
         "cancelButtonLabel": "Add another missing record",
         "confirmButtonLabel": "Go to my research",
         "confirmationMessage": <div>
-          <Alert
-            allowDismiss={false}
-            message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
-            showLoader={false}
-            title="File upload failed"
-            type="info"
-          />
           <p>
             Your record has been saved.
             <br />
@@ -61,6 +54,195 @@ exports[`Add new record should render stepper and a publication form 1`] = `
 </div>
 `;
 
-exports[`Add new record should render the confirm dialog with an alert for failed file upload 1`] = `<span />`;
+exports[`Add new record should render the confirm dialog with an alert for failed file upload 1`] = `
+<ConfirmDialogBox
+  hideCancelButton={false}
+  locale={
+    Object {
+      "cancelButtonLabel": "Add another missing record",
+      "confirmButtonLabel": "Go to my research",
+      "confirmationMessage": <div>
+        <Alert
+          allowDismiss={false}
+          message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
+          showLoader={false}
+          title="File upload failed"
+          type="info"
+        />
+        <p>
+          Your record has been saved.
+          <br />
+          <br />
+          Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+        </p>
+      </div>,
+      "confirmationTitle": "Your record has been submitted",
+      "fileFailConfirmationAlert": Object {
+        "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
+        "title": "File upload failed",
+        "type": "info",
+      },
+      "recordSuccessConfirmationMessage": <p>
+        Your record has been saved.
+        <br />
+        <br />
+        Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+      </p>,
+    }
+  }
+  onAction={[Function]}
+  onCancelAction={[Function]}
+  onRef={[Function]}
+>
+  <Dialog
+    actions={
+      Array [
+        <div
+          className="columns dialog-actions ConfirmDialogBox-actions"
+        >
+          <div
+            className="column is-hidden-mobile"
+          />
+          <div
+            className="column is-narrow"
+          >
+            <RaisedButton
+              className="ConfirmDialogBox-actions-cancel"
+              disabled={false}
+              fullWidth={true}
+              label="Add another missing record"
+              labelPosition="after"
+              onTouchTap={[Function]}
+              primary={false}
+              secondary={false}
+            />
+          </div>
+          <div
+            className="column is-narrow"
+          >
+            <RaisedButton
+              className="ConfirmDialogBox-actions-confirm"
+              disabled={false}
+              fullWidth={true}
+              keyboardFocused={true}
+              label="Go to my research"
+              labelPosition="after"
+              onTouchTap={[Function]}
+              primary={false}
+              secondary={true}
+            />
+          </div>
+          <div
+            className="is-clearfix"
+          />
+        </div>,
+      ]
+    }
+    autoDetectWindowHeight={true}
+    autoScrollBodyContent={false}
+    modal={true}
+    open={false}
+    repositionOnUpdate={true}
+    title="Your record has been submitted"
+  >
+    <RenderToLayer
+      open={true}
+      render={[Function]}
+      useLayerForClickAway={false}
+    />
+  </Dialog>
+</ConfirmDialogBox>
+`;
 
-exports[`Add new record should render the confirm dialog with without an alert for successful file upload 1`] = `<span />`;
+exports[`Add new record should render the confirm dialog without an alert for a succcessful file upload 1`] = `
+<ConfirmDialogBox
+  hideCancelButton={false}
+  locale={
+    Object {
+      "cancelButtonLabel": "Add another missing record",
+      "confirmButtonLabel": "Go to my research",
+      "confirmationMessage": <div>
+        <p>
+          Your record has been saved.
+          <br />
+          <br />
+          Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+        </p>
+      </div>,
+      "confirmationTitle": "Your record has been submitted",
+      "fileFailConfirmationAlert": Object {
+        "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
+        "title": "File upload failed",
+        "type": "info",
+      },
+      "recordSuccessConfirmationMessage": <p>
+        Your record has been saved.
+        <br />
+        <br />
+        Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+      </p>,
+    }
+  }
+  onAction={[Function]}
+  onCancelAction={[Function]}
+  onRef={[Function]}
+>
+  <Dialog
+    actions={
+      Array [
+        <div
+          className="columns dialog-actions ConfirmDialogBox-actions"
+        >
+          <div
+            className="column is-hidden-mobile"
+          />
+          <div
+            className="column is-narrow"
+          >
+            <RaisedButton
+              className="ConfirmDialogBox-actions-cancel"
+              disabled={false}
+              fullWidth={true}
+              label="Add another missing record"
+              labelPosition="after"
+              onTouchTap={[Function]}
+              primary={false}
+              secondary={false}
+            />
+          </div>
+          <div
+            className="column is-narrow"
+          >
+            <RaisedButton
+              className="ConfirmDialogBox-actions-confirm"
+              disabled={false}
+              fullWidth={true}
+              keyboardFocused={true}
+              label="Go to my research"
+              labelPosition="after"
+              onTouchTap={[Function]}
+              primary={false}
+              secondary={true}
+            />
+          </div>
+          <div
+            className="is-clearfix"
+          />
+        </div>,
+      ]
+    }
+    autoDetectWindowHeight={true}
+    autoScrollBodyContent={false}
+    modal={true}
+    open={false}
+    repositionOnUpdate={true}
+    title="Your record has been submitted"
+  >
+    <RenderToLayer
+      open={true}
+      render={[Function]}
+      useLayerForClickAway={false}
+    />
+  </Dialog>
+</ConfirmDialogBox>
+`;

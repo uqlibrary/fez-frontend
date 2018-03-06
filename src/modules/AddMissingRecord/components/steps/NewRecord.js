@@ -64,7 +64,7 @@ export default class NewRecord extends React.Component {
         const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
         saveConfirmationLocale.confirmationMessage = (
             <div>
-                {!this.props.newRecordFileUploadingError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
+                {this.props.newRecordFileUploadingError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
                 {saveConfirmationLocale.recordSuccessConfirmationMessage}
             </div>
         );
