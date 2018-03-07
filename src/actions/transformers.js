@@ -50,6 +50,9 @@ export const getRecordLinkSearchKey = (data) => {
 export const getRecordFileAttachmentSearchKey = (files, record) => {
     if (!files || files.length === 0) return {};
 
+    const OPEN_ACCESS_ID = 9;
+    const CLOSED_ACCESS_ID = 8;
+
     // if record already has files, add new files to the end of the list (for patch)
     const initialCount = record && record.fez_record_search_key_file_attachment_name ?
         record.fez_record_search_key_file_attachment_name.length : 0;
@@ -73,7 +76,9 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
         .map((item, index) => {
             if (!item.hasOwnProperty('access_condition_id')) return null;
             return {
-                rek_file_attachment_access_condition: item.access_condition_id,
+                rek_file_attachment_access_condition: item.access_condition_id === OPEN_ACCESS_ID && (item.date && moment(item.date).isAfter())
+                    ? CLOSED_ACCESS_ID
+                    : item.access_condition_id,
                 rek_file_attachment_access_condition_order: initialCount + index + 1
             };
         })
