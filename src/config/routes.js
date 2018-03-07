@@ -22,6 +22,17 @@ export const pathConfig =  {
     collection: {
         view: (pid) => (`/collection/${pid}`),
     },
+    // TODO: update links when we have list pages
+    list: {
+        author: (authorId) => (`/list/author_id/${authorId}`),
+        subject: (subjectId) => (`/list/subject/${subjectId}`),
+        herdcCode: (herdcCodeId) => (`/list/subject/${herdcCodeId}`),
+        herdcStatus: (herdcStatusId) => (`/list/?cat=quick_filter&search_keys[UQ_22]=${herdcStatusId}`),
+        keyword: (keyword) => (`/list//?cat=quick_filter&search_keys[0]=${keyword}`),
+        institutionalStatus: (institutionalStatusId) => (`/list/?cat=quick_filter&search_keys[UQ_23]=${institutionalStatusId}`),
+        openAccessStatus: (openAccessStatusId) => (`/list/?cat=quick_filter&search_keys[UQ_54]=${openAccessStatusId}`),
+        journalName: (journalName) => (`/list/?cat=quick_filter&search_keys[core_34]=${journalName}`),
+    },
     admin: {
         masquerade: '/admin/masquerade'
     },

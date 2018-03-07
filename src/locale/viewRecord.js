@@ -1,5 +1,8 @@
 export default {
     viewRecord: {
+        linkTexts: {
+            journalOpenAccessPolicyLink: 'Check publisher\'s open access policy'
+        },
         sections: {
             publicationDetails: 'Publication details',
             grantInformation: 'Grant information',
@@ -11,7 +14,7 @@ export default {
                 rek_title: 'Title',
                 rek_date: 'Publication date',
                 rek_genre: 'Type',
-                rek_genre_type: 'Genre type',
+                rek_genre_type: 'Sub-type',
                 rek_description: 'Description',
                 fez_record_search_key_author: 'Author(s)',
                 fez_record_search_key_contributor: 'Editor(s)',

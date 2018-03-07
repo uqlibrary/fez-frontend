@@ -2,16 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CitationView from './CitationView';
 import {locale} from 'locale';
+import {pathConfig} from 'config/routes';
 
 export default class AuthorsCitationView extends React.Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         searchKey: PropTypes.object,
+        idSearchKey: PropTypes.object,
         className: PropTypes.string,
         prefix: PropTypes.string,
         suffix: PropTypes.string,
         initialNumberOfAuthors: PropTypes.number,
         thresholdNumberOfAuthors: PropTypes.number,
+        showLink: PropTypes.bool
     };
 
     static defaultProps = {
@@ -21,10 +24,15 @@ export default class AuthorsCitationView extends React.Component {
             subkey: 'rek_author',
             order: 'rek_author_order'
         },
+        idSearchKey: {
+            idKey: 'fez_record_search_key_author_id',
+            idSubkey: 'rek_author_id',
+            idOrder: 'rek_author_id_order'
+        },
         className: 'citationAuthors',
         initialNumberOfAuthors: 10,
-        thresholdNumberOfAuthors: 3
-        // TODO: link to author: idSearchKey: {key: 'fez_record_search_key_author_id', subkey: 'rek_author_id'}
+        thresholdNumberOfAuthors: 3,
+        showLink: false
     };
 
     constructor(props) {
@@ -45,7 +53,7 @@ export default class AuthorsCitationView extends React.Component {
                     author1[order] - author2[order])
                 ).map(author => (
                     {
-                        // TODO: add author id for linking
+                        id: this.getAuthorId(author[order]),
                         value: author[subkey],
                         order: author[order]
                     }
@@ -59,12 +67,28 @@ export default class AuthorsCitationView extends React.Component {
             || JSON.stringify(nextProps.publication[nextProps.searchKey]) !== JSON.stringify(this.props.publication[this.props.searchKey]);
     }
 
+    getAuthorId = (order) => {
+        let id = 0;
+        const {publication, idSearchKey: {idKey, idOrder, idSubkey}, showLink} = this.props;
+
+        if (showLink) {
+            const authorIds = publication && publication[idKey] && [...publication[idKey]];
+            for (const authorId of authorIds) {
+                if (authorId[idOrder] === order) {
+                    id = authorId[idSubkey];
+                    break;
+                }
+            }
+        }
+
+        return id;
+    }
+
     renderAuthors = (authors) => {
         return authors.map((author, index) => {
             const prefix = authors.length > 1 && index === authors.length - 1 ? ' and ' : '';
             const suffix = authors.length > 2 && index < authors.length - 1 ? ', ' : '';
-
-            return (
+            const element = (
                 <CitationView
                     className="citationAuthor"
                     key={`citationAuthor_${index + 1}`}
@@ -72,6 +96,8 @@ export default class AuthorsCitationView extends React.Component {
                     prefix={prefix}
                     suffix={suffix} />
             );
+
+            return author.id ? <a href={pathConfig.list.author(author.id)} key={`citationAuthor_${index + 1}`}>{element}</a> : element;
         });
     };
 
