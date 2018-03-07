@@ -99,6 +99,11 @@ export default {
                 title: 'Error',
                 message: 'This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at espace.admin@email.com.au'
             },
+            publicationFailedToClaimAlert: {
+                type: 'error_outline',
+                title: 'Incomplete data',
+                message: (<span>The selected source has incomplete data. You will need to <b>ADD A MISSING RECORD</b> and enter the information manually.</span>),
+            }
         },
         unclaimPublicationForm: {
             title: 'Remove this record from my profile',

@@ -161,6 +161,12 @@ describe('Component ClaimRecord ', () => {
             },
             {
                 parameters: {dirty: true, invalid: true, error: null, formErrors: {rek_title: 'one', rek_date: 'two'}, alertLocale: {validationAlert: {title: 'validationError', message: 'validationError', type: 'warning'}}}
+            },
+            {
+                parameters: {error: 'The given data was invalid.', initialValues: Immutable.Map({
+                    publication: Immutable.Map({rek_pid: null}),
+                    author: Immutable.Map({aut_id: 410})
+                }), alertLocale: {publicationFailedToClaimAlert: {title: 'External pub api error', message: 'External pub api error', type: 'error'}}}
             }
         ];
 

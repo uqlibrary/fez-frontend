@@ -110,13 +110,18 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
         className="column"
       >
         <Field
+          allowPartial={true}
+          className="requiredHintField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Place of publication"
-          fullWidth={true}
-          hintText="Type the place of publication"
-          name="fez_record_search_key_place_of_publication.rek_place_of_publication"
-          type="text"
+          floatingTitle="Publication date"
+          floatingTitleRequired={true}
+          name="rek_date"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
         />
       </div>
     </div>
@@ -140,18 +145,13 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
         className="column"
       >
         <Field
-          allowPartial={true}
-          className="requiredHintField"
           component={[Function]}
           disabled={false}
-          floatingTitle="Publication date"
-          floatingTitleRequired={true}
-          name="rek_date"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
+          floatingLabelText="Place of publication"
+          fullWidth={true}
+          hintText="Type the place of publication"
+          name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+          type="text"
         />
       </div>
     </div>

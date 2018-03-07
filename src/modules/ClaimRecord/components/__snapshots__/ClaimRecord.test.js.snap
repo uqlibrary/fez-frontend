@@ -8541,3 +8541,41 @@ exports[`Component ClaimRecord  should return and render alert message depending
   </div>
 </div>
 `;
+
+exports[`Component ClaimRecord  should return and render alert message depending on form status 5`] = `
+<div
+  className="error_outline alertWrapper "
+>
+  <div
+    className="columns is-multiline is-mobile"
+  >
+    <div
+      className="column is-narrow alertIcon"
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        error_outline
+      </FontIcon>
+    </div>
+    <div
+      className="column alertText"
+    >
+      <div>
+        <b>
+          Incomplete data - 
+        </b>
+        <span>
+          The selected source has incomplete data. You will need to 
+          <b>
+            ADD A MISSING RECORD
+          </b>
+           and enter the information manually.
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

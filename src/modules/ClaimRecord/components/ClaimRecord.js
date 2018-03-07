@@ -22,6 +22,7 @@ export default class ClaimRecord extends React.PureComponent {
     static propTypes = {
         ...propTypes, // all redux-form props
         publicationToClaimFileUploadingError: PropTypes.bool,
+        publicationFailedToClaim: PropTypes.string,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired
     };
@@ -103,7 +104,14 @@ export default class ClaimRecord extends React.PureComponent {
                 {txt.successWorkflowConfirmation.successConfirmationMessage}
             </div>
         );
-        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
+        let alertProps;
+        if (!publication.rek_pid && this.props.error === 'The given data was invalid.') {
+            alertProps = {...txt.publicationFailedToClaimAlert};
+        } else if (publication.rek_pid && (authorLinked || contributorLinked)) {
+            alertProps = {...txt.alreadyClaimedAlert};
+        } else {
+            alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
+        }
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
@@ -196,15 +204,9 @@ export default class ClaimRecord extends React.PureComponent {
                             </StandardCard>
                         </div>
                     }
-
                     {
                         alertProps && <Alert {...alertProps} />
                     }
-                    {
-                        publication.rek_pid && (authorLinked || contributorLinked) &&
-                            <Alert {...txt.alreadyClaimedAlert} />
-                    }
-
                     <div className="columns action-buttons">
                         <div className="column is-hidden-mobile"/>
                         <div className="column is-narrow-desktop">

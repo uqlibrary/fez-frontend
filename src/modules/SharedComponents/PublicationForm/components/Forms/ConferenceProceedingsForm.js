@@ -82,12 +82,15 @@ export default class ConferenceProceedingsForm extends Component {
                         </div>
                         <div className="column">
                             <Field
-                                component={TextField}
+                                component={PartialDateField}
                                 disabled={this.props.submitting}
-                                name="fez_record_search_key_place_of_publication.rek_place_of_publication"
-                                type="text"
-                                fullWidth
-                                {...txt.information.fieldLabels.publicationPlace} />
+                                name="rek_date"
+                                allowPartial
+                                className="requiredHintField"
+                                validate={[validation.required]}
+                                floatingTitle={txt.information.fieldLabels.date.title}
+                                floatingTitleRequired
+                            />
                         </div>
                     </div>
                     <div className="columns">
@@ -102,15 +105,12 @@ export default class ConferenceProceedingsForm extends Component {
                         </div>
                         <div className="column">
                             <Field
-                                component={PartialDateField}
+                                component={TextField}
                                 disabled={this.props.submitting}
-                                name="rek_date"
-                                allowPartial
-                                className="requiredHintField"
-                                validate={[validation.required]}
-                                floatingTitle={txt.information.fieldLabels.date.title}
-                                floatingTitleRequired
-                            />
+                                name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+                                type="text"
+                                fullWidth
+                                {...txt.information.fieldLabels.publicationPlace} />
                         </div>
                     </div>
                 </StandardCard>
