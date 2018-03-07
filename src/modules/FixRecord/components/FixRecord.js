@@ -89,7 +89,7 @@ export default class FixRecord extends React.PureComponent {
 
     _navigateToMyResearch = () => {
         this.props.history.push(routes.pathConfig.records.mine);
-    }
+    };
 
     _navigateToDashboard = () => {
         this.props.history.push(routes.pathConfig.dashboard);
@@ -99,13 +99,6 @@ export default class FixRecord extends React.PureComponent {
         this.setState({
             selectedRecordAction: value
         });
-    };
-
-    _handleKeyboardFormSubmit = (event) => {
-        if (event.key === 'Enter' && !event.shiftKey) {
-            event.preventDefault();
-            this.props.handleSubmit();
-        }
     };
 
     _setSuccessConfirmation = (ref) => {
@@ -149,7 +142,7 @@ export default class FixRecord extends React.PureComponent {
         const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txtFixForm});
         return (
             <StandardPage title={txt.title}>
-                <form onKeyDown={this._handleKeyboardFormSubmit}>
+                <form>
                     <StandardCard title={txt.subTitle} help={txt.help}>
                         <PublicationCitation publication={this.props.recordToFix}/>
 

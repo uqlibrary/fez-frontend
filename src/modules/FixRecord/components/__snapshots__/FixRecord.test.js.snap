@@ -5,9 +5,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
   className=""
   title="Request a correction or upload files"
 >
-  <form
-    onKeyDown={[Function]}
-  >
+  <form>
     <StandardCard
       className=""
       title="Record to be amended"
@@ -626,9 +624,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
   className=""
   title="Request a correction or upload files"
 >
-  <form
-    onKeyDown={[Function]}
-  >
+  <form>
     <StandardCard
       className=""
       title="Record to be amended"
@@ -1115,9 +1111,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
   className=""
   title="Request a correction or upload files"
 >
-  <form
-    onKeyDown={[Function]}
-  >
+  <form>
     <StandardCard
       className=""
       title="Record to be amended"
@@ -1723,9 +1717,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
   className=""
   title="Request a correction or upload files"
 >
-  <form
-    onKeyDown={[Function]}
-  >
+  <form>
     <StandardCard
       className=""
       title="Record to be amended"
@@ -2324,9 +2316,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
   className=""
   title="Request a correction or upload files"
 >
-  <form
-    onKeyDown={[Function]}
-  >
+  <form>
     <StandardCard
       className=""
       title="Record to be amended"

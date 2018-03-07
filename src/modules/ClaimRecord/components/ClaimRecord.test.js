@@ -184,23 +184,6 @@ describe('Component ClaimRecord ', () => {
         expect(wrapper.instance().successConfirmationBox).toEqual('successBox');
     });
 
-    it('should submit form when user hits Enter', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({handleSubmit: testMethod});
-
-        wrapper.instance()._handleKeyboardFormSubmit({key: 'Enter', shiftKey: false, preventDefault: jest.fn()});
-        expect(testMethod).toHaveBeenCalled();
-
-    });
-
-    it('should not submit form when user hits shift+Enter', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({handleSubmit: testMethod});
-
-        wrapper.instance()._handleKeyboardFormSubmit({key: 'Enter', shiftKey: true, preventDefault: jest.fn()});
-        expect(testMethod).not.toHaveBeenCalled();
-    });
-
     it('should redirect if no author or record set', () => {
         const testMethod = jest.fn();
         const wrapper = setup({initialValues: Immutable.Map({author: null}), history: {go: testMethod}});

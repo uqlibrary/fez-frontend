@@ -82,22 +82,6 @@ describe('Component FixRecord', () => {
         expect(wrapper.instance().successConfirmationBox).toEqual('successBox');
     });
 
-    it('should submit form when user hits Enter', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({recordToFix: mockRecordToFix, handleSubmit: testMethod});
-        wrapper.setState({selectedRecordAction: 'unclaim'});
-        wrapper.instance()._handleKeyboardFormSubmit({key: 'Enter', preventDefault: jest.fn()});
-        expect(testMethod).toHaveBeenCalled();
-    });
-
-    it('should not submit form when user hits shift+Enter', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({recordToFix: mockRecordToFix, handleSubmit: testMethod});
-        wrapper.setState({selectedRecordAction: 'unclaim'});
-        wrapper.instance()._handleKeyboardFormSubmit({key: 'Enter', shiftKey: true, preventDefault: jest.fn()});
-        expect(testMethod).not.toHaveBeenCalled();
-    });
-
     it('should redirect to other pages', () => {
         const testMethod = jest.fn();
 

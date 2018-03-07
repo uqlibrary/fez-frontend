@@ -5,9 +5,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
   className=""
   title="Claim a publication"
 >
-  <form
-    onKeyDown={[Function]}
-  >
+  <form>
     <StandardCard
       className=""
       help={
@@ -920,9 +918,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
   className=""
   title="Claim a publication"
 >
-  <form
-    onKeyDown={[Function]}
-  >
+  <form>
     <StandardCard
       className=""
       help={
@@ -1820,9 +1816,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
   className=""
   title="Claim a publication"
 >
-  <form
-    onKeyDown={[Function]}
-  >
+  <form>
     <StandardCard
       className=""
       help={
@@ -2972,9 +2966,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
   className=""
   title="Claim a publication"
 >
-  <form
-    onKeyDown={[Function]}
-  >
+  <form>
     <StandardCard
       className=""
       help={
@@ -4124,9 +4116,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
   className=""
   title="Claim a publication"
 >
-  <form
-    onKeyDown={[Function]}
-  >
+  <form>
     <StandardCard
       className=""
       help={
@@ -5277,9 +5267,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
   className=""
   title="Claim a publication"
 >
-  <form
-    onKeyDown={[Function]}
-  >
+  <form>
     <StandardCard
       className=""
       help={
@@ -6092,9 +6080,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
   className=""
   title="Claim a publication"
 >
-  <form
-    onKeyDown={[Function]}
-  >
+  <form>
     <StandardCard
       className=""
       help={
@@ -7251,9 +7237,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
   className=""
   title="Claim a publication"
 >
-  <form
-    onKeyDown={[Function]}
-  >
+  <form>
     <StandardCard
       className=""
       help={

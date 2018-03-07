@@ -5,9 +5,7 @@ exports[`Component GoogleScholar  should display submission error if saving fail
   className=""
   title="Google Scholar identifier"
 >
-  <form
-    onKeyDown={[Function]}
-  >
+  <form>
     <StandardCard
       className=""
       help={
@@ -129,9 +127,7 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
   className=""
   title="Google Scholar identifier"
 >
-  <form
-    onKeyDown={[Function]}
-  >
+  <form>
     <StandardCard
       className=""
       help={
@@ -254,9 +250,7 @@ exports[`Component GoogleScholar  should render form if author doesn't have goog
   className=""
   title="Google Scholar identifier"
 >
-  <form
-    onKeyDown={[Function]}
-  >
+  <form>
     <StandardCard
       className=""
       help={
@@ -371,9 +365,7 @@ exports[`Component GoogleScholar  should render form if author has google schola
   className=""
   title="Google Scholar identifier"
 >
-  <form
-    onKeyDown={[Function]}
-  >
+  <form>
     <StandardCard
       className=""
       help={
