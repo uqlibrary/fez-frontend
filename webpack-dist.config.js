@@ -153,10 +153,10 @@ module.exports = {
                     }
                 ]
             },
-            // {
-            //     test: /\.js$/,
-            //     loader: WebpackStrip.loader('console.log')
-            // }
+            {
+                test: /\.js$/,
+                loader: WebpackStrip.loader('console.log')
+            }
         ]
     },
     resolve: {
