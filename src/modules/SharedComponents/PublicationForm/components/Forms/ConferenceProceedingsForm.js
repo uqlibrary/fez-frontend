@@ -84,23 +84,14 @@ export default class ConferenceProceedingsForm extends Component {
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                name="fez_record_search_key_proceedings_title.rek_proceedings_title"
-                                type="text"
-                                fullWidth
-                                {...txt.information.fieldLabels.proceedingsTitle} />
-                        </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column is-half">
-                            <Field
-                                component={TextField}
-                                disabled={this.props.submitting}
                                 name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.publicationPlace} />
                         </div>
-                        <div className="column">
+                    </div>
+                    <div className="columns">
+                        <div className="column is-half">
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -109,8 +100,6 @@ export default class ConferenceProceedingsForm extends Component {
                                 fullWidth
                                 {...txt.information.fieldLabels.publisher} />
                         </div>
-                    </div>
-                    <div className="columns">
                         <div className="column">
                             <Field
                                 component={PartialDateField}
