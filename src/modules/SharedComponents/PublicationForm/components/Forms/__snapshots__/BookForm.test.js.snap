@@ -247,7 +247,7 @@ exports[`BookForm renders  component 1`] = `
                 <b>
                   add to a list of editors below
                 </b>
-                , in the format and order that they are published.
+                , in the format "John Smith".
               </div>,
               "descriptionStep1NoStep2": <div>
                 Please 
@@ -257,8 +257,8 @@ exports[`BookForm renders  component 1`] = `
                 , in the format and order that they are published.
               </div>,
               "identifierLabel": "UQ identifier (if available)",
-              "nameAsPublishedHint": "Type the name exactly as published",
-              "nameAsPublishedLabel": "Enter each editor's name as published (eg. Smith, John)",
+              "nameAsPublishedHint": "Type the name in the format eg. \\"John Smith\\"",
+              "nameAsPublishedLabel": "Enter each editor's name as published (eg. John Smith)",
             },
           },
           "header": Object {
@@ -284,7 +284,7 @@ exports[`BookForm renders  component 1`] = `
                  from the list below (if applicable).
               </div>,
               "identifierColumn": "UQ identifier",
-              "nameColumn": "Editor's name as published",
+              "nameColumn": "Editor's name in the format eg. \\"John Smith\\"",
               "reorderColumn": "Reorder items",
             },
           },
