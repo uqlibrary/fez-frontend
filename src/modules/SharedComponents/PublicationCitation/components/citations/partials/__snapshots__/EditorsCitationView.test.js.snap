@@ -6,6 +6,13 @@ exports[`EditorsCitationView test  should render component with no contributors 
 >
   <AuthorsCitationView
     className="citationEditors"
+    idSearchKey={
+      Object {
+        "idKey": "fez_record_search_key_author_id",
+        "idOrder": "rek_author_id_order",
+        "idSubkey": "rek_author_id",
+      }
+    }
     initialNumberOfAuthors={10}
     prefix=" edited by "
     publication={Object {}}
@@ -16,6 +23,7 @@ exports[`EditorsCitationView test  should render component with no contributors 
         "subkey": "rek_contributor",
       }
     }
+    showLink={false}
     suffix=". "
     thresholdNumberOfAuthors={3}
   >
@@ -43,6 +51,13 @@ exports[`EditorsCitationView test  should render component with one contributor 
 >
   <AuthorsCitationView
     className="citationEditors"
+    idSearchKey={
+      Object {
+        "idKey": "fez_record_search_key_author_id",
+        "idOrder": "rek_author_id_order",
+        "idSubkey": "rek_author_id",
+      }
+    }
     initialNumberOfAuthors={10}
     prefix=" edited by "
     publication={
@@ -64,6 +79,7 @@ exports[`EditorsCitationView test  should render component with one contributor 
         "subkey": "rek_contributor",
       }
     }
+    showLink={false}
     suffix=". "
     thresholdNumberOfAuthors={3}
   >
@@ -119,6 +135,13 @@ exports[`EditorsCitationView test  should render component with three contributo
 >
   <AuthorsCitationView
     className="citationEditors"
+    idSearchKey={
+      Object {
+        "idKey": "fez_record_search_key_author_id",
+        "idOrder": "rek_author_id_order",
+        "idSubkey": "rek_author_id",
+      }
+    }
     initialNumberOfAuthors={10}
     prefix=" edited by "
     publication={
@@ -152,6 +175,7 @@ exports[`EditorsCitationView test  should render component with three contributo
         "subkey": "rek_contributor",
       }
     }
+    showLink={false}
     suffix=". "
     thresholdNumberOfAuthors={3}
   >
@@ -230,6 +254,13 @@ exports[`EditorsCitationView test  should render component with two contributors
 >
   <AuthorsCitationView
     className="citationEditors"
+    idSearchKey={
+      Object {
+        "idKey": "fez_record_search_key_author_id",
+        "idOrder": "rek_author_id_order",
+        "idSubkey": "rek_author_id",
+      }
+    }
     initialNumberOfAuthors={10}
     prefix=" edited by "
     publication={
@@ -257,6 +288,7 @@ exports[`EditorsCitationView test  should render component with two contributors
         "subkey": "rek_contributor",
       }
     }
+    showLink={false}
     suffix=". "
     thresholdNumberOfAuthors={3}
   >

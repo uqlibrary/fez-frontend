@@ -450,6 +450,13 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -874,6 +881,7 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -1416,6 +1424,13 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
     >
       <AuthorsCitationView
         className="citationEditors"
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_author_id",
+            "idOrder": "rek_author_id_order",
+            "idSubkey": "rek_author_id",
+          }
+        }
         initialNumberOfAuthors={10}
         prefix=" edited by "
         publication={
@@ -1841,6 +1856,7 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
             "subkey": "rek_contributor",
           }
         }
+        showLink={false}
         suffix=". "
         thresholdNumberOfAuthors={3}
       >
@@ -3335,6 +3351,13 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
@@ -3344,6 +3367,7 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -3385,6 +3409,13 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
     >
       <AuthorsCitationView
         className="citationEditors"
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_author_id",
+            "idOrder": "rek_author_id_order",
+            "idSubkey": "rek_author_id",
+          }
+        }
         initialNumberOfAuthors={10}
         prefix=" edited by "
         publication={Object {}}
@@ -3395,6 +3426,7 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
             "subkey": "rek_contributor",
           }
         }
+        showLink={false}
         suffix=". "
         thresholdNumberOfAuthors={3}
       >

@@ -760,6 +760,13 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
     >
       <AuthorsCitationView
         className="citationEditors"
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_author_id",
+            "idOrder": "rek_author_id_order",
+            "idSubkey": "rek_author_id",
+          }
+        }
         initialNumberOfAuthors={10}
         prefix=""
         publication={
@@ -1130,6 +1137,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
             "subkey": "rek_contributor",
           }
         }
+        showLink={false}
         suffix=" ed. "
         thresholdNumberOfAuthors={3}
       >
@@ -2043,6 +2051,13 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
     >
       <AuthorsCitationView
         className="citationEditors"
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_author_id",
+            "idOrder": "rek_author_id_order",
+            "idSubkey": "rek_author_id",
+          }
+        }
         initialNumberOfAuthors={10}
         prefix=""
         publication={
@@ -2416,6 +2431,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
             "subkey": "rek_contributor",
           }
         }
+        showLink={false}
         suffix=" ed. "
         thresholdNumberOfAuthors={3}
       >
@@ -2603,6 +2619,13 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
     >
       <AuthorsCitationView
         className="citationEditors"
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_author_id",
+            "idOrder": "rek_author_id_order",
+            "idSubkey": "rek_author_id",
+          }
+        }
         initialNumberOfAuthors={10}
         prefix=""
         publication={Object {}}
@@ -2613,6 +2636,7 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
             "subkey": "rek_contributor",
           }
         }
+        showLink={false}
         suffix=" ed. "
         thresholdNumberOfAuthors={3}
       >

@@ -3,6 +3,13 @@
 exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
 <AuthorsCitationView
   className=""
+  idSearchKey={
+    Object {
+      "idKey": "fez_record_search_key_author_id",
+      "idOrder": "rek_author_id_order",
+      "idSubkey": "rek_author_id",
+    }
+  }
   initialNumberOfAuthors={10}
   publication={
     Object {
@@ -23,6 +30,7 @@ exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
       "subkey": "rek_author",
     }
   }
+  showLink={false}
   suffix=" "
   thresholdNumberOfAuthors={3}
 >
@@ -50,6 +58,13 @@ exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
 exports[`AuthorsCitationView test  should render component with 2 authors 1`] = `
 <AuthorsCitationView
   className=""
+  idSearchKey={
+    Object {
+      "idKey": "fez_record_search_key_author_id",
+      "idOrder": "rek_author_id_order",
+      "idSubkey": "rek_author_id",
+    }
+  }
   initialNumberOfAuthors={10}
   publication={
     Object {
@@ -76,6 +91,7 @@ exports[`AuthorsCitationView test  should render component with 2 authors 1`] = 
       "subkey": "rek_author",
     }
   }
+  showLink={false}
   suffix=" "
   thresholdNumberOfAuthors={3}
 >
@@ -117,6 +133,13 @@ exports[`AuthorsCitationView test  should render component with 2 authors 1`] = 
 exports[`AuthorsCitationView test  should render component with 3 authors 1`] = `
 <AuthorsCitationView
   className=""
+  idSearchKey={
+    Object {
+      "idKey": "fez_record_search_key_author_id",
+      "idOrder": "rek_author_id_order",
+      "idSubkey": "rek_author_id",
+    }
+  }
   initialNumberOfAuthors={10}
   publication={
     Object {
@@ -149,6 +172,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors 1`] = 
       "subkey": "rek_author",
     }
   }
+  showLink={false}
   suffix=" "
   thresholdNumberOfAuthors={3}
 >
@@ -205,6 +229,13 @@ exports[`AuthorsCitationView test  should render component with 3 authors 1`] = 
 exports[`AuthorsCitationView test  should render component with 3 authors with prefix/suffix 1`] = `
 <AuthorsCitationView
   className=""
+  idSearchKey={
+    Object {
+      "idKey": "fez_record_search_key_author_id",
+      "idOrder": "rek_author_id_order",
+      "idSubkey": "rek_author_id",
+    }
+  }
   initialNumberOfAuthors={10}
   prefix="Authored by: "
   publication={
@@ -238,6 +269,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
       "subkey": "rek_author",
     }
   }
+  showLink={false}
   suffix=" people."
   thresholdNumberOfAuthors={3}
 >
@@ -295,6 +327,13 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
 exports[`AuthorsCitationView test  should render component with 3 authors with prefix/suffix without changing original data structure 1`] = `
 <AuthorsCitationView
   className=""
+  idSearchKey={
+    Object {
+      "idKey": "fez_record_search_key_author_id",
+      "idOrder": "rek_author_id_order",
+      "idSubkey": "rek_author_id",
+    }
+  }
   initialNumberOfAuthors={10}
   prefix="Authored by: "
   publication={
@@ -328,6 +367,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
       "subkey": "rek_author",
     }
   }
+  showLink={false}
   suffix=" people."
   thresholdNumberOfAuthors={3}
 >
@@ -385,6 +425,13 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
 exports[`AuthorsCitationView test  should render component with 10 authors (8 initial number and threshold 2) 1`] = `
 <AuthorsCitationView
   className=""
+  idSearchKey={
+    Object {
+      "idKey": "fez_record_search_key_author_id",
+      "idOrder": "rek_author_id_order",
+      "idSubkey": "rek_author_id",
+    }
+  }
   initialNumberOfAuthors={8}
   prefix="Authored by: "
   publication={
@@ -460,6 +507,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors (8 in
       "subkey": "rek_author",
     }
   }
+  showLink={false}
   suffix=" people."
   thresholdNumberOfAuthors={2}
 >
@@ -615,6 +663,13 @@ exports[`AuthorsCitationView test  should render component with 10 authors (8 in
 exports[`AuthorsCitationView test  should render component with 10 authors and show more link 1`] = `
 <AuthorsCitationView
   className=""
+  idSearchKey={
+    Object {
+      "idKey": "fez_record_search_key_author_id",
+      "idOrder": "rek_author_id_order",
+      "idSubkey": "rek_author_id",
+    }
+  }
   initialNumberOfAuthors={10}
   prefix="Authored by: "
   publication={
@@ -702,6 +757,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
       "subkey": "rek_author",
     }
   }
+  showLink={false}
   suffix=" people."
   thresholdNumberOfAuthors={0}
 >
@@ -868,6 +924,13 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
 exports[`AuthorsCitationView test  should render component with 10 authors and show more link 2`] = `
 <AuthorsCitationView
   className=""
+  idSearchKey={
+    Object {
+      "idKey": "fez_record_search_key_author_id",
+      "idOrder": "rek_author_id_order",
+      "idSubkey": "rek_author_id",
+    }
+  }
   initialNumberOfAuthors={10}
   prefix="Authored by: "
   publication={
@@ -955,6 +1018,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
       "subkey": "rek_author",
     }
   }
+  showLink={false}
   suffix=" people."
   thresholdNumberOfAuthors={0}
 >
@@ -1149,6 +1213,13 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
 exports[`AuthorsCitationView test  should render component with exactly 10 authors 1`] = `
 <AuthorsCitationView
   className=""
+  idSearchKey={
+    Object {
+      "idKey": "fez_record_search_key_author_id",
+      "idOrder": "rek_author_id_order",
+      "idSubkey": "rek_author_id",
+    }
+  }
   initialNumberOfAuthors={10}
   prefix="Authored by: "
   publication={
@@ -1224,6 +1295,7 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
       "subkey": "rek_author",
     }
   }
+  showLink={false}
   suffix=" people."
   thresholdNumberOfAuthors={3}
 >
@@ -1379,6 +1451,13 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
 exports[`AuthorsCitationView test  should render component with no authors 1`] = `
 <AuthorsCitationView
   className=""
+  idSearchKey={
+    Object {
+      "idKey": "fez_record_search_key_author_id",
+      "idOrder": "rek_author_id_order",
+      "idSubkey": "rek_author_id",
+    }
+  }
   initialNumberOfAuthors={10}
   publication={Object {}}
   searchKey={
@@ -1388,6 +1467,7 @@ exports[`AuthorsCitationView test  should render component with no authors 1`] =
       "subkey": "rek_author",
     }
   }
+  showLink={false}
   suffix=" "
   thresholdNumberOfAuthors={3}
 >
@@ -1400,6 +1480,13 @@ exports[`AuthorsCitationView test  should render component with no authors 1`] =
 exports[`AuthorsCitationView test  should set class on component with no authors 1`] = `
 <AuthorsCitationView
   className="myClass"
+  idSearchKey={
+    Object {
+      "idKey": "fez_record_search_key_author_id",
+      "idOrder": "rek_author_id_order",
+      "idSubkey": "rek_author_id",
+    }
+  }
   initialNumberOfAuthors={10}
   publication={Object {}}
   searchKey={
@@ -1409,6 +1496,7 @@ exports[`AuthorsCitationView test  should set class on component with no authors
       "subkey": "rek_author",
     }
   }
+  showLink={false}
   suffix=" "
   thresholdNumberOfAuthors={3}
 >
