@@ -59,7 +59,7 @@ export default class PublicationsListPaging extends Component {
             <div>
                 {
                     totalPages > 1 &&
-                    <div className="publicationsListPaging is-gapless is-hidden-mobile is-hidden-tablet-only">
+                    <div className="publicationsListPaging is-gapless">
                         {
                             this.state.current_page >= 1 &&
                             <FlatButton
