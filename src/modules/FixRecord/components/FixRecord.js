@@ -105,6 +105,15 @@ export default class FixRecord extends React.PureComponent {
         this.successConfirmationBox = ref;
     };
 
+    _handleSubmit = (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+        } else {
+            event.preventDefault();
+            this.props.handleSubmit();
+        }
+    };
+
     render() {
         // if author is not linked to this record, abandon form
         if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
@@ -142,7 +151,7 @@ export default class FixRecord extends React.PureComponent {
         const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txtFixForm});
         return (
             <StandardPage title={txt.title}>
-                <form>
+                <form onSubmit={this._handleSubmit}>
                     <StandardCard title={txt.subTitle} help={txt.help}>
                         <PublicationCitation publication={this.props.recordToFix}/>
 

@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component PublicationForm should render component initialised with just one field - publication type 1`] = `
-<form>
+<form
+  onSubmit={[Function]}
+>
   <NavigationDialogBox
     txt={
       Object {
@@ -561,7 +563,9 @@ exports[`Component PublicationForm should render component initialised with just
 `;
 
 exports[`Component PublicationForm should render component with BookForm 1`] = `
-<form>
+<form
+  onSubmit={[Function]}
+>
   <NavigationDialogBox
     txt={
       Object {
@@ -1158,7 +1162,9 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
 `;
 
 exports[`Component PublicationForm should render component with GenericDocument 1`] = `
-<form>
+<form
+  onSubmit={[Function]}
+>
   <NavigationDialogBox
     txt={
       Object {
@@ -1754,7 +1760,9 @@ exports[`Component PublicationForm should render component with GenericDocument 
 `;
 
 exports[`Component PublicationForm should render component with JournalArticleForm 1`] = `
-<form>
+<form
+  onSubmit={[Function]}
+>
   <NavigationDialogBox
     txt={
       Object {
@@ -2351,7 +2359,9 @@ exports[`Component PublicationForm should render component with JournalArticleFo
 `;
 
 exports[`Component PublicationForm should render component with ResearchReportForm 1`] = `
-<form>
+<form
+  onSubmit={[Function]}
+>
   <NavigationDialogBox
     txt={
       Object {
@@ -2947,7 +2957,9 @@ exports[`Component PublicationForm should render component with ResearchReportFo
 `;
 
 exports[`Component PublicationForm should render component with all fields disabled 1`] = `
-<form>
+<form
+  onSubmit={[Function]}
+>
   <NavigationDialogBox
     txt={
       Object {

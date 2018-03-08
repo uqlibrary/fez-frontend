@@ -55,6 +55,14 @@ export default class PublicationForm extends Component {
             null;
     };
 
+    _handleSubmit = (event) => {
+        if(event) {
+            event.preventDefault();
+            console.log('Stopped event submit');
+            this.props.handleSubmit();
+        }
+    };
+
     render() {
         const publicationTypeItems = [
             ...(this.publicationTypes.filter((item) => {
@@ -72,7 +80,7 @@ export default class PublicationForm extends Component {
 
         const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
         return (
-            <form>
+            <form onSubmit={this._handleSubmit}>
                 <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
 
                 <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>

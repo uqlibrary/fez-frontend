@@ -71,6 +71,15 @@ export default class ClaimRecord extends React.PureComponent {
         this.successConfirmationBox = ref;
     };
 
+    _handleSubmit = (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+        } else {
+            event.preventDefault();
+            this.props.handleSubmit();
+        }
+    };
+
     render() {
         const txt = locale.forms.claimPublicationForm;
         const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
@@ -107,7 +116,7 @@ export default class ClaimRecord extends React.PureComponent {
         }
         return (
             <StandardPage title={txt.title}>
-                <form>
+                <form onSubmit={this._handleSubmit}>
                     <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
                         <PublicationCitation publication={publication}/>
                     </StandardCard>
