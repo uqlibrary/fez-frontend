@@ -154,6 +154,66 @@ describe('Fix record actions', () => {
             }
         });
 
+        it('dispatches expected actions with invalid data (missing editor is not linked to publication)', async () => {
+            const testInput = {
+                publication: {
+                    fez_record_search_key_contributor_id: [
+                        {
+                            rek_contributor_id: 124
+                        }
+                    ]
+                },
+                author: {
+                    aut_id: 123
+                }
+            };
+
+            const expectedActions = [
+                actions.FIX_RECORD_FAILED
+            ];
+
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+
+        it('dispatches expected actions - fixing edited book record', async () => {
+            const testInput = {
+                publication: {
+                    ...mockData.record,
+                    fez_record_search_key_contributor_id: [
+                        {
+                            rek_contributor_id: 123
+                        }
+                    ]
+                },
+                author: {
+                    aut_id: 123
+                }
+            };
+
+            const expectedActions = [
+                actions.FIX_RECORD_PROCESSING,
+                actions.FIX_RECORD_SUCCESS
+            ];
+
+            mockApi
+                .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+                .reply(200, {data: {...testInput.publication}})
+                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}).apiUrl)
+                .reply(200, {});
+
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+
         it('dispatches expected actions for successful record fix with files', async () => {
             const testInput = {
                 publication: {
