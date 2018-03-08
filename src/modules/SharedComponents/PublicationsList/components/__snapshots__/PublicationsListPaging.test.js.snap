@@ -9,26 +9,30 @@ exports[`PublicationsListPaging renders  component with empty paging data 1`] = 
 exports[`PublicationsListPaging renders  component with non-empty paging data, first page 1`] = `
 <div>
   <div
-    className="publicationsListPaging is-gapless"
+    className="publicationsListPaging is-gapless columns is-gapless is-mobile"
   >
-    <FlatButton
-      className="pagingPrevious"
-      disabled={true}
-      fullWidth={false}
-      icon={<NavigationChevronLeft />}
-      label="Previous"
-      labelPosition="after"
-      labelStyle={Object {}}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onTouchStart={[Function]}
-      onTouchTap={[Function]}
-      primary={false}
-      secondary={false}
-    />
     <div
-      className="publicationsListPagingItems"
+      className="column is-narrow is-pulled-left"
+    >
+      <FlatButton
+        className="pagingPrevious"
+        disabled={true}
+        fullWidth={false}
+        icon={<NavigationChevronLeft />}
+        label="Previous"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        onTouchTap={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
+    <div
+      className="publicationsListPagingItems column is-hidden-mobile has-text-centered"
     >
       <FlatButton
         className="page selectedPage"
@@ -79,22 +83,44 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         secondary={false}
       />
     </div>
-    <FlatButton
-      className="pagingNext"
-      disabled={false}
-      fullWidth={false}
-      icon={<NavigationChevronRight />}
-      label="Next"
-      labelPosition="before"
-      labelStyle={Object {}}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onTouchStart={[Function]}
-      onTouchTap={[Function]}
-      primary={false}
-      secondary={false}
-    />
+    <div
+      className="column is-hidden-tablet-only is-hidden-desktop has-text-centered"
+    >
+      <FlatButton
+        className="pagingLabel"
+        disabled={false}
+        fullWidth={false}
+        label="Page 1 of 3"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
+    <div
+      className="column is-narrow is-pulled-right"
+    >
+      <FlatButton
+        className="pagingNext"
+        disabled={false}
+        fullWidth={false}
+        icon={<NavigationChevronRight />}
+        label="Next"
+        labelPosition="before"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        onTouchTap={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
   </div>
 </div>
 `;
@@ -102,26 +128,30 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
 exports[`PublicationsListPaging renders  component with non-empty paging data, last page 1`] = `
 <div>
   <div
-    className="publicationsListPaging is-gapless"
+    className="publicationsListPaging is-gapless columns is-gapless is-mobile"
   >
-    <FlatButton
-      className="pagingPrevious"
-      disabled={false}
-      fullWidth={false}
-      icon={<NavigationChevronLeft />}
-      label="Previous"
-      labelPosition="after"
-      labelStyle={Object {}}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onTouchStart={[Function]}
-      onTouchTap={[Function]}
-      primary={false}
-      secondary={false}
-    />
     <div
-      className="publicationsListPagingItems"
+      className="column is-narrow is-pulled-left"
+    >
+      <FlatButton
+        className="pagingPrevious"
+        disabled={false}
+        fullWidth={false}
+        icon={<NavigationChevronLeft />}
+        label="Previous"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        onTouchTap={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
+    <div
+      className="publicationsListPagingItems column is-hidden-mobile has-text-centered"
     >
       <FlatButton
         className="page"
@@ -172,22 +202,44 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         secondary={false}
       />
     </div>
-    <FlatButton
-      className="pagingNext"
-      disabled={true}
-      fullWidth={false}
-      icon={<NavigationChevronRight />}
-      label="Next"
-      labelPosition="before"
-      labelStyle={Object {}}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onTouchStart={[Function]}
-      onTouchTap={[Function]}
-      primary={false}
-      secondary={false}
-    />
+    <div
+      className="column is-hidden-tablet-only is-hidden-desktop has-text-centered"
+    >
+      <FlatButton
+        className="pagingLabel"
+        disabled={false}
+        fullWidth={false}
+        label="Page 3 of 3"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
+    <div
+      className="column is-narrow is-pulled-right"
+    >
+      <FlatButton
+        className="pagingNext"
+        disabled={true}
+        fullWidth={false}
+        icon={<NavigationChevronRight />}
+        label="Next"
+        labelPosition="before"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        onTouchTap={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
   </div>
 </div>
 `;
@@ -195,26 +247,30 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
 exports[`PublicationsListPaging renders  component with non-empty paging data, second page 1`] = `
 <div>
   <div
-    className="publicationsListPaging is-gapless"
+    className="publicationsListPaging is-gapless columns is-gapless is-mobile"
   >
-    <FlatButton
-      className="pagingPrevious"
-      disabled={false}
-      fullWidth={false}
-      icon={<NavigationChevronLeft />}
-      label="Previous"
-      labelPosition="after"
-      labelStyle={Object {}}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onTouchStart={[Function]}
-      onTouchTap={[Function]}
-      primary={false}
-      secondary={false}
-    />
     <div
-      className="publicationsListPagingItems"
+      className="column is-narrow is-pulled-left"
+    >
+      <FlatButton
+        className="pagingPrevious"
+        disabled={false}
+        fullWidth={false}
+        icon={<NavigationChevronLeft />}
+        label="Previous"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        onTouchTap={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
+    <div
+      className="publicationsListPagingItems column is-hidden-mobile has-text-centered"
     >
       <FlatButton
         className="page"
@@ -265,22 +321,44 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         secondary={false}
       />
     </div>
-    <FlatButton
-      className="pagingNext"
-      disabled={false}
-      fullWidth={false}
-      icon={<NavigationChevronRight />}
-      label="Next"
-      labelPosition="before"
-      labelStyle={Object {}}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onTouchStart={[Function]}
-      onTouchTap={[Function]}
-      primary={false}
-      secondary={false}
-    />
+    <div
+      className="column is-hidden-tablet-only is-hidden-desktop has-text-centered"
+    >
+      <FlatButton
+        className="pagingLabel"
+        disabled={false}
+        fullWidth={false}
+        label="Page 2 of 3"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
+    <div
+      className="column is-narrow is-pulled-right"
+    >
+      <FlatButton
+        className="pagingNext"
+        disabled={false}
+        fullWidth={false}
+        icon={<NavigationChevronRight />}
+        label="Next"
+        labelPosition="before"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        onTouchTap={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
   </div>
 </div>
 `;
