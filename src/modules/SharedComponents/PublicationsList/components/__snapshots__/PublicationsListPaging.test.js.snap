@@ -87,7 +87,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
       className="column is-hidden-tablet-only is-hidden-desktop has-text-centered"
     >
       <FlatButton
-        className="pagingLabel"
+        className="pagingTotals"
         disabled={false}
         fullWidth={false}
         label="Page 1 of 3"
@@ -206,7 +206,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       className="column is-hidden-tablet-only is-hidden-desktop has-text-centered"
     >
       <FlatButton
-        className="pagingLabel"
+        className="pagingTotals"
         disabled={false}
         fullWidth={false}
         label="Page 3 of 3"
@@ -325,7 +325,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
       className="column is-hidden-tablet-only is-hidden-desktop has-text-centered"
     >
       <FlatButton
-        className="pagingLabel"
+        className="pagingTotals"
         disabled={false}
         fullWidth={false}
         label="Page 2 of 3"

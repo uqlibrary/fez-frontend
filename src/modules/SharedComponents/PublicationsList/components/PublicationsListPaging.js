@@ -78,7 +78,7 @@ export default class PublicationsListPaging extends Component {
                             {renderedPages}
                         </div>
                         <div className="column is-hidden-tablet-only is-hidden-desktop has-text-centered">
-                            <FlatButton className="pagingLabel"
+                            <FlatButton className="pagingTotals"
                                 label={txt.pageOf
                                     .replace('[currentPage]', this.state.current_page)
                                     .replace('[totalPages]', totalPages)
