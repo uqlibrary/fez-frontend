@@ -12,9 +12,9 @@ const FORM_NAME = 'PublicationForm';
 const onSubmit = (values, dispatch, state) => {
     // Get the list of redux-form registered fields for the current form
     const formFields = state.registeredFields.toJS();
-    const cleanValues = values.toJS();
 
-    // Delete the currentAuthor if there is no author field in the form, or if its a thesis (specific field name)
+    // Delete the currentAuthor if there is no author field in the form (potentially editors only like conference proceedings) and its not a thesis (specific field name)
+    const cleanValues = values.toJS();
     if((!formFields.authors && !formFields['currentAuthor.0.nameAsPublished'])) {
         delete cleanValues.currentAuthor;
     }
