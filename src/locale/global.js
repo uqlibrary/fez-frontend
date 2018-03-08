@@ -117,8 +117,8 @@ export default {
         },
         sherpaRomeoLink: {
             ariaLabel: 'View publisher\'s open access policy in an new window',
-            prefix: 'https://www.sherpa.ac.uk/romeo/',
-            externalUrl: 'https://www.sherpa.ac.uk/romeo/search.php?issn=[issn]'
+            prefix: 'http://www.sherpa.ac.uk/romeo/',
+            externalUrl: 'http://www.sherpa.ac.uk/romeo/search.php?issn=[issn]'
         },
         embargoDateFormat: 'YYYY-MM-DD',
         defaultLinkDescription: 'Link to publication'

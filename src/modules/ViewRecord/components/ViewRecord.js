@@ -65,9 +65,9 @@ export default class ViewRecord extends Component {
                 </StandardCard>
                 <StandardCard title={'Files'} />
                 {
-                    this.props.recordToView && this.props.recordToView.rek_formatted_abstract &&
+                    this.props.recordToView && (this.props.recordToView.rek_formatted_abstract || this.props.recordToView.rek_description) &&
                     <StandardCard title={locale.viewRecord.sections.abstract}>
-                        <p dangerouslySetInnerHTML={{__html: this.props.recordToView.rek_formatted_abstract}} />
+                        <p dangerouslySetInnerHTML={{__html: this.props.recordToView.rek_formatted_abstract || this.props.recordToView.rek_description}} />
                     </StandardCard>
                 }
                 {

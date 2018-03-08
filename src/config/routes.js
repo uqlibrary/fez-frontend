@@ -24,14 +24,20 @@ export const pathConfig =  {
     },
     // TODO: update links when we have list pages
     list: {
-        author: (authorId) => (`/list/author_id/${authorId}`),
+        author: (author) => (`/list/author/${author}`),
+        authorId: (authorId) => (`/list/author_id/${authorId}`),
         subject: (subjectId) => (`/list/subject/${subjectId}`),
-        herdcCode: (herdcCodeId) => (`/list/subject/${herdcCodeId}`),
         herdcStatus: (herdcStatusId) => (`/list/?cat=quick_filter&search_keys[UQ_22]=${herdcStatusId}`),
-        keyword: (keyword) => (`/list//?cat=quick_filter&search_keys[0]=${keyword}`),
+        keyword: (keyword) => (`/list/?cat=quick_filter&search_keys[0]=${keyword}`),
         institutionalStatus: (institutionalStatusId) => (`/list/?cat=quick_filter&search_keys[UQ_23]=${institutionalStatusId}`),
         openAccessStatus: (openAccessStatusId) => (`/list/?cat=quick_filter&search_keys[UQ_54]=${openAccessStatusId}`),
         journalName: (journalName) => (`/list/?cat=quick_filter&search_keys[core_34]=${journalName}`),
+        publisher: (publisher) => (`/list/?cat=quick_filter&search_keys[core_29]=${publisher}`),
+        license: (license) => (`/list/?cat=quick_filter&search_keys[core_112]=${license}`),
+        accessCondition: (accessCondition) => (`/list/?cat=quick_filter&search_keys[core_95]=${accessCondition}`),
+        collectionType: (collectionType) => (`/list/?cat=quick_filter&search_keys[core_92]=${collectionType}`),
+        orgUnitName: (orgUnitName) => (`/list/?cat=quick_filter&search_keys[core_70]=${orgUnitName}`),
+        series: (series) => (`/list/?cat=quick_filter&search_keys[core_33]=${series}`),
     },
     admin: {
         masquerade: '/admin/masquerade'

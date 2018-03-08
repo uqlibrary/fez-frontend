@@ -84,20 +84,27 @@ export default class AuthorsCitationView extends React.Component {
         return id;
     }
 
-    renderAuthors = (authors) => {
+    renderAuthors = (authors, showLink) => {
         return authors.map((author, index) => {
             const prefix = authors.length > 1 && index === authors.length - 1 ? ' and ' : '';
             const suffix = authors.length > 2 && index < authors.length - 1 ? ', ' : '';
+            const key = `citationAuthor_${index + 1}`;
             const element = (
                 <CitationView
                     className="citationAuthor"
-                    key={`citationAuthor_${index + 1}`}
+                    key={key}
                     value={author.value}
                     prefix={prefix}
                     suffix={suffix} />
             );
 
-            return author.id ? <a href={pathConfig.list.author(author.id)} key={`citationAuthor_${index + 1}`}>{element}</a> : element;
+            if (showLink) {
+                const href = author.id ? pathConfig.list.authorId(author.id) : pathConfig.list.author(author.value);
+                const className = author.id ? 'authorIdLink' : 'authorNameLink';
+                return <a className={className} href={href} key={key}>{element}</a>;
+            } else {
+                return element;
+            }
         });
     };
 
@@ -110,7 +117,7 @@ export default class AuthorsCitationView extends React.Component {
 
     render() {
         const {showMoreLabel, showLessLabel} = locale.components.publicationCitation.citationAuthors;
-        const {className, prefix, suffix, initialNumberOfAuthors} = this.props;
+        const {className, prefix, suffix, initialNumberOfAuthors, showLink} = this.props;
         const {authors, hasMoreAuthors, toggleShowMoreLink} = this.state;
 
         if (authors.length === 0) return (<span className={`${className || ''} empty`} />);
@@ -119,7 +126,7 @@ export default class AuthorsCitationView extends React.Component {
             <span className={className || ''}>
                 {prefix}
                 {
-                    this.renderAuthors(authors)
+                    this.renderAuthors(authors, showLink)
                         .slice(0, hasMoreAuthors && toggleShowMoreLink
                             ? initialNumberOfAuthors
                             : authors.length)

@@ -31,6 +31,42 @@ export default class AdditionalInformation extends Component {
         );
     }
 
+    renderLink = (link, value) => {
+        return <a href={link}>{value}</a>;
+    }
+
+    // render array of objects
+    renderList = (list, subkey, getLink) => {
+        return (
+            <ul key={subkey}>
+                {
+                    list.map((item, index) => (
+                        <li key={`${subkey}-${index}`}>
+                            {(() => {
+                                if (getLink) {
+                                    return this.renderLink(getLink(item[subkey]), item[subkey]);
+                                } else {
+                                    return item[subkey];
+                                }
+                            })()}
+                        </li>
+                    ))
+                }
+            </ul>
+        );
+    }
+
+    renderObjects = (objects, subkey) => {
+        switch (subkey) {
+            case 'rek_author': return this.renderAuthors(this.props.publication);
+            case 'rek_contributor': return this.renderContributors(this.props.publication);
+            case 'rek_keywords': return this.renderList(objects, subkey, pathConfig.list.keyword);
+            case 'rek_subject': return this.renderList(objects, subkey, pathConfig.list.subject);
+            case 'rek_fields_of_research': return this.renderList(objects, subkey, pathConfig.list.subject);
+            default: return this.renderList(objects, subkey);
+        }
+    }
+
     // render a single object
     renderObject = (object, subkey) => {
         const lookupSuffix = '_lookup';
@@ -38,11 +74,33 @@ export default class AdditionalInformation extends Component {
             case 'rek_doi': return this.renderDoi(object[subkey]);
             case 'rek_date_available': return moment(object[subkey]).format('YYYY');
             case 'rek_journal_name': return this.renderJournalName(object[subkey]);
+            case 'rek_publisher': return this.renderLink(pathConfig.list.publisher(object[subkey]), object[subkey]);
             case 'rek_oa_status': return this.renderLink(pathConfig.list.openAccessStatus(object[subkey]), object[subkey + lookupSuffix]);
-            case 'rek_herdc_code': return this.renderLink(pathConfig.list.herdcCode(object[subkey]), object[subkey + lookupSuffix]);
+            case 'rek_alternative_genre': return this.renderLink(pathConfig.list.subject(object[subkey]), object[subkey + lookupSuffix]);
+            case 'rek_herdc_code': return this.renderLink(pathConfig.list.subject(object[subkey]), object[subkey + lookupSuffix]);
             case 'rek_herdc_status': return this.renderLink(pathConfig.list.herdcStatus(object[subkey]), object[subkey + lookupSuffix]);
+            case 'rek_ands_collection_type': return this.renderLink(pathConfig.list.collectionType(object[subkey]), object[subkey + lookupSuffix]);
+            case 'rek_access_conditions': return this.renderLink(pathConfig.list.accessCondition(object[subkey]), object[subkey + lookupSuffix]);
+            case 'rek_series': return this.renderLink(pathConfig.list.series(object[subkey]), object[subkey]);
+            case 'rek_license': return this.renderLink(pathConfig.list.license(object[subkey]), object[subkey + lookupSuffix]);
+            case 'rek_org_unit_name': return this.renderLink(pathConfig.list.orgUnitName(object[subkey]), object[subkey]);
+            case 'rek_institutional_status': return this.renderLink(pathConfig.list.institutionalStatus(object[subkey]), object[subkey + lookupSuffix]);
             default: return object[subkey + lookupSuffix] ? object[subkey + lookupSuffix] : object[subkey];
         }
+    }
+
+    renderString = (key, value) => {
+        // get values for rek_ fields e.g. rek_title
+        let data = '';
+        if (key === 'rek_title') {
+            data = this.getTitle(this.props.publication);
+        } else if (key === 'rek_date') {
+            data = moment(value).format('YYYY-MM-DD');
+        } else {
+            data = value;
+        }
+
+        return data;
     }
 
     renderJournalName = (journalName) => {
@@ -70,20 +128,6 @@ export default class AdditionalInformation extends Component {
         return issns && Array.isArray(issns) && issns.length > 0 ? {'issn': issns[0][issnField], 'color': issns[0][colorField]} : null;
     }
 
-    renderString = (key, value) => {
-        // get values for rek_ fields e.g. rek_title
-        let data = '';
-        if (key === 'rek_title') {
-            data = this.getTitle(this.props.publication);
-        } else if (key === 'rek_date') {
-            data = moment(value).format('YYYY-MM-DD');
-        } else {
-            data = value;
-        }
-
-        return data;
-    }
-
     getTitle = (publication) => {
         return (
             <span dangerouslySetInnerHTML={{__html: publication.rek_formatted_title ? publication.rek_formatted_title : publication.rek_title}} />
@@ -105,41 +149,6 @@ export default class AdditionalInformation extends Component {
     renderDoi = (doi) => {
         return (
             <DoiCitationView key="additional-information-doi" doi={doi}/>
-        );
-    }
-
-    renderObjects = (objects, subkey) => {
-        switch (subkey) {
-            case 'rek_author': return this.renderAuthors(this.props.publication);
-            case 'rek_contributor': return this.renderContributors(this.props.publication);
-            case 'rek_subject': return this.renderList(objects, subkey, pathConfig.list.subject);
-            case 'rek_keywords': return this.renderList(objects, subkey, pathConfig.list.keyword);
-            default: return this.renderList(objects, subkey);
-        }
-    }
-
-    renderLink = (link, value) => {
-        return <a href={link}>{value}</a>;
-    }
-
-    // render array of objects
-    renderList = (list, subkey, getLink) => {
-        return (
-            <ul key={subkey}>
-                {
-                    list.map((item, index) => (
-                        <li key={`${subkey}-${index}`}>
-                            {(() => {
-                                if (getLink) {
-                                    return this.renderLink(getLink(item[subkey]), item[subkey]);
-                                } else {
-                                    return item[subkey];
-                                }
-                            })()}
-                        </li>
-                    ))
-                }
-            </ul>
         );
     }
 
