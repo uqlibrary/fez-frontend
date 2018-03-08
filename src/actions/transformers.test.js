@@ -37,13 +37,6 @@ describe('getRecordLinkSearchKey test ', () => {
 describe('getRecordFileAttachmentSearchKey test ', () => {
 
     beforeEach(() => {
-        // // Set a mock date for account API
-        // const DATE_TO_USE = new Date(2018, 0, 1, 0, 0, 0, 0);
-        // const _Date = Date;
-        // global.Date = jest.fn(() => DATE_TO_USE);
-        // global.Date.UTC = _Date.UTC;
-        // global.Date.parse = _Date.parse;
-        // global.Date.now = _Date.now;
         const now = new Date(2018, 0, 1, 0, 0, 0, 0);
         Date.now = jest.genMockFunction().mockReturnValue(now);
     });
@@ -56,52 +49,7 @@ describe('getRecordFileAttachmentSearchKey test ', () => {
         expect(result).toEqual(expected);
     });
 
-    // it('should return request object structure for files', () => {
-    //     const files = [
-    //         {
-    //             access_condition_id: 1,
-    //             name: 'file.txt',
-    //             date: '2017-10-01'
-    //         },
-    //         {
-    //             access_condition_id: 2,
-    //             name: 'file2.txt'
-    //         }
-    //     ];
-    //     const record = null;
-    //     const expected = {
-    //         fez_record_search_key_file_attachment_name: [
-    //             {
-    //                 rek_file_attachment_name: 'file.txt',
-    //                 rek_file_attachment_name_order: 1
-    //             },
-    //             {
-    //                 rek_file_attachment_name: 'file2.txt',
-    //                 rek_file_attachment_name_order: 2
-    //             }
-    //         ],
-    //         fez_record_search_key_file_attachment_embargo_date: [
-    //             {
-    //                 rek_file_attachment_embargo_date: '2017-10-01',
-    //                 rek_file_attachment_embargo_date_order: 1
-    //             }
-    //         ],
-    //         fez_record_search_key_file_attachment_access_condition: [
-    //             {
-    //                 rek_file_attachment_access_condition: 1,
-    //                 rek_file_attachment_access_condition_order: 1
-    //             },
-    //             {
-    //                 rek_file_attachment_access_condition: 2,
-    //                 rek_file_attachment_access_condition_order: 2
-    //             }
-    //         ]
-    //     };
-    //     const result = transformers.getRecordFileAttachmentSearchKey(files, record);
-    //     expect(result).toEqual(expected);
-    // });
-
-    it('should return request object structure for files', () => {
+    it('should return request object structure for files with various open access status', () => {
 
         const files = [
             {
@@ -181,142 +129,142 @@ describe('getRecordFileAttachmentSearchKey test ', () => {
         expect(result).toEqual(expected);
     });
 
-    // it('should return request object structure for files no access id', () => {
-    //     const files = [
-    //         {
-    //             name: 'file.txt'
-    //         },
-    //         {
-    //             name: 'file2.txt'
-    //         }
-    //     ];
-    //     const record = null;
-    //     const expected = {
-    //         fez_record_search_key_file_attachment_name: [
-    //             {
-    //                 rek_file_attachment_name: 'file.txt',
-    //                 rek_file_attachment_name_order: 1
-    //             },
-    //             {
-    //                 rek_file_attachment_name: 'file2.txt',
-    //                 rek_file_attachment_name_order: 2
-    //             }
-    //         ],
-    //         fez_record_search_key_file_attachment_embargo_date: [],
-    //         fez_record_search_key_file_attachment_access_condition: []
-    //     };
-    //     const result = transformers.getRecordFileAttachmentSearchKey(files, record);
-    //     expect(result).toEqual(expected);
-    // });
-    //
-    // it('should return request object structure for files and empty record', () => {
-    //     const files = [
-    //         {
-    //             access_condition_id: 1,
-    //             name: 'file.txt',
-    //             date: '2017-10-01'
-    //         },
-    //         {
-    //             access_condition_id: 2,
-    //             name: 'file2.txt'
-    //         }
-    //     ];
-    //     const record = {
-    //         "fez_record_search_key_file_attachment_access_condition": [],
-    //         "fez_record_search_key_file_attachment_embargo_date": [],
-    //         "fez_record_search_key_file_attachment_name": []
-    //     };
-    //     const expected = {
-    //         fez_record_search_key_file_attachment_name: [
-    //             {
-    //                 rek_file_attachment_name: 'file.txt',
-    //                 rek_file_attachment_name_order: 1
-    //             },
-    //             {
-    //                 rek_file_attachment_name: 'file2.txt',
-    //                 rek_file_attachment_name_order: 2
-    //             }
-    //         ],
-    //         fez_record_search_key_file_attachment_embargo_date: [
-    //             {
-    //                 rek_file_attachment_embargo_date: '2017-10-01',
-    //                 rek_file_attachment_embargo_date_order: 1
-    //             }
-    //         ],
-    //         fez_record_search_key_file_attachment_access_condition: [
-    //             {
-    //                 rek_file_attachment_access_condition: 1,
-    //                 rek_file_attachment_access_condition_order: 1
-    //             },
-    //             {
-    //                 rek_file_attachment_access_condition: 2,
-    //                 rek_file_attachment_access_condition_order: 2
-    //             }
-    //         ]
-    //     };
-    //     const result = transformers.getRecordFileAttachmentSearchKey(files, record);
-    //     expect(result).toEqual(expected);
-    // });
-    //
-    // it('should return request object structure for files and existing files in record', () => {
-    //     const files = [
-    //         {
-    //             access_condition_id: 1,
-    //             name: 'file.txt',
-    //             date: '2017-10-01'
-    //         },
-    //         {
-    //             access_condition_id: 2,
-    //             name: 'file2.txt'
-    //         }
-    //     ];
-    //     const record = {
-    //         "fez_record_search_key_file_attachment_access_condition": [],
-    //         "fez_record_search_key_file_attachment_embargo_date": [],
-    //         "fez_record_search_key_file_attachment_name": [{
-    //             "rek_file_attachment_name_id": null,
-    //             "rek_file_attachment_name_pid": "UQ:676287",
-    //             "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
-    //             "rek_file_attachment_name_order": 1
-    //         }]
-    //     };
-    //     const expected = {
-    //         fez_record_search_key_file_attachment_name: [
-    //             {
-    //                 "rek_file_attachment_name_id": null,
-    //                 "rek_file_attachment_name_pid": "UQ:676287",
-    //                 "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
-    //                 "rek_file_attachment_name_order": 1
-    //             },
-    //             {
-    //                 rek_file_attachment_name: 'file.txt',
-    //                 rek_file_attachment_name_order: 2
-    //             },
-    //             {
-    //                 rek_file_attachment_name: 'file2.txt',
-    //                 rek_file_attachment_name_order: 3
-    //             }
-    //         ],
-    //         fez_record_search_key_file_attachment_embargo_date: [
-    //             {
-    //                 rek_file_attachment_embargo_date: '2017-10-01',
-    //                 rek_file_attachment_embargo_date_order: 2
-    //             }
-    //         ],
-    //         fez_record_search_key_file_attachment_access_condition: [
-    //             {
-    //                 rek_file_attachment_access_condition: 1,
-    //                 rek_file_attachment_access_condition_order: 2
-    //             },
-    //             {
-    //                 rek_file_attachment_access_condition: 2,
-    //                 rek_file_attachment_access_condition_order: 3
-    //             }
-    //         ]
-    //     };
-    //     const result = transformers.getRecordFileAttachmentSearchKey(files, record);
-    //     expect(result).toEqual(expected);
-    // });
+    it('should return request object structure for files no access id', () => {
+        const files = [
+            {
+                name: 'file.txt'
+            },
+            {
+                name: 'file2.txt'
+            }
+        ];
+        const record = null;
+        const expected = {
+            fez_record_search_key_file_attachment_name: [
+                {
+                    rek_file_attachment_name: 'file.txt',
+                    rek_file_attachment_name_order: 1
+                },
+                {
+                    rek_file_attachment_name: 'file2.txt',
+                    rek_file_attachment_name_order: 2
+                }
+            ],
+            fez_record_search_key_file_attachment_embargo_date: [],
+            fez_record_search_key_file_attachment_access_condition: []
+        };
+        const result = transformers.getRecordFileAttachmentSearchKey(files, record);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return request object structure for files and empty record', () => {
+        const files = [
+            {
+                access_condition_id: 1,
+                name: 'file.txt',
+                date: '2017-10-01'
+            },
+            {
+                access_condition_id: 2,
+                name: 'file2.txt'
+            }
+        ];
+        const record = {
+            "fez_record_search_key_file_attachment_access_condition": [],
+            "fez_record_search_key_file_attachment_embargo_date": [],
+            "fez_record_search_key_file_attachment_name": []
+        };
+        const expected = {
+            fez_record_search_key_file_attachment_name: [
+                {
+                    rek_file_attachment_name: 'file.txt',
+                    rek_file_attachment_name_order: 1
+                },
+                {
+                    rek_file_attachment_name: 'file2.txt',
+                    rek_file_attachment_name_order: 2
+                }
+            ],
+            fez_record_search_key_file_attachment_embargo_date: [
+                {
+                    rek_file_attachment_embargo_date: '2017-10-01',
+                    rek_file_attachment_embargo_date_order: 1
+                }
+            ],
+            fez_record_search_key_file_attachment_access_condition: [
+                {
+                    rek_file_attachment_access_condition: 1,
+                    rek_file_attachment_access_condition_order: 1
+                },
+                {
+                    rek_file_attachment_access_condition: 2,
+                    rek_file_attachment_access_condition_order: 2
+                }
+            ]
+        };
+        const result = transformers.getRecordFileAttachmentSearchKey(files, record);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return request object structure for files and existing files in record', () => {
+        const files = [
+            {
+                access_condition_id: 1,
+                name: 'file.txt',
+                date: moment().clone().format('YYYY-MM-DD') // today
+            },
+            {
+                access_condition_id: 2,
+                name: 'file2.txt'
+            }
+        ];
+        const record = {
+            "fez_record_search_key_file_attachment_access_condition": [],
+            "fez_record_search_key_file_attachment_embargo_date": [],
+            "fez_record_search_key_file_attachment_name": [{
+                "rek_file_attachment_name_id": null,
+                "rek_file_attachment_name_pid": "UQ:676287",
+                "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
+                "rek_file_attachment_name_order": 1
+            }]
+        };
+        const expected = {
+            fez_record_search_key_file_attachment_name: [
+                {
+                    "rek_file_attachment_name_id": null,
+                    "rek_file_attachment_name_pid": "UQ:676287",
+                    "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
+                    "rek_file_attachment_name_order": 1
+                },
+                {
+                    rek_file_attachment_name: 'file.txt',
+                    rek_file_attachment_name_order: 2
+                },
+                {
+                    rek_file_attachment_name: 'file2.txt',
+                    rek_file_attachment_name_order: 3
+                }
+            ],
+            fez_record_search_key_file_attachment_embargo_date: [
+                {
+                    rek_file_attachment_embargo_date: '2018-01-01',
+                    rek_file_attachment_embargo_date_order: 2
+                }
+            ],
+            fez_record_search_key_file_attachment_access_condition: [
+                {
+                    rek_file_attachment_access_condition: 1,
+                    rek_file_attachment_access_condition_order: 2
+                },
+                {
+                    rek_file_attachment_access_condition: 2,
+                    rek_file_attachment_access_condition_order: 3
+                }
+            ]
+        };
+        const result = transformers.getRecordFileAttachmentSearchKey(files, record);
+        expect(result).toEqual(expected);
+    });
 
 });
 
@@ -774,6 +722,16 @@ describe('getRecordContributorsIdSearchKey test ', () => {
 });
 
 describe('getAuthorIdentifierOrcidPatchRequest() ', () => {
+
+    it('should return empty request', () => {
+        const authorId = null;
+        const orcidId = '1234-1234-1234';
+        const data = {};
+
+        const expected = {};
+        const result = transformers.getAuthorIdentifierOrcidPatchRequest(authorId, orcidId);
+        expect(result).toEqual(expected);
+    });
 
     it('should return orcid request', () => {
         const authorId = 4444;
