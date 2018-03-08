@@ -43,6 +43,13 @@ export default class GoogleScholar extends React.PureComponent {
         this.props.actions.resetSavingAuthorState();
     }
 
+    _handleKeyboardFormSubmit = (event) => {
+        if (event.key === 'Enter' && !event.shiftKey) {
+            event.preventDefault();
+            this.props.handleSubmit();
+        }
+    };
+
     _navigateToDashboard = () => {
         this.props.history.push(routes.pathConfig.dashboard);
     };
@@ -75,7 +82,7 @@ export default class GoogleScholar extends React.PureComponent {
 
         return (
             <StandardPage title={txt.title}>
-                <form>
+                <form onKeyDown={this._handleKeyboardFormSubmit}>
                     <StandardCard title={cardLocale.title} help={txt.help}>
                         {cardLocale.description}
                         <div className="columns">
