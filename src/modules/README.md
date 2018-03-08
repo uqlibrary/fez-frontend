@@ -14,7 +14,7 @@ Template for modules unit tests:
 import [COMPONENT_NAME] from './[COMPONENT_NAME]';
 
 function setup(testProps, isShallow = true) {
-    // build full props list requied by the component
+    // build full props list required by the component
     const props = {
         ...testProps,
         author: testProps.author || null,

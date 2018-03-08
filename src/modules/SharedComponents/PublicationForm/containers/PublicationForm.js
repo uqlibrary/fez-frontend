@@ -10,12 +10,12 @@ import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscard
 const FORM_NAME = 'PublicationForm';
 
 const onSubmit = (values, dispatch, state) => {
-    // Get the list of redux-form registered fields for the current form and put in into the values to pass on
+    // Get the list of redux-form registered fields for the current form
     const formFields = state.registeredFields.toJS();
-
-    // clean up the author if there is no author field in the current form
     const cleanValues = values.toJS();
-    if(!formFields.author) {
+
+    // Delete the currentAuthor if there is no author field in the form, or if its a thesis (specific field name)
+    if((!formFields.authors && !formFields['currentAuthor.0.nameAsPublished'])) {
         delete cleanValues.currentAuthor;
     }
 
