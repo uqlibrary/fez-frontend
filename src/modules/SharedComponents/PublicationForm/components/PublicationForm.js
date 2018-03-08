@@ -5,7 +5,6 @@ import {Field} from 'redux-form/immutable';
 import MenuItem from 'material-ui/MenuItem';
 import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
-
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {SelectField} from 'uqlibrary-react-toolbox/build/SelectField';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
@@ -55,12 +54,8 @@ export default class PublicationForm extends Component {
             null;
     };
 
-    _handleSubmit = (event) => {
-        if(event) {
-            event.preventDefault();
-            console.log('Stopped event submit');
-            this.props.handleSubmit();
-        }
+    _handleDefaultSubmit = (event) => {
+        if(event) event.preventDefault();
     };
 
     render() {
@@ -80,7 +75,7 @@ export default class PublicationForm extends Component {
 
         const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
         return (
-            <form onSubmit={this._handleSubmit}>
+            <form onSubmit={this._handleDefaultSubmit}>
                 <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
 
                 <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
