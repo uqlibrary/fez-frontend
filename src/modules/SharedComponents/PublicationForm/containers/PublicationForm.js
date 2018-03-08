@@ -9,9 +9,18 @@ import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscard
 
 const FORM_NAME = 'PublicationForm';
 
-const onSubmit = (values, dispatch) => {
+const onSubmit = (values, dispatch, state) => {
+    // Get the list of redux-form registered fields for the current form and put in into the values to pass on
+    const formFields = state.registeredFields.toJS();
+
+    // clean up the author if there is no author field in the current form
+    const cleanValues = values.toJS();
+    if(!formFields.author) {
+        delete cleanValues.currentAuthor;
+    }
+
     // set default values for a new unapproved record
-    return dispatch(createNewRecord({...values.toJS()}))
+    return dispatch(createNewRecord({...cleanValues}))
         .then(() => {
             // once this promise is resolved form is submitted successfully and will call parent container
             // reported bug to redux-form:
@@ -29,7 +38,6 @@ const onSubmit = (values, dispatch) => {
 const validate = (values) => {
     // add only multi field validations
     // single field validations should be implemented using validate prop: <Field validate={[validation.required]} />
-
     // reset global errors, eg form submit failure
     stopSubmit(FORM_NAME, null);
     const data = values.toJS();
@@ -65,7 +73,7 @@ let PublicationFormContainer = reduxForm({
 const mapStateToProps = (state) => {
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-        formErrors: getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({})
+        formErrors: getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({}),
     };
 };
 
