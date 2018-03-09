@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {locale} from 'locale';
 import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {AuthorsCitationView, DoiCitationView, EditorsCitationView} from '../../SharedComponents/PublicationCitation/components/citations/partials';
+import {AuthorsCitationView, DoiCitationView} from '../../SharedComponents/PublicationCitation/components/citations/partials';
 import {ExternalLink} from '../../SharedComponents/ExternalLink';
 import {pathConfig} from 'config/routes';
 
@@ -43,10 +43,11 @@ export default class AdditionalInformation extends Component {
                     list.map((item, index) => (
                         <li key={`${subkey}-${index}`}>
                             {(() => {
+                                const data = this.getData(item, subkey);
                                 if (getLink) {
-                                    return this.renderLink(getLink(item[subkey]), item[subkey]);
+                                    return this.renderLink(getLink(item[subkey]), data);
                                 } else {
-                                    return item[subkey];
+                                    return data;
                                 }
                             })()}
                         </li>
@@ -69,23 +70,23 @@ export default class AdditionalInformation extends Component {
 
     // render a single object
     renderObject = (object, subkey) => {
-        const lookupSuffix = '_lookup';
+        const data = this.getData(object, subkey);
         switch (subkey) {
-            case 'rek_doi': return this.renderDoi(object[subkey]);
-            case 'rek_date_available': return moment(object[subkey]).format('YYYY');
-            case 'rek_journal_name': return this.renderJournalName(object[subkey]);
-            case 'rek_publisher': return this.renderLink(pathConfig.list.publisher(object[subkey]), object[subkey]);
-            case 'rek_oa_status': return this.renderLink(pathConfig.list.openAccessStatus(object[subkey]), object[subkey + lookupSuffix]);
-            case 'rek_alternative_genre': return this.renderLink(pathConfig.list.subject(object[subkey]), object[subkey + lookupSuffix]);
-            case 'rek_herdc_code': return this.renderLink(pathConfig.list.subject(object[subkey]), object[subkey + lookupSuffix]);
-            case 'rek_herdc_status': return this.renderLink(pathConfig.list.herdcStatus(object[subkey]), object[subkey + lookupSuffix]);
-            case 'rek_ands_collection_type': return this.renderLink(pathConfig.list.collectionType(object[subkey]), object[subkey + lookupSuffix]);
-            case 'rek_access_conditions': return this.renderLink(pathConfig.list.accessCondition(object[subkey]), object[subkey + lookupSuffix]);
+            case 'rek_doi': return this.renderDoi(data);
+            case 'rek_date_available': return moment(data).format('YYYY');
+            case 'rek_journal_name': return this.renderJournalName(data);
+            case 'rek_publisher': return this.renderLink(pathConfig.list.publisher(data), data);
+            case 'rek_oa_status': return this.renderLink(pathConfig.list.openAccessStatus(object[subkey]), data);
+            case 'rek_alternative_genre': return this.renderLink(pathConfig.list.subject(object[subkey]), data);
+            case 'rek_herdc_code': return this.renderLink(pathConfig.list.subject(object[subkey]), data);
+            case 'rek_herdc_status': return this.renderLink(pathConfig.list.herdcStatus(object[subkey]), data);
+            case 'rek_ands_collection_type': return this.renderLink(pathConfig.list.collectionType(object[subkey]), data);
+            case 'rek_access_conditions': return this.renderLink(pathConfig.list.accessCondition(object[subkey]), data);
             case 'rek_series': return this.renderLink(pathConfig.list.series(object[subkey]), object[subkey]);
-            case 'rek_license': return this.renderLink(pathConfig.list.license(object[subkey]), object[subkey + lookupSuffix]);
-            case 'rek_org_unit_name': return this.renderLink(pathConfig.list.orgUnitName(object[subkey]), object[subkey]);
-            case 'rek_institutional_status': return this.renderLink(pathConfig.list.institutionalStatus(object[subkey]), object[subkey + lookupSuffix]);
-            default: return object[subkey + lookupSuffix] ? object[subkey + lookupSuffix] : object[subkey];
+            case 'rek_license': return this.renderLink(pathConfig.list.license(object[subkey]), data);
+            case 'rek_org_unit_name': return this.renderLink(pathConfig.list.orgUnitName(data), data);
+            case 'rek_institutional_status': return this.renderLink(pathConfig.list.institutionalStatus(object[subkey]), data);
+            default: return data;
         }
     }
 
@@ -121,6 +122,11 @@ export default class AdditionalInformation extends Component {
         );
     }
 
+    getData = (object, subkey) => {
+        const lookupSuffix = '_lookup';
+        return object[subkey + lookupSuffix] ? object[subkey + lookupSuffix] : object[subkey];
+    }
+
     getSherpaRomeo = () => {
         const issnField = 'rek_issn';
         const colorField = 'rek_issn_lookup';
@@ -141,8 +147,19 @@ export default class AdditionalInformation extends Component {
     }
 
     renderContributors = (publication) => {
+        const searchKey = {
+            key: 'fez_record_search_key_contributor',
+            subkey: 'rek_contributor',
+            order: 'rek_contributor_order'
+        };
+        const idSearchKey = {
+            idKey: 'fez_record_search_key_contributor_id',
+            idSubkey: 'rek_contributor_id',
+            idOrder: 'rek_contributor_id_order'
+        };
+
         return (
-            <EditorsCitationView key="additional-information-editors" publication={publication}/>
+            <AuthorsCitationView key="additional-information-editors" publication={publication} searchKey={searchKey} idSearchKey={idSearchKey} initialNumberOfAuthors={publication.fez_record_search_key_contributor.length} showLink/>
         );
     }
 

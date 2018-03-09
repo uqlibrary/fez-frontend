@@ -42,7 +42,7 @@ export default {
                 fez_record_search_key_total_pages: 'Total pages',
                 fez_record_search_key_total_chapters: 'Total chapters',
                 fez_record_search_key_language: 'Language',
-                fez_record_search_key_subjects: 'Subjects',
+                fez_record_search_key_subject: 'Subject',
                 fez_record_search_key_institutional_status: 'Institutional status',
                 fez_record_search_key_journal_name: 'Journal name',
                 fez_record_search_key_language_of_journal_name: 'Language of journal name',
@@ -185,15 +185,12 @@ export default {
             },
             'Generic Document': {
                 rek_date: 'Date',
-                fez_record_search_key_subjects: 'Research fields, Courses and Disciplines'
+                fez_record_search_key_subject: 'Research fields, Courses and Disciplines'
             },
             'Image': {
                 fez_record_search_key_author: 'Creator'
             },
             'Journal': {
-                rek_title: 'Title of journal',
-            },
-            'Journal Article': {
                 rek_title: 'Title of journal',
             },
             'Manuscript': {
@@ -336,7 +333,7 @@ export default {
                     order: 24
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_subject',
                     order: 25
                 },
                 {
@@ -450,7 +447,7 @@ export default {
                     order: 22
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_subject',
                     order: 23
                 },
                 {
@@ -564,7 +561,7 @@ export default {
                     order: 26
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_subject',
                     order: 27
                 },
                 {
@@ -706,7 +703,7 @@ export default {
                     order: 33
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_subject',
                     order: 34
                 },
                 {
@@ -852,7 +849,7 @@ export default {
                     order: 34
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_subject',
                     order: 35
                 },
                 {
@@ -930,7 +927,7 @@ export default {
                     order: 17
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_subject',
                     order: 18
                 },
                 {
@@ -1114,7 +1111,7 @@ export default {
                     order: 15
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_subject',
                     order: 16
                 },
                 {
@@ -1188,7 +1185,7 @@ export default {
                     order: 16
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_subject',
                     order: 17
                 },
                 {
@@ -1352,7 +1349,7 @@ export default {
                     order: 5
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_subject',
                     order: 6
                 },
                 {
@@ -1524,7 +1521,7 @@ export default {
                     order: 17
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_subject',
                     order: 18
                 },
                 {
@@ -1626,7 +1623,7 @@ export default {
                     order: 23
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_subject',
                     order: 24
                 },
                 {
@@ -1852,7 +1849,7 @@ export default {
                     order: 17
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_subject',
                     order: 18
                 },
                 {
@@ -1930,7 +1927,7 @@ export default {
                     order: 17
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_subject',
                     order: 18
                 },
                 {
@@ -1980,7 +1977,7 @@ export default {
                     order: 10
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_subject',
                     order: 11
                 },
                 {
@@ -2010,40 +2007,36 @@ export default {
                     order: 4
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_author',
                     order: 5
                 },
                 {
-                    field: 'fez_record_search_key_author',
+                    field: 'fez_record_search_key_contributor',
                     order: 6
                 },
                 {
-                    field: 'fez_record_search_key_contributor',
+                    field: 'fez_record_search_key_oa_status',
                     order: 7
                 },
                 {
-                    field: 'fez_record_search_key_oa_status',
+                    field: 'fez_record_search_key_country_of_issue',
                     order: 8
                 },
                 {
-                    field: 'fez_record_search_key_country_of_issue',
+                    field: 'fez_record_search_key_contributor',
                     order: 9
                 },
                 {
-                    field: 'fez_record_search_key_contributor',
+                    field: 'fez_record_search_key_subject',
                     order: 10
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_language',
                     order: 11
                 },
                 {
-                    field: 'fez_record_search_key_language',
-                    order: 12
-                },
-                {
                     field: 'fez_record_search_key_keywords',
-                    order: 13
+                    order: 12
                 }
             ],
             'Seminar Paper': [
@@ -2104,7 +2097,7 @@ export default {
                     order: 14
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_subject',
                     order: 15
                 },
                 {
@@ -2166,7 +2159,7 @@ export default {
                     order: 13
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_subject',
                     order: 14
                 },
                 {
@@ -2240,7 +2233,7 @@ export default {
                     order: 16
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_subject',
                     order: 17
                 },
                 {
@@ -2314,7 +2307,7 @@ export default {
                     order: 16
                 },
                 {
-                    field: 'fez_record_search_key_subjects',
+                    field: 'fez_record_search_key_subject',
                     order: 17
                 },
                 {
