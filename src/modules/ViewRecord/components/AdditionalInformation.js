@@ -134,6 +134,12 @@ export default class AdditionalInformation extends Component {
         );
     }
 
+    transformFieldNameToSubkey = (field) => {
+        const keyPrefix = 'fez_record_search_key_';
+        const subkeyPrefix = 'rek_';
+        return field.indexOf(keyPrefix) === 0 ? subkeyPrefix + field.substring(keyPrefix.length) : null;
+    }
+
     renderContributors = (publication) => {
         return (
             <EditorsCitationView key="additional-information-editors" publication={publication}/>
@@ -152,33 +158,54 @@ export default class AdditionalInformation extends Component {
         );
     }
 
+    renderFooter = () => {
+        const rows = [];
+        const publication = this.props.publication;
+        const footer = locale.viewRecord.headings.default.footer;
+
+        // common fields for all display types
+        Object.keys(footer).forEach((field) => {
+            const data = publication[field];
+            const subkey = this.transformFieldNameToSubkey(field);
+
+            if (data) {
+                rows.push(this.renderRow(footer[field], this.renderObject(data, subkey)));
+            }
+        });
+        return rows;
+    }
+
     renderColumns = () => {
         const rows = [];
-        const keyPrefix = 'fez_record_search_key_';
-        const subkeyPrefix = 'rek_';
         const publication = this.props.publication;
-        const fields = locale.viewRecord.fields;
+        const displayType = publication.rek_display_type_lookup;
+        const headings = locale.viewRecord.headings;
+        const displayTypeHeadings = displayType && headings[displayType] ? headings[displayType] : [];
+        const fields = displayType && locale.viewRecord.fields[displayType] ? locale.viewRecord.fields[displayType] : [];
 
-        // element might have null values
-        Object.keys(publication).forEach((key) => {
+        fields.map((item) => {
             let data = '';
-            const value = publication[key];
+            const field = item.field;
+            const value = publication[field];
 
-            // do not display when value is null, empty array or no matching field locale
-            if (value && Object.keys(value).length > 0 && fields.default[key]) {
-                const subkey = key.indexOf(keyPrefix) === 0 ? subkeyPrefix + key.substring(keyPrefix.length) : null;
-                const heading = fields[publication.rek_display_type_lookup] ? fields[publication.rek_display_type_lookup][key] : fields.default[key];
+            // do not display field when value is null, empty array
+            if (value && Object.keys(value).length > 0) {
+                const subkey = this.transformFieldNameToSubkey(field);
+                const heading = displayTypeHeadings[field] ? displayTypeHeadings[field] : headings.default[field];
 
                 // logic to get values from fez_record_search_key fields
                 if (subkey) {
                     data = Array.isArray(value) ? this.renderObjects(value, subkey) : this.renderObject(value, subkey);
                 } else {
-                    data = this.renderString(key, value);
+                    data = this.renderString(field, value);
                 }
 
                 rows.push(this.renderRow(heading, data));
             }
         });
+
+        // common fields for all display types
+        rows.push(this.renderFooter());
 
         return rows;
     }

@@ -40,8 +40,9 @@ export default class ViewRecord extends Component {
 
     render() {
         const txt = locale.pages.viewRecord;
+        const {loadingRecordToView, recordToViewError, recordToView} = this.props;
 
-        if(this.props.loadingRecordToView) {
+        if(loadingRecordToView) {
             return (
                 <div className="is-centered">
                     <InlineLoader message={txt.loadingMessage}/>
@@ -49,34 +50,34 @@ export default class ViewRecord extends Component {
             );
         }
 
-        if(this.props.recordToViewError) {
+        if(recordToViewError) {
             return (
                 <StandardPage>
-                    <Alert message={this.props.recordToViewError} />
+                    <Alert message={recordToViewError} />
                 </StandardPage>
             );
         }
 
         return (
-            <StandardPage className="viewRecord" title={this.props.recordToView && this.props.recordToView.rek_title}>
-                <PublicationCitation publication={this.props.recordToView} hideTitle />
+            <StandardPage className="viewRecord" title={recordToView && recordToView.rek_title}>
+                <PublicationCitation publication={recordToView} hideTitle />
                 <StandardCard title={'Links'}>
                     Include PubmedCentral link if available: <PubmedCentralLink pubmedCentralId={'PMC123232'} />
                 </StandardCard>
                 <StandardCard title={'Files'} />
                 {
-                    this.props.recordToView && (this.props.recordToView.rek_formatted_abstract || this.props.recordToView.rek_description) &&
-                    <StandardCard title={locale.viewRecord.sections.abstract}>
-                        <p dangerouslySetInnerHTML={{__html: this.props.recordToView.rek_formatted_abstract || this.props.recordToView.rek_description}} />
+                    recordToView && (recordToView.rek_formatted_abstract || recordToView.rek_description) &&
+                    <StandardCard title={locale.viewRecord.sections.abstract[recordToView.rek_display_type_lookup] || locale.viewRecord.sections.abstract.default}>
+                        <p dangerouslySetInnerHTML={{__html: recordToView.rek_formatted_abstract || recordToView.rek_description}} />
                     </StandardCard>
                 }
                 {
-                    this.props.recordToView && this.props.recordToView.rek_display_type_lookup &&
-                    <AdditionalInformation publication={this.props.recordToView} />
+                    recordToView && recordToView.rek_display_type_lookup &&
+                    <AdditionalInformation publication={recordToView} />
                 }
                 {
-                    this.props.recordToView && this.props.recordToView.rek_display_type_lookup &&
-                    <PublicationDetails publication={this.props.recordToView} />
+                    recordToView && recordToView.rek_display_type_lookup &&
+                    <PublicationDetails publication={recordToView} />
                 }
             </StandardPage>
         );
