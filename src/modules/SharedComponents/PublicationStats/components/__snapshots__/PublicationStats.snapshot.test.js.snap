@@ -4,6 +4,9 @@ exports[`PublicationStats component should render 1 for hindex because they roun
 <Table
   allRowsSelected={false}
   className="publicationsStatsTable"
+  fixedFooter={true}
+  fixedHeader={true}
+  height="inherit"
   multiSelectable={false}
   selectable={false}
 >
@@ -11,11 +14,14 @@ exports[`PublicationStats component should render 1 for hindex because they roun
     adjustForCheckbox={false}
     className="publicationsStatsHeader"
     displaySelectAll={false}
+    enableSelectAll={true}
     selectAllSelected={false}
   >
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableHeaderColumn
@@ -46,12 +52,18 @@ exports[`PublicationStats component should render 1 for hindex because they roun
   </TableHeader>
   <TableBody
     allRowsSelected={false}
+    deselectOnClickaway={true}
     displayRowCheckbox={false}
     multiSelectable={false}
+    preScanRows={true}
+    selectable={true}
+    style={Object {}}
   >
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -72,8 +84,10 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -94,8 +108,10 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -116,8 +132,10 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -138,8 +156,10 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -167,6 +187,9 @@ exports[`PublicationStats component should render N/A for hindex because it is n
 <Table
   allRowsSelected={false}
   className="publicationsStatsTable"
+  fixedFooter={true}
+  fixedHeader={true}
+  height="inherit"
   multiSelectable={false}
   selectable={false}
 >
@@ -174,11 +197,14 @@ exports[`PublicationStats component should render N/A for hindex because it is n
     adjustForCheckbox={false}
     className="publicationsStatsHeader"
     displaySelectAll={false}
+    enableSelectAll={true}
     selectAllSelected={false}
   >
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableHeaderColumn
@@ -209,12 +235,18 @@ exports[`PublicationStats component should render N/A for hindex because it is n
   </TableHeader>
   <TableBody
     allRowsSelected={false}
+    deselectOnClickaway={true}
     displayRowCheckbox={false}
     multiSelectable={false}
+    preScanRows={true}
+    selectable={true}
+    style={Object {}}
   >
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -235,8 +267,10 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -257,8 +291,10 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -279,8 +315,10 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -301,8 +339,10 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -330,6 +370,9 @@ exports[`PublicationStats component should render N/A for hindex because it is u
 <Table
   allRowsSelected={false}
   className="publicationsStatsTable"
+  fixedFooter={true}
+  fixedHeader={true}
+  height="inherit"
   multiSelectable={false}
   selectable={false}
 >
@@ -337,11 +380,14 @@ exports[`PublicationStats component should render N/A for hindex because it is u
     adjustForCheckbox={false}
     className="publicationsStatsHeader"
     displaySelectAll={false}
+    enableSelectAll={true}
     selectAllSelected={false}
   >
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableHeaderColumn
@@ -372,12 +418,18 @@ exports[`PublicationStats component should render N/A for hindex because it is u
   </TableHeader>
   <TableBody
     allRowsSelected={false}
+    deselectOnClickaway={true}
     displayRowCheckbox={false}
     multiSelectable={false}
+    preScanRows={true}
+    selectable={true}
+    style={Object {}}
   >
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -398,8 +450,10 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -420,8 +474,10 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -442,8 +498,10 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -464,8 +522,10 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -493,6 +553,9 @@ exports[`PublicationStats component should render N/A for hindex because they eq
 <Table
   allRowsSelected={false}
   className="publicationsStatsTable"
+  fixedFooter={true}
+  fixedHeader={true}
+  height="inherit"
   multiSelectable={false}
   selectable={false}
 >
@@ -500,11 +563,14 @@ exports[`PublicationStats component should render N/A for hindex because they eq
     adjustForCheckbox={false}
     className="publicationsStatsHeader"
     displaySelectAll={false}
+    enableSelectAll={true}
     selectAllSelected={false}
   >
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableHeaderColumn
@@ -535,12 +601,18 @@ exports[`PublicationStats component should render N/A for hindex because they eq
   </TableHeader>
   <TableBody
     allRowsSelected={false}
+    deselectOnClickaway={true}
     displayRowCheckbox={false}
     multiSelectable={false}
+    preScanRows={true}
+    selectable={true}
+    style={Object {}}
   >
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -561,8 +633,10 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -583,8 +657,10 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -605,8 +681,10 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -627,8 +705,10 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -662,6 +742,9 @@ exports[`PublicationStats component should render statistics with table and data
 <Table
   allRowsSelected={false}
   className="publicationsStatsTable"
+  fixedFooter={true}
+  fixedHeader={true}
+  height="inherit"
   multiSelectable={false}
   selectable={false}
 >
@@ -669,11 +752,14 @@ exports[`PublicationStats component should render statistics with table and data
     adjustForCheckbox={false}
     className="publicationsStatsHeader"
     displaySelectAll={false}
+    enableSelectAll={true}
     selectAllSelected={false}
   >
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableHeaderColumn
@@ -704,12 +790,18 @@ exports[`PublicationStats component should render statistics with table and data
   </TableHeader>
   <TableBody
     allRowsSelected={false}
+    deselectOnClickaway={true}
     displayRowCheckbox={false}
     multiSelectable={false}
+    preScanRows={true}
+    selectable={true}
+    style={Object {}}
   >
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -730,8 +822,10 @@ exports[`PublicationStats component should render statistics with table and data
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -752,8 +846,10 @@ exports[`PublicationStats component should render statistics with table and data
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -774,8 +870,10 @@ exports[`PublicationStats component should render statistics with table and data
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn
@@ -796,8 +894,10 @@ exports[`PublicationStats component should render statistics with table and data
       </TableRowColumn>
     </TableRow>
     <TableRow
+      displayBorder={true}
       hoverable={false}
       hovered={false}
+      selectable={true}
       striped={false}
     >
       <TableRowColumn

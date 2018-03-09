@@ -36,6 +36,8 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
         >
           <FontIcon
             className="authorIcon material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             person_outline
           </FontIcon>
@@ -102,6 +104,7 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
             className="contributorDelete"
             disableTouchRipple={false}
             disabled={false}
+            iconStyle={Object {}}
             onTouchTap={[Function]}
             tooltip="Remove this record"
             tooltipPosition="bottom-left"
@@ -109,6 +112,8 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
           >
             <FontIcon
               className="material-icons deleteIcon"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
               delete
             </FontIcon>
@@ -152,6 +157,8 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
         >
           <FontIcon
             className="authorIcon material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             person_outline
           </FontIcon>
@@ -210,6 +217,7 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
             className="contributorDelete"
             disableTouchRipple={false}
             disabled={false}
+            iconStyle={Object {}}
             onTouchTap={[Function]}
             tooltip="Remove this record"
             tooltipPosition="bottom-left"
@@ -217,6 +225,8 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
           >
             <FontIcon
               className="material-icons deleteIcon"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
               delete
             </FontIcon>
@@ -260,6 +270,8 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
         >
           <FontIcon
             className="authorIcon material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             person_outline
           </FontIcon>
@@ -318,6 +330,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
             className="contributorDelete"
             disableTouchRipple={false}
             disabled={false}
+            iconStyle={Object {}}
             onTouchTap={[Function]}
             tooltip="Remove this record"
             tooltipPosition="bottom-left"
@@ -325,6 +338,8 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
           >
             <FontIcon
               className="material-icons deleteIcon"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
               delete
             </FontIcon>
@@ -372,6 +387,8 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
         >
           <FontIcon
             className="authorIcon material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             person_outline
           </FontIcon>
@@ -414,6 +431,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
             className="reorderUp"
             disableTouchRipple={false}
             disabled={false}
+            iconStyle={Object {}}
             onTouchTap={[Function]}
             tooltip="Move record up the order"
             tooltipPosition="bottom-left"
@@ -421,6 +439,8 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
           >
             <FontIcon
               className="material-icons"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
               keyboard_arrow_up
             </FontIcon>
@@ -434,6 +454,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
             className="reorderDown"
             disableTouchRipple={false}
             disabled={false}
+            iconStyle={Object {}}
             onTouchTap={[Function]}
             tooltip="Move record down the order"
             tooltipPosition="bottom-left"
@@ -441,6 +462,8 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
           >
             <FontIcon
               className="material-icons"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
               keyboard_arrow_down
             </FontIcon>
@@ -454,6 +477,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
             className="contributorDelete"
             disableTouchRipple={false}
             disabled={false}
+            iconStyle={Object {}}
             onTouchTap={[Function]}
             tooltip="Remove this record"
             tooltipPosition="bottom-left"
@@ -461,6 +485,8 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
           >
             <FontIcon
               className="material-icons deleteIcon"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
               delete
             </FontIcon>
@@ -504,6 +530,8 @@ exports[`Component ContributorRow  a row with index and contributor with author 
         >
           <FontIcon
             className="authorIcon material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             person_outline
           </FontIcon>
@@ -572,6 +600,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
             className="contributorDelete"
             disableTouchRipple={false}
             disabled={false}
+            iconStyle={Object {}}
             onTouchTap={[Function]}
             tooltip="Remove this record"
             tooltipPosition="bottom-left"
@@ -579,6 +608,8 @@ exports[`Component ContributorRow  a row with index and contributor with author 
           >
             <FontIcon
               className="material-icons deleteIcon"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
               delete
             </FontIcon>
@@ -622,6 +653,8 @@ exports[`Component ContributorRow  a row with index and contributor with author 
         >
           <FontIcon
             className="authorIcon material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             person_outline
           </FontIcon>
@@ -694,6 +727,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
             className="contributorDelete"
             disableTouchRipple={false}
             disabled={false}
+            iconStyle={Object {}}
             onTouchTap={[Function]}
             tooltip="Remove this record"
             tooltipPosition="bottom-left"
@@ -701,6 +735,8 @@ exports[`Component ContributorRow  a row with index and contributor with author 
           >
             <FontIcon
               className="material-icons deleteIcon"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
               delete
             </FontIcon>

@@ -18,6 +18,7 @@ exports[`Component ViewRecord  should render error 1`] = `
     allowDismiss={false}
     message="PID not found"
     showLoader={false}
+    type="error"
   />
 </StandardPage>
 `;

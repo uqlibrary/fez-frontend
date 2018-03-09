@@ -10,8 +10,13 @@ exports[`AuthorLinking should be disabled 1`] = `
       containerHeight={200}
       displayBottomUpwards={false}
       elementHeight={73}
+      handleScroll={[Function]}
       infiniteLoadBeginEdgeOffset={50}
       isInfiniteLoading={false}
+      loadingSpinnerDelegate={<div />}
+      onInfiniteLoad={[Function]}
+      styles={Object {}}
+      timeScrollStateLastsForAfterUserScrolls={150}
       useWindowAsScrollContainer={false}
     >
       <div
@@ -31,6 +36,23 @@ exports[`AuthorLinking should be disabled 1`] = `
           index={0}
           key="0"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -48,6 +70,23 @@ exports[`AuthorLinking should be disabled 1`] = `
           index={1}
           key="1"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -65,6 +104,23 @@ exports[`AuthorLinking should be disabled 1`] = `
           index={2}
           key="2"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -87,6 +143,23 @@ exports[`AuthorLinking should be disabled 1`] = `
           index={3}
           key="3"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -104,6 +177,23 @@ exports[`AuthorLinking should be disabled 1`] = `
           index={4}
           key="4"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -121,6 +211,23 @@ exports[`AuthorLinking should be disabled 1`] = `
           index={5}
           key="5"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -143,6 +250,23 @@ exports[`AuthorLinking should be disabled 1`] = `
           index={6}
           key="6"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -160,6 +284,23 @@ exports[`AuthorLinking should be disabled 1`] = `
           index={7}
           key="7"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -177,6 +318,23 @@ exports[`AuthorLinking should be disabled 1`] = `
           index={8}
           key="8"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -197,8 +355,13 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
       containerHeight={200}
       displayBottomUpwards={false}
       elementHeight={73}
+      handleScroll={[Function]}
       infiniteLoadBeginEdgeOffset={50}
       isInfiniteLoading={false}
+      loadingSpinnerDelegate={<div />}
+      onInfiniteLoad={[Function]}
+      styles={Object {}}
+      timeScrollStateLastsForAfterUserScrolls={150}
       useWindowAsScrollContainer={false}
     >
       <div
@@ -218,6 +381,23 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           index={0}
           key="0"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -235,6 +415,23 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           index={1}
           key="1"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -252,6 +449,23 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           index={2}
           key="2"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -274,6 +488,23 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           index={3}
           key="3"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -291,6 +522,23 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           index={4}
           key="4"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -308,6 +556,23 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           index={5}
           key="5"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -330,6 +595,23 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           index={6}
           key="6"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -347,6 +629,23 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           index={7}
           key="7"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -364,6 +663,23 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           index={8}
           key="8"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -384,8 +700,13 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
       containerHeight={200}
       displayBottomUpwards={false}
       elementHeight={73}
+      handleScroll={[Function]}
       infiniteLoadBeginEdgeOffset={50}
       isInfiniteLoading={false}
+      loadingSpinnerDelegate={<div />}
+      onInfiniteLoad={[Function]}
+      styles={Object {}}
+      timeScrollStateLastsForAfterUserScrolls={150}
       useWindowAsScrollContainer={false}
     >
       <div
@@ -405,6 +726,23 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           index={0}
           key="0"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -422,6 +760,23 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           index={1}
           key="1"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -439,6 +794,23 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           index={2}
           key="2"
           linked={true}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -461,6 +833,23 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           index={3}
           key="3"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -478,6 +867,23 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           index={4}
           key="4"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -495,6 +901,23 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           index={5}
           key="5"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -517,6 +940,23 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           index={6}
           key="6"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -534,6 +974,23 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           index={7}
           key="7"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -551,6 +1008,23 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           index={8}
           key="8"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -571,8 +1045,13 @@ exports[`ContributorLinking should be disabled 1`] = `
       containerHeight={200}
       displayBottomUpwards={false}
       elementHeight={73}
+      handleScroll={[Function]}
       infiniteLoadBeginEdgeOffset={50}
       isInfiniteLoading={false}
+      loadingSpinnerDelegate={<div />}
+      onInfiniteLoad={[Function]}
+      styles={Object {}}
+      timeScrollStateLastsForAfterUserScrolls={150}
       useWindowAsScrollContainer={false}
     >
       <div
@@ -592,6 +1071,23 @@ exports[`ContributorLinking should be disabled 1`] = `
           index={0}
           key="0"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -609,6 +1105,23 @@ exports[`ContributorLinking should be disabled 1`] = `
           index={1}
           key="1"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -626,6 +1139,23 @@ exports[`ContributorLinking should be disabled 1`] = `
           index={2}
           key="2"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -648,6 +1178,23 @@ exports[`ContributorLinking should be disabled 1`] = `
           index={3}
           key="3"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -668,8 +1215,13 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
       containerHeight={200}
       displayBottomUpwards={false}
       elementHeight={73}
+      handleScroll={[Function]}
       infiniteLoadBeginEdgeOffset={50}
       isInfiniteLoading={false}
+      loadingSpinnerDelegate={<div />}
+      onInfiniteLoad={[Function]}
+      styles={Object {}}
+      timeScrollStateLastsForAfterUserScrolls={150}
       useWindowAsScrollContainer={false}
     >
       <div
@@ -689,6 +1241,23 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           index={0}
           key="0"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -706,6 +1275,23 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           index={1}
           key="1"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -723,6 +1309,23 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           index={2}
           key="2"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -745,6 +1348,23 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           index={3}
           key="3"
           linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -765,8 +1385,13 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
       containerHeight={200}
       displayBottomUpwards={false}
       elementHeight={73}
+      handleScroll={[Function]}
       infiniteLoadBeginEdgeOffset={50}
       isInfiniteLoading={false}
+      loadingSpinnerDelegate={<div />}
+      onInfiniteLoad={[Function]}
+      styles={Object {}}
+      timeScrollStateLastsForAfterUserScrolls={150}
       useWindowAsScrollContainer={false}
     >
       <div
@@ -786,6 +1411,23 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           index={0}
           key="0"
           linked={true}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -803,6 +1445,23 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           index={1}
           key="1"
           linked={true}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -820,6 +1479,23 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           index={2}
           key="2"
           linked={true}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"
@@ -842,6 +1518,23 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           index={3}
           key="3"
           linked={true}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
           onAuthorSelected={[Function]}
           selected={null}
           type="author"

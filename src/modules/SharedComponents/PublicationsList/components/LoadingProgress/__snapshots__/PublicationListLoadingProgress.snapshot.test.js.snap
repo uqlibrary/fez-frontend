@@ -18,7 +18,9 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         >
           <CircularProgress
             aria-label="eSpace loading"
+            max={100}
             min={0}
+            mode="indeterminate"
             size={14}
             thickness={2}
             value={0}
@@ -108,7 +110,9 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         >
           <CircularProgress
             aria-label="eSpace loading"
+            max={100}
             min={0}
+            mode="indeterminate"
             size={14}
             thickness={2}
             value={0}
@@ -125,7 +129,9 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         >
           <CircularProgress
             aria-label="Web of science loading"
+            max={100}
             min={0}
+            mode="indeterminate"
             size={14}
             thickness={2}
             value={0}
@@ -142,7 +148,9 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         >
           <CircularProgress
             aria-label="Scopus loading"
+            max={100}
             min={0}
+            mode="indeterminate"
             size={14}
             thickness={2}
             value={0}
@@ -159,7 +167,9 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         >
           <CircularProgress
             aria-label="PubMed loading"
+            max={100}
             min={0}
+            mode="indeterminate"
             size={14}
             thickness={2}
             value={0}
@@ -176,7 +186,9 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         >
           <CircularProgress
             aria-label="Crossref loading"
+            max={100}
             min={0}
+            mode="indeterminate"
             size={14}
             thickness={2}
             value={0}
@@ -206,7 +218,9 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         >
           <CircularProgress
             aria-label="eSpace loading"
+            max={100}
             min={0}
+            mode="indeterminate"
             size={14}
             thickness={2}
             value={0}
@@ -268,7 +282,9 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         >
           <CircularProgress
             aria-label="Crossref loading"
+            max={100}
             min={0}
+            mode="indeterminate"
             size={14}
             thickness={2}
             value={0}

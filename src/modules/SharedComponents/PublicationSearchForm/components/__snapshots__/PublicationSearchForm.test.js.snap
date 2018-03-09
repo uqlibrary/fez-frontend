@@ -45,6 +45,7 @@ exports[`PublicationSearchForm renders  component 1`] = `
           disabled={false}
           fullWidth={true}
           label="Search"
+          labelPosition="after"
           primary={false}
           secondary={true}
         />

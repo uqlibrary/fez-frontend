@@ -19,30 +19,69 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
   value={null}
 >
   <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
     checked={false}
     desktop={false}
     disabled={false}
+    focusState="none"
     insetChildren={false}
     key="select_field_0"
     primaryText="Item 1"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
     value="Item 1"
   />
   <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
     checked={false}
     desktop={false}
     disabled={false}
+    focusState="none"
     insetChildren={false}
     key="select_field_1"
     primaryText="Item 2"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
     value="Item 2"
   />
   <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
     checked={false}
     desktop={false}
     disabled={false}
+    focusState="none"
     insetChildren={false}
     key="select_field_2"
     primaryText="Item 3"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
     value="Item 3"
   />
 </SelectField>
@@ -85,12 +124,25 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
   onChange={[Function]}
 >
   <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
     checked={false}
     desktop={false}
     disabled={false}
+    focusState="none"
     insetChildren={false}
     key="select_field_0"
     primaryText="Item 1"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
     value="Item 1"
   />
 </SelectField>

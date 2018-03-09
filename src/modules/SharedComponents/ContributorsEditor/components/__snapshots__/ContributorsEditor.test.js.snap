@@ -4998,6 +4998,22 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
   />
   <ContributorRowHeader
     isInfinite={false}
+    locale={
+      Object {
+        "contributorAssignmentColumn": "Select your name",
+        "deleteAll": "Remove all records",
+        "deleteAllConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete all records?",
+          "confirmationTitle": "Delete all",
+        },
+        "descriptionStep2": "Step 2 - Select your name from the list below",
+        "identifierColumn": "UQ identifier",
+        "nameColumn": "Name as published",
+        "reorderColumn": "Reorder records",
+      }
+    }
     onDeleteAll={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
@@ -5014,6 +5030,33 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
       disabledContributorAssignment={false}
       index={0}
       key="0"
+      locale={
+        Object {
+          "deleteHint": "Remove this record",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to delete this record?",
+            "confirmationTitle": "Delete record",
+          },
+          "moveDownHint": "Move record down the order",
+          "moveUpHint": "Move record up the order",
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "selectHint": "Select this record ([name]) to assign it to you",
+          "suffix": " listed contributor",
+        }
+      }
       onContributorAssigned={[Function]}
       onDelete={[Function]}
       onMoveDown={[Function]}
@@ -5032,6 +5075,33 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
       disabledContributorAssignment={false}
       index={1}
       key="1"
+      locale={
+        Object {
+          "deleteHint": "Remove this record",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to delete this record?",
+            "confirmationTitle": "Delete record",
+          },
+          "moveDownHint": "Move record down the order",
+          "moveUpHint": "Move record up the order",
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "selectHint": "Select this record ([name]) to assign it to you",
+          "suffix": " listed contributor",
+        }
+      }
       onContributorAssigned={[Function]}
       onDelete={[Function]}
       onMoveDown={[Function]}
@@ -5050,6 +5120,33 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
       disabledContributorAssignment={false}
       index={2}
       key="2"
+      locale={
+        Object {
+          "deleteHint": "Remove this record",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to delete this record?",
+            "confirmationTitle": "Delete record",
+          },
+          "moveDownHint": "Move record down the order",
+          "moveUpHint": "Move record up the order",
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "selectHint": "Select this record ([name]) to assign it to you",
+          "suffix": " listed contributor",
+        }
+      }
       onContributorAssigned={[Function]}
       onDelete={[Function]}
       onMoveDown={[Function]}
@@ -5070,6 +5167,22 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
   />
   <ContributorRowHeader
     isInfinite={true}
+    locale={
+      Object {
+        "contributorAssignmentColumn": "Select your name",
+        "deleteAll": "Remove all records",
+        "deleteAllConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete all records?",
+          "confirmationTitle": "Delete all",
+        },
+        "descriptionStep2": "Step 2 - Select your name from the list below",
+        "identifierColumn": "UQ identifier",
+        "nameColumn": "Name as published",
+        "reorderColumn": "Reorder records",
+      }
+    }
     onDeleteAll={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
@@ -5079,8 +5192,13 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
     containerHeight={195}
     displayBottomUpwards={false}
     elementHeight={65}
+    handleScroll={[Function]}
     isInfiniteLoading={false}
+    loadingSpinnerDelegate={<div />}
+    onInfiniteLoad={[Function]}
+    styles={Object {}}
     threshold={130}
+    timeScrollStateLastsForAfterUserScrolls={150}
     useWindowAsScrollContainer={false}
   >
     <ContributorRow
@@ -5094,6 +5212,33 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       disabledContributorAssignment={false}
       index={0}
       key="0"
+      locale={
+        Object {
+          "deleteHint": "Remove this record",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to delete this record?",
+            "confirmationTitle": "Delete record",
+          },
+          "moveDownHint": "Move record down the order",
+          "moveUpHint": "Move record up the order",
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "selectHint": "Select this record ([name]) to assign it to you",
+          "suffix": " listed contributor",
+        }
+      }
       onContributorAssigned={[Function]}
       onDelete={[Function]}
       onMoveDown={[Function]}
@@ -5112,6 +5257,33 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       disabledContributorAssignment={false}
       index={1}
       key="1"
+      locale={
+        Object {
+          "deleteHint": "Remove this record",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to delete this record?",
+            "confirmationTitle": "Delete record",
+          },
+          "moveDownHint": "Move record down the order",
+          "moveUpHint": "Move record up the order",
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "selectHint": "Select this record ([name]) to assign it to you",
+          "suffix": " listed contributor",
+        }
+      }
       onContributorAssigned={[Function]}
       onDelete={[Function]}
       onMoveDown={[Function]}
@@ -5130,6 +5302,33 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       disabledContributorAssignment={false}
       index={2}
       key="2"
+      locale={
+        Object {
+          "deleteHint": "Remove this record",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to delete this record?",
+            "confirmationTitle": "Delete record",
+          },
+          "moveDownHint": "Move record down the order",
+          "moveUpHint": "Move record up the order",
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "selectHint": "Select this record ([name]) to assign it to you",
+          "suffix": " listed contributor",
+        }
+      }
       onContributorAssigned={[Function]}
       onDelete={[Function]}
       onMoveDown={[Function]}
@@ -5148,6 +5347,33 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       disabledContributorAssignment={false}
       index={3}
       key="3"
+      locale={
+        Object {
+          "deleteHint": "Remove this record",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to delete this record?",
+            "confirmationTitle": "Delete record",
+          },
+          "moveDownHint": "Move record down the order",
+          "moveUpHint": "Move record up the order",
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "selectHint": "Select this record ([name]) to assign it to you",
+          "suffix": " listed contributor",
+        }
+      }
       onContributorAssigned={[Function]}
       onDelete={[Function]}
       onMoveDown={[Function]}

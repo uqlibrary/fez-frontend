@@ -891,6 +891,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
           disabled={false}
           fullWidth={true}
           label="Cancel this claim"
+          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -903,6 +904,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
           disabled={false}
           fullWidth={true}
           label="Claim this publication"
+          labelPosition="after"
           onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}
@@ -1789,6 +1791,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           disabled={false}
           fullWidth={true}
           label="Cancel this claim"
+          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -1801,6 +1804,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           disabled={false}
           fullWidth={true}
           label="Claim this publication"
+          labelPosition="after"
           onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}
@@ -2939,6 +2943,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           disabled={false}
           fullWidth={true}
           label="Cancel this claim"
+          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -2951,6 +2956,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           disabled={false}
           fullWidth={true}
           label="Claim this publication"
+          labelPosition="after"
           onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}
@@ -4089,6 +4095,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
           disabled={false}
           fullWidth={true}
           label="Cancel this claim"
+          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -4101,6 +4108,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
           disabled={false}
           fullWidth={true}
           label="Claim this publication"
+          labelPosition="after"
           onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}
@@ -5240,6 +5248,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
           disabled={false}
           fullWidth={true}
           label="Cancel this claim"
+          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -5252,6 +5261,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
           disabled={false}
           fullWidth={true}
           label="Claim this publication"
+          labelPosition="after"
           onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}
@@ -6051,6 +6061,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
       message="This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at espace.admin@email.com.au"
       showLoader={false}
       title="Error"
+      type="error"
     />
     <div
       className="columns action-buttons"
@@ -6065,6 +6076,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
           disabled={false}
           fullWidth={true}
           label="Cancel this claim"
+          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -7210,6 +7222,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
           disabled={false}
           fullWidth={true}
           label="Cancel this claim"
+          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -7222,6 +7235,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
           disabled={false}
           fullWidth={true}
           label="Claim this publication"
+          labelPosition="after"
           onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}
@@ -8360,6 +8374,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
           disabled={false}
           fullWidth={true}
           label="Cancel this claim"
+          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -8372,6 +8387,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
           disabled={false}
           fullWidth={true}
           label="Claim this publication"
+          labelPosition="after"
           onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}
@@ -8394,7 +8410,9 @@ exports[`Component ClaimRecord  should return and render alert message depending
     >
       <CircularProgress
         className="alertSpinner"
+        max={100}
         min={0}
+        mode="indeterminate"
         size={32}
         thickness={4}
         value={0}
@@ -8426,6 +8444,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
     >
       <FontIcon
         className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
       >
         done
       </FontIcon>
@@ -8456,6 +8476,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
     >
       <FontIcon
         className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
       >
         error_outline
       </FontIcon>
@@ -8486,6 +8508,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
     >
       <FontIcon
         className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
       >
         warning
       </FontIcon>
@@ -8530,6 +8554,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
     >
       <FontIcon
         className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
       >
         error_outline
       </FontIcon>
