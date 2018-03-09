@@ -25,7 +25,6 @@ exports[`ThesisSubmission test should display successfull submission screen 1`] 
         disabled={false}
         fullWidth={true}
         label="Return to the Graduate School website"
-        labelPosition="after"
         onTouchTap={[Function]}
         primary={false}
         secondary={true}
@@ -60,7 +59,6 @@ exports[`ThesisSubmission test should render hdr thesis submission acknowledgeme
         disabled={false}
         fullWidth={true}
         label="Return to the Graduate School website"
-        labelPosition="after"
         onTouchTap={[Function]}
         primary={false}
         secondary={true}
@@ -501,7 +499,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
           disabled={false}
           fullWidth={true}
           label="Cancel"
-          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -514,7 +511,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
           disabled={false}
           fullWidth={true}
           label="Deposit your thesis"
-          labelPosition="after"
           primary={false}
           secondary={true}
         />
@@ -549,7 +545,6 @@ exports[`ThesisSubmission test should render sbs thesis submission acknowledgeme
         disabled={false}
         fullWidth={true}
         label="Return to the Graduate School website"
-        labelPosition="after"
         onTouchTap={[Function]}
         primary={false}
         secondary={true}
@@ -990,7 +985,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
           disabled={false}
           fullWidth={true}
           label="Cancel"
-          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -1003,7 +997,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
           disabled={false}
           fullWidth={true}
           label="Deposit your thesis"
-          labelPosition="after"
           primary={false}
           secondary={true}
         />

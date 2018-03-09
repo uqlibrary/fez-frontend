@@ -46,7 +46,6 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       <IconButton
         disableTouchRipple={false}
         disabled={false}
-        iconStyle={Object {}}
         onTouchTap={[Function]}
         tooltip="Remove all records"
         tooltipPosition="top-left"
@@ -54,8 +53,6 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       >
         <FontIcon
           className="material-icons"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
         >
           delete_forever
         </FontIcon>
@@ -105,7 +102,6 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       <IconButton
         disableTouchRipple={false}
         disabled={true}
-        iconStyle={Object {}}
         onTouchTap={[Function]}
         tooltip="Remove all records"
         tooltipPosition="top-left"
@@ -113,8 +109,6 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       >
         <FontIcon
           className="material-icons"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
         >
           delete_forever
         </FontIcon>
@@ -164,7 +158,6 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       <IconButton
         disableTouchRipple={false}
         disabled={false}
-        iconStyle={Object {}}
         onTouchTap={[Function]}
         tooltip="Remove all records"
         tooltipPosition="top-left"
@@ -172,8 +165,6 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       >
         <FontIcon
           className="material-icons"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
         >
           delete_forever
         </FontIcon>

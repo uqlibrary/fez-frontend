@@ -12,8 +12,6 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
       className="researcherIDlink"
       href="https://app.library.uq.edu.au/#/id"
       openInNewIcon={false}
-      rel="noopener noreferrer"
-      target="_blank"
       title="You are not linked to Publons - Click to amend"
     >
       <div
@@ -30,8 +28,6 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
       className="researcherIDlink"
       href="https://app.library.uq.edu.au/#/id"
       openInNewIcon={false}
-      rel="noopener noreferrer"
-      target="_blank"
       title="You are not linked to Researcher (ISI) - Click to amend"
     >
       <div
@@ -48,8 +44,6 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
       className="researcherIDlink"
       href="https://app.library.uq.edu.au/#/id"
       openInNewIcon={false}
-      rel="noopener noreferrer"
-      target="_blank"
       title="You are not linked to Scopus - Click to amend"
     >
       <div

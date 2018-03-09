@@ -53,7 +53,6 @@ exports[`Application component should render alert if user is not fez author 1`]
       }
     }
     onLeftIconButtonTouchTap={[Function]}
-    showMenuIconButton={true}
     style={
       Object {
         "height": 75,
@@ -61,7 +60,6 @@ exports[`Application component should render alert if user is not fez author 1`]
     }
     title="UQ eSpace DEMO"
     titleStyle={Object {}}
-    zDepth={1}
   />
   <MenuDrawer
     docked={false}
@@ -346,7 +344,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       }
     }
     onLeftIconButtonTouchTap={[Function]}
-    showMenuIconButton={true}
     style={
       Object {
         "height": 75,
@@ -354,7 +351,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     }
     title="UQ eSpace DEMO"
     titleStyle={Object {}}
-    zDepth={1}
   />
   <MenuDrawer
     docked={false}
@@ -624,7 +620,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       }
     }
     onLeftIconButtonTouchTap={[Function]}
-    showMenuIconButton={true}
     style={
       Object {
         "height": 75,
@@ -632,7 +627,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     }
     title="UQ eSpace DEMO"
     titleStyle={Object {}}
-    zDepth={1}
   />
   <MenuDrawer
     docked={false}
@@ -785,7 +779,6 @@ exports[`Application component should render app for account with fez author wit
       }
     }
     onLeftIconButtonTouchTap={[Function]}
-    showMenuIconButton={true}
     style={
       Object {
         "height": 75,
@@ -793,7 +786,6 @@ exports[`Application component should render app for account with fez author wit
     }
     title="UQ eSpace DEMO"
     titleStyle={Object {}}
-    zDepth={1}
   />
   <MenuDrawer
     docked={false}
@@ -1063,7 +1055,6 @@ exports[`Application component should render app for account with fez author wit
       }
     }
     onLeftIconButtonTouchTap={[Function]}
-    showMenuIconButton={true}
     style={
       Object {
         "height": 75,
@@ -1071,7 +1062,6 @@ exports[`Application component should render app for account with fez author wit
     }
     title="UQ eSpace DEMO"
     titleStyle={Object {}}
-    zDepth={1}
   />
   <MenuDrawer
     docked={false}
@@ -1358,7 +1348,6 @@ exports[`Application component should render application with routing for the us
       }
     }
     onLeftIconButtonTouchTap={[Function]}
-    showMenuIconButton={true}
     style={
       Object {
         "height": 75,
@@ -1366,7 +1355,6 @@ exports[`Application component should render application with routing for the us
     }
     title="UQ eSpace DEMO"
     titleStyle={Object {}}
-    zDepth={1}
   />
   <MenuDrawer
     docked={false}
@@ -1491,7 +1479,6 @@ exports[`Application component should render for anon user 1`] = `
       }
     }
     onLeftIconButtonTouchTap={[Function]}
-    showMenuIconButton={true}
     style={
       Object {
         "height": 75,
@@ -1499,7 +1486,6 @@ exports[`Application component should render for anon user 1`] = `
     }
     title="UQ eSpace DEMO"
     titleStyle={Object {}}
-    zDepth={1}
   />
   <MenuDrawer
     docked={false}
@@ -1595,7 +1581,6 @@ exports[`Application component should render loading screen while account is loa
   <AppLoader
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
     logoText="UQ eSpace DEMO"
-    progressColor="#FFF"
     title="UQ eSpace DEMO"
   />
 </div>
@@ -1662,7 +1647,6 @@ exports[`Application component should render thesis submission for HDR without m
     }
     title="UQ eSpace DEMO"
     titleStyle={Object {}}
-    zDepth={1}
   />
   <div
     className="content-container"

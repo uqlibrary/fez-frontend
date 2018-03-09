@@ -420,47 +420,21 @@ exports[`Component FixRecord should render fix record form 1`] = `
         }
       >
         <MenuItem
-          anchorOrigin={
-            Object {
-              "horizontal": "right",
-              "vertical": "top",
-            }
-          }
           checked={false}
           desktop={false}
           disabled={false}
-          focusState="none"
           insetChildren={false}
           key="fix_record_action_0"
           primaryText="I am the author/editor/contributor of this record - I would like to make a correction, or upload files"
-          targetOrigin={
-            Object {
-              "horizontal": "left",
-              "vertical": "top",
-            }
-          }
           value="fix"
         />
         <MenuItem
-          anchorOrigin={
-            Object {
-              "horizontal": "right",
-              "vertical": "top",
-            }
-          }
           checked={false}
           desktop={false}
           disabled={false}
-          focusState="none"
           insetChildren={false}
           key="fix_record_action_1"
           primaryText="I am not the author/editor/contributor of this record - I would like this record removed from my profile"
-          targetOrigin={
-            Object {
-              "horizontal": "left",
-              "vertical": "top",
-            }
-          }
           value="unclaim"
         />
       </Field>
@@ -511,7 +485,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
         title="Suggest a correction"
       >
         <Field
-          className="requiredField"
+          className={null}
           component={[Function]}
           floatingLabelText="Describe the problem with this record, eg record is a duplicate, or suggested changes"
           fullWidth={true}
@@ -519,13 +493,9 @@ exports[`Component FixRecord should render fix record form 1`] = `
           name="comments"
           rows={1}
           type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
         />
         <Field
+          className={null}
           component={[Function]}
           floatingLabelText="Link (URL)"
           fullWidth={true}
@@ -577,7 +547,6 @@ exports[`Component FixRecord should render fix record form 1`] = `
           disabled={false}
           fullWidth={true}
           label="Cancel"
-          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -590,7 +559,6 @@ exports[`Component FixRecord should render fix record form 1`] = `
           disabled={false}
           fullWidth={true}
           label="Submit"
-          labelPosition="after"
           onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}
@@ -1041,47 +1009,21 @@ exports[`Component FixRecord should render record citation, two actions in selec
         }
       >
         <MenuItem
-          anchorOrigin={
-            Object {
-              "horizontal": "right",
-              "vertical": "top",
-            }
-          }
           checked={false}
           desktop={false}
           disabled={false}
-          focusState="none"
           insetChildren={false}
           key="fix_record_action_0"
           primaryText="I am the author/editor/contributor of this record - I would like to make a correction, or upload files"
-          targetOrigin={
-            Object {
-              "horizontal": "left",
-              "vertical": "top",
-            }
-          }
           value="fix"
         />
         <MenuItem
-          anchorOrigin={
-            Object {
-              "horizontal": "right",
-              "vertical": "top",
-            }
-          }
           checked={false}
           desktop={false}
           disabled={false}
-          focusState="none"
           insetChildren={false}
           key="fix_record_action_1"
           primaryText="I am not the author/editor/contributor of this record - I would like this record removed from my profile"
-          targetOrigin={
-            Object {
-              "horizontal": "left",
-              "vertical": "top",
-            }
-          }
           value="unclaim"
         />
       </Field>
@@ -1099,7 +1041,6 @@ exports[`Component FixRecord should render record citation, two actions in selec
           disabled={false}
           fullWidth={true}
           label="Cancel"
-          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -1530,47 +1471,21 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
         }
       >
         <MenuItem
-          anchorOrigin={
-            Object {
-              "horizontal": "right",
-              "vertical": "top",
-            }
-          }
           checked={false}
           desktop={false}
           disabled={false}
-          focusState="none"
           insetChildren={false}
           key="fix_record_action_0"
           primaryText="I am the author/editor/contributor of this record - I would like to make a correction, or upload files"
-          targetOrigin={
-            Object {
-              "horizontal": "left",
-              "vertical": "top",
-            }
-          }
           value="fix"
         />
         <MenuItem
-          anchorOrigin={
-            Object {
-              "horizontal": "right",
-              "vertical": "top",
-            }
-          }
           checked={false}
           desktop={false}
           disabled={false}
-          focusState="none"
           insetChildren={false}
           key="fix_record_action_1"
           primaryText="I am not the author/editor/contributor of this record - I would like this record removed from my profile"
-          targetOrigin={
-            Object {
-              "horizontal": "left",
-              "vertical": "top",
-            }
-          }
           value="unclaim"
         />
       </Field>
@@ -1628,7 +1543,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
         title="Suggest a correction"
       >
         <Field
-          className="requiredField"
+          className={null}
           component={[Function]}
           floatingLabelText="Describe the problem with this record, eg record is a duplicate, or suggested changes"
           fullWidth={true}
@@ -1636,13 +1551,9 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
           name="comments"
           rows={1}
           type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
         />
         <Field
+          className={null}
           component={[Function]}
           floatingLabelText="Link (URL)"
           fullWidth={true}
@@ -1694,7 +1605,6 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
           disabled={false}
           fullWidth={true}
           label="Cancel"
-          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -1707,7 +1617,6 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
           disabled={false}
           fullWidth={true}
           label="Submit"
-          labelPosition="after"
           onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}
@@ -2138,47 +2047,21 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
         }
       >
         <MenuItem
-          anchorOrigin={
-            Object {
-              "horizontal": "right",
-              "vertical": "top",
-            }
-          }
           checked={false}
           desktop={false}
           disabled={false}
-          focusState="none"
           insetChildren={false}
           key="fix_record_action_0"
           primaryText="I am the author/editor/contributor of this record - I would like to make a correction, or upload files"
-          targetOrigin={
-            Object {
-              "horizontal": "left",
-              "vertical": "top",
-            }
-          }
           value="fix"
         />
         <MenuItem
-          anchorOrigin={
-            Object {
-              "horizontal": "right",
-              "vertical": "top",
-            }
-          }
           checked={false}
           desktop={false}
           disabled={false}
-          focusState="none"
           insetChildren={false}
           key="fix_record_action_1"
           primaryText="I am not the author/editor/contributor of this record - I would like this record removed from my profile"
-          targetOrigin={
-            Object {
-              "horizontal": "left",
-              "vertical": "top",
-            }
-          }
           value="unclaim"
         />
       </Field>
@@ -2229,7 +2112,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
         title="Suggest a correction"
       >
         <Field
-          className="requiredField"
+          className={null}
           component={[Function]}
           floatingLabelText="Describe the problem with this record, eg record is a duplicate, or suggested changes"
           fullWidth={true}
@@ -2237,13 +2120,9 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
           name="comments"
           rows={1}
           type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
         />
         <Field
+          className={null}
           component={[Function]}
           floatingLabelText="Link (URL)"
           fullWidth={true}
@@ -2295,7 +2174,6 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
           disabled={false}
           fullWidth={true}
           label="Cancel"
-          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -2308,7 +2186,6 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
           disabled={false}
           fullWidth={true}
           label="Submit"
-          labelPosition="after"
           onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}
@@ -2739,47 +2616,21 @@ exports[`Component FixRecord should render unclaim form 1`] = `
         }
       >
         <MenuItem
-          anchorOrigin={
-            Object {
-              "horizontal": "right",
-              "vertical": "top",
-            }
-          }
           checked={false}
           desktop={false}
           disabled={false}
-          focusState="none"
           insetChildren={false}
           key="fix_record_action_0"
           primaryText="I am the author/editor/contributor of this record - I would like to make a correction, or upload files"
-          targetOrigin={
-            Object {
-              "horizontal": "left",
-              "vertical": "top",
-            }
-          }
           value="fix"
         />
         <MenuItem
-          anchorOrigin={
-            Object {
-              "horizontal": "right",
-              "vertical": "top",
-            }
-          }
           checked={false}
           desktop={false}
           disabled={false}
-          focusState="none"
           insetChildren={false}
           key="fix_record_action_1"
           primaryText="I am not the author/editor/contributor of this record - I would like this record removed from my profile"
-          targetOrigin={
-            Object {
-              "horizontal": "left",
-              "vertical": "top",
-            }
-          }
           value="unclaim"
         />
       </Field>
@@ -2833,7 +2684,6 @@ exports[`Component FixRecord should render unclaim form 1`] = `
           disabled={false}
           fullWidth={true}
           label="Cancel"
-          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -2846,7 +2696,6 @@ exports[`Component FixRecord should render unclaim form 1`] = `
           disabled={false}
           fullWidth={true}
           label="Submit"
-          labelPosition="after"
           onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}
@@ -2869,9 +2718,7 @@ exports[`Component FixRecord should return and render the alert details correctl
     >
       <CircularProgress
         className="alertSpinner"
-        max={100}
         min={0}
-        mode="indeterminate"
         size={32}
         thickness={4}
         value={0}
@@ -2903,8 +2750,6 @@ exports[`Component FixRecord should return and render the alert details correctl
     >
       <FontIcon
         className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
       >
         done
       </FontIcon>
@@ -2935,8 +2780,6 @@ exports[`Component FixRecord should return and render the alert details correctl
     >
       <FontIcon
         className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
       >
         error_outline
       </FontIcon>
@@ -2967,8 +2810,6 @@ exports[`Component FixRecord should return and render the alert details correctl
     >
       <FontIcon
         className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
       >
         warning
       </FontIcon>

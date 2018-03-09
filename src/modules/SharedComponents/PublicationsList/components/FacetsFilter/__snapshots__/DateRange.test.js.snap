@@ -2,9 +2,7 @@
 
 exports[`Date range  should render component with values set 1`] = `
 <ListItem
-  autoGenerateNestedIndicator={true}
   className="dateRange active  "
-  containerElement="span"
   disableKeyboardFocus={false}
   disabled={false}
   initiallyOpen={false}
@@ -41,24 +39,15 @@ exports[`Date range  should render component with values set 1`] = `
     ]
   }
   nestedLevel={0}
-  onKeyboardFocus={[Function]}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
-  onNestedListToggle={[Function]}
-  onTouchEnd={[Function]}
-  onTouchStart={[Function]}
   open={null}
   primaryText="Date range"
   primaryTogglesNestedList={true}
-  secondaryTextLines={1}
 />
 `;
 
 exports[`Date range  should render disabled component 1`] = `
 <ListItem
-  autoGenerateNestedIndicator={true}
   className="dateRange  disabled"
-  containerElement="span"
   disableKeyboardFocus={false}
   disabled={true}
   initiallyOpen={false}
@@ -153,24 +142,15 @@ exports[`Date range  should render disabled component 1`] = `
     ]
   }
   nestedLevel={0}
-  onKeyboardFocus={[Function]}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
-  onNestedListToggle={[Function]}
-  onTouchEnd={[Function]}
-  onTouchStart={[Function]}
   open={null}
   primaryText="Date range"
   primaryTogglesNestedList={true}
-  secondaryTextLines={1}
 />
 `;
 
 exports[`Date range  should render empty component 1`] = `
 <ListItem
-  autoGenerateNestedIndicator={true}
   className="dateRange  "
-  containerElement="span"
   disableKeyboardFocus={false}
   disabled={false}
   initiallyOpen={false}
@@ -265,15 +245,8 @@ exports[`Date range  should render empty component 1`] = `
     ]
   }
   nestedLevel={0}
-  onKeyboardFocus={[Function]}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
-  onNestedListToggle={[Function]}
-  onTouchEnd={[Function]}
-  onTouchStart={[Function]}
   open={null}
   primaryText="Date range"
   primaryTogglesNestedList={true}
-  secondaryTextLines={1}
 />
 `;

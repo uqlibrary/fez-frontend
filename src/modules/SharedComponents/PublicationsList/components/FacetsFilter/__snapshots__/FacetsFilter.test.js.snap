@@ -6,9 +6,7 @@ exports[`FacetsFilter  components for mock data 1`] = `
 >
   <List>
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -42,21 +40,12 @@ exports[`FacetsFilter  components for mock data 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Display type"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -182,21 +171,12 @@ exports[`FacetsFilter  components for mock data 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Keywords"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -230,21 +210,12 @@ exports[`FacetsFilter  components for mock data 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Year published"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -301,21 +272,12 @@ exports[`FacetsFilter  components for mock data 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Journal name"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -349,21 +311,12 @@ exports[`FacetsFilter  components for mock data 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Collection"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -397,24 +350,11 @@ exports[`FacetsFilter  components for mock data 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Author"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <DateRange
-      defaultValue={
-        Object {
-          "from": 2008,
-          "to": 2023,
-        }
-      }
       itemClassName="dateRange facetsCategory"
       locale={
         Object {
@@ -438,9 +378,7 @@ exports[`FacetsFilter  components for mock data 2`] = `
 >
   <List>
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -497,21 +435,12 @@ exports[`FacetsFilter  components for mock data 2`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Display type"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -637,21 +566,12 @@ exports[`FacetsFilter  components for mock data 2`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Keywords"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -685,21 +605,12 @@ exports[`FacetsFilter  components for mock data 2`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Year published"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -756,21 +667,12 @@ exports[`FacetsFilter  components for mock data 2`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Journal name"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -804,21 +706,12 @@ exports[`FacetsFilter  components for mock data 2`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Collection"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -852,24 +745,11 @@ exports[`FacetsFilter  components for mock data 2`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Author"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <DateRange
-      defaultValue={
-        Object {
-          "from": 2008,
-          "to": 2023,
-        }
-      }
       itemClassName="dateRange facetsCategory"
       locale={
         Object {
@@ -893,9 +773,7 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
 >
   <List>
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory active "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -933,21 +811,12 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={true}
       primaryText="Display type"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory active "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -1077,21 +946,12 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={true}
       primaryText="Keywords"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -1125,21 +985,12 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Year published"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -1196,21 +1047,12 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Journal name"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -1244,21 +1086,12 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Collection"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -1292,24 +1125,11 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Author"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <DateRange
-      defaultValue={
-        Object {
-          "from": 2008,
-          "to": 2023,
-        }
-      }
       itemClassName="dateRange facetsCategory"
       locale={
         Object {
@@ -1337,7 +1157,6 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
         disabled={false}
         fullWidth={true}
         label="Reset"
-        labelPosition="after"
         onClick={[Function]}
         primary={false}
         secondary={false}
@@ -1353,9 +1172,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
 >
   <List>
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory active "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -1393,21 +1210,12 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={true}
       primaryText="Display type"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -1533,21 +1341,12 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Keywords"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -1581,21 +1380,12 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Year published"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -1652,21 +1442,12 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Journal name"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -1700,21 +1481,12 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Collection"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -1748,24 +1520,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Author"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <DateRange
-      defaultValue={
-        Object {
-          "from": 2008,
-          "to": 2023,
-        }
-      }
       itemClassName="dateRange facetsCategory"
       locale={
         Object {
@@ -1793,7 +1552,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
         disabled={false}
         fullWidth={true}
         label="Reset"
-        labelPosition="after"
         onClick={[Function]}
         primary={false}
         secondary={false}
@@ -1809,9 +1567,7 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
 >
   <List>
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory disabled"
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={true}
       initiallyOpen={false}
@@ -1845,21 +1601,12 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Display type"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory disabled"
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={true}
       initiallyOpen={false}
@@ -1985,21 +1732,12 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Keywords"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory disabled"
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={true}
       initiallyOpen={false}
@@ -2033,21 +1771,12 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Year published"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory disabled"
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={true}
       initiallyOpen={false}
@@ -2104,21 +1833,12 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Journal name"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory disabled"
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={true}
       initiallyOpen={false}
@@ -2152,21 +1872,12 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Collection"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory disabled"
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={true}
       initiallyOpen={false}
@@ -2200,24 +1911,11 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Author"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <DateRange
-      defaultValue={
-        Object {
-          "from": 2008,
-          "to": 2023,
-        }
-      }
       disabled={true}
       itemClassName="dateRange facetsCategory"
       locale={
@@ -2242,9 +1940,7 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
 >
   <List>
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -2370,21 +2066,12 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Keywords"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -2418,21 +2105,12 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Year published"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -2489,21 +2167,12 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Journal name"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -2537,21 +2206,12 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Collection"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <ListItem
-      autoGenerateNestedIndicator={true}
       className="facetsCategory "
-      containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
       initiallyOpen={false}
@@ -2585,24 +2245,11 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
         ]
       }
       nestedLevel={0}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onNestedListToggle={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
       open={null}
       primaryText="Author"
       primaryTogglesNestedList={true}
-      secondaryTextLines={1}
     />
     <DateRange
-      defaultValue={
-        Object {
-          "from": 2008,
-          "to": 2023,
-        }
-      }
       itemClassName="dateRange facetsCategory"
       locale={
         Object {

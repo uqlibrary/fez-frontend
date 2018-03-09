@@ -170,11 +170,12 @@ export default class FixRecord extends React.PureComponent {
                                 onRef={this._setSuccessConfirmation}
                                 onAction={this._navigateToMyResearch}
                                 onCancelAction={this._navigateToDashboard}
-                                locale={saveConfirmationLocale}/>
+                                locale={saveConfirmationLocale}
+                            />
                             <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
                                 <Field
                                     component={TextField}
-                                    className="requiredField"
+                                    className={this.props.formErrors && (this.props.formErrors.rek_link || this.props.formErrors.files) ? 'requiredField' : null}
                                     disabled={this.props.submitting}
                                     name="comments"
                                     type="text"
@@ -182,15 +183,17 @@ export default class FixRecord extends React.PureComponent {
                                     multiLine
                                     rows={1}
                                     floatingLabelText={txtFixForm.comments.fieldLabels.comments}
-                                    validate={[validation.required]}/>
+                                />
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
+                                    className={this.props.formErrors && (this.props.formErrors.files || this.props.formValues.comments) ? 'requiredField' : null}
                                     name="rek_link"
                                     type="text"
                                     fullWidth
                                     floatingLabelText={txtFixForm.comments.fieldLabels.url}
-                                    validate={[validation.url]}/>
+                                    validate={[validation.url]}
+                                />
                             </StandardCard>
                             <StandardCard title={txtFixForm.fileUpload.title} help={txtFixForm.fileUpload.help}>
                                 {txtFixForm.fileUpload.description}

@@ -22,12 +22,6 @@ exports[`AuthorItem renders  should be disabled 1`] = `
           Test user
         </span>
       }
-      labelPosition="after"
-      labelStyle={Object {}}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onTouchStart={[Function]}
       onTouchTap={[Function]}
       primary={false}
       secondary={false}
@@ -67,12 +61,6 @@ exports[`AuthorItem renders  should be linked 1`] = `
           Test user
         </span>
       }
-      labelPosition="after"
-      labelStyle={Object {}}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onTouchStart={[Function]}
       primary={false}
       secondary={false}
     />
@@ -111,12 +99,6 @@ exports[`AuthorItem renders  should be linked and disabled 1`] = `
           Test user
         </span>
       }
-      labelPosition="after"
-      labelStyle={Object {}}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onTouchStart={[Function]}
       onTouchTap={[Function]}
       primary={false}
       secondary={false}
@@ -156,12 +138,6 @@ exports[`AuthorItem renders  should be selected 1`] = `
           Test user
         </span>
       }
-      labelPosition="after"
-      labelStyle={Object {}}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onTouchStart={[Function]}
       primary={true}
       secondary={false}
     />
@@ -200,12 +176,6 @@ exports[`AuthorItem renders  should be selected and disabled 1`] = `
           Test user
         </span>
       }
-      labelPosition="after"
-      labelStyle={Object {}}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onTouchStart={[Function]}
       primary={true}
       secondary={false}
     />
@@ -244,12 +214,6 @@ exports[`AuthorItem renders  should be unselected and able to select author 1`] 
           Test user
         </span>
       }
-      labelPosition="after"
-      labelStyle={Object {}}
-      onKeyboardFocus={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onTouchStart={[Function]}
       onTouchTap={[Function]}
       primary={false}
       secondary={false}

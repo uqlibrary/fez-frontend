@@ -25,179 +25,75 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
       value="published_date"
     >
       <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
         checked={false}
         desktop={false}
         disabled={false}
-        focusState="none"
         insetChildren={false}
         key="0"
         primaryText="Published date"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
         value="published_date"
       />
       <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
         checked={false}
         desktop={false}
         disabled={false}
-        focusState="none"
         insetChildren={false}
         key="1"
         primaryText="Search relevance"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
         value="score"
       />
       <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
         checked={false}
         desktop={false}
         disabled={false}
-        focusState="none"
         insetChildren={false}
         key="2"
         primaryText="Title"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
         value="title"
       />
       <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
         checked={false}
         desktop={false}
         disabled={false}
-        focusState="none"
         insetChildren={false}
         key="3"
         primaryText="Created date"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
         value="created_date"
       />
       <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
         checked={false}
         desktop={false}
         disabled={false}
-        focusState="none"
         insetChildren={false}
         key="4"
         primaryText="Updated date"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
         value="updated_date"
       />
       <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
         checked={false}
         desktop={false}
         disabled={false}
-        focusState="none"
         insetChildren={false}
         key="5"
         primaryText="Altmetric score"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
         value="altmetric_score"
       />
       <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
         checked={false}
         desktop={false}
         disabled={false}
-        focusState="none"
         insetChildren={false}
         key="6"
         primaryText="Scopus citation count"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
         value="scopus_citation_count"
       />
       <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
         checked={false}
         desktop={false}
         disabled={false}
-        focusState="none"
         insetChildren={false}
         key="7"
         primaryText="Thompson citation count"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
         value="thomson_citation_count"
       />
     </SelectField>
@@ -220,47 +116,21 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
       value="Desc"
     >
       <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
         checked={false}
         desktop={false}
         disabled={false}
-        focusState="none"
         insetChildren={false}
         key="0"
         primaryText="Desc"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
         value="Desc"
       />
       <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
         checked={false}
         desktop={false}
         disabled={false}
-        focusState="none"
         insetChildren={false}
         key="1"
         primaryText="Asc"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
         value="Asc"
       />
     </SelectField>
@@ -283,87 +153,35 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
       value={20}
     >
       <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
         checked={false}
         desktop={false}
         disabled={false}
-        focusState="none"
         insetChildren={false}
         primaryText={20}
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
         value={20}
       />
       <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
         checked={false}
         desktop={false}
         disabled={false}
-        focusState="none"
         insetChildren={false}
         primaryText={50}
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
         value={50}
       />
       <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
         checked={false}
         desktop={false}
         disabled={false}
-        focusState="none"
         insetChildren={false}
         primaryText={100}
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
         value={100}
       />
       <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
         checked={false}
         desktop={false}
         disabled={false}
-        focusState="none"
         insetChildren={false}
         primaryText={1000}
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
         value={1000}
       />
     </SelectField>

@@ -828,12 +828,6 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
         disabled={false}
         fullWidth={true}
         label="Claim now"
-        labelPosition="after"
-        labelStyle={Object {}}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
         onTouchTap={[Function]}
         primary={false}
         secondary={true}
@@ -848,12 +842,6 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
         disabled={false}
         fullWidth={true}
         label="Not mine"
-        labelPosition="after"
-        labelStyle={Object {}}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
         onTouchTap={[Function]}
         primary={false}
         secondary={true}
@@ -868,12 +856,6 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
         disabled={false}
         fullWidth={true}
         label="View stats"
-        labelPosition="after"
-        labelStyle={Object {}}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
         onTouchTap={[Function]}
         primary={false}
         secondary={true}
@@ -1711,12 +1693,6 @@ exports[`PublicationCitation  should render component with default actions 1`] =
         disabled={false}
         fullWidth={true}
         label="Request Correction"
-        labelPosition="after"
-        labelStyle={Object {}}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
         onTouchTap={[Function]}
         primary={false}
         secondary={true}
@@ -3374,9 +3350,6 @@ exports[`PublicationCitation  should render component with publication from mult
           className="publicationSource"
           href="https://fez-staging.library.uq.edu.au/records/UQ:224457"
           key="source_0"
-          openInNewIcon={true}
-          rel="noopener noreferrer"
-          target="_blank"
         >
           eSpace
         </ExternalLink>
@@ -4207,9 +4180,6 @@ exports[`PublicationCitation  should render component without a title 1`] = `
           className="publicationSource"
           href="https://fez-staging.library.uq.edu.au/records/UQ:224457"
           key="source_0"
-          openInNewIcon={true}
-          rel="noopener noreferrer"
-          target="_blank"
         >
           eSpace
         </ExternalLink>

@@ -338,7 +338,6 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
               },
             ]
           }
-          yAxisTitle="Total publications"
         />
       </StandardCard>
     </div>

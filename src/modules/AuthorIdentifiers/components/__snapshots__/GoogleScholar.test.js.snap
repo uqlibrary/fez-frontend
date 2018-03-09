@@ -100,7 +100,6 @@ exports[`Component GoogleScholar  should display submission error if saving fail
           disabled={false}
           fullWidth={true}
           label="Cancel"
-          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -113,7 +112,6 @@ exports[`Component GoogleScholar  should display submission error if saving fail
           disabled={false}
           fullWidth={true}
           label="Save Google Scholar ID"
-          labelPosition="after"
           onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}
@@ -225,7 +223,6 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
           disabled={true}
           fullWidth={true}
           label="Cancel"
-          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -238,7 +235,6 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
           disabled={true}
           fullWidth={true}
           label="Save Google Scholar ID"
-          labelPosition="after"
           onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}
@@ -342,7 +338,6 @@ exports[`Component GoogleScholar  should render form if author doesn't have goog
           disabled={false}
           fullWidth={true}
           label="Cancel"
-          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -355,7 +350,6 @@ exports[`Component GoogleScholar  should render form if author doesn't have goog
           disabled={false}
           fullWidth={true}
           label="Save Google Scholar ID"
-          labelPosition="after"
           onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}
@@ -456,7 +450,6 @@ exports[`Component GoogleScholar  should render form if author has google schola
           disabled={false}
           fullWidth={true}
           label="Cancel"
-          labelPosition="after"
           onTouchTap={[Function]}
           primary={false}
           secondary={false}
@@ -469,7 +462,6 @@ exports[`Component GoogleScholar  should render form if author has google schola
           disabled={false}
           fullWidth={true}
           label="Save Google Scholar ID"
-          labelPosition="after"
           onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}

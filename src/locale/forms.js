@@ -193,6 +193,12 @@ export default {
                 type: 'done',
                 title: 'Success',
                 message: 'Fix record request has been submitted successfully.'
+            },
+            oneIsRequired: {
+                comments: 'At least one of comments, link or a file submission must be completed',
+                rek_link: 'At least one of comments, link or a file submission must be completed',
+                files: 'At least one of comments, link or a file submission must be completed',
+                message: 'At least one of the above is required to be completed'
             }
         }
     }
