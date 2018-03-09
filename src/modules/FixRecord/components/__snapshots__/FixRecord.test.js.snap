@@ -2988,3 +2988,35 @@ exports[`Component FixRecord should return and render the alert details correctl
   </div>
 </div>
 `;
+
+exports[`Component FixRecord should return and render the alert details correctly 5`] = `
+<div
+  className="warning alertWrapper "
+>
+  <div
+    className="columns is-multiline is-mobile"
+  >
+    <div
+      className="column is-narrow alertIcon"
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        warning
+      </FontIcon>
+    </div>
+    <div
+      className="column alertText"
+    >
+      <div>
+        <b>
+          Validation - 
+        </b>
+        One of comments, link or file submission must be completed.
+      </div>
+    </div>
+  </div>
+</div>
+`;

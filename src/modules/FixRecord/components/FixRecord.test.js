@@ -106,6 +106,10 @@ describe('Component FixRecord', () => {
             },
             {
                 parameters: {invalid: true, dirty: true, formErrors: {rek_title: 'one', comments: 'two'}, alertLocale: {validationAlert: {title: 'validationError'}}},
+            },
+            {
+                parameters: {formErrors: {rek_link: 'one', comments: 'two', files: 'three'}, formValues: Immutable.Map({fixAction: 'fix'}),
+                    alertLocale: {oneIsRequired:{ alert:{title: 'oneIsRequiredError'}}}},
             }
         ];
 
