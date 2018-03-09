@@ -41,7 +41,6 @@ const validate = (values) => {
         errors.comments = locale.forms.fixPublicationForm.oneIsRequired.comments;
         errors.rek_link = locale.forms.fixPublicationForm.oneIsRequired.rek_link;
         errors.files = locale.forms.fixPublicationForm.oneIsRequired.files;
-        errors.oneIsRequired = locale.forms.fixPublicationForm.oneIsRequired.message;
     }
     return errors;
 };

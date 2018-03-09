@@ -143,7 +143,11 @@ export default class FixRecord extends React.PureComponent {
                 {saveConfirmationLocale.confirmationMessage}
             </div>
         );
-        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txtFixForm});
+        // If the comments, link or files are empty, show a custom message saying one is required.
+        const formValues = this.props.formValues && this.props.formValues.toJS();
+        const alertProps = (this.props.formErrors && this.props.formErrors.comments && this.props.formErrors.rek_link && this.props.formErrors.files && formValues.fixAction === 'fix') ?
+            txtFixForm.oneIsRequired.alert :
+            validation.getErrorAlertProps({...this.props, alertLocale: txtFixForm});
         return (
             <StandardPage title={txt.title}>
                 <form onSubmit={this._handleDefaultSubmit}>
