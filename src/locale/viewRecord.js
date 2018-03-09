@@ -142,7 +142,8 @@ export default {
                 fez_record_search_key_contributor: 'Contributor(s)',
                 fez_record_search_key_location: 'Place of recording',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
-                fez_record_search_key_rights: 'Rights'
+                fez_record_search_key_rights: 'Rights',
+                fez_record_search_key_license: 'License'
             },
             'Book': {
                 rek_date: 'Publication year'
@@ -237,103 +238,103 @@ export default {
         fields: {
             'Audio Document': [
                 {
-                    field: 'fez_record_search_key_alternate_genre',
+                    field: 'fez_record_search_key_author',
                     order: 1
                 },
                 {
-                    field: 'fez_record_search_key_author',
+                    field: 'rek_title',
                     order: 2
                 },
                 {
-                    field: 'rek_title',
+                    field: 'fez_record_search_key_translated_title',
                     order: 3
                 },
                 {
-                    field: 'fez_record_search_key_translated_title',
+                    field: 'fez_record_search_key_place_of_publication',
                     order: 4
                 },
                 {
-                    field: 'fez_record_search_key_place_of_publication',
+                    field: 'fez_record_search_key_publisher',
                     order: 5
                 },
                 {
-                    field: 'fez_record_search_key_publisher',
+                    field: 'fez_record_search_key_oa_status',
                     order: 6
                 },
                 {
-                    field: 'fez_record_search_key_oa_status',
+                    field: 'rek_date',
                     order: 7
                 },
                 {
-                    field: 'rek_date',
+                    field: 'fez_record_search_key_date_recorded',
                     order: 8
                 },
                 {
-                    field: 'fez_record_search_key_date_recorded',
+                    field: 'fez_record_search_key_location',
                     order: 9
                 },
                 {
-                    field: 'fez_record_search_key_location',
+                    field: 'fez_record_search_key_geographic_area',
                     order: 10
                 },
                 {
-                    field: 'fez_record_search_key_geographic_area',
+                    field: 'fez_record_search_key_date_available',
                     order: 11
                 },
                 {
-                    field: 'fez_record_search_key_date_available',
+                    field: 'fez_record_search_key_contributor',
                     order: 12
                 },
                 {
-                    field: 'fez_record_search_key_contributor',
+                    field: 'fez_record_search_key_series',
                     order: 13
                 },
                 {
-                    field: 'fez_record_search_key_series',
+                    field: 'fez_record_search_key_isbn',
                     order: 14
                 },
                 {
-                    field: 'fez_record_search_key_isbn',
+                    field: 'fez_record_search_key_issn',
                     order: 15
                 },
                 {
-                    field: 'fez_record_search_key_issn',
+                    field: 'rek_genre',
                     order: 16
                 },
                 {
-                    field: 'rek_genre',
+                    field: 'fez_record_search_key_original_format',
                     order: 17
                 },
                 {
-                    field: 'fez_record_search_key_original_format',
+                    field: 'fez_record_search_key_source',
                     order: 18
                 },
                 {
-                    field: 'fez_record_search_key_source',
+                    field: 'fez_record_search_key_length',
                     order: 19
                 },
                 {
-                    field: 'fez_record_search_key_length',
+                    field: 'fez_record_search_key_language',
                     order: 20
                 },
                 {
-                    field: 'fez_record_search_key_language',
+                    field: 'fez_record_search_key_rights',
                     order: 21
                 },
                 {
-                    field: 'fez_record_search_key_rights',
+                    field: 'fez_record_search_key_license',
                     order: 22
                 },
                 {
-                    field: 'fez_record_search_key_license',
+                    field: 'fez_record_search_key_alternate_genre',
                     order: 23
                 },
                 {
-                    field: 'fez_record_search_key_alternate_genre',
+                    field: 'fez_record_search_key_subject',
                     order: 24
                 },
                 {
-                    field: 'fez_record_search_key_subject',
+                    field: 'fez_record_search_key_alternate_genre',
                     order: 25
                 },
                 {

@@ -73,11 +73,13 @@ export default class AdditionalInformation extends Component {
         const data = this.getData(object, subkey);
         switch (subkey) {
             case 'rek_doi': return this.renderDoi(data);
-            case 'rek_date_available': return moment(data).format('YYYY');
+            case 'rek_date_available': return this.formatDate(data, 'YYYY');
+            case 'rek_date_recorded': return this.formatDate(data);
             case 'rek_journal_name': return this.renderJournalName(data);
+            case 'rek_transcript': return this.renderTranscript(data);
             case 'rek_publisher': return this.renderLink(pathConfig.list.publisher(data), data);
             case 'rek_oa_status': return this.renderLink(pathConfig.list.openAccessStatus(object[subkey]), data);
-            case 'rek_alternative_genre': return this.renderLink(pathConfig.list.subject(object[subkey]), data);
+            case 'rek_alternate_genre': return this.renderLink(pathConfig.list.subject(object[subkey]), data);
             case 'rek_herdc_code': return this.renderLink(pathConfig.list.subject(object[subkey]), data);
             case 'rek_herdc_status': return this.renderLink(pathConfig.list.herdcStatus(object[subkey]), data);
             case 'rek_ands_collection_type': return this.renderLink(pathConfig.list.collectionType(object[subkey]), data);
@@ -86,6 +88,7 @@ export default class AdditionalInformation extends Component {
             case 'rek_license': return this.renderLink(pathConfig.list.license(object[subkey]), data);
             case 'rek_org_unit_name': return this.renderLink(pathConfig.list.orgUnitName(data), data);
             case 'rek_institutional_status': return this.renderLink(pathConfig.list.institutionalStatus(object[subkey]), data);
+            case 'rek_book_title': return this.renderLink(pathConfig.list.bookTitle(object[subkey]), data);
             default: return data;
         }
     }
@@ -96,12 +99,16 @@ export default class AdditionalInformation extends Component {
         if (key === 'rek_title') {
             data = this.getTitle(this.props.publication);
         } else if (key === 'rek_date') {
-            data = moment(value).format('YYYY-MM-DD');
+            data = this.formatDate(value);
         } else {
             data = value;
         }
 
         return data;
+    }
+
+    formatDate = (date, format = 'YYYY-MM-DD') => {
+        return moment(date).format(format);
     }
 
     renderJournalName = (journalName) => {
@@ -122,9 +129,16 @@ export default class AdditionalInformation extends Component {
         );
     }
 
+    renderTranscript = (data) => {
+        return (
+            <span dangerouslySetInnerHTML={{__html: data}} />
+        );
+    }
+
+    // rek_issn_lookup returns sherpa romeo color
     getData = (object, subkey) => {
         const lookupSuffix = '_lookup';
-        return object[subkey + lookupSuffix] ? object[subkey + lookupSuffix] : object[subkey];
+        return object[subkey + lookupSuffix] && subkey !== 'rek_issn' ? object[subkey + lookupSuffix] : object[subkey];
     }
 
     getSherpaRomeo = () => {

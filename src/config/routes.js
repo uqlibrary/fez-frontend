@@ -38,6 +38,7 @@ export const pathConfig =  {
         collectionType: (collectionType) => (`/list/?cat=quick_filter&search_keys[core_92]=${collectionType}`),
         orgUnitName: (orgUnitName) => (`/list/?cat=quick_filter&search_keys[core_70]=${orgUnitName}`),
         series: (series) => (`/list/?cat=quick_filter&search_keys[core_33]=${series}`),
+        bookTitle: (bookTitle) => (`/list/?cat=quick_filter&search_keys[core_37]=${bookTitle}`),
     },
     admin: {
         masquerade: '/admin/masquerade'
