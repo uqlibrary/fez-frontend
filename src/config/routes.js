@@ -39,6 +39,8 @@ export const pathConfig =  {
         orgUnitName: (orgUnitName) => (`/list/?cat=quick_filter&search_keys[core_70]=${orgUnitName}`),
         series: (series) => (`/list/?cat=quick_filter&search_keys[core_33]=${series}`),
         bookTitle: (bookTitle) => (`/list/?cat=quick_filter&search_keys[core_37]=${bookTitle}`),
+        conferenceName: (conferenceName) => (`/list/?cat=quick_filter&search_keys[core_36]=${conferenceName}`),
+        proceedingsTitle: (proceedingsTitle) => (`/list/?cat=quick_filter&search_keys[UQ_2]=${proceedingsTitle}`),
     },
     admin: {
         masquerade: '/admin/masquerade'

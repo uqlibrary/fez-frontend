@@ -68,7 +68,7 @@ export default {
                 fez_record_search_key_org_unit_name: 'School, Department or Center',
                 fez_record_search_key_org_name: 'Institution',
                 fez_record_search_key_access_conditions: 'Access conditions',
-                fez_record_search_key_seo_code: 'SEO code',
+                fez_record_search_key_seo_code: 'ANZSRC Socio-Economic Objective (SEO) Code',
                 fez_record_search_key_ands_collection_type: 'Collection type',
                 fez_record_search_key_contact_details_email: 'Contact email',
                 fez_record_search_key_author_role: 'Author(s) role',
@@ -783,35 +783,35 @@ export default {
                     order: 17
                 },
                 {
-                    field: 'fez_record_search_key_place_of_publication',
+                    field: 'fez_record_search_key_isbn',
                     order: 18
                 },
                 {
-                    field: 'fez_record_search_key_publisher',
+                    field: 'fez_record_search_key_issn',
                     order: 19
                 },
                 {
-                    field: 'rek_date',
+                    field: 'fez_record_search_key_place_of_publication',
                     order: 20
                 },
                 {
-                    field: 'fez_record_search_key_date_available',
+                    field: 'fez_record_search_key_publisher',
                     order: 21
                 },
                 {
-                    field: 'fez_record_search_key_doi',
+                    field: 'rek_date',
                     order: 22
                 },
                 {
-                    field: 'fez_record_search_key_oa_status',
+                    field: 'fez_record_search_key_date_available',
                     order: 23
                 },
                 {
-                    field: 'fez_record_search_key_isbn',
+                    field: 'fez_record_search_key_doi',
                     order: 24
                 },
                 {
-                    field: 'fez_record_search_key_issn',
+                    field: 'fez_record_search_key_oa_status',
                     order: 25
                 },
                 {

@@ -64,7 +64,7 @@ export default class AdditionalInformation extends Component {
             case 'rek_keywords': return this.renderList(objects, subkey, pathConfig.list.keyword);
             case 'rek_subject': return this.renderList(objects, subkey, pathConfig.list.subject);
             case 'rek_fields_of_research': return this.renderList(objects, subkey, pathConfig.list.subject);
-            case 'rek_seo_code': return this.renderList(objects, pathConfig.list.subject);
+            case 'rek_seo_code': return this.renderList(objects, subkey, pathConfig.list.subject);
             default: return this.renderList(objects, subkey);
         }
     }
@@ -76,11 +76,14 @@ export default class AdditionalInformation extends Component {
             case 'rek_doi': return this.renderDoi(data);
             case 'rek_date_available': return this.formatDate(data, 'YYYY');
             case 'rek_date_recorded': return this.formatDate(data);
+            case 'rek_start_date': return this.formatDate(data);
+            case 'rek_end_date': return this.formatDate(data);
             case 'rek_time_period_start_date': return this.formatDate(data);
             case 'rek_time_period_end_date': return this.formatDate(data);
             case 'rek_project_start_date': return this.formatDate(data);
             case 'rek_project_end_date': return this.formatDate(data);
             case 'rek_journal_name': return this.renderJournalName(data);
+            case 'rek_project_description': return this.renderHTML(data);
             case 'rek_transcript': return this.renderHTML(data);
             case 'rek_notes': return this.renderHTML(data);
             case 'rek_additional_notes': return this.renderHTML(data);
@@ -96,6 +99,7 @@ export default class AdditionalInformation extends Component {
             case 'rek_org_unit_name': return this.renderLink(pathConfig.list.orgUnitName(data), data);
             case 'rek_institutional_status': return this.renderLink(pathConfig.list.institutionalStatus(object[subkey]), data);
             case 'rek_book_title': return this.renderLink(pathConfig.list.bookTitle(object[subkey]), data);
+            case 'rek_conference_name': return this.renderLink(pathConfig.list.conferenceName(object[subkey]), data);
             default: return data;
         }
     }
