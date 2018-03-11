@@ -64,6 +64,7 @@ export default class AdditionalInformation extends Component {
             case 'rek_keywords': return this.renderList(objects, subkey, pathConfig.list.keyword);
             case 'rek_subject': return this.renderList(objects, subkey, pathConfig.list.subject);
             case 'rek_fields_of_research': return this.renderList(objects, subkey, pathConfig.list.subject);
+            case 'rek_seo_code': return this.renderList(objects, pathConfig.list.subject);
             default: return this.renderList(objects, subkey);
         }
     }
@@ -75,8 +76,14 @@ export default class AdditionalInformation extends Component {
             case 'rek_doi': return this.renderDoi(data);
             case 'rek_date_available': return this.formatDate(data, 'YYYY');
             case 'rek_date_recorded': return this.formatDate(data);
+            case 'rek_time_period_start_date': return this.formatDate(data);
+            case 'rek_time_period_end_date': return this.formatDate(data);
+            case 'rek_project_start_date': return this.formatDate(data);
+            case 'rek_project_end_date': return this.formatDate(data);
             case 'rek_journal_name': return this.renderJournalName(data);
-            case 'rek_transcript': return this.renderTranscript(data);
+            case 'rek_transcript': return this.renderHTML(data);
+            case 'rek_notes': return this.renderHTML(data);
+            case 'rek_additional_notes': return this.renderHTML(data);
             case 'rek_publisher': return this.renderLink(pathConfig.list.publisher(data), data);
             case 'rek_oa_status': return this.renderLink(pathConfig.list.openAccessStatus(object[subkey]), data);
             case 'rek_alternate_genre': return this.renderLink(pathConfig.list.subject(object[subkey]), data);
@@ -129,7 +136,7 @@ export default class AdditionalInformation extends Component {
         );
     }
 
-    renderTranscript = (data) => {
+    renderHTML = (data) => {
         return (
             <span dangerouslySetInnerHTML={{__html: data}} />
         );

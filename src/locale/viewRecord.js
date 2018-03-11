@@ -98,8 +98,8 @@ export default {
                 fez_record_search_key_report_number: 'Report number',
                 fez_record_search_key_parent_publication: 'Parent publication',
                 fez_record_search_key_related_publications: 'Related publications',
-                fez_record_search_key_time_period_start_time: 'Time coverage start date',
-                fez_record_search_key_time_period_end_time: 'Time coverage end date',
+                fez_record_search_key_time_period_start_date: 'Time coverage start date',
+                fez_record_search_key_time_period_end_date: 'Time coverage end date',
                 fez_record_search_key_start_date: 'Collection start date',
                 fez_record_search_key_end_date: 'Collection end date',
                 fez_record_search_key_project_start_date: 'Project start date',
@@ -134,6 +134,7 @@ export default {
                     fez_record_search_key_herdc_code: 'Q-Index code',
                     fez_record_search_key_herdc_status: 'Q-Index status',
                     fez_record_search_key_institutional_status: 'Institutional status',
+                    fez_record_search_key_additional_notes: 'Additional notes',
                     fez_record_search_key_notes: 'Additional notes'
                 },
             },
@@ -1010,11 +1011,11 @@ export default {
                     order: 17
                 },
                 {
-                    field: 'fez_record_search_key_time_period_start_time',
+                    field: 'fez_record_search_key_time_period_start_date',
                     order: 18
                 },
                 {
-                    field: 'fez_record_search_key_time_period_end_time',
+                    field: 'fez_record_search_key_time_period_end_date',
                     order: 19
                 },
                 {
