@@ -76,6 +76,8 @@ export default class AdditionalInformation extends Component {
             case 'rek_doi': return this.renderDoi(data);
             case 'rek_date_available': return this.formatDate(data, 'YYYY');
             case 'rek_date_recorded': return this.formatDate(data);
+            case 'rek_date_photo_taken': return this.formatDate(data, 'YYYY');
+            case 'rek_date_scanned': return this.formatDate(data);
             case 'rek_start_date': return this.formatDate(data);
             case 'rek_end_date': return this.formatDate(data);
             case 'rek_time_period_start_date': return this.formatDate(data);
@@ -108,7 +110,7 @@ export default class AdditionalInformation extends Component {
         // get values for rek_ fields e.g. rek_title
         let data = '';
         if (key === 'rek_title') {
-            data = this.getTitle(this.props.publication);
+            data = this.renderTitle(this.props.publication);
         } else if (key === 'rek_date') {
             data = this.formatDate(value);
         } else {
@@ -159,7 +161,7 @@ export default class AdditionalInformation extends Component {
         return issns && Array.isArray(issns) && issns.length > 0 ? {'issn': issns[0][issnField], 'color': issns[0][colorField]} : null;
     }
 
-    getTitle = (publication) => {
+    renderTitle = (publication) => {
         return (
             <span dangerouslySetInnerHTML={{__html: publication.rek_formatted_title ? publication.rek_formatted_title : publication.rek_title}} />
         );
