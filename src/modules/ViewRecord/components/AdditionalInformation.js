@@ -112,12 +112,20 @@ export default class AdditionalInformation extends Component {
         if (key === 'rek_title') {
             data = this.renderTitle(this.props.publication);
         } else if (key === 'rek_date') {
-            data = this.formatDate(value);
+            data = this.formatPublicationDate(value);
         } else {
             data = value;
         }
 
         return data;
+    }
+
+    formatPublicationDate = (publicationDate) => {
+        const headings = locale.viewRecord.headings;
+        const displayTypeHeadings = headings[this.props.publication.rek_display_type_lookup] ? headings[this.props.publication.rek_display_type_lookup] : [];
+        const publicationDateFormatConfig = 'rek_date_format';
+        const dateFormat = displayTypeHeadings[publicationDateFormatConfig] ? displayTypeHeadings[publicationDateFormatConfig] : headings[publicationDateFormatConfig];
+        return this.formatDate(publicationDate, dateFormat);
     }
 
     formatDate = (date, format = 'YYYY-MM-DD') => {
@@ -227,7 +235,9 @@ export default class AdditionalInformation extends Component {
         const displayTypeHeadings = displayType && headings[displayType] ? headings[displayType] : [];
         const fields = displayType && locale.viewRecord.fields[displayType] ? locale.viewRecord.fields[displayType] : [];
 
-        fields.map((item) => {
+        fields.sort((field1, field2) => (
+            field1.order - field2.order
+        )).map((item) => {
             let data = '';
             const field = item.field;
             const value = publication[field];
@@ -241,7 +251,7 @@ export default class AdditionalInformation extends Component {
                 if (subkey) {
                     data = Array.isArray(value) ? this.renderObjects(value, subkey) : this.renderObject(value, subkey);
                 } else {
-                    data = this.renderString(field, value);
+                    data = this.renderString(field, value, );
                 }
 
                 rows.push(this.renderRow(heading, data));

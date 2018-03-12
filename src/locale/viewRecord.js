@@ -18,6 +18,7 @@ export default {
             default: {
                 rek_title: 'Title',
                 rek_date: 'Publication date',
+                rek_date_format: 'YYYY-MM-DD',
                 rek_subtype: 'Sub-type',
                 rek_genre: 'Type',
                 rek_genre_type: 'Sub-type',
@@ -148,15 +149,18 @@ export default {
                 fez_record_search_key_license: 'License'
             },
             'Book': {
-                rek_date: 'Publication year'
+                rek_date: 'Publication year',
+                rek_date_format: 'YYYY',
             },
             'Book Chapter': {
                 rek_date: 'Publication year',
+                rek_date_format: 'YYYY',
                 rek_title: 'Title of chapter',
                 fez_record_search_key_translated_title: 'Translated title of chapter'
             },
             'Conference Paper': {
                 rek_date: 'Publication year',
+                rek_date_format: 'YYYY',
                 rek_title: 'Title of paper',
                 fez_record_search_key_translated_title: 'Translated title of paper'
             },
@@ -168,6 +172,7 @@ export default {
             'Creative Work': {},
             'Data Collection': {
                 rek_date: 'Publication year',
+                rek_date_format: 'YYYY',
                 rek_genre: 'Collection type',
                 rek_title: 'Dataset name',
                 fez_record_search_key_author: 'Creator name',
@@ -178,6 +183,7 @@ export default {
             'Department Technical Report': {},
             'Design': {
                 rek_date: 'Year available',
+                rek_date_format: 'YYYY',
                 fez_record_search_key_date_available: 'Date of completion',
                 fez_record_search_key_author: 'Designer(s)',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
