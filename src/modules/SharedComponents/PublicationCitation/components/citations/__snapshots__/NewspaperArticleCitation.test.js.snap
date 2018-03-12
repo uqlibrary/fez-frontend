@@ -747,13 +747,14 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Wong, Kam Cheong"
         >
           <span
             className="citationAuthor"
           >
+             
             Wong, Kam Cheong
             , 
           </span>
@@ -761,13 +762,14 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Wong, Catherine"
         >
           <span
             className="citationAuthor"
           >
+             
             Wong, Catherine
             , 
           </span>
@@ -775,13 +777,14 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Li, Stephen"
         >
           <span
             className="citationAuthor"
           >
+             
             Li, Stephen
             , 
           </span>
@@ -789,13 +792,14 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Woo, Kai Hui"
         >
           <span
             className="citationAuthor"
           >
+             
             Woo, Kai Hui
             , 
           </span>
@@ -1637,13 +1641,14 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Wong, Kam Cheong"
         >
           <span
             className="citationAuthor"
           >
+             
             Wong, Kam Cheong
             , 
           </span>
@@ -1651,13 +1656,14 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Wong, Catherine"
         >
           <span
             className="citationAuthor"
           >
+             
             Wong, Catherine
             , 
           </span>
@@ -1665,13 +1671,14 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Li, Stephen"
         >
           <span
             className="citationAuthor"
           >
+             
             Li, Stephen
             , 
           </span>
@@ -1679,13 +1686,14 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Woo, Kai Hui"
         >
           <span
             className="citationAuthor"
           >
+             
             Woo, Kai Hui
             , 
           </span>

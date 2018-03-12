@@ -1759,13 +1759,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Azimi, Iman"
         >
           <span
             className="citationAuthor"
           >
+             
             Azimi, Iman
             , 
           </span>
@@ -1773,13 +1774,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Milevskiy, Michael J. G."
         >
           <span
             className="citationAuthor"
           >
+             
             Milevskiy, Michael J. G.
             , 
           </span>
@@ -1787,13 +1789,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Kaemmerer, Elke"
         >
           <span
             className="citationAuthor"
           >
+             
             Kaemmerer, Elke
             , 
           </span>
@@ -1801,13 +1804,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Turner, Dane"
         >
           <span
             className="citationAuthor"
           >
+             
             Turner, Dane
             , 
           </span>
@@ -1815,13 +1819,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_5"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Yapa, Kunsala T. D. S."
         >
           <span
             className="citationAuthor"
           >
+             
             Yapa, Kunsala T. D. S.
             , 
           </span>
@@ -1829,13 +1834,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_6"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Brown, Melissa A."
         >
           <span
             className="citationAuthor"
           >
+             
             Brown, Melissa A.
             , 
           </span>
@@ -1843,13 +1849,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_7"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Thompson, Erik W."
         >
           <span
             className="citationAuthor"
           >
+             
             Thompson, Erik W.
             , 
           </span>
@@ -1857,13 +1864,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_8"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Roberts-Thomson, Sarah J."
         >
           <span
             className="citationAuthor"
           >
+             
             Roberts-Thomson, Sarah J.
             , 
           </span>

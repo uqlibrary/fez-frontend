@@ -519,13 +519,14 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=""
           value="Jennifer Moffatt"
         >
           <span
             className="citationAuthor"
           >
+             
             Jennifer Moffatt
           </span>
         </CitationView>
@@ -1137,13 +1138,14 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=""
           value="Jennifer Moffatt"
         >
           <span
             className="citationAuthor"
           >
+             
             Jennifer Moffatt
           </span>
         </CitationView>

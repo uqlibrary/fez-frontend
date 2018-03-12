@@ -607,13 +607,14 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=""
           value="Vishal Asai"
         >
           <span
             className="citationAuthor"
           >
+             
             Vishal Asai
           </span>
         </CitationView>
@@ -1370,13 +1371,14 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=""
           value="Vishal Asai"
         >
           <span
             className="citationAuthor"
           >
+             
             Vishal Asai
           </span>
         </CitationView>
@@ -2137,13 +2139,14 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=""
           value="Vishal Asai"
         >
           <span
             className="citationAuthor"
           >
+             
             Vishal Asai
           </span>
         </CitationView>

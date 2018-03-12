@@ -635,13 +635,14 @@ exports[`VideoDocumentCitation renders  component with a mock espace record 1`] 
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=""
           value="Walters, S."
         >
           <span
             className="citationAuthor"
           >
+             
             Walters, S.
           </span>
         </CitationView>
