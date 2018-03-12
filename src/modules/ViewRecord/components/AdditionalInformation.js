@@ -108,16 +108,11 @@ export default class AdditionalInformation extends Component {
 
     renderString = (key, value) => {
         // get values for rek_ fields e.g. rek_title
-        let data = '';
-        if (key === 'rek_title') {
-            data = this.renderTitle(this.props.publication);
-        } else if (key === 'rek_date') {
-            data = this.formatPublicationDate(value);
-        } else {
-            data = value;
+        switch (key) {
+            case 'rek_title': return this.renderTitle(this.props.publication);
+            case 'rek_date': return this.formatPublicationDate(value);
+            default: return value;
         }
-
-        return data;
     }
 
     formatPublicationDate = (publicationDate) => {
@@ -135,13 +130,17 @@ export default class AdditionalInformation extends Component {
     renderJournalName = (journalName) => {
         const journalNameElement = <a href={pathConfig.list.journalName(journalName)}>{journalName}</a>;
         const sherpaRomeoData = this.getSherpaRomeo();
-        const sherpaRomeoColor = sherpaRomeoData ? sherpaRomeoData.color : null;
-        const sherpaRomeoLink = locale.global.sherpaRomeoLink.externalUrl.replace('[issn]', sherpaRomeoData.issn);
+        let sherpaRomeoElement = <span/>;
 
-        const sherpaRomeoElement = sherpaRomeoColor ?
-            (<ExternalLink className={`sherpaRomeo${sherpaRomeoColor[0].toUpperCase() + sherpaRomeoColor.slice(1)}`} href={sherpaRomeoLink} aria-label={locale.global.sherpaRomeoLink.ariaLabel}>
-                {locale.viewRecord.linkTexts.journalOpenAccessPolicyLink}
-            </ExternalLink>) : <span/>;
+        if (sherpaRomeoData) {
+            const sherpaRomeoColor = sherpaRomeoData.color;
+            const sherpaRomeoLink = locale.global.sherpaRomeoLink.externalUrl.replace('[issn]', sherpaRomeoData.issn);
+            sherpaRomeoElement =
+                      (<ExternalLink className={`sherpaRomeo${sherpaRomeoColor[0].toUpperCase() + sherpaRomeoColor.slice(1)}`}
+                          href={sherpaRomeoLink} aria-label={locale.global.sherpaRomeoLink.ariaLabel}>
+                          {locale.viewRecord.linkTexts.journalOpenAccessPolicyLink}
+                      </ExternalLink>);
+        }
 
         return (
             <span>
@@ -165,7 +164,8 @@ export default class AdditionalInformation extends Component {
     getSherpaRomeo = () => {
         const issnField = 'rek_issn';
         const colorField = 'rek_issn_lookup';
-        const issns = this.props.publication.fez_record_search_key_issn;
+        const colors = ['green', 'blue', 'yellow', 'white'];
+        const issns = this.props.publication.fez_record_search_key_issn.filter(issn => colors.includes(issn[colorField]));
         return issns && Array.isArray(issns) && issns.length > 0 ? {'issn': issns[0][issnField], 'color': issns[0][colorField]} : null;
     }
 
@@ -251,7 +251,7 @@ export default class AdditionalInformation extends Component {
                 if (subkey) {
                     data = Array.isArray(value) ? this.renderObjects(value, subkey) : this.renderObject(value, subkey);
                 } else {
-                    data = this.renderString(field, value, );
+                    data = this.renderString(field, value);
                 }
 
                 rows.push(this.renderRow(heading, data));
