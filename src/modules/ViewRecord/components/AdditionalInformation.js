@@ -7,8 +7,10 @@ import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {AuthorsCitationView, DoiCitationView} from '../../SharedComponents/PublicationCitation/components/citations/partials';
 import {ExternalLink} from '../../SharedComponents/ExternalLink';
 import {pathConfig} from 'config/routes';
+import ReactHtmlParser from 'react-html-parser';
 
 const moment = require('moment');
+const dompurify = require('dompurify');
 
 export default class AdditionalInformation extends Component {
     static propTypes = {
@@ -185,9 +187,7 @@ export default class AdditionalInformation extends Component {
     }
 
     renderHTML = (data) => {
-        return (
-            <span dangerouslySetInnerHTML={{__html: data}} />
-        );
+        return ReactHtmlParser(dompurify.sanitize(data));
     }
 
     // rek_issn_lookup returns sherpa romeo color

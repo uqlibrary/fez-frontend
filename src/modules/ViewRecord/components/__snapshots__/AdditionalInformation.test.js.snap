@@ -456,13 +456,7 @@ exports[`Additional Information Component  should render component with audio do
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Hearing the city Symposium Title 5: In conversation",
-              }
-            }
-          />
+          Hearing the city Symposium Title 5: In conversation
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -753,13 +747,11 @@ exports[`Additional Information Component  should render component with audio do
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Researcher: Food?<br /> Participant: (Traditional Language)",
-              }
-            }
+          Researcher: Food?
+          <br
+            key="1"
           />
+           Participant: (Traditional Language)
         </TableRowColumn>
       </TableRow>
     </TableBody>
@@ -1834,13 +1826,7 @@ exports[`Additional Information Component  should render component with book 1`]
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Addictions",
-              }
-            }
-          />
+          Addictions
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -2871,13 +2857,7 @@ exports[`Additional Information Component  should render component with book cha
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Non-coding RNAs in Mammary Gland Development and Disease",
-              }
-            }
-          />
+          Non-coding RNAs in Mammary Gland Development and Disease
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -4732,13 +4712,7 @@ exports[`Additional Information Component  should render component with conferen
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Alcohol use disorders, risky alcohol consumption and adverse events among chronic non-cancer pain patients receiving opioid therapy",
-              }
-            }
-          />
+          Alcohol use disorders, risky alcohol consumption and adverse events among chronic non-cancer pain patients receiving opioid therapy
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -5235,13 +5209,7 @@ exports[`Additional Information Component  should render component with conferen
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Experiences and Challenges in Sewers: Measurements and Hydrodynamics",
-              }
-            }
-          />
+          Experiences and Challenges in Sewers: Measurements and Hydrodynamics
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -6577,13 +6545,7 @@ exports[`Additional Information Component  should render component with conferen
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "The full conference proceedings bibliographic details are : LARRARTE, F., and CHANSON, H. (2008). \\"Experiences and Challenges in Sewers: Measurements and Hydrodynamics.\\" Proceedings of the International Meeting on Measurements and Hydraulics of Sewers, Summer School GEMCEA/LCPC, 19-21 Aug. 2008, Bouguenais, Hydraulic Model Report No. CH70/08, Div. of Civil Engineering, The University of Queensland, Brisbane, Australia, 114 pages (ISBN 9781864999280).",
-              }
-            }
-          />
+          The full conference proceedings bibliographic details are : LARRARTE, F., and CHANSON, H. (2008). "Experiences and Challenges in Sewers: Measurements and Hydrodynamics." Proceedings of the International Meeting on Measurements and Hydraulics of Sewers, Summer School GEMCEA/LCPC, 19-21 Aug. 2008, Bouguenais, Hydraulic Model Report No. CH70/08, Div. of Civil Engineering, The University of Queensland, Brisbane, Australia, 114 pages (ISBN 9781864999280).
         </TableRowColumn>
       </TableRow>
     </TableBody>
@@ -6952,13 +6914,7 @@ exports[`Additional Information Component  should render component with creative
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Sustainable home Brisbane",
-              }
-            }
-          />
+          Sustainable home Brisbane
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -7254,12 +7210,16 @@ exports[`Additional Information Component  should render component with data col
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "ARC DP120103498 - Genome sequencing has revolutionised biology, but for most microorganisms this revolution has not arrived because the majority cannot be grown in the laboratory. This project will address this grand challenge by targeted sequencing of single cells from the environment that will fill in many major gaps in the microbial tree of life.<br /><br />ARC DP1093175 - Microorganisms underpin life on Earth, but our understanding of their diversity and activity is limited by our inability to grow most of them in the laboratory. Recently, new techniques have emerged that allow access to the genetic information of all microorganisms by directly sequencing DNA and RNA from the environment. In this research we will further develop these frontier technologies, promoting this new area of science in Australia. We will apply these techniques to microbial communities involved in wastewater treatment in order to understand the interactions between microorganisms and the viruses that infect them. Understanding this interaction will have important implications for optimising these treatment processes. <br />",
-              }
-            }
+          ARC DP120103498 - Genome sequencing has revolutionised biology, but for most microorganisms this revolution has not arrived because the majority cannot be grown in the laboratory. This project will address this grand challenge by targeted sequencing of single cells from the environment that will fill in many major gaps in the microbial tree of life.
+          <br
+            key="1"
+          />
+          <br
+            key="2"
+          />
+          ARC DP1093175 - Microorganisms underpin life on Earth, but our understanding of their diversity and activity is limited by our inability to grow most of them in the laboratory. Recently, new techniques have emerged that allow access to the genetic information of all microorganisms by directly sequencing DNA and RNA from the environment. In this research we will further develop these frontier technologies, promoting this new area of science in Australia. We will apply these techniques to microbial communities involved in wastewater treatment in order to understand the interactions between microorganisms and the viruses that infect them. Understanding this interaction will have important implications for optimising these treatment processes. 
+          <br
+            key="4"
           />
         </TableRowColumn>
       </TableRow>
@@ -8580,13 +8540,7 @@ exports[`Additional Information Component  should render component with data col
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
-              }
-            }
-          />
+          CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -9153,13 +9107,7 @@ exports[`Additional Information Component  should render component with data col
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "CheckM is open source software available at http://ecogenomics.github.io/CheckM",
-              }
-            }
-          />
+          CheckM is open source software available at http://ecogenomics.github.io/CheckM
         </TableRowColumn>
       </TableRow>
     </TableBody>
@@ -9658,13 +9606,7 @@ exports[`Additional Information Component  should render component with design d
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Site setting and circumstance: A house and courtyard garden, Riga, Latvia",
-              }
-            }
-          />
+          Site setting and circumstance: A house and courtyard garden, Riga, Latvia
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -10478,13 +10420,7 @@ exports[`Additional Information Component  should render component with digilib 
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Conveyor, copper mine, Mount Morgan",
-              }
-            }
-          />
+          Conveyor, copper mine, Mount Morgan
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -11215,13 +11151,7 @@ exports[`Additional Information Component  should render component with generic 
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Numerical solution of partial differential equations",
-              }
-            }
-          />
+          Numerical solution of partial differential equations
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -12299,13 +12229,7 @@ exports[`Additional Information Component  should render component with image 1`
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Reference Desk, Duhig Building, University of Queensland Library, circa 1955. This area in the Duhig Building houses the AskIT desk and Ezones",
-              }
-            }
-          />
+          Reference Desk, Duhig Building, University of Queensland Library, circa 1955. This area in the Duhig Building houses the AskIT desk and Ezones
         </TableRowColumn>
       </TableRow>
     </TableBody>
@@ -12354,13 +12278,7 @@ exports[`Additional Information Component  should render component with journal 
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Management international review",
-              }
-            }
-          />
+          Management international review
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -14195,13 +14113,7 @@ exports[`Additional Information Component  should render component with journal 
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells",
-              }
-            }
-          />
+          TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -15126,13 +15038,7 @@ exports[`Additional Information Component  should render component with manuscri
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944",
-              }
-            }
-          />
+          Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -15791,13 +15697,7 @@ exports[`Additional Information Component  should render component with manuscri
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Letter dated 15 July 1944 from Thea Astley to Mr [Paul] Grano sending 9 poems for criticism. Poems not included in collection.",
-              }
-            }
-          />
+          Letter dated 15 July 1944 from Thea Astley to Mr [Paul] Grano sending 9 poems for criticism. Poems not included in collection.
         </TableRowColumn>
       </TableRow>
     </TableBody>
@@ -16978,13 +16878,7 @@ exports[`Additional Information Component  should render component with newspape
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells",
-              }
-            }
-          />
+          TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -17813,13 +17707,7 @@ exports[`Additional Information Component  should render component with patent 1
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Bacterial plaques staining composition for evaluating dental caries activity",
-              }
-            }
-          />
+          Bacterial plaques staining composition for evaluating dental caries activity
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -18042,13 +17930,7 @@ exports[`Additional Information Component  should render component with preprint
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Heavy Tails, Importance Sampling and Cross-Entropy",
-              }
-            }
-          />
+          Heavy Tails, Importance Sampling and Cross-Entropy
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -19090,13 +18972,7 @@ exports[`Additional Information Component  should render component with referenc
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Domestic Technologies",
-              }
-            }
-          />
+          Domestic Technologies
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -20095,13 +19971,7 @@ exports[`Additional Information Component  should render component with research
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Accelerated Apprenticeships: Apprentice, Employer and Teaching Staff Perceptions - 4",
-              }
-            }
-          />
+          Accelerated Apprenticeships: Apprentice, Employer and Teaching Staff Perceptions - 4
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -20250,13 +20120,7 @@ exports[`Additional Information Component  should render component with research
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "adsfasdfasd dsfsadf",
-              }
-            }
-          />
+          adsfasdfasd dsfsadf
         </TableRowColumn>
       </TableRow>
     </TableBody>
@@ -20579,13 +20443,7 @@ exports[`Additional Information Component  should render component with thesis 1
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "It's for love not money: Queensland graziers' perceptions of sustainable development",
-              }
-            }
-          />
+          It's for love not money: Queensland graziers' perceptions of sustainable development
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -20833,13 +20691,7 @@ exports[`Additional Information Component  should render component with thesis 1
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Pages requiring colour printing: 2, 76, 166, 210, 214, 215, 221, 222, 223, 224, 226. Pages in landscape format: 240-245. The author has given permission for this thesis to be made open access.",
-              }
-            }
-          />
+          Pages requiring colour printing: 2, 76, 166, 210, 214, 215, 221, 222, 223, 224, 226. Pages in landscape format: 240-245. The author has given permission for this thesis to be made open access.
         </TableRowColumn>
       </TableRow>
     </TableBody>
@@ -21220,13 +21072,7 @@ exports[`Additional Information Component  should render component with video do
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Video 12: 1) Discovery History and Geology of the Cannington Ag-Pb-Zn Deposit 2) Advances in Micro-Analytical Technologies — What a grain can tell you",
-              }
-            }
-          />
+          Video 12: 1) Discovery History and Geology of the Cannington Ag-Pb-Zn Deposit 2) Advances in Micro-Analytical Technologies — What a grain can tell you
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -21788,13 +21634,7 @@ exports[`Additional Information Component  should render component with working 
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Education, Employment and Social Inclusion within the European Union",
-              }
-            }
-          />
+          Education, Employment and Social Inclusion within the European Union
         </TableRowColumn>
       </TableRow>
       <TableRow
@@ -22186,13 +22026,7 @@ exports[`Additional Information Component  should render component with working 
           className="dataColumn"
           hoverable={false}
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "ISSN 1448-8563",
-              }
-            }
-          />
+          ISSN 1448-8563
         </TableRowColumn>
       </TableRow>
     </TableBody>

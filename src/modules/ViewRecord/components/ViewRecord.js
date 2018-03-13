@@ -6,10 +6,12 @@ import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
-
+import ReactHtmlParser from 'react-html-parser';
 import {locale} from 'locale';
 import PublicationDetails from './PublicationDetails';
 import AdditionalInformation from './AdditionalInformation';
+
+const dompurify = require('dompurify');
 
 export default class ViewRecord extends Component {
     static propTypes = {
@@ -63,7 +65,7 @@ export default class ViewRecord extends Component {
                 {
                     recordToView && (recordToView.rek_formatted_abstract || recordToView.rek_description) &&
                     <StandardCard title={locale.viewRecord.sections.abstract[recordToView.rek_display_type_lookup] || locale.viewRecord.sections.abstract.default}>
-                        <p dangerouslySetInnerHTML={{__html: recordToView.rek_formatted_abstract || recordToView.rek_description}} />
+                        {ReactHtmlParser(dompurify.sanitize(recordToView.rek_formatted_abstract || recordToView.rek_description))}
                     </StandardCard>
                 }
                 {
