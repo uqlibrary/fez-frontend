@@ -223,7 +223,18 @@ export const dataCollection = {
         "rek_doi_xsdmf_id": 16572,
         "rek_doi": "10.14264/uql.2016.841"
     },
-    "fez_record_search_key_end_date": null,
+    "fez_record_search_key_start_date": {
+        "rek_start_date_id": 8,
+        "rek_start_date_pid": "UQ:162308",
+        "rek_start_date_xsdmf_id": 12154,
+        "rek_start_date": "2005-01-05 00:00:00"
+    },
+    "fez_record_search_key_end_date": {
+        "rek_end_date_id": 8,
+        "rek_end_date_pid": "UQ:162308",
+        "rek_end_date_xsdmf_id": 12154,
+        "rek_end_date": "2005-01-05 00:00:00"
+    },
     "fez_record_search_key_fields_of_research": [
         {
             "rek_fields_of_research_id": 8831,
@@ -483,7 +494,16 @@ export const dataCollection = {
         "rek_rights_xsdmf_id": 16211,
         "rek_rights": "2015, The University of Queensland"
     },
-    "fez_record_search_key_seo_code": [],
+    "fez_record_search_key_seo_code": [
+        {
+            "rek_seo_code_id": 866,
+            "rek_seo_code_pid": "UQ:398336",
+            "rek_seo_code_xsdmf_id": null,
+            "rek_seo_code": 451600,
+            "rek_seo_code_order": 1,
+            "rek_seo_code_lookup": "970106 Expanding Knowledge in the Biological Sciences"
+        }
+    ],
     "fez_record_search_key_software_required": [
         {
             "rek_software_required_id": 156,
@@ -493,9 +513,18 @@ export const dataCollection = {
             "rek_software_required": "CheckM v0.9.4"
         }
     ],
-    "fez_record_search_key_start_date": null,
-    "fez_record_search_key_time_period_end_date": null,
-    "fez_record_search_key_time_period_start_date": null,
+    "fez_record_search_key_time_period_end_date": {
+        "rek_time_period_end_date_id": 867,
+        "rek_time_period_end_date_pid": "UQ:407731",
+        "rek_time_period_end_date_xsdmf_id": 16538,
+        "rek_time_period_end_date": "2009-01-01T00:00:00Z"
+    },
+    "fez_record_search_key_time_period_start_date": {
+        "rek_time_period_start_date_id": 965,
+        "rek_time_period_start_date_pid": "UQ:407731",
+        "rek_time_period_start_date_xsdmf_id": 16537,
+        "rek_time_period_start_date": "2001-01-01T00:00:00Z"
+    },
     "fez_record_search_key_type_of_data": [
         {
             "rek_type_of_data_id": 1111,
@@ -874,7 +903,8 @@ export const newspaperArticle = {
     ],
     "fez_record_search_key_total_pages": null,
     "fez_record_search_key_translated_newspaper": null,
-    "fez_record_search_key_translated_title": null
+    "fez_record_search_key_translated_title": null,
+    "rek_display_type_lookup": "Newspaper",
 };
 
 export const thesis = {
@@ -904,7 +934,7 @@ export const thesis = {
     "rek_genre_type_xsdmf_id": 7330,
     "rek_genre_type": "PhD Thesis",
     "rek_formatted_title_xsdmf_id": null,
-    "rek_formatted_title": null,
+    "rek_formatted_title": "It's for love not money: Queensland graziers' perceptions of sustainable development",
     "rek_formatted_abstract_xsdmf_id": null,
     "rek_formatted_abstract": null,
     "rek_depositor_affiliation_xsdmf_id": 12290,
@@ -1103,7 +1133,8 @@ export const thesis = {
             "rek_supervisor_id_order": 3
         }
     ],
-    "fez_record_search_key_translated_title": null
+    "fez_record_search_key_translated_title": null,
+    "rek_display_type_lookup": "Thesis",
 };
 
 export const conferenceProceedings = {
@@ -1463,7 +1494,8 @@ export const conferenceProceedings = {
     },
     "fez_record_search_key_translated_conference_name": null,
     "fez_record_search_key_translated_title": null,
-    "fez_record_search_key_volume_number": null
+    "fez_record_search_key_volume_number": null,
+    "rek_display_type_lookup": "Conference Proceedings",
 };
 
 export const digilibImage = {
@@ -1743,7 +1775,8 @@ export const digilibImage = {
             "rek_subcategory": "Mining equipment"
         }
     ],
-    "fez_record_search_key_surrounding_features": []
+    "fez_record_search_key_surrounding_features": [],
+    "rek_display_type_lookup": "Digilib Image",
 };
 
 export const workingPaper = {
@@ -2033,7 +2066,8 @@ export const workingPaper = {
         "rek_total_pages_xsdmf_id": 10747,
         "rek_total_pages": "23"
     },
-    "fez_record_search_key_translated_title": null
+    "fez_record_search_key_translated_title": null,
+    "rek_display_type_lookup": "Working Paper",
 };
 
 export const design = {
@@ -2370,6 +2404,18 @@ export const design = {
         "rek_project_name_xsdmf_id": 12165,
         "rek_project_name": "Site setting and circumstance: A house and courtyard garden, Riga, Latvia"
     },
+    "fez_record_search_key_start_date": {
+        "rek_start_date_id": 8,
+        "rek_start_date_pid": "UQ:162308",
+        "rek_start_date_xsdmf_id": 12154,
+        "rek_start_date": "2005-01-05 00:00:00"
+    },
+    "fez_record_search_key_end_date": {
+        "rek_end_date_id": 8,
+        "rek_end_date_pid": "UQ:162308",
+        "rek_end_date_xsdmf_id": 12154,
+        "rek_end_date": "2005-01-05 00:00:00"
+    },
     "fez_record_search_key_project_start_date": {
         "rek_project_start_date_id": 8,
         "rek_project_start_date_pid": "UQ:162308",
@@ -2426,7 +2472,8 @@ export const design = {
         "rek_total_pages_xsdmf_id": 12309,
         "rek_total_pages": "1 Design project"
     },
-    "fez_record_search_key_translated_title": null
+    "fez_record_search_key_translated_title": null,
+    "rek_display_type_lookup": "Design",
 };
 
 export const creativeWork = {
@@ -2679,7 +2726,8 @@ export const creativeWork = {
         "rek_total_pages_xsdmf_id": 11992,
         "rek_total_pages": "10"
     },
-    "fez_record_search_key_translated_title": null
+    "fez_record_search_key_translated_title": null,
+    "rek_display_type_lookup": "Creative Work",
 };
 
 export const departmentTechnicalReport = {
@@ -2889,7 +2937,8 @@ export const departmentTechnicalReport = {
         "rek_total_pages_xsdmf_id": 10777,
         "rek_total_pages": "75"
     },
-    "fez_record_search_key_translated_title": null
+    "fez_record_search_key_translated_title": null,
+    "rek_display_type_lookup": "Deparment Technical Report",
 };
 
 export const journalArticle = {
@@ -3440,12 +3489,72 @@ export const journalArticle = {
         "rek_ismemberof": "UQ:677356",
         "rek_ismemberof_order": 5
     }],
-    "fez_record_search_key_issn": [{
-        "rek_issn_id": null,
-        "rek_issn_pid": "UQ:676287",
-        "rek_issn": "1477-9137",
-        "rek_issn_order": 1
-    }, {"rek_issn_id": null, "rek_issn_pid": "UQ:676287", "rek_issn": "0021-9533", "rek_issn_order": 2}],
+    "fez_record_search_key_issn": [
+        {
+            "rek_issn_id": 5382905,
+            "rek_issn_pid": "UQ:676287",
+            "rek_issn_xsdmf_id": null,
+            "rek_issn": "1477-9137",
+            "rek_issn_order": 1,
+            "fez_journal_issns": {
+                "jni_id": 13071,
+                "jni_jnl_id": 7538,
+                "jni_issn": "1477-9137",
+                "jni_issn_order": 2,
+                "fez_journal": {
+                    "jnl_id": 7538,
+                    "jnl_journal_name": "Journal of Cell Science",
+                    "jnl_era_id": 2234,
+                    "jnl_era_year": 2010,
+                    "jnl_created_date": "2010-11-19 00:00:00",
+                    "jnl_updated_date": "2010-11-19 00:00:00",
+                    "jnl_rank": "A",
+                    "jnl_foreign_name": null
+                }
+            },
+            "fez_sherpa_romeo": {
+                "srm_id": 13764,
+                "srm_issn": "1477-9137",
+                "srm_xml": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<!DOCTYPE romeoapi SYSTEM \"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\">\n<romeoapi version=\"2.9.9\">\n  <header>\n    <parameters>\n      <parameter source=\"specified\">\n        <parametername>issn</parametername>\n        <parametervalue>1477-9137</parametervalue>\n      </parameter>\n      <parameter source=\"specified\">\n        <parametername>versions</parametername>\n        <parametervalue>all</parametervalue>\n      </parameter>\n      <parameter source=\"default\">\n        <parametername>showfunder</parametername>\n        <parametervalue>none</parametervalue>\n      </parameter>\n      <parameter source=\"default\">\n        <parametername>fIDnum</parametername>\n        <parametervalue>|</parametervalue>\n      </parameter>\n      <parameter source=\"default\">\n        <parametername>la</parametername>\n        <parametervalue>en</parametervalue>\n      </parameter>\n    </parameters>\n    <numhits>1</numhits>\n    <apicontrol>journal</apicontrol>\n    <outcome>singleJournal</outcome>\n    <message />\n    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>\n    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>\n    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>\n    <timestamp>30-Sep-2017:19:26:17</timestamp>\n  </header>\n  <journals>\n    <journal>\n      <jtitle>Journal of Cell Science</jtitle>\n      <issn>0021-9533</issn>\n      <zetocpub>Company of Biologists</zetocpub>\n      <romeopub>Company of Biologists</romeopub>\n    </journal>\n  </journals>\n  <publishers>\n    <publisher id=\"29\">\n      <name>Company of Biologists</name>\n      <alias />\n      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>\n      <preprints>\n        <prearchiving>can</prearchiving>\n        <prerestrictions />\n      </preprints>\n      <postprints>\n        <postarchiving>can</postarchiving>\n        <postrestrictions />\n      </postprints>\n      <pdfversion>\n        <pdfarchiving>can</pdfarchiving>\n        <pdfrestrictions />\n      </pdfversion>\n      <conditions>\n        <condition>On author's personal website immediately</condition>\n        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>\n        <condition>Authors retain copyright</condition>\n        <condition>Publisher's version/PDF may be used</condition>\n        <condition>Must link to publisher version</condition>\n        <condition>Non-commercial use</condition>\n        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>\n        <condition>Non-commercial use</condition>\n        <condition>Publisher last contacted on 30/03/2016</condition>\n      </conditions>\n      <mandates />\n      <paidaccess>\n        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>\n        <paidaccessname>Open Access</paidaccessname>\n        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>\n      </paidaccess>\n      <copyrightlinks>\n        <copyrightlink>\n          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>\n          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>\n        </copyrightlink>\n        <copyrightlink>\n          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>\n          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>\n        </copyrightlink>\n      </copyrightlinks>\n      <romeocolour>green</romeocolour>\n      <dateadded>2004-01-10 00:00:00</dateadded>\n      <dateupdated>2016-04-12 16:14:47</dateupdated>\n    </publisher>\n  </publishers>\n</romeoapi>\n",
+                "srm_journal_name": "Journal of Cell Science",
+                "srm_colour": "green",
+                "srm_date_updated": "2017-09-30 18:26:18"
+            },
+            "rek_issn_lookup": "green"
+        },
+        {
+            "rek_issn_id": 5382906,
+            "rek_issn_pid": "UQ:676287",
+            "rek_issn_xsdmf_id": null,
+            "rek_issn": "0021-9533",
+            "rek_issn_order": 2,
+            "fez_journal_issns": {
+                "jni_id": 13070,
+                "jni_jnl_id": 7538,
+                "jni_issn": "0021-9533",
+                "jni_issn_order": 1,
+                "fez_journal": {
+                    "jnl_id": 7538,
+                    "jnl_journal_name": "Journal of Cell Science",
+                    "jnl_era_id": 2234,
+                    "jnl_era_year": 2010,
+                    "jnl_created_date": "2010-11-19 00:00:00",
+                    "jnl_updated_date": "2010-11-19 00:00:00",
+                    "jnl_rank": "A",
+                    "jnl_foreign_name": null
+                }
+            },
+            "fez_sherpa_romeo": {
+                "srm_id": 13763,
+                "srm_issn": "0021-9533",
+                "srm_xml": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<!DOCTYPE romeoapi SYSTEM \"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\">\n<romeoapi version=\"2.9.9\">\n  <header>\n    <parameters>\n      <parameter source=\"specified\">\n        <parametername>issn</parametername>\n        <parametervalue>0021-9533</parametervalue>\n      </parameter>\n      <parameter source=\"specified\">\n        <parametername>versions</parametername>\n        <parametervalue>all</parametervalue>\n      </parameter>\n      <parameter source=\"default\">\n        <parametername>showfunder</parametername>\n        <parametervalue>none</parametervalue>\n      </parameter>\n      <parameter source=\"default\">\n        <parametername>fIDnum</parametername>\n        <parametervalue>|</parametervalue>\n      </parameter>\n      <parameter source=\"default\">\n        <parametername>la</parametername>\n        <parametervalue>en</parametervalue>\n      </parameter>\n    </parameters>\n    <numhits>1</numhits>\n    <apicontrol>journal</apicontrol>\n    <outcome>singleJournal</outcome>\n    <message />\n    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>\n    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>\n    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>\n    <timestamp>30-Sep-2017:16:12:52</timestamp>\n  </header>\n  <journals>\n    <journal>\n      <jtitle>Journal of Cell Science</jtitle>\n      <issn>0021-9533</issn>\n      <zetocpub>Company of Biologists</zetocpub>\n      <romeopub>Company of Biologists</romeopub>\n    </journal>\n  </journals>\n  <publishers>\n    <publisher id=\"29\">\n      <name>Company of Biologists</name>\n      <alias />\n      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>\n      <preprints>\n        <prearchiving>can</prearchiving>\n        <prerestrictions />\n      </preprints>\n      <postprints>\n        <postarchiving>can</postarchiving>\n        <postrestrictions />\n      </postprints>\n      <pdfversion>\n        <pdfarchiving>can</pdfarchiving>\n        <pdfrestrictions />\n      </pdfversion>\n      <conditions>\n        <condition>On author's personal website immediately</condition>\n        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>\n        <condition>Authors retain copyright</condition>\n        <condition>Publisher's version/PDF may be used</condition>\n        <condition>Must link to publisher version</condition>\n        <condition>Non-commercial use</condition>\n        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>\n        <condition>Non-commercial use</condition>\n        <condition>Publisher last contacted on 30/03/2016</condition>\n      </conditions>\n      <mandates />\n      <paidaccess>\n        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>\n        <paidaccessname>Open Access</paidaccessname>\n        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>\n      </paidaccess>\n      <copyrightlinks>\n        <copyrightlink>\n          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>\n          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>\n        </copyrightlink>\n        <copyrightlink>\n          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>\n          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>\n        </copyrightlink>\n      </copyrightlinks>\n      <romeocolour>green</romeocolour>\n      <dateadded>2004-01-10 00:00:00</dateadded>\n      <dateupdated>2016-04-12 16:14:47</dateupdated>\n    </publisher>\n  </publishers>\n</romeoapi>\n",
+                "srm_journal_name": "Journal of Cell Science",
+                "srm_colour": "green",
+                "srm_date_updated": "2017-09-30 15:12:52"
+            },
+            "rek_issn_lookup": "green"
+        }
+    ],
     "fez_record_search_key_issue_number": {
         "rek_issue_number_id": null,
         "rek_issue_number_pid": "UQ:676287",
@@ -3612,7 +3721,8 @@ export const journalArticle = {
         "rek_volume_number_id": null,
         "rek_volume_number_pid": "UQ:676287",
         "rek_volume_number": "130"
-    }
+    },
+    "rek_display_type_lookup" : "Journal Article"
 };
 
 export const bookChapter = {
@@ -3991,7 +4101,8 @@ export const bookChapter = {
         "rek_volume_number_id": null,
         "rek_volume_number_pid": "UQ:376215",
         "rek_volume_number": "886"
-    }
+    },
+    "rek_display_type_lookup": "Book Chapter",
 };
 
 export const book = {
@@ -4288,7 +4399,8 @@ export const book = {
     "fez_record_search_key_translated_proceedings_title": null,
     "fez_record_search_key_translated_title": null,
     "fez_record_search_key_type_of_data": [],
-    "fez_record_search_key_volume_number": null
+    "fez_record_search_key_volume_number": null,
+    "rek_display_type_lookup": "Book",
 };
 
 export const editedBook = {
@@ -4981,7 +5093,8 @@ export const conferencePaper = {
         "rek_volume_number_id": null,
         "rek_volume_number_pid": "UQ:347818",
         "rek_volume_number": "33"
-    }
+    },
+    "rek_display_type_lookup": "Conference Paper",
 };
 
 export const generic = {
@@ -5348,7 +5461,8 @@ export const generic = {
     "fez_record_search_key_translated_proceedings_title": null,
     "fez_record_search_key_translated_title": null,
     "fez_record_search_key_type_of_data": [],
-    "fez_record_search_key_volume_number": null
+    "fez_record_search_key_volume_number": null,
+    "rek_display_type_lookup": "Generic Document",
 };
 
 export const audioDocument = {
@@ -5407,8 +5521,15 @@ export const audioDocument = {
     "fez_record_search_key_acknowledgements":null,
     "fez_record_search_key_additional_notes":null,
     "fez_record_search_key_advisory_statement":null,
-    "fez_record_search_key_alternate_genre":[
-
+    "fez_record_search_key_alternate_genre": [
+        {
+            "rek_alternate_genre_id": 19123,
+            "rek_alternate_genre_pid": "UQ:151787",
+            "rek_alternate_genre_xsdmf_id": 16955,
+            "rek_alternate_genre": "453663",
+            "rek_alternate_genre_order": 1,
+            "rek_alternate_genre_lookup": "Conversation"
+        }
     ],
     "fez_record_search_key_alternative_title":[
 
@@ -5565,7 +5686,12 @@ export const audioDocument = {
     "fez_record_search_key_data_volume":null,
     "fez_record_search_key_date_available":null,
     "fez_record_search_key_date_photo_taken":null,
-    "fez_record_search_key_date_recorded":null,
+    "fez_record_search_key_date_recorded": {
+        "rek_date_recorded_id": 18812,
+        "rek_date_recorded_pid": "UQ:151787",
+        "rek_date_recorded_xsdmf_id": 16638,
+        "rek_date_recorded": "1963-10-17T00:00:00Z"
+    },
     "fez_record_search_key_date_scanned":null,
     "fez_record_search_key_doi":null,
     "fez_record_search_key_edition":null,
@@ -5681,7 +5807,13 @@ export const audioDocument = {
 
     ],
     "fez_record_search_key_length":null,
-    "fez_record_search_key_license":null,
+    "fez_record_search_key_license": {
+        "rek_license_id": 22340,
+        "rek_license_pid": "UQ:362394",
+        "rek_license_xsdmf_id": 16636,
+        "rek_license": 453611,
+        "rek_license_lookup": "Creative Commons Attribution noncommercial no derivatives"
+    },
     "fez_record_search_key_link":[
 
     ],
@@ -5797,7 +5929,12 @@ export const audioDocument = {
     "fez_record_search_key_time_period_start_date":null,
     "fez_record_search_key_total_chapters":null,
     "fez_record_search_key_total_pages":null,
-    "fez_record_search_key_transcript":null,
+    "fez_record_search_key_transcript": {
+        "rek_transcript_id": 19167,
+        "rek_transcript_pid": "UQ:362393",
+        "rek_transcript_xsdmf_id": 16626,
+        "rek_transcript": "Researcher: Food?<br /> Participant: (Traditional Language)"
+    },
     "fez_record_search_key_translated_book_title":null,
     "fez_record_search_key_translated_conference_name":null,
     "fez_record_search_key_translated_journal_name":null,
@@ -5807,7 +5944,8 @@ export const audioDocument = {
     "fez_record_search_key_type_of_data":[
 
     ],
-    "fez_record_search_key_volume_number":null
+    "fez_record_search_key_volume_number":null,
+    "rek_display_type_lookup": "Audio Document",
 };
 
 export const preprint = {
@@ -6089,7 +6227,8 @@ export const preprint = {
             "rek_subject": 230117,
             "rek_subject_order": 3
         }
-    ]
+    ],
+    "rek_display_type_lookup": "Preprint",
 };
 
 export const mockRecordToFix = {
@@ -6597,6 +6736,280 @@ export const mockRecordToFix = {
     }
 };
 
+export const referenceEntry = {
+    "rek_pid": "UQ:120546",
+    "rek_title_xsdmf_id": 10676,
+    "rek_title": "Domestic Technologies",
+    "rek_description_xsdmf_id": 11392,
+    "rek_description": "Offering extensive coverage, this Encyclopedia is a new reference that reflects the vibrant, diverse and evolving culture of modern Japan, spanning from the end of the Japanese Imperialist period in 1945 to the present day. Entries cover areas such as literature, film, architecture, food, health, political economy, religion and technology and they range from shorter definitions, histories or biographies to longer overview essays giving an in-depth treatment of major issues. With over 700 alphabetically arranged entries, this Encyclopedia will be an invaluable reference tool for students of Japanese and Asian Studies, as well as providing a fascinating insight into Japanese culture for the general reader. Suggestions for further reading, a comprehensive system of cross-referencing, a thematic contents list and an extensive index all help navigate the reader around the Encyclopedia and on to further study.",
+    "rek_display_type_xsdmf_id": 3673,
+    "rek_display_type": 272,
+    "rek_status_xsdmf_id": 3680,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": 9959,
+    "rek_date": "2001-11-29T00:00:00Z",
+    "rek_object_type_xsdmf_id": 3674,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 7578,
+    "rek_depositor": 1548,
+    "rek_created_date_xsdmf_id": 3677,
+    "rek_created_date": "2007-12-11T15:50:31Z",
+    "rek_updated_date_xsdmf_id": 3678,
+    "rek_updated_date": "2014-10-05T17:16:27Z",
+    "rek_file_downloads": 0,
+    "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Low, M.\" href=\"/list/author_id/923/\">Low, M.</a> (<span class=\"citation_date\">2001</span>) <a class=\"citation_title\" title=\"Click to view Reference Entry: Domestic Technologies\" href=\"/view/UQ:120546\">Domestic Technologies</a> in <span class=\"citation_contributor\"><span class=\"citation_contributor\">Sandra Buckley</span> and <span class=\"citation_contributor\">Low, Morris</span></span> (eds.) <i><span class=\"citation_parent_publication\">Encyclopedia of Contemporary Japanese Culture</span></i>.  <span class=\"citation_place_of_publication\">London</span>: <span class=\"citation_publisher\">Routledge</span>",
+    "rek_genre_xsdmf_id": 9961,
+    "rek_genre": "Reference Entry",
+    "rek_genre_type_xsdmf_id": null,
+    "rek_genre_type": null,
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": null,
+    "rek_formatted_abstract": null,
+    "rek_depositor_affiliation_xsdmf_id": 11881,
+    "rek_depositor_affiliation": 923,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 3679,
+    "rek_copyright": "on",
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_author": [
+        {
+            "rek_author_id": 29052079,
+            "rek_author_pid": "UQ:120546",
+            "rek_author_xsdmf_id": 9928,
+            "rek_author": "Low, M.",
+            "rek_author_order": 1
+        }
+    ],
+    "fez_record_search_key_author_affiliation_country": [],
+    "fez_record_search_key_author_affiliation_full_address": [],
+    "fez_record_search_key_author_affiliation_id": [],
+    "fez_record_search_key_author_affiliation_name": [],
+    "fez_record_search_key_author_id": [
+        {
+            "rek_author_id_id": 28420047,
+            "rek_author_id_pid": "UQ:120546",
+            "rek_author_id_xsdmf_id": 9923,
+            "rek_author_id": 923,
+            "rek_author_id_order": 1,
+            "rek_author_id_lookup": "Low, Morris"
+        }
+    ],
+    "fez_record_search_key_contributor": [
+        {
+            "rek_contributor_id": 3115541,
+            "rek_contributor_pid": "UQ:120546",
+            "rek_contributor_xsdmf_id": 9936,
+            "rek_contributor": "Sandra Buckley",
+            "rek_contributor_order": 1
+        },
+        {
+            "rek_contributor_id": 3115542,
+            "rek_contributor_pid": "UQ:120546",
+            "rek_contributor_xsdmf_id": 9936,
+            "rek_contributor": "Low, Morris",
+            "rek_contributor_order": 2
+        }
+    ],
+    "fez_record_search_key_contributor_id": [
+        {
+            "rek_contributor_id_id": 2324192,
+            "rek_contributor_id_pid": "UQ:120546",
+            "rek_contributor_id_xsdmf_id": 9931,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 1
+        },
+        {
+            "rek_contributor_id_id": 2324193,
+            "rek_contributor_id_pid": "UQ:120546",
+            "rek_contributor_id_xsdmf_id": 9931,
+            "rek_contributor_id": 923,
+            "rek_contributor_id_order": 2,
+            "rek_contributor_id_lookup": "Low, Morris"
+        }
+    ],
+    "fez_record_search_key_corresponding_country": [],
+    "fez_record_search_key_corresponding_email": [],
+    "fez_record_search_key_corresponding_name": [],
+    "fez_record_search_key_corresponding_organisation": [],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_date_available": null,
+    "fez_record_search_key_edition": null,
+    "fez_record_search_key_end_page": {
+        "rek_end_page_id": 5538675,
+        "rek_end_page_pid": "UQ:120546",
+        "rek_end_page_xsdmf_id": 9957,
+        "rek_end_page": "113"
+    },
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [],
+    "fez_record_search_key_grant_acronym": [],
+    "fez_record_search_key_grant_agency": [],
+    "fez_record_search_key_grant_agency_id": [],
+    "fez_record_search_key_grant_id": [],
+    "fez_record_search_key_grant_text": [],
+    "fez_record_search_key_herdc_code": null,
+    "fez_record_search_key_herdc_status": null,
+    "fez_record_search_key_isbn": [
+        {
+            "rek_isbn_id": 1068531,
+            "rek_isbn_pid": "UQ:120546",
+            "rek_isbn_xsdmf_id": 10834,
+            "rek_isbn": "0415143446",
+            "rek_isbn_order": 1
+        },
+        {
+            "rek_isbn_id": 1068532,
+            "rek_isbn_pid": "UQ:120546",
+            "rek_isbn_xsdmf_id": 10834,
+            "rek_isbn": "978-0-415-14344-8",
+            "rek_isbn_order": 2
+        }
+    ],
+    "fez_record_search_key_isi_loc": null,
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 11605058,
+            "rek_ismemberof_pid": "UQ:120546",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:3838",
+            "rek_ismemberof_order": 1,
+            "rek_ismemberof_lookup": "School of Languages and Cultures Publications"
+        },
+        {
+            "rek_ismemberof_id": 11605059,
+            "rek_ismemberof_pid": "UQ:120546",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:152266",
+            "rek_ismemberof_order": 2,
+            "rek_ismemberof_lookup": "Excellence in Research Australia (ERA) - Collection"
+        }
+    ],
+    "fez_record_search_key_issue_number": null,
+    "fez_record_search_key_keywords": [
+        {
+            "rek_keywords_id": 29295748,
+            "rek_keywords_pid": "UQ:120546",
+            "rek_keywords_xsdmf_id": 9941,
+            "rek_keywords": "Japanese culture",
+            "rek_keywords_order": 1
+        },
+        {
+            "rek_keywords_id": 29295749,
+            "rek_keywords_pid": "UQ:120546",
+            "rek_keywords_xsdmf_id": 9941,
+            "rek_keywords": "Popular culture - Japan - Encyclopedias",
+            "rek_keywords_order": 2
+        },
+        {
+            "rek_keywords_id": 29295750,
+            "rek_keywords_pid": "UQ:120546",
+            "rek_keywords_xsdmf_id": 9941,
+            "rek_keywords": "Japan - Civilization - 1945- - Encyclopedia",
+            "rek_keywords_order": 3
+        }
+    ],
+    "fez_record_search_key_language": [
+        {
+            "rek_language_id": 5267048,
+            "rek_language_pid": "UQ:120546",
+            "rek_language_xsdmf_id": 10673,
+            "rek_language": "eng",
+            "rek_language_order": 1
+        }
+    ],
+    "fez_record_search_key_notes": null,
+    "fez_record_search_key_parent_publication": {
+        "rek_parent_publication_id": 6241,
+        "rek_parent_publication_pid": "UQ:120546",
+        "rek_parent_publication_xsdmf_id": 10683,
+        "rek_parent_publication": "Encyclopedia of Contemporary Japanese Culture"
+    },
+    "fez_record_search_key_publisher": {
+        "rek_publisher_id": 4471265,
+        "rek_publisher_pid": "UQ:120546",
+        "rek_publisher_xsdmf_id": 10044,
+        "rek_publisher": "Routledge"
+    },
+    "fez_record_search_key_scopus_id": null,
+    "fez_record_search_key_start_page": {
+        "rek_start_page_id": 5609077,
+        "rek_start_page_pid": "UQ:120546",
+        "rek_start_page_xsdmf_id": 9956,
+        "rek_start_page": "112"
+    },
+    "fez_record_search_key_subject": [
+        {
+            "rek_subject_id": 9142777,
+            "rek_subject_pid": "UQ:120546",
+            "rek_subject_xsdmf_id": 9940,
+            "rek_subject": 430102,
+            "rek_subject_order": 1,
+            "rek_subject_lookup": "430102 History - Asian"
+        },
+        {
+            "rek_subject_id": 9142778,
+            "rek_subject_pid": "UQ:120546",
+            "rek_subject_xsdmf_id": 9940,
+            "rek_subject": 420212,
+            "rek_subject_order": 2,
+            "rek_subject_lookup": "420212 Japanese"
+        },
+        {
+            "rek_subject_id": 9142779,
+            "rek_subject_pid": "UQ:120546",
+            "rek_subject_xsdmf_id": 9940,
+            "rek_subject": 450647,
+            "rek_subject_order": 3,
+            "rek_subject_lookup": "751001 Languages and literature"
+        },
+        {
+            "rek_subject_id": 9142780,
+            "rek_subject_pid": "UQ:120546",
+            "rek_subject_xsdmf_id": 9940,
+            "rek_subject": 450041,
+            "rek_subject_order": 4,
+            "rek_subject_lookup": "M"
+        }
+    ],
+    "fez_record_search_key_total_pages": {
+        "rek_total_pages_id": 5522741,
+        "rek_total_pages_pid": "UQ:120546",
+        "rek_total_pages_xsdmf_id": 9963,
+        "rek_total_pages": "2"
+    },
+    "fez_record_search_key_translated_title": null,
+    "fez_record_search_key_volume_number": null,
+    "fez_record_search_key_issn": [],
+    "fez_matched_journals": [],
+    "fez_record_search_key_file_hashdataset": [],
+    "rek_status_lookup": "Published",
+    "rek_object_type_lookup": "Record",
+    "rek_wok_doc_type_lookup": null,
+    "rek_display_type_lookup": "Reference Entry",
+    "rek_scopus_doc_type_lookup": null,
+    "rek_pubmed_doc_type_lookup": null
+};
+
 export const researchReport = {
     "rek_pid":"UQ:684901",
     "rek_title_xsdmf_id":null,
@@ -6981,7 +7394,8 @@ export const researchReport = {
     "fez_record_search_key_type_of_data":[
 
     ],
-    "fez_record_search_key_volume_number":null
+    "fez_record_search_key_volume_number":null,
+    "rek_display_type_lookup": "Research Report",
 };
 
 export const seminarPaper = {
@@ -7190,7 +7604,8 @@ export const seminarPaper = {
             "rek_subject_order": 2
         }
     ],
-    "fez_record_search_key_total_pages": null
+    "fez_record_search_key_total_pages": null,
+    "rek_display_type_lookup": "Seminar Paper",
 };
 
 export const manuscript = {
@@ -7498,7 +7913,8 @@ export const manuscript = {
     },
     "fez_record_search_key_subject": [],
     "fez_record_search_key_transcript": null,
-    "fez_record_search_key_translated_title": null
+    "fez_record_search_key_translated_title": null,
+    "rek_display_type_lookup": "Manuscript",
 };
 
 export const imageDocument = {
@@ -7720,7 +8136,8 @@ export const imageDocument = {
         "rek_source": "Fryer Library University of Queensland Photograph Collection, UQFL466, Box 8, AG/P/108"
     },
     "fez_record_search_key_subject": [],
-    "fez_record_search_key_translated_title": null
+    "fez_record_search_key_translated_title": null,
+    "rek_display_type_lookup": "Image Document",
 };
 
 export const videoDocument = {
@@ -8117,7 +8534,8 @@ export const videoDocument = {
     "fez_record_search_key_type_of_data":[
 
     ],
-    "fez_record_search_key_volume_number":null
+    "fez_record_search_key_volume_number":null,
+    "rek_display_type_lookup": "Video Document",
 };
 
 export const journal = {
@@ -8550,7 +8968,8 @@ export const journal = {
         "rek_volume_number_pid":"UQ:186337",
         "rek_volume_number_xsdmf_id":null,
         "rek_volume_number":"45"
-    }
+    },
+    "rek_display_type_lookup": "Journal",
 };
 
 export const patent = {
@@ -8762,7 +9181,8 @@ export const patent = {
             "rek_subject_order": 3
         }
     ],
-    "fez_record_search_key_translated_title": null
+    "fez_record_search_key_translated_title": null,
+    "rek_display_type_lookup": "Patent",
 }
 
 export const publicationDetails = {

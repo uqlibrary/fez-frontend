@@ -105,7 +105,6 @@ export default {
                 fez_record_search_key_start_date: 'Collection start date',
                 fez_record_search_key_end_date: 'Collection end date',
                 fez_record_search_key_project_start_date: 'Project start date',
-                fez_record_search_key_project_end_date: 'Project end date',
                 fez_record_search_key_construction_date: 'Date of construction',
                 fez_record_search_key_date_photo_taken: 'Date photo taken',
                 fez_record_search_key_date_scanned: 'Date scanned',
@@ -347,20 +346,16 @@ export default {
                     order: 24
                 },
                 {
-                    field: 'fez_record_search_key_alternate_genre',
+                    field: 'fez_record_search_key_keywords',
                     order: 25
                 },
                 {
-                    field: 'fez_record_search_key_keywords',
+                    field: 'fez_record_search_key_advisory_statement',
                     order: 26
                 },
                 {
-                    field: 'fez_record_search_key_advisory_statement',
-                    order: 27
-                },
-                {
                     field: 'fez_record_search_key_acknowledgements',
-                    order: 28
+                    order: 27
                 },
                 {
                     field: 'fez_record_search_key_transcript',

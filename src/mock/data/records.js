@@ -4624,6 +4624,13 @@ export const record = {
             "rek_issn_lookup": "green"
         }
     ],
+    "fez_record_search_key_license": {
+        "rek_license_id": 25113,
+        "rek_license_pid": "UQ:396321",
+        "rek_license_xsdmf_id": null,
+        "rek_license": 453608,
+        "rek_license_lookup": "Creative Commons Attribution (only)"
+    },
     "fez_record_search_key_issue_number": {
         "rek_issue_number_id": 4565410,
         "rek_issue_number_pid": "UQ:396321",
@@ -4799,7 +4806,7 @@ export const record = {
     "rek_status_lookup": "Published",
     "rek_object_type_lookup": "Record",
     "rek_wok_doc_type_lookup": null,
-    "rek_display_type_lookup": "Journal Article",
+    "rek_display_type_lookup": "Data Collection",
     "rek_scopus_doc_type_lookup": null,
     "rek_pubmed_doc_type_lookup": null
 };

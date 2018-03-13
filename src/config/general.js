@@ -274,6 +274,33 @@ export const thesisSubmissionSubtypes = [
 export const OrgUnitsVocabId = 453703;
 export const FieldOfResearchVocabId = 451780;
 
+export const licenseLinks = {
+    453608: {
+        className: 'cc-by',
+        url: 'http://creativecommons.org/licenses/by/3.0/deed.en_US'
+    },
+    453609: {
+        className: 'cc-by-nd',
+        url: 'http://creativecommons.org/licenses/by-nd/3.0/deed.en_US'
+    },
+    453610: {
+        className: 'cc-by-nc',
+        url: 'http://creativecommons.org/licenses/by-nc/3.0/deed.en_US'
+    },
+    453611: {
+        className: 'cc-by-nc-nd',
+        url: 'http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US'
+    },
+    453612: {
+        className: 'cc-by-nc-sa',
+        url: 'http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US'
+    },
+    453613: {
+        className: 'cc-by-sa',
+        url: 'http://creativecommons.org/licenses/by-sa/3.0/deed.en_US'
+    }
+}
+
 // Default values for createNewRecord
 export const NEW_RECORD_DEFAULT_VALUES = {
     rek_object_type: 3,

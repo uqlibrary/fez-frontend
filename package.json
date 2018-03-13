@@ -178,6 +178,7 @@
       "enzyme"
     ],
     "collectCoverage": true,
+    "coverageReporters" : ["html", "text"],
     "modulePaths": [
       "<rootDir>/src"
     ],
