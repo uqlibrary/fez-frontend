@@ -20,7 +20,6 @@ import * as recordForms from './Forms';
 export default class PublicationForm extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
-        author: PropTypes.object,
         onFormSubmitSuccess: PropTypes.func.isRequired,
         onFormCancel: PropTypes.func.isRequired
     };

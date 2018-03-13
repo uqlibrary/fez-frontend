@@ -11,16 +11,9 @@ import * as actions from './actionTypes';
  * @param {object} data to be posted, refer to backend API
  * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
-export function createNewRecord(data, author) {
+export function createNewRecord(data) {
     return dispatch => {
         dispatch({type: actions.CREATE_RECORD_SAVING});
-
-        // Strip comments from new record api request, and store for later posting to issues api
-        let hasComments;
-        if(data.comments) {
-            hasComments = data.comments;
-            delete data.comments;
-        }
 
         // set default values, links
         const recordRequest = {
@@ -55,18 +48,6 @@ export function createNewRecord(data, author) {
             })
             .then(() =>(hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
             .then(() => (hasFilesToUpload ? patch(routes.EXISTING_RECORD_API({pid: newRecord.rek_pid}), recordPatch) : newRecord))
-            .then(()=> {
-                const transformedIssuesRecord = transformers.getNewRecordIssueRequest({
-                    publication: {
-                        rek_pid: newRecord.rek_pid
-                    },
-                    comments: hasComments,
-                    author: {
-                        aut_display_name: author.aut_display_name,
-                        aut_org_username: author.aut_org_username || author.aut_student_username || null
-                    }});
-                return hasComments ? post(routes.RECORDS_ISSUES_API({pid: newRecord.rek_pid}), transformedIssuesRecord) : newRecord;
-            })
             .then((response) => {
                 dispatch({
                     type: actions.CREATE_RECORD_SUCCESS,

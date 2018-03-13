@@ -148,7 +148,7 @@ export default class BookForm extends Component {
                         <div className="column">
                             <Field
                                 component={TextField}
-                                name="comments"
+                                name="fez_record_search_key_notes.rek_notes"
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth

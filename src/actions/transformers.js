@@ -18,10 +18,6 @@ const getIssuesRequest = (text) => ({issue: text});
 */
 export const getFixIssueRequest = pipe(getIssueValues, locale.issues.fixRecord, getIssuesRequest);
 
-/* getNewRecordIssueRequest - returns fix record issue request object for a new record with comments
-* @returns {Object} issue request
-*/
-export const getNewRecordIssueRequest = pipe(getIssueValues, locale.issues.newRecord, getIssuesRequest);
 
 /* getRecordLinkSearchKey - returns link object formatted for record request
 * NOTE: link description is required to save link
