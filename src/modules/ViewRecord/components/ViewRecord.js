@@ -6,7 +6,6 @@ import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
-import {PubmedCentralLink} from 'modules/SharedComponents/PubmedCentralLink';
 
 import {locale} from 'locale';
 import PublicationDetails from './PublicationDetails';
@@ -61,10 +60,6 @@ export default class ViewRecord extends Component {
         return (
             <StandardPage className="viewRecord" title={recordToView && recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
-                <StandardCard title={'Links'}>
-                    Include PubmedCentral link if available: <PubmedCentralLink pubmedCentralId={'PMC123232'} />
-                </StandardCard>
-                <StandardCard title={'Files'} />
                 {
                     recordToView && (recordToView.rek_formatted_abstract || recordToView.rek_description) &&
                     <StandardCard title={locale.viewRecord.sections.abstract[recordToView.rek_display_type_lookup] || locale.viewRecord.sections.abstract.default}>

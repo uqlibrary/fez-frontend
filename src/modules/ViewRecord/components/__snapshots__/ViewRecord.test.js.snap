@@ -7,19 +7,6 @@ exports[`Component ViewRecord  should render default props 1`] = `
   <withRouter(Connect(PublicationCitation))
     hideTitle={true}
   />
-  <StandardCard
-    className=""
-    title="Links"
-  >
-    Include PubmedCentral link if available: 
-    <PubmedCentralLink
-      pubmedCentralId="PMC123232"
-    />
-  </StandardCard>
-  <StandardCard
-    className=""
-    title="Files"
-  />
 </StandardPage>
 `;
 
@@ -447,19 +434,6 @@ exports[`Component ViewRecord  should render record view 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-  />
-  <StandardCard
-    className=""
-    title="Links"
-  >
-    Include PubmedCentral link if available: 
-    <PubmedCentralLink
-      pubmedCentralId="PMC123232"
-    />
-  </StandardCard>
-  <StandardCard
-    className=""
-    title="Files"
   />
   <AdditionalInformation
     publication={
@@ -1657,19 +1631,6 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-  />
-  <StandardCard
-    className=""
-    title="Links"
-  >
-    Include PubmedCentral link if available: 
-    <PubmedCentralLink
-      pubmedCentralId="PMC123232"
-    />
-  </StandardCard>
-  <StandardCard
-    className=""
-    title="Files"
   />
   <AdditionalInformation
     publication={

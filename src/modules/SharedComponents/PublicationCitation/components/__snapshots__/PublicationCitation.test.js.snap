@@ -13,13 +13,13 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
       <h3
         className="publicationTitle"
       >
-        <a
-          href="#"
+        <Link
           onClick={[Function]}
-          onKeyPress={[Function]}
+          replace={false}
+          to="/records/UQ:41878"
         >
           Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-        </a>
+        </Link>
       </h3>
       <JournalArticleCitation
         publication={
@@ -898,13 +898,13 @@ exports[`PublicationCitation  should render component with default actions 1`] =
       <h3
         className="publicationTitle"
       >
-        <a
-          href="#"
+        <Link
           onClick={[Function]}
-          onKeyPress={[Function]}
+          replace={false}
+          to="/records/UQ:41878"
         >
           Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-        </a>
+        </Link>
       </h3>
       <JournalArticleCitation
         publication={
@@ -1743,13 +1743,13 @@ exports[`PublicationCitation  should render component with default item 1`] = `
       <h3
         className="publicationTitle"
       >
-        <a
-          href="#"
+        <Link
           onClick={[Function]}
-          onKeyPress={[Function]}
+          replace={false}
+          to="/records/UQ:41878"
         >
           Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-        </a>
+        </Link>
       </h3>
       <JournalArticleCitation
         publication={
@@ -2561,13 +2561,13 @@ exports[`PublicationCitation  should render component with publication from mult
       <h3
         className="publicationTitle"
       >
-        <a
-          href="#"
+        <Link
           onClick={[Function]}
-          onKeyPress={[Function]}
+          replace={false}
+          to="/records/UQ:41878"
         >
           Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-        </a>
+        </Link>
       </h3>
       <JournalArticleCitation
         publication={
@@ -3404,9 +3404,6 @@ exports[`PublicationCitation  should render component without a title 1`] = `
     <div
       className="column"
     >
-      <h3
-        className="publicationTitle"
-      />
       <JournalArticleCitation
         publication={
           Object {
