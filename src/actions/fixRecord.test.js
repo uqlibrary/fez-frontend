@@ -183,7 +183,7 @@ describe('Fix record actions', () => {
         it('dispatches expected actions - fixing edited book record', async () => {
             const testInput = {
                 publication: {
-                    ...mockData.record,
+                    ...mockData.mockRecordToFix,
                     fez_record_search_key_contributor_id: [
                         {
                             rek_contributor_id: 123
