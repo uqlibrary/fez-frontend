@@ -299,7 +299,7 @@ export const licenseLinks = {
         className: 'cc-by-sa',
         url: 'http://creativecommons.org/licenses/by-sa/3.0/deed.en_US'
     }
-}
+};
 
 // Default values for createNewRecord
 export const NEW_RECORD_DEFAULT_VALUES = {
