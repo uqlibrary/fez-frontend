@@ -109,7 +109,7 @@ export default class AdditionalInformation extends Component {
     renderString = (key, value) => {
         // get values for rek_ fields e.g. rek_title
         switch (key) {
-            case 'rek_title': return this.renderTitle(this.props.publication);
+            case 'rek_title': return this.renderTitle();
             case 'rek_date': return this.formatPublicationDate(value);
             default: return value;
         }
@@ -150,10 +150,9 @@ export default class AdditionalInformation extends Component {
         );
     }
 
-    renderTitle = (publication) => {
-        return (
-            <span dangerouslySetInnerHTML={{__html: publication.rek_formatted_title ? publication.rek_formatted_title : publication.rek_title}} />
-        );
+    renderTitle = () => {
+        const {publication} = this.props;
+        return this.renderHTML(publication.rek_formatted_title ? publication.rek_formatted_title : publication.rek_title);
     }
 
     renderContributors = (publication) => {
@@ -202,11 +201,11 @@ export default class AdditionalInformation extends Component {
         const colorField = 'rek_issn_lookup';
         const colors = ['green', 'blue', 'yellow', 'white'];
         const issns = this.props.publication.fez_record_search_key_issn.filter(issn => colors.includes(issn[colorField]));
-        return issns && Array.isArray(issns) && issns.length > 0 ? {'issn': issns[0][issnField], 'color': issns[0][colorField]} : null;
+        return issns.length > 0 ? {'issn': issns[0][issnField], 'color': issns[0][colorField]} : null;
     }
 
     formatPublicationDate = (publicationDate) => {
-        const headings = locale.viewRecord.headings;
+        const {headings} = locale.viewRecord;
         const displayTypeHeadings = headings[this.props.publication.rek_display_type_lookup] ? headings[this.props.publication.rek_display_type_lookup] : [];
         const publicationDateFormatConfig = 'rek_date_format';
         const dateFormat = displayTypeHeadings[publicationDateFormatConfig] ? displayTypeHeadings[publicationDateFormatConfig] : headings[publicationDateFormatConfig];
