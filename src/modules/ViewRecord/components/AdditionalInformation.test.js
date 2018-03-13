@@ -18,6 +18,7 @@ describe('Additional Information Component ', () => {
     it('should render component with journal article', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('.sherpaRomeoGreen').length).toEqual(1);
     });
 
     it('should render component with journal', () => {
@@ -33,6 +34,7 @@ describe('Additional Information Component ', () => {
     it('should render component with audio document', () => {
         const wrapper = setup({publication: records.audioDocument});
         expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('.license.cc-by-nc-nd').length).toEqual(1);
     });
 
     it('should render component with book', () => {
