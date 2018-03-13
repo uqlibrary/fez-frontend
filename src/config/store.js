@@ -6,7 +6,6 @@ import rootReducer from '../reducer';
 import Immutable from 'immutable';
 import thunk from 'redux-thunk';
 
-// Raven
 import Raven from 'raven-js';
 import createRavenMiddleware from 'raven-for-redux';
 
