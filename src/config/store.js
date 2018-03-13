@@ -27,7 +27,6 @@ const getStore = () => {
                 thunk,
                 createRavenMiddleware(Raven, {
                     environment: process.env.REACT_APP_ENVIRONMENT,
-                    debug: true,
                 })
             ),
         ),
