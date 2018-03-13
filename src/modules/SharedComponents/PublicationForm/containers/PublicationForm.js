@@ -9,9 +9,9 @@ import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscard
 
 const FORM_NAME = 'PublicationForm';
 
-const onSubmit = (values, dispatch) => {
+const onSubmit = (values, dispatch, props) => {
     // set default values for a new unapproved record
-    return dispatch(createNewRecord({...values.toJS()}))
+    return dispatch(createNewRecord({...values.toJS()}, props.author))
         .then(() => {
             // once this promise is resolved form is submitted successfully and will call parent container
             // reported bug to redux-form:
@@ -64,6 +64,7 @@ let PublicationFormContainer = reduxForm({
 
 const mapStateToProps = (state) => {
     return {
+        author: state.get('accountReducer').author,
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({})
     };
