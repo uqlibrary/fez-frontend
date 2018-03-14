@@ -19,7 +19,7 @@ describe('Grant Information Component ', () => {
 
         // first grant table would have 4 rows, agency, agency id, grant id and text
         expect(wrapper.find('Table.grantInformation').at(0).find('TableRow').length).toEqual(4);
-        // first grant table would have 3 rows, agency, agency id and grant id
+        // second grant table would have 3 rows, agency, agency id and grant id
         expect(wrapper.find('Table.grantInformation').at(1).find('TableRow').length).toEqual(3);
     });
 
