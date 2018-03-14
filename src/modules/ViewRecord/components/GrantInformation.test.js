@@ -15,6 +15,12 @@ describe('Grant Information Component ', () => {
     it('should render component', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('Table.grantInformation').length).toEqual(3);
+
+        // first grant table would have 4 rows, agency, agency id, grant id and text
+        expect(wrapper.find('Table.grantInformation').at(0).find('TableRow').length).toEqual(4);
+        // first grant table would have 3 rows, agency, agency id and grant id
+        expect(wrapper.find('Table.grantInformation').at(1).find('TableRow').length).toEqual(3);
     });
 
     it('should render component with empty publication', () => {
