@@ -17,7 +17,6 @@ import {locale} from 'locale';
 
 export default class RecordsSearchResults extends React.Component {
     static propTypes = {
-        author: PropTypes.object,
         publicationsList: PropTypes.array,
         loadingSearch: PropTypes.bool,
         loadingPublicationSources: PropTypes.object,
@@ -81,8 +80,6 @@ export default class RecordsSearchResults extends React.Component {
                 return true;
             })
             .map(item => (item.rek_pid));
-        console.log('unclaimablePublicationsList');
-        console.log(unclaimablePublicationsList);
 
         const unclaimable = [
             {
@@ -91,9 +88,6 @@ export default class RecordsSearchResults extends React.Component {
                 primary: false
             }
         ];
-
-        console.log('unclaimable');
-        console.log(unclaimable);
 
         return (
             <div className="columns searchWrapper">
