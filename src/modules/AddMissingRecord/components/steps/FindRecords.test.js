@@ -1,12 +1,8 @@
-import {shallow} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
+import FindRecords from './FindRecords';
 import Immutable from 'immutable';
 
-import FindRecords from './FindRecords';
-
-function setup(values) {
-    return shallow(<FindRecords {...values}/>);
+function setup(testProps, isShallow = true) {
+    return getElement(FindRecords, testProps, isShallow);
 }
 
 describe('Search record', () => {

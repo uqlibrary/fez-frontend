@@ -2,8 +2,6 @@
 @import '~uqlibrary-react-toolbox/sass/index';
 // Frontend specific variables override toolbox defaults if defined
 @import "./variables";
-// Import the fez-frontend modules styles
-@import './components';
 // Various fixes and hacks to make MUI work
 @import './muifixes';
 // Typography
@@ -14,3 +12,7 @@
 @import "./charts";
 // SVG Icons
 @import "./icons";
+// Import the fez-frontend modules styles
+@import './components';
+// Print styles
+@import "./print";

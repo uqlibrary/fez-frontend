@@ -12,13 +12,13 @@ exports[`VideoDocumentForm renders  component 1`] = `
             <b>
               Place of publication:
             </b>
-             Please enter the geographical location for the publisher or producer of the work, i.e. city, country
+             Type the geographical location for the publisher or producer of the work, i.e. city, country
           </p>
           <p>
             <b>
               Publication date:
             </b>
-             Please enter the date recorded on the work, where available. For online recordings or broadcasts, enter the date first publicly presented or released. 
+             Type the date recorded on the work, where available. For online recordings or broadcasts, enter the date first publicly presented or released. 
           </p>
         </div>,
         "title": "Video information",
@@ -78,7 +78,7 @@ exports[`VideoDocumentForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Publisher"
           fullWidth={true}
-          hintText="Please enter the name of the publisher or producer of the work."
+          hintText="Type the name of the publisher or producer of the work."
           name="fez_record_search_key_publisher.rek_publisher"
           type="text"
         />
@@ -113,7 +113,7 @@ exports[`VideoDocumentForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Abstract"
           fullWidth={true}
-          hintText="Please provide an abstract or summary of the work."
+          hintText="Provide an abstract or summary of the work."
           multiLine={true}
           name="rek_description"
           rows={3}
@@ -124,17 +124,10 @@ exports[`VideoDocumentForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Creators",
-      }
-    }
     title="Creators"
   >
     <div>
-      This is the author or creator of the work, e.g. producer or performer (if self-produced). Please enter creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.
+      Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name once from the list of creators or contributors.
     </div>
     <Field
       className="requiredField"
@@ -145,9 +138,28 @@ exports[`VideoDocumentForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButton": "Add creator",
+              "descriptionStep1": <div>
+                <span
+                  className="authorSteps"
+                >
+                  Step 1 of 2
+                </span>
+                 - Please 
+                <b>
+                  add to a list of creators below
+                </b>
+                , in the format and order that they are published.
+              </div>,
+              "descriptionStep1NoStep2": <div>
+                Please 
+                <b>
+                  add to a list of creators below
+                </b>
+                , in the format and order that they are published.
+              </div>,
               "identifierLabel": "UQ identifier (if available)",
-              "nameAsPublishedHint": "Please type the name exactly as published",
-              "nameAsPublishedLabel": "Creator's name as published",
+              "nameAsPublishedHint": "Type the name exactly as published",
+              "nameAsPublishedLabel": "Enter each creator's name as published (eg. Smith, John)",
             },
           },
           "header": Object {
@@ -160,6 +172,18 @@ exports[`VideoDocumentForm renders  component 1`] = `
                 "confirmationMessage": "Are you sure you want to delete all items?",
                 "confirmationTitle": "Delete all",
               },
+              "descriptionStep2": <div>
+                <span
+                  className="authorSteps"
+                >
+                  Step 2 of 2
+                </span>
+                 - Please 
+                <b>
+                  select your name
+                </b>
+                 from the list below (if applicable).
+              </div>,
               "identifierColumn": "UQ identifier",
               "nameColumn": "Creator's name as published",
               "reorderColumn": "Reorder items",
@@ -188,7 +212,10 @@ exports[`VideoDocumentForm renders  component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
+              "selectHint": "Select this creator ([name]) to assign it as you",
+              "selectedHint": "This is you",
               "suffix": " listed creator",
+              "unselectedHint": "Select this to confirm this creator is you",
             },
           },
         }
@@ -202,15 +229,13 @@ exports[`VideoDocumentForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Please enter contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.",
+        "text": "This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.",
         "title": "Contributors",
       }
     }
     title="Contributors"
   >
-    <div>
-      Provide a list of contributors for this publication
-    </div>
+    <div />
     <Field
       component={[Function]}
       disabled={false}
@@ -219,9 +244,28 @@ exports[`VideoDocumentForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButton": "Add contributor",
+              "descriptionStep1": <div>
+                <span
+                  className="authorSteps"
+                >
+                  Step 1 of 2
+                </span>
+                 - Please 
+                <b>
+                  add to a list of contributors below
+                </b>
+                , in the format and order that they are published.
+              </div>,
+              "descriptionStep1NoStep2": <div>
+                Please 
+                <b>
+                  add to a list of contributors below
+                </b>
+                , in the format and order that they are published.
+              </div>,
               "identifierLabel": "UQ identifier (if available)",
-              "nameAsPublishedHint": "Please type the name exactly as published",
-              "nameAsPublishedLabel": "Contributor's name as published",
+              "nameAsPublishedHint": "Type the name exactly as published",
+              "nameAsPublishedLabel": "Enter each contributor's name as published (eg. Smith, John)",
             },
           },
           "header": Object {
@@ -234,6 +278,18 @@ exports[`VideoDocumentForm renders  component 1`] = `
                 "confirmationMessage": "Are you sure you want to delete all items?",
                 "confirmationTitle": "Delete all",
               },
+              "descriptionStep2": <div>
+                <span
+                  className="authorSteps"
+                >
+                  Step 2 of 2
+                </span>
+                 - Please 
+                <b>
+                  select your name
+                </b>
+                 from the list below (if applicable).
+              </div>,
               "identifierColumn": "UQ identifier",
               "nameColumn": "Contributor's name as published",
               "reorderColumn": "Reorder items",
@@ -262,7 +318,10 @@ exports[`VideoDocumentForm renders  component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
+              "selectHint": "Select this contributor ([name]) to assign it as you",
+              "selectedHint": "This is you",
               "suffix": " listed contributor",
+              "unselectedHint": "Select this to confirm this contributor is you",
             },
           },
         }
@@ -273,13 +332,6 @@ exports[`VideoDocumentForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "text...",
-        "title": "Optional information",
-      }
-    }
     title="Optional information"
   >
     <div
@@ -293,7 +345,7 @@ exports[`VideoDocumentForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          hintText="Please add any additional information here."
+          hintText="Add any additional information here."
           multiLine={true}
           name="fez_record_search_key_notes.rek_notes"
           rows={1}

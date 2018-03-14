@@ -1,4 +1,4 @@
-import {AutoSuggestField} from 'uqlibrary-react-toolbox';
+import {AutoSuggestField} from 'uqlibrary-react-toolbox/build/AutoSuggestField';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
 
@@ -11,7 +11,8 @@ const mapStateToProps = (state, props) => {
         allowFreeText: true,
         onChange: props.input.onChange,
         async: true,
-        errorText: props.meta ? props.meta.error : null
+        errorText: props.meta ? props.meta.error : null,
+        selectedValue: props.input ? props.input.value : null
     };
 };
 

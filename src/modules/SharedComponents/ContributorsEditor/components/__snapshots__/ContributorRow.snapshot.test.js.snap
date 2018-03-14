@@ -1,334 +1,134 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContributorRow renders  a row with index and contributor set calls delete function 1`] = `
-<ContributorRow
-  canMoveDown={false}
-  canMoveUp={false}
-  contributor={
-    Object {
-      "nameAsPublished": "A. Smith",
-    }
-  }
-  disabled={false}
-  disabledContributorAssignment={false}
-  index={0}
-  locale={
-    Object {
-      "deleteHint": "Remove this record",
-      "deleteRecordConfirmation": Object {
+exports[`Component ContributorRow  Row should be clickable when showContributorAssignment set to true 1`] = `
+<div
+  className="contributorsRow datalist datalist-row "
+  id={0}
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
         "cancelButtonLabel": "No",
         "confirmButtonLabel": "Yes",
         "confirmationMessage": "Are you sure you want to delete this record?",
         "confirmationTitle": "Delete record",
-      },
-      "moveDownHint": "Move record down the order",
-      "moveUpHint": "Move record up the order",
-      "ordinalData": Array [
-        "First",
-        "Second",
-        "Third",
-        "Fourth",
-        "Fifth",
-        "Sixth",
-        "Seventh",
-        "Eighth",
-        "Ninth",
-        "Tenth",
-      ],
-      "suffix": " listed contributor",
-    }
-  }
-  onDelete={[Function]}
-  showContributorAssignment={false}
-  showIdentifierLookup={false}
->
-  <div
-    className="columns is-gapless is-mobile contributorsRow datalist datalist-row"
-  >
-    <ConfirmDialogBox
-      hideCancelButton={false}
-      locale={
-        Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure you want to delete this record?",
-          "confirmationTitle": "Delete record",
-        }
       }
-      onAction={[Function]}
-      onRef={[Function]}
-    >
-      <Dialog
-        actions={
-          Array [
-            <div
-              className="columns dialog-actions ConfirmDialogBox-actions"
-            >
-              <div
-                className="column is-hidden-mobile"
-              />
-              <div
-                className="column is-narrow"
-              >
-                <RaisedButton
-                  className="ConfirmDialogBox-actions-cancel"
-                  disabled={false}
-                  fullWidth={true}
-                  label="No"
-                  labelPosition="after"
-                  onTouchTap={[Function]}
-                  primary={false}
-                  secondary={false}
-                />
-              </div>
-              <div
-                className="column is-narrow"
-              >
-                <RaisedButton
-                  className="ConfirmDialogBox-actions-confirm"
-                  disabled={false}
-                  fullWidth={true}
-                  keyboardFocused={true}
-                  label="Yes"
-                  labelPosition="after"
-                  onTouchTap={[Function]}
-                  primary={false}
-                  secondary={true}
-                />
-              </div>
-              <div
-                className="is-clearfix"
-              />
-            </div>,
-          ]
-        }
-        autoDetectWindowHeight={true}
-        autoScrollBodyContent={false}
-        modal={true}
-        open={false}
-        repositionOnUpdate={true}
-        title="Delete record"
-      >
-        <RenderToLayer
-          open={true}
-          render={[Function]}
-          useLayerForClickAway={false}
-        />
-      </Dialog>
-    </ConfirmDialogBox>
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <div
+    className="columns is-gapless is-mobile"
+  >
     <div
-      className="column datalist-text"
+      className="column no-overflow"
     >
-      <span
-        className="contributorName"
+      <div
+        aria-label="Select this record (J. Smith) to assign it to you"
+        className="columns is-gapless contributorDetails"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
       >
-        A. Smith
-      </span>
-      <span
-        className="contributorSubtitle datalist-text-subtitle"
-      >
-        First  listed contributor
-      </span>
-    </div>
-    <div
-      className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
-    />
-    <div
-      className="column is-narrow contributorDelete datalist-buttons"
-    >
-      <IconButton
-        className="contributorDelete"
-        disableTouchRipple={false}
-        disabled={false}
-        iconStyle={Object {}}
-        onTouchTap={[Function]}
-        tooltip="Remove this record"
-        tooltipPosition="bottom-center"
-        touch={false}
-      >
-        <EnhancedButton
-          centerRipple={true}
-          className="contributorDelete"
-          containerElement="button"
-          disableTouchRipple={false}
-          disabled={false}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onKeyboardFocus={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOut={[Function]}
-          onTouchStart={[Function]}
-          onTouchTap={[Function]}
-          style={
-            Object {
-              "boxSizing": "border-box",
-              "fontSize": 0,
-              "height": 48,
-              "overflow": "visible",
-              "padding": 12,
-              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-              "width": 48,
-            }
-          }
-          tabIndex={0}
-          type="button"
+        <div
+          className="column is-narrow is-hidden-mobile"
         >
-          <button
-            className="contributorDelete"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
+          <FontIcon
+            className="authorIcon material-icons"
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
-            onMouseOut={[Function]}
-            onTouchStart={[Function]}
-            onTouchTap={[Function]}
-            style={
-              Object {
-                "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
-                "background": "none",
-                "border": 10,
-                "boxSizing": "border-box",
-                "cursor": "pointer",
-                "display": "inline-block",
-                "fontFamily": "Roboto, sans-serif",
-                "fontSize": 0,
-                "fontWeight": "inherit",
-                "height": 48,
-                "margin": 0,
-                "muiPrepared": true,
-                "outline": "none",
-                "overflow": "visible",
-                "padding": 12,
-                "position": "relative",
-                "textDecoration": "none",
-                "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                "verticalAlign": null,
-                "width": 48,
-                "zIndex": 1,
-              }
-            }
-            tabIndex={0}
-            type="button"
           >
-            <TouchRipple
-              abortOnScroll={true}
-              centerRipple={true}
+            person_outline
+          </FontIcon>
+        </div>
+        <div
+          className="column datalist-text contributor"
+        >
+          <div
+            className="contributorName no-overflow"
+          >
+            <div
+              className="columns is-gapless is-mobile"
             >
               <div
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchStart={[Function]}
+                className="column is-narrow name"
               >
-                <Tooltip
-                  horizontalPosition="center"
-                  label="Remove this record"
-                  show={false}
-                  style={
-                    Object {
-                      "boxSizing": "border-box",
-                    }
-                  }
-                  touch={false}
-                  verticalPosition="bottom"
-                >
-                  <div
-                    style={
-                      Object {
-                        "borderRadius": 2,
-                        "boxSizing": "border-box",
-                        "color": "#ffffff",
-                        "fontFamily": "Roboto, sans-serif",
-                        "fontSize": "10px",
-                        "left": 24,
-                        "lineHeight": "22px",
-                        "muiPrepared": true,
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "padding": "0 8px",
-                        "position": "absolute",
-                        "right": null,
-                        "top": -10000,
-                        "transition": "top 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        "userSelect": "none",
-                        "zIndex": 3000,
-                      }
-                    }
-                  >
-                    <div
-                      style={
-                        Object {
-                          "backgroundColor": "transparent",
-                          "borderRadius": "50%",
-                          "left": "50%",
-                          "muiPrepared": true,
-                          "position": "absolute",
-                          "top": 0,
-                          "transform": "translate(-50%, -50%)",
-                          "transition": "width 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, height 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, backgroundColor 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        }
-                      }
-                    />
-                    <span
-                      style={
-                        Object {
-                          "muiPrepared": true,
-                          "position": "relative",
-                          "whiteSpace": "nowrap",
-                        }
-                      }
-                    >
-                      Remove this record
-                    </span>
-                  </div>
-                </Tooltip>
-                <FontIcon
-                  className="material-icons deleteIcon"
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={Object {}}
-                >
-                  <span
-                    className="material-icons deleteIcon"
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    style={
-                      Object {
-                        "color": "rgba(0, 0, 0, 0.87)",
-                        "display": "inline-block",
-                        "fontSize": 24,
-                        "muiPrepared": true,
-                        "position": "relative",
-                        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        "userSelect": "none",
-                      }
-                    }
-                  >
-                    delete
-                  </span>
-                </FontIcon>
+                J. Smith
               </div>
-            </TouchRipple>
-          </button>
-        </EnhancedButton>
-      </IconButton>
+            </div>
+          </div>
+          <div
+            className="contributorSubtitle datalist-text-subtitle"
+          >
+            First  listed contributor
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="column is-narrow"
+    >
+      <div
+        className="columns is-gapless contributorActions"
+      >
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
+        <div
+          className="column is-narrow contributorDelete datalist-buttons"
+        >
+          <IconButton
+            aria-label="Remove this record"
+            className="contributorDelete"
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onTouchTap={[Function]}
+            tooltip="Remove this record"
+            tooltipPosition="bottom-left"
+            touch={false}
+          >
+            <FontIcon
+              className="material-icons deleteIcon"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              delete
+            </FontIcon>
+          </IconButton>
+        </div>
+      </div>
     </div>
   </div>
-</ContributorRow>
+</div>
 `;
 
-exports[`ContributorRow renders  a row with index and contributor set, renders only name and delete button 1`] = `
+exports[`Component ContributorRow  Row should not be clickable when showContributorAssignment set to false 1`] = `
 <div
-  className="columns is-gapless is-mobile contributorsRow datalist datalist-row"
+  className="contributorsRow datalist datalist-row "
+  id={0}
 >
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -344,50 +144,104 @@ exports[`ContributorRow renders  a row with index and contributor set, renders o
     onRef={[Function]}
   />
   <div
-    className="column datalist-text"
+    className="columns is-gapless is-mobile"
   >
-    <span
-      className="contributorName"
+    <div
+      className="column no-overflow"
     >
-      A. Smith
-    </span>
-    <span
-      className="contributorSubtitle datalist-text-subtitle"
-    >
-      First  listed contributor
-    </span>
-  </div>
-  <div
-    className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
-  />
-  <div
-    className="column is-narrow contributorDelete datalist-buttons"
-  >
-    <IconButton
-      className="contributorDelete"
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onTouchTap={[Function]}
-      tooltip="Remove this record"
-      tooltipPosition="bottom-center"
-      touch={false}
-    >
-      <FontIcon
-        className="material-icons deleteIcon"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <div
+        className="columns is-gapless contributorDetails is-mobile"
       >
-        delete
-      </FontIcon>
-    </IconButton>
+        <div
+          className="column is-narrow is-hidden-mobile"
+        >
+          <FontIcon
+            className="authorIcon material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            person_outline
+          </FontIcon>
+        </div>
+        <div
+          className="column datalist-text contributor"
+        >
+          <div
+            className="contributorName no-overflow"
+          >
+            J. Smith
+          </div>
+          <div
+            className="contributorSubtitle datalist-text-subtitle"
+          >
+            First  listed contributor
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="column is-narrow"
+    >
+      <div
+        className="columns is-gapless contributorActions"
+      >
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
+        <div
+          className="column is-narrow contributorDelete datalist-buttons"
+        >
+          <IconButton
+            aria-label="Remove this record"
+            className="contributorDelete"
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onTouchTap={[Function]}
+            tooltip="Remove this record"
+            tooltipPosition="bottom-left"
+            touch={false}
+          >
+            <FontIcon
+              className="material-icons deleteIcon"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              delete
+            </FontIcon>
+          </IconButton>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
 
-exports[`ContributorRow renders  a row with index and contributor set, renders reorder buttons, contributor assignment, and delete button 1`] = `
+exports[`Component ContributorRow  a row with index and contributor set, renders only name and delete button 1`] = `
 <div
-  className="columns is-gapless is-mobile contributorsRow datalist datalist-row"
+  className="contributorsRow datalist datalist-row "
+  id={0}
 >
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -403,101 +257,104 @@ exports[`ContributorRow renders  a row with index and contributor set, renders r
     onRef={[Function]}
   />
   <div
-    className="column is-1-desktop is-1-tablet is-3-mobile contributorIdentifier datalist-text"
+    className="columns is-gapless is-mobile"
   >
-    <Checkbox
-      checkedIcon={<ToggleRadioButtonChecked />}
-      className="contributorAssignment"
-      disabled={false}
-      labelPosition="right"
-      name="contributorAssignment"
-      onCheck={[Function]}
-      uncheckedIcon={<ToggleRadioButtonUnchecked />}
-      value={0}
-    />
-  </div>
-  <div
-    className="column datalist-text"
-  >
-    <span
-      className="contributorName"
+    <div
+      className="column no-overflow"
     >
-      A. Smith
-    </span>
-    <span
-      className="contributorSubtitle datalist-text-subtitle"
-    >
-      First  listed contributor
-    </span>
-  </div>
-  <div
-    className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
-  >
-    <IconButton
-      className="reorderUp"
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onTouchTap={[Function]}
-      tooltip="Move record up the order"
-      tooltipPosition="bottom-center"
-      touch={false}
-    >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <div
+        className="columns is-gapless contributorDetails is-mobile"
       >
-        keyboard_arrow_up
-      </FontIcon>
-    </IconButton>
-    <IconButton
-      className="reorderDown"
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onTouchTap={[Function]}
-      tooltip="Move record down the order"
-      tooltipPosition="bottom-center"
-      touch={false}
+        <div
+          className="column is-narrow is-hidden-mobile"
+        >
+          <FontIcon
+            className="authorIcon material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            person_outline
+          </FontIcon>
+        </div>
+        <div
+          className="column datalist-text contributor"
+        >
+          <div
+            className="contributorName no-overflow"
+          >
+            A. Smith
+          </div>
+          <div
+            className="contributorSubtitle datalist-text-subtitle"
+          >
+            First  listed contributor
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="column is-narrow"
     >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <div
+        className="columns is-gapless contributorActions"
       >
-        keyboard_arrow_down
-      </FontIcon>
-    </IconButton>
-  </div>
-  <div
-    className="column is-narrow contributorDelete datalist-buttons"
-  >
-    <IconButton
-      className="contributorDelete"
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onTouchTap={[Function]}
-      tooltip="Remove this record"
-      tooltipPosition="bottom-center"
-      touch={false}
-    >
-      <FontIcon
-        className="material-icons deleteIcon"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        delete
-      </FontIcon>
-    </IconButton>
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
+        <div
+          className="column is-narrow contributorDelete datalist-buttons"
+        >
+          <IconButton
+            aria-label="Remove this record"
+            className="contributorDelete"
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onTouchTap={[Function]}
+            tooltip="Remove this record"
+            tooltipPosition="bottom-left"
+            touch={false}
+          >
+            <FontIcon
+              className="material-icons deleteIcon"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              delete
+            </FontIcon>
+          </IconButton>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
 
-exports[`ContributorRow renders  a row with index and contributor with author details set, contributor author details, and delete button 1`] = `
+exports[`Component ContributorRow  a row with index and contributor set, renders reorder buttons, contributor assignment, and delete button 1`] = `
 <div
-  className="columns is-gapless is-mobile contributorsRow datalist datalist-row"
+  className="contributorsRow datalist datalist-row "
+  id={0}
 >
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -513,52 +370,380 @@ exports[`ContributorRow renders  a row with index and contributor with author de
     onRef={[Function]}
   />
   <div
-    className="column datalist-text"
+    className="columns is-gapless is-mobile"
   >
-    <span
-      className="contributorName"
+    <div
+      className="column no-overflow"
     >
-      J. Smith
-    </span>
-    <span
-      className="contributorSubtitle datalist-text-subtitle"
+      <div
+        aria-label="Select this record (J. Smith) to assign it to you"
+        className="columns is-gapless contributorDetails"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+      >
+        <div
+          className="column is-narrow is-hidden-mobile"
+        >
+          <FontIcon
+            className="authorIcon material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            person_outline
+          </FontIcon>
+        </div>
+        <div
+          className="column datalist-text contributor"
+        >
+          <div
+            className="contributorName no-overflow"
+          >
+            <div
+              className="columns is-gapless is-mobile"
+            >
+              <div
+                className="column is-narrow name"
+              >
+                J. Smith
+              </div>
+            </div>
+          </div>
+          <div
+            className="contributorSubtitle datalist-text-subtitle"
+          >
+            First  listed contributor
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="column is-narrow"
     >
-      First  listed contributor
-    </span>
+      <div
+        className="columns is-gapless contributorActions"
+      >
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
+          <IconButton
+            aria-label="Move record up the order"
+            className="reorderUp"
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onTouchTap={[Function]}
+            tooltip="Move record up the order"
+            tooltipPosition="bottom-left"
+            touch={false}
+          >
+            <FontIcon
+              className="material-icons"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              keyboard_arrow_up
+            </FontIcon>
+          </IconButton>
+        </div>
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
+          <IconButton
+            aria-label="Move record down the order"
+            className="reorderDown"
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onTouchTap={[Function]}
+            tooltip="Move record down the order"
+            tooltipPosition="bottom-left"
+            touch={false}
+          >
+            <FontIcon
+              className="material-icons"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              keyboard_arrow_down
+            </FontIcon>
+          </IconButton>
+        </div>
+        <div
+          className="column is-narrow contributorDelete datalist-buttons"
+        >
+          <IconButton
+            aria-label="Remove this record"
+            className="contributorDelete"
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onTouchTap={[Function]}
+            tooltip="Remove this record"
+            tooltipPosition="bottom-left"
+            touch={false}
+          >
+            <FontIcon
+              className="material-icons deleteIcon"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              delete
+            </FontIcon>
+          </IconButton>
+        </div>
+      </div>
+    </div>
   </div>
-  <div
-    className="column is-3-desktop is-3-tablet is-5-mobile contributorIdentifier datalist-text"
-  >
-    <strong>
-       
-    </strong>
-    <br />
-    <small />
-  </div>
-  <div
-    className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+</div>
+`;
+
+exports[`Component ContributorRow  a row with index and contributor with author details set and set as selected 1`] = `
+<div
+  className="contributorsRow datalist datalist-row selected"
+  id={0}
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this record?",
+        "confirmationTitle": "Delete record",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
   />
   <div
-    className="column is-narrow contributorDelete datalist-buttons"
+    className="columns is-gapless is-mobile"
   >
-    <IconButton
-      className="contributorDelete"
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onTouchTap={[Function]}
-      tooltip="Remove this record"
-      tooltipPosition="bottom-center"
-      touch={false}
+    <div
+      className="column no-overflow"
     >
-      <FontIcon
-        className="material-icons deleteIcon"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <div
+        className="columns is-gapless contributorDetails is-mobile"
       >
-        delete
-      </FontIcon>
-    </IconButton>
+        <div
+          className="column is-narrow is-hidden-mobile"
+        >
+          <FontIcon
+            className="authorIcon material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            person_outline
+          </FontIcon>
+        </div>
+        <div
+          className="column datalist-text contributor"
+        >
+          <div
+            className="contributorName no-overflow"
+          />
+          <div
+            className="contributorSubtitle datalist-text-subtitle"
+          >
+            First  listed contributor
+          </div>
+        </div>
+        <div
+          className="column contributorIdentifier datalist-text is-hidden-mobile"
+        >
+          <div
+            className="identifierName"
+          >
+             
+          </div>
+          <div
+            className="identifierSubtitle datalist-text-subtitle"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="column is-narrow"
+    >
+      <div
+        className="columns is-gapless contributorActions"
+      >
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
+        <div
+          className="column is-narrow contributorDelete datalist-buttons"
+        >
+          <IconButton
+            aria-label="Remove this record"
+            className="contributorDelete"
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onTouchTap={[Function]}
+            tooltip="Remove this record"
+            tooltipPosition="bottom-left"
+            touch={false}
+          >
+            <FontIcon
+              className="material-icons deleteIcon"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              delete
+            </FontIcon>
+          </IconButton>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component ContributorRow  a row with index and contributor with author details set, contributor author details, and delete button 1`] = `
+<div
+  className="contributorsRow datalist datalist-row "
+  id={0}
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this record?",
+        "confirmationTitle": "Delete record",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <div
+    className="columns is-gapless is-mobile"
+  >
+    <div
+      className="column no-overflow"
+    >
+      <div
+        className="columns is-gapless contributorDetails is-mobile"
+      >
+        <div
+          className="column is-narrow is-hidden-mobile"
+        >
+          <FontIcon
+            className="authorIcon material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            person_outline
+          </FontIcon>
+        </div>
+        <div
+          className="column datalist-text contributor"
+        >
+          <div
+            className="contributorName no-overflow"
+          >
+            J. Smith
+          </div>
+          <div
+            className="contributorSubtitle datalist-text-subtitle"
+          >
+            First  listed contributor
+          </div>
+        </div>
+        <div
+          className="column contributorIdentifier datalist-text is-hidden-mobile"
+        >
+          <div
+            className="identifierName"
+          >
+            Mr
+             
+            Christopher Christoff
+          </div>
+          <div
+            className="identifierSubtitle datalist-text-subtitle"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="column is-narrow"
+    >
+      <div
+        className="columns is-gapless contributorActions"
+      >
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
+          <div
+            style={
+              Object {
+                "height": "50px",
+                "width": "50px",
+              }
+            }
+          />
+        </div>
+        <div
+          className="column is-narrow contributorDelete datalist-buttons"
+        >
+          <IconButton
+            aria-label="Remove this record"
+            className="contributorDelete"
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onTouchTap={[Function]}
+            tooltip="Remove this record"
+            tooltipPosition="bottom-left"
+            touch={false}
+          >
+            <FontIcon
+              className="material-icons deleteIcon"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              delete
+            </FontIcon>
+          </IconButton>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;

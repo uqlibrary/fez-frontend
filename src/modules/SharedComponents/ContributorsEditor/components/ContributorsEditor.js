@@ -1,13 +1,13 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
-import {Alert} from 'uqlibrary-react-toolbox';
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import Infinite from 'react-infinite';
 
-export class ContributorsEditor extends Component {
+export class ContributorsEditor extends React.PureComponent {
     static propTypes = {
         showIdentifierLookup: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
@@ -36,6 +36,10 @@ export class ContributorsEditor extends Component {
             isCurrentAuthorSelected: false,
             errorMessage: ''
         };
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props !== nextProps || this.state !== nextState;
     }
 
     componentWillUpdate(nextProps, nextState) {
@@ -137,7 +141,6 @@ export class ContributorsEditor extends Component {
                 {...(this.props.locale && this.props.locale.row ? this.props.locale.row : {})}
                 onContributorAssigned={this.assignContributor} />
         ));
-
         return (
             <div className={this.props.className}>
                 {
@@ -148,11 +151,12 @@ export class ContributorsEditor extends Component {
                         type="warning" />
                 }
                 <ContributorForm
-                    errorText={this.props.meta && this.props.meta.dirty ? this.props.meta.error : ''}
                     onAdd={this.addContributor}
                     showIdentifierLookup={this.props.showIdentifierLookup}
                     {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
-                    disabled={this.props.disabled} />
+                    disabled={this.props.disabled}
+                    showContributorAssignment={this.props.showContributorAssignment}
+                />
                 {
                     this.state.contributors.length > 0 &&
                     <ContributorRowHeader
@@ -160,16 +164,26 @@ export class ContributorsEditor extends Component {
                         {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
                         showIdentifierLookup={this.props.showIdentifierLookup}
                         disabled={this.props.disabled}
-                        showContributorAssignment={this.props.showContributorAssignment} />
+                        showContributorAssignment={this.props.showContributorAssignment}
+                        isInfinite={this.state.contributors.length > 3}
+                    />
                 }
                 {
-                    this.state.contributors.length > 0 &&
-                    <Infinite containerHeight={195}
-                        elementHeight={65}
-                        threshold={130}
-                        className="authors-infinite">
-                        {renderContributorsRows}
-                    </Infinite>
+                    this.state.contributors.length > 3 ?
+                        <Infinite containerHeight={195}
+                            elementHeight={65}
+                            threshold={130}
+                            className="authors-infinite">
+                            {renderContributorsRows}
+                        </Infinite>
+                        :
+                        <div>{renderContributorsRows.map(item => item)}</div>
+                }
+                {
+                    this.props.meta && this.props.meta.error &&
+                    <div className="validationErrorMessage">
+                        {this.props.meta.error}
+                    </div>
                 }
             </div>
         );
@@ -178,7 +192,7 @@ export class ContributorsEditor extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        author: state.get('accountReducer').author
+        author: state && state.get('accountReducer') ? state.get('accountReducer').author : null
     };
 };
 

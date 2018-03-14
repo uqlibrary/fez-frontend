@@ -1,8 +1,9 @@
 import {connect} from 'react-redux';
-import {reduxForm, getFormValues, stopSubmit} from 'redux-form/immutable'; // SubmissionError
+import {reduxForm, getFormValues, stopSubmit} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import PublicationSearchForm from '../components/PublicationSearchForm';
-import {validation, locale} from 'config';
+import {validation} from 'config';
+import {locale} from 'locale';
 
 const FORM_NAME = 'PublicationSearchForm';
 

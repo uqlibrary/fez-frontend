@@ -1,24 +1,35 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
 
-import {TextField, StandardCard, ListEditorField, PartialDateField} from 'uqlibrary-react-toolbox';
+import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {PartialDateField} from 'uqlibrary-react-toolbox/build/PartialDate';
+import {ListEditorField} from 'uqlibrary-react-toolbox/build/ListEditor';
+
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {PublicationSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
-import {validation, locale} from 'config';
-import PropTypes from 'prop-types';
+import {validation} from 'config';
+import {locale} from 'locale';
+import {default as formLocale} from 'locale/publicationForm';
 
 export default class BookForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
-        subtypeVocabId: PropTypes.number
-    }
+        subtypeVocabId: PropTypes.number,
+        formValues: PropTypes.object
+    };
 
     constructor(props) {
         super(props);
     }
 
     render() {
-        const txt = locale.forms.publicationForm.book;
+        const txt = formLocale.book;
+        const editors = this.props.formValues && this.props.formValues.get('editors');
+        const editorSelected = !!editors && editors.filter((editor) => editor.selected).length > 0;
+        const authors = this.props.formValues && this.props.formValues.get('authors');
+        const authorSelected = !!authors && authors.filter((author) => author.selected).length > 0;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
@@ -90,21 +101,19 @@ export default class BookForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                    <div>{txt.authors.description}</div>
                     <Field
                         component={ContributorsEditorField}
                         name="authors"
                         locale={txt.authors.field}
-                        showContributorAssignment
+                        showContributorAssignment={!editorSelected}
                         className="requiredField"
                         disabled={this.props.submitting} />
                 </StandardCard>
 
                 <StandardCard title={txt.editors.title} help={txt.editors.help}>
-                    <div>{txt.editors.description}</div>
                     <Field
                         component={ContributorsEditorField}
-                        showContributorAssignment
+                        showContributorAssignment={!authorSelected}
                         name="editors"
                         locale={txt.editors.field}
                         disabled={this.props.submitting} />

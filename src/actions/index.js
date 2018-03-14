@@ -7,4 +7,5 @@ export * from './search';
 export * from './publications';
 export * from './claimPublications';
 export * from './fixRecord';
+export * from './viewRecord';
 export * from './controlledVocabularies';

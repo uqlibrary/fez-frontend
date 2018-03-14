@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import AutoComplete from 'material-ui/AutoComplete';
 import TextField from 'material-ui/TextField';
@@ -8,15 +8,16 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as actions from 'actions/authors';
 
-export class ContributorForm extends Component {
+export class ContributorForm extends React.PureComponent {
     static propTypes = {
-        authorsList: PropTypes.array,
+        authorsList: PropTypes.array.isRequired,
         onAdd: PropTypes.func.isRequired,
         showIdentifierLookup: PropTypes.bool,
         errorText: PropTypes.string,
         actions: PropTypes.object.isRequired,
         locale: PropTypes.object,
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        showContributorAssignment: PropTypes.bool
     };
 
     static defaultProps = {
@@ -24,9 +25,11 @@ export class ContributorForm extends Component {
             nameAsPublishedLabel: 'Name as published',
             nameAsPublishedHint: 'Please type the name exactly as published',
             identifierLabel: 'UQ identifier (if available)',
-            addButton: 'Add author'
+            addButton: 'Add author',
+            descriptionStep1: (<div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>),
+            descriptionStep1NoStep2: (<div>Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>)
         }
-    }
+    };
 
     constructor(props) {
         super(props);
@@ -36,6 +39,10 @@ export class ContributorForm extends Component {
             uqIdentifier: '',
             contributor: {}
         };
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props !== nextProps || this.state !== nextState;
     }
 
     _addContributor = (event) => {
@@ -85,53 +92,56 @@ export class ContributorForm extends Component {
 
     render() {
         const autoCompleteDataFormat = {text: 'displayName', value: 'aut_id'};
-
+        const description = this.props.showContributorAssignment ? this.props.locale.descriptionStep1 : this.props.locale.descriptionStep1NoStep2;
         return (
-            <div className="columns">
-                <div className="column">
-                    <TextField
-                        fullWidth
-                        errorText={this.props.errorText}
-                        ref="nameAsPublishedField"
-                        id="nameAsPublishedField"
-                        floatingLabelText={this.props.locale.nameAsPublishedLabel}
-                        hintText={this.props.locale.nameAsPublishedHint}
-                        value={this.state.nameAsPublished}
-                        onChange={this._onNameChanged}
-                        onKeyPress={this._addContributor}
-                        disabled={this.props.disabled}
-                        className="input-long-hint"/>
-                </div>
-                {
-                    this.props.showIdentifierLookup &&
-                    <div className="column">
-                        <AutoComplete
-                            disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
-                            listStyle={{maxHeight: 200, overflow: 'auto'}}
-                            filter={() => true}
-                            ref="identifierField"
-                            id="identifierField"
-                            floatingLabelText={this.props.locale.identifierLabel}
-                            hintText={this.props.locale.identifierLabel}
-                            dataSource={this.props.authorsList}
-                            dataSourceConfig={autoCompleteDataFormat}
-                            openOnFocus
+            <div className="contributorForm">
+                {description}
+                <div className="columns">
+                    <div className="column contributor">
+                        <TextField
                             fullWidth
-                            animated={false}
-                            searchText={this.state.uqIdentifier}
-                            onUpdateInput={this._onUQIdentifierChanged}
-                            onNewRequest={this._onUQIdentifierSelected}
+                            ref="nameAsPublishedField"
+                            id="nameAsPublishedField"
+                            floatingLabelText={this.props.locale.nameAsPublishedLabel}
+                            hintText={this.props.locale.nameAsPublishedHint}
+                            value={this.state.nameAsPublished}
+                            onChange={this._onNameChanged}
+                            onKeyPress={this._addContributor}
+                            disabled={this.props.disabled}
+                            className="mui-long-labels-fix"
                         />
                     </div>
-                }
-                <div className="column is-narrow">
-                    <RaisedButton
-                        className="is-mui-spacing-button"
-                        fullWidth
-                        primary
-                        label={this.props.locale.addButton}
-                        disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
-                        onClick={this._addContributor} />
+                    {
+                        this.props.showIdentifierLookup &&
+                        <div className="column identifier">
+                            <AutoComplete
+                                disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
+                                listStyle={{maxHeight: 200, overflow: 'auto'}}
+                                filter={() => true}
+                                ref="identifierField"
+                                id="identifierField"
+                                floatingLabelText={this.props.locale.identifierLabel}
+                                hintText={this.props.locale.identifierLabel}
+                                dataSource={this.props.authorsList}
+                                dataSourceConfig={autoCompleteDataFormat}
+                                openOnFocus
+                                fullWidth
+                                animated={false}
+                                searchText={this.state.uqIdentifier}
+                                onUpdateInput={this._onUQIdentifierChanged}
+                                onNewRequest={this._onUQIdentifierSelected}
+                            />
+                        </div>
+                    }
+                    <div className="column is-narrow">
+                        <RaisedButton
+                            className="is-mui-spacing-button"
+                            fullWidth
+                            primary
+                            label={this.props.locale.addButton}
+                            disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
+                            onClick={this._addContributor} />
+                    </div>
                 </div>
             </div>
         );
@@ -140,7 +150,7 @@ export class ContributorForm extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        authorsList: state.get('authorsReducer') ? state.get('authorsReducer').authorsList : []
+        authorsList: state && state.get('authorsReducer') ? state.get('authorsReducer').authorsList : []
     };
 };
 

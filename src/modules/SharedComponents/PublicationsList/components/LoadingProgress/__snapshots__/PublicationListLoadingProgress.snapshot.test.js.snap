@@ -10,6 +10,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
     >
       <div
         className="searchDashboardList"
+        key="0"
       >
         eSpace
         <span
@@ -28,6 +29,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
       </div>
       <div
         className="searchDashboardList"
+        key="1"
       >
         Web of science
         <span
@@ -42,6 +44,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
       </div>
       <div
         className="searchDashboardList"
+        key="2"
       >
         Scopus
         <span
@@ -56,6 +59,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
       </div>
       <div
         className="searchDashboardList"
+        key="3"
       >
         PubMed
         <span
@@ -70,6 +74,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
       </div>
       <div
         className="searchDashboardList"
+        key="4"
       >
         Crossref
         <span
@@ -97,6 +102,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
     >
       <div
         className="searchDashboardList"
+        key="0"
       >
         eSpace
         <span
@@ -115,6 +121,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       </div>
       <div
         className="searchDashboardList"
+        key="1"
       >
         Web of science
         <span
@@ -133,6 +140,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       </div>
       <div
         className="searchDashboardList"
+        key="2"
       >
         Scopus
         <span
@@ -151,6 +159,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       </div>
       <div
         className="searchDashboardList"
+        key="3"
       >
         PubMed
         <span
@@ -169,6 +178,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       </div>
       <div
         className="searchDashboardList"
+        key="4"
       >
         Crossref
         <span
@@ -200,6 +210,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
     >
       <div
         className="searchDashboardList"
+        key="0"
       >
         eSpace
         <span
@@ -218,6 +229,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
       </div>
       <div
         className="searchDashboardList"
+        key="1"
       >
         Web of science
         <span
@@ -232,6 +244,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
       </div>
       <div
         className="searchDashboardList"
+        key="2"
       >
         Scopus
         <span
@@ -246,6 +259,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
       </div>
       <div
         className="searchDashboardList"
+        key="3"
       >
         PubMed
         <span
@@ -260,6 +274,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
       </div>
       <div
         className="searchDashboardList"
+        key="4"
       >
         Crossref
         <span

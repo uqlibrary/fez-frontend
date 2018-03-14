@@ -1,14 +1,24 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
-import {TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField, NavigationDialogBox} from 'uqlibrary-react-toolbox';
-import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
-import {AuthorLinkingField, ContributorLinkingField} from 'modules/SharedComponents/AuthorLinking';
-import {validation, locale, routes} from 'config';
 
-export default class ClaimRecord extends Component {
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
+import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
+import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
+import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPrompt';
+
+
+import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
+import {AuthorLinkingField, ContributorLinkingField} from 'modules/SharedComponents/AuthorLinking';
+import {validation, routes} from 'config';
+import {locale} from 'locale';
+
+export default class ClaimRecord extends React.PureComponent {
     static propTypes = {
         ...propTypes, // all redux-form props
         publicationToClaimFileUploadingError: PropTypes.bool,
@@ -35,6 +45,10 @@ export default class ClaimRecord extends Component {
         }
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props !== nextProps || this.state !== nextState;
+    }
+
     componentWillUnmount() {
         // clear previously selected publication for a claim
         this.props.actions.clearClaimPublication();
@@ -59,22 +73,6 @@ export default class ClaimRecord extends Component {
         }
     };
 
-    getAlert = ({submitFailed = false, error, dirty = false, invalid = false, submitting = false, submitSucceeded = false, txt, authorLinked = false, contributorLinked = false}) => {
-        let alertProps = null;
-        if (submitFailed && error) {
-            alertProps = {...txt.errorAlert, message: txt.errorAlert.message ? txt.errorAlert.message(error) : error};
-        } else if (!submitFailed && dirty && invalid) {
-            alertProps = {...txt.validationAlert};
-        } else if (submitting) {
-            alertProps = {...txt.progressAlert};
-        } else if (submitSucceeded) {
-            alertProps = {...txt.successAlert};
-        } else if (authorLinked || contributorLinked) {
-            alertProps = {...txt.alreadyClaimedAlert};
-        }
-        return alertProps ? (<Alert {...alertProps} />) : null;
-    };
-
     _setSuccessConfirmation = (ref) => {
         this.successConfirmationBox = ref;
     };
@@ -95,12 +93,17 @@ export default class ClaimRecord extends Component {
         const fromAddRecord = !!publication.sources;
         // set confirmation message depending on file upload status and publication fromAddRecord
         const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
+
         saveConfirmationLocale.cancelButtonLabel = fromAddRecord
             ? txt.successWorkflowConfirmation.addRecordButtonLabel : txt.successWorkflowConfirmation.cancelButtonLabel;
-        saveConfirmationLocale.confirmationMessage = this.props.publicationToClaimFileUploadingError
-            ?  txt.successWorkflowConfirmation.fileFailConfirmationMessage
-            : txt.successWorkflowConfirmation.successConfirmationMessage;
 
+        saveConfirmationLocale.confirmationMessage = (
+            <div>
+                {this.props.publicationToClaimFileUploadingError && <Alert {...txt.successWorkflowConfirmation.fileFailConfirmationAlert} />}
+                {txt.successWorkflowConfirmation.successConfirmationMessage}
+            </div>
+        );
+        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
@@ -108,7 +111,7 @@ export default class ClaimRecord extends Component {
                         <PublicationCitation publication={publication}/>
                     </StandardCard>
                     {
-                        (!publication.rek_pid || !authorLinked) &&
+                        (!publication.rek_pid || !(authorLinked || contributorLinked)) &&
                         <div>
                             <ConfirmDialogBox
                                 onRef={this._setSuccessConfirmation}
@@ -187,7 +190,7 @@ export default class ClaimRecord extends Component {
                                     name="files"
                                     component={ FileUploadField }
                                     disabled={this.props.submitting}
-                                    requireFileAccess
+                                    requireOpenAccessStatus
                                     validate={[validation.validFileUpload]}
                                 />
                             </StandardCard>
@@ -195,7 +198,11 @@ export default class ClaimRecord extends Component {
                     }
 
                     {
-                        this.getAlert({...this.props, txt: txt, authorLinked: publication.rek_pid && authorLinked})
+                        alertProps && <Alert {...alertProps} />
+                    }
+                    {
+                        publication.rek_pid && (authorLinked || contributorLinked) &&
+                            <Alert {...txt.alreadyClaimedAlert} />
                     }
 
                     <div className="columns action-buttons">
@@ -208,7 +215,7 @@ export default class ClaimRecord extends Component {
                                 onTouchTap={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}/>
                         </div>
                         {
-                            (!publication.rek_pid || !authorLinked) &&
+                            (!publication.rek_pid || !(authorLinked || contributorLinked)) &&
                             <div className="column is-narrow-desktop">
                                 <RaisedButton
                                     secondary

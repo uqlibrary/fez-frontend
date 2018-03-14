@@ -9,7 +9,7 @@ import * as routes from 'repositories/routes';
 export function loadAcmlQuickTemplates() {
     return dispatch => {
         dispatch({type: actions.ACML_QUICK_TEMPLATES_LOADING});
-        get(routes.GET_ACML_QUICK_TEMPLATES_API())
+        return get(routes.GET_ACML_QUICK_TEMPLATES_API())
             .then(accessTypes => {
                 dispatch({
                     type: actions.ACML_QUICK_TEMPLATES_LOADED,
@@ -17,10 +17,9 @@ export function loadAcmlQuickTemplates() {
                 });
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.ACML_QUICK_TEMPLATES_FAILED,
-                    payload: error
+                    payload: error.message
                 });
             });
     };

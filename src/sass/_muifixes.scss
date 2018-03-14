@@ -3,6 +3,9 @@
 // An MUI override to make form labels WCAG AA compliant
 label {
   color: $label-color !important;
+  font-size: $text-body-large;
+  font-weight: $text-weight-normal;
+  line-height: $text-line-height-xlarge;
 }
 
 .selectField button:focus {
@@ -58,8 +61,8 @@ button[type=button] {
 }
 
 // Adds red asterix to required fields
-.requiredField label:after,
-.requiredHintField div:first-child:after {
+.requiredField label:before,
+.requiredHintField div:first-child:before {
   content: "*";
   padding-right: 5px;
   padding-left: 5px;
@@ -83,6 +86,10 @@ button[type=button] {
   }
   & div.body-1 {
     padding: 0px !important;
+    @include mobile {
+      -ms-word-break: break-all;
+      word-break: break-all;
+    }
   }
 }
 
@@ -113,5 +120,52 @@ button[type=button] {
 
 // Class to space elements against scroll bars
 .scrollbar-spacer{
-  width: 17px !important;
+  width: 6px;
+  @include mobile {
+    width: 6px !important;
+  }
+}
+.scrollbar-spacer-infinite{
+    width: 20px !important;
+  @include mobile {
+    width: 6px;
+  }
+}
+
+// Styles to restyle the react-tooltip component
+.reactTooltip{
+margin-top: 6px !important;
+  padding: 6px 10px !important;
+  font-size: $text-body-xsmall !important;
+  background: lighten($text-color, 20%) !important;
+  color: $text-color-reverse !important;
+  &.place-right::after {
+    border-color: transparent lighten($text-color, 20%) !important;
+    border-right: 2px solid inherit !important;
+  }
+  &.place-top::after {
+    border-color: lighten($text-color, 20%) transparent !important;
+    border-top: 2px solid inherit !important;
+  }
+  &.place-bottom::after {
+    border-color: lighten($text-color, 20%) transparent !important;
+    border-bottom: 2px solid inherit !important;
+  }
+  &.place-left::after {
+    border-color: lighten($text-color, 20%) transparent !important;
+    border-left: 2px solid inherit !important;
+  }
+}
+
+.validationMessage {
+  .validationList {
+    margin: 6px 0;
+    .validationItem {
+    }
+  }
+}
+
+.no-overflow {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
 }

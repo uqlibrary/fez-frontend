@@ -1,16 +1,12 @@
-import {shallow} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
-
 import NewRecord from './NewRecord';
 
-function setup(values) {
-    return shallow(<NewRecord {...values}/>);
+function setup(testProps, isShallow = true) {
+    return getElement(NewRecord, testProps, isShallow);
 }
 
 describe('Add new record', () => {
 
-    it('should not render publication form if author is not loaded', () => {
+    it('should not render publication form if author is not loaded ', () => {
         const wrapper = setup({author: null});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -31,15 +27,13 @@ describe('Add new record', () => {
         expect(showConfirmation).toBeCalled();
     });
 
-    it.skip('should navigate to find publication', () => {
+    it('should navigate to find publication', () => {
         const navigateToRecordSearch = jest.fn();
         const history = {
             push: navigateToRecordSearch
         };
-
-        const wrapper = setup({history: history});
+        const wrapper = setup({history: history, actions: {clearNewRecord: jest.fn()}});
         wrapper.instance()._restartWorkflow();
-
         expect(navigateToRecordSearch).toBeCalled();
     });
 
@@ -48,10 +42,8 @@ describe('Add new record', () => {
         const history = {
             push: navigateToMyResearch
         };
-
         const wrapper = setup({history: history, actions: {clearNewRecord: jest.fn()}});
         wrapper.instance()._navigateToMyResearch();
-
         expect(navigateToMyResearch).toBeCalled();
     });
 
@@ -66,4 +58,25 @@ describe('Add new record', () => {
 
         expect(navigateToSearch).toBeCalled();
     });
+
+    it('should render the confirm dialog with an alert for failed file upload', () => {
+        const wrapper = setup({
+            author: {aut_id: 12345, aut_display_name: 'Test'},
+            history: {},
+            newRecordFileUploadingError: true,
+            rawSearchQuery: 'This is a test'
+        }, false);
+        expect(toJson(wrapper.find('ConfirmDialogBox'))).toMatchSnapshot();
+    });
+
+    it('should render the confirm dialog without an alert for a succcessful file upload', () => {
+        const wrapper = setup({
+            author: {aut_id: 12345, aut_display_name: 'Test'},
+            history: {},
+            newRecordFileUploadingError: false,
+            rawSearchQuery: 'This is a test'
+        }, false);
+        expect(toJson(wrapper.find('ConfirmDialogBox'))).toMatchSnapshot();
+    });
+
 });

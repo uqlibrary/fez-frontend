@@ -1,4 +1,4 @@
-import {locale} from 'config';
+import {locale} from 'locale';
 
 const moment = require('moment');
 
@@ -7,7 +7,7 @@ const pipe = (...functionsList) => values => functionsList.reduce((attributes, f
 const getIssueValues = (data) => ({
     pid: data.publication.rek_pid,
     userName: data.author.aut_display_name,
-    userId: data.author.aut_org_username,
+    userId: data.author.aut_org_username || data.author.aut_student_username,
     comments: data.comments
 });
 
@@ -53,12 +53,13 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
     // if record already has files, add new files to the end of the list (for patch)
     const initialCount = record && record.fez_record_search_key_file_attachment_name ?
         record.fez_record_search_key_file_attachment_name.length : 0;
-    const attachmentNames = files.map((item, index) => {
-        return {
-            rek_file_attachment_name: item.name,
-            rek_file_attachment_name_order: initialCount + index + 1
-        };
-    });
+    const attachmentNames = files
+        .map((item, index) => {
+            return {
+                rek_file_attachment_name: item.name,
+                rek_file_attachment_name_order: initialCount + index + 1
+            };
+        });
     const attachmentEmbargoDates = files
         .map((item, index) => {
             if (!item.hasOwnProperty('date')) return null;
@@ -68,12 +69,15 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
             };
         })
         .filter((file) => (file !== null));
-    const attachmentAccessConditions = files.map((item, index) => {
-        return {
-            rek_file_attachment_access_condition: item.access_condition_id,
-            rek_file_attachment_access_condition_order: initialCount + index + 1
-        };
-    });
+    const attachmentAccessConditions = files
+        .map((item, index) => {
+            if (!item.hasOwnProperty('access_condition_id')) return null;
+            return {
+                rek_file_attachment_access_condition: item.access_condition_id,
+                rek_file_attachment_access_condition_order: initialCount + index + 1
+            };
+        })
+        .filter((file) => (file !== null));
 
     return {
         fez_record_search_key_file_attachment_name: [
@@ -114,18 +118,6 @@ export const getRecordSupervisorsSearchKey = (supervisors) => {
             {
                 rek_supervisor: item.nameAsPublished,
                 rek_supervisor_order: index + 1
-            }
-        ))
-    };
-};
-
-export const getRecordSubjectSearchKey = (subjects) => {
-    if (!subjects || subjects.length === 0) return {};
-    return {
-        fez_record_search_key_subject: subjects.map((item, index) => (
-            {
-                rek_subject_id: item.rek_value.key,
-                rek_subject_order: index + 1
             }
         ))
     };
@@ -261,4 +253,49 @@ export const getRecordContributorsIdSearchKey = (authors, defaultAuthorId) => {
             )
         )
     };
+};
+
+/* getRecordFieldsOfResearchSearchKey - returns fields of research for record request
+ * @param {array} of objects in format {rek_value: {key: id, value: value}, rek_order}
+ * @returns {Object} formatted {fez_record_search_key_fields_of_research} for record request
+ */
+export const getRecordFieldsOfResearchSearchKey = (fieldsOfResearch) => {
+    if (!fieldsOfResearch || fieldsOfResearch.length === 0) return {};
+
+    return {
+        fez_record_search_key_fields_of_research: fieldsOfResearch.map((item) => (
+            {
+                rek_fields_of_research: item.rek_value.key,
+                rek_fields_of_research_order: item.rek_order
+            }
+        ))
+    };
+};
+
+/*
+* getAuthorIdentifierOrcidPatchRequest - returns author patch request to update author identifier with new orcid id
+* @param {string} authorId - fez-authors id (eg 1671)
+* @param {string} orcidId - new orcid id
+* @param {object} additional data
+* @returns {Object} formatted for author patch request
+*/
+export const getAuthorIdentifierOrcidPatchRequest = (authorId, orcidId, data = null) => {
+    if (!authorId) return {};
+
+    const patchRequest = {
+        aut_id: authorId,
+        aut_orcid_id: orcidId
+    };
+
+    // additional data is set for ORCID
+    if (orcidId && data) {
+        patchRequest.fez_author_identifier_user_grants = {
+            aig_name: data.scope,
+            aig_expires: data.expires_in,
+            aig_details: data.access_token,
+            aig_details_dump: JSON.stringify(data),
+        };
+    }
+
+    return patchRequest;
 };

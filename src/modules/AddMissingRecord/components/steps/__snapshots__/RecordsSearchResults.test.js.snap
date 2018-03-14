@@ -24,10 +24,10 @@ exports[`Search record results should render stepper and no results 1`] = `
           "title": "No matching records found",
         }
       }
-      text="We were unable to match any results to your search criteria. Please, search again or create a new eSpace record."
+      text="We were unable to match any results to your search criteria. Please search again or create a new eSpace record."
       title="No matching publications found"
     >
-      We were unable to match any results to your search criteria. Please, search again or create a new eSpace record.
+      We were unable to match any results to your search criteria. Please search again or create a new eSpace record.
     </StandardCard>
     <div
       className="columns action-buttons"

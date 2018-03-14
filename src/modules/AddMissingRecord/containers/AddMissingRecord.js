@@ -6,9 +6,9 @@ import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state) => {
     return {
-        ...state.get('searchRecordsReducer'),
-        ...state.get('createRecordReducer'),
-        author: state.get('accountReducer').author
+        ...(state && state.get('searchRecordsReducer') ? state.get('searchRecordsReducer') : {}),
+        ...(state && state.get('createRecordReducer') ? state.get('createRecordReducer') : {}),
+        author: state && state.get('accountReducer') ? state.get('accountReducer').author : null
     };
 };
 

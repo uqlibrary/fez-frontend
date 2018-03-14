@@ -3,13 +3,18 @@ import PropTypes from 'prop-types';
 
 import {Field} from 'redux-form/immutable';
 
-import {TextField, StandardCard, PartialDateField} from 'uqlibrary-react-toolbox';
+import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {PartialDateField} from 'uqlibrary-react-toolbox/build/PartialDate';
+
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {validation, locale} from 'config';
+import {validation} from 'config';
+import {default as formLocale} from 'locale/publicationForm';
 
 export default class AudioDocumentForm extends Component {
     static propTypes = {
-        submitting: PropTypes.bool
+        submitting: PropTypes.bool,
+        formValues: PropTypes.object
     };
 
     constructor(props) {
@@ -18,7 +23,11 @@ export default class AudioDocumentForm extends Component {
 
     render() {
         // path to the locale data for each of the sections
-        const txt = locale.forms.publicationForm.audioDocument;
+        const txt = formLocale.audioDocument;
+        const editors = this.props.formValues && this.props.formValues.get('editors');
+        const editorSelected = !!editors && editors.filter((editor) => editor.selected).length > 0;
+        const authors = this.props.formValues && this.props.formValues.get('authors');
+        const authorSelected = !!authors && authors.filter((author) => author.selected).length > 0;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
@@ -90,10 +99,9 @@ export default class AudioDocumentForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.creator.title} help={txt.creator.help}>
-                    <div>{txt.creator.description}</div>
                     <Field
                         component={ContributorsEditorField}
-                        showContributorAssignment
+                        showContributorAssignment={!editorSelected}
                         className="requiredField"
                         name="authors"
                         locale={txt.creator.field}
@@ -102,10 +110,9 @@ export default class AudioDocumentForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.contributor.title} help={txt.contributor.help}>
-                    <div>{txt.contributor.description}</div>
                     <Field
                         component={ContributorsEditorField}
-                        showContributorAssignment
+                        showContributorAssignment={!authorSelected}
                         name="editors"
                         locale={txt.contributor.field}
                         disabled={this.props.submitting}

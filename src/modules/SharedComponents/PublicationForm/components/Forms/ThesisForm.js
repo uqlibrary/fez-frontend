@@ -1,11 +1,18 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
+
+import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {PartialDateField} from 'uqlibrary-react-toolbox/build/PartialDate';
+
 import {ThesisSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
-import {TextField, StandardCard, PartialDateField} from 'uqlibrary-react-toolbox';
 import {OrgNameField, OrgUnitNameField, FieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
-import {validation, locale} from 'config';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
+
+import {validation} from 'config';
+import {locale} from 'locale';
+import {default as formLocale} from 'locale/publicationForm';
 
 export default class ThesisForm extends Component {
     static propTypes = {
@@ -20,7 +27,7 @@ export default class ThesisForm extends Component {
     };
 
     render() {
-        const txt = locale.forms.publicationForm.thesis;
+        const txt = formLocale.thesis;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
@@ -100,7 +107,6 @@ export default class ThesisForm extends Component {
                     </div>
                 </StandardCard>
                 <StandardCard title={txt.supervisors.title} help={txt.supervisors.help}>
-                    <div>{txt.supervisors.description}</div>
                     <Field
                         component={ContributorsEditorField}
                         className="requiredField"

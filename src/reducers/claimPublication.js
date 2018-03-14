@@ -40,11 +40,13 @@ const handlers = {
         }
     ),
 
-    [actions.POSSIBLY_YOUR_PUBLICATIONS_COMPLETED]: (state, action) => (
+    [actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED]: (state, action) => (
         {
             ...state,
             loadingPossiblePublicationsList: false,
+            loadingPossibleCounts: false,
             possiblePublicationsList: action.payload.data,
+            possibleCounts: action.payload.total,
             possiblePublicationsPagingData: {
                 total: action.payload.total,
                 current_page: action.payload.current_page,
@@ -55,7 +57,7 @@ const handlers = {
         }
     ),
 
-    [actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED]: (state, action) => (
+    [actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED]: (state, action) => (
         {
             ...state,
             possiblePublicationsFacets: action.payload
@@ -76,12 +78,11 @@ const handlers = {
     [actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING]: (state) => (
         {
             ...state,
-            loadingPossibleCounts: true,
-            possibleCounts: 0
+            loadingPossibleCounts: true
         }
     ),
 
-    [actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED]: (state, action) => (
+    [actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADED]: (state, action) => (
         {
             ...state,
             loadingPossibleCounts: false,
@@ -97,10 +98,27 @@ const handlers = {
         }
     ),
 
-    [actions.HIDE_PUBLICATIONS_COMPLETED]: (state, action) => (
+    [actions.HIDE_PUBLICATIONS_LOADED]: (state, action) => (
         {
             ...state,
             publicationsClaimedInProgress: [...state.publicationsClaimedInProgress, action.payload.pid]
+        }
+    ),
+
+    [actions.HIDE_PUBLICATIONS_FAILED]: (state, action) => (
+        {
+            ...state,
+            hidePublicationLoading: false,
+            hidePublicationFailed: true,
+            hidePublicationFailedErrorMessage: action.payload
+        }
+    ),
+
+    [actions.HIDE_PUBLICATIONS_FAILED_RESET]: (state) => (
+        {
+            ...state,
+            hidePublicationFailed: false,
+            hidePublicationFailedErrorMessage: null
         }
     ),
 

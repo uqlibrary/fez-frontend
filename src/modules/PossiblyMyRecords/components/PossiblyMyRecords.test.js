@@ -1,110 +1,88 @@
-import {shallow} from 'enzyme';
-import {mount} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import PossiblyMyRecords from './PossiblyMyRecords';
 import {possibleUnclaimedList} from 'mock/data';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import {Provider} from 'react-redux';
-import Immutable from 'immutable';
 
 beforeAll(() => {
     injectTapEventPlugin();
 });
 
-const create = () => {
-    const initialState = Immutable.Map();
-
-    const store = {
-        getState: jest.fn(() => (initialState)),
-        dispatch: jest.fn(),
-        subscribe: jest.fn()
-    };
-    const next = jest.fn();
-    const invoke = (action) => thunk(store)(next)(action);
-    return {store, next, invoke}
-};
-
-function setup({possiblePublicationsList, loadingPossiblePublicationsList, loadingPossibleCounts,
-                   possiblePublicationsFacets,
-                   account, author, accountLoading, possibleCounts, actions, history, isShallow = true}) {
+function setup(testProps, isShallow = true) {
     const props = {
-        possiblePublicationsList: possiblePublicationsList || [],
-        possiblePublicationsFacets: possiblePublicationsFacets || {},
-        possibleCounts: possibleCounts || 0,
-        loadingPossiblePublicationsList: loadingPossiblePublicationsList || false,
-        loadingPossibleCounts: loadingPossibleCounts || false,
+        ...testProps,
+        possiblePublicationsList: testProps.possiblePublicationsList || [],
+        possiblePublicationsFacets: testProps.possiblePublicationsFacets || {},
+        possibleCounts: testProps.possibleCounts || 0,
+        loadingPossiblePublicationsList: testProps.loadingPossiblePublicationsList || false,
+        loadingPossibleCounts: testProps.loadingPossibleCounts || false,
 
-        account: account || {id: 12345},
-        author: author || {aut_id: 12344},
-        accountLoading: accountLoading || false,
-        actions: actions || {},
-        history: history || { push : jest.fn()}
-    };
+        hidePublicationLoading: testProps.hidePublicationLoading || false,
+        hidePublicationFailed: testProps.hidePublicationFailed || false,
+        hidePublicationFailedErrorMessage: testProps.hidePublicationFailedErrorMessage || null,
 
-    if(isShallow) {
-        return shallow(
-            <Provider store={create().store}>
-                <PossiblyMyRecords {...props} />
-            </Provider>);
-    }
+        account: testProps.account || {id: 12345},
+        author: testProps.author || {aut_id: 12344},
+        accountLoading: testProps.accountLoading || false,
 
-    return mount(
-        <Provider store={create().store}>
-            <PossiblyMyRecords {...props} />
-        </Provider>, {
-        context: {
-            muiTheme: getMuiTheme()
+        actions: {
+            searchPossiblyYourPublications: jest.fn(),
+            ...testProps.actions
         },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+        history: testProps.history || { push : jest.fn()}
+    };
+    return getElement(PossiblyMyRecords, props, isShallow);
 }
 
-describe('PossiblyMyRecords test', () => {
+describe('Component PossiblyMyRecords', () => {
+
     it('renders empty list', () => {
-        const wrapper = setup({}).find('PossiblyMyRecords').dive();
+        const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('renders loading screen while loading author data', () => {
-        const wrapper = setup({ authorLoading: true }).find('PossiblyMyRecords').dive();
+    it('renders loading screen while loading publication data', () => {
+        const wrapper = setup({ loadingPossiblePublicationsList: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('renders loading screen while loading publications ', () => {
-        const wrapper = setup({ author: {}, loadingPossiblePublicationsList: true }).find('PossiblyMyRecords').dive();
+    it('renders loading screen while loading publication counts', () => {
+        const wrapper = setup({ loadingPossibleCounts: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders no results', () => {
-        const wrapper = setup({ author: {} }).find('PossiblyMyRecords').dive();
+        const wrapper = setup({ author: {} });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders list of publications and counts', () => {
-        const wrapper = setup({ author: {}, possibleCounts: 5, possiblePublicationsList: possibleUnclaimedList.data }).find('PossiblyMyRecords').dive();
+        const wrapper = setup({ author: {}, possibleCounts: 5, possiblePublicationsList: possibleUnclaimedList.data });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('renders alert when the hide pub api fails', () => {
+        const wrapper = setup({
+            author: {aut_org_username: 'xyz'},
+            possibleCounts: 5,
+            possiblePublicationsList: possibleUnclaimedList.data,
+            hidePublicationFailed: true,
+            hidePublicationFailedErrorMessage: 'Test error message'
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('publication for claiming is selected', () => {
         const actionFunction = jest.fn();
-        const wrapper = setup({ actions: { setClaimPublication: actionFunction}}).find('PossiblyMyRecords').dive();
+        const wrapper = setup({ actions: { setClaimPublication: actionFunction}});
         wrapper.instance()._claimPublication({pid: 11111});
         expect(actionFunction).toHaveBeenCalled();
     });
 
-    // TODO: how to set this.confirmBOx ?
-    // it('calls confirm publication to be hidden', () => {
-    //     const actionFunction = jest.fn();
-    //     const wrapper = setup({ isShallow: false, author: {}, actions: { searchPossiblyYourPublications: actionFunction} }).find('PossiblyMyRecords');
-    //     expect(wrapper.state().publicationToHide).toBeFalsy();
-    //     wrapper.instance()._confirmHidePublication({pid: 1111});
-    //     expect(wrapper.state().publicationToHide).toBeTruthy();
-    // });
+    it('loads possible pubs when username has been set', () => {
+        const actionFunction = jest.fn();
+        const wrapper = setup({actions: { searchPossiblyYourPublications: actionFunction}});
+        wrapper.setProps({author: {aut_org_username: 'xyz'}});
+        expect(actionFunction).toHaveBeenCalled();
+    });
 
     it('calls componentDidMount', () => {
         const actionFunction = jest.fn();
@@ -112,20 +90,37 @@ describe('PossiblyMyRecords test', () => {
         expect(actionFunction).toHaveBeenCalled();
     });
 
-    // TODO: how to set props of sub-component?
-    // it('calls componentWillReceiveProps', () => {
-    //     const actionFunction = jest.fn();
-    //     const wrapper = setup({ isShallow: false, actions: { searchPossiblyYourPublications: actionFunction} });
-    //     wrapper.setProps({author: {aut_org_username: 'xyz'});
-    //     expect(actionFunction).toHaveBeenCalled();
-    // });
-
     it('calls hide publication', () => {
         const actionFunction = jest.fn();
-        const wrapper = setup({ author: {}, actions: { hideRecord: actionFunction}}).find('PossiblyMyRecords').dive();
+        const wrapper = setup({ author: {}, actions: { hideRecord: actionFunction}});
         wrapper.setState({ publicationToHide: {pid: 1111} });
         wrapper.instance()._hidePublication();
         expect(actionFunction).toHaveBeenCalled();
         expect(wrapper.state().publicationToHide).toBeFalsy();
     });
+
+    it('calls the action to reset error message and status when leaving the page', () => {
+        const resetFn = jest.fn();
+        const wrapper = setup({author: {aut_id: 1111}, actions: { hideRecordErrorReset: resetFn} });
+        wrapper.unmount();
+        expect(resetFn).toHaveBeenCalled();
+    });
+
+    it('sets the state when confirming an item to be hidden', () => {
+        const pubToHide = {test: 'This is a test'};
+        const wrapper = setup({author: {aut_id: 1111}});
+        wrapper.instance().hideConfirmationBox = {showConfirmation: jest.fn()};
+        wrapper.instance()._confirmHidePublication(pubToHide);
+        expect(wrapper.state().publicationToHide).toEqual(pubToHide);
+    });
+
+    it('sets the state for activeFacets', () => {
+        const facetActive = {test: 'This is a test'};
+        const wrapper = setup({author: {aut_id: 1111}});
+        wrapper.instance()._facetsChanged(facetActive);
+        expect(wrapper.state().activeFacets).toEqual(facetActive);
+    });
+
+
+
 });

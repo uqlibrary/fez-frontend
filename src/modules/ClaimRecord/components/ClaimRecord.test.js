@@ -1,48 +1,27 @@
-jest.dontMock('./ClaimRecord');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import ClaimRecord from './ClaimRecord';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import Immutable from 'immutable';
 import {journalArticle} from 'mock/data/testing/records';
 
-function setup({initialValues, history, handleSubmit = jest.fn(), actions, isShallow = true}){
+function setup(testProps, isShallow = true) {
     const props = {
-        initialValues: initialValues ||
-            Immutable.Map({
-                publication: Immutable.Map(journalArticle),
-                author: Immutable.Map({aut_id: 410})
-            }),
-        handleSubmit: handleSubmit,
-        actions: actions || {},
-        history: history || {}
-    };
-
-    if(isShallow) {
-        return shallow(<ClaimRecord {...props} />);
-    }
-
-    return mount(<ClaimRecord {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
+        ...testProps,
+        initialValues:  testProps.initialValues || Immutable.Map({
+            publication: Immutable.Map(journalArticle),
+            author: Immutable.Map({aut_id: 410})
+        }),
+        handleSubmit: testProps.handleSubmit || jest.fn(),
+        actions: testProps.actions || {},
+        history: testProps.history || {
+            push: jest.fn(),
+            go: jest.fn()
         },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
-
+        publicationToClaimFileUploadingError: testProps.publicationToClaimFileUploadingError || false,
+    };
+    return getElement(ClaimRecord, props, isShallow);
 }
 
-beforeAll(() => {
-    injectTapEventPlugin();
-});
-
-
 describe('Component ClaimRecord ', () => {
+
     it('should render claim publication form', () => {
         const wrapper = setup({});
         expect(wrapper.find('Field').length).toEqual(4);
@@ -51,52 +30,48 @@ describe('Component ClaimRecord ', () => {
     });
 
     it('should render publication citation, error message if publication has PID and it was claimed by current author already', () => {
-        const testArticle = {
-            ...journalArticle,
-            fez_record_search_key_author_id: [
-                {
-                    "rek_author_id": 410,
-                    "rek_author_id_order": 1
-                },
-                {
-                    "rek_author_id": 0,
-                    "rek_author_id_order": 2
-                }
-            ],
-            fez_record_search_key_author: [
-                {
-                    "rek_author_id": null,
-                    "rek_author_pid": "UQ:111111",
-                    "rek_author": "Smith, A",
-                    "rek_author_order": 1
-                },
-                {
-                    "rek_author_id": null,
-                    "rek_author_pid": "UQ:222222",
-                    "rek_author": "Smith, J",
-                    "rek_author_order": 2
-                },
-            ]
+        const props = {
+            initialValues: Immutable.Map({
+                author: Immutable.Map({aut_id: 410}),
+                publication: Immutable.Map({
+                    ...journalArticle,
+                    fez_record_search_key_author_id: [
+                        {
+                            "rek_author_id": 410,
+                            "rek_author_id_order": 1
+                        },
+                        {
+                            "rek_author_id": 0,
+                            "rek_author_id_order": 2
+                        }
+                    ],
+                    fez_record_search_key_author: [
+                        {
+                            "rek_author_id": null,
+                            "rek_author_pid": "UQ:111111",
+                            "rek_author": "Smith, A",
+                            "rek_author_order": 1
+                        },
+                        {
+                            "rek_author_id": null,
+                            "rek_author_pid": "UQ:222222",
+                            "rek_author": "Smith, J",
+                            "rek_author_order": 2
+                        },
+                    ]
+                })
+            })
         };
 
-        const wrapper = setup({
-            initialValues: Immutable.Map(
-                {
-                    publication: Immutable.Map(testArticle),
-                    author: Immutable.Map({aut_id: 410})
-                }
-            )
-        });
-
+        const wrapper = setup({...props});
         expect(wrapper.find('Field').length).toEqual(0);
         expect(wrapper.find('RaisedButton').length).toEqual(1);
         expect(wrapper.find('Alert').length).toEqual(1);
         expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
-
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render claim form if publication doesn\'t have a PID and but current author was assigned (author linking component should not be rendered)', () => {
+    it('should render claim form if publication doesn\'t have a PID but current author was assigned (author linking component should not be rendered)', () => {
             const testArticle = {
                 ...journalArticle,
                 rek_pid: null,
@@ -173,51 +148,33 @@ describe('Component ClaimRecord ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render alert message depending on form status', () => {
-        const wrapper = setup({}).instance();
+    it('should return and render alert message depending on form status', () => {
         const testCases = [
             {
-                parameters: {submitFailed: true, error: true, txt: {errorAlert: {title: 'submitFailed' }}},
-                expected: 'submitFailed'
+                parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting', message: 'submitting', type: 'info', showLoader: true }}}
             },
             {
-                parameters: {dirty: true, invalid: true, txt: {validationAlert: {title: 'validationFailed'}}},
-                expected: 'validationFailed'
+                parameters: {submitSucceeded: true, alertLocale: {successAlert: {title: 'submitSucceeded', message: 'submitSucceeded', type: 'done' }}}
             },
             {
-                parameters: {submitting: true, txt: {progressAlert: {title: 'submitting' }}},
-                expected: 'submitting'
+                parameters: {submitFailed: true, error: 'This is an error', alertLocale: {errorAlert: {title: 'submitFailed', message: jest.fn(), type: 'error' }}}
             },
             {
-                parameters: {submitSucceeded: true, txt: {successAlert: {title: 'submitSucceeded' }}},
-                expected: 'submitSucceeded'
-            },
-            {
-                parameters: {authorLinked: true, txt: {alreadyClaimedAlert: {title: 'alreadyClaimed' }}},
-                expected: 'alreadyClaimed'
-            },
-            {
-                parameters: {contributorLinked: true, txt: {alreadyClaimedAlert: {title: 'alreadyClaimed' }}},
-                expected: 'alreadyClaimed'
-            },
+                parameters: {dirty: true, invalid: true, error: null, formErrors: {rek_title: 'one', rek_date: 'two'}, alertLocale: {validationAlert: {title: 'validationError', message: 'validationError', type: 'warning'}}}
+            }
         ];
 
         testCases.forEach(testCase => {
-            const alert = wrapper.getAlert({...testCase.parameters});
-            expect(alert.props.title).toEqual(testCase.expected);
+            const wrapper = setup({...testCase.parameters}).find('Alert').dive();
+            expect(toJson(wrapper)).toMatchSnapshot();
         });
-    });
-
-    it('should not render any alerts if not required', () => {
-        const wrapper = setup({}).instance();
-        const noAlert = wrapper.getAlert({});
-        expect(noAlert).toEqual(null);
     });
 
     it('should set local variables', () => {
         const wrapper = setup({});
         wrapper.setState({selectedRecordAction: 'unclaim'});
         wrapper.instance()._setSuccessConfirmation('successBox');
+        wrapper.update();
         expect(wrapper.instance().successConfirmationBox).toEqual('successBox');
     });
 
@@ -252,7 +209,6 @@ describe('Component ClaimRecord ', () => {
         expect(testMethod).toHaveBeenCalled();
     });
 
-
     it('should clear record to fix when leaving the form', () => {
         const actionFunction = jest.fn();
         const wrapper = setup({actions: {clearClaimPublication: actionFunction}});
@@ -279,6 +235,18 @@ describe('Component ClaimRecord ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper.setProps({dirty: true});
+        wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render the confirm dialog with an alert due to a file upload error', () => {
+        const wrapper = setup({publicationToClaimFileUploadingError: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render the confirm dialog without an alert due to file upload success', () => {
+        const wrapper = setup({publicationToClaimFileUploadingError: false});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 });

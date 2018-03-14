@@ -1,19 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
-
-import {locale, routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
+import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
+import {locale} from 'locale';
 
 // application components
 import AppBar from 'material-ui/AppBar';
-import {AppLoader, MenuDrawer, HelpDrawer, AuthButton, Alert} from 'uqlibrary-react-toolbox';
+import {AppLoader} from 'uqlibrary-react-toolbox/build/Loaders';
+import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
+import {MenuDrawer} from 'uqlibrary-react-toolbox/build/MenuDrawer';
+import {HelpDrawer} from 'uqlibrary-react-toolbox/build/HelpDrawer';
+import {AuthButton} from 'uqlibrary-react-toolbox/build/AuthButton';
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+import AppAlertContainer from '../containers/AppAlert';
+
 import * as pages from './pages';
 import IconButton from 'material-ui/IconButton';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
 export default class App extends React.Component {
     static propTypes = {
-        user: PropTypes.object,
+        account: PropTypes.object,
+        author: PropTypes.object,
+        accountLoading: PropTypes.bool,
+        accountAuthorLoading: PropTypes.bool,
         actions: PropTypes.object,
         location: PropTypes.object,
         history: PropTypes.object.isRequired
@@ -29,8 +39,8 @@ export default class App extends React.Component {
         this.state = {
             menuDrawerOpen: false,
             docked: false,
-            mediaQuery: window.matchMedia('(min-width: 1600px)'),
-            isMobile: window.matchMedia('(max-width: 720px)').matches
+            mediaQuery: window.matchMedia('(min-width: 1280px)'),
+            isMobile: window.matchMedia('(max-width: 720px)').matches,
         };
     }
 
@@ -52,6 +62,14 @@ export default class App extends React.Component {
         this.state.mediaQuery.addListener(this.handleResize);
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props.accountLoading !== nextProps.accountLoading
+            || this.props.accountAuthorLoading !== nextProps.accountAuthorLoading
+            || (!!this.props.location && !!nextProps.location && this.props.location.pathname !== nextProps.location.pathname)
+            || (!!this.props.history && !!nextState.history && this.props.history.push !== nextState.history.push)
+            || this.state !== nextState;
+    }
+
     componentWillUnmount() {
         this.state.mediaQuery.removeListener(this.handleResize);
     }
@@ -68,103 +86,161 @@ export default class App extends React.Component {
         });
     };
 
+    redirectUserToLogin = (isAuthorizedUser = false, redirectToCurrentLocation = false) => () => {
+        const redirectUrl = isAuthorizedUser ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
+        const returnUrl = redirectToCurrentLocation || !isAuthorizedUser ? window.location.href : APP_URL;
+        window.location.assign(`${redirectUrl}?return=${window.btoa(returnUrl)}`);
+    };
+
+    redirectToOrcid = () => {
+        if (window.location.search.indexOf('?') >= 0 && window.location.search.indexOf('code') >= 0) {
+            // if user already received an orcid response - clean up query string by redirecting via window.location
+            window.location.assign(routes.pathConfig.authorIdentifiers.orcid.absoluteLink);
+        } else {
+            this.props.history.push(routes.pathConfig.authorIdentifiers.orcid.link);
+        }
+    };
+
     render() {
-        const titleStyle = this.state.docked ? {paddingLeft: 320} : {};
-        const container = this.state.docked ? {paddingLeft: 340} : {};
-        const menuItems = routes.getMenuConfig(this.props.user.account);
-        const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
-        const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
-        const isPublicPage = menuItems.filter((menuItem) =>
-            (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
-        return (
-            <div className="layout-fill">
-                {
-                    this.props.user.accountLoading &&
+        // display loader while user account is loading
+        if (this.props.accountLoading) {
+            return (
+                <div className="layout-fill">
                     <AppLoader
                         title={locale.global.title}
                         logoImage={locale.global.logo}
                         logoText={locale.global.title}/>
-                }
-                {
-                    !this.props.user.accountLoading &&
-                    <div className="layout-fill align-stretch">
-                        <AppBar
-                            className="AppBar align-center"
-                            showMenuIconButton={!this.state.docked}
-                            style={{height: 75}}
-                            iconStyleLeft={{marginTop: 0}}
-                            title={locale.global.title}
-                            titleStyle={titleStyle}
-                            onLeftIconButtonTouchTap={this.toggleDrawer}
-                            iconElementLeft={
-                                <IconButton
-                                    tooltip={locale.global.mainNavButton.tooltip}
-                                    tooltipPosition="bottom-right"
-                                    hoveredStyle={appBarButtonStyles}
-                                    tabIndex={(this.state.docked || !this.state.menuDrawerOpen) ? 1 : -1} >
-                                    <NavigationMenu />
-                                </IconButton>
-                            }
-                            iconElementRight={
-                                <div style={{marginTop: '-10px'}}>
-                                    <AuthButton
-                                        isAuthorizedUser={isAuthorizedUser}
-                                        hoveredStyle={appBarButtonStyles}
-                                        loginUrl={AUTH_URL_LOGIN}
-                                        logoutUrl={AUTH_URL_LOGOUT}
-                                        signInTooltipText={locale.authentication.signInText}
-                                        signOutTooltipText={isAuthorizedUser ? (`${locale.authentication.signOutText} - ${this.props.user.account.name}`) : ''} />
-                                </div>
-                            }
-                        />
+                </div>
+            );
+        }
 
-                        <MenuDrawer
-                            menuItems={menuItems}
-                            drawerOpen={this.state.docked || this.state.menuDrawerOpen}
-                            docked={this.state.docked}
-                            history={this.props.history}
-                            logoImage={locale.global.logo}
-                            logoText={locale.global.title}
-                            onToggleDrawer={this.toggleDrawer}
-                            isMobile={this.state.isMobile}
-                            locale={{
-                                skipNavAriaLabel: locale.global.skipNav.ariaLabel,
-                                skipNavTitle: locale.global.skipNav.title,
-                                closeMenuLabel: locale.global.mainNavButton.closeMenuLabel
-                            }} />
+        const isAuthorizedUser = !this.props.accountLoading && this.props.account !== null;
+        const isAuthorLoading = this.props.accountLoading || this.props.accountAuthorLoading;
+        const isOrcidRequired = this.props.author && !this.props.author.aut_orcid_id
+            && this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
+        const isHdrStudent = this.props.author && this.props.author.aut_student_username;
+        const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent);
+        const isPublicPage = menuItems.filter((menuItem) =>
+            (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
+        const isThesisSubmissionPage = this.props.location.pathname === routes.pathConfig.hdrSubmission ||
+            this.props.location.pathname === routes.pathConfig.sbsSubmission;
 
-                        <div className="content-container" style={container}>
-                            {
-                                // user is not logged in
-                                !this.props.user.accountLoading && !this.props.user.account &&
-                                <div className="layout-fill dashAlert">
-                                    <div className="layout-card">
-                                        <Alert {...locale.global.loginAlert} />
-                                    </div>
-                                </div>
-                            }
-                            {
-                                // user is logged in, but doesn't have eSpace author identifier
-                                !isPublicPage && this.props.user.account && !this.props.user.loadingAuthorDetails && !this.props.user.authorDetails &&
-                                <div className="layout-fill dashAlert">
-                                    <div className="layout-card">
-                                        <Alert {...locale.global.notRegisteredAuthorAlert} />
-                                    </div>
-                                </div>
-                            }
+        const showMenu = !isThesisSubmissionPage;
+        const titleStyle = showMenu && this.state.docked ? {paddingLeft: 320} : {};
+        const containerStyle = showMenu && this.state.docked ? {paddingLeft: 340} : {};
+        const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
 
-                            <Switch>
-                                {
-                                    routes.getRoutesConfig(pages, this.props.user.account).map((route, index) => (
-                                        <Route key={`route_${index}`} {...route} />
-                                    ))
-                                }
-                            </Switch>
+        if (!isAuthorizedUser && isThesisSubmissionPage) {
+            this.redirectUserToLogin()();
+            return (<div/>);
+        }
 
+        let userStatusAlert = null;
+        if(!this.props.accountLoading && !this.props.account) {
+            // user is not logged in
+            userStatusAlert = {
+                ...locale.global.loginAlert,
+                action: this.redirectUserToLogin()
+            };
+        } else if (!isPublicPage && !isAuthorLoading && this.props.account && !this.props.author) {
+            // user is logged in, but doesn't have eSpace author identifier
+            userStatusAlert = {
+                ...locale.global.notRegisteredAuthorAlert
+            };
+        } else if (!isPublicPage && !isAuthorLoading && isOrcidRequired && !isHdrStudent ) {
+            // user is logged in, but doesn't have ORCID identifier
+            userStatusAlert = {
+                ...locale.global.noOrcidAlert,
+                action: this.redirectToOrcid
+            };
+        } else if (!isPublicPage && !isThesisSubmissionPage && !isAuthorLoading && isOrcidRequired && isHdrStudent) {
+            // user is logged in, but doesn't have ORCID identifier
+            userStatusAlert = {
+                ...locale.global.forceOrcidLinkAlert
+            };
+        }
+
+        return (
+            <div className="layout-fill align-stretch">
+                <AppBar
+                    className="AppBar align-center"
+                    showMenuIconButton={showMenu && !this.state.docked}
+                    style={{height: 75}}
+                    iconStyleLeft={{marginTop: 0}}
+                    title={locale.global.title}
+                    titleStyle={titleStyle}
+                    onLeftIconButtonTouchTap={this.toggleDrawer}
+                    iconElementLeft={
+                        <IconButton
+                            tooltip={locale.global.mainNavButton.tooltip}
+                            tooltipPosition="bottom-right"
+                            hoveredStyle={appBarButtonStyles}
+                            tabIndex={(this.state.docked || !this.state.menuDrawerOpen) ? 1 : -1} >
+                            <NavigationMenu />
+                        </IconButton>
+                    }
+                    iconElementRight={
+                        <div style={{marginTop: '-10px'}}>
+                            <AuthButton
+                                isAuthorizedUser={isAuthorizedUser}
+                                hoveredStyle={appBarButtonStyles}
+                                onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
+                                signInTooltipText={locale.global.authentication.signInText}
+                                signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''} />
                         </div>
-                        <HelpDrawer/>
-                    </div>
+                    }
+                />
+                {
+                    showMenu &&
+                    <MenuDrawer
+                        menuItems={menuItems}
+                        drawerOpen={this.state.docked || this.state.menuDrawerOpen}
+                        docked={this.state.docked}
+                        history={this.props.history}
+                        logoImage={locale.global.logo}
+                        logoText={locale.global.title}
+                        onToggleDrawer={this.toggleDrawer}
+                        isMobile={this.state.isMobile}
+                        locale={{
+                            skipNavAriaLabel: locale.global.skipNav.ariaLabel,
+                            skipNavTitle: locale.global.skipNav.title,
+                            closeMenuLabel: locale.global.mainNavButton.closeMenuLabel
+                        }}/>
                 }
+                <div className="content-container" style={containerStyle}>
+                    {
+                        userStatusAlert &&
+                        <div className="layout-fill dashAlert">
+                            <div className="layout-card">
+                                <Alert {...userStatusAlert} />
+                            </div>
+                        </div>
+                    }
+                    <AppAlertContainer />
+                    {
+                        isAuthorLoading &&
+                        <div className="isLoading is-centered">
+                            <InlineLoader message={locale.global.loadingUserAccount}/>
+                        </div>
+                    }
+
+                    {
+                        !isAuthorLoading &&
+                        <Switch>
+                            {
+                                routes.getRoutesConfig({
+                                    components: pages,
+                                    account: this.props.account,
+                                    forceOrcidRegistration: isOrcidRequired && isHdrStudent,
+                                    isHdrStudent: isHdrStudent
+                                }).map((route, index) => (
+                                    <Route key={`route_${index}`} {...route} />
+                                ))
+                            }
+                        </Switch>
+                    }
+                </div>
+                <HelpDrawer/>
             </div>
         );
     }
