@@ -1412,11 +1412,447 @@ export const externalTitleScopusResultsList = {
 
 export const internalTitleSearchList = {
     "total": 230,
-    "per_page": 5,
+    "per_page": 10,
     "current_page": 1,
     "from": 1,
-    "to": 5,
+    "to": 6,
     "data": [
+        {
+            "rek_pid": "UQ:400819",
+            "rek_title_xsdmf_id": 16197,
+            "rek_title": "Phase 1 results of ASWROTI project",
+            "rek_description_xsdmf_id": 16079,
+            "rek_description": "This dataset was produced during the Phase 1 study of the ASWROTI project. For the results of Phase 2, 3 and 4 of ASWROTI project, please see the datasets created for each phase of the project.<br /><br />This high level cost estimation was developed to demonstrate novel treatment processes; <br />Option 1 - Sidestream Anammox and <br />Option&nbsp;2 - Mainstream Anammox, can achieve a water quality fit for recycling at a lower energy/chemical input and reduced capital and&nbsp;operating costs compared to current schemes; Basecase option.<br /><br />The cost estimation was developed for Stage 1: Carbon Removal Processes and Stage 2: Nitrogen Removal Processes of the&nbsp;treatment processes and does not include Stage 3: Polishing Processes. Refer to process flow diagrams for process boundaries.",
+            "rek_display_type_xsdmf_id": 106,
+            "rek_display_type": 371,
+            "rek_status_xsdmf_id": 538,
+            "rek_status": 2,
+            "rek_date_xsdmf_id": 16037,
+            "rek_date": "2016-01-01T00:00:00Z",
+            "rek_object_type_xsdmf_id": 236,
+            "rek_object_type": 3,
+            "rek_depositor_xsdmf_id": 7575,
+            "rek_depositor": 7948,
+            "rek_created_date_xsdmf_id": 527,
+            "rek_created_date": "2016-08-19T07:43:42Z",
+            "rek_updated_date_xsdmf_id": 528,
+            "rek_updated_date": "2017-02-01T02:31:18Z",
+            "rek_file_downloads": 0,
+            "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Hu, Shihu\" href=\"/list/author_id/6315/\">Hu, Shihu</a> (<span class=\"citation_date\">2016</span>): <a class=\"citation_title\" title=\"Click to view Data Collection: Phase 1 results of ASWROTI project\" href=\"/view/UQ:400819\">Phase 1 results of ASWROTI project</a>. <span class=\"citation_publisher\">The University of Queensland</span>. <span class=\"citation_ands_collection_type\">Dataset</span>. doi:<span class=\"citation_doi\">10.14264/uql.2016.551</span>",
+            "rek_genre_xsdmf_id": 16248,
+            "rek_genre": "Dataset Collection",
+            "rek_genre_type_xsdmf_id": null,
+            "rek_genre_type": null,
+            "rek_formatted_title_xsdmf_id": null,
+            "rek_formatted_title": null,
+            "rek_formatted_abstract_xsdmf_id": null,
+            "rek_formatted_abstract": null,
+            "rek_depositor_affiliation_xsdmf_id": null,
+            "rek_depositor_affiliation": null,
+            "rek_thomson_citation_count": null,
+            "rek_thomson_citation_count_xsdmf_id": null,
+            "rek_subtype_xsdmf_id": null,
+            "rek_subtype": null,
+            "rek_scopus_citation_count": null,
+            "rek_herdc_notes_xsdmf_id": null,
+            "rek_herdc_notes": null,
+            "rek_scopus_doc_type_xsdmf_id": null,
+            "rek_scopus_doc_type": null,
+            "rek_wok_doc_type_xsdmf_id": null,
+            "rek_wok_doc_type": null,
+            "rek_pubmed_doc_type_xsdmf_id": null,
+            "rek_pubmed_doc_type": null,
+            "rek_security_inherited": 1,
+            "rek_altmetric_score": 0,
+            "rek_altmetric_score_xsdmf_id": null,
+            "rek_altmetric_id": 0,
+            "rek_altmetric_id_xsdmf_id": null,
+            "rek_copyright_xsdmf_id": 537,
+            "rek_copyright": "on",
+            "fez_record_search_key_access_conditions": {
+                "rek_access_conditions_id": 3479,
+                "rek_access_conditions_pid": "UQ:400819",
+                "rek_access_conditions_xsdmf_id": 16213,
+                "rek_access_conditions": "453619",
+                "rek_access_conditions_lookup": "Open Access"
+            },
+            "fez_record_search_key_additional_notes": null,
+            "fez_record_search_key_ands_collection_type": {
+                "rek_ands_collection_type_id": 3378,
+                "rek_ands_collection_type_pid": "UQ:400819",
+                "rek_ands_collection_type_xsdmf_id": 16272,
+                "rek_ands_collection_type": "453616",
+                "rek_ands_collection_type_lookup": "Dataset"
+            },
+            "fez_record_search_key_assigned_group_id": [],
+            "fez_record_search_key_assigned_user_id": [],
+            "fez_record_search_key_author": [
+                {
+                    "rek_author_id": 28574412,
+                    "rek_author_pid": "UQ:400819",
+                    "rek_author_xsdmf_id": 16015,
+                    "rek_author": "Hu, Shihu",
+                    "rek_author_order": 1
+                }
+            ],
+            "fez_record_search_key_author_id": [
+                {
+                    "rek_author_id_id": 27955646,
+                    "rek_author_id_pid": "UQ:400819",
+                    "rek_author_id_xsdmf_id": 16269,
+                    "rek_author_id": 6315,
+                    "rek_author_id_order": 1,
+                    "rek_author_id_lookup": "Shihu Hu"
+                }
+            ],
+            "fez_record_search_key_author_role": [
+                {
+                    "rek_author_role_id": 5647,
+                    "rek_author_role_pid": "UQ:400819",
+                    "rek_author_role_xsdmf_id": 16244,
+                    "rek_author_role_order": 1,
+                    "rek_author_role": "Project leader"
+                }
+            ],
+            "fez_record_search_key_contact_details_email": [
+                {
+                    "rek_contact_details_email_id": 4806,
+                    "rek_contact_details_email_pid": "UQ:400819",
+                    "rek_contact_details_email_xsdmf_id": 16274,
+                    "rek_contact_details_email_order": 1,
+                    "rek_contact_details_email": "s.hu@awmc.uq.edu.au"
+                }
+            ],
+            "fez_record_search_key_contributor": [
+                {
+                    "rek_contributor_id": 3204343,
+                    "rek_contributor_pid": "UQ:400819",
+                    "rek_contributor_xsdmf_id": 16024,
+                    "rek_contributor": "Hu, Shihu ",
+                    "rek_contributor_order": 1
+                }
+            ],
+            "fez_record_search_key_contributor_id": [
+                {
+                    "rek_contributor_id_id": 2286532,
+                    "rek_contributor_id_pid": "UQ:400819",
+                    "rek_contributor_id_xsdmf_id": 16019,
+                    "rek_contributor_id": 6315,
+                    "rek_contributor_id_order": 1,
+                    "rek_contributor_id_lookup": "Shihu Hu"
+                }
+            ],
+            "fez_record_search_key_coverage_period": [],
+            "fez_record_search_key_data_volume": {
+                "rek_data_volume_id": 2038,
+                "rek_data_volume_pid": "UQ:400819",
+                "rek_data_volume_xsdmf_id": 16230,
+                "rek_data_volume": "271k"
+            },
+            "fez_record_search_key_datastream_policy": null,
+            "fez_record_search_key_doi": {
+                "rek_doi_id": 1479319,
+                "rek_doi_pid": "UQ:400819",
+                "rek_doi_xsdmf_id": 16572,
+                "rek_doi": "10.14264/uql.2016.551"
+            },
+            "fez_record_search_key_end_date": {
+                "rek_end_date_id": 1333,
+                "rek_end_date_pid": "UQ:400819",
+                "rek_end_date_xsdmf_id": 16206,
+                "rek_end_date": "2013-07-01T00:00:00Z"
+            },
+            "fez_record_search_key_fields_of_research": [
+                {
+                    "rek_fields_of_research_id": 7616,
+                    "rek_fields_of_research_pid": "UQ:400819",
+                    "rek_fields_of_research_xsdmf_id": 16043,
+                    "rek_fields_of_research": 452452,
+                    "rek_fields_of_research_order": 1,
+                    "rek_fields_of_research_lookup": "1002 Environmental Biotechnology"
+                }
+            ],
+            "fez_record_search_key_file_attachment_access_condition": [],
+            "fez_record_search_key_file_attachment_embargo_date": [],
+            "fez_record_search_key_file_attachment_name": [
+                {
+                    "rek_file_attachment_name_id": 4194549,
+                    "rek_file_attachment_name_pid": "UQ:400819",
+                    "rek_file_attachment_name_xsdmf_id": 16175,
+                    "rek_file_attachment_name": "ASWROTI_phase1_dataset.pdf",
+                    "rek_file_attachment_name_order": 1
+                },
+                {
+                    "rek_file_attachment_name_id": 4194550,
+                    "rek_file_attachment_name_pid": "UQ:400819",
+                    "rek_file_attachment_name_xsdmf_id": 16175,
+                    "rek_file_attachment_name": "FezACML_ASWROTI_phase1_dataset.pdf.xml",
+                    "rek_file_attachment_name_order": 2
+                },
+                {
+                    "rek_file_attachment_name_id": 4194551,
+                    "rek_file_attachment_name_pid": "UQ:400819",
+                    "rek_file_attachment_name_xsdmf_id": 16175,
+                    "rek_file_attachment_name": "FezACML_UQ_400819.xml",
+                    "rek_file_attachment_name_order": 3
+                },
+                {
+                    "rek_file_attachment_name_id": 4194552,
+                    "rek_file_attachment_name_pid": "UQ:400819",
+                    "rek_file_attachment_name_xsdmf_id": 16175,
+                    "rek_file_attachment_name": "presmd_ASWROTI_phase1_dataset.xml",
+                    "rek_file_attachment_name_order": 4
+                }
+            ],
+            "fez_record_search_key_geographic_area": [
+                {
+                    "rek_geographic_area_id": 18569,
+                    "rek_geographic_area_pid": "UQ:400819",
+                    "rek_geographic_area_xsdmf_id": 16217,
+                    "rek_geographic_area_order": 1,
+                    "rek_geographic_area": "153.039551,-27.488781"
+                }
+            ],
+            "fez_record_search_key_grant_acronym": [],
+            "fez_record_search_key_grant_agency": [
+                {
+                    "rek_grant_agency_id": 17,
+                    "rek_grant_agency_pid": "UQ:400819",
+                    "rek_grant_agency_xsdmf_id": 0,
+                    "rek_grant_agency_order": 1,
+                    "rek_grant_agency": "Australian Water Recycling Centre of Excellence"
+                },
+                {
+                    "rek_grant_agency_id": 18,
+                    "rek_grant_agency_pid": "UQ:400819",
+                    "rek_grant_agency_xsdmf_id": 0,
+                    "rek_grant_agency_order": 2,
+                    "rek_grant_agency": "Queensland Urban Utilities"
+                },
+                {
+                    "rek_grant_agency_id": 19,
+                    "rek_grant_agency_pid": "UQ:400819",
+                    "rek_grant_agency_xsdmf_id": 0,
+                    "rek_grant_agency_order": 3,
+                    "rek_grant_agency": "GHD"
+                },
+                {
+                    "rek_grant_agency_id": 20,
+                    "rek_grant_agency_pid": "UQ:400819",
+                    "rek_grant_agency_xsdmf_id": 0,
+                    "rek_grant_agency_order": 4,
+                    "rek_grant_agency": "Melbourne Water"
+                },
+                {
+                    "rek_grant_agency_id": 21,
+                    "rek_grant_agency_pid": "UQ:400819",
+                    "rek_grant_agency_xsdmf_id": 0,
+                    "rek_grant_agency_order": 5,
+                    "rek_grant_agency": "Wide Bay Water"
+                }
+            ],
+            "fez_record_search_key_grant_agency_id": [],
+            "fez_record_search_key_grant_id": [],
+            "fez_record_search_key_grant_text": [],
+            "fez_record_search_key_isdatasetof": [
+                {
+                    "rek_isdatasetof_id": 2684,
+                    "rek_isdatasetof_pid": "UQ:400819",
+                    "rek_isdatasetof_xsdmf_id": 16601,
+                    "rek_isdatasetof": "UQ:369310",
+                    "rek_isdatasetof_order": 1,
+                    "rek_isdatasetof_lookup": "Identifying novel wastewater treatment options through optimal technology integration"
+                },
+                {
+                    "rek_isdatasetof_id": 2685,
+                    "rek_isdatasetof_pid": "UQ:400819",
+                    "rek_isdatasetof_xsdmf_id": 16601,
+                    "rek_isdatasetof": "UQ:394211",
+                    "rek_isdatasetof_order": 2,
+                    "rek_isdatasetof_lookup": "Affordable and sustainable water recycling through optimal technology integration: a report of a study funded by the Australian Water Recycling Centre of Excellence"
+                }
+            ],
+            "fez_record_search_key_ismemberof": [
+                {
+                    "rek_ismemberof_id": 11398749,
+                    "rek_ismemberof_pid": "UQ:400819",
+                    "rek_ismemberof_xsdmf_id": 16597,
+                    "rek_ismemberof": "UQ:289097",
+                    "rek_ismemberof_order": 1,
+                    "rek_ismemberof_lookup": "Research Data Collections"
+                },
+                {
+                    "rek_ismemberof_id": 11398750,
+                    "rek_ismemberof_pid": "UQ:400819",
+                    "rek_ismemberof_xsdmf_id": 16597,
+                    "rek_ismemberof": "UQ:7565",
+                    "rek_ismemberof_order": 2,
+                    "rek_ismemberof_lookup": "Advanced Water Management Centre Publications"
+                }
+            ],
+            "fez_record_search_key_keywords": [
+                {
+                    "rek_keywords_id": 28933597,
+                    "rek_keywords_pid": "UQ:400819",
+                    "rek_keywords_xsdmf_id": 16041,
+                    "rek_keywords": "Wastewater engineering",
+                    "rek_keywords_order": 1
+                },
+                {
+                    "rek_keywords_id": 28933598,
+                    "rek_keywords_pid": "UQ:400819",
+                    "rek_keywords_xsdmf_id": 16041,
+                    "rek_keywords": "Anammox",
+                    "rek_keywords_order": 2
+                }
+            ],
+            "fez_record_search_key_language": [
+                {
+                    "rek_language_id": 5167602,
+                    "rek_language_pid": "UQ:400819",
+                    "rek_language_xsdmf_id": 16066,
+                    "rek_language": "eng",
+                    "rek_language_order": 1
+                },
+                {
+                    "rek_language_id": 5167603,
+                    "rek_language_pid": "UQ:400819",
+                    "rek_language_xsdmf_id": 16066,
+                    "rek_language": "aus",
+                    "rek_language_order": 2
+                }
+            ],
+            "fez_record_search_key_license": {
+                "rek_license_id": 25115,
+                "rek_license_pid": "UQ:400819",
+                "rek_license_xsdmf_id": 16246,
+                "rek_license": 453701,
+                "rek_license_lookup": "UQ Terms & Conditions Permitted Re-use with Acknowledgement Licence"
+            },
+            "fez_record_search_key_link": [],
+            "fez_record_search_key_link_description": [],
+            "fez_record_search_key_project_description": {
+                "rek_project_description_id": 3156,
+                "rek_project_description_pid": "UQ:400819",
+                "rek_project_description_xsdmf_id": 16513,
+                "rek_project_description": "The aim of the project was to investigate and develop integrated treatment train(s) that can achieve a water quality fit for recycling at a lower energy/chemical input and reduced capital and operating costs compared to current schemes. This project is funded by the Australian Water Recycling Centre of Excellence and undertaken by Advanced Water Management Centre (AWMC) at The University of Queensland (UQ) together with Melbourne Water, GHD, Queensland Urban Utilities (QUU) and Wide Bay Water, who also contributed to the funding of the project. The project consisted of four phases: a desktop study was followed by laboratory and pilot scale studies, and finished with an engineering evaluation based on the experimental results."
+            },
+            "fez_record_search_key_project_id": null,
+            "fez_record_search_key_project_name": {
+                "rek_project_name_id": 2774,
+                "rek_project_name_pid": "UQ:400819",
+                "rek_project_name_xsdmf_id": 16099,
+                "rek_project_name": "Affordable and Sustainable Water Recycling through Optimal Technology Integration (ASWROTI)"
+            },
+            "fez_record_search_key_publisher": {
+                "rek_publisher_id": 4383009,
+                "rek_publisher_pid": "UQ:400819",
+                "rek_publisher_xsdmf_id": 16050,
+                "rek_publisher": "The University of Queensland"
+            },
+            "fez_record_search_key_related_datasets": null,
+            "fez_record_search_key_related_publications": null,
+            "fez_record_search_key_rights": null,
+            "fez_record_search_key_seo_code": [
+                {
+                    "rek_seo_code_id": 867,
+                    "rek_seo_code_pid": "UQ:400819",
+                    "rek_seo_code_xsdmf_id": 16045,
+                    "rek_seo_code": 451320,
+                    "rek_seo_code_order": 1,
+                    "rek_seo_code_lookup": "900403 Water Recycling Services (incl. Sewage and Greywater)"
+                },
+                {
+                    "rek_seo_code_id": 868,
+                    "rek_seo_code_pid": "UQ:400819",
+                    "rek_seo_code_xsdmf_id": 16045,
+                    "rek_seo_code": 451317,
+                    "rek_seo_code_order": 2,
+                    "rek_seo_code_lookup": "9004 Water and Waste Services"
+                }
+            ],
+            "fez_record_search_key_software_required": [
+                {
+                    "rek_software_required_id": 10,
+                    "rek_software_required_pid": "UQ:400819",
+                    "rek_software_required_xsdmf_id": 16208,
+                    "rek_software_required_order": 1,
+                    "rek_software_required": "PDF reader"
+                }
+            ],
+            "fez_record_search_key_start_date": {
+                "rek_start_date_id": 1487,
+                "rek_start_date_pid": "UQ:400819",
+                "rek_start_date_xsdmf_id": 16205,
+                "rek_start_date": "2012-01-01T00:00:00Z"
+            },
+            "fez_record_search_key_time_period_end_date": null,
+            "fez_record_search_key_time_period_start_date": null,
+            "fez_record_search_key_type_of_data": [
+                {
+                    "rek_type_of_data_id": 108,
+                    "rek_type_of_data_pid": "UQ:400819",
+                    "rek_type_of_data_xsdmf_id": 16250,
+                    "rek_type_of_data_order": 1,
+                    "rek_type_of_data": "Text"
+                }
+            ],
+            "fez_record_search_key_issn": [],
+            "fez_datastream_info": [
+                {
+                    "dsi_pid": "UQ:400819",
+                    "dsi_dsid": "ASWROTI_phase1_dataset.pdf",
+                    "dsi_embargo_date": "2016-08-19",
+                    "dsi_open_access": null,
+                    "dsi_label": "Full text (open access)",
+                    "dsi_mimetype": "application/pdf",
+                    "dsi_copyright": null,
+                    "dsi_state": "A",
+                    "dsi_size": 276500
+                },
+                {
+                    "dsi_pid": "UQ:400819",
+                    "dsi_dsid": "FezACML_ASWROTI_phase1_dataset.pdf.xml",
+                    "dsi_embargo_date": null,
+                    "dsi_open_access": null,
+                    "dsi_label": "FezACML security for datastream - ASWROTI_phase1_dataset.pdf",
+                    "dsi_mimetype": "text/xml",
+                    "dsi_copyright": null,
+                    "dsi_state": "A",
+                    "dsi_size": 62
+                },
+                {
+                    "dsi_pid": "UQ:400819",
+                    "dsi_dsid": "FezACML_UQ_400819.xml",
+                    "dsi_embargo_date": null,
+                    "dsi_open_access": null,
+                    "dsi_label": "FezACML security for PID - UQ:400819",
+                    "dsi_mimetype": "text/xml",
+                    "dsi_copyright": null,
+                    "dsi_state": "A",
+                    "dsi_size": 3705
+                },
+                {
+                    "dsi_pid": "UQ:400819",
+                    "dsi_dsid": "presmd_ASWROTI_phase1_dataset.xml",
+                    "dsi_embargo_date": null,
+                    "dsi_open_access": null,
+                    "dsi_label": "",
+                    "dsi_mimetype": "application/xml",
+                    "dsi_copyright": null,
+                    "dsi_state": "A",
+                    "dsi_size": 1275
+                }
+            ],
+            "fez_matched_journals": [],
+            "fez_record_search_key_file_hashdataset": [],
+            "rek_status_lookup": "Published",
+            "rek_object_type_lookup": "Record",
+            "rek_wok_doc_type_lookup": null,
+            "rek_display_type_lookup": "Data Collection",
+            "rek_scopus_doc_type_lookup": null,
+            "rek_pubmed_doc_type_lookup": null
+        },
         {
             "rek_pid": "UQ:342708",
             "rek_title_xsdmf_id": 10588,

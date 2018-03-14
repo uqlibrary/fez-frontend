@@ -59,8 +59,6 @@ export default class ViewRecord extends Component {
                 </StandardPage>
             );
         }
-
-        console.log(recordToView);
         return (
             <StandardPage className="viewRecord" title={recordToView && recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
