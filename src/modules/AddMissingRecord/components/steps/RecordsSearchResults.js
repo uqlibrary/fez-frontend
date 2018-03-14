@@ -68,16 +68,15 @@ export default class RecordsSearchResults extends React.Component {
             .filter(item => {
                 // If the item doesnt have a pid
                 if (!item.rek_pid) return false;
-                // If none of the authors have been assigned
+                // If not all of the authors have been assigned by count
                 if (item.fez_record_search_key_author_id.length !== item.fez_record_search_key_author.length) return false;
-                // If there are no authors, and none of the contributors have been assigned
+                // If there are no authors, and not all of the contributors have been assigned by count
                 if (item.fez_record_search_key_author.length === 0 &&
                     (item.fez_record_search_key_contributor_id.length !== item.fez_record_search_key_contributor.length)) return false;
-                // If the item has had authors assigned, but have unclaimed/unassigned
-                if (item.fez_record_search_key_author_id.reduce((total, item)=>(total || item.rek_author_id === 0), false)) return false;
-                // If the item has had contributors assigned, but have unclaimed/unassigned
-                if (item.fez_record_search_key_contributor_id.reduce((total, item)=>(total || item.rek_contributor_id === 0), false)) return false;
-                return true;
+                // If the item has had contributors or authors assigned, but have unclaimed/unassigned ie. id = 0
+                return (
+                    (item.fez_record_search_key_contributor_id.reduce((total, item)=>(total || item.rek_contributor_id === 0), false)) ||
+                    (item.fez_record_search_key_author_id.reduce((total, item)=>(total || item.rek_author_id === 0), false))) ? false : true;
             })
             .map(item => (item.rek_pid));
 
