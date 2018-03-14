@@ -1433,9 +1433,9 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
         className="citationEditors"
         idSearchKey={
           Object {
-            "idKey": "fez_record_search_key_author_id",
-            "idOrder": "rek_author_id_order",
-            "idSubkey": "rek_author_id",
+            "idKey": "fez_record_search_key_contributor_id",
+            "idOrder": "rek_contributor_id_order",
+            "idSubkey": "rek_contributor_id",
           }
         }
         initialNumberOfAuthors={10}
@@ -3259,7 +3259,6 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
@@ -3424,9 +3423,9 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
         className="citationEditors"
         idSearchKey={
           Object {
-            "idKey": "fez_record_search_key_author_id",
-            "idOrder": "rek_author_id_order",
-            "idSubkey": "rek_author_id",
+            "idKey": "fez_record_search_key_contributor_id",
+            "idOrder": "rek_contributor_id_order",
+            "idSubkey": "rek_contributor_id",
           }
         }
         initialNumberOfAuthors={10}

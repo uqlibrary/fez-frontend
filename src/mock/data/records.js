@@ -4114,8 +4114,52 @@ export const record = {
         }
     ],
     "fez_record_search_key_biosis_id": null,
-    "fez_record_search_key_contributor": [],
-    "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_contributor": [
+        {
+            "rek_contributor_id": 3058003,
+            "rek_contributor_pid": "UQ:399208",
+            "rek_contributor_xsdmf_id": 4194,
+            "rek_contributor": "Dilum Fernando",
+            "rek_contributor_order": 1
+        },
+        {
+            "rek_contributor_id": 3058004,
+            "rek_contributor_pid": "UQ:399208",
+            "rek_contributor_xsdmf_id": 4194,
+            "rek_contributor": "Jin-Guang Teng",
+            "rek_contributor_order": 2
+        },
+        {
+            "rek_contributor_id": 3058005,
+            "rek_contributor_pid": "UQ:399208",
+            "rek_contributor_xsdmf_id": 4194,
+            "rek_contributor": "Jose L. Torero",
+            "rek_contributor_order": 3
+        }
+    ],
+    "fez_record_search_key_contributor_id": [
+        {
+            "rek_contributor_id_id": 2275921,
+            "rek_contributor_id_pid": "UQ:399208",
+            "rek_contributor_id_xsdmf_id": 4150,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 1
+        },
+        {
+            "rek_contributor_id_id": 2275922,
+            "rek_contributor_id_pid": "UQ:399208",
+            "rek_contributor_id_xsdmf_id": 4150,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 2
+        },
+        {
+            "rek_contributor_id_id": 2275923,
+            "rek_contributor_id_pid": "UQ:399208",
+            "rek_contributor_id_xsdmf_id": 4150,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 3
+        }
+    ],
     "fez_record_search_key_corresponding_country": [
         {
             "rek_corresponding_country_id": 45207,

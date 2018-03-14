@@ -696,7 +696,6 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
@@ -1462,7 +1461,6 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
@@ -2232,7 +2230,6 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"

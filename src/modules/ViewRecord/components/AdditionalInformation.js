@@ -5,7 +5,7 @@ import {pathConfig} from 'config/routes';
 import {viewRecordsConfig} from 'config/viewRecord';
 import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {AuthorsCitationView, DoiCitationView} from '../../SharedComponents/PublicationCitation/components/citations/partials';
+import {AuthorsCitationView, DoiCitationView, EditorsCitationView} from '../../SharedComponents/PublicationCitation/components/citations/partials';
 import {ExternalLink} from '../../SharedComponents/ExternalLink';
 import ReactHtmlParser from 'react-html-parser';
 
@@ -143,9 +143,9 @@ export default class AdditionalInformation extends Component {
             const sherpaRomeoColor = sherpaRomeoData.color;
             const sherpaRomeoLink = locale.global.sherpaRomeoLink.externalUrl.replace('[issn]', sherpaRomeoData.issn);
             sherpaRomeoElement =
-                      (<ExternalLink className={`sherpaRomeo${sherpaRomeoColor[0].toUpperCase() + sherpaRomeoColor.slice(1)}`}
+                      (<ExternalLink
                           href={sherpaRomeoLink} aria-label={locale.global.sherpaRomeoLink.ariaLabel}>
-                          {locale.viewRecord.linkTexts.journalOpenAccessPolicyLink}
+                          <span className={`sherpaRomeo${sherpaRomeoColor[0].toUpperCase() + sherpaRomeoColor.slice(1)}`}>{locale.viewRecord.linkTexts.journalOpenAccessPolicyLink}</span>
                       </ExternalLink>);
         }
 
@@ -157,19 +157,8 @@ export default class AdditionalInformation extends Component {
     }
 
     renderContributors = (publication) => {
-        const searchKey = {
-            key: 'fez_record_search_key_contributor',
-            subkey: 'rek_contributor',
-            order: 'rek_contributor_order'
-        };
-        const idSearchKey = {
-            idKey: 'fez_record_search_key_contributor_id',
-            idSubkey: 'rek_contributor_id',
-            idOrder: 'rek_contributor_id_order'
-        };
-
         return (
-            <AuthorsCitationView key="additional-information-editors" publication={publication} searchKey={searchKey} idSearchKey={idSearchKey} initialNumberOfAuthors={publication.fez_record_search_key_contributor.length} showLink/>
+            <EditorsCitationView key="additional-information-editors" publication={publication} prefix={' '} initialNumberOfEditors={publication.fez_record_search_key_contributor.length} showLink />
         );
     }
 

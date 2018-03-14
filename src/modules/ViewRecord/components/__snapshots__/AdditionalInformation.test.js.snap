@@ -2006,17 +2006,10 @@ exports[`Additional Information Component  should render component with book 1`]
           className="dataColumn"
           hoverable={false}
         >
-          <AuthorsCitationView
-            className="citationAuthors"
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_contributor_id",
-                "idOrder": "rek_contributor_id_order",
-                "idSubkey": "rek_contributor_id",
-              }
-            }
-            initialNumberOfAuthors={3}
+          <EditorsCitationView
+            initialNumberOfEditors={3}
             key="additional-information-editors"
+            prefix=" "
             publication={
               Object {
                 "fez_record_search_key_access_conditions": null,
@@ -2316,16 +2309,7 @@ exports[`Additional Information Component  should render component with book 1`]
                 "rek_wok_doc_type": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_contributor",
-                "order": "rek_contributor_order",
-                "subkey": "rek_contributor",
-              }
-            }
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         </TableRowColumn>
       </TableRow>
@@ -3112,17 +3096,10 @@ exports[`Additional Information Component  should render component with book cha
           className="dataColumn"
           hoverable={false}
         >
-          <AuthorsCitationView
-            className="citationAuthors"
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_contributor_id",
-                "idOrder": "rek_contributor_id_order",
-                "idSubkey": "rek_contributor_id",
-              }
-            }
-            initialNumberOfAuthors={3}
+          <EditorsCitationView
+            initialNumberOfEditors={3}
             key="additional-information-editors"
+            prefix=" "
             publication={
               Object {
                 "fez_record_search_key_access_conditions": null,
@@ -3540,16 +3517,7 @@ exports[`Additional Information Component  should render component with book cha
                 "rek_wok_doc_type": "@",
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_contributor",
-                "order": "rek_contributor_order",
-                "subkey": "rek_contributor",
-              }
-            }
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         </TableRowColumn>
       </TableRow>
@@ -5231,17 +5199,10 @@ exports[`Additional Information Component  should render component with conferen
           className="dataColumn"
           hoverable={false}
         >
-          <AuthorsCitationView
-            className="citationAuthors"
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_contributor_id",
-                "idOrder": "rek_contributor_id_order",
-                "idSubkey": "rek_contributor_id",
-              }
-            }
-            initialNumberOfAuthors={2}
+          <EditorsCitationView
+            initialNumberOfEditors={2}
             key="additional-information-editors"
+            prefix=" "
             publication={
               Object {
                 "fez_record_search_key_article_number": null,
@@ -5604,16 +5565,7 @@ exports[`Additional Information Component  should render component with conferen
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_contributor",
-                "order": "rek_contributor_order",
-                "subkey": "rek_contributor",
-              }
-            }
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         </TableRowColumn>
       </TableRow>
@@ -5850,17 +5802,10 @@ exports[`Additional Information Component  should render component with conferen
           className="dataColumn"
           hoverable={false}
         >
-          <AuthorsCitationView
-            className="citationAuthors"
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_contributor_id",
-                "idOrder": "rek_contributor_id_order",
-                "idSubkey": "rek_contributor_id",
-              }
-            }
-            initialNumberOfAuthors={2}
+          <EditorsCitationView
+            initialNumberOfEditors={2}
             key="additional-information-editors"
+            prefix=" "
             publication={
               Object {
                 "fez_record_search_key_article_number": null,
@@ -6223,16 +6168,7 @@ exports[`Additional Information Component  should render component with conferen
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_contributor",
-                "order": "rek_contributor_order",
-                "subkey": "rek_contributor",
-              }
-            }
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         </TableRowColumn>
       </TableRow>
@@ -7242,17 +7178,10 @@ exports[`Additional Information Component  should render component with data col
           className="dataColumn"
           hoverable={false}
         >
-          <AuthorsCitationView
-            className="citationAuthors"
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_contributor_id",
-                "idOrder": "rek_contributor_id_order",
-                "idSubkey": "rek_contributor_id",
-              }
-            }
-            initialNumberOfAuthors={1}
+          <EditorsCitationView
+            initialNumberOfEditors={1}
             key="additional-information-editors"
+            prefix=" "
             publication={
               Object {
                 "fez_record_search_key_access_conditions": Object {
@@ -7819,16 +7748,7 @@ exports[`Additional Information Component  should render component with data col
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_contributor",
-                "order": "rek_contributor_order",
-                "subkey": "rek_contributor",
-              }
-            }
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         </TableRowColumn>
       </TableRow>
@@ -9812,17 +9732,10 @@ exports[`Additional Information Component  should render component with design d
           className="dataColumn"
           hoverable={false}
         >
-          <AuthorsCitationView
-            className="citationAuthors"
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_contributor_id",
-                "idOrder": "rek_contributor_id_order",
-                "idSubkey": "rek_contributor_id",
-              }
-            }
-            initialNumberOfAuthors={9}
+          <EditorsCitationView
+            initialNumberOfEditors={9}
             key="additional-information-editors"
+            prefix=" "
             publication={
               Object {
                 "fez_record_search_key_acknowledgements": null,
@@ -10230,16 +10143,7 @@ exports[`Additional Information Component  should render component with design d
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_contributor",
-                "order": "rek_contributor_order",
-                "subkey": "rek_contributor",
-              }
-            }
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         </TableRowColumn>
       </TableRow>
@@ -11738,17 +11642,10 @@ exports[`Additional Information Component  should render component with generic 
           className="dataColumn"
           hoverable={false}
         >
-          <AuthorsCitationView
-            className="citationAuthors"
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_contributor_id",
-                "idOrder": "rek_contributor_id_order",
-                "idSubkey": "rek_contributor_id",
-              }
-            }
-            initialNumberOfAuthors={2}
+          <EditorsCitationView
+            initialNumberOfEditors={2}
             key="additional-information-editors"
+            prefix=" "
             publication={
               Object {
                 "fez_record_search_key_access_conditions": null,
@@ -12118,16 +12015,7 @@ exports[`Additional Information Component  should render component with generic 
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_contributor",
-                "order": "rek_contributor_order",
-                "subkey": "rek_contributor",
-              }
-            }
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         </TableRowColumn>
       </TableRow>
@@ -12300,17 +12188,10 @@ exports[`Additional Information Component  should render component with journal 
           className="dataColumn"
           hoverable={false}
         >
-          <AuthorsCitationView
-            className="citationAuthors"
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_contributor_id",
-                "idOrder": "rek_contributor_id_order",
-                "idSubkey": "rek_contributor_id",
-              }
-            }
-            initialNumberOfAuthors={1}
+          <EditorsCitationView
+            initialNumberOfEditors={1}
             key="additional-information-editors"
+            prefix=" "
             publication={
               Object {
                 "fez_record_search_key_access_conditions": null,
@@ -12640,16 +12521,7 @@ exports[`Additional Information Component  should render component with journal 
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_contributor",
-                "order": "rek_contributor_order",
-                "subkey": "rek_contributor",
-              }
-            }
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         </TableRowColumn>
       </TableRow>
@@ -14144,13 +14016,17 @@ exports[`Additional Information Component  should render component with journal 
              
             <ExternalLink
               aria-label="View publisher's open access policy in an new window"
-              className="sherpaRomeoGreen"
+              className="externalLink"
               href="http://www.sherpa.ac.uk/romeo/search.php?issn=1477-9137"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
             >
-              Check publisher's open access policy
+              <span
+                className="sherpaRomeoGreen"
+              >
+                Check publisher's open access policy
+              </span>
             </ExternalLink>
           </span>
         </TableRowColumn>
@@ -15130,17 +15006,10 @@ exports[`Additional Information Component  should render component with manuscri
           className="dataColumn"
           hoverable={false}
         >
-          <AuthorsCitationView
-            className="citationAuthors"
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_contributor_id",
-                "idOrder": "rek_contributor_id_order",
-                "idSubkey": "rek_contributor_id",
-              }
-            }
-            initialNumberOfAuthors={2}
+          <EditorsCitationView
+            initialNumberOfEditors={2}
             key="additional-information-editors"
+            prefix=" "
             publication={
               Object {
                 "fez_record_search_key_acknowledgements": null,
@@ -15451,16 +15320,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_contributor",
-                "order": "rek_contributor_order",
-                "subkey": "rek_contributor",
-              }
-            }
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         </TableRowColumn>
       </TableRow>
@@ -16909,13 +16769,17 @@ exports[`Additional Information Component  should render component with newspape
              
             <ExternalLink
               aria-label="View publisher's open access policy in an new window"
-              className="sherpaRomeoGreen"
+              className="externalLink"
               href="http://www.sherpa.ac.uk/romeo/search.php?issn=1477-9137"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
             >
-              Check publisher's open access policy
+              <span
+                className="sherpaRomeoGreen"
+              >
+                Check publisher's open access policy
+              </span>
             </ExternalLink>
           </span>
         </TableRowColumn>
@@ -19064,17 +18928,10 @@ exports[`Additional Information Component  should render component with referenc
           className="dataColumn"
           hoverable={false}
         >
-          <AuthorsCitationView
-            className="citationAuthors"
-            idSearchKey={
-              Object {
-                "idKey": "fez_record_search_key_contributor_id",
-                "idOrder": "rek_contributor_id_order",
-                "idSubkey": "rek_contributor_id",
-              }
-            }
-            initialNumberOfAuthors={2}
+          <EditorsCitationView
+            initialNumberOfEditors={2}
             key="additional-information-editors"
+            prefix=" "
             publication={
               Object {
                 "fez_matched_journals": Array [],
@@ -19350,16 +19207,7 @@ exports[`Additional Information Component  should render component with referenc
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
-            searchKey={
-              Object {
-                "key": "fez_record_search_key_contributor",
-                "order": "rek_contributor_order",
-                "subkey": "rek_contributor",
-              }
-            }
             showLink={true}
-            suffix=" "
-            thresholdNumberOfAuthors={3}
           />
         </TableRowColumn>
       </TableRow>

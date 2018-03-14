@@ -8,9 +8,9 @@ exports[`EditorsCitationView test  should render component with no contributors 
     className="citationEditors"
     idSearchKey={
       Object {
-        "idKey": "fez_record_search_key_author_id",
-        "idOrder": "rek_author_id_order",
-        "idSubkey": "rek_author_id",
+        "idKey": "fez_record_search_key_contributor_id",
+        "idOrder": "rek_contributor_id_order",
+        "idSubkey": "rek_contributor_id",
       }
     }
     initialNumberOfAuthors={10}
@@ -53,9 +53,9 @@ exports[`EditorsCitationView test  should render component with one contributor 
     className="citationEditors"
     idSearchKey={
       Object {
-        "idKey": "fez_record_search_key_author_id",
-        "idOrder": "rek_author_id_order",
-        "idSubkey": "rek_author_id",
+        "idKey": "fez_record_search_key_contributor_id",
+        "idOrder": "rek_contributor_id_order",
+        "idSubkey": "rek_contributor_id",
       }
     }
     initialNumberOfAuthors={10}
@@ -138,9 +138,9 @@ exports[`EditorsCitationView test  should render component with three contributo
     className="citationEditors"
     idSearchKey={
       Object {
-        "idKey": "fez_record_search_key_author_id",
-        "idOrder": "rek_author_id_order",
-        "idSubkey": "rek_author_id",
+        "idKey": "fez_record_search_key_contributor_id",
+        "idOrder": "rek_contributor_id_order",
+        "idSubkey": "rek_contributor_id",
       }
     }
     initialNumberOfAuthors={10}
@@ -259,9 +259,9 @@ exports[`EditorsCitationView test  should render component with two contributors
     className="citationEditors"
     idSearchKey={
       Object {
-        "idKey": "fez_record_search_key_author_id",
-        "idOrder": "rek_author_id_order",
-        "idSubkey": "rek_author_id",
+        "idKey": "fez_record_search_key_contributor_id",
+        "idOrder": "rek_contributor_id_order",
+        "idSubkey": "rek_contributor_id",
       }
     }
     initialNumberOfAuthors={10}

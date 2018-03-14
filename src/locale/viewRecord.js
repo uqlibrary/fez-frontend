@@ -120,10 +120,10 @@ export default {
                 fez_record_search_key_patent_number: 'Patent number',
                 fez_record_search_key_country_of_issue: 'Country of origin',
                 grantInformation: {
-                    fez_record_search_key_grant_agency: 'Grant Agency',
-                    fez_record_search_key_grant_agency_id: 'Grant Agency ID',
-                    fez_record_search_key_grant_id: 'Grant ID',
-                    fez_record_search_key_grant_text: 'Grant Text'
+                    fez_record_search_key_grant_agency: 'Grant agency',
+                    fez_record_search_key_grant_agency_id: 'Grant agency id',
+                    fez_record_search_key_grant_id: 'Grant id',
+                    fez_record_search_key_grant_text: 'Grant text'
                 },
                 publicationDetails: {
                     rek_display_type: 'Publication type',

@@ -1327,7 +1327,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
@@ -2720,7 +2719,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
@@ -4113,7 +4111,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
@@ -5363,7 +5360,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
@@ -6756,7 +6752,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
@@ -9461,7 +9456,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
