@@ -7,6 +7,7 @@ exports[`Additional Information Component  should render component with audio do
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -766,6 +767,7 @@ exports[`Additional Information Component  should render component with book 1`]
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -2347,6 +2349,7 @@ exports[`Additional Information Component  should render component with book cha
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -3917,6 +3920,7 @@ exports[`Additional Information Component  should render component with conferen
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -5143,6 +5147,7 @@ exports[`Additional Information Component  should render component with conferen
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -6496,6 +6501,7 @@ exports[`Additional Information Component  should render component with creative
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -7090,6 +7096,7 @@ exports[`Additional Information Component  should render component with data col
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -9042,6 +9049,7 @@ exports[`Additional Information Component  should render component with design d
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -10290,6 +10298,7 @@ exports[`Additional Information Component  should render component with digilib 
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -10995,6 +11004,7 @@ exports[`Additional Information Component  should render component with empty pu
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -11021,6 +11031,7 @@ exports[`Additional Information Component  should render component with generic 
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -12083,6 +12094,7 @@ exports[`Additional Information Component  should render component with image 1`
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -12132,6 +12144,7 @@ exports[`Additional Information Component  should render component with journal 
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -12819,6 +12832,7 @@ exports[`Additional Information Component  should render component with journal 
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -14535,6 +14549,7 @@ exports[`Additional Information Component  should render component with manuscri
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -15580,6 +15595,7 @@ exports[`Additional Information Component  should render component with newspape
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -17296,6 +17312,7 @@ exports[`Additional Information Component  should render component with patent 1
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -17776,6 +17793,7 @@ exports[`Additional Information Component  should render component with preprint
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -18500,6 +18518,7 @@ exports[`Additional Information Component  should render component with referenc
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -19483,6 +19502,7 @@ exports[`Additional Information Component  should render component with research
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -19999,6 +20019,7 @@ exports[`Additional Information Component  should render component with thesis 1
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -20570,6 +20591,7 @@ exports[`Additional Information Component  should render component with video do
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -21129,6 +21151,7 @@ exports[`Additional Information Component  should render component with working 
 >
   <Table
     allRowsSelected={false}
+    className="additionalInformation"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"

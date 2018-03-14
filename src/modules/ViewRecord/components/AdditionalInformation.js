@@ -264,7 +264,7 @@ export default class AdditionalInformation extends Component {
     render() {
         return (
             <StandardCard title={locale.viewRecord.sections.additionalInformation}>
-                <Table selectable={false}>
+                <Table selectable={false} className="additionalInformation">
                     <TableBody displayRowCheckbox={false}>
                         {
                             this.renderColumns()
