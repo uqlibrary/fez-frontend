@@ -81,9 +81,12 @@ export function fixRecord(data) {
     const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
         data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id).length > 0;
 
+    const isContributorLinked = data.publication.fez_record_search_key_contributor_id && data.publication.fez_record_search_key_contributor_id.length > 0 &&
+        data.publication.fez_record_search_key_contributor_id.filter(contributorId => contributorId.rek_contributor_id === data.author.aut_id).length > 0;
+
     const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
 
-    if (!isAuthorLinked) {
+    if (!isAuthorLinked && !isContributorLinked) {
         return dispatch => {
             dispatch({
                 type: actions.FIX_RECORD_FAILED,

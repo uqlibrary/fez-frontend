@@ -1,5 +1,6 @@
 import * as transformers from './transformers';
 import {APP_URL} from 'config';
+const moment = require('moment');
 
 describe('getRecordLinkSearchKey test ', () => {
 
@@ -35,6 +36,11 @@ describe('getRecordLinkSearchKey test ', () => {
 
 describe('getRecordFileAttachmentSearchKey test ', () => {
 
+    beforeEach(() => {
+        const now = new Date(2018, 0, 1, 0, 0, 0, 0);
+        Date.now = jest.genMockFunction().mockReturnValue(now);
+    });
+
     it('should return empty request object structure if no files are provided', () => {
         const files = [];
         const record = {};
@@ -43,44 +49,79 @@ describe('getRecordFileAttachmentSearchKey test ', () => {
         expect(result).toEqual(expected);
     });
 
-    it('should return request object structure for files', () => {
+    it('should return request object structure for files with various open access status', () => {
+
         const files = [
             {
-                access_condition_id: 1,
-                name: 'file.txt',
-                date: '2017-10-01'
+                access_condition_id: 9, // open access, should stay open
+                name: 'file1.txt',
+                date: moment().clone().format('YYYY-MM-DD') // today
             },
             {
-                access_condition_id: 2,
-                name: 'file2.txt'
+                access_condition_id: 9, // open access, should be closed 'cause in the future
+                name: 'file2.txt',
+                date: moment().clone().add(30, 'days').format('YYYY-MM-DD') // future
+            },
+            {
+                access_condition_id: 9, // open access, should stay open 'cause in the past
+                name: 'file3.txt',
+                date: moment().clone().add(-30, 'days').format('YYYY-MM-DD') // past
+            },
+            {
+                access_condition_id: 8, // closed access, should stay closed
+                name: 'file4.txt'
             }
         ];
         const record = null;
         const expected = {
             fez_record_search_key_file_attachment_name: [
                 {
-                    rek_file_attachment_name: 'file.txt',
+                    rek_file_attachment_name: 'file1.txt',
                     rek_file_attachment_name_order: 1
                 },
                 {
                     rek_file_attachment_name: 'file2.txt',
                     rek_file_attachment_name_order: 2
+                },
+                {
+                    rek_file_attachment_name: 'file3.txt',
+                    rek_file_attachment_name_order: 3
+                },
+                {
+                    rek_file_attachment_name: 'file4.txt',
+                    rek_file_attachment_name_order: 4
                 }
             ],
             fez_record_search_key_file_attachment_embargo_date: [
                 {
-                    rek_file_attachment_embargo_date: '2017-10-01',
+                    rek_file_attachment_embargo_date: '2018-01-01',
                     rek_file_attachment_embargo_date_order: 1
+                },
+                {
+                    rek_file_attachment_embargo_date: '2018-01-31',
+                    rek_file_attachment_embargo_date_order: 2
+                },
+                {
+                    rek_file_attachment_embargo_date: '2017-12-02',
+                    rek_file_attachment_embargo_date_order: 3
                 }
             ],
             fez_record_search_key_file_attachment_access_condition: [
                 {
-                    rek_file_attachment_access_condition: 1,
+                    rek_file_attachment_access_condition: 9,
                     rek_file_attachment_access_condition_order: 1
                 },
                 {
-                    rek_file_attachment_access_condition: 2,
+                    rek_file_attachment_access_condition: 8,
                     rek_file_attachment_access_condition_order: 2
+                },
+                {
+                    rek_file_attachment_access_condition: 9,
+                    rek_file_attachment_access_condition_order: 3
+                },
+                {
+                    rek_file_attachment_access_condition: 8,
+                    rek_file_attachment_access_condition_order: 4
                 }
             ]
         };
@@ -170,7 +211,7 @@ describe('getRecordFileAttachmentSearchKey test ', () => {
             {
                 access_condition_id: 1,
                 name: 'file.txt',
-                date: '2017-10-01'
+                date: moment().clone().format('YYYY-MM-DD') // today
             },
             {
                 access_condition_id: 2,
@@ -206,7 +247,7 @@ describe('getRecordFileAttachmentSearchKey test ', () => {
             ],
             fez_record_search_key_file_attachment_embargo_date: [
                 {
-                    rek_file_attachment_embargo_date: '2017-10-01',
+                    rek_file_attachment_embargo_date: '2018-01-01',
                     rek_file_attachment_embargo_date_order: 2
                 }
             ],
@@ -681,6 +722,16 @@ describe('getRecordContributorsIdSearchKey test ', () => {
 });
 
 describe('getAuthorIdentifierOrcidPatchRequest() ', () => {
+
+    it('should return empty request', () => {
+        const authorId = null;
+        const orcidId = '1234-1234-1234';
+        const data = {};
+
+        const expected = {};
+        const result = transformers.getAuthorIdentifierOrcidPatchRequest(authorId, orcidId);
+        expect(result).toEqual(expected);
+    });
 
     it('should return orcid request', () => {
         const authorId = 4444;
