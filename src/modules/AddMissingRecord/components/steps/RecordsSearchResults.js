@@ -17,6 +17,7 @@ import {locale} from 'locale';
 
 export default class RecordsSearchResults extends React.Component {
     static propTypes = {
+        author: PropTypes.object,
         publicationsList: PropTypes.array,
         loadingSearch: PropTypes.bool,
         loadingPublicationSources: PropTypes.object,
@@ -66,11 +67,22 @@ export default class RecordsSearchResults extends React.Component {
 
         const unclaimablePublicationsList = this.props.publicationsList
             .filter(item => {
+                // If the item doesnt have a pid
                 if (!item.rek_pid) return false;
+                // If none of the authors have been assigned
                 if (item.fez_record_search_key_author_id.length !== item.fez_record_search_key_author.length) return false;
-                return item.fez_record_search_key_author_id.reduce((total, item)=>(total || item.rek_author_id === 0), false) ? false : true;
+                // If there are no authors, and none of the contributors have been assigned
+                if (item.fez_record_search_key_author.length === 0 &&
+                    (item.fez_record_search_key_contributor_id.length !== item.fez_record_search_key_contributor.length)) return false;
+                // If the item has had authors assigned, but have unclaimed/unassigned
+                if (item.fez_record_search_key_author_id.reduce((total, item)=>(total || item.rek_author_id === 0), false)) return false;
+                // If the item has had contributors assigned, but have unclaimed/unassigned
+                if (item.fez_record_search_key_contributor_id.reduce((total, item)=>(total || item.rek_contributor_id === 0), false)) return false;
+                return true;
             })
             .map(item => (item.rek_pid));
+        console.log('unclaimablePublicationsList');
+        console.log(unclaimablePublicationsList);
 
         const unclaimable = [
             {
@@ -79,6 +91,9 @@ export default class RecordsSearchResults extends React.Component {
                 primary: false
             }
         ];
+
+        console.log('unclaimable');
+        console.log(unclaimable);
 
         return (
             <div className="columns searchWrapper">
