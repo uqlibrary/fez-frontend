@@ -4806,7 +4806,7 @@ export const record = {
     "rek_status_lookup": "Published",
     "rek_object_type_lookup": "Record",
     "rek_wok_doc_type_lookup": null,
-    "rek_display_type_lookup": "Data Collection",
+    "rek_display_type_lookup": "Journal Article",
     "rek_scopus_doc_type_lookup": null,
     "rek_pubmed_doc_type_lookup": null
 };

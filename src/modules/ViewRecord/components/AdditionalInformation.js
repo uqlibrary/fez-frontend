@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'locale';
-import {licenseLinks} from 'config/general';
+import {pathConfig} from 'config/routes';
+import {viewRecordsConfig} from 'config/viewRecord';
 import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {AuthorsCitationView, DoiCitationView} from '../../SharedComponents/PublicationCitation/components/citations/partials';
 import {ExternalLink} from '../../SharedComponents/ExternalLink';
-import {pathConfig} from 'config/routes';
 import ReactHtmlParser from 'react-html-parser';
 
 const moment = require('moment');
@@ -38,7 +38,6 @@ export default class AdditionalInformation extends Component {
         return <a href={link}>{value}</a>;
     }
 
-    // render array of objects
     renderList = (list, subkey, getLink) => {
         return (
             <ul key={subkey}>
@@ -60,7 +59,8 @@ export default class AdditionalInformation extends Component {
         );
     }
 
-    renderObjects = (objects, subkey) => {
+    // render a list of objects (objects with order fields)
+    renderObjectList = (objects, subkey) => {
         switch (subkey) {
             case 'rek_author': return this.renderAuthors(this.props.publication);
             case 'rek_contributor': return this.renderContributors(this.props.publication);
@@ -73,25 +73,23 @@ export default class AdditionalInformation extends Component {
         }
     }
 
-    // render a single object
+    // render a single object (without order field)
     renderObject = (object, subkey) => {
         const data = this.getData(object, subkey);
+
+        // date fields
+        if (viewRecordsConfig.dateFields.includes(subkey)) {
+            return this.formatDate(data, viewRecordsConfig.dateFieldFormat[subkey]);
+        }
+
+        // html fields
+        if (viewRecordsConfig.htmlFields.includes(subkey)) {
+            return this.renderHTML(data);
+        }
+
         switch (subkey) {
             case 'rek_doi': return this.renderDoi(data);
-            case 'rek_date_available': return this.formatDate(data, 'YYYY');
-            case 'rek_date_recorded': return this.formatDate(data);
-            case 'rek_date_photo_taken': return this.formatDate(data, 'YYYY');
-            case 'rek_date_scanned': return this.formatDate(data);
-            case 'rek_start_date': return this.formatDate(data);
-            case 'rek_end_date': return this.formatDate(data);
-            case 'rek_time_period_start_date': return this.formatDate(data);
-            case 'rek_time_period_end_date': return this.formatDate(data);
-            case 'rek_project_start_date': return this.formatDate(data);
             case 'rek_journal_name': return this.renderJournalName(data);
-            case 'rek_project_description': return this.renderHTML(data);
-            case 'rek_transcript': return this.renderHTML(data);
-            case 'rek_notes': return this.renderHTML(data);
-            case 'rek_additional_notes': return this.renderHTML(data);
             case 'rek_publisher': return this.renderLink(pathConfig.list.publisher(data), data);
             case 'rek_oa_status': return this.renderLink(pathConfig.list.openAccessStatus(object[subkey]), data);
             case 'rek_herdc_code': return this.renderLink(pathConfig.list.subject(object[subkey]), data);
@@ -108,8 +106,8 @@ export default class AdditionalInformation extends Component {
         }
     }
 
-    renderString = (key, value) => {
-        // get values for rek_ fields e.g. rek_title
+    // render rek fields from fez_record_search_key
+    renderContent = (key, value) => {
         switch (key) {
             case 'rek_title': return this.renderTitle();
             case 'rek_date': return this.formatPublicationDate(value);
@@ -117,9 +115,15 @@ export default class AdditionalInformation extends Component {
         }
     }
 
+    renderTitle = () => {
+        const {publication} = this.props;
+        return this.renderHTML(publication.rek_formatted_title ? publication.rek_formatted_title : publication.rek_title);
+    }
+
     renderLicense = (cvoId, lookup) => {
         const licenseLooup = this.renderLink(pathConfig.list.license(cvoId), lookup);
-        const creativeCommonLogo =  licenseLinks[cvoId] ? licenseLinks[cvoId] : null;
+        const creativeCommonLogo =  viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
+
         return (
             <span>
                 {licenseLooup}
@@ -150,11 +154,6 @@ export default class AdditionalInformation extends Component {
                 {journalNameElement} {sherpaRomeoElement}
             </span>
         );
-    }
-
-    renderTitle = () => {
-        const {publication} = this.props;
-        return this.renderHTML(publication.rek_formatted_title ? publication.rek_formatted_title : publication.rek_title);
     }
 
     renderContributors = (publication) => {
@@ -190,12 +189,13 @@ export default class AdditionalInformation extends Component {
         return ReactHtmlParser(dompurify.sanitize(data));
     }
 
-    // rek_issn_lookup returns sherpa romeo color
+    // get lookup data if it exsts, except rek_issn_lookup as it returns sherpa romeo color
     getData = (object, subkey) => {
         const lookupSuffix = '_lookup';
         return object[subkey + lookupSuffix] && subkey !== 'rek_issn' ? object[subkey + lookupSuffix] : object[subkey];
     }
 
+    // rek_issn_lookup returns sherpa romeo color
     getSherpaRomeo = () => {
         const issnField = 'rek_issn';
         const colorField = 'rek_issn_lookup';
@@ -205,11 +205,7 @@ export default class AdditionalInformation extends Component {
     }
 
     formatPublicationDate = (publicationDate) => {
-        const {headings} = locale.viewRecord;
-        const displayTypeHeadings = headings[this.props.publication.rek_display_type_lookup] ? headings[this.props.publication.rek_display_type_lookup] : [];
-        const publicationDateFormatConfig = 'rek_date_format';
-        const dateFormat = displayTypeHeadings[publicationDateFormatConfig] ? displayTypeHeadings[publicationDateFormatConfig] : headings[publicationDateFormatConfig];
-        return this.formatDate(publicationDate, dateFormat);
+        return this.formatDate(publicationDate, viewRecordsConfig.publicationDateFormat[this.props.publication.rek_display_type_lookup]);
     }
 
     formatDate = (date, format = 'YYYY-MM-DD') => {
@@ -222,12 +218,12 @@ export default class AdditionalInformation extends Component {
         return field.indexOf(keyPrefix) === 0 ? subkeyPrefix + field.substring(keyPrefix.length) : null;
     }
 
+    // common fields for all display types at the bottom of the list
     renderFooter = () => {
         const rows = [];
         const publication = this.props.publication;
         const footer = locale.viewRecord.headings.default.footer;
 
-        // common fields for all display types
         Object.keys(footer).forEach((field) => {
             const data = publication[field];
             const subkey = this.transformFieldNameToSubkey(field);
@@ -261,9 +257,9 @@ export default class AdditionalInformation extends Component {
 
                 // logic to get values from fez_record_search_key fields
                 if (subkey) {
-                    data = Array.isArray(value) ? this.renderObjects(value, subkey) : this.renderObject(value, subkey);
+                    data = Array.isArray(value) ? this.renderObjectList(value, subkey) : this.renderObject(value, subkey);
                 } else {
-                    data = this.renderString(field, value);
+                    data = this.renderContent(field, value);
                 }
 
                 rows.push(this.renderRow(heading, data));
