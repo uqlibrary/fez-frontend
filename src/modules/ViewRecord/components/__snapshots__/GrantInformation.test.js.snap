@@ -1,0 +1,507 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grant Information Component  should render component 1`] = `
+<StandardCard
+  className=""
+  title="Grant information"
+>
+  <Table
+    allRowsSelected={false}
+    className="grantInformation"
+    fixedFooter={true}
+    fixedHeader={true}
+    height="inherit"
+    key="grantInformation-1"
+    multiSelectable={false}
+    selectable={false}
+  >
+    <TableBody
+      allRowsSelected={false}
+      deselectOnClickaway={true}
+      displayRowCheckbox={false}
+      multiSelectable={false}
+      preScanRows={true}
+      selectable={true}
+      style={Object {}}
+    >
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Grant agency
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          National Health and Medical Research Council
+        </TableRowColumn>
+      </TableRow>
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Grant agency id
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          10.13039/501100000925
+        </TableRowColumn>
+      </TableRow>
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Grant id
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          569645 | 1022263
+        </TableRowColumn>
+      </TableRow>
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Grant text
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
+        </TableRowColumn>
+      </TableRow>
+    </TableBody>
+  </Table>
+  <Table
+    allRowsSelected={false}
+    className="grantInformation"
+    fixedFooter={true}
+    fixedHeader={true}
+    height="inherit"
+    key="grantInformation-2"
+    multiSelectable={false}
+    selectable={false}
+  >
+    <TableBody
+      allRowsSelected={false}
+      deselectOnClickaway={true}
+      displayRowCheckbox={false}
+      multiSelectable={false}
+      preScanRows={true}
+      selectable={true}
+      style={Object {}}
+    >
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Grant agency
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          Cancer Council Queensland
+        </TableRowColumn>
+      </TableRow>
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Grant agency id
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          10.13039/501100001168
+        </TableRowColumn>
+      </TableRow>
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Grant id
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          1042819
+        </TableRowColumn>
+      </TableRow>
+    </TableBody>
+  </Table>
+  <Table
+    allRowsSelected={false}
+    className="grantInformation"
+    fixedFooter={true}
+    fixedHeader={true}
+    height="inherit"
+    key="grantInformation-3"
+    multiSelectable={false}
+    selectable={false}
+  >
+    <TableBody
+      allRowsSelected={false}
+      deselectOnClickaway={true}
+      displayRowCheckbox={false}
+      multiSelectable={false}
+      preScanRows={true}
+      selectable={true}
+      style={Object {}}
+    >
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Grant agency
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          National Breast Cancer Foundation
+        </TableRowColumn>
+      </TableRow>
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Grant agency id
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          10.13039/501100001026
+        </TableRowColumn>
+      </TableRow>
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Grant id
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          CG-12-07 | CG-10-04
+        </TableRowColumn>
+      </TableRow>
+    </TableBody>
+  </Table>
+</StandardCard>
+`;
+
+exports[`Grant Information Component  should render component with empty publication 1`] = `
+<StandardCard
+  className=""
+  title="Grant information"
+/>
+`;
+
+exports[`Grant Information Component  should render with publication without grant id data 1`] = `
+<StandardCard
+  className=""
+  title="Grant information"
+>
+  <Table
+    allRowsSelected={false}
+    className="grantInformation"
+    fixedFooter={true}
+    fixedHeader={true}
+    height="inherit"
+    key="grantInformation-1"
+    multiSelectable={false}
+    selectable={false}
+  >
+    <TableBody
+      allRowsSelected={false}
+      deselectOnClickaway={true}
+      displayRowCheckbox={false}
+      multiSelectable={false}
+      preScanRows={true}
+      selectable={true}
+      style={Object {}}
+    >
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Grant agency
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          National Health and Medical Research Council
+        </TableRowColumn>
+      </TableRow>
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Grant agency id
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          10.13039/501100000925
+        </TableRowColumn>
+      </TableRow>
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Grant text
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
+        </TableRowColumn>
+      </TableRow>
+    </TableBody>
+  </Table>
+  <Table
+    allRowsSelected={false}
+    className="grantInformation"
+    fixedFooter={true}
+    fixedHeader={true}
+    height="inherit"
+    key="grantInformation-2"
+    multiSelectable={false}
+    selectable={false}
+  >
+    <TableBody
+      allRowsSelected={false}
+      deselectOnClickaway={true}
+      displayRowCheckbox={false}
+      multiSelectable={false}
+      preScanRows={true}
+      selectable={true}
+      style={Object {}}
+    >
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Grant agency
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          Cancer Council Queensland
+        </TableRowColumn>
+      </TableRow>
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Grant agency id
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          10.13039/501100001168
+        </TableRowColumn>
+      </TableRow>
+    </TableBody>
+  </Table>
+  <Table
+    allRowsSelected={false}
+    className="grantInformation"
+    fixedFooter={true}
+    fixedHeader={true}
+    height="inherit"
+    key="grantInformation-3"
+    multiSelectable={false}
+    selectable={false}
+  >
+    <TableBody
+      allRowsSelected={false}
+      deselectOnClickaway={true}
+      displayRowCheckbox={false}
+      multiSelectable={false}
+      preScanRows={true}
+      selectable={true}
+      style={Object {}}
+    >
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Grant agency
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          National Breast Cancer Foundation
+        </TableRowColumn>
+      </TableRow>
+      <TableRow
+        className="tableRow"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="headingColumn"
+          hoverable={false}
+        >
+          Grant agency id
+        </TableRowColumn>
+        <TableRowColumn
+          className="dataColumn"
+          hoverable={false}
+        >
+          10.13039/501100001026
+        </TableRowColumn>
+      </TableRow>
+    </TableBody>
+  </Table>
+</StandardCard>
+`;
