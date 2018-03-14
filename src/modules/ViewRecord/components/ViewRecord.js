@@ -10,6 +10,7 @@ import ReactHtmlParser from 'react-html-parser';
 import {locale} from 'locale';
 import PublicationDetails from './PublicationDetails';
 import AdditionalInformation from './AdditionalInformation';
+import Links from './Links';
 
 const dompurify = require('dompurify');
 
@@ -59,9 +60,17 @@ export default class ViewRecord extends Component {
             );
         }
 
+        console.log(recordToView);
         return (
             <StandardPage className="viewRecord" title={recordToView && recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
+                {
+                    recordToView && (
+                        (recordToView.fez_record_search_key_link && recordToView.fez_record_search_key_link.length > 0) ||
+                        (recordToView.fez_record_search_key_pubmed_central_id && recordToView.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id) ||
+                        (recordToView.fez_record_search_key_doi && recordToView.fez_record_search_key_doi.rek_doi)) &&
+                    <Links {...this.props} />
+                }
                 {
                     recordToView && (recordToView.rek_formatted_abstract || recordToView.rek_description) &&
                     <StandardCard title={locale.viewRecord.sections.abstract[recordToView.rek_display_type_lookup] || locale.viewRecord.sections.abstract.default}>

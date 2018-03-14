@@ -6091,7 +6091,9 @@ export const myRecordsList = {
                 "rek_publisher_xsdmf_id": null,
                 "rek_publisher": "Nature Publishing Group"
             },
-            "fez_record_search_key_pubmed_id": null,
+            "fez_record_search_key_pubmed_central_id": {
+                "rek_pubmed_central_id": "12345",
+            },
             "fez_record_search_key_refereed": {
                 "rek_refereed_id": 2666559,
                 "rek_refereed_pid": "UQ:36649",

@@ -24,8 +24,8 @@ export default class ViewRecordLinks extends PureComponent {
 
     render() {
         const record = this.props.recordToView;
-        const txt = locale.components.viewRecord.viewRecordLinks;
-        const showIcon = () => {
+        const txt = locale.viewRecord.sections.links;
+        const openAccessStatus = () => {
             if(!record.fez_record_search_key_oa_embargo_days) {
                 return true;
             } else {
@@ -35,24 +35,14 @@ export default class ViewRecordLinks extends PureComponent {
                 return (embargoDate < currentDate);
             }
         };
-        const showLink = () => {
-            return!(
-                (record && record.fez_record_search_key_oa_status && (
-                    record.fez_record_search_key_oa_status.rek_oa_status === 453692 || // Not yet assessed
-                    record.fez_record_search_key_oa_status.rek_oa_status === 453692 || // Link (no DOI)
-                    record.fez_record_search_key_oa_status.rek_oa_status === 453698 || // Mediated access
-                    record.fez_record_search_key_oa_status.rek_oa_status === 453700    // Not open access
-                )) || !record.fez_record_search_key_oa_status
-            );
-        };
         const showPMC = () => {
             return (record && record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id);
         };
-        if(!record || !(showLink() || showPMC())) return (<div className="empty"/>);
+        if(!record) return (<div className="empty"/>);
         return (
-            <StandardCard title="Links">
+            <StandardCard title={txt.title}>
                 <div className="viewRecordLinks">
-                    <Table selectable={false}>
+                    <Table selectable={false} className="links">
                         <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="tableHeader">
                             <TableRow>
                                 <TableHeaderColumn className="rowLink">Link (will open in a new window)</TableHeaderColumn>
@@ -65,8 +55,7 @@ export default class ViewRecordLinks extends PureComponent {
                             {
                                 record.fez_record_search_key_doi &&
                                 record.fez_record_search_key_doi.rek_doi &&
-                                showLink() &&
-                                <TableRow>
+                                <TableRow className="tableRow">
                                     <TableRowColumn className="rowLink">
                                         <DoiLink DoiId={record.fez_record_search_key_doi.rek_doi}/>
                                     </TableRowColumn>
@@ -75,7 +64,7 @@ export default class ViewRecordLinks extends PureComponent {
                                     </TableRowColumn>
                                     <TableRowColumn className="rowOA align-right">
                                         {
-                                            showIcon() &&
+                                            openAccessStatus() &&
                                             <div className="fez-icon openAccess large"
                                                 title={txt.openAccessLabel.replace('[oa_status]', openAccessIdLookup[record.fez_record_search_key_oa_status.rek_oa_status])}
                                             />
@@ -100,7 +89,6 @@ export default class ViewRecordLinks extends PureComponent {
                             {
                                 record.fez_record_search_key_link &&
                                 record.fez_record_search_key_link.length > 0 &&
-                                showLink() &&
                                 record.fez_record_search_key_link.map((item, index) => (
                                     <TableRow key={index}>
                                         <TableRowColumn className="rowLink">
@@ -115,7 +103,7 @@ export default class ViewRecordLinks extends PureComponent {
                                         </TableRowColumn>
                                         <TableRowColumn className="rowOA align-right">
                                             {
-                                                showIcon() &&
+                                                openAccessStatus() &&
                                                 <div className="fez-icon openAccess large"
                                                     title={txt.openAccessLabel.replace('[oa_status]', openAccessIdLookup[record.fez_record_search_key_oa_status.rek_oa_status])}/>
                                             }

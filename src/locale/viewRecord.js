@@ -12,6 +12,12 @@ export default {
                 'Journal': 'Summary/Description',
                 'Data Collection': 'Dataset description',
                 'Design': 'Project description'
+            },
+            links: {
+                title: 'Links',
+                linkMissingDescription: 'No description avalable',
+                linkMissingDescriptionTitle: 'Click to open link in a new window',
+                openAccessLabel: 'Open Access - [oa_status] - Free to read (embargo date might apply)',
             }
         },
         headings: {

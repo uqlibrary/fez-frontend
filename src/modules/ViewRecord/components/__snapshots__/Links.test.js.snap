@@ -10,6 +10,7 @@ exports[`Component ViewRecord  should render a PubMed Central link 1`] = `
   >
     <Table
       allRowsSelected={false}
+      className="links"
       fixedFooter={true}
       fixedHeader={true}
       height="inherit"
@@ -109,6 +110,7 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
   >
     <Table
       allRowsSelected={false}
+      className="links"
       fixedFooter={true}
       fixedHeader={true}
       height="inherit"
@@ -289,6 +291,7 @@ exports[`Component ViewRecord  should render list of links without OA icons 1`] 
   >
     <Table
       allRowsSelected={false}
+      className="links"
       fixedFooter={true}
       fixedHeader={true}
       height="inherit"

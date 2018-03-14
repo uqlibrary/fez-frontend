@@ -1,4 +1,4 @@
-import ViewRecordLinks from './ViewRecordLinks';
+import Links from './Links';
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -10,7 +10,7 @@ function setup(testProps, isShallow = true){
             clearRecordToView: jest.fn()
         }
     };
-    return getElement(ViewRecordLinks, props, isShallow);
+    return getElement(Links, props, isShallow);
 }
 
 describe('Component ViewRecord ', () => {
