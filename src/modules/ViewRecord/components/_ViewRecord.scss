@@ -16,21 +16,45 @@
     vertical-align: top;
   }
 
+  .additionalInformation, .publicationDetails {
+    table-layout: auto !important;
+  }
   .tableRow, .headingColumn, .dataColumn {
-    height: 0 !important;
-    padding: 0.5em 0 0.5em 0.5em !important;
+    padding: 8px 6px !important;
+    height: auto !important;
+    @include mobile {
+      padding:  6px 0 0 0 !important;
+      height: auto !important;
+    }
   }
 
   .headingColumn {
-    width: 275px;
+    font-weight: $text-weight-bold;
+    font-size: $text-body-normal !important;
     vertical-align: top;
+    white-space: normal !important;
+
+    @include desktop {
+      width: 150px;
+    }
+    @include mobile {
+      display: inline-block !important;
+      width: calc(100% - 12px);
+      height: auto !important;
+    }
   }
 
   .dataColumn {
-    font-weight: 700;
+    font-weight: $text-weight-normal;
     white-space: normal !important;
-    text-align: justify !important;
-    text-justify: inter-word;
+    vertical-align: top;
+    @include mobile {
+      padding: 12px 0 12px 18px !important;
+      display: inline-block !important;
+      width: calc(100% - 12px);
+      height: auto !important;
+      word-break: normal !important;
+    }
   }
 
   ul {
