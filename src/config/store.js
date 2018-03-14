@@ -7,7 +7,6 @@ import Immutable from 'immutable';
 import thunk from 'redux-thunk';
 
 import Raven from 'raven-js';
-import createRavenMiddleware from 'raven-for-redux';
 
 Raven.config('https://2e8809106d66495ba3023139b1bcfbe5@sentry.io/301681').install();
 
@@ -24,10 +23,7 @@ const getStore = () => {
         composeEnhancer(
             applyMiddleware(
                 routerMiddleware(history),
-                thunk,
-                createRavenMiddleware(Raven, {
-                    environment: process.env.REACT_APP_ENVIRONMENT,
-                })
+                thunk
             ),
         ),
     );
