@@ -328,6 +328,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
       "rek_description": "The International Meeting on Measurements and Hydraulics of Sewers (IMMHS'08) was organised by the Water and Environment Division of the Laboratoire Central des Ponts et Chaussées (LCPC) to foster interactions between industry professionals, researchers and university academics on the topics of experiences and challenges in sewers including measurements, hydrodynamics and sediments. A main feature of the meeting was the direct interactions between a wide range of professionals and researchers working on a broad range of relevant topics, including operational issues, sediments and turbidity, mud rheology, H2S, and flow measurements. Another interesting aspect of this event was the stimulating debates during and after the presentations, as well as during the subsequent discussions and the field measurements. Contributions include: Challenges in Sewer Hydrodynamics, Sediments and Measurements, Sedimentation in Large Combined Sewage Systems: Perspectives of an Operator, A New Velocity and Total Suspended Solid Measurement Device, Measurements of Pollutants by Turbidimetry, Acoustic Doppler Velocimetry (ADV) in the Field and in Laboratory: Practical Experiences, Sewer Sediments - their Diversity, Impact and Modelling Challenges, Use of CFD Techniques to Estimate the Spatial Distribution of Sediment on the Bed of a Large Detention and Settling Basin. The publication of the proceedings marked the successful conclusion of this event. Each paper was peer-reviewed by a minimum of two experts. A key feature of all these contributions is the practical knowledge gained in the last ten to fifteen years, and a particular effort was made by all contributors to share both positive and negative experiences.",
       "rek_description_xsdmf_id": 11462,
       "rek_display_type": 197,
+      "rek_display_type_lookup": "Conference Proceedings",
       "rek_display_type_xsdmf_id": 3673,
       "rek_file_downloads": 3215,
       "rek_formatted_abstract": null,
@@ -721,6 +722,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
           "rek_description": "The International Meeting on Measurements and Hydraulics of Sewers (IMMHS'08) was organised by the Water and Environment Division of the Laboratoire Central des Ponts et Chaussées (LCPC) to foster interactions between industry professionals, researchers and university academics on the topics of experiences and challenges in sewers including measurements, hydrodynamics and sediments. A main feature of the meeting was the direct interactions between a wide range of professionals and researchers working on a broad range of relevant topics, including operational issues, sediments and turbidity, mud rheology, H2S, and flow measurements. Another interesting aspect of this event was the stimulating debates during and after the presentations, as well as during the subsequent discussions and the field measurements. Contributions include: Challenges in Sewer Hydrodynamics, Sediments and Measurements, Sedimentation in Large Combined Sewage Systems: Perspectives of an Operator, A New Velocity and Total Suspended Solid Measurement Device, Measurements of Pollutants by Turbidimetry, Acoustic Doppler Velocimetry (ADV) in the Field and in Laboratory: Practical Experiences, Sewer Sediments - their Diversity, Impact and Modelling Challenges, Use of CFD Techniques to Estimate the Spatial Distribution of Sediment on the Bed of a Large Detention and Settling Basin. The publication of the proceedings marked the successful conclusion of this event. Each paper was peer-reviewed by a minimum of two experts. A key feature of all these contributions is the practical knowledge gained in the last ten to fifteen years, and a particular effort was made by all contributors to share both positive and negative experiences.",
           "rek_description_xsdmf_id": 11462,
           "rek_display_type": 197,
+          "rek_display_type_lookup": "Conference Proceedings",
           "rek_display_type_xsdmf_id": 3673,
           "rek_file_downloads": 3215,
           "rek_formatted_abstract": null,
@@ -760,6 +762,13 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
     >
       <AuthorsCitationView
         className="citationEditors"
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_contributor_id",
+            "idOrder": "rek_contributor_id_order",
+            "idSubkey": "rek_contributor_id",
+          }
+        }
         initialNumberOfAuthors={10}
         prefix=""
         publication={
@@ -1088,6 +1097,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
             "rek_description": "The International Meeting on Measurements and Hydraulics of Sewers (IMMHS'08) was organised by the Water and Environment Division of the Laboratoire Central des Ponts et Chaussées (LCPC) to foster interactions between industry professionals, researchers and university academics on the topics of experiences and challenges in sewers including measurements, hydrodynamics and sediments. A main feature of the meeting was the direct interactions between a wide range of professionals and researchers working on a broad range of relevant topics, including operational issues, sediments and turbidity, mud rheology, H2S, and flow measurements. Another interesting aspect of this event was the stimulating debates during and after the presentations, as well as during the subsequent discussions and the field measurements. Contributions include: Challenges in Sewer Hydrodynamics, Sediments and Measurements, Sedimentation in Large Combined Sewage Systems: Perspectives of an Operator, A New Velocity and Total Suspended Solid Measurement Device, Measurements of Pollutants by Turbidimetry, Acoustic Doppler Velocimetry (ADV) in the Field and in Laboratory: Practical Experiences, Sewer Sediments - their Diversity, Impact and Modelling Challenges, Use of CFD Techniques to Estimate the Spatial Distribution of Sediment on the Bed of a Large Detention and Settling Basin. The publication of the proceedings marked the successful conclusion of this event. Each paper was peer-reviewed by a minimum of two experts. A key feature of all these contributions is the practical knowledge gained in the last ten to fifteen years, and a particular effort was made by all contributors to share both positive and negative experiences.",
             "rek_description_xsdmf_id": 11462,
             "rek_display_type": 197,
+            "rek_display_type_lookup": "Conference Proceedings",
             "rek_display_type_xsdmf_id": 3673,
             "rek_file_downloads": 3215,
             "rek_formatted_abstract": null,
@@ -1130,6 +1140,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
             "subkey": "rek_contributor",
           }
         }
+        showLink={false}
         suffix=" ed. "
         thresholdNumberOfAuthors={3}
       >
@@ -1139,13 +1150,14 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
           <CitationView
             className="citationAuthor"
             key="citationAuthor_1"
-            prefix=""
+            prefix=" "
             suffix=""
             value="Frédérique Larrarte"
           >
             <span
               className="citationAuthor"
             >
+               
               Frédérique Larrarte
             </span>
           </CitationView>
@@ -1608,6 +1620,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
       "rek_description": "The International Meeting on Measurements and Hydraulics of Sewers (IMMHS'08) was organised by the Water and Environment Division of the Laboratoire Central des Ponts et Chaussées (LCPC) to foster interactions between industry professionals, researchers and university academics on the topics of experiences and challenges in sewers including measurements, hydrodynamics and sediments. A main feature of the meeting was the direct interactions between a wide range of professionals and researchers working on a broad range of relevant topics, including operational issues, sediments and turbidity, mud rheology, H2S, and flow measurements. Another interesting aspect of this event was the stimulating debates during and after the presentations, as well as during the subsequent discussions and the field measurements. Contributions include: Challenges in Sewer Hydrodynamics, Sediments and Measurements, Sedimentation in Large Combined Sewage Systems: Perspectives of an Operator, A New Velocity and Total Suspended Solid Measurement Device, Measurements of Pollutants by Turbidimetry, Acoustic Doppler Velocimetry (ADV) in the Field and in Laboratory: Practical Experiences, Sewer Sediments - their Diversity, Impact and Modelling Challenges, Use of CFD Techniques to Estimate the Spatial Distribution of Sediment on the Bed of a Large Detention and Settling Basin. The publication of the proceedings marked the successful conclusion of this event. Each paper was peer-reviewed by a minimum of two experts. A key feature of all these contributions is the practical knowledge gained in the last ten to fifteen years, and a particular effort was made by all contributors to share both positive and negative experiences.",
       "rek_description_xsdmf_id": 11462,
       "rek_display_type": 197,
+      "rek_display_type_lookup": "Conference Proceedings",
       "rek_display_type_xsdmf_id": 3673,
       "rek_file_downloads": 3215,
       "rek_formatted_abstract": null,
@@ -2004,6 +2017,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
           "rek_description": "The International Meeting on Measurements and Hydraulics of Sewers (IMMHS'08) was organised by the Water and Environment Division of the Laboratoire Central des Ponts et Chaussées (LCPC) to foster interactions between industry professionals, researchers and university academics on the topics of experiences and challenges in sewers including measurements, hydrodynamics and sediments. A main feature of the meeting was the direct interactions between a wide range of professionals and researchers working on a broad range of relevant topics, including operational issues, sediments and turbidity, mud rheology, H2S, and flow measurements. Another interesting aspect of this event was the stimulating debates during and after the presentations, as well as during the subsequent discussions and the field measurements. Contributions include: Challenges in Sewer Hydrodynamics, Sediments and Measurements, Sedimentation in Large Combined Sewage Systems: Perspectives of an Operator, A New Velocity and Total Suspended Solid Measurement Device, Measurements of Pollutants by Turbidimetry, Acoustic Doppler Velocimetry (ADV) in the Field and in Laboratory: Practical Experiences, Sewer Sediments - their Diversity, Impact and Modelling Challenges, Use of CFD Techniques to Estimate the Spatial Distribution of Sediment on the Bed of a Large Detention and Settling Basin. The publication of the proceedings marked the successful conclusion of this event. Each paper was peer-reviewed by a minimum of two experts. A key feature of all these contributions is the practical knowledge gained in the last ten to fifteen years, and a particular effort was made by all contributors to share both positive and negative experiences.",
           "rek_description_xsdmf_id": 11462,
           "rek_display_type": 197,
+          "rek_display_type_lookup": "Conference Proceedings",
           "rek_display_type_xsdmf_id": 3673,
           "rek_file_downloads": 3215,
           "rek_formatted_abstract": null,
@@ -2043,6 +2057,13 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
     >
       <AuthorsCitationView
         className="citationEditors"
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_contributor_id",
+            "idOrder": "rek_contributor_id_order",
+            "idSubkey": "rek_contributor_id",
+          }
+        }
         initialNumberOfAuthors={10}
         prefix=""
         publication={
@@ -2374,6 +2395,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
             "rek_description": "The International Meeting on Measurements and Hydraulics of Sewers (IMMHS'08) was organised by the Water and Environment Division of the Laboratoire Central des Ponts et Chaussées (LCPC) to foster interactions between industry professionals, researchers and university academics on the topics of experiences and challenges in sewers including measurements, hydrodynamics and sediments. A main feature of the meeting was the direct interactions between a wide range of professionals and researchers working on a broad range of relevant topics, including operational issues, sediments and turbidity, mud rheology, H2S, and flow measurements. Another interesting aspect of this event was the stimulating debates during and after the presentations, as well as during the subsequent discussions and the field measurements. Contributions include: Challenges in Sewer Hydrodynamics, Sediments and Measurements, Sedimentation in Large Combined Sewage Systems: Perspectives of an Operator, A New Velocity and Total Suspended Solid Measurement Device, Measurements of Pollutants by Turbidimetry, Acoustic Doppler Velocimetry (ADV) in the Field and in Laboratory: Practical Experiences, Sewer Sediments - their Diversity, Impact and Modelling Challenges, Use of CFD Techniques to Estimate the Spatial Distribution of Sediment on the Bed of a Large Detention and Settling Basin. The publication of the proceedings marked the successful conclusion of this event. Each paper was peer-reviewed by a minimum of two experts. A key feature of all these contributions is the practical knowledge gained in the last ten to fifteen years, and a particular effort was made by all contributors to share both positive and negative experiences.",
             "rek_description_xsdmf_id": 11462,
             "rek_display_type": 197,
+            "rek_display_type_lookup": "Conference Proceedings",
             "rek_display_type_xsdmf_id": 3673,
             "rek_file_downloads": 3215,
             "rek_formatted_abstract": null,
@@ -2416,6 +2438,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
             "subkey": "rek_contributor",
           }
         }
+        showLink={false}
         suffix=" ed. "
         thresholdNumberOfAuthors={3}
       >
@@ -2425,13 +2448,14 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
           <CitationView
             className="citationAuthor"
             key="citationAuthor_1"
-            prefix=""
+            prefix=" "
             suffix=""
             value="Frédérique Larrarte"
           >
             <span
               className="citationAuthor"
             >
+               
               Frédérique Larrarte
             </span>
           </CitationView>
@@ -2603,6 +2627,13 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
     >
       <AuthorsCitationView
         className="citationEditors"
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_contributor_id",
+            "idOrder": "rek_contributor_id_order",
+            "idSubkey": "rek_contributor_id",
+          }
+        }
         initialNumberOfAuthors={10}
         prefix=""
         publication={Object {}}
@@ -2613,6 +2644,7 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
             "subkey": "rek_contributor",
           }
         }
+        showLink={false}
         suffix=" ed. "
         thresholdNumberOfAuthors={3}
       >

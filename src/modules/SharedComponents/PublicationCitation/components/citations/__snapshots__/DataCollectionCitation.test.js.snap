@@ -177,7 +177,12 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         "rek_doi_pid": "UQ:407731",
         "rek_doi_xsdmf_id": 16572,
       },
-      "fez_record_search_key_end_date": null,
+      "fez_record_search_key_end_date": Object {
+        "rek_end_date": "2005-01-05 00:00:00",
+        "rek_end_date_id": 8,
+        "rek_end_date_pid": "UQ:162308",
+        "rek_end_date_xsdmf_id": 12154,
+      },
       "fez_record_search_key_fields_of_research": Array [
         Object {
           "rek_fields_of_research": 452086,
@@ -437,7 +442,16 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         "rek_rights_pid": "UQ:407731",
         "rek_rights_xsdmf_id": 16211,
       },
-      "fez_record_search_key_seo_code": Array [],
+      "fez_record_search_key_seo_code": Array [
+        Object {
+          "rek_seo_code": 451600,
+          "rek_seo_code_id": 866,
+          "rek_seo_code_lookup": "970106 Expanding Knowledge in the Biological Sciences",
+          "rek_seo_code_order": 1,
+          "rek_seo_code_pid": "UQ:398336",
+          "rek_seo_code_xsdmf_id": null,
+        },
+      ],
       "fez_record_search_key_software_required": Array [
         Object {
           "rek_software_required": "CheckM v0.9.4",
@@ -447,9 +461,24 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
           "rek_software_required_xsdmf_id": 16208,
         },
       ],
-      "fez_record_search_key_start_date": null,
-      "fez_record_search_key_time_period_end_date": null,
-      "fez_record_search_key_time_period_start_date": null,
+      "fez_record_search_key_start_date": Object {
+        "rek_start_date": "2005-01-05 00:00:00",
+        "rek_start_date_id": 8,
+        "rek_start_date_pid": "UQ:162308",
+        "rek_start_date_xsdmf_id": 12154,
+      },
+      "fez_record_search_key_time_period_end_date": Object {
+        "rek_time_period_end_date": "2009-01-01T00:00:00Z",
+        "rek_time_period_end_date_id": 867,
+        "rek_time_period_end_date_pid": "UQ:407731",
+        "rek_time_period_end_date_xsdmf_id": 16538,
+      },
+      "fez_record_search_key_time_period_start_date": Object {
+        "rek_time_period_start_date": "2001-01-01T00:00:00Z",
+        "rek_time_period_start_date_id": 965,
+        "rek_time_period_start_date_pid": "UQ:407731",
+        "rek_time_period_start_date_xsdmf_id": 16537,
+      },
       "fez_record_search_key_type_of_data": Array [
         Object {
           "rek_type_of_data": "Text",
@@ -571,6 +600,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -747,7 +783,12 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
             "rek_doi_pid": "UQ:407731",
             "rek_doi_xsdmf_id": 16572,
           },
-          "fez_record_search_key_end_date": null,
+          "fez_record_search_key_end_date": Object {
+            "rek_end_date": "2005-01-05 00:00:00",
+            "rek_end_date_id": 8,
+            "rek_end_date_pid": "UQ:162308",
+            "rek_end_date_xsdmf_id": 12154,
+          },
           "fez_record_search_key_fields_of_research": Array [
             Object {
               "rek_fields_of_research": 452086,
@@ -1007,7 +1048,16 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
             "rek_rights_pid": "UQ:407731",
             "rek_rights_xsdmf_id": 16211,
           },
-          "fez_record_search_key_seo_code": Array [],
+          "fez_record_search_key_seo_code": Array [
+            Object {
+              "rek_seo_code": 451600,
+              "rek_seo_code_id": 866,
+              "rek_seo_code_lookup": "970106 Expanding Knowledge in the Biological Sciences",
+              "rek_seo_code_order": 1,
+              "rek_seo_code_pid": "UQ:398336",
+              "rek_seo_code_xsdmf_id": null,
+            },
+          ],
           "fez_record_search_key_software_required": Array [
             Object {
               "rek_software_required": "CheckM v0.9.4",
@@ -1017,9 +1067,24 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
               "rek_software_required_xsdmf_id": 16208,
             },
           ],
-          "fez_record_search_key_start_date": null,
-          "fez_record_search_key_time_period_end_date": null,
-          "fez_record_search_key_time_period_start_date": null,
+          "fez_record_search_key_start_date": Object {
+            "rek_start_date": "2005-01-05 00:00:00",
+            "rek_start_date_id": 8,
+            "rek_start_date_pid": "UQ:162308",
+            "rek_start_date_xsdmf_id": 12154,
+          },
+          "fez_record_search_key_time_period_end_date": Object {
+            "rek_time_period_end_date": "2009-01-01T00:00:00Z",
+            "rek_time_period_end_date_id": 867,
+            "rek_time_period_end_date_pid": "UQ:407731",
+            "rek_time_period_end_date_xsdmf_id": 16538,
+          },
+          "fez_record_search_key_time_period_start_date": Object {
+            "rek_time_period_start_date": "2001-01-01T00:00:00Z",
+            "rek_time_period_start_date_id": 965,
+            "rek_time_period_start_date_pid": "UQ:407731",
+            "rek_time_period_start_date_xsdmf_id": 16537,
+          },
           "fez_record_search_key_type_of_data": Array [
             Object {
               "rek_type_of_data": "Text",
@@ -1116,6 +1181,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=""
       thresholdNumberOfAuthors={3}
     >
@@ -1125,13 +1191,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Parks, Donovan H."
         >
           <span
             className="citationAuthor"
           >
+             
             Parks, Donovan H.
             , 
           </span>
@@ -1139,13 +1206,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Imelfort, Michael"
         >
           <span
             className="citationAuthor"
           >
+             
             Imelfort, Michael
             , 
           </span>
@@ -1153,13 +1221,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Skennerton, Connor T."
         >
           <span
             className="citationAuthor"
           >
+             
             Skennerton, Connor T.
             , 
           </span>
@@ -1167,13 +1236,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
+             
             Hugenholtz, Philip
             , 
           </span>
@@ -1257,7 +1327,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
@@ -1504,7 +1573,12 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_doi_pid": "UQ:407731",
         "rek_doi_xsdmf_id": 16572,
       },
-      "fez_record_search_key_end_date": null,
+      "fez_record_search_key_end_date": Object {
+        "rek_end_date": "2005-01-05 00:00:00",
+        "rek_end_date_id": 8,
+        "rek_end_date_pid": "UQ:162308",
+        "rek_end_date_xsdmf_id": 12154,
+      },
       "fez_record_search_key_fields_of_research": Array [
         Object {
           "rek_fields_of_research": 452086,
@@ -1764,7 +1838,16 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_rights_pid": "UQ:407731",
         "rek_rights_xsdmf_id": 16211,
       },
-      "fez_record_search_key_seo_code": Array [],
+      "fez_record_search_key_seo_code": Array [
+        Object {
+          "rek_seo_code": 451600,
+          "rek_seo_code_id": 866,
+          "rek_seo_code_lookup": "970106 Expanding Knowledge in the Biological Sciences",
+          "rek_seo_code_order": 1,
+          "rek_seo_code_pid": "UQ:398336",
+          "rek_seo_code_xsdmf_id": null,
+        },
+      ],
       "fez_record_search_key_software_required": Array [
         Object {
           "rek_software_required": "CheckM v0.9.4",
@@ -1774,9 +1857,24 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_software_required_xsdmf_id": 16208,
         },
       ],
-      "fez_record_search_key_start_date": null,
-      "fez_record_search_key_time_period_end_date": null,
-      "fez_record_search_key_time_period_start_date": null,
+      "fez_record_search_key_start_date": Object {
+        "rek_start_date": "2005-01-05 00:00:00",
+        "rek_start_date_id": 8,
+        "rek_start_date_pid": "UQ:162308",
+        "rek_start_date_xsdmf_id": 12154,
+      },
+      "fez_record_search_key_time_period_end_date": Object {
+        "rek_time_period_end_date": "2009-01-01T00:00:00Z",
+        "rek_time_period_end_date_id": 867,
+        "rek_time_period_end_date_pid": "UQ:407731",
+        "rek_time_period_end_date_xsdmf_id": 16538,
+      },
+      "fez_record_search_key_time_period_start_date": Object {
+        "rek_time_period_start_date": "2001-01-01T00:00:00Z",
+        "rek_time_period_start_date_id": 965,
+        "rek_time_period_start_date_pid": "UQ:407731",
+        "rek_time_period_start_date_xsdmf_id": 16537,
+      },
       "fez_record_search_key_type_of_data": Array [
         Object {
           "rek_type_of_data": "Text",
@@ -1898,6 +1996,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -2074,7 +2179,12 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_doi_pid": "UQ:407731",
             "rek_doi_xsdmf_id": 16572,
           },
-          "fez_record_search_key_end_date": null,
+          "fez_record_search_key_end_date": Object {
+            "rek_end_date": "2005-01-05 00:00:00",
+            "rek_end_date_id": 8,
+            "rek_end_date_pid": "UQ:162308",
+            "rek_end_date_xsdmf_id": 12154,
+          },
           "fez_record_search_key_fields_of_research": Array [
             Object {
               "rek_fields_of_research": 452086,
@@ -2334,7 +2444,16 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_rights_pid": "UQ:407731",
             "rek_rights_xsdmf_id": 16211,
           },
-          "fez_record_search_key_seo_code": Array [],
+          "fez_record_search_key_seo_code": Array [
+            Object {
+              "rek_seo_code": 451600,
+              "rek_seo_code_id": 866,
+              "rek_seo_code_lookup": "970106 Expanding Knowledge in the Biological Sciences",
+              "rek_seo_code_order": 1,
+              "rek_seo_code_pid": "UQ:398336",
+              "rek_seo_code_xsdmf_id": null,
+            },
+          ],
           "fez_record_search_key_software_required": Array [
             Object {
               "rek_software_required": "CheckM v0.9.4",
@@ -2344,9 +2463,24 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_software_required_xsdmf_id": 16208,
             },
           ],
-          "fez_record_search_key_start_date": null,
-          "fez_record_search_key_time_period_end_date": null,
-          "fez_record_search_key_time_period_start_date": null,
+          "fez_record_search_key_start_date": Object {
+            "rek_start_date": "2005-01-05 00:00:00",
+            "rek_start_date_id": 8,
+            "rek_start_date_pid": "UQ:162308",
+            "rek_start_date_xsdmf_id": 12154,
+          },
+          "fez_record_search_key_time_period_end_date": Object {
+            "rek_time_period_end_date": "2009-01-01T00:00:00Z",
+            "rek_time_period_end_date_id": 867,
+            "rek_time_period_end_date_pid": "UQ:407731",
+            "rek_time_period_end_date_xsdmf_id": 16538,
+          },
+          "fez_record_search_key_time_period_start_date": Object {
+            "rek_time_period_start_date": "2001-01-01T00:00:00Z",
+            "rek_time_period_start_date_id": 965,
+            "rek_time_period_start_date_pid": "UQ:407731",
+            "rek_time_period_start_date_xsdmf_id": 16537,
+          },
           "fez_record_search_key_type_of_data": Array [
             Object {
               "rek_type_of_data": "Text",
@@ -2443,6 +2577,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=""
       thresholdNumberOfAuthors={3}
     >
@@ -2452,13 +2587,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Parks, Donovan H."
         >
           <span
             className="citationAuthor"
           >
+             
             Parks, Donovan H.
             , 
           </span>
@@ -2466,13 +2602,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Imelfort, Michael"
         >
           <span
             className="citationAuthor"
           >
+             
             Imelfort, Michael
             , 
           </span>
@@ -2480,13 +2617,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Skennerton, Connor T."
         >
           <span
             className="citationAuthor"
           >
+             
             Skennerton, Connor T.
             , 
           </span>
@@ -2494,13 +2632,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
+             
             Hugenholtz, Philip
             , 
           </span>
@@ -2580,7 +2719,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
@@ -2827,7 +2965,12 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_doi_pid": "UQ:407731",
         "rek_doi_xsdmf_id": 16572,
       },
-      "fez_record_search_key_end_date": null,
+      "fez_record_search_key_end_date": Object {
+        "rek_end_date": "2005-01-05 00:00:00",
+        "rek_end_date_id": 8,
+        "rek_end_date_pid": "UQ:162308",
+        "rek_end_date_xsdmf_id": 12154,
+      },
       "fez_record_search_key_fields_of_research": Array [
         Object {
           "rek_fields_of_research": 452086,
@@ -3087,7 +3230,16 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_rights_pid": "UQ:407731",
         "rek_rights_xsdmf_id": 16211,
       },
-      "fez_record_search_key_seo_code": Array [],
+      "fez_record_search_key_seo_code": Array [
+        Object {
+          "rek_seo_code": 451600,
+          "rek_seo_code_id": 866,
+          "rek_seo_code_lookup": "970106 Expanding Knowledge in the Biological Sciences",
+          "rek_seo_code_order": 1,
+          "rek_seo_code_pid": "UQ:398336",
+          "rek_seo_code_xsdmf_id": null,
+        },
+      ],
       "fez_record_search_key_software_required": Array [
         Object {
           "rek_software_required": "CheckM v0.9.4",
@@ -3097,9 +3249,24 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_software_required_xsdmf_id": 16208,
         },
       ],
-      "fez_record_search_key_start_date": null,
-      "fez_record_search_key_time_period_end_date": null,
-      "fez_record_search_key_time_period_start_date": null,
+      "fez_record_search_key_start_date": Object {
+        "rek_start_date": "2005-01-05 00:00:00",
+        "rek_start_date_id": 8,
+        "rek_start_date_pid": "UQ:162308",
+        "rek_start_date_xsdmf_id": 12154,
+      },
+      "fez_record_search_key_time_period_end_date": Object {
+        "rek_time_period_end_date": "2009-01-01T00:00:00Z",
+        "rek_time_period_end_date_id": 867,
+        "rek_time_period_end_date_pid": "UQ:407731",
+        "rek_time_period_end_date_xsdmf_id": 16538,
+      },
+      "fez_record_search_key_time_period_start_date": Object {
+        "rek_time_period_start_date": "2001-01-01T00:00:00Z",
+        "rek_time_period_start_date_id": 965,
+        "rek_time_period_start_date_pid": "UQ:407731",
+        "rek_time_period_start_date_xsdmf_id": 16537,
+      },
       "fez_record_search_key_type_of_data": Array [
         Object {
           "rek_type_of_data": "Text",
@@ -3221,6 +3388,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -3397,7 +3571,12 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_doi_pid": "UQ:407731",
             "rek_doi_xsdmf_id": 16572,
           },
-          "fez_record_search_key_end_date": null,
+          "fez_record_search_key_end_date": Object {
+            "rek_end_date": "2005-01-05 00:00:00",
+            "rek_end_date_id": 8,
+            "rek_end_date_pid": "UQ:162308",
+            "rek_end_date_xsdmf_id": 12154,
+          },
           "fez_record_search_key_fields_of_research": Array [
             Object {
               "rek_fields_of_research": 452086,
@@ -3657,7 +3836,16 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_rights_pid": "UQ:407731",
             "rek_rights_xsdmf_id": 16211,
           },
-          "fez_record_search_key_seo_code": Array [],
+          "fez_record_search_key_seo_code": Array [
+            Object {
+              "rek_seo_code": 451600,
+              "rek_seo_code_id": 866,
+              "rek_seo_code_lookup": "970106 Expanding Knowledge in the Biological Sciences",
+              "rek_seo_code_order": 1,
+              "rek_seo_code_pid": "UQ:398336",
+              "rek_seo_code_xsdmf_id": null,
+            },
+          ],
           "fez_record_search_key_software_required": Array [
             Object {
               "rek_software_required": "CheckM v0.9.4",
@@ -3667,9 +3855,24 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_software_required_xsdmf_id": 16208,
             },
           ],
-          "fez_record_search_key_start_date": null,
-          "fez_record_search_key_time_period_end_date": null,
-          "fez_record_search_key_time_period_start_date": null,
+          "fez_record_search_key_start_date": Object {
+            "rek_start_date": "2005-01-05 00:00:00",
+            "rek_start_date_id": 8,
+            "rek_start_date_pid": "UQ:162308",
+            "rek_start_date_xsdmf_id": 12154,
+          },
+          "fez_record_search_key_time_period_end_date": Object {
+            "rek_time_period_end_date": "2009-01-01T00:00:00Z",
+            "rek_time_period_end_date_id": 867,
+            "rek_time_period_end_date_pid": "UQ:407731",
+            "rek_time_period_end_date_xsdmf_id": 16538,
+          },
+          "fez_record_search_key_time_period_start_date": Object {
+            "rek_time_period_start_date": "2001-01-01T00:00:00Z",
+            "rek_time_period_start_date_id": 965,
+            "rek_time_period_start_date_pid": "UQ:407731",
+            "rek_time_period_start_date_xsdmf_id": 16537,
+          },
           "fez_record_search_key_type_of_data": Array [
             Object {
               "rek_type_of_data": "Text",
@@ -3766,6 +3969,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=""
       thresholdNumberOfAuthors={3}
     >
@@ -3775,13 +3979,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Parks, Donovan H."
         >
           <span
             className="citationAuthor"
           >
+             
             Parks, Donovan H.
             , 
           </span>
@@ -3789,13 +3994,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Imelfort, Michael"
         >
           <span
             className="citationAuthor"
           >
+             
             Imelfort, Michael
             , 
           </span>
@@ -3803,13 +4009,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Skennerton, Connor T."
         >
           <span
             className="citationAuthor"
           >
+             
             Skennerton, Connor T.
             , 
           </span>
@@ -3817,13 +4024,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
+             
             Hugenholtz, Philip
             , 
           </span>
@@ -3903,7 +4111,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
@@ -4114,7 +4321,12 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_doi_pid": "UQ:407731",
         "rek_doi_xsdmf_id": 16572,
       },
-      "fez_record_search_key_end_date": null,
+      "fez_record_search_key_end_date": Object {
+        "rek_end_date": "2005-01-05 00:00:00",
+        "rek_end_date_id": 8,
+        "rek_end_date_pid": "UQ:162308",
+        "rek_end_date_xsdmf_id": 12154,
+      },
       "fez_record_search_key_fields_of_research": Array [
         Object {
           "rek_fields_of_research": 452086,
@@ -4374,7 +4586,16 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_rights_pid": "UQ:407731",
         "rek_rights_xsdmf_id": 16211,
       },
-      "fez_record_search_key_seo_code": Array [],
+      "fez_record_search_key_seo_code": Array [
+        Object {
+          "rek_seo_code": 451600,
+          "rek_seo_code_id": 866,
+          "rek_seo_code_lookup": "970106 Expanding Knowledge in the Biological Sciences",
+          "rek_seo_code_order": 1,
+          "rek_seo_code_pid": "UQ:398336",
+          "rek_seo_code_xsdmf_id": null,
+        },
+      ],
       "fez_record_search_key_software_required": Array [
         Object {
           "rek_software_required": "CheckM v0.9.4",
@@ -4384,9 +4605,24 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_software_required_xsdmf_id": 16208,
         },
       ],
-      "fez_record_search_key_start_date": null,
-      "fez_record_search_key_time_period_end_date": null,
-      "fez_record_search_key_time_period_start_date": null,
+      "fez_record_search_key_start_date": Object {
+        "rek_start_date": "2005-01-05 00:00:00",
+        "rek_start_date_id": 8,
+        "rek_start_date_pid": "UQ:162308",
+        "rek_start_date_xsdmf_id": 12154,
+      },
+      "fez_record_search_key_time_period_end_date": Object {
+        "rek_time_period_end_date": "2009-01-01T00:00:00Z",
+        "rek_time_period_end_date_id": 867,
+        "rek_time_period_end_date_pid": "UQ:407731",
+        "rek_time_period_end_date_xsdmf_id": 16538,
+      },
+      "fez_record_search_key_time_period_start_date": Object {
+        "rek_time_period_start_date": "2001-01-01T00:00:00Z",
+        "rek_time_period_start_date_id": 965,
+        "rek_time_period_start_date_pid": "UQ:407731",
+        "rek_time_period_start_date_xsdmf_id": 16537,
+      },
       "fez_record_search_key_type_of_data": Array [
         Object {
           "rek_type_of_data": "Text",
@@ -4508,6 +4744,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -4648,7 +4891,12 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_doi_pid": "UQ:407731",
             "rek_doi_xsdmf_id": 16572,
           },
-          "fez_record_search_key_end_date": null,
+          "fez_record_search_key_end_date": Object {
+            "rek_end_date": "2005-01-05 00:00:00",
+            "rek_end_date_id": 8,
+            "rek_end_date_pid": "UQ:162308",
+            "rek_end_date_xsdmf_id": 12154,
+          },
           "fez_record_search_key_fields_of_research": Array [
             Object {
               "rek_fields_of_research": 452086,
@@ -4908,7 +5156,16 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_rights_pid": "UQ:407731",
             "rek_rights_xsdmf_id": 16211,
           },
-          "fez_record_search_key_seo_code": Array [],
+          "fez_record_search_key_seo_code": Array [
+            Object {
+              "rek_seo_code": 451600,
+              "rek_seo_code_id": 866,
+              "rek_seo_code_lookup": "970106 Expanding Knowledge in the Biological Sciences",
+              "rek_seo_code_order": 1,
+              "rek_seo_code_pid": "UQ:398336",
+              "rek_seo_code_xsdmf_id": null,
+            },
+          ],
           "fez_record_search_key_software_required": Array [
             Object {
               "rek_software_required": "CheckM v0.9.4",
@@ -4918,9 +5175,24 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_software_required_xsdmf_id": 16208,
             },
           ],
-          "fez_record_search_key_start_date": null,
-          "fez_record_search_key_time_period_end_date": null,
-          "fez_record_search_key_time_period_start_date": null,
+          "fez_record_search_key_start_date": Object {
+            "rek_start_date": "2005-01-05 00:00:00",
+            "rek_start_date_id": 8,
+            "rek_start_date_pid": "UQ:162308",
+            "rek_start_date_xsdmf_id": 12154,
+          },
+          "fez_record_search_key_time_period_end_date": Object {
+            "rek_time_period_end_date": "2009-01-01T00:00:00Z",
+            "rek_time_period_end_date_id": 867,
+            "rek_time_period_end_date_pid": "UQ:407731",
+            "rek_time_period_end_date_xsdmf_id": 16538,
+          },
+          "fez_record_search_key_time_period_start_date": Object {
+            "rek_time_period_start_date": "2001-01-01T00:00:00Z",
+            "rek_time_period_start_date_id": 965,
+            "rek_time_period_start_date_pid": "UQ:407731",
+            "rek_time_period_start_date_xsdmf_id": 16537,
+          },
           "fez_record_search_key_type_of_data": Array [
             Object {
               "rek_type_of_data": "Text",
@@ -5017,6 +5289,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=""
       thresholdNumberOfAuthors={3}
     >
@@ -5087,7 +5360,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
@@ -5334,7 +5606,12 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_doi_pid": "UQ:407731",
         "rek_doi_xsdmf_id": 16572,
       },
-      "fez_record_search_key_end_date": null,
+      "fez_record_search_key_end_date": Object {
+        "rek_end_date": "2005-01-05 00:00:00",
+        "rek_end_date_id": 8,
+        "rek_end_date_pid": "UQ:162308",
+        "rek_end_date_xsdmf_id": 12154,
+      },
       "fez_record_search_key_fields_of_research": Array [
         Object {
           "rek_fields_of_research": 452086,
@@ -5594,7 +5871,16 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_rights_pid": "UQ:407731",
         "rek_rights_xsdmf_id": 16211,
       },
-      "fez_record_search_key_seo_code": Array [],
+      "fez_record_search_key_seo_code": Array [
+        Object {
+          "rek_seo_code": 451600,
+          "rek_seo_code_id": 866,
+          "rek_seo_code_lookup": "970106 Expanding Knowledge in the Biological Sciences",
+          "rek_seo_code_order": 1,
+          "rek_seo_code_pid": "UQ:398336",
+          "rek_seo_code_xsdmf_id": null,
+        },
+      ],
       "fez_record_search_key_software_required": Array [
         Object {
           "rek_software_required": "CheckM v0.9.4",
@@ -5604,9 +5890,24 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_software_required_xsdmf_id": 16208,
         },
       ],
-      "fez_record_search_key_start_date": null,
-      "fez_record_search_key_time_period_end_date": null,
-      "fez_record_search_key_time_period_start_date": null,
+      "fez_record_search_key_start_date": Object {
+        "rek_start_date": "2005-01-05 00:00:00",
+        "rek_start_date_id": 8,
+        "rek_start_date_pid": "UQ:162308",
+        "rek_start_date_xsdmf_id": 12154,
+      },
+      "fez_record_search_key_time_period_end_date": Object {
+        "rek_time_period_end_date": "2009-01-01T00:00:00Z",
+        "rek_time_period_end_date_id": 867,
+        "rek_time_period_end_date_pid": "UQ:407731",
+        "rek_time_period_end_date_xsdmf_id": 16538,
+      },
+      "fez_record_search_key_time_period_start_date": Object {
+        "rek_time_period_start_date": "2001-01-01T00:00:00Z",
+        "rek_time_period_start_date_id": 965,
+        "rek_time_period_start_date_pid": "UQ:407731",
+        "rek_time_period_start_date_xsdmf_id": 16537,
+      },
       "fez_record_search_key_type_of_data": Array [
         Object {
           "rek_type_of_data": "Text",
@@ -5728,6 +6029,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -5904,7 +6212,12 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_doi_pid": "UQ:407731",
             "rek_doi_xsdmf_id": 16572,
           },
-          "fez_record_search_key_end_date": null,
+          "fez_record_search_key_end_date": Object {
+            "rek_end_date": "2005-01-05 00:00:00",
+            "rek_end_date_id": 8,
+            "rek_end_date_pid": "UQ:162308",
+            "rek_end_date_xsdmf_id": 12154,
+          },
           "fez_record_search_key_fields_of_research": Array [
             Object {
               "rek_fields_of_research": 452086,
@@ -6164,7 +6477,16 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_rights_pid": "UQ:407731",
             "rek_rights_xsdmf_id": 16211,
           },
-          "fez_record_search_key_seo_code": Array [],
+          "fez_record_search_key_seo_code": Array [
+            Object {
+              "rek_seo_code": 451600,
+              "rek_seo_code_id": 866,
+              "rek_seo_code_lookup": "970106 Expanding Knowledge in the Biological Sciences",
+              "rek_seo_code_order": 1,
+              "rek_seo_code_pid": "UQ:398336",
+              "rek_seo_code_xsdmf_id": null,
+            },
+          ],
           "fez_record_search_key_software_required": Array [
             Object {
               "rek_software_required": "CheckM v0.9.4",
@@ -6174,9 +6496,24 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_software_required_xsdmf_id": 16208,
             },
           ],
-          "fez_record_search_key_start_date": null,
-          "fez_record_search_key_time_period_end_date": null,
-          "fez_record_search_key_time_period_start_date": null,
+          "fez_record_search_key_start_date": Object {
+            "rek_start_date": "2005-01-05 00:00:00",
+            "rek_start_date_id": 8,
+            "rek_start_date_pid": "UQ:162308",
+            "rek_start_date_xsdmf_id": 12154,
+          },
+          "fez_record_search_key_time_period_end_date": Object {
+            "rek_time_period_end_date": "2009-01-01T00:00:00Z",
+            "rek_time_period_end_date_id": 867,
+            "rek_time_period_end_date_pid": "UQ:407731",
+            "rek_time_period_end_date_xsdmf_id": 16538,
+          },
+          "fez_record_search_key_time_period_start_date": Object {
+            "rek_time_period_start_date": "2001-01-01T00:00:00Z",
+            "rek_time_period_start_date_id": 965,
+            "rek_time_period_start_date_pid": "UQ:407731",
+            "rek_time_period_start_date_xsdmf_id": 16537,
+          },
           "fez_record_search_key_type_of_data": Array [
             Object {
               "rek_type_of_data": "Text",
@@ -6273,6 +6610,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=""
       thresholdNumberOfAuthors={3}
     >
@@ -6282,13 +6620,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Parks, Donovan H."
         >
           <span
             className="citationAuthor"
           >
+             
             Parks, Donovan H.
             , 
           </span>
@@ -6296,13 +6635,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Imelfort, Michael"
         >
           <span
             className="citationAuthor"
           >
+             
             Imelfort, Michael
             , 
           </span>
@@ -6310,13 +6650,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Skennerton, Connor T."
         >
           <span
             className="citationAuthor"
           >
+             
             Skennerton, Connor T.
             , 
           </span>
@@ -6324,13 +6665,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
+             
             Hugenholtz, Philip
             , 
           </span>
@@ -6410,7 +6752,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
@@ -6652,7 +6993,12 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       "fez_record_search_key_data_volume": null,
       "fez_record_search_key_datastream_policy": null,
       "fez_record_search_key_doi": null,
-      "fez_record_search_key_end_date": null,
+      "fez_record_search_key_end_date": Object {
+        "rek_end_date": "2005-01-05 00:00:00",
+        "rek_end_date_id": 8,
+        "rek_end_date_pid": "UQ:162308",
+        "rek_end_date_xsdmf_id": 12154,
+      },
       "fez_record_search_key_fields_of_research": Array [
         Object {
           "rek_fields_of_research": 452086,
@@ -6912,7 +7258,16 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_rights_pid": "UQ:407731",
         "rek_rights_xsdmf_id": 16211,
       },
-      "fez_record_search_key_seo_code": Array [],
+      "fez_record_search_key_seo_code": Array [
+        Object {
+          "rek_seo_code": 451600,
+          "rek_seo_code_id": 866,
+          "rek_seo_code_lookup": "970106 Expanding Knowledge in the Biological Sciences",
+          "rek_seo_code_order": 1,
+          "rek_seo_code_pid": "UQ:398336",
+          "rek_seo_code_xsdmf_id": null,
+        },
+      ],
       "fez_record_search_key_software_required": Array [
         Object {
           "rek_software_required": "CheckM v0.9.4",
@@ -6922,9 +7277,24 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_software_required_xsdmf_id": 16208,
         },
       ],
-      "fez_record_search_key_start_date": null,
-      "fez_record_search_key_time_period_end_date": null,
-      "fez_record_search_key_time_period_start_date": null,
+      "fez_record_search_key_start_date": Object {
+        "rek_start_date": "2005-01-05 00:00:00",
+        "rek_start_date_id": 8,
+        "rek_start_date_pid": "UQ:162308",
+        "rek_start_date_xsdmf_id": 12154,
+      },
+      "fez_record_search_key_time_period_end_date": Object {
+        "rek_time_period_end_date": "2009-01-01T00:00:00Z",
+        "rek_time_period_end_date_id": 867,
+        "rek_time_period_end_date_pid": "UQ:407731",
+        "rek_time_period_end_date_xsdmf_id": 16538,
+      },
+      "fez_record_search_key_time_period_start_date": Object {
+        "rek_time_period_start_date": "2001-01-01T00:00:00Z",
+        "rek_time_period_start_date_id": 965,
+        "rek_time_period_start_date_pid": "UQ:407731",
+        "rek_time_period_start_date_xsdmf_id": 16537,
+      },
       "fez_record_search_key_type_of_data": Array [
         Object {
           "rek_type_of_data": "Text",
@@ -7046,6 +7416,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -7217,7 +7594,12 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "fez_record_search_key_data_volume": null,
           "fez_record_search_key_datastream_policy": null,
           "fez_record_search_key_doi": null,
-          "fez_record_search_key_end_date": null,
+          "fez_record_search_key_end_date": Object {
+            "rek_end_date": "2005-01-05 00:00:00",
+            "rek_end_date_id": 8,
+            "rek_end_date_pid": "UQ:162308",
+            "rek_end_date_xsdmf_id": 12154,
+          },
           "fez_record_search_key_fields_of_research": Array [
             Object {
               "rek_fields_of_research": 452086,
@@ -7477,7 +7859,16 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_rights_pid": "UQ:407731",
             "rek_rights_xsdmf_id": 16211,
           },
-          "fez_record_search_key_seo_code": Array [],
+          "fez_record_search_key_seo_code": Array [
+            Object {
+              "rek_seo_code": 451600,
+              "rek_seo_code_id": 866,
+              "rek_seo_code_lookup": "970106 Expanding Knowledge in the Biological Sciences",
+              "rek_seo_code_order": 1,
+              "rek_seo_code_pid": "UQ:398336",
+              "rek_seo_code_xsdmf_id": null,
+            },
+          ],
           "fez_record_search_key_software_required": Array [
             Object {
               "rek_software_required": "CheckM v0.9.4",
@@ -7487,9 +7878,24 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_software_required_xsdmf_id": 16208,
             },
           ],
-          "fez_record_search_key_start_date": null,
-          "fez_record_search_key_time_period_end_date": null,
-          "fez_record_search_key_time_period_start_date": null,
+          "fez_record_search_key_start_date": Object {
+            "rek_start_date": "2005-01-05 00:00:00",
+            "rek_start_date_id": 8,
+            "rek_start_date_pid": "UQ:162308",
+            "rek_start_date_xsdmf_id": 12154,
+          },
+          "fez_record_search_key_time_period_end_date": Object {
+            "rek_time_period_end_date": "2009-01-01T00:00:00Z",
+            "rek_time_period_end_date_id": 867,
+            "rek_time_period_end_date_pid": "UQ:407731",
+            "rek_time_period_end_date_xsdmf_id": 16538,
+          },
+          "fez_record_search_key_time_period_start_date": Object {
+            "rek_time_period_start_date": "2001-01-01T00:00:00Z",
+            "rek_time_period_start_date_id": 965,
+            "rek_time_period_start_date_pid": "UQ:407731",
+            "rek_time_period_start_date_xsdmf_id": 16537,
+          },
           "fez_record_search_key_type_of_data": Array [
             Object {
               "rek_type_of_data": "Text",
@@ -7586,6 +7992,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=""
       thresholdNumberOfAuthors={3}
     >
@@ -7595,13 +8002,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Parks, Donovan H."
         >
           <span
             className="citationAuthor"
           >
+             
             Parks, Donovan H.
             , 
           </span>
@@ -7609,13 +8017,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Imelfort, Michael"
         >
           <span
             className="citationAuthor"
           >
+             
             Imelfort, Michael
             , 
           </span>
@@ -7623,13 +8032,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Skennerton, Connor T."
         >
           <span
             className="citationAuthor"
           >
+             
             Skennerton, Connor T.
             , 
           </span>
@@ -7637,13 +8047,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
+             
             Hugenholtz, Philip
             , 
           </span>
@@ -7909,7 +8320,12 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_doi_pid": "UQ:407731",
         "rek_doi_xsdmf_id": 16572,
       },
-      "fez_record_search_key_end_date": null,
+      "fez_record_search_key_end_date": Object {
+        "rek_end_date": "2005-01-05 00:00:00",
+        "rek_end_date_id": 8,
+        "rek_end_date_pid": "UQ:162308",
+        "rek_end_date_xsdmf_id": 12154,
+      },
       "fez_record_search_key_fields_of_research": Array [
         Object {
           "rek_fields_of_research": 452086,
@@ -8164,7 +8580,16 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_rights_pid": "UQ:407731",
         "rek_rights_xsdmf_id": 16211,
       },
-      "fez_record_search_key_seo_code": Array [],
+      "fez_record_search_key_seo_code": Array [
+        Object {
+          "rek_seo_code": 451600,
+          "rek_seo_code_id": 866,
+          "rek_seo_code_lookup": "970106 Expanding Knowledge in the Biological Sciences",
+          "rek_seo_code_order": 1,
+          "rek_seo_code_pid": "UQ:398336",
+          "rek_seo_code_xsdmf_id": null,
+        },
+      ],
       "fez_record_search_key_software_required": Array [
         Object {
           "rek_software_required": "CheckM v0.9.4",
@@ -8174,9 +8599,24 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_software_required_xsdmf_id": 16208,
         },
       ],
-      "fez_record_search_key_start_date": null,
-      "fez_record_search_key_time_period_end_date": null,
-      "fez_record_search_key_time_period_start_date": null,
+      "fez_record_search_key_start_date": Object {
+        "rek_start_date": "2005-01-05 00:00:00",
+        "rek_start_date_id": 8,
+        "rek_start_date_pid": "UQ:162308",
+        "rek_start_date_xsdmf_id": 12154,
+      },
+      "fez_record_search_key_time_period_end_date": Object {
+        "rek_time_period_end_date": "2009-01-01T00:00:00Z",
+        "rek_time_period_end_date_id": 867,
+        "rek_time_period_end_date_pid": "UQ:407731",
+        "rek_time_period_end_date_xsdmf_id": 16538,
+      },
+      "fez_record_search_key_time_period_start_date": Object {
+        "rek_time_period_start_date": "2001-01-01T00:00:00Z",
+        "rek_time_period_start_date_id": 965,
+        "rek_time_period_start_date_pid": "UQ:407731",
+        "rek_time_period_start_date_xsdmf_id": 16537,
+      },
       "fez_record_search_key_type_of_data": Array [
         Object {
           "rek_type_of_data": "Text",
@@ -8298,6 +8738,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -8474,7 +8921,12 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_doi_pid": "UQ:407731",
             "rek_doi_xsdmf_id": 16572,
           },
-          "fez_record_search_key_end_date": null,
+          "fez_record_search_key_end_date": Object {
+            "rek_end_date": "2005-01-05 00:00:00",
+            "rek_end_date_id": 8,
+            "rek_end_date_pid": "UQ:162308",
+            "rek_end_date_xsdmf_id": 12154,
+          },
           "fez_record_search_key_fields_of_research": Array [
             Object {
               "rek_fields_of_research": 452086,
@@ -8729,7 +9181,16 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_rights_pid": "UQ:407731",
             "rek_rights_xsdmf_id": 16211,
           },
-          "fez_record_search_key_seo_code": Array [],
+          "fez_record_search_key_seo_code": Array [
+            Object {
+              "rek_seo_code": 451600,
+              "rek_seo_code_id": 866,
+              "rek_seo_code_lookup": "970106 Expanding Knowledge in the Biological Sciences",
+              "rek_seo_code_order": 1,
+              "rek_seo_code_pid": "UQ:398336",
+              "rek_seo_code_xsdmf_id": null,
+            },
+          ],
           "fez_record_search_key_software_required": Array [
             Object {
               "rek_software_required": "CheckM v0.9.4",
@@ -8739,9 +9200,24 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_software_required_xsdmf_id": 16208,
             },
           ],
-          "fez_record_search_key_start_date": null,
-          "fez_record_search_key_time_period_end_date": null,
-          "fez_record_search_key_time_period_start_date": null,
+          "fez_record_search_key_start_date": Object {
+            "rek_start_date": "2005-01-05 00:00:00",
+            "rek_start_date_id": 8,
+            "rek_start_date_pid": "UQ:162308",
+            "rek_start_date_xsdmf_id": 12154,
+          },
+          "fez_record_search_key_time_period_end_date": Object {
+            "rek_time_period_end_date": "2009-01-01T00:00:00Z",
+            "rek_time_period_end_date_id": 867,
+            "rek_time_period_end_date_pid": "UQ:407731",
+            "rek_time_period_end_date_xsdmf_id": 16538,
+          },
+          "fez_record_search_key_time_period_start_date": Object {
+            "rek_time_period_start_date": "2001-01-01T00:00:00Z",
+            "rek_time_period_start_date_id": 965,
+            "rek_time_period_start_date_pid": "UQ:407731",
+            "rek_time_period_start_date_xsdmf_id": 16537,
+          },
           "fez_record_search_key_type_of_data": Array [
             Object {
               "rek_type_of_data": "Text",
@@ -8838,6 +9314,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=""
       thresholdNumberOfAuthors={3}
     >
@@ -8847,13 +9324,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Parks, Donovan H."
         >
           <span
             className="citationAuthor"
           >
+             
             Parks, Donovan H.
             , 
           </span>
@@ -8861,13 +9339,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Imelfort, Michael"
         >
           <span
             className="citationAuthor"
           >
+             
             Imelfort, Michael
             , 
           </span>
@@ -8875,13 +9354,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Skennerton, Connor T."
         >
           <span
             className="citationAuthor"
           >
+             
             Skennerton, Connor T.
             , 
           </span>
@@ -8889,13 +9369,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
+             
             Hugenholtz, Philip
             , 
           </span>
@@ -8975,7 +9456,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
@@ -9080,6 +9560,13 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
@@ -9089,6 +9576,7 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=""
       thresholdNumberOfAuthors={3}
     >

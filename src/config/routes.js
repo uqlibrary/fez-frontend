@@ -19,6 +19,29 @@ export const pathConfig =  {
             new: '/records/add/new',
         }
     },
+    collection: {
+        view: (pid) => (`/collection/${pid}`),
+    },
+    // TODO: update links when we have list pages
+    list: {
+        author: (author) => (`/list/author/${author}`),
+        authorId: (authorId) => (`/list/author_id/${authorId}`),
+        subject: (subjectId) => (`/list/subject/${subjectId}`),
+        herdcStatus: (herdcStatusId) => (`/list/?cat=quick_filter&search_keys[UQ_22]=${herdcStatusId}`),
+        keyword: (keyword) => (`/list/?cat=quick_filter&search_keys[0]=${keyword}`),
+        institutionalStatus: (institutionalStatusId) => (`/list/?cat=quick_filter&search_keys[UQ_23]=${institutionalStatusId}`),
+        openAccessStatus: (openAccessStatusId) => (`/list/?cat=quick_filter&search_keys[UQ_54]=${openAccessStatusId}`),
+        journalName: (journalName) => (`/list/?cat=quick_filter&search_keys[core_34]=${journalName}`),
+        publisher: (publisher) => (`/list/?cat=quick_filter&search_keys[core_29]=${publisher}`),
+        license: (license) => (`/list/?cat=quick_filter&search_keys[core_112]=${license}`),
+        accessCondition: (accessCondition) => (`/list/?cat=quick_filter&search_keys[core_95]=${accessCondition}`),
+        collectionType: (collectionType) => (`/list/?cat=quick_filter&search_keys[core_92]=${collectionType}`),
+        orgUnitName: (orgUnitName) => (`/list/?cat=quick_filter&search_keys[core_70]=${orgUnitName}`),
+        series: (series) => (`/list/?cat=quick_filter&search_keys[core_33]=${series}`),
+        bookTitle: (bookTitle) => (`/list/?cat=quick_filter&search_keys[core_37]=${bookTitle}`),
+        conferenceName: (conferenceName) => (`/list/?cat=quick_filter&search_keys[core_36]=${conferenceName}`),
+        proceedingsTitle: (proceedingsTitle) => (`/list/?cat=quick_filter&search_keys[UQ_2]=${proceedingsTitle}`),
+    },
     admin: {
         masquerade: '/admin/masquerade'
     },
