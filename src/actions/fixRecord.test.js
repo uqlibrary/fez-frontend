@@ -1,10 +1,10 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as fixRecordActions from './fixRecord';
-import * as mockData from 'mock/data';
+import * as mockData from 'mock/data/testing/records';
 
 describe('Fix record actions', () => {
-    const testPid = "UQ:396321";
+    const testPid = "UQ:41878";
 
     // extend expect to check actions
     expect.extend({toHaveDispatchedActions});
@@ -22,7 +22,7 @@ describe('Fix record actions', () => {
         it('dispatches expected actions when loading a record to fix from API successfully', async () => {
             mockApi
                 .onGet(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
-                .reply(200, {data: {...mockData.record}});
+                .reply(200, {data: {...mockData.mockRecordToFix}});
 
             const expectedActions = [
                 actions.FIX_RECORD_LOADING,
@@ -75,7 +75,7 @@ describe('Fix record actions', () => {
                 actions.FIX_RECORD_SET
             ];
             try {
-                await mockActionsStore.dispatch(fixRecordActions.setFixRecord(mockData.record));
+                await mockActionsStore.dispatch(fixRecordActions.setFixRecord(mockData.mockRecordToFix));
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -183,7 +183,7 @@ describe('Fix record actions', () => {
         it('dispatches expected actions - fixing edited book record', async () => {
             const testInput = {
                 publication: {
-                    ...mockData.record,
+                    ...mockData.mockRecordToFix,
                     fez_record_search_key_contributor_id: [
                         {
                             rek_contributor_id: 123
@@ -217,7 +217,7 @@ describe('Fix record actions', () => {
         it('dispatches expected actions for successful record fix with files', async () => {
             const testInput = {
                 publication: {
-                    ...mockData.record
+                    ...mockData.mockRecordToFix
                 },
                 author: {
                     aut_id: 410
@@ -242,7 +242,7 @@ describe('Fix record actions', () => {
                 .onPut('s3-ap-southeast-2.amazonaws.com', {"name": "test.txt"})
                 .reply(200, {})
                 .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
-                .reply(200, {data: {...mockData.record}})
+                .reply(200, {data: {...mockData.mockRecordToFix}})
                 .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}).apiUrl)
                 .reply(200, {});
 
@@ -257,7 +257,7 @@ describe('Fix record actions', () => {
         it('dispatches expected actions for successful record fix with url link', async () => {
             const testInput = {
                 publication: {
-                    ...mockData.record
+                    ...mockData.mockRecordToFix
                 },
                 author: {
                     aut_id: 410
@@ -272,7 +272,7 @@ describe('Fix record actions', () => {
 
             mockApi
                 .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
-                .reply(200, {data: {...mockData.record}})
+                .reply(200, {data: {...mockData.mockRecordToFix}})
                 .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}).apiUrl)
                 .reply(200, {});
 
@@ -287,7 +287,7 @@ describe('Fix record actions', () => {
         it('dispatches expected actions for successful record fix', async () => {
             const testInput = {
                 publication: {
-                    ...mockData.record
+                    ...mockData.mockRecordToFix
                 },
                 author: {
                     aut_id: 410
@@ -312,7 +312,7 @@ describe('Fix record actions', () => {
         it('dispatches expected actions for record fix for anon user', async () => {
             const testInput = {
                 publication: {
-                    ...mockData.record
+                    ...mockData.mockRecordToFix
                 },
                 author: {
                     aut_id: 410
@@ -340,7 +340,7 @@ describe('Fix record actions', () => {
         it('dispatches expected actions for record fix with API returning error', async () => {
             const testInput = {
                 publication: {
-                    ...mockData.record
+                    ...mockData.mockRecordToFix
                 },
                 author: {
                     aut_id: 410
@@ -434,7 +434,7 @@ describe('Fix record actions', () => {
         it('dispatches expected actions for successful record unclaim', async () => {
             const testInput = {
                 publication: {
-                    ...mockData.record,
+                    ...mockData.mockRecordToFix,
                     fez_record_search_key_author_id: [
                         {
                             rek_author_id: 123
@@ -457,7 +457,7 @@ describe('Fix record actions', () => {
             ];
 
             mockApi.onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
-                .reply(200, {data: {...mockData.record}});
+                .reply(200, {data: {...mockData.mockRecordToFix}});
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
@@ -508,7 +508,7 @@ describe('Fix record actions', () => {
         it('dispatches expected actions for record unclaim with API returning error', async () => {
             const testInput = {
                 publication: {
-                    ...mockData.record,
+                    ...mockData.mockRecordToFix,
                     fez_record_search_key_author_id: [
                         {
                             rek_author_id: 123

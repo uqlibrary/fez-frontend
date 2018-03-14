@@ -197,11 +197,12 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
       "rek_description": "Despite a National Strategy for Ecologically Sustainable Development and the embodiment of this in numerous national and state statues, environmental degradation continues to occur on rural land. This raises the question of how the primary land managers in Queensland perceive sustainable development. Australia’s early reliance on agricultural production and international markets contributed substantially to the extensive environmental degradation that has occurred. Consequently economic and environmental issues have dominated the research on sustainable development, with the social dimension relatively neglected. In addition, despite the large quantity of work that has been conducted with farmers and graziers, little is known about how either of these types of land managers interpret sustainable development. The aim of this thesis was to develop an in-depth understanding of graziers’ perceptions of sustainable development to make a contribution to this area. An exploratory interpretative approach was taken to conduct this investigation because previous research had been limited. In-depth unstructured interviews were conducted with 57 Queensland graziers in the tropical savannas in a case study with two locations – the Gulf of Carpentaria and the Central West. This approach was supported by participant observation and a brief questionnaire to provide background information. The fieldwork was conducted over a period of five months which allowed analysis to be conducted as the study progressed. Most of the graziers were interviewed on their properties with the goal of adding richness to the data and assisting with interpretation. Several bodies of literature have been used to interpret the results of this study. Areas of the sustainable development literature relevant to this thesis are reviewed to provide a context for the thesis. The literature on structural change in Australian agriculture provides a background to the broad influences on the agricultural sector and farmers. Also reviewed are the approaches taken to change the land management practices of farmers. The enduring value of farming and the changing values of rural land use are explored through a review of agrarianism, the goals and values of farmers and the post-productivist transition. The results for both study locations showed that these graziers preference the economic dimension of sustainable development over the environmental and social dimensions. The rationale for this preference is that maintaining economic viability will allow them to achieve their social goal – to continue their preferred way of life. A strong focus therefore, is on economic viability as a means to a social end. The objective is to overcome the constraints of being market and season dependent and the costs of operating in rural and remote locations through a whole-of-enterprise business management approach. The need for graziers to continue increasing their productivity to remain economically viable and to continue being competitive in international markets, challenges their ability to balance the economic and environmental dimensions of sustainable development. For some the environmental dimension of sustainable development may be compromised to accommodate their economic priorities and social goals. A perceived future threat, more so for Gulf graziers, arises from the belief that they and their interests are marginalised through consultation processes. This contributes to their belief that the government prioritises Aboriginal land rights and environmental protection interests over their production interests. They believe that if this continues their future is at risk through further decreases to the security of their tenure. The results of this study suggest that a more innovative and integrated approach will be required to meet the challenges of sustainable development in these areas, in early twenty-first century Australia. The holistic approach from a social science perspective has provided an understanding of what graziers value and why. These insights contribute to knowledge of how to progress sustainable development. They could be tested with other types of land managers and as a foundation on which to build a more comprehensive understanding of sustainable development.",
       "rek_description_xsdmf_id": 11378,
       "rek_display_type": 187,
+      "rek_display_type_lookup": "Thesis",
       "rek_display_type_xsdmf_id": 12278,
       "rek_file_downloads": 523,
       "rek_formatted_abstract": null,
       "rek_formatted_abstract_xsdmf_id": null,
-      "rek_formatted_title": null,
+      "rek_formatted_title": "It's for love not money: Queensland graziers' perceptions of sustainable development",
       "rek_formatted_title_xsdmf_id": null,
       "rek_genre": "Thesis",
       "rek_genre_type": "PhD Thesis",
@@ -264,6 +265,13 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -460,11 +468,12 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
           "rek_description": "Despite a National Strategy for Ecologically Sustainable Development and the embodiment of this in numerous national and state statues, environmental degradation continues to occur on rural land. This raises the question of how the primary land managers in Queensland perceive sustainable development. Australia’s early reliance on agricultural production and international markets contributed substantially to the extensive environmental degradation that has occurred. Consequently economic and environmental issues have dominated the research on sustainable development, with the social dimension relatively neglected. In addition, despite the large quantity of work that has been conducted with farmers and graziers, little is known about how either of these types of land managers interpret sustainable development. The aim of this thesis was to develop an in-depth understanding of graziers’ perceptions of sustainable development to make a contribution to this area. An exploratory interpretative approach was taken to conduct this investigation because previous research had been limited. In-depth unstructured interviews were conducted with 57 Queensland graziers in the tropical savannas in a case study with two locations – the Gulf of Carpentaria and the Central West. This approach was supported by participant observation and a brief questionnaire to provide background information. The fieldwork was conducted over a period of five months which allowed analysis to be conducted as the study progressed. Most of the graziers were interviewed on their properties with the goal of adding richness to the data and assisting with interpretation. Several bodies of literature have been used to interpret the results of this study. Areas of the sustainable development literature relevant to this thesis are reviewed to provide a context for the thesis. The literature on structural change in Australian agriculture provides a background to the broad influences on the agricultural sector and farmers. Also reviewed are the approaches taken to change the land management practices of farmers. The enduring value of farming and the changing values of rural land use are explored through a review of agrarianism, the goals and values of farmers and the post-productivist transition. The results for both study locations showed that these graziers preference the economic dimension of sustainable development over the environmental and social dimensions. The rationale for this preference is that maintaining economic viability will allow them to achieve their social goal – to continue their preferred way of life. A strong focus therefore, is on economic viability as a means to a social end. The objective is to overcome the constraints of being market and season dependent and the costs of operating in rural and remote locations through a whole-of-enterprise business management approach. The need for graziers to continue increasing their productivity to remain economically viable and to continue being competitive in international markets, challenges their ability to balance the economic and environmental dimensions of sustainable development. For some the environmental dimension of sustainable development may be compromised to accommodate their economic priorities and social goals. A perceived future threat, more so for Gulf graziers, arises from the belief that they and their interests are marginalised through consultation processes. This contributes to their belief that the government prioritises Aboriginal land rights and environmental protection interests over their production interests. They believe that if this continues their future is at risk through further decreases to the security of their tenure. The results of this study suggest that a more innovative and integrated approach will be required to meet the challenges of sustainable development in these areas, in early twenty-first century Australia. The holistic approach from a social science perspective has provided an understanding of what graziers value and why. These insights contribute to knowledge of how to progress sustainable development. They could be tested with other types of land managers and as a foundation on which to build a more comprehensive understanding of sustainable development.",
           "rek_description_xsdmf_id": 11378,
           "rek_display_type": 187,
+          "rek_display_type_lookup": "Thesis",
           "rek_display_type_xsdmf_id": 12278,
           "rek_file_downloads": 523,
           "rek_formatted_abstract": null,
           "rek_formatted_abstract_xsdmf_id": null,
-          "rek_formatted_title": null,
+          "rek_formatted_title": "It's for love not money: Queensland graziers' perceptions of sustainable development",
           "rek_formatted_title_xsdmf_id": null,
           "rek_genre": "Thesis",
           "rek_genre_type": "PhD Thesis",
@@ -502,6 +511,7 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -511,13 +521,14 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=""
           value="Jennifer Moffatt"
         >
           <span
             className="citationAuthor"
           >
+             
             Jennifer Moffatt
           </span>
         </CitationView>
@@ -805,11 +816,12 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
       "rek_description": "Despite a National Strategy for Ecologically Sustainable Development and the embodiment of this in numerous national and state statues, environmental degradation continues to occur on rural land. This raises the question of how the primary land managers in Queensland perceive sustainable development. Australia’s early reliance on agricultural production and international markets contributed substantially to the extensive environmental degradation that has occurred. Consequently economic and environmental issues have dominated the research on sustainable development, with the social dimension relatively neglected. In addition, despite the large quantity of work that has been conducted with farmers and graziers, little is known about how either of these types of land managers interpret sustainable development. The aim of this thesis was to develop an in-depth understanding of graziers’ perceptions of sustainable development to make a contribution to this area. An exploratory interpretative approach was taken to conduct this investigation because previous research had been limited. In-depth unstructured interviews were conducted with 57 Queensland graziers in the tropical savannas in a case study with two locations – the Gulf of Carpentaria and the Central West. This approach was supported by participant observation and a brief questionnaire to provide background information. The fieldwork was conducted over a period of five months which allowed analysis to be conducted as the study progressed. Most of the graziers were interviewed on their properties with the goal of adding richness to the data and assisting with interpretation. Several bodies of literature have been used to interpret the results of this study. Areas of the sustainable development literature relevant to this thesis are reviewed to provide a context for the thesis. The literature on structural change in Australian agriculture provides a background to the broad influences on the agricultural sector and farmers. Also reviewed are the approaches taken to change the land management practices of farmers. The enduring value of farming and the changing values of rural land use are explored through a review of agrarianism, the goals and values of farmers and the post-productivist transition. The results for both study locations showed that these graziers preference the economic dimension of sustainable development over the environmental and social dimensions. The rationale for this preference is that maintaining economic viability will allow them to achieve their social goal – to continue their preferred way of life. A strong focus therefore, is on economic viability as a means to a social end. The objective is to overcome the constraints of being market and season dependent and the costs of operating in rural and remote locations through a whole-of-enterprise business management approach. The need for graziers to continue increasing their productivity to remain economically viable and to continue being competitive in international markets, challenges their ability to balance the economic and environmental dimensions of sustainable development. For some the environmental dimension of sustainable development may be compromised to accommodate their economic priorities and social goals. A perceived future threat, more so for Gulf graziers, arises from the belief that they and their interests are marginalised through consultation processes. This contributes to their belief that the government prioritises Aboriginal land rights and environmental protection interests over their production interests. They believe that if this continues their future is at risk through further decreases to the security of their tenure. The results of this study suggest that a more innovative and integrated approach will be required to meet the challenges of sustainable development in these areas, in early twenty-first century Australia. The holistic approach from a social science perspective has provided an understanding of what graziers value and why. These insights contribute to knowledge of how to progress sustainable development. They could be tested with other types of land managers and as a foundation on which to build a more comprehensive understanding of sustainable development.",
       "rek_description_xsdmf_id": 11378,
       "rek_display_type": 187,
+      "rek_display_type_lookup": "Thesis",
       "rek_display_type_xsdmf_id": 12278,
       "rek_file_downloads": 523,
       "rek_formatted_abstract": null,
       "rek_formatted_abstract_xsdmf_id": null,
-      "rek_formatted_title": null,
+      "rek_formatted_title": "It's for love not money: Queensland graziers' perceptions of sustainable development",
       "rek_formatted_title_xsdmf_id": null,
       "rek_genre": "Thesis",
       "rek_genre_type": "PhD Thesis",
@@ -872,6 +884,13 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -1070,11 +1089,12 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
           "rek_description": "Despite a National Strategy for Ecologically Sustainable Development and the embodiment of this in numerous national and state statues, environmental degradation continues to occur on rural land. This raises the question of how the primary land managers in Queensland perceive sustainable development. Australia’s early reliance on agricultural production and international markets contributed substantially to the extensive environmental degradation that has occurred. Consequently economic and environmental issues have dominated the research on sustainable development, with the social dimension relatively neglected. In addition, despite the large quantity of work that has been conducted with farmers and graziers, little is known about how either of these types of land managers interpret sustainable development. The aim of this thesis was to develop an in-depth understanding of graziers’ perceptions of sustainable development to make a contribution to this area. An exploratory interpretative approach was taken to conduct this investigation because previous research had been limited. In-depth unstructured interviews were conducted with 57 Queensland graziers in the tropical savannas in a case study with two locations – the Gulf of Carpentaria and the Central West. This approach was supported by participant observation and a brief questionnaire to provide background information. The fieldwork was conducted over a period of five months which allowed analysis to be conducted as the study progressed. Most of the graziers were interviewed on their properties with the goal of adding richness to the data and assisting with interpretation. Several bodies of literature have been used to interpret the results of this study. Areas of the sustainable development literature relevant to this thesis are reviewed to provide a context for the thesis. The literature on structural change in Australian agriculture provides a background to the broad influences on the agricultural sector and farmers. Also reviewed are the approaches taken to change the land management practices of farmers. The enduring value of farming and the changing values of rural land use are explored through a review of agrarianism, the goals and values of farmers and the post-productivist transition. The results for both study locations showed that these graziers preference the economic dimension of sustainable development over the environmental and social dimensions. The rationale for this preference is that maintaining economic viability will allow them to achieve their social goal – to continue their preferred way of life. A strong focus therefore, is on economic viability as a means to a social end. The objective is to overcome the constraints of being market and season dependent and the costs of operating in rural and remote locations through a whole-of-enterprise business management approach. The need for graziers to continue increasing their productivity to remain economically viable and to continue being competitive in international markets, challenges their ability to balance the economic and environmental dimensions of sustainable development. For some the environmental dimension of sustainable development may be compromised to accommodate their economic priorities and social goals. A perceived future threat, more so for Gulf graziers, arises from the belief that they and their interests are marginalised through consultation processes. This contributes to their belief that the government prioritises Aboriginal land rights and environmental protection interests over their production interests. They believe that if this continues their future is at risk through further decreases to the security of their tenure. The results of this study suggest that a more innovative and integrated approach will be required to meet the challenges of sustainable development in these areas, in early twenty-first century Australia. The holistic approach from a social science perspective has provided an understanding of what graziers value and why. These insights contribute to knowledge of how to progress sustainable development. They could be tested with other types of land managers and as a foundation on which to build a more comprehensive understanding of sustainable development.",
           "rek_description_xsdmf_id": 11378,
           "rek_display_type": 187,
+          "rek_display_type_lookup": "Thesis",
           "rek_display_type_xsdmf_id": 12278,
           "rek_file_downloads": 523,
           "rek_formatted_abstract": null,
           "rek_formatted_abstract_xsdmf_id": null,
-          "rek_formatted_title": null,
+          "rek_formatted_title": "It's for love not money: Queensland graziers' perceptions of sustainable development",
           "rek_formatted_title_xsdmf_id": null,
           "rek_genre": "Thesis",
           "rek_genre_type": "PhD Thesis",
@@ -1112,6 +1132,7 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -1121,13 +1142,14 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=""
           value="Jennifer Moffatt"
         >
           <span
             className="citationAuthor"
           >
+             
             Jennifer Moffatt
           </span>
         </CitationView>
@@ -1251,6 +1273,13 @@ exports[`ThesisCitation renders  component with empty publication 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
@@ -1260,6 +1289,7 @@ exports[`ThesisCitation renders  component with empty publication 1`] = `
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
