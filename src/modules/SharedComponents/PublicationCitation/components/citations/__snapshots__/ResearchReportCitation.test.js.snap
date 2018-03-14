@@ -241,6 +241,7 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
       "rek_description": "asdf asdj ajsdflj lkjsdf;asdfklajds djfkahsdfhdskfhkadgssdy98yfasd  isudyfiuysdfkjhsdjkfh euwyf f ",
       "rek_description_xsdmf_id": null,
       "rek_display_type": 275,
+      "rek_display_type_lookup": "Research Report",
       "rek_display_type_xsdmf_id": null,
       "rek_file_downloads": 0,
       "rek_formatted_abstract": null,
@@ -308,6 +309,13 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -548,6 +556,7 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
           "rek_description": "asdf asdj ajsdflj lkjsdf;asdfklajds djfkahsdfhdskfhkadgssdy98yfasd  isudyfiuysdfkjhsdjkfh euwyf f ",
           "rek_description_xsdmf_id": null,
           "rek_display_type": 275,
+          "rek_display_type_lookup": "Research Report",
           "rek_display_type_xsdmf_id": null,
           "rek_file_downloads": 0,
           "rek_formatted_abstract": null,
@@ -590,6 +599,7 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -599,13 +609,14 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=""
           value="Vishal Asai"
         >
           <span
             className="citationAuthor"
           >
+             
             Vishal Asai
           </span>
         </CitationView>
@@ -685,7 +696,6 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
@@ -996,6 +1006,7 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
       "rek_description": "asdf asdj ajsdflj lkjsdf;asdfklajds djfkahsdfhdskfhkadgssdy98yfasd  isudyfiuysdfkjhsdjkfh euwyf f ",
       "rek_description_xsdmf_id": null,
       "rek_display_type": 275,
+      "rek_display_type_lookup": "Research Report",
       "rek_display_type_xsdmf_id": null,
       "rek_file_downloads": 0,
       "rek_formatted_abstract": null,
@@ -1063,6 +1074,13 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -1303,6 +1321,7 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
           "rek_description": "asdf asdj ajsdflj lkjsdf;asdfklajds djfkahsdfhdskfhkadgssdy98yfasd  isudyfiuysdfkjhsdjkfh euwyf f ",
           "rek_description_xsdmf_id": null,
           "rek_display_type": 275,
+          "rek_display_type_lookup": "Research Report",
           "rek_display_type_xsdmf_id": null,
           "rek_file_downloads": 0,
           "rek_formatted_abstract": null,
@@ -1345,6 +1364,7 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -1354,13 +1374,14 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=""
           value="Vishal Asai"
         >
           <span
             className="citationAuthor"
           >
+             
             Vishal Asai
           </span>
         </CitationView>
@@ -1440,7 +1461,6 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
@@ -1753,6 +1773,7 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
       "rek_description": "asdf asdj ajsdflj lkjsdf;asdfklajds djfkahsdfhdskfhkadgssdy98yfasd  isudyfiuysdfkjhsdjkfh euwyf f ",
       "rek_description_xsdmf_id": null,
       "rek_display_type": 275,
+      "rek_display_type_lookup": "Research Report",
       "rek_display_type_xsdmf_id": null,
       "rek_file_downloads": 0,
       "rek_formatted_abstract": null,
@@ -1820,6 +1841,13 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -2062,6 +2090,7 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
           "rek_description": "asdf asdj ajsdflj lkjsdf;asdfklajds djfkahsdfhdskfhkadgssdy98yfasd  isudyfiuysdfkjhsdjkfh euwyf f ",
           "rek_description_xsdmf_id": null,
           "rek_display_type": 275,
+          "rek_display_type_lookup": "Research Report",
           "rek_display_type_xsdmf_id": null,
           "rek_file_downloads": 0,
           "rek_formatted_abstract": null,
@@ -2104,6 +2133,7 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -2113,13 +2143,14 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=""
           value="Vishal Asai"
         >
           <span
             className="citationAuthor"
           >
+             
             Vishal Asai
           </span>
         </CitationView>
@@ -2199,7 +2230,6 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
@@ -2304,6 +2334,13 @@ exports[`ResearchReportCitation renders  component with empty publication 1`] = 
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
@@ -2313,6 +2350,7 @@ exports[`ResearchReportCitation renders  component with empty publication 1`] = 
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
