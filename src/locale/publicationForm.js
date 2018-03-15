@@ -1097,6 +1097,7 @@ export default {
                     ['fileName']: 'File(s) ([filenames]) have invalid file name',
                     ['maxFileSize']: 'File(s) ([filenames]) exceed maximum allowed upload file size',
                     ['maxFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([filenames]) will not be uploaded',
+                    ['duplicateFiles']: 'File(s) ([filenames]) are duplicate and have been ignored'
                 },
                 successTitle: 'Success',
                 successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
