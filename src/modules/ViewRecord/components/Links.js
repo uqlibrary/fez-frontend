@@ -66,7 +66,7 @@ export default class ViewRecordLinks extends PureComponent {
                                         {
                                             openAccessStatus() &&
                                             <div className="fez-icon openAccess large"
-                                                title={txt.openAccessLabel.replace('[oa_status]', openAccessIdLookup[record.fez_record_search_key_oa_status.rek_oa_status])}
+                                                title={txt.openAccessLabel.replace('[oa_status]', record.fez_record_search_key_oa_status && openAccessIdLookup[record.fez_record_search_key_oa_status.rek_oa_status])}
                                             />
                                         }
                                     </TableRowColumn>
@@ -77,7 +77,7 @@ export default class ViewRecordLinks extends PureComponent {
                                 showPMC() &&
                                 <TableRow>
                                     <TableRowColumn className="rowLink">
-                                        <PubmedCentralLink pubmedCentralId={record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id}/>
+                                        <PubmedCentralLink pubmedCentralId={record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id}/>
                                     </TableRowColumn>
                                     <TableRowColumn className="rowDescription is-hidden-mobile">Pubmed Central link</TableRowColumn>
                                     <TableRowColumn className="rowOA align-right">

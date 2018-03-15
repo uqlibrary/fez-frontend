@@ -72,7 +72,7 @@ export default class ViewRecord extends Component {
                 {
                     recordToView && (recordToView.rek_formatted_abstract || recordToView.rek_description) &&
                     <StandardCard title={locale.viewRecord.sections.abstract[recordToView.rek_display_type_lookup] || locale.viewRecord.sections.abstract.default}>
-                        {ReactHtmlParser(dompurify.sanitize(recordToView.rek_formatted_abstract || recordToView.rek_description))}
+                        <div>{ReactHtmlParser(dompurify.sanitize(recordToView.rek_formatted_abstract || recordToView.rek_description))}</div>
                     </StandardCard>
                 }
                 {

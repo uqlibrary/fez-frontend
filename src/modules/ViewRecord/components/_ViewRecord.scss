@@ -45,6 +45,9 @@
     @include desktop {
       width: 150px;
     }
+    @include tablet {
+      width: 150px;
+    }
     @include mobile {
       display: inline-block !important;
       width: calc(100% - 12px);
@@ -80,6 +83,7 @@
   .sherpaRomeoYellow {
     color: yellow;
     background-color: grey;
+    padding: 1px 3px;
   }
 
   .viewRecordLinks {
