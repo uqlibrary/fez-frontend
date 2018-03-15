@@ -295,6 +295,7 @@ exports[`JournalCitation renders  component with a mock espace record 1`] = `
       "rek_description": null,
       "rek_description_xsdmf_id": null,
       "rek_display_type": 294,
+      "rek_display_type_lookup": "Journal",
       "rek_display_type_xsdmf_id": 3673,
       "rek_file_downloads": 0,
       "rek_formatted_abstract": null,

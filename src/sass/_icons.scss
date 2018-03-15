@@ -1,7 +1,4 @@
 .fez-icon {
-  border-radius: 50% !important;
-  -moz-border-radius: 50% !important;
-  -webkit-border-radius: 50% !important;
   display: inline-block;
   vertical-align: text-top;
   overflow: hidden;
@@ -31,6 +28,30 @@
     content: url(../../src/images/google_scholar_icon.svg);
   }
 
+  &.cc-by::before {
+    content: url(../../src/images/creativecommons/cca_only.png);
+  }
+
+  &.cc-by-nd::before {
+    content: url(../../src/images/creativecommons/cca_no_derivatives.png);
+  }
+
+  &.cc-by-nc::before {
+    content: url(../../src/images/creativecommons/cca_noncom.png);
+  }
+
+  &.cc-by-nc-nd::before {
+    content: url(../../src/images/creativecommons/cca_noncom_no_derivatives.png);
+  }
+
+  &.cc-by-nc-sa::before {
+    content: url(../../src/images/creativecommons/cca_noncom_share_alike.png);
+  }
+
+  &.cc-by-sa::before {
+    content: url(../../src/images/creativecommons/cca_share_alike.png);
+  }
+
   &.xsmall {
     width: 6px;
     height: 6px;
@@ -52,10 +73,17 @@
     height: 18px;
   }
   &.dashboard {
+    border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    -webkit-border-radius: 50% !important;
     width: 40px;
     height: 40px;
     &.orcid::before {
       zoom: 0.8;
     }
+  }
+
+  &.license .openExternalUrlIcon {
+    display: none !important;
   }
 }
