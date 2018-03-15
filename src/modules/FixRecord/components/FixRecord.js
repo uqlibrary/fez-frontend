@@ -143,11 +143,7 @@ export default class FixRecord extends React.PureComponent {
                 {saveConfirmationLocale.confirmationMessage}
             </div>
         );
-        // If the comments, link or files are empty, show a custom message saying one is required.
-        const formValues = this.props.formValues && this.props.formValues.toJS();
-        const alertProps = (this.props.formErrors && this.props.formErrors.comments && this.props.formErrors.rek_link && this.props.formErrors.files && formValues.fixAction === 'fix') ?
-            txtFixForm.oneIsRequired.alert :
-            validation.getErrorAlertProps({...this.props, alertLocale: txtFixForm});
+        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txtFixForm});
         return (
             <StandardPage title={txt.title}>
                 <form onSubmit={this._handleDefaultSubmit}>
@@ -179,7 +175,6 @@ export default class FixRecord extends React.PureComponent {
                             <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
                                 <Field
                                     component={TextField}
-                                    className={this.props.formErrors && (this.props.formErrors.rek_link || this.props.formErrors.files) ? 'requiredField' : null}
                                     disabled={this.props.submitting}
                                     name="comments"
                                     type="text"
@@ -191,7 +186,6 @@ export default class FixRecord extends React.PureComponent {
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
-                                    className={this.props.formErrors && (this.props.formErrors.files || this.props.formValues.comments) ? 'requiredField' : null}
                                     name="rek_link"
                                     type="text"
                                     fullWidth
@@ -246,7 +240,7 @@ export default class FixRecord extends React.PureComponent {
                                     fullWidth
                                     label={txt.submit}
                                     onTouchTap={this.props.handleSubmit}
-                                    disabled={this.props.submitting || this.props.invalid}/>
+                                    disabled={this.props.submitting || (this.props.formErrors && this.props.formErrors.size === undefined)}/>
                             </div>
                         }
                     </div>

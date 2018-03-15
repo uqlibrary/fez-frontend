@@ -36,10 +36,13 @@ export default class RichEditor extends React.PureComponent {
                 });
 
                 this.editorInstance.on('change', (evt) => {
-                    this.props.onChange({
-                        htmlText: evt.editor.getData(),
-                        plainText: evt.editor.document.getBody().getText()
-                    });
+                    const textValue = evt.editor.document.getBody().getText().trim();
+                    this.props.onChange(textValue.length > 0
+                        ? {
+                            htmlText: evt.editor.getData(),
+                            plainText: evt.editor.document.getBody().getText().trim()
+                        }
+                        : null);
                 });
             }
         }

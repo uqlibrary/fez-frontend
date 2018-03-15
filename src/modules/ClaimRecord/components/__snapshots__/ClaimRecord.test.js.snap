@@ -10477,15 +10477,9 @@ exports[`Component ClaimRecord  should return and render alert message depending
     >
       <div>
         <b>
-          Incomplete data - 
+          Error - 
         </b>
-        <span>
-          The selected source has incomplete data. You will need to 
-          <b>
-            ADD A MISSING RECORD
-          </b>
-           and enter the information manually.
-        </span>
+        Error has occurred during request and request cannot be processed. The given data was invalid. Please contact eSpace administrators or try again later.
       </div>
     </div>
   </div>

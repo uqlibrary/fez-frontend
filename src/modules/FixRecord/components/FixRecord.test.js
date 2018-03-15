@@ -93,32 +93,6 @@ describe('Component FixRecord', () => {
         expect(testMethod).toHaveBeenCalledWith('/dashboard');
     });
 
-    it('should return and render the alert details correctly', () => {
-        const testCases = [
-            {
-                parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting', message: 'submitting', type: 'info'}}},
-            },
-            {
-                parameters: {submitSucceeded: true, alertLocale: {successAlert: {title: 'submitSucceeded', message: 'submitSucceeded', type: 'done'}}},
-            },
-            {
-                parameters: {submitFailed: true, error: 'This is an error', alertLocale: {errorAlert: {title: 'submitFailed', message: jest.fn(), type: 'error'}}},
-            },
-            {
-                parameters: {invalid: true, dirty: true, formErrors: {rek_title: 'one', comments: 'two'}, alertLocale: {validationAlert: {title: 'validationError'}}},
-            },
-            {
-                parameters: {formErrors: {rek_link: 'one', comments: 'two', files: 'three'}, formValues: Immutable.Map({fixAction: 'fix'}),
-                    alertLocale: {oneIsRequired:{ alert:{title: 'oneIsRequiredError'}}}},
-            }
-        ];
-
-        testCases.forEach(testCase => {
-            const wrapper = setup({...testCase.parameters, recordToFix: mockRecordToFix}).find('Alert').dive();
-            expect(toJson(wrapper)).toMatchSnapshot();
-        });
-    });
-
     it('should clear record to fix when leaving the form', () => {
         const actionFunction = jest.fn();
         const wrapper = setup({recordToFix: mockRecordToFix, actions: {clearFixRecord: actionFunction}});

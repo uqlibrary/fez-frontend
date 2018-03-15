@@ -6,7 +6,6 @@ import FixRecord from '../components/FixRecord';
 import {withRouter} from 'react-router-dom';
 import * as actions from 'actions';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
-import {locale} from 'locale';
 const FORM_NAME = 'FixRecord';
 
 const onSubmit = (values, dispatch, props) => {
@@ -33,14 +32,11 @@ const onSubmit = (values, dispatch, props) => {
 
 const validate = (values) => {
     stopSubmit(FORM_NAME, null);
-
     const data = values.toJS();
-    const fileQueue = !!(data.files && data.files.queue && data.files.queue.length !== 0);
+    const hasFiles = data.files && data.files.queue && data.files.queue.length > 0;
     const errors = {};
-    if(!data.comments && !data.rek_link && !fileQueue) {
-        errors.comments = locale.forms.fixPublicationForm.oneIsRequired.comments;
-        errors.rek_link = locale.forms.fixPublicationForm.oneIsRequired.rek_link;
-        errors.files = locale.forms.fixPublicationForm.oneIsRequired.files;
+    if(data.fixAction === 'fix' && !data.comments && !data.rek_link && !hasFiles) {
+        errors.fixRecordAnyField = true;
     }
     return errors;
 };

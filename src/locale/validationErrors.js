@@ -55,6 +55,6 @@ export default {
         contributorLinking: 'You are required to select a contributor from the list, then confirm that it is you',
         authorLinking: 'You are required to select a author from the list, then confirm that it is you',
         comments: 'Comments are required',
-        oneIsRequired: 'At least one of the above is required to be completed'
+        fixRecordAnyField: 'Please provide either comments, URL link or upload file(s).'
     }
 };

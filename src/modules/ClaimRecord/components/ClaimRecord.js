@@ -93,7 +93,8 @@ export default class ClaimRecord extends React.PureComponent {
         const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
 
         saveConfirmationLocale.cancelButtonLabel = fromAddRecord
-            ? txt.successWorkflowConfirmation.addRecordButtonLabel : txt.successWorkflowConfirmation.cancelButtonLabel;
+            ? txt.successWorkflowConfirmation.addRecordButtonLabel
+            : txt.successWorkflowConfirmation.cancelButtonLabel;
 
         saveConfirmationLocale.confirmationMessage = (
             <div>
@@ -102,12 +103,14 @@ export default class ClaimRecord extends React.PureComponent {
             </div>
         );
         let alertProps;
-        if (!publication.rek_pid && this.props.error === 'The given data was invalid.') {
-            alertProps = {...txt.publicationFailedToClaimAlert};
+        if (!publication.rek_pid && this.props.submitFailed) {
+            // if creating a new record from external source failed it might be because external source doesn't have full required record data
+            // display a custom error message
+            alertProps = validation.getErrorAlertProps({...this.props, dirty: true, error: txt.errorAlert.incompleteData, alertLocale: txt});
         } else if (publication.rek_pid && (authorLinked || contributorLinked)) {
             alertProps = {...txt.alreadyClaimedAlert};
         } else {
-            alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
+            alertProps = validation.getErrorAlertProps({...this.props, dirty: true, alertLocale: txt});
         }
         return (
             <StandardPage title={txt.title}>
@@ -214,15 +217,14 @@ export default class ClaimRecord extends React.PureComponent {
                                 onTouchTap={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}/>
                         </div>
                         {
-                            (!publication.rek_pid || !(authorLinked || contributorLinked)) &&
+                            (!publication.rek_pid || !(authorLinked || contributorLinked)) && !(!publication.rek_pid && this.props.submitFailed) &&
                             <div className="column is-narrow-desktop">
                                 <RaisedButton
                                     secondary
                                     fullWidth
                                     label={txt.submit}
                                     onTouchTap={this.props.handleSubmit}
-                                    disabled={this.props.submitting || this.props.invalid}
-                                />
+                                    disabled={this.props.submitting || (this.props.formErrors && this.props.formErrors.size === undefined)}/>
                             </div>
                         }
                     </div>

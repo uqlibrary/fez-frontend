@@ -125,8 +125,7 @@ export default class PublicationForm extends Component {
                             fullWidth
                             label={txt.submit}
                             onTouchTap={this.props.handleSubmit}
-                            disabled={this.props.submitting || this.props.invalid}
-                        />
+                            disabled={this.props.submitting || (this.props.formErrors && this.props.formErrors.size === undefined)}/>
                     </div>
                     }
                 </div>

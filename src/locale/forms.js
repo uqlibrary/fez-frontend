@@ -81,7 +81,8 @@ export default {
             errorAlert: {
                 type: 'error_outline',
                 title: 'Error',
-                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`)
+                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`),
+                incompleteData: 'The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually.'
             },
             progressAlert: {
                 type: 'info_outline',
@@ -98,11 +99,6 @@ export default {
                 type: 'error',
                 title: 'Error',
                 message: 'This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at espace.admin@email.com.au'
-            },
-            publicationFailedToClaimAlert: {
-                type: 'error_outline',
-                title: 'Incomplete data',
-                message: (<span>The selected source has incomplete data. You will need to <b>ADD A MISSING RECORD</b> and enter the information manually.</span>),
             }
         },
         unclaimPublicationForm: {
@@ -193,16 +189,6 @@ export default {
                 type: 'done',
                 title: 'Success',
                 message: 'Fix record request has been submitted successfully.'
-            },
-            oneIsRequired: {
-                comments: 'At least one of comments, link or a file submission must be completed',
-                rek_link: 'At least one of comments, link or a file submission must be completed',
-                files: 'At least one of comments, link or a file submission must be completed',
-                alert: {
-                    type: 'warning',
-                    title: 'Validation',
-                    message: 'One of comments, link or file submission must be completed.',
-                }
             }
         }
     }
