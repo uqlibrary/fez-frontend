@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
-import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
+import {Table, TableBody} from 'material-ui/Table';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import ViewRecordTableRow from './ViewRecordTableRow';
 
 export default class GrantInformation extends Component {
     static propTypes = {
@@ -13,37 +14,20 @@ export default class GrantInformation extends Component {
         super(props);
     }
 
-    renderRow = (heading, data) => {
-        return (
-            <TableRow className="tableRow">
-                <TableRowColumn className="headingColumn">
-                    {heading}
-                </TableRowColumn>
-                <TableRowColumn className="dataColumn">
-                    {data}
-                </TableRowColumn>
-            </TableRow>
-        );
-    }
-
-    renderGrantDetail = (grantAgency, grantAgencyId, grantId, grantText, order) => {
+    renderGrantDetail = (grantAgency, grantId, grantText, order) => {
         return (
             <Table selectable={false} className="grantInformation" key={`grantInformation-${order}`}>
                 <TableBody displayRowCheckbox={false}>
                     {
-                        this.renderRow(locale.viewRecord.headings.default.grantInformation.fez_record_search_key_grant_agency, grantAgency.rek_grant_agency)
-                    }
-                    {
-                        grantAgencyId &&
-                        this.renderRow(locale.viewRecord.headings.default.grantInformation.fez_record_search_key_grant_agency_id, grantAgencyId.rek_grant_agency_id)
+                        <ViewRecordTableRow heading={locale.viewRecord.headings.default.grantInformation.fez_record_search_key_grant_agency} data={grantAgency.rek_grant_agency} />
                     }
                     {
                         grantId &&
-                        this.renderRow(locale.viewRecord.headings.default.grantInformation.fez_record_search_key_grant_id, grantId.rek_grant_id)
+                        <ViewRecordTableRow heading={locale.viewRecord.headings.default.grantInformation.fez_record_search_key_grant_id} data={grantId.rek_grant_id} />
                     }
                     {
                         grantText &&
-                        this.renderRow(locale.viewRecord.headings.default.grantInformation.fez_record_search_key_grant_text, grantText.rek_grant_text)
+                        <ViewRecordTableRow heading={locale.viewRecord.headings.default.grantInformation.fez_record_search_key_grant_text} data={grantText.rek_grant_text} />
                     }
                 </TableBody>
             </Table>
@@ -57,7 +41,6 @@ export default class GrantInformation extends Component {
     renderGrants = (publication) => {
         const grants = [];
         const grantAgencies = publication.fez_record_search_key_grant_agency;
-        const grantAgencyIds = publication.fez_record_search_key_grant_agency_id;
         const grantIds = publication.fez_record_search_key_grant_id;
         const grantTexts = publication.fez_record_search_key_grant_text;
 
@@ -65,10 +48,9 @@ export default class GrantInformation extends Component {
             grantAgency1.rek_grant_agency_order - grantAgency2.rek_grant_agency_order
         )).map((grantAgency) => {
             const order = grantAgency.rek_grant_agency_order;
-            const grantAgencyId = this.searchByOrder(grantAgencyIds, 'rek_grant_agency_id_order', order);
             const grantId = this.searchByOrder(grantIds, 'rek_grant_id_order', order);
             const grantText = this.searchByOrder(grantTexts, 'rek_grant_text_order', order);
-            grants.push(this.renderGrantDetail(grantAgency, grantAgencyId, grantId, grantText, order));
+            grants.push(this.renderGrantDetail(grantAgency, grantId, grantText, order));
         });
         return grants;
     }
