@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import {locale} from 'locale';
 import {pathConfig} from 'config/routes';
 import {viewRecordsConfig} from 'config/viewRecord';
-import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
+import {Table, TableBody} from 'material-ui/Table';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {AuthorsCitationView, DoiCitationView, EditorsCitationView} from '../../SharedComponents/PublicationCitation/components/citations/partials';
 import {ExternalLink} from '../../SharedComponents/ExternalLink';
 import ReactHtmlParser from 'react-html-parser';
+import ViewRecordTableRow from './ViewRecordTableRow';
 
 const moment = require('moment');
 const dompurify = require('dompurify');
@@ -23,14 +24,7 @@ export default class AdditionalInformation extends Component {
 
     renderRow = (heading, data) => {
         return (
-            <TableRow key={heading} className="tableRow">
-                <TableRowColumn className="headingColumn">
-                    {heading}
-                </TableRowColumn>
-                <TableRowColumn className="dataColumn">
-                    {data}
-                </TableRowColumn>
-            </TableRow>
+            <ViewRecordTableRow heading={heading} data={data} key={`additional-info-${heading}`}/>
         );
     }
 
