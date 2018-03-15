@@ -1,7 +1,8 @@
 export default {
     viewRecord: {
         linkTexts: {
-            journalOpenAccessPolicyLink: 'Check publisher\'s open access policy'
+            journalOpenAccessPolicyLink: 'Check publisher\'s open access policy',
+            eraJournalListed: '(ERA [year] Journal(s) Listed)'
         },
         sections: {
             publicationDetails: 'Publication details',
@@ -366,96 +367,88 @@ export default {
                     order: 1
                 },
                 {
-                    field: 'fez_record_search_key_author',
+                    field: 'rek_title',
                     order: 2
                 },
                 {
-                    field: 'fez_record_search_key_author',
+                    field: 'fez_record_search_key_translated_title',
                     order: 3
                 },
                 {
-                    field: 'rek_title',
+                    field: 'fez_record_search_key_language_of_title',
                     order: 4
                 },
                 {
-                    field: 'fez_record_search_key_translated_title',
+                    field: 'fez_record_search_key_place_of_publication',
                     order: 5
                 },
                 {
-                    field: 'fez_record_search_key_language_of_title',
+                    field: 'fez_record_search_key_publisher',
                     order: 6
                 },
                 {
-                    field: 'fez_record_search_key_place_of_publication',
+                    field: 'rek_date',
                     order: 7
                 },
                 {
-                    field: 'fez_record_search_key_publisher',
+                    field: 'fez_record_search_key_doi',
                     order: 8
                 },
                 {
-                    field: 'rek_date',
+                    field: 'fez_record_search_key_oa_status',
                     order: 9
                 },
                 {
-                    field: 'fez_record_search_key_doi',
+                    field: 'fez_record_search_key_volume_number',
                     order: 10
                 },
                 {
-                    field: 'fez_record_search_key_oa_status',
+                    field: 'fez_record_search_key_edition',
                     order: 11
                 },
                 {
-                    field: 'fez_record_search_key_volume_number',
+                    field: 'fez_record_search_key_series',
                     order: 12
                 },
                 {
-                    field: 'fez_record_search_key_edition',
+                    field: 'fez_record_search_key_isbn',
                     order: 13
                 },
                 {
-                    field: 'fez_record_search_key_series',
+                    field: 'fez_record_search_key_issn',
                     order: 14
                 },
                 {
-                    field: 'fez_record_search_key_isbn',
+                    field: 'fez_record_search_key_contributor',
                     order: 15
                 },
                 {
-                    field: 'fez_record_search_key_issn',
+                    field: 'fez_record_search_key_language',
                     order: 16
                 },
                 {
-                    field: 'fez_record_search_key_contributor',
+                    field: 'fez_record_search_key_start_page',
                     order: 17
                 },
                 {
-                    field: 'fez_record_search_key_language',
+                    field: 'fez_record_search_key_end_page',
                     order: 18
                 },
                 {
-                    field: 'fez_record_search_key_start_page',
+                    field: 'fez_record_search_key_total_pages',
                     order: 19
                 },
                 {
-                    field: 'fez_record_search_key_end_page',
+                    field: 'fez_record_search_key_date_available',
                     order: 20
                 },
                 {
-                    field: 'fez_record_search_key_total_pages',
+                    field: 'fez_record_search_key_subject',
                     order: 21
                 },
                 {
-                    field: 'fez_record_search_key_date_available',
-                    order: 22
-                },
-                {
-                    field: 'fez_record_search_key_subject',
-                    order: 23
-                },
-                {
                     field: 'fez_record_search_key_keywords',
-                    order: 24
+                    order: 22
                 }
             ],
             'Book Chapter': [

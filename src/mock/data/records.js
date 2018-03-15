@@ -4609,22 +4609,40 @@ export const record = {
             "rek_issn_xsdmf_id": null,
             "rek_issn": "1460-2083",
             "rek_issn_order": 1,
-            "fez_journal_issns": {
-                "jni_id": 12970,
-                "jni_jnl_id": 7489,
-                "jni_issn": "1460-2083",
-                "jni_issn_order": 2,
-                "fez_journal": {
-                    "jnl_id": 7489,
-                    "jnl_journal_name": "Human Molecular Genetics",
-                    "jnl_era_id": 22191,
-                    "jnl_era_year": 2010,
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
-                    "jnl_rank": "A*",
-                    "jnl_foreign_name": null
+            "fez_journal_issns": [
+                {
+                    "jni_id": 9527,
+                    "jni_jnl_id": 5493,
+                    "jni_issn": "1815-5669",
+                    "jni_issn_order": 1,
+                    "fez_journal": {
+                        "jnl_id": 5493,
+                        "jnl_journal_name": "Journal of Contemporary Accounting and Economics",
+                        "jnl_era_id": 18570,
+                        "jnl_era_year": 2010,
+                        "jnl_created_date": "2010-11-19 00:00:00",
+                        "jnl_updated_date": "2010-11-19 00:00:00",
+                        "jnl_rank": "B",
+                        "jnl_foreign_name": null
+                    }
+                },
+                {
+                    "jni_id": 54148,
+                    "jni_jnl_id": 32517,
+                    "jni_issn": "1815-5669",
+                    "jni_issn_order": 1,
+                    "fez_journal": {
+                        "jnl_id": 32517,
+                        "jnl_journal_name": "Journal of Contemporary Accounting and Economics",
+                        "jnl_era_id": 18570,
+                        "jnl_era_year": 2012,
+                        "jnl_created_date": "2011-10-28 00:00:00",
+                        "jnl_updated_date": "2011-10-28 00:00:00",
+                        "jnl_rank": null,
+                        "jnl_foreign_name": ""
+                    }
                 }
-            },
+            ],
             "fez_sherpa_romeo": {
                 "srm_id": 13663,
                 "srm_issn": "1460-2083",

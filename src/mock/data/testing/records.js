@@ -3504,7 +3504,7 @@ export const journalArticle = {
             "rek_issn_xsdmf_id": null,
             "rek_issn": "1477-9137",
             "rek_issn_order": 1,
-            "fez_journal_issns": {
+            "fez_journal_issns": [{
                 "jni_id": 13071,
                 "jni_jnl_id": 7538,
                 "jni_issn": "1477-9137",
@@ -3519,7 +3519,7 @@ export const journalArticle = {
                     "jnl_rank": "A",
                     "jnl_foreign_name": null
                 }
-            },
+            }],
             "fez_sherpa_romeo": {
                 "srm_id": 13764,
                 "srm_issn": "1477-9137",
@@ -3536,7 +3536,7 @@ export const journalArticle = {
             "rek_issn_xsdmf_id": null,
             "rek_issn": "0021-9533",
             "rek_issn_order": 2,
-            "fez_journal_issns": {
+            "fez_journal_issns": [{
                 "jni_id": 13070,
                 "jni_jnl_id": 7538,
                 "jni_issn": "0021-9533",
@@ -3551,7 +3551,7 @@ export const journalArticle = {
                     "jnl_rank": "A",
                     "jnl_foreign_name": null
                 }
-            },
+            }],
             "fez_sherpa_romeo": {
                 "srm_id": 13763,
                 "srm_issn": "0021-9533",

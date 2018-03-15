@@ -637,22 +637,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
       ],
       "fez_record_search_key_issn": Array [
         Object {
-          "fez_journal_issns": Object {
-            "fez_journal": Object {
-              "jnl_created_date": "2010-11-19 00:00:00",
-              "jnl_era_id": 2234,
-              "jnl_era_year": 2010,
-              "jnl_foreign_name": null,
-              "jnl_id": 7538,
-              "jnl_journal_name": "Journal of Cell Science",
-              "jnl_rank": "A",
-              "jnl_updated_date": "2010-11-19 00:00:00",
+          "fez_journal_issns": Array [
+            Object {
+              "fez_journal": Object {
+                "jnl_created_date": "2010-11-19 00:00:00",
+                "jnl_era_id": 2234,
+                "jnl_era_year": 2010,
+                "jnl_foreign_name": null,
+                "jnl_id": 7538,
+                "jnl_journal_name": "Journal of Cell Science",
+                "jnl_rank": "A",
+                "jnl_updated_date": "2010-11-19 00:00:00",
+              },
+              "jni_id": 13071,
+              "jni_issn": "1477-9137",
+              "jni_issn_order": 2,
+              "jni_jnl_id": 7538,
             },
-            "jni_id": 13071,
-            "jni_issn": "1477-9137",
-            "jni_issn_order": 2,
-            "jni_jnl_id": 7538,
-          },
+          ],
           "fez_sherpa_romeo": Object {
             "srm_colour": "green",
             "srm_date_updated": "2017-09-30 18:26:18",
@@ -762,22 +764,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
           "rek_issn_xsdmf_id": null,
         },
         Object {
-          "fez_journal_issns": Object {
-            "fez_journal": Object {
-              "jnl_created_date": "2010-11-19 00:00:00",
-              "jnl_era_id": 2234,
-              "jnl_era_year": 2010,
-              "jnl_foreign_name": null,
-              "jnl_id": 7538,
-              "jnl_journal_name": "Journal of Cell Science",
-              "jnl_rank": "A",
-              "jnl_updated_date": "2010-11-19 00:00:00",
+          "fez_journal_issns": Array [
+            Object {
+              "fez_journal": Object {
+                "jnl_created_date": "2010-11-19 00:00:00",
+                "jnl_era_id": 2234,
+                "jnl_era_year": 2010,
+                "jnl_foreign_name": null,
+                "jnl_id": 7538,
+                "jnl_journal_name": "Journal of Cell Science",
+                "jnl_rank": "A",
+                "jnl_updated_date": "2010-11-19 00:00:00",
+              },
+              "jni_id": 13070,
+              "jni_issn": "0021-9533",
+              "jni_issn_order": 1,
+              "jni_jnl_id": 7538,
             },
-            "jni_id": 13070,
-            "jni_issn": "0021-9533",
-            "jni_issn_order": 1,
-            "jni_jnl_id": 7538,
-          },
+          ],
           "fez_sherpa_romeo": Object {
             "srm_colour": "green",
             "srm_date_updated": "2017-09-30 15:12:52",
@@ -1774,22 +1778,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
           ],
           "fez_record_search_key_issn": Array [
             Object {
-              "fez_journal_issns": Object {
-                "fez_journal": Object {
-                  "jnl_created_date": "2010-11-19 00:00:00",
-                  "jnl_era_id": 2234,
-                  "jnl_era_year": 2010,
-                  "jnl_foreign_name": null,
-                  "jnl_id": 7538,
-                  "jnl_journal_name": "Journal of Cell Science",
-                  "jnl_rank": "A",
-                  "jnl_updated_date": "2010-11-19 00:00:00",
+              "fez_journal_issns": Array [
+                Object {
+                  "fez_journal": Object {
+                    "jnl_created_date": "2010-11-19 00:00:00",
+                    "jnl_era_id": 2234,
+                    "jnl_era_year": 2010,
+                    "jnl_foreign_name": null,
+                    "jnl_id": 7538,
+                    "jnl_journal_name": "Journal of Cell Science",
+                    "jnl_rank": "A",
+                    "jnl_updated_date": "2010-11-19 00:00:00",
+                  },
+                  "jni_id": 13071,
+                  "jni_issn": "1477-9137",
+                  "jni_issn_order": 2,
+                  "jni_jnl_id": 7538,
                 },
-                "jni_id": 13071,
-                "jni_issn": "1477-9137",
-                "jni_issn_order": 2,
-                "jni_jnl_id": 7538,
-              },
+              ],
               "fez_sherpa_romeo": Object {
                 "srm_colour": "green",
                 "srm_date_updated": "2017-09-30 18:26:18",
@@ -1899,22 +1905,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
               "rek_issn_xsdmf_id": null,
             },
             Object {
-              "fez_journal_issns": Object {
-                "fez_journal": Object {
-                  "jnl_created_date": "2010-11-19 00:00:00",
-                  "jnl_era_id": 2234,
-                  "jnl_era_year": 2010,
-                  "jnl_foreign_name": null,
-                  "jnl_id": 7538,
-                  "jnl_journal_name": "Journal of Cell Science",
-                  "jnl_rank": "A",
-                  "jnl_updated_date": "2010-11-19 00:00:00",
+              "fez_journal_issns": Array [
+                Object {
+                  "fez_journal": Object {
+                    "jnl_created_date": "2010-11-19 00:00:00",
+                    "jnl_era_id": 2234,
+                    "jnl_era_year": 2010,
+                    "jnl_foreign_name": null,
+                    "jnl_id": 7538,
+                    "jnl_journal_name": "Journal of Cell Science",
+                    "jnl_rank": "A",
+                    "jnl_updated_date": "2010-11-19 00:00:00",
+                  },
+                  "jni_id": 13070,
+                  "jni_issn": "0021-9533",
+                  "jni_issn_order": 1,
+                  "jni_jnl_id": 7538,
                 },
-                "jni_id": 13070,
-                "jni_issn": "0021-9533",
-                "jni_issn_order": 1,
-                "jni_jnl_id": 7538,
-              },
+              ],
               "fez_sherpa_romeo": Object {
                 "srm_colour": "green",
                 "srm_date_updated": "2017-09-30 15:12:52",
@@ -3096,22 +3104,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
           ],
           "fez_record_search_key_issn": Array [
             Object {
-              "fez_journal_issns": Object {
-                "fez_journal": Object {
-                  "jnl_created_date": "2010-11-19 00:00:00",
-                  "jnl_era_id": 2234,
-                  "jnl_era_year": 2010,
-                  "jnl_foreign_name": null,
-                  "jnl_id": 7538,
-                  "jnl_journal_name": "Journal of Cell Science",
-                  "jnl_rank": "A",
-                  "jnl_updated_date": "2010-11-19 00:00:00",
+              "fez_journal_issns": Array [
+                Object {
+                  "fez_journal": Object {
+                    "jnl_created_date": "2010-11-19 00:00:00",
+                    "jnl_era_id": 2234,
+                    "jnl_era_year": 2010,
+                    "jnl_foreign_name": null,
+                    "jnl_id": 7538,
+                    "jnl_journal_name": "Journal of Cell Science",
+                    "jnl_rank": "A",
+                    "jnl_updated_date": "2010-11-19 00:00:00",
+                  },
+                  "jni_id": 13071,
+                  "jni_issn": "1477-9137",
+                  "jni_issn_order": 2,
+                  "jni_jnl_id": 7538,
                 },
-                "jni_id": 13071,
-                "jni_issn": "1477-9137",
-                "jni_issn_order": 2,
-                "jni_jnl_id": 7538,
-              },
+              ],
               "fez_sherpa_romeo": Object {
                 "srm_colour": "green",
                 "srm_date_updated": "2017-09-30 18:26:18",
@@ -3221,22 +3231,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
               "rek_issn_xsdmf_id": null,
             },
             Object {
-              "fez_journal_issns": Object {
-                "fez_journal": Object {
-                  "jnl_created_date": "2010-11-19 00:00:00",
-                  "jnl_era_id": 2234,
-                  "jnl_era_year": 2010,
-                  "jnl_foreign_name": null,
-                  "jnl_id": 7538,
-                  "jnl_journal_name": "Journal of Cell Science",
-                  "jnl_rank": "A",
-                  "jnl_updated_date": "2010-11-19 00:00:00",
+              "fez_journal_issns": Array [
+                Object {
+                  "fez_journal": Object {
+                    "jnl_created_date": "2010-11-19 00:00:00",
+                    "jnl_era_id": 2234,
+                    "jnl_era_year": 2010,
+                    "jnl_foreign_name": null,
+                    "jnl_id": 7538,
+                    "jnl_journal_name": "Journal of Cell Science",
+                    "jnl_rank": "A",
+                    "jnl_updated_date": "2010-11-19 00:00:00",
+                  },
+                  "jni_id": 13070,
+                  "jni_issn": "0021-9533",
+                  "jni_issn_order": 1,
+                  "jni_jnl_id": 7538,
                 },
-                "jni_id": 13070,
-                "jni_issn": "0021-9533",
-                "jni_issn_order": 1,
-                "jni_jnl_id": 7538,
-              },
+              ],
               "fez_sherpa_romeo": Object {
                 "srm_colour": "green",
                 "srm_date_updated": "2017-09-30 15:12:52",
@@ -4212,22 +4224,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
               ],
               "fez_record_search_key_issn": Array [
                 Object {
-                  "fez_journal_issns": Object {
-                    "fez_journal": Object {
-                      "jnl_created_date": "2010-11-19 00:00:00",
-                      "jnl_era_id": 2234,
-                      "jnl_era_year": 2010,
-                      "jnl_foreign_name": null,
-                      "jnl_id": 7538,
-                      "jnl_journal_name": "Journal of Cell Science",
-                      "jnl_rank": "A",
-                      "jnl_updated_date": "2010-11-19 00:00:00",
+                  "fez_journal_issns": Array [
+                    Object {
+                      "fez_journal": Object {
+                        "jnl_created_date": "2010-11-19 00:00:00",
+                        "jnl_era_id": 2234,
+                        "jnl_era_year": 2010,
+                        "jnl_foreign_name": null,
+                        "jnl_id": 7538,
+                        "jnl_journal_name": "Journal of Cell Science",
+                        "jnl_rank": "A",
+                        "jnl_updated_date": "2010-11-19 00:00:00",
+                      },
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
                     },
-                    "jni_id": 13071,
-                    "jni_issn": "1477-9137",
-                    "jni_issn_order": 2,
-                    "jni_jnl_id": 7538,
-                  },
+                  ],
                   "fez_sherpa_romeo": Object {
                     "srm_colour": "green",
                     "srm_date_updated": "2017-09-30 18:26:18",
@@ -4337,22 +4351,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                   "rek_issn_xsdmf_id": null,
                 },
                 Object {
-                  "fez_journal_issns": Object {
-                    "fez_journal": Object {
-                      "jnl_created_date": "2010-11-19 00:00:00",
-                      "jnl_era_id": 2234,
-                      "jnl_era_year": 2010,
-                      "jnl_foreign_name": null,
-                      "jnl_id": 7538,
-                      "jnl_journal_name": "Journal of Cell Science",
-                      "jnl_rank": "A",
-                      "jnl_updated_date": "2010-11-19 00:00:00",
+                  "fez_journal_issns": Array [
+                    Object {
+                      "fez_journal": Object {
+                        "jnl_created_date": "2010-11-19 00:00:00",
+                        "jnl_era_id": 2234,
+                        "jnl_era_year": 2010,
+                        "jnl_foreign_name": null,
+                        "jnl_id": 7538,
+                        "jnl_journal_name": "Journal of Cell Science",
+                        "jnl_rank": "A",
+                        "jnl_updated_date": "2010-11-19 00:00:00",
+                      },
+                      "jni_id": 13070,
+                      "jni_issn": "0021-9533",
+                      "jni_issn_order": 1,
+                      "jni_jnl_id": 7538,
                     },
-                    "jni_id": 13070,
-                    "jni_issn": "0021-9533",
-                    "jni_issn_order": 1,
-                    "jni_jnl_id": 7538,
-                  },
+                  ],
                   "fez_sherpa_romeo": Object {
                     "srm_colour": "green",
                     "srm_date_updated": "2017-09-30 15:12:52",
@@ -5325,22 +5341,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
               ],
               "fez_record_search_key_issn": Array [
                 Object {
-                  "fez_journal_issns": Object {
-                    "fez_journal": Object {
-                      "jnl_created_date": "2010-11-19 00:00:00",
-                      "jnl_era_id": 2234,
-                      "jnl_era_year": 2010,
-                      "jnl_foreign_name": null,
-                      "jnl_id": 7538,
-                      "jnl_journal_name": "Journal of Cell Science",
-                      "jnl_rank": "A",
-                      "jnl_updated_date": "2010-11-19 00:00:00",
+                  "fez_journal_issns": Array [
+                    Object {
+                      "fez_journal": Object {
+                        "jnl_created_date": "2010-11-19 00:00:00",
+                        "jnl_era_id": 2234,
+                        "jnl_era_year": 2010,
+                        "jnl_foreign_name": null,
+                        "jnl_id": 7538,
+                        "jnl_journal_name": "Journal of Cell Science",
+                        "jnl_rank": "A",
+                        "jnl_updated_date": "2010-11-19 00:00:00",
+                      },
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
                     },
-                    "jni_id": 13071,
-                    "jni_issn": "1477-9137",
-                    "jni_issn_order": 2,
-                    "jni_jnl_id": 7538,
-                  },
+                  ],
                   "fez_sherpa_romeo": Object {
                     "srm_colour": "green",
                     "srm_date_updated": "2017-09-30 18:26:18",
@@ -5450,22 +5468,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                   "rek_issn_xsdmf_id": null,
                 },
                 Object {
-                  "fez_journal_issns": Object {
-                    "fez_journal": Object {
-                      "jnl_created_date": "2010-11-19 00:00:00",
-                      "jnl_era_id": 2234,
-                      "jnl_era_year": 2010,
-                      "jnl_foreign_name": null,
-                      "jnl_id": 7538,
-                      "jnl_journal_name": "Journal of Cell Science",
-                      "jnl_rank": "A",
-                      "jnl_updated_date": "2010-11-19 00:00:00",
+                  "fez_journal_issns": Array [
+                    Object {
+                      "fez_journal": Object {
+                        "jnl_created_date": "2010-11-19 00:00:00",
+                        "jnl_era_id": 2234,
+                        "jnl_era_year": 2010,
+                        "jnl_foreign_name": null,
+                        "jnl_id": 7538,
+                        "jnl_journal_name": "Journal of Cell Science",
+                        "jnl_rank": "A",
+                        "jnl_updated_date": "2010-11-19 00:00:00",
+                      },
+                      "jni_id": 13070,
+                      "jni_issn": "0021-9533",
+                      "jni_issn_order": 1,
+                      "jni_jnl_id": 7538,
                     },
-                    "jni_id": 13070,
-                    "jni_issn": "0021-9533",
-                    "jni_issn_order": 1,
-                    "jni_jnl_id": 7538,
-                  },
+                  ],
                   "fez_sherpa_romeo": Object {
                     "srm_colour": "green",
                     "srm_date_updated": "2017-09-30 15:12:52",

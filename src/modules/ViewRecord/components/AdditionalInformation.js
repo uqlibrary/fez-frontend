@@ -135,8 +135,10 @@ export default class AdditionalInformation extends Component {
     }
 
     renderJournalName = (journalName) => {
-        const journalNameElement = <a href={pathConfig.list.journalName(journalName)}>{journalName}</a>;
         const sherpaRomeoData = this.getSherpaRomeo();
+        const eraYears = this.getERAYears();
+        const eraJournalListedText = eraYears && eraYears.length > 0 ? locale.viewRecord.linkTexts.eraJournalListed.replace('[year]', eraYears.join(', ')) : '';
+        const journalNameElement = <a href={pathConfig.list.journalName(journalName)}><span>{journalName}</span> <span className={'eraYearListed'}>{eraJournalListedText}</span></a>;
         let sherpaRomeoElement = <span/>;
 
         if (sherpaRomeoData) {
@@ -182,6 +184,23 @@ export default class AdditionalInformation extends Component {
     getData = (object, subkey) => {
         const lookupSuffix = '_lookup';
         return object[subkey + lookupSuffix] && subkey !== 'rek_issn' ? object[subkey + lookupSuffix] : object[subkey];
+    }
+
+    // fez_journal_issns returns era data
+    getERAYears = () => {
+        const years = [];
+        const issns = this.props.publication.fez_record_search_key_issn || [];
+        issns.map((issn) => {
+            if (Array.isArray(issn.fez_journal_issns) && issn.fez_journal_issns.length > 0) {
+                issn.fez_journal_issns.map((journalIssn) => {
+                    if (journalIssn.fez_journal && !years.includes(journalIssn.fez_journal.jnl_era_year)) {
+                        years.push(journalIssn.fez_journal.jnl_era_year);
+                    }
+                });
+            }
+        });
+
+        return years;
     }
 
     // rek_issn_lookup returns sherpa romeo color
