@@ -225,7 +225,10 @@ describe('Fix record actions', () => {
                 files: {
                     queue: [
                         {
-                            name: 'test.txt'
+                            name: 'test.txt',
+                            fileData: {
+                                name: 'test.txt'
+                            }
                         }
                     ]
                 }

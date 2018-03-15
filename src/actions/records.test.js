@@ -85,7 +85,10 @@ describe('Record action creators', () => {
                 "files":  {
                     "queue": [
                         {
-                            "name": "test.txt"
+                            "name": "test.txt",
+                            "fileData": {
+                                "name": "test.txt"
+                            }
                         }
                     ],
                     "isValid": true},
@@ -193,7 +196,10 @@ describe('Record action creators', () => {
                 "files": {
                     "queue": [
                         {
-                            "name": "test.txt"
+                            "name": "test.txt",
+                            "fileData": {
+                                "name": "test.txt"
+                            }
                         }
                     ]
                 }
@@ -274,7 +280,10 @@ describe('Record action creators', () => {
             "files": {
                 "queue": [
                     {
-                        "name": "test.txt"
+                        "name": "test.txt",
+                        "fileData": {
+                            "name": "test.txt"
+                        }
                     }
                 ], "isValid": true},
             "rek_status": 2,

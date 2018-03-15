@@ -21,7 +21,7 @@ export function putUploadFile(pid, file, dispatch) {
                 cancelToken: generateCancelToken().token
             };
             const fileUrl = Array.isArray(uploadUrl) && uploadUrl.length > 0 ? uploadUrl[0] : uploadUrl;
-            return put({apiUrl: fileUrl}, file, options);
+            return put({apiUrl: fileUrl}, file.fileData, options);
         })
         .then(uploadResponse => (Promise.resolve(uploadResponse)))
         .catch(error => {
