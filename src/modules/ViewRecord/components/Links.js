@@ -66,7 +66,7 @@ export default class ViewRecordLinks extends PureComponent {
                                         {
                                             openAccessStatus() &&
                                             <div className="fez-icon openAccess large"
-                                                title={txt.openAccessLabel.replace('[oa_status]', record.fez_record_search_key_oa_status && openAccessIdLookup[record.fez_record_search_key_oa_status.rek_oa_status])}
+                                                title={txt.openAccessLabel.replace('[oa_status]', record.fez_record_search_key_oa_status && openAccessIdLookup[record.fez_record_search_key_oa_status.rek_oa_status] || txt.doiLabelNoOpenAccess)}
                                             />
                                         }
                                     </TableRowColumn>

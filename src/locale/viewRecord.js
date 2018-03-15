@@ -18,6 +18,7 @@ export default {
                 linkMissingDescription: 'No description avalable',
                 linkMissingDescriptionTitle: 'Click to open link in a new window',
                 openAccessLabel: 'Open Access - [oa_status] - Free to read (embargo date might apply)',
+                doiLabelNoOpenAccess: 'DOI Link'
             }
         },
         headings: {
