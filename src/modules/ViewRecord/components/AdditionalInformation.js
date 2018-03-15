@@ -207,20 +207,29 @@ export default class AdditionalInformation extends Component {
         return field.indexOf(keyPrefix) === 0 ? subkeyPrefix + field.substring(keyPrefix.length) : null;
     }
 
+    // TODO: check for user role
+    excludeAdminOnlyFields = (fields) => {
+        return fields.filter(item=>!locale.viewRecord.adminFields.includes(item.field));
+    }
+
     // common fields for all display types at the bottom of the list
     renderFooter = () => {
         const rows = [];
         const publication = this.props.publication;
-        const footer = locale.viewRecord.headings.default.footer;
+        const footer = this.excludeAdminOnlyFields(locale.viewRecord.fields.footer);
 
-        Object.keys(footer).forEach((field) => {
+        footer.sort((field1, field2) => (
+            field1.order - field2.order
+        )).map((item) => {
+            const field = item.field;
             const data = publication[field];
             const subkey = this.transformFieldNameToSubkey(field);
 
             if (data) {
-                rows.push(this.renderRow(footer[field], this.renderObject(data, subkey)));
+                rows.push(this.renderRow(locale.viewRecord.headings.default.footer[field], this.renderObject(data, subkey)));
             }
         });
+
         return rows;
     }
 
@@ -230,7 +239,7 @@ export default class AdditionalInformation extends Component {
         const displayType = publication.rek_display_type_lookup;
         const headings = locale.viewRecord.headings;
         const displayTypeHeadings = displayType && headings[displayType] ? headings[displayType] : [];
-        const fields = displayType && locale.viewRecord.fields[displayType] ? locale.viewRecord.fields[displayType] : [];
+        const fields = displayType && locale.viewRecord.fields[displayType] ? this.excludeAdminOnlyFields(locale.viewRecord.fields[displayType]) : [];
 
         fields.sort((field1, field2) => (
             field1.order - field2.order

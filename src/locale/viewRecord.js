@@ -131,8 +131,8 @@ export default {
                     fez_record_search_key_ismemberof: 'Collections'
                 },
                 footer: {
-                    fez_record_search_key_herdc_code: 'Q-Index code',
-                    fez_record_search_key_herdc_status: 'Q-Index status',
+                    fez_record_search_key_herdc_code: 'HERDC code',
+                    fez_record_search_key_herdc_status: 'HERDC status',
                     fez_record_search_key_institutional_status: 'Institutional status',
                     fez_record_search_key_additional_notes: 'Additional notes',
                     fez_record_search_key_notes: 'Additional notes'
@@ -2313,7 +2313,34 @@ export default {
                     field: 'fez_record_search_key_keywords',
                     order: 18
                 }
+            ],
+            footer: [
+                {
+                    field: 'fez_record_search_key_herdc_code',
+                    order: 0
+                },
+                {
+                    field: 'fez_record_search_key_herdc_status',
+                    order: 1
+                },
+                {
+                    field: 'fez_record_search_key_institutional_status',
+                    order: 2
+                },
+                {
+                    field: 'fez_record_search_key_additional_notes',
+                    order: 3
+                },
+                {
+                    field: 'fez_record_search_key_notes',
+                    order: 4
+                }
             ]
-        }
+        },
+        adminFields: [
+            'fez_record_search_key_herdc_code',
+            'fez_record_search_key_herdc_status',
+            'fez_record_search_key_institutional_status'
+        ]
     }
 };
