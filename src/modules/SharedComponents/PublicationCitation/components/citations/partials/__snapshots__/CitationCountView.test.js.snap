@@ -24,6 +24,7 @@ exports[`CitationCountView test  should render component with given count 1`] = 
         className="wosCitationCount"
         href="www.google.com"
         rel="noopener noreferrer"
+        tabIndex="0"
         target="_blank"
         title="Google"
       >

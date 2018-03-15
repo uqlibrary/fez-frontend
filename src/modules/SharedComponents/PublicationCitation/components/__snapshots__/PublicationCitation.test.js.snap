@@ -13,13 +13,13 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
       <h3
         className="publicationTitle"
       >
-        <a
-          href="#"
+        <Link
           onClick={[Function]}
-          onKeyPress={[Function]}
+          replace={false}
+          to="/records/UQ:41878"
         >
           Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-        </a>
+        </Link>
       </h3>
       <JournalArticleCitation
         publication={
@@ -380,6 +380,7 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
             "rek_description": null,
             "rek_description_xsdmf_id": null,
             "rek_display_type": 179,
+            "rek_display_type_lookup": "Journal Article",
             "rek_display_type_xsdmf_id": 3673,
             "rek_file_downloads": 0,
             "rek_formatted_abstract": null,
@@ -775,6 +776,7 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
             "rek_description": null,
             "rek_description_xsdmf_id": null,
             "rek_display_type": 179,
+            "rek_display_type_lookup": "Journal Article",
             "rek_display_type_xsdmf_id": 3673,
             "rek_file_downloads": 0,
             "rek_formatted_abstract": null,
@@ -896,13 +898,13 @@ exports[`PublicationCitation  should render component with default actions 1`] =
       <h3
         className="publicationTitle"
       >
-        <a
-          href="#"
+        <Link
           onClick={[Function]}
-          onKeyPress={[Function]}
+          replace={false}
+          to="/records/UQ:41878"
         >
           Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-        </a>
+        </Link>
       </h3>
       <JournalArticleCitation
         publication={
@@ -1263,6 +1265,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
             "rek_description": null,
             "rek_description_xsdmf_id": null,
             "rek_display_type": 179,
+            "rek_display_type_lookup": "Journal Article",
             "rek_display_type_xsdmf_id": 3673,
             "rek_file_downloads": 0,
             "rek_formatted_abstract": null,
@@ -1658,6 +1661,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
             "rek_description": null,
             "rek_description_xsdmf_id": null,
             "rek_display_type": 179,
+            "rek_display_type_lookup": "Journal Article",
             "rek_display_type_xsdmf_id": 3673,
             "rek_file_downloads": 0,
             "rek_formatted_abstract": null,
@@ -1739,13 +1743,13 @@ exports[`PublicationCitation  should render component with default item 1`] = `
       <h3
         className="publicationTitle"
       >
-        <a
-          href="#"
+        <Link
           onClick={[Function]}
-          onKeyPress={[Function]}
+          replace={false}
+          to="/records/UQ:41878"
         >
           Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-        </a>
+        </Link>
       </h3>
       <JournalArticleCitation
         publication={
@@ -2106,6 +2110,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
             "rek_description": null,
             "rek_description_xsdmf_id": null,
             "rek_display_type": 179,
+            "rek_display_type_lookup": "Journal Article",
             "rek_display_type_xsdmf_id": 3673,
             "rek_file_downloads": 0,
             "rek_formatted_abstract": null,
@@ -2501,6 +2506,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
             "rek_description": null,
             "rek_description_xsdmf_id": null,
             "rek_display_type": 179,
+            "rek_display_type_lookup": "Journal Article",
             "rek_display_type_xsdmf_id": 3673,
             "rek_file_downloads": 0,
             "rek_formatted_abstract": null,
@@ -2555,13 +2561,13 @@ exports[`PublicationCitation  should render component with publication from mult
       <h3
         className="publicationTitle"
       >
-        <a
-          href="#"
+        <Link
           onClick={[Function]}
-          onKeyPress={[Function]}
+          replace={false}
+          to="/records/UQ:41878"
         >
           Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-        </a>
+        </Link>
       </h3>
       <JournalArticleCitation
         publication={
@@ -2922,6 +2928,7 @@ exports[`PublicationCitation  should render component with publication from mult
             "rek_description": null,
             "rek_description_xsdmf_id": null,
             "rek_display_type": 179,
+            "rek_display_type_lookup": "Journal Article",
             "rek_display_type_xsdmf_id": 3673,
             "rek_file_downloads": 0,
             "rek_formatted_abstract": null,
@@ -3323,6 +3330,7 @@ exports[`PublicationCitation  should render component with publication from mult
             "rek_description": null,
             "rek_description_xsdmf_id": null,
             "rek_display_type": 179,
+            "rek_display_type_lookup": "Journal Article",
             "rek_display_type_xsdmf_id": 3673,
             "rek_file_downloads": 0,
             "rek_formatted_abstract": null,
@@ -3396,9 +3404,6 @@ exports[`PublicationCitation  should render component without a title 1`] = `
     <div
       className="column"
     >
-      <h3
-        className="publicationTitle"
-      />
       <JournalArticleCitation
         publication={
           Object {
@@ -3758,6 +3763,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
             "rek_description": null,
             "rek_description_xsdmf_id": null,
             "rek_display_type": 179,
+            "rek_display_type_lookup": "Journal Article",
             "rek_display_type_xsdmf_id": 3673,
             "rek_file_downloads": 0,
             "rek_formatted_abstract": null,
@@ -4159,6 +4165,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
             "rek_description": null,
             "rek_description_xsdmf_id": null,
             "rek_display_type": 179,
+            "rek_display_type_lookup": "Journal Article",
             "rek_display_type_xsdmf_id": 3673,
             "rek_file_downloads": 0,
             "rek_formatted_abstract": null,

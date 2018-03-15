@@ -156,9 +156,28 @@ exports[`WorkingPaperForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButton": "Add author",
+              "descriptionStep1": <div>
+                <span
+                  className="authorSteps"
+                >
+                  Step 1 of 2
+                </span>
+                 - Please 
+                <b>
+                  add to a list of authors below
+                </b>
+                , in the format and order that they are published.
+              </div>,
+              "descriptionStep1NoStep2": <div>
+                Please 
+                <b>
+                  add to a list of authors below
+                </b>
+                , in the format and order that they are published.
+              </div>,
               "identifierLabel": "UQ identifier (if available)",
               "nameAsPublishedHint": "Type the name exactly as published",
-              "nameAsPublishedLabel": "Enter each author's name as published",
+              "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
             },
           },
           "header": Object {
@@ -171,6 +190,18 @@ exports[`WorkingPaperForm renders  component 1`] = `
                 "confirmationMessage": "Are you sure you want to delete all items?",
                 "confirmationTitle": "Delete all",
               },
+              "descriptionStep2": <div>
+                <span
+                  className="authorSteps"
+                >
+                  Step 2 of 2
+                </span>
+                 - Please 
+                <b>
+                  select your name
+                </b>
+                 from the list below (if applicable).
+              </div>,
               "identifierColumn": "UQ identifier",
               "nameColumn": "Author's name as published",
               "reorderColumn": "Reorder items",
@@ -199,7 +230,10 @@ exports[`WorkingPaperForm renders  component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
+              "selectHint": "Select this author ([name]) to assign it as you",
+              "selectedHint": "This is you",
               "suffix": " listed author",
+              "unselectedHint": "Select this to confirm [identifier] is you",
             },
           },
         }

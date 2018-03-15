@@ -7,7 +7,6 @@ exports[`DoiCitationView test  should render component with doi 1`] = `
   <span
     className="citationDOI"
   >
-     
     <ExternalLink
       aria-label="Open this DOI in an new window"
       className="citationDoiLink"
@@ -22,6 +21,7 @@ exports[`DoiCitationView test  should render component with doi 1`] = `
         className="citationDoiLink"
         href="https://doi.org/10.121212/lskdjflsdjf"
         rel="noopener noreferrer"
+        tabIndex="0"
         target="_blank"
         title="Open this DOI in an new window"
       >

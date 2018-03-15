@@ -95,13 +95,13 @@ mock
     // .reply(500, ["Server error: `POST https://sandbox.orcid.org/oauth/token` resulted in a `500 Internal Server Error` response:\n{\"error\":\"server_error\",\"error_description\":\"Redirect URI mismatch.\"}\n"])
     .onGet(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)))
     .reply(200, ['s3-ap-southeast-2.amazonaws.com']);
-    // .reply(500, {message: 'error - failed GET FILE_UPLOAD_API'});
+// .reply(500, {message: 'error - failed GET FILE_UPLOAD_API'});
 
 
 mock
     .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
     .reply(200, {data: {}});
-    // .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'});
+// .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'});
 
 mock
     .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({pid: '.*'}).apiUrl)))
@@ -111,18 +111,18 @@ mock
     .reply(200, {data: {}})
     // .reply(500, ['ERROR HIDE_POSSIBLE_RECORD_API'])
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
-    .reply(200, {data: {}});
-    // .reply(500, {message: 'error - failed NEW_RECORD_API'});
+    // .reply(200, {data: {}});
+    .reply(500, {message: 'error - failed NEW_RECORD_API'});
 
 mock
     .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
-    .reply(200, {data: {...mockData.record}})
-    // .reply(500, ['ERROR IN EXISTING_RECORD_API'])
+    // .reply(200, {data: {...mockData.record}})
+    .reply(500, ['ERROR IN EXISTING_RECORD_API'])
     .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({authorId: '.*'}).apiUrl)))
     .reply(200, {...mockData.currentAuthor.uqresearcher})
     // .reply(500, {message: 'error - failed PATCH AUTHOR_API'})
     .onAny().reply((config) => {
-        console.log('url not found...');
-        console.log(config);
-        return [404, {message: `MOCK URL NOT FOUND: ${config.url}`}];
-    });
+    console.log('url not found...');
+    console.log(config);
+    return [404, {message: `MOCK URL NOT FOUND: ${config.url}`}];
+});

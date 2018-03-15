@@ -178,6 +178,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
       "rek_description": "Injuries are a leading cause of death and burden of disease in persons younger than 60 years of age (Peden et al., 2002) and it has been estimated that in 2000, injuries accounted for 9% of the world’s deaths and 12% of the world’s burden of disease (WHO, 2002). Injuries follow a strong gender pattern and injury mortality among men is twice that among women. Injuries affect mainly young, economically active adults between the ages of 15 and 44 years with this age group accounting for almost 50% of the world’s injury-related mortality (WHO, 2002). More than 90% of the world’s deaths from injuries occur in low- and middle-income countries (WHO, 2002). Males in Africa and the low- and middle-income countries of Europe have the highest injury-related mortality rates worldwide. Among females, the highest injuryrelated mortality rates are found in Africa and India. Zwi et al. highlight this neglected health problem in developing countries and argue for an immediate policy response (Zwi et al.,",
       "rek_description_xsdmf_id": 11455,
       "rek_display_type": 181,
+      "rek_display_type_lookup": "Deparment Technical Report",
       "rek_display_type_xsdmf_id": 3673,
       "rek_file_downloads": 0,
       "rek_formatted_abstract": null,
@@ -245,6 +246,13 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -422,6 +430,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
           "rek_description": "Injuries are a leading cause of death and burden of disease in persons younger than 60 years of age (Peden et al., 2002) and it has been estimated that in 2000, injuries accounted for 9% of the world’s deaths and 12% of the world’s burden of disease (WHO, 2002). Injuries follow a strong gender pattern and injury mortality among men is twice that among women. Injuries affect mainly young, economically active adults between the ages of 15 and 44 years with this age group accounting for almost 50% of the world’s injury-related mortality (WHO, 2002). More than 90% of the world’s deaths from injuries occur in low- and middle-income countries (WHO, 2002). Males in Africa and the low- and middle-income countries of Europe have the highest injury-related mortality rates worldwide. Among females, the highest injuryrelated mortality rates are found in Africa and India. Zwi et al. highlight this neglected health problem in developing countries and argue for an immediate policy response (Zwi et al.,",
           "rek_description_xsdmf_id": 11455,
           "rek_display_type": 181,
+          "rek_display_type_lookup": "Deparment Technical Report",
           "rek_display_type_xsdmf_id": 3673,
           "rek_file_downloads": 0,
           "rek_formatted_abstract": null,
@@ -464,6 +473,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -473,13 +483,14 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=""
           value="Norman, Rosana"
         >
           <span
             className="citationAuthor"
           >
+             
             Norman, Rosana
           </span>
         </CitationView>
@@ -761,6 +772,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
       "rek_description": "Injuries are a leading cause of death and burden of disease in persons younger than 60 years of age (Peden et al., 2002) and it has been estimated that in 2000, injuries accounted for 9% of the world’s deaths and 12% of the world’s burden of disease (WHO, 2002). Injuries follow a strong gender pattern and injury mortality among men is twice that among women. Injuries affect mainly young, economically active adults between the ages of 15 and 44 years with this age group accounting for almost 50% of the world’s injury-related mortality (WHO, 2002). More than 90% of the world’s deaths from injuries occur in low- and middle-income countries (WHO, 2002). Males in Africa and the low- and middle-income countries of Europe have the highest injury-related mortality rates worldwide. Among females, the highest injuryrelated mortality rates are found in Africa and India. Zwi et al. highlight this neglected health problem in developing countries and argue for an immediate policy response (Zwi et al.,",
       "rek_description_xsdmf_id": 11455,
       "rek_display_type": 181,
+      "rek_display_type_lookup": "Deparment Technical Report",
       "rek_display_type_xsdmf_id": 3673,
       "rek_file_downloads": 0,
       "rek_formatted_abstract": null,
@@ -828,6 +840,13 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -1010,6 +1029,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
           "rek_description": "Injuries are a leading cause of death and burden of disease in persons younger than 60 years of age (Peden et al., 2002) and it has been estimated that in 2000, injuries accounted for 9% of the world’s deaths and 12% of the world’s burden of disease (WHO, 2002). Injuries follow a strong gender pattern and injury mortality among men is twice that among women. Injuries affect mainly young, economically active adults between the ages of 15 and 44 years with this age group accounting for almost 50% of the world’s injury-related mortality (WHO, 2002). More than 90% of the world’s deaths from injuries occur in low- and middle-income countries (WHO, 2002). Males in Africa and the low- and middle-income countries of Europe have the highest injury-related mortality rates worldwide. Among females, the highest injuryrelated mortality rates are found in Africa and India. Zwi et al. highlight this neglected health problem in developing countries and argue for an immediate policy response (Zwi et al.,",
           "rek_description_xsdmf_id": 11455,
           "rek_display_type": 181,
+          "rek_display_type_lookup": "Deparment Technical Report",
           "rek_display_type_xsdmf_id": 3673,
           "rek_file_downloads": 0,
           "rek_formatted_abstract": null,
@@ -1052,6 +1072,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -1061,13 +1082,14 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=""
           value="Norman, Rosana"
         >
           <span
             className="citationAuthor"
           >
+             
             Norman, Rosana
           </span>
         </CitationView>
@@ -1201,6 +1223,13 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
@@ -1210,6 +1239,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >

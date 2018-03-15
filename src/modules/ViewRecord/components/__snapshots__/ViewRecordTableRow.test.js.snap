@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewRecordTableRow Component should render with array 1`] = `
+<TableRow
+  className="tableRow"
+  displayBorder={true}
+  hoverable={false}
+  hovered={false}
+  selectable={true}
+  striped={false}
+>
+  <TableRowColumn
+    className="headingColumn"
+    hoverable={false}
+  />
+  <TableRowColumn
+    className="dataColumn"
+    hoverable={false}
+  />
+</TableRow>
+`;
+
+exports[`ViewRecordTableRow Component should render with default props 1`] = `
+<TableRow
+  className="tableRow"
+  displayBorder={true}
+  hoverable={false}
+  hovered={false}
+  selectable={true}
+  striped={false}
+>
+  <TableRowColumn
+    className="headingColumn"
+    hoverable={false}
+  />
+  <TableRowColumn
+    className="dataColumn"
+    hoverable={false}
+  />
+</TableRow>
+`;
+
+exports[`ViewRecordTableRow Component should render with jsx 1`] = `
+<TableRow
+  className="tableRow"
+  displayBorder={true}
+  hoverable={false}
+  hovered={false}
+  selectable={true}
+  striped={false}
+>
+  <TableRowColumn
+    className="headingColumn"
+    hoverable={false}
+  />
+  <TableRowColumn
+    className="dataColumn"
+    hoverable={false}
+  />
+</TableRow>
+`;
+
+exports[`ViewRecordTableRow Component should render with string 1`] = `
+<TableRow
+  className="tableRow"
+  displayBorder={true}
+  hoverable={false}
+  hovered={false}
+  selectable={true}
+  striped={false}
+>
+  <TableRowColumn
+    className="headingColumn"
+    hoverable={false}
+  />
+  <TableRowColumn
+    className="dataColumn"
+    hoverable={false}
+  />
+</TableRow>
+`;

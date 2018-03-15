@@ -101,6 +101,8 @@ export const isValidGoogleScholarId = id => {
 };
 
 export const translateFormErrorsToText = (formErrors) => {
+    if (!formErrors) return null;
+
     let errorMessagesList = [];
 
     Object.keys(formErrors).map(key => {
@@ -120,32 +122,36 @@ export const translateFormErrorsToText = (formErrors) => {
     return errorMessagesList.length > 0 ? errorMessagesList : null;
 };
 
-export const getErrorAlertProps = ({submitFailed = false, dirty = false, invalid = false, submitting = false,
+export const getErrorAlertProps = ({dirty = false, submitting = false,
     error, formErrors, submitSucceeded = false, alertLocale = {}}) => {
     let alertProps = null;
-    if (submitFailed && error) {
-        alertProps = {
-            ...alertLocale.errorAlert,
-            message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error
-        };
-    } else if (dirty && invalid && !error) {
-        const errorMessagesList = formErrors ? translateFormErrorsToText(formErrors) : null;
-        const message = (
-            <span>
-                {alertLocale.validationAlert.message}
-                <ul>
-                    {
-                        errorMessagesList && errorMessagesList.length > 0 && errorMessagesList.map((item, index) => (
-                            <li key={`validation-summary-${index}`}>{item}</li>
-                        ))
-                    }
-                </ul>
-            </span>);
-        alertProps = {...alertLocale.validationAlert, message: message};
-    } else if (submitting) {
+    if (submitting) {
         alertProps = {...alertLocale.progressAlert};
     } else if (submitSucceeded) {
         alertProps = {...alertLocale.successAlert};
+    } else if (dirty) {
+        if (error) {
+            // error is set by submit failed, it's reset once form is re-validated (updated for re-submit)
+            alertProps = {
+                ...alertLocale.errorAlert,
+                message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error
+            };
+        } else if (formErrors && formErrors && formErrors.size === undefined) {
+            // formErrors is set by form validation or validate method, it's reset once form is re-validated
+            const errorMessagesList = formErrors ? translateFormErrorsToText(formErrors) : null;
+            const message = (
+                <span>
+                    {alertLocale.validationAlert.message}
+                    <ul>
+                        {
+                            errorMessagesList && errorMessagesList.length > 0 && errorMessagesList.map((item, index) => (
+                                <li key={`validation-summary-${index}`}>{item}</li>
+                            ))
+                        }
+                    </ul>
+                </span>);
+            alertProps = {...alertLocale.validationAlert, message: message};
+        }
     }
     return alertProps;
 };

@@ -59,33 +59,44 @@ export default class PublicationsListPaging extends Component {
             <div>
                 {
                     totalPages > 1 &&
-                    <div className="publicationsListPaging is-gapless is-hidden-mobile is-hidden-tablet-only">
+                    <div className="publicationsListPaging is-gapless columns is-gapless is-mobile">
                         {
                             this.state.current_page >= 1 &&
-                            <FlatButton
-                                className="pagingPrevious"
-                                onTouchTap={() => {
-                                    this.pageChanged(this.state.current_page - 1);
-                                }}
-                                disabled={this.props.disabled || this.state.current_page === 1}
-                                label={txt.previousPage}
-                                labelPosition="after"
-                                icon={<NavigationChevronLeft/>}/>
+                                <div className="column is-narrow is-pulled-left">
+                                    <FlatButton
+                                        className="pagingPrevious"
+                                        onTouchTap={() => {
+                                            this.pageChanged(this.state.current_page - 1);
+                                        }}
+                                        disabled={this.props.disabled || this.state.current_page === 1}
+                                        label={txt.previousPage}
+                                        labelPosition="after"
+                                        icon={<NavigationChevronLeft/>}/>
+                                </div>
                         }
-                        <div className="publicationsListPagingItems">
+                        <div className="publicationsListPagingItems column is-hidden-mobile has-text-centered">
                             {renderedPages}
+                        </div>
+                        <div className="column is-hidden-tablet-only is-hidden-desktop has-text-centered">
+                            <FlatButton className="pagingTotals"
+                                label={txt.pageOf
+                                    .replace('[currentPage]', this.state.current_page)
+                                    .replace('[totalPages]', totalPages)
+                                }/>
                         </div>
                         {
                             this.state.current_page <= totalPages &&
-                            <FlatButton
-                                className="pagingNext"
-                                onTouchTap={() => {
-                                    this.pageChanged(this.state.current_page + 1);
-                                }}
-                                disabled={this.props.disabled || this.state.current_page === totalPages}
-                                label={txt.nextPage}
-                                labelPosition="before"
-                                icon={<NavigationChevronRight/>}/>
+                            <div className="column is-narrow is-pulled-right">
+                                <FlatButton
+                                    className="pagingNext"
+                                    onTouchTap={() => {
+                                        this.pageChanged(this.state.current_page + 1);
+                                    }}
+                                    disabled={this.props.disabled || this.state.current_page === totalPages}
+                                    label={txt.nextPage}
+                                    labelPosition="before"
+                                    icon={<NavigationChevronRight/>}/>
+                            </div>
                         }
                     </div>
                 }

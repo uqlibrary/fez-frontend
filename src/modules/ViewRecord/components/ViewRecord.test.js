@@ -6,9 +6,9 @@ function setup(testProps, isShallow = true){
         ...testProps,
         match: testProps.match || { params: {pid: 'UQ:12344'}},
         actions: testProps.actions || {
-                loadRecordToView: jest.fn(),
-                clearRecordToView: jest.fn()
-            }
+            loadRecordToView: jest.fn(),
+            clearRecordToView: jest.fn()
+        }
     };
     return getElement(ViewRecord, props, isShallow);
 }

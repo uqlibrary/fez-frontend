@@ -5,7 +5,6 @@ import {Field} from 'redux-form/immutable';
 import MenuItem from 'material-ui/MenuItem';
 import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
-
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {SelectField} from 'uqlibrary-react-toolbox/build/SelectField';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
@@ -40,6 +39,7 @@ export default class PublicationForm extends Component {
     }
 
     _getPublicationTypeForm = (publicationTypeId) => {
+        const {formValues} = this.props;
         const filteredPublicationType = publicationTypeId ?
             this.publicationTypes.filter((item) => { return item.id === publicationTypeId; }) : null;
         return filteredPublicationType && filteredPublicationType.length > 0 && filteredPublicationType[0].formComponent ?
@@ -47,10 +47,15 @@ export default class PublicationForm extends Component {
                 filteredPublicationType[0].formComponent,
                 {
                     subtypeVocabId: filteredPublicationType[0].subtypeVocabId,
-                    submitting: this.props.submitting
+                    submitting: this.props.submitting,
+                    formValues
                 })
             :
             null;
+    };
+
+    _handleDefaultSubmit = (event) => {
+        if(event) event.preventDefault();
     };
 
     render() {
@@ -70,7 +75,7 @@ export default class PublicationForm extends Component {
 
         const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
         return (
-            <form>
+            <form onSubmit={this._handleDefaultSubmit}>
                 <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
 
                 <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
@@ -120,8 +125,7 @@ export default class PublicationForm extends Component {
                             fullWidth
                             label={txt.submit}
                             onTouchTap={this.props.handleSubmit}
-                            disabled={this.props.submitting || this.props.invalid}
-                        />
+                            disabled={this.props.submitting || (this.props.formErrors && this.props.formErrors.size === undefined)}/>
                     </div>
                     }
                 </div>

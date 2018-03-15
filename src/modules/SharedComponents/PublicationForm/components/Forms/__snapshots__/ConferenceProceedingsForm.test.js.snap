@@ -24,7 +24,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Title"
           fullWidth={true}
-          hintText="Title of conference"
+          hintText="Proceedings title"
           multiLine={true}
           name="rek_title"
           rows={1}
@@ -110,53 +110,6 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
         className="column"
       >
         <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Proceedings title"
-          fullWidth={true}
-          hintText="Type the title of proceedings"
-          name="fez_record_search_key_proceedings_title.rek_proceedings_title"
-          type="text"
-        />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column is-half"
-      >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Place of publication"
-          fullWidth={true}
-          hintText="Type the place of publication"
-          name="fez_record_search_key_place_of_publication.rek_place_of_publication"
-          type="text"
-        />
-      </div>
-      <div
-        className="column"
-      >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Publisher"
-          fullWidth={true}
-          hintText="Type the name of the publisher"
-          name="fez_record_search_key_publisher.rek_publisher"
-          type="text"
-        />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
-      >
-        <Field
           allowPartial={true}
           className="requiredHintField"
           component={[Function]}
@@ -169,6 +122,36 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
               [Function],
             ]
           }
+        />
+      </div>
+    </div>
+    <div
+      className="columns"
+    >
+      <div
+        className="column is-half"
+      >
+        <Field
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Publisher"
+          fullWidth={true}
+          hintText="Type the name of the publisher"
+          name="fez_record_search_key_publisher.rek_publisher"
+          type="text"
+        />
+      </div>
+      <div
+        className="column"
+      >
+        <Field
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Place of publication"
+          fullWidth={true}
+          hintText="Type the place of publication"
+          name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+          type="text"
         />
       </div>
     </div>
@@ -189,9 +172,28 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButton": "Add editor",
+              "descriptionStep1": <div>
+                <span
+                  className="authorSteps"
+                >
+                  Step 1 of 2
+                </span>
+                 - Please 
+                <b>
+                  add to a list of editors below
+                </b>
+                , in the format "John Smith".
+              </div>,
+              "descriptionStep1NoStep2": <div>
+                Please 
+                <b>
+                  add to a list of editors below
+                </b>
+                , in the format and order that they are published.
+              </div>,
               "identifierLabel": "UQ identifier (if available)",
-              "nameAsPublishedHint": "Type the name exactly as published",
-              "nameAsPublishedLabel": "Enter each editor's name as published",
+              "nameAsPublishedHint": "Type the name in the format eg. \\"John Smith\\"",
+              "nameAsPublishedLabel": "Enter each editor's name as published (eg. John Smith)",
             },
           },
           "header": Object {
@@ -204,8 +206,20 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
                 "confirmationMessage": "Are you sure you want to delete all items?",
                 "confirmationTitle": "Delete all",
               },
+              "descriptionStep2": <div>
+                <span
+                  className="authorSteps"
+                >
+                  Step 2 of 2
+                </span>
+                 - Please 
+                <b>
+                  select your name
+                </b>
+                 from the list below (if applicable).
+              </div>,
               "identifierColumn": "UQ identifier",
-              "nameColumn": "Editor's name as published",
+              "nameColumn": "Editor's name in the format eg. \\"John Smith\\"",
               "reorderColumn": "Reorder items",
             },
           },
@@ -232,7 +246,10 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
+              "selectHint": "Select this editor ([name]) to assign it as you",
+              "selectedHint": "This is you",
               "suffix": " listed editor",
+              "unselectedHint": "Select this to confirm this editor is you",
             },
           },
         }

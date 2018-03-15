@@ -190,6 +190,7 @@ exports[`ImageDocumentCitation renders  component with a mock espace record 1`] 
       "rek_description": null,
       "rek_description_xsdmf_id": null,
       "rek_display_type": 238,
+      "rek_display_type_lookup": "Image Document",
       "rek_display_type_xsdmf_id": 3673,
       "rek_file_downloads": 183,
       "rek_formatted_abstract": "Fryer Library University of Queensland Photograph Collection, UQFL466 consist of approximately 1100 photographs relating to the University of Queensland.<br />Photographs have been arranged in the following series:<br />&bull; AA: University of Queensland site at George Street<br />&bull; AB: St Lucia site before the establishment of the University of Queensland<br />&bull; AC: Buildings and grounds of the University of Queensland<br />&bull; AD: University of Queensland St Lucia campus buildings other than Great Court<br />&bull; AE: University of Queensland Non St Lucia Campus Buildings<br />&bull; AF: University of Queensland grounds<br />&bull; AG: University of Queensland Library<br />&bull; AH: University of Queensland ceremonies<br />&bull; AI: Research, teaching, business, cultural and support facilities of the University of Queensland<br />&bull; AJ: University of Queensland students<br />&bull; AK: University of Queensland Alumni (including ceremonies)<br />&bull; AL: Staff, benefactors and official associates of the University of Queensland<br />&bull; AM: University of Queensland sports<br />&bull; AP: University of Queensland honour boards, plaques, etc.",
@@ -257,6 +258,13 @@ exports[`ImageDocumentCitation renders  component with a mock espace record 1`] 
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -446,6 +454,7 @@ exports[`ImageDocumentCitation renders  component with a mock espace record 1`] 
           "rek_description": null,
           "rek_description_xsdmf_id": null,
           "rek_display_type": 238,
+          "rek_display_type_lookup": "Image Document",
           "rek_display_type_xsdmf_id": 3673,
           "rek_file_downloads": 183,
           "rek_formatted_abstract": "Fryer Library University of Queensland Photograph Collection, UQFL466 consist of approximately 1100 photographs relating to the University of Queensland.<br />Photographs have been arranged in the following series:<br />&bull; AA: University of Queensland site at George Street<br />&bull; AB: St Lucia site before the establishment of the University of Queensland<br />&bull; AC: Buildings and grounds of the University of Queensland<br />&bull; AD: University of Queensland St Lucia campus buildings other than Great Court<br />&bull; AE: University of Queensland Non St Lucia Campus Buildings<br />&bull; AF: University of Queensland grounds<br />&bull; AG: University of Queensland Library<br />&bull; AH: University of Queensland ceremonies<br />&bull; AI: Research, teaching, business, cultural and support facilities of the University of Queensland<br />&bull; AJ: University of Queensland students<br />&bull; AK: University of Queensland Alumni (including ceremonies)<br />&bull; AL: Staff, benefactors and official associates of the University of Queensland<br />&bull; AM: University of Queensland sports<br />&bull; AP: University of Queensland honour boards, plaques, etc.",
@@ -488,6 +497,7 @@ exports[`ImageDocumentCitation renders  component with a mock espace record 1`] 
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -577,6 +587,13 @@ exports[`ImageDocumentCitation renders  component with empty publication 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
@@ -586,6 +603,7 @@ exports[`ImageDocumentCitation renders  component with empty publication 1`] = `
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >

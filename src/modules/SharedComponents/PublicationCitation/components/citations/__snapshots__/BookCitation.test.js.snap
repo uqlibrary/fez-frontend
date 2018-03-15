@@ -280,6 +280,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
       "rek_depositor_affiliation": 1061,
       "rek_description": null,
       "rek_display_type": 174,
+      "rek_display_type_lookup": "Book",
       "rek_file_downloads": 0,
       "rek_formatted_abstract": null,
       "rek_formatted_title": null,
@@ -332,6 +333,13 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -611,6 +619,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
           "rek_depositor_affiliation": 1061,
           "rek_description": null,
           "rek_display_type": 174,
+          "rek_display_type_lookup": "Book",
           "rek_file_downloads": 0,
           "rek_formatted_abstract": null,
           "rek_formatted_title": null,
@@ -638,6 +647,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -647,13 +657,14 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Teesson, Maree"
         >
           <span
             className="citationAuthor"
           >
+             
             Teesson, Maree
             , 
           </span>
@@ -661,13 +672,14 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Hall, Wayne"
         >
           <span
             className="citationAuthor"
           >
+             
             Hall, Wayne
             , 
           </span>
@@ -675,13 +687,14 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Proudfoot, Heather"
         >
           <span
             className="citationAuthor"
           >
+             
             Proudfoot, Heather
             , 
           </span>
@@ -1323,6 +1336,13 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
     >
       <AuthorsCitationView
         className="citationEditors"
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_contributor_id",
+            "idOrder": "rek_contributor_id_order",
+            "idSubkey": "rek_contributor_id",
+          }
+        }
         initialNumberOfAuthors={10}
         prefix=""
         publication={
@@ -1582,6 +1602,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
             "subkey": "rek_contributor",
           }
         }
+        showLink={false}
         suffix=" ed."
         thresholdNumberOfAuthors={3}
       >
@@ -1591,13 +1612,14 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
           <CitationView
             className="citationAuthor"
             key="citationAuthor_1"
-            prefix=""
+            prefix=" "
             suffix=", "
             value="Smith, A"
           >
             <span
               className="citationAuthor"
             >
+               
               Smith, A
               , 
             </span>
@@ -1605,13 +1627,14 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
           <CitationView
             className="citationAuthor"
             key="citationAuthor_2"
-            prefix=""
+            prefix=" "
             suffix=", "
             value="Smith, C"
           >
             <span
               className="citationAuthor"
             >
+               
               Smith, C
               , 
             </span>
@@ -1765,6 +1788,13 @@ exports[`BookCitation renders  component with empty publication 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
@@ -1774,6 +1804,7 @@ exports[`BookCitation renders  component with empty publication 1`] = `
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -2375,6 +2406,13 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
     >
       <AuthorsCitationView
         className="citationEditors"
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_contributor_id",
+            "idOrder": "rek_contributor_id_order",
+            "idSubkey": "rek_contributor_id",
+          }
+        }
         initialNumberOfAuthors={10}
         prefix=""
         publication={
@@ -2632,6 +2670,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
             "subkey": "rek_contributor",
           }
         }
+        showLink={false}
         suffix=" ed."
         thresholdNumberOfAuthors={3}
       >
@@ -2641,13 +2680,14 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
           <CitationView
             className="citationAuthor"
             key="citationAuthor_1"
-            prefix=""
+            prefix=" "
             suffix=", "
             value="Smith, A"
           >
             <span
               className="citationAuthor"
             >
+               
               Smith, A
               , 
             </span>
@@ -2655,13 +2695,14 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
           <CitationView
             className="citationAuthor"
             key="citationAuthor_2"
-            prefix=""
+            prefix=" "
             suffix=", "
             value="Smith, C"
           >
             <span
               className="citationAuthor"
             >
+               
               Smith, C
               , 
             </span>

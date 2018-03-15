@@ -6,7 +6,7 @@ const ExternalLink = (props) => {
     const {className, children, openInNewIcon, ...rest} = props;
 
     return (
-        <a {...rest} className={className}>
+        <a {...rest} className={className} tabIndex="0">
             {!!children && children}
             {
                 openInNewIcon &&
