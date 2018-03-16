@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import {pathConfig} from 'config/routes';
-import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
+import {Table, TableBody} from 'material-ui/Table';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import ViewRecordTableRow from './ViewRecordTableRow';
 
 export default class PublicationDetails extends Component {
     static propTypes = {
@@ -14,19 +15,6 @@ export default class PublicationDetails extends Component {
         super(props);
     }
 
-    renderRow = (heading, data) => {
-        return (
-            <TableRow className="tableRow">
-                <TableRowColumn className="headingColumn">
-                    {heading}
-                </TableRowColumn>
-                <TableRowColumn className="dataColumn">
-                    {data}
-                </TableRowColumn>
-            </TableRow>
-        );
-    }
-
     render() {
         return (
             <StandardCard title={locale.viewRecord.sections.publicationDetails}>
@@ -34,15 +22,15 @@ export default class PublicationDetails extends Component {
                     <TableBody displayRowCheckbox={false}>
                         {
                             this.props.publication.rek_display_type_lookup &&
-                            this.renderRow(locale.viewRecord.headings.default.publicationDetails.rek_display_type, this.props.publication.rek_display_type_lookup)
+                            <ViewRecordTableRow heading={locale.viewRecord.headings.default.publicationDetails.rek_display_type} data={this.props.publication.rek_display_type_lookup} />
                         }
                         {
                             this.props.publication.rek_subtype &&
-                            this.renderRow(locale.viewRecord.headings.default.publicationDetails.rek_subtype, this.props.publication.rek_subtype)
+                            <ViewRecordTableRow heading={locale.viewRecord.headings.default.publicationDetails.rek_subtype} data={this.props.publication.rek_subtype} />
                         }
                         {
                             this.props.publication.fez_record_search_key_ismemberof && this.props.publication.fez_record_search_key_ismemberof.length > 0 &&
-                            this.renderRow(locale.viewRecord.headings.default.publicationDetails.fez_record_search_key_ismemberof, (
+                            <ViewRecordTableRow heading={locale.viewRecord.headings.default.publicationDetails.fez_record_search_key_ismemberof} data={(
                                 <ul>
                                     {
                                         this.props.publication.fez_record_search_key_ismemberof.map((collection, index)=>(
@@ -53,7 +41,7 @@ export default class PublicationDetails extends Component {
                                         ))
                                     }
                                 </ul>
-                            ))
+                            )} />
                         }
                     </TableBody>
                 </Table>

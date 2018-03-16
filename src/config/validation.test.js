@@ -128,17 +128,18 @@ describe('Validation method', () => {
 
 describe('getErrorAlertProps ', () => {
     it('should return props for alert', () => {
+        // dirty = false, submitting = false, error, formErrors, submitSucceeded = false, alertLocale = {}
         const testCases = [
             {
-                parameters: {submitFailed: true, error: true, alertLocale: {errorAlert: {title: 'submitFailed' }}},
+                parameters: {dirty: true, error: 'oops', alertLocale: {errorAlert: {title: 'submitFailed' }}},
                 expected: 'submitFailed'
             },
             {
-                parameters: {dirty: true, invalid: true, formErrors: [{'rek_title': 'This field is required'}], alertLocale: {validationAlert: {title: 'validationFailed'}}},
+                parameters: {dirty: true, formErrors: [{'rek_title': 'This field is required'}], alertLocale: {validationAlert: {title: 'validationFailed'}}},
                 expected: 'validationFailed'
             },
             {
-                parameters: {submitFailed: true, dirty: true, invalid: true, formErrors: [{'rek_title': 'This field is required'}], alertLocale: {validationAlert: {title: 'validationFailed'}}},
+                parameters: {submitFailed: true, dirty: true, formErrors: [{'rek_title': 'This field is required'}], alertLocale: {validationAlert: {title: 'validationFailed'}}},
                 expected: 'validationFailed'
             },
             {

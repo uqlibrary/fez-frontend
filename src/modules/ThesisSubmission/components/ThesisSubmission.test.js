@@ -48,7 +48,7 @@ describe('ThesisSubmission test', () => {
     });
 
     it('should disable submit button if invalid form data before submit', () => {
-        const wrapper = setup({invalid: true, submitFailed: false});
+        const wrapper = setup({formErrors: {bla: 'wrong'}, dirty: true, submitFailed: false});
         expect(wrapper.find('RaisedButton').length).toEqual(2);
 
         wrapper.find('RaisedButton').forEach(field => {
@@ -59,7 +59,7 @@ describe('ThesisSubmission test', () => {
     });
 
     it('should not disable submit button if form submit has failed', () => {
-        const wrapper = setup({invalid: true, submitFailed: true, error: 'oopps'});
+        const wrapper = setup({dirty: true, submitFailed: true, error: 'oopps'});
         expect(wrapper.find('RaisedButton').length).toEqual(2);
 
         wrapper.find('RaisedButton').forEach(field => {
