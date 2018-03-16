@@ -89,7 +89,7 @@ export default class FixRecord extends React.PureComponent {
 
     _navigateToMyResearch = () => {
         this.props.history.push(routes.pathConfig.records.mine);
-    }
+    };
 
     _navigateToDashboard = () => {
         this.props.history.push(routes.pathConfig.dashboard);
@@ -101,15 +101,12 @@ export default class FixRecord extends React.PureComponent {
         });
     };
 
-    _handleKeyboardFormSubmit = (event) => {
-        if (event.key === 'Enter' && !event.shiftKey) {
-            event.preventDefault();
-            this.props.handleSubmit();
-        }
-    };
-
     _setSuccessConfirmation = (ref) => {
         this.successConfirmationBox = ref;
+    };
+
+    _handleDefaultSubmit = (event) => {
+        if(event) event.preventDefault();
     };
 
     render() {
@@ -149,7 +146,7 @@ export default class FixRecord extends React.PureComponent {
         const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txtFixForm});
         return (
             <StandardPage title={txt.title}>
-                <form onKeyDown={this._handleKeyboardFormSubmit}>
+                <form onSubmit={this._handleDefaultSubmit}>
                     <StandardCard title={txt.subTitle} help={txt.help}>
                         <PublicationCitation publication={this.props.recordToFix}/>
 
@@ -173,11 +170,11 @@ export default class FixRecord extends React.PureComponent {
                                 onRef={this._setSuccessConfirmation}
                                 onAction={this._navigateToMyResearch}
                                 onCancelAction={this._navigateToDashboard}
-                                locale={saveConfirmationLocale}/>
+                                locale={saveConfirmationLocale}
+                            />
                             <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
                                 <Field
                                     component={TextField}
-                                    className="requiredField"
                                     disabled={this.props.submitting}
                                     name="comments"
                                     type="text"
@@ -185,7 +182,7 @@ export default class FixRecord extends React.PureComponent {
                                     multiLine
                                     rows={1}
                                     floatingLabelText={txtFixForm.comments.fieldLabels.comments}
-                                    validate={[validation.required]}/>
+                                />
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -193,7 +190,8 @@ export default class FixRecord extends React.PureComponent {
                                     type="text"
                                     fullWidth
                                     floatingLabelText={txtFixForm.comments.fieldLabels.url}
-                                    validate={[validation.url]}/>
+                                    validate={[validation.url]}
+                                />
                             </StandardCard>
                             <StandardCard title={txtFixForm.fileUpload.title} help={txtFixForm.fileUpload.help}>
                                 {txtFixForm.fileUpload.description}
@@ -242,7 +240,7 @@ export default class FixRecord extends React.PureComponent {
                                     fullWidth
                                     label={txt.submit}
                                     onTouchTap={this.props.handleSubmit}
-                                    disabled={this.props.submitting || this.props.invalid}/>
+                                    disabled={this.props.submitting || (this.props.formErrors && this.props.formErrors.size === undefined)}/>
                             </div>
                         }
                     </div>

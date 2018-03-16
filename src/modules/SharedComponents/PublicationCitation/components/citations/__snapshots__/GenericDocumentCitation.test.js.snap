@@ -335,6 +335,7 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
       "rek_description": "Lecture notes on numerical solution of partial differential equations. Topics include parabolic and hyperbolic partial differential equations, explicit and implicit methods, iterative methods, finite difference, stability and error analysis, finite element method, spectral method, central difference method, Forward Euler method, Backward Euler method, Lax method, Jacobi method, Gauss-Seidel method, relaxation methods, wave equation, diffusion and heat equation, nonlinear partial differential equations, soliton, shock wave, Korteweg-de-Vries equation, nonlinear inviscid Burger's equation, method of characteristics.",
       "rek_description_xsdmf_id": 7662,
       "rek_display_type": 202,
+      "rek_display_type_lookup": "Generic Document",
       "rek_display_type_xsdmf_id": 3673,
       "rek_file_downloads": 106769,
       "rek_formatted_abstract": null,
@@ -401,6 +402,13 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -735,6 +743,7 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
           "rek_description": "Lecture notes on numerical solution of partial differential equations. Topics include parabolic and hyperbolic partial differential equations, explicit and implicit methods, iterative methods, finite difference, stability and error analysis, finite element method, spectral method, central difference method, Forward Euler method, Backward Euler method, Lax method, Jacobi method, Gauss-Seidel method, relaxation methods, wave equation, diffusion and heat equation, nonlinear partial differential equations, soliton, shock wave, Korteweg-de-Vries equation, nonlinear inviscid Burger's equation, method of characteristics.",
           "rek_description_xsdmf_id": 7662,
           "rek_display_type": 202,
+          "rek_display_type_lookup": "Generic Document",
           "rek_display_type_xsdmf_id": 3673,
           "rek_file_downloads": 106769,
           "rek_formatted_abstract": null,
@@ -776,6 +785,7 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -785,13 +795,14 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=""
           value="Louise Olsen-Kettle"
         >
           <span
             className="citationAuthor"
           >
+             
             Louise Olsen-Kettle
           </span>
         </CitationView>
@@ -1172,6 +1183,7 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
       "rek_description": "Lecture notes on numerical solution of partial differential equations. Topics include parabolic and hyperbolic partial differential equations, explicit and implicit methods, iterative methods, finite difference, stability and error analysis, finite element method, spectral method, central difference method, Forward Euler method, Backward Euler method, Lax method, Jacobi method, Gauss-Seidel method, relaxation methods, wave equation, diffusion and heat equation, nonlinear partial differential equations, soliton, shock wave, Korteweg-de-Vries equation, nonlinear inviscid Burger's equation, method of characteristics.",
       "rek_description_xsdmf_id": 7662,
       "rek_display_type": 202,
+      "rek_display_type_lookup": "Generic Document",
       "rek_display_type_xsdmf_id": 3673,
       "rek_file_downloads": 106769,
       "rek_formatted_abstract": null,
@@ -1239,6 +1251,13 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -1573,6 +1592,7 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
           "rek_description": "Lecture notes on numerical solution of partial differential equations. Topics include parabolic and hyperbolic partial differential equations, explicit and implicit methods, iterative methods, finite difference, stability and error analysis, finite element method, spectral method, central difference method, Forward Euler method, Backward Euler method, Lax method, Jacobi method, Gauss-Seidel method, relaxation methods, wave equation, diffusion and heat equation, nonlinear partial differential equations, soliton, shock wave, Korteweg-de-Vries equation, nonlinear inviscid Burger's equation, method of characteristics.",
           "rek_description_xsdmf_id": 7662,
           "rek_display_type": 202,
+          "rek_display_type_lookup": "Generic Document",
           "rek_display_type_xsdmf_id": 3673,
           "rek_file_downloads": 106769,
           "rek_formatted_abstract": null,
@@ -1615,6 +1635,7 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -1624,13 +1645,14 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=""
           value="Louise Olsen-Kettle"
         >
           <span
             className="citationAuthor"
           >
+             
             Louise Olsen-Kettle
           </span>
         </CitationView>
@@ -2017,6 +2039,7 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
       "rek_description": "Lecture notes on numerical solution of partial differential equations. Topics include parabolic and hyperbolic partial differential equations, explicit and implicit methods, iterative methods, finite difference, stability and error analysis, finite element method, spectral method, central difference method, Forward Euler method, Backward Euler method, Lax method, Jacobi method, Gauss-Seidel method, relaxation methods, wave equation, diffusion and heat equation, nonlinear partial differential equations, soliton, shock wave, Korteweg-de-Vries equation, nonlinear inviscid Burger's equation, method of characteristics.",
       "rek_description_xsdmf_id": 7662,
       "rek_display_type": 202,
+      "rek_display_type_lookup": "Generic Document",
       "rek_display_type_xsdmf_id": 3673,
       "rek_file_downloads": 106769,
       "rek_formatted_abstract": null,
@@ -2084,6 +2107,13 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -2420,6 +2450,7 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
           "rek_description": "Lecture notes on numerical solution of partial differential equations. Topics include parabolic and hyperbolic partial differential equations, explicit and implicit methods, iterative methods, finite difference, stability and error analysis, finite element method, spectral method, central difference method, Forward Euler method, Backward Euler method, Lax method, Jacobi method, Gauss-Seidel method, relaxation methods, wave equation, diffusion and heat equation, nonlinear partial differential equations, soliton, shock wave, Korteweg-de-Vries equation, nonlinear inviscid Burger's equation, method of characteristics.",
           "rek_description_xsdmf_id": 7662,
           "rek_display_type": 202,
+          "rek_display_type_lookup": "Generic Document",
           "rek_display_type_xsdmf_id": 3673,
           "rek_file_downloads": 106769,
           "rek_formatted_abstract": null,
@@ -2462,6 +2493,7 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -2471,13 +2503,14 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=""
           value="Louise Olsen-Kettle"
         >
           <span
             className="citationAuthor"
           >
+             
             Louise Olsen-Kettle
           </span>
         </CitationView>
@@ -2558,6 +2591,13 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
@@ -2567,6 +2607,7 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >

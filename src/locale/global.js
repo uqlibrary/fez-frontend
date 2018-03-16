@@ -53,7 +53,7 @@ export default {
         noOrcidAlert: {
             title: 'ORCID ID REQUIRED',
             message: 'You do not have an ORCID ID linked to your UQ eSpace.',
-            type: 'info_outline',
+            type: 'warning',
             actionButtonLabel: 'Click here to link or register'
         },
         forceOrcidLinkAlert: {
@@ -114,6 +114,11 @@ export default {
             ariaLabel: 'Full text via Pubmed Central (open access)',
             prefix: 'https://www.ncbi.nlm.nih.gov/pmc/articles/',
             externalUrl: 'https://www.ncbi.nlm.nih.gov/pmc/articles/[id]'
+        },
+        sherpaRomeoLink: {
+            ariaLabel: 'View publisher\'s open access policy in an new window',
+            prefix: 'http://www.sherpa.ac.uk/romeo/',
+            externalUrl: 'http://www.sherpa.ac.uk/romeo/search.php?issn=[issn]'
         },
         embargoDateFormat: 'YYYY-MM-DD',
         defaultLinkDescription: 'Link to publication'

@@ -74,9 +74,8 @@ export default class RecordsSearchResults extends React.Component {
                 if (item.fez_record_search_key_author.length === 0 &&
                     (item.fez_record_search_key_contributor_id.length !== item.fez_record_search_key_contributor.length)) return false;
                 // If the item has had contributors or authors assigned, but have unclaimed/unassigned ie. id = 0
-                return (
-                    (item.fez_record_search_key_contributor_id.reduce((total, item)=>(total || item.rek_contributor_id === 0), false)) ||
-                    (item.fez_record_search_key_author_id.reduce((total, item)=>(total || item.rek_author_id === 0), false))) ? false : true;
+                if (item.fez_record_search_key_contributor_id.length > 0 && item.fez_record_search_key_contributor_id.reduce((total, item)=>(total || item.rek_contributor_id === 0))) return false;
+                return (item.fez_record_search_key_author_id.length > 0 && item.fez_record_search_key_author_id.reduce((total, item)=>(total || item.rek_author_id === 0), false));
             })
             .map(item => (item.rek_pid));
 
