@@ -92,13 +92,12 @@ export default {
             children: (
                 <StandardCard>
                     <p>The requested page could not be found.</p>
-                    <p>Sorry about that, but here's what you can do next:
+                    <p>Sorry about that, but here's what you can do next:</p>
                     <ul>
                         <li>Try re-typing the address, checking for spelling, capitalisation and/or punctuation.</li>
                         <li>Start again at the home page.</li>
                         <li>If you’re sure the page should be at this address, email us at webmaster@library.uq.edu.au.</li>
                     </ul>
-                    </p>
                 </StandardCard>
             )
         },

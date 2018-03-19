@@ -45,10 +45,9 @@ export default class JournalName extends PureComponent {
             const sherpaRomeoColor = sherpaRomeoData.color;
             const sherpaRomeoLink = locale.global.sherpaRomeoLink.externalUrl.replace('[issn]', sherpaRomeoData.issn);
             sherpaRomeoElement =
-                (<ExternalLink
-                    href={sherpaRomeoLink} aria-label={locale.global.sherpaRomeoLink.ariaLabel}>
+                (<span> <ExternalLink href={sherpaRomeoLink} aria-label={locale.global.sherpaRomeoLink.ariaLabel}>
                     <span className={`sherpaRomeo${sherpaRomeoColor[0].toUpperCase() + sherpaRomeoColor.slice(1)}`}>{locale.viewRecord.linkTexts.journalOpenAccessPolicyLink}</span>
-                </ExternalLink>);
+                </ExternalLink></span>);
         }
 
         return sherpaRomeoElement;

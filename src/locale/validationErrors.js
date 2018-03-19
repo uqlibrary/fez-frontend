@@ -54,6 +54,7 @@ export default {
         fez_record_search_key_keywords: 'Keywords are required',
         contributorLinking: 'You are required to select a contributor from the list, then confirm that it is you',
         authorLinking: 'You are required to select a author from the list, then confirm that it is you',
-        comments: 'Comments are required'
+        comments: 'Comments are required',
+        fixRecordAnyField: 'Please provide either comments, URL link or upload file(s).'
     }
 };

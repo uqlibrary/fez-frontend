@@ -6,7 +6,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
   title="Claim a publication"
 >
   <form
-    onKeyDown={[Function]}
+    onSubmit={[Function]}
   >
     <StandardCard
       className=""
@@ -1045,7 +1045,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
   title="Claim a publication"
 >
   <form
-    onKeyDown={[Function]}
+    onSubmit={[Function]}
   >
     <StandardCard
       className=""
@@ -2069,7 +2069,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
   title="Claim a publication"
 >
   <form
-    onKeyDown={[Function]}
+    onSubmit={[Function]}
   >
     <StandardCard
       className=""
@@ -3345,7 +3345,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
   title="Claim a publication"
 >
   <form
-    onKeyDown={[Function]}
+    onSubmit={[Function]}
   >
     <StandardCard
       className=""
@@ -4621,7 +4621,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
   title="Claim a publication"
 >
   <form
-    onKeyDown={[Function]}
+    onSubmit={[Function]}
   >
     <StandardCard
       className=""
@@ -5898,7 +5898,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
   title="Claim a publication"
 >
   <form
-    onKeyDown={[Function]}
+    onSubmit={[Function]}
   >
     <StandardCard
       className=""
@@ -6837,7 +6837,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
   title="Claim a publication"
 >
   <form
-    onKeyDown={[Function]}
+    onSubmit={[Function]}
   >
     <StandardCard
       className=""
@@ -8120,7 +8120,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
   title="Claim a publication"
 >
   <form
-    onKeyDown={[Function]}
+    onSubmit={[Function]}
   >
     <StandardCard
       className=""
@@ -9528,6 +9528,38 @@ exports[`Component ClaimRecord  should return and render alert message depending
             </li>
           </ul>
         </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component ClaimRecord  should return and render alert message depending on form status 5`] = `
+<div
+  className="error_outline alertWrapper "
+>
+  <div
+    className="columns is-multiline is-mobile"
+  >
+    <div
+      className="column is-narrow alertIcon"
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        error_outline
+      </FontIcon>
+    </div>
+    <div
+      className="column alertText"
+    >
+      <div>
+        <b>
+          Error - 
+        </b>
+        Error has occurred during request and request cannot be processed. The given data was invalid. Please contact eSpace administrators or try again later.
       </div>
     </div>
   </div>
