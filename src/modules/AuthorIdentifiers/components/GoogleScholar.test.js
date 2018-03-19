@@ -61,22 +61,6 @@ describe('Component GoogleScholar ', () => {
         expect(wrapper.instance().props.history.push).toHaveBeenCalledWith('/dashboard');
     });
 
-    it('should submit form when user hits Enter', () => {
-        const wrapper = setup({
-            author: currentAuthor.uqnoauthid.data
-        });
-        wrapper.instance()._handleKeyboardFormSubmit({key: 'Enter', preventDefault: jest.fn()});
-        expect(wrapper.instance().props.handleSubmit).toHaveBeenCalled();
-    });
-
-    it('should NOT submit the form when user hits shift+Enter', () => {
-        const wrapper = setup({
-            author: currentAuthor.uqnoauthid.data,
-        });
-        wrapper.instance()._handleKeyboardFormSubmit({key: 'Enter', shiftKey: true, preventDefault: jest.fn()});
-        expect(wrapper.instance().props.handleSubmit).not.toHaveBeenCalled();
-    });
-
     it('should go back to the dashboard if the submission succeeded', () => {
         const wrapper = setup({
             author: currentAuthor.uqnoauthid.data

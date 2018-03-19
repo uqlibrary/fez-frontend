@@ -28,7 +28,6 @@ const onSubmit = (values, dispatch, props) => {
 
 let ThesisSubmissionContainer = reduxForm({
     form: FORM_NAME,
-    // validate,
     onSubmit
 })(confirmDiscardFormChanges(ThesisSubmission, FORM_NAME));
 

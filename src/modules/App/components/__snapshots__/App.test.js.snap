@@ -1143,7 +1143,7 @@ exports[`Application component should render app for account with fez author wit
           message="You do not have an ORCID ID linked to your UQ eSpace."
           showLoader={false}
           title="ORCID ID REQUIRED"
-          type="info_outline"
+          type="warning"
         />
       </div>
     </div>

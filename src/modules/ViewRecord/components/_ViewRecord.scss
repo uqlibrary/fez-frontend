@@ -16,9 +16,14 @@
     vertical-align: top;
   }
 
+  table.grantInformation {
+    margin-bottom: 1em;
+  }
+
   .additionalInformation, .publicationDetails {
     table-layout: auto !important;
   }
+
   .tableRow, .headingColumn, .dataColumn {
     padding: 8px 6px !important;
     height: auto !important;
