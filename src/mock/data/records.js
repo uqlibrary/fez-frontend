@@ -3741,16 +3741,23 @@ export const record = {
     "rek_altmetric_id_xsdmf_id": null,
     "rek_copyright_xsdmf_id": 3679,
     "rek_copyright": "on",
+    "fez_record_search_key_additional_notes": {
+        "rek_additional_notes_id": 44,
+        "rek_additional_notes_pid": "UQ:344368",
+        "rek_additional_notes_xsdmf_id": 3441,
+        "rek_additional_notes": "Testing notes"
+    },
     "fez_record_search_key_article_number": null,
     "fez_record_search_key_assigned_group_id": [],
     "fez_record_search_key_assigned_user_id": [],
-    "fez_record_search_key_author": [{
+    "fez_record_search_key_author": [
+        {
         "rek_author_id": 28593829,
         "rek_author_pid": "UQ:396321",
         "rek_author_xsdmf_id": 6351,
         "rek_author": "Milevskiy, Michael J. G.",
         "rek_author_order": 1
-    },
+        },
         {
             "rek_author_id": 28593830,
             "rek_author_pid": "UQ:396321",
@@ -3858,7 +3865,8 @@ export const record = {
     "fez_record_search_key_author_affiliation_full_address": [],
     "fez_record_search_key_author_affiliation_id": [],
     "fez_record_search_key_author_affiliation_name": [],
-    "fez_record_search_key_author_id": [{
+    "fez_record_search_key_author_id": [
+        {
         "rek_author_id_id": 27973928,
         "rek_author_id_pid": "UQ:396321",
         "rek_author_id_xsdmf_id": 6346,
