@@ -38,7 +38,6 @@ export default {
                 fez_record_search_key_total_chapters: 'Total chapters',
                 fez_record_search_key_language: 'Language',
                 fez_record_search_key_subject: 'Subject(s)',
-                fez_record_search_key_institutional_status: 'Institutional status',
                 fez_record_search_key_journal_name: 'Journal name',
                 fez_record_search_key_language_of_journal_name: 'Language of journal name',
                 fez_record_search_key_translated_journal_name: 'Translated of journal name',
@@ -113,6 +112,11 @@ export default {
                 fez_record_search_key_translated_newspaper: 'Translated newspaper',
                 fez_record_search_key_patent_number: 'Patent number',
                 fez_record_search_key_country_of_issue: 'Country of origin',
+                fez_record_search_key_herdc_code: 'HERDC code',
+                fez_record_search_key_herdc_status: 'HERDC status',
+                fez_record_search_key_institutional_status: 'Institutional status',
+                fez_record_search_key_additional_notes: 'Additional notes',
+                fez_record_search_key_notes: 'Additional notes',
                 grantInformation: {
                     fez_record_search_key_grant_agency: 'Grant agency',
                     fez_record_search_key_grant_id: 'Grant id',
@@ -122,14 +126,7 @@ export default {
                     rek_display_type: 'Publication type',
                     rek_subtype: 'Sub-type',
                     fez_record_search_key_ismemberof: 'Collections'
-                },
-                footer: {
-                    fez_record_search_key_herdc_code: 'HERDC code',
-                    fez_record_search_key_herdc_status: 'HERDC status',
-                    fez_record_search_key_institutional_status: 'Institutional status',
-                    fez_record_search_key_additional_notes: 'Additional notes',
-                    fez_record_search_key_notes: 'Additional notes'
-                },
+                }
             },
             'Audio Document': {
                 fez_record_search_key_author: 'Creator(s)',

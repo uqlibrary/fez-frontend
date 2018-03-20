@@ -217,7 +217,7 @@ export default class AdditionalInformation extends Component {
         const displayType = publication.rek_display_type_lookup;
         const headings = locale.viewRecord.headings;
         const displayTypeHeadings = displayType && headings[displayType] ? headings[displayType] : [];
-        const footerFields =  locale.viewRecord.fields.footer;
+        const footerFields = locale.viewRecord.fields.footer;
         let fields = displayType && locale.viewRecord.fields[displayType] ? locale.viewRecord.fields[displayType].concat(footerFields) : footerFields;
         fields = this.excludeAdminOnlyFields(fields);
 
