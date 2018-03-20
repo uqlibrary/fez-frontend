@@ -206,47 +206,29 @@ export default class AdditionalInformation extends Component {
         return fields.filter(item=>!locale.viewRecord.adminFields.includes(item.field));
     }
 
-    // common fields for all display types at the bottom of the list
-    renderFooter = () => {
-        const rows = [];
-        const publication = this.props.publication;
-        const footer = this.excludeAdminOnlyFields(locale.viewRecord.fields.footer);
-
-        footer.sort((field1, field2) => (
-            field1.order - field2.order
-        )).map((item) => {
-            const field = item.field;
-            const data = publication[field];
-            const subkey = this.transformFieldNameToSubkey(field);
-
-            if (data) {
-                rows.push(this.renderRow(locale.viewRecord.headings.default.footer[field], this.renderObject(data, subkey)));
-            }
-        });
-
-        return rows;
-    }
-
     renderColumns = () => {
         const rows = [];
         const publication = this.props.publication;
         const displayType = publication.rek_display_type_lookup;
         const headings = locale.viewRecord.headings;
         const displayTypeHeadings = displayType && headings[displayType] ? headings[displayType] : [];
-        const fields = displayType && locale.viewRecord.fields[displayType] ? this.excludeAdminOnlyFields(locale.viewRecord.fields[displayType]) : [];
-
+        const footerFields = locale.viewRecord.fields.footer;
+        let fields = displayType && locale.viewRecord.fields[displayType] ? locale.viewRecord.fields[displayType].concat(footerFields) : footerFields;
+        fields = this.excludeAdminOnlyFields(fields);
+        console.log(fields);
         fields.sort((field1, field2) => (
             field1.order - field2.order
         )).map((item) => {
             let data = '';
             const field = item.field;
             const value = publication[field];
-
+            console.log(field);
+            console.log(value);
             // do not display field when value is null, empty array
             if (value && Object.keys(value).length > 0) {
                 const subkey = this.transformFieldNameToSubkey(field);
                 const heading = displayTypeHeadings[field] ? displayTypeHeadings[field] : headings.default[field];
-
+                console.log(heading);
                 // logic to get values from fez_record_search_key fields
                 if (subkey) {
                     data = Array.isArray(value) ? this.renderObjectList(value, subkey) : this.renderObject(value, subkey);
@@ -257,9 +239,6 @@ export default class AdditionalInformation extends Component {
                 rows.push(this.renderRow(heading, data));
             }
         });
-
-        // common fields for all display types
-        rows.push(this.renderFooter());
 
         return rows;
     }
