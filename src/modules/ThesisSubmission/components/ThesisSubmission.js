@@ -208,8 +208,7 @@ export default class ThesisSubmission extends Component {
                                 fullWidth
                                 label={formLocale.thesisSubmission.submit}
                                 onTouchTap={this.props.handleSubmit}
-                                disabled={this.props.submitting || (!(this.props.submitFailed && this.props.error) && this.props.invalid)}
-                            />
+                                disabled={this.props.submitting || (this.props.formErrors && this.props.formErrors.size === undefined)}/>
                         </div>
                     </div>
                 </form>

@@ -10,6 +10,7 @@ import ReactHtmlParser from 'react-html-parser';
 import {locale} from 'locale';
 import PublicationDetails from './PublicationDetails';
 import AdditionalInformation from './AdditionalInformation';
+import GrantInformation from './GrantInformation';
 
 const dompurify = require('dompurify');
 
@@ -71,6 +72,10 @@ export default class ViewRecord extends Component {
                 {
                     recordToView && recordToView.rek_display_type_lookup &&
                     <AdditionalInformation publication={recordToView} />
+                }
+                {
+                    recordToView && recordToView.fez_record_search_key_grant_agency && recordToView.fez_record_search_key_grant_agency.length > 0 &&
+                    <GrantInformation publication={recordToView} />
                 }
                 {
                     recordToView && recordToView.rek_display_type_lookup &&

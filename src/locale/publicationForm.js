@@ -986,7 +986,7 @@ export default {
             fieldLabels: {
                 title: {
                     floatingLabelText: 'Title',
-                    hintText: 'Title of conference'
+                    hintText: 'Proceedings title'
                 },
                 conferenceName: {
                     floatingLabelText: 'Conference name',

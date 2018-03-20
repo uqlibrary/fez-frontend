@@ -6,7 +6,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
   title="Request a correction or upload files"
 >
   <form
-    onKeyDown={[Function]}
+    onSubmit={[Function]}
   >
     <StandardCard
       className=""
@@ -512,7 +512,6 @@ exports[`Component FixRecord should render fix record form 1`] = `
         title="Suggest a correction"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           floatingLabelText="Describe the problem with this record, eg record is a duplicate, or suggested changes"
           fullWidth={true}
@@ -520,11 +519,6 @@ exports[`Component FixRecord should render fix record form 1`] = `
           name="comments"
           rows={1}
           type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
         />
         <Field
           component={[Function]}
@@ -628,7 +622,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
   title="Request a correction or upload files"
 >
   <form
-    onKeyDown={[Function]}
+    onSubmit={[Function]}
   >
     <StandardCard
       className=""
@@ -1118,7 +1112,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
   title="Request a correction or upload files"
 >
   <form
-    onKeyDown={[Function]}
+    onSubmit={[Function]}
   >
     <StandardCard
       className=""
@@ -1631,7 +1625,6 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
         title="Suggest a correction"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           floatingLabelText="Describe the problem with this record, eg record is a duplicate, or suggested changes"
           fullWidth={true}
@@ -1639,11 +1632,6 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
           name="comments"
           rows={1}
           type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
         />
         <Field
           component={[Function]}
@@ -1727,7 +1715,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
   title="Request a correction or upload files"
 >
   <form
-    onKeyDown={[Function]}
+    onSubmit={[Function]}
   >
     <StandardCard
       className=""
@@ -2233,7 +2221,6 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
         title="Suggest a correction"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           floatingLabelText="Describe the problem with this record, eg record is a duplicate, or suggested changes"
           fullWidth={true}
@@ -2241,11 +2228,6 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
           name="comments"
           rows={1}
           type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
         />
         <Field
           component={[Function]}
@@ -2329,7 +2311,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
   title="Request a correction or upload files"
 >
   <form
-    onKeyDown={[Function]}
+    onSubmit={[Function]}
   >
     <StandardCard
       className=""
@@ -2860,148 +2842,4 @@ exports[`Component FixRecord should render unclaim form 1`] = `
     </div>
   </form>
 </StandardPage>
-`;
-
-exports[`Component FixRecord should return and render the alert details correctly 1`] = `
-<div
-  className="info_outline alertWrapper "
->
-  <div
-    className="columns is-multiline is-mobile"
-  >
-    <div
-      className="column is-narrow alertIcon"
-    >
-      <CircularProgress
-        className="alertSpinner"
-        max={100}
-        min={0}
-        mode="indeterminate"
-        size={32}
-        thickness={4}
-        value={0}
-      />
-    </div>
-    <div
-      className="column alertText"
-    >
-      <div>
-        <b>
-          Saving - 
-        </b>
-        Request is being processed.
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Component FixRecord should return and render the alert details correctly 2`] = `
-<div
-  className="done alertWrapper "
->
-  <div
-    className="columns is-multiline is-mobile"
-  >
-    <div
-      className="column is-narrow alertIcon"
-    >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        done
-      </FontIcon>
-    </div>
-    <div
-      className="column alertText"
-    >
-      <div>
-        <b>
-          Success - 
-        </b>
-        Fix record request has been submitted successfully.
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Component FixRecord should return and render the alert details correctly 3`] = `
-<div
-  className="error_outline alertWrapper "
->
-  <div
-    className="columns is-multiline is-mobile"
-  >
-    <div
-      className="column is-narrow alertIcon"
-    >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        error_outline
-      </FontIcon>
-    </div>
-    <div
-      className="column alertText"
-    >
-      <div>
-        <b>
-          Error - 
-        </b>
-        Error has occurred during request and request cannot be processed. This is an error Please contact eSpace administrators or try again later.
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Component FixRecord should return and render the alert details correctly 4`] = `
-<div
-  className="warning alertWrapper "
->
-  <div
-    className="columns is-multiline is-mobile"
-  >
-    <div
-      className="column is-narrow alertIcon"
-    >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        warning
-      </FontIcon>
-    </div>
-    <div
-      className="column alertText"
-    >
-      <div>
-        <b>
-          Validation - 
-        </b>
-        <span>
-          Form cannot be submitted until all fields are valid. Please review all input fields.
-          <ul>
-            <li
-              key="validation-summary-0"
-            >
-              Title is required
-            </li>
-            <li
-              key="validation-summary-1"
-            >
-              Comments are required
-            </li>
-          </ul>
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
 `;
