@@ -7434,7 +7434,8 @@ exports[`Additional Information Component  should render component with conferen
             "The full conference proceedings bibliographic details are : LARRARTE, F., and CHANSON, H. (2008). \\"Experiences and Challenges in Sewers: Measurements and Hydrodynamics.\\" Proceedings of the International Meeting on Measurements and Hydraulics of Sewers, Summer School GEMCEA/LCPC, 19-21 Aug. 2008, Bouguenais, Hydraulic Model Report No. CH70/08, Div. of Civil Engineering, The University of Queensland, Brisbane, Australia, 114 pages (ISBN 9781864999280).",
           ]
         }
-        key="additional-info-undefined"
+        heading="Additional notes"
+        key="additional-info-Additional notes"
       />
       <ViewRecordTableRow
         data={
@@ -9365,7 +9366,8 @@ exports[`Additional Information Component  should render component with data col
             "CheckM is open source software available at http://ecogenomics.github.io/CheckM",
           ]
         }
-        key="additional-info-undefined"
+        heading="Additional notes"
+        key="additional-info-Additional notes"
       />
       <ViewRecordTableRow
         data={
@@ -12094,7 +12096,8 @@ exports[`Additional Information Component  should render component with image 1`
             "Reference Desk, Duhig Building, University of Queensland Library, circa 1955. This area in the Duhig Building houses the AskIT desk and Ezones",
           ]
         }
-        key="additional-info-undefined"
+        heading="Additional notes"
+        key="additional-info-Additional notes"
       />
       <ViewRecordTableRow
         data={
@@ -19547,7 +19550,8 @@ exports[`Additional Information Component  should render component with manuscri
             "Letter dated 15 July 1944 from Thea Astley to Mr [Paul] Grano sending 9 poems for criticism. Poems not included in collection.",
           ]
         }
-        key="additional-info-undefined"
+        heading="Additional notes"
+        key="additional-info-Additional notes"
       />
       <ViewRecordTableRow
         data={
@@ -22987,7 +22991,8 @@ exports[`Additional Information Component  should render component with research
             "adsfasdfasd dsfsadf",
           ]
         }
-        key="additional-info-undefined"
+        heading="Additional notes"
+        key="additional-info-Additional notes"
       />
       <ViewRecordTableRow
         data={
@@ -23383,7 +23388,8 @@ exports[`Additional Information Component  should render component with thesis 1
             "Pages requiring colour printing: 2, 76, 166, 210, 214, 215, 221, 222, 223, 224, 226. Pages in landscape format: 240-245. The author has given permission for this thesis to be made open access.",
           ]
         }
-        key="additional-info-undefined"
+        heading="Additional notes"
+        key="additional-info-Additional notes"
       />
       <ViewRecordTableRow
         data={
@@ -24318,7 +24324,8 @@ exports[`Additional Information Component  should render component with working 
             "ISSN 1448-8563",
           ]
         }
-        key="additional-info-undefined"
+        heading="Additional notes"
+        key="additional-info-Additional notes"
       />
       <ViewRecordTableRow
         data={
