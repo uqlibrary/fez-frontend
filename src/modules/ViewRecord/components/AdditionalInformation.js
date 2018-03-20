@@ -215,20 +215,19 @@ export default class AdditionalInformation extends Component {
         const footerFields = locale.viewRecord.fields.footer;
         let fields = displayType && locale.viewRecord.fields[displayType] ? locale.viewRecord.fields[displayType].concat(footerFields) : footerFields;
         fields = this.excludeAdminOnlyFields(fields);
-        console.log(fields);
+
         fields.sort((field1, field2) => (
             field1.order - field2.order
         )).map((item) => {
             let data = '';
             const field = item.field;
             const value = publication[field];
-            console.log(field);
-            console.log(value);
+
             // do not display field when value is null, empty array
             if (value && Object.keys(value).length > 0) {
                 const subkey = this.transformFieldNameToSubkey(field);
                 const heading = displayTypeHeadings[field] ? displayTypeHeadings[field] : headings.default[field];
-                console.log(heading);
+
                 // logic to get values from fez_record_search_key fields
                 if (subkey) {
                     data = Array.isArray(value) ? this.renderObjectList(value, subkey) : this.renderObject(value, subkey);
