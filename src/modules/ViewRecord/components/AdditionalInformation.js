@@ -5,12 +5,12 @@ import {pathConfig} from 'config/routes';
 import {viewRecordsConfig} from 'config/viewRecord';
 import {Table, TableBody} from 'material-ui/Table';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {AuthorsCitationView, DoiCitationView, EditorsCitationView} from '../../SharedComponents/PublicationCitation/components/citations/partials';
-import {ExternalLink} from '../../SharedComponents/ExternalLink';
+import {AuthorsCitationView, DoiCitationView, EditorsCitationView, DateCitationView} from 'modules/SharedComponents/PublicationCitation/components/citations/partials';
+import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import ReactHtmlParser from 'react-html-parser';
 import ViewRecordTableRow from './ViewRecordTableRow';
+import JournalName from './partials/JournalName';
 
-const moment = require('moment');
 const dompurify = require('dompurify');
 
 export default class AdditionalInformation extends Component {
@@ -83,7 +83,7 @@ export default class AdditionalInformation extends Component {
 
         switch (subkey) {
             case 'rek_doi': return this.renderDoi(data);
-            case 'rek_journal_name': return this.renderJournalName(data);
+            case 'rek_journal_name': return this.renderJournalName();
             case 'rek_publisher': return this.renderLink(pathConfig.list.publisher(data), data);
             case 'rek_oa_status': return this.renderLink(pathConfig.list.openAccessStatus(object[subkey]), data);
             case 'rek_herdc_code': return this.renderLink(pathConfig.list.subject(object[subkey]), data);
@@ -129,25 +129,9 @@ export default class AdditionalInformation extends Component {
         );
     }
 
-    renderJournalName = (journalName) => {
-        const journalNameElement = <a href={pathConfig.list.journalName(journalName)}>{journalName}</a>;
-        const sherpaRomeoData = this.getSherpaRomeo();
-        let sherpaRomeoElement = <span/>;
-
-        if (sherpaRomeoData) {
-            const sherpaRomeoColor = sherpaRomeoData.color;
-            const sherpaRomeoLink = locale.global.sherpaRomeoLink.externalUrl.replace('[issn]', sherpaRomeoData.issn);
-            sherpaRomeoElement =
-                      (<ExternalLink
-                          href={sherpaRomeoLink} aria-label={locale.global.sherpaRomeoLink.ariaLabel}>
-                          <span className={`sherpaRomeo${sherpaRomeoColor[0].toUpperCase() + sherpaRomeoColor.slice(1)}`}>{locale.viewRecord.linkTexts.journalOpenAccessPolicyLink}</span>
-                      </ExternalLink>);
-        }
-
+    renderJournalName = () => {
         return (
-            <span>
-                {journalNameElement} {sherpaRomeoElement}
-            </span>
+            <JournalName publication={this.props.publication} />
         );
     }
 
@@ -183,21 +167,14 @@ export default class AdditionalInformation extends Component {
         return publication.rek_formatted_abstract || publication.rek_description;
     }
 
-    // rek_issn_lookup returns sherpa romeo color
-    getSherpaRomeo = () => {
-        const issnField = 'rek_issn';
-        const colorField = 'rek_issn_lookup';
-        const colors = ['green', 'blue', 'yellow', 'white'];
-        const issns = this.props.publication.fez_record_search_key_issn.filter(issn => colors.includes(issn[colorField]));
-        return issns.length > 0 ? {'issn': issns[0][issnField], 'color': issns[0][colorField]} : null;
-    }
-
     formatPublicationDate = (publicationDate) => {
         return this.formatDate(publicationDate, viewRecordsConfig.publicationDateFormat[this.props.publication.rek_display_type_lookup]);
     }
 
     formatDate = (date, format = 'YYYY-MM-DD') => {
-        return moment(date).format(format);
+        return (
+            <DateCitationView format={format} date={date} prefix={''} suffix={''}/>
+        );
     }
 
     transformFieldNameToSubkey = (field) => {
