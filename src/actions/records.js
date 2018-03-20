@@ -14,14 +14,13 @@ import * as actions from './actionTypes';
 export function createNewRecord(data) {
     return dispatch => {
         dispatch({type: actions.CREATE_RECORD_SAVING});
-
         // set default values, links
         const recordRequest = {
             ...NEW_RECORD_DEFAULT_VALUES,
             ...JSON.parse(JSON.stringify(data)),
             ...transformers.getRecordLinkSearchKey(data),
-            ...transformers.getRecordAuthorsSearchKey(data.authors || data.currentAuthor),
-            ...transformers.getRecordAuthorsIdSearchKey(data.authors || data.currentAuthor),
+            ...transformers.getRecordAuthorsSearchKey(data.authors || data.currentAuthor || null),
+            ...transformers.getRecordAuthorsIdSearchKey(data.authors || data.currentAuthor || null),
             ...transformers.getRecordContributorsSearchKey(data.editors),
             ...transformers.getRecordContributorsIdSearchKey(data.editors),
             ...transformers.getRecordSupervisorsSearchKey(data.supervisors),

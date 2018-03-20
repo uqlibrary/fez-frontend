@@ -23,97 +23,42 @@ exports[`Publication Details Component  should render component 1`] = `
       selectable={true}
       style={Object {}}
     >
-      <TableRow
-        className="tableRow"
-        displayBorder={true}
-        hoverable={false}
-        hovered={false}
-        selectable={true}
-        striped={false}
-      >
-        <TableRowColumn
-          className="headingColumn"
-          hoverable={false}
-        >
-          Publication type
-        </TableRowColumn>
-        <TableRowColumn
-          className="dataColumn"
-          hoverable={false}
-        >
-          Journal Article
-        </TableRowColumn>
-      </TableRow>
-      <TableRow
-        className="tableRow"
-        displayBorder={true}
-        hoverable={false}
-        hovered={false}
-        selectable={true}
-        striped={false}
-      >
-        <TableRowColumn
-          className="headingColumn"
-          hoverable={false}
-        >
-          Sub-type
-        </TableRowColumn>
-        <TableRowColumn
-          className="dataColumn"
-          hoverable={false}
-        >
-          Article (original research)
-        </TableRowColumn>
-      </TableRow>
-      <TableRow
-        className="tableRow"
-        displayBorder={true}
-        hoverable={false}
-        hovered={false}
-        selectable={true}
-        striped={false}
-      >
-        <TableRowColumn
-          className="headingColumn"
-          hoverable={false}
-        >
-          Collections
-        </TableRowColumn>
-        <TableRowColumn
-          className="dataColumn"
-          hoverable={false}
-        >
+      <ViewRecordTableRow
+        data="Journal Article"
+        heading="Publication type"
+      />
+      <ViewRecordTableRow
+        data="Article (original research)"
+        heading="Sub-type"
+      />
+      <ViewRecordTableRow
+        data={
           <ul>
-            <li
-              key="collection-0"
-            >
+            <li>
               <a
-                href="/collection/UQ:396321"
+                href="/collection/UQ:3825"
               >
                 School of Chemistry and Molecular Biosciences
               </a>
             </li>
-            <li
-              key="collection-1"
-            >
+            <li>
               <a
-                href="/collection/UQ:396321"
+                href="/collection/UQ:218311"
               >
                 HERDC Pre-Audit
               </a>
             </li>
-            <li
-              key="collection-2"
-            >
+            <li>
               <a
-                href="/collection/UQ:396321"
+                href="/collection/UQ:171723"
               >
                 UQ Centre for Clinical Research Publications
               </a>
             </li>
           </ul>
-        </TableRowColumn>
-      </TableRow>
+        }
+        heading="Collections"
+      />
     </TableBody>
   </Table>
 </StandardCard>
@@ -169,27 +114,10 @@ exports[`Publication Details Component  should render with publication without c
       selectable={true}
       style={Object {}}
     >
-      <TableRow
-        className="tableRow"
-        displayBorder={true}
-        hoverable={false}
-        hovered={false}
-        selectable={true}
-        striped={false}
-      >
-        <TableRowColumn
-          className="headingColumn"
-          hoverable={false}
-        >
-          Publication type
-        </TableRowColumn>
-        <TableRowColumn
-          className="dataColumn"
-          hoverable={false}
-        >
-          Journal Article
-        </TableRowColumn>
-      </TableRow>
+      <ViewRecordTableRow
+        data="Journal Article"
+        heading="Publication type"
+      />
     </TableBody>
   </Table>
 </StandardCard>
@@ -218,76 +146,38 @@ exports[`Publication Details Component  should render with publication without s
       selectable={true}
       style={Object {}}
     >
-      <TableRow
-        className="tableRow"
-        displayBorder={true}
-        hoverable={false}
-        hovered={false}
-        selectable={true}
-        striped={false}
-      >
-        <TableRowColumn
-          className="headingColumn"
-          hoverable={false}
-        >
-          Publication type
-        </TableRowColumn>
-        <TableRowColumn
-          className="dataColumn"
-          hoverable={false}
-        >
-          Journal Article
-        </TableRowColumn>
-      </TableRow>
-      <TableRow
-        className="tableRow"
-        displayBorder={true}
-        hoverable={false}
-        hovered={false}
-        selectable={true}
-        striped={false}
-      >
-        <TableRowColumn
-          className="headingColumn"
-          hoverable={false}
-        >
-          Collections
-        </TableRowColumn>
-        <TableRowColumn
-          className="dataColumn"
-          hoverable={false}
-        >
+      <ViewRecordTableRow
+        data="Journal Article"
+        heading="Publication type"
+      />
+      <ViewRecordTableRow
+        data={
           <ul>
-            <li
-              key="collection-0"
-            >
+            <li>
               <a
-                href="/collection/UQ:396321"
+                href="/collection/UQ:3825"
               >
                 School of Chemistry and Molecular Biosciences
               </a>
             </li>
-            <li
-              key="collection-1"
-            >
+            <li>
               <a
-                href="/collection/UQ:396321"
+                href="/collection/UQ:218311"
               >
                 HERDC Pre-Audit
               </a>
             </li>
-            <li
-              key="collection-2"
-            >
+            <li>
               <a
-                href="/collection/UQ:396321"
+                href="/collection/UQ:171723"
               >
                 UQ Centre for Clinical Research Publications
               </a>
             </li>
           </ul>
-        </TableRowColumn>
-      </TableRow>
+        }
+        heading="Collections"
+      />
     </TableBody>
   </Table>
 </StandardCard>
