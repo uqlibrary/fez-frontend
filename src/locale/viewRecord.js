@@ -6,13 +6,7 @@ export default {
         sections: {
             publicationDetails: 'Publication details',
             grantInformation: 'Grant information',
-            additionalInformation: 'Additional information',
-            abstract: {
-                default: 'Abstract',
-                'Journal': 'Summary/Description',
-                'Data Collection': 'Dataset description',
-                'Design': 'Project description'
-            }
+            additionalInformation: 'Additional information'
         },
         headings: {
             default: {
@@ -21,7 +15,7 @@ export default {
                 rek_subtype: 'Sub-type',
                 rek_genre: 'Type',
                 rek_genre_type: 'Sub-type',
-                rek_description: 'Description',
+                rek_description: 'Abstract',
                 fez_record_search_key_author: 'Author(s)',
                 fez_record_search_key_contributor: 'Editor(s)',
                 fez_record_search_key_supervisor: 'Supervisor(s)',
@@ -43,7 +37,7 @@ export default {
                 fez_record_search_key_total_pages: 'Total pages',
                 fez_record_search_key_total_chapters: 'Total chapters',
                 fez_record_search_key_language: 'Language',
-                fez_record_search_key_subject: 'Subjects',
+                fez_record_search_key_subject: 'Subject(s)',
                 fez_record_search_key_institutional_status: 'Institutional status',
                 fez_record_search_key_journal_name: 'Journal name',
                 fez_record_search_key_language_of_journal_name: 'Language of journal name',
@@ -51,7 +45,7 @@ export default {
                 fez_record_search_key_book_title: 'Title of book',
                 fez_record_search_key_translated_book_title: 'Translated title of book',
                 fez_record_search_key_language_of_book_title: 'Language of book title',
-                fez_record_search_key_keywords: 'Keyword',
+                fez_record_search_key_keywords: 'Keyword(s)',
                 fez_record_search_key_series: 'Series',
                 fez_record_search_key_edition: 'Edition',
                 fez_record_search_key_building_materials: 'Building materials',
@@ -168,6 +162,7 @@ export default {
                 rek_date: 'Publication year',
                 rek_genre: 'Collection type',
                 rek_title: 'Dataset name',
+                rek_description: 'Dataset description',
                 fez_record_search_key_author: 'Creator name',
                 fez_record_search_key_contributor: 'Contact name',
                 fez_record_search_key_author_role: 'Creator(s) role',
@@ -176,6 +171,7 @@ export default {
             'Department Technical Report': {},
             'Design': {
                 rek_date: 'Year available',
+                rek_description: 'Project description',
                 fez_record_search_key_date_available: 'Date of completion',
                 fez_record_search_key_author: 'Designer(s)',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
@@ -196,6 +192,7 @@ export default {
             },
             'Journal': {
                 rek_title: 'Title of journal',
+                rek_description: 'Summary/Description',
             },
             'Manuscript': {
                 rek_date: 'Date',
@@ -2316,23 +2313,27 @@ export default {
             footer: [
                 {
                     field: 'fez_record_search_key_herdc_code',
-                    order: 0
+                    order: 50
                 },
                 {
                     field: 'fez_record_search_key_herdc_status',
-                    order: 1
+                    order: 51
                 },
                 {
                     field: 'fez_record_search_key_institutional_status',
-                    order: 2
+                    order: 52
                 },
                 {
                     field: 'fez_record_search_key_additional_notes',
-                    order: 3
+                    order: 53
                 },
                 {
                     field: 'fez_record_search_key_notes',
-                    order: 4
+                    order: 54
+                },
+                {
+                    field: 'rek_description',
+                    order: 55
                 }
             ]
         },

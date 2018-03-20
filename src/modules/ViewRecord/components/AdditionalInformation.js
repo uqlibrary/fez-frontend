@@ -105,6 +105,7 @@ export default class AdditionalInformation extends Component {
         switch (key) {
             case 'rek_title': return this.renderTitle();
             case 'rek_date': return this.formatPublicationDate(value);
+            case 'rek_description': return this.renderHTML(value);
             default: return value;
         }
     }
@@ -178,6 +179,10 @@ export default class AdditionalInformation extends Component {
         return object[subkey + lookupSuffix] && subkey !== 'rek_issn' ? object[subkey + lookupSuffix] : object[subkey];
     }
 
+    getAbstract = (publication) => {
+        return publication.rek_formatted_abstract || publication.rek_description;
+    }
+
     // rek_issn_lookup returns sherpa romeo color
     getSherpaRomeo = () => {
         const issnField = 'rek_issn';
@@ -206,41 +211,22 @@ export default class AdditionalInformation extends Component {
         return fields.filter(item=>!locale.viewRecord.adminFields.includes(item.field));
     }
 
-    // common fields for all display types at the bottom of the list
-    renderFooter = () => {
-        const rows = [];
-        const publication = this.props.publication;
-        const footer = this.excludeAdminOnlyFields(locale.viewRecord.fields.footer);
-
-        footer.sort((field1, field2) => (
-            field1.order - field2.order
-        )).map((item) => {
-            const field = item.field;
-            const data = publication[field];
-            const subkey = this.transformFieldNameToSubkey(field);
-
-            if (data) {
-                rows.push(this.renderRow(locale.viewRecord.headings.default.footer[field], this.renderObject(data, subkey)));
-            }
-        });
-
-        return rows;
-    }
-
     renderColumns = () => {
         const rows = [];
         const publication = this.props.publication;
         const displayType = publication.rek_display_type_lookup;
         const headings = locale.viewRecord.headings;
         const displayTypeHeadings = displayType && headings[displayType] ? headings[displayType] : [];
-        const fields = displayType && locale.viewRecord.fields[displayType] ? this.excludeAdminOnlyFields(locale.viewRecord.fields[displayType]) : [];
+        const footerFields =  locale.viewRecord.fields.footer;
+        let fields = displayType && locale.viewRecord.fields[displayType] ? locale.viewRecord.fields[displayType].concat(footerFields) : footerFields;
+        fields = this.excludeAdminOnlyFields(fields);
 
         fields.sort((field1, field2) => (
             field1.order - field2.order
         )).map((item) => {
             let data = '';
             const field = item.field;
-            const value = publication[field];
+            const value = (field === 'rek_description') ? this.getAbstract(publication) : publication[field];
 
             // do not display field when value is null, empty array
             if (value && Object.keys(value).length > 0) {
@@ -257,9 +243,6 @@ export default class AdditionalInformation extends Component {
                 rows.push(this.renderRow(heading, data));
             }
         });
-
-        // common fields for all display types
-        rows.push(this.renderFooter());
 
         return rows;
     }
