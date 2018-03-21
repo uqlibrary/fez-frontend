@@ -453,9 +453,9 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
               <br />
               PDF files must be saved using the following naming structure 
               <b>
-                &lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf
+                &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
               </b>
-              . Stages of examination are: submission, or correctedthesis, or finalthesis. For example:
+              . Document name could be thesis, abstract, and etc. For example:
               <ul>
                 <li>
                   s1234567_phd_thesis.pdf
@@ -942,9 +942,9 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
               <br />
               PDF files must be saved using the following naming structure 
               <b>
-                &lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf
+                &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
               </b>
-              . Stages of examination are: submission, or correctedthesis, or finalthesis. For example:
+              . Document name could be thesis, abstract, and etc. For example:
               <ul>
                 <li>
                   s1234567_phd_thesis.pdf
