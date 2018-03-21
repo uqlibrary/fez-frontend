@@ -187,6 +187,22 @@ exports[`ConferencePaperForm renders  component 1`] = `
         />
       </div>
     </div>
+    <div
+      className="columns"
+    >
+      <div
+        className="column is-half"
+      >
+        <Field
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Journal name"
+          fullWidth={true}
+          name="fez_record_search_key_journal_name.rek_journal_name"
+          type="text"
+        />
+      </div>
+    </div>
   </StandardCard>
   <StandardCard
     className=""

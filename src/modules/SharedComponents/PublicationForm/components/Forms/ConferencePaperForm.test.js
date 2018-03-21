@@ -40,9 +40,9 @@ describe('ConferencePaperForm renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 16 input fields', () => {
+    it('component with 17 input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field').length).toEqual(16);
+        expect(wrapper.find('Field').length).toEqual(17);
     });
 
     it('component with 7 required input fields', () => {

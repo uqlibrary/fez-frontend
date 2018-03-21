@@ -135,6 +135,17 @@ export default class ConferencePaperForm extends Component {
                             />
                         </div>
                     </div>
+                    <div className="columns">
+                        <div className="column is-half">
+                            <Field
+                                component={TextField}
+                                disabled={this.props.submitting}
+                                name="fez_record_search_key_journal_name.rek_journal_name"
+                                type="text"
+                                fullWidth
+                                floatingLabelText={txt.information.fieldLabels.journalName} />
+                        </div>
+                    </div>
                 </StandardCard>
 
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>

@@ -207,6 +207,7 @@ export default {
                 subtype: 'Publication subtype',
                 publicationPlace: 'Place of publication',
                 publisher: 'Publisher',
+                journalName: 'Journal name',
                 date: {
                     title: 'Publication date',
                     day: 'Day',
@@ -1011,6 +1012,10 @@ export default {
                 publisher: {
                     floatingLabelText: 'Publisher',
                     hintText: 'Type the name of the publisher'
+                },
+                journalName: {
+                    floatingLabelText: 'Journal name',
+                    hintText: 'Type the name of the Journal'
                 },
                 date: {
                     title: 'Publication date',
