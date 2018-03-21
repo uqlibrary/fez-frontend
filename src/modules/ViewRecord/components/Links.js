@@ -37,7 +37,45 @@ export default class ViewRecordLinks extends PureComponent {
                 return (embargoDate < currentDate);
             }
         };
-        if(!record) return (<div className="empty"/>);
+        const allLinks = (record) => {
+            const allLinks = [];
+            if (record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi) {
+                // push the DOI link in
+                allLinks.push({
+                    link: (<DoiLink DoiId={record.fez_record_search_key_doi.rek_doi}/>),
+                    description: record.fez_record_search_key_oa_status && openAccessIdLookup[record.fez_record_search_key_oa_status.rek_oa_status],
+                    oaStatus: openAccessStatus()
+                });
+            }
+            if (record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id) {
+                // push the pubmed central link in
+                allLinks.push({
+                    link: <PubmedCentralLink
+                        pubmedCentralId={record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id}/>,
+                    description: txt.pubmedCentralLinkDescription,
+                    oaStatus: true
+                });
+            }
+            if (record.fez_record_search_key_link && record.fez_record_search_key_link.length > 0) {
+                // push all the pub links in
+                record.fez_record_search_key_link.map((item, index) => {
+                    allLinks.push({
+                        link: (<ExternalLink href={item.rek_link}
+                            title={(record.fez_record_search_key_link_description &&
+                             record.fez_record_search_key_link_description[index] &&
+                             record.fez_record_search_key_link_description[index].rek_link_description) ||
+                            txt.linkMissingDescriptionTitle}>{item.rek_link}</ExternalLink>),
+                        description: record.fez_record_search_key_link_description &&
+                        record.fez_record_search_key_link_description[index] &&
+                        record.fez_record_search_key_link_description[index].rek_link_description ||
+                        txt.linkMissingDescription,
+                        oaStatus: openAccessStatus()
+                    });
+                });
+            }
+            return allLinks;
+        };
+        if(!record || !allLinks(record)) return (<div className="empty"/>);
         return (
             <StandardCard title={txt.title}>
                 <div className="viewRecordLinks">
@@ -50,71 +88,26 @@ export default class ViewRecordLinks extends PureComponent {
                             </TableRow>
                         </TableHeader>
                         <TableBody displayRowCheckbox={false} className="tableData">
-                            {/* Generate DOI link if an ID exists */}
-                            {
-                                record.fez_record_search_key_doi &&
-                                record.fez_record_search_key_doi.rek_doi &&
-                                <TableRow className="tableRow">
+                            {allLinks(record).map((item, index) => (
+                                <TableRow key={index}>
                                     <TableRowColumn className="rowLink">
-                                        <DoiLink DoiId={record.fez_record_search_key_doi.rek_doi}/>
+                                        {item.link}
                                     </TableRowColumn>
                                     <TableRowColumn className="rowDescription is-hidden-mobile">
-                                        {record.fez_record_search_key_oa_status && openAccessIdLookup[record.fez_record_search_key_oa_status.rek_oa_status]}
+                                        {item.description}
                                     </TableRowColumn>
                                     <TableRowColumn className="rowOA align-right">
-                                        {
-                                            openAccessStatus() &&
+                                        {item.oaStatus &&
                                             <div className="fez-icon openAccess large"
-                                                title={txt.openAccessLabel.replace('[oa_status]', record.fez_record_search_key_oa_status && openAccessIdLookup[record.fez_record_search_key_oa_status.rek_oa_status] || txt.doiLabelNoOpenAccess)}
-                                            />
+                                                title={txt.openAccessLabel.replace('[oa_status]',
+                                                    record.fez_record_search_key_oa_status &&
+                                                    record.fez_record_search_key_oa_status.rek_oa_status &&
+                                                    openAccessIdLookup[record.fez_record_search_key_oa_status.rek_oa_status] ||
+                                                    txt.labelNoOpenAccessLookup)}/>
                                         }
                                     </TableRowColumn>
                                 </TableRow>
-                            }
-                            {/* Generate PubMed Central link if an ID exists */}
-                            {
-                                record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id &&
-                                <TableRow>
-                                    <TableRowColumn className="rowLink">
-                                        <PubmedCentralLink pubmedCentralId={record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id} />
-                                    </TableRowColumn>
-                                    <TableRowColumn className="rowDescription is-hidden-mobile">{txt.pubmedCentralLinkDescription}</TableRowColumn>
-                                    <TableRowColumn className="rowOA align-right">
-                                        <div className="fez-icon openAccess large" />
-                                    </TableRowColumn>
-                                </TableRow>
-                            }
-                            {/* Generate all other links */}
-                            {
-                                record.fez_record_search_key_link &&
-                                record.fez_record_search_key_link.length > 0 &&
-                                record.fez_record_search_key_link.map((item, index) => (
-                                    <TableRow key={index}>
-                                        <TableRowColumn className="rowLink">
-                                            <ExternalLink href={item.rek_link}
-                                                title={(record.fez_record_search_key_link_description &&
-                                                    record.fez_record_search_key_link_description[index] &&
-                                                    record.fez_record_search_key_link_description[index].rek_link_description) ||
-                                                txt.linkMissingDescriptionTitle}
-                                            >
-                                                {item.rek_link}
-                                            </ExternalLink>
-                                        </TableRowColumn>
-                                        <TableRowColumn className="rowDescription is-hidden-mobile">
-                                            {record.fez_record_search_key_link_description &&
-                                            record.fez_record_search_key_link_description[index] &&
-                                            record.fez_record_search_key_link_description[index].rek_link_description ||
-                                            txt.linkMissingDescription}
-                                        </TableRowColumn>
-                                        <TableRowColumn className="rowOA align-right">
-                                            {
-                                                openAccessStatus() &&
-                                                <div className="fez-icon openAccess large"
-                                                    title={txt.openAccessLabel.replace('[oa_status]', openAccessIdLookup[record.fez_record_search_key_oa_status.rek_oa_status])}/>
-                                            }
-                                        </TableRowColumn>
-                                    </TableRow>
-                                ))}
+                            ))}
                         </TableBody>
                     </Table>
                 </div>

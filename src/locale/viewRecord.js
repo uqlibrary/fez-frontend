@@ -13,8 +13,8 @@ export default {
                 linkMissingDescription: 'No description available',
                 linkMissingDescriptionTitle: 'Click to open link in a new window',
                 openAccessLabel: 'Open Access - [oa_status] - Free to read (embargo date might apply)',
-                doiLabelNoOpenAccess: 'DOI Link',
-                pubmedCentralLinkDescription: 'Pubmed Central link',
+                labelNoOpenAccessLookup: 'Open Access',
+                pubmedCentralLinkDescription: 'Full text from PubMed Central',
                 headerTitles: {
                     link: 'Link (will open in a new window)',
                     description: 'Description',

@@ -59,10 +59,10 @@ exports[`Component ViewRecord  should render a DOI link 1`] = `
         style={Object {}}
       >
         <TableRow
-          className="tableRow"
           displayBorder={true}
           hoverable={false}
           hovered={false}
+          key="0"
           selectable={true}
           striped={false}
         >
@@ -84,7 +84,7 @@ exports[`Component ViewRecord  should render a DOI link 1`] = `
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - DOI Link - Free to read (embargo date might apply)"
+              title="Open Access - Open Access - Free to read (embargo date might apply)"
             />
           </TableRowColumn>
         </TableRow>
@@ -156,6 +156,7 @@ exports[`Component ViewRecord  should render a PubMed Central link 1`] = `
           displayBorder={true}
           hoverable={false}
           hovered={false}
+          key="0"
           selectable={true}
           striped={false}
         >
@@ -171,7 +172,7 @@ exports[`Component ViewRecord  should render a PubMed Central link 1`] = `
             className="rowDescription is-hidden-mobile"
             hoverable={false}
           >
-            Pubmed Central link
+            Full text from PubMed Central
           </TableRowColumn>
           <TableRowColumn
             className="rowOA align-right"
@@ -179,6 +180,7 @@ exports[`Component ViewRecord  should render a PubMed Central link 1`] = `
           >
             <div
               className="fez-icon openAccess large"
+              title="Open Access - DOI - Free to read (embargo date might apply)"
             />
           </TableRowColumn>
         </TableRow>
