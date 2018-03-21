@@ -25,7 +25,7 @@ export default class ViewRecordLinks extends PureComponent {
     render() {
         const record = this.props.publication;
         const txt = locale.viewRecord.sections.links;
-        const embargoed = () => {
+        const isEmbargo = () => {
             if(!record.fez_record_search_key_oa_embargo_days ||
                 record.fez_record_search_key_oa_embargo_days && record.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days === 0 ) {
                 return false;
@@ -34,7 +34,7 @@ export default class ViewRecordLinks extends PureComponent {
                 const currentDate = moment().utc();
                 const embargoDate = moment(moment().format(record.rek_created_date))
                     .add(record.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days, 'days').utc();
-                return embargoDate < currentDate ? false : moment(embargoDate).format('Do MMMM YY');
+                return embargoDate < currentDate ? false : moment(embargoDate).format('Do MMMM YYYY');
             }
         };
         const allLinks = (record) => {
@@ -44,7 +44,7 @@ export default class ViewRecordLinks extends PureComponent {
                 allLinks.push({
                     link: (<DoiLink DoiId={record.fez_record_search_key_doi.rek_doi}/>),
                     description: record.fez_record_search_key_oa_status && openAccessIdLookup[record.fez_record_search_key_oa_status.rek_oa_status],
-                    oaStatus: embargoed()
+                    oaStatus: isEmbargo()
                 });
             }
             if (record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id) {
@@ -69,7 +69,7 @@ export default class ViewRecordLinks extends PureComponent {
                         record.fez_record_search_key_link_description[index] &&
                         record.fez_record_search_key_link_description[index].rek_link_description ||
                         txt.linkMissingDescription,
-                        oaStatus: embargoed()
+                        oaStatus: isEmbargo()
                     });
                 });
             }
@@ -97,7 +97,7 @@ export default class ViewRecordLinks extends PureComponent {
                                         {item.description}
                                     </TableRowColumn>
                                     <TableRowColumn className="rowOA align-right">
-                                        {embargoed() === false ?
+                                        {isEmbargo() === false ?
                                             <div className="fez-icon openAccess large"
                                                 title={txt.openAccessLabel.replace('[oa_status]',
                                                     record.fez_record_search_key_oa_status &&
@@ -107,11 +107,11 @@ export default class ViewRecordLinks extends PureComponent {
                                             :
                                             <div>
                                                 <span className="is-hidden-mobile is-hidden-tablet-only">
-                                                    {txt.embargoedUntil.replace('[embargo_date]', embargoed())}
+                                                    {txt.embargoedUntil.replace('[embargo_date]', isEmbargo())}
                                                 </span>
                                                 <div className="fez-icon openAccessLocked large"
                                                     title={txt.openAccessLockedLabel
-                                                        .replace('[embargo_date]', embargoed())
+                                                        .replace('[embargo_date]', isEmbargo())
                                                         .replace('[oa_status]', record.fez_record_search_key_oa_status &&
                                                         record.fez_record_search_key_oa_status.rek_oa_status &&
                                                         openAccessIdLookup[record.fez_record_search_key_oa_status.rek_oa_status] ||
