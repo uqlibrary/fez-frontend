@@ -84,7 +84,7 @@ exports[`Component ViewRecord  should render a DOI link 1`] = `
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - Open Access - Free to read (embargo date might apply)"
+              title="Open Access - Open Access - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -180,7 +180,7 @@ exports[`Component ViewRecord  should render a PubMed Central link 1`] = `
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - DOI - Free to read (embargo date might apply)"
+              title="Open Access - DOI - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -289,7 +289,7 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - DOI - Free to read (embargo date might apply)"
+              title="Open Access - DOI - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -328,7 +328,7 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - DOI - Free to read (embargo date might apply)"
+              title="Open Access - DOI - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -367,7 +367,7 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - DOI - Free to read (embargo date might apply)"
+              title="Open Access - DOI - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -470,7 +470,7 @@ exports[`Component ViewRecord  should render list of links with OA icons due to 
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - DOI - Free to read (embargo date might apply)"
+              title="Open Access - DOI - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -509,7 +509,7 @@ exports[`Component ViewRecord  should render list of links with OA icons due to 
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - DOI - Free to read (embargo date might apply)"
+              title="Open Access - DOI - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -548,7 +548,7 @@ exports[`Component ViewRecord  should render list of links with OA icons due to 
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - DOI - Free to read (embargo date might apply)"
+              title="Open Access - DOI - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -648,7 +648,19 @@ exports[`Component ViewRecord  should render list of links with no OA icons due 
           <TableRowColumn
             className="rowOA align-right"
             hoverable={false}
-          />
+          >
+            <div>
+              <span
+                className="is-hidden-mobile is-hidden-tablet-only"
+              >
+                Embargoed until 23rd December 20 
+              </span>
+              <div
+                className="fez-icon openAccessLocked large"
+                title="Open Access - DOI - Embargoed until 23rd December 20"
+              />
+            </div>
+          </TableRowColumn>
         </TableRow>
         <TableRow
           displayBorder={true}
@@ -682,7 +694,19 @@ exports[`Component ViewRecord  should render list of links with no OA icons due 
           <TableRowColumn
             className="rowOA align-right"
             hoverable={false}
-          />
+          >
+            <div>
+              <span
+                className="is-hidden-mobile is-hidden-tablet-only"
+              >
+                Embargoed until 23rd December 20 
+              </span>
+              <div
+                className="fez-icon openAccessLocked large"
+                title="Open Access - DOI - Embargoed until 23rd December 20"
+              />
+            </div>
+          </TableRowColumn>
         </TableRow>
         <TableRow
           displayBorder={true}
@@ -716,7 +740,19 @@ exports[`Component ViewRecord  should render list of links with no OA icons due 
           <TableRowColumn
             className="rowOA align-right"
             hoverable={false}
-          />
+          >
+            <div>
+              <span
+                className="is-hidden-mobile is-hidden-tablet-only"
+              >
+                Embargoed until 23rd December 20 
+              </span>
+              <div
+                className="fez-icon openAccessLocked large"
+                title="Open Access - DOI - Embargoed until 23rd December 20"
+              />
+            </div>
+          </TableRowColumn>
         </TableRow>
       </TableBody>
     </Table>

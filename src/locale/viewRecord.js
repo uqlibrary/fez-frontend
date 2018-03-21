@@ -12,9 +12,12 @@ export default {
                 title: 'Links',
                 linkMissingDescription: 'No description available',
                 linkMissingDescriptionTitle: 'Click to open link in a new window',
-                openAccessLabel: 'Open Access - [oa_status] - Free to read (embargo date might apply)',
+                openAccessLabel: 'Open Access - [oa_status] - Free to read',
+                openAccessLockedLabel: 'Open Access - [oa_status] - Embargoed until [embargo_date]',
                 labelNoOpenAccessLookup: 'Open Access',
+                labelNoOpenAccessLockedLookup: 'Open access - Embargo applies',
                 pubmedCentralLinkDescription: 'Full text from PubMed Central',
+                embargoedUntil: 'Embargoed until [embargo_date] ',
                 headerTitles: {
                     link: 'Link (will open in a new window)',
                     description: 'Description',
