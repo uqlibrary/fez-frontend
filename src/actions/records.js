@@ -130,8 +130,6 @@ export function submitThesis(data, author) {
                         newRecord: response
                     }
                 });
-
-                Raven.captureException(new Error('thesis created!!!'));
                 return response;
             })
             .catch(error => {
@@ -140,7 +138,6 @@ export function submitThesis(data, author) {
                     : 'Submit Thesis: Error occurred while saving record to eSpace. ';
                 const compositeError = `${specificError} ${ error.message ? `(${error.message})` : '' }`;
 
-                // record error to sentry.oi
                 Raven.captureException(error, {message: specificError});
 
                 dispatch({
