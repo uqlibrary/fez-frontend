@@ -16,9 +16,10 @@ describe('Additional Information Component ', () => {
     });
 
     it('should render component with journal article', () => {
-        const wrapper = setup({});
+        const wrapper = setup({}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.sherpaRomeoGreen').length).toEqual(1);
+        expect(wrapper.find('.eraYearListed').text()).toEqual('(ERA 2010 Journal(s) Listed)');
     });
 
     it('should render component with journal', () => {
@@ -32,9 +33,9 @@ describe('Additional Information Component ', () => {
     });
 
     it('should render component with audio document', () => {
-        const wrapper = setup({publication: records.audioDocument});
+        const wrapper = setup({publication: records.audioDocument}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('.license.cc-by-nc-nd').length).toEqual(1);
+        expect(wrapper.find('a.license.cc-by-nc-nd').length).toEqual(1);
     });
 
     it('should render component with book', () => {

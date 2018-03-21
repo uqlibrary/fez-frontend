@@ -45,9 +45,9 @@ export default class ViewRecordLinks extends PureComponent {
                     <Table selectable={false} className="links">
                         <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="tableHeader">
                             <TableRow>
-                                <TableHeaderColumn className="rowLink">Link (will open in a new window)</TableHeaderColumn>
-                                <TableHeaderColumn className="rowDescription is-hidden-mobile">Description</TableHeaderColumn>
-                                <TableHeaderColumn className="rowOA align-right">&nbsp;</TableHeaderColumn>
+                                <TableHeaderColumn className="rowLink">{txt.headerTitles.link}</TableHeaderColumn>
+                                <TableHeaderColumn className="rowDescription is-hidden-mobile">{txt.headerTitles.description}</TableHeaderColumn>
+                                <TableHeaderColumn className="rowOA align-right">{txt.headerTitles.oaStatus}</TableHeaderColumn>
                             </TableRow>
                         </TableHeader>
                         <TableBody displayRowCheckbox={false} className="tableData">

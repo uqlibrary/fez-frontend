@@ -44,7 +44,7 @@ exports[`Component ViewRecord  should render a PubMed Central link 1`] = `
           <TableHeaderColumn
             className="rowOA align-right"
           >
-             
+             
           </TableHeaderColumn>
         </TableRow>
       </TableHeader>
@@ -144,7 +144,7 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
           <TableHeaderColumn
             className="rowOA align-right"
           >
-             
+             
           </TableHeaderColumn>
         </TableRow>
       </TableHeader>
@@ -263,7 +263,7 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
             className="rowDescription is-hidden-mobile"
             hoverable={false}
           >
-            No description avalable
+            No description available
           </TableRowColumn>
           <TableRowColumn
             className="rowOA align-right"
@@ -325,7 +325,7 @@ exports[`Component ViewRecord  should render list of links without OA icons 1`] 
           <TableHeaderColumn
             className="rowOA align-right"
           >
-             
+             
           </TableHeaderColumn>
         </TableRow>
       </TableHeader>
@@ -434,7 +434,7 @@ exports[`Component ViewRecord  should render list of links without OA icons 1`] 
             className="rowDescription is-hidden-mobile"
             hoverable={false}
           >
-            No description avalable
+            No description available
           </TableRowColumn>
           <TableRowColumn
             className="rowOA align-right"

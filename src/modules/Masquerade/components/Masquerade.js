@@ -20,12 +20,11 @@ export default class Masquerade extends Component {
     _masqueradeAs = (event) => {
         if(event && event.key && (event.key !== 'Enter' || this.state.userName.length === 0)) return;
 
-        this.setState = {
+        this.setState({
             loading: true
-        };
+        });
 
-        const url = `https://auth.library.uq.edu.au/masquerade?user=${this.state.userName}&return=${window.btoa(window.location.href)}`;
-        window.location.href = url;
+        window.location.href = `https://auth.library.uq.edu.au/masquerade?user=${this.state.userName}&return=${window.btoa(window.location.href)}`;
     };
 
     _usernameChanged = (event, newValue) => {

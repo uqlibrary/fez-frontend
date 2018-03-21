@@ -82,22 +82,6 @@ describe('Component FixRecord', () => {
         expect(wrapper.instance().successConfirmationBox).toEqual('successBox');
     });
 
-    it('should submit form when user hits Enter', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({recordToFix: mockRecordToFix, handleSubmit: testMethod});
-        wrapper.setState({selectedRecordAction: 'unclaim'});
-        wrapper.instance()._handleKeyboardFormSubmit({key: 'Enter', preventDefault: jest.fn()});
-        expect(testMethod).toHaveBeenCalled();
-    });
-
-    it('should not submit form when user hits shift+Enter', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({recordToFix: mockRecordToFix, handleSubmit: testMethod});
-        wrapper.setState({selectedRecordAction: 'unclaim'});
-        wrapper.instance()._handleKeyboardFormSubmit({key: 'Enter', shiftKey: true, preventDefault: jest.fn()});
-        expect(testMethod).not.toHaveBeenCalled();
-    });
-
     it('should redirect to other pages', () => {
         const testMethod = jest.fn();
 
@@ -107,28 +91,6 @@ describe('Component FixRecord', () => {
 
         wrapper.instance()._navigateToDashboard();
         expect(testMethod).toHaveBeenCalledWith('/dashboard');
-    });
-
-    it('should return and render the alert details correctly', () => {
-        const testCases = [
-            {
-                parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting', message: 'submitting', type: 'info'}}},
-            },
-            {
-                parameters: {submitSucceeded: true, alertLocale: {successAlert: {title: 'submitSucceeded', message: 'submitSucceeded', type: 'done'}}},
-            },
-            {
-                parameters: {submitFailed: true, error: 'This is an error', alertLocale: {errorAlert: {title: 'submitFailed', message: jest.fn(), type: 'error'}}},
-            },
-            {
-                parameters: {invalid: true, dirty: true, formErrors: {rek_title: 'one', comments: 'two'}, alertLocale: {validationAlert: {title: 'validationError'}}},
-            }
-        ];
-
-        testCases.forEach(testCase => {
-            const wrapper = setup({...testCase.parameters, recordToFix: mockRecordToFix}).find('Alert').dive();
-            expect(toJson(wrapper)).toMatchSnapshot();
-        });
     });
 
     it('should clear record to fix when leaving the form', () => {

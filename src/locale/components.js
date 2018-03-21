@@ -253,13 +253,13 @@ export default {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of editors below</b>, in the format and order that they are published.</div>
+                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of editors below</b>, in the format "John Smith".</div>
                         ),
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of editors below</b>, in the format and order that they are published.</div>
                         ),
-                        nameAsPublishedLabel: 'Enter each editor\'s name as published (eg. Smith, John)',
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedLabel: 'Enter each editor\'s name as published (eg. John Smith)',
+                        nameAsPublishedHint: 'Type the name in the format eg. "John Smith"',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add editor'
                     }
@@ -270,7 +270,7 @@ export default {
                             <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name (if applicable)',
-                        nameColumn: 'Editor\'s name as published',
+                        nameColumn: 'Editor\'s name in the format eg. "John Smith"',
                         identifierColumn: 'UQ identifier',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',

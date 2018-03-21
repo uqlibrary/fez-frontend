@@ -36,6 +36,7 @@ export const generateCancelToken = () => {
 };
 
 api.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
+api.defaults.headers.common[TOKEN_NAME] = 'NnfJRHCqPPXe6snp1rzZClhscyC180994FmThHjg';
 api.isCancel = axios.isCancel; // needed for cancelling requests and the instance created does not have this method
 
 let isGet = null;

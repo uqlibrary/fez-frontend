@@ -53,7 +53,7 @@ export default {
         noOrcidAlert: {
             title: 'ORCID ID REQUIRED',
             message: 'You do not have an ORCID ID linked to your UQ eSpace.',
-            type: 'info_outline',
+            type: 'warning',
             actionButtonLabel: 'Click here to link or register'
         },
         forceOrcidLinkAlert: {

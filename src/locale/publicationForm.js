@@ -986,7 +986,7 @@ export default {
             fieldLabels: {
                 title: {
                     floatingLabelText: 'Title',
-                    hintText: 'Title of conference'
+                    hintText: 'Proceedings title'
                 },
                 conferenceName: {
                     floatingLabelText: 'Conference name',
@@ -1105,8 +1105,8 @@ export default {
                 fileUploadRestrictions: (
                     <div>
                         Maximum file size is 5Gb. <br/>
-                        PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf</b>.
-                        Stages of examination are: submission, or correctedthesis, or finalthesis.
+                        PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
+                        Document name could be thesis, abstract, and etc.
                         For example:
                         <ul>
                             <li>s1234567_phd_thesis.pdf</li>

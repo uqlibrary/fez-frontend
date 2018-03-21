@@ -1289,9 +1289,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                   "rek_publisher_pid": "UQ:36649",
                   "rek_publisher_xsdmf_id": null,
                 },
-                "fez_record_search_key_pubmed_central_id": Object {
-                  "rek_pubmed_central_id": "12345",
-                },
+                "fez_record_search_key_pubmed_id": null,
                 "fez_record_search_key_refereed": Object {
                   "rek_refereed": 1,
                   "rek_refereed_id": 2666559,
