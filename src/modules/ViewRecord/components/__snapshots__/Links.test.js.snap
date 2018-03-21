@@ -653,11 +653,11 @@ exports[`Component ViewRecord  should render list of links with no OA icons due 
               <span
                 className="is-hidden-mobile is-hidden-tablet-only"
               >
-                Embargoed until 23rd December 2020 
+                Embargoed until 24th December 2020 
               </span>
               <div
                 className="fez-icon openAccessLocked large"
-                title="Open Access - DOI - Embargoed until 23rd December 2020"
+                title="Open Access - DOI - Embargoed until 24th December 2020"
               />
             </div>
           </TableRowColumn>
@@ -699,11 +699,11 @@ exports[`Component ViewRecord  should render list of links with no OA icons due 
               <span
                 className="is-hidden-mobile is-hidden-tablet-only"
               >
-                Embargoed until 23rd December 2020 
+                Embargoed until 24th December 2020 
               </span>
               <div
                 className="fez-icon openAccessLocked large"
-                title="Open Access - DOI - Embargoed until 23rd December 2020"
+                title="Open Access - DOI - Embargoed until 24th December 2020"
               />
             </div>
           </TableRowColumn>
@@ -745,11 +745,11 @@ exports[`Component ViewRecord  should render list of links with no OA icons due 
               <span
                 className="is-hidden-mobile is-hidden-tablet-only"
               >
-                Embargoed until 23rd December 2020 
+                Embargoed until 24th December 2020 
               </span>
               <div
                 className="fez-icon openAccessLocked large"
-                title="Open Access - DOI - Embargoed until 23rd December 2020"
+                title="Open Access - DOI - Embargoed until 24th December 2020"
               />
             </div>
           </TableRowColumn>

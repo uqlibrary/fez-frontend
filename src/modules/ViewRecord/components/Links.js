@@ -30,10 +30,12 @@ export default class ViewRecordLinks extends PureComponent {
                 record.fez_record_search_key_oa_embargo_days && record.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days === 0 ) {
                 return false;
             } else {
-                // const currentDate = moment().add(7, 'days').utc(); // For testing embargo timeframes
-                const currentDate = moment().utc();
-                const embargoDate = moment(moment().format(record.rek_created_date))
-                    .add(record.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days, 'days').utc();
+                const currentDate = moment().format(); // .add(7, 'days');
+                console.log('Current Date', currentDate);
+                const embargoDate = moment(moment(record.rek_created_date))
+                    .add(record.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days, 'days').format();
+                console.log('Created Date', moment(record.rek_created_date).format());
+                console.log('Embargo Date', embargoDate);
                 return embargoDate < currentDate ? false : moment(embargoDate).format('Do MMMM YYYY');
             }
         };
