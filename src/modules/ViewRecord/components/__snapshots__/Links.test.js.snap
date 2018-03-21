@@ -192,7 +192,7 @@ exports[`Component ViewRecord  should render a PubMed Central link 1`] = `
 
 exports[`Component ViewRecord  should render empty div 1`] = `
 <div
-  className="empty"
+  className="links empty"
 />
 `;
 

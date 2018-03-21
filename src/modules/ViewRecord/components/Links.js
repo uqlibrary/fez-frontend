@@ -30,12 +30,9 @@ export default class ViewRecordLinks extends PureComponent {
                 record.fez_record_search_key_oa_embargo_days && record.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days === 0 ) {
                 return false;
             } else {
-                const currentDate = moment().format(); // .add(7, 'days');
-                console.log('Current Date', currentDate);
+                const currentDate = moment().format();
                 const embargoDate = moment(moment(record.rek_created_date))
                     .add(record.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days, 'days').format();
-                console.log('Created Date', moment(record.rek_created_date).format());
-                console.log('Embargo Date', embargoDate);
                 return embargoDate < currentDate ? false : moment(embargoDate).format('Do MMMM YYYY');
             }
         };
@@ -77,7 +74,7 @@ export default class ViewRecordLinks extends PureComponent {
             }
             return allLinks;
         };
-        if(!record || !allLinks(record)) return (<div className="empty"/>);
+        if(!record || !allLinks(record)) return (<div className="links empty"/>);
         return (
             <StandardCard title={txt.title}>
                 <div className="viewRecordLinks">
@@ -99,14 +96,15 @@ export default class ViewRecordLinks extends PureComponent {
                                         {item.description}
                                     </TableRowColumn>
                                     <TableRowColumn className="rowOA align-right">
-                                        {isEmbargo() === false ?
+                                        {!isEmbargo() ?
+                                            // Open access and no embargo
                                             <div className="fez-icon openAccess large"
                                                 title={txt.openAccessLabel.replace('[oa_status]',
-                                                    record.fez_record_search_key_oa_status &&
-                                                    record.fez_record_search_key_oa_status.rek_oa_status &&
+                                                    record.fez_record_search_key_oa_status && record.fez_record_search_key_oa_status.rek_oa_status &&
                                                     openAccessIdLookup[record.fez_record_search_key_oa_status.rek_oa_status] ||
                                                     txt.labelNoOpenAccessLookup)}/>
                                             :
+                                            // Open access but under an embargo date
                                             <div>
                                                 <span className="is-hidden-mobile is-hidden-tablet-only">
                                                     {txt.embargoedUntil.replace('[embargo_date]', isEmbargo())}
@@ -114,8 +112,7 @@ export default class ViewRecordLinks extends PureComponent {
                                                 <div className="fez-icon openAccessLocked large"
                                                     title={txt.openAccessLockedLabel
                                                         .replace('[embargo_date]', isEmbargo())
-                                                        .replace('[oa_status]', record.fez_record_search_key_oa_status &&
-                                                        record.fez_record_search_key_oa_status.rek_oa_status &&
+                                                        .replace('[oa_status]', record.fez_record_search_key_oa_status && record.fez_record_search_key_oa_status.rek_oa_status &&
                                                         openAccessIdLookup[record.fez_record_search_key_oa_status.rek_oa_status] ||
                                                         txt.labelNoOpenAccessLockedLookup)}/>
                                             </div>

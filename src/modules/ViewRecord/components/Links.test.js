@@ -15,6 +15,10 @@ function setup(testProps, isShallow = true){
 
 describe('Component ViewRecord ', () => {
 
+    beforeEach(() => {
+        Date.now = jest.genMockFunction().mockReturnValue('2020-01-01T00:00:00.000Z');
+    });
+
     it('should render empty div', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -80,7 +84,6 @@ describe('Component ViewRecord ', () => {
             ],
         };
 
-        Date.now = jest.genMockFunction().mockReturnValue('2020-01-01T00:00:00.000Z');
         const wrapper = setup({publication: linkProps});
         expect(wrapper.find('.openAccess').length).toEqual(3);
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -147,7 +150,6 @@ describe('Component ViewRecord ', () => {
             ],
         };
 
-        Date.now = jest.genMockFunction().mockReturnValue('2020-01-01T00:00:00.000Z');
         const wrapper = setup({publication: linkProps});
         expect(wrapper.find('.openAccess').length).toEqual(3);
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -214,7 +216,6 @@ describe('Component ViewRecord ', () => {
             ],
         };
 
-        Date.now = jest.genMockFunction().mockReturnValue('2020-01-01T00:00:00.000Z');
         const wrapper = setup({publication: linkProps});
         expect(wrapper.find('.openAccess').length).toEqual(0);
         expect(toJson(wrapper)).toMatchSnapshot();

@@ -1,17 +1,21 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'locale';
 import {openAccessIdLookup} from 'config/general';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import * as Partials from './partials';
+import moment from 'moment';
 
-export default class CitationCounts extends Component {
+export default class CitationCounts extends React.PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
     };
 
     constructor(props) {
         super(props);
+    }
+    shouldComponentUpdate(nextProps) {
+        return this.props !== nextProps;
     }
 
     getTitle = (title) => (locale.global.linkWillOpenInNewWindow.replace('[destination]', `${this.props.publication.rek_title} (${title})`));
@@ -27,6 +31,17 @@ export default class CitationCounts extends Component {
             altmetric: publication.rek_altmetric_score ? publication.rek_altmetric_score : null
         };
 
+        const isEmbargo = (record) => {
+            if(!record.fez_record_search_key_oa_embargo_days ||
+                record.fez_record_search_key_oa_embargo_days && record.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days === 0 ) {
+                return false;
+            } else {
+                const currentDate = moment().format();
+                const embargoDate = moment(moment(record.rek_created_date))
+                    .add(record.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days, 'days').format();
+                return embargoDate < currentDate ? false : moment(embargoDate).format('Do MMMM YYYY');
+            }
+        };
         return (
             <div className="citationCounts columns is-multiline is-gapless is-marginless">
                 {
@@ -69,10 +84,20 @@ export default class CitationCounts extends Component {
                 }
                 {
                     !!publication.rek_pid && !!publication.fez_record_search_key_oa_status &&
-                    !!openAccessIdLookup[publication.fez_record_search_key_oa_status.rek_oa_status] &&
+                    !!openAccessIdLookup[publication.fez_record_search_key_oa_status.rek_oa_status] && !isEmbargo(publication) &&
                     <span className="citationCount">
                         <div title={txt.openAccessLabel.replace('[oa_status]', openAccessIdLookup[publication.fez_record_search_key_oa_status.rek_oa_status])}
                             className="fez-icon openAccess large"/>
+                    </span>
+                }
+                {
+                    !!publication.rek_pid && !!publication.fez_record_search_key_oa_status &&
+                    !!openAccessIdLookup[publication.fez_record_search_key_oa_status.rek_oa_status] && isEmbargo(publication) &&
+                    <span className="citationCount">
+                        <div title={txt.openAccessLockedLabel
+                            .replace('[embargo_date]', isEmbargo(publication))
+                            .replace('[oa_status]', openAccessIdLookup[publication.fez_record_search_key_oa_status.rek_oa_status])}
+                        className="fez-icon openAccessLocked large"/>
                     </span>
                 }
                 {

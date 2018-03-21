@@ -32,6 +32,7 @@ export default {
                 googleCountLabel: 'Citation counts in Google Scholar',
                 altmetricCountLabel: 'Altmetric score is [count]',
                 openAccessLabel: 'Open Access - [oa_status] - Free to read (embargo date might apply)',
+                openAccessLockedLabel: 'Open Access - [oa_status] - Embargoed until [embargo_date]',
                 statsLabel: 'View full statistics',
                 altmetric: {
                     externalUrl: 'http://www.altmetric.com/details.php?citation_id=[id]',
