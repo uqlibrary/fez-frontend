@@ -137,6 +137,8 @@ export function submitThesis(data, author) {
                     : 'Error occurred while saving record to eSpace. ';
                 const compositeError = `${specificError} ${ error.message ? `(${error.message})` : '' }`;
 
+                // record error to sentry.oi
+
                 dispatch({
                     type: actions.CREATE_RECORD_FAILED,
                     payload: compositeError
