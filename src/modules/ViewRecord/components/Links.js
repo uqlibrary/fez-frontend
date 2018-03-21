@@ -11,7 +11,7 @@ import moment from 'moment';
 
 export default class ViewRecordLinks extends PureComponent {
     static propTypes = {
-        recordToView: PropTypes.object
+        publication: PropTypes.object
     };
 
     constructor(props) {
@@ -23,20 +23,19 @@ export default class ViewRecordLinks extends PureComponent {
     }
 
     render() {
-        const record = this.props.recordToView;
+        const record = this.props.publication;
         const txt = locale.viewRecord.sections.links;
         const openAccessStatus = () => {
-            if(!record.fez_record_search_key_oa_embargo_days) {
+            if(!record.fez_record_search_key_oa_embargo_days ||
+                record.fez_record_search_key_oa_embargo_days && record.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days === 0 ) {
+                console.log('no embargo days');
                 return true;
             } else {
                 const currentDate = moment().utc();
                 const embargoDate = moment(moment().format(record.rek_created_date))
-                    .add(record.fez_record_search_key_oa_embargo_days.rek_embargo_days, 'days').utc();
+                    .add(record.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days, 'days').utc();
                 return (embargoDate < currentDate);
             }
-        };
-        const showPMC = () => {
-            return (record && record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id);
         };
         if(!record) return (<div className="empty"/>);
         return (
@@ -74,12 +73,12 @@ export default class ViewRecordLinks extends PureComponent {
                             }
                             {/* Generate PubMed Central link if an ID exists */}
                             {
-                                showPMC() &&
+                                record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id &&
                                 <TableRow>
                                     <TableRowColumn className="rowLink">
-                                        <PubmedCentralLink pubmedCentralId={record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id}/>
+                                        <PubmedCentralLink pubmedCentralId={record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id} />
                                     </TableRowColumn>
-                                    <TableRowColumn className="rowDescription is-hidden-mobile">Pubmed Central link</TableRowColumn>
+                                    <TableRowColumn className="rowDescription is-hidden-mobile">{txt.pubmedCentralLinkDescription}</TableRowColumn>
                                     <TableRowColumn className="rowOA align-right">
                                         <div className="fez-icon openAccess large" />
                                     </TableRowColumn>
@@ -93,13 +92,19 @@ export default class ViewRecordLinks extends PureComponent {
                                     <TableRow key={index}>
                                         <TableRowColumn className="rowLink">
                                             <ExternalLink href={item.rek_link}
-                                                title={record.fez_record_search_key_link_description[index].rek_link_description || txt.linkMissingDescriptionTitle}
+                                                title={(record.fez_record_search_key_link_description &&
+                                                    record.fez_record_search_key_link_description[index] &&
+                                                    record.fez_record_search_key_link_description[index].rek_link_description) ||
+                                                txt.linkMissingDescriptionTitle}
                                             >
                                                 {item.rek_link}
                                             </ExternalLink>
                                         </TableRowColumn>
                                         <TableRowColumn className="rowDescription is-hidden-mobile">
-                                            {record.fez_record_search_key_link_description[index].rek_link_description || txt.linkMissingDescription}
+                                            {record.fez_record_search_key_link_description &&
+                                            record.fez_record_search_key_link_description[index] &&
+                                            record.fez_record_search_key_link_description[index].rek_link_description ||
+                                            txt.linkMissingDescription}
                                         </TableRowColumn>
                                         <TableRowColumn className="rowOA align-right">
                                             {

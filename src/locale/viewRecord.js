@@ -14,6 +14,7 @@ export default {
                 linkMissingDescriptionTitle: 'Click to open link in a new window',
                 openAccessLabel: 'Open Access - [oa_status] - Free to read (embargo date might apply)',
                 doiLabelNoOpenAccess: 'DOI Link',
+                pubmedCentralLinkDescription: 'Pubmed Central link',
                 headerTitles: {
                     link: 'Link (will open in a new window)',
                     description: 'Description',
@@ -2344,8 +2345,5 @@ export default {
             'fez_record_search_key_herdc_status',
             'fez_record_search_key_institutional_status'
         ],
-        links: {
-            title: 'Links'
-        }
     },
 };
