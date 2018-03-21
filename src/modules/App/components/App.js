@@ -147,7 +147,7 @@ export default class App extends React.Component {
             userStatusAlert = {
                 ...locale.global.notRegisteredAuthorAlert
             };
-        } else if (!isPublicPage && !isAuthorLoading && isOrcidRequired && !isHdrStudent ) {
+        } else if (!isPublicPage && !isAuthorLoading && isOrcidRequired && !isHdrStudent && !isThesisSubmissionPage) {
             // user is logged in, but doesn't have ORCID identifier
             userStatusAlert = {
                 ...locale.global.noOrcidAlert,
