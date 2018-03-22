@@ -136,7 +136,7 @@ export default class ConferencePaperForm extends Component {
                         </div>
                     </div>
                     <div className="columns">
-                        <div className="column is-half">
+                        <div className="column">
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
