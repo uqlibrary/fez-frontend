@@ -1013,10 +1013,6 @@ export default {
                     floatingLabelText: 'Publisher',
                     hintText: 'Type the name of the publisher'
                 },
-                journalName: {
-                    floatingLabelText: 'Journal name',
-                    hintText: 'Type the name of the Journal'
-                },
                 date: {
                     title: 'Publication date',
                     day: 'Day',

@@ -85,7 +85,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
       className="columns"
     >
       <div
-        className="column is-half"
+        className="column"
       >
         <Field
           className="requiredField"
@@ -102,8 +102,12 @@ exports[`ConferencePaperForm renders  component 1`] = `
           }
         />
       </div>
+    </div>
+    <div
+      className="columns"
+    >
       <div
-        className="column"
+        className="column is-half"
       >
         <Field
           component={[Function]}
@@ -111,6 +115,18 @@ exports[`ConferencePaperForm renders  component 1`] = `
           floatingLabelText="Proceedings title"
           fullWidth={true}
           name="fez_record_search_key_proceedings_title.rek_proceedings_title"
+          type="text"
+        />
+      </div>
+      <div
+        className="column"
+      >
+        <Field
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Journal name"
+          fullWidth={true}
+          name="fez_record_search_key_journal_name.rek_journal_name"
           type="text"
         />
       </div>
@@ -184,22 +200,6 @@ exports[`ConferencePaperForm renders  component 1`] = `
               [Function],
             ]
           }
-        />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
-      >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Journal name"
-          fullWidth={true}
-          name="fez_record_search_key_journal_name.rek_journal_name"
-          type="text"
         />
       </div>
     </div>
