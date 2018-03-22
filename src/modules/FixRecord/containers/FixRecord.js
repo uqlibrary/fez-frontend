@@ -48,11 +48,14 @@ let FixRecordContainer = reduxForm({
 })(confirmDiscardFormChanges(FixRecord, FORM_NAME));
 
 const mapStateToProps = (state) => {
+    const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
+
     return {
         ...state.get('fixRecordReducer'),
         ...state.get('accountReducer'),
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-        formErrors: getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({}),
+        formErrors: formErrors,
+        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map)
     };
 };
 

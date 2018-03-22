@@ -3718,7 +3718,7 @@ export const record = {
     "rek_formatted_title_xsdmf_id": 11438,
     "rek_formatted_title": "Long-range regulators of the lncRNA <em>HOTAIR<\/em> enhance its prognostic potential in breast cancer",
     "rek_formatted_abstract_xsdmf_id": 11442,
-    "rek_formatted_abstract": "Predicting response to endocrine therapy and survival in estrogen receptor positive breast cancer is a significant clinical challenge and novel prognostic biomarkers are needed. Long-range regulators of gene expression are emerging as promising biomarkers and therapeutic targets for human diseases, so we have explored the potential of distal enhancer elements of non-coding RNAs in the prognostication of breast cancer survival. <em>HOTAIR<\/em> is a long non-coding RNA that is overexpressed, promotes metastasis and is predictive of decreased survival. Here we describe a long-range transcriptional enhancer of the <em>HOTAIR<\/em> gene that binds several hormone receptors and associated transcription factors, interacts with the <em>HOTAIR<\/em> promoter and augments transcription. This enhancer is dependent on Forkhead-Box transcription factors and functionally interacts with a novel alternate <em>HOTAIR<\/em> promoter. <em>HOTAIR<\/em> expression is negatively regulated by estrogen, positively regulated by FOXA1 and FOXM1, and is inversely correlated with estrogen receptor and directly correlated with <em>FOXM1<\/em> in breast tumors. The combination of <em>HOTAIR<\/em> and <em>FOXM1 <\/em>enables greater discrimination of endocrine therapy responders and non-responders in patients with estrogen receptor positive breast cancer. Consistent with this, <em>HOTAIR<\/em> expression is increased in cell-line models of endocrine resistance. Analysis of breast cancer gene expression data indicates that <em>HOTAIR<\/em> is co-expressed with <em>FOXA1<\/em> and <em>FOXM1<\/em> in HER2-enriched tumors, and these factors enhance the prognostic power of <em>HOTAIR<\/em> in aggressive HER2+ breast tumors. Our study elucidates the transcriptional regulation of <em>HOTAIR<\/em>, identifies <em>HOTAIR<\/em> and its regulators as novel biomarkers of patient response to endocrine therapy and corroborates the importance of transcriptional enhancers in cancer.",
+    "rek_formatted_abstract": "<img src='x' onError=alert(1); /><script>alert(2);</script><i>italic</i><b>bold</b><strike>strike</strike>&szlig; &micro; &asymp;<p style='font-size:30px'>paragraph</p><strong>strong</strong><u>underline</u><s>s</s><sup>sup</sup><sub>sub</sub><tabler><tbody><tr>table row</tr></tbody></table><div>div</div>Predicting 2 response to endocrine therapy and survival in estrogen receptor positive breast cancer is a significant clinical challenge and novel prognostic biomarkers are needed. Long-range regulators of gene expression are emerging as promising biomarkers and therapeutic targets for human diseases, so we have explored the potential of distal enhancer elements of non-coding RNAs in the prognostication of breast cancer survival. <em>HOTAIR<\/em> is a long non-coding RNA that is overexpressed, promotes metastasis and is predictive of decreased survival. Here we describe a long-range transcriptional enhancer of the <em>HOTAIR<\/em> gene that binds several hormone receptors and associated transcription factors, interacts with the <em>HOTAIR<\/em> promoter and augments transcription. This enhancer is dependent on Forkhead-Box transcription factors and functionally interacts with a novel alternate <em>HOTAIR<\/em> promoter. <em>HOTAIR<\/em> expression is <i>negatively regulated by estrogen</i>, positively regulated by FOXA1 and FOXM1, and is inversely correlated with estrogen receptor and directly correlated with <em>FOXM1<\/em> in breast tumors. The combination of <em>HOTAIR<\/em> and <em>FOXM1 <\/em>enables greater discrimination of endocrine therapy responders and non-responders in patients with estrogen receptor positive breast cancer. Consistent with this, <em>HOTAIR<\/em> expression is increased in cell-line models of endocrine resistance. Analysis of breast cancer gene expression data indicates that <em>HOTAIR<\/em> is co-expressed with <em>FOXA1<\/em> and <em>FOXM1<\/em> in HER2-enriched tumors, and these factors enhance the prognostic power of <em>HOTAIR<\/em> in aggressive HER2+ breast tumors. Our study elucidates the transcriptional regulation of <em>HOTAIR<\/em>, identifies <em>HOTAIR<\/em> and its regulators as novel biomarkers of patient response to endocrine therapy and corroborates the importance of transcriptional enhancers in cancer.",
     "rek_depositor_affiliation_xsdmf_id": 11881,
     "rek_depositor_affiliation": 881,
     "rek_thomson_citation_count": 3,
@@ -3741,16 +3741,23 @@ export const record = {
     "rek_altmetric_id_xsdmf_id": null,
     "rek_copyright_xsdmf_id": 3679,
     "rek_copyright": "on",
+    "fez_record_search_key_additional_notes": {
+        "rek_additional_notes_id": 44,
+        "rek_additional_notes_pid": "UQ:344368",
+        "rek_additional_notes_xsdmf_id": 3441,
+        "rek_additional_notes": "Testing notes"
+    },
     "fez_record_search_key_article_number": null,
     "fez_record_search_key_assigned_group_id": [],
     "fez_record_search_key_assigned_user_id": [],
-    "fez_record_search_key_author": [{
+    "fez_record_search_key_author": [
+        {
         "rek_author_id": 28593829,
         "rek_author_pid": "UQ:396321",
         "rek_author_xsdmf_id": 6351,
         "rek_author": "Milevskiy, Michael J. G.",
         "rek_author_order": 1
-    },
+        },
         {
             "rek_author_id": 28593830,
             "rek_author_pid": "UQ:396321",
@@ -3858,7 +3865,8 @@ export const record = {
     "fez_record_search_key_author_affiliation_full_address": [],
     "fez_record_search_key_author_affiliation_id": [],
     "fez_record_search_key_author_affiliation_name": [],
-    "fez_record_search_key_author_id": [{
+    "fez_record_search_key_author_id": [
+        {
         "rek_author_id_id": 27973928,
         "rek_author_id_pid": "UQ:396321",
         "rek_author_id_xsdmf_id": 6346,
