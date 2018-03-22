@@ -30,11 +30,8 @@ describe('Component ViewRecord ', () => {
                 rek_oa_embargo_days: 1
             },
             rek_created_date: '2019-12-25T00:00:00Z',
-            "fez_record_search_key_oa_status": {
-                "rek_oa_status_id": 281706,
-                "rek_oa_status_pid": "UQ:396321",
-                "rek_oa_status_xsdmf_id": 16607,
-                "rek_oa_status": 453693
+            fez_record_search_key_oa_status: {
+                rek_oa_status: 453694 // Link (no DOI)
             },
             "fez_record_search_key_link": [
                 {
@@ -100,7 +97,7 @@ describe('Component ViewRecord ', () => {
                 "rek_oa_status_id": 281706,
                 "rek_oa_status_pid": "UQ:396321",
                 "rek_oa_status_xsdmf_id": 16607,
-                "rek_oa_status": 453693
+                "rek_oa_status": 453694
             },
             "fez_record_search_key_link": [
                 {
@@ -156,7 +153,7 @@ describe('Component ViewRecord ', () => {
 
     });
 
-    it('should render list of links with no OA icons due to no embargo date in the future', () => {
+    it('should render list of links with locked OA icons due to embargo date in the future', () => {
         const linkProps = {
             fez_record_search_key_oa_embargo_days: {
                 rek_oa_embargo_days: 365
@@ -166,7 +163,7 @@ describe('Component ViewRecord ', () => {
                 "rek_oa_status_id": 281706,
                 "rek_oa_status_pid": "UQ:396321",
                 "rek_oa_status_xsdmf_id": 16607,
-                "rek_oa_status": 453693
+                "rek_oa_status": 453694
             },
             "fez_record_search_key_link": [
                 {
@@ -217,7 +214,80 @@ describe('Component ViewRecord ', () => {
         };
 
         const wrapper = setup({publication: linkProps});
-        expect(wrapper.find('.openAccess').length).toEqual(0);
+        expect(wrapper.find('.openAccessEmbargoed').length).toEqual(3);
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+    });
+
+    it('should render list of links with closed OA icons due to DOI OA status', () => {
+        const linkProps = {
+            fez_record_search_key_oa_embargo_days: {
+                rek_oa_embargo_days: 365
+            },
+            rek_created_date: '2019-12-25T00:00:00Z',
+            "fez_record_search_key_oa_status": {
+                "rek_oa_status_id": 281706,
+                "rek_oa_status_pid": "UQ:396321",
+                "rek_oa_status_xsdmf_id": 16607,
+                "rek_oa_status": 453693
+            },
+            fez_record_search_key_doi: {
+                rek_doi_id: 1706266,
+                rek_doi_pid: "UQ:795721",
+                rek_doi_xsdmf_id: 16514,
+                rek_doi: "10.1016/j.pnsc.2012.12.004"
+            },
+            "fez_record_search_key_link": [
+                {
+                    "rek_link_id": 3240198,
+                    "rek_link_pid": "UQ:795347",
+                    "rek_link_xsdmf_id": null,
+                    "rek_link": "http://www.thisisatest.com",
+                    "rek_link_order": 1
+                },
+                {
+                    "rek_link_id": 3240199,
+                    "rek_link_pid": "UQ:795347",
+                    "rek_link_xsdmf_id": null,
+                    "rek_link": "http://www.thisisanothertest.com",
+                    "rek_link_order": 2
+                },
+                {
+                    "rek_link_id": 3240200,
+                    "rek_link_pid": "UQ:795347",
+                    "rek_link_xsdmf_id": null,
+                    "rek_link": "http://www.nodescription.com",
+                    "rek_link_order": 2
+                }
+            ],
+            "fez_record_search_key_link_description": [
+                {
+                    "rek_link_description_id": 3240198,
+                    "rek_link_description_pid": "UQ:795347",
+                    "rek_link_description_xsdmf_id": null,
+                    "rek_link_description": "Link to publication",
+                    "rek_link_description_order": 1
+                },
+                {
+                    "rek_link_description_id": 3240199,
+                    "rek_link_description_pid": "UQ:795347",
+                    "rek_link_description_xsdmf_id": null,
+                    "rek_link_description": "Another link to publication",
+                    "rek_link_description_order": 1
+                },
+                {
+                    "rek_link_description_id": 3240200,
+                    "rek_link_description_pid": "UQ:795347",
+                    "rek_link_description_xsdmf_id": null,
+                    "rek_link_description": null,
+                    "rek_link_description_order": 1
+                }
+            ],
+        };
+
+        const wrapper = setup({publication: linkProps});
+        expect(wrapper.find('.openAccessClosed').length).toEqual(3);
+        expect(wrapper.find('.openAccess').length).toEqual(1);
         expect(toJson(wrapper)).toMatchSnapshot();
 
     });

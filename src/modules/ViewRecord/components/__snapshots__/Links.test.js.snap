@@ -77,14 +77,16 @@ exports[`Component ViewRecord  should render a DOI link 1`] = `
           <TableRowColumn
             className="rowDescription is-hidden-mobile"
             hoverable={false}
-          />
+          >
+            Open Access - Embargo applies
+          </TableRowColumn>
           <TableRowColumn
             className="rowOA align-right"
             hoverable={false}
           >
             <div
-              className="fez-icon openAccess large"
-              title="Open Access - Open Access - Free to read"
+              className="fez-icon openAccessClosed large"
+              title="Closed access"
             />
           </TableRowColumn>
         </TableRow>
@@ -289,7 +291,7 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - DOI - Free to read"
+              title="Open Access - Link (no DOI) - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -328,7 +330,7 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - DOI - Free to read"
+              title="Open Access - Link (no DOI) - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -350,7 +352,7 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="Click to open link in a new window"
+              title="No description available"
             >
               http://www.nodescription.com
             </ExternalLink>
@@ -367,7 +369,7 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - DOI - Free to read"
+              title="Open Access - Link (no DOI) - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -470,7 +472,7 @@ exports[`Component ViewRecord  should render list of links with OA icons due to 
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - DOI - Free to read"
+              title="Open Access - Link (no DOI) - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -509,7 +511,7 @@ exports[`Component ViewRecord  should render list of links with OA icons due to 
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - DOI - Free to read"
+              title="Open Access - Link (no DOI) - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -531,7 +533,7 @@ exports[`Component ViewRecord  should render list of links with OA icons due to 
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="Click to open link in a new window"
+              title="No description available"
             >
               http://www.nodescription.com
             </ExternalLink>
@@ -548,7 +550,7 @@ exports[`Component ViewRecord  should render list of links with OA icons due to 
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - DOI - Free to read"
+              title="Open Access - Link (no DOI) - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -558,7 +560,220 @@ exports[`Component ViewRecord  should render list of links with OA icons due to 
 </StandardCard>
 `;
 
-exports[`Component ViewRecord  should render list of links with no OA icons due to no embargo date in the future 1`] = `
+exports[`Component ViewRecord  should render list of links with closed OA icons due to DOI OA status 1`] = `
+<StandardCard
+  className=""
+  title="Links"
+>
+  <div
+    className="viewRecordLinks"
+  >
+    <Table
+      allRowsSelected={false}
+      className="links"
+      fixedFooter={true}
+      fixedHeader={true}
+      height="inherit"
+      multiSelectable={false}
+      selectable={false}
+    >
+      <TableHeader
+        adjustForCheckbox={false}
+        className="tableHeader"
+        displaySelectAll={false}
+        enableSelectAll={true}
+        selectAllSelected={false}
+      >
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
+        >
+          <TableHeaderColumn
+            className="rowLink"
+          >
+            Link (will open in a new window)
+          </TableHeaderColumn>
+          <TableHeaderColumn
+            className="rowDescription is-hidden-mobile"
+          >
+            Description
+          </TableHeaderColumn>
+          <TableHeaderColumn
+            className="rowOA align-right"
+          >
+             
+          </TableHeaderColumn>
+        </TableRow>
+      </TableHeader>
+      <TableBody
+        allRowsSelected={false}
+        className="tableData"
+        deselectOnClickaway={true}
+        displayRowCheckbox={false}
+        multiSelectable={false}
+        preScanRows={true}
+        selectable={true}
+        style={Object {}}
+      >
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          key="0"
+          selectable={true}
+          striped={false}
+        >
+          <TableRowColumn
+            className="rowLink"
+            hoverable={false}
+          >
+            <DoiLink
+              DoiId="10.1016/j.pnsc.2012.12.004"
+            />
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowDescription is-hidden-mobile"
+            hoverable={false}
+          >
+            DOI
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowOA align-right"
+            hoverable={false}
+          >
+            <div
+              className="fez-icon openAccess large"
+              title="Open Access - DOI - Free to read"
+            />
+          </TableRowColumn>
+        </TableRow>
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          key="1"
+          selectable={true}
+          striped={false}
+        >
+          <TableRowColumn
+            className="rowLink"
+            hoverable={false}
+          >
+            <ExternalLink
+              className="externalLink"
+              href="http://www.thisisatest.com"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Link to publication"
+            >
+              http://www.thisisatest.com
+            </ExternalLink>
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowDescription is-hidden-mobile"
+            hoverable={false}
+          >
+            Link to publication
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowOA align-right"
+            hoverable={false}
+          >
+            <div
+              className="fez-icon openAccessClosed large"
+              title="Closed access"
+            />
+          </TableRowColumn>
+        </TableRow>
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          key="2"
+          selectable={true}
+          striped={false}
+        >
+          <TableRowColumn
+            className="rowLink"
+            hoverable={false}
+          >
+            <ExternalLink
+              className="externalLink"
+              href="http://www.thisisanothertest.com"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Another link to publication"
+            >
+              http://www.thisisanothertest.com
+            </ExternalLink>
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowDescription is-hidden-mobile"
+            hoverable={false}
+          >
+            Another link to publication
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowOA align-right"
+            hoverable={false}
+          >
+            <div
+              className="fez-icon openAccessClosed large"
+              title="Closed access"
+            />
+          </TableRowColumn>
+        </TableRow>
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          key="3"
+          selectable={true}
+          striped={false}
+        >
+          <TableRowColumn
+            className="rowLink"
+            hoverable={false}
+          >
+            <ExternalLink
+              className="externalLink"
+              href="http://www.nodescription.com"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="No description available"
+            >
+              http://www.nodescription.com
+            </ExternalLink>
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowDescription is-hidden-mobile"
+            hoverable={false}
+          >
+            No description available
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowOA align-right"
+            hoverable={false}
+          >
+            <div
+              className="fez-icon openAccessClosed large"
+              title="Closed access"
+            />
+          </TableRowColumn>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </div>
+</StandardCard>
+`;
+
+exports[`Component ViewRecord  should render list of links with locked OA icons due to embargo date in the future 1`] = `
 <StandardCard
   className=""
   title="Links"
@@ -653,11 +868,11 @@ exports[`Component ViewRecord  should render list of links with no OA icons due 
               <span
                 className="is-hidden-mobile is-hidden-tablet-only"
               >
-                Embargoed until 24th December 2020 
+                Open access after 24th December 2020 
               </span>
               <div
-                className="fez-icon openAccessLocked large"
-                title="Open Access - DOI - Embargoed until 24th December 2020"
+                className="fez-icon openAccessEmbargoed large"
+                title="Link (no DOI) - Open access after 24th December 2020"
               />
             </div>
           </TableRowColumn>
@@ -699,11 +914,11 @@ exports[`Component ViewRecord  should render list of links with no OA icons due 
               <span
                 className="is-hidden-mobile is-hidden-tablet-only"
               >
-                Embargoed until 24th December 2020 
+                Open access after 24th December 2020 
               </span>
               <div
-                className="fez-icon openAccessLocked large"
-                title="Open Access - DOI - Embargoed until 24th December 2020"
+                className="fez-icon openAccessEmbargoed large"
+                title="Link (no DOI) - Open access after 24th December 2020"
               />
             </div>
           </TableRowColumn>
@@ -726,7 +941,7 @@ exports[`Component ViewRecord  should render list of links with no OA icons due 
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="Click to open link in a new window"
+              title="No description available"
             >
               http://www.nodescription.com
             </ExternalLink>
@@ -745,11 +960,11 @@ exports[`Component ViewRecord  should render list of links with no OA icons due 
               <span
                 className="is-hidden-mobile is-hidden-tablet-only"
               >
-                Embargoed until 24th December 2020 
+                Open access after 24th December 2020 
               </span>
               <div
-                className="fez-icon openAccessLocked large"
-                title="Open Access - DOI - Embargoed until 24th December 2020"
+                className="fez-icon openAccessEmbargoed large"
+                title="Link (no DOI) - Open access after 24th December 2020"
               />
             </div>
           </TableRowColumn>
