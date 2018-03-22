@@ -187,6 +187,12 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
         "rek_date_available_pid": "UQ:162308",
         "rek_date_available_xsdmf_id": 12163,
       },
+      "fez_record_search_key_end_date": Object {
+        "rek_end_date": "2005-01-05 00:00:00",
+        "rek_end_date_id": 8,
+        "rek_end_date_pid": "UQ:162308",
+        "rek_end_date_xsdmf_id": 12154,
+      },
       "fez_record_search_key_end_page": null,
       "fez_record_search_key_file_attachment_access_condition": Array [],
       "fez_record_search_key_file_attachment_embargo_date": Array [],
@@ -305,6 +311,12 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
       "fez_record_search_key_scopus_id": null,
       "fez_record_search_key_series": null,
       "fez_record_search_key_source": null,
+      "fez_record_search_key_start_date": Object {
+        "rek_start_date": "2005-01-05 00:00:00",
+        "rek_start_date_id": 8,
+        "rek_start_date_pid": "UQ:162308",
+        "rek_start_date_xsdmf_id": 12154,
+      },
       "fez_record_search_key_start_page": null,
       "fez_record_search_key_subject": Array [
         Object {
@@ -361,6 +373,7 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
       "rek_description": "The project is an exploration in the role of the garden as a means of generating a sense of place and to become a key focus in the formation and memory of a dwelling. The project is situated in Latvia, in the suburb of Meshaparks, an old established suburb of Riga. The suburb is characterized by larger lot sizes with villas set amongst trees. In the early 1930's Scandinavian functionalist architecture came to prominence and continued in popularity for a short period, dying out in the mid 1930's. The subject project involved the restoration of an existing timber functionalist house designed in 1933 by the architect Lidija Hofmane-Grinberga and constructed in the same year. The site also contained two outbuildings designed and constructed in the mid and late 1980's The project aimed to draw out the latent potential of the site circumstance that comprised the sunny garden hidden from the street and buildings that enclosed the garden to create an informal yet enclosed space that became in effect the major outdoor \\"room\\" of the house. The design draws inspiration from traditional Latvian farmhouse courtyard gardens, Japanese enclosed gardens as well as the work of Finnish architect Alvar Aalto.",
       "rek_description_xsdmf_id": 12199,
       "rek_display_type": 316,
+      "rek_display_type_lookup": "Design",
       "rek_display_type_xsdmf_id": 3673,
       "rek_file_downloads": 15,
       "rek_formatted_abstract": null,
@@ -428,6 +441,13 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -614,6 +634,12 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
             "rek_date_available_pid": "UQ:162308",
             "rek_date_available_xsdmf_id": 12163,
           },
+          "fez_record_search_key_end_date": Object {
+            "rek_end_date": "2005-01-05 00:00:00",
+            "rek_end_date_id": 8,
+            "rek_end_date_pid": "UQ:162308",
+            "rek_end_date_xsdmf_id": 12154,
+          },
           "fez_record_search_key_end_page": null,
           "fez_record_search_key_file_attachment_access_condition": Array [],
           "fez_record_search_key_file_attachment_embargo_date": Array [],
@@ -732,6 +758,12 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
           "fez_record_search_key_scopus_id": null,
           "fez_record_search_key_series": null,
           "fez_record_search_key_source": null,
+          "fez_record_search_key_start_date": Object {
+            "rek_start_date": "2005-01-05 00:00:00",
+            "rek_start_date_id": 8,
+            "rek_start_date_pid": "UQ:162308",
+            "rek_start_date_xsdmf_id": 12154,
+          },
           "fez_record_search_key_start_page": null,
           "fez_record_search_key_subject": Array [
             Object {
@@ -788,6 +820,7 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
           "rek_description": "The project is an exploration in the role of the garden as a means of generating a sense of place and to become a key focus in the formation and memory of a dwelling. The project is situated in Latvia, in the suburb of Meshaparks, an old established suburb of Riga. The suburb is characterized by larger lot sizes with villas set amongst trees. In the early 1930's Scandinavian functionalist architecture came to prominence and continued in popularity for a short period, dying out in the mid 1930's. The subject project involved the restoration of an existing timber functionalist house designed in 1933 by the architect Lidija Hofmane-Grinberga and constructed in the same year. The site also contained two outbuildings designed and constructed in the mid and late 1980's The project aimed to draw out the latent potential of the site circumstance that comprised the sunny garden hidden from the street and buildings that enclosed the garden to create an informal yet enclosed space that became in effect the major outdoor \\"room\\" of the house. The design draws inspiration from traditional Latvian farmhouse courtyard gardens, Japanese enclosed gardens as well as the work of Finnish architect Alvar Aalto.",
           "rek_description_xsdmf_id": 12199,
           "rek_display_type": 316,
+          "rek_display_type_lookup": "Design",
           "rek_display_type_xsdmf_id": 3673,
           "rek_file_downloads": 15,
           "rek_formatted_abstract": null,
@@ -830,6 +863,7 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -839,13 +873,14 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=""
           value="Dickson, Michael"
         >
           <span
             className="citationAuthor"
           >
+             
             Dickson, Michael
           </span>
         </CitationView>
@@ -1096,6 +1131,12 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
         "rek_date_available_pid": "UQ:162308",
         "rek_date_available_xsdmf_id": 12163,
       },
+      "fez_record_search_key_end_date": Object {
+        "rek_end_date": "2005-01-05 00:00:00",
+        "rek_end_date_id": 8,
+        "rek_end_date_pid": "UQ:162308",
+        "rek_end_date_xsdmf_id": 12154,
+      },
       "fez_record_search_key_end_page": null,
       "fez_record_search_key_file_attachment_access_condition": Array [],
       "fez_record_search_key_file_attachment_embargo_date": Array [],
@@ -1216,6 +1257,12 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
       "fez_record_search_key_source": Object {
         "rek_source": null,
       },
+      "fez_record_search_key_start_date": Object {
+        "rek_start_date": "2005-01-05 00:00:00",
+        "rek_start_date_id": 8,
+        "rek_start_date_pid": "UQ:162308",
+        "rek_start_date_xsdmf_id": 12154,
+      },
       "fez_record_search_key_start_page": null,
       "fez_record_search_key_subject": Array [
         Object {
@@ -1272,6 +1319,7 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
       "rek_description": "The project is an exploration in the role of the garden as a means of generating a sense of place and to become a key focus in the formation and memory of a dwelling. The project is situated in Latvia, in the suburb of Meshaparks, an old established suburb of Riga. The suburb is characterized by larger lot sizes with villas set amongst trees. In the early 1930's Scandinavian functionalist architecture came to prominence and continued in popularity for a short period, dying out in the mid 1930's. The subject project involved the restoration of an existing timber functionalist house designed in 1933 by the architect Lidija Hofmane-Grinberga and constructed in the same year. The site also contained two outbuildings designed and constructed in the mid and late 1980's The project aimed to draw out the latent potential of the site circumstance that comprised the sunny garden hidden from the street and buildings that enclosed the garden to create an informal yet enclosed space that became in effect the major outdoor \\"room\\" of the house. The design draws inspiration from traditional Latvian farmhouse courtyard gardens, Japanese enclosed gardens as well as the work of Finnish architect Alvar Aalto.",
       "rek_description_xsdmf_id": 12199,
       "rek_display_type": 316,
+      "rek_display_type_lookup": "Design",
       "rek_display_type_xsdmf_id": 3673,
       "rek_file_downloads": 15,
       "rek_formatted_abstract": null,
@@ -1339,6 +1387,13 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -1525,6 +1580,12 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
             "rek_date_available_pid": "UQ:162308",
             "rek_date_available_xsdmf_id": 12163,
           },
+          "fez_record_search_key_end_date": Object {
+            "rek_end_date": "2005-01-05 00:00:00",
+            "rek_end_date_id": 8,
+            "rek_end_date_pid": "UQ:162308",
+            "rek_end_date_xsdmf_id": 12154,
+          },
           "fez_record_search_key_end_page": null,
           "fez_record_search_key_file_attachment_access_condition": Array [],
           "fez_record_search_key_file_attachment_embargo_date": Array [],
@@ -1645,6 +1706,12 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
           "fez_record_search_key_source": Object {
             "rek_source": null,
           },
+          "fez_record_search_key_start_date": Object {
+            "rek_start_date": "2005-01-05 00:00:00",
+            "rek_start_date_id": 8,
+            "rek_start_date_pid": "UQ:162308",
+            "rek_start_date_xsdmf_id": 12154,
+          },
           "fez_record_search_key_start_page": null,
           "fez_record_search_key_subject": Array [
             Object {
@@ -1701,6 +1768,7 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
           "rek_description": "The project is an exploration in the role of the garden as a means of generating a sense of place and to become a key focus in the formation and memory of a dwelling. The project is situated in Latvia, in the suburb of Meshaparks, an old established suburb of Riga. The suburb is characterized by larger lot sizes with villas set amongst trees. In the early 1930's Scandinavian functionalist architecture came to prominence and continued in popularity for a short period, dying out in the mid 1930's. The subject project involved the restoration of an existing timber functionalist house designed in 1933 by the architect Lidija Hofmane-Grinberga and constructed in the same year. The site also contained two outbuildings designed and constructed in the mid and late 1980's The project aimed to draw out the latent potential of the site circumstance that comprised the sunny garden hidden from the street and buildings that enclosed the garden to create an informal yet enclosed space that became in effect the major outdoor \\"room\\" of the house. The design draws inspiration from traditional Latvian farmhouse courtyard gardens, Japanese enclosed gardens as well as the work of Finnish architect Alvar Aalto.",
           "rek_description_xsdmf_id": 12199,
           "rek_display_type": 316,
+          "rek_display_type_lookup": "Design",
           "rek_display_type_xsdmf_id": 3673,
           "rek_file_downloads": 15,
           "rek_formatted_abstract": null,
@@ -1743,6 +1811,7 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -1752,13 +1821,14 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=""
           value="Dickson, Michael"
         >
           <span
             className="citationAuthor"
           >
+             
             Dickson, Michael
           </span>
         </CitationView>
@@ -1857,6 +1927,13 @@ exports[`DesignCitation renders  component with empty publication 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
@@ -1866,6 +1943,7 @@ exports[`DesignCitation renders  component with empty publication 1`] = `
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >

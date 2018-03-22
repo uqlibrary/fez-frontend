@@ -4,6 +4,7 @@ import {putUploadFiles} from '../repositories';
 import * as transformers from './transformers';
 import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 import * as actions from './actionTypes';
+import Raven from 'raven-js';
 
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
@@ -14,14 +15,13 @@ import * as actions from './actionTypes';
 export function createNewRecord(data) {
     return dispatch => {
         dispatch({type: actions.CREATE_RECORD_SAVING});
-
         // set default values, links
         const recordRequest = {
             ...NEW_RECORD_DEFAULT_VALUES,
             ...JSON.parse(JSON.stringify(data)),
             ...transformers.getRecordLinkSearchKey(data),
-            ...transformers.getRecordAuthorsSearchKey(data.authors || data.currentAuthor),
-            ...transformers.getRecordAuthorsIdSearchKey(data.authors || data.currentAuthor),
+            ...transformers.getRecordAuthorsSearchKey(data.authors || data.currentAuthor || null),
+            ...transformers.getRecordAuthorsIdSearchKey(data.authors || data.currentAuthor || null),
             ...transformers.getRecordContributorsSearchKey(data.editors),
             ...transformers.getRecordContributorsIdSearchKey(data.editors),
             ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
@@ -134,9 +134,11 @@ export function submitThesis(data, author) {
             })
             .catch(error => {
                 const specificError = !fileUploadSucceeded
-                    ? 'File upload failed. '
-                    : 'Error occurred while saving record to eSpace. ';
+                    ? 'Submit Thesis: File upload failed. '
+                    : 'Submit Thesis: Error occurred while saving record to eSpace. ';
                 const compositeError = `${specificError} ${ error.message ? `(${error.message})` : '' }`;
+
+                if(!process.env.USE_MOCK) Raven.captureException(error, {message: specificError});
 
                 dispatch({
                     type: actions.CREATE_RECORD_FAILED,

@@ -180,6 +180,7 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
       "rek_description": null,
       "rek_description_xsdmf_id": null,
       "rek_display_type": 185,
+      "rek_display_type_lookup": "Patent",
       "rek_display_type_xsdmf_id": 3673,
       "rek_file_downloads": 0,
       "rek_formatted_abstract": "PROBLEM TO BE SOLVED: To obtain a bacterial plaque staining composition for evaluating dental caries activity, which approximately simultaneously carries out bacterial plaque staining and dental caries activity evaluation and evaluates dental caries activity relatively accurately even in thick bacterial plaque in comparison with a conventional bacterial plaque staining composition.<br /><br />SOLUTION: The bacterial plaque staining composition for evaluating dental caries activity comprises a blue pigment that is soluble in water and does not change a color tone at pH7, a red pigment that is soluble in water at pH4.5 but not soluble in water and does not change a color tone at pH4.5 and a saccharide. The bacterial plaque staining composition comprises 1 pt.wt. of the total content of the blue pigment and the red pigment and 1-50 pts.wt. of saccharide content in the content ratio of the blue pigment to the red pigment of preferably 1:3-3:1.<br />",
@@ -247,6 +248,13 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -426,6 +434,7 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
           "rek_description": null,
           "rek_description_xsdmf_id": null,
           "rek_display_type": 185,
+          "rek_display_type_lookup": "Patent",
           "rek_display_type_xsdmf_id": 3673,
           "rek_file_downloads": 0,
           "rek_formatted_abstract": "PROBLEM TO BE SOLVED: To obtain a bacterial plaque staining composition for evaluating dental caries activity, which approximately simultaneously carries out bacterial plaque staining and dental caries activity evaluation and evaluates dental caries activity relatively accurately even in thick bacterial plaque in comparison with a conventional bacterial plaque staining composition.<br /><br />SOLUTION: The bacterial plaque staining composition for evaluating dental caries activity comprises a blue pigment that is soluble in water and does not change a color tone at pH7, a red pigment that is soluble in water at pH4.5 but not soluble in water and does not change a color tone at pH4.5 and a saccharide. The bacterial plaque staining composition comprises 1 pt.wt. of the total content of the blue pigment and the red pigment and 1-50 pts.wt. of saccharide content in the content ratio of the blue pigment to the red pigment of preferably 1:3-3:1.<br />",
@@ -468,6 +477,7 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -477,13 +487,14 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Walsh, Laurence J"
         >
           <span
             className="citationAuthor"
           >
+             
             Walsh, Laurence J
             , 
           </span>
@@ -491,13 +502,14 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Ota R"
         >
           <span
             className="citationAuthor"
           >
+             
             Ota R
             , 
           </span>
@@ -505,13 +517,14 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Nagao S"
         >
           <span
             className="citationAuthor"
           >
+             
             Nagao S
             , 
           </span>
@@ -615,6 +628,13 @@ exports[`PatentCitation renders  component with empty publication 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
@@ -624,6 +644,7 @@ exports[`PatentCitation renders  component with empty publication 1`] = `
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >

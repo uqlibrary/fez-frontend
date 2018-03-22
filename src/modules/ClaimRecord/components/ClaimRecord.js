@@ -21,7 +21,9 @@ import {locale} from 'locale';
 export default class ClaimRecord extends React.PureComponent {
     static propTypes = {
         ...propTypes, // all redux-form props
+        disableSubmit: PropTypes.bool,
         publicationToClaimFileUploadingError: PropTypes.bool,
+        publicationFailedToClaim: PropTypes.string,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired
     };
@@ -56,25 +58,22 @@ export default class ClaimRecord extends React.PureComponent {
 
     _navigateToMyResearch = () => {
         this.props.history.push(routes.pathConfig.records.mine);
-    }
+    };
 
     _navigateToAddRecord = () => {
         this.props.history.push(routes.pathConfig.records.add.find);
-    }
+    };
 
     _navigateToPossibleMyResearch = () => {
         this.props.history.push(routes.pathConfig.records.possible);
-    }
-
-    _handleKeyboardFormSubmit = (event) => {
-        if (event.key === 'Enter' && !event.shiftKey) {
-            event.preventDefault();
-            this.props.handleSubmit();
-        }
     };
 
     _setSuccessConfirmation = (ref) => {
         this.successConfirmationBox = ref;
+    };
+
+    _handleDefaultSubmit = (event) => {
+        if(event) event.preventDefault();
     };
 
     render() {
@@ -95,7 +94,8 @@ export default class ClaimRecord extends React.PureComponent {
         const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
 
         saveConfirmationLocale.cancelButtonLabel = fromAddRecord
-            ? txt.successWorkflowConfirmation.addRecordButtonLabel : txt.successWorkflowConfirmation.cancelButtonLabel;
+            ? txt.successWorkflowConfirmation.addRecordButtonLabel
+            : txt.successWorkflowConfirmation.cancelButtonLabel;
 
         saveConfirmationLocale.confirmationMessage = (
             <div>
@@ -103,10 +103,19 @@ export default class ClaimRecord extends React.PureComponent {
                 {txt.successWorkflowConfirmation.successConfirmationMessage}
             </div>
         );
-        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
+        let alertProps;
+        if (!publication.rek_pid && this.props.submitFailed) {
+            // if creating a new record from external source failed it might be because external source doesn't have full required record data
+            // display a custom error message
+            alertProps = validation.getErrorAlertProps({...this.props, dirty: true, error: txt.errorAlert.incompleteData, alertLocale: txt});
+        } else if (publication.rek_pid && (authorLinked || contributorLinked)) {
+            alertProps = {...txt.alreadyClaimedAlert};
+        } else {
+            alertProps = validation.getErrorAlertProps({...this.props, dirty: true, alertLocale: txt});
+        }
         return (
             <StandardPage title={txt.title}>
-                <form onKeyDown={this._handleKeyboardFormSubmit}>
+                <form onSubmit={this._handleDefaultSubmit}>
                     <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
                         <PublicationCitation publication={publication}/>
                     </StandardCard>
@@ -196,15 +205,9 @@ export default class ClaimRecord extends React.PureComponent {
                             </StandardCard>
                         </div>
                     }
-
                     {
                         alertProps && <Alert {...alertProps} />
                     }
-                    {
-                        publication.rek_pid && (authorLinked || contributorLinked) &&
-                            <Alert {...txt.alreadyClaimedAlert} />
-                    }
-
                     <div className="columns action-buttons">
                         <div className="column is-hidden-mobile"/>
                         <div className="column is-narrow-desktop">
@@ -215,15 +218,14 @@ export default class ClaimRecord extends React.PureComponent {
                                 onTouchTap={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}/>
                         </div>
                         {
-                            (!publication.rek_pid || !(authorLinked || contributorLinked)) &&
+                            (!publication.rek_pid || !(authorLinked || contributorLinked)) && !(!publication.rek_pid && this.props.submitFailed) &&
                             <div className="column is-narrow-desktop">
                                 <RaisedButton
                                     secondary
                                     fullWidth
                                     label={txt.submit}
                                     onTouchTap={this.props.handleSubmit}
-                                    disabled={this.props.submitting || this.props.invalid}
-                                />
+                                    disabled={this.props.submitting || this.props.disableSubmit}/>
                             </div>
                         }
                     </div>

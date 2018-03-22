@@ -250,6 +250,7 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
       "rek_description": "We consider the problem of estimating P (Y1+ ... +Yn > x) by importance sampling when the Yi are i.i.d. and heavy-tailed. The idea is to exploit the cross-entropy method as a tool for choosing good parameters in the importance sampling distribution; in doing so, we use the asymptotic description that given P(Y1+ ... +Yn > x,) n-1 of the Yi have distribution F and one the conditional distribution of Y given Y > x. We show in some parametric examples (Pareto and Weibull) how this leads to precise answers, which as demonstrated numerically, are close to being variance minimal within the parametric class under consideration. Related problems for M/G/1 and GI/G/1 queues are also discussed.",
       "rek_description_xsdmf_id": 7938,
       "rek_display_type": 204,
+      "rek_display_type_lookup": "Preprint",
       "rek_display_type_xsdmf_id": 3673,
       "rek_file_downloads": 478,
       "rek_formatted_abstract": null,
@@ -317,6 +318,13 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -566,6 +574,7 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
           "rek_description": "We consider the problem of estimating P (Y1+ ... +Yn > x) by importance sampling when the Yi are i.i.d. and heavy-tailed. The idea is to exploit the cross-entropy method as a tool for choosing good parameters in the importance sampling distribution; in doing so, we use the asymptotic description that given P(Y1+ ... +Yn > x,) n-1 of the Yi have distribution F and one the conditional distribution of Y given Y > x. We show in some parametric examples (Pareto and Weibull) how this leads to precise answers, which as demonstrated numerically, are close to being variance minimal within the parametric class under consideration. Related problems for M/G/1 and GI/G/1 queues are also discussed.",
           "rek_description_xsdmf_id": 7938,
           "rek_display_type": 204,
+          "rek_display_type_lookup": "Preprint",
           "rek_display_type_xsdmf_id": 3673,
           "rek_file_downloads": 478,
           "rek_formatted_abstract": null,
@@ -608,6 +617,7 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -617,13 +627,14 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Asmussen, S."
         >
           <span
             className="citationAuthor"
           >
+             
             Asmussen, S.
             , 
           </span>
@@ -631,13 +642,14 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Kroese, D. P."
         >
           <span
             className="citationAuthor"
           >
+             
             Kroese, D. P.
             , 
           </span>
@@ -727,6 +739,13 @@ exports[`PreprintCitation renders  component with empty publication 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
@@ -736,6 +755,7 @@ exports[`PreprintCitation renders  component with empty publication 1`] = `
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >

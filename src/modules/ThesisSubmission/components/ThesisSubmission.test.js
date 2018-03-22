@@ -48,7 +48,7 @@ describe('ThesisSubmission test', () => {
     });
 
     it('should disable submit button if invalid form data before submit', () => {
-        const wrapper = setup({invalid: true, submitFailed: false});
+        const wrapper = setup({disableSubmit: true});
         expect(wrapper.find('RaisedButton').length).toEqual(2);
 
         wrapper.find('RaisedButton').forEach(field => {
@@ -59,7 +59,7 @@ describe('ThesisSubmission test', () => {
     });
 
     it('should not disable submit button if form submit has failed', () => {
-        const wrapper = setup({invalid: true, submitFailed: true, error: 'oopps'});
+        const wrapper = setup({submitFailed: true});
         expect(wrapper.find('RaisedButton').length).toEqual(2);
 
         wrapper.find('RaisedButton').forEach(field => {
@@ -98,6 +98,14 @@ describe('ThesisSubmission test', () => {
         window.location.assign = jest.fn();
         const wrapper = setup({}).instance().afterSubmit();
         expect(window.location.assign).toBeCalledWith(expect.stringContaining(formLocale.thesisSubmission.afterSubmitLink));
+    });
+
+    it('should display confirmation box before submission', () => {
+        const testMethod = jest.fn();
+        const wrapper = setup({});
+        wrapper.instance().depositConfirmationBox = {showConfirmation: testMethod};
+        wrapper.instance().openDepositConfirmation();
+        expect(testMethod).toHaveBeenCalled();
     });
 
 });

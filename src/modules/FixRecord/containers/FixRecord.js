@@ -1,12 +1,11 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {reduxForm, getFormValues, getFormSyncErrors, SubmissionError} from 'redux-form/immutable';
+import {reduxForm, getFormValues, getFormSyncErrors, SubmissionError, stopSubmit} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import FixRecord from '../components/FixRecord';
 import {withRouter} from 'react-router-dom';
 import * as actions from 'actions';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
-
 const FORM_NAME = 'FixRecord';
 
 const onSubmit = (values, dispatch, props) => {
@@ -31,17 +30,32 @@ const onSubmit = (values, dispatch, props) => {
         });
 };
 
+const validate = (values) => {
+    stopSubmit(FORM_NAME, null);
+    const data = values.toJS();
+    const hasFiles = data.files && data.files.queue && data.files.queue.length > 0;
+    const errors = {};
+    if(data.fixAction === 'fix' && !data.comments && !data.rek_link && !hasFiles) {
+        errors.fixRecordAnyField = true;
+    }
+    return errors;
+};
+
 let FixRecordContainer = reduxForm({
     form: FORM_NAME,
+    validate,
     onSubmit
 })(confirmDiscardFormChanges(FixRecord, FORM_NAME));
 
 const mapStateToProps = (state) => {
+    const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
+
     return {
         ...state.get('fixRecordReducer'),
         ...state.get('accountReducer'),
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-        formErrors: getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({}),
+        formErrors: formErrors,
+        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map)
     };
 };
 

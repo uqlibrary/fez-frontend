@@ -5,8 +5,10 @@ import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
 import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
-
 import {locale} from 'locale';
+import PublicationDetails from './PublicationDetails';
+import AdditionalInformation from './AdditionalInformation';
+import GrantInformation from './GrantInformation';
 
 export default class ViewRecord extends Component {
     static propTypes = {
@@ -36,8 +38,9 @@ export default class ViewRecord extends Component {
 
     render() {
         const txt = locale.pages.viewRecord;
+        const {loadingRecordToView, recordToViewError, recordToView} = this.props;
 
-        if(this.props.loadingRecordToView) {
+        if(loadingRecordToView) {
             return (
                 <div className="is-centered">
                     <InlineLoader message={txt.loadingMessage}/>
@@ -45,16 +48,29 @@ export default class ViewRecord extends Component {
             );
         }
 
-        if(this.props.recordToViewError) {
+        if(recordToViewError) {
             return (
                 <StandardPage>
-                    <Alert message={this.props.recordToViewError} />
+                    <Alert message={recordToViewError} />
                 </StandardPage>
             );
         }
+
         return (
-            <StandardPage className="viewRecord" title={this.props.recordToView && this.props.recordToView.rek_title}>
-                <PublicationCitation publication={this.props.recordToView} hideTitle />
+            <StandardPage className="viewRecord" title={recordToView && recordToView.rek_title}>
+                <PublicationCitation publication={recordToView} hideTitle />
+                {
+                    recordToView && recordToView.rek_display_type_lookup &&
+                    <AdditionalInformation publication={recordToView} />
+                }
+                {
+                    recordToView && recordToView.fez_record_search_key_grant_agency && recordToView.fez_record_search_key_grant_agency.length > 0 &&
+                    <GrantInformation publication={recordToView} />
+                }
+                {
+                    recordToView && recordToView.rek_display_type_lookup &&
+                    <PublicationDetails publication={recordToView} />
+                }
             </StandardPage>
         );
     }

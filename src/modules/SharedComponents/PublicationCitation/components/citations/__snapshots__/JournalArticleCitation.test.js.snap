@@ -569,7 +569,15 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
           "rek_grant_id_pid": "UQ:676287",
         },
       ],
-      "fez_record_search_key_grant_text": Array [],
+      "fez_record_search_key_grant_text": Array [
+        Object {
+          "rek_grant_text": "We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.",
+          "rek_grant_text_id": 583,
+          "rek_grant_text_order": 1,
+          "rek_grant_text_pid": "UQ:396321",
+          "rek_grant_text_xsdmf_id": 0,
+        },
+      ],
       "fez_record_search_key_herdc_code": Object {
         "rek_herdc_code": 450009,
         "rek_herdc_code_id": null,
@@ -629,16 +637,131 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
       ],
       "fez_record_search_key_issn": Array [
         Object {
+          "fez_journal_issns": Array [
+            Object {
+              "fez_journal": Object {
+                "jnl_created_date": "2010-11-19 00:00:00",
+                "jnl_era_id": 2234,
+                "jnl_era_year": 2010,
+                "jnl_foreign_name": null,
+                "jnl_id": 7538,
+                "jnl_journal_name": "Journal of Cell Science",
+                "jnl_rank": "A",
+                "jnl_updated_date": "2010-11-19 00:00:00",
+              },
+              "jni_id": 13071,
+              "jni_issn": "1477-9137",
+              "jni_issn_order": 2,
+              "jni_jnl_id": 7538,
+            },
+          ],
+          "fez_sherpa_romeo": Object {
+            "srm_colour": "green",
+            "srm_date_updated": "2017-09-30 18:26:18",
+            "srm_id": 13764,
+            "srm_issn": "1477-9137",
+            "srm_journal_name": "Journal of Cell Science",
+            "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
+<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
+<romeoapi version=\\"2.9.9\\">
+  <header>
+    <parameters>
+      <parameter source=\\"specified\\">
+        <parametername>issn</parametername>
+        <parametervalue>1477-9137</parametervalue>
+      </parameter>
+      <parameter source=\\"specified\\">
+        <parametername>versions</parametername>
+        <parametervalue>all</parametervalue>
+      </parameter>
+      <parameter source=\\"default\\">
+        <parametername>showfunder</parametername>
+        <parametervalue>none</parametervalue>
+      </parameter>
+      <parameter source=\\"default\\">
+        <parametername>fIDnum</parametername>
+        <parametervalue>|</parametervalue>
+      </parameter>
+      <parameter source=\\"default\\">
+        <parametername>la</parametername>
+        <parametervalue>en</parametervalue>
+      </parameter>
+    </parameters>
+    <numhits>1</numhits>
+    <apicontrol>journal</apicontrol>
+    <outcome>singleJournal</outcome>
+    <message />
+    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
+    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
+    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
+    <timestamp>30-Sep-2017:19:26:17</timestamp>
+  </header>
+  <journals>
+    <journal>
+      <jtitle>Journal of Cell Science</jtitle>
+      <issn>0021-9533</issn>
+      <zetocpub>Company of Biologists</zetocpub>
+      <romeopub>Company of Biologists</romeopub>
+    </journal>
+  </journals>
+  <publishers>
+    <publisher id=\\"29\\">
+      <name>Company of Biologists</name>
+      <alias />
+      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
+      <preprints>
+        <prearchiving>can</prearchiving>
+        <prerestrictions />
+      </preprints>
+      <postprints>
+        <postarchiving>can</postarchiving>
+        <postrestrictions />
+      </postprints>
+      <pdfversion>
+        <pdfarchiving>can</pdfarchiving>
+        <pdfrestrictions />
+      </pdfversion>
+      <conditions>
+        <condition>On author's personal website immediately</condition>
+        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
+        <condition>Authors retain copyright</condition>
+        <condition>Publisher's version/PDF may be used</condition>
+        <condition>Must link to publisher version</condition>
+        <condition>Non-commercial use</condition>
+        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
+        <condition>Non-commercial use</condition>
+        <condition>Publisher last contacted on 30/03/2016</condition>
+      </conditions>
+      <mandates />
+      <paidaccess>
+        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
+        <paidaccessname>Open Access</paidaccessname>
+        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
+      </paidaccess>
+      <copyrightlinks>
+        <copyrightlink>
+          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
+          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
+        </copyrightlink>
+        <copyrightlink>
+          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
+          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
+        </copyrightlink>
+      </copyrightlinks>
+      <romeocolour>green</romeocolour>
+      <dateadded>2004-01-10 00:00:00</dateadded>
+      <dateupdated>2016-04-12 16:14:47</dateupdated>
+    </publisher>
+  </publishers>
+</romeoapi>
+",
+          },
           "rek_issn": "1477-9137",
-          "rek_issn_id": null,
+          "rek_issn_id": 5382905,
+          "rek_issn_lookup": "green",
           "rek_issn_order": 1,
           "rek_issn_pid": "UQ:676287",
-        },
-        Object {
-          "rek_issn": "0021-9533",
-          "rek_issn_id": null,
-          "rek_issn_order": 2,
-          "rek_issn_pid": "UQ:676287",
+          "rek_issn_xsdmf_id": null,
         },
       ],
       "fez_record_search_key_issue_number": Object {
@@ -832,6 +955,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
       "rek_depositor_affiliation": 1247,
       "rek_description": "Hypoxia is a feature of the tumour microenvironment that promotes invasiveness, resistance to chemotherapeutics and cell survival. Our studies identify the transient receptor potential canonical-1 (TRPC1) ion channel as a key component of responses to hypoxia in breast cancer cells. This regulation includes control of specific epithelial to mesenchymal transition (EMT) events and hypoxia-mediated activation of signalling pathways such as activation of the EGFR, STAT3 and the autophagy marker LC3B, through hypoxia-inducible factor-1α (HIF1α)-dependent and -independent mechanisms. TRPC1 regulated HIF1α levels in PTEN-deficient MDA-MB-468 and HCC1569 breast cancer cell lines. This regulation arises from effects on the constitutive translation of HIF1α under normoxic conditions via an Akt-dependent pathway. In further support of the role of TRPC1 in EMT, its expression is closely associated with EMT- and metastasisrelated genes in breast tumours, and is enhanced in basal B breast cancer cell lines. TRPC1 expression is also significantly prognostic for basal breast cancers, particularly those classified as lymph node positive. The defined roles of TRPC1 identified here could be therapeutically exploited for the control of oncogenic pathways in breast cancer cells.",
       "rek_display_type": 179,
+      "rek_display_type_lookup": "Journal Article",
       "rek_file_downloads": 0,
       "rek_formatted_abstract": null,
       "rek_formatted_title": null,
@@ -884,6 +1008,13 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={
         Object {
@@ -1452,7 +1583,15 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
               "rek_grant_id_pid": "UQ:676287",
             },
           ],
-          "fez_record_search_key_grant_text": Array [],
+          "fez_record_search_key_grant_text": Array [
+            Object {
+              "rek_grant_text": "We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.",
+              "rek_grant_text_id": 583,
+              "rek_grant_text_order": 1,
+              "rek_grant_text_pid": "UQ:396321",
+              "rek_grant_text_xsdmf_id": 0,
+            },
+          ],
           "fez_record_search_key_herdc_code": Object {
             "rek_herdc_code": 450009,
             "rek_herdc_code_id": null,
@@ -1512,16 +1651,131 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
           ],
           "fez_record_search_key_issn": Array [
             Object {
+              "fez_journal_issns": Array [
+                Object {
+                  "fez_journal": Object {
+                    "jnl_created_date": "2010-11-19 00:00:00",
+                    "jnl_era_id": 2234,
+                    "jnl_era_year": 2010,
+                    "jnl_foreign_name": null,
+                    "jnl_id": 7538,
+                    "jnl_journal_name": "Journal of Cell Science",
+                    "jnl_rank": "A",
+                    "jnl_updated_date": "2010-11-19 00:00:00",
+                  },
+                  "jni_id": 13071,
+                  "jni_issn": "1477-9137",
+                  "jni_issn_order": 2,
+                  "jni_jnl_id": 7538,
+                },
+              ],
+              "fez_sherpa_romeo": Object {
+                "srm_colour": "green",
+                "srm_date_updated": "2017-09-30 18:26:18",
+                "srm_id": 13764,
+                "srm_issn": "1477-9137",
+                "srm_journal_name": "Journal of Cell Science",
+                "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
+<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
+<romeoapi version=\\"2.9.9\\">
+  <header>
+    <parameters>
+      <parameter source=\\"specified\\">
+        <parametername>issn</parametername>
+        <parametervalue>1477-9137</parametervalue>
+      </parameter>
+      <parameter source=\\"specified\\">
+        <parametername>versions</parametername>
+        <parametervalue>all</parametervalue>
+      </parameter>
+      <parameter source=\\"default\\">
+        <parametername>showfunder</parametername>
+        <parametervalue>none</parametervalue>
+      </parameter>
+      <parameter source=\\"default\\">
+        <parametername>fIDnum</parametername>
+        <parametervalue>|</parametervalue>
+      </parameter>
+      <parameter source=\\"default\\">
+        <parametername>la</parametername>
+        <parametervalue>en</parametervalue>
+      </parameter>
+    </parameters>
+    <numhits>1</numhits>
+    <apicontrol>journal</apicontrol>
+    <outcome>singleJournal</outcome>
+    <message />
+    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
+    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
+    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
+    <timestamp>30-Sep-2017:19:26:17</timestamp>
+  </header>
+  <journals>
+    <journal>
+      <jtitle>Journal of Cell Science</jtitle>
+      <issn>0021-9533</issn>
+      <zetocpub>Company of Biologists</zetocpub>
+      <romeopub>Company of Biologists</romeopub>
+    </journal>
+  </journals>
+  <publishers>
+    <publisher id=\\"29\\">
+      <name>Company of Biologists</name>
+      <alias />
+      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
+      <preprints>
+        <prearchiving>can</prearchiving>
+        <prerestrictions />
+      </preprints>
+      <postprints>
+        <postarchiving>can</postarchiving>
+        <postrestrictions />
+      </postprints>
+      <pdfversion>
+        <pdfarchiving>can</pdfarchiving>
+        <pdfrestrictions />
+      </pdfversion>
+      <conditions>
+        <condition>On author's personal website immediately</condition>
+        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
+        <condition>Authors retain copyright</condition>
+        <condition>Publisher's version/PDF may be used</condition>
+        <condition>Must link to publisher version</condition>
+        <condition>Non-commercial use</condition>
+        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
+        <condition>Non-commercial use</condition>
+        <condition>Publisher last contacted on 30/03/2016</condition>
+      </conditions>
+      <mandates />
+      <paidaccess>
+        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
+        <paidaccessname>Open Access</paidaccessname>
+        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
+      </paidaccess>
+      <copyrightlinks>
+        <copyrightlink>
+          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
+          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
+        </copyrightlink>
+        <copyrightlink>
+          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
+          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
+        </copyrightlink>
+      </copyrightlinks>
+      <romeocolour>green</romeocolour>
+      <dateadded>2004-01-10 00:00:00</dateadded>
+      <dateupdated>2016-04-12 16:14:47</dateupdated>
+    </publisher>
+  </publishers>
+</romeoapi>
+",
+              },
               "rek_issn": "1477-9137",
-              "rek_issn_id": null,
+              "rek_issn_id": 5382905,
+              "rek_issn_lookup": "green",
               "rek_issn_order": 1,
               "rek_issn_pid": "UQ:676287",
-            },
-            Object {
-              "rek_issn": "0021-9533",
-              "rek_issn_id": null,
-              "rek_issn_order": 2,
-              "rek_issn_pid": "UQ:676287",
+              "rek_issn_xsdmf_id": null,
             },
           ],
           "fez_record_search_key_issue_number": Object {
@@ -1715,6 +1969,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
           "rek_depositor_affiliation": 1247,
           "rek_description": "Hypoxia is a feature of the tumour microenvironment that promotes invasiveness, resistance to chemotherapeutics and cell survival. Our studies identify the transient receptor potential canonical-1 (TRPC1) ion channel as a key component of responses to hypoxia in breast cancer cells. This regulation includes control of specific epithelial to mesenchymal transition (EMT) events and hypoxia-mediated activation of signalling pathways such as activation of the EGFR, STAT3 and the autophagy marker LC3B, through hypoxia-inducible factor-1α (HIF1α)-dependent and -independent mechanisms. TRPC1 regulated HIF1α levels in PTEN-deficient MDA-MB-468 and HCC1569 breast cancer cell lines. This regulation arises from effects on the constitutive translation of HIF1α under normoxic conditions via an Akt-dependent pathway. In further support of the role of TRPC1 in EMT, its expression is closely associated with EMT- and metastasisrelated genes in breast tumours, and is enhanced in basal B breast cancer cell lines. TRPC1 expression is also significantly prognostic for basal breast cancers, particularly those classified as lymph node positive. The defined roles of TRPC1 identified here could be therapeutically exploited for the control of oncogenic pathways in breast cancer cells.",
           "rek_display_type": 179,
+          "rek_display_type_lookup": "Journal Article",
           "rek_file_downloads": 0,
           "rek_formatted_abstract": null,
           "rek_formatted_title": null,
@@ -1742,6 +1997,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >
@@ -1751,13 +2007,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Azimi, Iman"
         >
           <span
             className="citationAuthor"
           >
+             
             Azimi, Iman
             , 
           </span>
@@ -1765,13 +2022,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Milevskiy, Michael J. G."
         >
           <span
             className="citationAuthor"
           >
+             
             Milevskiy, Michael J. G.
             , 
           </span>
@@ -1779,13 +2037,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Kaemmerer, Elke"
         >
           <span
             className="citationAuthor"
           >
+             
             Kaemmerer, Elke
             , 
           </span>
@@ -1793,13 +2052,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Turner, Dane"
         >
           <span
             className="citationAuthor"
           >
+             
             Turner, Dane
             , 
           </span>
@@ -1807,13 +2067,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_5"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Yapa, Kunsala T. D. S."
         >
           <span
             className="citationAuthor"
           >
+             
             Yapa, Kunsala T. D. S.
             , 
           </span>
@@ -1821,13 +2082,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_6"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Brown, Melissa A."
         >
           <span
             className="citationAuthor"
           >
+             
             Brown, Melissa A.
             , 
           </span>
@@ -1835,13 +2097,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_7"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Thompson, Erik W."
         >
           <span
             className="citationAuthor"
           >
+             
             Thompson, Erik W.
             , 
           </span>
@@ -1849,13 +2112,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_8"
-          prefix=""
+          prefix=" "
           suffix=", "
           value="Roberts-Thomson, Sarah J."
         >
           <span
             className="citationAuthor"
           >
+             
             Roberts-Thomson, Sarah J.
             , 
           </span>
@@ -2518,7 +2782,15 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
               "rek_grant_id_pid": "UQ:676287",
             },
           ],
-          "fez_record_search_key_grant_text": Array [],
+          "fez_record_search_key_grant_text": Array [
+            Object {
+              "rek_grant_text": "We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.",
+              "rek_grant_text_id": 583,
+              "rek_grant_text_order": 1,
+              "rek_grant_text_pid": "UQ:396321",
+              "rek_grant_text_xsdmf_id": 0,
+            },
+          ],
           "fez_record_search_key_herdc_code": Object {
             "rek_herdc_code": 450009,
             "rek_herdc_code_id": null,
@@ -2578,16 +2850,131 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
           ],
           "fez_record_search_key_issn": Array [
             Object {
+              "fez_journal_issns": Array [
+                Object {
+                  "fez_journal": Object {
+                    "jnl_created_date": "2010-11-19 00:00:00",
+                    "jnl_era_id": 2234,
+                    "jnl_era_year": 2010,
+                    "jnl_foreign_name": null,
+                    "jnl_id": 7538,
+                    "jnl_journal_name": "Journal of Cell Science",
+                    "jnl_rank": "A",
+                    "jnl_updated_date": "2010-11-19 00:00:00",
+                  },
+                  "jni_id": 13071,
+                  "jni_issn": "1477-9137",
+                  "jni_issn_order": 2,
+                  "jni_jnl_id": 7538,
+                },
+              ],
+              "fez_sherpa_romeo": Object {
+                "srm_colour": "green",
+                "srm_date_updated": "2017-09-30 18:26:18",
+                "srm_id": 13764,
+                "srm_issn": "1477-9137",
+                "srm_journal_name": "Journal of Cell Science",
+                "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
+<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
+<romeoapi version=\\"2.9.9\\">
+  <header>
+    <parameters>
+      <parameter source=\\"specified\\">
+        <parametername>issn</parametername>
+        <parametervalue>1477-9137</parametervalue>
+      </parameter>
+      <parameter source=\\"specified\\">
+        <parametername>versions</parametername>
+        <parametervalue>all</parametervalue>
+      </parameter>
+      <parameter source=\\"default\\">
+        <parametername>showfunder</parametername>
+        <parametervalue>none</parametervalue>
+      </parameter>
+      <parameter source=\\"default\\">
+        <parametername>fIDnum</parametername>
+        <parametervalue>|</parametervalue>
+      </parameter>
+      <parameter source=\\"default\\">
+        <parametername>la</parametername>
+        <parametervalue>en</parametervalue>
+      </parameter>
+    </parameters>
+    <numhits>1</numhits>
+    <apicontrol>journal</apicontrol>
+    <outcome>singleJournal</outcome>
+    <message />
+    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
+    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
+    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
+    <timestamp>30-Sep-2017:19:26:17</timestamp>
+  </header>
+  <journals>
+    <journal>
+      <jtitle>Journal of Cell Science</jtitle>
+      <issn>0021-9533</issn>
+      <zetocpub>Company of Biologists</zetocpub>
+      <romeopub>Company of Biologists</romeopub>
+    </journal>
+  </journals>
+  <publishers>
+    <publisher id=\\"29\\">
+      <name>Company of Biologists</name>
+      <alias />
+      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
+      <preprints>
+        <prearchiving>can</prearchiving>
+        <prerestrictions />
+      </preprints>
+      <postprints>
+        <postarchiving>can</postarchiving>
+        <postrestrictions />
+      </postprints>
+      <pdfversion>
+        <pdfarchiving>can</pdfarchiving>
+        <pdfrestrictions />
+      </pdfversion>
+      <conditions>
+        <condition>On author's personal website immediately</condition>
+        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
+        <condition>Authors retain copyright</condition>
+        <condition>Publisher's version/PDF may be used</condition>
+        <condition>Must link to publisher version</condition>
+        <condition>Non-commercial use</condition>
+        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
+        <condition>Non-commercial use</condition>
+        <condition>Publisher last contacted on 30/03/2016</condition>
+      </conditions>
+      <mandates />
+      <paidaccess>
+        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
+        <paidaccessname>Open Access</paidaccessname>
+        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
+      </paidaccess>
+      <copyrightlinks>
+        <copyrightlink>
+          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
+          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
+        </copyrightlink>
+        <copyrightlink>
+          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
+          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
+        </copyrightlink>
+      </copyrightlinks>
+      <romeocolour>green</romeocolour>
+      <dateadded>2004-01-10 00:00:00</dateadded>
+      <dateupdated>2016-04-12 16:14:47</dateupdated>
+    </publisher>
+  </publishers>
+</romeoapi>
+",
+              },
               "rek_issn": "1477-9137",
-              "rek_issn_id": null,
+              "rek_issn_id": 5382905,
+              "rek_issn_lookup": "green",
               "rek_issn_order": 1,
               "rek_issn_pid": "UQ:676287",
-            },
-            Object {
-              "rek_issn": "0021-9533",
-              "rek_issn_id": null,
-              "rek_issn_order": 2,
-              "rek_issn_pid": "UQ:676287",
+              "rek_issn_xsdmf_id": null,
             },
           ],
           "fez_record_search_key_issue_number": Object {
@@ -2781,6 +3168,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
           "rek_depositor_affiliation": 1247,
           "rek_description": "Hypoxia is a feature of the tumour microenvironment that promotes invasiveness, resistance to chemotherapeutics and cell survival. Our studies identify the transient receptor potential canonical-1 (TRPC1) ion channel as a key component of responses to hypoxia in breast cancer cells. This regulation includes control of specific epithelial to mesenchymal transition (EMT) events and hypoxia-mediated activation of signalling pathways such as activation of the EGFR, STAT3 and the autophagy marker LC3B, through hypoxia-inducible factor-1α (HIF1α)-dependent and -independent mechanisms. TRPC1 regulated HIF1α levels in PTEN-deficient MDA-MB-468 and HCC1569 breast cancer cell lines. This regulation arises from effects on the constitutive translation of HIF1α under normoxic conditions via an Akt-dependent pathway. In further support of the role of TRPC1 in EMT, its expression is closely associated with EMT- and metastasisrelated genes in breast tumours, and is enhanced in basal B breast cancer cell lines. TRPC1 expression is also significantly prognostic for basal breast cancers, particularly those classified as lymph node positive. The defined roles of TRPC1 identified here could be therapeutically exploited for the control of oncogenic pathways in breast cancer cells.",
           "rek_display_type": 179,
+          "rek_display_type_lookup": "Journal Article",
           "rek_file_downloads": 0,
           "rek_formatted_abstract": null,
           "rek_formatted_title": null,
@@ -3387,7 +3775,15 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                   "rek_grant_id_pid": "UQ:676287",
                 },
               ],
-              "fez_record_search_key_grant_text": Array [],
+              "fez_record_search_key_grant_text": Array [
+                Object {
+                  "rek_grant_text": "We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.",
+                  "rek_grant_text_id": 583,
+                  "rek_grant_text_order": 1,
+                  "rek_grant_text_pid": "UQ:396321",
+                  "rek_grant_text_xsdmf_id": 0,
+                },
+              ],
               "fez_record_search_key_herdc_code": Object {
                 "rek_herdc_code": 450009,
                 "rek_herdc_code_id": null,
@@ -3447,16 +3843,131 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
               ],
               "fez_record_search_key_issn": Array [
                 Object {
+                  "fez_journal_issns": Array [
+                    Object {
+                      "fez_journal": Object {
+                        "jnl_created_date": "2010-11-19 00:00:00",
+                        "jnl_era_id": 2234,
+                        "jnl_era_year": 2010,
+                        "jnl_foreign_name": null,
+                        "jnl_id": 7538,
+                        "jnl_journal_name": "Journal of Cell Science",
+                        "jnl_rank": "A",
+                        "jnl_updated_date": "2010-11-19 00:00:00",
+                      },
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                  ],
+                  "fez_sherpa_romeo": Object {
+                    "srm_colour": "green",
+                    "srm_date_updated": "2017-09-30 18:26:18",
+                    "srm_id": 13764,
+                    "srm_issn": "1477-9137",
+                    "srm_journal_name": "Journal of Cell Science",
+                    "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
+<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
+<romeoapi version=\\"2.9.9\\">
+  <header>
+    <parameters>
+      <parameter source=\\"specified\\">
+        <parametername>issn</parametername>
+        <parametervalue>1477-9137</parametervalue>
+      </parameter>
+      <parameter source=\\"specified\\">
+        <parametername>versions</parametername>
+        <parametervalue>all</parametervalue>
+      </parameter>
+      <parameter source=\\"default\\">
+        <parametername>showfunder</parametername>
+        <parametervalue>none</parametervalue>
+      </parameter>
+      <parameter source=\\"default\\">
+        <parametername>fIDnum</parametername>
+        <parametervalue>|</parametervalue>
+      </parameter>
+      <parameter source=\\"default\\">
+        <parametername>la</parametername>
+        <parametervalue>en</parametervalue>
+      </parameter>
+    </parameters>
+    <numhits>1</numhits>
+    <apicontrol>journal</apicontrol>
+    <outcome>singleJournal</outcome>
+    <message />
+    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
+    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
+    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
+    <timestamp>30-Sep-2017:19:26:17</timestamp>
+  </header>
+  <journals>
+    <journal>
+      <jtitle>Journal of Cell Science</jtitle>
+      <issn>0021-9533</issn>
+      <zetocpub>Company of Biologists</zetocpub>
+      <romeopub>Company of Biologists</romeopub>
+    </journal>
+  </journals>
+  <publishers>
+    <publisher id=\\"29\\">
+      <name>Company of Biologists</name>
+      <alias />
+      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
+      <preprints>
+        <prearchiving>can</prearchiving>
+        <prerestrictions />
+      </preprints>
+      <postprints>
+        <postarchiving>can</postarchiving>
+        <postrestrictions />
+      </postprints>
+      <pdfversion>
+        <pdfarchiving>can</pdfarchiving>
+        <pdfrestrictions />
+      </pdfversion>
+      <conditions>
+        <condition>On author's personal website immediately</condition>
+        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
+        <condition>Authors retain copyright</condition>
+        <condition>Publisher's version/PDF may be used</condition>
+        <condition>Must link to publisher version</condition>
+        <condition>Non-commercial use</condition>
+        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
+        <condition>Non-commercial use</condition>
+        <condition>Publisher last contacted on 30/03/2016</condition>
+      </conditions>
+      <mandates />
+      <paidaccess>
+        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
+        <paidaccessname>Open Access</paidaccessname>
+        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
+      </paidaccess>
+      <copyrightlinks>
+        <copyrightlink>
+          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
+          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
+        </copyrightlink>
+        <copyrightlink>
+          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
+          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
+        </copyrightlink>
+      </copyrightlinks>
+      <romeocolour>green</romeocolour>
+      <dateadded>2004-01-10 00:00:00</dateadded>
+      <dateupdated>2016-04-12 16:14:47</dateupdated>
+    </publisher>
+  </publishers>
+</romeoapi>
+",
+                  },
                   "rek_issn": "1477-9137",
-                  "rek_issn_id": null,
+                  "rek_issn_id": 5382905,
+                  "rek_issn_lookup": "green",
                   "rek_issn_order": 1,
                   "rek_issn_pid": "UQ:676287",
-                },
-                Object {
-                  "rek_issn": "0021-9533",
-                  "rek_issn_id": null,
-                  "rek_issn_order": 2,
-                  "rek_issn_pid": "UQ:676287",
+                  "rek_issn_xsdmf_id": null,
                 },
               ],
               "fez_record_search_key_issue_number": Object {
@@ -3650,6 +4161,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
               "rek_depositor_affiliation": 1247,
               "rek_description": "Hypoxia is a feature of the tumour microenvironment that promotes invasiveness, resistance to chemotherapeutics and cell survival. Our studies identify the transient receptor potential canonical-1 (TRPC1) ion channel as a key component of responses to hypoxia in breast cancer cells. This regulation includes control of specific epithelial to mesenchymal transition (EMT) events and hypoxia-mediated activation of signalling pathways such as activation of the EGFR, STAT3 and the autophagy marker LC3B, through hypoxia-inducible factor-1α (HIF1α)-dependent and -independent mechanisms. TRPC1 regulated HIF1α levels in PTEN-deficient MDA-MB-468 and HCC1569 breast cancer cell lines. This regulation arises from effects on the constitutive translation of HIF1α under normoxic conditions via an Akt-dependent pathway. In further support of the role of TRPC1 in EMT, its expression is closely associated with EMT- and metastasisrelated genes in breast tumours, and is enhanced in basal B breast cancer cell lines. TRPC1 expression is also significantly prognostic for basal breast cancers, particularly those classified as lymph node positive. The defined roles of TRPC1 identified here could be therapeutically exploited for the control of oncogenic pathways in breast cancer cells.",
               "rek_display_type": 179,
+              "rek_display_type_lookup": "Journal Article",
               "rek_file_downloads": 0,
               "rek_formatted_abstract": null,
               "rek_formatted_title": null,
@@ -4253,7 +4765,15 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                   "rek_grant_id_pid": "UQ:676287",
                 },
               ],
-              "fez_record_search_key_grant_text": Array [],
+              "fez_record_search_key_grant_text": Array [
+                Object {
+                  "rek_grant_text": "We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.",
+                  "rek_grant_text_id": 583,
+                  "rek_grant_text_order": 1,
+                  "rek_grant_text_pid": "UQ:396321",
+                  "rek_grant_text_xsdmf_id": 0,
+                },
+              ],
               "fez_record_search_key_herdc_code": Object {
                 "rek_herdc_code": 450009,
                 "rek_herdc_code_id": null,
@@ -4313,16 +4833,131 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
               ],
               "fez_record_search_key_issn": Array [
                 Object {
+                  "fez_journal_issns": Array [
+                    Object {
+                      "fez_journal": Object {
+                        "jnl_created_date": "2010-11-19 00:00:00",
+                        "jnl_era_id": 2234,
+                        "jnl_era_year": 2010,
+                        "jnl_foreign_name": null,
+                        "jnl_id": 7538,
+                        "jnl_journal_name": "Journal of Cell Science",
+                        "jnl_rank": "A",
+                        "jnl_updated_date": "2010-11-19 00:00:00",
+                      },
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                  ],
+                  "fez_sherpa_romeo": Object {
+                    "srm_colour": "green",
+                    "srm_date_updated": "2017-09-30 18:26:18",
+                    "srm_id": 13764,
+                    "srm_issn": "1477-9137",
+                    "srm_journal_name": "Journal of Cell Science",
+                    "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
+<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
+<romeoapi version=\\"2.9.9\\">
+  <header>
+    <parameters>
+      <parameter source=\\"specified\\">
+        <parametername>issn</parametername>
+        <parametervalue>1477-9137</parametervalue>
+      </parameter>
+      <parameter source=\\"specified\\">
+        <parametername>versions</parametername>
+        <parametervalue>all</parametervalue>
+      </parameter>
+      <parameter source=\\"default\\">
+        <parametername>showfunder</parametername>
+        <parametervalue>none</parametervalue>
+      </parameter>
+      <parameter source=\\"default\\">
+        <parametername>fIDnum</parametername>
+        <parametervalue>|</parametervalue>
+      </parameter>
+      <parameter source=\\"default\\">
+        <parametername>la</parametername>
+        <parametervalue>en</parametervalue>
+      </parameter>
+    </parameters>
+    <numhits>1</numhits>
+    <apicontrol>journal</apicontrol>
+    <outcome>singleJournal</outcome>
+    <message />
+    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
+    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
+    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
+    <timestamp>30-Sep-2017:19:26:17</timestamp>
+  </header>
+  <journals>
+    <journal>
+      <jtitle>Journal of Cell Science</jtitle>
+      <issn>0021-9533</issn>
+      <zetocpub>Company of Biologists</zetocpub>
+      <romeopub>Company of Biologists</romeopub>
+    </journal>
+  </journals>
+  <publishers>
+    <publisher id=\\"29\\">
+      <name>Company of Biologists</name>
+      <alias />
+      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
+      <preprints>
+        <prearchiving>can</prearchiving>
+        <prerestrictions />
+      </preprints>
+      <postprints>
+        <postarchiving>can</postarchiving>
+        <postrestrictions />
+      </postprints>
+      <pdfversion>
+        <pdfarchiving>can</pdfarchiving>
+        <pdfrestrictions />
+      </pdfversion>
+      <conditions>
+        <condition>On author's personal website immediately</condition>
+        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
+        <condition>Authors retain copyright</condition>
+        <condition>Publisher's version/PDF may be used</condition>
+        <condition>Must link to publisher version</condition>
+        <condition>Non-commercial use</condition>
+        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
+        <condition>Non-commercial use</condition>
+        <condition>Publisher last contacted on 30/03/2016</condition>
+      </conditions>
+      <mandates />
+      <paidaccess>
+        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
+        <paidaccessname>Open Access</paidaccessname>
+        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
+      </paidaccess>
+      <copyrightlinks>
+        <copyrightlink>
+          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
+          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
+        </copyrightlink>
+        <copyrightlink>
+          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
+          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
+        </copyrightlink>
+      </copyrightlinks>
+      <romeocolour>green</romeocolour>
+      <dateadded>2004-01-10 00:00:00</dateadded>
+      <dateupdated>2016-04-12 16:14:47</dateupdated>
+    </publisher>
+  </publishers>
+</romeoapi>
+",
+                  },
                   "rek_issn": "1477-9137",
-                  "rek_issn_id": null,
+                  "rek_issn_id": 5382905,
+                  "rek_issn_lookup": "green",
                   "rek_issn_order": 1,
                   "rek_issn_pid": "UQ:676287",
-                },
-                Object {
-                  "rek_issn": "0021-9533",
-                  "rek_issn_id": null,
-                  "rek_issn_order": 2,
-                  "rek_issn_pid": "UQ:676287",
+                  "rek_issn_xsdmf_id": null,
                 },
               ],
               "fez_record_search_key_issue_number": Object {
@@ -4516,6 +5151,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
               "rek_depositor_affiliation": 1247,
               "rek_description": "Hypoxia is a feature of the tumour microenvironment that promotes invasiveness, resistance to chemotherapeutics and cell survival. Our studies identify the transient receptor potential canonical-1 (TRPC1) ion channel as a key component of responses to hypoxia in breast cancer cells. This regulation includes control of specific epithelial to mesenchymal transition (EMT) events and hypoxia-mediated activation of signalling pathways such as activation of the EGFR, STAT3 and the autophagy marker LC3B, through hypoxia-inducible factor-1α (HIF1α)-dependent and -independent mechanisms. TRPC1 regulated HIF1α levels in PTEN-deficient MDA-MB-468 and HCC1569 breast cancer cell lines. This regulation arises from effects on the constitutive translation of HIF1α under normoxic conditions via an Akt-dependent pathway. In further support of the role of TRPC1 in EMT, its expression is closely associated with EMT- and metastasisrelated genes in breast tumours, and is enhanced in basal B breast cancer cell lines. TRPC1 expression is also significantly prognostic for basal breast cancers, particularly those classified as lymph node positive. The defined roles of TRPC1 identified here could be therapeutically exploited for the control of oncogenic pathways in breast cancer cells.",
               "rek_display_type": 179,
+              "rek_display_type_lookup": "Journal Article",
               "rek_file_downloads": 0,
               "rek_formatted_abstract": null,
               "rek_formatted_title": null,
@@ -4560,7 +5196,6 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
       <span
         className="citationDOI"
       >
-         
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
@@ -4665,6 +5300,13 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      idSearchKey={
+        Object {
+          "idKey": "fez_record_search_key_author_id",
+          "idOrder": "rek_author_id_order",
+          "idSubkey": "rek_author_id",
+        }
+      }
       initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
@@ -4674,6 +5316,7 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
           "subkey": "rek_author",
         }
       }
+      showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
     >

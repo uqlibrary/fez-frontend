@@ -67,8 +67,8 @@ export default class PublicationsListSorting extends Component {
         if (!this.props.pagingData || this.props.pagingData.total === 0) return (<span className="publicationsListSorting empty"/>);
         const txt = locale.components.sorting;
         return (
-            <div className="publicationsListSorting columns is-gapless is-mobile is-multiline">
-                <div className="column is-12-mobile">
+            <div className="publicationsListSorting columns is-gapless is-mobile">
+                <div className="column is-6-mobile">
                     <SelectField
                         id="sortBy"
                         maxHeight={250}
@@ -84,8 +84,8 @@ export default class PublicationsListSorting extends Component {
                         }
                     </SelectField>
                 </div>
-                <div className="column is-narrow is-spacer is-hidden-mobile" />
-                <div className="column is-12-mobile">
+                <div className="column is-narrow is-spacer" />
+                <div className="column">
                     <SelectField
                         id="sortOrder"
                         maxHeight={250}
