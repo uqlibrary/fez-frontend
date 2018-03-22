@@ -9,7 +9,7 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING]: () => ({
+    [actions.ACADEMIC_PUBLICATIONS_STATS_LOADING]: () => ({
         ...initialState
     }),
 
@@ -24,15 +24,11 @@ const handlers = {
         publicationTypesCount: action.payload
     }),
 
-    [actions.ACADEMIC_PUBLICATIONS_BY_YEAR_FAILED]: (state) => ({
+    [actions.ACADEMIC_PUBLICATIONS_STATS_FAILED]: (state) => ({
         ...state,
         loadingPublicationsByYear: false,
-        publicationsByYear: null
-    }),
-
-    [actions.ACADEMIC_PUBLICATIONS_STATS_LOADING]: (state) => ({
-        ...state,
-        loadingPublicationsStats: true,
+        loadingPublicationsStats: false,
+        publicationsByYear: null,
         publicationsStats: null
     }),
 
@@ -40,12 +36,6 @@ const handlers = {
         ...state,
         loadingPublicationsStats: false,
         publicationsStats: action.payload
-    }),
-
-    [actions.ACADEMIC_PUBLICATIONS_STATS_FAILED]: (state) => ({
-        ...state,
-        loadingPublicationsStats: false,
-        publicationsStats: null
     })
 };
 

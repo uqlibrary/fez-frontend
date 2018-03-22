@@ -1,16 +1,16 @@
 /**
  * Returns the data for graph - count of unique publication types
  *
- * @param {array} raw data
+ * @param {array} data - raw data
  * @param {number} keepPublicationTypes -  keep X of pub types, sum others
- * @returns {array} in format [ ['Journal articles', 429], ['Conference papers', 112], ['Other', 129] ]
+ * @returns {Array} in format [ ['Journal articles', 429], ['Conference papers', 112], ['Other', 129] ]
  */
 export function getPublicationsPerType(data, keepPublicationTypes) {
     const rawData = [...data];
-    const values = rawData.reduce((a, b) => {return a.concat(b.pivot);}, []);
+    const values = rawData.reduce((a, b) => {return a.concat(b.stats_display_type_i_lookup_exact.buckets);}, []);
     const publicationTypesCountObject = values
         .reduce((a, b) => {
-            a[b.value] = (a[b.value] >= 0) ? (a[b.value] + b.count) : b.count;
+            a[b.key] = (a[b.key] >= 0) ? (a[b.key] + b.doc_count) : b.doc_count;
             return a;
         }, {});
 
@@ -37,13 +37,13 @@ export function getPublicationsPerType(data, keepPublicationTypes) {
 /**
  * getCategories - transforms raw academic publication years data into categories, eg years
  * eg [1977, 1980, 1982]
- * @param {array} raw data
+ * @param {array} data - raw data
  * @returns {Array}
  */
 export function getPublicationsPerYearCategories(data) {
     const rawData = [...data];
     // extract years and parse year value into int
-    const categories = rawData.map((yearData) => { return parseInt(yearData.value, 10); });
+    const categories = rawData.map((yearData) => { return parseInt(yearData.key, 10); });
 
     // sort years in ascending order
     categories.sort((yearFirst, yearNext) => { return yearFirst - yearNext; });
@@ -53,8 +53,8 @@ export function getPublicationsPerYearCategories(data) {
 /**
  * getSeries - transforms raw academic publication years data into series formatted data, eg publication type and publications count per year
  * eg [{ 'name': 'Journal Article', 'data': [1, 1, 3]}]
- * @param {object} raw data
- * @param {array} output of getPublicationsPerType()
+ * @param {object} data - raw data
+ * @param {Array} topPublicationTypes - output of getPublicationsPerType()
  * @returns {Array}
  */
 export function getPublicationsPerYearSeries(data, topPublicationTypes) {
@@ -68,15 +68,15 @@ export function getPublicationsPerYearSeries(data, topPublicationTypes) {
     }, {});
 
     // sort all data by year
-    rawData.sort((yearFirst, yearNext) => { return parseInt(yearFirst.value, 10) - parseInt(yearNext.value, 10); });
+    rawData.sort((yearFirst, yearNext) => { return parseInt(yearFirst.key, 10) - parseInt(yearNext.key, 10); });
 
     // for each year/publication type - extract publication type count
     rawData.map((yearData, yearIndex) => {
-        yearData.pivot.map((publicationType) => {
-            if (fields[publicationType.value]) {
-                fields[publicationType.value][yearIndex] = publicationType.count;
+        yearData.stats_display_type_i_lookup_exact.buckets.map((publicationType) => {
+            if (fields[publicationType.key]) {
+                fields[publicationType.key][yearIndex] = publicationType.doc_count;
             } else {
-                fields.Other[yearIndex] += publicationType.count;
+                fields.Other[yearIndex] += publicationType.doc_count;
             }
         });
     });
@@ -96,23 +96,20 @@ export function getPublicationsPerYearSeries(data, topPublicationTypes) {
 
 /**
  * WOS/SCOPUS stats
- * @param {array} raw data
+ * @param {Array} years
+ * @param {array} data - raw data
  * @returns {object}
  */
-export function getPublicationsStats(data) {
-    const rawData = {...data};
-    const years = rawData.aggregations.date_year_t.buckets
-        .map(item => { return item.key; })
-        .sort((item1, item2) => { return item1 - item2; });
-    const formattedStats = {
+export function getPublicationsStats(years, data) {
+    return {
         thomson_citation_count_i: {
-            ...rawData.aggregations.thomson_citation_count_i,
+            ...data.stats_thomson_citation_count_i,
             years: `${years[0]} - ${years[years.length - 1]}`
         },
         scopus_citation_count_i: {
-            ...rawData.aggregations.scopus_citation_count_i,
+            ...data.stats_scopus_citation_count_i,
             years: `${years[0]} - ${years[years.length - 1]}`
         }
     };
-    return formattedStats;
 }
+

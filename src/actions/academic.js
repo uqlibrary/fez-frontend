@@ -3,21 +3,23 @@ import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
 import * as routes from 'repositories/routes';
 
-/**
- * Returns the author's publications per year
- * @param {string} user name
- * @returns {action}
- */
-export function loadAuthorPublicationsByYear(userName) {
+export function loadAuthorPublicationsStats(userName) {
     return dispatch => {
-        dispatch({type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING});
-        return get(routes.ACADEMIC_STATS_PUBLICATION_YEARS_API({userId: userName}))
+        dispatch({type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADING});
+        let statsData = null;
+        return get(routes.ACADEMIC_PUBLICATIONS_STATS_API({}))
             .then(response => {
-                const data = response !== null && response.hasOwnProperty('facet_counts')
-                && response.facet_counts.hasOwnProperty('facet_pivot') ?
-                    response.facet_counts.facet_pivot['date_year_t,display_type_i_lookup_exact'] : [];
+                let data = [];
+                let topPublicationTypes = [];
+                let years = [];
 
-                const topPublicationTypes = transformer.getPublicationsPerType(data, 4);
+                if (response !== null && response.hasOwnProperty('filters') && response.filters.hasOwnProperty('facets')) {
+                    data = response.filters.facets.hasOwnProperty('Year published') && response.filters.facets['Year published'].buckets;
+                    topPublicationTypes = transformer.getPublicationsPerType(data, 4);
+                    years = transformer.getPublicationsPerYearCategories(data);
+                    statsData = response !== null && transformer.getPublicationsStats(years, response.filters.facets);
+                }
+
                 dispatch({
                     type: actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED,
                     payload: topPublicationTypes
@@ -26,33 +28,10 @@ export function loadAuthorPublicationsByYear(userName) {
                     type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED,
                     payload: {
                         series: transformer.getPublicationsPerYearSeries(data, topPublicationTypes),
-                        categories: transformer.getPublicationsPerYearCategories(data)
+                        categories: years
                     }
                 });
-            })
-            .catch(error => {
-                dispatch({
-                    type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_FAILED,
-                    payload: error.message
-                });
-            });
-    };
-}
 
-/**
- * Returns the author's publications stats
- * @param {string} user name
- * @returns {action}
- */
-export function loadAuthorPublicationsStats(userName) {
-    return dispatch => {
-        dispatch({type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADING});
-        let statsData = null;
-        return get(routes.ACADEMIC_STATS_PUBLICATION_STATS_API({userId: userName}))
-            .then(response => {
-                if (response) {
-                    statsData = transformer.getPublicationsStats(response);
-                }
                 return get(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: userName}));
             })
             .then(response => {
