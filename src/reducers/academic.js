@@ -24,12 +24,10 @@ const handlers = {
         publicationTypesCount: action.payload
     }),
 
-    [actions.ACADEMIC_PUBLICATIONS_STATS_FAILED]: (state) => ({
-        ...state,
+    [actions.ACADEMIC_PUBLICATIONS_STATS_FAILED]: () => ({
+        ...initialState,
         loadingPublicationsByYear: false,
-        loadingPublicationsStats: false,
-        publicationsByYear: null,
-        publicationsStats: null
+        loadingPublicationsStats: false
     }),
 
     [actions.ACADEMIC_PUBLICATIONS_STATS_LOADED]: (state, action) => ({

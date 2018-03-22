@@ -44,12 +44,10 @@ mock
         if (mockData.currentAuthor[user]) return [200, mockData.currentAuthor[user]];
         return [404, {}];
     })
-    .onGet(routes.ACADEMIC_STATS_PUBLICATION_YEARS_API({userId: user}).apiUrl)
-    .reply(200, mockData.publicationYearsBig)
     .onGet(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: user}).apiUrl)
     .reply(200, mockData.hindexResponse)
-    .onGet(routes.ACADEMIC_STATS_PUBLICATION_STATS_API({userId: user}).apiUrl)
-    .reply(200, mockData.publicationStats)
+    .onGet(routes.ACADEMIC_PUBLICATIONS_STATS_API({userId: user}).apiUrl)
+    .reply(200, mockData.currentAuthorStats)
     .onGet(routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API({userId: user}).apiUrl)
     .reply(200, mockData.trendingPublications)
     .onGet(routes.SEARCH_EXTERNAL_RECORDS_API({}).apiUrl)
