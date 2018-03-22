@@ -191,7 +191,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
       className="columns"
     >
       <div
-        className="column is-half"
+        className="column"
       >
         <Field
           component={[Function]}
