@@ -2,12 +2,16 @@ import React from 'react';
 
 export default class AddThis extends React.Component {
     componentDidMount() {
-        const script = document.createElement('script');
+        /* add the script to the body if it hasnt already happened */
+        if (!document.getElementById('addThisScript')) {
+            const script = document.createElement('script');
 
-        script.src = '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-512eb98337c8a4a9';
-        script.async = true;
+            script.src = '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-512eb98337c8a4a9';
+            script.id = 'addThisScript';
+            script.async = true;
 
-        document.body.appendChild(script);
+            document.body.appendChild(script);
+        }
     }
 
     render() {
