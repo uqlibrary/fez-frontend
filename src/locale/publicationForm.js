@@ -1063,9 +1063,7 @@ export default {
     errorAlert: {
         type: 'error_outline',
         title: 'Error',
-        message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`),
-        createRecordMessage: 'Error has occurred during request and adding new publication cannot be processed.',
-        fileUploadMessage: 'Error has occurred while uploading files.',
+        message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`)
     },
     progressAlert: {
         type: 'info_outline',
@@ -1131,6 +1129,13 @@ export default {
         submit: 'Deposit your thesis',
         afterSubmitLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
         afterSubmit: 'Return to the Graduate School website',
-        afterSubmitText: (<p>Your thesis has been deposited. You will receive an email confirming your thesis deposit shortly.</p>)
+        afterSubmitText: (<p>Your thesis has been deposited. You will receive an email confirming your thesis deposit shortly.</p>),
+        depositConfirmation: {
+            confirmationTitle: 'Thesis deposit',
+            confirmationMessage: 'You are about to deposit your thesis with attached files. Are you sure you want to proceed?',
+            cancelButtonLabel: 'No, continue editing',
+            confirmButtonLabel: 'Yes, deposit thesis'
+        },
+        depositFailedMessage: () => ('Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.')
     }
 };
