@@ -104,6 +104,20 @@ describe('Application component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render app for account with fez author without ORCID ID should not display ORCID warning on thesis submission page', () => {
+        const wrapper = setup({
+            location: {
+                pathname: routes.pathConfig.hdrSubmission
+            },
+            account: account,
+            author: {
+                ...author,
+                aut_orcid_id: null
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render app for HDR without ORCID ID', () => {
         const wrapper = setup({
             account: account,
