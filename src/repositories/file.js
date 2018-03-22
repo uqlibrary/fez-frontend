@@ -26,8 +26,7 @@ export function putUploadFile(pid, file, dispatch) {
         })
         .then(uploadResponse => (Promise.resolve(uploadResponse)))
         .catch(error => {
-            // file uploading failed
-            Raven.captureException(error);
+            if(!process.env.USE_MOCK) Raven.captureException(error);
 
             // only send issues for PIDs
             if (/^UQ:\d+/g.test(pid)) {
