@@ -154,8 +154,7 @@ module.exports = {
             'process.env.USE_MOCK': JSON.stringify(useMock),
             'process.env.APP_URL': JSON.stringify(`http://${url}:${port}/`),
             'process.env.ORCID_URL': JSON.stringify(orcidUrl),
-            'process.env.ORCID_CLIENT_ID': JSON.stringify(orcidClientId),
-            'process.env.TITLE_SUFFIX': JSON.stringify('LOCAL')
+            'process.env.ORCID_CLIENT_ID': JSON.stringify(orcidClientId)
         })
     ],
     resolve: {

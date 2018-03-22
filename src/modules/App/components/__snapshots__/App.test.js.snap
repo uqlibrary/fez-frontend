@@ -59,7 +59,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         "height": 75,
       }
     }
-    title="UQ eSpace "
+    title="UQ eSpace DEMO"
     titleStyle={Object {}}
     zDepth={1}
   />
@@ -76,7 +76,7 @@ exports[`Application component should render alert if user is not fez author 1`]
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoText="UQ eSpace DEMO"
     menuItems={
       Array [
         Object {
@@ -352,7 +352,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         "height": 75,
       }
     }
-    title="UQ eSpace "
+    title="UQ eSpace DEMO"
     titleStyle={Object {}}
     zDepth={1}
   />
@@ -369,7 +369,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoText="UQ eSpace DEMO"
     menuItems={
       Array [
         Object {
@@ -630,7 +630,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         "height": 75,
       }
     }
-    title="UQ eSpace "
+    title="UQ eSpace DEMO"
     titleStyle={Object {}}
     zDepth={1}
   />
@@ -647,7 +647,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoText="UQ eSpace DEMO"
     menuItems={
       Array [
         Object {
@@ -791,7 +791,7 @@ exports[`Application component should render app for account with fez author wit
         "height": 75,
       }
     }
-    title="UQ eSpace "
+    title="UQ eSpace DEMO"
     titleStyle={Object {}}
     zDepth={1}
   />
@@ -808,7 +808,7 @@ exports[`Application component should render app for account with fez author wit
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoText="UQ eSpace DEMO"
     menuItems={
       Array [
         Object {
@@ -1069,7 +1069,7 @@ exports[`Application component should render app for account with fez author wit
         "height": 75,
       }
     }
-    title="UQ eSpace "
+    title="UQ eSpace DEMO"
     titleStyle={Object {}}
     zDepth={1}
   />
@@ -1086,7 +1086,7 @@ exports[`Application component should render app for account with fez author wit
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoText="UQ eSpace DEMO"
     menuItems={
       Array [
         Object {
@@ -1305,231 +1305,6 @@ exports[`Application component should render app for account with fez author wit
 </div>
 `;
 
-exports[`Application component should render app for account with fez author without ORCID ID should not display ORCID warning on thesis submission page 1`] = `
-<div
-  className="layout-fill align-stretch"
->
-  <AppBar
-    className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
-          Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
-          }
-        }
-        iconStyle={Object {}}
-        tabIndex={1}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
-      >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
-      >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
-            }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonTouchTap={[Function]}
-    showMenuIconButton={false}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title="UQ eSpace "
-    titleStyle={Object {}}
-    zDepth={1}
-  />
-  <div
-    className="content-container"
-    style={Object {}}
-  >
-    <Connect(AppAlert) />
-    <Switch>
-      <Route
-        key="route_0"
-        path="/rhdsubmission_new"
-        render={[Function]}
-      />
-      <Route
-        key="route_1"
-        path="/sbslodge_new"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_2"
-        path="/"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_3"
-        path="/dashboard"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_4"
-        path="/records/mine"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_5"
-        path="/records/possible"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_6"
-        path="/records/claim"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_7"
-        path="/records/:pid(UQ:\\\\d+)/fix"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_8"
-        path="/records/add/find"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_9"
-        path="/records/add/results"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_10"
-        path="/records/add/new"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_11"
-        path="/author-identifiers/orcid/link"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_12"
-        path="/author-identifiers/google-scholar/link"
-      />
-      <Route
-        key="route_13"
-        path="/about"
-        render={[Function]}
-      />
-      <Route
-        key="route_14"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_15"
-        path="/records/:pid(UQ:\\\\d+)"
-      />
-      <Route
-        key="route_16"
-        render={[Function]}
-      />
-    </Switch>
-  </div>
-  <Connect(HelpDrawer) />
-</div>
-`;
-
 exports[`Application component should render application with routing for the user and display loading screen while loading author 1`] = `
 <div
   className="layout-fill align-stretch"
@@ -1589,7 +1364,7 @@ exports[`Application component should render application with routing for the us
         "height": 75,
       }
     }
-    title="UQ eSpace "
+    title="UQ eSpace DEMO"
     titleStyle={Object {}}
     zDepth={1}
   />
@@ -1606,7 +1381,7 @@ exports[`Application component should render application with routing for the us
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoText="UQ eSpace DEMO"
     menuItems={
       Array [
         Object {
@@ -1722,7 +1497,7 @@ exports[`Application component should render for anon user 1`] = `
         "height": 75,
       }
     }
-    title="UQ eSpace "
+    title="UQ eSpace DEMO"
     titleStyle={Object {}}
     zDepth={1}
   />
@@ -1739,7 +1514,7 @@ exports[`Application component should render for anon user 1`] = `
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoText="UQ eSpace DEMO"
     menuItems={
       Array [
         Object {
@@ -1819,9 +1594,9 @@ exports[`Application component should render loading screen while account is loa
 >
   <AppLoader
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoText="UQ eSpace DEMO"
     progressColor="#FFF"
-    title="UQ eSpace "
+    title="UQ eSpace DEMO"
   />
 </div>
 `;
@@ -1885,7 +1660,7 @@ exports[`Application component should render thesis submission for HDR without m
         "height": 75,
       }
     }
-    title="UQ eSpace "
+    title="UQ eSpace DEMO"
     titleStyle={Object {}}
     zDepth={1}
   />
