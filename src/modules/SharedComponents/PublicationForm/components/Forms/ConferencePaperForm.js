@@ -70,7 +70,7 @@ export default class ConferencePaperForm extends Component {
                         </div>
                     </div>
                     <div className="columns">
-                        <div className="column is-half">
+                        <div className="column">
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -81,7 +81,9 @@ export default class ConferencePaperForm extends Component {
                                 validate={[validation.required]}
                                 floatingLabelText={txt.information.fieldLabels.conferenceDates} />
                         </div>
-                        <div className="column">
+                    </div>
+                    <div className="columns">
+                        <div className="column is-half">
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -89,6 +91,15 @@ export default class ConferencePaperForm extends Component {
                                 type="text"
                                 fullWidth
                                 floatingLabelText={txt.information.fieldLabels.proceedingsTitle} />
+                        </div>
+                        <div className="column">
+                            <Field
+                                component={TextField}
+                                disabled={this.props.submitting}
+                                name="fez_record_search_key_journal_name.rek_journal_name"
+                                type="text"
+                                fullWidth
+                                floatingLabelText={txt.information.fieldLabels.journalName} />
                         </div>
                     </div>
                     <div className="columns">

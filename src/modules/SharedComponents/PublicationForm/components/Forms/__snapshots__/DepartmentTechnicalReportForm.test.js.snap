@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GenericDocumentForm renders  component 1`] = `
+exports[`DepartmentTechnicalReportForm renders  component 1`] = `
 <div>
   <StandardCard
     className=""
