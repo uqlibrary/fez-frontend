@@ -207,6 +207,7 @@ export default {
                 subtype: 'Publication subtype',
                 publicationPlace: 'Place of publication',
                 publisher: 'Publisher',
+                journalName: 'Journal name',
                 date: {
                     title: 'Publication date',
                     day: 'Day',

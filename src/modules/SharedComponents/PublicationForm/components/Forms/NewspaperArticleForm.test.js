@@ -1,37 +1,14 @@
 jest.dontMock('./NewspaperArticleForm');
 
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import NewspaperArticleForm from './NewspaperArticleForm';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
-function setup({submitting, subtypeVocabId, isShallow = true}){
-
+function setup(testProps, isShallow = true){
     const props = {
-        submitting: submitting || false, // : PropTypes.bool,
+        ...testProps,
+        submitting: testProps.submitting || false // : PropTypes.bool,
     };
-
-    if(isShallow) {
-        return shallow(<NewspaperArticleForm {...props} />);
-    }
-
-    return mount(<NewspaperArticleForm {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
-
+    return getElement(NewspaperArticleForm, props, isShallow);
 }
-
-beforeAll(() => {
-    injectTapEventPlugin();
-});
 
 describe('NewspaperArticleForm renders ', () => {
     it('component', () => {
