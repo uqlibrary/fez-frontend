@@ -1,38 +1,15 @@
 jest.dontMock('./ThesisForm');
 
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import ThesisForm from './ThesisForm';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
-function setup({submitting, vocabId, isShallow = true}){
-
+function setup(testProps, isShallow = true){
     const props = {
-        submitting: submitting || false, // : PropTypes.bool,
-        vocabId: vocabId || 0, // : PropTypes.number
+        ...testProps,
+        submitting: testProps.submitting || false, // : PropTypes.bool,
+        vocabId: testProps.vocabId || 0, // : PropTypes.number
     };
-
-    if(isShallow) {
-        return shallow(<ThesisForm {...props} />);
-    }
-
-    return mount(<ThesisForm {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
-
+    return getElement(ThesisForm, props, isShallow);
 }
-
-beforeAll(() => {
-    injectTapEventPlugin();
-});
 
 describe('ThesisForm ', () => {
     it('should render component', () => {
@@ -46,7 +23,7 @@ describe('ThesisForm ', () => {
         expect(wrapper.instance().getNumbersOnly('12Three')).toBe('12');
         expect(wrapper.instance().getNumbersOnly('  01Three')).toBe('01');
         expect(wrapper.instance().getNumbersOnly('124')).toBe('124');
-    })
+    });
 
     it('should render component with 12 input fields', () => {
         const wrapper = setup({});

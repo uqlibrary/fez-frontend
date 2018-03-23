@@ -3718,7 +3718,7 @@ export const record = {
     "rek_formatted_title_xsdmf_id": 11438,
     "rek_formatted_title": "Long-range regulators of the lncRNA <em>HOTAIR<\/em> enhance its prognostic potential in breast cancer",
     "rek_formatted_abstract_xsdmf_id": 11442,
-    "rek_formatted_abstract": "Predicting response to endocrine therapy and survival in estrogen receptor positive breast cancer is a significant clinical challenge and novel prognostic biomarkers are needed. Long-range regulators of gene expression are emerging as promising biomarkers and therapeutic targets for human diseases, so we have explored the potential of distal enhancer elements of non-coding RNAs in the prognostication of breast cancer survival. <em>HOTAIR<\/em> is a long non-coding RNA that is overexpressed, promotes metastasis and is predictive of decreased survival. Here we describe a long-range transcriptional enhancer of the <em>HOTAIR<\/em> gene that binds several hormone receptors and associated transcription factors, interacts with the <em>HOTAIR<\/em> promoter and augments transcription. This enhancer is dependent on Forkhead-Box transcription factors and functionally interacts with a novel alternate <em>HOTAIR<\/em> promoter. <em>HOTAIR<\/em> expression is negatively regulated by estrogen, positively regulated by FOXA1 and FOXM1, and is inversely correlated with estrogen receptor and directly correlated with <em>FOXM1<\/em> in breast tumors. The combination of <em>HOTAIR<\/em> and <em>FOXM1 <\/em>enables greater discrimination of endocrine therapy responders and non-responders in patients with estrogen receptor positive breast cancer. Consistent with this, <em>HOTAIR<\/em> expression is increased in cell-line models of endocrine resistance. Analysis of breast cancer gene expression data indicates that <em>HOTAIR<\/em> is co-expressed with <em>FOXA1<\/em> and <em>FOXM1<\/em> in HER2-enriched tumors, and these factors enhance the prognostic power of <em>HOTAIR<\/em> in aggressive HER2+ breast tumors. Our study elucidates the transcriptional regulation of <em>HOTAIR<\/em>, identifies <em>HOTAIR<\/em> and its regulators as novel biomarkers of patient response to endocrine therapy and corroborates the importance of transcriptional enhancers in cancer.",
+    "rek_formatted_abstract": "<img src='x' onError=alert(1); /><script>alert(2);</script><i>italic</i><b>bold</b><strike>strike</strike>&szlig; &micro; &asymp;<p style='font-size:30px'>paragraph</p><strong>strong</strong><u>underline</u><s>s</s><sup>sup</sup><sub>sub</sub><tabler><tbody><tr>table row</tr></tbody></table><div>div</div>Predicting 2 response to endocrine therapy and survival in estrogen receptor positive breast cancer is a significant clinical challenge and novel prognostic biomarkers are needed. Long-range regulators of gene expression are emerging as promising biomarkers and therapeutic targets for human diseases, so we have explored the potential of distal enhancer elements of non-coding RNAs in the prognostication of breast cancer survival. <em>HOTAIR<\/em> is a long non-coding RNA that is overexpressed, promotes metastasis and is predictive of decreased survival. Here we describe a long-range transcriptional enhancer of the <em>HOTAIR<\/em> gene that binds several hormone receptors and associated transcription factors, interacts with the <em>HOTAIR<\/em> promoter and augments transcription. This enhancer is dependent on Forkhead-Box transcription factors and functionally interacts with a novel alternate <em>HOTAIR<\/em> promoter. <em>HOTAIR<\/em> expression is <i>negatively regulated by estrogen</i>, positively regulated by FOXA1 and FOXM1, and is inversely correlated with estrogen receptor and directly correlated with <em>FOXM1<\/em> in breast tumors. The combination of <em>HOTAIR<\/em> and <em>FOXM1 <\/em>enables greater discrimination of endocrine therapy responders and non-responders in patients with estrogen receptor positive breast cancer. Consistent with this, <em>HOTAIR<\/em> expression is increased in cell-line models of endocrine resistance. Analysis of breast cancer gene expression data indicates that <em>HOTAIR<\/em> is co-expressed with <em>FOXA1<\/em> and <em>FOXM1<\/em> in HER2-enriched tumors, and these factors enhance the prognostic power of <em>HOTAIR<\/em> in aggressive HER2+ breast tumors. Our study elucidates the transcriptional regulation of <em>HOTAIR<\/em>, identifies <em>HOTAIR<\/em> and its regulators as novel biomarkers of patient response to endocrine therapy and corroborates the importance of transcriptional enhancers in cancer.",
     "rek_depositor_affiliation_xsdmf_id": 11881,
     "rek_depositor_affiliation": 881,
     "rek_thomson_citation_count": 3,
@@ -3741,16 +3741,23 @@ export const record = {
     "rek_altmetric_id_xsdmf_id": null,
     "rek_copyright_xsdmf_id": 3679,
     "rek_copyright": "on",
+    "fez_record_search_key_additional_notes": {
+        "rek_additional_notes_id": 44,
+        "rek_additional_notes_pid": "UQ:344368",
+        "rek_additional_notes_xsdmf_id": 3441,
+        "rek_additional_notes": "Testing notes"
+    },
     "fez_record_search_key_article_number": null,
     "fez_record_search_key_assigned_group_id": [],
     "fez_record_search_key_assigned_user_id": [],
-    "fez_record_search_key_author": [{
+    "fez_record_search_key_author": [
+        {
         "rek_author_id": 28593829,
         "rek_author_pid": "UQ:396321",
         "rek_author_xsdmf_id": 6351,
         "rek_author": "Milevskiy, Michael J. G.",
         "rek_author_order": 1
-    },
+        },
         {
             "rek_author_id": 28593830,
             "rek_author_pid": "UQ:396321",
@@ -3858,7 +3865,8 @@ export const record = {
     "fez_record_search_key_author_affiliation_full_address": [],
     "fez_record_search_key_author_affiliation_id": [],
     "fez_record_search_key_author_affiliation_name": [],
-    "fez_record_search_key_author_id": [{
+    "fez_record_search_key_author_id": [
+        {
         "rek_author_id_id": 27973928,
         "rek_author_id_pid": "UQ:396321",
         "rek_author_id_xsdmf_id": 6346,
@@ -3989,100 +3997,342 @@ export const record = {
     },
     "fez_record_search_key_file_attachment_access_condition": [],
     "fez_record_search_key_file_attachment_embargo_date": [],
-    "fez_record_search_key_file_attachment_name": [{
-        "rek_file_attachment_name_id": 4215529,
-        "rek_file_attachment_name_pid": "UQ:396321",
-        "rek_file_attachment_name_xsdmf_id": 6437,
-        "rek_file_attachment_name": "FezACML_UQ_396321.xml",
-        "rek_file_attachment_name_order": 1
-    }],
-    "fez_record_search_key_grant_acronym": [],
-    "fez_record_search_key_grant_agency": [],
+    "fez_record_search_key_file_attachment_name": [
+        {
+            "rek_file_attachment_name_id": 4215529,
+            "rek_file_attachment_name_pid": "UQ:396321",
+            "rek_file_attachment_name_xsdmf_id": null,
+            "rek_file_attachment_name": "FezACML_UQ_396321.xml",
+            "rek_file_attachment_name_order": 1
+        }
+    ],
+    "fez_record_search_key_grant_acronym": [
+        {
+            "rek_grant_acronym_id": 6035,
+            "rek_grant_acronym_pid": "UQ:396321",
+            "rek_grant_acronym_xsdmf_id": 0,
+            "rek_grant_acronym_order": 1,
+            "rek_grant_acronym": "NBCF"
+        },
+        {
+            "rek_grant_acronym_id": 6036,
+            "rek_grant_acronym_pid": "UQ:396321",
+            "rek_grant_acronym_xsdmf_id": 0,
+            "rek_grant_acronym_order": 2,
+            "rek_grant_acronym": "ARC"
+        }
+    ],
+    "fez_record_search_key_grant_agency": [
+        {
+            "rek_grant_agency_id": 21114,
+            "rek_grant_agency_pid": "UQ:396321",
+            "rek_grant_agency_xsdmf_id": 0,
+            "rek_grant_agency_order": 1,
+            "rek_grant_agency": "National Breast Cancer Foundation of Australia"
+        },
+        {
+            "rek_grant_agency_id": 21115,
+            "rek_grant_agency_pid": "UQ:396321",
+            "rek_grant_agency_xsdmf_id": 0,
+            "rek_grant_agency_order": 2,
+            "rek_grant_agency": "Australian Research Council"
+        },
+        {
+            "rek_grant_agency_id": 21116,
+            "rek_grant_agency_pid": "UQ:396321",
+            "rek_grant_agency_xsdmf_id": 0,
+            "rek_grant_agency_order": 3,
+            "rek_grant_agency": "Cancer Council of Queensland"
+        },
+        {
+            "rek_grant_agency_id": 21117,
+            "rek_grant_agency_pid": "UQ:396321",
+            "rek_grant_agency_xsdmf_id": 0,
+            "rek_grant_agency_order": 4,
+            "rek_grant_agency": "University of Queensland"
+        },
+        {
+            "rek_grant_agency_id": 21118,
+            "rek_grant_agency_pid": "UQ:396321",
+            "rek_grant_agency_xsdmf_id": 0,
+            "rek_grant_agency_order": 5,
+            "rek_grant_agency": "National Breast Cancer Foundation [NBCF]"
+        },
+        {
+            "rek_grant_agency_id": 21119,
+            "rek_grant_agency_pid": "UQ:396321",
+            "rek_grant_agency_xsdmf_id": 0,
+            "rek_grant_agency_order": 6,
+            "rek_grant_agency": "Institute, Integrative Cancer Biology Program"
+        },
+        {
+            "rek_grant_agency_id": 21120,
+            "rek_grant_agency_pid": "UQ:396321",
+            "rek_grant_agency_xsdmf_id": 0,
+            "rek_grant_agency_order": 7,
+            "rek_grant_agency": "NBCF"
+        },
+        {
+            "rek_grant_agency_id": 21121,
+            "rek_grant_agency_pid": "UQ:396321",
+            "rek_grant_agency_xsdmf_id": 0,
+            "rek_grant_agency_order": 8,
+            "rek_grant_agency": "Breast Cancer Now"
+        },
+        {
+            "rek_grant_agency_id": 21122,
+            "rek_grant_agency_pid": "UQ:396321",
+            "rek_grant_agency_xsdmf_id": 0,
+            "rek_grant_agency_order": 9,
+            "rek_grant_agency": "Australian Postgraduate Award (APA)"
+        },
+        {
+            "rek_grant_agency_id": 21123,
+            "rek_grant_agency_pid": "UQ:396321",
+            "rek_grant_agency_xsdmf_id": 0,
+            "rek_grant_agency_order": 10,
+            "rek_grant_agency": "NBCF"
+        },
+        {
+            "rek_grant_agency_id": 21124,
+            "rek_grant_agency_pid": "UQ:396321",
+            "rek_grant_agency_xsdmf_id": 0,
+            "rek_grant_agency_order": 11,
+            "rek_grant_agency": "NHMRC"
+        }
+    ],
     "fez_record_search_key_grant_agency_id": [],
-    "fez_record_search_key_grant_id": [],
-    "fez_record_search_key_grant_text": [],
+    "fez_record_search_key_grant_id": [
+        {
+            "rek_grant_id_id": 15583,
+            "rek_grant_id_pid": "UQ:396321",
+            "rek_grant_id_xsdmf_id": 0,
+            "rek_grant_id_order": 1,
+            "rek_grant_id": "NBCF: 2007003445"
+        },
+        {
+            "rek_grant_id_id": 15584,
+            "rek_grant_id_pid": "UQ:396321",
+            "rek_grant_id_xsdmf_id": 0,
+            "rek_grant_id_order": 2,
+            "rek_grant_id": "ARC: DP0985025"
+        },
+        {
+            "rek_grant_id_id": 15585,
+            "rek_grant_id_pid": "UQ:396321",
+            "rek_grant_id_xsdmf_id": 0,
+            "rek_grant_id_order": 3,
+            "rek_grant_id": "CCQ: 1026095"
+        },
+        {
+            "rek_grant_id_id": 15586,
+            "rek_grant_id_pid": "UQ:396321",
+            "rek_grant_id_xsdmf_id": 0,
+            "rek_grant_id_order": 4,
+            "rek_grant_id": "CG-08-03"
+        },
+        {
+            "rek_grant_id_id": 15587,
+            "rek_grant_id_pid": "UQ:396321",
+            "rek_grant_id_xsdmf_id": 0,
+            "rek_grant_id_order": 5,
+            "rek_grant_id": "U54CA1113001"
+        },
+        {
+            "rek_grant_id_id": 15588,
+            "rek_grant_id_pid": "UQ:396321",
+            "rek_grant_id_xsdmf_id": 0,
+            "rek_grant_id_order": 6,
+            "rek_grant_id": "ECF-10-05"
+        }
+    ],
+    "fez_record_search_key_grant_text": [
+        {
+            "rek_grant_text_id": 583,
+            "rek_grant_text_pid": "UQ:396321",
+            "rek_grant_text_xsdmf_id": 0,
+            "rek_grant_text_order": 1,
+            "rek_grant_text": "We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland."
+        }
+    ],
     "fez_record_search_key_herdc_code": {
-        "rek_herdc_code_id": 4602013,
-        "rek_herdc_code_pid": "UQ:396321",
-        "rek_herdc_code_xsdmf_id": 12386,
-        "rek_herdc_code": 450009
+        "rek_herdc_code_id"      : 4602013,
+        "rek_herdc_code_pid"     : "UQ:396321",
+        "rek_herdc_code_xsdmf_id": null,
+        "rek_herdc_code"         : 450009,
+        "rek_herdc_code_lookup"  : "C1"
     },
     "fez_record_search_key_herdc_status": {
         "rek_herdc_status_id": 3519027,
         "rek_herdc_status_pid": "UQ:396321",
-        "rek_herdc_status_xsdmf_id": 12405,
-        "rek_herdc_status": 453220
+        "rek_herdc_status_xsdmf_id": null,
+        "rek_herdc_status": 453220,
+        "rek_herdc_status_lookup": "Provisional Code"
     },
     "fez_record_search_key_institutional_status": {
         "rek_institutional_status_id": 3181405,
         "rek_institutional_status_pid": "UQ:396321",
-        "rek_institutional_status_xsdmf_id": 12406,
-        "rek_institutional_status": 453223
+        "rek_institutional_status_xsdmf_id": null,
+        "rek_institutional_status": 453223,
+        "rek_institutional_status_lookup": "UQ"
     },
     "fez_record_search_key_isbn": [],
     "fez_record_search_key_isderivationof": [],
     "fez_record_search_key_isi_loc": {
         "rek_isi_loc_id": 4019614,
         "rek_isi_loc_pid": "UQ:396321",
-        "rek_isi_loc_xsdmf_id": 10797,
+        "rek_isi_loc_xsdmf_id": null,
         "rek_isi_loc": "000393077300011"
     },
-    "fez_record_search_key_ismemberof": [{
-        "rek_ismemberof_id": 12091805,
-        "rek_ismemberof_pid": "UQ:396321",
-        "rek_ismemberof_xsdmf_id": 149,
-        "rek_ismemberof": "UQ:3825",
-        "rek_ismemberof_order": 1
-    }, {
-        "rek_ismemberof_id": 12091806,
-        "rek_ismemberof_pid": "UQ:396321",
-        "rek_ismemberof_xsdmf_id": 149,
-        "rek_ismemberof": "UQ:218311",
-        "rek_ismemberof_order": 2
-    }, {
-        "rek_ismemberof_id": 12091807,
-        "rek_ismemberof_pid": "UQ:396321",
-        "rek_ismemberof_xsdmf_id": 149,
-        "rek_ismemberof": "UQ:171723",
-        "rek_ismemberof_order": 3
-    }, {
-        "rek_ismemberof_id": 12091808,
-        "rek_ismemberof_pid": "UQ:396321",
-        "rek_ismemberof_xsdmf_id": 149,
-        "rek_ismemberof": "UQ:3858",
-        "rek_ismemberof_order": 4
-    }, {
-        "rek_ismemberof_id": 12091809,
-        "rek_ismemberof_pid": "UQ:396321",
-        "rek_ismemberof_xsdmf_id": 149,
-        "rek_ismemberof": "UQ:3860",
-        "rek_ismemberof_order": 5
-    }, {
-        "rek_ismemberof_id": 12091810,
-        "rek_ismemberof_pid": "UQ:396321",
-        "rek_ismemberof_xsdmf_id": 149,
-        "rek_ismemberof": "UQ:3831",
-        "rek_ismemberof_order": 6
-    }, {
-        "rek_ismemberof_id": 12091811,
-        "rek_ismemberof_pid": "UQ:396321",
-        "rek_ismemberof_xsdmf_id": 149,
-        "rek_ismemberof": "UQ:273541",
-        "rek_ismemberof_order": 7
-    }],
-    "fez_record_search_key_issn": [{
-        "rek_issn_id": 5023871,
-        "rek_issn_pid": "UQ:396321",
-        "rek_issn_xsdmf_id": 10796,
-        "rek_issn": "1460-2083",
-        "rek_issn_order": 1
-    }, {
-        "rek_issn_id": 5023872,
-        "rek_issn_pid": "UQ:396321",
-        "rek_issn_xsdmf_id": 10796,
-        "rek_issn": "0964-6906",
-        "rek_issn_order": 2
-    }],
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 12091805,
+            "rek_ismemberof_pid": "UQ:396321",
+            "rek_ismemberof_xsdmf_id": null,
+            "rek_ismemberof": "UQ:3825",
+            "rek_ismemberof_order": 1,
+            "rek_ismemberof_lookup": "School of Chemistry and Molecular Biosciences"
+        },
+        {
+            "rek_ismemberof_id": 12091806,
+            "rek_ismemberof_pid": "UQ:396321",
+            "rek_ismemberof_xsdmf_id": null,
+            "rek_ismemberof": "UQ:218311",
+            "rek_ismemberof_order": 2,
+            "rek_ismemberof_lookup": "HERDC Pre-Audit"
+        },
+        {
+            "rek_ismemberof_id": 12091807,
+            "rek_ismemberof_pid": "UQ:396321",
+            "rek_ismemberof_xsdmf_id": null,
+            "rek_ismemberof": "UQ:171723",
+            "rek_ismemberof_order": 3,
+            "rek_ismemberof_lookup": "UQ Centre for Clinical Research Publications"
+        },
+        {
+            "rek_ismemberof_id": 12091808,
+            "rek_ismemberof_pid": "UQ:396321",
+            "rek_ismemberof_xsdmf_id": null,
+            "rek_ismemberof": "UQ:3858",
+            "rek_ismemberof_order": 4,
+            "rek_ismemberof_lookup": "Institute for Molecular Bioscience - Publications"
+        },
+        {
+            "rek_ismemberof_id": 12091809,
+            "rek_ismemberof_pid": "UQ:396321",
+            "rek_ismemberof_xsdmf_id": null,
+            "rek_ismemberof": "UQ:3860",
+            "rek_ismemberof_order": 5,
+            "rek_ismemberof_lookup": "Australian Institute for Bioengineering and Nanotechnology Publications"
+        },
+        {
+            "rek_ismemberof_id": 12091810,
+            "rek_ismemberof_pid": "UQ:396321",
+            "rek_ismemberof_xsdmf_id": null,
+            "rek_ismemberof": "UQ:3831",
+            "rek_ismemberof_order": 6,
+            "rek_ismemberof_lookup": "School of Medicine Publications"
+        },
+        {
+            "rek_ismemberof_id": 12091811,
+            "rek_ismemberof_pid": "UQ:396321",
+            "rek_ismemberof_xsdmf_id": null,
+            "rek_ismemberof": "UQ:273541",
+            "rek_ismemberof_order": 7,
+            "rek_ismemberof_lookup": "Admin Only - School of Medicine"
+        }
+    ],
+    "fez_record_search_key_issn": [
+        {
+            "rek_issn_id": 5023871,
+            "rek_issn_pid": "UQ:396321",
+            "rek_issn_xsdmf_id": null,
+            "rek_issn": "1460-2083",
+            "rek_issn_order": 1,
+            "fez_journal_issns": [
+                {
+                    "jni_id": 9527,
+                    "jni_jnl_id": 5493,
+                    "jni_issn": "1815-5669",
+                    "jni_issn_order": 1,
+                    "fez_journal": {
+                        "jnl_id": 5493,
+                        "jnl_journal_name": "Journal of Contemporary Accounting and Economics",
+                        "jnl_era_id": 18570,
+                        "jnl_era_year": 2010,
+                        "jnl_created_date": "2010-11-19 00:00:00",
+                        "jnl_updated_date": "2010-11-19 00:00:00",
+                        "jnl_rank": "B",
+                        "jnl_foreign_name": null
+                    }
+                },
+                {
+                    "jni_id": 54148,
+                    "jni_jnl_id": 32517,
+                    "jni_issn": "1815-5669",
+                    "jni_issn_order": 1,
+                    "fez_journal": {
+                        "jnl_id": 32517,
+                        "jnl_journal_name": "Journal of Contemporary Accounting and Economics",
+                        "jnl_era_id": 18570,
+                        "jnl_era_year": 2012,
+                        "jnl_created_date": "2011-10-28 00:00:00",
+                        "jnl_updated_date": "2011-10-28 00:00:00",
+                        "jnl_rank": null,
+                        "jnl_foreign_name": ""
+                    }
+                }
+            ],
+            "fez_sherpa_romeo": {
+                "srm_id": 13663,
+                "srm_issn": "1460-2083",
+                "srm_xml": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<!DOCTYPE romeoapi SYSTEM \"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\">\n<romeoapi version=\"2.9.9\">\n  <header>\n    <parameters>\n      <parameter source=\"specified\">\n        <parametername>issn</parametername>\n        <parametervalue>1460-2083</parametervalue>\n      </parameter>\n      <parameter source=\"specified\">\n        <parametername>versions</parametername>\n        <parametervalue>all</parametervalue>\n      </parameter>\n      <parameter source=\"default\">\n        <parametername>showfunder</parametername>\n        <parametervalue>none</parametervalue>\n      </parameter>\n      <parameter source=\"default\">\n        <parametername>fIDnum</parametername>\n        <parametervalue>|</parametervalue>\n      </parameter>\n      <parameter source=\"default\">\n        <parametername>la</parametername>\n        <parametervalue>en</parametervalue>\n      </parameter>\n    </parameters>\n    <numhits>1</numhits>\n    <apicontrol>journal</apicontrol>\n    <outcome>singleJournal</outcome>\n    <message />\n    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>\n    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>\n    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>\n    <timestamp>30-Sep-2017:19:06:16</timestamp>\n  </header>\n  <journals>\n    <journal>\n      <jtitle>Human Molecular Genetics</jtitle>\n      <issn>0964-6906</issn>\n      <zetocpub>Oxford University Press (OUP): Policy B - Oxford Open Option B</zetocpub>\n      <romeopub>Oxford University Press (OUP): Policy B - Oxford Open Option B</romeopub>\n    </journal>\n  </journals>\n  <publishers>\n    <publisher id=\"1475\"  parentid=\"55\">\n      <name>Oxford University Press (OUP)</name>\n      <alias>Policy B - Oxford Open Option B</alias>\n      <homeurl>http://www.oxfordjournals.org/</homeurl>\n      <preprints>\n        <prearchiving>can</prearchiving>\n        <prerestrictions />\n      </preprints>\n      <postprints>\n        <postarchiving>can</postarchiving>\n        <postrestrictions />\n      </postprints>\n      <pdfversion>\n        <pdfarchiving>cannot</pdfarchiving>\n        <pdfrestrictions />\n      </pdfversion>\n      <conditions>\n        <condition>Pre-print can only be posted prior to acceptance</condition>\n        <condition>Pre-print must be accompanied by set statement (see link)</condition>\n        <condition>Pre-print must not be replaced with post-print, instead a link to published version with amended set statement should be made</condition>\n        <condition>Pre-print on author's personal website, employer website, free public server or pre-prints in subject area</condition>\n        <condition>Post-print on author's personal website immediately</condition>\n        <condition>Post-print in Institutional repositories or Central repositories after &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo</condition>\n        <condition>Publisher's version/PDF cannot be used</condition>\n        <condition>Published source must be acknowledged</condition>\n        <condition>Must link to publisher version</condition>\n        <condition>Set phrase to accompany archived copy (see policy)</condition>\n        <condition>Eligible authors may deposit in &lt;a href=&quot;http://opendepot.org/&quot; target=&quot;_blank&quot;&gt;OpenDepot&lt;/a&gt;</condition>\n        <condition>The publisher will deposit in PubMed Central on behalf of NIH authors</condition>\n        <condition>Publisher last contacted on 19/02/2015</condition>\n      </conditions>\n      <mandates />\n      <paidaccess>\n        <paidaccessurl>http://www.oxfordjournals.org/oxfordopen/</paidaccessurl>\n        <paidaccessname>Oxford Open</paidaccessname>\n        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>\n      </paidaccess>\n      <copyrightlinks>\n        <copyrightlink>\n          <copyrightlinktext>Policy B</copyrightlinktext>\n          <copyrightlinkurl>http://www.oxfordjournals.org/en/access-purchase/rights-and-permissions/self-archiving-policyb.html</copyrightlinkurl>\n        </copyrightlink>\n        <copyrightlink>\n          <copyrightlinktext>publication rights</copyrightlinktext>\n          <copyrightlinkurl>http://www.oxfordjournals.org/access_purchase/publication_rights.html</copyrightlinkurl>\n        </copyrightlink>\n        <copyrightlink>\n          <copyrightlinktext>NIH policy</copyrightlinktext>\n          <copyrightlinkurl>http://www.oxfordjournals.org/news/2008/08/04/nih_deposits.html</copyrightlinkurl>\n        </copyrightlink>\n        <copyrightlink>\n          <copyrightlinktext>Other funding agencies</copyrightlinktext>\n          <copyrightlinkurl>http://www.oxfordjournals.org/for_authors/repositories.html</copyrightlinkurl>\n        </copyrightlink>\n      </copyrightlinks>\n      <romeocolour>green</romeocolour>\n      <dateadded>2013-03-26 15:23:36</dateadded>\n      <dateupdated>2017-05-30 10:16:55</dateupdated>\n    </publisher>\n  </publishers>\n</romeoapi>\n",
+                "srm_journal_name": "Human Molecular Genetics",
+                "srm_colour": "green",
+                "srm_date_updated": "2017-09-30 18:06:16"
+            },
+            "rek_issn_lookup": "green"
+        },
+        {
+            "rek_issn_id": 5023872,
+            "rek_issn_pid": "UQ:396321",
+            "rek_issn_xsdmf_id": null,
+            "rek_issn": "0964-6906",
+            "rek_issn_order": 2,
+            "fez_journal_issns": {
+                "jni_id": 12969,
+                "jni_jnl_id": 7489,
+                "jni_issn": "0964-6906",
+                "jni_issn_order": 1,
+                "fez_journal": {
+                    "jnl_id": 7489,
+                    "jnl_journal_name": "Human Molecular Genetics",
+                    "jnl_era_id": 22191,
+                    "jnl_era_year": 2010,
+                    "jnl_created_date": "2010-11-19 00:00:00",
+                    "jnl_updated_date": "2010-11-19 00:00:00",
+                    "jnl_rank": "A*",
+                    "jnl_foreign_name": null
+                }
+            },
+            "fez_sherpa_romeo": {
+                "srm_id": 13662,
+                "srm_issn": "0964-6906",
+                "srm_xml": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<!DOCTYPE romeoapi SYSTEM \"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\">\n<romeoapi version=\"2.9.9\">\n  <header>\n    <parameters>\n      <parameter source=\"specified\">\n        <parametername>issn</parametername>\n        <parametervalue>0964-6906</parametervalue>\n      </parameter>\n      <parameter source=\"specified\">\n        <parametername>versions</parametername>\n        <parametervalue>all</parametervalue>\n      </parameter>\n      <parameter source=\"default\">\n        <parametername>showfunder</parametername>\n        <parametervalue>none</parametervalue>\n      </parameter>\n      <parameter source=\"default\">\n        <parametername>fIDnum</parametername>\n        <parametervalue>|</parametervalue>\n      </parameter>\n      <parameter source=\"default\">\n        <parametername>la</parametername>\n        <parametervalue>en</parametervalue>\n      </parameter>\n    </parameters>\n    <numhits>1</numhits>\n    <apicontrol>journal</apicontrol>\n    <outcome>singleJournal</outcome>\n    <message />\n    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>\n    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>\n    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>\n    <timestamp>30-Sep-2017:17:50:58</timestamp>\n  </header>\n  <journals>\n    <journal>\n      <jtitle>Human Molecular Genetics</jtitle>\n      <issn>0964-6906</issn>\n      <zetocpub>Oxford University Press (OUP): Policy B - Oxford Open Option B</zetocpub>\n      <romeopub>Oxford University Press (OUP): Policy B - Oxford Open Option B</romeopub>\n    </journal>\n  </journals>\n  <publishers>\n    <publisher id=\"1475\"  parentid=\"55\">\n      <name>Oxford University Press (OUP)</name>\n      <alias>Policy B - Oxford Open Option B</alias>\n      <homeurl>http://www.oxfordjournals.org/</homeurl>\n      <preprints>\n        <prearchiving>can</prearchiving>\n        <prerestrictions />\n      </preprints>\n      <postprints>\n        <postarchiving>can</postarchiving>\n        <postrestrictions />\n      </postprints>\n      <pdfversion>\n        <pdfarchiving>cannot</pdfarchiving>\n        <pdfrestrictions />\n      </pdfversion>\n      <conditions>\n        <condition>Pre-print can only be posted prior to acceptance</condition>\n        <condition>Pre-print must be accompanied by set statement (see link)</condition>\n        <condition>Pre-print must not be replaced with post-print, instead a link to published version with amended set statement should be made</condition>\n        <condition>Pre-print on author's personal website, employer website, free public server or pre-prints in subject area</condition>\n        <condition>Post-print on author's personal website immediately</condition>\n        <condition>Post-print in Institutional repositories or Central repositories after &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo</condition>\n        <condition>Publisher's version/PDF cannot be used</condition>\n        <condition>Published source must be acknowledged</condition>\n        <condition>Must link to publisher version</condition>\n        <condition>Set phrase to accompany archived copy (see policy)</condition>\n        <condition>Eligible authors may deposit in &lt;a href=&quot;http://opendepot.org/&quot; target=&quot;_blank&quot;&gt;OpenDepot&lt;/a&gt;</condition>\n        <condition>The publisher will deposit in PubMed Central on behalf of NIH authors</condition>\n        <condition>Publisher last contacted on 19/02/2015</condition>\n      </conditions>\n      <mandates />\n      <paidaccess>\n        <paidaccessurl>http://www.oxfordjournals.org/oxfordopen/</paidaccessurl>\n        <paidaccessname>Oxford Open</paidaccessname>\n        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>\n      </paidaccess>\n      <copyrightlinks>\n        <copyrightlink>\n          <copyrightlinktext>Policy B</copyrightlinktext>\n          <copyrightlinkurl>http://www.oxfordjournals.org/en/access-purchase/rights-and-permissions/self-archiving-policyb.html</copyrightlinkurl>\n        </copyrightlink>\n        <copyrightlink>\n          <copyrightlinktext>publication rights</copyrightlinktext>\n          <copyrightlinkurl>http://www.oxfordjournals.org/access_purchase/publication_rights.html</copyrightlinkurl>\n        </copyrightlink>\n        <copyrightlink>\n          <copyrightlinktext>NIH policy</copyrightlinktext>\n          <copyrightlinkurl>http://www.oxfordjournals.org/news/2008/08/04/nih_deposits.html</copyrightlinkurl>\n        </copyrightlink>\n        <copyrightlink>\n          <copyrightlinktext>Other funding agencies</copyrightlinktext>\n          <copyrightlinkurl>http://www.oxfordjournals.org/for_authors/repositories.html</copyrightlinkurl>\n        </copyrightlink>\n      </copyrightlinks>\n      <romeocolour>green</romeocolour>\n      <dateadded>2013-03-26 15:23:36</dateadded>\n      <dateupdated>2017-05-30 10:16:55</dateupdated>\n    </publisher>\n  </publishers>\n</romeoapi>\n",
+                "srm_journal_name": "Human Molecular Genetics",
+                "srm_colour": "green",
+                "srm_date_updated": "2017-09-30 16:50:58"
+            },
+            "rek_issn_lookup": "green"
+        }
+    ],
+    "fez_record_search_key_license": {
+        "rek_license_id": 25113,
+        "rek_license_pid": "UQ:396321",
+        "rek_license_xsdmf_id": null,
+        "rek_license": 453608,
+        "rek_license_lookup": "Creative Commons Attribution (only)"
+    },
     "fez_record_search_key_issue_number": {
         "rek_issue_number_id": 4565410,
         "rek_issue_number_pid": "UQ:396321",
@@ -4134,7 +4384,8 @@ export const record = {
         "rek_oa_status_id": 281706,
         "rek_oa_status_pid": "UQ:396321",
         "rek_oa_status_xsdmf_id": 16607,
-        "rek_oa_status": 453693
+        "rek_oa_status": 453692,
+        "rek_oa_status_lookup": "Not yet assessed"
     },
     "fez_record_search_key_place_of_publication": {
         "rek_place_of_publication_id": 4125279,
@@ -4195,7 +4446,8 @@ export const record = {
         "rek_volume_number_pid": "UQ:396321",
         "rek_volume_number_xsdmf_id": 6379,
         "rek_volume_number": "25"
-    }
+    },
+    "rek_display_type_lookup": "Journal Article"
 };
 
 export const myRecordsList = {

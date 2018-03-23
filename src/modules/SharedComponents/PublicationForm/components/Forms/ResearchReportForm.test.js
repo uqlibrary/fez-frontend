@@ -1,37 +1,14 @@
 jest.dontMock('./ResearchReportForm');
 
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import ResearchReportForm from './ResearchReportForm';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
-function setup({submitting, isShallow = true}){
-
+function setup(testProps, isShallow = true){
     const props = {
-        submitting: submitting || false, // : PropTypes.bool
+        ...testProps,
+        submitting: testProps.submitting || false // : PropTypes.bool,
     };
-
-    if(isShallow) {
-        return shallow(<ResearchReportForm {...props} />);
-    }
-
-    return mount(<ResearchReportForm {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
-
+    return getElement(ResearchReportForm, props, isShallow);
 }
-
-beforeAll(() => {
-    injectTapEventPlugin();
-});
 
 describe('ResearchReportForm renders ', () => {
     it('component', () => {
