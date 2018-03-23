@@ -35,6 +35,7 @@ export function createNewRecord(data) {
         if (recordRequest.currentAuthor) delete recordRequest.currentAuthor;
         if (recordRequest.supervisors) delete recordRequest.supervisors;
         if (recordRequest.fieldOfResearch) delete recordRequest.fieldOfResearch;
+        if (recordRequest.comments) delete recordRequest.comments;
 
         let newRecord = null;
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
@@ -48,21 +49,25 @@ export function createNewRecord(data) {
             })
             .then(() =>(hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
             .then(() => (hasFilesToUpload ? patch(routes.EXISTING_RECORD_API({pid: newRecord.rek_pid}), recordPatch) : newRecord))
+            .then(() => (data.comments ? post(routes.RECORDS_ISSUES_API({pid: newRecord.rek_pid}), {issue: 'Notes from creator of the new record: ' +  data.comments}) : newRecord))
             .then((response) => {
                 dispatch({
                     type: actions.CREATE_RECORD_SUCCESS,
-                    payload: response.data ? response.data : newRecord
+                    payload: {
+                        newRecord: response.data ? response.data : newRecord,
+                        fileUploadOrIssueFailed: false
+                    }
                 });
                 return Promise.resolve(response.data ? response.data : newRecord);
             })
             .catch(error => {
-                // record was created, but file upload or record patch failed
+                // record was created, but file upload or record patch failed or issue post failed
                 if (!!newRecord && !!newRecord.rek_pid) {
                     dispatch({
                         type: actions.CREATE_RECORD_SUCCESS,
                         payload: {
                             newRecord: newRecord,
-                            fileUploadFailed: true
+                            fileUploadOrIssueFailed: true
                         }
                     });
 

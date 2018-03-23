@@ -5,7 +5,7 @@ export const initialState = {
     newRecordSaving: false,
     newRecordError: false,
     newRecordErrorMessage: null,
-    newRecordFileUploadingError: false
+    newRecordFileUploadingOrIssueError: false
 };
 
 const handlers = {
@@ -18,8 +18,8 @@ const handlers = {
     [actions.CREATE_RECORD_SUCCESS]: (state, action) => (
         {
             ...initialState,
-            newRecord: action.payload,
-            newRecordFileUploadingError: !!action.payload.fileUploadFailed
+            newRecord: action.payload.newRecord,
+            newRecordFileUploadingOrIssueError: !!action.payload.fileUploadOrIssueFailed
         }
     ),
 
