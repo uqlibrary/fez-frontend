@@ -17,12 +17,7 @@ export default class ViewRecord extends Component {
         loadingRecordToView: PropTypes.bool,
         recordToViewError: PropTypes.string,
         match: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired,
-        showAddThis: PropTypes.bool
-    };
-
-    static defaultProps = {
-        showAddThis: true
+        actions: PropTypes.object.isRequired
     };
 
     constructor(props) {
@@ -66,7 +61,7 @@ export default class ViewRecord extends Component {
             <StandardPage className="viewRecord" title={recordToView && recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
 
-                <AddThis show={this.props.showAddThis} />
+                <AddThis />
 
                 {
                     recordToView && recordToView.rek_display_type_lookup &&
