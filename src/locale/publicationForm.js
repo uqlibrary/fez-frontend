@@ -1093,11 +1093,11 @@ export default {
                 instructions: '',
                 accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
                 validation: {
-                    ['folder']: 'Invalid file(s) ([filenames])',
-                    ['fileName']: 'File(s) ([filenames]) have invalid file name',
-                    ['maxFileSize']: 'File(s) ([filenames]) exceed maximum allowed upload file size',
-                    ['maxFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([filenames]) will not be uploaded',
-                    ['duplicateFiles']: 'File(s) ([filenames]) are duplicate and have been ignored'
+                    ['folder']: 'Invalid files ([fileNames])',
+                    ['fileName']: 'File(s) ([fileNames]) have invalid file name',
+                    ['maxFileSize']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
+                    ['tooManyFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
+                    ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored'
                 },
                 successTitle: 'Success',
                 successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',

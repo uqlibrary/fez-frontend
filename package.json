@@ -89,7 +89,7 @@
     "redux-form": "^7.2.3",
     "redux-immutable": "^4.0.0",
     "redux-thunk": "^2.2.0",
-    "uqlibrary-react-toolbox": "github:uqlibrary/uqlibrary-react-toolbox#refactor-file-uploader"
+    "uqlibrary-react-toolbox": "github:uqlibrary/uqlibrary-react-toolbox#refactor-file-uploader-jm"
   },
   "scripts": {
     "start": "webpack-dev-server",

@@ -473,11 +473,11 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
             "successTitle": "Success",
             "validation": Object {
-              "duplicateFiles": "File(s) ([filenames]) are duplicate and have been ignored",
-              "fileName": "File(s) ([filenames]) have invalid file name",
-              "folder": "Invalid file(s) ([filenames])",
-              "maxFileSize": "File(s) ([filenames]) exceed maximum allowed upload file size",
-              "maxFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([filenames]) will not be uploaded",
+              "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+              "fileName": "File(s) ([fileNames]) have invalid file name",
+              "folder": "Invalid files ([fileNames])",
+              "maxFileSize": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+              "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
             },
           }
         }
@@ -963,11 +963,11 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
             "successTitle": "Success",
             "validation": Object {
-              "duplicateFiles": "File(s) ([filenames]) are duplicate and have been ignored",
-              "fileName": "File(s) ([filenames]) have invalid file name",
-              "folder": "Invalid file(s) ([filenames])",
-              "maxFileSize": "File(s) ([filenames]) exceed maximum allowed upload file size",
-              "maxFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([filenames]) will not be uploaded",
+              "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+              "fileName": "File(s) ([fileNames]) have invalid file name",
+              "folder": "Invalid files ([fileNames])",
+              "maxFileSize": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+              "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
             },
           }
         }

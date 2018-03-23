@@ -116,6 +116,7 @@ describe('Record action creators', () => {
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
                 'FILE_UPLOAD_STARTED',
+                'FILE_UPLOAD_PROGRESS@test.txt',
                 actions.CREATE_RECORD_SUCCESS
             ];
 
@@ -220,6 +221,7 @@ describe('Record action creators', () => {
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
                 'FILE_UPLOAD_STARTED',
+                'FILE_UPLOAD_PROGRESS@test.txt',
                 actions.CREATE_RECORD_SUCCESS
             ];
 
@@ -344,6 +346,7 @@ describe('Record action creators', () => {
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
                 'FILE_UPLOAD_STARTED',
+                'FILE_UPLOAD_PROGRESS@test.txt',
                 actions.CREATE_RECORD_SUCCESS
             ];
 
@@ -389,6 +392,7 @@ describe('Record action creators', () => {
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
                 'FILE_UPLOAD_STARTED',
+                'FILE_UPLOAD_PROGRESS@test.txt',
                 actions.CREATE_RECORD_FAILED
             ];
 

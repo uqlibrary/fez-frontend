@@ -382,6 +382,7 @@ describe('Claim publication actions tests ', () => {
             const expectedActions = [
                 actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
                 'FILE_UPLOAD_STARTED',
+                'FILE_UPLOAD_PROGRESS@test.jpg',
                 actions.CLAIM_PUBLICATION_CREATE_COMPLETED
             ];
 
