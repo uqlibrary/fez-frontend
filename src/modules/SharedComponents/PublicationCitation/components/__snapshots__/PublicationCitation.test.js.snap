@@ -813,7 +813,6 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
           }
         }
       />
-      <AddThis />
     </div>
   </div>
   <div
@@ -1699,7 +1698,6 @@ exports[`PublicationCitation  should render component with default actions 1`] =
           }
         }
       />
-      <AddThis />
     </div>
   </div>
   <div
@@ -2545,7 +2543,6 @@ exports[`PublicationCitation  should render component with default item 1`] = `
           }
         }
       />
-      <AddThis />
     </div>
   </div>
 </div>
@@ -3392,7 +3389,6 @@ exports[`PublicationCitation  should render component with publication from mult
           eSpace
         </ExternalLink>
       </div>
-      <AddThis />
     </div>
   </div>
 </div>
@@ -4228,7 +4224,6 @@ exports[`PublicationCitation  should render component without a title 1`] = `
           eSpace
         </ExternalLink>
       </div>
-      <AddThis />
     </div>
   </div>
 </div>

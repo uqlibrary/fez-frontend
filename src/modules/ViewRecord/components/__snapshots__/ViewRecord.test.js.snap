@@ -7,6 +7,9 @@ exports[`Component ViewRecord  should render default props 1`] = `
   <withRouter(Connect(PublicationCitation))
     hideTitle={true}
   />
+  <AddThis
+    show={true}
+  />
 </StandardPage>
 `;
 
@@ -434,6 +437,9 @@ exports[`Component ViewRecord  should render record view 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
+  />
+  <AddThis
+    show={true}
   />
   <AdditionalInformation
     publication={
@@ -1631,6 +1637,9 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
+  />
+  <AddThis
+    show={true}
   />
   <AdditionalInformation
     publication={
