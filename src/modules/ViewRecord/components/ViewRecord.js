@@ -9,6 +9,7 @@ import {locale} from 'locale';
 import PublicationDetails from './PublicationDetails';
 import AdditionalInformation from './AdditionalInformation';
 import GrantInformation from './GrantInformation';
+import {AddThis} from 'modules/SharedComponents/AddThis';
 
 export default class ViewRecord extends Component {
     static propTypes = {
@@ -16,7 +17,12 @@ export default class ViewRecord extends Component {
         loadingRecordToView: PropTypes.bool,
         recordToViewError: PropTypes.string,
         match: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired
+        actions: PropTypes.object.isRequired,
+        showAddThis: PropTypes.bool
+    };
+
+    static defaultProps = {
+        showAddThis: true
     };
 
     constructor(props) {
@@ -59,6 +65,9 @@ export default class ViewRecord extends Component {
         return (
             <StandardPage className="viewRecord" title={recordToView && recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
+
+                <AddThis show={this.props.showAddThis} />
+
                 {
                     recordToView && recordToView.rek_display_type_lookup &&
                     <AdditionalInformation publication={recordToView} />

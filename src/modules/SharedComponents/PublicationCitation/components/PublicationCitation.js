@@ -33,7 +33,6 @@ import ThesisCitation from './citations/ThesisCitation';
 import NewspaperArticleCitation from './citations/NewspaperArticleCitation';
 import DataCollectionCitation from './citations/DataCollectionCitation';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
-import {AddThis} from 'modules/SharedComponents/AddThis';
 
 export default class PublicationCitation extends PureComponent {
     static propTypes = {
@@ -175,8 +174,6 @@ export default class PublicationCitation extends PureComponent {
 
                         {/* display publication source (eg from espace/pubmed/crossref/etc */}
                         {this.props.showSources && this.props.publication.sources && this.renderSources()}
-
-                        <AddThis />
                     </div>
                 </div>
                 {
