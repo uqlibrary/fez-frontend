@@ -19,6 +19,7 @@ UQ's branding for Fez is UQ eSpace.
 - Build and dev tools: `Webpack`
 - Unit tests: `Jest`
 - E2E tests: TBA
+- Styling: [Bulma](https://bulma.io/)
 
 ## Development
 This project is using `yarn` for dependency management.  Make sure `yarn` is installed on your machine.
