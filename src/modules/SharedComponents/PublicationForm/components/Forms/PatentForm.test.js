@@ -1,39 +1,15 @@
 jest.dontMock('./PatentForm');
 
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import PatentForm from './PatentForm';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
-function setup({submitting, vocabId, isShallow = true}){
-
+function setup(testProps, isShallow = true){
     const props = {
-        submitting: submitting || false, // : PropTypes.bool,
-        vocabId: vocabId || 0, // : PropTypes.number
+        ...testProps,
+        submitting: testProps.submitting || false, // : PropTypes.bool,
+        vocabId: testProps.vocabId || 0, // : PropTypes.number
     };
-
-    if(isShallow) {
-        return shallow(<PatentForm {...props} />);
-    }
-
-    return mount(<PatentForm {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
-
+    return getElement(PatentForm, props, isShallow);
 }
-
-beforeAll(() => {
-    injectTapEventPlugin();
-});
-
 describe('PatentForm renders ', () => {
     it('component', () => {
         const wrapper = setup({});

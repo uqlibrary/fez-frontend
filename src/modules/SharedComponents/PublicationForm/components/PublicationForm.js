@@ -19,6 +19,7 @@ import * as recordForms from './Forms';
 export default class PublicationForm extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
+        disableSubmit: PropTypes.bool,
         onFormSubmitSuccess: PropTypes.func.isRequired,
         onFormCancel: PropTypes.func.isRequired
     };
@@ -125,7 +126,7 @@ export default class PublicationForm extends Component {
                             fullWidth
                             label={txt.submit}
                             onTouchTap={this.props.handleSubmit}
-                            disabled={this.props.submitting || (this.props.formErrors && this.props.formErrors.size === undefined)}/>
+                            disabled={this.props.submitting || this.props.disableSubmit}/>
                     </div>
                     }
                 </div>

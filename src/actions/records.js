@@ -138,7 +138,7 @@ export function submitThesis(data, author) {
                     : 'Submit Thesis: Error occurred while saving record to eSpace. ';
                 const compositeError = `${specificError} ${ error.message ? `(${error.message})` : '' }`;
 
-                Raven.captureException(error, {message: specificError});
+                if(!process.env.USE_MOCK) Raven.captureException(error, {message: specificError});
 
                 dispatch({
                     type: actions.CREATE_RECORD_FAILED,
