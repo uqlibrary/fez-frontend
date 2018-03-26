@@ -2,7 +2,6 @@
 
 exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1`] = `
 <StandardPage
-  className=""
   title="Claim possible publications"
 >
   <ConfirmDialogBox
@@ -41,7 +40,6 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
         <Alert
           allowDismiss={false}
           message="Error has occurred during request and request cannot be processed. Test error message Please contact eSpace administrators or try again later."
-          showLoader={false}
           title="Error"
           type="error"
         />
@@ -664,7 +662,6 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
                   "rek_end_page_id": null,
                   "rek_end_page_pid": "UQ:678742",
                 },
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],
                 "fez_record_search_key_geographic_area": Array [],
                 "fez_record_search_key_grant_acronym": Array [],
@@ -2000,7 +1997,6 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
                   "rek_end_page_id": null,
                   "rek_end_page_pid": "UQ:678835",
                 },
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],
                 "fez_record_search_key_geographic_area": Array [],
                 "fez_record_search_key_grant_acronym": Array [],
@@ -2654,7 +2650,6 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
                   "rek_end_page_id": null,
                   "rek_end_page_pid": "UQ:678835",
                 },
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],
                 "fez_record_search_key_geographic_area": Array [],
                 "fez_record_search_key_grant_acronym": Array [],
@@ -2979,7 +2974,6 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
                 "fez_record_search_key_edition": null,
                 "fez_record_search_key_end_date": null,
                 "fez_record_search_key_end_page": null,
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],
@@ -3345,7 +3339,6 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
                 "fez_record_search_key_doi": null,
                 "fez_record_search_key_edition": null,
                 "fez_record_search_key_end_page": null,
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],
@@ -3517,7 +3510,6 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
 
 exports[`Component PossiblyMyRecords renders empty list 1`] = `
 <StandardPage
-  className=""
   title="Claim possible publications"
 >
   <div
@@ -3557,7 +3549,6 @@ exports[`Component PossiblyMyRecords renders empty list 1`] = `
 
 exports[`Component PossiblyMyRecords renders list of publications and counts 1`] = `
 <StandardPage
-  className=""
   title="Claim possible publications"
 >
   <ConfirmDialogBox
@@ -4212,7 +4203,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts 1`]
                   "rek_end_page_id": null,
                   "rek_end_page_pid": "UQ:678742",
                 },
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],
                 "fez_record_search_key_geographic_area": Array [],
                 "fez_record_search_key_grant_acronym": Array [],
@@ -5548,7 +5538,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts 1`]
                   "rek_end_page_id": null,
                   "rek_end_page_pid": "UQ:678835",
                 },
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],
                 "fez_record_search_key_geographic_area": Array [],
                 "fez_record_search_key_grant_acronym": Array [],
@@ -6202,7 +6191,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts 1`]
                   "rek_end_page_id": null,
                   "rek_end_page_pid": "UQ:678835",
                 },
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],
                 "fez_record_search_key_geographic_area": Array [],
                 "fez_record_search_key_grant_acronym": Array [],
@@ -6527,7 +6515,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts 1`]
                 "fez_record_search_key_edition": null,
                 "fez_record_search_key_end_date": null,
                 "fez_record_search_key_end_page": null,
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],
@@ -6893,7 +6880,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts 1`]
                 "fez_record_search_key_doi": null,
                 "fez_record_search_key_edition": null,
                 "fez_record_search_key_end_page": null,
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],
@@ -7065,7 +7051,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts 1`]
 
 exports[`Component PossiblyMyRecords renders loading screen while loading publication counts 1`] = `
 <StandardPage
-  className=""
   title="Claim possible publications"
 >
   <div
@@ -7083,7 +7068,6 @@ exports[`Component PossiblyMyRecords renders loading screen while loading public
 
 exports[`Component PossiblyMyRecords renders loading screen while loading publication data 1`] = `
 <StandardPage
-  className=""
   title="Claim possible publications"
 >
   <div
@@ -7101,7 +7085,6 @@ exports[`Component PossiblyMyRecords renders loading screen while loading public
 
 exports[`Component PossiblyMyRecords renders no results 1`] = `
 <StandardPage
-  className=""
   title="Claim possible publications"
 >
   <div

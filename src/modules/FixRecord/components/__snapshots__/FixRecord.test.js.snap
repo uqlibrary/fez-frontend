@@ -2,7 +2,6 @@
 
 exports[`Component FixRecord should render fix record form 1`] = `
 <StandardPage
-  className=""
   title="Request a correction or upload files"
 >
   <form
@@ -142,7 +141,6 @@ exports[`Component FixRecord should render fix record form 1`] = `
               "rek_end_page_pid": "UQ:41878",
               "rek_end_page_xsdmf_id": 6384,
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [],
@@ -618,7 +616,6 @@ exports[`Component FixRecord should render loader when record is loading 1`] = `
 
 exports[`Component FixRecord should render record citation, two actions in select field and a cancel button 1`] = `
 <StandardPage
-  className=""
   title="Request a correction or upload files"
 >
   <form
@@ -758,7 +755,6 @@ exports[`Component FixRecord should render record citation, two actions in selec
               "rek_end_page_pid": "UQ:41878",
               "rek_end_page_xsdmf_id": 6384,
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [],
@@ -1108,7 +1104,6 @@ exports[`Component FixRecord should render record citation, two actions in selec
 
 exports[`Component FixRecord should render the confirm dialog box with an alert due to a file upload failure 1`] = `
 <StandardPage
-  className=""
   title="Request a correction or upload files"
 >
   <form
@@ -1248,7 +1243,6 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
               "rek_end_page_pid": "UQ:41878",
               "rek_end_page_xsdmf_id": 6384,
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [],
@@ -1593,7 +1587,6 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
               <Alert
                 allowDismiss={false}
                 message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
-                showLoader={false}
                 title="File upload failed"
                 type="info"
               />
@@ -1711,7 +1704,6 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
 
 exports[`Component FixRecord should render the confirm dialog box without an alert due to a file upload success 1`] = `
 <StandardPage
-  className=""
   title="Request a correction or upload files"
 >
   <form
@@ -1851,7 +1843,6 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
               "rek_end_page_pid": "UQ:41878",
               "rek_end_page_xsdmf_id": 6384,
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [],
@@ -2307,7 +2298,6 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
 
 exports[`Component FixRecord should render unclaim form 1`] = `
 <StandardPage
-  className=""
   title="Request a correction or upload files"
 >
   <form
@@ -2447,7 +2437,6 @@ exports[`Component FixRecord should render unclaim form 1`] = `
               "rek_end_page_pid": "UQ:41878",
               "rek_end_page_xsdmf_id": 6384,
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [],
@@ -2785,7 +2774,6 @@ exports[`Component FixRecord should render unclaim form 1`] = `
       <Alert
         allowDismiss={false}
         message="You are about to remove this publication from your eSpace profile."
-        showLoader={false}
         title="WARNING"
         type="warning"
       />

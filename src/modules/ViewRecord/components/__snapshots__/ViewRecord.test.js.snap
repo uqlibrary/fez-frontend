@@ -11,13 +11,11 @@ exports[`Component ViewRecord  should render default props 1`] = `
 `;
 
 exports[`Component ViewRecord  should render error 1`] = `
-<StandardPage
-  className=""
->
+<StandardPage>
   <Alert
     allowDismiss={false}
     message="PID not found"
-    showLoader={false}
+    title="Error"
     type="error"
   />
 </StandardPage>
@@ -169,7 +167,6 @@ exports[`Component ViewRecord  should render record view 1`] = `
           "rek_end_page_pid": "UQ:41878",
           "rek_end_page_xsdmf_id": 6384,
         },
-        "fez_record_search_key_fields_of_research": Array [],
         "fez_record_search_key_file_attachment_access_condition": Array [],
         "fez_record_search_key_file_attachment_embargo_date": Array [],
         "fez_record_search_key_file_attachment_name": Array [],
@@ -565,7 +562,6 @@ exports[`Component ViewRecord  should render record view 1`] = `
           "rek_end_page_pid": "UQ:41878",
           "rek_end_page_xsdmf_id": 6384,
         },
-        "fez_record_search_key_fields_of_research": Array [],
         "fez_record_search_key_file_attachment_access_condition": Array [],
         "fez_record_search_key_file_attachment_embargo_date": Array [],
         "fez_record_search_key_file_attachment_name": Array [],
@@ -961,7 +957,6 @@ exports[`Component ViewRecord  should render record view 1`] = `
           "rek_end_page_pid": "UQ:41878",
           "rek_end_page_xsdmf_id": 6384,
         },
-        "fez_record_search_key_fields_of_research": Array [],
         "fez_record_search_key_file_attachment_access_condition": Array [],
         "fez_record_search_key_file_attachment_embargo_date": Array [],
         "fez_record_search_key_file_attachment_name": Array [],
@@ -1366,7 +1361,6 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
           "rek_end_page_pid": "UQ:41878",
           "rek_end_page_xsdmf_id": 6384,
         },
-        "fez_record_search_key_fields_of_research": Array [],
         "fez_record_search_key_file_attachment_access_condition": Array [],
         "fez_record_search_key_file_attachment_embargo_date": Array [],
         "fez_record_search_key_file_attachment_name": Array [],
@@ -1762,7 +1756,6 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
           "rek_end_page_pid": "UQ:41878",
           "rek_end_page_xsdmf_id": 6384,
         },
-        "fez_record_search_key_fields_of_research": Array [],
         "fez_record_search_key_file_attachment_access_condition": Array [],
         "fez_record_search_key_file_attachment_embargo_date": Array [],
         "fez_record_search_key_file_attachment_name": Array [],
@@ -2158,7 +2151,6 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
           "rek_end_page_pid": "UQ:41878",
           "rek_end_page_xsdmf_id": 6384,
         },
-        "fez_record_search_key_fields_of_research": Array [],
         "fez_record_search_key_file_attachment_access_condition": Array [],
         "fez_record_search_key_file_attachment_embargo_date": Array [],
         "fez_record_search_key_file_attachment_name": Array [],

@@ -235,20 +235,20 @@ export const dataCollection = {
         "rek_end_date_xsdmf_id": 12154,
         "rek_end_date": "2005-01-05 00:00:00"
     },
-    "fez_record_search_key_fields_of_research": [
+    "fez_record_search_key_subject": [
         {
-            "rek_fields_of_research_id": 8831,
-            "rek_fields_of_research_pid": "UQ:407731",
-            "rek_fields_of_research_xsdmf_id": 16043,
-            "rek_fields_of_research": 452086,
-            "rek_fields_of_research_order": 1
+            "rek_subject_id": 8831,
+            "rek_subject_pid": "UQ:407731",
+            "rek_subject_xsdmf_id": 16043,
+            "rek_subject": 452086,
+            "rek_subject_order": 1
         },
         {
-            "rek_fields_of_research_id": 8832,
-            "rek_fields_of_research_pid": "UQ:407731",
-            "rek_fields_of_research_xsdmf_id": 16043,
-            "rek_fields_of_research": 452109,
-            "rek_fields_of_research_order": 2
+            "rek_subject_id": 8832,
+            "rek_subject_pid": "UQ:407731",
+            "rek_subject_xsdmf_id": 16043,
+            "rek_subject": 452109,
+            "rek_subject_order": 2
         }
     ],
     "fez_record_search_key_file_attachment_access_condition": [],
@@ -3368,7 +3368,6 @@ export const journalArticle = {
         "rek_end_page_pid": "UQ:676287",
         "rek_end_page": "2305"
     },
-    "fez_record_search_key_fields_of_research": [],
     "fez_record_search_key_file_attachment_access_condition": [],
     "fez_record_search_key_file_attachment_embargo_date": [],
     "fez_record_search_key_file_attachment_name": [{
@@ -3862,7 +3861,6 @@ export const bookChapter = {
         "rek_end_page_pid": "UQ:376215",
         "rek_end_page": "153"
     },
-    "fez_record_search_key_fields_of_research": [],
     "fez_record_search_key_file_attachment_access_condition": [],
     "fez_record_search_key_file_attachment_embargo_date": [],
     "fez_record_search_key_file_attachment_name": [],
@@ -4230,7 +4228,6 @@ export const book = {
     },
     "fez_record_search_key_end_date": null,
     "fez_record_search_key_end_page": null,
-    "fez_record_search_key_fields_of_research": [],
     "fez_record_search_key_file_attachment_access_condition": [],
     "fez_record_search_key_file_attachment_embargo_date": [],
     "fez_record_search_key_file_attachment_name": [],
@@ -4478,7 +4475,6 @@ export const editedBook = {
     },
     "fez_record_search_key_end_date": null,
     "fez_record_search_key_end_page": null,
-    "fez_record_search_key_fields_of_research": [],
     "fez_record_search_key_file_attachment_access_condition": [],
     "fez_record_search_key_file_attachment_embargo_date": [],
     "fez_record_search_key_file_attachment_name": [],
@@ -4895,7 +4891,6 @@ export const conferencePaper = {
         "rek_end_page_pid": "UQ:347818",
         "rek_end_page": "40"
     },
-    "fez_record_search_key_fields_of_research": [],
     "fez_record_search_key_file_attachment_access_condition": [],
     "fez_record_search_key_file_attachment_embargo_date": [],
     "fez_record_search_key_file_attachment_name": [],
@@ -5273,7 +5268,6 @@ export const generic = {
     "fez_record_search_key_edition": null,
     "fez_record_search_key_end_date": null,
     "fez_record_search_key_end_page": null,
-    "fez_record_search_key_fields_of_research": [],
     "fez_record_search_key_file_attachment_access_condition": [],
     "fez_record_search_key_file_attachment_embargo_date": [],
     "fez_record_search_key_file_attachment_name": [
@@ -5725,9 +5719,6 @@ export const audioDocument = {
     "fez_record_search_key_edition":null,
     "fez_record_search_key_end_date":null,
     "fez_record_search_key_end_page":null,
-    "fez_record_search_key_fields_of_research":[
-
-    ],
     "fez_record_search_key_file_attachment_access_condition":[
 
     ],
@@ -6485,9 +6476,6 @@ export const mockRecordToFix = {
         "rek_end_page_xsdmf_id":6384,
         "rek_end_page":"253A"
     },
-    "fez_record_search_key_fields_of_research":[
-
-    ],
     "fez_record_search_key_file_attachment_access_condition":[
 
     ],
@@ -7204,9 +7192,6 @@ export const researchReport = {
     "fez_record_search_key_edition":null,
     "fez_record_search_key_end_date":null,
     "fez_record_search_key_end_page":null,
-    "fez_record_search_key_fields_of_research":[
-
-    ],
     "fez_record_search_key_file_attachment_access_condition":[
 
     ],
@@ -8332,9 +8317,6 @@ export const videoDocument = {
     "fez_record_search_key_edition":null,
     "fez_record_search_key_end_date":null,
     "fez_record_search_key_end_page":null,
-    "fez_record_search_key_fields_of_research":[
-
-    ],
     "fez_record_search_key_file_attachment_access_condition":[
 
     ],
@@ -8730,9 +8712,6 @@ export const journal = {
     "fez_record_search_key_edition":null,
     "fez_record_search_key_end_date":null,
     "fez_record_search_key_end_page":null,
-    "fez_record_search_key_fields_of_research":[
-
-    ],
     "fez_record_search_key_file_attachment_access_condition":[
 
     ],

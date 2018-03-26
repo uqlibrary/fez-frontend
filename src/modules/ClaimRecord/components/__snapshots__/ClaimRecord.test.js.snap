@@ -2,7 +2,6 @@
 
 exports[`Component ClaimRecord  should render claim form if publication doesn't have a PID but current author was assigned (author linking component should not be rendered) 1`] = `
 <StandardPage
-  className=""
   title="Claim a publication"
 >
   <form
@@ -414,7 +413,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [
@@ -1041,7 +1039,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
 
 exports[`Component ClaimRecord  should render claim form, author linking component should not be rendered if there's only one author on a publication 1`] = `
 <StandardPage
-  className=""
   title="Claim a publication"
 >
   <form
@@ -1438,7 +1435,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [
@@ -2065,7 +2061,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
 
 exports[`Component ClaimRecord  should render claim publication form 1`] = `
 <StandardPage
-  className=""
   title="Claim a publication"
 >
   <form
@@ -2565,7 +2560,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [
@@ -3341,7 +3335,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
 
 exports[`Component ClaimRecord  should render navigation prompt 1`] = `
 <StandardPage
-  className=""
   title="Claim a publication"
 >
   <form
@@ -3841,7 +3834,6 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [
@@ -4617,7 +4609,6 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
 
 exports[`Component ClaimRecord  should render navigation prompt 2`] = `
 <StandardPage
-  className=""
   title="Claim a publication"
 >
   <form
@@ -5117,7 +5108,6 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [
@@ -5894,7 +5884,6 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
 
 exports[`Component ClaimRecord  should render publication citation, error message if publication has PID and it was claimed by current author already 1`] = `
 <StandardPage
-  className=""
   title="Claim a publication"
 >
   <form
@@ -6306,7 +6295,6 @@ exports[`Component ClaimRecord  should render publication citation, error messag
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [
@@ -6803,7 +6791,6 @@ exports[`Component ClaimRecord  should render publication citation, error messag
     <Alert
       allowDismiss={false}
       message="This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at espace.admin@email.com.au"
-      showLoader={false}
       title="Error"
       type="error"
     />
@@ -6833,7 +6820,6 @@ exports[`Component ClaimRecord  should render publication citation, error messag
 
 exports[`Component ClaimRecord  should render the confirm dialog with an alert due to a file upload error 1`] = `
 <StandardPage
-  className=""
   title="Claim a publication"
 >
   <form
@@ -7333,7 +7319,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [
@@ -7839,7 +7824,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               <Alert
                 allowDismiss={false}
                 message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
-                showLoader={false}
                 title="File upload failed"
                 type="info"
               />
@@ -8116,7 +8100,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
 
 exports[`Component ClaimRecord  should render the confirm dialog without an alert due to file upload success 1`] = `
 <StandardPage
-  className=""
   title="Claim a publication"
 >
   <form
@@ -8616,7 +8599,6 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [
@@ -9392,7 +9374,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
 
 exports[`Component ClaimRecord  should return and render alert message depending on form status 1`] = `
 <div
-  className="info_outline alertWrapper "
+  className="info_outline alertWrapper"
 >
   <div
     className="columns is-multiline is-mobile"
@@ -9400,23 +9382,22 @@ exports[`Component ClaimRecord  should return and render alert message depending
     <div
       className="column is-narrow alertIcon"
     >
-      <CircularProgress
-        className="alertSpinner"
-        max={100}
-        min={0}
-        mode="indeterminate"
-        size={32}
-        thickness={4}
-        value={0}
-      />
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        info_outline
+      </FontIcon>
     </div>
     <div
       className="column alertText"
     >
       <div>
         <b>
-          Saving - 
+          Saving
         </b>
+         - 
         Claim publication is being processed.
       </div>
     </div>
@@ -9426,7 +9407,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
 
 exports[`Component ClaimRecord  should return and render alert message depending on form status 2`] = `
 <div
-  className="done alertWrapper "
+  className="done alertWrapper"
 >
   <div
     className="columns is-multiline is-mobile"
@@ -9447,8 +9428,9 @@ exports[`Component ClaimRecord  should return and render alert message depending
     >
       <div>
         <b>
-          Success - 
+          Success
         </b>
+         - 
         Publication claim has been submitted successfully.
       </div>
     </div>
@@ -9458,7 +9440,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
 
 exports[`Component ClaimRecord  should return and render alert message depending on form status 3`] = `
 <div
-  className="error_outline alertWrapper "
+  className="error_outline alertWrapper"
 >
   <div
     className="columns is-multiline is-mobile"
@@ -9479,8 +9461,9 @@ exports[`Component ClaimRecord  should return and render alert message depending
     >
       <div>
         <b>
-          Error - 
+          Error
         </b>
+         - 
         Error has occurred during request and request cannot be processed. This is an error Please contact eSpace administrators or try again later.
       </div>
     </div>
@@ -9490,7 +9473,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
 
 exports[`Component ClaimRecord  should return and render alert message depending on form status 4`] = `
 <div
-  className="warning alertWrapper "
+  className="warning alertWrapper"
 >
   <div
     className="columns is-multiline is-mobile"
@@ -9511,8 +9494,9 @@ exports[`Component ClaimRecord  should return and render alert message depending
     >
       <div>
         <b>
-          Validation - 
+          Validation
         </b>
+         - 
         <span>
           Form cannot be submitted until all fields are valid. Please review all input fields.
           <ul>
@@ -9536,7 +9520,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
 
 exports[`Component ClaimRecord  should return and render alert message depending on form status 5`] = `
 <div
-  className="error_outline alertWrapper "
+  className="error_outline alertWrapper"
 >
   <div
     className="columns is-multiline is-mobile"
@@ -9557,8 +9541,9 @@ exports[`Component ClaimRecord  should return and render alert message depending
     >
       <div>
         <b>
-          Error - 
+          Error
         </b>
+         - 
         Error has occurred during request and request cannot be processed. The given data was invalid. Please contact eSpace administrators or try again later.
       </div>
     </div>

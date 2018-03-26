@@ -2,7 +2,6 @@
 
 exports[`ThesisSubmission test should display successfull submission screen 1`] = `
 <StandardPage
-  className=""
   title="Professional doctorate deposit"
 >
   <StandardCard
@@ -37,7 +36,6 @@ exports[`ThesisSubmission test should display successfull submission screen 1`] 
 
 exports[`ThesisSubmission test should render hdr thesis submission acknowledgement 1`] = `
 <StandardPage
-  className=""
   title="Higher degree by research thesis deposit"
 >
   <StandardCard
@@ -72,7 +70,6 @@ exports[`ThesisSubmission test should render hdr thesis submission acknowledgeme
 
 exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
 <StandardPage
-  className=""
   title="Higher degree by research thesis deposit"
 >
   <p>
@@ -526,7 +523,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
 
 exports[`ThesisSubmission test should render sbs thesis submission acknowledgement 1`] = `
 <StandardPage
-  className=""
   title="Professional doctorate deposit"
 >
   <StandardCard
@@ -561,7 +557,6 @@ exports[`ThesisSubmission test should render sbs thesis submission acknowledgeme
 
 exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
 <StandardPage
-  className=""
   title="Professional doctorate deposit"
 >
   <p>
