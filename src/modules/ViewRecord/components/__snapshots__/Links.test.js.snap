@@ -293,7 +293,7 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - Link (no DOI) - Free to read"
+              title="Open Access - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -333,7 +333,7 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - Link (no DOI) - Free to read"
+              title="Open Access - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -373,7 +373,7 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - Link (no DOI) - Free to read"
+              title="Open Access - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -413,7 +413,7 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - Link (no DOI) - Free to read"
+              title="Open Access - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -517,7 +517,7 @@ exports[`Component ViewRecord  should render list of links with OA icons due to 
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - Link (no DOI) - Free to read"
+              title="Open Access - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -557,7 +557,7 @@ exports[`Component ViewRecord  should render list of links with OA icons due to 
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - Link (no DOI) - Free to read"
+              title="Open Access - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -597,7 +597,7 @@ exports[`Component ViewRecord  should render list of links with OA icons due to 
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - Link (no DOI) - Free to read"
+              title="Open Access - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -637,7 +637,7 @@ exports[`Component ViewRecord  should render list of links with OA icons due to 
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - Link (no DOI) - Free to read"
+              title="Open Access - Free to read"
             />
           </TableRowColumn>
         </TableRow>
@@ -955,7 +955,7 @@ exports[`Component ViewRecord  should render list of links with locked OA icons 
           >
             <div
               className="fez-icon openAccess large"
-              title="Open Access - Link (no DOI) - Free to read"
+              title="Open Access - Free to read"
             />
           </TableRowColumn>
         </TableRow>

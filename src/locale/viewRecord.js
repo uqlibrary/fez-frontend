@@ -20,6 +20,7 @@ export default {
                 openAccessLabel: 'Open Access - [oa_status] - Free to read',
                 openAccessEmbargoedLabel: '[oa_status] - Open access after [embargo_date]',
                 labelNoOpenAccessLookup: 'Open Access - Embargo applies',
+                labelOpenAccessNoStatus: 'Open Access - Free to read',
                 labelClosedAccess: 'Closed access',
                 pubmedCentralLinkDescription: 'Full text from PubMed Central',
                 embargoedUntil: 'Open access after [embargo_date] ',

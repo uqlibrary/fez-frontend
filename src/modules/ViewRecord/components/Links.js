@@ -48,8 +48,10 @@ export default class ViewRecordLinks extends PureComponent {
         if(status === 'open') {
             return (
                 <div className="fez-icon openAccess large"
-                    title={txt.openAccessLabel.replace('[oa_status]',
-                        openAccessIdLookup[recordOaStatus] || txt.labelNoOpenAccessLookup)}
+                    title={recordOaStatus !== OPEN_ACCESS_ID_LINK_NO_DOI ?
+                        txt.openAccessLabel.replace('[oa_status]', openAccessIdLookup[recordOaStatus]) :
+                        txt.labelOpenAccessNoStatus
+                    }
                 />
             );
         } else if (status === 'closed') {
@@ -64,7 +66,7 @@ export default class ViewRecordLinks extends PureComponent {
                         title={status &&
                          (txt.openAccessEmbargoedLabel
                              .replace('[embargo_date]', status)
-                             .replace('[oa_status]', openAccessIdLookup[status])) || txt.labelNoOpenAccessLookup}/>
+                             .replace('[oa_status]', openAccessIdLookup[status]))}/>
                 </div>
             );
         } else {
@@ -100,7 +102,7 @@ export default class ViewRecordLinks extends PureComponent {
             });
         }
         if(recordOaStatus === OPEN_ACCESS_ID_LINK_NO_DOI) {
-            // Has OA status of "Link (no DOI)" then produce a google scholar link for the publicaiton title
+            // Has OA status of "Link (no DOI)" then produce a google scholar link for the publication title
             links.push({
                 link: (<ExternalLink
                     href={txt.googleScholar.linkPrefix.replace('[title]', record.rek_title)}

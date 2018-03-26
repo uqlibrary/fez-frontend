@@ -10,6 +10,7 @@ import PublicationDetails from './PublicationDetails';
 import AdditionalInformation from './AdditionalInformation';
 import GrantInformation from './GrantInformation';
 import Links from './Links';
+import {OPEN_ACCESS_ID_LINK_NO_DOI} from 'config/general';
 
 export default class ViewRecord extends Component {
     static propTypes = {
@@ -65,7 +66,7 @@ export default class ViewRecord extends Component {
                         (recordToView.fez_record_search_key_link && recordToView.fez_record_search_key_link.length > 0) ||
                         (recordToView.fez_record_search_key_pubmed_central_id && recordToView.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id) ||
                         (recordToView.fez_record_search_key_doi && recordToView.fez_record_search_key_doi.rek_doi) ||
-                        (recordToView.fez_record_search_key_oa_status && recordToView.fez_record_search_key_oa_status.rek_oa_status === 453694)) &&
+                        (recordToView.fez_record_search_key_oa_status && recordToView.fez_record_search_key_oa_status.rek_oa_status === OPEN_ACCESS_ID_LINK_NO_DOI)) &&
                     <Links publication={recordToView} />
                 }
                 {
