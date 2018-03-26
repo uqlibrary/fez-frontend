@@ -1,37 +1,14 @@
 jest.dontMock('./PreprintForm');
 
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import PreprintForm from './PreprintForm';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
-function setup({submitting, isShallow = true}){
-
+function setup(testProps, isShallow = true){
     const props = {
-        submitting: submitting || false,
+        ...testProps,
+        submitting: testProps.submitting || false // : PropTypes.bool,
     };
-
-    if(isShallow) {
-        return shallow(<PreprintForm {...props} />);
-    }
-
-    return mount(<PreprintForm {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
-
+    return getElement(PreprintForm, props, isShallow);
 }
-
-beforeAll(() => {
-    injectTapEventPlugin();
-});
 
 describe('PreprintForm renders ', () => {
     it('component', () => {

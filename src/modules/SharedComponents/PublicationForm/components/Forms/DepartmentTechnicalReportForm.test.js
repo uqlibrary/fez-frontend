@@ -1,39 +1,16 @@
-jest.dontMock('./GenericDocumentForm');
+jest.dontMock('./DepartmentTechnicalReportForm');
 
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import DepartmentTechnicalReportForm from './DepartmentTechnicalReportForm';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
-function setup({submitting, isShallow = true}){
-
+function setup(testProps, isShallow = true){
     const props = {
-        submitting: submitting || false, // : PropTypes.bool,
+        ...testProps,
+        submitting: testProps.submitting || false // : PropTypes.bool,
     };
-
-    if(isShallow) {
-        return shallow(<DepartmentTechnicalReportForm {...props} />);
-    }
-
-    return mount(<DepartmentTechnicalReportForm {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
-
+    return getElement(DepartmentTechnicalReportForm, props, isShallow);
 }
 
-beforeAll(() => {
-    injectTapEventPlugin();
-});
-
-describe('GenericDocumentForm renders ', () => {
+describe('DepartmentTechnicalReportForm renders ', () => {
     it('component', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
