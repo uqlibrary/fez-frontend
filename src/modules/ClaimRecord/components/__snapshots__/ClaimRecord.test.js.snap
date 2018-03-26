@@ -414,7 +414,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [
@@ -1561,7 +1560,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [
@@ -2811,7 +2809,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [
@@ -4210,7 +4207,6 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [
@@ -5609,7 +5605,6 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [
@@ -6921,7 +6916,6 @@ exports[`Component ClaimRecord  should render publication citation, error messag
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [
@@ -8071,7 +8065,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [
@@ -9477,7 +9470,6 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [

@@ -24,7 +24,7 @@ export function createNewRecord(data) {
             ...transformers.getRecordContributorsSearchKey(data.editors),
             ...transformers.getRecordContributorsIdSearchKey(data.editors),
             ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
-            ...transformers.getRecordFieldsOfResearchSearchKey(data.fieldOfResearch)
+            ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch)
         };
 
         // delete extra form values from request object
@@ -98,7 +98,7 @@ export function submitThesis(data, author) {
             ...transformers.getRecordAuthorsSearchKey(data.currentAuthor),
             ...transformers.getRecordAuthorsIdSearchKey(data.currentAuthor),
             ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
-            ...transformers.getRecordFieldsOfResearchSearchKey(data.fieldOfResearch),
+            ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
             ...transformers.getRecordFileAttachmentSearchKey(data.files.queue),
             rek_title: data.thesisTitle.plainText,
             rek_formatted_title: data.thesisTitle.htmlText,

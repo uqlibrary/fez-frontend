@@ -1511,7 +1511,6 @@ export const internalTitleSearchList = {
             "fez_record_search_key_software_required": [],
             "rek_pubmed_doc_type": null,
             "fez_record_search_key_herdc_status": null,
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_language_of_proceedings_title": [],
             "rek_scopus_doc_type": null,
             "fez_record_search_key_conference_location": null,
@@ -1831,7 +1830,6 @@ export const internalTitleSearchList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "161"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -2429,7 +2427,6 @@ export const internalTitleSearchList = {
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -2709,7 +2706,6 @@ export const internalTitleSearchList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "59"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -3028,7 +3024,6 @@ export const internalTitleSearchList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "573"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -3382,7 +3377,6 @@ export const internalTitleSearchList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "1188"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -4369,7 +4363,6 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": 6266,
                 "rek_end_page": "269"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -4756,7 +4749,6 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "xxi"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -5164,7 +5156,6 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "4090"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -5681,7 +5672,6 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": 6384,
                 "rek_end_page": "253A"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -6217,7 +6207,6 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "478"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -6787,7 +6776,6 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "442"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -7366,7 +7354,6 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "678"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -7940,7 +7927,6 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "6145"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -8500,7 +8486,6 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "328"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -9035,7 +9020,6 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": 6384,
                 "rek_end_page": "3183"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [
@@ -9599,7 +9583,6 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "210"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -10208,7 +10191,6 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": 6384,
                 "rek_end_page": "R1016"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -10697,7 +10679,6 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": 6384,
                 "rek_end_page": "R939"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -11551,7 +11532,6 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "495"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -12084,7 +12064,6 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "289"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -12691,7 +12670,6 @@ export const myRecordsList = {
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -13041,7 +13019,6 @@ export const myRecordsList = {
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -13377,7 +13354,6 @@ export const myRecordsList = {
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -13755,7 +13731,6 @@ export const myRecordsList = {
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -14175,7 +14150,6 @@ export const myRecordsList = {
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -14658,7 +14632,6 @@ export const myRecordsList = {
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -14966,7 +14939,6 @@ export const myRecordsList = {
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -16084,7 +16056,6 @@ export const possibleUnclaimedList = {
                 "rek_end_page_pid": "UQ:678742",
                 "rek_end_page": "1168"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_name": [],
             "fez_record_search_key_geographic_area": [],
             "fez_record_search_key_grant_acronym": [],
@@ -17221,7 +17192,6 @@ export const possibleUnclaimedList = {
                 "rek_end_page_pid": "UQ:678835",
                 "rek_end_page": "731"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_name": [],
             "fez_record_search_key_geographic_area": [],
             "fez_record_search_key_grant_acronym": [],
@@ -17798,7 +17768,6 @@ export const possibleUnclaimedList = {
                 "rek_end_page_pid": "UQ:678835",
                 "rek_end_page": "731"
             },
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_name": [],
             "fez_record_search_key_geographic_area": [],
             "fez_record_search_key_grant_acronym": [],
@@ -18124,7 +18093,6 @@ export const possibleUnclaimedList = {
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -18479,7 +18447,6 @@ export const possibleUnclaimedList = {
             "fez_record_search_key_doi": null,
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_page": null,
-            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
