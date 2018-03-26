@@ -83,7 +83,6 @@ export default {
                 fez_record_search_key_contact_details_email: 'Contact email',
                 fez_record_search_key_author_role: 'Author(s) role',
                 fez_record_search_key_data_volume: 'Data Volume',
-                fez_record_search_key_fields_of_research: 'ANZSRC Field of Research (FoR) Code',
                 fez_record_search_key_project_id: 'Project ID',
                 fez_record_search_key_project_description: 'Project description',
                 fez_record_search_key_project_name: 'Project name',
@@ -981,7 +980,7 @@ export default {
                     order: 9
                 },
                 {
-                    field: 'fez_record_search_key_fields_of_research',
+                    field: 'fez_record_search_key_subject',
                     order: 10
                 },
                 {
