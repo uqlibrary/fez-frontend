@@ -26,23 +26,23 @@ export default class Files extends Component {
 
         return (
             <TableRow selectable={false} className="file" key={`file-${order}`}>
-                <TableRowColumn>
+                <TableRowColumn style={{width: '50%'}}>
                     {
                         <FileName pid={pid} fileName={fileName} mimeType={mimeType} openAccess={openAccess} thumbnailFileName={thumbnailDataStream && thumbnailDataStream.dsi_dsid} previewFileName={previewDataStream && previewDataStream.dsi_dsid} handleFileNameClick={this.props.handleFileNameClick} />
                     }
                 </TableRowColumn>
-                <TableRowColumn>
+                <TableRowColumn style={{width: '25%'}} className="is-hidden-mobile">
                     {
                         dataStream &&
                         dataStream.dsi_label
                     }
                 </TableRowColumn>
-                <TableRowColumn className="rowOA align-right">
+                <TableRowColumn className="rowOA align-right" style={{width: '10%'}}>
                     {
                         this.renderEmbargoDate(embargoDate, openAccess)
                     }
                 </TableRowColumn>
-                <TableRowColumn className="align-right">
+                <TableRowColumn className="align-right is-hidden-mobile is-hidden-tablet-only" style={{width: '15%'}}>
                     {
                         dataStream &&
                         this.formatBytes(dataStream.dsi_size)
@@ -116,10 +116,10 @@ export default class Files extends Component {
             <Table selectable={false} className="files">
                 <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
                     <TableRow>
-                        <TableHeaderColumn>{locale.viewRecord.sections.files.fileName}</TableHeaderColumn>
-                        <TableHeaderColumn>{locale.viewRecord.sections.files.description}</TableHeaderColumn>
-                        <TableHeaderColumn/>
-                        <TableHeaderColumn className="align-right">{locale.viewRecord.sections.files.size}</TableHeaderColumn>
+                        <TableHeaderColumn style={{width: '50%'}}>{locale.viewRecord.sections.files.fileName}</TableHeaderColumn>
+                        <TableHeaderColumn style={{width: '25%'}} className="is-hidden-mobile">{locale.viewRecord.sections.files.description}</TableHeaderColumn>
+                        <TableHeaderColumn style={{width: '10%'}}/>
+                        <TableHeaderColumn className="align-right is-hidden-mobile is-hidden-tablet-only" style={{width: '15%'}}>{locale.viewRecord.sections.files.size}</TableHeaderColumn>
                     </TableRow>
                 </TableHeader>
                 <TableBody displayRowCheckbox={false}>

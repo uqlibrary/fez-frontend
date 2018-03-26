@@ -1,6 +1,46 @@
 @import '../../../sass/variables';
 
 .viewRecord {
+
+  .file{
+    td {
+      padding: 0 6px !important;
+      height: auto !important;
+    }
+    .fileDetails {
+      width: 100%;
+      .fileIcon {
+        img, svg {
+          color: lighten($secondary-color, 33%) !important;
+          margin-top: 6px !important;
+          width: 32px !important;
+          height: 32px !important;
+        }
+      }
+      .fileInfo {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 200px;
+      }
+      .fileName {
+        margin-left: 12px;
+        line-height: 47px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .audioWrapper {
+        overflow: hidden;
+        .audioPlayer {
+          margin-top: 8px;
+          width: 100px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
   margin-top: -12px !important;
   .publicationCitation {
     padding-top: 0 !important;
@@ -30,18 +70,6 @@
 
   .align-right {
     text-align: right !important;
-  }
-
-  .fileIcon {
-    svg {
-      width: 40px !important;
-      height: 40px !important;
-      color: darkgray !important;
-    }
-    img {
-      width: 40px !important;
-      height: 40px !important;
-    }
   }
 
   .tableRow, .headingColumn, .dataColumn {

@@ -38,11 +38,9 @@ export default class fileName extends PureComponent {
 
     renderAudioPlayer = (pid, fileName, mimeType) => {
         return (
-            <span className={'filePlayer'}>
-                <audio controls>
-                    <source src={this.getUrl(pid, fileName)} type={mimeType} />
-                </audio>
-            </span>
+            <audio controls className="audioPlayer">
+                <source src={this.getUrl(pid, fileName)} type={mimeType} />
+            </audio>
         );
     }
 
@@ -85,11 +83,11 @@ export default class fileName extends PureComponent {
         const {pid, fileName, openAccess, mimeType, thumbnailFileName} = this.props;
 
         return (
-            <span>
-                <span className="fileIcon">
+            <div className="columns is-gapless is-mobile fileDetails">
+                <div className="column is-narrow is-vertical-center fileIcon">
                     {this.renderFileIcon(pid, mimeType, thumbnailFileName)}
-                </span>
-                <span className="fileInfo">
+                </div>
+                <div className="column fileInfo">
                     {
                         openAccess ?
                             <a href="#" onClick={this.handleFileNameClick} onKeyPress={this.handleFileNameClick} className={'fileName'}>
@@ -98,12 +96,14 @@ export default class fileName extends PureComponent {
                             :
                             fileName
                     }
-                    {
-                        openAccess && this.isAudio() &&
-                        this.renderAudioPlayer(pid, fileName, mimeType)
-                    }
-                </span>
-            </span>
+                </div>
+                {
+                    openAccess && this.isAudio() &&
+                    <div className="column is-narrow audioWrapper is-hidden-mobile">
+                        {this.renderAudioPlayer(pid, fileName, mimeType)}
+                    </div>
+                }
+            </div>
         );
     }
 }
