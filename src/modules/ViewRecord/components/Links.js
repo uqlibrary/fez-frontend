@@ -146,7 +146,7 @@ export default class ViewRecordLinks extends PureComponent {
                             </TableRow>
                         </TableHeader>
                         <TableBody displayRowCheckbox={false} className="tableData">
-                            {this.allLinks(this.props.publication).map((item, index) => (
+                            {this.allLinks(record).map((item, index) => (
                                 <TableRow key={index}>
                                     <TableRowColumn className="rowLink">{item.link}</TableRowColumn>
                                     <TableRowColumn className="rowDescription is-hidden-mobile" title={item.description}>{item.description}</TableRowColumn>
