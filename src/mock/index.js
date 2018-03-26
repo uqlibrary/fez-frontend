@@ -100,8 +100,8 @@ mock
 
 mock
     .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
-    .reply(200, {data: {}});
-// .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'});
+    // .reply(200, {data: {}});
+    .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'});
 
 mock
     .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({pid: '.*'}).apiUrl)))
@@ -111,13 +111,13 @@ mock
     .reply(200, {data: {}})
     // .reply(500, ['ERROR HIDE_POSSIBLE_RECORD_API'])
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
-    // .reply(200, {data: {}});
-    .reply(500, {message: 'error - failed NEW_RECORD_API'});
+    .reply(200, {data: {rek_pid: 'UQ:1111111'}}); // TODO: add actual record to data return!!!
+    // .reply(500, {message: 'error - failed NEW_RECORD_API'});
 
 mock
     .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
-    // .reply(200, {data: {...mockData.record}})
-    .reply(500, ['ERROR IN EXISTING_RECORD_API'])
+    .reply(200, {data: {...mockData.record}})
+    // .reply(500, ['ERROR IN EXISTING_RECORD_API'])
     .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({authorId: '.*'}).apiUrl)))
     .reply(200, {...mockData.currentAuthor.uqresearcher})
     // .reply(500, {message: 'error - failed PATCH AUTHOR_API'})

@@ -2,6 +2,7 @@ import {generateCancelToken} from 'config';
 import * as fileUploadActions from 'uqlibrary-react-toolbox/build/FileUploader/actions';
 import * as routes from './routes';
 import {get, put, post} from './generic';
+import Raven from 'raven-js';
 
 /**
  * Uploads a file directly into an S3 bucket via API
@@ -25,6 +26,8 @@ export function putUploadFile(pid, file, dispatch) {
         })
         .then(uploadResponse => (Promise.resolve(uploadResponse)))
         .catch(error => {
+            if(!process.env.USE_MOCK) Raven.captureException(error);
+
             // only send issues for PIDs
             if (/^UQ:\d+/g.test(pid)) {
                 const issue = {issue:
