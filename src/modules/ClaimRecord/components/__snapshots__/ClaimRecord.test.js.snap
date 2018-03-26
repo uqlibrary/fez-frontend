@@ -923,9 +923,9 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             </div>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-              "title": "File upload failed",
-              "type": "info",
+              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "File upload and/or edits/changes/comments post failed",
+              "type": "warning",
             },
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -1947,9 +1947,9 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             </div>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-              "title": "File upload failed",
-              "type": "info",
+              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "File upload and/or edits/changes/comments post failed",
+              "type": "warning",
             },
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -3074,9 +3074,9 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             </div>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-              "title": "File upload failed",
-              "type": "info",
+              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "File upload and/or edits/changes/comments post failed",
+              "type": "warning",
             },
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -4350,9 +4350,9 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             </div>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-              "title": "File upload failed",
-              "type": "info",
+              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "File upload and/or edits/changes/comments post failed",
+              "type": "warning",
             },
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -5626,9 +5626,9 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
             </div>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-              "title": "File upload failed",
-              "type": "info",
+              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "File upload and/or edits/changes/comments post failed",
+              "type": "warning",
             },
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -7838,10 +7838,10 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             "confirmationMessage": <div>
               <Alert
                 allowDismiss={false}
-                message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
+                message="Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators."
                 showLoader={false}
-                title="File upload failed"
-                type="info"
+                title="File upload and/or edits/changes/comments post failed"
+                type="warning"
               />
               <p>
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -7849,9 +7849,9 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             </div>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-              "title": "File upload failed",
-              "type": "info",
+              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "File upload and/or edits/changes/comments post failed",
+              "type": "warning",
             },
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -9125,9 +9125,9 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
             </div>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-              "title": "File upload failed",
-              "type": "info",
+              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "File upload and/or edits/changes/comments post failed",
+              "type": "warning",
             },
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
