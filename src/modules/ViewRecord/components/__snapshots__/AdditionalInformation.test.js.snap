@@ -9324,11 +9324,37 @@ exports[`Additional Information Component  should render component with data col
       />
       <ViewRecordTableRow
         data={
-          <ul>
-            <li>
-              153.050537,-27.352253
-            </li>
-          </ul>
+          <withScriptjs(withGoogleMap(Component))
+            containerElement={
+              <div
+                style={
+                  Object {
+                    "height": "400px",
+                  }
+                }
+              />
+            }
+            coordinates="153.050537,-27.352253"
+            googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+            loadingElement={
+              <div
+                style={
+                  Object {
+                    "height": "100%",
+                  }
+                }
+              />
+            }
+            mapElement={
+              <div
+                style={
+                  Object {
+                    "height": "100%",
+                  }
+                }
+              />
+            }
+          />
         }
         heading="Geographic co-ordinates"
         key="additional-info-Geographic co-ordinates"

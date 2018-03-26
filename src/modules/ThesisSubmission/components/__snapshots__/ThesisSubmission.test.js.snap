@@ -453,9 +453,9 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
               <br />
               PDF files must be saved using the following naming structure 
               <b>
-                &lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf
+                &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
               </b>
-              . Stages of examination are: submission, or correctedthesis, or finalthesis. For example:
+              . Document name could be thesis, abstract, and etc. For example:
               <ul>
                 <li>
                   s1234567_phd_thesis.pdf
@@ -473,10 +473,11 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
             "successTitle": "Success",
             "validation": Object {
-              "fileName": "File(s) ([filenames]) have invalid file name",
-              "folder": "Invalid file(s) ([filenames])",
-              "maxFileSize": "File(s) ([filenames]) exceed maximum allowed upload file size",
-              "maxFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([filenames]) will not be uploaded",
+              "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+              "fileName": "File(s) ([fileNames]) have invalid file name",
+              "folder": "Invalid files ([fileNames])",
+              "maxFileSize": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+              "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
             },
           }
         }
@@ -942,9 +943,9 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
               <br />
               PDF files must be saved using the following naming structure 
               <b>
-                &lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf
+                &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
               </b>
-              . Stages of examination are: submission, or correctedthesis, or finalthesis. For example:
+              . Document name could be thesis, abstract, and etc. For example:
               <ul>
                 <li>
                   s1234567_phd_thesis.pdf
@@ -962,10 +963,11 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
             "successTitle": "Success",
             "validation": Object {
-              "fileName": "File(s) ([filenames]) have invalid file name",
-              "folder": "Invalid file(s) ([filenames])",
-              "maxFileSize": "File(s) ([filenames]) exceed maximum allowed upload file size",
-              "maxFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([filenames]) will not be uploaded",
+              "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+              "fileName": "File(s) ([fileNames]) have invalid file name",
+              "folder": "Invalid files ([fileNames])",
+              "maxFileSize": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+              "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
             },
           }
         }
