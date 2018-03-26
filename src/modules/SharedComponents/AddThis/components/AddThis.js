@@ -13,18 +13,37 @@ export default class AddThis extends React.Component {
     componentDidMount() {
         /* add the script to the body if it hasnt already happened */
         if (!document.getElementById('addThisScript')) {
+            window.addthis_config = {
+                'pubid': 'ra-512eb98337c8a4a9'
+            };
+
             const script = document.createElement('script');
 
-            script.src = '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-512eb98337c8a4a9';
+            script.src = '//s7.addthis.com/js/300/addthis_widget.js' + '?' + new Date().getTime();
             script.id = 'addThisScript';
-            script.async = true;
+            document.head.appendChild(script);
+            console.log('added in did mount');
 
-            document.body.appendChild(script);
+            this.addThisRefresh();
         }
+    }
+
+    addThisRefresh() {
+        const js = document.createTextNode('window.addEventListener("hashchange", function () { ' +
+            'console.log("about to hashchange refresh"); ' +
+            'addthis.layers.refresh; ' +
+            'console.log("after hashchange refresh");' +
+            '});');
+
+        const script = document.createElement('script');
+        script.id = 'hashchange';
+        script.appendChild(js);
+        document.head.appendChild(script);
     }
 
     render() {
         if (!this.props.show) return <div className="addthis_empty" />;
+
         return (
             <div className="addthis_toolbox addthis_default_style columns is-gapless is-clearfix is-marginless">
                 <div className="column" />
