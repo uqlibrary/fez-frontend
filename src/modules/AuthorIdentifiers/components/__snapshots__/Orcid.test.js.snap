@@ -2,6 +2,7 @@
 
 exports[`Component Orcid  should display error if ORCID url redirect STATE response is invalid 1`] = `
 <StandardPage
+  className=""
   title="Link ORCID ID to UQ eSpace"
 >
   <ConfirmDialogBox
@@ -27,6 +28,7 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
     allowDismiss={false}
     message="Error has occurred during request and request cannot be processed. Invalid authorisation state response from ORCID.  Please contact eSpace administrators or try again later."
     orcidStateError="Invalid authorisation state response from ORCID. "
+    showLoader={false}
     title="Error"
     type="error_outline"
   />
@@ -100,6 +102,7 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
 
 exports[`Component Orcid  should display error if author update failed 1`] = `
 <StandardPage
+  className=""
   title="Link ORCID ID to UQ eSpace"
 >
   <ConfirmDialogBox
@@ -125,6 +128,7 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
     allowDismiss={false}
     message="Error has occurred during request and request cannot be processed. API IS NOT AVAILABLE Please contact eSpace administrators or try again later."
     orcidStateError="Invalid authorisation state response from ORCID. "
+    showLoader={false}
     title="Error"
     type="error_outline"
   />
@@ -198,6 +202,7 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
 
 exports[`Component Orcid  should render form uf account/author is set 1`] = `
 <StandardPage
+  className=""
   title="Link ORCID ID to UQ eSpace"
 >
   <ConfirmDialogBox

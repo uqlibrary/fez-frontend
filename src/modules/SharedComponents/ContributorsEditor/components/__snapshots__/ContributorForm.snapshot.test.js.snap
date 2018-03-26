@@ -542,6 +542,7 @@ exports[`Component ContributorForm rendering display name field and identifier f
                           "color": "#ffffff",
                           "rippleBackgroundColor": "#616161",
                         },
+                        "userAgent": undefined,
                         "zIndex": Object {
                           "appBar": 1100,
                           "dialog": 1500,
@@ -989,6 +990,7 @@ exports[`Component ContributorForm rendering display name field and identifier f
                           "color": "#ffffff",
                           "rippleBackgroundColor": "#616161",
                         },
+                        "userAgent": undefined,
                         "zIndex": Object {
                           "appBar": 1100,
                           "dialog": 1500,
@@ -1461,6 +1463,7 @@ exports[`Component ContributorForm rendering display name field and identifier f
                           "color": "#ffffff",
                           "rippleBackgroundColor": "#616161",
                         },
+                        "userAgent": undefined,
                         "zIndex": Object {
                           "appBar": 1100,
                           "dialog": 1500,
@@ -2019,6 +2022,7 @@ exports[`Component ContributorForm rendering display name field and identifier f
                               "color": "#ffffff",
                               "rippleBackgroundColor": "#616161",
                             },
+                            "userAgent": undefined,
                             "zIndex": Object {
                               "appBar": 1100,
                               "dialog": 1500,
@@ -2466,6 +2470,7 @@ exports[`Component ContributorForm rendering display name field and identifier f
                               "color": "#ffffff",
                               "rippleBackgroundColor": "#616161",
                             },
+                            "userAgent": undefined,
                             "zIndex": Object {
                               "appBar": 1100,
                               "dialog": 1500,
@@ -2940,6 +2945,7 @@ exports[`Component ContributorForm rendering display name field and identifier f
                               "color": "#ffffff",
                               "rippleBackgroundColor": "#616161",
                             },
+                            "userAgent": undefined,
                             "zIndex": Object {
                               "appBar": 1100,
                               "dialog": 1500,
@@ -3750,6 +3756,7 @@ exports[`Component ContributorForm rendering display name field only 1`] = `
                           "color": "#ffffff",
                           "rippleBackgroundColor": "#616161",
                         },
+                        "userAgent": undefined,
                         "zIndex": Object {
                           "appBar": 1100,
                           "dialog": 1500,
@@ -4197,6 +4204,7 @@ exports[`Component ContributorForm rendering display name field only 1`] = `
                           "color": "#ffffff",
                           "rippleBackgroundColor": "#616161",
                         },
+                        "userAgent": undefined,
                         "zIndex": Object {
                           "appBar": 1100,
                           "dialog": 1500,
@@ -4669,6 +4677,7 @@ exports[`Component ContributorForm rendering display name field only 1`] = `
                           "color": "#ffffff",
                           "rippleBackgroundColor": "#616161",
                         },
+                        "userAgent": undefined,
                         "zIndex": Object {
                           "appBar": 1100,
                           "dialog": 1500,

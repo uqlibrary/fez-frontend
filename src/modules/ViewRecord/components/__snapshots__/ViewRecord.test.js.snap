@@ -11,11 +11,13 @@ exports[`Component ViewRecord  should render default props 1`] = `
 `;
 
 exports[`Component ViewRecord  should render error 1`] = `
-<StandardPage>
+<StandardPage
+  className=""
+>
   <Alert
     allowDismiss={false}
     message="PID not found"
-    title="Error"
+    showLoader={false}
     type="error"
   />
 </StandardPage>
