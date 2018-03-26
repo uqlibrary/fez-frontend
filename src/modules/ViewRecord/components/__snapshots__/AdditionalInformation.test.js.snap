@@ -191,7 +191,6 @@ exports[`Additional Information Component  should render component with audio do
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [],
@@ -791,7 +790,6 @@ exports[`Additional Information Component  should render component with audio do
                                                 "fez_record_search_key_edition": null,
                                                 "fez_record_search_key_end_date": null,
                                                 "fez_record_search_key_end_page": null,
-                                                "fez_record_search_key_fields_of_research": Array [],
                                                 "fez_record_search_key_file_attachment_access_condition": Array [],
                                                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                                                 "fez_record_search_key_file_attachment_name": Array [],
@@ -1287,7 +1285,6 @@ exports[`Additional Information Component  should render component with audio do
                                                       "fez_record_search_key_edition": null,
                                                       "fez_record_search_key_end_date": null,
                                                       "fez_record_search_key_end_page": null,
-                                                      "fez_record_search_key_fields_of_research": Array [],
                                                       "fez_record_search_key_file_attachment_access_condition": Array [],
                                                       "fez_record_search_key_file_attachment_embargo_date": Array [],
                                                       "fez_record_search_key_file_attachment_name": Array [],
@@ -3259,7 +3256,6 @@ exports[`Additional Information Component  should render component with book 1`]
                 },
                 "fez_record_search_key_end_date": null,
                 "fez_record_search_key_end_page": null,
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],
@@ -3649,7 +3645,6 @@ exports[`Additional Information Component  should render component with book 1`]
                 },
                 "fez_record_search_key_end_date": null,
                 "fez_record_search_key_end_page": null,
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],
@@ -4023,7 +4018,6 @@ exports[`Additional Information Component  should render component with book cha
                   "rek_end_page_id": null,
                   "rek_end_page_pid": "UQ:376215",
                 },
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],
@@ -4562,7 +4556,6 @@ exports[`Additional Information Component  should render component with book cha
                   "rek_end_page_id": null,
                   "rek_end_page_pid": "UQ:376215",
                 },
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],
@@ -5248,7 +5241,6 @@ exports[`Additional Information Component  should render component with conferen
                   "rek_end_page_id": null,
                   "rek_end_page_pid": "UQ:347818",
                 },
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],
@@ -5982,7 +5974,6 @@ exports[`Additional Information Component  should render component with conferen
                   "rek_end_page_id": null,
                   "rek_end_page_pid": "UQ:347818",
                 },
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],
@@ -8230,22 +8221,6 @@ exports[`Additional Information Component  should render component with data col
                   "rek_end_date_pid": "UQ:162308",
                   "rek_end_date_xsdmf_id": 12154,
                 },
-                "fez_record_search_key_fields_of_research": Array [
-                  Object {
-                    "rek_fields_of_research": 452086,
-                    "rek_fields_of_research_id": 8831,
-                    "rek_fields_of_research_order": 1,
-                    "rek_fields_of_research_pid": "UQ:407731",
-                    "rek_fields_of_research_xsdmf_id": 16043,
-                  },
-                  Object {
-                    "rek_fields_of_research": 452109,
-                    "rek_fields_of_research_id": 8832,
-                    "rek_fields_of_research_order": 2,
-                    "rek_fields_of_research_pid": "UQ:407731",
-                    "rek_fields_of_research_xsdmf_id": 16043,
-                  },
-                ],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [
@@ -8514,6 +8489,22 @@ exports[`Additional Information Component  should render component with data col
                   "rek_start_date_pid": "UQ:162308",
                   "rek_start_date_xsdmf_id": 12154,
                 },
+                "fez_record_search_key_subject": Array [
+                  Object {
+                    "rek_subject": 452086,
+                    "rek_subject_id": 8831,
+                    "rek_subject_order": 1,
+                    "rek_subject_pid": "UQ:407731",
+                    "rek_subject_xsdmf_id": 16043,
+                  },
+                  Object {
+                    "rek_subject": 452109,
+                    "rek_subject_id": 8832,
+                    "rek_subject_order": 2,
+                    "rek_subject_pid": "UQ:407731",
+                    "rek_subject_xsdmf_id": 16043,
+                  },
+                ],
                 "fez_record_search_key_time_period_end_date": Object {
                   "rek_time_period_end_date": "2009-01-01T00:00:00Z",
                   "rek_time_period_end_date_id": 867,
@@ -8825,22 +8816,6 @@ exports[`Additional Information Component  should render component with data col
                   "rek_end_date_pid": "UQ:162308",
                   "rek_end_date_xsdmf_id": 12154,
                 },
-                "fez_record_search_key_fields_of_research": Array [
-                  Object {
-                    "rek_fields_of_research": 452086,
-                    "rek_fields_of_research_id": 8831,
-                    "rek_fields_of_research_order": 1,
-                    "rek_fields_of_research_pid": "UQ:407731",
-                    "rek_fields_of_research_xsdmf_id": 16043,
-                  },
-                  Object {
-                    "rek_fields_of_research": 452109,
-                    "rek_fields_of_research_id": 8832,
-                    "rek_fields_of_research_order": 2,
-                    "rek_fields_of_research_pid": "UQ:407731",
-                    "rek_fields_of_research_xsdmf_id": 16043,
-                  },
-                ],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [
@@ -9109,6 +9084,22 @@ exports[`Additional Information Component  should render component with data col
                   "rek_start_date_pid": "UQ:162308",
                   "rek_start_date_xsdmf_id": 12154,
                 },
+                "fez_record_search_key_subject": Array [
+                  Object {
+                    "rek_subject": 452086,
+                    "rek_subject_id": 8831,
+                    "rek_subject_order": 1,
+                    "rek_subject_pid": "UQ:407731",
+                    "rek_subject_xsdmf_id": 16043,
+                  },
+                  Object {
+                    "rek_subject": 452109,
+                    "rek_subject_id": 8832,
+                    "rek_subject_order": 2,
+                    "rek_subject_pid": "UQ:407731",
+                    "rek_subject_xsdmf_id": 16043,
+                  },
+                ],
                 "fez_record_search_key_time_period_end_date": Object {
                   "rek_time_period_end_date": "2009-01-01T00:00:00Z",
                   "rek_time_period_end_date_id": 867,
@@ -9300,8 +9291,8 @@ exports[`Additional Information Component  should render component with data col
             </li>
           </ul>
         }
-        heading="ANZSRC Field of Research (FoR) Code"
-        key="additional-info-ANZSRC Field of Research (FoR) Code"
+        heading="Subject(s)"
+        key="additional-info-Subject(s)"
       />
       <ViewRecordTableRow
         data={
@@ -11579,7 +11570,6 @@ exports[`Additional Information Component  should render component with generic 
                 "fez_record_search_key_edition": null,
                 "fez_record_search_key_end_date": null,
                 "fez_record_search_key_end_page": null,
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [
@@ -11968,7 +11958,6 @@ exports[`Additional Information Component  should render component with generic 
                 "fez_record_search_key_edition": null,
                 "fez_record_search_key_end_date": null,
                 "fez_record_search_key_end_page": null,
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [
@@ -12451,7 +12440,6 @@ exports[`Additional Information Component  should render component with journal 
                 "fez_record_search_key_edition": null,
                 "fez_record_search_key_end_date": null,
                 "fez_record_search_key_end_page": null,
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],
@@ -13370,7 +13358,6 @@ exports[`Additional Information Component  should render component with journal 
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_fields_of_research": Array [],
             "fez_record_search_key_file_attachment_access_condition": Array [],
             "fez_record_search_key_file_attachment_embargo_date": Array [],
             "fez_record_search_key_file_attachment_name": Array [
@@ -14572,7 +14559,6 @@ exports[`Additional Information Component  should render component with journal 
                                                   "rek_end_page_id": null,
                                                   "rek_end_page_pid": "UQ:676287",
                                                 },
-                                                "fez_record_search_key_fields_of_research": Array [],
                                                 "fez_record_search_key_file_attachment_access_condition": Array [],
                                                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                                                 "fez_record_search_key_file_attachment_name": Array [
@@ -15670,7 +15656,6 @@ exports[`Additional Information Component  should render component with journal 
                                                         "rek_end_page_id": null,
                                                         "rek_end_page_pid": "UQ:676287",
                                                       },
-                                                      "fez_record_search_key_fields_of_research": Array [],
                                                       "fez_record_search_key_file_attachment_access_condition": Array [],
                                                       "fez_record_search_key_file_attachment_embargo_date": Array [],
                                                       "fez_record_search_key_file_attachment_name": Array [
@@ -16970,7 +16955,6 @@ exports[`Additional Information Component  should render component with journal 
                                                   "rek_end_page_id": null,
                                                   "rek_end_page_pid": "UQ:676287",
                                                 },
-                                                "fez_record_search_key_fields_of_research": Array [],
                                                 "fez_record_search_key_file_attachment_access_condition": Array [],
                                                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                                                 "fez_record_search_key_file_attachment_name": Array [
@@ -18048,7 +18032,6 @@ exports[`Additional Information Component  should render component with journal 
                                                         "rek_end_page_id": null,
                                                         "rek_end_page_pid": "UQ:676287",
                                                       },
-                                                      "fez_record_search_key_fields_of_research": Array [],
                                                       "fez_record_search_key_file_attachment_access_condition": Array [],
                                                       "fez_record_search_key_file_attachment_embargo_date": Array [],
                                                       "fez_record_search_key_file_attachment_name": Array [
@@ -21918,7 +21901,6 @@ exports[`Additional Information Component  should render component with newspape
                   "rek_end_page_id": null,
                   "rek_end_page_pid": "UQ:676287",
                 },
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [
@@ -22919,7 +22901,6 @@ exports[`Additional Information Component  should render component with newspape
                   "rek_end_page_id": null,
                   "rek_end_page_pid": "UQ:676287",
                 },
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [
@@ -25414,7 +25395,6 @@ exports[`Additional Information Component  should render component with research
                 "fez_record_search_key_edition": null,
                 "fez_record_search_key_end_date": null,
                 "fez_record_search_key_end_page": null,
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],
@@ -26222,7 +26202,6 @@ exports[`Additional Information Component  should render component with video do
                 "fez_record_search_key_edition": null,
                 "fez_record_search_key_end_date": null,
                 "fez_record_search_key_end_page": null,
-                "fez_record_search_key_fields_of_research": Array [],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [],

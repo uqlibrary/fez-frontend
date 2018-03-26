@@ -1,38 +1,14 @@
 jest.dontMock('./ConferencePaperForm');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import ConferencePaperForm from './ConferencePaperForm';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
-function setup({submitting, subtypeVocabId, isShallow = true}){
-
+function setup(testProps, isShallow = true){
     const props = {
-        submitting: submitting || false, // : PropTypes.bool,
-        subtypeVocabId: subtypeVocabId || 0, // : PropTypes.number
+        ...testProps,
+        submitting: testProps.submitting || false, // : PropTypes.bool,
+        subtypeVocabId: testProps.subtypeVocabId || 0, // : PropTypes.number
     };
-
-    if(isShallow) {
-        return shallow(<ConferencePaperForm {...props} />);
-    }
-
-    return mount(<ConferencePaperForm {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
-
+    return getElement(ConferencePaperForm, props, isShallow);
 }
-
-beforeAll(() => {
-    injectTapEventPlugin();
-});
 
 describe('ConferencePaperForm renders ', () => {
     it('component', () => {
@@ -40,9 +16,9 @@ describe('ConferencePaperForm renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 16 input fields', () => {
+    it('component with 17 input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field').length).toEqual(16);
+        expect(wrapper.find('Field').length).toEqual(17);
     });
 
     it('component with 7 required input fields', () => {

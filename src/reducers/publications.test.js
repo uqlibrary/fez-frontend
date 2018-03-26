@@ -721,7 +721,6 @@ const latestPubsPayload = {
             "rek_end_page_xsdmf_id": null,
             "rek_end_page": "266"
         },
-        "fez_record_search_key_fields_of_research": [],
         "fez_record_search_key_file_attachment_access_condition": [],
         "fez_record_search_key_file_attachment_embargo_date": [],
         "fez_record_search_key_file_attachment_name": [],
@@ -1231,7 +1230,6 @@ const latestPubsPayload = {
         "fez_record_search_key_edition": null,
         "fez_record_search_key_end_date": null,
         "fez_record_search_key_end_page": null,
-        "fez_record_search_key_fields_of_research": [],
         "fez_record_search_key_file_attachment_access_condition": [],
         "fez_record_search_key_file_attachment_embargo_date": [],
         "fez_record_search_key_file_attachment_name": [],
@@ -1510,7 +1508,6 @@ const latestPubsPayload = {
         "fez_record_search_key_edition": null,
         "fez_record_search_key_end_date": null,
         "fez_record_search_key_end_page": null,
-        "fez_record_search_key_fields_of_research": [],
         "fez_record_search_key_file_attachment_access_condition": [],
         "fez_record_search_key_file_attachment_embargo_date": [],
         "fez_record_search_key_file_attachment_name": [],
@@ -1782,7 +1779,6 @@ const latestPubsPayload = {
         "fez_record_search_key_edition": null,
         "fez_record_search_key_end_date": null,
         "fez_record_search_key_end_page": null,
-        "fez_record_search_key_fields_of_research": [],
         "fez_record_search_key_file_attachment_access_condition": [],
         "fez_record_search_key_file_attachment_embargo_date": [],
         "fez_record_search_key_file_attachment_name": [],
@@ -2727,7 +2723,6 @@ const latestPubsPayload = {
             "rek_end_page_xsdmf_id": null,
             "rek_end_page": "3283"
         },
-        "fez_record_search_key_fields_of_research": [],
         "fez_record_search_key_file_attachment_access_condition": [],
         "fez_record_search_key_file_attachment_embargo_date": [],
         "fez_record_search_key_file_attachment_name": [{
@@ -3452,7 +3447,6 @@ const authorPubsPayload = {
         "fez_record_search_key_edition": null,
         "fez_record_search_key_end_date": null,
         "fez_record_search_key_end_page": null,
-        "fez_record_search_key_fields_of_research": [],
         "fez_record_search_key_file_attachment_access_condition": [],
         "fez_record_search_key_file_attachment_embargo_date": [],
         "fez_record_search_key_file_attachment_name": [],
