@@ -207,6 +207,7 @@ export default {
                 subtype: 'Publication subtype',
                 publicationPlace: 'Place of publication',
                 publisher: 'Publisher',
+                journalName: 'Journal name',
                 date: {
                     title: 'Publication date',
                     day: 'Day',
@@ -1063,9 +1064,7 @@ export default {
     errorAlert: {
         type: 'error_outline',
         title: 'Error',
-        message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`),
-        createRecordMessage: 'Error has occurred during request and adding new publication cannot be processed.',
-        fileUploadMessage: 'Error has occurred while uploading files.',
+        message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`)
     },
     progressAlert: {
         type: 'info_outline',
@@ -1093,10 +1092,11 @@ export default {
                 instructions: '',
                 accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
                 validation: {
-                    ['folder']: 'Invalid file(s) ([filenames])',
-                    ['fileName']: 'File(s) ([filenames]) have invalid file name',
-                    ['maxFileSize']: 'File(s) ([filenames]) exceed maximum allowed upload file size',
-                    ['maxFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([filenames]) will not be uploaded',
+                    ['folder']: 'Invalid files ([fileNames])',
+                    ['fileName']: 'File(s) ([fileNames]) have invalid file name',
+                    ['maxFileSize']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
+                    ['tooManyFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
+                    ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored'
                 },
                 successTitle: 'Success',
                 successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
@@ -1131,6 +1131,13 @@ export default {
         submit: 'Deposit your thesis',
         afterSubmitLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
         afterSubmit: 'Return to the Graduate School website',
-        afterSubmitText: (<p>Your thesis has been deposited. You will receive an email confirming your thesis deposit shortly.</p>)
+        afterSubmitText: (<p>Your thesis has been deposited. You will receive an email confirming your thesis deposit shortly.</p>),
+        depositConfirmation: {
+            confirmationTitle: 'Thesis deposit',
+            confirmationMessage: 'You are about to deposit your thesis with attached files. Are you sure you want to proceed?',
+            cancelButtonLabel: 'No, continue editing',
+            confirmButtonLabel: 'Yes, deposit thesis'
+        },
+        depositFailedMessage: () => ('Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.')
     }
 };

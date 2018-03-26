@@ -12,6 +12,7 @@ import ViewRecordTableRow from './ViewRecordTableRow';
 import JournalName from './partials/JournalName';
 
 const dompurify = require('dompurify');
+const dompurifyConfig = { ALLOWED_TAGS: ['p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b'], ALLOWED_ATTR: [] };
 
 export default class AdditionalInformation extends Component {
     static propTypes = {
@@ -153,7 +154,7 @@ export default class AdditionalInformation extends Component {
     }
 
     renderHTML = (data) => {
-        return ReactHtmlParser(dompurify.sanitize(data));
+        return ReactHtmlParser(dompurify.sanitize(data, dompurifyConfig));
     }
 
     // get lookup data if it exsts, except rek_issn_lookup as it returns sherpa romeo color

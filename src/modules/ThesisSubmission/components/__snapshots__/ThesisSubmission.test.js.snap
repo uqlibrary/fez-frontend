@@ -95,6 +95,18 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
         }
       }
     />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "No, continue editing",
+          "confirmButtonLabel": "Yes, deposit thesis",
+          "confirmationMessage": "You are about to deposit your thesis with attached files. Are you sure you want to proceed?",
+          "confirmationTitle": "Thesis deposit",
+        }
+      }
+      onRef={[Function]}
+    />
     <StandardCard
       className=""
       title="Thesis information"
@@ -470,10 +482,11 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
             "successTitle": "Success",
             "validation": Object {
-              "fileName": "File(s) ([filenames]) have invalid file name",
-              "folder": "Invalid file(s) ([filenames])",
-              "maxFileSize": "File(s) ([filenames]) exceed maximum allowed upload file size",
-              "maxFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([filenames]) will not be uploaded",
+              "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+              "fileName": "File(s) ([fileNames]) have invalid file name",
+              "folder": "Invalid files ([fileNames])",
+              "maxFileSize": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+              "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
             },
           }
         }
@@ -512,6 +525,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
           fullWidth={true}
           label="Deposit your thesis"
           labelPosition="after"
+          onTouchTap={[Function]}
           primary={false}
           secondary={true}
         />
@@ -582,6 +596,18 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
         }
       }
     />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "No, continue editing",
+          "confirmButtonLabel": "Yes, deposit thesis",
+          "confirmationMessage": "You are about to deposit your thesis with attached files. Are you sure you want to proceed?",
+          "confirmationTitle": "Thesis deposit",
+        }
+      }
+      onRef={[Function]}
+    />
     <StandardCard
       className=""
       title="Thesis information"
@@ -957,10 +983,11 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
             "successTitle": "Success",
             "validation": Object {
-              "fileName": "File(s) ([filenames]) have invalid file name",
-              "folder": "Invalid file(s) ([filenames])",
-              "maxFileSize": "File(s) ([filenames]) exceed maximum allowed upload file size",
-              "maxFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([filenames]) will not be uploaded",
+              "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+              "fileName": "File(s) ([fileNames]) have invalid file name",
+              "folder": "Invalid files ([fileNames])",
+              "maxFileSize": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+              "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
             },
           }
         }
@@ -999,6 +1026,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
           fullWidth={true}
           label="Deposit your thesis"
           labelPosition="after"
+          onTouchTap={[Function]}
           primary={false}
           secondary={true}
         />
