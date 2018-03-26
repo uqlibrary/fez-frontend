@@ -100,7 +100,6 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
       "fez_record_search_key_edition": null,
       "fez_record_search_key_end_date": null,
       "fez_record_search_key_end_page": null,
-      "fez_record_search_key_fields_of_research": Array [],
       "fez_record_search_key_file_attachment_access_condition": Array [],
       "fez_record_search_key_file_attachment_embargo_date": Array [],
       "fez_record_search_key_file_attachment_name": Array [
@@ -508,7 +507,6 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
           "fez_record_search_key_edition": null,
           "fez_record_search_key_end_date": null,
           "fez_record_search_key_end_page": null,
-          "fez_record_search_key_fields_of_research": Array [],
           "fez_record_search_key_file_attachment_access_condition": Array [],
           "fez_record_search_key_file_attachment_embargo_date": Array [],
           "fez_record_search_key_file_attachment_name": Array [
@@ -948,7 +946,6 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
       "fez_record_search_key_edition": null,
       "fez_record_search_key_end_date": null,
       "fez_record_search_key_end_page": null,
-      "fez_record_search_key_fields_of_research": Array [],
       "fez_record_search_key_file_attachment_access_condition": Array [],
       "fez_record_search_key_file_attachment_embargo_date": Array [],
       "fez_record_search_key_file_attachment_name": Array [
@@ -1357,7 +1354,6 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
           "fez_record_search_key_edition": null,
           "fez_record_search_key_end_date": null,
           "fez_record_search_key_end_page": null,
-          "fez_record_search_key_fields_of_research": Array [],
           "fez_record_search_key_file_attachment_access_condition": Array [],
           "fez_record_search_key_file_attachment_embargo_date": Array [],
           "fez_record_search_key_file_attachment_name": Array [
@@ -1802,7 +1798,6 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
       "fez_record_search_key_edition": null,
       "fez_record_search_key_end_date": null,
       "fez_record_search_key_end_page": null,
-      "fez_record_search_key_fields_of_research": Array [],
       "fez_record_search_key_file_attachment_access_condition": Array [],
       "fez_record_search_key_file_attachment_embargo_date": Array [],
       "fez_record_search_key_file_attachment_name": Array [
@@ -2213,7 +2208,6 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
           "fez_record_search_key_edition": null,
           "fez_record_search_key_end_date": null,
           "fez_record_search_key_end_page": null,
-          "fez_record_search_key_fields_of_research": Array [],
           "fez_record_search_key_file_attachment_access_condition": Array [],
           "fez_record_search_key_file_attachment_embargo_date": Array [],
           "fez_record_search_key_file_attachment_name": Array [

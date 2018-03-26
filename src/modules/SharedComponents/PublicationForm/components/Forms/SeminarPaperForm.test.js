@@ -1,37 +1,14 @@
 jest.dontMock('./SeminarPaperForm');
 
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import SeminarPaperForm from './SeminarPaperForm';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
-function setup({submitting, isShallow = true}){
-
+function setup(testProps, isShallow = true){
     const props = {
-        submitting: submitting || false // : PropTypes.bool,
+        ...testProps,
+        submitting: testProps.submitting || false // : PropTypes.bool,
     };
-
-    if(isShallow) {
-        return shallow(<SeminarPaperForm {...props} />);
-    }
-
-    return mount(<SeminarPaperForm {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
-
+    return getElement(SeminarPaperForm, props, isShallow);
 }
-
-beforeAll(() => {
-    injectTapEventPlugin();
-});
 
 describe('SeminarPaperForm renders ', () => {
     it('component', () => {

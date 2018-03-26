@@ -484,7 +484,6 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         "rek_end_page_id": null,
         "rek_end_page_pid": "UQ:676287",
       },
-      "fez_record_search_key_fields_of_research": Array [],
       "fez_record_search_key_file_attachment_access_condition": Array [],
       "fez_record_search_key_file_attachment_embargo_date": Array [],
       "fez_record_search_key_file_attachment_name": Array [
@@ -1498,7 +1497,6 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
             "rek_end_page_id": null,
             "rek_end_page_pid": "UQ:676287",
           },
-          "fez_record_search_key_fields_of_research": Array [],
           "fez_record_search_key_file_attachment_access_condition": Array [],
           "fez_record_search_key_file_attachment_embargo_date": Array [],
           "fez_record_search_key_file_attachment_name": Array [
@@ -2697,7 +2695,6 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
             "rek_end_page_id": null,
             "rek_end_page_pid": "UQ:676287",
           },
-          "fez_record_search_key_fields_of_research": Array [],
           "fez_record_search_key_file_attachment_access_condition": Array [],
           "fez_record_search_key_file_attachment_embargo_date": Array [],
           "fez_record_search_key_file_attachment_name": Array [
@@ -3690,7 +3687,6 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                 "rek_end_page_id": null,
                 "rek_end_page_pid": "UQ:676287",
               },
-              "fez_record_search_key_fields_of_research": Array [],
               "fez_record_search_key_file_attachment_access_condition": Array [],
               "fez_record_search_key_file_attachment_embargo_date": Array [],
               "fez_record_search_key_file_attachment_name": Array [
@@ -4680,7 +4676,6 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                 "rek_end_page_id": null,
                 "rek_end_page_pid": "UQ:676287",
               },
-              "fez_record_search_key_fields_of_research": Array [],
               "fez_record_search_key_file_attachment_access_condition": Array [],
               "fez_record_search_key_file_attachment_embargo_date": Array [],
               "fez_record_search_key_file_attachment_name": Array [

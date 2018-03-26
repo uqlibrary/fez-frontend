@@ -61,7 +61,6 @@ export default class AdditionalInformation extends Component {
             case 'rek_contributor': return this.renderContributors(this.props.publication);
             case 'rek_keywords': return this.renderList(objects, subkey, pathConfig.list.keyword);
             case 'rek_subject': return this.renderList(objects, subkey, pathConfig.list.subject);
-            case 'rek_fields_of_research': return this.renderList(objects, subkey, pathConfig.list.subject);
             case 'rek_seo_code': return this.renderList(objects, subkey, pathConfig.list.subject);
             case 'rek_alternate_genre': return this.renderList(objects, subkey, pathConfig.list.subject);
             default: return this.renderList(objects, subkey);
