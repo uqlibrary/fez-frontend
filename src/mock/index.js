@@ -46,8 +46,6 @@ mock
     })
     .onGet(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: user}).apiUrl)
     .reply(200, mockData.hindexResponse)
-    .onGet(routes.ACADEMIC_PUBLICATIONS_STATS_API({userId: user}).apiUrl)
-    .reply(200, mockData.currentAuthorStats)
     .onGet(routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API({userId: user}).apiUrl)
     .reply(200, mockData.trendingPublications)
     .onGet(routes.SEARCH_EXTERNAL_RECORDS_API({}).apiUrl)
@@ -59,21 +57,23 @@ mock
         if (config.params.source === 'pubmed' && config.params.id) return [200, mockData.externalPubMedSearchResultsList];
     })
     .onGet(routes.CURRENT_USER_RECORDS_API({}).apiUrl).reply(config => {
-    // CURRENT_USER_RECORDS_API
-    if (config.params.rule === 'mine') return [200, mockData.myRecordsList];
-    // POSSIBLE_RECORDS_API
-    if (config.params.rule === 'possible') return [200, mockData.possibleUnclaimedList];
-    // if (config.params.rule === 'possible') return [500, ['ERROR POSSIBLE_RECORDS_API']];
-    // SEARCH_KEY_LOOKUP_API
-    if (config.params.rule === 'lookup') {
-        return [200, mockData.searchKeyList[config.params.search_key]];
-    }
-    // SEARCH_INTERNAL_RECORDS_API
-    if (config.params.id || config.params.doi || config.params.title) {
-        return [200, mockData.internalTitleSearchList];
-    }
-    return [404, ['Request not found']];
-})
+        // CURRENT_USER_RECORDS_API
+        if (config.params.rule === 'mine') return [200, mockData.myRecordsList];
+        // ACADEMIC_PUBLICATIONS_STATS_API
+        if (config.params.rule === 'mine' && config.params['filters[stats_only]'] === true) return [200, mockData.currentAuthorStats];
+        // POSSIBLE_RECORDS_API
+        if (config.params.rule === 'possible') return [200, mockData.possibleUnclaimedList];
+        // if (config.params.rule === 'possible') return [500, ['ERROR POSSIBLE_RECORDS_API']];
+        // SEARCH_KEY_LOOKUP_API
+        if (config.params.rule === 'lookup') {
+            return [200, mockData.searchKeyList[config.params.search_key]];
+        }
+        // SEARCH_INTERNAL_RECORDS_API
+        if (config.params.id || config.params.doi || config.params.title) {
+            return [200, mockData.internalTitleSearchList];
+        }
+        return [404, ['Request not found']];
+    })
     .onGet(routes.GET_ACML_QUICK_TEMPLATES_API().apiUrl)
     .reply(200, mockData.quickTemplates)
     .onGet(routes.AUTHORS_SEARCH_API({query: '.*'}).apiUrl)
