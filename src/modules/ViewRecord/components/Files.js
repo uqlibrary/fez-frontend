@@ -113,8 +113,8 @@ export default class Files extends Component {
         });
 
         return (
-            <Table selectable={false} className="files">
-                <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
+            <Table selectable={false} className="file">
+                <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="tableHeader">
                     <TableRow>
                         <TableHeaderColumn style={{width: '50%'}}>{locale.viewRecord.sections.files.fileName}</TableHeaderColumn>
                         <TableHeaderColumn style={{width: '25%'}} className="is-hidden-mobile">{locale.viewRecord.sections.files.description}</TableHeaderColumn>
