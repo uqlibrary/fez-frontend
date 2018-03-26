@@ -7,7 +7,22 @@ export default {
         sections: {
             publicationDetails: 'Publication details',
             grantInformation: 'Grant information',
-            additionalInformation: 'Additional information'
+            additionalInformation: 'Additional information',
+            files: {
+                title: 'Files',
+                fileName: 'Filename',
+                description: 'Description',
+                size: 'Size',
+                embargoDate: 'Embargoed until [embargoDate]',
+                culturalSensitivityStatement: 'Be advised, that some files may contain content which is of a sensitive nature to some cultures or tastes.',
+                preview: {
+                    videoTitle: 'Video preview',
+                    imageTitle: 'Image preview',
+                    openInNewWindow: 'Open file in a new window',
+                    close: 'Close',
+                    browserNotSupportVideoTagMsg: 'Your browser does not support the video tag.'
+                }
+            }
         },
         headings: {
             default: {

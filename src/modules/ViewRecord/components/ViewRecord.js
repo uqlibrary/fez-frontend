@@ -6,9 +6,11 @@ import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {locale} from 'locale';
+import Files from './Files';
 import PublicationDetails from './PublicationDetails';
 import AdditionalInformation from './AdditionalInformation';
 import GrantInformation from './GrantInformation';
+import MediaPreview from './MediaPreview';
 
 export default class ViewRecord extends Component {
     static propTypes = {
@@ -21,6 +23,11 @@ export default class ViewRecord extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            previewMediaUrl: null,
+            previewMimeType: null
+        };
+        this.handleFileNameClick = this.handleFileNameClick.bind(this);
     }
 
     componentDidMount() {
@@ -34,6 +41,13 @@ export default class ViewRecord extends Component {
         if (this.props.actions) {
             this.props.actions.clearRecordToView();
         }
+    }
+
+    handleFileNameClick(mediaUrl, mimeType) {
+        this.setState({
+            previewMediaUrl: mediaUrl,
+            previewMimeType: mimeType
+        });
     }
 
     render() {
@@ -59,6 +73,14 @@ export default class ViewRecord extends Component {
         return (
             <StandardPage className="viewRecord" title={recordToView && recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
+                {
+                    recordToView && recordToView.fez_record_search_key_file_attachment_name && recordToView.fez_record_search_key_file_attachment_name.length > 0 &&
+                    <Files publication={recordToView} handleFileNameClick={this.handleFileNameClick}/>
+                }
+                {
+                    this.state.previewMediaUrl && this.state.previewMimeType &&
+                    <MediaPreview mediaUrl={this.state.previewMediaUrl} mimeType={this.state.previewMimeType}/>
+                }
                 {
                     recordToView && recordToView.rek_display_type_lookup &&
                     <AdditionalInformation publication={recordToView} />

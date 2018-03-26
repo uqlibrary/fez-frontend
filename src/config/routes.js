@@ -22,6 +22,10 @@ export const pathConfig =  {
     collection: {
         view: (pid) => (`/collection/${pid}`),
     },
+    // TODO: update how we get files after security is implemented in fez file api
+    file: {
+        url: (pid, fileName) => (`/view/${pid}/${fileName}`)
+    },
     // TODO: update links when we have list pages
     list: {
         author: (author) => (`/list/author/${author}`),

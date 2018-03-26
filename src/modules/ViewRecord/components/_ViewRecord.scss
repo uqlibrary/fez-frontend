@@ -24,6 +24,26 @@
     table-layout: auto !important;
   }
 
+  .files th {
+    color: $secondary-color-dark !important;
+  }
+
+  .align-right {
+    text-align: right !important;
+  }
+
+  .fileIcon {
+    svg {
+      width: 40px !important;
+      height: 40px !important;
+      color: darkgray !important;
+    }
+    img {
+      width: 40px !important;
+      height: 40px !important;
+    }
+  }
+
   .tableRow, .headingColumn, .dataColumn {
     padding: 8px 6px !important;
     height: auto !important;
