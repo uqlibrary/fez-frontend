@@ -27,21 +27,30 @@ user = user || 'uqresearcher';
 mock
     .onGet(routes.CURRENT_ACCOUNT_API().apiUrl).reply(config => {
     // mock account response
-    if (user === 'anon') return [403, {}];
-    if (mockData.accounts[user]) return [200, mockData.accounts[user]];
+    if (user === 'anon') {
+        return [403, {}];
+    } else if (mockData.accounts[user]) {
+        return [200, mockData.accounts[user]];
+    }
     return [404, {}];
 })
     .onGet(routes.AUTHOR_DETAILS_API({userId: user}).apiUrl).reply(config => {
     // mock current author details
-    if (user === 'anon') return [403, {}];
-    if (mockData.authorDetails[user]) return [200, mockData.authorDetails[user]];
+    if (user === 'anon') {
+        return [403, {}];
+    } else if (mockData.authorDetails[user]) {
+        return [200, mockData.authorDetails[user]];
+    }
     return [404, {}];
 })
     .onGet(routes.CURRENT_AUTHOR_API().apiUrl)
     .reply(config => {
         // mock current author details from fez
-        if (user === 'anon') return [403, {}];
-        if (mockData.currentAuthor[user]) return [200, mockData.currentAuthor[user]];
+        if (user === 'anon') {
+            return [403, {}];
+        } else if (mockData.currentAuthor[user]) {
+            return [200, mockData.currentAuthor[user]];
+        }
         return [404, {}];
     })
     .onGet(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: user}).apiUrl)
@@ -51,25 +60,31 @@ mock
     .onGet(routes.SEARCH_EXTERNAL_RECORDS_API({}).apiUrl)
     .reply(config => {
         if (config.params.source === 'scopus' && config.params.title) return [200, mockData.externalTitleScopusResultsList];
-        if (config.params.source === 'wos' && config.params.title) return [200, mockData.externalTitleSearchResultsList];
-        if (config.params.source === 'crossref' && config.params.title) return [200, mockData.externalTitleSearchResultsList];
-        if (config.params.source === 'crossref' && config.params.doi) return [200, mockData.externalDoiSearchResultList];
-        if (config.params.source === 'pubmed' && config.params.id) return [200, mockData.externalPubMedSearchResultsList];
+        else if (config.params.source === 'wos' && config.params.title) return [200, mockData.externalTitleSearchResultsList];
+        else if (config.params.source === 'crossref' && config.params.title) return [200, mockData.externalTitleSearchResultsList];
+        else if (config.params.source === 'crossref' && config.params.doi) return [200, mockData.externalDoiSearchResultList];
+        else if (config.params.source === 'pubmed' && config.params.id) return [200, mockData.externalPubMedSearchResultsList];
     })
     .onGet(routes.CURRENT_USER_RECORDS_API({}).apiUrl).reply(config => {
-        // CURRENT_USER_RECORDS_API
-        if (config.params.rule === 'mine') return [200, mockData.myRecordsList];
         // ACADEMIC_PUBLICATIONS_STATS_API
-        if (config.params.rule === 'mine' && config.params['filters[stats_only]'] === true) return [200, mockData.currentAuthorStats];
+        if (config.params.rule === 'mine' && !!config.params['filters[stats_only]']) {
+            return [200, mockData.currentAuthorStats];
+        }
+        // CURRENT_USER_RECORDS_API
+        else if (config.params.rule === 'mine') {
+            return [200, mockData.myRecordsList];
+        }
         // POSSIBLE_RECORDS_API
-        if (config.params.rule === 'possible') return [200, mockData.possibleUnclaimedList];
-        // if (config.params.rule === 'possible') return [500, ['ERROR POSSIBLE_RECORDS_API']];
+        else if (config.params.rule === 'possible') {
+            return [200, mockData.possibleUnclaimedList];
+            // return [500, ['ERROR POSSIBLE_RECORDS_API']];
+        }
         // SEARCH_KEY_LOOKUP_API
-        if (config.params.rule === 'lookup') {
+        else if (config.params.rule === 'lookup') {
             return [200, mockData.searchKeyList[config.params.search_key]];
         }
         // SEARCH_INTERNAL_RECORDS_API
-        if (config.params.id || config.params.doi || config.params.title) {
+        else if (config.params.id || config.params.doi || config.params.title) {
             return [200, mockData.internalTitleSearchList];
         }
         return [404, ['Request not found']];
@@ -93,7 +108,7 @@ mock
     // .reply(500, ["Server error: `POST https://sandbox.orcid.org/oauth/token` resulted in a `500 Internal Server Error` response:\n{\"error\":\"server_error\",\"error_description\":\"Redirect URI mismatch.\"}\n"])
     .onGet(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)))
     .reply(200, ['s3-ap-southeast-2.amazonaws.com']);
-// .reply(500, {message: 'error - failed GET FILE_UPLOAD_API'});
+    // .reply(500, {message: 'error - failed GET FILE_UPLOAD_API'});
 
 
 mock
@@ -120,7 +135,7 @@ mock
     .reply(200, {...mockData.currentAuthor.uqresearcher})
     // .reply(500, {message: 'error - failed PATCH AUTHOR_API'})
     .onAny().reply((config) => {
-    console.log('url not found...');
-    console.log(config);
-    return [404, {message: `MOCK URL NOT FOUND: ${config.url}`}];
-});
+        console.log('url not found...');
+        console.log(config);
+        return [404, {message: `MOCK URL NOT FOUND: ${config.url}`}];
+    });
