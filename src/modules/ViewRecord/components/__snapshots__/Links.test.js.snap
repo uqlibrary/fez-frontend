@@ -77,6 +77,7 @@ exports[`Component ViewRecord  should render a DOI link 1`] = `
           <TableRowColumn
             className="rowDescription is-hidden-mobile"
             hoverable={false}
+            title="Open Access - Embargo applies"
           >
             Open Access - Embargo applies
           </TableRowColumn>
@@ -85,8 +86,7 @@ exports[`Component ViewRecord  should render a DOI link 1`] = `
             hoverable={false}
           >
             <div
-              className="fez-icon openAccessClosed large"
-              title="Closed access"
+              className="openAccessClosed noOaIcon"
             />
           </TableRowColumn>
         </TableRow>
@@ -173,6 +173,7 @@ exports[`Component ViewRecord  should render a PubMed Central link 1`] = `
           <TableRowColumn
             className="rowDescription is-hidden-mobile"
             hoverable={false}
+            title="Full text from PubMed Central"
           >
             Full text from PubMed Central
           </TableRowColumn>
@@ -270,20 +271,21 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
           >
             <ExternalLink
               className="externalLink"
-              href="http://www.thisisatest.com"
+              href="https://scholar.google.com/scholar?q=intitle:%22undefined%22"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="Link to publication"
+              title="Search Google Scholar for this open access article"
             >
-              http://www.thisisatest.com
+              https://scholar.google.com/scholar?q=intitle:"undefined%22
             </ExternalLink>
           </TableRowColumn>
           <TableRowColumn
             className="rowDescription is-hidden-mobile"
             hoverable={false}
+            title="Search Google Scholar for this open access article"
           >
-            Link to publication
+            Search Google Scholar for this open access article
           </TableRowColumn>
           <TableRowColumn
             className="rowOA align-right"
@@ -309,20 +311,21 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
           >
             <ExternalLink
               className="externalLink"
-              href="http://www.thisisanothertest.com"
+              href="http://www.thisisatest.com"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="Another link to publication"
+              title="Link to publication"
             >
-              http://www.thisisanothertest.com
+              http://www.thisisatest.com
             </ExternalLink>
           </TableRowColumn>
           <TableRowColumn
             className="rowDescription is-hidden-mobile"
             hoverable={false}
+            title="Link to publication"
           >
-            Another link to publication
+            Link to publication
           </TableRowColumn>
           <TableRowColumn
             className="rowOA align-right"
@@ -348,6 +351,46 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
           >
             <ExternalLink
               className="externalLink"
+              href="http://www.thisisanothertest.com"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Another link to publication"
+            >
+              http://www.thisisanothertest.com
+            </ExternalLink>
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowDescription is-hidden-mobile"
+            hoverable={false}
+            title="Another link to publication"
+          >
+            Another link to publication
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowOA align-right"
+            hoverable={false}
+          >
+            <div
+              className="fez-icon openAccess large"
+              title="Open Access - Link (no DOI) - Free to read"
+            />
+          </TableRowColumn>
+        </TableRow>
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          key="3"
+          selectable={true}
+          striped={false}
+        >
+          <TableRowColumn
+            className="rowLink"
+            hoverable={false}
+          >
+            <ExternalLink
+              className="externalLink"
               href="http://www.nodescription.com"
               openInNewIcon={true}
               rel="noopener noreferrer"
@@ -360,6 +403,7 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
           <TableRowColumn
             className="rowDescription is-hidden-mobile"
             hoverable={false}
+            title="No description available"
           >
             No description available
           </TableRowColumn>
@@ -451,20 +495,21 @@ exports[`Component ViewRecord  should render list of links with OA icons due to 
           >
             <ExternalLink
               className="externalLink"
-              href="http://www.thisisatest.com"
+              href="https://scholar.google.com/scholar?q=intitle:%22undefined%22"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="Link to publication"
+              title="Search Google Scholar for this open access article"
             >
-              http://www.thisisatest.com
+              https://scholar.google.com/scholar?q=intitle:"undefined%22
             </ExternalLink>
           </TableRowColumn>
           <TableRowColumn
             className="rowDescription is-hidden-mobile"
             hoverable={false}
+            title="Search Google Scholar for this open access article"
           >
-            Link to publication
+            Search Google Scholar for this open access article
           </TableRowColumn>
           <TableRowColumn
             className="rowOA align-right"
@@ -490,20 +535,21 @@ exports[`Component ViewRecord  should render list of links with OA icons due to 
           >
             <ExternalLink
               className="externalLink"
-              href="http://www.thisisanothertest.com"
+              href="http://www.thisisatest.com"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="Another link to publication"
+              title="Link to publication"
             >
-              http://www.thisisanothertest.com
+              http://www.thisisatest.com
             </ExternalLink>
           </TableRowColumn>
           <TableRowColumn
             className="rowDescription is-hidden-mobile"
             hoverable={false}
+            title="Link to publication"
           >
-            Another link to publication
+            Link to publication
           </TableRowColumn>
           <TableRowColumn
             className="rowOA align-right"
@@ -529,6 +575,46 @@ exports[`Component ViewRecord  should render list of links with OA icons due to 
           >
             <ExternalLink
               className="externalLink"
+              href="http://www.thisisanothertest.com"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Another link to publication"
+            >
+              http://www.thisisanothertest.com
+            </ExternalLink>
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowDescription is-hidden-mobile"
+            hoverable={false}
+            title="Another link to publication"
+          >
+            Another link to publication
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowOA align-right"
+            hoverable={false}
+          >
+            <div
+              className="fez-icon openAccess large"
+              title="Open Access - Link (no DOI) - Free to read"
+            />
+          </TableRowColumn>
+        </TableRow>
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          key="3"
+          selectable={true}
+          striped={false}
+        >
+          <TableRowColumn
+            className="rowLink"
+            hoverable={false}
+          >
+            <ExternalLink
+              className="externalLink"
               href="http://www.nodescription.com"
               openInNewIcon={true}
               rel="noopener noreferrer"
@@ -541,6 +627,7 @@ exports[`Component ViewRecord  should render list of links with OA icons due to 
           <TableRowColumn
             className="rowDescription is-hidden-mobile"
             hoverable={false}
+            title="No description available"
           >
             No description available
           </TableRowColumn>
@@ -637,6 +724,7 @@ exports[`Component ViewRecord  should render list of links with closed OA icons 
           <TableRowColumn
             className="rowDescription is-hidden-mobile"
             hoverable={false}
+            title="DOI"
           >
             DOI
           </TableRowColumn>
@@ -676,6 +764,7 @@ exports[`Component ViewRecord  should render list of links with closed OA icons 
           <TableRowColumn
             className="rowDescription is-hidden-mobile"
             hoverable={false}
+            title="Link to publication"
           >
             Link to publication
           </TableRowColumn>
@@ -684,8 +773,7 @@ exports[`Component ViewRecord  should render list of links with closed OA icons 
             hoverable={false}
           >
             <div
-              className="fez-icon openAccessClosed large"
-              title="Closed access"
+              className="openAccessClosed noOaIcon"
             />
           </TableRowColumn>
         </TableRow>
@@ -715,6 +803,7 @@ exports[`Component ViewRecord  should render list of links with closed OA icons 
           <TableRowColumn
             className="rowDescription is-hidden-mobile"
             hoverable={false}
+            title="Another link to publication"
           >
             Another link to publication
           </TableRowColumn>
@@ -723,8 +812,7 @@ exports[`Component ViewRecord  should render list of links with closed OA icons 
             hoverable={false}
           >
             <div
-              className="fez-icon openAccessClosed large"
-              title="Closed access"
+              className="openAccessClosed noOaIcon"
             />
           </TableRowColumn>
         </TableRow>
@@ -754,6 +842,7 @@ exports[`Component ViewRecord  should render list of links with closed OA icons 
           <TableRowColumn
             className="rowDescription is-hidden-mobile"
             hoverable={false}
+            title="No description available"
           >
             No description available
           </TableRowColumn>
@@ -762,8 +851,7 @@ exports[`Component ViewRecord  should render list of links with closed OA icons 
             hoverable={false}
           >
             <div
-              className="fez-icon openAccessClosed large"
-              title="Closed access"
+              className="openAccessClosed noOaIcon"
             />
           </TableRowColumn>
         </TableRow>
@@ -845,6 +933,46 @@ exports[`Component ViewRecord  should render list of links with locked OA icons 
           >
             <ExternalLink
               className="externalLink"
+              href="https://scholar.google.com/scholar?q=intitle:%22undefined%22"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Search Google Scholar for this open access article"
+            >
+              https://scholar.google.com/scholar?q=intitle:"undefined%22
+            </ExternalLink>
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowDescription is-hidden-mobile"
+            hoverable={false}
+            title="Search Google Scholar for this open access article"
+          >
+            Search Google Scholar for this open access article
+          </TableRowColumn>
+          <TableRowColumn
+            className="rowOA align-right"
+            hoverable={false}
+          >
+            <div
+              className="fez-icon openAccess large"
+              title="Open Access - Link (no DOI) - Free to read"
+            />
+          </TableRowColumn>
+        </TableRow>
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          key="1"
+          selectable={true}
+          striped={false}
+        >
+          <TableRowColumn
+            className="rowLink"
+            hoverable={false}
+          >
+            <ExternalLink
+              className="externalLink"
               href="http://www.thisisatest.com"
               openInNewIcon={true}
               rel="noopener noreferrer"
@@ -857,6 +985,7 @@ exports[`Component ViewRecord  should render list of links with locked OA icons 
           <TableRowColumn
             className="rowDescription is-hidden-mobile"
             hoverable={false}
+            title="Link to publication"
           >
             Link to publication
           </TableRowColumn>
@@ -872,7 +1001,7 @@ exports[`Component ViewRecord  should render list of links with locked OA icons 
               </span>
               <div
                 className="fez-icon openAccessEmbargoed large"
-                title="Link (no DOI) - Open access after 24th December 2020"
+                title="undefined - Open access after 24th December 2020"
               />
             </div>
           </TableRowColumn>
@@ -881,7 +1010,7 @@ exports[`Component ViewRecord  should render list of links with locked OA icons 
           displayBorder={true}
           hoverable={false}
           hovered={false}
-          key="1"
+          key="2"
           selectable={true}
           striped={false}
         >
@@ -903,6 +1032,7 @@ exports[`Component ViewRecord  should render list of links with locked OA icons 
           <TableRowColumn
             className="rowDescription is-hidden-mobile"
             hoverable={false}
+            title="Another link to publication"
           >
             Another link to publication
           </TableRowColumn>
@@ -918,7 +1048,7 @@ exports[`Component ViewRecord  should render list of links with locked OA icons 
               </span>
               <div
                 className="fez-icon openAccessEmbargoed large"
-                title="Link (no DOI) - Open access after 24th December 2020"
+                title="undefined - Open access after 24th December 2020"
               />
             </div>
           </TableRowColumn>
@@ -927,7 +1057,7 @@ exports[`Component ViewRecord  should render list of links with locked OA icons 
           displayBorder={true}
           hoverable={false}
           hovered={false}
-          key="2"
+          key="3"
           selectable={true}
           striped={false}
         >
@@ -949,6 +1079,7 @@ exports[`Component ViewRecord  should render list of links with locked OA icons 
           <TableRowColumn
             className="rowDescription is-hidden-mobile"
             hoverable={false}
+            title="No description available"
           >
             No description available
           </TableRowColumn>
@@ -964,7 +1095,7 @@ exports[`Component ViewRecord  should render list of links with locked OA icons 
               </span>
               <div
                 className="fez-icon openAccessEmbargoed large"
-                title="Link (no DOI) - Open access after 24th December 2020"
+                title="undefined - Open access after 24th December 2020"
               />
             </div>
           </TableRowColumn>

@@ -10,6 +10,11 @@ export default {
             additionalInformation: 'Additional information',
             links: {
                 title: 'Links',
+                headerTitles: {
+                    link: 'Link (will open in a new window)',
+                    description: 'Description',
+                    oaStatus: ' '
+                },
                 linkMissingDescription: 'No description available',
                 linkMissingDescriptionTitle: 'Click to open link in a new window',
                 openAccessLabel: 'Open Access - [oa_status] - Free to read',
@@ -18,10 +23,9 @@ export default {
                 labelClosedAccess: 'Closed access',
                 pubmedCentralLinkDescription: 'Full text from PubMed Central',
                 embargoedUntil: 'Open access after [embargo_date] ',
-                headerTitles: {
-                    link: 'Link (will open in a new window)',
-                    description: 'Description',
-                    oaStatus: ' '
+                googleScholar: {
+                    linkPrefix: 'https://scholar.google.com/scholar?q=intitle:%22[title]%22',
+                    linkDescription: 'Search Google Scholar for this open access article'
                 }
             }
         },

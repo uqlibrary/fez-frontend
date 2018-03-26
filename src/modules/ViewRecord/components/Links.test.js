@@ -82,7 +82,7 @@ describe('Component ViewRecord ', () => {
         };
 
         const wrapper = setup({publication: linkProps});
-        expect(wrapper.find('.openAccess').length).toEqual(3);
+        expect(wrapper.find('.openAccess').length).toEqual(4);
         expect(toJson(wrapper)).toMatchSnapshot();
 
     });
@@ -148,7 +148,7 @@ describe('Component ViewRecord ', () => {
         };
 
         const wrapper = setup({publication: linkProps});
-        expect(wrapper.find('.openAccess').length).toEqual(3);
+        expect(wrapper.find('.openAccess').length).toEqual(4);
         expect(toJson(wrapper)).toMatchSnapshot();
 
     });

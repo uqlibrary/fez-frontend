@@ -64,7 +64,8 @@ export default class ViewRecord extends Component {
                     recordToView && (
                         (recordToView.fez_record_search_key_link && recordToView.fez_record_search_key_link.length > 0) ||
                         (recordToView.fez_record_search_key_pubmed_central_id && recordToView.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id) ||
-                        (recordToView.fez_record_search_key_doi && recordToView.fez_record_search_key_doi.rek_doi)) &&
+                        (recordToView.fez_record_search_key_doi && recordToView.fez_record_search_key_doi.rek_doi) ||
+                        (recordToView.fez_record_search_key_oa_status && recordToView.fez_record_search_key_oa_status.rek_oa_status === 453694)) &&
                     <Links publication={recordToView} />
                 }
                 {

@@ -94,13 +94,14 @@
   .viewRecordLinks {
     margin-top: 24px !important;
     .rowLink {
-      width: 50%;
+      width: 40%;
       @include mobile {
         width: 80% !important;
       }
     }
     .rowDescription {
       text-indent: 12px !important;
+      width: 30%;
     }
     .rowOA {
       text-align: right !important;

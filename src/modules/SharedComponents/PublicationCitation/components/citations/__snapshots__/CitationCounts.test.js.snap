@@ -105,8 +105,8 @@ exports[`CitationCounts renders  component with all metrics under embargo date 1
     className="citationCount"
   >
     <div
-      className="fez-icon openAccessLocked large"
-      title="Open Access - DOI - Embargoed until 20th September 2022"
+      className="fez-icon openAccess large"
+      title="Open Access - DOI - Free to read (embargo date might apply)"
     />
   </span>
   <div
