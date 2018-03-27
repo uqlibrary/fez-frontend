@@ -389,7 +389,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           fullWidth={true}
           hintText="Add any additional information here"
           multiLine={true}
-          name="fez_record_search_key_notes.rek_notes"
+          name="comments"
           rows={1}
           type="text"
         />
