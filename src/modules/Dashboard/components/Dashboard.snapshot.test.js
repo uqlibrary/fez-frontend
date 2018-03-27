@@ -24,7 +24,6 @@ function setup(testProps, isShallow = true) {
             loadAuthorPublicationsStats: jest.fn(),
             searchLatestPublications: jest.fn(),
             searchTrendingPublications: jest.fn(),
-            loadAuthorPublicationsByYear: jest.fn()
         },
         history: {}
     };

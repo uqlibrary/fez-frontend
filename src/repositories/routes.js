@@ -59,9 +59,7 @@ export const AUTHOR_DETAILS_API = ({userId}) => ({apiUrl: `authors/details/${use
 export const AUTHOR_ORCID_DETAILS_API = ({userId, params}) => ({apiUrl: `orcid/${userId}/request`, options: {params: {...params}}});
 
 // academic stats apis
-export const ACADEMIC_STATS_PUBLICATION_YEARS_API = ({userId}) => ({apiUrl: `academic/${userId}/publication-years`});
 export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({userId}) => ({apiUrl: `academic/${userId}/hindex`});
-export const ACADEMIC_STATS_PUBLICATION_STATS_API = ({userId}) => ({apiUrl: `academic/${userId}/publication-stats`});
 export const ACADEMIC_STATS_PUBLICATIONS_TRENDING_API = ({userId}) => ({apiUrl: `academic/${userId}/trending_publications`});
 
 // lookup apis
@@ -82,6 +80,7 @@ export const POSSIBLE_RECORDS_API = ({facets = {}}) => ({apiUrl: 'records/search
 export const HIDE_POSSIBLE_RECORD_API = () => ({apiUrl: 'records/search', options: {params: {rule: 'possible'}}}); // (POST: with data: [\'pid\' => \'UQ:1\', \'type\' => \'H\'])`);
 
 export const CURRENT_USER_RECORDS_API = (values) => ({apiUrl: 'records/search', options: {params: {rule: 'mine', ...getStandardSearchParams(values)}}});
+export const ACADEMIC_PUBLICATIONS_STATS_API = (values) => ({apiUrl: 'records/search', options: {params: {rule: 'mine', 'filters[stats_only]': true, ...getStandardSearchParams(values)}}});
 
 export const SEARCH_INTERNAL_RECORDS_API = (values) => (
     // values = {searchQuery, page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}
