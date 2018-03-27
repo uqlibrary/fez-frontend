@@ -19,6 +19,7 @@ export default class MyRecords extends React.Component {
         account: PropTypes.object,
         accountLoading: PropTypes.bool,
 
+        location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object
     };
@@ -46,6 +47,8 @@ export default class MyRecords extends React.Component {
     }
 
     componentWillReceiveProps(newProps) {
+        console.log(newProps.location.state);
+
         if (!this.state.allowResultsPaging && !newProps.loadingPublicationsList && newProps.publicationsList.length > 0) {
             this.setState({ allowResultsPaging: true });
         }
@@ -63,6 +66,12 @@ export default class MyRecords extends React.Component {
             || this.state.pageSize !== nextState.pageSize
             || this.state.page !== nextState.page
             || JSON.stringify(this.state.activeFacets) !== JSON.stringify(nextState.activeFacets)) {
+            this.props.history.push({
+                pathname: `${routes.pathConfig.records.mine}/${nextState.page}`,
+                // search: `?page=${nextState.page}`,
+                state: {...nextState}
+            });
+
             this.props.actions.searchAuthorPublications({
                 userName: this.props.account.id,
                 pageSize: nextState.pageSize,
