@@ -390,6 +390,45 @@ describe('Claim publication actions tests ', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
+        it('dispatched expected actions claiming a publication with comments', async () => {
+
+            const testParams = {pid: testClaimRequest.publication.rek_pid};
+
+            mockApi
+                .onPatch(repositories.routes.EXISTING_RECORD_API(testParams).apiUrl)
+                .reply(200, {})
+                .onPost(repositories.routes.RECORDS_ISSUES_API({}).apiUrl)
+                .reply(200, {});
+
+            const expectedActions = [
+                actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
+                actions.CLAIM_PUBLICATION_CREATE_COMPLETED
+            ];
+
+            await mockActionsStore.dispatch(claimActions.claimPublication({...testClaimRequest, comments: 'This is a test'}));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatched expected actions claiming a publication with comments with issue api failure', async () => {
+
+            const testParams = {pid: testClaimRequest.publication.rek_pid};
+
+            mockApi
+                .onPatch(repositories.routes.EXISTING_RECORD_API(testParams).apiUrl)
+                .reply(200, {})
+                .onPost(repositories.routes.RECORDS_ISSUES_API({}).apiUrl)
+                .reply(500);
+
+            const expectedActions = [
+                actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
+                actions.CLAIM_PUBLICATION_CREATE_COMPLETED
+            ];
+
+            await mockActionsStore.dispatch(claimActions.claimPublication({...testClaimRequest, comments: 'This is a test'}));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+
         it('dispatched expected actions claiming a publication with files with file upload failed', async () => {
             const testParams = {pid: testClaimRequest.publication.rek_pid};
             const files = {
