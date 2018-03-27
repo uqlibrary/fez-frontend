@@ -39,8 +39,8 @@ export default class Files extends Component {
                 </TableRowColumn>
                 <TableRowColumn className="align-right oaStatus">
                     <div className="fez-icon large openAccess" />
-                    <div className="fez-icon large openAccessLocked" />
-                    <div className="fez-icon large openAccessClosed" />
+                    <div className="fez-icon large openAccessEmbargoed" />
+                    <div className="fez-icon large closedAccess" />
                     {
                         this.renderEmbargoDate(embargoDate, openAccess)
                     }
