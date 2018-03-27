@@ -11,22 +11,18 @@ export default class ShareAnywhere extends React.Component {
     };
 
     componentDidMount() {
-        /* add the script to the body if it hasnt already happened */
+        // window.a2a_config.custom_services = [
+        //     [
+        //         'www.researchgate.net',
+        //         'https://www.researchgate.net/go.Share.html?url=' + encodeURI(window.location.href) + '&title=' + encodeURIComponent(document.title),
+        //         'https://www.example.com/images/icon_20x20.png' // RG background: #ooccbb, white text TODO
+        //     ]
+        // ];
+
         if (!document.getElementById('shareAnywhereScript')) {
-            // const url = encodeURI(window.location.href);
-            // const pageTitle = encodeURIComponent(document.title);
-
-            // window.a2a_config.custom_services = [
-            //     [
-            //         'www.researchgate.net',
-            //         'https://www.researchgate.net/go.Share.html?url=' + url + '&title=' + pageTitle,
-            //         'https://www.example.com/images/icon_32x32.png' // RG background: #ooccbb, white text
-            //     ]
-            // ];
-
+            /* add the script to the body if it hasnt already happened */
             const script = document.createElement('script');
-
-            script.src = '//static.addtoany.com/menu/page.js' + '?' + new Date().getTime();
+            script.src = '//static.addtoany.com/menu/page.js';
             script.id = 'shareAnywhereScript';
             document.head.appendChild(script);
             console.log('added in did mount');
@@ -34,20 +30,18 @@ export default class ShareAnywhere extends React.Component {
     }
 
     componentWillUnmount() {
+        /* remove the script so we can reload it when user returns via the back button  */
         const scriptShareAnywhere = document.getElementById('shareAnywhereScript');
         scriptShareAnywhere.parentNode.removeChild(scriptShareAnywhere);
-        if (!document.getElementById('shareAnywhereScript')) {
-            console.log('script has been removed');
-        } else {
-            console.log('script has NOT been removed');
-        }
     }
 
     render() {
         if (!this.props.show) return <div className="shareAnywhere_empty" />;
 
+        const blockStyle = { paddingBottom: 12 };
+
         return (
-            <div className="a2a_kit a2a_kit_size_20 a2a_default_style columns is-gapless is-clearfix is-marginless">
+            <div className="shareAnywhere a2a_kit a2a_kit_size_20 a2a_default_style columns is-gapless is-clearfix is-marginless" style={blockStyle}>
                 <div className="column" />
                 <div className="column is-narrow">
                     <a className="a2a_button_mendeley" />
