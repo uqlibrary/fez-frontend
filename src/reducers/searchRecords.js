@@ -22,8 +22,8 @@ const idSearchKeys = [
 
 export const deduplicateResults = (list) => {
     return idSearchKeys.reduce((publicationsList, idSearchKey) => {
-        // get a list of DOI counts
-        const doiCountHash = publicationsList
+        // get a list of doi/scopus_id/isi_loc counts
+        const idCountHash = publicationsList
             .filter(item => {
                 return !!item[idSearchKey.key];
             })
@@ -35,25 +35,25 @@ export const deduplicateResults = (list) => {
                 return duplicatesCount;
             }, []);
 
-        // get a list of duplicate doi records and dois
-        const doiDuplicatesList = [];
+        // get a list of duplicate doi records and dois/scopus_ids/isi_loc
+        const idDuplicatesList = [];
         const duplicates = publicationsList
             .filter(item => {
-                if (item[idSearchKey.key] && doiCountHash[item[idSearchKey.key][idSearchKey.value].toLowerCase()] > 1
-                    && doiDuplicatesList.indexOf(item[idSearchKey.key][idSearchKey.value].toLowerCase()) === -1) {
-                    doiDuplicatesList.push(item[idSearchKey.key][idSearchKey.value].toLowerCase());
+                if (item[idSearchKey.key] && idCountHash[item[idSearchKey.key][idSearchKey.value].toLowerCase()] > 1
+                    && idDuplicatesList.indexOf(item[idSearchKey.key][idSearchKey.value].toLowerCase()) === -1) {
+                    idDuplicatesList.push(item[idSearchKey.key][idSearchKey.value].toLowerCase());
                 }
-                return !!item[idSearchKey.key] && doiCountHash[item[idSearchKey.key][idSearchKey.value].toLowerCase()] > 1;
+                return !!item[idSearchKey.key] && idCountHash[item[idSearchKey.key][idSearchKey.value].toLowerCase()] > 1;
             });
 
         // remove all duplicates from full list of results
         const cleanedPublicationsList = publicationsList
             .filter(item => {
-                return !item[idSearchKey.key] || doiCountHash[item[idSearchKey.key][idSearchKey.value].toLowerCase()] === 1;
+                return !item[idSearchKey.key] || idCountHash[item[idSearchKey.key][idSearchKey.value].toLowerCase()] === 1;
             });
 
         // filter duplicate records based on source priority
-        const highPriorityItem = doiDuplicatesList
+        const highPriorityItem = idDuplicatesList
             .map(id => {
                 // get a record with most priority
                 return duplicates
