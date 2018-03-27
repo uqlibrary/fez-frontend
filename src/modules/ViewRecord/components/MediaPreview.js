@@ -2,11 +2,13 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'locale';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import RaisedButton from 'material-ui/RaisedButton';
 
 export default class MediaPreview extends Component {
     static propTypes = {
         mediaUrl: PropTypes.string.isRequired,
-        mimeType: PropTypes.string.isRequired
+        mimeType: PropTypes.string.isRequired,
+        closeAction: PropTypes.func.isRequired
     };
 
     constructor(props) {
@@ -22,20 +24,14 @@ export default class MediaPreview extends Component {
         );
     }
 
-    renderPreview = (mediaUrl, mimeType) => {
-        if (this.isVideo(mimeType)) {
-            return this.renderVideoPreview(mediaUrl, mimeType);
-        } else if (this.isImage(mimeType)) {
-            return this.renderImagePreview(mediaUrl);
-        } else {
-            return <span/>;
-        }
-    }
-
     renderImagePreview = (url) => {
         return (
             <img src={url} />
         );
+    }
+
+    openFileInNewWindow = () => {
+        window.open(this.props.mediaUrl);
     }
 
     isVideo = (mimeType) => {
@@ -50,11 +46,25 @@ export default class MediaPreview extends Component {
         return this.isVideo(mimeType) ? locale.viewRecord.sections.files.preview.videoTitle : locale.viewRecord.sections.files.preview.imageTitle;
     }
 
+    renderPreview = (mediaUrl, mimeType) => {
+        if (this.isVideo(mimeType)) {
+            return this.renderVideoPreview(mediaUrl, mimeType);
+        } else if (this.isImage(mimeType)) {
+            return this.renderImagePreview(mediaUrl);
+        } else {
+            return <span/>;
+        }
+    }
+
     render()  {
-        const {mediaUrl, mimeType} = this.props;
+        const {mediaUrl, mimeType, closeAction} = this.props;
 
         return (
             <StandardCard title={this.getTitle(mimeType)}>
+                <div className="column is-narrow filePreview">
+                    <RaisedButton label={locale.viewRecord.sections.files.preview.openInNewWindow} onTouchTap={this.openFileInNewWindow} primary />
+                    <RaisedButton label={locale.viewRecord.sections.files.preview.close} onTouchTap={closeAction}/>
+                </div>
                 {this.renderPreview(mediaUrl, mimeType)}
             </StandardCard>
         );

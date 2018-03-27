@@ -12,19 +12,20 @@ export default class fileName extends PureComponent {
     static propTypes = {
         pid: PropTypes.string.isRequired,
         fileName: PropTypes.string.isRequired,
+        mimeType: PropTypes.string.isRequired,
+        handleFileNameClick: PropTypes.func.isRequired,
         thumbnailFileName: PropTypes.string,
         previewFileName: PropTypes.string,
-        mimeType: PropTypes.string,
         openAccess: PropTypes.bool,
-        handleFileNameClick: PropTypes.func.isRequired
+        isEmbargoed: PropTypes.bool
     };
 
     constructor(props) {
         super(props);
     }
 
-    renderFileIcon = (pid, mimeType, thumbnailFileName) => {
-        if (thumbnailFileName) {
+    renderFileIcon = (pid, mimeType, thumbnailFileName, isEmbargoed, openAccess) => {
+        if (openAccess && !isEmbargoed && thumbnailFileName) {
             return <img src={this.getUrl(pid, thumbnailFileName)} />;
         }
 
@@ -48,7 +49,6 @@ export default class fileName extends PureComponent {
     };
 
     renderAudioPlayer = (pid, fileName, mimeType) => {
-        console.log(fileName);
         return (
             <div>
                 <audio id="audioPlayer">
@@ -101,16 +101,16 @@ export default class fileName extends PureComponent {
 
     // show icons, thumbnail and audio player
     render = () => {
-        const {pid, fileName, openAccess, mimeType, thumbnailFileName} = this.props;
+        const {pid, fileName, isEmbargoed, openAccess, mimeType, thumbnailFileName} = this.props;
 
         return (
             <div className="columns is-gapless is-mobile fileDetails">
                 <div className="column is-narrow is-vertical-center fileIcon">
-                    {this.renderFileIcon(pid, mimeType, thumbnailFileName)}
+                    {this.renderFileIcon(pid, mimeType, thumbnailFileName, isEmbargoed, openAccess)}
                 </div>
                 <div className="column fileInfo">
                     {
-                        openAccess ?
+                        openAccess && !isEmbargoed ?
                             <a href="#" onClick={this.handleFileNameClick} onKeyPress={this.handleFileNameClick} className={'fileName'}>
                                 {fileName}
                             </a>

@@ -33,6 +33,7 @@ export default class ViewRecord extends Component {
             previewMimeType: null
         };
         this.handleFileNameClick = this.handleFileNameClick.bind(this);
+        this.resetPreviewState = this.resetPreviewState.bind(this);
     }
 
     componentDidMount() {
@@ -52,6 +53,13 @@ export default class ViewRecord extends Component {
         this.setState({
             previewMediaUrl: mediaUrl,
             previewMimeType: mimeType
+        });
+    }
+
+    resetPreviewState() {
+        this.setState({
+            previewMediaUrl: null,
+            previewMimeType: null
         });
     }
 
@@ -88,7 +96,7 @@ export default class ViewRecord extends Component {
                 }
                 {
                     this.state.previewMediaUrl && this.state.previewMimeType &&
-                    <MediaPreview mediaUrl={this.state.previewMediaUrl} mimeType={this.state.previewMimeType}/>
+                    <MediaPreview mediaUrl={this.state.previewMediaUrl} mimeType={this.state.previewMimeType} closeAction={this.resetPreviewState}/>
                 }
                 {
                     recordToView && (recordToView.rek_formatted_abstract || recordToView.rek_description) &&
