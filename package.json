@@ -150,7 +150,8 @@
         "presets": [
           "env",
           "react",
-          "stage-0"
+          "stage-0",
+          "stage-1"
         ],
         "plugins": [
           [
@@ -193,7 +194,7 @@
       "\\.(jpg|jpeg|svg)$": "<rootDir>/__mocks__/images.js"
     },
     "transformIgnorePatterns": [
-      "<roodDir>/node_modules/(?!uqlibrary-react-toolbox)"
+      "<rootDir>/node_modules/"
     ],
     "setupFiles": [
       "./src/test.setup.js"
