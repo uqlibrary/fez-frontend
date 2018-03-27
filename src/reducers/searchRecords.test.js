@@ -638,7 +638,7 @@ describe('searchRecords reducer', () => {
                     "rek_isi_loc_id": 4031803,
                     "rek_isi_loc_pid": "UQ:683770",
                     "rek_isi_loc_xsdmf_id": null,
-                    "rek_isi_loc": "000283520500009"
+                    "rek_isi_loc": "000283520500019"
                 },
                 "fez_record_search_key_ismemberof": [{
                     "rek_ismemberof_id": 12105580,
@@ -2311,7 +2311,7 @@ describe('searchRecords reducer', () => {
 
         const result = deduplicateResults([...espaceList, ...scopusList, ...wosList]);
 
-        expect(result.length).toEqual(8);
+        expect(result.length).toEqual(7);
 
         result.map((item, index) => {
             if (item.fez_record_search_key_doi &&
