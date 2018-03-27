@@ -21,6 +21,11 @@
     .grantText {
       margin-top: 6px;
     }
+    .headingColumn {
+      @include mobile {
+        display: none !important;
+      }
+    }
   }
 
   .additionalInformation, .publicationDetails, .grantInformation {
@@ -40,6 +45,9 @@
       white-space: normal !important;
 
       @include desktop {
+        width: 150px;
+      }
+      @include tablet {
         width: 150px;
       }
       @include mobile {
@@ -66,6 +74,9 @@
     ul {
       padding: 0 !important;
       margin: 0 !important;
+      li {
+        margin-left: 12px;
+      }
     }
 
     p {
