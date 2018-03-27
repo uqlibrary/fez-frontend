@@ -5,14 +5,15 @@ import {pathConfig} from 'config/routes';
 import {viewRecordsConfig} from 'config/viewRecord';
 import {Table, TableBody} from 'material-ui/Table';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {AuthorsCitationView, DoiCitationView, EditorsCitationView} from '../../SharedComponents/PublicationCitation/components/citations/partials';
-import {ExternalLink} from '../../SharedComponents/ExternalLink';
+import {AuthorsCitationView, DoiCitationView, EditorsCitationView, DateCitationView} from 'modules/SharedComponents/PublicationCitation/components/citations/partials';
+import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import ReactHtmlParser from 'react-html-parser';
 import ViewRecordTableRow from './ViewRecordTableRow';
 import PublicationMap from './PublicationMap';
+import JournalName from './partials/JournalName';
 
-const moment = require('moment');
 const dompurify = require('dompurify');
+const dompurifyConfig = { ALLOWED_TAGS: ['p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b'], ALLOWED_ATTR: [] };
 
 export default class AdditionalInformation extends Component {
     static propTypes = {
@@ -84,7 +85,7 @@ export default class AdditionalInformation extends Component {
 
         switch (subkey) {
             case 'rek_doi': return this.renderDoi(data);
-            case 'rek_journal_name': return this.renderJournalName(data);
+            case 'rek_journal_name': return this.renderJournalName();
             case 'rek_publisher': return this.renderLink(pathConfig.list.publisher(data), data);
             case 'rek_oa_status': return this.renderLink(pathConfig.list.openAccessStatus(object[subkey]), data);
             case 'rek_herdc_code': return this.renderLink(pathConfig.list.subject(object[subkey]), data);
@@ -106,6 +107,7 @@ export default class AdditionalInformation extends Component {
         switch (key) {
             case 'rek_title': return this.renderTitle();
             case 'rek_date': return this.formatPublicationDate(value);
+            case 'rek_description': return this.renderHTML(value);
             default: return value;
         }
     }
@@ -129,25 +131,9 @@ export default class AdditionalInformation extends Component {
         );
     }
 
-    renderJournalName = (journalName) => {
-        const journalNameElement = <a href={pathConfig.list.journalName(journalName)}>{journalName}</a>;
-        const sherpaRomeoData = this.getSherpaRomeo();
-        let sherpaRomeoElement = <span/>;
-
-        if (sherpaRomeoData) {
-            const sherpaRomeoColor = sherpaRomeoData.color;
-            const sherpaRomeoLink = locale.global.sherpaRomeoLink.externalUrl.replace('[issn]', sherpaRomeoData.issn);
-            sherpaRomeoElement =
-                      (<ExternalLink
-                          href={sherpaRomeoLink} aria-label={locale.global.sherpaRomeoLink.ariaLabel}>
-                          <span className={`sherpaRomeo${sherpaRomeoColor[0].toUpperCase() + sherpaRomeoColor.slice(1)}`}>{locale.viewRecord.linkTexts.journalOpenAccessPolicyLink}</span>
-                      </ExternalLink>);
-        }
-
+    renderJournalName = () => {
         return (
-            <span>
-                {journalNameElement} {sherpaRomeoElement}
-            </span>
+            <JournalName publication={this.props.publication} />
         );
     }
 
@@ -185,7 +171,7 @@ export default class AdditionalInformation extends Component {
     }
 
     renderHTML = (data) => {
-        return ReactHtmlParser(dompurify.sanitize(data));
+        return ReactHtmlParser(dompurify.sanitize(data, dompurifyConfig));
     }
 
     // get lookup data if it exsts, except rek_issn_lookup as it returns sherpa romeo color
@@ -194,13 +180,8 @@ export default class AdditionalInformation extends Component {
         return object[subkey + lookupSuffix] && subkey !== 'rek_issn' ? object[subkey + lookupSuffix] : object[subkey];
     }
 
-    // rek_issn_lookup returns sherpa romeo color
-    getSherpaRomeo = () => {
-        const issnField = 'rek_issn';
-        const colorField = 'rek_issn_lookup';
-        const colors = ['green', 'blue', 'yellow', 'white'];
-        const issns = this.props.publication.fez_record_search_key_issn.filter(issn => colors.includes(issn[colorField]));
-        return issns.length > 0 ? {'issn': issns[0][issnField], 'color': issns[0][colorField]} : null;
+    getAbstract = (publication) => {
+        return publication.rek_formatted_abstract || publication.rek_description;
     }
 
     formatPublicationDate = (publicationDate) => {
@@ -208,7 +189,9 @@ export default class AdditionalInformation extends Component {
     }
 
     formatDate = (date, format = 'YYYY-MM-DD') => {
-        return moment(date).format(format);
+        return (
+            <DateCitationView format={format} date={date} prefix={''} suffix={''}/>
+        );
     }
 
     transformFieldNameToSubkey = (field) => {
@@ -217,21 +200,9 @@ export default class AdditionalInformation extends Component {
         return field.indexOf(keyPrefix) === 0 ? subkeyPrefix + field.substring(keyPrefix.length) : null;
     }
 
-    // common fields for all display types at the bottom of the list
-    renderFooter = () => {
-        const rows = [];
-        const publication = this.props.publication;
-        const footer = locale.viewRecord.headings.default.footer;
-
-        Object.keys(footer).forEach((field) => {
-            const data = publication[field];
-            const subkey = this.transformFieldNameToSubkey(field);
-
-            if (data) {
-                rows.push(this.renderRow(footer[field], this.renderObject(data, subkey)));
-            }
-        });
-        return rows;
+    // TODO: check for user role
+    excludeAdminOnlyFields = (fields) => {
+        return fields.filter(item=>!locale.viewRecord.adminFields.includes(item.field));
     }
 
     renderColumns = () => {
@@ -240,14 +211,16 @@ export default class AdditionalInformation extends Component {
         const displayType = publication.rek_display_type_lookup;
         const headings = locale.viewRecord.headings;
         const displayTypeHeadings = displayType && headings[displayType] ? headings[displayType] : [];
-        const fields = displayType && locale.viewRecord.fields[displayType] ? locale.viewRecord.fields[displayType] : [];
+        const footerFields = locale.viewRecord.fields.footer;
+        let fields = displayType && locale.viewRecord.fields[displayType] ? locale.viewRecord.fields[displayType].concat(footerFields) : footerFields;
+        fields = this.excludeAdminOnlyFields(fields);
 
         fields.sort((field1, field2) => (
             field1.order - field2.order
         )).map((item) => {
             let data = '';
             const field = item.field;
-            const value = publication[field];
+            const value = (field === 'rek_description') ? this.getAbstract(publication) : publication[field];
 
             // do not display field when value is null, empty array
             if (value && Object.keys(value).length > 0) {
@@ -264,9 +237,6 @@ export default class AdditionalInformation extends Component {
                 rows.push(this.renderRow(heading, data));
             }
         });
-
-        // common fields for all display types
-        rows.push(this.renderFooter());
 
         return rows;
     }
