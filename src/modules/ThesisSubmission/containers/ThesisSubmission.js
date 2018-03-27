@@ -46,9 +46,12 @@ const mapStateToProps = (state, props) => {
         ...props.isHdrThesis ? general.HDR_THESIS_DEFAULT_VALUES : general.SBS_THESIS_DEFAULT_VALUES
     };
 
+    const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
+
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-        formErrors: getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({}),
+        formErrors: formErrors,
+        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         initialValues: initialValues,
         author: currentAuthor,
         isHdrThesis: props.isHdrThesis,

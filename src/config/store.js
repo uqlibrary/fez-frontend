@@ -8,7 +8,7 @@ import thunk from 'redux-thunk';
 
 import Raven from 'raven-js';
 
-Raven.config('https://2e8809106d66495ba3023139b1bcfbe5@sentry.io/301681').install();
+if(!process.env.USE_MOCK) Raven.config('https://2e8809106d66495ba3023139b1bcfbe5@sentry.io/301681').install();
 
 export const history = process.env.BRANCH === 'production' || process.env.BRANCH === 'staging'
     ? createBrowserHistory()

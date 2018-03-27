@@ -81,7 +81,8 @@ module.exports = {
             'process.env.BRANCH': JSON.stringify(config.environment),
             'process.env.ORCID_URL': JSON.stringify(config.orcidUrl),
             'process.env.ORCID_CLIENT_ID': JSON.stringify(config.orcidClientId),
-            'process.env.PUBLIC_PATH': JSON.stringify(config.basePath)
+            'process.env.PUBLIC_PATH': JSON.stringify(config.basePath),
+            'process.env.TITLE_SUFFIX': JSON.stringify(config.titleSuffix)
         }),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         // Put it in the end to capture all the HtmlWebpackPlugin's
