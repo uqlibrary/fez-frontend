@@ -1,7 +1,6 @@
 import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
 import * as routes from 'repositories/routes';
-import Raven from 'raven-js';
 
 /**
  * Loads the user's account and author details into the application
@@ -17,7 +16,6 @@ export function loadCurrentAccount() {
         return get(routes.CURRENT_ACCOUNT_API())
             .then(account => {
                 if (account.hasOwnProperty('hasSession') && account.hasSession === true) {
-                    if(!process.env.USE_MOCK) Raven.setUserContext({id: account.id});
                     return Promise.resolve(account);
                 } else {
                     dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});

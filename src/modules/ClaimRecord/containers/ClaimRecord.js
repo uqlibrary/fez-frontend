@@ -31,12 +31,10 @@ let ClaimPublicationFormContainer = reduxForm({
 })(confirmDiscardFormChanges(ClaimRecord, FORM_NAME));
 
 const mapStateToProps = (state) => {
-    const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     return {
         publicationToClaimFileUploadingError: state && state.get('claimPublicationReducer') ? state.get('claimPublicationReducer').publicationToClaimFileUploadingError : null,
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-        formErrors: formErrors,
-        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
+        formErrors: getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({}),
         initialValues: {
             publication: state && state.get('claimPublicationReducer') ? state.get('claimPublicationReducer').publicationToClaim : null,
             author: state && state.get('accountReducer') ? state.get('accountReducer').author : null
