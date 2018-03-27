@@ -127,7 +127,6 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
         "rek_end_page_pid": "UQ:137936",
         "rek_end_page_xsdmf_id": 6266,
       },
-      "fez_record_search_key_fields_of_research": Array [],
       "fez_record_search_key_file_attachment_access_condition": Array [],
       "fez_record_search_key_file_attachment_embargo_date": Array [],
       "fez_record_search_key_file_attachment_name": Array [],

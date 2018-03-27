@@ -71,12 +71,9 @@ let PublicationFormContainer = reduxForm({
 })(confirmDiscardFormChanges(PublicationForm, FORM_NAME));
 
 const mapStateToProps = (state) => {
-    const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
-
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-        formErrors: formErrors,
-        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map)
+        formErrors: getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({}),
     };
 };
 

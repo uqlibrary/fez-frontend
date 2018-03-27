@@ -1,38 +1,15 @@
 jest.dontMock('./BookForm');
 
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import BookForm from './BookForm';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
-function setup({submitting, subtypeVocabId, isShallow = true}){
-
+function setup(testProps, isShallow = true){
     const props = {
-        submitting: submitting || false, // : PropTypes.bool,
-        subtypeVocabId: subtypeVocabId || 0, // : PropTypes.number
+        ...testProps,
+        submitting: testProps.submitting || false, // : PropTypes.bool,
+        subtypeVocabId: testProps.subtypeVocabId || 0, // : PropTypes.number
     };
-
-    if(isShallow) {
-        return shallow(<BookForm {...props} />);
-    }
-
-    return mount(<BookForm {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
-
+    return getElement(BookForm, props, isShallow);
 }
-
-beforeAll(() => {
-    injectTapEventPlugin();
-});
 
 describe('BookForm renders ', () => {
     it('component', () => {

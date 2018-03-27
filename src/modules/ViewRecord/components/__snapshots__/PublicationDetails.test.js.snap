@@ -36,21 +36,21 @@ exports[`Publication Details Component  should render component 1`] = `
           <ul>
             <li>
               <a
-                href="/collection/UQ:3825"
+                href="/collection/UQ:396321"
               >
                 School of Chemistry and Molecular Biosciences
               </a>
             </li>
             <li>
               <a
-                href="/collection/UQ:218311"
+                href="/collection/UQ:396321"
               >
                 HERDC Pre-Audit
               </a>
             </li>
             <li>
               <a
-                href="/collection/UQ:171723"
+                href="/collection/UQ:396321"
               >
                 UQ Centre for Clinical Research Publications
               </a>
@@ -155,21 +155,21 @@ exports[`Publication Details Component  should render with publication without s
           <ul>
             <li>
               <a
-                href="/collection/UQ:3825"
+                href="/collection/UQ:396321"
               >
                 School of Chemistry and Molecular Biosciences
               </a>
             </li>
             <li>
               <a
-                href="/collection/UQ:218311"
+                href="/collection/UQ:396321"
               >
                 HERDC Pre-Audit
               </a>
             </li>
             <li>
               <a
-                href="/collection/UQ:171723"
+                href="/collection/UQ:396321"
               >
                 UQ Centre for Clinical Research Publications
               </a>

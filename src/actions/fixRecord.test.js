@@ -225,7 +225,10 @@ describe('Fix record actions', () => {
                 files: {
                     queue: [
                         {
-                            name: 'test.txt'
+                            name: 'test.txt',
+                            fileData: {
+                                name: 'test.txt'
+                            }
                         }
                     ]
                 }
@@ -233,6 +236,8 @@ describe('Fix record actions', () => {
 
             const expectedActions = [
                 actions.FIX_RECORD_PROCESSING,
+                'FILE_UPLOAD_STARTED',
+                'FILE_UPLOAD_PROGRESS@test.txt',
                 actions.FIX_RECORD_SUCCESS
             ];
 

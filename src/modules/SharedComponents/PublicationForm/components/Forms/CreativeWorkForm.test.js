@@ -1,38 +1,15 @@
 jest.dontMock('./CreativeWorkForm');
 
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import CreativeWorkForm from './CreativeWorkForm';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
-function setup({submitting, subtypeVocabId, isShallow = true}){
-
+function setup(testProps, isShallow = true){
     const props = {
-        submitting: submitting || false, // : PropTypes.bool,
-        subtypeVocabId: subtypeVocabId || 0, // : PropTypes.number
+        ...testProps,
+        submitting: testProps.submitting || false, // : PropTypes.bool,
+        subtypeVocabId: testProps.subtypeVocabId || 0, // : PropTypes.number
     };
-
-    if(isShallow) {
-        return shallow(<CreativeWorkForm {...props} />);
-    }
-
-    return mount(<CreativeWorkForm {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
-
+    return getElement(CreativeWorkForm, props, isShallow);
 }
-
-beforeAll(() => {
-    injectTapEventPlugin();
-});
 
 describe('CreativeWorkForm renders ', () => {
     it('component', () => {
