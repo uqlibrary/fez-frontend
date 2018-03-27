@@ -9,6 +9,7 @@ import {AuthorsCitationView, DoiCitationView, EditorsCitationView, DateCitationV
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import ReactHtmlParser from 'react-html-parser';
 import ViewRecordTableRow from './ViewRecordTableRow';
+import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 
 const dompurify = require('dompurify');
@@ -63,6 +64,7 @@ export default class AdditionalInformation extends Component {
             case 'rek_subject': return this.renderList(objects, subkey, pathConfig.list.subject);
             case 'rek_seo_code': return this.renderList(objects, subkey, pathConfig.list.subject);
             case 'rek_alternate_genre': return this.renderList(objects, subkey, pathConfig.list.subject);
+            case 'rek_geographic_area': return this.renderMap(objects);
             default: return this.renderList(objects, subkey);
         }
     }
@@ -146,6 +148,21 @@ export default class AdditionalInformation extends Component {
             <AuthorsCitationView key="additional-information-authors" publication={publication} initialNumberOfAuthors={publication.fez_record_search_key_author.length} showLink />
         );
     }
+
+    renderMap = (coordinatesList) => {
+        if (coordinatesList.length === 0 || !coordinatesList[0].rek_geographic_area) {
+            return (<span />);
+        }
+        return (
+            <PublicationMap
+                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                loadingElement={<div style={{height: '100%'}}/>}
+                containerElement={<div style={{height: '400px'}}/>}
+                mapElement={<div style={{height: '100%'}}/>}
+                coordinates={coordinatesList[0].rek_geographic_area}
+            />
+        );
+    };
 
     renderDoi = (doi) => {
         return (

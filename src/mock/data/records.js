@@ -18868,3 +18868,222 @@ export const possibleUnclaimedList = {
         }
     }
 };
+
+export const recordWithMap = {
+    "rek_pid": "UQ:164935",
+    "rek_title_xsdmf_id": 10699,
+    "rek_title": "Reference Desk, Library",
+    "rek_description_xsdmf_id": null,
+    "rek_description": null,
+    "rek_display_type_xsdmf_id": 3673,
+    "rek_display_type": 238,
+    "rek_status_xsdmf_id": 3680,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": 8563,
+    "rek_date": "1955-01-01T00:00:00Z",
+    "rek_object_type_xsdmf_id": 3674,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 7578,
+    "rek_depositor": 141,
+    "rek_created_date_xsdmf_id": 3677,
+    "rek_created_date": "2009-02-21T13:44:31Z",
+    "rek_updated_date_xsdmf_id": 3678,
+    "rek_updated_date": "2016-08-15T06:03:12Z",
+    "rek_file_downloads": 183,
+    "rek_citation": " (<span class=\"citation_date\">1955<\/span>). <a class=\"citation_title\" title=\"Click to view Image: Reference Desk, Library\" href=\"\/view\/UQ:164935\">Reference Desk, Library<\/a>. ",
+    "rek_genre_xsdmf_id": 8564,
+    "rek_genre": "image\/tiff",
+    "rek_genre_type_xsdmf_id": null,
+    "rek_genre_type": null,
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": 11449,
+    "rek_formatted_abstract": "Fryer Library University of Queensland Photograph Collection, UQFL466 consist of approximately 1100 photographs relating to the University of Queensland.<br \/>Photographs have been arranged in the following series:<br \/>&bull; AA: University of Queensland site at George Street<br \/>&bull; AB: St Lucia site before the establishment of the University of Queensland<br \/>&bull; AC: Buildings and grounds of the University of Queensland<br \/>&bull; AD: University of Queensland St Lucia campus buildings other than Great Court<br \/>&bull; AE: University of Queensland Non St Lucia Campus Buildings<br \/>&bull; AF: University of Queensland grounds<br \/>&bull; AG: University of Queensland Library<br \/>&bull; AH: University of Queensland ceremonies<br \/>&bull; AI: Research, teaching, business, cultural and support facilities of the University of Queensland<br \/>&bull; AJ: University of Queensland students<br \/>&bull; AK: University of Queensland Alumni (including ceremonies)<br \/>&bull; AL: Staff, benefactors and official associates of the University of Queensland<br \/>&bull; AM: University of Queensland sports<br \/>&bull; AP: University of Queensland honour boards, plaques, etc.",
+    "rek_depositor_affiliation_xsdmf_id": 11881,
+    "rek_depositor_affiliation": 789,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 3679,
+    "rek_copyright": "on",
+    "fez_record_search_key_acknowledgements": null,
+    "fez_record_search_key_advisory_statement": null,
+    "fez_record_search_key_article_number": null,
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [{
+        "rek_assigned_user_id_id": 903944,
+        "rek_assigned_user_id_pid": "UQ:164935",
+        "rek_assigned_user_id_xsdmf_id": 9501,
+        "rek_assigned_user_id": 141,
+        "rek_assigned_user_id_order": 1
+    }],
+    "fez_record_search_key_author": [],
+    "fez_record_search_key_author_id": [],
+    "fez_record_search_key_author_affiliation_country": [],
+    "fez_record_search_key_author_affiliation_full_address": [],
+    "fez_record_search_key_author_affiliation_id": [],
+    "fez_record_search_key_author_affiliation_name": [],
+    "fez_record_search_key_contributor": [],
+    "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_corresponding_country": [],
+    "fez_record_search_key_corresponding_email": [],
+    "fez_record_search_key_corresponding_name": [],
+    "fez_record_search_key_corresponding_organisation": [],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_date_available": {
+        "rek_date_available_id": 896555,
+        "rek_date_available_pid": "UQ:164935",
+        "rek_date_available_xsdmf_id": 10697,
+        "rek_date_available": "2009-01-01T00:00:00Z"
+    },
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [{
+        "rek_file_attachment_name_id": 3798608,
+        "rek_file_attachment_name_pid": "UQ:164935",
+        "rek_file_attachment_name_xsdmf_id": 8625,
+        "rek_file_attachment_name": "presmd_uqfl466_b8_AG_P_108.xml",
+        "rek_file_attachment_name_order": 1
+    }, {
+        "rek_file_attachment_name_id": 3798609,
+        "rek_file_attachment_name_pid": "UQ:164935",
+        "rek_file_attachment_name_xsdmf_id": 8625,
+        "rek_file_attachment_name": "preview_uqfl466_b8_AG_P_108.jpg",
+        "rek_file_attachment_name_order": 2
+    }, {
+        "rek_file_attachment_name_id": 3798610,
+        "rek_file_attachment_name_pid": "UQ:164935",
+        "rek_file_attachment_name_xsdmf_id": 8625,
+        "rek_file_attachment_name": "thumbnail_uqfl466_b8_AG_P_108.jpg",
+        "rek_file_attachment_name_order": 3
+    }, {
+        "rek_file_attachment_name_id": 3798611,
+        "rek_file_attachment_name_pid": "UQ:164935",
+        "rek_file_attachment_name_xsdmf_id": 8625,
+        "rek_file_attachment_name": "uqfl466_b8_AG_P_108.jpg",
+        "rek_file_attachment_name_order": 4
+    }, {
+        "rek_file_attachment_name_id": 3798612,
+        "rek_file_attachment_name_pid": "UQ:164935",
+        "rek_file_attachment_name_xsdmf_id": 8625,
+        "rek_file_attachment_name": "web_uqfl466_b8_AG_P_108.jpg",
+        "rek_file_attachment_name_order": 5
+    }],
+    "fez_record_search_key_geographic_area": [{
+        "rek_geographic_area_id": 10759,
+        "rek_geographic_area_pid": "UQ:164935",
+        "rek_geographic_area_xsdmf_id": 17125,
+        "rek_geographic_area_order": 1,
+        "rek_geographic_area": "153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337"
+    }],
+    "fez_record_search_key_grant_acronym": [],
+    "fez_record_search_key_grant_agency": [],
+    "fez_record_search_key_grant_agency_id": [],
+    "fez_record_search_key_grant_text": [],
+    "fez_record_search_key_institutional_status": null,
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_ismemberof": [{
+        "rek_ismemberof_id": 11406667,
+        "rek_ismemberof_pid": "UQ:164935",
+        "rek_ismemberof_xsdmf_id": 149,
+        "rek_ismemberof": "UQ:278419",
+        "rek_ismemberof_order": 1,
+        "rek_ismemberof_lookup": "Fryer Library"
+    }],
+    "fez_record_search_key_keywords": [{
+        "rek_keywords_id": 28947937,
+        "rek_keywords_pid": "UQ:164935",
+        "rek_keywords_xsdmf_id": 8555,
+        "rek_keywords": "University of Queensland -- History",
+        "rek_keywords_order": 1
+    }, {
+        "rek_keywords_id": 28947938,
+        "rek_keywords_pid": "UQ:164935",
+        "rek_keywords_xsdmf_id": 8555,
+        "rek_keywords": "Central Library, The University of Queensland",
+        "rek_keywords_order": 2
+    }, {
+        "rek_keywords_id": 28947939,
+        "rek_keywords_pid": "UQ:164935",
+        "rek_keywords_xsdmf_id": 8555,
+        "rek_keywords": "Librarians",
+        "rek_keywords_order": 3
+    }],
+    "fez_record_search_key_language": [],
+    "fez_record_search_key_license": null,
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_notes": {
+        "rek_notes_id": 1097936,
+        "rek_notes_pid": "UQ:164935",
+        "rek_notes_xsdmf_id": 12466,
+        "rek_notes": "Reference Desk, Duhig Building, University of Queensland Library, circa 1955. This area in the Duhig Building houses the AskIT desk and Ezones"
+    },
+    "fez_record_search_key_oa_status": {
+        "rek_oa_status_id": 281614,
+        "rek_oa_status_pid": "UQ:164935",
+        "rek_oa_status_xsdmf_id": 17010,
+        "rek_oa_status": 453697,
+        "rek_oa_status_lookup": "Other"
+    },
+    "fez_record_search_key_original_format": {
+        "rek_original_format_id": 7670,
+        "rek_original_format_pid": "UQ:164935",
+        "rek_original_format_xsdmf_id": 8567,
+        "rek_original_format": "Photograph; b&w."
+    },
+    "fez_record_search_key_place_of_publication": null,
+    "fez_record_search_key_publisher": null,
+    "fez_record_search_key_refereed": null,
+    "fez_record_search_key_refereed_source": {
+        "rek_refereed_source_id": 1120295,
+        "rek_refereed_source_pid": "UQ:164935",
+        "rek_refereed_source_xsdmf_id": 16623,
+        "rek_refereed_source": "453638",
+        "rek_refereed_source_lookup": "Not yet assessed"
+    },
+    "fez_record_search_key_rights": {
+        "rek_rights_id": 108945,
+        "rek_rights_pid": "UQ:164935",
+        "rek_rights_xsdmf_id": 8574,
+        "rek_rights": "Copyright expired"
+    },
+    "fez_record_search_key_series": {
+        "rek_series_id": 187133,
+        "rek_series_pid": "UQ:164935",
+        "rek_series_xsdmf_id": 11046,
+        "rek_series": "Fryer Library University of Queensland Photograph Collection, UQFL466"
+    },
+    "fez_record_search_key_source": {
+        "rek_source_id": 57344,
+        "rek_source_pid": "UQ:164935",
+        "rek_source_xsdmf_id": 8572,
+        "rek_source": "Fryer Library University of Queensland Photograph Collection, UQFL466, Box 8, AG\/P\/108"
+    },
+    "fez_record_search_key_subject": [],
+    "fez_record_search_key_translated_title": null,
+    "fez_record_search_key_issn": [],
+    "fez_matched_journals": [],
+    "fez_record_search_key_file_hashdataset": [],
+    "rek_status_lookup": "Published",
+    "rek_object_type_lookup": "Record",
+    "rek_wok_doc_type_lookup": null,
+    "rek_display_type_lookup": "Image",
+    "rek_scopus_doc_type_lookup": null,
+    "rek_pubmed_doc_type_lookup": null
+};
