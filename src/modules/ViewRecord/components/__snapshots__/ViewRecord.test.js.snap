@@ -7,7 +7,7 @@ exports[`Component ViewRecord  should render default props 1`] = `
   <withRouter(Connect(PublicationCitation))
     hideTitle={true}
   />
-  <AddThis
+  <ShareAnywhere
     show={true}
   />
 </StandardPage>
@@ -438,7 +438,7 @@ exports[`Component ViewRecord  should render record view 1`] = `
       }
     }
   />
-  <AddThis
+  <ShareAnywhere
     show={true}
   />
   <AdditionalInformation
@@ -1638,7 +1638,7 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
       }
     }
   />
-  <AddThis
+  <ShareAnywhere
     show={true}
   />
   <AdditionalInformation

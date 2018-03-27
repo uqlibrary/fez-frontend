@@ -9,7 +9,7 @@ import {locale} from 'locale';
 import PublicationDetails from './PublicationDetails';
 import AdditionalInformation from './AdditionalInformation';
 import GrantInformation from './GrantInformation';
-import {AddThis} from 'modules/SharedComponents/AddThis';
+import {ShareAnywhere} from 'modules/SharedComponents/ShareAnywhere';
 
 export default class ViewRecord extends Component {
     static propTypes = {
@@ -61,7 +61,7 @@ export default class ViewRecord extends Component {
             <StandardPage className="viewRecord" title={recordToView && recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
 
-                <AddThis />
+                <ShareAnywhere />
 
                 {
                     recordToView && recordToView.rek_display_type_lookup &&
