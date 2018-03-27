@@ -7,12 +7,6 @@ exports[`Component ViewRecord  should render default props 1`] = `
   <withRouter(Connect(PublicationCitation))
     hideTitle={true}
   />
-  <Alert
-    allowDismiss={true}
-    message="Cultural Sensitivity Statement - Be advised, that some files may contain content which is of a sensitive nature to some cultures or tastes."
-    showLoader={false}
-    type="info"
-  />
 </StandardPage>
 `;
 
@@ -439,12 +433,6 @@ exports[`Component ViewRecord  should render record view 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-  />
-  <Alert
-    allowDismiss={true}
-    message="Cultural Sensitivity Statement - Be advised, that some files may contain content which is of a sensitive nature to some cultures or tastes."
-    showLoader={false}
-    type="info"
   />
   <AdditionalInformation
     publication={
@@ -1639,12 +1627,6 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-  />
-  <Alert
-    allowDismiss={true}
-    message="Cultural Sensitivity Statement - Be advised, that some files may contain content which is of a sensitive nature to some cultures or tastes."
-    showLoader={false}
-    type="info"
   />
   <AdditionalInformation
     publication={

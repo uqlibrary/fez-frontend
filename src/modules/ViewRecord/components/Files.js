@@ -18,9 +18,9 @@ export default class Files extends Component {
     }
 
     renderFileDetail = (pid, fileName, embargoDate, accessCondition, order, dataStreams) => {
-        const dataStream = this.searchByName(dataStreams, 'dsi_dsid', fileName);
-        const thumbnailDataStream = this.searchByName(dataStreams, 'dsi_dsid', 'thumbnail_' + fileName);
-        const previewDataStream = this.searchByName(dataStreams, 'dsi_dsid', 'preview_' + fileName);
+        const dataStream = this.searchByKey(dataStreams, 'dsi_dsid', fileName);
+        const thumbnailDataStream = this.searchByKey(dataStreams, 'dsi_dsid', 'thumbnail_' + fileName);
+        const previewDataStream = this.searchByKey(dataStreams, 'dsi_dsid', 'preview_' + fileName);
         const mimeType = dataStream && dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
         const openAccess = this.isOpenAccess(accessCondition);
         const isEmbargoed = this.isEmbargoed(embargoDate);
@@ -81,12 +81,8 @@ export default class Files extends Component {
             );
     }
 
-    searchByOrder = (grantData, orderSubkey, order) => {
-        return grantData && grantData.filter(grantData=>grantData[orderSubkey] === order)[0];
-    }
-
-    searchByName = (dataStreams, nameSubkey, name) => {
-        return dataStreams && dataStreams.filter(dataStream=>dataStream[nameSubkey] === name)[0];
+    searchByKey = (list, key, value) => {
+        return list && list.filter(item=>item[key] === value)[0];
     }
 
     formatBytes = (bytes) => {
@@ -121,14 +117,13 @@ export default class Files extends Component {
         const dataStreams = publication.fez_datastream_info;
 
         fileNames.filter((fileName) => (
-            // console.log(fileName.rek_file_attachment_name)
             !fileName.rek_file_attachment_name.match('^(FezACML|stream|web|thumbnail|presmd)')
         )).sort((fileName1, fileName2) => (
             fileName1.rek_file_attachment_name_order - fileName2.rek_file_attachment_name_order
         )).map((fileName) => {
             const order = fileName.rek_file_attachment_name_order;
-            const embargoDate = this.searchByOrder(embargoDates, 'rek_file_attachment_embargo_date_order', order);
-            const accessCondition = this.searchByOrder(accessConditions, 'rek_file_attachment_access_condition_order', order);
+            const embargoDate = this.searchByKey(embargoDates, 'rek_file_attachment_embargo_date_order', order);
+            const accessCondition = this.searchByKey(accessConditions, 'rek_file_attachment_access_condition_order', order);
 
             files.push(this.renderFileDetail(publication.rek_pid, fileName.rek_file_attachment_name, embargoDate, accessCondition, order, dataStreams));
         });
@@ -151,9 +146,15 @@ export default class Files extends Component {
     }
 
     render() {
+        const {publication} = this.props;
+
         return (
             <StandardCard title={locale.viewRecord.sections.files.title}>
-                {this.props.publication.fez_record_search_key_file_attachment_name && this.renderFiles(this.props.publication)}
+                {
+                    publication.fez_record_search_key_file_attachment_name &&
+                    publication.fez_record_search_key_file_attachment_name.length > 0 &&
+                    this.renderFiles(publication)
+                }
             </StandardCard>
         );
     }

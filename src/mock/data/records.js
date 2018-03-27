@@ -4009,7 +4009,7 @@ export const record = {
             "rek_file_attachment_access_condition_pid": "UQ:792099",
             "rek_file_attachment_access_condition_xsdmf_id": 0,
             "rek_file_attachment_access_condition_order": 5,
-            "rek_file_attachment_access_condition": "9"
+            "rek_file_attachment_access_condition": "8"
         },
         {
             "rek_file_attachment_access_condition_id": 17,
@@ -4025,7 +4025,7 @@ export const record = {
             "rek_file_attachment_embargo_date_pid": "UQ:795494",
             "rek_file_attachment_embargo_date_xsdmf_id": 0,
             "rek_file_attachment_embargo_date_order": 2,
-            "rek_file_attachment_embargo_date": "2018-03-27T00:00:00Z"
+            "rek_file_attachment_embargo_date": "2018-03-29T08:34:47+10:00"
         }
     ],
     "fez_record_search_key_file_attachment_name": [

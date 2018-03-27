@@ -83,6 +83,7 @@ export default class ViewRecord extends Component {
             <StandardPage className="viewRecord" title={recordToView && recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
                 {
+                    recordToView && recordToView.fez_record_search_key_file_attachment_name && recordToView.fez_record_search_key_file_attachment_name.length > 0 &&
                     !this.props.hideCulturalSensitivityStatement &&
                     <Alert message={locale.viewRecord.sections.files.culturalSensitivityStatement} type={'info'} allowDismiss dismissAction={this.props.actions.hideCulturalSensitivityStatement} />
                 }

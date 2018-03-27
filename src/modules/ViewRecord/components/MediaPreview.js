@@ -46,6 +46,16 @@ export default class MediaPreview extends Component {
         return this.isVideo(mimeType) ? locale.viewRecord.sections.files.preview.videoTitle : locale.viewRecord.sections.files.preview.imageTitle;
     }
 
+    renderButtons = (mimeType, closeAction) => {
+        return (
+            (this.isVideo(mimeType) || this.isImage(mimeType)) &&
+            <div className="column is-narrow filePreview">
+                <RaisedButton label={locale.viewRecord.sections.files.preview.openInNewWindow} onTouchTap={this.openFileInNewWindow} primary />
+                <RaisedButton label={locale.viewRecord.sections.files.preview.close} onTouchTap={closeAction}/>
+            </div>
+        );
+    }
+
     renderPreview = (mediaUrl, mimeType) => {
         if (this.isVideo(mimeType)) {
             return this.renderVideoPreview(mediaUrl, mimeType);
@@ -61,10 +71,7 @@ export default class MediaPreview extends Component {
 
         return (
             <StandardCard title={this.getTitle(mimeType)}>
-                <div className="column is-narrow filePreview">
-                    <RaisedButton label={locale.viewRecord.sections.files.preview.openInNewWindow} onTouchTap={this.openFileInNewWindow} primary />
-                    <RaisedButton label={locale.viewRecord.sections.files.preview.close} onTouchTap={closeAction}/>
-                </div>
+                {this.renderButtons(mimeType, closeAction)}
                 {this.renderPreview(mediaUrl, mimeType)}
             </StandardCard>
         );

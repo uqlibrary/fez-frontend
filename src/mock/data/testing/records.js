@@ -3368,8 +3368,24 @@ export const journalArticle = {
         "rek_end_page_pid": "UQ:676287",
         "rek_end_page": "2305"
     },
-    "fez_record_search_key_file_attachment_access_condition": [],
-    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_access_condition": [
+        {
+            "rek_file_attachment_access_condition_id": 17,
+            "rek_file_attachment_access_condition_pid": "UQ:792099",
+            "rek_file_attachment_access_condition_xsdmf_id": 0,
+            "rek_file_attachment_access_condition_order": 3,
+            "rek_file_attachment_access_condition": "8"
+        },
+    ],
+    "fez_record_search_key_file_attachment_embargo_date": [
+        {
+            "rek_file_attachment_embargo_date_id": 83,
+            "rek_file_attachment_embargo_date_pid": "UQ:795494",
+            "rek_file_attachment_embargo_date_xsdmf_id": 0,
+            "rek_file_attachment_embargo_date_order": 3,
+            "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z"
+        }
+    ],
     "fez_record_search_key_file_attachment_name": [{
         "rek_file_attachment_name_id": null,
         "rek_file_attachment_name_pid": "UQ:676287",

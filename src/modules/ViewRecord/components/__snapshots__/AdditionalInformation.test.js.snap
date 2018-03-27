@@ -13404,8 +13404,24 @@ exports[`Additional Information Component  should render component with journal 
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_file_attachment_access_condition": Array [],
-            "fez_record_search_key_file_attachment_embargo_date": Array [],
+            "fez_record_search_key_file_attachment_access_condition": Array [
+              Object {
+                "rek_file_attachment_access_condition": "8",
+                "rek_file_attachment_access_condition_id": 17,
+                "rek_file_attachment_access_condition_order": 3,
+                "rek_file_attachment_access_condition_pid": "UQ:792099",
+                "rek_file_attachment_access_condition_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_file_attachment_embargo_date": Array [
+              Object {
+                "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                "rek_file_attachment_embargo_date_id": 83,
+                "rek_file_attachment_embargo_date_order": 3,
+                "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                "rek_file_attachment_embargo_date_xsdmf_id": 0,
+              },
+            ],
             "fez_record_search_key_file_attachment_name": Array [
               Object {
                 "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -14657,8 +14673,24 @@ exports[`Additional Information Component  should render component with journal 
                                                   "rek_end_page_id": null,
                                                   "rek_end_page_pid": "UQ:676287",
                                                 },
-                                                "fez_record_search_key_file_attachment_access_condition": Array [],
-                                                "fez_record_search_key_file_attachment_embargo_date": Array [],
+                                                "fez_record_search_key_file_attachment_access_condition": Array [
+                                                  Object {
+                                                    "rek_file_attachment_access_condition": "8",
+                                                    "rek_file_attachment_access_condition_id": 17,
+                                                    "rek_file_attachment_access_condition_order": 3,
+                                                    "rek_file_attachment_access_condition_pid": "UQ:792099",
+                                                    "rek_file_attachment_access_condition_xsdmf_id": 0,
+                                                  },
+                                                ],
+                                                "fez_record_search_key_file_attachment_embargo_date": Array [
+                                                  Object {
+                                                    "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                                                    "rek_file_attachment_embargo_date_id": 83,
+                                                    "rek_file_attachment_embargo_date_order": 3,
+                                                    "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                                                    "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                                                  },
+                                                ],
                                                 "fez_record_search_key_file_attachment_name": Array [
                                                   Object {
                                                     "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -15806,8 +15838,24 @@ exports[`Additional Information Component  should render component with journal 
                                                         "rek_end_page_id": null,
                                                         "rek_end_page_pid": "UQ:676287",
                                                       },
-                                                      "fez_record_search_key_file_attachment_access_condition": Array [],
-                                                      "fez_record_search_key_file_attachment_embargo_date": Array [],
+                                                      "fez_record_search_key_file_attachment_access_condition": Array [
+                                                        Object {
+                                                          "rek_file_attachment_access_condition": "8",
+                                                          "rek_file_attachment_access_condition_id": 17,
+                                                          "rek_file_attachment_access_condition_order": 3,
+                                                          "rek_file_attachment_access_condition_pid": "UQ:792099",
+                                                          "rek_file_attachment_access_condition_xsdmf_id": 0,
+                                                        },
+                                                      ],
+                                                      "fez_record_search_key_file_attachment_embargo_date": Array [
+                                                        Object {
+                                                          "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                                                          "rek_file_attachment_embargo_date_id": 83,
+                                                          "rek_file_attachment_embargo_date_order": 3,
+                                                          "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                                                          "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                                                        },
+                                                      ],
                                                       "fez_record_search_key_file_attachment_name": Array [
                                                         Object {
                                                           "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -17157,8 +17205,24 @@ exports[`Additional Information Component  should render component with journal 
                                                   "rek_end_page_id": null,
                                                   "rek_end_page_pid": "UQ:676287",
                                                 },
-                                                "fez_record_search_key_file_attachment_access_condition": Array [],
-                                                "fez_record_search_key_file_attachment_embargo_date": Array [],
+                                                "fez_record_search_key_file_attachment_access_condition": Array [
+                                                  Object {
+                                                    "rek_file_attachment_access_condition": "8",
+                                                    "rek_file_attachment_access_condition_id": 17,
+                                                    "rek_file_attachment_access_condition_order": 3,
+                                                    "rek_file_attachment_access_condition_pid": "UQ:792099",
+                                                    "rek_file_attachment_access_condition_xsdmf_id": 0,
+                                                  },
+                                                ],
+                                                "fez_record_search_key_file_attachment_embargo_date": Array [
+                                                  Object {
+                                                    "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                                                    "rek_file_attachment_embargo_date_id": 83,
+                                                    "rek_file_attachment_embargo_date_order": 3,
+                                                    "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                                                    "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                                                  },
+                                                ],
                                                 "fez_record_search_key_file_attachment_name": Array [
                                                   Object {
                                                     "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -18286,8 +18350,24 @@ exports[`Additional Information Component  should render component with journal 
                                                         "rek_end_page_id": null,
                                                         "rek_end_page_pid": "UQ:676287",
                                                       },
-                                                      "fez_record_search_key_file_attachment_access_condition": Array [],
-                                                      "fez_record_search_key_file_attachment_embargo_date": Array [],
+                                                      "fez_record_search_key_file_attachment_access_condition": Array [
+                                                        Object {
+                                                          "rek_file_attachment_access_condition": "8",
+                                                          "rek_file_attachment_access_condition_id": 17,
+                                                          "rek_file_attachment_access_condition_order": 3,
+                                                          "rek_file_attachment_access_condition_pid": "UQ:792099",
+                                                          "rek_file_attachment_access_condition_xsdmf_id": 0,
+                                                        },
+                                                      ],
+                                                      "fez_record_search_key_file_attachment_embargo_date": Array [
+                                                        Object {
+                                                          "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                                                          "rek_file_attachment_embargo_date_id": 83,
+                                                          "rek_file_attachment_embargo_date_order": 3,
+                                                          "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                                                          "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                                                        },
+                                                      ],
                                                       "fez_record_search_key_file_attachment_name": Array [
                                                         Object {
                                                           "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -22207,8 +22287,24 @@ exports[`Additional Information Component  should render component with newspape
                   "rek_end_page_id": null,
                   "rek_end_page_pid": "UQ:676287",
                 },
-                "fez_record_search_key_file_attachment_access_condition": Array [],
-                "fez_record_search_key_file_attachment_embargo_date": Array [],
+                "fez_record_search_key_file_attachment_access_condition": Array [
+                  Object {
+                    "rek_file_attachment_access_condition": "8",
+                    "rek_file_attachment_access_condition_id": 17,
+                    "rek_file_attachment_access_condition_order": 3,
+                    "rek_file_attachment_access_condition_pid": "UQ:792099",
+                    "rek_file_attachment_access_condition_xsdmf_id": 0,
+                  },
+                ],
+                "fez_record_search_key_file_attachment_embargo_date": Array [
+                  Object {
+                    "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                    "rek_file_attachment_embargo_date_id": 83,
+                    "rek_file_attachment_embargo_date_order": 3,
+                    "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                    "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                  },
+                ],
                 "fez_record_search_key_file_attachment_name": Array [
                   Object {
                     "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -23259,8 +23355,24 @@ exports[`Additional Information Component  should render component with newspape
                   "rek_end_page_id": null,
                   "rek_end_page_pid": "UQ:676287",
                 },
-                "fez_record_search_key_file_attachment_access_condition": Array [],
-                "fez_record_search_key_file_attachment_embargo_date": Array [],
+                "fez_record_search_key_file_attachment_access_condition": Array [
+                  Object {
+                    "rek_file_attachment_access_condition": "8",
+                    "rek_file_attachment_access_condition_id": 17,
+                    "rek_file_attachment_access_condition_order": 3,
+                    "rek_file_attachment_access_condition_pid": "UQ:792099",
+                    "rek_file_attachment_access_condition_xsdmf_id": 0,
+                  },
+                ],
+                "fez_record_search_key_file_attachment_embargo_date": Array [
+                  Object {
+                    "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                    "rek_file_attachment_embargo_date_id": 83,
+                    "rek_file_attachment_embargo_date_order": 3,
+                    "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                    "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                  },
+                ],
                 "fez_record_search_key_file_attachment_name": Array [
                   Object {
                     "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
