@@ -6,26 +6,20 @@ import * as mock from 'mock/data';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps,
-        account: testProps.account || mock.accounts.uqresearcher,
-        authorDetails: testProps.authorDetails,
-        accountAuthorDetailsLoading: testProps.accountAuthorDetailsLoading || false,
-        loadingPublicationsByYear: testProps.loadingPublicationsByYear || false,
-        publicationsByYear: testProps.publicationsByYear,
-        publicationTypesCount: testProps.publicationTypesCount,
-        possiblyYourPublicationsCount: testProps.possiblyYourPublicationsCount,
-        hidePossiblyYourPublicationsLure: testProps.hidePossiblyYourPublicationsLure || false,
-        publicationsList: testProps.publicationsList,
-        loadingPublicationsStats: testProps.loadingPublicationsStats || false,
-        publicationsStats: testProps.publicationsStats,
-        possiblyYourPublicationsCountLoading: testProps.possiblyYourPublicationsCountLoading || false,
+        account: mock.accounts.uqresearcher,
+        accountAuthorDetailsLoading: false,
+        loadingPublicationsByYear: false,
+        hidePossiblyYourPublicationsLure: false,
+        loadingPublicationsStats: false,
+        possiblyYourPublicationsCountLoading: false,
         actions: {
             countPossiblyYourPublications: jest.fn(),
             loadAuthorPublicationsStats: jest.fn(),
             searchLatestPublications: jest.fn(),
             searchTrendingPublications: jest.fn(),
         },
-        history: {}
+        history: {},
+        ...testProps,
     };
     return getElement(Dashboard, props, isShallow);
 }
@@ -98,5 +92,12 @@ describe('Dashboard test', () => {
             publicationTypesCount: [["Journal Article",278],["Conference Paper",42],["Book Chapter",12],["Book",1],["Other",1]]
         });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('does navigate to records add find page when clicked addPublicationLure', () => {
+        const testPushFn = jest.fn();
+        const wrapper = setup({history: {push: testPushFn}});
+        wrapper.instance()._addPublication();
+        expect(testPushFn).toHaveBeenCalledWith('records/add/find');
     });
 });
