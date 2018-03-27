@@ -38,9 +38,6 @@ export default class Files extends Component {
                     }
                 </TableRowColumn>
                 <TableRowColumn className="align-right oaStatus">
-                    <div className="fez-icon large openAccess" />
-                    <div className="fez-icon large openAccessEmbargoed" />
-                    <div className="fez-icon large closedAccess" />
                     {
                         this.renderEmbargoDate(embargoDate, openAccess)
                     }
@@ -65,7 +62,7 @@ export default class Files extends Component {
 
     renderEmbargoDate = (embargoDate, openAccess = false) => {
         if (!openAccess) {
-            return (<div className="fez-icon openAccessClosed large"/>);
+            return (<div className="fez-icon closedAccess large"/>);
         }
 
         return (embargoDate && moment(embargoDate.rek_file_attachment_embargo_date).isAfter(moment())) ?

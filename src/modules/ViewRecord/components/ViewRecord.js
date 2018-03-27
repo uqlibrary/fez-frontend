@@ -18,7 +18,8 @@ export default class ViewRecord extends Component {
         loadingRecordToView: PropTypes.bool,
         recordToViewError: PropTypes.string,
         match: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired
+        actions: PropTypes.object.isRequired,
+        hideCulturalSensitivityStatement: PropTypes.bool,
     };
 
     constructor(props) {
@@ -73,6 +74,10 @@ export default class ViewRecord extends Component {
         return (
             <StandardPage className="viewRecord" title={recordToView && recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
+                {
+                    !this.props.hideCulturalSensitivityStatement &&
+                    <Alert message={locale.viewRecord.sections.files.culturalSensitivityStatement} type={'info'} allowDismiss dismissAction={this.props.actions.hideCulturalSensitivityStatement} />
+                }
                 {
                     recordToView && recordToView.fez_record_search_key_file_attachment_name && recordToView.fez_record_search_key_file_attachment_name.length > 0 &&
                     <Files publication={recordToView} handleFileNameClick={this.handleFileNameClick}/>

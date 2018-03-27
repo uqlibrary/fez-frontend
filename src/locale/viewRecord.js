@@ -14,7 +14,7 @@ export default {
                 description: 'Description',
                 size: 'Size',
                 embargoDate: 'Embargoed until [embargoDate]',
-                culturalSensitivityStatement: 'Be advised, that some files may contain content which is of a sensitive nature to some cultures or tastes.',
+                culturalSensitivityStatement: 'Cultural Sensitivity Statement - Be advised, that some files may contain content which is of a sensitive nature to some cultures or tastes.',
                 preview: {
                     videoTitle: 'Video preview',
                     imageTitle: 'Image preview',
