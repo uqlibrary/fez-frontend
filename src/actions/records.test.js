@@ -374,7 +374,7 @@ describe('Record action creators', () => {
                 await mockActionsStore.dispatch(recordActions.submitThesis(customInput, authorData));
             } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-                expect(e).toEqual('File upload failed.  (Request error with status code 500. )');
+                expect(e).toEqual('Submit Thesis: File upload failed.  (Request error with status code 500. )');
             }
         });
 
@@ -400,7 +400,7 @@ describe('Record action creators', () => {
                 await mockActionsStore.dispatch(recordActions.submitThesis(customInput, authorData));
             } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-                expect(e).toEqual('Error occurred while saving record to eSpace.  (Request error with status code 500. )');
+                expect(e).toEqual('Submit Thesis: Error occurred while saving record to eSpace.  (Request error with status code 500. )');
             }
         });
 
