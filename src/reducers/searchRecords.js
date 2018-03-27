@@ -20,7 +20,7 @@ const idSearchKeys = [
     {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'}
 ];
 
-export const deduplicateResults = (publicationsList) => {
+export const deduplicateResults = (list) => {
     return idSearchKeys.reduce((publicationsList, idSearchKey) => {
         // get a list of DOI counts
         const doiCountHash = publicationsList
@@ -54,11 +54,11 @@ export const deduplicateResults = (publicationsList) => {
 
         // filter duplicate records based on source priority
         const highPriorityItem = doiDuplicatesList
-            .map(doi => {
+            .map(id => {
                 // get a record with most priority
                 return duplicates
                     .filter(item => {
-                        return !!item[idSearchKey.key] && doi === item[idSearchKey.key][idSearchKey.value].toLowerCase();
+                        return !!item[idSearchKey.key] && id === item[idSearchKey.key][idSearchKey.value].toLowerCase();
                     })
                     .reduce((list, item) => {
                         if (list.length === 0) {
@@ -88,7 +88,7 @@ export const deduplicateResults = (publicationsList) => {
         return [...highPriorityItem, ...cleanedPublicationsList]
             .sort((item1, item2) =>
                 (locale.global.sources[item1.currentSource].priority - locale.global.sources[item2.currentSource].priority));
-    }, publicationsList);
+    }, [...list]);
 };
 
 const handlers = {
