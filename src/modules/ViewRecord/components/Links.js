@@ -23,38 +23,40 @@ export default class ViewRecordLinks extends PureComponent {
     }
 
     // Returns open, closed or an embargo date for non-DOI/PMC/GoogleScholar links
-    pubLinksOaStatus = () => {
-        const recordOaStatus = this.props.publication.fez_record_search_key_oa_status && this.props.publication.fez_record_search_key_oa_status.rek_oa_status;
-        const recordEmbargoDays = this.props.publication.fez_record_search_key_oa_embargo_days && this.props.publication.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days;
-        const currentDate = moment().format();
-        const createdDate = this.props.publication.rek_created_date;
-        const embargoDate = moment(moment(createdDate)).add(recordEmbargoDays, 'days').format();
-        if(recordOaStatus !== OPEN_ACCESS_ID_LINK_NO_DOI) {
+    publicationLinksOpenAccessStatus = (
+        oaStatus = this.props.publication.fez_record_search_key_oa_status && this.props.publication.fez_record_search_key_oa_status.rek_oa_status,
+        embargoDays = this.props.publication.fez_record_search_key_oa_embargo_days && this.props.publication.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days,
+        createdDate = this.props.publication.rek_created_date) => {
+        if(oaStatus !== OPEN_ACCESS_ID_LINK_NO_DOI) {
             // if its not "Link (No DOI)" consider the pub links closed
-            return 'closed';
-        } else if(!recordEmbargoDays && recordOaStatus === OPEN_ACCESS_ID_LINK_NO_DOI) {
-            // If theres no embargo days specified and its "Link (No DOI)" consider pub links open
-            return 'open';
+            return {openAccess: false, recordOaStatus: oaStatus,  embargoDate: null};
+        } else if(!embargoDays && oaStatus === OPEN_ACCESS_ID_LINK_NO_DOI) {
+            // If theres no embargo days specified and its "Link (No DOI)" consider publication links open
+            return {openAccess: true, recordOaStatus: oaStatus, embargoDate: null};
         } else {
             // Otherwise, return an embargo date
-            return embargoDate < currentDate ? 'open' : moment(embargoDate).format('Do MMMM YYYY');
+            const currentDate = moment().format();
+            const embargoDate = moment(moment(createdDate)).add(embargoDays, 'days').format();
+            return embargoDate < currentDate ?
+                {openAccess: true, recordOaStatus: oaStatus, embargoDate: null} :
+                {openAccess: true, recordOaStatus: oaStatus, embargoDate: moment(embargoDate).format('Do MMMM YYYY')};
         }
     };
 
     // Returns the icon element based on status
-    getOaIcon = (status = 'closed') => {
+    // {openAccess: bool, recordOaStatus: int, embargoDate: null || 'date'}
+    getOaIcon = (status = {openAccess: false, recordOaStatus: null, embargoDate: null}) => {
         const txt = locale.viewRecord.sections.links;
-        const recordOaStatus = this.props.publication.fez_record_search_key_oa_status && this.props.publication.fez_record_search_key_oa_status.rek_oa_status;
-        if(status === 'open') {
+        if(status.openAccess) {
             return (
                 <div className="fez-icon openAccess large"
-                    title={recordOaStatus !== OPEN_ACCESS_ID_LINK_NO_DOI ?
-                        txt.openAccessLabel.replace('[oa_status]', openAccessIdLookup[recordOaStatus]) :
+                    title={status.recordOaStatus !== OPEN_ACCESS_ID_LINK_NO_DOI ?
+                        txt.openAccessLabel.replace('[oa_status]', openAccessIdLookup[status.recordOaStatus]) :
                         txt.labelOpenAccessNoStatus
                     }
                 />
             );
-        } else if (status === 'closed') {
+        } else if (!status.openAccess) {
             return <div className="openAccessClosed noOaIcon" />;
         } else if (!!status) {
             return (
@@ -123,7 +125,7 @@ export default class ViewRecordLinks extends PureComponent {
                         </ExternalLink>
                     ),
                     description: recordLinkDescription(index) || txt.linkMissingDescription,
-                    icon: recordOaStatus !== OPEN_ACCESS_ID_DOI ? this.getOaIcon(this.pubLinksOaStatus()) : this.getOaIcon('closed')
+                    icon: recordOaStatus !== OPEN_ACCESS_ID_DOI ? this.getOaIcon(this.publicationLinksOpenAccessStatus()) : this.getOaIcon('closed')
                 });
             });
         }
