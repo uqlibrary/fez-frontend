@@ -29,10 +29,11 @@ describe('Files Component ', () => {
 
     it('should display embargo date icon', () => {
         const publication = Object.assign({}, journalArticle);
-        publication.fez_record_search_key_file_attachment_embargo_date[0].rek_file_attachment_embargo_date = moment().add(1, 'day').format(moment.HTML5_FMT.DATETIME_LOCAL_SECONDS);
+        const tomorrow = moment().add(1, 'day');
+        publication.fez_record_search_key_file_attachment_embargo_date[0].rek_file_attachment_embargo_date = tomorrow.format(moment.HTML5_FMT.DATETIME_LOCAL_SECONDS);
         const wrapper = setup({publication:publication}, false);
-        expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.fez-icon.openAccessEmbargoed').length).toEqual(1);
+        expect(wrapper.find('.oaStatus span').text()).toEqual('Embargoed until ' + tomorrow.format('DD/MM/YYYY'));
     });
 
     it('should render bytes correctly', () => {
