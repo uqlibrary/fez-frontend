@@ -16,16 +16,15 @@ export default class fileName extends PureComponent {
         handleFileNameClick: PropTypes.func.isRequired,
         thumbnailFileName: PropTypes.string,
         previewFileName: PropTypes.string,
-        openAccess: PropTypes.bool,
-        isEmbargoed: PropTypes.bool
+        accessible: PropTypes.bool,
     };
 
     constructor(props) {
         super(props);
     }
 
-    renderFileIcon = (pid, mimeType, thumbnailFileName, isEmbargoed, openAccess) => {
-        if (openAccess && !isEmbargoed && thumbnailFileName) {
+    renderFileIcon = (pid, mimeType, thumbnailFileName, accessible) => {
+        if (accessible && thumbnailFileName) {
             return <img src={this.getUrl(pid, thumbnailFileName)} />;
         }
 
@@ -101,16 +100,16 @@ export default class fileName extends PureComponent {
 
     // show icons, thumbnail and audio player
     render = () => {
-        const {pid, fileName, isEmbargoed, openAccess, mimeType, thumbnailFileName} = this.props;
+        const {pid, fileName, accessible, mimeType, thumbnailFileName, handleFileNameClick} = this.props;
 
         return (
             <div className="columns is-gapless is-mobile fileDetails">
                 <div className="column is-narrow is-vertical-center fileIcon">
-                    {this.renderFileIcon(pid, mimeType, thumbnailFileName, isEmbargoed, openAccess)}
+                    {this.renderFileIcon(pid, mimeType, thumbnailFileName, accessible)}
                 </div>
                 <div className="column fileInfo">
                     {
-                        openAccess && !isEmbargoed ?
+                        accessible && handleFileNameClick?
                             <a href="#" onClick={this.handleFileNameClick} onKeyPress={this.handleFileNameClick} className={'fileName'}>
                                 {fileName}
                             </a>
@@ -119,7 +118,7 @@ export default class fileName extends PureComponent {
                     }
                 </div>
                 {
-                    openAccess && this.isAudio() &&
+                    accessible && this.isAudio() &&
                     <div className="column is-narrow audioWrapper is-hidden-mobile">
                         {this.renderAudioPlayer(pid, fileName, mimeType)}
                     </div>

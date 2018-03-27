@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`File Name Component  should render component 1`] = `
+exports[`File Name Component  should display thumbnail and file name link 1`] = `
 <Provider
   store={
     Object {
@@ -53,7 +53,592 @@ exports[`File Name Component  should render component 1`] = `
       }
     >
       <fileName
-        fileName="FezACML_UQ676287_OA.pdf.xml"
+        accessible={true}
+        fileName="UQ676287_OA.pdf"
+        handleFileNameClick={[Function]}
+        mimeType="application/pdf"
+        pid="UQ:676287"
+        thumbnailFileName="test.jpg"
+      >
+        <div
+          className="columns is-gapless is-mobile fileDetails"
+        >
+          <div
+            className="column is-narrow is-vertical-center fileIcon"
+          >
+            <img
+              src="/view/UQ:676287/test.jpg"
+            />
+          </div>
+          <div
+            className="column fileInfo"
+          >
+            <a
+              className="fileName"
+              href="#"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+            >
+              UQ676287_OA.pdf
+            </a>
+          </div>
+        </div>
+      </fileName>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
+
+exports[`File Name Component  should render audio player 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <fileName
+        accessible={true}
+        fileName="UQ676287_OA.pdf"
+        handleFileNameClick={[Function]}
+        mimeType="audio/mp3"
+        pid="UQ:676287"
+      >
+        <div
+          className="columns is-gapless is-mobile fileDetails"
+        >
+          <div
+            className="column is-narrow is-vertical-center fileIcon"
+          >
+            <AvVolumeUp>
+              <SvgIcon
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                viewBox="0 0 24 24"
+              >
+                <svg
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  style={
+                    Object {
+                      "color": "rgba(0, 0, 0, 0.87)",
+                      "display": "inline-block",
+                      "fill": "currentColor",
+                      "height": 24,
+                      "muiPrepared": true,
+                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                      "userSelect": "none",
+                      "width": 24,
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
+                  />
+                </svg>
+              </SvgIcon>
+            </AvVolumeUp>
+          </div>
+          <div
+            className="column fileInfo"
+          >
+            <a
+              className="fileName"
+              href="#"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+            >
+              UQ676287_OA.pdf
+            </a>
+          </div>
+          <div
+            className="column is-narrow audioWrapper is-hidden-mobile"
+          >
+            <div>
+              <audio
+                id="audioPlayer"
+              >
+                <source
+                  src="/view/UQ:676287/UQ676287_OA.pdf"
+                  type="audio/mp3"
+                />
+              </audio>
+              <IconButton
+                className="audioButton play"
+                disableTouchRipple={false}
+                disabled={false}
+                iconStyle={Object {}}
+                onTouchTap={[Function]}
+                tooltipPosition="bottom-center"
+                touch={true}
+              >
+                <EnhancedButton
+                  centerRipple={true}
+                  className="audioButton play"
+                  containerElement="button"
+                  disableTouchRipple={false}
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onKeyboardFocus={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOut={[Function]}
+                  onTouchStart={[Function]}
+                  onTouchTap={[Function]}
+                  style={
+                    Object {
+                      "boxSizing": "border-box",
+                      "fontSize": 0,
+                      "height": 48,
+                      "overflow": "visible",
+                      "padding": 12,
+                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                      "width": 48,
+                    }
+                  }
+                  tabIndex={0}
+                  type="button"
+                >
+                  <button
+                    className="audioButton play"
+                    disabled={false}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseOut={[Function]}
+                    onTouchStart={[Function]}
+                    onTouchTap={[Function]}
+                    style={
+                      Object {
+                        "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+                        "background": "none",
+                        "border": 10,
+                        "boxSizing": "border-box",
+                        "cursor": "pointer",
+                        "display": "inline-block",
+                        "fontFamily": "Roboto, sans-serif",
+                        "fontSize": 0,
+                        "fontWeight": "inherit",
+                        "height": 48,
+                        "margin": 0,
+                        "muiPrepared": true,
+                        "outline": "none",
+                        "overflow": "visible",
+                        "padding": 12,
+                        "position": "relative",
+                        "textDecoration": "none",
+                        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "verticalAlign": null,
+                        "width": 48,
+                        "zIndex": 1,
+                      }
+                    }
+                    tabIndex={0}
+                    type="button"
+                  >
+                    <TouchRipple
+                      abortOnScroll={true}
+                      centerRipple={true}
+                      key="touchRipple"
+                    >
+                      <div
+                        onMouseDown={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseUp={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchStart={[Function]}
+                      >
+                        <AvPlayArrow
+                          key=".0"
+                          style={Object {}}
+                        >
+                          <SvgIcon
+                            onMouseEnter={[Function]}
+                            onMouseLeave={[Function]}
+                            style={Object {}}
+                            viewBox="0 0 24 24"
+                          >
+                            <svg
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                              style={
+                                Object {
+                                  "color": "rgba(0, 0, 0, 0.87)",
+                                  "display": "inline-block",
+                                  "fill": "currentColor",
+                                  "height": 24,
+                                  "muiPrepared": true,
+                                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                                  "userSelect": "none",
+                                  "width": 24,
+                                }
+                              }
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M8 5v14l11-7z"
+                              />
+                            </svg>
+                          </SvgIcon>
+                        </AvPlayArrow>
+                      </div>
+                    </TouchRipple>
+                  </button>
+                </EnhancedButton>
+              </IconButton>
+              <IconButton
+                className="audioButton pause"
+                disableTouchRipple={false}
+                disabled={false}
+                iconStyle={Object {}}
+                onTouchTap={[Function]}
+                tooltipPosition="bottom-center"
+                touch={true}
+              >
+                <EnhancedButton
+                  centerRipple={true}
+                  className="audioButton pause"
+                  containerElement="button"
+                  disableTouchRipple={false}
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onKeyboardFocus={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOut={[Function]}
+                  onTouchStart={[Function]}
+                  onTouchTap={[Function]}
+                  style={
+                    Object {
+                      "boxSizing": "border-box",
+                      "fontSize": 0,
+                      "height": 48,
+                      "overflow": "visible",
+                      "padding": 12,
+                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                      "width": 48,
+                    }
+                  }
+                  tabIndex={0}
+                  type="button"
+                >
+                  <button
+                    className="audioButton pause"
+                    disabled={false}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseOut={[Function]}
+                    onTouchStart={[Function]}
+                    onTouchTap={[Function]}
+                    style={
+                      Object {
+                        "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+                        "background": "none",
+                        "border": 10,
+                        "boxSizing": "border-box",
+                        "cursor": "pointer",
+                        "display": "inline-block",
+                        "fontFamily": "Roboto, sans-serif",
+                        "fontSize": 0,
+                        "fontWeight": "inherit",
+                        "height": 48,
+                        "margin": 0,
+                        "muiPrepared": true,
+                        "outline": "none",
+                        "overflow": "visible",
+                        "padding": 12,
+                        "position": "relative",
+                        "textDecoration": "none",
+                        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "verticalAlign": null,
+                        "width": 48,
+                        "zIndex": 1,
+                      }
+                    }
+                    tabIndex={0}
+                    type="button"
+                  >
+                    <TouchRipple
+                      abortOnScroll={true}
+                      centerRipple={true}
+                      key="touchRipple"
+                    >
+                      <div
+                        onMouseDown={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseUp={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchStart={[Function]}
+                      >
+                        <AvPause
+                          key=".0"
+                          style={Object {}}
+                        >
+                          <SvgIcon
+                            onMouseEnter={[Function]}
+                            onMouseLeave={[Function]}
+                            style={Object {}}
+                            viewBox="0 0 24 24"
+                          >
+                            <svg
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                              style={
+                                Object {
+                                  "color": "rgba(0, 0, 0, 0.87)",
+                                  "display": "inline-block",
+                                  "fill": "currentColor",
+                                  "height": 24,
+                                  "muiPrepared": true,
+                                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                                  "userSelect": "none",
+                                  "width": 24,
+                                }
+                              }
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"
+                              />
+                            </svg>
+                          </SvgIcon>
+                        </AvPause>
+                      </div>
+                    </TouchRipple>
+                  </button>
+                </EnhancedButton>
+              </IconButton>
+            </div>
+          </div>
+        </div>
+      </fileName>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
+
+exports[`File Name Component  should render component and display file name only 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <fileName
+        fileName="UQ676287_OA.pdf"
+        handleFileNameClick={[Function]}
+        mimeType="application/pdf"
+        pid="UQ:676287"
+      >
+        <div
+          className="columns is-gapless is-mobile fileDetails"
+        >
+          <div
+            className="column is-narrow is-vertical-center fileIcon"
+          >
+            <ImagePictureAsPdf>
+              <SvgIcon
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                viewBox="0 0 24 24"
+              >
+                <svg
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  style={
+                    Object {
+                      "color": "rgba(0, 0, 0, 0.87)",
+                      "display": "inline-block",
+                      "fill": "currentColor",
+                      "height": 24,
+                      "muiPrepared": true,
+                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                      "userSelect": "none",
+                      "width": 24,
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm4-3H19v1h1.5V11H19v2h-1.5V7h3v1.5zM9 9.5h1v-1H9v1zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm10 5.5h1v-3h-1v3z"
+                  />
+                </svg>
+              </SvgIcon>
+            </ImagePictureAsPdf>
+          </div>
+          <div
+            className="column fileInfo"
+          >
+            UQ676287_OA.pdf
+          </div>
+        </div>
+      </fileName>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
+
+exports[`File Name Component  should render default icon 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <fileName
+        fileName="UQ676287_OA.pdf"
         handleFileNameClick={[Function]}
         mimeType="text/plain"
         pid="UQ:676287"
@@ -97,7 +682,7 @@ exports[`File Name Component  should render component 1`] = `
           <div
             className="column fileInfo"
           >
-            FezACML_UQ676287_OA.pdf.xml
+            UQ676287_OA.pdf
           </div>
         </div>
       </fileName>

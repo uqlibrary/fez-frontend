@@ -33,8 +33,7 @@ export default class Files extends Component {
                             pid={pid}
                             fileName={fileName}
                             mimeType={mimeType}
-                            isEmbargoed={isEmbargoed}
-                            openAccess={openAccess}
+                            accessible={(openAccess && !isEmbargoed)}
                             thumbnailFileName={thumbnailDataStream && thumbnailDataStream.dsi_dsid}
                             previewFileName={previewDataStream && previewDataStream.dsi_dsid}
                             handleFileNameClick={this.props.handleFileNameClick}

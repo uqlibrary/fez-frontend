@@ -3385,7 +3385,59 @@ export const journalArticle = {
         "rek_file_attachment_name_pid": "UQ:676287",
         "rek_file_attachment_name": "UQ676287_OA.pdf",
         "rek_file_attachment_name_order": 3
+    },
+    {
+        "rek_file_attachment_name_id": null,
+        "rek_file_attachment_name_pid": "UQ:676287",
+        "rek_file_attachment_name": "image.jpg",
+        "rek_file_attachment_name_order": 4
     }],
+    "fez_datastream_info": [
+        {
+            "dsi_pid": "UQ:792099",
+            "dsi_dsid": "image.jpg",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "testing image description",
+            "dsi_mimetype": "image/jpeg",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 97786
+        },
+        {
+            "dsi_pid": "UQ:792099",
+            "dsi_dsid": "preview_image.jpg",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "preview_image.jpg",
+            "dsi_mimetype": "image/jpeg",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 65857
+        },
+        {
+            "dsi_pid": "UQ:792099",
+            "dsi_dsid": "thumbnail_image.jpg",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "thumbnail_image.jpg",
+            "dsi_mimetype": "image/jpeg",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 3952
+        },
+        {
+            "dsi_pid": "UQ:792099",
+            "dsi_dsid": "web_image.jpg",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "web_image.jpg",
+            "dsi_mimetype": "image/jpeg",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 97345
+        },
+    ],
     "fez_record_search_key_geographic_area": [],
     "fez_record_search_key_grant_acronym": [],
     "fez_record_search_key_grant_agency": [{
