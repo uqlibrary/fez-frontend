@@ -30,8 +30,8 @@ export const deduplicateResults = (list) => {
             .map(item => {
                 return item[idSearchKey.key][idSearchKey.value];
             })
-            .reduce((duplicatesCount, doi) => {
-                duplicatesCount[doi.toLowerCase()] = (duplicatesCount[doi.toLowerCase()] || 0) + 1;
+            .reduce((duplicatesCount, id) => {
+                duplicatesCount[id.toLowerCase()] = (duplicatesCount[id.toLowerCase()] || 0) + 1;
                 return duplicatesCount;
             }, []);
 
