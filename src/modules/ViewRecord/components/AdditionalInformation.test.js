@@ -19,7 +19,6 @@ describe('Additional Information Component ', () => {
         const wrapper = setup({}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.sherpaRomeoGreen').length).toEqual(1);
-        expect(wrapper.find('.eraYearListed').text()).toEqual('(ERA 2010 Journal(s) Listed)');
     });
 
     it('should render component with journal', () => {

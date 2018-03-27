@@ -21,7 +21,6 @@ import {locale} from 'locale';
 export default class ClaimRecord extends React.PureComponent {
     static propTypes = {
         ...propTypes, // all redux-form props
-        disableSubmit: PropTypes.bool,
         publicationToClaimFileUploadingError: PropTypes.bool,
         publicationFailedToClaim: PropTypes.string,
         history: PropTypes.object.isRequired,
@@ -225,7 +224,7 @@ export default class ClaimRecord extends React.PureComponent {
                                     fullWidth
                                     label={txt.submit}
                                     onTouchTap={this.props.handleSubmit}
-                                    disabled={this.props.submitting || this.props.disableSubmit}/>
+                                    disabled={this.props.submitting || (this.props.formErrors && this.props.formErrors.size === undefined)}/>
                             </div>
                         }
                     </div>

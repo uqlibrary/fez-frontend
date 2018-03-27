@@ -453,38 +453,38 @@ describe('unclaimRecord[Author/Contributor]SearchKey test ', () => {
     });
 });
 
-describe('getRecordFieldsOfResearchSearchKey test ', () => {
+describe('getRecordSubjectSearchKey test ', () => {
 
-    it('should return empty fields of research object', () => {
+    it('should return empty subject object', () => {
         const input = [];
         const expected = {};
-        const result = transformers.getRecordFieldsOfResearchSearchKey(input);
+        const result = transformers.getRecordSubjectSearchKey(input);
         expect(result).toEqual(expected);
     });
 
-    it('should return fields of research list based on input', () => {
+    it('should return subject list based on input', () => {
         const input = [
             {rek_order: 1, rek_value: {key: 451799, value: "01 Mathematical Sciences"}},
             {rek_order: 2, rek_value: {key: 451802, value: "0101 Mathematical Sciences"}},
             {rek_order: 3, rek_value: {key: 451801, value: "010101 Mathematical Sciences"}}
         ];
         const expected = {
-            fez_record_search_key_fields_of_research: [
+            fez_record_search_key_subject: [
                 {
-                    rek_fields_of_research: 451799,
-                    rek_fields_of_research_order: 1
+                    rek_subject: 451799,
+                    rek_subject_order: 1
                 },
                 {
-                    rek_fields_of_research: 451802,
-                    rek_fields_of_research_order: 2
+                    rek_subject: 451802,
+                    rek_subject_order: 2
                 },
                 {
-                    rek_fields_of_research: 451801,
-                    rek_fields_of_research_order: 3
+                    rek_subject: 451801,
+                    rek_subject_order: 3
                 }
             ]
         };
-        const result = transformers.getRecordFieldsOfResearchSearchKey(input);
+        const result = transformers.getRecordSubjectSearchKey(input);
         expect(result).toEqual(expected);
     });
 });
