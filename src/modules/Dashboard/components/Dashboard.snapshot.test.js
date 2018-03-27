@@ -98,6 +98,6 @@ describe('Dashboard test', () => {
         const testPushFn = jest.fn();
         const wrapper = setup({history: {push: testPushFn}});
         wrapper.instance()._addPublication();
-        expect(testPushFn).toHaveBeenCalledWith('records/add/find');
+        expect(testPushFn).toHaveBeenCalledWith('/records/add/find');
     });
 });
