@@ -74,7 +74,7 @@ export default class ViewRecord extends Component {
                     <AdditionalInformation publication={recordToView} />
                 }
                 {
-                    recordToView && recordToView.fez_record_search_key_grant_agency &&
+                    recordToView && recordToView.fez_record_search_key_grant_agency && recordToView.fez_record_search_key_grant_agency.length > 0 &&
                     <GrantInformation publication={recordToView} />
                 }
                 {
