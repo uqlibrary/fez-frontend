@@ -4,6 +4,9 @@ import {pathConfig} from 'config/routes';
 import AvVolumeUp from 'material-ui/svg-icons/av/volume-up';
 import InsertDriveFile from 'material-ui/svg-icons/editor/insert-drive-file';
 import PictureAsPdf from 'material-ui/svg-icons/image/picture-as-pdf';
+import PlayArrow from 'material-ui/svg-icons/av/play-arrow';
+import Pause from 'material-ui/svg-icons/av/pause';
+import IconButton from 'material-ui/IconButton';
 
 export default class fileName extends PureComponent {
     static propTypes = {
@@ -36,11 +39,29 @@ export default class fileName extends PureComponent {
         return <InsertDriveFile />;
     }
 
+    audioPlayerPlay = () => {
+        document.getElementById('audioPlayer').play();
+    };
+
+    audioPlayerPause = () => {
+        document.getElementById('audioPlayer').pause();
+    };
+
     renderAudioPlayer = (pid, fileName, mimeType) => {
+        console.log(fileName);
         return (
-            <audio controls className="audioPlayer">
-                <source src={this.getUrl(pid, fileName)} type={mimeType} />
-            </audio>
+            <div>
+                <audio id="audioPlayer">
+                    <source src={this.getUrl(pid, fileName)} type={mimeType} />
+                </audio>
+                <IconButton touch onTouchTap={this.audioPlayerPlay} className="audioButton play">
+                    <PlayArrow />
+                </IconButton>
+                <IconButton touch onTouchTap={this.audioPlayerPause} className="audioButton pause">
+                    <Pause />
+                </IconButton>
+            </div>
+
         );
     }
 

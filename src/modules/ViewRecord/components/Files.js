@@ -26,23 +26,26 @@ export default class Files extends Component {
 
         return (
             <TableRow selectable={false} className="file" key={`file-${order}`}>
-                <TableRowColumn style={{width: '50%'}}>
+                <TableRowColumn className="filename">
                     {
                         <FileName pid={pid} fileName={fileName} mimeType={mimeType} openAccess={openAccess} thumbnailFileName={thumbnailDataStream && thumbnailDataStream.dsi_dsid} previewFileName={previewDataStream && previewDataStream.dsi_dsid} handleFileNameClick={this.props.handleFileNameClick} />
                     }
                 </TableRowColumn>
-                <TableRowColumn style={{width: '25%'}} className="is-hidden-mobile">
+                <TableRowColumn className="is-hidden-mobile description">
                     {
                         dataStream &&
                         dataStream.dsi_label
                     }
                 </TableRowColumn>
-                <TableRowColumn className="rowOA align-right" style={{width: '10%'}}>
+                <TableRowColumn className="align-right oaStatus">
+                    <div className="fez-icon large openAccess" />
+                    <div className="fez-icon large openAccessLocked" />
+                    <div className="fez-icon large openAccessClosed" />
                     {
                         this.renderEmbargoDate(embargoDate, openAccess)
                     }
                 </TableRowColumn>
-                <TableRowColumn className="align-right is-hidden-mobile is-hidden-tablet-only" style={{width: '15%'}}>
+                <TableRowColumn className="align-right is-hidden-mobile is-hidden-tablet-only size" >
                     {
                         dataStream &&
                         this.formatBytes(dataStream.dsi_size)
@@ -113,13 +116,13 @@ export default class Files extends Component {
         });
 
         return (
-            <Table selectable={false} className="file">
+            <Table selectable={false} className="file header">
                 <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="tableHeader">
                     <TableRow>
-                        <TableHeaderColumn style={{width: '50%'}}>{locale.viewRecord.sections.files.fileName}</TableHeaderColumn>
-                        <TableHeaderColumn style={{width: '25%'}} className="is-hidden-mobile">{locale.viewRecord.sections.files.description}</TableHeaderColumn>
-                        <TableHeaderColumn style={{width: '10%'}}/>
-                        <TableHeaderColumn className="align-right is-hidden-mobile is-hidden-tablet-only" style={{width: '15%'}}>{locale.viewRecord.sections.files.size}</TableHeaderColumn>
+                        <TableHeaderColumn className="filename">{locale.viewRecord.sections.files.fileName}</TableHeaderColumn>
+                        <TableHeaderColumn className="description is-hidden-mobile">{locale.viewRecord.sections.files.description}</TableHeaderColumn>
+                        <TableHeaderColumn className="oaStatus"/>
+                        <TableHeaderColumn className="align-right is-hidden-mobile is-hidden-tablet-only size">{locale.viewRecord.sections.files.size}</TableHeaderColumn>
                     </TableRow>
                 </TableHeader>
                 <TableBody displayRowCheckbox={false}>
