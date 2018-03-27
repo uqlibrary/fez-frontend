@@ -3,18 +3,14 @@ import PropTypes from 'prop-types';
 
 import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
 import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
-import ReactHtmlParser from 'react-html-parser';
 import {locale} from 'locale';
 import Files from './Files';
 import PublicationDetails from './PublicationDetails';
 import AdditionalInformation from './AdditionalInformation';
 import GrantInformation from './GrantInformation';
 import MediaPreview from './MediaPreview';
-
-const dompurify = require('dompurify');
 
 export default class ViewRecord extends Component {
     static propTypes = {
@@ -99,17 +95,11 @@ export default class ViewRecord extends Component {
                     <MediaPreview mediaUrl={this.state.previewMediaUrl} mimeType={this.state.previewMimeType} closeAction={this.resetPreviewState}/>
                 }
                 {
-                    recordToView && (recordToView.rek_formatted_abstract || recordToView.rek_description) &&
-                    <StandardCard title={locale.viewRecord.sections.abstract[recordToView.rek_display_type_lookup] || locale.viewRecord.sections.abstract.default}>
-                        {ReactHtmlParser(dompurify.sanitize(recordToView.rek_formatted_abstract || recordToView.rek_description))}
-                    </StandardCard>
-                }
-                {
                     recordToView && recordToView.rek_display_type_lookup &&
                     <AdditionalInformation publication={recordToView} />
                 }
                 {
-                    recordToView && recordToView.fez_record_search_key_grant_agency &&
+                    recordToView && recordToView.fez_record_search_key_grant_agency && recordToView.fez_record_search_key_grant_agency.length > 0 &&
                     <GrantInformation publication={recordToView} />
                 }
                 {

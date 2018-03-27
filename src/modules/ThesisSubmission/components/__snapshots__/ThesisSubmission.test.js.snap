@@ -98,6 +98,18 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
         }
       }
     />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "No, continue editing",
+          "confirmButtonLabel": "Yes, deposit thesis",
+          "confirmationMessage": "You are about to deposit your thesis with attached files. Are you sure you want to proceed?",
+          "confirmationTitle": "Thesis deposit",
+        }
+      }
+      onRef={[Function]}
+    />
     <StandardCard
       className=""
       title="Thesis information"
@@ -453,9 +465,9 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
               <br />
               PDF files must be saved using the following naming structure 
               <b>
-                &lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf
+                &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
               </b>
-              . Stages of examination are: submission, or correctedthesis, or finalthesis. For example:
+              . Document name could be thesis, abstract, and etc. For example:
               <ul>
                 <li>
                   s1234567_phd_thesis.pdf
@@ -516,6 +528,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
           fullWidth={true}
           label="Deposit your thesis"
           labelPosition="after"
+          onTouchTap={[Function]}
           primary={false}
           secondary={true}
         />
@@ -588,6 +601,18 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
         }
       }
     />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "No, continue editing",
+          "confirmButtonLabel": "Yes, deposit thesis",
+          "confirmationMessage": "You are about to deposit your thesis with attached files. Are you sure you want to proceed?",
+          "confirmationTitle": "Thesis deposit",
+        }
+      }
+      onRef={[Function]}
+    />
     <StandardCard
       className=""
       title="Thesis information"
@@ -943,9 +968,9 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
               <br />
               PDF files must be saved using the following naming structure 
               <b>
-                &lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf
+                &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
               </b>
-              . Stages of examination are: submission, or correctedthesis, or finalthesis. For example:
+              . Document name could be thesis, abstract, and etc. For example:
               <ul>
                 <li>
                   s1234567_phd_thesis.pdf
@@ -1006,6 +1031,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
           fullWidth={true}
           label="Deposit your thesis"
           labelPosition="after"
+          onTouchTap={[Function]}
           primary={false}
           secondary={true}
         />

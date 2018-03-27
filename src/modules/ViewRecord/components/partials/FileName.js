@@ -109,7 +109,7 @@ export default class fileName extends PureComponent {
                 </div>
                 <div className="column fileInfo">
                     {
-                        accessible && handleFileNameClick?
+                        accessible && handleFileNameClick ?
                             <a href="#" onClick={this.handleFileNameClick} onKeyPress={this.handleFileNameClick} className={'fileName'}>
                                 {fileName}
                             </a>
