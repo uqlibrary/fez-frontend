@@ -71,6 +71,7 @@ export default class ViewRecord extends Component {
                     recordToView && recordToView.rek_display_type_lookup &&
                     <PublicationDetails publication={recordToView} />
                 }
+
             </StandardPage>
         );
     }
