@@ -5,7 +5,6 @@ import {Field} from 'redux-form/immutable';
 
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPrompt';
-import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
@@ -29,7 +28,6 @@ export default class ThesisSubmission extends Component {
         ...propTypes, // all redux-form props
         author: PropTypes.object,
         isHdrThesis: PropTypes.bool, // HDR thesis if true or SBS thesis if false
-        disableSubmit: PropTypes.bool,
         fileAccessId: PropTypes.number
     };
 
@@ -49,19 +47,10 @@ export default class ThesisSubmission extends Component {
         window.location.assign(formLocale.thesisSubmission.afterSubmitLink);
     }
 
-    openDepositConfirmation = () => {
-        this.depositConfirmationBox.showConfirmation();
-    };
-
-    setDepositConfirmation = (ref) => {
-        this.depositConfirmationBox = ref;
-    };
-
     render() {
         const txt = formLocale.thesis;
         const txtFoR = locale.components.fieldOfResearchForm;
         const txtSupervisors = locale.components.thesisSubmissionSupervisors;
-
         if (this.props.submitSucceeded) {
             return (
                 <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
@@ -81,18 +70,7 @@ export default class ThesisSubmission extends Component {
                 </StandardPage>
             );
         }
-        // customise error for thesis submission
-        const alertProps = validation.getErrorAlertProps({
-            ...this.props,
-            alertLocale: {
-                validationAlert: {...formLocale.validationAlert},
-                progressAlert: {...formLocale.progressAlert},
-                successAlert: {...formLocale.successAlert},
-                errorAlert: {
-                    ...formLocale.errorAlert,
-                    message: formLocale.thesisSubmission.depositFailedMessage
-                }
-            }});
+        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: formLocale});
         return (
             <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
                 <p>{formLocale.thesisSubmission.text}</p>
@@ -100,12 +78,6 @@ export default class ThesisSubmission extends Component {
                     <NavigationDialogBox
                         when={this.props.dirty && !this.props.submitSucceeded}
                         txt={formLocale.cancelWorkflowConfirmation}/>
-
-                    <ConfirmDialogBox
-                        onRef={this.setDepositConfirmation}
-                        onAction={this.props.handleSubmit}
-                        locale={formLocale.thesisSubmission.depositConfirmation}
-                    />
 
                     <StandardCard title={txt.information.title} help={txt.information.help}>
                         <div className="columns" style={{marginTop: '6px'}}>
@@ -235,8 +207,8 @@ export default class ThesisSubmission extends Component {
                                 secondary
                                 fullWidth
                                 label={formLocale.thesisSubmission.submit}
-                                onTouchTap={this.openDepositConfirmation}
-                                disabled={this.props.submitting || this.props.disableSubmit}/>
+                                onTouchTap={this.props.handleSubmit}
+                                disabled={this.props.submitting || (this.props.formErrors && this.props.formErrors.size === undefined)}/>
                         </div>
                     </div>
                 </form>

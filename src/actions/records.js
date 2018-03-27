@@ -4,7 +4,6 @@ import {putUploadFiles} from '../repositories';
 import * as transformers from './transformers';
 import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 import * as actions from './actionTypes';
-import Raven from 'raven-js';
 
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
@@ -25,7 +24,7 @@ export function createNewRecord(data) {
             ...transformers.getRecordContributorsSearchKey(data.editors),
             ...transformers.getRecordContributorsIdSearchKey(data.editors),
             ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
-            ...transformers.getRecordFieldsOfResearchSearchKey(data.fieldOfResearch)
+            ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch)
         };
 
         // delete extra form values from request object
@@ -99,7 +98,7 @@ export function submitThesis(data, author) {
             ...transformers.getRecordAuthorsSearchKey(data.currentAuthor),
             ...transformers.getRecordAuthorsIdSearchKey(data.currentAuthor),
             ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
-            ...transformers.getRecordFieldsOfResearchSearchKey(data.fieldOfResearch),
+            ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
             ...transformers.getRecordFileAttachmentSearchKey(data.files.queue),
             rek_title: data.thesisTitle.plainText,
             rek_formatted_title: data.thesisTitle.htmlText,
@@ -134,11 +133,9 @@ export function submitThesis(data, author) {
             })
             .catch(error => {
                 const specificError = !fileUploadSucceeded
-                    ? 'Submit Thesis: File upload failed. '
-                    : 'Submit Thesis: Error occurred while saving record to eSpace. ';
+                    ? 'File upload failed. '
+                    : 'Error occurred while saving record to eSpace. ';
                 const compositeError = `${specificError} ${ error.message ? `(${error.message})` : '' }`;
-
-                if(!process.env.USE_MOCK) Raven.captureException(error, {message: specificError});
 
                 dispatch({
                     type: actions.CREATE_RECORD_FAILED,

@@ -235,20 +235,20 @@ export const dataCollection = {
         "rek_end_date_xsdmf_id": 12154,
         "rek_end_date": "2005-01-05 00:00:00"
     },
-    "fez_record_search_key_fields_of_research": [
+    "fez_record_search_key_subject": [
         {
-            "rek_fields_of_research_id": 8831,
-            "rek_fields_of_research_pid": "UQ:407731",
-            "rek_fields_of_research_xsdmf_id": 16043,
-            "rek_fields_of_research": 452086,
-            "rek_fields_of_research_order": 1
+            "rek_subject_id": 8831,
+            "rek_subject_pid": "UQ:407731",
+            "rek_subject_xsdmf_id": 16043,
+            "rek_subject": 452086,
+            "rek_subject_order": 1
         },
         {
-            "rek_fields_of_research_id": 8832,
-            "rek_fields_of_research_pid": "UQ:407731",
-            "rek_fields_of_research_xsdmf_id": 16043,
-            "rek_fields_of_research": 452109,
-            "rek_fields_of_research_order": 2
+            "rek_subject_id": 8832,
+            "rek_subject_pid": "UQ:407731",
+            "rek_subject_xsdmf_id": 16043,
+            "rek_subject": 452109,
+            "rek_subject_order": 2
         }
     ],
     "fez_record_search_key_file_attachment_access_condition": [],
@@ -3368,7 +3368,6 @@ export const journalArticle = {
         "rek_end_page_pid": "UQ:676287",
         "rek_end_page": "2305"
     },
-    "fez_record_search_key_fields_of_research": [],
     "fez_record_search_key_file_attachment_access_condition": [],
     "fez_record_search_key_file_attachment_embargo_date": [],
     "fez_record_search_key_file_attachment_name": [{
@@ -3504,7 +3503,7 @@ export const journalArticle = {
             "rek_issn_xsdmf_id": null,
             "rek_issn": "1477-9137",
             "rek_issn_order": 1,
-            "fez_journal_issns": [{
+            "fez_journal_issns": {
                 "jni_id": 13071,
                 "jni_jnl_id": 7538,
                 "jni_issn": "1477-9137",
@@ -3519,7 +3518,7 @@ export const journalArticle = {
                     "jnl_rank": "A",
                     "jnl_foreign_name": null
                 }
-            }],
+            },
             "fez_sherpa_romeo": {
                 "srm_id": 13764,
                 "srm_issn": "1477-9137",
@@ -3527,6 +3526,38 @@ export const journalArticle = {
                 "srm_journal_name": "Journal of Cell Science",
                 "srm_colour": "green",
                 "srm_date_updated": "2017-09-30 18:26:18"
+            },
+            "rek_issn_lookup": "green"
+        },
+        {
+            "rek_issn_id": 5382906,
+            "rek_issn_pid": "UQ:676287",
+            "rek_issn_xsdmf_id": null,
+            "rek_issn": "0021-9533",
+            "rek_issn_order": 2,
+            "fez_journal_issns": {
+                "jni_id": 13070,
+                "jni_jnl_id": 7538,
+                "jni_issn": "0021-9533",
+                "jni_issn_order": 1,
+                "fez_journal": {
+                    "jnl_id": 7538,
+                    "jnl_journal_name": "Journal of Cell Science",
+                    "jnl_era_id": 2234,
+                    "jnl_era_year": 2010,
+                    "jnl_created_date": "2010-11-19 00:00:00",
+                    "jnl_updated_date": "2010-11-19 00:00:00",
+                    "jnl_rank": "A",
+                    "jnl_foreign_name": null
+                }
+            },
+            "fez_sherpa_romeo": {
+                "srm_id": 13763,
+                "srm_issn": "0021-9533",
+                "srm_xml": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<!DOCTYPE romeoapi SYSTEM \"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\">\n<romeoapi version=\"2.9.9\">\n  <header>\n    <parameters>\n      <parameter source=\"specified\">\n        <parametername>issn</parametername>\n        <parametervalue>0021-9533</parametervalue>\n      </parameter>\n      <parameter source=\"specified\">\n        <parametername>versions</parametername>\n        <parametervalue>all</parametervalue>\n      </parameter>\n      <parameter source=\"default\">\n        <parametername>showfunder</parametername>\n        <parametervalue>none</parametervalue>\n      </parameter>\n      <parameter source=\"default\">\n        <parametername>fIDnum</parametername>\n        <parametervalue>|</parametervalue>\n      </parameter>\n      <parameter source=\"default\">\n        <parametername>la</parametername>\n        <parametervalue>en</parametervalue>\n      </parameter>\n    </parameters>\n    <numhits>1</numhits>\n    <apicontrol>journal</apicontrol>\n    <outcome>singleJournal</outcome>\n    <message />\n    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>\n    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>\n    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>\n    <timestamp>30-Sep-2017:16:12:52</timestamp>\n  </header>\n  <journals>\n    <journal>\n      <jtitle>Journal of Cell Science</jtitle>\n      <issn>0021-9533</issn>\n      <zetocpub>Company of Biologists</zetocpub>\n      <romeopub>Company of Biologists</romeopub>\n    </journal>\n  </journals>\n  <publishers>\n    <publisher id=\"29\">\n      <name>Company of Biologists</name>\n      <alias />\n      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>\n      <preprints>\n        <prearchiving>can</prearchiving>\n        <prerestrictions />\n      </preprints>\n      <postprints>\n        <postarchiving>can</postarchiving>\n        <postrestrictions />\n      </postprints>\n      <pdfversion>\n        <pdfarchiving>can</pdfarchiving>\n        <pdfrestrictions />\n      </pdfversion>\n      <conditions>\n        <condition>On author's personal website immediately</condition>\n        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>\n        <condition>Authors retain copyright</condition>\n        <condition>Publisher's version/PDF may be used</condition>\n        <condition>Must link to publisher version</condition>\n        <condition>Non-commercial use</condition>\n        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>\n        <condition>Non-commercial use</condition>\n        <condition>Publisher last contacted on 30/03/2016</condition>\n      </conditions>\n      <mandates />\n      <paidaccess>\n        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>\n        <paidaccessname>Open Access</paidaccessname>\n        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>\n      </paidaccess>\n      <copyrightlinks>\n        <copyrightlink>\n          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>\n          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>\n        </copyrightlink>\n        <copyrightlink>\n          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>\n          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>\n        </copyrightlink>\n      </copyrightlinks>\n      <romeocolour>green</romeocolour>\n      <dateadded>2004-01-10 00:00:00</dateadded>\n      <dateupdated>2016-04-12 16:14:47</dateupdated>\n    </publisher>\n  </publishers>\n</romeoapi>\n",
+                "srm_journal_name": "Journal of Cell Science",
+                "srm_colour": "green",
+                "srm_date_updated": "2017-09-30 15:12:52"
             },
             "rek_issn_lookup": "green"
         }
@@ -3862,7 +3893,6 @@ export const bookChapter = {
         "rek_end_page_pid": "UQ:376215",
         "rek_end_page": "153"
     },
-    "fez_record_search_key_fields_of_research": [],
     "fez_record_search_key_file_attachment_access_condition": [],
     "fez_record_search_key_file_attachment_embargo_date": [],
     "fez_record_search_key_file_attachment_name": [],
@@ -4230,7 +4260,6 @@ export const book = {
     },
     "fez_record_search_key_end_date": null,
     "fez_record_search_key_end_page": null,
-    "fez_record_search_key_fields_of_research": [],
     "fez_record_search_key_file_attachment_access_condition": [],
     "fez_record_search_key_file_attachment_embargo_date": [],
     "fez_record_search_key_file_attachment_name": [],
@@ -4478,7 +4507,6 @@ export const editedBook = {
     },
     "fez_record_search_key_end_date": null,
     "fez_record_search_key_end_page": null,
-    "fez_record_search_key_fields_of_research": [],
     "fez_record_search_key_file_attachment_access_condition": [],
     "fez_record_search_key_file_attachment_embargo_date": [],
     "fez_record_search_key_file_attachment_name": [],
@@ -4895,7 +4923,6 @@ export const conferencePaper = {
         "rek_end_page_pid": "UQ:347818",
         "rek_end_page": "40"
     },
-    "fez_record_search_key_fields_of_research": [],
     "fez_record_search_key_file_attachment_access_condition": [],
     "fez_record_search_key_file_attachment_embargo_date": [],
     "fez_record_search_key_file_attachment_name": [],
@@ -5273,7 +5300,6 @@ export const generic = {
     "fez_record_search_key_edition": null,
     "fez_record_search_key_end_date": null,
     "fez_record_search_key_end_page": null,
-    "fez_record_search_key_fields_of_research": [],
     "fez_record_search_key_file_attachment_access_condition": [],
     "fez_record_search_key_file_attachment_embargo_date": [],
     "fez_record_search_key_file_attachment_name": [
@@ -5725,9 +5751,6 @@ export const audioDocument = {
     "fez_record_search_key_edition":null,
     "fez_record_search_key_end_date":null,
     "fez_record_search_key_end_page":null,
-    "fez_record_search_key_fields_of_research":[
-
-    ],
     "fez_record_search_key_file_attachment_access_condition":[
 
     ],
@@ -6485,9 +6508,6 @@ export const mockRecordToFix = {
         "rek_end_page_xsdmf_id":6384,
         "rek_end_page":"253A"
     },
-    "fez_record_search_key_fields_of_research":[
-
-    ],
     "fez_record_search_key_file_attachment_access_condition":[
 
     ],
@@ -7204,9 +7224,6 @@ export const researchReport = {
     "fez_record_search_key_edition":null,
     "fez_record_search_key_end_date":null,
     "fez_record_search_key_end_page":null,
-    "fez_record_search_key_fields_of_research":[
-
-    ],
     "fez_record_search_key_file_attachment_access_condition":[
 
     ],
@@ -8332,9 +8349,6 @@ export const videoDocument = {
     "fez_record_search_key_edition":null,
     "fez_record_search_key_end_date":null,
     "fez_record_search_key_end_page":null,
-    "fez_record_search_key_fields_of_research":[
-
-    ],
     "fez_record_search_key_file_attachment_access_condition":[
 
     ],
@@ -8730,9 +8744,6 @@ export const journal = {
     "fez_record_search_key_edition":null,
     "fez_record_search_key_end_date":null,
     "fez_record_search_key_end_page":null,
-    "fez_record_search_key_fields_of_research":[
-
-    ],
     "fez_record_search_key_file_attachment_access_condition":[
 
     ],

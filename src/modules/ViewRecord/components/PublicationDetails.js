@@ -36,7 +36,7 @@ export default class PublicationDetails extends Component {
                                         this.props.publication.fez_record_search_key_ismemberof.map((collection, index)=>(
                                             collection.rek_ismemberof && collection.rek_ismemberof_lookup &&
                                             <li key={`collection-${index}`}>
-                                                <a href={pathConfig.collection.view(collection.rek_ismemberof)}>{collection.rek_ismemberof_lookup}</a>
+                                                <a href={pathConfig.collection.view(this.props.publication.rek_pid)}>{collection.rek_ismemberof_lookup}</a>
                                             </li>
                                         ))
                                     }
