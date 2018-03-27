@@ -23,6 +23,7 @@ import {locale} from 'locale';
 export default class FixRecord extends React.PureComponent {
     static propTypes = {
         ...propTypes, // all redux-form props
+        disableSubmit: PropTypes.bool,
 
         recordToFix: PropTypes.object,
         loadingRecordToFix: PropTypes.bool,
@@ -240,7 +241,7 @@ export default class FixRecord extends React.PureComponent {
                                     fullWidth
                                     label={txt.submit}
                                     onTouchTap={this.props.handleSubmit}
-                                    disabled={this.props.submitting || (this.props.formErrors && this.props.formErrors.size === undefined)}/>
+                                    disabled={this.props.submitting || this.props.disableSubmit}/>
                             </div>
                         }
                     </div>
