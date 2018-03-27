@@ -74,12 +74,18 @@
   // Grant specific styles
   .grantInformation {
     margin-bottom: 0 !important;
+    margin-top: 6px !important;
     .grantText {
       margin-top: 6px;
     }
     .headingColumn {
       @include mobile {
         display: none !important;
+      }
+    }
+    .dataColumn {
+      @include mobile {
+        padding: 6px 0 !important;
       }
     }
   }
