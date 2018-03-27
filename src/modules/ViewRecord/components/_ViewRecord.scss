@@ -2,10 +2,12 @@
 
 .viewRecord {
   margin-top: -12px !important;
+
   .publicationCitation {
     padding-top: 0 !important;
     border-bottom: none !important;
   }
+
   .openExternalUrlIcon {
     height: $text-body-small !important;
     width: $text-body-small !important;
@@ -16,18 +18,7 @@
     vertical-align: top;
   }
 
-  table.grantInformation {
-    margin-bottom: 0 !important;
-    .grantText {
-      margin-top: 6px;
-    }
-    .headingColumn {
-      @include mobile {
-        display: none !important;
-      }
-    }
-  }
-
+  // Universal table data styles
   .additionalInformation, .publicationDetails, .grantInformation {
     table-layout: auto !important;
     .tableRow, .headingColumn, .dataColumn {
@@ -78,30 +69,40 @@
         margin-left: 12px;
       }
     }
+  }
 
-    p {
-      text-align: justify;
-      text-justify: inter-word;
+  // Grant specific styles
+  .grantInformation {
+    margin-bottom: 0 !important;
+    .grantText {
+      margin-top: 6px;
+    }
+    .headingColumn {
+      @include mobile {
+        display: none !important;
+      }
     }
   }
 
+  // Additional info specific styles
+  .additionalInformation {
+    .citationLabel {
+      display: none;
+    }
 
+    .sherpaRomeoGreen {
+      color: green;
+    }
 
-  .citationLabel {
-    display: none;
+    .sherpaRomeoBlue {
+      color: blue;
+    }
+
+    .sherpaRomeoYellow {
+      color: yellow;
+      background-color: grey;
+    }
   }
 
-  .sherpaRomeoGreen {
-    color: green;
-  }
-
-  .sherpaRomeoBlue {
-    color: blue;
-  }
-
-  .sherpaRomeoYellow {
-    color: yellow;
-    background-color: grey;
-  }
 }
 
