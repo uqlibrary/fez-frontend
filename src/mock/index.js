@@ -72,7 +72,10 @@ mock
         }
         // CURRENT_USER_RECORDS_API
         else if (config.params.rule === 'mine') {
-            return [200, mockData.myRecordsList];
+            const totalRecords = mockData.myRecordsList.data.length;
+            const fromRecord = 5 * (config.params.page - 1);
+            const toRecord = 5 * (config.params.page);
+            return [200, {...mockData.myRecordsList, current_page: config.params.page, data: mockData.myRecordsList.data.slice(fromRecord, totalRecords > toRecord ? toRecord : totalRecords)}];
         }
         // POSSIBLE_RECORDS_API
         else if (config.params.rule === 'possible') {

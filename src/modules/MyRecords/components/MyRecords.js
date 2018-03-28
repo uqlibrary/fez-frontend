@@ -16,9 +16,9 @@ export default class MyRecords extends React.Component {
         loadingPublicationsList: PropTypes.bool,
         publicationsListPagingData: PropTypes.object,
 
-        account: PropTypes.object,
         accountLoading: PropTypes.bool,
 
+        location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object
     };
@@ -26,8 +26,7 @@ export default class MyRecords extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            allowResultsPaging: !props.loadingPublicationsList && props.publicationsList.length > 0,
+        this.initState = {
             page: 1,
             pageSize: 20,
             sortBy: locale.components.sorting.sortBy[0].value,
@@ -37,69 +36,87 @@ export default class MyRecords extends React.Component {
                 ranges: {}
             }
         };
+
+        this.state = {
+            // check if user has publications, once true always true
+            // facets filtering might return no results, but facets should still be visible
+            hasPublications: !props.loadingPublicationsList && props.publicationsList.length > 0,
+            ...(!!this.props.location.state ? this.props.location.state : this.initState)
+        };
     }
 
     componentDidMount() {
-        if (this.props.account && this.props.account.id) {
-            this.props.actions.searchAuthorPublications({userName: this.props.account.id});
+        if (!this.props.accountLoading) {
+            this.props.actions.searchAuthorPublications({...this.state});
         }
     }
 
     componentWillReceiveProps(newProps) {
-        if (!this.state.allowResultsPaging && !newProps.loadingPublicationsList && newProps.publicationsList.length > 0) {
-            this.setState({ allowResultsPaging: true });
-        }
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return this.props.accountLoading !== nextProps.accountLoading
-            || this.props.loadingPublicationsList !== nextProps.loadingPublicationsList
-            || this.state !== nextState;
-    }
-
-    componentWillUpdate(nextProps, nextState) {
-        if (this.state.sortBy !== nextState.sortBy
-            || this.state.sortDirection !== nextState.sortDirection
-            || this.state.pageSize !== nextState.pageSize
-            || this.state.page !== nextState.page
-            || JSON.stringify(this.state.activeFacets) !== JSON.stringify(nextState.activeFacets)) {
-            this.props.actions.searchAuthorPublications({
-                userName: this.props.account.id,
-                pageSize: nextState.pageSize,
-                page: nextState.page,
-                sortBy: nextState.sortBy,
-                sortDirection: nextState.sortDirection,
-                facets: nextState.activeFacets
+        // handle browser back button - set state from location/dispatch action for this state
+        if (this.props.location !== newProps.location
+            && newProps.history.action === 'POP'
+            && newProps.location.pathname === routes.pathConfig.records.mine) {
+            this.setState({...newProps.location.state}, () => {
+                // only will be called when user clicks back on my records page
+                this.props.actions.searchAuthorPublications({...this.state});
             });
         }
+        // set forever-true flag if user has publications
+        if (!this.state.hasPublications && !newProps.loadingPublicationsList
+            && !!newProps.publicationsList && newProps.publicationsList.length > 0) {
+            this.setState({ hasPublications: true });
+        }
+    }
+
+    shouldComponentUpdate(nextProps) {
+        // do not re-render on state change
+        // state change will trigger a dispatch which will update props
+        return this.props !== nextProps;
     }
 
     pageSizeChanged = (pageSize) => {
-        this.setState({
-            pageSize: pageSize,
-            page: 1
-        });
+        this.setState(
+            {
+                pageSize: pageSize,
+                page: 1
+            }, this.pushPageHistory
+        );
     }
 
     pageChanged = (page) => {
-        this.setState({
-            page: page
-        });
+        this.setState(
+            {
+                page: page
+            }, this.pushPageHistory
+        );
     }
 
     sortByChanged = (sortBy, sortDirection) => {
-        this.setState({
-            sortBy: sortBy,
-            sortDirection: sortDirection
-        });
+        this.setState(
+            {
+                sortBy: sortBy,
+                sortDirection: sortDirection
+            }, this.pushPageHistory
+        );
     }
 
     facetsChanged = (activeFacets) => {
-        this.setState({
-            activeFacets: {...activeFacets},
-            page: 1
-        });
+        this.setState(
+            {
+                activeFacets: {...activeFacets},
+                page: 1
+            }, this.pushPageHistory
+        );
     }
+
+    pushPageHistory = () => {
+        this.props.history.push({
+            pathname: `${routes.pathConfig.records.mine}`,
+            search: `?ts=${Date.now()}`,
+            state: {...this.state}
+        });
+        this.props.actions.searchAuthorPublications({...this.state});
+    };
 
     fixRecord = (item) => {
         this.props.history.push(routes.pathConfig.records.fix(item.rek_pid));
@@ -112,12 +129,12 @@ export default class MyRecords extends React.Component {
         return (
             <StandardPage title={txt.pageTitle}>
                 {
-                    (this.props.accountLoading || (!this.state.allowResultsPaging && this.props.loadingPublicationsList)) &&
+                    (this.props.accountLoading || (!this.state.hasPublications && this.props.loadingPublicationsList)) &&
                     <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
                 }
                 <div className="columns">
                     {
-                        !this.props.accountLoading && !this.props.loadingPublicationsList && (!this.props.publicationsList || this.props.publicationsList.length === 0) &&
+                        !this.props.accountLoading && !this.props.loadingPublicationsList && !!this.props.publicationsList && this.props.publicationsList.length === 0 &&
                         <div className="column">
                             <StandardCard {...txt.noResultsFound}>
                                 {txt.noResultsFound.text}
@@ -125,7 +142,7 @@ export default class MyRecords extends React.Component {
                         </div>
                     }
                     {
-                        !this.props.accountLoading && this.state.allowResultsPaging && this.props.publicationsList.length > 0 &&
+                        !this.props.accountLoading && this.props.publicationsList.length > 0 &&
                         <div className="column">
                             <StandardCard>
                                 {
@@ -139,6 +156,9 @@ export default class MyRecords extends React.Component {
                                 }
                                 {txt.text}
                                 <PublicationsListSorting
+                                    sortBy={this.state.sortBy}
+                                    sortDirection={this.state.sortDirection}
+                                    pageSize={this.state.pageSize}
                                     pagingData={pagingData}
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
@@ -167,17 +187,18 @@ export default class MyRecords extends React.Component {
                         </div>
                     }
                     {
-                        !this.props.accountLoading && this.state.allowResultsPaging && (
-                            (this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0) ||
-                            Object.keys(this.state.activeFacets.filters).length > 0 ||
-                            Object.keys(this.state.activeFacets.ranges).length > 0
+                        !this.props.accountLoading && this.state.hasPublications
+                        && (
+                            (this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
+                            || Object.keys(this.state.activeFacets.filters).length > 0
+                            || Object.keys(this.state.activeFacets.ranges).length > 0
                         ) &&
                         <div className="column is-3 is-hidden-mobile">
                             <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                 <FacetsFilter
                                     facetsData={this.props.publicationsListFacets}
                                     onFacetsChanged={this.facetsChanged}
-                                    activeFacets={this.state.activeFacets}
+                                    activeFacets={{...this.state.activeFacets}}
                                     disabled={this.props.loadingPublicationsList}
                                     excludeFacetsList={txt.facetsFilter.excludeFacetsList}
                                     renameFacetsList={txt.facetsFilter.renameFacetsList} />

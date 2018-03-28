@@ -33,11 +33,10 @@ export default class FacetsFilter extends React.Component {
         };
     }
 
-    componentWillUpdate(nextProps, nextState) {
-        if (JSON.stringify(nextState.activeFacets) !== JSON.stringify(this.state.activeFacets)
-            && this.props.onFacetsChanged) {
-            this.props.onFacetsChanged(nextState.activeFacets);
-        }
+    componentWillReceiveProps(nextProps) {
+        this.state = {
+            activeFacets: {...nextProps.activeFacets}
+        };
     }
 
     _handleFacetClick = (category, facet) => () => {
@@ -58,6 +57,7 @@ export default class FacetsFilter extends React.Component {
         this.setState({
             activeFacets: {...activeFacets}
         });
+        this.props.onFacetsChanged({...activeFacets});
     };
 
     _handleYearPublishedRangeFacet = (category) => (range) => {
@@ -78,10 +78,17 @@ export default class FacetsFilter extends React.Component {
         this.setState({
             activeFacets: {...activeFacets}
         });
+        this.props.onFacetsChanged({...activeFacets});
     };
 
     _handleResetClick = () => {
         this.setState({
+            activeFacets: {
+                filters: {},
+                ranges: {}
+            }
+        });
+        this.props.onFacetsChanged({
             activeFacets: {
                 filters: {},
                 ranges: {}
