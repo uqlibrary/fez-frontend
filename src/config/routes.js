@@ -133,7 +133,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 exact: true
             },
             {
-                path: pathConfig.records.mine + '/:page',
+                path: pathConfig.records.mine,
                 component: components.MyRecords,
                 access: [roles.researcher, roles.admin],
                 exact: true

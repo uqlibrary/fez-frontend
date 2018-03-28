@@ -15376,32 +15376,6 @@ export const myRecordsList = {
                     }
                 ]
             },
-            "Display type": {
-                "doc_count_error_upper_bound": 0,
-                "sum_other_doc_count": 0,
-                "buckets": [
-                    {
-                        "key": 179,
-                        "doc_count": 110
-                    },
-                    {
-                        "key": 130,
-                        "doc_count": 32
-                    },
-                    {
-                        "key": 174,
-                        "doc_count": 3
-                    },
-                    {
-                        "key": 177,
-                        "doc_count": 1
-                    },
-                    {
-                        "key": 202,
-                        "doc_count": 1
-                    }
-                ]
-            },
             "Keywords": {
                 "doc_count_error_upper_bound": 0,
                 "sum_other_doc_count": 556,
@@ -15694,6 +15668,32 @@ export const myRecordsList = {
                     }
                 ]
             },
+            "Display type": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 0,
+                "buckets": [
+                    {
+                        "key": 179,
+                        "doc_count": 110
+                    },
+                    {
+                        "key": 130,
+                        "doc_count": 32
+                    },
+                    {
+                        "key": 174,
+                        "doc_count": 3
+                    },
+                    {
+                        "key": 177,
+                        "doc_count": 1
+                    },
+                    {
+                        "key": 202,
+                        "doc_count": 1
+                    }
+                ]
+            },
             "Display type (lookup)": {
                 "doc_count_error_upper_bound": 0,
                 "sum_other_doc_count": 0,
@@ -15720,6 +15720,16 @@ export const myRecordsList = {
                     }
                 ]
             }
+            // "Display type (lookup)": {
+            //     "doc_count_error_upper_bound": 0,
+            //     "sum_other_doc_count": 0,
+            //     "buckets": [{"key": "Journal Article", "doc_count": 96}]
+            // },
+            // "Display type": {
+            //     "doc_count_error_upper_bound": 0,
+            //     "sum_other_doc_count": 0,
+            //     "buckets": [{"key": 179, "doc_count": 96}]
+            // }
         }
     }
 };
