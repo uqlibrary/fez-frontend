@@ -1128,7 +1128,6 @@ describe('Links method tests ', () => {
     it('getPMCLink link creation function', () => {
         const wrapper = setup({publication: record});
         const test = JSON.stringify(wrapper.instance().getPMCLink('PMC12345', 453954));
-        const result = '{\"link\":{\"key\":null,\"ref\":null,\"props\":{\"pubmedCentralId\":\"PMC12345\"},\"_owner\":null,\"_store\":{}},\"description\":\"Full text from PubMed Central\",\"icon\":{\"type\":\"div\",\"key\":null,\"ref\":null,\"props\":{\"className\":\"fez-icon openAccess large\",\"title\":\"Open Access - PMC - Free to read\"},\"_owner\":null,\"_store\":{}}}';
         expect(test).toMatchSnapshot();
     });
 
@@ -1180,7 +1179,6 @@ describe('Links method tests ', () => {
                 testCase.parameters.recordEmbargoDays,
                 testCase.parameters.recordPublishedDate
                 ));
-            // expect(test).toEqual(testCase.expected);
             expect(test).toMatchSnapshot();
         });
     });
