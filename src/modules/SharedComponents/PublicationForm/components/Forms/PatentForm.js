@@ -105,7 +105,7 @@ export default class PatentForm extends Component {
                         <div className="column">
                             <Field
                                 component={TextField}
-                                name="fez_record_search_key_notes.rek_notes"
+                                name="comments"
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth

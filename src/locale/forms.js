@@ -65,9 +65,9 @@ export default {
                         Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
                     </p>),
                 fileFailConfirmationAlert: {
-                    title: 'File upload failed',
-                    message: 'Retry uploading files via "Fix record" screen or contact eSpace administrators.',
-                    type: 'info'
+                    title: 'File upload and/or edits/changes/comments post failed',
+                    message: 'Retry uploading files and/or posting edits/changes/comments about this claim via "Fix record" screen or contact eSpace administrators.',
+                    type: 'warning'
                 },
                 cancelButtonLabel: 'Claim more publications',
                 addRecordButtonLabel: 'Add another missing record',

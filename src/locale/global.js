@@ -20,7 +20,7 @@ help: {
 
 export default {
     global: {
-        title: 'UQ eSpace DEMO',
+        title: `UQ eSpace ${process.env.TITLE_SUFFIX || ''}`,
         logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
         loading: 'Loading...',
         loadingUserAccount: 'Loading user account...',

@@ -96,7 +96,12 @@ mock
     .onGet(routes.GET_PUBLICATION_TYPES_API().apiUrl)
     .reply(200, mockData.recordsTypeList)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
-    .reply(200, {data: {...mockData.record}})
+    .reply(config => {
+        if (config.url.indexOf('UQ:164935') >= 0) {
+            return [200, {data: {...mockData.recordWithMap}}];
+        }
+        return [200, {data: {...mockData.record}}];
+    })
     // .reply(500, ['ERROR in EXISTING_RECORD_API'])
     .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({id: '.*'}).apiUrl)))
     .reply((config) => {
@@ -114,7 +119,7 @@ mock
 mock
     .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
     .reply(200, {data: {}});
-// .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'});
+    // .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'});
 
 mock
     .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({pid: '.*'}).apiUrl)))
@@ -124,7 +129,7 @@ mock
     .reply(200, {data: {}})
     // .reply(500, ['ERROR HIDE_POSSIBLE_RECORD_API'])
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
-    .reply(200, {data: {}});
+    .reply(200, {data: {rek_pid: 'UQ:1111111'}}); // TODO: add actual record to data return!!!
     // .reply(500, {message: 'error - failed NEW_RECORD_API'});
 
 mock
