@@ -4,7 +4,8 @@ import MediaPreview from "./MediaPreview";
 function setup(testProps, isShallow = true){
     const props = {
         ...testProps,
-        mediaUrl: testProps.mediaUrl || 'https://test.com',
+        mediaUrl: testProps.mediaUrl || 'https://test.com/test.jpg',
+        previewMediaUrl: testProps.previewMediaUrl || 'https://test.com/preview_test.jpg',
         mimeType: testProps.mimeType || 'text/plain',
         closeAction: testProps.closeAction || (()=>{})
     };

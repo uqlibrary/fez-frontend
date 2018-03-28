@@ -28,7 +28,7 @@ exports[`Media Preview Component  should render component 1`] = `
     />
   </div>
   <img
-    src="https://test.com"
+    src="https://test.com/preview_test.jpg"
   />
 </StandardCard>
 `;
@@ -61,7 +61,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
     />
   </div>
   <img
-    src="https://test.com"
+    src="https://test.com/preview_test.jpg"
   />
 </StandardCard>
 `;
@@ -97,7 +97,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
     controls={true}
   >
     <source
-      src="https://test.com"
+      src="https://test.com/preview_test.jpg"
       type="video/mp4"
     />
     Your browser does not support the video tag.

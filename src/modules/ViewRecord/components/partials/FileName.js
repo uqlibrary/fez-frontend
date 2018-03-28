@@ -85,16 +85,18 @@ export default class fileName extends PureComponent {
     }
 
     getUrl = (pid, fileName) => {
-        return pathConfig.file.url(pid, fileName);
+        return fileName && pathConfig.file.url(pid, fileName);
     }
 
     handleFileNameClick = (e) => {
         e.preventDefault();
-        const url = this.getUrl(this.props.pid, this.props.previewFileName || this.props.fileName);
+        const mediaUrl = this.getUrl(this.props.pid, this.props.fileName);
+        const previewMediaUrl = this.getUrl(this.props.pid, this.props.previewFileName || mediaUrl);
+
         if (this.canShowPreview()) {
-            this.props.handleFileNameClick(url, this.props.mimeType);
+            this.props.handleFileNameClick(mediaUrl, previewMediaUrl, this.props.mimeType);
         } else {
-            window.open(url);
+            window.open(mediaUrl);
         }
     }
 

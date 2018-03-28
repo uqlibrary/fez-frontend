@@ -7,6 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 export default class MediaPreview extends Component {
     static propTypes = {
         mediaUrl: PropTypes.string.isRequired,
+        previewMediaUrl: PropTypes.string.isRequired,
         mimeType: PropTypes.string.isRequired,
         closeAction: PropTypes.func.isRequired
     };
@@ -52,13 +53,13 @@ export default class MediaPreview extends Component {
     }
 
     render()  {
-        const {mediaUrl, mimeType, closeAction} = this.props;
+        const {previewMediaUrl, mimeType, closeAction} = this.props;
         const isVideo = mimeType.indexOf('video') === 0;
 
         return (
             <StandardCard title={this.getTitle(isVideo)}>
                 {this.renderButtons(closeAction)}
-                {this.renderPreview(isVideo, mediaUrl, mimeType)}
+                {this.renderPreview(isVideo, previewMediaUrl, mimeType)}
             </StandardCard>
         );
     }

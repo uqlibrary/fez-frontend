@@ -25,8 +25,11 @@ export default class ViewRecord extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            previewMediaUrl: null,
-            previewMimeType: null
+            preview: {
+                mediaUrl: null,
+                previewMediaUrl: null,
+                mimeType: null
+            }
         };
         this.handleFileNameClick = this.handleFileNameClick.bind(this);
         this.resetPreviewState = this.resetPreviewState.bind(this);
@@ -45,17 +48,23 @@ export default class ViewRecord extends Component {
         }
     }
 
-    handleFileNameClick(mediaUrl, mimeType) {
+    handleFileNameClick(mediaUrl, previewMediaUrl, mimeType) {
         this.setState({
-            previewMediaUrl: mediaUrl,
-            previewMimeType: mimeType
+            preview: {
+                mediaUrl: mediaUrl,
+                previewMediaUrl: previewMediaUrl,
+                mimeType: mimeType
+            }
         });
     }
 
     resetPreviewState() {
         this.setState({
-            previewMediaUrl: null,
-            previewMimeType: null
+            preview: {
+                mediaUrl: null,
+                previewMediaUrl: null,
+                mimeType: null
+            }
         });
     }
 
@@ -92,8 +101,8 @@ export default class ViewRecord extends Component {
                     <Files publication={recordToView} handleFileNameClick={this.handleFileNameClick}/>
                 }
                 {
-                    this.state.previewMediaUrl && this.state.previewMimeType &&
-                    <MediaPreview mediaUrl={this.state.previewMediaUrl} mimeType={this.state.previewMimeType} closeAction={this.resetPreviewState}/>
+                    this.state.preview.mediaUrl && this.state.preview.mimeType &&
+                    <MediaPreview mediaUrl={this.state.preview.mediaUrl} previewMediaUrl={this.state.preview.previewMediaUrl} mimeType={this.state.preview.mimeType} closeAction={this.resetPreviewState}/>
                 }
                 {
                     recordToView && recordToView.rek_display_type_lookup &&
