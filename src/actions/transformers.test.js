@@ -277,9 +277,14 @@ describe('getFixIssueRequest test ', () => {
         input.author.aut_display_name = 'J. Smith';
         input.author.aut_org_username = 'uqjsmith';
         input.comments = 'Some comments...';
+        input.rek_link = 'http://www.test.com';
+        input.files = {queue: [{name: '1.jpg'},{name: '2.jpg'}]};
 
-
-        const expected = {issue: 'Record: ' + APP_URL + 'view/UQ:1111 \n User \'J. Smith (uqjsmith)\' has indicated that they require a fix to this publication: Some comments...'}
+        const expected = {"issue": "Record: https://fez-staging.library.uq.edu.au/view/UQ:1111\n" +
+            "User: J. Smith (uqjsmith) has indicated that they require a fix to this publication.\n" +
+                "Added comments: Some comments...\n" +
+                "Added link: http://www.test.com\n" +
+                "Added files: 1.jpg,2.jpg"};
 
         const result = transformers.getFixIssueRequest(input);
         expect(result).toEqual(expected);
