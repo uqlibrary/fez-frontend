@@ -47,7 +47,7 @@ export default class MyRecords extends React.Component {
 
     componentDidMount() {
         if (!this.props.accountLoading) {
-            this.props.actions.searchAuthorPublications({...this.initState, ...this.state});
+            this.props.actions.searchAuthorPublications({...this.state});
         }
     }
 
@@ -56,10 +56,9 @@ export default class MyRecords extends React.Component {
         if (this.props.location !== newProps.location
             && newProps.history.action === 'POP'
             && newProps.location.pathname === routes.pathConfig.records.mine) {
-            this.setState({...this.initState, ...newProps.location.state}, () => {
-                console.log(this.state);
+            this.setState({...newProps.location.state}, () => {
                 // only will be called when user clicks back on my records page
-                this.props.actions.searchAuthorPublications({...this.initState, ...this.state});
+                this.props.actions.searchAuthorPublications({...this.state});
             });
         }
         // set forever-true flag if user has publications
@@ -114,9 +113,9 @@ export default class MyRecords extends React.Component {
         this.props.history.push({
             pathname: `${routes.pathConfig.records.mine}`,
             search: `?ts=${Date.now()}`,
-            state: {...this.initState, ...this.state}
+            state: {...this.state}
         });
-        this.props.actions.searchAuthorPublications({...this.initState, ...this.state});
+        this.props.actions.searchAuthorPublications({...this.state});
     };
 
     fixRecord = (item) => {
