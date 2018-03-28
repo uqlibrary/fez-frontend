@@ -47,7 +47,7 @@ export default class MyRecords extends React.Component {
 
     componentDidMount() {
         if (!this.props.accountLoading) {
-            this.props.actions.searchAuthorPublications({...this.state});
+            this.props.actions.searchAuthorPublications({...this.initState, ...this.state});
         }
     }
 
@@ -56,9 +56,10 @@ export default class MyRecords extends React.Component {
         if (this.props.location !== newProps.location
             && newProps.history.action === 'POP'
             && newProps.location.pathname === routes.pathConfig.records.mine) {
-            this.setState({...(!!newProps.location.state ? newProps.location.state : this.initState)}, () => {
+            this.setState({...this.initState, ...newProps.location.state}, () => {
+                console.log(this.state);
                 // only will be called when user clicks back on my records page
-                this.props.actions.searchAuthorPublications({...this.state});
+                this.props.actions.searchAuthorPublications({...this.initState, ...this.state});
             });
         }
         // set forever-true flag if user has publications
@@ -79,10 +80,7 @@ export default class MyRecords extends React.Component {
             {
                 pageSize: pageSize,
                 page: 1
-            },
-            () => {
-                this.pushPageHistory();
-            }
+            }, this.pushPageHistory
         );
     }
 
@@ -90,10 +88,7 @@ export default class MyRecords extends React.Component {
         this.setState(
             {
                 page: page
-            },
-            () => {
-                this.pushPageHistory();
-            }
+            }, this.pushPageHistory
         );
     }
 
@@ -102,10 +97,7 @@ export default class MyRecords extends React.Component {
             {
                 sortBy: sortBy,
                 sortDirection: sortDirection
-            },
-            () => {
-                this.pushPageHistory();
-            }
+            }, this.pushPageHistory
         );
     }
 
@@ -114,10 +106,7 @@ export default class MyRecords extends React.Component {
             {
                 activeFacets: {...activeFacets},
                 page: 1
-            },
-            () => {
-                this.pushPageHistory();
-            }
+            }, this.pushPageHistory
         );
     }
 
@@ -125,9 +114,9 @@ export default class MyRecords extends React.Component {
         this.props.history.push({
             pathname: `${routes.pathConfig.records.mine}`,
             search: `?ts=${Date.now()}`,
-            state: {...this.state}
+            state: {...this.initState, ...this.state}
         });
-        this.props.actions.searchAuthorPublications({...this.state});
+        this.props.actions.searchAuthorPublications({...this.initState, ...this.state});
     };
 
     fixRecord = (item) => {
