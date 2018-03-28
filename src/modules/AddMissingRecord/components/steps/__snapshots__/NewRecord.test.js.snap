@@ -20,9 +20,9 @@ exports[`Add new record should render stepper and a publication form 1`] = `
         </div>,
         "confirmationTitle": "Your record has been submitted",
         "fileFailConfirmationAlert": Object {
-          "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-          "title": "File upload failed",
-          "type": "info",
+          "message": "Retry uploading files and/or submitting publication notes via \\"Fix record\\" screen or contact eSpace administrators.",
+          "title": "File upload and/or notes post failed",
+          "type": "warning",
         },
         "recordSuccessConfirmationMessage": <p>
           Your record has been saved.
@@ -62,13 +62,6 @@ exports[`Add new record should render the confirm dialog with an alert for faile
       "cancelButtonLabel": "Add another missing record",
       "confirmButtonLabel": "Go to my research",
       "confirmationMessage": <div>
-        <Alert
-          allowDismiss={false}
-          message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
-          showLoader={false}
-          title="File upload failed"
-          type="info"
-        />
         <p>
           Your record has been saved.
           <br />
@@ -78,9 +71,9 @@ exports[`Add new record should render the confirm dialog with an alert for faile
       </div>,
       "confirmationTitle": "Your record has been submitted",
       "fileFailConfirmationAlert": Object {
-        "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-        "title": "File upload failed",
-        "type": "info",
+        "message": "Retry uploading files and/or submitting publication notes via \\"Fix record\\" screen or contact eSpace administrators.",
+        "title": "File upload and/or notes post failed",
+        "type": "warning",
       },
       "recordSuccessConfirmationMessage": <p>
         Your record has been saved.
@@ -171,9 +164,9 @@ exports[`Add new record should render the confirm dialog without an alert for a 
       </div>,
       "confirmationTitle": "Your record has been submitted",
       "fileFailConfirmationAlert": Object {
-        "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-        "title": "File upload failed",
-        "type": "info",
+        "message": "Retry uploading files and/or submitting publication notes via \\"Fix record\\" screen or contact eSpace administrators.",
+        "title": "File upload and/or notes post failed",
+        "type": "warning",
       },
       "recordSuccessConfirmationMessage": <p>
         Your record has been saved.

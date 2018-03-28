@@ -125,7 +125,7 @@ const handlers = {
     [actions.CLAIM_PUBLICATION_CREATE_COMPLETED]: (state, action) => (
         {
             ...state,
-            publicationToClaimFileUploadingError: !!action.payload.fileUploadFailed,
+            publicationToClaimFileUploadingError: !!action.payload.fileUploadOrIssueFailed,
             publicationsClaimedInProgress: [...state.publicationsClaimedInProgress, action.payload.pid]
         }
     )

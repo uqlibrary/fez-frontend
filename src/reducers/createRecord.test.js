@@ -8,7 +8,7 @@ describe('createRecord reducer', () => {
         newRecordSaving: false,
         newRecordError: false,
         newRecordErrorMessage: null,
-        newRecordFileUploadingError: false
+        newRecordFileUploadingOrIssueError: false
     };
 
     const aRecordToCreate = {
@@ -22,8 +22,8 @@ describe('createRecord reducer', () => {
     });
 
     it('returns the payload of the created record, and whether the file upload was successful', () => {
-        const test = createRecordReducer(initialState, {type: actions.CREATE_RECORD_SUCCESS, payload: aRecordToCreate, fileUploadFailed: false});
-        expect(test).toEqual({...initialState, newRecord: aRecordToCreate, newRecordFileUploadingError: false});
+        const test = createRecordReducer(initialState, {type: actions.CREATE_RECORD_SUCCESS, payload: {newRecord: aRecordToCreate, fileUploadOrIssueFailed: false}});
+        expect(test).toEqual({...initialState, newRecord: aRecordToCreate, newRecordFileUploadingOrIssueError: false});
     });
 
     it('returns the payload of the failed record and that there was an error', () => {
