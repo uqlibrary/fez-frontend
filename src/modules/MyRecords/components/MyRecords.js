@@ -157,6 +157,9 @@ export default class MyRecords extends React.Component {
                                 }
                                 {txt.text}
                                 <PublicationsListSorting
+                                    sortBy={this.state.sortBy}
+                                    sortDirection={this.state.sortDirection}
+                                    pageSize={this.state.pageSize}
                                     pagingData={pagingData}
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
@@ -185,17 +188,18 @@ export default class MyRecords extends React.Component {
                         </div>
                     }
                     {
-                        !this.props.accountLoading && this.state.hasPublications && (
-                            (this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0) ||
-                            Object.keys(this.state.activeFacets.filters).length > 0 ||
-                            Object.keys(this.state.activeFacets.ranges).length > 0
+                        !this.props.accountLoading && this.state.hasPublications
+                        && (
+                            (this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
+                            || Object.keys(this.state.activeFacets.filters).length > 0
+                            || Object.keys(this.state.activeFacets.ranges).length > 0
                         ) &&
                         <div className="column is-3 is-hidden-mobile">
                             <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                 <FacetsFilter
                                     facetsData={this.props.publicationsListFacets}
                                     onFacetsChanged={this.facetsChanged}
-                                    activeFacets={this.state.activeFacets}
+                                    activeFacets={{...this.state.activeFacets}}
                                     disabled={this.props.loadingPublicationsList}
                                     excludeFacetsList={txt.facetsFilter.excludeFacetsList}
                                     renameFacetsList={txt.facetsFilter.renameFacetsList} />

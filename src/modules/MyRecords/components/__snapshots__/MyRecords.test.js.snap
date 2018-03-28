@@ -36,6 +36,7 @@ exports[`MyRecords test renders list of publications 1`] = `
           disabled={false}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
+          pageSize={20}
           pagingData={
             Object {
               "current_page": 1,
@@ -45,6 +46,8 @@ exports[`MyRecords test renders list of publications 1`] = `
               "total": 147,
             }
           }
+          sortBy="published_date"
+          sortDirection="Desc"
         />
         <PublicationsListPaging
           disabled={false}
