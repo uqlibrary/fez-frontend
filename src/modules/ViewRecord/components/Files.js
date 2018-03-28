@@ -22,8 +22,8 @@ export default class Files extends Component {
         const thumbnailDataStream = this.searchByKey(dataStreams, 'dsi_dsid', 'thumbnail_' + fileName);
         const previewDataStream = this.searchByKey(dataStreams, 'dsi_dsid', 'preview_' + fileName);
         const mimeType = dataStream && dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
-        const openAccess = this.isOpenAccess(accessCondition);
-        const isEmbargoed = this.isEmbargoed(embargoDate);
+        // const openAccess = this.isOpenAccess(accessCondition);
+        // const isEmbargoed = this.isEmbargoed(embargoDate);
 
         return (
             <TableRow selectable={false} className="file" key={`file-${order}`}>
@@ -33,7 +33,7 @@ export default class Files extends Component {
                             pid={pid}
                             fileName={fileName}
                             mimeType={mimeType}
-                            accessible={(openAccess && !isEmbargoed)}
+                            accessible // ={(openAccess && !isEmbargoed)}
                             thumbnailFileName={thumbnailDataStream && thumbnailDataStream.dsi_dsid}
                             previewFileName={previewDataStream && previewDataStream.dsi_dsid}
                             handleFileNameClick={this.props.handleFileNameClick}
@@ -48,7 +48,7 @@ export default class Files extends Component {
                 </TableRowColumn>
                 <TableRowColumn className="align-right oaStatus">
                     {
-                        this.renderEmbargoDate(embargoDate, isEmbargoed, openAccess)
+                        // this.renderEmbargoDate(embargoDate, isEmbargoed, openAccess)
                     }
                 </TableRowColumn>
                 <TableRowColumn className="align-right is-hidden-mobile is-hidden-tablet-only size" >

@@ -1695,11 +1695,7 @@ exports[`Files Component  should render component and display open access icon 1
                                                   "whiteSpace": "nowrap",
                                                 }
                                               }
-                                            >
-                                              <div
-                                                className="fez-icon openAccess large"
-                                              />
-                                            </td>
+                                            />
                                           </TableRowColumn>
                                           <TableRowColumn
                                             className="align-right is-hidden-mobile is-hidden-tablet-only size"
@@ -1905,11 +1901,7 @@ exports[`Files Component  should render component and display open access icon 1
                                                   "whiteSpace": "nowrap",
                                                 }
                                               }
-                                            >
-                                              <div
-                                                className="fez-icon openAccess large"
-                                              />
-                                            </td>
+                                            />
                                           </TableRowColumn>
                                           <TableRowColumn
                                             className="align-right is-hidden-mobile is-hidden-tablet-only size"
