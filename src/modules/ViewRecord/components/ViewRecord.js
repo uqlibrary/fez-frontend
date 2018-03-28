@@ -11,7 +11,7 @@ import {locale} from 'locale';
 import PublicationDetails from './PublicationDetails';
 import AdditionalInformation from './AdditionalInformation';
 import GrantInformation from './GrantInformation';
-import {ShareAnywhere} from 'modules/SharedComponents/ShareAnywhere';
+import {ShareThis} from 'modules/SharedComponents/ShareThis';
 
 const dompurify = require('dompurify');
 
@@ -65,7 +65,7 @@ export default class ViewRecord extends Component {
             <StandardPage className="viewRecord" title={recordToView && recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
 
-                <ShareAnywhere />
+                <ShareThis />
 
                 {
                     recordToView && (recordToView.rek_formatted_abstract || recordToView.rek_description) &&

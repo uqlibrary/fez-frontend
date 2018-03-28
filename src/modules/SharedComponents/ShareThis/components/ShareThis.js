@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default class ShareAnywhere extends React.Component {
+export default class ShareThis extends React.Component {
     static propTypes = {
         show: PropTypes.bool
     };
@@ -19,11 +19,11 @@ export default class ShareAnywhere extends React.Component {
         //     ]
         // ];
 
-        if (!document.getElementById('shareAnywhereScript')) {
+        if (!document.getElementById('shareThisScript')) {
             /* add the script to the body if it hasnt already happened */
             const script = document.createElement('script');
             script.src = '//static.addtoany.com/menu/page.js';
-            script.id = 'shareAnywhereScript';
+            script.id = 'shareThisScript';
             document.head.appendChild(script);
             console.log('added in did mount');
         }
@@ -31,17 +31,17 @@ export default class ShareAnywhere extends React.Component {
 
     componentWillUnmount() {
         /* remove the script so we can reload it when user returns via the back button  */
-        const scriptShareAnywhere = document.getElementById('shareAnywhereScript');
-        scriptShareAnywhere.parentNode.removeChild(scriptShareAnywhere);
+        const scriptShareThis = document.getElementById('shareThisScript');
+        scriptShareThis.parentNode.removeChild(scriptShareThis);
     }
 
     render() {
-        if (!this.props.show) return <div className="shareAnywhere_empty" />;
+        if (!this.props.show) return <div className="shareThis_empty" />;
 
         const blockStyle = { paddingBottom: 12 };
 
         return (
-            <div className="shareAnywhere a2a_kit a2a_kit_size_20 a2a_default_style columns is-gapless is-clearfix is-marginless" style={blockStyle}>
+            <div className="shareThis a2a_kit a2a_kit_size_20 a2a_default_style columns is-gapless is-clearfix is-marginless" style={blockStyle}>
                 <div className="column" />
                 <div className="column is-narrow">
                     <a className="a2a_button_mendeley" />
