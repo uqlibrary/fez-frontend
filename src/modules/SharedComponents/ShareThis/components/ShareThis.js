@@ -11,21 +11,18 @@ export default class ShareThis extends React.Component {
     };
 
     componentDidMount() {
-        // window.a2a_config.custom_services = [
-        //     [
-        //         'www.researchgate.net',
-        //         'https://www.researchgate.net/go.Share.html?url=' + encodeURI(window.location.href) + '&title=' + encodeURIComponent(document.title),
-        //         'https://www.example.com/images/icon_20x20.png' // RG background: #ooccbb, white text TODO
-        //     ]
-        // ];
-
         if (!document.getElementById('shareThisScript')) {
             /* add the script to the body if it hasnt already happened */
             const script = document.createElement('script');
             script.src = '//static.addtoany.com/menu/page.js';
             script.id = 'shareThisScript';
+            // script.async = true;
+
+            const code = this.addThisConfigInHead();
+            script.appendChild(document.createTextNode(code));
+
             document.head.appendChild(script);
-            console.log('added in did mount');
+            console.log('AddThis in did mount');
         }
     }
 
@@ -33,6 +30,26 @@ export default class ShareThis extends React.Component {
         /* remove the script so we can reload it when user returns via the back button  */
         const scriptShareThis = document.getElementById('shareThisScript');
         scriptShareThis.parentNode.removeChild(scriptShareThis);
+    }
+
+    addThisConfigInHead() {
+        const code = 'function my_addtoany_onready() { \n' +
+            'console.log("in my_addtoany_onready"); \n' +
+            '    var a2a_config = a2a_config || {}; \n' +
+            '    a2a_config.custom_services = [ \n' +
+            '        [ \n' +
+            '            "www.researchgate.net", \n' +
+            '            "https://www.researchgate.net/go.Share.html?url=' + encodeURI(window.location.href) + '&title=' + encodeURIComponent(document.title) + '", \n' +
+            '            "https://www.example.com/images/icon_20x20.png" \n' +  // RG background: #ooccbb, white text TODO
+            '        ] \n' +
+            '    ]; \n' +
+            '    a2a.init("page");  \n' +
+            '}';
+        return code;
+        // const script = document.createElement('script');
+        // script.id = 'shareThisHeader';
+        // script.appendChild(document.createTextNode(code));
+        // document.head.appendChild(script);
     }
 
     render() {
