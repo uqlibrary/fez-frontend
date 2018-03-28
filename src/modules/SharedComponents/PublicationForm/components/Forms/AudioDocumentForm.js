@@ -125,7 +125,7 @@ export default class AudioDocumentForm extends Component {
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                name="fez_record_search_key_notes.rek_notes"
+                                name="comments"
                                 type="text"
                                 fullWidth
                                 rows={1}

@@ -192,7 +192,6 @@ export function claimPublication(data) {
             ...NEW_RECORD_DEFAULT_VALUES,
             ...transformers.getRecordLinkSearchKey(data),
             ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication),
-            ...{fez_record_search_key_notes: {rek_notes: data.comments}},
             ...recordAuthorsIdSearchKeys,
             ...recordContributorsIdSearchKeys
         } : null;
@@ -233,11 +232,14 @@ export function claimPublication(data) {
             .then(() => hasFilesToUpload ? repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null)
             // patch record with files if file upload has succeeded
             .then(() => hasFilesToUpload ? patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchFilesRecordRequest) : null)
+            // send comments as an issue request
+            .then(() => (data.comments ? post(routes.RECORDS_ISSUES_API({pid: data.publication.rek_pid}), {issue: 'Notes from creator of a claimed record: ' +  data.comments}) : null))
             // finish claim record action
             .then(() => {
                 dispatch({
                     type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
-                    payload: {pid: data.publication.rek_pid}
+                    payload: {pid: data.publication.rek_pid},
+                    fileUploadOrIssueFailed: false
                 });
                 return Promise.resolve(data.publication);
             })
@@ -248,7 +250,7 @@ export function claimPublication(data) {
                         type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
                         payload: {
                             pid: data.publication.rek_pid,
-                            fileUploadFailed: true
+                            fileUploadOrIssueFailed: true
                         }
                     });
 
