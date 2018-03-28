@@ -34,21 +34,12 @@ export default class MediaPreview extends Component {
         window.open(this.props.mediaUrl);
     }
 
-    isVideo = (mimeType) => {
-        return mimeType.indexOf('video') === 0;
+    getTitle = (isVideo) => {
+        return isVideo ? locale.viewRecord.sections.files.preview.videoTitle : locale.viewRecord.sections.files.preview.imageTitle;
     }
 
-    isImage = (mimeType) => {
-        return mimeType.indexOf('image') === 0;
-    }
-
-    getTitle = (mimeType) => {
-        return this.isVideo(mimeType) ? locale.viewRecord.sections.files.preview.videoTitle : locale.viewRecord.sections.files.preview.imageTitle;
-    }
-
-    renderButtons = (mimeType, closeAction) => {
+    renderButtons = (closeAction) => {
         return (
-            (this.isVideo(mimeType) || this.isImage(mimeType)) &&
             <div className="column is-narrow filePreview">
                 <RaisedButton label={locale.viewRecord.sections.files.preview.openInNewWindow} onTouchTap={this.openFileInNewWindow} primary />
                 <RaisedButton label={locale.viewRecord.sections.files.preview.close} onTouchTap={closeAction}/>
@@ -56,23 +47,18 @@ export default class MediaPreview extends Component {
         );
     }
 
-    renderPreview = (mediaUrl, mimeType) => {
-        if (this.isVideo(mimeType)) {
-            return this.renderVideoPreview(mediaUrl, mimeType);
-        } else if (this.isImage(mimeType)) {
-            return this.renderImagePreview(mediaUrl);
-        } else {
-            return <span/>;
-        }
+    renderPreview = (isVideo, mediaUrl, mimeType) => {
+        return isVideo ? this.renderVideoPreview(mediaUrl, mimeType) : this.renderImagePreview(mediaUrl);
     }
 
     render()  {
         const {mediaUrl, mimeType, closeAction} = this.props;
+        const isVideo = mimeType.indexOf('video') === 0;
 
         return (
-            <StandardCard title={this.getTitle(mimeType)}>
-                {this.renderButtons(mimeType, closeAction)}
-                {this.renderPreview(mediaUrl, mimeType)}
+            <StandardCard title={this.getTitle(isVideo)}>
+                {this.renderButtons(closeAction)}
+                {this.renderPreview(isVideo, mediaUrl, mimeType)}
             </StandardCard>
         );
     }

@@ -16,7 +16,7 @@ describe('Files Component ', () => {
     it('should render component and display open access icon', () => {
         const wrapper = setup({}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('.fez-icon.openAccess').length).toEqual(1);
+        expect(wrapper.find('.fez-icon.openAccess').length).toEqual(2);
     });
 
     it('should render component with no files', () => {

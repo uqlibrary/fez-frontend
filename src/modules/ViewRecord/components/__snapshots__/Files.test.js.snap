@@ -1801,6 +1801,7 @@ exports[`Files Component  should render component and display open access icon 1
                                               }
                                             >
                                               <fileName
+                                                accessible={true}
                                                 fileName="image.jpg"
                                                 handleFileNameClick={[Function]}
                                                 mimeType="image/jpeg"
@@ -1814,40 +1815,21 @@ exports[`Files Component  should render component and display open access icon 1
                                                   <div
                                                     className="column is-narrow is-vertical-center fileIcon"
                                                   >
-                                                    <EditorInsertDriveFile>
-                                                      <SvgIcon
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </EditorInsertDriveFile>
+                                                    <img
+                                                      src="/view/UQ:676287/thumbnail_image.jpg"
+                                                    />
                                                   </div>
                                                   <div
                                                     className="column fileInfo"
                                                   >
-                                                    image.jpg
+                                                    <a
+                                                      className="fileName"
+                                                      href="#"
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                    >
+                                                      image.jpg
+                                                    </a>
                                                   </div>
                                                 </div>
                                               </fileName>
@@ -1925,7 +1907,7 @@ exports[`Files Component  should render component and display open access icon 1
                                               }
                                             >
                                               <div
-                                                className="fez-icon closedAccess large"
+                                                className="fez-icon openAccess large"
                                               />
                                             </td>
                                           </TableRowColumn>

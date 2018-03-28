@@ -5,7 +5,31 @@ exports[`Media Preview Component  should render component 1`] = `
   className=""
   title="Image preview"
 >
-  <span />
+  <div
+    className="column is-narrow filePreview"
+  >
+    <RaisedButton
+      disabled={false}
+      fullWidth={false}
+      label="Open file in a new window"
+      labelPosition="after"
+      onTouchTap={[Function]}
+      primary={true}
+      secondary={false}
+    />
+    <RaisedButton
+      disabled={false}
+      fullWidth={false}
+      label="Close"
+      labelPosition="after"
+      onTouchTap={[Function]}
+      primary={false}
+      secondary={false}
+    />
+  </div>
+  <img
+    src="https://test.com"
+  />
 </StandardCard>
 `;
 

@@ -15,7 +15,6 @@ describe('Media Preview Component ', () => {
     it('should render component', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('RaisedButton').length).toEqual(0);
     });
 
     it('should render component with image', () => {

@@ -105,7 +105,7 @@ export default class Files extends Component {
     }
 
     isOpenAccess = (accessCondition) => {
-        return (accessCondition && parseInt(accessCondition.rek_file_attachment_access_condition, 10) === 8);
+        return !(accessCondition && parseInt(accessCondition.rek_file_attachment_access_condition, 10) === 9);
     }
 
     // filter out fezacml, premd, thumbnail, web prefix files
@@ -117,7 +117,7 @@ export default class Files extends Component {
         const dataStreams = publication.fez_datastream_info;
 
         fileNames.filter((fileName) => (
-            !fileName.rek_file_attachment_name.match('^(FezACML|stream|web|thumbnail|presmd)')
+            !fileName.rek_file_attachment_name.match('^(FezACML|stream|web|thumbnail|preview|presmd)')
         )).sort((fileName1, fileName2) => (
             fileName1.rek_file_attachment_name_order - fileName2.rek_file_attachment_name_order
         )).map((fileName) => {
