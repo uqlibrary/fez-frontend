@@ -642,13 +642,5 @@ export default {
                 showLoader: true
             }
         }
-    },
-    addDataset: {
-        title: 'Add dataset',
-        externalUrl: 'https://espace.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315'
-    },
-    listDataset: {
-        title: 'List dataset',
-        externalUrl: 'https://espace.library.uq.edu.au/my_research_data_claimed.php'
     }
 };
