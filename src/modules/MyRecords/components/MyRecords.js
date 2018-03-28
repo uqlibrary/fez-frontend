@@ -41,13 +41,13 @@ export default class MyRecords extends React.Component {
             // check if user has publications, once true always true
             // facets filtering might return no results, but facets should still be visible
             hasPublications: !props.loadingPublicationsList && props.publicationsList.length > 0,
-            ...this.initState
+            ...(!!this.props.location.state ? this.props.location.state : this.initState)
         };
     }
 
     componentDidMount() {
         if (!this.props.accountLoading) {
-            this.props.actions.searchAuthorPublications({});
+            this.props.actions.searchAuthorPublications({...this.state});
         }
     }
 
@@ -56,7 +56,6 @@ export default class MyRecords extends React.Component {
         if (this.props.location !== newProps.location
             && newProps.history.action === 'POP'
             && newProps.location.pathname === routes.pathConfig.records.mine) {
-            console.log('POP');
             this.setState({...(!!newProps.location.state ? newProps.location.state : this.initState)}, () => {
                 // only will be called when user clicks back on my records page
                 this.props.actions.searchAuthorPublications({...this.state});
