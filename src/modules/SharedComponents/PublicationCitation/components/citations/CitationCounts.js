@@ -14,10 +14,6 @@ export default class CitationCounts extends React.PureComponent {
         super(props);
     }
 
-    shouldComponentUpdate(nextProps) {
-        return this.props !== nextProps;
-    }
-
     getTitle = (title) => (locale.global.linkWillOpenInNewWindow.replace('[destination]', `${this.props.publication.rek_title} (${title})`));
 
     render() {
