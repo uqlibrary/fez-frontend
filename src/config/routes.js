@@ -19,6 +19,10 @@ export const pathConfig =  {
             new: '/records/add/new',
         }
     },
+    dataset: {
+        add: 'https://espace.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315',
+        list: 'https://espace.library.uq.edu.au/my_research_data_claimed.php'
+    },
     collection: {
         view: (pid) => (`/collection/${pid}`),
     },
@@ -254,6 +258,14 @@ export const getMenuConfig = (account, disabled) => {
             {
                 linkTo: pathConfig.records.add.find,
                 ...locale.menu.addMissingRecord
+            },
+            {
+                linkTo: pathConfig.dataset.add,
+                ...locale.menu.addDataset
+            },
+            {
+                linkTo: pathConfig.dataset.list,
+                ...locale.menu.listDataset
             },
             {
                 divider: true,

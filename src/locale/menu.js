@@ -13,6 +13,12 @@ export default {
         addMissingRecord: {
             primaryText: 'Add a missing record'
         },
+        addDataset: {
+            primaryText: 'Add dataset'
+        },
+        listDataset: {
+            primaryText: 'List dataset'
+        },
         masquerade: {
             primaryText: 'Masquerade',
             secondaryText: 'as another user'
