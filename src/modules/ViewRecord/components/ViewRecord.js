@@ -9,6 +9,7 @@ import {locale} from 'locale';
 import PublicationDetails from './PublicationDetails';
 import AdditionalInformation from './AdditionalInformation';
 import GrantInformation from './GrantInformation';
+import RelatedPublications from './RelatedPublications';
 
 export default class ViewRecord extends Component {
     static propTypes = {
@@ -59,6 +60,14 @@ export default class ViewRecord extends Component {
         return (
             <StandardPage className="viewRecord" title={recordToView && recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
+                {
+                    recordToView &&
+                    (
+                        (recordToView.fez_record_search_key_related_publications && recordToView.fez_record_search_key_related_publications.length > 0) ||
+                        (recordToView.fez_record_search_key_related_datasets && recordToView.fez_record_search_key_related_datasets.length > 0)
+                    ) &&
+                    <RelatedPublications publication={recordToView} />
+                }
                 {
                     recordToView && recordToView.rek_display_type_lookup &&
                     <AdditionalInformation publication={recordToView} />

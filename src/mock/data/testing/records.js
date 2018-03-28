@@ -486,8 +486,43 @@ export const dataCollection = {
         "rek_publisher_xsdmf_id": 16050,
         "rek_publisher": "Cold Spring Harbor Laboratory Press"
     },
-    "fez_record_search_key_related_datasets": null,
-    "fez_record_search_key_related_publications": null,
+    "fez_record_search_key_related_datasets": [
+        {
+            "rek_related_datasets_id": 1258088,
+            "rek_related_datasets_pid": "UQ:137936",
+            "rek_related_datasets": {
+                "rek_pid": "UQ:12345",
+                "rek_title": "related dataset 1",
+                "rek_created_date": "2016-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Data Collection"
+            },
+            "rek_related_datasets_order": 1
+        },
+        {
+            "rek_related_datasets_id": 1258088,
+            "rek_related_datasets_pid": "UQ:137936",
+            "rek_related_datasets": {
+                "rek_pid": "UQ:12345",
+                "rek_title": "related dataset 2",
+                "rek_created_date": "2016-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Data Collection"
+            },
+            "rek_related_datasets_order": 2
+        }
+    ],
+    "fez_record_search_key_related_publications": [
+        {
+            "rek_related_publications_id": 1258088,
+            "rek_related_publications_pid": "UQ:137936",
+            "rek_related_publications": {
+                "rek_pid": "UQ:12345",
+                "rek_title": "related publication 1",
+                "rek_created_date": "2017-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Research Report"
+            },
+            "rek_related_publications_order": 1
+        }
+    ],
     "fez_record_search_key_rights": {
         "rek_rights_id": 116537,
         "rek_rights_pid": "UQ:407731",

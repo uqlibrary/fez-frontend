@@ -418,8 +418,43 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
       },
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [
+        Object {
+          "rek_related_datasets": Object {
+            "rek_created_date": "2016-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Data Collection",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related dataset 1",
+          },
+          "rek_related_datasets_id": 1258088,
+          "rek_related_datasets_order": 1,
+          "rek_related_datasets_pid": "UQ:137936",
+        },
+        Object {
+          "rek_related_datasets": Object {
+            "rek_created_date": "2016-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Data Collection",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related dataset 2",
+          },
+          "rek_related_datasets_id": 1258088,
+          "rek_related_datasets_order": 2,
+          "rek_related_datasets_pid": "UQ:137936",
+        },
+      ],
+      "fez_record_search_key_related_publications": Array [
+        Object {
+          "rek_related_publications": Object {
+            "rek_created_date": "2017-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Research Report",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related publication 1",
+          },
+          "rek_related_publications_id": 1258088,
+          "rek_related_publications_order": 1,
+          "rek_related_publications_pid": "UQ:137936",
+        },
+      ],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -1024,8 +1059,43 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
             "rek_publisher_pid": "UQ:407731",
             "rek_publisher_xsdmf_id": 16050,
           },
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [
+            Object {
+              "rek_related_datasets": Object {
+                "rek_created_date": "2016-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Data Collection",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related dataset 1",
+              },
+              "rek_related_datasets_id": 1258088,
+              "rek_related_datasets_order": 1,
+              "rek_related_datasets_pid": "UQ:137936",
+            },
+            Object {
+              "rek_related_datasets": Object {
+                "rek_created_date": "2016-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Data Collection",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related dataset 2",
+              },
+              "rek_related_datasets_id": 1258088,
+              "rek_related_datasets_order": 2,
+              "rek_related_datasets_pid": "UQ:137936",
+            },
+          ],
+          "fez_record_search_key_related_publications": Array [
+            Object {
+              "rek_related_publications": Object {
+                "rek_created_date": "2017-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Research Report",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related publication 1",
+              },
+              "rek_related_publications_id": 1258088,
+              "rek_related_publications_order": 1,
+              "rek_related_publications_pid": "UQ:137936",
+            },
+          ],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -1814,8 +1884,43 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
       },
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [
+        Object {
+          "rek_related_datasets": Object {
+            "rek_created_date": "2016-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Data Collection",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related dataset 1",
+          },
+          "rek_related_datasets_id": 1258088,
+          "rek_related_datasets_order": 1,
+          "rek_related_datasets_pid": "UQ:137936",
+        },
+        Object {
+          "rek_related_datasets": Object {
+            "rek_created_date": "2016-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Data Collection",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related dataset 2",
+          },
+          "rek_related_datasets_id": 1258088,
+          "rek_related_datasets_order": 2,
+          "rek_related_datasets_pid": "UQ:137936",
+        },
+      ],
+      "fez_record_search_key_related_publications": Array [
+        Object {
+          "rek_related_publications": Object {
+            "rek_created_date": "2017-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Research Report",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related publication 1",
+          },
+          "rek_related_publications_id": 1258088,
+          "rek_related_publications_order": 1,
+          "rek_related_publications_pid": "UQ:137936",
+        },
+      ],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -2420,8 +2525,43 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_publisher_pid": "UQ:407731",
             "rek_publisher_xsdmf_id": 16050,
           },
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [
+            Object {
+              "rek_related_datasets": Object {
+                "rek_created_date": "2016-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Data Collection",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related dataset 1",
+              },
+              "rek_related_datasets_id": 1258088,
+              "rek_related_datasets_order": 1,
+              "rek_related_datasets_pid": "UQ:137936",
+            },
+            Object {
+              "rek_related_datasets": Object {
+                "rek_created_date": "2016-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Data Collection",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related dataset 2",
+              },
+              "rek_related_datasets_id": 1258088,
+              "rek_related_datasets_order": 2,
+              "rek_related_datasets_pid": "UQ:137936",
+            },
+          ],
+          "fez_record_search_key_related_publications": Array [
+            Object {
+              "rek_related_publications": Object {
+                "rek_created_date": "2017-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Research Report",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related publication 1",
+              },
+              "rek_related_publications_id": 1258088,
+              "rek_related_publications_order": 1,
+              "rek_related_publications_pid": "UQ:137936",
+            },
+          ],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -3206,8 +3346,43 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
       },
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [
+        Object {
+          "rek_related_datasets": Object {
+            "rek_created_date": "2016-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Data Collection",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related dataset 1",
+          },
+          "rek_related_datasets_id": 1258088,
+          "rek_related_datasets_order": 1,
+          "rek_related_datasets_pid": "UQ:137936",
+        },
+        Object {
+          "rek_related_datasets": Object {
+            "rek_created_date": "2016-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Data Collection",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related dataset 2",
+          },
+          "rek_related_datasets_id": 1258088,
+          "rek_related_datasets_order": 2,
+          "rek_related_datasets_pid": "UQ:137936",
+        },
+      ],
+      "fez_record_search_key_related_publications": Array [
+        Object {
+          "rek_related_publications": Object {
+            "rek_created_date": "2017-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Research Report",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related publication 1",
+          },
+          "rek_related_publications_id": 1258088,
+          "rek_related_publications_order": 1,
+          "rek_related_publications_pid": "UQ:137936",
+        },
+      ],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -3812,8 +3987,43 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_publisher_pid": "UQ:407731",
             "rek_publisher_xsdmf_id": 16050,
           },
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [
+            Object {
+              "rek_related_datasets": Object {
+                "rek_created_date": "2016-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Data Collection",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related dataset 1",
+              },
+              "rek_related_datasets_id": 1258088,
+              "rek_related_datasets_order": 1,
+              "rek_related_datasets_pid": "UQ:137936",
+            },
+            Object {
+              "rek_related_datasets": Object {
+                "rek_created_date": "2016-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Data Collection",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related dataset 2",
+              },
+              "rek_related_datasets_id": 1258088,
+              "rek_related_datasets_order": 2,
+              "rek_related_datasets_pid": "UQ:137936",
+            },
+          ],
+          "fez_record_search_key_related_publications": Array [
+            Object {
+              "rek_related_publications": Object {
+                "rek_created_date": "2017-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Research Report",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related publication 1",
+              },
+              "rek_related_publications_id": 1258088,
+              "rek_related_publications_order": 1,
+              "rek_related_publications_pid": "UQ:137936",
+            },
+          ],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -4562,8 +4772,43 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
       },
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [
+        Object {
+          "rek_related_datasets": Object {
+            "rek_created_date": "2016-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Data Collection",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related dataset 1",
+          },
+          "rek_related_datasets_id": 1258088,
+          "rek_related_datasets_order": 1,
+          "rek_related_datasets_pid": "UQ:137936",
+        },
+        Object {
+          "rek_related_datasets": Object {
+            "rek_created_date": "2016-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Data Collection",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related dataset 2",
+          },
+          "rek_related_datasets_id": 1258088,
+          "rek_related_datasets_order": 2,
+          "rek_related_datasets_pid": "UQ:137936",
+        },
+      ],
+      "fez_record_search_key_related_publications": Array [
+        Object {
+          "rek_related_publications": Object {
+            "rek_created_date": "2017-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Research Report",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related publication 1",
+          },
+          "rek_related_publications_id": 1258088,
+          "rek_related_publications_order": 1,
+          "rek_related_publications_pid": "UQ:137936",
+        },
+      ],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -5132,8 +5377,43 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_publisher_pid": "UQ:407731",
             "rek_publisher_xsdmf_id": 16050,
           },
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [
+            Object {
+              "rek_related_datasets": Object {
+                "rek_created_date": "2016-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Data Collection",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related dataset 1",
+              },
+              "rek_related_datasets_id": 1258088,
+              "rek_related_datasets_order": 1,
+              "rek_related_datasets_pid": "UQ:137936",
+            },
+            Object {
+              "rek_related_datasets": Object {
+                "rek_created_date": "2016-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Data Collection",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related dataset 2",
+              },
+              "rek_related_datasets_id": 1258088,
+              "rek_related_datasets_order": 2,
+              "rek_related_datasets_pid": "UQ:137936",
+            },
+          ],
+          "fez_record_search_key_related_publications": Array [
+            Object {
+              "rek_related_publications": Object {
+                "rek_created_date": "2017-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Research Report",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related publication 1",
+              },
+              "rek_related_publications_id": 1258088,
+              "rek_related_publications_order": 1,
+              "rek_related_publications_pid": "UQ:137936",
+            },
+          ],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -5847,8 +6127,43 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
       },
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [
+        Object {
+          "rek_related_datasets": Object {
+            "rek_created_date": "2016-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Data Collection",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related dataset 1",
+          },
+          "rek_related_datasets_id": 1258088,
+          "rek_related_datasets_order": 1,
+          "rek_related_datasets_pid": "UQ:137936",
+        },
+        Object {
+          "rek_related_datasets": Object {
+            "rek_created_date": "2016-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Data Collection",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related dataset 2",
+          },
+          "rek_related_datasets_id": 1258088,
+          "rek_related_datasets_order": 2,
+          "rek_related_datasets_pid": "UQ:137936",
+        },
+      ],
+      "fez_record_search_key_related_publications": Array [
+        Object {
+          "rek_related_publications": Object {
+            "rek_created_date": "2017-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Research Report",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related publication 1",
+          },
+          "rek_related_publications_id": 1258088,
+          "rek_related_publications_order": 1,
+          "rek_related_publications_pid": "UQ:137936",
+        },
+      ],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -6453,8 +6768,43 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_publisher_pid": "UQ:407731",
             "rek_publisher_xsdmf_id": 16050,
           },
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [
+            Object {
+              "rek_related_datasets": Object {
+                "rek_created_date": "2016-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Data Collection",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related dataset 1",
+              },
+              "rek_related_datasets_id": 1258088,
+              "rek_related_datasets_order": 1,
+              "rek_related_datasets_pid": "UQ:137936",
+            },
+            Object {
+              "rek_related_datasets": Object {
+                "rek_created_date": "2016-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Data Collection",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related dataset 2",
+              },
+              "rek_related_datasets_id": 1258088,
+              "rek_related_datasets_order": 2,
+              "rek_related_datasets_pid": "UQ:137936",
+            },
+          ],
+          "fez_record_search_key_related_publications": Array [
+            Object {
+              "rek_related_publications": Object {
+                "rek_created_date": "2017-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Research Report",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related publication 1",
+              },
+              "rek_related_publications_id": 1258088,
+              "rek_related_publications_order": 1,
+              "rek_related_publications_pid": "UQ:137936",
+            },
+          ],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -7234,8 +7584,43 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
       },
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [
+        Object {
+          "rek_related_datasets": Object {
+            "rek_created_date": "2016-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Data Collection",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related dataset 1",
+          },
+          "rek_related_datasets_id": 1258088,
+          "rek_related_datasets_order": 1,
+          "rek_related_datasets_pid": "UQ:137936",
+        },
+        Object {
+          "rek_related_datasets": Object {
+            "rek_created_date": "2016-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Data Collection",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related dataset 2",
+          },
+          "rek_related_datasets_id": 1258088,
+          "rek_related_datasets_order": 2,
+          "rek_related_datasets_pid": "UQ:137936",
+        },
+      ],
+      "fez_record_search_key_related_publications": Array [
+        Object {
+          "rek_related_publications": Object {
+            "rek_created_date": "2017-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Research Report",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related publication 1",
+          },
+          "rek_related_publications_id": 1258088,
+          "rek_related_publications_order": 1,
+          "rek_related_publications_pid": "UQ:137936",
+        },
+      ],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -7835,8 +8220,43 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_publisher_pid": "UQ:407731",
             "rek_publisher_xsdmf_id": 16050,
           },
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [
+            Object {
+              "rek_related_datasets": Object {
+                "rek_created_date": "2016-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Data Collection",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related dataset 1",
+              },
+              "rek_related_datasets_id": 1258088,
+              "rek_related_datasets_order": 1,
+              "rek_related_datasets_pid": "UQ:137936",
+            },
+            Object {
+              "rek_related_datasets": Object {
+                "rek_created_date": "2016-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Data Collection",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related dataset 2",
+              },
+              "rek_related_datasets_id": 1258088,
+              "rek_related_datasets_order": 2,
+              "rek_related_datasets_pid": "UQ:137936",
+            },
+          ],
+          "fez_record_search_key_related_publications": Array [
+            Object {
+              "rek_related_publications": Object {
+                "rek_created_date": "2017-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Research Report",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related publication 1",
+              },
+              "rek_related_publications_id": 1258088,
+              "rek_related_publications_order": 1,
+              "rek_related_publications_pid": "UQ:137936",
+            },
+          ],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -8556,8 +8976,43 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_project_name_xsdmf_id": 16099,
       },
       "fez_record_search_key_publisher": null,
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [
+        Object {
+          "rek_related_datasets": Object {
+            "rek_created_date": "2016-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Data Collection",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related dataset 1",
+          },
+          "rek_related_datasets_id": 1258088,
+          "rek_related_datasets_order": 1,
+          "rek_related_datasets_pid": "UQ:137936",
+        },
+        Object {
+          "rek_related_datasets": Object {
+            "rek_created_date": "2016-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Data Collection",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related dataset 2",
+          },
+          "rek_related_datasets_id": 1258088,
+          "rek_related_datasets_order": 2,
+          "rek_related_datasets_pid": "UQ:137936",
+        },
+      ],
+      "fez_record_search_key_related_publications": Array [
+        Object {
+          "rek_related_publications": Object {
+            "rek_created_date": "2017-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Research Report",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related publication 1",
+          },
+          "rek_related_publications_id": 1258088,
+          "rek_related_publications_order": 1,
+          "rek_related_publications_pid": "UQ:137936",
+        },
+      ],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -9157,8 +9612,43 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_project_name_xsdmf_id": 16099,
           },
           "fez_record_search_key_publisher": null,
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [
+            Object {
+              "rek_related_datasets": Object {
+                "rek_created_date": "2016-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Data Collection",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related dataset 1",
+              },
+              "rek_related_datasets_id": 1258088,
+              "rek_related_datasets_order": 1,
+              "rek_related_datasets_pid": "UQ:137936",
+            },
+            Object {
+              "rek_related_datasets": Object {
+                "rek_created_date": "2016-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Data Collection",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related dataset 2",
+              },
+              "rek_related_datasets_id": 1258088,
+              "rek_related_datasets_order": 2,
+              "rek_related_datasets_pid": "UQ:137936",
+            },
+          ],
+          "fez_record_search_key_related_publications": Array [
+            Object {
+              "rek_related_publications": Object {
+                "rek_created_date": "2017-07-15T11:49:38Z",
+                "rek_display_type_lookup": "Research Report",
+                "rek_pid": "UQ:12345",
+                "rek_title": "related publication 1",
+              },
+              "rek_related_publications_id": 1258088,
+              "rek_related_publications_order": 1,
+              "rek_related_publications_pid": "UQ:137936",
+            },
+          ],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,

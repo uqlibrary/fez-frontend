@@ -7,7 +7,11 @@ export default {
         sections: {
             publicationDetails: 'Publication details',
             grantInformation: 'Grant information',
-            additionalInformation: 'Additional information'
+            additionalInformation: 'Additional information',
+            relatedPublications: {
+                title: 'Related publications and datasets',
+                depositedBy: 'deposited'
+            }
         },
         headings: {
             default: {
