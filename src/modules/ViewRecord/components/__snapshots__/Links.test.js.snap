@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component ViewRecord  should render a DOI link 1`] = `
+exports[`Component Links  should render a DOI link 1`] = `
 <StandardCard
   className=""
   title="Links"
@@ -96,7 +96,7 @@ exports[`Component ViewRecord  should render a DOI link 1`] = `
 </StandardCard>
 `;
 
-exports[`Component ViewRecord  should render a PubMed Central link 1`] = `
+exports[`Component Links  should render a PubMed Central link 1`] = `
 <StandardCard
   className=""
   title="Links"
@@ -193,13 +193,13 @@ exports[`Component ViewRecord  should render a PubMed Central link 1`] = `
 </StandardCard>
 `;
 
-exports[`Component ViewRecord  should render empty div 1`] = `
+exports[`Component Links  should render empty div 1`] = `
 <div
   className="links empty"
 />
 `;
 
-exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
+exports[`Component Links  should render list of links with OA icons 1`] = `
 <StandardCard
   className=""
   title="Links"
@@ -423,7 +423,7 @@ exports[`Component ViewRecord  should render list of links with OA icons 1`] = `
 </StandardCard>
 `;
 
-exports[`Component ViewRecord  should render list of links with OA icons due to no embargo days 1`] = `
+exports[`Component Links  should render list of links with OA icons due to no embargo days 1`] = `
 <StandardCard
   className=""
   title="Links"
@@ -647,7 +647,7 @@ exports[`Component ViewRecord  should render list of links with OA icons due to 
 </StandardCard>
 `;
 
-exports[`Component ViewRecord  should render list of links with closed OA icons due to DOI OA status 1`] = `
+exports[`Component Links  should render list of links with closed OA icons due to DOI OA status 1`] = `
 <StandardCard
   className=""
   title="Links"
@@ -861,7 +861,7 @@ exports[`Component ViewRecord  should render list of links with closed OA icons 
 </StandardCard>
 `;
 
-exports[`Component ViewRecord  should render list of links with locked OA icons due to embargo date in the future 1`] = `
+exports[`Component Links  should render list of links with locked OA icons due to embargo date in the future 1`] = `
 <StandardCard
   className=""
   title="Links"
@@ -1105,3 +1105,25 @@ exports[`Component ViewRecord  should render list of links with locked OA icons 
   </div>
 </StandardCard>
 `;
+
+exports[`Links method tests  getAllLinks link creation function 1`] = `"[{\\"link\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"pubmedCentralId\\":\\"PMC12345678\\"},\\"_owner\\":null,\\"_store\\":{}},\\"description\\":\\"Full text from PubMed Central\\",\\"icon\\":{\\"type\\":\\"div\\",\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"className\\":\\"fez-icon openAccess large\\",\\"title\\":\\"Open Access - Free to read\\"},\\"_owner\\":null,\\"_store\\":{}}},{\\"link\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"doi\\":\\"10.1093/hmg/ddw177\\"},\\"_owner\\":null,\\"_store\\":{}},\\"description\\":\\"Link (no DOI)\\",\\"icon\\":{\\"type\\":\\"div\\",\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"className\\":\\"openAccessClosed noOaIcon\\"},\\"_owner\\":null,\\"_store\\":{}}},{\\"link\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"href\\":\\"https://scholar.google.com/scholar?q=intitle:%22Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer%22\\",\\"title\\":\\"Search Google Scholar for this open access article\\",\\"children\\":\\"https://scholar.google.com/scholar?q=intitle:\\\\\\"Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer%22\\",\\"className\\":\\"externalLink\\",\\"target\\":\\"_blank\\",\\"rel\\":\\"noopener noreferrer\\",\\"openInNewIcon\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"description\\":\\"Search Google Scholar for this open access article\\",\\"icon\\":{\\"type\\":\\"div\\",\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"className\\":\\"fez-icon openAccess large\\",\\"title\\":\\"Open Access - Free to read\\"},\\"_owner\\":null,\\"_store\\":{}}},{\\"link\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"href\\":\\"http://www.thisisatest.com\\",\\"title\\":\\"Link to publication\\",\\"children\\":\\"http://www.thisisatest.com\\",\\"className\\":\\"externalLink\\",\\"target\\":\\"_blank\\",\\"rel\\":\\"noopener noreferrer\\",\\"openInNewIcon\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"description\\":\\"Link to publication\\",\\"icon\\":{\\"type\\":\\"div\\",\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"children\\":[{\\"type\\":\\"span\\",\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"className\\":\\"is-hidden-mobile is-hidden-tablet-only\\",\\"children\\":\\"Open access after 20th November 2043 \\"},\\"_owner\\":null,\\"_store\\":{}},{\\"type\\":\\"div\\",\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"className\\":\\"fez-icon openAccessEmbargoed large\\",\\"title\\":\\"Link (no DOI) - Open access after 20th November 2043\\"},\\"_owner\\":null,\\"_store\\":{}}]},\\"_owner\\":null,\\"_store\\":{}}},{\\"link\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"href\\":\\"http://www.thisisanothertest.com\\",\\"title\\":\\"Click to open link in a new window\\",\\"children\\":\\"http://www.thisisanothertest.com\\",\\"className\\":\\"externalLink\\",\\"target\\":\\"_blank\\",\\"rel\\":\\"noopener noreferrer\\",\\"openInNewIcon\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"description\\":\\"No description available\\",\\"icon\\":{\\"type\\":\\"div\\",\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"children\\":[{\\"type\\":\\"span\\",\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"className\\":\\"is-hidden-mobile is-hidden-tablet-only\\",\\"children\\":\\"Open access after 20th November 2043 \\"},\\"_owner\\":null,\\"_store\\":{}},{\\"type\\":\\"div\\",\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"className\\":\\"fez-icon openAccessEmbargoed large\\",\\"title\\":\\"Link (no DOI) - Open access after 20th November 2043\\"},\\"_owner\\":null,\\"_store\\":{}}]},\\"_owner\\":null,\\"_store\\":{}}}]"`;
+
+exports[`Links method tests  getDoiLink link creation function 1`] = `"{\\"link\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"doi\\":\\"10.1093/hmg/ddw177\\"},\\"_owner\\":null,\\"_store\\":{}},\\"description\\":\\"DOI\\",\\"icon\\":{\\"type\\":\\"div\\",\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"className\\":\\"openAccessClosed noOaIcon\\"},\\"_owner\\":null,\\"_store\\":{}}}"`;
+
+exports[`Links method tests  getGoogleScholarLink link creation function 1`] = `"{\\"link\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"href\\":\\"https://scholar.google.com/scholar?q=intitle:%22Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer%22\\",\\"title\\":\\"Search Google Scholar for this open access article\\",\\"children\\":\\"https://scholar.google.com/scholar?q=intitle:\\\\\\"Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer%22\\",\\"className\\":\\"externalLink\\",\\"target\\":\\"_blank\\",\\"rel\\":\\"noopener noreferrer\\",\\"openInNewIcon\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"description\\":\\"Search Google Scholar for this open access article\\",\\"icon\\":{\\"type\\":\\"div\\",\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"className\\":\\"fez-icon openAccess large\\",\\"title\\":\\"Open Access - Free to read\\"},\\"_owner\\":null,\\"_store\\":{}}}"`;
+
+exports[`Links method tests  getPMCLink link creation function 1`] = `"{\\"link\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"pubmedCentralId\\":\\"PMC12345\\"},\\"_owner\\":null,\\"_store\\":{}},\\"description\\":\\"Full text from PubMed Central\\",\\"icon\\":{\\"type\\":\\"div\\",\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"className\\":\\"fez-icon openAccess large\\",\\"title\\":\\"Open Access - PMC - Free to read\\"},\\"_owner\\":null,\\"_store\\":{}}}"`;
+
+exports[`Links method tests  getPublicationLink link creation function as 1. open 2. embargoed, 3. closed 1`] = `"{\\"link\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"href\\":\\"http://www.thisisatest.com\\",\\"title\\":\\"Link to publication\\",\\"children\\":\\"http://www.thisisatest.com\\",\\"className\\":\\"externalLink\\",\\"target\\":\\"_blank\\",\\"rel\\":\\"noopener noreferrer\\",\\"openInNewIcon\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"description\\":\\"Link to publication\\",\\"icon\\":{\\"type\\":\\"div\\",\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"className\\":\\"fez-icon openAccess large\\",\\"title\\":\\"Open Access - Free to read\\"},\\"_owner\\":null,\\"_store\\":{}}}"`;
+
+exports[`Links method tests  getPublicationLink link creation function as 1. open 2. embargoed, 3. closed 2`] = `"{\\"link\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"href\\":\\"http://www.thisisatest.com\\",\\"title\\":\\"Link to publication\\",\\"children\\":\\"http://www.thisisatest.com\\",\\"className\\":\\"externalLink\\",\\"target\\":\\"_blank\\",\\"rel\\":\\"noopener noreferrer\\",\\"openInNewIcon\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"description\\":\\"Link to publication\\",\\"icon\\":{\\"type\\":\\"div\\",\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"children\\":[{\\"type\\":\\"span\\",\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"className\\":\\"is-hidden-mobile is-hidden-tablet-only\\",\\"children\\":\\"Open access after 4th February 2021 \\"},\\"_owner\\":null,\\"_store\\":{}},{\\"type\\":\\"div\\",\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"className\\":\\"fez-icon openAccessEmbargoed large\\",\\"title\\":\\"Link (no DOI) - Open access after 4th February 2021\\"},\\"_owner\\":null,\\"_store\\":{}}]},\\"_owner\\":null,\\"_store\\":{}}}"`;
+
+exports[`Links method tests  getPublicationLink link creation function as 1. open 2. embargoed, 3. closed 3`] = `"{\\"link\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"href\\":\\"http://www.thisisatest.com\\",\\"title\\":\\"Link to publication\\",\\"children\\":\\"http://www.thisisatest.com\\",\\"className\\":\\"externalLink\\",\\"target\\":\\"_blank\\",\\"rel\\":\\"noopener noreferrer\\",\\"openInNewIcon\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"description\\":\\"Link to publication\\",\\"icon\\":{\\"type\\":\\"div\\",\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"className\\":\\"openAccessClosed noOaIcon\\"},\\"_owner\\":null,\\"_store\\":{}}}"`;
+
+exports[`Links method tests  publicationLinkOpenAccessStatus function as 1.embargoed, 2.open, 3.open, 4.closed 1`] = `"{\\"openAccess\\":false,\\"recordOaStatus\\":453694,\\"embargoDate\\":\\"9th September 2032\\"}"`;
+
+exports[`Links method tests  publicationLinkOpenAccessStatus function as 1.embargoed, 2.open, 3.open, 4.closed 2`] = `"{\\"openAccess\\":true,\\"recordOaStatus\\":453694,\\"embargoDate\\":null}"`;
+
+exports[`Links method tests  publicationLinkOpenAccessStatus function as 1.embargoed, 2.open, 3.open, 4.closed 3`] = `"{\\"openAccess\\":true,\\"recordOaStatus\\":453694,\\"embargoDate\\":null}"`;
+
+exports[`Links method tests  publicationLinkOpenAccessStatus function as 1.embargoed, 2.open, 3.open, 4.closed 4`] = `"{\\"openAccess\\":false,\\"recordOaStatus\\":453693,\\"embargoDate\\":null}"`;

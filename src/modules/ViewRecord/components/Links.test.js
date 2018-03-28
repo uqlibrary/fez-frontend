@@ -1,5 +1,4 @@
 import Links from './Links';
-import {OPEN_ACCESS_ID_LINK_NO_DOI, OPEN_ACCESS_ID_DOI} from 'config/general';
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -798,7 +797,7 @@ const record = {
     ],
 };
 
-describe('Component ViewRecord ', () => {
+describe('Component Links ', () => {
 
     beforeEach(() => {
         Date.now = jest.genMockFunction().mockReturnValue('2020-01-01T00:00:00.000Z');
@@ -1111,7 +1110,7 @@ describe('Component ViewRecord ', () => {
     });
 });
 
-describe('ViewRecord unit tests ', () => {
+describe('Links method tests ', () => {
 
     beforeEach(() => {
         Date.now = jest.genMockFunction().mockReturnValue('2020-01-01T00:00:00.000Z');
@@ -1123,92 +1122,104 @@ describe('ViewRecord unit tests ', () => {
         const recordPubmedCentralId = null;
         const wrapper = setup({publication: record});
         const test = JSON.stringify(wrapper.instance().getDOILink(recordDoi, recordOaStatus, recordPubmedCentralId));
-        const result = '{\"link\":{\"key\":null,\"ref\":null,\"props\":{\"doi\":\"10.1093/hmg/ddw177\"},\"_owner\":null,\"_store\":{}},\"description\":\"DOI\",\"icon\":{\"type\":\"div\",\"key\":null,\"ref\":null,\"props\":{\"className\":\"openAccessClosed noOaIcon\"},\"_owner\":null,\"_store\":{}}}';
-        expect(test).toEqual(result);
+        expect(test).toMatchSnapshot();
     });
 
     it('getPMCLink link creation function', () => {
-        const recordPubmedCentralId = 'PMC12345';
         const wrapper = setup({publication: record});
-        const test = JSON.stringify(wrapper.instance().getPMCLink(recordPubmedCentralId));
-        const result = '{\"link\":{\"key\":null,\"ref\":null,\"props\":{\"pubmedCentralId\":\"PMC12345\"},\"_owner\":null,\"_store\":{}},\"description\":\"Full text from PubMed Central\",\"icon\":{\"type\":\"div\",\"key\":null,\"ref\":null,\"props\":{\"className\":\"fez-icon openAccess large\",\"title\":\"Open Access - Free to read\"},\"_owner\":null,\"_store\":{}}}';
-        expect(test).toEqual(result);
+        const test = JSON.stringify(wrapper.instance().getPMCLink('PMC12345', 453954));
+        const result = '{\"link\":{\"key\":null,\"ref\":null,\"props\":{\"pubmedCentralId\":\"PMC12345\"},\"_owner\":null,\"_store\":{}},\"description\":\"Full text from PubMed Central\",\"icon\":{\"type\":\"div\",\"key\":null,\"ref\":null,\"props\":{\"className\":\"fez-icon openAccess large\",\"title\":\"Open Access - PMC - Free to read\"},\"_owner\":null,\"_store\":{}}}';
+        expect(test).toMatchSnapshot();
     });
 
     it('getGoogleScholarLink link creation function', () => {
-        const recordPubmedCentralId = 'PMC12345';
         const wrapper = setup({publication: record});
-        const test = JSON.stringify(wrapper.instance().getGoogleScholarLink(record.rek_title));
-        const result = '{\"link\":{\"key\":null,\"ref\":null,\"props\":{\"href\":\"https://scholar.google.com/scholar?q=intitle:%22Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer%22\",\"title\":\"Search Google Scholar for this open access article\",\"children\":\"https://scholar.google.com/scholar?q=intitle:\\\"Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer%22\",\"className\":\"externalLink\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"openInNewIcon\":true},\"_owner\":null,\"_store\":{}},\"description\":\"Search Google Scholar for this open access article\",\"icon\":{\"type\":\"div\",\"key\":null,\"ref\":null,\"props\":{\"className\":\"fez-icon openAccess large\",\"title\":\"Open Access - Free to read\"},\"_owner\":null,\"_store\":{}}}';
-        expect(test).toEqual(result);
+        const test = JSON.stringify(wrapper.instance().getGoogleScholarLink(record.rek_title, 453694));
+        expect(test).toMatchSnapshot();
     });
 
-    it('getPublicationLink link creation function as open access', () => {
-        const item = record.fez_record_search_key_link[0];
-        const index = 0;
-        const recordOaStatus = 453694;
-        const embargoDays = 0;
-        const publishedDate = '2020-01-01T00:00:00.000Z';
+    it('getPublicationLink link creation function as 1. open 2. embargoed, 3. closed', () => {
+
+        const testCases =  [
+            {
+                parameters: {
+                    item:record.fez_record_search_key_link[0],
+                    index: 0,
+                    recordOaStatus: 453694,
+                    recordEmbargoDays: 0,
+                    recordPublishedDate:'2020-01-01T00:00:00.000Z'
+                }
+            },
+            {
+                parameters: {
+                    item: record.fez_record_search_key_link[0],
+                    index: 0,
+                    recordOaStatus: 453694,
+                    recordEmbargoDays: 400,
+                    recordPublishedDate: '2020-01-01T00:00:00.000Z'
+                }
+            },
+            {
+                parameters: {
+                    item:record.fez_record_search_key_link[0],
+                    index: 0,
+                    recordOaStatus: 453693,
+                    recordEmbargoDays: 0,
+                    recordPublishedDate:'2020-01-01T00:00:00.000Z'
+                }
+            }
+        ];
 
         const wrapper = setup({publication: record});
-        const test = JSON.stringify(wrapper.instance().getPublicationLink(item, index, recordOaStatus, embargoDays, publishedDate));
-        const result = '{\"link\":{\"key\":null,\"ref\":null,\"props\":{\"href\":\"http://www.thisisatest.com\",\"title\":\"Link to publication\",\"children\":\"http://www.thisisatest.com\",\"className\":\"externalLink\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"openInNewIcon\":true},\"_owner\":null,\"_store\":{}},\"description\":\"Link to publication\",\"icon\":{\"type\":\"div\",\"key\":null,\"ref\":null,\"props\":{\"className\":\"fez-icon openAccess large\",\"title\":\"Open Access - Free to read\"},\"_owner\":null,\"_store\":{}}}';
-        expect(test).toEqual(result);
+        testCases.forEach(testCase => {
+            Date.now = jest.genMockFunction().mockReturnValue('2020-01-01T00:00:00.000Z');
+            const test = JSON.stringify(wrapper.instance().getPublicationLink(
+                testCase.parameters.item,
+                testCase.parameters.index,
+                testCase.parameters.recordOaStatus,
+                testCase.parameters.recordEmbargoDays,
+                testCase.parameters.recordPublishedDate
+                ));
+            // expect(test).toEqual(testCase.expected);
+            expect(test).toMatchSnapshot();
+        });
     });
 
-    it('getPublicationLink link creation function as embargoed', () => {
-        const item = record.fez_record_search_key_link[0];
-        const index = 0;
-        const recordOaStatus = 453694;
-        const embargoDays = 400;
-        const publishedDate = '2019-01-01T00:00:00.000Z';
-
+    it('getAllLinks link creation function', () => {
         const wrapper = setup({publication: record});
-        const test = JSON.stringify(wrapper.instance().getPublicationLink(item, index, recordOaStatus, embargoDays, publishedDate));
-        const result = '{\"link\":{\"key\":null,\"ref\":null,\"props\":{\"href\":\"http://www.thisisatest.com\",\"title\":\"Link to publication\",\"children\":\"http://www.thisisatest.com\",\"className\":\"externalLink\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"openInNewIcon\":true},\"_owner\":null,\"_store\":{}},\"description\":\"Link to publication\",\"icon\":{\"type\":\"div\",\"key\":null,\"ref\":null,\"props\":{\"children\":[{\"type\":\"span\",\"key\":null,\"ref\":null,\"props\":{\"className\":\"is-hidden-mobile is-hidden-tablet-only\",\"children\":\"Open access after 5th February 2020 \"},\"_owner\":null,\"_store\":{}},{\"type\":\"div\",\"key\":null,\"ref\":null,\"props\":{\"className\":\"fez-icon openAccessEmbargoed large\",\"title\":\"Link (no DOI) - Open access after 5th February 2020\"},\"_owner\":null,\"_store\":{}}]},\"_owner\":null,\"_store\":{}}}';
-        expect(test).toEqual(result);
+        const test = JSON.stringify(wrapper.instance().getAllLinks(record));
+        expect(test).toMatchSnapshot();
     });
 
-    it('allLinks link creation function', () => {
-        const wrapper = setup({publication: record});
-        const test = JSON.stringify(wrapper.instance().allLinks(record));
-        const result = '[{\"link\":{\"key\":null,\"ref\":null,\"props\":{\"pubmedCentralId\":\"PMC12345678\"},\"_owner\":null,\"_store\":{}},\"description\":\"Full text from PubMed Central\",\"icon\":{\"type\":\"div\",\"key\":null,\"ref\":null,\"props\":{\"className\":\"fez-icon openAccess large\",\"title\":\"Open Access - Free to read\"},\"_owner\":null,\"_store\":{}}},{\"link\":{\"key\":null,\"ref\":null,\"props\":{\"doi\":\"10.1093/hmg/ddw177\"},\"_owner\":null,\"_store\":{}},\"description\":\"Link (no DOI)\",\"icon\":{\"type\":\"div\",\"key\":null,\"ref\":null,\"props\":{\"className\":\"openAccessClosed noOaIcon\"},\"_owner\":null,\"_store\":{}}},{\"link\":{\"key\":null,\"ref\":null,\"props\":{\"href\":\"https://scholar.google.com/scholar?q=intitle:%22Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer%22\",\"title\":\"Search Google Scholar for this open access article\",\"children\":\"https://scholar.google.com/scholar?q=intitle:\\\"Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer%22\",\"className\":\"externalLink\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"openInNewIcon\":true},\"_owner\":null,\"_store\":{}},\"description\":\"Search Google Scholar for this open access article\",\"icon\":{\"type\":\"div\",\"key\":null,\"ref\":null,\"props\":{\"className\":\"fez-icon openAccess large\",\"title\":\"Open Access - Free to read\"},\"_owner\":null,\"_store\":{}}},{\"link\":{\"key\":null,\"ref\":null,\"props\":{\"href\":\"http://www.thisisatest.com\",\"title\":\"Link to publication\",\"children\":\"http://www.thisisatest.com\",\"className\":\"externalLink\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"openInNewIcon\":true},\"_owner\":null,\"_store\":{}},\"description\":\"Link to publication\",\"icon\":{\"type\":\"div\",\"key\":null,\"ref\":null,\"props\":{\"children\":[{\"type\":\"span\",\"key\":null,\"ref\":null,\"props\":{\"className\":\"is-hidden-mobile is-hidden-tablet-only\",\"children\":\"Open access after 20th November 2043 \"},\"_owner\":null,\"_store\":{}},{\"type\":\"div\",\"key\":null,\"ref\":null,\"props\":{\"className\":\"fez-icon openAccessEmbargoed large\",\"title\":\"Link (no DOI) - Open access after 20th November 2043\"},\"_owner\":null,\"_store\":{}}]},\"_owner\":null,\"_store\":{}}},{\"link\":{\"key\":null,\"ref\":null,\"props\":{\"href\":\"http://www.thisisanothertest.com\",\"title\":\"Click to open link in a new window\",\"children\":\"http://www.thisisanothertest.com\",\"className\":\"externalLink\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"openInNewIcon\":true},\"_owner\":null,\"_store\":{}},\"description\":\"No description available\",\"icon\":{\"type\":\"div\",\"key\":null,\"ref\":null,\"props\":{\"children\":[{\"type\":\"span\",\"key\":null,\"ref\":null,\"props\":{\"className\":\"is-hidden-mobile is-hidden-tablet-only\",\"children\":\"Open access after 20th November 2043 \"},\"_owner\":null,\"_store\":{}},{\"type\":\"div\",\"key\":null,\"ref\":null,\"props\":{\"className\":\"fez-icon openAccessEmbargoed large\",\"title\":\"Link (no DOI) - Open access after 20th November 2043\"},\"_owner\":null,\"_store\":{}}]},\"_owner\":null,\"_store\":{}}}]';
-        expect(test).toEqual(result);
-    });
-
-    it('publicationLinkOpenAccessStatus function', () => {
+    it('publicationLinkOpenAccessStatus function as 1.embargoed, 2.open, 3.open, 4.closed', () => {
         const testCases =  [
             {
                 parameters: {
                     recordOaStatus: 453694,
                     recordEmbargoDays: 5000,
                     recordPublishedDate: '2019-01-01T00:00:00.000Z'
-                },
-                expected: '{\"openAccess\":false,\"recordOaStatus\":453694,\"embargoDate\":\"9th September 2032\"}'
+                }
             },
             {
                 parameters: {
                     recordOaStatus: 453694,
                     recordEmbargoDays: 0,
                     recordPublishedDate: '2019-01-01T00:00:00.000Z'
-                },
-                expected: '{\"openAccess\":true,\"recordOaStatus\":453694,\"embargoDate\":null}'
+                }
             },
             {
                 parameters: {
                     recordOaStatus: 453694,
                     recordEmbargoDays: 1,
                     recordPublishedDate: '2019-01-01T00:00:00.000Z'
-                },
-                expected: '{\"openAccess\":true,\"recordOaStatus\":453694,\"embargoDate\":null}'
+                }
             },
             {
                 parameters: {
                     recordOaStatus: 453693,
                     recordEmbargoDays: null,
                     recordPublishedDate: '2019-01-01T00:00:00.000Z'
-                },
-                expected: '{\"openAccess\":false,\"recordOaStatus\":453693,\"embargoDate\":null}'
+                }
             }
         ];
 
@@ -1216,9 +1227,8 @@ describe('ViewRecord unit tests ', () => {
         testCases.forEach(testCase => {
             Date.now = jest.genMockFunction().mockReturnValue('2020-01-01T00:00:00.000Z');
             const test = JSON.stringify(wrapper.instance().publicationLinkOpenAccessStatus(testCase.parameters.recordOaStatus, testCase.parameters.recordEmbargoDays, testCase.parameters.recordPublishedDate));
-            expect(test).toEqual(testCase.expected);
+            expect(test).toMatchSnapshot();
         });
     });
-
 });
 
