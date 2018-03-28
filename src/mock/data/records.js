@@ -4373,18 +4373,21 @@ export const record = {
     }],
     "fez_record_search_key_language_of_journal_name": [],
     "fez_record_search_key_language_of_title": [],
-    "fez_record_search_key_link": [],
-    "fez_record_search_key_link_description": [],
     "fez_record_search_key_native_script_journal_name": null,
     "fez_record_search_key_native_script_title": null,
     "fez_record_search_key_notes": null,
-    "fez_record_search_key_oa_embargo_days": null,
+    "fez_record_search_key_oa_embargo_days": {
+        rek_oa_embargo_days: 10000
+    },
+    "fez_record_search_key_pubmed_central_id": {
+        "rek_pubmed_central_id": "PMC12345678"
+    },
     "fez_record_search_key_oa_notes": null,
     "fez_record_search_key_oa_status": {
         "rek_oa_status_id": 281706,
         "rek_oa_status_pid": "UQ:396321",
         "rek_oa_status_xsdmf_id": 16607,
-        "rek_oa_status": 453692,
+        "rek_oa_status": 453694,
         "rek_oa_status_lookup": "Not yet assessed"
     },
     "fez_record_search_key_place_of_publication": {
@@ -4447,7 +4450,32 @@ export const record = {
         "rek_volume_number_xsdmf_id": 6379,
         "rek_volume_number": "25"
     },
-    "rek_display_type_lookup": "Journal Article"
+    "rek_display_type_lookup": "Journal Article",
+    "fez_record_search_key_link": [
+        {
+            "rek_link_id": 3240198,
+            "rek_link_pid": "UQ:795347",
+            "rek_link_xsdmf_id": null,
+            "rek_link": "http://www.thisisatest.com",
+            "rek_link_order": 1
+        },
+        {
+            "rek_link_id": 3240199,
+            "rek_link_pid": "UQ:795347",
+            "rek_link_xsdmf_id": null,
+            "rek_link": "http://www.thisisanothertest.com",
+            "rek_link_order": 2
+        }
+    ],
+    "fez_record_search_key_link_description": [
+        {
+            "rek_link_description_id": 3240198,
+            "rek_link_description_pid": "UQ:795347",
+            "rek_link_description_xsdmf_id": null,
+            "rek_link_description": "Link to publication",
+            "rek_link_description_order": 1
+        }
+    ],
 };
 
 export const myRecordsList = {

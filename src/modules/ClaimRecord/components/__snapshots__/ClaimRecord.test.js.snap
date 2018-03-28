@@ -566,22 +566,24 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             ],
             "fez_record_search_key_issn": Array [
               Object {
-                "fez_journal_issns": Object {
-                  "fez_journal": Object {
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_era_id": 2234,
-                    "jnl_era_year": 2010,
-                    "jnl_foreign_name": null,
-                    "jnl_id": 7538,
-                    "jnl_journal_name": "Journal of Cell Science",
-                    "jnl_rank": "A",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
+                "fez_journal_issns": Array [
+                  Object {
+                    "fez_journal": Object {
+                      "jnl_created_date": "2010-11-19 00:00:00",
+                      "jnl_era_id": 2234,
+                      "jnl_era_year": 2010,
+                      "jnl_foreign_name": null,
+                      "jnl_id": 7538,
+                      "jnl_journal_name": "Journal of Cell Science",
+                      "jnl_rank": "A",
+                      "jnl_updated_date": "2010-11-19 00:00:00",
+                    },
+                    "jni_id": 13071,
+                    "jni_issn": "1477-9137",
+                    "jni_issn_order": 2,
+                    "jni_jnl_id": 7538,
                   },
-                  "jni_id": 13071,
-                  "jni_issn": "1477-9137",
-                  "jni_issn_order": 2,
-                  "jni_jnl_id": 7538,
-                },
+                ],
                 "fez_sherpa_romeo": Object {
                   "srm_colour": "green",
                   "srm_date_updated": "2017-09-30 18:26:18",
@@ -687,131 +689,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                 "rek_issn_id": 5382905,
                 "rek_issn_lookup": "green",
                 "rek_issn_order": 1,
-                "rek_issn_pid": "UQ:676287",
-                "rek_issn_xsdmf_id": null,
-              },
-              Object {
-                "fez_journal_issns": Object {
-                  "fez_journal": Object {
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_era_id": 2234,
-                    "jnl_era_year": 2010,
-                    "jnl_foreign_name": null,
-                    "jnl_id": 7538,
-                    "jnl_journal_name": "Journal of Cell Science",
-                    "jnl_rank": "A",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
-                  },
-                  "jni_id": 13070,
-                  "jni_issn": "0021-9533",
-                  "jni_issn_order": 1,
-                  "jni_jnl_id": 7538,
-                },
-                "fez_sherpa_romeo": Object {
-                  "srm_colour": "green",
-                  "srm_date_updated": "2017-09-30 15:12:52",
-                  "srm_id": 13763,
-                  "srm_issn": "0021-9533",
-                  "srm_journal_name": "Journal of Cell Science",
-                  "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>0021-9533</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:16:12:52</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Journal of Cell Science</jtitle>
-      <issn>0021-9533</issn>
-      <zetocpub>Company of Biologists</zetocpub>
-      <romeopub>Company of Biologists</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"29\\">
-      <name>Company of Biologists</name>
-      <alias />
-      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>can</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>On author's personal website immediately</condition>
-        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
-        <condition>Authors retain copyright</condition>
-        <condition>Publisher's version/PDF may be used</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher last contacted on 30/03/2016</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
-        <paidaccessname>Open Access</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2004-01-10 00:00:00</dateadded>
-      <dateupdated>2016-04-12 16:14:47</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
-                },
-                "rek_issn": "0021-9533",
-                "rek_issn_id": 5382906,
-                "rek_issn_lookup": "green",
-                "rek_issn_order": 2,
                 "rek_issn_pid": "UQ:676287",
                 "rek_issn_xsdmf_id": null,
               },
@@ -1045,9 +922,9 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             </div>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-              "title": "File upload failed",
-              "type": "info",
+              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "File upload and/or edits/changes/comments post failed",
+              "type": "warning",
             },
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -1712,22 +1589,24 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             ],
             "fez_record_search_key_issn": Array [
               Object {
-                "fez_journal_issns": Object {
-                  "fez_journal": Object {
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_era_id": 2234,
-                    "jnl_era_year": 2010,
-                    "jnl_foreign_name": null,
-                    "jnl_id": 7538,
-                    "jnl_journal_name": "Journal of Cell Science",
-                    "jnl_rank": "A",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
+                "fez_journal_issns": Array [
+                  Object {
+                    "fez_journal": Object {
+                      "jnl_created_date": "2010-11-19 00:00:00",
+                      "jnl_era_id": 2234,
+                      "jnl_era_year": 2010,
+                      "jnl_foreign_name": null,
+                      "jnl_id": 7538,
+                      "jnl_journal_name": "Journal of Cell Science",
+                      "jnl_rank": "A",
+                      "jnl_updated_date": "2010-11-19 00:00:00",
+                    },
+                    "jni_id": 13071,
+                    "jni_issn": "1477-9137",
+                    "jni_issn_order": 2,
+                    "jni_jnl_id": 7538,
                   },
-                  "jni_id": 13071,
-                  "jni_issn": "1477-9137",
-                  "jni_issn_order": 2,
-                  "jni_jnl_id": 7538,
-                },
+                ],
                 "fez_sherpa_romeo": Object {
                   "srm_colour": "green",
                   "srm_date_updated": "2017-09-30 18:26:18",
@@ -1833,131 +1712,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                 "rek_issn_id": 5382905,
                 "rek_issn_lookup": "green",
                 "rek_issn_order": 1,
-                "rek_issn_pid": "UQ:676287",
-                "rek_issn_xsdmf_id": null,
-              },
-              Object {
-                "fez_journal_issns": Object {
-                  "fez_journal": Object {
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_era_id": 2234,
-                    "jnl_era_year": 2010,
-                    "jnl_foreign_name": null,
-                    "jnl_id": 7538,
-                    "jnl_journal_name": "Journal of Cell Science",
-                    "jnl_rank": "A",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
-                  },
-                  "jni_id": 13070,
-                  "jni_issn": "0021-9533",
-                  "jni_issn_order": 1,
-                  "jni_jnl_id": 7538,
-                },
-                "fez_sherpa_romeo": Object {
-                  "srm_colour": "green",
-                  "srm_date_updated": "2017-09-30 15:12:52",
-                  "srm_id": 13763,
-                  "srm_issn": "0021-9533",
-                  "srm_journal_name": "Journal of Cell Science",
-                  "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>0021-9533</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:16:12:52</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Journal of Cell Science</jtitle>
-      <issn>0021-9533</issn>
-      <zetocpub>Company of Biologists</zetocpub>
-      <romeopub>Company of Biologists</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"29\\">
-      <name>Company of Biologists</name>
-      <alias />
-      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>can</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>On author's personal website immediately</condition>
-        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
-        <condition>Authors retain copyright</condition>
-        <condition>Publisher's version/PDF may be used</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher last contacted on 30/03/2016</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
-        <paidaccessname>Open Access</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2004-01-10 00:00:00</dateadded>
-      <dateupdated>2016-04-12 16:14:47</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
-                },
-                "rek_issn": "0021-9533",
-                "rek_issn_id": 5382906,
-                "rek_issn_lookup": "green",
-                "rek_issn_order": 2,
                 "rek_issn_pid": "UQ:676287",
                 "rek_issn_xsdmf_id": null,
               },
@@ -2191,9 +1945,9 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             </div>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-              "title": "File upload failed",
-              "type": "info",
+              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "File upload and/or edits/changes/comments post failed",
+              "type": "warning",
             },
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -2961,22 +2715,24 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             ],
             "fez_record_search_key_issn": Array [
               Object {
-                "fez_journal_issns": Object {
-                  "fez_journal": Object {
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_era_id": 2234,
-                    "jnl_era_year": 2010,
-                    "jnl_foreign_name": null,
-                    "jnl_id": 7538,
-                    "jnl_journal_name": "Journal of Cell Science",
-                    "jnl_rank": "A",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
+                "fez_journal_issns": Array [
+                  Object {
+                    "fez_journal": Object {
+                      "jnl_created_date": "2010-11-19 00:00:00",
+                      "jnl_era_id": 2234,
+                      "jnl_era_year": 2010,
+                      "jnl_foreign_name": null,
+                      "jnl_id": 7538,
+                      "jnl_journal_name": "Journal of Cell Science",
+                      "jnl_rank": "A",
+                      "jnl_updated_date": "2010-11-19 00:00:00",
+                    },
+                    "jni_id": 13071,
+                    "jni_issn": "1477-9137",
+                    "jni_issn_order": 2,
+                    "jni_jnl_id": 7538,
                   },
-                  "jni_id": 13071,
-                  "jni_issn": "1477-9137",
-                  "jni_issn_order": 2,
-                  "jni_jnl_id": 7538,
-                },
+                ],
                 "fez_sherpa_romeo": Object {
                   "srm_colour": "green",
                   "srm_date_updated": "2017-09-30 18:26:18",
@@ -3082,131 +2838,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                 "rek_issn_id": 5382905,
                 "rek_issn_lookup": "green",
                 "rek_issn_order": 1,
-                "rek_issn_pid": "UQ:676287",
-                "rek_issn_xsdmf_id": null,
-              },
-              Object {
-                "fez_journal_issns": Object {
-                  "fez_journal": Object {
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_era_id": 2234,
-                    "jnl_era_year": 2010,
-                    "jnl_foreign_name": null,
-                    "jnl_id": 7538,
-                    "jnl_journal_name": "Journal of Cell Science",
-                    "jnl_rank": "A",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
-                  },
-                  "jni_id": 13070,
-                  "jni_issn": "0021-9533",
-                  "jni_issn_order": 1,
-                  "jni_jnl_id": 7538,
-                },
-                "fez_sherpa_romeo": Object {
-                  "srm_colour": "green",
-                  "srm_date_updated": "2017-09-30 15:12:52",
-                  "srm_id": 13763,
-                  "srm_issn": "0021-9533",
-                  "srm_journal_name": "Journal of Cell Science",
-                  "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>0021-9533</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:16:12:52</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Journal of Cell Science</jtitle>
-      <issn>0021-9533</issn>
-      <zetocpub>Company of Biologists</zetocpub>
-      <romeopub>Company of Biologists</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"29\\">
-      <name>Company of Biologists</name>
-      <alias />
-      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>can</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>On author's personal website immediately</condition>
-        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
-        <condition>Authors retain copyright</condition>
-        <condition>Publisher's version/PDF may be used</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher last contacted on 30/03/2016</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
-        <paidaccessname>Open Access</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2004-01-10 00:00:00</dateadded>
-      <dateupdated>2016-04-12 16:14:47</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
-                },
-                "rek_issn": "0021-9533",
-                "rek_issn_id": 5382906,
-                "rek_issn_lookup": "green",
-                "rek_issn_order": 2,
                 "rek_issn_pid": "UQ:676287",
                 "rek_issn_xsdmf_id": null,
               },
@@ -3440,9 +3071,9 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             </div>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-              "title": "File upload failed",
-              "type": "info",
+              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "File upload and/or edits/changes/comments post failed",
+              "type": "warning",
             },
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -4359,22 +3990,24 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             ],
             "fez_record_search_key_issn": Array [
               Object {
-                "fez_journal_issns": Object {
-                  "fez_journal": Object {
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_era_id": 2234,
-                    "jnl_era_year": 2010,
-                    "jnl_foreign_name": null,
-                    "jnl_id": 7538,
-                    "jnl_journal_name": "Journal of Cell Science",
-                    "jnl_rank": "A",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
+                "fez_journal_issns": Array [
+                  Object {
+                    "fez_journal": Object {
+                      "jnl_created_date": "2010-11-19 00:00:00",
+                      "jnl_era_id": 2234,
+                      "jnl_era_year": 2010,
+                      "jnl_foreign_name": null,
+                      "jnl_id": 7538,
+                      "jnl_journal_name": "Journal of Cell Science",
+                      "jnl_rank": "A",
+                      "jnl_updated_date": "2010-11-19 00:00:00",
+                    },
+                    "jni_id": 13071,
+                    "jni_issn": "1477-9137",
+                    "jni_issn_order": 2,
+                    "jni_jnl_id": 7538,
                   },
-                  "jni_id": 13071,
-                  "jni_issn": "1477-9137",
-                  "jni_issn_order": 2,
-                  "jni_jnl_id": 7538,
-                },
+                ],
                 "fez_sherpa_romeo": Object {
                   "srm_colour": "green",
                   "srm_date_updated": "2017-09-30 18:26:18",
@@ -4480,131 +4113,6 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                 "rek_issn_id": 5382905,
                 "rek_issn_lookup": "green",
                 "rek_issn_order": 1,
-                "rek_issn_pid": "UQ:676287",
-                "rek_issn_xsdmf_id": null,
-              },
-              Object {
-                "fez_journal_issns": Object {
-                  "fez_journal": Object {
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_era_id": 2234,
-                    "jnl_era_year": 2010,
-                    "jnl_foreign_name": null,
-                    "jnl_id": 7538,
-                    "jnl_journal_name": "Journal of Cell Science",
-                    "jnl_rank": "A",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
-                  },
-                  "jni_id": 13070,
-                  "jni_issn": "0021-9533",
-                  "jni_issn_order": 1,
-                  "jni_jnl_id": 7538,
-                },
-                "fez_sherpa_romeo": Object {
-                  "srm_colour": "green",
-                  "srm_date_updated": "2017-09-30 15:12:52",
-                  "srm_id": 13763,
-                  "srm_issn": "0021-9533",
-                  "srm_journal_name": "Journal of Cell Science",
-                  "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>0021-9533</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:16:12:52</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Journal of Cell Science</jtitle>
-      <issn>0021-9533</issn>
-      <zetocpub>Company of Biologists</zetocpub>
-      <romeopub>Company of Biologists</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"29\\">
-      <name>Company of Biologists</name>
-      <alias />
-      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>can</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>On author's personal website immediately</condition>
-        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
-        <condition>Authors retain copyright</condition>
-        <condition>Publisher's version/PDF may be used</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher last contacted on 30/03/2016</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
-        <paidaccessname>Open Access</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2004-01-10 00:00:00</dateadded>
-      <dateupdated>2016-04-12 16:14:47</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
-                },
-                "rek_issn": "0021-9533",
-                "rek_issn_id": 5382906,
-                "rek_issn_lookup": "green",
-                "rek_issn_order": 2,
                 "rek_issn_pid": "UQ:676287",
                 "rek_issn_xsdmf_id": null,
               },
@@ -4838,9 +4346,9 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             </div>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-              "title": "File upload failed",
-              "type": "info",
+              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "File upload and/or edits/changes/comments post failed",
+              "type": "warning",
             },
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -5757,22 +5265,24 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
             ],
             "fez_record_search_key_issn": Array [
               Object {
-                "fez_journal_issns": Object {
-                  "fez_journal": Object {
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_era_id": 2234,
-                    "jnl_era_year": 2010,
-                    "jnl_foreign_name": null,
-                    "jnl_id": 7538,
-                    "jnl_journal_name": "Journal of Cell Science",
-                    "jnl_rank": "A",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
+                "fez_journal_issns": Array [
+                  Object {
+                    "fez_journal": Object {
+                      "jnl_created_date": "2010-11-19 00:00:00",
+                      "jnl_era_id": 2234,
+                      "jnl_era_year": 2010,
+                      "jnl_foreign_name": null,
+                      "jnl_id": 7538,
+                      "jnl_journal_name": "Journal of Cell Science",
+                      "jnl_rank": "A",
+                      "jnl_updated_date": "2010-11-19 00:00:00",
+                    },
+                    "jni_id": 13071,
+                    "jni_issn": "1477-9137",
+                    "jni_issn_order": 2,
+                    "jni_jnl_id": 7538,
                   },
-                  "jni_id": 13071,
-                  "jni_issn": "1477-9137",
-                  "jni_issn_order": 2,
-                  "jni_jnl_id": 7538,
-                },
+                ],
                 "fez_sherpa_romeo": Object {
                   "srm_colour": "green",
                   "srm_date_updated": "2017-09-30 18:26:18",
@@ -5878,131 +5388,6 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                 "rek_issn_id": 5382905,
                 "rek_issn_lookup": "green",
                 "rek_issn_order": 1,
-                "rek_issn_pid": "UQ:676287",
-                "rek_issn_xsdmf_id": null,
-              },
-              Object {
-                "fez_journal_issns": Object {
-                  "fez_journal": Object {
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_era_id": 2234,
-                    "jnl_era_year": 2010,
-                    "jnl_foreign_name": null,
-                    "jnl_id": 7538,
-                    "jnl_journal_name": "Journal of Cell Science",
-                    "jnl_rank": "A",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
-                  },
-                  "jni_id": 13070,
-                  "jni_issn": "0021-9533",
-                  "jni_issn_order": 1,
-                  "jni_jnl_id": 7538,
-                },
-                "fez_sherpa_romeo": Object {
-                  "srm_colour": "green",
-                  "srm_date_updated": "2017-09-30 15:12:52",
-                  "srm_id": 13763,
-                  "srm_issn": "0021-9533",
-                  "srm_journal_name": "Journal of Cell Science",
-                  "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>0021-9533</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:16:12:52</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Journal of Cell Science</jtitle>
-      <issn>0021-9533</issn>
-      <zetocpub>Company of Biologists</zetocpub>
-      <romeopub>Company of Biologists</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"29\\">
-      <name>Company of Biologists</name>
-      <alias />
-      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>can</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>On author's personal website immediately</condition>
-        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
-        <condition>Authors retain copyright</condition>
-        <condition>Publisher's version/PDF may be used</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher last contacted on 30/03/2016</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
-        <paidaccessname>Open Access</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2004-01-10 00:00:00</dateadded>
-      <dateupdated>2016-04-12 16:14:47</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
-                },
-                "rek_issn": "0021-9533",
-                "rek_issn_id": 5382906,
-                "rek_issn_lookup": "green",
-                "rek_issn_order": 2,
                 "rek_issn_pid": "UQ:676287",
                 "rek_issn_xsdmf_id": null,
               },
@@ -6236,9 +5621,9 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
             </div>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-              "title": "File upload failed",
-              "type": "info",
+              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "File upload and/or edits/changes/comments post failed",
+              "type": "warning",
             },
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -7068,22 +6453,24 @@ exports[`Component ClaimRecord  should render publication citation, error messag
             ],
             "fez_record_search_key_issn": Array [
               Object {
-                "fez_journal_issns": Object {
-                  "fez_journal": Object {
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_era_id": 2234,
-                    "jnl_era_year": 2010,
-                    "jnl_foreign_name": null,
-                    "jnl_id": 7538,
-                    "jnl_journal_name": "Journal of Cell Science",
-                    "jnl_rank": "A",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
+                "fez_journal_issns": Array [
+                  Object {
+                    "fez_journal": Object {
+                      "jnl_created_date": "2010-11-19 00:00:00",
+                      "jnl_era_id": 2234,
+                      "jnl_era_year": 2010,
+                      "jnl_foreign_name": null,
+                      "jnl_id": 7538,
+                      "jnl_journal_name": "Journal of Cell Science",
+                      "jnl_rank": "A",
+                      "jnl_updated_date": "2010-11-19 00:00:00",
+                    },
+                    "jni_id": 13071,
+                    "jni_issn": "1477-9137",
+                    "jni_issn_order": 2,
+                    "jni_jnl_id": 7538,
                   },
-                  "jni_id": 13071,
-                  "jni_issn": "1477-9137",
-                  "jni_issn_order": 2,
-                  "jni_jnl_id": 7538,
-                },
+                ],
                 "fez_sherpa_romeo": Object {
                   "srm_colour": "green",
                   "srm_date_updated": "2017-09-30 18:26:18",
@@ -7189,131 +6576,6 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                 "rek_issn_id": 5382905,
                 "rek_issn_lookup": "green",
                 "rek_issn_order": 1,
-                "rek_issn_pid": "UQ:676287",
-                "rek_issn_xsdmf_id": null,
-              },
-              Object {
-                "fez_journal_issns": Object {
-                  "fez_journal": Object {
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_era_id": 2234,
-                    "jnl_era_year": 2010,
-                    "jnl_foreign_name": null,
-                    "jnl_id": 7538,
-                    "jnl_journal_name": "Journal of Cell Science",
-                    "jnl_rank": "A",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
-                  },
-                  "jni_id": 13070,
-                  "jni_issn": "0021-9533",
-                  "jni_issn_order": 1,
-                  "jni_jnl_id": 7538,
-                },
-                "fez_sherpa_romeo": Object {
-                  "srm_colour": "green",
-                  "srm_date_updated": "2017-09-30 15:12:52",
-                  "srm_id": 13763,
-                  "srm_issn": "0021-9533",
-                  "srm_journal_name": "Journal of Cell Science",
-                  "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>0021-9533</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:16:12:52</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Journal of Cell Science</jtitle>
-      <issn>0021-9533</issn>
-      <zetocpub>Company of Biologists</zetocpub>
-      <romeopub>Company of Biologists</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"29\\">
-      <name>Company of Biologists</name>
-      <alias />
-      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>can</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>On author's personal website immediately</condition>
-        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
-        <condition>Authors retain copyright</condition>
-        <condition>Publisher's version/PDF may be used</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher last contacted on 30/03/2016</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
-        <paidaccessname>Open Access</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2004-01-10 00:00:00</dateadded>
-      <dateupdated>2016-04-12 16:14:47</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
-                },
-                "rek_issn": "0021-9533",
-                "rek_issn_id": 5382906,
-                "rek_issn_lookup": "green",
-                "rek_issn_order": 2,
                 "rek_issn_pid": "UQ:676287",
                 "rek_issn_xsdmf_id": null,
               },
@@ -8217,22 +7479,24 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             ],
             "fez_record_search_key_issn": Array [
               Object {
-                "fez_journal_issns": Object {
-                  "fez_journal": Object {
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_era_id": 2234,
-                    "jnl_era_year": 2010,
-                    "jnl_foreign_name": null,
-                    "jnl_id": 7538,
-                    "jnl_journal_name": "Journal of Cell Science",
-                    "jnl_rank": "A",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
+                "fez_journal_issns": Array [
+                  Object {
+                    "fez_journal": Object {
+                      "jnl_created_date": "2010-11-19 00:00:00",
+                      "jnl_era_id": 2234,
+                      "jnl_era_year": 2010,
+                      "jnl_foreign_name": null,
+                      "jnl_id": 7538,
+                      "jnl_journal_name": "Journal of Cell Science",
+                      "jnl_rank": "A",
+                      "jnl_updated_date": "2010-11-19 00:00:00",
+                    },
+                    "jni_id": 13071,
+                    "jni_issn": "1477-9137",
+                    "jni_issn_order": 2,
+                    "jni_jnl_id": 7538,
                   },
-                  "jni_id": 13071,
-                  "jni_issn": "1477-9137",
-                  "jni_issn_order": 2,
-                  "jni_jnl_id": 7538,
-                },
+                ],
                 "fez_sherpa_romeo": Object {
                   "srm_colour": "green",
                   "srm_date_updated": "2017-09-30 18:26:18",
@@ -8338,131 +7602,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                 "rek_issn_id": 5382905,
                 "rek_issn_lookup": "green",
                 "rek_issn_order": 1,
-                "rek_issn_pid": "UQ:676287",
-                "rek_issn_xsdmf_id": null,
-              },
-              Object {
-                "fez_journal_issns": Object {
-                  "fez_journal": Object {
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_era_id": 2234,
-                    "jnl_era_year": 2010,
-                    "jnl_foreign_name": null,
-                    "jnl_id": 7538,
-                    "jnl_journal_name": "Journal of Cell Science",
-                    "jnl_rank": "A",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
-                  },
-                  "jni_id": 13070,
-                  "jni_issn": "0021-9533",
-                  "jni_issn_order": 1,
-                  "jni_jnl_id": 7538,
-                },
-                "fez_sherpa_romeo": Object {
-                  "srm_colour": "green",
-                  "srm_date_updated": "2017-09-30 15:12:52",
-                  "srm_id": 13763,
-                  "srm_issn": "0021-9533",
-                  "srm_journal_name": "Journal of Cell Science",
-                  "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>0021-9533</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:16:12:52</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Journal of Cell Science</jtitle>
-      <issn>0021-9533</issn>
-      <zetocpub>Company of Biologists</zetocpub>
-      <romeopub>Company of Biologists</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"29\\">
-      <name>Company of Biologists</name>
-      <alias />
-      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>can</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>On author's personal website immediately</condition>
-        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
-        <condition>Authors retain copyright</condition>
-        <condition>Publisher's version/PDF may be used</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher last contacted on 30/03/2016</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
-        <paidaccessname>Open Access</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2004-01-10 00:00:00</dateadded>
-      <dateupdated>2016-04-12 16:14:47</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
-                },
-                "rek_issn": "0021-9533",
-                "rek_issn_id": 5382906,
-                "rek_issn_lookup": "green",
-                "rek_issn_order": 2,
                 "rek_issn_pid": "UQ:676287",
                 "rek_issn_xsdmf_id": null,
               },
@@ -8692,10 +7831,10 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             "confirmationMessage": <div>
               <Alert
                 allowDismiss={false}
-                message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
+                message="Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators."
                 showLoader={false}
-                title="File upload failed"
-                type="info"
+                title="File upload and/or edits/changes/comments post failed"
+                type="warning"
               />
               <p>
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -8703,9 +7842,9 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             </div>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-              "title": "File upload failed",
-              "type": "info",
+              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "File upload and/or edits/changes/comments post failed",
+              "type": "warning",
             },
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -9622,22 +8761,24 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
             ],
             "fez_record_search_key_issn": Array [
               Object {
-                "fez_journal_issns": Object {
-                  "fez_journal": Object {
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_era_id": 2234,
-                    "jnl_era_year": 2010,
-                    "jnl_foreign_name": null,
-                    "jnl_id": 7538,
-                    "jnl_journal_name": "Journal of Cell Science",
-                    "jnl_rank": "A",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
+                "fez_journal_issns": Array [
+                  Object {
+                    "fez_journal": Object {
+                      "jnl_created_date": "2010-11-19 00:00:00",
+                      "jnl_era_id": 2234,
+                      "jnl_era_year": 2010,
+                      "jnl_foreign_name": null,
+                      "jnl_id": 7538,
+                      "jnl_journal_name": "Journal of Cell Science",
+                      "jnl_rank": "A",
+                      "jnl_updated_date": "2010-11-19 00:00:00",
+                    },
+                    "jni_id": 13071,
+                    "jni_issn": "1477-9137",
+                    "jni_issn_order": 2,
+                    "jni_jnl_id": 7538,
                   },
-                  "jni_id": 13071,
-                  "jni_issn": "1477-9137",
-                  "jni_issn_order": 2,
-                  "jni_jnl_id": 7538,
-                },
+                ],
                 "fez_sherpa_romeo": Object {
                   "srm_colour": "green",
                   "srm_date_updated": "2017-09-30 18:26:18",
@@ -9743,131 +8884,6 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                 "rek_issn_id": 5382905,
                 "rek_issn_lookup": "green",
                 "rek_issn_order": 1,
-                "rek_issn_pid": "UQ:676287",
-                "rek_issn_xsdmf_id": null,
-              },
-              Object {
-                "fez_journal_issns": Object {
-                  "fez_journal": Object {
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_era_id": 2234,
-                    "jnl_era_year": 2010,
-                    "jnl_foreign_name": null,
-                    "jnl_id": 7538,
-                    "jnl_journal_name": "Journal of Cell Science",
-                    "jnl_rank": "A",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
-                  },
-                  "jni_id": 13070,
-                  "jni_issn": "0021-9533",
-                  "jni_issn_order": 1,
-                  "jni_jnl_id": 7538,
-                },
-                "fez_sherpa_romeo": Object {
-                  "srm_colour": "green",
-                  "srm_date_updated": "2017-09-30 15:12:52",
-                  "srm_id": 13763,
-                  "srm_issn": "0021-9533",
-                  "srm_journal_name": "Journal of Cell Science",
-                  "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>0021-9533</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:16:12:52</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Journal of Cell Science</jtitle>
-      <issn>0021-9533</issn>
-      <zetocpub>Company of Biologists</zetocpub>
-      <romeopub>Company of Biologists</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"29\\">
-      <name>Company of Biologists</name>
-      <alias />
-      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>can</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>On author's personal website immediately</condition>
-        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
-        <condition>Authors retain copyright</condition>
-        <condition>Publisher's version/PDF may be used</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher last contacted on 30/03/2016</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
-        <paidaccessname>Open Access</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2004-01-10 00:00:00</dateadded>
-      <dateupdated>2016-04-12 16:14:47</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
-                },
-                "rek_issn": "0021-9533",
-                "rek_issn_id": 5382906,
-                "rek_issn_lookup": "green",
-                "rek_issn_order": 2,
                 "rek_issn_pid": "UQ:676287",
                 "rek_issn_xsdmf_id": null,
               },
@@ -10101,9 +9117,9 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
             </div>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-              "title": "File upload failed",
-              "type": "info",
+              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "File upload and/or edits/changes/comments post failed",
+              "type": "warning",
             },
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.

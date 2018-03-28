@@ -41,7 +41,12 @@
   }
 }
 
-.body-1 { font-size: $text-body-normal; font-weight: $text-weight-normal; line-height: $text-line-height-normal;}
+.body-1 { font-size: $text-body-normal; font-weight: $text-weight-normal; line-height: $text-line-height-normal;
+  @include mobile {
+    -ms-word-break: break-word;
+    word-break: break-word;
+  }
+}
 .body-2 { font-size: $text-body-normal; font-weight: $text-weight-bold; line-height: $text-line-height-normal;}
 .caption { font-size: $text-body-xsmall; }
 

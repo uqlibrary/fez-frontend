@@ -1,12 +1,13 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {PubmedCentralLink} from 'modules/SharedComponents/PubmedCentralLink';
-import {DoiLink} from 'modules/SharedComponents/DoiLink';
+import DoiCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DoiCitationView';
+// import {DoiLink} from 'modules/SharedComponents/DoiLink';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {locale} from 'locale';
-import {OPEN_ACCESS_ID_DOI, OPEN_ACCESS_ID_LINK_NO_DOI, openAccessIdLookup} from 'config/general';
+import {OPEN_ACCESS_ID_LINK_NO_DOI, OPEN_ACCESS_ID_DOI, openAccessIdLookup} from 'config/general';
 import moment from 'moment';
 
 export default class ViewRecordLinks extends PureComponent {
@@ -18,115 +19,142 @@ export default class ViewRecordLinks extends PureComponent {
         super(props);
     }
 
-    shouldComponentUpdate(nextProps) {
-        return this.props !== nextProps;
-    }
-
-    // Returns open, closed or an embargo date for non-DOI/PMC/GoogleScholar links
-    publicationLinksOpenAccessStatus = (
-        oaStatus = this.props.publication.fez_record_search_key_oa_status && this.props.publication.fez_record_search_key_oa_status.rek_oa_status,
-        embargoDays = this.props.publication.fez_record_search_key_oa_embargo_days && this.props.publication.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days,
-        createdDate = this.props.publication.rek_created_date) => {
-        if(oaStatus !== OPEN_ACCESS_ID_LINK_NO_DOI) {
-            // if its not "Link (No DOI)" consider the pub links closed
-            return {openAccess: false, recordOaStatus: oaStatus,  embargoDate: null};
-        } else if(!embargoDays && oaStatus === OPEN_ACCESS_ID_LINK_NO_DOI) {
-            // If theres no embargo days specified and its "Link (No DOI)" consider publication links open
-            return {openAccess: true, recordOaStatus: oaStatus, embargoDate: null};
+    // Returns an object {openAccess: bool, recordOaStatus: int, embargoDate: date || null}
+    publicationLinkOpenAccessStatus = (recordOaStatus, recordEmbargoDays, recordPublishedDate) => {
+        if(recordOaStatus !== OPEN_ACCESS_ID_LINK_NO_DOI) {
+            return {openAccess: false, recordOaStatus: recordOaStatus,  embargoDate: null};
+        } else if(!recordEmbargoDays && recordOaStatus === OPEN_ACCESS_ID_LINK_NO_DOI) {
+            return {openAccess: true, recordOaStatus: recordOaStatus, embargoDate: null};
         } else {
-            // Otherwise, return an embargo date
             const currentDate = moment().format();
-            const embargoDate = moment(moment(createdDate)).add(embargoDays, 'days').format();
+            const embargoDate = moment(moment(recordPublishedDate)).add(recordEmbargoDays, 'days').format();
             return embargoDate < currentDate ?
-                {openAccess: true, recordOaStatus: oaStatus, embargoDate: null} :
-                {openAccess: true, recordOaStatus: oaStatus, embargoDate: moment(embargoDate).format('Do MMMM YYYY')};
+                {openAccess: true, recordOaStatus: recordOaStatus, embargoDate: null} :
+                {openAccess: false, recordOaStatus: recordOaStatus, embargoDate: moment(embargoDate).format('Do MMMM YYYY')};
         }
     };
 
-    // Returns the icon element based on status
-    // {openAccess: bool, recordOaStatus: int, embargoDate: null || 'date'}
-    getOaIcon = (status = {openAccess: false, recordOaStatus: null, embargoDate: null}) => {
+    // Returns the icon element based on a specified object
+    // {openAccess: bool, recordOaStatus: int, embargoDate: date || null} or from publicationLinkOpenAccessStatus()
+    getOaIcon = (status) => {
+        const recordOaStatus = this.props.publication.fez_record_search_key_oa_status
+            && this.props.publication.fez_record_search_key_oa_status.rek_oa_status;
         const txt = locale.viewRecord.sections.links;
-        if(status.openAccess) {
+        if(status.openAccess && !status.embargoDate) {
             return (
                 <div className="fez-icon openAccess large"
-                    title={status.recordOaStatus !== OPEN_ACCESS_ID_LINK_NO_DOI ?
-                        txt.openAccessLabel.replace('[oa_status]', openAccessIdLookup[status.recordOaStatus]) :
-                        txt.labelOpenAccessNoStatus
+                    title={recordOaStatus !== OPEN_ACCESS_ID_LINK_NO_DOI ?
+                        txt.openAccessLabel.replace('[oa_status]', openAccessIdLookup[recordOaStatus])
+                        : txt.labelOpenAccessNoStatus
                     }
                 />
             );
-        } else if (!status.openAccess) {
-            return <div className="openAccessClosed noOaIcon" />;
-        } else if (!!status) {
+        } else if (!status.openAccess && status.embargoDate) {
             return (
                 <div>
                     <span className="is-hidden-mobile is-hidden-tablet-only">
-                        {status && txt.embargoedUntil.replace('[embargo_date]', status)}
+                        {txt.embargoedUntil.replace('[embargo_date]', status.embargoDate)}
                     </span>
                     <div className="fez-icon openAccessEmbargoed large"
-                        title={status &&
-                         (txt.openAccessEmbargoedLabel
-                             .replace('[embargo_date]', status)
-                             .replace('[oa_status]', openAccessIdLookup[status]))}/>
+                        title={(txt.openAccessEmbargoedLabel
+                            .replace('[embargo_date]', status.embargoDate)
+                            .replace('[oa_status]', openAccessIdLookup[recordOaStatus]))}/>
                 </div>
             );
         } else {
-            return <div className="noOaIcon" />;
+            return <div className="openAccessClosed noOaIcon" />;
         }
     };
 
-    // Generates an array of links to render
-    // If there is a DOI, expect the OA status to be "DOI" - set the DOI to open access, pub links to closed access
-    // Id there is a PMC ID, expect the OA status to be "PMC" - set the PMC to open access, DOI link to closed access and pub links open to embargo
-    // If the OA status is "Link (No DOI)" (regardless of wether DOI is supplied or not) then all pub links are open to embargo and create a google scholar search link
-    allLinks = (record) => {
-        const txt = locale.viewRecord.sections.links;
-        const recordPubmedCentralId = record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id;
-        const recordDoi = record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi;
-        const recordOaStatus = record.fez_record_search_key_oa_status && record.fez_record_search_key_oa_status.rek_oa_status;
-        const recordHasLinks = record.fez_record_search_key_link && record.fez_record_search_key_link.length > 0;
-        const recordLinkDescription = (index) => record.fez_record_search_key_link_description && record.fez_record_search_key_link_description[index] && record.fez_record_search_key_link_description[index].rek_link_description || txt.linkMissingDescription;
+    // Returns an object with link, description and icon to the DOI
+    getDOILink = (recordDoi, recordOaStatus, recordPubmedCentralId) => {
+        return {
+            link: (<DoiCitationView doi={recordDoi} />),
+            description: openAccessIdLookup[recordOaStatus]
+            || locale.viewRecord.sections.links.labelNoOpenAccessLookup,
+            icon: recordOaStatus === OPEN_ACCESS_ID_DOI && !recordPubmedCentralId ?
+                this.getOaIcon({openAccess: true, embargoDate: null}) :
+                this.getOaIcon({openAccess: false, embargoDate: null})
+        };
+    };
 
+    // Returns an object with link, description and icon to the PMC ID
+    getPMCLink = (recordPubmedCentralId) => {
+        return {
+            link: <PubmedCentralLink pubmedCentralId={recordPubmedCentralId}/>,
+            description: locale.viewRecord.sections.links.pubmedCentralLinkDescription,
+            icon: this.getOaIcon({openAccess: true, embargoed: false})
+        };
+    };
+
+    // Returns an object with link to google scholar searching for the title
+    getGoogleScholarLink = (title) => {
+        return {
+            link: (<ExternalLink
+                href={locale.viewRecord.sections.links.googleScholar.linkPrefix.replace('[title]', title)}
+                title={locale.viewRecord.sections.links.googleScholar.linkDescription}>
+                {locale.viewRecord.sections.links.googleScholar.linkPrefix.replace('[title]', title).replace('%22', '"')}
+            </ExternalLink>),
+            description: locale.viewRecord.sections.links.googleScholar.linkDescription,
+            icon: this.getOaIcon({openAccess: true, embargoed: false})
+        };
+    };
+
+    // Returns an object with link, description and icon for all links listed in the publication.
+    getPublicationLink = (item, index, recordOaStatus, embargoDays, publishedDate) => {
+        const itemDescription = this.props.publication.fez_record_search_key_link_description
+            && this.props.publication.fez_record_search_key_link_description[index]
+            && this.props.publication.fez_record_search_key_link_description[index].rek_link_description;
+        return {
+            link: (
+                <ExternalLink href={item.rek_link}
+                    title={itemDescription || locale.viewRecord.sections.links.linkMissingDescriptionTitle}
+                >
+                    {item.rek_link}
+                </ExternalLink>
+            ),
+            description: itemDescription || locale.viewRecord.sections.links.linkMissingDescription,
+            icon: recordOaStatus !== OPEN_ACCESS_ID_DOI ?
+                this.getOaIcon(this.publicationLinkOpenAccessStatus(recordOaStatus, embargoDays, publishedDate)) :
+                this.getOaIcon({openAccess: false, embargoed: false})
+        };
+    };
+
+    // Generates an array of links to render
+    allLinks = (record) => {
+        const recordPubmedCentralId = record.fez_record_search_key_pubmed_central_id
+            && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id;
+        const recordDoi = record.fez_record_search_key_doi
+            && record.fez_record_search_key_doi.rek_doi;
+        const recordOaStatus = record.fez_record_search_key_oa_status
+            && record.fez_record_search_key_oa_status.rek_oa_status;
+        const recordHasPublicationLinks = record.fez_record_search_key_link
+            && record.fez_record_search_key_link.length > 0;
+        const embargoDays = record.fez_record_search_key_oa_embargo_days
+            && record.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days
+            || 0;
+        const publishedDate = record.rek_date;
         const links = [];
+
+        // Has a PubMed Central ID
         if (recordPubmedCentralId) {
-            links.push({
-                link: <PubmedCentralLink pubmedCentralId={recordPubmedCentralId}/>,
-                description: txt.pubmedCentralLinkDescription,
-                icon: this.getOaIcon('open')
-            });
+            links.push(this.getPMCLink(recordPubmedCentralId));
         }
+
+        // Has a DOI
         if (recordDoi) {
-            links.push({
-                link: (<DoiLink DoiId={recordDoi}/>),
-                description: openAccessIdLookup[recordOaStatus] || txt.labelNoOpenAccessLookup,
-                icon: recordOaStatus === OPEN_ACCESS_ID_DOI && !recordPubmedCentralId ? this.getOaIcon('open') : this.getOaIcon('closed')
-            });
+            links.push(this.getDOILink(recordDoi, recordOaStatus, recordPubmedCentralId));
         }
+
+        // Has OA status of "Link (no DOI)" then produce a google scholar link for the publication title
         if(recordOaStatus === OPEN_ACCESS_ID_LINK_NO_DOI) {
-            // Has OA status of "Link (no DOI)" then produce a google scholar link for the publication title
-            links.push({
-                link: (<ExternalLink
-                    href={txt.googleScholar.linkPrefix.replace('[title]', record.rek_title)}
-                    title={txt.googleScholar.linkDescription}>
-                    {txt.googleScholar.linkPrefix.replace('[title]', record.rek_title).replace('%22', '"')}
-                </ExternalLink>),
-                description: txt.googleScholar.linkDescription,
-                icon: this.getOaIcon('open')
-            });
+            links.push(this.getGoogleScholarLink(record.rek_title));
         }
-        if (recordHasLinks) {
-            // push all the other links in
+
+        // push all the other links in
+        if (recordHasPublicationLinks) {
             record.fez_record_search_key_link.map((item, index) => {
-                links.push({
-                    link: (
-                        <ExternalLink href={item.rek_link} title={(recordLinkDescription(index)) || txt.linkMissingDescriptionTitle}>
-                            {item.rek_link}
-                        </ExternalLink>
-                    ),
-                    description: recordLinkDescription(index) || txt.linkMissingDescription,
-                    icon: recordOaStatus !== OPEN_ACCESS_ID_DOI ? this.getOaIcon(this.publicationLinksOpenAccessStatus()) : this.getOaIcon('closed')
-                });
+                links.push(this.getPublicationLink(item, index, recordOaStatus, embargoDays, publishedDate));
             });
         }
         return links;
@@ -134,8 +162,8 @@ export default class ViewRecordLinks extends PureComponent {
 
     render() {
         const record = this.props.publication;
-        if(!record) return (<div className="links empty"/>);
         const txt = locale.viewRecord.sections.links;
+        if(!record) return (<div className="links empty"/>);
         return (
             <StandardCard title={txt.title}>
                 <div className="viewRecordLinks">
