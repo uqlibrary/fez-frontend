@@ -81,7 +81,7 @@ export default class MyRecords extends React.Component {
                 page: 1
             },
             () => {
-                this.props.actions.searchAuthorPublications({...this.state});
+                this.pushPageHistory();
             }
         );
     }
@@ -92,12 +92,7 @@ export default class MyRecords extends React.Component {
                 page: page
             },
             () => {
-                this.props.history.push({
-                    pathname: `${routes.pathConfig.records.mine}`,
-                    search: `?ts=${Date.now()}`,
-                    state: {...this.state}
-                });
-                this.props.actions.searchAuthorPublications({...this.state});
+                this.pushPageHistory();
             }
         );
     }
@@ -109,7 +104,7 @@ export default class MyRecords extends React.Component {
                 sortDirection: sortDirection
             },
             () => {
-                this.props.actions.searchAuthorPublications({...this.state});
+                this.pushPageHistory();
             }
         );
     }
@@ -121,10 +116,19 @@ export default class MyRecords extends React.Component {
                 page: 1
             },
             () => {
-                this.props.actions.searchAuthorPublications({...this.state});
+                this.pushPageHistory();
             }
         );
     }
+
+    pushPageHistory = () => {
+        this.props.history.push({
+            pathname: `${routes.pathConfig.records.mine}`,
+            search: `?ts=${Date.now()}`,
+            state: {...this.state}
+        });
+        this.props.actions.searchAuthorPublications({...this.state});
+    };
 
     fixRecord = (item) => {
         this.props.history.push(routes.pathConfig.records.fix(item.rek_pid));

@@ -60,12 +60,8 @@ export default class ClaimRecord extends React.PureComponent {
         this.props.history.push(routes.pathConfig.records.mine);
     };
 
-    _navigateToAddRecord = () => {
-        this.props.history.push(routes.pathConfig.records.add.find);
-    };
-
-    _navigateToPossibleMyResearch = () => {
-        this.props.history.push(routes.pathConfig.records.possible);
+    _cancelClaim = () => {
+        this.props.history.goBack();
     };
 
     _setSuccessConfirmation = (ref) => {
@@ -125,7 +121,7 @@ export default class ClaimRecord extends React.PureComponent {
                             <ConfirmDialogBox
                                 onRef={this._setSuccessConfirmation}
                                 onAction={this._navigateToMyResearch}
-                                onCancelAction={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}
+                                onCancelAction={this._cancelClaim}
                                 locale={saveConfirmationLocale} />
                             <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
                             {
@@ -215,7 +211,7 @@ export default class ClaimRecord extends React.PureComponent {
                                 fullWidth
                                 label={txt.cancel}
                                 disabled={this.props.submitting}
-                                onTouchTap={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}/>
+                                onTouchTap={this._cancelClaim}/>
                         </div>
                         {
                             (!publication.rek_pid || !(authorLinked || contributorLinked)) && !(!publication.rek_pid && this.props.submitFailed) &&
