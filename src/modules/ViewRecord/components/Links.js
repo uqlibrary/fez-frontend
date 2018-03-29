@@ -53,8 +53,7 @@ export default class ViewRecordLinks extends PureComponent {
     getDOILink = (recordDoi, recordOaStatus, recordPubmedCentralId) => {
         return {
             link: (<DoiCitationView doi={recordDoi} />),
-            description: openAccessIdLookup[recordOaStatus]
-            || locale.viewRecord.sections.links.labelNoOpenAccessLookup,
+            description: locale.viewRecord.sections.links.doiDescription,
             icon: recordOaStatus === OPEN_ACCESS_ID_DOI && !recordPubmedCentralId ?
                 this.getOaIcon({openAccess: true, recordOaStatus: recordOaStatus,  embargoDate: null}) :
                 this.getOaIcon({openAccess: false, recordOaStatus: recordOaStatus,  embargoDate: null})

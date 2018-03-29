@@ -17,6 +17,7 @@ export default {
                 },
                 linkMissingDescription: 'No description available',
                 linkMissingDescriptionTitle: 'Click to open link in a new window',
+                doiDescription: 'Full text from publisher',
                 openAccessLabel: 'Open Access - [oa_status] - Free to read',
                 openAccessEmbargoedLabel: '[oa_status] - Open access after [embargo_date]',
                 labelNoOpenAccessLookup: 'Open Access - Embargo applies',
