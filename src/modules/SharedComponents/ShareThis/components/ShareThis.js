@@ -18,7 +18,6 @@ export default class ShareThis extends React.Component {
             script.id = 'shareThisScript';
             script.async = true;
             document.head.appendChild(script);
-            console.log('added in did mount');
         }
 
         this.addThisConfigInHead();
@@ -32,54 +31,40 @@ export default class ShareThis extends React.Component {
 
     addThisConfigInHead() {
         const code = '(function() { \n' +
-            'console.log("in addThisConfigInHead"); \n' +
+            '_waitforAddThis(1000)\n\n' +
 
-            // function _waitforAddThis() {
-            //     var numMilliSecondsRecheck = 100;
-            //     this.async(function() {
-            //         if (window.)
-            //     }, numMilliSecondsRecheck);
-            // }
+            '  function _waitforAddThis(waitmilliseconds) {\n' +
+            '    if (window.a2a_config === null || typeof window.a2a === "undefined" || !(window.a2a.init)) {\n' +
+            '       if (waitmilliseconds > 0) {\n' +
+            '           setTimeout(function() {\n' +
+            '               _waitforAddThis(waitmilliseconds-100)\n' +
+            '               },  waitmilliseconds);\n' +
+            '       }\n' +
+            '    } else {\n' +
+            '        _addCode()\n' +
+            '    }\n' +
+            '  }\n\n' +
 
-            '  var waitforAddThis = timeoutms => new Promise((r, j)=>{\n' +
-            '    console.log("checking A")\n' +
-            '    var check = function() {\n' +
-            '      console.log("checking")\n' +
-            '      if(window.a2a_config !== undefined) {\n' +
-            '          console.log("found!"); \n' +
-            '          console.log(window.a2a); \n' +
+            '  function _addCode() { \n' +
             '          var a2a_config = window.a2a_config || {}; \n' +
             '          a2a_config.custom_services = [ \n' +
             '              [ \n' +
             '                  "www.researchgate.net", \n' +
             '                  "https://www.researchgate.net/go.Share.html?url=' + encodeURI(window.location.href) + '&title=' + encodeURIComponent(document.title) + '", \n' +
-            '                  "https://www.example.com/images/icon_20x20.png" \n' +  // RG background: #ooccbb, white text TODO
+            '                  "/images/ResearchGate.png" \n' +
             '              ] \n' +
             '          ]; \n' +
-            '          window.a2a_config = a2a_config; \n' +
-            '          window.a2a.init("page");  \n' +
-            '      } else if((timeoutms -= 100) < 0) {\n' +
-            '        console.log("AddThis timed out")\n' +
-            '      } else {\n' +
-            '        setTimeout(check, 100)\n' +
-            '      } \n' +
-            '    }\n' +
-            '    setTimeout(check, 100)\n' +
-            '  })' +
-            '  (async ()=>{\n' +
-            // '    a.innerHTML = \'waiting..\'\n' +
-            '    waitforAddThis(2000)\n' +
-            '  })()\n' +
+            // '          a2a_config.add_services = true; \n\n' +
 
-
+            '          window.a2a_config = a2a_config;' +
+            '          window.a2a.init_all("page");  \n' +
+            '  } \n' +
             '})(window);';
 
         const script = document.createElement('script');
         script.id = 'shareThisHeader';
         script.appendChild(document.createTextNode(code));
-        console.log(script);
         document.head.appendChild(script);
-        console.log('ran addThisConfigInHead');
     }
 
     render() {
