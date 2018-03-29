@@ -280,12 +280,14 @@ describe('getFixIssueRequest test ', () => {
         input.rek_link = 'http://www.test.com';
         input.files = {queue: [{name: '1.jpg'},{name: '2.jpg'}]};
 
-        const expected = {"issue": "Added comments : Some comments...\n" +
-            "Added link     : http://www.test.com\n" +
-            "Added files    : 1.jpg, 2.jpg"};
-
+        const expected = ["Added comments: Some comments...", "Added link: http://www.test.com", "Added files: 1.jpg, 2.jpg"];
         const result = transformers.getFixIssueRequest(input);
-        expect(result).toEqual(expected);
+        expected.map(item => {
+            expect(result.issue).toContain(item);
+        });
+
+        const result2 = transformers.getFixIssueRequest({});
+        expect(result2.issue).toEqual('');
     });
 
 });

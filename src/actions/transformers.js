@@ -5,18 +5,9 @@ const moment = require('moment');
 const pipe = (...functionsList) => values => functionsList.reduce((attributes, functionItem) => functionItem(attributes), values);
 
 const getIssueValues = (data) => {
-    const files = [];
-    if(data.files && data.files.queue.length > 0) {
-        data.files && data.files.queue && data.files.queue.map((item) => {
-            files.push(item.name);
-        });
-    }
     return {
-        pid: data.publication.rek_pid,
-        userName: data.author.aut_display_name,
-        userId: data.author.aut_org_username || data.author.aut_student_username,
         comments: data.comments || null,
-        files: files.toString().replace(/,/g, ', ') || null,
+        files: data.files && data.files.queue ? data.files.queue.map(item => item.name).toString().replace(/,/g, ', ') : null,
         link: data.rek_link || null,
     };
 };
