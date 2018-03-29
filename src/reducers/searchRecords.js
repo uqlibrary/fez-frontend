@@ -88,25 +88,27 @@ export const deduplicateResults = (list) => {
                     })
                     .reduce((list, item) => {
                         if (list.length === 0) {
-                            list.push(item);
+                            return [item];
                         } else {
                             const currentItem = {...list[0]}; // the first item
+                            const currentItemSources = [...currentItem.sources];
                             const currentItemPriority = Math
-                                .min(...currentItem.sources
-                                    .map(source => {
-                                        return locale.global.sources[source.source].priority;
-                                    })); // returns the lowest valued priority source this record has
+                                .min(
+                                    ...currentItemSources.map(source => locale.global.sources[source.source].priority)
+                                ); // returns the lowest valued priority source this record has
                             const itemPriority = locale.global.sources[item.sources[0].source].priority; // items current source priority
 
                             if (itemPriority < currentItemPriority) {
-                                currentItem.sources.push(item.sources[0]);
-                                item.sources = currentItem.sources;
-                                list[0] = item;
+                                currentItemSources.push(item.sources[0]);
+                                const itemWithNewSources = {...item};
+                                itemWithNewSources.sources = [...currentItemSources];
+                                return [itemWithNewSources];
                             } else {
-                                list[0].sources.push(item.sources[0]);
+                                currentItemSources.push(item.sources[0]);
+                                currentItem.sources = [...currentItemSources];
+                                return [{...currentItem}];
                             }
                         }
-                        return list;
                     }, [])[0];
             });
 
