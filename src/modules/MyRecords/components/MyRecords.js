@@ -56,7 +56,7 @@ export default class MyRecords extends React.Component {
         if (this.props.location !== newProps.location
             && newProps.history.action === 'POP'
             && newProps.location.pathname === routes.pathConfig.records.mine) {
-            this.setState({...newProps.location.state}, () => {
+            this.setState({...(!!newProps.location.state ? newProps.location.state : this.initState)}, () => {
                 // only will be called when user clicks back on my records page
                 this.props.actions.searchAuthorPublications({...this.state});
             });
@@ -103,7 +103,7 @@ export default class MyRecords extends React.Component {
     facetsChanged = (activeFacets) => {
         this.setState(
             {
-                activeFacets: {...activeFacets},
+                activeFacets: activeFacets,
                 page: 1
             }, this.pushPageHistory
         );
@@ -187,7 +187,7 @@ export default class MyRecords extends React.Component {
                         </div>
                     }
                     {
-                        !this.props.accountLoading && this.state.hasPublications
+                        !this.props.accountLoading && !this.props.loadingPublicationsList && this.state.hasPublications
                         && (
                             (this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
                             || Object.keys(this.state.activeFacets.filters).length > 0
@@ -198,7 +198,7 @@ export default class MyRecords extends React.Component {
                                 <FacetsFilter
                                     facetsData={this.props.publicationsListFacets}
                                     onFacetsChanged={this.facetsChanged}
-                                    activeFacets={{...this.state.activeFacets}}
+                                    activeFacets={this.state.activeFacets}
                                     disabled={this.props.loadingPublicationsList}
                                     excludeFacetsList={txt.facetsFilter.excludeFacetsList}
                                     renameFacetsList={txt.facetsFilter.renameFacetsList} />

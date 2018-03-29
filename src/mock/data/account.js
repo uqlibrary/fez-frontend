@@ -559,7 +559,7 @@ export const authorDetails = {
         "mypub_url": "uqresearcher",
         "org_units": ["Institute for Molecular Bioscience", "School of Chemistry and Molecular Biosciences", "The University of Queensland Diamantina Institute"],
         "positions": ["Affiliate Professor", "Affiliate Professorial Res Fellow", "ARC Australian Laureate Fellow"],
-        "espace": {"first_year": 1990, "last_year": 2017, "doc_count": "282"}
+        "espace": {"first_year":1975,"last_year":2018,"doc_count":357}
     },
     s2222222: {
         "espace_id": 44444,
@@ -578,7 +578,7 @@ export const authorDetails = {
         "positions": [""],
         "uqr_id": null,
         "image_exists": null,
-        "espace": {"first_year": null, "last_year": null, "doc_count": "0"}
+        "espace": {"first_year": null, "last_year": null, "doc_count": 0}
     },
     uqnoauthid: {
         "uqr_id": null,
@@ -597,6 +597,6 @@ export const authorDetails = {
         "mypub_url": null,
         "org_units": ["The University of Queensland Diamantina Institute"],
         "positions": ["Program Scientific Support Coordin"],
-        "espace": {"first_year": 1999, "last_year": 2012, "doc_count": "14"}
+        "espace": {"first_year": 1999, "last_year": 2012, "doc_count": 14}
     }
 };
