@@ -1,0 +1,685 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard Author Profile test Render the authors profile as expected for a UQ researcher) 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+      },
+      "subscribe": [MockFunction],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <DashboardProfile
+        author={
+          Object {
+            "aut_created_date": null,
+            "aut_description": "",
+            "aut_display_name": "Researcher, J",
+            "aut_email": "",
+            "aut_external_id": "0000040357",
+            "aut_fname": "J",
+            "aut_google_scholar_id": "kUemDfMAAAAJ",
+            "aut_homepage_link": "",
+            "aut_id": 410,
+            "aut_lname": "Researcher",
+            "aut_mname": "",
+            "aut_mypub_url": "",
+            "aut_orcid_id": "0000-0001-1111-1111",
+            "aut_org_staff_id": "0001952",
+            "aut_org_student_id": null,
+            "aut_org_username": "uqresearcher",
+            "aut_people_australia_id": "",
+            "aut_position": "",
+            "aut_publons_id": null,
+            "aut_ref_num": "",
+            "aut_researcher_id": "A-1137-2007",
+            "aut_rid_last_updated": "2013-05-17",
+            "aut_rid_password": "",
+            "aut_scopus_id": "35478294000",
+            "aut_student_username": null,
+            "aut_title": "Professor",
+            "aut_update_date": "2017-07-23",
+          }
+        }
+        authorDetails={
+          Object {
+            "espace": Object {
+              "doc_count": 357,
+              "first_year": 1975,
+              "last_year": 2018,
+            },
+            "espace_id": 20288,
+            "family_name": "Researcher",
+            "given_name": "J",
+            "google_scholar_id": "kUemDfMAAAAJ",
+            "image_exists": 1,
+            "mypub_url": "uqresearcher",
+            "orcid_id": "0000-0001-1111-1111",
+            "org_units": Array [
+              "Institute for Molecular Bioscience",
+              "School of Chemistry and Molecular Biosciences",
+              "The University of Queensland Diamantina Institute",
+            ],
+            "positions": Array [
+              "Affiliate Professor",
+              "Affiliate Professorial Res Fellow",
+              "ARC Australian Laureate Fellow",
+            ],
+            "publons_id": "",
+            "researcher_id": "G-111-1111",
+            "scopus_id": "",
+            "staff_id": "0000111",
+            "title": "Professor",
+            "uqr_id": 14,
+            "username": "uqresearcher",
+          }
+        }
+        history={Object {}}
+      >
+        <div
+          className="imageCover"
+        >
+          <div
+            className="is-pulled-right"
+          >
+            <Connect(HelpIcon)
+              buttonLabel="OK"
+              text="Your profile help...."
+              title="Your dashboard"
+            >
+              <HelpIcon
+                buttonLabel="OK"
+                onClick={[Function]}
+                style={Object {}}
+                text="Your profile help...."
+                title="Your dashboard"
+                tooltip="Click for more information"
+                tooltipIconColor="#CCCCCC"
+              >
+                <IconButton
+                  disableTouchRipple={false}
+                  disabled={false}
+                  iconStyle={Object {}}
+                  onClick={[Function]}
+                  style={Object {}}
+                  tooltip="Click for more information"
+                  tooltipPosition="bottom-left"
+                  touch={false}
+                >
+                  <EnhancedButton
+                    centerRipple={true}
+                    containerElement="button"
+                    disableTouchRipple={false}
+                    disabled={false}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onKeyboardFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseOut={[Function]}
+                    onTouchStart={[Function]}
+                    onTouchTap={[Function]}
+                    style={
+                      Object {
+                        "boxSizing": "border-box",
+                        "fontSize": 0,
+                        "height": 48,
+                        "overflow": "visible",
+                        "padding": 12,
+                        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "width": 48,
+                      }
+                    }
+                    tabIndex={0}
+                    type="button"
+                  >
+                    <button
+                      disabled={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseOut={[Function]}
+                      onTouchStart={[Function]}
+                      onTouchTap={[Function]}
+                      style={
+                        Object {
+                          "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+                          "background": "none",
+                          "border": 10,
+                          "boxSizing": "border-box",
+                          "cursor": "pointer",
+                          "display": "inline-block",
+                          "fontFamily": "Roboto, sans-serif",
+                          "fontSize": 0,
+                          "fontWeight": "inherit",
+                          "height": 48,
+                          "margin": 0,
+                          "muiPrepared": true,
+                          "outline": "none",
+                          "overflow": "visible",
+                          "padding": 12,
+                          "position": "relative",
+                          "textDecoration": "none",
+                          "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                          "verticalAlign": null,
+                          "width": 48,
+                          "zIndex": 1,
+                        }
+                      }
+                      tabIndex={0}
+                      type="button"
+                    >
+                      <TouchRipple
+                        abortOnScroll={true}
+                        centerRipple={true}
+                        key="touchRipple"
+                      >
+                        <div
+                          onMouseDown={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseUp={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchStart={[Function]}
+                        >
+                          <Tooltip
+                            horizontalPosition="left"
+                            label="Click for more information"
+                            show={false}
+                            style={
+                              Object {
+                                "boxSizing": "border-box",
+                              }
+                            }
+                            touch={false}
+                            verticalPosition="bottom"
+                          >
+                            <div
+                              style={
+                                Object {
+                                  "borderRadius": 2,
+                                  "boxSizing": "border-box",
+                                  "color": "#ffffff",
+                                  "fontFamily": "Roboto, sans-serif",
+                                  "fontSize": "10px",
+                                  "left": null,
+                                  "lineHeight": "22px",
+                                  "muiPrepared": true,
+                                  "opacity": 0,
+                                  "overflow": "hidden",
+                                  "padding": "0 8px",
+                                  "position": "absolute",
+                                  "right": 12,
+                                  "top": -10000,
+                                  "transition": "top 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                                  "userSelect": "none",
+                                  "zIndex": 3000,
+                                }
+                              }
+                            >
+                              <div
+                                style={
+                                  Object {
+                                    "backgroundColor": "transparent",
+                                    "borderRadius": "50%",
+                                    "left": "100%",
+                                    "muiPrepared": true,
+                                    "position": "absolute",
+                                    "top": 0,
+                                    "transform": "translate(-50%, -50%)",
+                                    "transition": "width 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, height 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, backgroundColor 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                                  }
+                                }
+                              />
+                              <span
+                                style={
+                                  Object {
+                                    "muiPrepared": true,
+                                    "position": "relative",
+                                    "whiteSpace": "nowrap",
+                                  }
+                                }
+                              >
+                                Click for more information
+                              </span>
+                            </div>
+                          </Tooltip>
+                          <FontIcon
+                            className="material-icons helpIcon"
+                            color="#CCCCCC"
+                            key=".0"
+                            onMouseEnter={[Function]}
+                            onMouseLeave={[Function]}
+                            style={Object {}}
+                          >
+                            <span
+                              className="material-icons helpIcon"
+                              color="#CCCCCC"
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                              style={
+                                Object {
+                                  "color": "#CCCCCC",
+                                  "display": "inline-block",
+                                  "fontSize": 24,
+                                  "muiPrepared": true,
+                                  "position": "relative",
+                                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                                  "userSelect": "none",
+                                }
+                              }
+                            >
+                              help_outline
+                            </span>
+                          </FontIcon>
+                        </div>
+                      </TouchRipple>
+                    </button>
+                  </EnhancedButton>
+                </IconButton>
+              </HelpIcon>
+            </Connect(HelpIcon)>
+          </div>
+          <div
+            className="columns userDetails is-gapless"
+          >
+            <div
+              className="column is-narrow authorAvatar"
+            >
+              <DashboardAuthorAvatar
+                values={
+                  Object {
+                    "familyName": "Researcher",
+                    "givenName": "J",
+                    "title": "Professor",
+                    "uqr_id": 14,
+                  }
+                }
+              >
+                <div
+                  className="authorAvatar"
+                >
+                  <Avatar
+                    aria-label="Photograph of  Professor J Researcher"
+                    backgroundColor="transparent"
+                    size={150}
+                    style={
+                      Object {
+                        "backgroundImage": "url(\\"https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_14.jpg\\"), url()",
+                        "backgroundSize": "cover, cover",
+                      }
+                    }
+                    title="Professor J Researcher"
+                  >
+                    <div
+                      aria-label="Photograph of  Professor J Researcher"
+                      size={150}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "backgroundImage": "url(\\"https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_14.jpg\\"), url()",
+                          "backgroundSize": "cover, cover",
+                          "borderRadius": "50%",
+                          "color": "#ffffff",
+                          "display": "inline-flex",
+                          "fontSize": 75,
+                          "height": 150,
+                          "justifyContent": "center",
+                          "muiPrepared": true,
+                          "userSelect": "none",
+                          "width": 150,
+                        }
+                      }
+                      title="Professor J Researcher"
+                    />
+                  </Avatar>
+                </div>
+              </DashboardAuthorAvatar>
+            </div>
+            <div
+              className="column authorDetails"
+            >
+              <DashboardAuthorDetails
+                familyName="Researcher"
+                givenName="J"
+                orgUnits={
+                  Array [
+                    "Institute for Molecular Bioscience",
+                    "School of Chemistry and Molecular Biosciences",
+                    "The University of Queensland Diamantina Institute",
+                  ]
+                }
+                positions={
+                  Array [
+                    "Affiliate Professor",
+                    "Affiliate Professorial Res Fellow",
+                    "ARC Australian Laureate Fellow",
+                  ]
+                }
+                title="Professor"
+              >
+                <div
+                  className="authorDetails"
+                >
+                  <div
+                    className="authorTitleName"
+                  >
+                    Professor
+                     
+                    J
+                     
+                    Researcher
+                  </div>
+                  <div
+                    className="is-paddingless is-marginless is-narrow"
+                  >
+                    <div
+                      className="authorPositionOrg"
+                      key="0"
+                    >
+                      <strong>
+                        Affiliate Professor
+                      </strong>
+                      <span
+                        className="color-reverse"
+                      >
+                        , 
+                        Institute for Molecular Bioscience
+                      </span>
+                    </div>
+                    <div
+                      className="authorPositionOrg"
+                      key="1"
+                    >
+                      <strong>
+                        Affiliate Professorial Res Fellow
+                      </strong>
+                      <span
+                        className="color-reverse"
+                      >
+                        , 
+                        School of Chemistry and Molecular Biosciences
+                      </span>
+                    </div>
+                    <div
+                      className="authorPositionOrg"
+                      key="2"
+                    >
+                      <strong>
+                        ARC Australian Laureate Fellow
+                      </strong>
+                      <span
+                        className="color-reverse"
+                      >
+                        , 
+                        The University of Queensland Diamantina Institute
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </DashboardAuthorDetails>
+              <DashboardResearcherIds
+                history={Object {}}
+                values={
+                  Object {
+                    "google_scholar": "kUemDfMAAAAJ",
+                    "orcid": "0000-0001-1111-1111",
+                    "publons": null,
+                    "researcher": "A-1137-2007",
+                    "scopus": "35478294000",
+                  }
+                }
+              >
+                <div
+                  className="columns researcherIds is-gapless"
+                >
+                  <div
+                    className="column is-narrow researchIdAvatar error"
+                    key="0"
+                  >
+                    <ExternalLink
+                      className="researcherIDlink"
+                      href="https://app.library.uq.edu.au/#/id"
+                      openInNewIcon={false}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      title="You are not linked to Publons - Click to amend"
+                    >
+                      <a
+                        className="researcherIDlink"
+                        href="https://app.library.uq.edu.au/#/id"
+                        rel="noopener noreferrer"
+                        tabIndex="0"
+                        target="_blank"
+                        title="You are not linked to Publons - Click to amend"
+                      >
+                        <div
+                          className="fez-icon publons dashboard"
+                          title="You are not linked to Publons - Click to amend"
+                        />
+                      </a>
+                    </ExternalLink>
+                  </div>
+                  <div
+                    className="column is-narrow researchIdAvatar ok"
+                    key="1"
+                  >
+                    <ExternalLink
+                      className="researcherIDlink"
+                      href="http://www.researcherid.com/rid/A-1137-2007"
+                      openInNewIcon={false}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+                    >
+                      <a
+                        className="researcherIDlink"
+                        href="http://www.researcherid.com/rid/A-1137-2007"
+                        rel="noopener noreferrer"
+                        tabIndex="0"
+                        target="_blank"
+                        title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+                      >
+                        <div
+                          className="fez-icon researcher dashboard"
+                          title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+                        />
+                      </a>
+                    </ExternalLink>
+                  </div>
+                  <div
+                    className="column is-narrow researchIdAvatar ok"
+                    key="2"
+                  >
+                    <ExternalLink
+                      className="researcherIDlink"
+                      href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
+                      openInNewIcon={false}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      title="Your Scopus ID is 35478294000 - Click to review"
+                    >
+                      <a
+                        className="researcherIDlink"
+                        href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
+                        rel="noopener noreferrer"
+                        tabIndex="0"
+                        target="_blank"
+                        title="Your Scopus ID is 35478294000 - Click to review"
+                      >
+                        <div
+                          className="fez-icon scopus dashboard"
+                          title="Your Scopus ID is 35478294000 - Click to review"
+                        />
+                      </a>
+                    </ExternalLink>
+                  </div>
+                  <div
+                    className="column is-narrow researchIdAvatar ok"
+                    key="3"
+                  >
+                    <ExternalLink
+                      className="researcherIDlink"
+                      href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
+                      openInNewIcon={false}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
+                    >
+                      <a
+                        className="researcherIDlink"
+                        href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
+                        rel="noopener noreferrer"
+                        tabIndex="0"
+                        target="_blank"
+                        title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
+                      >
+                        <div
+                          className="fez-icon google_scholar dashboard"
+                          title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
+                        />
+                      </a>
+                    </ExternalLink>
+                  </div>
+                  <div
+                    className="column is-narrow researchIdAvatar ok"
+                    key="4"
+                  >
+                    <ExternalLink
+                      className="researcherIDlink"
+                      href="https://orcid.org/0000-0001-1111-1111"
+                      openInNewIcon={false}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      title="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
+                    >
+                      <a
+                        className="researcherIDlink"
+                        href="https://orcid.org/0000-0001-1111-1111"
+                        rel="noopener noreferrer"
+                        tabIndex="0"
+                        target="_blank"
+                        title="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
+                      >
+                        <div
+                          className="fez-icon orcid dashboard"
+                          title="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
+                        />
+                      </a>
+                    </ExternalLink>
+                  </div>
+                  <div
+                    className="column is-narrow"
+                  >
+                     
+                    <a
+                      aria-label="Click to visit your ORCId profile"
+                      className="orcidLink"
+                      href="https://orcid.org/0000-0001-1111-1111"
+                      tabIndex="0"
+                      target="_blank"
+                      title="Click to visit your ORCId profile"
+                    >
+                      orcid.org/
+                      0000-0001-1111-1111
+                    </a>
+                  </div>
+                </div>
+              </DashboardResearcherIds>
+            </div>
+            <div
+              className="column is-narrow is-hidden-tablet-only authorCount"
+            >
+              <DashboardArticleCount
+                articleCount={357}
+                articleFirstYear={1975}
+                articleLastYear={2018}
+              >
+                <div
+                  className="authorCounter is-centered"
+                >
+                  <div>
+                    <div
+                      className="noOfArticles"
+                    >
+                      357
+                    </div>
+                    <div
+                      className="articlesFrom"
+                    >
+                      eSpace articles from
+                    </div>
+                    <div
+                      className="dateRange"
+                    >
+                      1975
+                      <span>
+                         to 
+                      </span>
+                      2018
+                    </div>
+                  </div>
+                </div>
+              </DashboardArticleCount>
+            </div>
+          </div>
+        </div>
+      </DashboardProfile>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
