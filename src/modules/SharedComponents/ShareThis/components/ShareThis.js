@@ -34,7 +34,7 @@ export default class ShareThis extends React.Component {
             '_waitforAddThis(1000)\n\n' +
 
             '  function _waitforAddThis(waitmilliseconds) {\n' +
-            '    if (window.a2a_config === null || typeof window.a2a === "undefined" || !(window.a2a.init)) {\n' +
+            '    if (window.a2a_config === null || typeof window.a2a === "undefined" || !(window.a2a.init_all)) {\n' +
             '       if (waitmilliseconds > 0) {\n' +
             '           setTimeout(function() {\n' +
             '               _waitforAddThis(waitmilliseconds-100)\n' +
@@ -49,14 +49,12 @@ export default class ShareThis extends React.Component {
             '          var a2a_config = window.a2a_config || {}; \n' +
             '          a2a_config.custom_services = [ \n' +
             '              [ \n' +
-            '                  "www.researchgate.net", \n' +
+            '                  "researchgate", \n' +
             '                  "https://www.researchgate.net/go.Share.html?url=' + encodeURI(window.location.href) + '&title=' + encodeURIComponent(document.title) + '", \n' +
             '                  "/images/ResearchGate.png" \n' +
             '              ] \n' +
             '          ]; \n' +
-            // '          a2a_config.add_services = true; \n\n' +
-
-            '          window.a2a_config = a2a_config;' +
+            '          window.a2a_config = a2a_config; \n' +
             '          window.a2a.init_all("page");  \n' +
             '  } \n' +
             '})(window);';
