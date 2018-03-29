@@ -71,6 +71,21 @@
     }
   }
 
+  .relatedPublications .publicationList {
+    .displayType {
+      font-style: italic;
+    }
+
+    div {
+      display: inline;
+    }
+
+    h3 {
+      display: inline;
+      font-size: 1em !important
+    }
+  }
+
   // Grant specific styles
   .grantInformation {
     margin-bottom: 0 !important;

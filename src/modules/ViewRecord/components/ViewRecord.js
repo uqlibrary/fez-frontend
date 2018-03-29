@@ -30,6 +30,11 @@ export default class ViewRecord extends Component {
         }
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props.recordToView !== nextProps.recordToView
+            || this.state !== nextState;
+    }
+
     componentWillUnmount() {
         // clear previously selected record
         if (this.props.actions) {
@@ -39,7 +44,7 @@ export default class ViewRecord extends Component {
 
     render() {
         const txt = locale.pages.viewRecord;
-        const {loadingRecordToView, recordToViewError, recordToView} = this.props;
+        const {loadingRecordToView, recordToViewError, recordToView, actions} = this.props;
 
         if(loadingRecordToView) {
             return (
@@ -66,7 +71,15 @@ export default class ViewRecord extends Component {
                         (recordToView.fez_record_search_key_related_publications && recordToView.fez_record_search_key_related_publications.length > 0) ||
                         (recordToView.fez_record_search_key_related_datasets && recordToView.fez_record_search_key_related_datasets.length > 0)
                     ) &&
-                    <RelatedPublications publication={recordToView} />
+                    <RelatedPublications
+                        title={locale.viewRecord.sections.relatedPublications.title}
+                        publication={recordToView}
+                        actions={actions}
+                        fields={[
+                            {field: 'fez_record_search_key_related_publications', subKey: 'rek_related_publications'},
+                            {field: 'fez_record_search_key_related_datasets', subKey: 'rek_related_datasets'}
+                        ]}
+                    />
                 }
                 {
                     recordToView && recordToView.rek_display_type_lookup &&
@@ -79,6 +92,18 @@ export default class ViewRecord extends Component {
                 {
                     recordToView && recordToView.rek_display_type_lookup &&
                     <PublicationDetails publication={recordToView} />
+                }
+                {
+                    recordToView && recordToView.fez_record_search_key_isderivationof && recordToView.fez_record_search_key_isderivationof.length > 0 &&
+                    <RelatedPublications
+                        title={locale.viewRecord.sections.availableVersions}
+                        publication={recordToView}
+                        actions={actions}
+                        fields={[
+                            {field: 'fez_record_search_key_isderivationof', subKey: 'rek_isderivationof'},
+                        ]}
+                        showPublicationTitle
+                    />
                 }
 
             </StandardPage>

@@ -4171,7 +4171,6 @@ export const record = {
         "rek_institutional_status_lookup": "UQ"
     },
     "fez_record_search_key_isbn": [],
-    "fez_record_search_key_isderivationof": [],
     "fez_record_search_key_isi_loc": {
         "rek_isi_loc_id": 4019614,
         "rek_isi_loc_pid": "UQ:396321",
@@ -4441,6 +4440,19 @@ export const record = {
             },
             "rek_related_publications_order": 2
         }
+    ],
+    "fez_record_search_key_isderivationof": [
+        {
+            "rek_isderivationof_id": 1258088,
+            "rek_isderivationof_pid": "UQ:137936",
+            "rek_isderivationof": {
+                "rek_pid": "UQ:33333",
+                "rek_title": "available version 2",
+                "rek_created_date": "2016-03-20T11:49:38Z",
+                "rek_display_type_lookup": "Book"
+            },
+            "rek_isderivationof_order": 1
+        },
     ],
     "fez_record_search_key_refereed": {
         "rek_refereed_id": 2587133,

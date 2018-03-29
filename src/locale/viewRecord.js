@@ -10,8 +10,10 @@ export default {
             additionalInformation: 'Additional information',
             relatedPublications: {
                 title: 'Related publications and datasets',
-                depositedBy: 'deposited'
-            }
+                depositedBy: 'deposited',
+                currentRecord: 'Current Record'
+            },
+            availableVersions: 'Available versions'
         },
         headings: {
             default: {

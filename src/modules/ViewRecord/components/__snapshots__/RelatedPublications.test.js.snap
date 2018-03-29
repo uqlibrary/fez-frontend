@@ -5,8 +5,29 @@ exports[`Related publications Component  should render component 1`] = `
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+          Array [],
+          Array [],
+          Array [],
+          Array [],
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+          Array [
+            [Function],
+          ],
+          Array [
+            [Function],
+          ],
+        ],
+      },
     }
   }
 >
@@ -53,6 +74,19 @@ exports[`Related publications Component  should render component 1`] = `
       }
     >
       <RelatedPublications
+        actions={Object {}}
+        fields={
+          Array [
+            Object {
+              "field": "fez_record_search_key_related_publications",
+              "subKey": "rek_related_publications",
+            },
+            Object {
+              "field": "fez_record_search_key_related_datasets",
+              "subKey": "rek_related_datasets",
+            },
+          ]
+        }
         publication={
           Object {
             "fez_record_search_key_access_conditions": Object {
@@ -654,10 +688,12 @@ exports[`Related publications Component  should render component 1`] = `
             "rek_wok_doc_type_xsdmf_id": null,
           }
         }
+        showPublicationTitle={false}
+        title=""
       >
         <StandardCard
           className="relatedPublications"
-          title="Related publications and datasets"
+          title=""
         >
           <Card
             className="relatedPublications standard-card"
@@ -757,13 +793,7 @@ exports[`Related publications Component  should render component 1`] = `
                       >
                         <div
                           className="column"
-                        >
-                          <h2
-                            className="cardTitle"
-                          >
-                            Related publications and datasets
-                          </h2>
-                        </div>
+                        />
                       </div>
                     </div>
                   </CardHeader>
@@ -783,105 +813,722 @@ exports[`Related publications Component  should render component 1`] = `
                       }
                     >
                       <div>
-                        <ul>
+                        <ul
+                          className="publicationList"
+                        >
                           <li
                             key="related-publications-0"
                           >
-                            <a
-                              href="/records/UQ:12345"
+                            <withRouter(Connect(PublicationCitation))
+                              actions={Object {}}
+                              hideCitation={true}
+                              publication={
+                                Object {
+                                  "rek_created_date": "2017-07-15T11:49:38Z",
+                                  "rek_display_type_lookup": "Research Report",
+                                  "rek_pid": "UQ:12345",
+                                  "rek_title": "related publication 1",
+                                }
+                              }
                             >
-                              related publication 1
-                            </a>
-                             
-                            <i>
-                              Research Report
-                            </i>
-                             
-                            <span>
-                              (
-                              deposited
-                               
-                              <DateCitationView
-                                className="citationDate"
-                                date="2017-07-15T11:49:38Z"
-                                format="DD-MM-YYYY"
-                                prefix=""
-                                suffix=""
+                              <Route
+                                render={[Function]}
                               >
-                                <span
-                                  className="citationDate"
+                                <Connect(PublicationCitation)
+                                  actions={Object {}}
+                                  hideCitation={true}
+                                  history={
+                                    Object {
+                                      "action": "POP",
+                                      "block": [Function],
+                                      "canGo": [Function],
+                                      "createHref": [Function],
+                                      "entries": Array [
+                                        Object {
+                                          "hash": "",
+                                          "key": "testKey",
+                                          "pathname": "/",
+                                          "search": "",
+                                        },
+                                      ],
+                                      "go": [Function],
+                                      "goBack": [Function],
+                                      "goForward": [Function],
+                                      "index": 0,
+                                      "length": 1,
+                                      "listen": [Function],
+                                      "location": Object {
+                                        "hash": "",
+                                        "key": "testKey",
+                                        "pathname": "/",
+                                        "search": "",
+                                      },
+                                      "push": [Function],
+                                      "replace": [Function],
+                                    }
+                                  }
+                                  location={
+                                    Object {
+                                      "hash": "",
+                                      "key": "testKey",
+                                      "pathname": "/",
+                                      "search": "",
+                                    }
+                                  }
+                                  match={
+                                    Object {
+                                      "isExact": true,
+                                      "params": Object {},
+                                      "path": "/",
+                                      "url": "/",
+                                    }
+                                  }
+                                  publication={
+                                    Object {
+                                      "rek_created_date": "2017-07-15T11:49:38Z",
+                                      "rek_display_type_lookup": "Research Report",
+                                      "rek_pid": "UQ:12345",
+                                      "rek_title": "related publication 1",
+                                    }
+                                  }
                                 >
-                                  15-07-2017
-                                </span>
-                              </DateCitationView>
-                              )
-                            </span>
+                                  <PublicationCitation
+                                    actions={
+                                      Object {
+                                        "claimPublication": [Function],
+                                        "clearClaimPublication": [Function],
+                                        "clearFixRecord": [Function],
+                                        "clearNewRecord": [Function],
+                                        "clearRecordToView": [Function],
+                                        "countPossiblyYourPublications": [Function],
+                                        "createNewRecord": [Function],
+                                        "createSearchPromise": [Function],
+                                        "dismissAppAlert": [Function],
+                                        "fixRecord": [Function],
+                                        "hidePossiblyYourPublicationsLure": [Function],
+                                        "hideRecord": [Function],
+                                        "hideRecordErrorReset": [Function],
+                                        "linkAuthorOrcidId": [Function],
+                                        "loadAuthorPublicationsStats": [Function],
+                                        "loadCurrentAccount": [Function],
+                                        "loadRecordToFix": [Function],
+                                        "loadRecordToView": [Function],
+                                        "loadSearchKeyList": [Function],
+                                        "loadVocabulariesList": [Function],
+                                        "logout": [Function],
+                                        "resetSavingAuthorState": [Function],
+                                        "searchAuthorPublications": [Function],
+                                        "searchAuthors": [Function],
+                                        "searchLatestPublications": [Function],
+                                        "searchPossiblyYourPublications": [Function],
+                                        "searchPublications": [Function],
+                                        "searchTrendingPublications": [Function],
+                                        "setClaimPublication": [Function],
+                                        "setFixRecord": [Function],
+                                        "setRecordToView": [Function],
+                                        "showAppAlert": [Function],
+                                        "submitThesis": [Function],
+                                        "unclaimRecord": [Function],
+                                        "updateCurrentAuthor": [Function],
+                                      }
+                                    }
+                                    className=""
+                                    hideCitation={true}
+                                    hideTitle={false}
+                                    history={
+                                      Object {
+                                        "action": "POP",
+                                        "block": [Function],
+                                        "canGo": [Function],
+                                        "createHref": [Function],
+                                        "entries": Array [
+                                          Object {
+                                            "hash": "",
+                                            "key": "testKey",
+                                            "pathname": "/",
+                                            "search": "",
+                                          },
+                                        ],
+                                        "go": [Function],
+                                        "goBack": [Function],
+                                        "goForward": [Function],
+                                        "index": 0,
+                                        "length": 1,
+                                        "listen": [Function],
+                                        "location": Object {
+                                          "hash": "",
+                                          "key": "testKey",
+                                          "pathname": "/",
+                                          "search": "",
+                                        },
+                                        "push": [Function],
+                                        "replace": [Function],
+                                      }
+                                    }
+                                    location={
+                                      Object {
+                                        "hash": "",
+                                        "key": "testKey",
+                                        "pathname": "/",
+                                        "search": "",
+                                      }
+                                    }
+                                    match={
+                                      Object {
+                                        "isExact": true,
+                                        "params": Object {},
+                                        "path": "/",
+                                        "url": "/",
+                                      }
+                                    }
+                                    publication={
+                                      Object {
+                                        "rek_created_date": "2017-07-15T11:49:38Z",
+                                        "rek_display_type_lookup": "Research Report",
+                                        "rek_pid": "UQ:12345",
+                                        "rek_title": "related publication 1",
+                                      }
+                                    }
+                                    showDefaultActions={false}
+                                    showSources={false}
+                                  >
+                                    <div
+                                      className="publicationCitation "
+                                    >
+                                      <div
+                                        className="columns is-gapless is-mobile"
+                                      >
+                                        <div
+                                          className="column"
+                                        >
+                                          <h3
+                                            className="publicationTitle"
+                                          >
+                                            <Link
+                                              onClick={[Function]}
+                                              replace={false}
+                                              to="/records/UQ:12345"
+                                            >
+                                              <a
+                                                href="/records/UQ:12345"
+                                                onClick={[Function]}
+                                              >
+                                                related publication 1
+                                              </a>
+                                            </Link>
+                                          </h3>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </PublicationCitation>
+                                </Connect(PublicationCitation)>
+                              </Route>
+                            </withRouter(Connect(PublicationCitation))>
+                            <CitationView
+                              className="displayType"
+                              prefix=" "
+                              suffix=" "
+                              value="Research Report"
+                            >
+                              <span
+                                className="displayType"
+                              >
+                                 
+                                Research Report
+                                 
+                              </span>
+                            </CitationView>
+                            <DateCitationView
+                              className="citationDate"
+                              date="2017-07-15T11:49:38Z"
+                              format="DD-MM-YYYY"
+                              prefix="(deposited "
+                              suffix=")"
+                            >
+                              <span
+                                className="citationDate"
+                              >
+                                (deposited 
+                                15-07-2017
+                                )
+                              </span>
+                            </DateCitationView>
                           </li>
                           <li
                             key="related-publications-1"
                           >
-                            <a
-                              href="/records/UQ:12345"
+                            <withRouter(Connect(PublicationCitation))
+                              actions={Object {}}
+                              hideCitation={true}
+                              publication={
+                                Object {
+                                  "rek_created_date": "2016-07-15T11:49:38Z",
+                                  "rek_display_type_lookup": "Data Collection",
+                                  "rek_pid": "UQ:12345",
+                                  "rek_title": "related dataset 1",
+                                }
+                              }
                             >
-                              related dataset 1
-                            </a>
-                             
-                            <i>
-                              Data Collection
-                            </i>
-                             
-                            <span>
-                              (
-                              deposited
-                               
-                              <DateCitationView
-                                className="citationDate"
-                                date="2016-07-15T11:49:38Z"
-                                format="DD-MM-YYYY"
-                                prefix=""
-                                suffix=""
+                              <Route
+                                render={[Function]}
                               >
-                                <span
-                                  className="citationDate"
+                                <Connect(PublicationCitation)
+                                  actions={Object {}}
+                                  hideCitation={true}
+                                  history={
+                                    Object {
+                                      "action": "POP",
+                                      "block": [Function],
+                                      "canGo": [Function],
+                                      "createHref": [Function],
+                                      "entries": Array [
+                                        Object {
+                                          "hash": "",
+                                          "key": "testKey",
+                                          "pathname": "/",
+                                          "search": "",
+                                        },
+                                      ],
+                                      "go": [Function],
+                                      "goBack": [Function],
+                                      "goForward": [Function],
+                                      "index": 0,
+                                      "length": 1,
+                                      "listen": [Function],
+                                      "location": Object {
+                                        "hash": "",
+                                        "key": "testKey",
+                                        "pathname": "/",
+                                        "search": "",
+                                      },
+                                      "push": [Function],
+                                      "replace": [Function],
+                                    }
+                                  }
+                                  location={
+                                    Object {
+                                      "hash": "",
+                                      "key": "testKey",
+                                      "pathname": "/",
+                                      "search": "",
+                                    }
+                                  }
+                                  match={
+                                    Object {
+                                      "isExact": true,
+                                      "params": Object {},
+                                      "path": "/",
+                                      "url": "/",
+                                    }
+                                  }
+                                  publication={
+                                    Object {
+                                      "rek_created_date": "2016-07-15T11:49:38Z",
+                                      "rek_display_type_lookup": "Data Collection",
+                                      "rek_pid": "UQ:12345",
+                                      "rek_title": "related dataset 1",
+                                    }
+                                  }
                                 >
-                                  15-07-2016
-                                </span>
-                              </DateCitationView>
-                              )
-                            </span>
+                                  <PublicationCitation
+                                    actions={
+                                      Object {
+                                        "claimPublication": [Function],
+                                        "clearClaimPublication": [Function],
+                                        "clearFixRecord": [Function],
+                                        "clearNewRecord": [Function],
+                                        "clearRecordToView": [Function],
+                                        "countPossiblyYourPublications": [Function],
+                                        "createNewRecord": [Function],
+                                        "createSearchPromise": [Function],
+                                        "dismissAppAlert": [Function],
+                                        "fixRecord": [Function],
+                                        "hidePossiblyYourPublicationsLure": [Function],
+                                        "hideRecord": [Function],
+                                        "hideRecordErrorReset": [Function],
+                                        "linkAuthorOrcidId": [Function],
+                                        "loadAuthorPublicationsStats": [Function],
+                                        "loadCurrentAccount": [Function],
+                                        "loadRecordToFix": [Function],
+                                        "loadRecordToView": [Function],
+                                        "loadSearchKeyList": [Function],
+                                        "loadVocabulariesList": [Function],
+                                        "logout": [Function],
+                                        "resetSavingAuthorState": [Function],
+                                        "searchAuthorPublications": [Function],
+                                        "searchAuthors": [Function],
+                                        "searchLatestPublications": [Function],
+                                        "searchPossiblyYourPublications": [Function],
+                                        "searchPublications": [Function],
+                                        "searchTrendingPublications": [Function],
+                                        "setClaimPublication": [Function],
+                                        "setFixRecord": [Function],
+                                        "setRecordToView": [Function],
+                                        "showAppAlert": [Function],
+                                        "submitThesis": [Function],
+                                        "unclaimRecord": [Function],
+                                        "updateCurrentAuthor": [Function],
+                                      }
+                                    }
+                                    className=""
+                                    hideCitation={true}
+                                    hideTitle={false}
+                                    history={
+                                      Object {
+                                        "action": "POP",
+                                        "block": [Function],
+                                        "canGo": [Function],
+                                        "createHref": [Function],
+                                        "entries": Array [
+                                          Object {
+                                            "hash": "",
+                                            "key": "testKey",
+                                            "pathname": "/",
+                                            "search": "",
+                                          },
+                                        ],
+                                        "go": [Function],
+                                        "goBack": [Function],
+                                        "goForward": [Function],
+                                        "index": 0,
+                                        "length": 1,
+                                        "listen": [Function],
+                                        "location": Object {
+                                          "hash": "",
+                                          "key": "testKey",
+                                          "pathname": "/",
+                                          "search": "",
+                                        },
+                                        "push": [Function],
+                                        "replace": [Function],
+                                      }
+                                    }
+                                    location={
+                                      Object {
+                                        "hash": "",
+                                        "key": "testKey",
+                                        "pathname": "/",
+                                        "search": "",
+                                      }
+                                    }
+                                    match={
+                                      Object {
+                                        "isExact": true,
+                                        "params": Object {},
+                                        "path": "/",
+                                        "url": "/",
+                                      }
+                                    }
+                                    publication={
+                                      Object {
+                                        "rek_created_date": "2016-07-15T11:49:38Z",
+                                        "rek_display_type_lookup": "Data Collection",
+                                        "rek_pid": "UQ:12345",
+                                        "rek_title": "related dataset 1",
+                                      }
+                                    }
+                                    showDefaultActions={false}
+                                    showSources={false}
+                                  >
+                                    <div
+                                      className="publicationCitation "
+                                    >
+                                      <div
+                                        className="columns is-gapless is-mobile"
+                                      >
+                                        <div
+                                          className="column"
+                                        >
+                                          <h3
+                                            className="publicationTitle"
+                                          >
+                                            <Link
+                                              onClick={[Function]}
+                                              replace={false}
+                                              to="/records/UQ:12345"
+                                            >
+                                              <a
+                                                href="/records/UQ:12345"
+                                                onClick={[Function]}
+                                              >
+                                                related dataset 1
+                                              </a>
+                                            </Link>
+                                          </h3>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </PublicationCitation>
+                                </Connect(PublicationCitation)>
+                              </Route>
+                            </withRouter(Connect(PublicationCitation))>
+                            <CitationView
+                              className="displayType"
+                              prefix=" "
+                              suffix=" "
+                              value="Data Collection"
+                            >
+                              <span
+                                className="displayType"
+                              >
+                                 
+                                Data Collection
+                                 
+                              </span>
+                            </CitationView>
+                            <DateCitationView
+                              className="citationDate"
+                              date="2016-07-15T11:49:38Z"
+                              format="DD-MM-YYYY"
+                              prefix="(deposited "
+                              suffix=")"
+                            >
+                              <span
+                                className="citationDate"
+                              >
+                                (deposited 
+                                15-07-2016
+                                )
+                              </span>
+                            </DateCitationView>
                           </li>
                           <li
                             key="related-publications-2"
                           >
-                            <a
-                              href="/records/UQ:12345"
+                            <withRouter(Connect(PublicationCitation))
+                              actions={Object {}}
+                              hideCitation={true}
+                              publication={
+                                Object {
+                                  "rek_created_date": "2016-07-15T11:49:38Z",
+                                  "rek_display_type_lookup": "Data Collection",
+                                  "rek_pid": "UQ:12345",
+                                  "rek_title": "related dataset 2",
+                                }
+                              }
                             >
-                              related dataset 2
-                            </a>
-                             
-                            <i>
-                              Data Collection
-                            </i>
-                             
-                            <span>
-                              (
-                              deposited
-                               
-                              <DateCitationView
-                                className="citationDate"
-                                date="2016-07-15T11:49:38Z"
-                                format="DD-MM-YYYY"
-                                prefix=""
-                                suffix=""
+                              <Route
+                                render={[Function]}
                               >
-                                <span
-                                  className="citationDate"
+                                <Connect(PublicationCitation)
+                                  actions={Object {}}
+                                  hideCitation={true}
+                                  history={
+                                    Object {
+                                      "action": "POP",
+                                      "block": [Function],
+                                      "canGo": [Function],
+                                      "createHref": [Function],
+                                      "entries": Array [
+                                        Object {
+                                          "hash": "",
+                                          "key": "testKey",
+                                          "pathname": "/",
+                                          "search": "",
+                                        },
+                                      ],
+                                      "go": [Function],
+                                      "goBack": [Function],
+                                      "goForward": [Function],
+                                      "index": 0,
+                                      "length": 1,
+                                      "listen": [Function],
+                                      "location": Object {
+                                        "hash": "",
+                                        "key": "testKey",
+                                        "pathname": "/",
+                                        "search": "",
+                                      },
+                                      "push": [Function],
+                                      "replace": [Function],
+                                    }
+                                  }
+                                  location={
+                                    Object {
+                                      "hash": "",
+                                      "key": "testKey",
+                                      "pathname": "/",
+                                      "search": "",
+                                    }
+                                  }
+                                  match={
+                                    Object {
+                                      "isExact": true,
+                                      "params": Object {},
+                                      "path": "/",
+                                      "url": "/",
+                                    }
+                                  }
+                                  publication={
+                                    Object {
+                                      "rek_created_date": "2016-07-15T11:49:38Z",
+                                      "rek_display_type_lookup": "Data Collection",
+                                      "rek_pid": "UQ:12345",
+                                      "rek_title": "related dataset 2",
+                                    }
+                                  }
                                 >
-                                  15-07-2016
-                                </span>
-                              </DateCitationView>
-                              )
-                            </span>
+                                  <PublicationCitation
+                                    actions={
+                                      Object {
+                                        "claimPublication": [Function],
+                                        "clearClaimPublication": [Function],
+                                        "clearFixRecord": [Function],
+                                        "clearNewRecord": [Function],
+                                        "clearRecordToView": [Function],
+                                        "countPossiblyYourPublications": [Function],
+                                        "createNewRecord": [Function],
+                                        "createSearchPromise": [Function],
+                                        "dismissAppAlert": [Function],
+                                        "fixRecord": [Function],
+                                        "hidePossiblyYourPublicationsLure": [Function],
+                                        "hideRecord": [Function],
+                                        "hideRecordErrorReset": [Function],
+                                        "linkAuthorOrcidId": [Function],
+                                        "loadAuthorPublicationsStats": [Function],
+                                        "loadCurrentAccount": [Function],
+                                        "loadRecordToFix": [Function],
+                                        "loadRecordToView": [Function],
+                                        "loadSearchKeyList": [Function],
+                                        "loadVocabulariesList": [Function],
+                                        "logout": [Function],
+                                        "resetSavingAuthorState": [Function],
+                                        "searchAuthorPublications": [Function],
+                                        "searchAuthors": [Function],
+                                        "searchLatestPublications": [Function],
+                                        "searchPossiblyYourPublications": [Function],
+                                        "searchPublications": [Function],
+                                        "searchTrendingPublications": [Function],
+                                        "setClaimPublication": [Function],
+                                        "setFixRecord": [Function],
+                                        "setRecordToView": [Function],
+                                        "showAppAlert": [Function],
+                                        "submitThesis": [Function],
+                                        "unclaimRecord": [Function],
+                                        "updateCurrentAuthor": [Function],
+                                      }
+                                    }
+                                    className=""
+                                    hideCitation={true}
+                                    hideTitle={false}
+                                    history={
+                                      Object {
+                                        "action": "POP",
+                                        "block": [Function],
+                                        "canGo": [Function],
+                                        "createHref": [Function],
+                                        "entries": Array [
+                                          Object {
+                                            "hash": "",
+                                            "key": "testKey",
+                                            "pathname": "/",
+                                            "search": "",
+                                          },
+                                        ],
+                                        "go": [Function],
+                                        "goBack": [Function],
+                                        "goForward": [Function],
+                                        "index": 0,
+                                        "length": 1,
+                                        "listen": [Function],
+                                        "location": Object {
+                                          "hash": "",
+                                          "key": "testKey",
+                                          "pathname": "/",
+                                          "search": "",
+                                        },
+                                        "push": [Function],
+                                        "replace": [Function],
+                                      }
+                                    }
+                                    location={
+                                      Object {
+                                        "hash": "",
+                                        "key": "testKey",
+                                        "pathname": "/",
+                                        "search": "",
+                                      }
+                                    }
+                                    match={
+                                      Object {
+                                        "isExact": true,
+                                        "params": Object {},
+                                        "path": "/",
+                                        "url": "/",
+                                      }
+                                    }
+                                    publication={
+                                      Object {
+                                        "rek_created_date": "2016-07-15T11:49:38Z",
+                                        "rek_display_type_lookup": "Data Collection",
+                                        "rek_pid": "UQ:12345",
+                                        "rek_title": "related dataset 2",
+                                      }
+                                    }
+                                    showDefaultActions={false}
+                                    showSources={false}
+                                  >
+                                    <div
+                                      className="publicationCitation "
+                                    >
+                                      <div
+                                        className="columns is-gapless is-mobile"
+                                      >
+                                        <div
+                                          className="column"
+                                        >
+                                          <h3
+                                            className="publicationTitle"
+                                          >
+                                            <Link
+                                              onClick={[Function]}
+                                              replace={false}
+                                              to="/records/UQ:12345"
+                                            >
+                                              <a
+                                                href="/records/UQ:12345"
+                                                onClick={[Function]}
+                                              >
+                                                related dataset 2
+                                              </a>
+                                            </Link>
+                                          </h3>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </PublicationCitation>
+                                </Connect(PublicationCitation)>
+                              </Route>
+                            </withRouter(Connect(PublicationCitation))>
+                            <CitationView
+                              className="displayType"
+                              prefix=" "
+                              suffix=" "
+                              value="Data Collection"
+                            >
+                              <span
+                                className="displayType"
+                              >
+                                 
+                                Data Collection
+                                 
+                              </span>
+                            </CitationView>
+                            <DateCitationView
+                              className="citationDate"
+                              date="2016-07-15T11:49:38Z"
+                              format="DD-MM-YYYY"
+                              prefix="(deposited "
+                              suffix=")"
+                            >
+                              <span
+                                className="citationDate"
+                              >
+                                (deposited 
+                                15-07-2016
+                                )
+                              </span>
+                            </DateCitationView>
                           </li>
                         </ul>
                       </div>
@@ -901,42 +1548,50 @@ exports[`Related publications Component  should render component 1`] = `
 exports[`Related publications Component  should render component with empty data 1`] = `
 <StandardCard
   className="relatedPublications"
-  title="Related publications and datasets"
-/>
+  title=""
+>
+  <ul
+    className="publicationList"
+  />
+</StandardCard>
 `;
 
 exports[`Related publications Component  should render component with empty datasets 1`] = `
 <StandardCard
   className="relatedPublications"
-  title="Related publications and datasets"
+  title=""
 >
-  <ul>
+  <ul
+    className="publicationList"
+  >
     <li
       key="related-publications-0"
     >
-      <a
-        href="/records/UQ:12345"
-      >
-        related publication 1
-      </a>
-       
-      <i>
-        Research Report
-      </i>
-       
-      <span>
-        (
-        deposited
-         
-        <DateCitationView
-          className="citationDate"
-          date="2017-07-15T11:49:38Z"
-          format="DD-MM-YYYY"
-          prefix=""
-          suffix=""
-        />
-        )
-      </span>
+      <withRouter(Connect(PublicationCitation))
+        actions={Object {}}
+        hideCitation={true}
+        publication={
+          Object {
+            "rek_created_date": "2017-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Research Report",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related publication 1",
+          }
+        }
+      />
+      <CitationView
+        className="displayType"
+        prefix=" "
+        suffix=" "
+        value="Research Report"
+      />
+      <DateCitationView
+        className="citationDate"
+        date="2017-07-15T11:49:38Z"
+        format="DD-MM-YYYY"
+        prefix="(deposited "
+        suffix=")"
+      />
     </li>
   </ul>
 </StandardCard>
@@ -945,62 +1600,68 @@ exports[`Related publications Component  should render component with empty data
 exports[`Related publications Component  should render component with empty publications 1`] = `
 <StandardCard
   className="relatedPublications"
-  title="Related publications and datasets"
+  title=""
 >
-  <ul>
+  <ul
+    className="publicationList"
+  >
     <li
       key="related-publications-0"
     >
-      <a
-        href="/records/UQ:12345"
-      >
-        related dataset 1
-      </a>
-       
-      <i>
-        Data Collection
-      </i>
-       
-      <span>
-        (
-        deposited
-         
-        <DateCitationView
-          className="citationDate"
-          date="2016-07-15T11:49:38Z"
-          format="DD-MM-YYYY"
-          prefix=""
-          suffix=""
-        />
-        )
-      </span>
+      <withRouter(Connect(PublicationCitation))
+        actions={Object {}}
+        hideCitation={true}
+        publication={
+          Object {
+            "rek_created_date": "2016-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Data Collection",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related dataset 1",
+          }
+        }
+      />
+      <CitationView
+        className="displayType"
+        prefix=" "
+        suffix=" "
+        value="Data Collection"
+      />
+      <DateCitationView
+        className="citationDate"
+        date="2016-07-15T11:49:38Z"
+        format="DD-MM-YYYY"
+        prefix="(deposited "
+        suffix=")"
+      />
     </li>
     <li
       key="related-publications-1"
     >
-      <a
-        href="/records/UQ:12345"
-      >
-        related dataset 2
-      </a>
-       
-      <i>
-        Data Collection
-      </i>
-       
-      <span>
-        (
-        deposited
-         
-        <DateCitationView
-          className="citationDate"
-          date="2016-07-15T11:49:38Z"
-          format="DD-MM-YYYY"
-          prefix=""
-          suffix=""
-        />
-        )
-      </span>
+      <withRouter(Connect(PublicationCitation))
+        actions={Object {}}
+        hideCitation={true}
+        publication={
+          Object {
+            "rek_created_date": "2016-07-15T11:49:38Z",
+            "rek_display_type_lookup": "Data Collection",
+            "rek_pid": "UQ:12345",
+            "rek_title": "related dataset 2",
+          }
+        }
+      />
+      <CitationView
+        className="displayType"
+        prefix=" "
+        suffix=" "
+        value="Data Collection"
+      />
+      <DateCitationView
+        className="citationDate"
+        date="2016-07-15T11:49:38Z"
+        format="DD-MM-YYYY"
+        prefix="(deposited "
+        suffix=")"
+      />
     </li>
   </ul>
 </StandardCard>

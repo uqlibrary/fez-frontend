@@ -5,6 +5,14 @@ function setup(testProps, isShallow = true){
     const props = {
         ...testProps,
         publication: testProps.publication || dataCollection,
+        title: testProps.title || '',
+        actions: testProps.actions || {},
+        showPublicationTitle: testProps.showPublicationTitle || false,
+        fields: testProps.fields ||
+        [
+            {field: 'fez_record_search_key_related_publications', subKey: 'rek_related_publications'},
+            {field: 'fez_record_search_key_related_datasets', subKey: 'rek_related_datasets'}
+        ]
     };
     return getElement(RelatedPublications, props, isShallow);
 }
