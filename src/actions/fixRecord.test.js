@@ -462,7 +462,9 @@ describe('Fix record actions', () => {
             ];
 
             mockApi.onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
-                .reply(200, {data: {...mockData.mockRecordToFix}});
+                .reply(200, {data: {...mockData.mockRecordToFix}})
+                .onPost(repositories.routes.HIDE_POSSIBLE_RECORD_API().apiUrl)
+                .reply(200, {data: {pid: testPid}});
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
