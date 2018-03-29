@@ -1,121 +1,107 @@
-jest.dontMock('./MyRecords');
-
-import {shallow} from 'enzyme';
-import {mount} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import MyRecords from './MyRecords';
 import {myRecordsList} from 'mock/data';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-import {Provider} from 'react-redux';
-import Immutable from 'immutable';
+import {routes} from 'config';
 
-beforeAll(() => {
-    injectTapEventPlugin();
-});
-
-const create = () => {
-    const initialState = Immutable.Map();
-
-    const store = {
-        getState: jest.fn(() => (initialState)),
-        dispatch: jest.fn(),
-        subscribe: jest.fn()
-    };
-    const next = jest.fn();
-    const invoke = (action) => thunk(store)(next)(action);
-    return {store, next, invoke}
-};
-
-function setup({publicationsList, publicationsListFacets, loadingPublicationsList, publicationsListPagingData,
-                   account, accountLoading, actions, history, isShallow = true}) {
+function setup(testProps, isShallow = true) {
     const props = {
-        publicationsList: publicationsList || [], // PropTypes.array,
-        publicationsListFacets: publicationsListFacets || {}, // PropTypes.object,
-        loadingPublicationsList: loadingPublicationsList || false, // PropTypes.bool,
-        publicationsListPagingData: publicationsListPagingData || {}, //PropTypes.object,
-
-        account: account || {id: 'fred'}, // PropTypes.object,
-        accountLoading: accountLoading || false, // PropTypes.bool,
-
-        actions: actions || {searchAuthorPublications: jest.fn()},
-        history: history || {}
-    };
-
-    if(isShallow) {
-        return shallow(
-            <Provider store={create().store}>
-                <MyRecords {...props} />
-            </Provider>);
-    }
-
-    return mount(
-        <Provider store={create().store}>
-            <MyRecords {...props} />
-        </Provider>, {
-        context: {
-            muiTheme: getMuiTheme()
+        actions: {
+            searchAuthorPublications: jest.fn(),
+            setFixRecord: jest.fn(),
         },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+        location: {pathname: routes.pathConfig.records.mine},
+        history: {
+            push: jest.fn(),
+            go: jest.fn()
+        },
+        accountLoading: false,
+        publicationsListPagingData: {},
+        loadingPublicationsList: false,
+        publicationsList: [],
+        publicationsListFacets: {},
+        ...testProps
+    };
+    return getElement(MyRecords, props, isShallow);
 }
 
 describe('MyRecords test', () => {
-    it('renders no results', () => {
-        const wrapper = setup({}).find('MyRecords').dive();
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
     it('renders loading screen while loading account data', () => {
-        const wrapper = setup({ accountLoading: true }).find('MyRecords').dive();
+        const wrapper = setup({ accountLoading: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders loading screen while loading publications ', () => {
-        const wrapper = setup({ loadingPublicationsList: true }).find('MyRecords').dive();
+        const wrapper = setup({ loadingPublicationsList: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('renders no results', () => {
+        const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders list of publications', () => {
-        const wrapper = setup({ publicationsList: myRecordsList.data, publicationsListPagingData: {"total": 147, "per_page": 20, "current_page": 1, "from": 1,"to": 20}})
-            .find('MyRecords').dive();
+        const wrapper = setup({
+            publicationsList: myRecordsList.data,
+            publicationsListPagingData: {"total": 147, "per_page": 20, "current_page": 1, "from": 1,"to": 20}
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+
     it('state is updated', () => {
-        const wrapper = setup({}).find('MyRecords').dive();
+        const testAction = jest.fn();
+        const wrapper = setup({actions: {searchAuthorPublications: testAction}});
 
         wrapper.instance().pageSizeChanged(100);
         expect(wrapper.state().pageSize).toEqual(100);
         expect(wrapper.state().page).toEqual(1);
+        expect(testAction).toHaveBeenCalled();
 
         wrapper.instance().pageChanged(2);
         expect(wrapper.state().page).toEqual(2);
+        expect(testAction).toHaveBeenCalled();
 
         wrapper.instance().sortByChanged('foo', 'bar');
         expect(wrapper.state().sortBy).toEqual('foo');
         expect(wrapper.state().sortDirection).toEqual('bar');
+        expect(testAction).toHaveBeenCalled();
 
         wrapper.instance().facetsChanged({'foo': 'bar'});
         expect(wrapper.state().activeFacets).toEqual({'foo': 'bar'});
         expect(wrapper.state().page).toEqual(1);
-
+        expect(testAction).toHaveBeenCalled();
     });
 
-    it('actions are called', () => {
-        const testFunction = jest.fn();
-        const wrapper = setup({isShallow: false, actions: {searchAuthorPublications: testFunction}});
-        expect(testFunction).toHaveBeenCalled();
+    it('sets forever true has publications', () => {
+        const wrapper = setup({loadingPublicationsList: true});
+        expect(wrapper.state().hasPublications).toEqual(false);
+
+        wrapper.instance().componentWillReceiveProps({loadingPublicationsList: false, publicationsList: [1,2,3], history: {}, location: {}});
+        expect(wrapper.state().hasPublications).toEqual(true);
     });
 
-    it('componentWillReceiveProps is called', () => {
-        const wrapper = setup({}).find('MyRecords').dive();
-        expect(wrapper.state().allowResultsPaging).toEqual(false);
-        wrapper.instance().componentWillReceiveProps({loadingPublicationsList: false, publicationsList: myRecordsList.data});
-        expect(wrapper.state().allowResultsPaging).toEqual(true);
+    it('gets publications when user clicks back', () => {
+        const testAction = jest.fn();
+        const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}});
+
+        wrapper.instance().componentWillReceiveProps({history: { action: 'POP'}, location: {pathname: routes.pathConfig.records.mine}});
+        expect(testAction).toHaveBeenCalled();
+    });
+
+    it('doesn\'t retrieve data from history if user navigates to next page', () => {
+        const testAction = jest.fn();
+        const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}});
+
+        wrapper.instance().componentWillReceiveProps({history: { action: 'PUSH'}, location: {pathname: routes.pathConfig.records.mine}});
+        expect(testAction).not.toHaveBeenCalled();
+    });
+
+    it('sets publication to fix', () => {
+        const push = jest.fn();
+        const setFixRecord = jest.fn();
+        const wrapper = setup({accountLoading: true, actions: {setFixRecord: setFixRecord},  history: {push: push}});
+        wrapper.instance().fixRecord({rek_pid: 'UQ:111111'});
+        expect(push).toHaveBeenCalledWith(routes.pathConfig.records.fix('UQ:111111'));
+        expect(setFixRecord).toHaveBeenCalled();
     });
 });

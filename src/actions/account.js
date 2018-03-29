@@ -17,7 +17,7 @@ export function loadCurrentAccount() {
         return get(routes.CURRENT_ACCOUNT_API())
             .then(account => {
                 if (account.hasOwnProperty('hasSession') && account.hasSession === true) {
-                    if(!process.env.USE_MOCK) Raven.setUserContext({id: account.id});
+                    if(!process.env.USE_MOCK && process.env.NODE_ENV !== 'test') Raven.setUserContext({id: account.id});
                     return Promise.resolve(account);
                 } else {
                     dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});

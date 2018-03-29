@@ -84,13 +84,17 @@ describe('Component FixRecord', () => {
 
     it('should redirect to other pages', () => {
         const testMethod = jest.fn();
+        const goBack = jest.fn();
 
-        const wrapper = setup({recordToFix: mockRecordToFix, history: {push: testMethod}});
+        const wrapper = setup({recordToFix: mockRecordToFix, history: {push: testMethod, goBack: goBack}});
         wrapper.instance()._navigateToMyResearch();
         expect(testMethod).toHaveBeenCalledWith('/records/mine');
 
         wrapper.instance()._navigateToDashboard();
         expect(testMethod).toHaveBeenCalledWith('/dashboard');
+
+        wrapper.instance()._cancelFix();
+        expect(goBack).toHaveBeenCalled();
     });
 
     it('should clear record to fix when leaving the form', () => {
