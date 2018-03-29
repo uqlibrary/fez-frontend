@@ -7,7 +7,6 @@ import ShareThis from './ShareThis';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-//import {myRecordsList} from 'mock/data';
 
 function setup({publication, isShallow = false}) {
 
@@ -33,7 +32,7 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('CitationCounts renders ', () => {
+describe('Sharethis renders ', () => {
     it('component with show true', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();

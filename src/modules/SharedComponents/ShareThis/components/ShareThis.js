@@ -18,9 +18,9 @@ export default class ShareThis extends React.Component {
             script.id = 'shareThisScript';
             script.async = true;
             document.head.appendChild(script);
-        }
 
-        this.addResearchGateButton();
+            this.addResearchGateButton();
+        }
     }
 
     componentWillUnmount() {
@@ -41,9 +41,11 @@ export default class ShareThis extends React.Component {
         link.rel = 'nofollow noopener noreferrer';
         link.appendChild(image);
 
-        const parentDiv = document.querySelector('#shareThisBlock');
-        const sibling = document.querySelector('#secondChild');
-        parentDiv.insertBefore(link, sibling);
+        const parentDiv = document.querySelector('.shareThis div:nth-child(2)');
+        const secondChild = document.querySelector('.shareThis div:nth-child(2) a:nth-child(2)');
+        if (link && parentDiv && secondChild && parentDiv.insertBefore) {
+            parentDiv.insertBefore(link, secondChild);
+        }
     }
 
     render() {
@@ -54,9 +56,9 @@ export default class ShareThis extends React.Component {
         return (
             <div className="shareThis columns is-gapless is-clearfix is-marginless" style={blockStyle}>
                 <div className="column" />
-                <div id="shareThisBlock" className="column is-narrow a2a_kit a2a_kit_size_20 a2a_default_style">
+                <div className="column is-narrow a2a_kit a2a_kit_size_20 a2a_default_style">
                     <a className="a2a_button_mendeley" />
-                    <a id="secondChild" className="a2a_button_twitter" />
+                    <a className="a2a_button_twitter" />
                     <a className="a2a_button_linkedin" />
                     <a className="a2a_button_facebook a2a_counter" />
                     <a className="a2a_button_email" />
