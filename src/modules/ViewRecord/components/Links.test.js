@@ -1224,7 +1224,10 @@ describe('Links method tests ', () => {
         const wrapper = setup({publication: record});
         testCases.forEach(testCase => {
             Date.now = jest.genMockFunction().mockReturnValue('2020-01-01T00:00:00.000Z');
-            const test = JSON.stringify(wrapper.instance().publicationLinkOpenAccessStatus(testCase.parameters.recordOaStatus, testCase.parameters.recordEmbargoDays, testCase.parameters.recordPublishedDate));
+            const test = JSON.stringify(wrapper.instance().publicationLinkOpenAccessStatus(
+                testCase.parameters.recordOaStatus,
+                testCase.parameters.recordEmbargoDays,
+                testCase.parameters.recordPublishedDate));
             expect(test).toMatchSnapshot();
         });
     });
