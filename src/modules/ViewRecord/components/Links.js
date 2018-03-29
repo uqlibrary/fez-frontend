@@ -20,7 +20,7 @@ export default class ViewRecordLinks extends PureComponent {
 
     renderLinkRow = (item) => {
         return (
-            <TableRow>
+            <TableRow key={`link-${item.index}`}>
                 <TableRowColumn className="rowLink">
                     {item.link}
                 </TableRowColumn>
@@ -34,8 +34,9 @@ export default class ViewRecordLinks extends PureComponent {
         );
     };
 
-    getDOILink = (doi, openAccessStatusId, pubmedCentralId) => {
+    getDOILink = (openAccessStatusId, doi, pubmedCentralId) => {
         return {
+            index: 'doi',
             link: (<DoiCitationView doi={doi} />),
             description: locale.viewRecord.sections.links.doiDescription,
             openAccessStatus: {
@@ -47,6 +48,7 @@ export default class ViewRecordLinks extends PureComponent {
 
     getPMCLink = (openAccessStatusId, pubmedCentralId) => {
         return {
+            index: 'pmc',
             link: <PubmedCentralLink pubmedCentralId={pubmedCentralId}/>,
             description: locale.viewRecord.sections.links.pubmedCentralLinkDescription,
             openAccessStatus: {
@@ -58,6 +60,7 @@ export default class ViewRecordLinks extends PureComponent {
 
     getGoogleScholarLink = (openAccessStatusId, title) => {
         return {
+            index: 'google',
             link: (
                 <ExternalLink
                     href={locale.viewRecord.sections.links.googleScholar.linkPrefix.replace('[title]', title)}
@@ -73,12 +76,13 @@ export default class ViewRecordLinks extends PureComponent {
         };
     };
 
-    getPublicationLink = (link, index, openAccessStatusId, isOpenAccess, embargoDate) => {
+    getPublicationLink = (openAccessStatusId, link, index, isOpenAccess, embargoDate) => {
         const linkDescription = this.props.publication.fez_record_search_key_link_description
             && this.props.publication.fez_record_search_key_link_description[index]
             && this.props.publication.fez_record_search_key_link_description[index].rek_link_description
             || locale.viewRecord.sections.links.linkMissingDescriptionTitle;
         return {
+            index: index,
             link: (
                 <ExternalLink href={link.rek_link} title={linkDescription}>
                     {link.rek_link}
@@ -93,11 +97,21 @@ export default class ViewRecordLinks extends PureComponent {
         };
     };
 
-    getLinkOpenAccess = (openAccessStatusId, pastEmgargoDate) => {
+    isRecordOpenAccess = (record) => {
+        const openAccessStatusId = record.fez_record_search_key_oa_status
+            && record.fez_record_search_key_oa_status.rek_oa_status;
+        const embargoDays = record.fez_record_search_key_oa_embargo_days
+            && record.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days
+            || 0;
+        const publishedDate = record.rek_date;
+        const currentDate = moment().format();
+        const embargoDate = embargoDays ? moment(publishedDate).add(embargoDays, 'days').format() : null;
+        const pastEmgargoDate = !embargoDate || embargoDate < currentDate;
         let isOpenAccess = false;
-        if (openAccessStatusId !== OPEN_ACCESS_ID_LINK_NO_DOI) isOpenAccess = false;
+        if (openAccessStatusId !== OPEN_ACCESS_ID_LINK_NO_DOI) return {isOpenAccess: false, embargoDate: null};
         else isOpenAccess = pastEmgargoDate;
-        return isOpenAccess;
+        const displayEmbargoDate = !!embargoDate && !isOpenAccess && embargoDate > currentDate ? moment(embargoDate).format('Do MMMM YYYY') : null;
+        return {isOpenAccess: isOpenAccess, embargoDate: displayEmbargoDate};
     };
 
     render() {
@@ -112,15 +126,8 @@ export default class ViewRecordLinks extends PureComponent {
             && record.fez_record_search_key_oa_status.rek_oa_status;
         const hasLinks = record.fez_record_search_key_link
             && record.fez_record_search_key_link.length > 0;
-        const embargoDays = record.fez_record_search_key_oa_embargo_days
-            && record.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days
-            || 0;
-        const publishedDate = record.rek_date;
-        const currentDate = moment().format();
-        const embargoDate = embargoDays ? moment(publishedDate).add(embargoDays, 'days').format() : null;
-        const isOpenAccess = this.getLinkOpenAccess(openAccessStatusId, !embargoDate || embargoDate < currentDate);
-        const displayEmbargoDate = !!embargoDate && !isOpenAccess && embargoDate > currentDate ? moment(embargoDate).format('Do MMMM YYYY') : null;
 
+        const {isOpenAccess, embargoDate} = this.isRecordOpenAccess(record);
         return (
             <StandardCard title={txt.title}>
                 <div className="viewRecordLinks">
@@ -135,21 +142,21 @@ export default class ViewRecordLinks extends PureComponent {
                         <TableBody displayRowCheckbox={false} className="tableData">
                             {
                                 !!pubmedCentralId &&
-                                this.renderLinkRow(this.getPMCLink(pubmedCentralId, openAccessStatusId))
+                                this.renderLinkRow(this.getPMCLink(openAccessStatusId, pubmedCentralId))
                             }
                             {
                                 !!doi &&
-                                this.renderLinkRow(this.getDOILink(doi, openAccessStatusId, pubmedCentralId))
+                                this.renderLinkRow(this.getDOILink(openAccessStatusId, doi, pubmedCentralId))
                             }
                             {
                                 // record has OA status of "Link (no DOI)" then produce a google scholar link for the publication title
                                 openAccessStatusId === OPEN_ACCESS_ID_LINK_NO_DOI &&
-                                this.renderLinkRow(this.getGoogleScholarLink(record.rek_title, openAccessStatusId))
+                                this.renderLinkRow(this.getGoogleScholarLink(openAccessStatusId, record.rek_title))
                             }
                             {
                                 hasLinks &&
                                 record.fez_record_search_key_link.map((item, index) => (
-                                    this.renderLinkRow(this.getPublicationLink(item, index, openAccessStatusId, isOpenAccess, displayEmbargoDate))
+                                    this.renderLinkRow(this.getPublicationLink(openAccessStatusId, item, index, isOpenAccess, embargoDate))
                                 ))
                             }
                         </TableBody>
