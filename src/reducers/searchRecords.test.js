@@ -276,5 +276,26 @@ describe('searchRecords reducer', () => {
             '2.s2.2323232323': 1,
         };
         expect(result).toEqual(expectedResult);
+
+        result = getIdCountHash(
+            [...records.espaceListCrafted, ...records.scopusListCrafted, ...records.wosListCrafted],
+            {key: 'fez_record_search_key_doi', value: 'rek_doi'},
+            true
+        );
+        expectedResult = {
+            '10.1.111111': 1,
+            '10.1.1122211': 1
+        };
+        expect(result).toEqual(expectedResult);
+
+        result = getIdCountHash(
+            [...records.espaceListCrafted, ...records.scopusListCrafted, ...records.wosListCrafted],
+            {key: 'fez_record_search_key_scopus_id', value: 'rek_scopus_id'},
+            true
+        );
+        expectedResult = {
+            '2.s2.222222222': 1
+        };
+        expect(result).toEqual(expectedResult);
     });
 });
