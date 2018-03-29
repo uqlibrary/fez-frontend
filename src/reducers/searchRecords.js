@@ -20,8 +20,30 @@ const idSearchKeys = [
     {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'}
 ];
 
+export const getEspaceDuplicatePublicationsById = (list, idSearchKey) => {
+    const idCountHash = list
+        .filter(item => !!item[idSearchKey.key] && item.currentSource === 'espace')
+        .map(item => {
+            return item[idSearchKey.key][idSearchKey.value];
+        })
+        .reduce((duplicatesCount, id) => {
+            duplicatesCount[id.toLowerCase()] = (duplicatesCount[id.toLowerCase()] || 0) + 1;
+            return duplicatesCount;
+        }, []);
+
+    const duplicateList = list
+        .filter(item => !!item[idSearchKey.key] && item.currentSource === 'espace')
+        .filter(item => {
+            return idCountHash[item[idSearchKey.key][idSearchKey.value].toLowerCase()] > 1;
+        });
+
+    return duplicateList.slice(0, duplicateList.length - 1);
+};
+
 export const deduplicateResults = (list) => {
     return idSearchKeys.reduce((publicationsList, idSearchKey) => {
+        const espacePublicationWithDuplicateIds = getEspaceDuplicatePublicationsById(publicationsList, idSearchKey);
+
         // get a list of doi/scopus_id/isi_loc counts
         const idCountHash = publicationsList
             .filter(item => {
@@ -38,20 +60,24 @@ export const deduplicateResults = (list) => {
         // get a list of duplicate doi records and dois/scopus_ids/isi_loc
         const idDuplicatesList = [];
         const duplicates = publicationsList
+            .filter(item => !!item[idSearchKey.key])
+            .filter(item => {
+                return item.currentSource !== 'espace' || espacePublicationWithDuplicateIds.filter(espaceItem => {
+                    return espaceItem.rek_pid === item.rek_pid;
+                }).length === 0;
+            })
             .filter(item => {
                 if (item[idSearchKey.key] && idCountHash[item[idSearchKey.key][idSearchKey.value].toLowerCase()] > 1
                     && idDuplicatesList.indexOf(item[idSearchKey.key][idSearchKey.value].toLowerCase()) === -1) {
                     idDuplicatesList.push(item[idSearchKey.key][idSearchKey.value].toLowerCase());
                 }
-                return !!item[idSearchKey.key] && idCountHash[item[idSearchKey.key][idSearchKey.value].toLowerCase()] > 1;
+                return idCountHash[item[idSearchKey.key][idSearchKey.value].toLowerCase()] > 1;
             });
-
         // remove all duplicates from full list of results
         const cleanedPublicationsList = publicationsList
             .filter(item => {
                 return !item[idSearchKey.key] || idCountHash[item[idSearchKey.key][idSearchKey.value].toLowerCase()] === 1;
             });
-
         // filter duplicate records based on source priority
         const highPriorityItem = idDuplicatesList
             .map(id => {
@@ -85,7 +111,7 @@ export const deduplicateResults = (list) => {
             });
 
         // re-add de-duplicated items
-        return [...highPriorityItem, ...cleanedPublicationsList]
+        return [...espacePublicationWithDuplicateIds, ...highPriorityItem, ...cleanedPublicationsList]
             .sort((item1, item2) =>
                 (locale.global.sources[item1.currentSource].priority - locale.global.sources[item2.currentSource].priority));
     }, [...list]);
