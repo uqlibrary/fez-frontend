@@ -20,16 +20,22 @@ const idSearchKeys = [
     {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'}
 ];
 
-export const getEspaceDuplicatePublicationsByIdExceptLastItem = (list, idSearchKey) => {
-    const idCountHash = list
-        .filter(item => !!item[idSearchKey.key] && item.currentSource === 'espace')
+export const getIdCountHash = (list, idSearchKey, isOnlyForEspace = false) => {
+    return list
+        .filter(item => {
+            return !!item[idSearchKey.key] && (!isOnlyForEspace || item.currentSource === 'espace');
+        })
         .map(item => {
             return item[idSearchKey.key][idSearchKey.value];
         })
         .reduce((duplicatesCount, id) => {
             duplicatesCount[id.toLowerCase()] = (duplicatesCount[id.toLowerCase()] || 0) + 1;
             return duplicatesCount;
-        }, []);
+        }, {});
+};
+
+export const getEspaceDuplicatePublicationsByIdExceptLastItem = (list, idSearchKey) => {
+    const idCountHash = getIdCountHash(list, idSearchKey, true);
 
     const duplicateList = list
         .filter(item => !!item[idSearchKey.key] && item.currentSource === 'espace')
@@ -45,17 +51,7 @@ export const deduplicateResults = (list) => {
         const espacePublicationWithDuplicateIds = getEspaceDuplicatePublicationsByIdExceptLastItem(publicationsList, idSearchKey);
 
         // get a list of doi/scopus_id/isi_loc counts
-        const idCountHash = publicationsList
-            .filter(item => {
-                return !!item[idSearchKey.key];
-            })
-            .map(item => {
-                return item[idSearchKey.key][idSearchKey.value];
-            })
-            .reduce((duplicatesCount, id) => {
-                duplicatesCount[id.toLowerCase()] = (duplicatesCount[id.toLowerCase()] || 0) + 1;
-                return duplicatesCount;
-            }, []);
+        const idCountHash = getIdCountHash(publicationsList, idSearchKey);
 
         // get a list of duplicate doi records and dois/scopus_ids/isi_loc
         const idDuplicatesList = [];
