@@ -54,7 +54,6 @@ export const deduplicateResults = (list) => {
         const idCountHash = getIdCountHash(publicationsList, idSearchKey);
 
         // get a list of duplicate doi records and dois/scopus_ids/isi_loc
-        const idDuplicatesList = [];
         const duplicates = publicationsList
             .filter(item => !!item[idSearchKey.key])
             .filter(item => {
@@ -63,19 +62,18 @@ export const deduplicateResults = (list) => {
                 }).length === 0;
             })
             .filter(item => {
-                if (item[idSearchKey.key] && idCountHash[item[idSearchKey.key][idSearchKey.value].toLowerCase()] > 1
-                    && idDuplicatesList.indexOf(item[idSearchKey.key][idSearchKey.value].toLowerCase()) === -1) {
-                    idDuplicatesList.push(item[idSearchKey.key][idSearchKey.value].toLowerCase());
-                }
                 return idCountHash[item[idSearchKey.key][idSearchKey.value].toLowerCase()] > 1;
             });
+
         // remove all duplicates from full list of results
         const cleanedPublicationsList = publicationsList
             .filter(item => {
                 return !item[idSearchKey.key] || idCountHash[item[idSearchKey.key][idSearchKey.value].toLowerCase()] === 1;
             });
+
         // filter duplicate records based on source priority
-        const highPriorityItem = idDuplicatesList
+        const highPriorityItem = Object.keys(idCountHash)
+            .filter(id => idCountHash[id] > 1)
             .map(id => {
                 // get a record with most priority
                 return duplicates
