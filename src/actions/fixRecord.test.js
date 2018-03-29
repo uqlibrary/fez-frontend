@@ -97,7 +97,6 @@ describe('Fix record actions', () => {
     });
 
     describe('fixRecord action', () => {
-
         it('dispatches expected actions with invalid data (missing publication data)', async () => {
             const testInput = {author: ''};
 
