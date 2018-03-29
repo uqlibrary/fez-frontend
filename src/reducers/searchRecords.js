@@ -34,15 +34,27 @@ export const getIdCountHash = (list, idSearchKey, isOnlyForEspace = false) => {
         }, {});
 };
 
-export const getEspaceDuplicatePublicationsByIdExceptLastItem = (list, idSearchKey) => {
-    const idCountHash = getIdCountHash(list, idSearchKey, true);
+export const getDuplicateList = (publicationsList, idSearchKey, isOnlyForEspace = false, espacePublicationWithDuplicateIds = []) => {
+    const idCountHash = getIdCountHash(publicationsList, idSearchKey, isOnlyForEspace);
 
-    const duplicateList = list
-        .filter(item => !!item[idSearchKey.key] && item.currentSource === 'espace')
+    return publicationsList
+        .filter(item => {
+            return !!item[idSearchKey.key] && (!isOnlyForEspace || item.currentSource === 'espace');
+        })
         .filter(item => {
             return idCountHash[item[idSearchKey.key][idSearchKey.value].toLowerCase()] > 1;
+        })
+        .filter(item => {
+            return isOnlyForEspace ||
+                item.currentSource !== 'espace' ||
+                espacePublicationWithDuplicateIds.filter(espaceItem => {
+                    return espaceItem.rek_pid === item.rek_pid;
+                }).length === 0;
         });
+};
 
+export const getEspaceDuplicatePublicationsByIdExceptLastItem = (list, idSearchKey) => {
+    const duplicateList = getDuplicateList(list, idSearchKey, true);
     return duplicateList.slice(0, duplicateList.length - 1);
 };
 
@@ -54,16 +66,7 @@ export const deduplicateResults = (list) => {
         const idCountHash = getIdCountHash(publicationsList, idSearchKey);
 
         // get a list of duplicate doi records and dois/scopus_ids/isi_loc
-        const duplicates = publicationsList
-            .filter(item => !!item[idSearchKey.key])
-            .filter(item => {
-                return item.currentSource !== 'espace' || espacePublicationWithDuplicateIds.filter(espaceItem => {
-                    return espaceItem.rek_pid === item.rek_pid;
-                }).length === 0;
-            })
-            .filter(item => {
-                return idCountHash[item[idSearchKey.key][idSearchKey.value].toLowerCase()] > 1;
-            });
+        const duplicates = getDuplicateList(publicationsList, idSearchKey, false, espacePublicationWithDuplicateIds);
 
         // remove all duplicates from full list of results
         const cleanedPublicationsList = publicationsList

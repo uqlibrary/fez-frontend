@@ -1,5 +1,5 @@
 import * as actions from '../actions/actionTypes';
-import searchRecordsReducer, {deduplicateResults, getEspaceDuplicatePublicationsByIdExceptLastItem, getIdCountHash} from './searchRecords';
+import searchRecordsReducer, {deduplicateResults, getEspaceDuplicatePublicationsByIdExceptLastItem, getIdCountHash, getDuplicateList} from './searchRecords';
 import * as records from '../mock/data/testing/searchRecords';
 
 const initialSearchSources = {
@@ -232,7 +232,7 @@ describe('searchRecords reducer', () => {
         expect(result).toEqual(expectedList);
     });
 
-    it('should correctly return id count hash', () => {
+    it('getIdCountHash should correctly return id count hash', () => {
         const testCases = [
             {
                 inputList: [...espaceList],
@@ -323,6 +323,59 @@ describe('searchRecords reducer', () => {
         testCases.map(testCase => {
             const {inputList, idSearchKey, isOnlyForEspace, expectedIdCountHash} = testCase;
             expect(getIdCountHash(inputList, idSearchKey, isOnlyForEspace)).toEqual(expectedIdCountHash);
+        });
+    });
+
+    it('getDuplicateList should get duplicates from the list correctly', () => {
+        const testCases = [
+            {
+                inputList: [...espaceList, ...scopusList, ...wosList],
+                idSearchKey: {key: 'fez_record_search_key_doi', value: 'rek_doi'},
+                isOnlyForEspace: false,
+                espaceDuplicates: [],
+                expectedDuplicates: records.expectedDuplicateListByDoiFromEsapceScopusWOS
+            },
+            {
+                inputList: [...espaceList, ...scopusList, ...wosList],
+                idSearchKey: {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'},
+                isOnlyForEspace: false,
+                espaceDuplicates: [],
+                expectedDuplicates: records.expectedDuplicateListByWOSIdFromEspaceScopusWOS
+            },
+            {
+                inputList: [...espaceList, ...scopusList, ...wosList],
+                idSearchKey: {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'},
+                isOnlyForEspace: false,
+                espaceDuplicates: [espaceList[0]],
+                expectedDuplicates: records.expectedDuplicateListByWOSIdFromEspaceScopusWOSWithEsapceDuplicatesProvided
+            },
+            {
+                inputList: [...espaceList, ...scopusList, ...wosList],
+                idSearchKey: {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'},
+                isOnlyForEspace: true,
+                espaceDuplicates: [],
+                expectedDuplicates: records.expectedDuplicateListByWOSIdFromEspaceScopusWOSOnlyForEspace
+            }
+        ];
+
+        testCases.map(testCase => {
+            const {inputList, idSearchKey, isOnlyForEspace, expectedDuplicates, espaceDuplicates} = testCase;
+            expect(getDuplicateList(inputList, idSearchKey, isOnlyForEspace, espaceDuplicates)).toEqual(expectedDuplicates);
+        });
+    });
+
+    it('getEspaceDuplicatePublicationsByIdExceptLastItem should correctly get espace records with duplicate id except last', () => {
+        const testCases = [
+            {
+                inputList: [...espaceList, ...scopusList, ...wosList],
+                idSearchKey: {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'},
+                expectedDuplicates: records.expectedDuplicateListByWOSIdFromEspaceScopusWOSOnlyForEspace.slice(0, -1)
+            }
+        ];
+
+        testCases.map(testCase => {
+            const {inputList, idSearchKey, expectedDuplicates} = testCase;
+            expect(getEspaceDuplicatePublicationsByIdExceptLastItem(inputList, idSearchKey)).toEqual(expectedDuplicates);
         });
     });
 });
