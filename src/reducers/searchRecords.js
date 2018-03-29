@@ -20,7 +20,7 @@ const idSearchKeys = [
     {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'}
 ];
 
-export const getEspaceDuplicatePublicationsById = (list, idSearchKey) => {
+export const getEspaceDuplicatePublicationsByIdExceptLastItem = (list, idSearchKey) => {
     const idCountHash = list
         .filter(item => !!item[idSearchKey.key] && item.currentSource === 'espace')
         .map(item => {
@@ -42,7 +42,7 @@ export const getEspaceDuplicatePublicationsById = (list, idSearchKey) => {
 
 export const deduplicateResults = (list) => {
     return idSearchKeys.reduce((publicationsList, idSearchKey) => {
-        const espacePublicationWithDuplicateIds = getEspaceDuplicatePublicationsById(publicationsList, idSearchKey);
+        const espacePublicationWithDuplicateIds = getEspaceDuplicatePublicationsByIdExceptLastItem(publicationsList, idSearchKey);
 
         // get a list of doi/scopus_id/isi_loc counts
         const idCountHash = publicationsList

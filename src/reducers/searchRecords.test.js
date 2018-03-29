@@ -1,5 +1,5 @@
 import * as actions from '../actions/actionTypes';
-import searchRecordsReducer, {deduplicateResults, getEspaceDuplicatePublicationsById} from './searchRecords';
+import searchRecordsReducer, {deduplicateResults, getEspaceDuplicatePublicationsByIdExceptLastItem} from './searchRecords';
 import * as records from '../mock/data/testing/searchRecords';
 
 const initialSearchSources = {
@@ -57,67 +57,7 @@ describe('searchRecords reducer', () => {
 
     it('updates correctly once general API data loaded', () => {
 
-        const postReducerPublicationsList = [
-            {
-                "currentSource": "espace",
-                "sources": [{source: "espace", id: "UQ:683770"}, {source: "scopus", id: "2-s2.0-85020491241"}],
-                "rek_pid": "UQ:683770",
-                "fez_record_search_key_doi": null,
-                "fez_record_search_key_isi_loc": {
-                    "rek_isi_loc_id": 4031803,
-                    "rek_isi_loc_pid": "UQ:683770",
-                    "rek_isi_loc_xsdmf_id": null,
-                    "rek_isi_loc": "000283520500009"
-                },
-                "fez_record_search_key_scopus_id": {
-                    "rek_scopus_id_id": 2552454,
-                    "rek_scopus_id_pid": "UQ:683770",
-                    "rek_scopus_id_xsdmf_id": null,
-                    "rek_scopus_id":"2-s2.0-85020491241"
-                }
-            },
-            {
-                "currentSource": "espace",
-                "sources": [{source: "espace", id: "UQ:224457"}, {source: "wos", id: "000283520500009"}],
-                "rek_pid": "UQ:224457",
-                "fez_record_search_key_doi": null,
-                "fez_record_search_key_isi_loc": {
-                    "rek_isi_loc_id": 3901795,
-                    "rek_isi_loc_pid": "UQ:224457",
-                    "rek_isi_loc_xsdmf_id": 10821,
-                    "rek_isi_loc": "000283520500009"
-                },
-                "fez_record_search_key_scopus_id": null
-            },
-            // duplicate doi in scopus, wos
-            {
-                "currentSource": "wos",
-                "sources": [{source: "scopus", id: "2-s2.0-85030864188"}, {source: "wos", id: "000412197500001"}],
-                "fez_record_search_key_isi_loc": {"rek_isi_loc": "000412197500001"},
-                "fez_record_search_key_doi": {"rek_doi": "10.1186\/s12985-017-0854-x"}
-            },
-            // duplicate doi in scopus, wos
-            {
-                "currentSource": "wos",
-                "sources": [{source: "scopus", id: "2-s2.0-84991737284"}, {source: "wos", id: "000386872100029"}],
-                "fez_record_search_key_isi_loc": {"rek_isi_loc": "000386872100029"},
-                "fez_record_search_key_doi": {"rek_doi": "10.1099\/jgv.0.000580"},
-            },
-            // duplicate doi in scopus, wos
-            {
-                "currentSource": "wos",
-                "sources": [{source: "scopus", id: "2-s2.0-84971467438"}, {source: "wos", id: "000377227600002"}],
-                "fez_record_search_key_isi_loc": {"rek_isi_loc": "000377227600002"},
-                "fez_record_search_key_doi": {"rek_doi": "10.1128\/JVI.00737-15"},
-            },
-            // duplicate doi in scopus, wos
-            {
-                "currentSource": "wos",
-                "sources": [{source: "scopus", id: "2-s2.0-77449149944"}, {source: "wos", id: "000273712100008"}],
-                "fez_record_search_key_isi_loc": {"rek_isi_loc": "000273712100008"},
-                "fez_record_search_key_doi": {"rek_doi": "10.1146\/annurev-ento-112408-085457"},
-            }
-        ];
+        const postReducerPublicationsList = records.postReducerPublicationsList;
 
         const loadedState = searchRecordsReducer(initialState, {
             payload: [...espaceList, ...scopusList, ...wosList],
@@ -131,37 +71,7 @@ describe('searchRecords reducer', () => {
 
     it('updates correctly once WOS API data loaded', () => {
 
-        const postReducerWOSPublicationsList = [
-            {
-                "currentSource": "wos",
-                "sources": [{source: "wos", id: "000412197500001"}],
-                "fez_record_search_key_isi_loc": {"rek_isi_loc": "000412197500001"},
-                "fez_record_search_key_doi": {"rek_doi": "10.1186\/s12985-017-0854-x"}
-            },
-            {
-                "currentSource": "wos",
-                "sources": [{source: "wos", id: "000386872100029"}],
-                "fez_record_search_key_isi_loc": {"rek_isi_loc": "000386872100029"},
-                "fez_record_search_key_doi": {"rek_doi": "10.1099\/jgv.0.000580"},
-            },
-            {
-                "currentSource": "wos",
-                "sources": [{source: "wos", id: "000377227600002"}],
-                "fez_record_search_key_isi_loc": {"rek_isi_loc": "000377227600002"},
-                "fez_record_search_key_doi": {"rek_doi": "10.1128\/JVI.00737-15"},
-            },
-            {
-                "currentSource": "wos",
-                "sources": [{source: "wos", id: "000283520500009"}],
-                "fez_record_search_key_isi_loc": {"rek_isi_loc": "000283520500009"},
-            },
-            {
-                "currentSource": "wos",
-                "sources": [{source: "wos", id: "000273712100008"}],
-                "fez_record_search_key_isi_loc": {"rek_isi_loc": "000273712100008"},
-                "fez_record_search_key_doi": {"rek_doi": "10.1146\/annurev-ento-112408-085457"},
-            }
-        ];
+        const postReducerWOSPublicationsList = records.wosList;
 
         const wosState = searchRecordsReducer(initialState, {
             payload: [...wosList],
@@ -274,15 +184,15 @@ describe('searchRecords reducer', () => {
             { rek_pid: 9, currentSource: 'espace', fez_record_search_key_isi_loc: {rek_isi_loc: '1232423532'}}
         ];
 
-        const espaceDuplicatesByDoi = getEspaceDuplicatePublicationsById(list, {key: 'fez_record_search_key_doi', value: 'rek_doi'});
+        const espaceDuplicatesByDoi = getEspaceDuplicatePublicationsByIdExceptLastItem(list, {key: 'fez_record_search_key_doi', value: 'rek_doi'});
         expect(espaceDuplicatesByDoi.length).toEqual(3);
         expect(espaceDuplicatesByDoi.map(item => item.rek_pid)).toEqual([1, 3, 4]);
 
-        const espaceDuplicatesByScopusId = getEspaceDuplicatePublicationsById(list, {key: 'fez_record_search_key_scopus_id', value: 'rek_scopus_id'});
+        const espaceDuplicatesByScopusId = getEspaceDuplicatePublicationsByIdExceptLastItem(list, {key: 'fez_record_search_key_scopus_id', value: 'rek_scopus_id'});
         expect(espaceDuplicatesByScopusId.length).toEqual(2);
         expect(espaceDuplicatesByScopusId.map(item => item.rek_pid)).toEqual([3, 5]);
 
-        const espaceDuplicatesByWOS = getEspaceDuplicatePublicationsById(list, {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'});
+        const espaceDuplicatesByWOS = getEspaceDuplicatePublicationsByIdExceptLastItem(list, {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'});
         expect(espaceDuplicatesByWOS.length).toEqual(1);
         expect(espaceDuplicatesByWOS.map(item => item.rek_pid)).toEqual([8]);
     });
@@ -294,32 +204,7 @@ describe('searchRecords reducer', () => {
          *  -   1 record with duplicate doi matching from scopusList and wosList
          *  -   1 record with duplicate scopus id matching from scopusList
          */
-        const espaceList = [
-            // duplicate espace record with wos id
-            { rek_pid: 1, currentSource: 'espace', sources: [{source: 'espace'}],
-                fez_record_search_key_doi: null,
-                fez_record_search_key_scopus_id: null,
-                fez_record_search_key_isi_loc: {rek_isi_loc: '1233423532'}
-            },
-            // duplicate espace record with wos id
-            { rek_pid: 2, currentSource: 'espace', sources: [{source: 'espace'}],
-                fez_record_search_key_doi: {rek_doi: '10.1.1122211'},
-                fez_record_search_key_scopus_id: null,
-                fez_record_search_key_isi_loc: {rek_isi_loc: '1233423532'}
-            },
-            // duplicate doi matching scopus, wos reocrds
-            { rek_pid: 3, currentSource: 'espace', sources: [{source: 'espace'}],
-                fez_record_search_key_doi: {rek_doi: '10.1.111111'},
-                fez_record_search_key_scopus_id: null,
-                fez_record_search_key_isi_loc: {rek_isi_loc: '454545545'}
-            },
-            // duplicate scopus id matching in scopus
-            { rek_pid: 4, currentSource: 'espace', sources: [{source: 'espace'}],
-                fez_record_search_key_doi: null,
-                fez_record_search_key_scopus_id: {rek_scopus_id: '2.s2.222222222'},
-                fez_record_search_key_isi_loc: {rek_isi_loc: '98989898989'}
-            }
-        ];
+        const espaceList = records.espaceListCrafted;
 
         /*
          * Below scopus list has:
@@ -328,33 +213,7 @@ describe('searchRecords reducer', () => {
          *  -   1 record with duplicate scopus id matching from espaceList
          *  -   1 unique record
          */
-        const scopusList = [
-            // duplicate doi matching wos - not expected in the list
-            { rek_pid: 5, currentSource: 'scopus', sources: [{source: 'scopus'}],
-                fez_record_search_key_doi: {rek_doi: '10.1.254745'},
-                fez_record_search_key_scopus_id: {rek_scopus_id: '2.s2.1111111111'}
-            },
-            // duplicate doi matching espace - not expected in the list
-            { rek_pid: 6, currentSource: 'scopus', sources: [{source: 'scopus'}],
-                fez_record_search_key_doi: {rek_doi: '10.1.111111'},
-                fez_record_search_key_scopus_id: {rek_scopus_id: '2.s2.1111111133'}
-            },
-            // duplicate scopus id matching in espace - not expected in the list
-            { rek_pid: 7, currentSource: 'scopus', sources: [{source: 'scopus'}],
-                fez_record_search_key_doi: {rek_doi: '10.1.222222'},
-                fez_record_search_key_scopus_id: {rek_scopus_id: '2.s2.222222222'}
-            },
-            // unique
-            { rek_pid: 8, currentSource: 'scopus', sources: [{source: 'scopus'}],
-                fez_record_search_key_doi: null,
-                fez_record_search_key_scopus_id: {rek_scopus_id: '2.s2.2323232323'}
-            },
-            // duplicate doi matching wos - not expected in the list
-            { rek_pid: 9, currentSource: 'scopus', sources: [{source: 'scopus'}],
-                fez_record_search_key_doi: {rek_doi: '10.1.989598'},
-                fez_record_search_key_scopus_id: null
-            }
-        ];
+        const scopusList = records.scopusListCrafted;
 
         /*
          * Below wos list has:
@@ -363,80 +222,9 @@ describe('searchRecords reducer', () => {
          *  -   1 record with duplicate wos id matching from espaceList (2 espace record with same wos id)
          *  -   1 unique record
          */
-        const wosList = [
-            // duplicate doi matching espace - not expected in the list
-            { rek_pid: 10, currentSource: 'wos', sources: [{source: 'wos'}],
-                fez_record_search_key_doi: {rek_doi: '10.1.111111'},
-                fez_record_search_key_isi_loc: {rek_isi_loc: '1232422532'}
-            },
-            // duplicate doi matching scopus - expected in the list with scopus source added
-            { rek_pid: 11, currentSource: 'wos', sources: [{source: 'wos'}],
-                fez_record_search_key_doi: {rek_doi: '10.1.254745'},
-                fez_record_search_key_isi_loc: {rek_isi_loc: '222423532'}
-            },
-            // duplicate wos id matching espace - not expected in the list
-            { rek_pid: 12, currentSource: 'wos', sources: [{source: 'wos'}],
-                fez_record_search_key_doi: {rek_doi: '10.1.22222222'},
-                fez_record_search_key_isi_loc: {rek_isi_loc: '1233423532'}
-            },
-            // unique
-            { rek_pid: 13, currentSource: 'wos', sources: [{source: 'wos'}],
-                fez_record_search_key_doi: {rek_doi: '10.1.99999'},
-                fez_record_search_key_isi_loc: {rek_isi_loc: '1232423543'}
-            },
-            // duplicate doi matching scopus - expected in the list with scopus source added
-            { rek_pid: 14, currentSource: 'wos', sources: [{source: 'wos'}],
-                fez_record_search_key_doi: {rek_doi: '10.1.989598'},
-                fez_record_search_key_isi_loc: {rek_isi_loc: '1232423512'}
-            }
-        ];
+        const wosList = records.wosListCrafted;
 
-        const expectedList = [
-            // duplicate espace record with wos id
-            { rek_pid: 1, currentSource: 'espace', sources: [{source: 'espace'}],
-                fez_record_search_key_doi: null,
-                fez_record_search_key_scopus_id: null,
-                fez_record_search_key_isi_loc: {rek_isi_loc: '1233423532'}
-            },
-            // duplicate espace record with wos id
-            { rek_pid: 2, currentSource: 'espace', sources: [{source: 'espace'}, {source: 'wos'}],
-                fez_record_search_key_doi: {rek_doi: '10.1.1122211'},
-                fez_record_search_key_scopus_id: null,
-                fez_record_search_key_isi_loc: {rek_isi_loc: '1233423532'}
-            },
-            // duplicate scopus id matching in scopus
-            { rek_pid: 4, currentSource: 'espace', sources: [{source: 'espace'}, {source: 'scopus'}],
-                fez_record_search_key_doi: null,
-                fez_record_search_key_scopus_id: {rek_scopus_id: '2.s2.222222222'},
-                fez_record_search_key_isi_loc: {rek_isi_loc: '98989898989'}
-            },
-            // duplicate doi matching scopus, wos reocrds
-            { rek_pid: 3, currentSource: 'espace', sources: [{source: 'espace'}, {source: 'scopus'}, {source: 'wos'}],
-                fez_record_search_key_doi: {rek_doi: '10.1.111111'},
-                fez_record_search_key_scopus_id: null,
-                fez_record_search_key_isi_loc: {rek_isi_loc: '454545545'}
-            },
-            // duplicate doi matching scopus - expected in the list with scopus source added
-            { rek_pid: 11, currentSource: 'wos', sources: [{source: 'scopus'}, {source: 'wos'}],
-                fez_record_search_key_doi: {rek_doi: '10.1.254745'},
-                fez_record_search_key_isi_loc: {rek_isi_loc: '222423532'}
-            },
-            // duplicate doi matching scopus - expected in the list with scopus source added
-            { rek_pid: 14, currentSource: 'wos', sources: [{source: 'scopus'}, {source: 'wos'}],
-                fez_record_search_key_doi: {rek_doi: '10.1.989598'},
-                fez_record_search_key_isi_loc: {rek_isi_loc: '1232423512'}
-            },
-            // unique
-            { rek_pid: 13, currentSource: 'wos', sources: [{source: 'wos'}],
-                fez_record_search_key_doi: {rek_doi: '10.1.99999'},
-                fez_record_search_key_isi_loc: {rek_isi_loc: '1232423543'}
-            },
-            // unique
-            { rek_pid: 8, currentSource: 'scopus', sources: [{source: 'scopus'}],
-                fez_record_search_key_doi: null,
-                fez_record_search_key_scopus_id: {rek_scopus_id: '2.s2.2323232323'}
-            },
-        ];
+        const expectedList = records.expectedListCrafted;
 
         const result = deduplicateResults([...espaceList, ...scopusList, ...wosList]);
 
