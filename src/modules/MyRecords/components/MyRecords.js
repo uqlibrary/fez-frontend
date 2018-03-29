@@ -47,7 +47,7 @@ export default class MyRecords extends React.Component {
 
     componentDidMount() {
         if (!this.props.accountLoading) {
-            this.props.actions.searchAuthorPublications({...this.initState, ...this.state});
+            this.props.actions.searchAuthorPublications({...this.state});
         }
     }
 
@@ -56,10 +56,9 @@ export default class MyRecords extends React.Component {
         if (this.props.location !== newProps.location
             && newProps.history.action === 'POP'
             && newProps.location.pathname === routes.pathConfig.records.mine) {
-            this.setState({...this.initState, ...newProps.location.state}, () => {
-                console.log(this.state);
+            this.setState({...(!!newProps.location.state ? newProps.location.state : this.initState)}, () => {
                 // only will be called when user clicks back on my records page
-                this.props.actions.searchAuthorPublications({...this.initState, ...this.state});
+                this.props.actions.searchAuthorPublications({...this.state});
             });
         }
         // set forever-true flag if user has publications
@@ -104,7 +103,7 @@ export default class MyRecords extends React.Component {
     facetsChanged = (activeFacets) => {
         this.setState(
             {
-                activeFacets: {...activeFacets},
+                activeFacets: activeFacets,
                 page: 1
             }, this.pushPageHistory
         );
@@ -114,9 +113,9 @@ export default class MyRecords extends React.Component {
         this.props.history.push({
             pathname: `${routes.pathConfig.records.mine}`,
             search: `?ts=${Date.now()}`,
-            state: {...this.initState, ...this.state}
+            state: {...this.state}
         });
-        this.props.actions.searchAuthorPublications({...this.initState, ...this.state});
+        this.props.actions.searchAuthorPublications({...this.state});
     };
 
     fixRecord = (item) => {
@@ -157,6 +156,9 @@ export default class MyRecords extends React.Component {
                                 }
                                 {txt.text}
                                 <PublicationsListSorting
+                                    sortBy={this.state.sortBy}
+                                    sortDirection={this.state.sortDirection}
+                                    pageSize={this.state.pageSize}
                                     pagingData={pagingData}
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
@@ -185,10 +187,11 @@ export default class MyRecords extends React.Component {
                         </div>
                     }
                     {
-                        !this.props.accountLoading && this.state.hasPublications && (
-                            (this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0) ||
-                            Object.keys(this.state.activeFacets.filters).length > 0 ||
-                            Object.keys(this.state.activeFacets.ranges).length > 0
+                        !this.props.accountLoading && !this.props.loadingPublicationsList && this.state.hasPublications
+                        && (
+                            (this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
+                            || Object.keys(this.state.activeFacets.filters).length > 0
+                            || Object.keys(this.state.activeFacets.ranges).length > 0
                         ) &&
                         <div className="column is-3 is-hidden-mobile">
                             <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
