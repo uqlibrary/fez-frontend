@@ -233,8 +233,6 @@ describe('searchRecords reducer', () => {
     });
 
     it('should correctly return id count hash', () => {
-        let result, expectedResult;
-
         const testCases = [
             {
                 inputList: [...espaceList],
@@ -323,8 +321,8 @@ describe('searchRecords reducer', () => {
         ];
 
         testCases.map(testCase => {
-            result = getIdCountHash(testCase.inputList, testCase.idSearchKey, testCase.isOnlyForEspace);
-            expect(result).toEqual(testCase.expectedIdCountHash);
+            const {inputList, idSearchKey, isOnlyForEspace, expectedIdCountHash} = testCase;
+            expect(getIdCountHash(inputList, idSearchKey, isOnlyForEspace)).toEqual(expectedIdCountHash);
         });
     });
 });
