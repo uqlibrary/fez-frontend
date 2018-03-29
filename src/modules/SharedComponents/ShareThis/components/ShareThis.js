@@ -20,7 +20,7 @@ export default class ShareThis extends React.Component {
             document.head.appendChild(script);
         }
 
-        this.addThisConfigInHead();
+        this.addResearchGateButton();
     }
 
     componentWillUnmount() {
@@ -29,40 +29,21 @@ export default class ShareThis extends React.Component {
         scriptShareThis.parentNode.removeChild(scriptShareThis);
     }
 
-    addThisConfigInHead() {
-        const code = '(function() { \n' +
-            '_waitforAddThis(1000)\n\n' +
+    addResearchGateButton() {
+        const image = document.createElement('img');
+        image.src = '/src/images/ResearchGate.svg';
+        image.height = 20;
+        image.width = 20;
+        image.alt = 'Share this link via Researchgate';
 
-            '  function _waitforAddThis(waitmilliseconds) {\n' +
-            '    if (window.a2a_config === null || typeof window.a2a === "undefined" || !(window.a2a.init_all)) {\n' +
-            '       if (waitmilliseconds > 0) {\n' +
-            '           setTimeout(function() {\n' +
-            '               _waitforAddThis(waitmilliseconds-100)\n' +
-            '               },  waitmilliseconds);\n' +
-            '       }\n' +
-            '    } else {\n' +
-            '        _addCode()\n' +
-            '    }\n' +
-            '  }\n\n' +
+        const link = document.createElement('a');
+        link.href = 'https://www.researchgate.net/go.Share.html?url=' + encodeURI(window.location.href) + '&title=' + encodeURIComponent(document.title);
+        link.rel = 'nofollow noopener noreferrer';
+        link.appendChild(image);
 
-            '  function _addCode() { \n' +
-            '          var a2a_config = window.a2a_config || {}; \n' +
-            '          a2a_config.custom_services = [ \n' +
-            '              [ \n' +
-            '                  "researchgate", \n' +
-            '                  "https://www.researchgate.net/go.Share.html?url=' + encodeURI(window.location.href) + '&title=' + encodeURIComponent(document.title) + '", \n' +
-            '                  "/images/ResearchGate.png" \n' +
-            '              ] \n' +
-            '          ]; \n' +
-            '          window.a2a_config = a2a_config; \n' +
-            '          window.a2a.init_all("page");  \n' +
-            '  } \n' +
-            '})(window);';
-
-        const script = document.createElement('script');
-        script.id = 'shareThisHeader';
-        script.appendChild(document.createTextNode(code));
-        document.head.appendChild(script);
+        const parentDiv = document.querySelector('#shareThisBlock');
+        const sibling = document.querySelector('#secondChild');
+        parentDiv.insertBefore(link, sibling);
     }
 
     render() {
@@ -73,10 +54,9 @@ export default class ShareThis extends React.Component {
         return (
             <div className="shareThis columns is-gapless is-clearfix is-marginless" style={blockStyle}>
                 <div className="column" />
-                <div className="column is-narrow a2a_kit a2a_kit_size_20 a2a_default_style">
+                <div id="shareThisBlock" className="column is-narrow a2a_kit a2a_kit_size_20 a2a_default_style">
                     <a className="a2a_button_mendeley" />
-
-                    <a className="a2a_button_twitter" />
+                    <a id="secondChild" className="a2a_button_twitter" />
                     <a className="a2a_button_linkedin" />
                     <a className="a2a_button_facebook a2a_counter" />
                     <a className="a2a_button_email" />
