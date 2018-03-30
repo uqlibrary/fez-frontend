@@ -24,6 +24,12 @@
   &.openAccess::before {
     content: url(../../src/images/oa_icon.svg);
   }
+  &.openAccessEmbargoed::before {
+    content: url(../../src/images/oa_icon_embargoed.svg);
+  }
+  &.openAccessClosed::before {
+    content: url(../../src/images/oa_icon_locked.svg);
+  }
   &.google::before, &.google_scholar::before {
     content: url(../../src/images/google_scholar_icon.svg);
   }

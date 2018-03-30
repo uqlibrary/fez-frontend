@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'locale';
 import {openAccessIdLookup} from 'config/general';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import * as Partials from './partials';
 
-export default class CitationCounts extends Component {
+export default class CitationCounts extends React.PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
     };
