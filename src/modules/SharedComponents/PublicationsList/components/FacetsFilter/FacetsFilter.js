@@ -9,7 +9,7 @@ import {publicationTypes} from 'config';
 import {locale} from 'locale';
 import DateRange from './DateRange';
 
-export default class FacetsFilter extends React.Component {
+export default class FacetsFilter extends React.PureComponent {
     static propTypes = {
         facetsData: PropTypes.object,
         onFacetsChanged: PropTypes.func,
@@ -192,6 +192,7 @@ export default class FacetsFilter extends React.Component {
                         <div className="column is-narrow-tablet">
                             <FlatButton
                                 fullWidth
+                                disabled={this.props.disabled}
                                 label={resetButtonText}
                                 onClick={this._handleResetClick}/>
                         </div>
