@@ -156,7 +156,7 @@ module.exports = {
             'process.env.ORCID_URL': JSON.stringify(orcidUrl),
             'process.env.ORCID_CLIENT_ID': JSON.stringify(orcidClientId),
             'process.env.TITLE_SUFFIX': JSON.stringify('LOCAL'),
-            'process.env.ENABLE_LOG': JSON.stringify(!!process.env.CI_BRANCH)
+            'process.env.ENABLE_LOG': JSON.stringify(!!process.env.CI_BRANCH && process.env.NODE_ENV !== 'test')
         })
     ],
     resolve: {
