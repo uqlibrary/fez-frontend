@@ -179,6 +179,7 @@ export function unclaimRecord(data) {
         };
 
         return patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest)
+            .then(() => (post(routes.HIDE_POSSIBLE_RECORD_API(), {pid: data.publication.rek_pid, type: 'H'})))
             .then(response => {
                 dispatch({
                     type: actions.FIX_RECORD_UNCLAIM_SUCCESS,

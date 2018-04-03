@@ -31,7 +31,7 @@ export function searchLatestPublications() {
  * @param {string} author user name
  * @returns {action}
  */
-export function searchAuthorPublications({page = 1, pageSize = 20, sortBy, sortDirection, facets}) {
+export function searchAuthorPublications({page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
     return dispatch => {
         dispatch({type: actions.AUTHOR_PUBLICATIONS_LOADING});
 
@@ -40,7 +40,7 @@ export function searchAuthorPublications({page = 1, pageSize = 20, sortBy, sortD
             pageSize: pageSize,
             sortBy: sortBy,
             sortDirection: sortDirection,
-            facets: facets
+            facets: activeFacets
         }))
             .then(response => {
                 dispatch({

@@ -4,12 +4,13 @@ const moment = require('moment');
 
 const pipe = (...functionsList) => values => functionsList.reduce((attributes, functionItem) => functionItem(attributes), values);
 
-const getIssueValues = (data) => ({
-    pid: data.publication.rek_pid,
-    userName: data.author.aut_display_name,
-    userId: data.author.aut_org_username || data.author.aut_student_username,
-    comments: data.comments
-});
+const getIssueValues = (data) => {
+    return {
+        comments: data.comments || null,
+        files: data.files && data.files.queue ? data.files.queue.map(item => item.name).toString().replace(/,/g, ', ') : null,
+        link: data.rek_link || null,
+    };
+};
 
 const getIssuesRequest = (text) => ({issue: text});
 

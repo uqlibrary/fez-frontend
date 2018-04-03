@@ -8,7 +8,10 @@ function setup(testProps, isShallow = true) {
             searchAuthorPublications: jest.fn(),
             setFixRecord: jest.fn(),
         },
-        location: {pathname: routes.pathConfig.records.mine},
+        location: {
+            pathname: routes.pathConfig.records.mine,
+            state: null
+        },
         history: {
             push: jest.fn(),
             go: jest.fn()
@@ -34,21 +37,62 @@ describe('MyRecords test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('renders loading screen while loading publications while filtering', () => {
+        const wrapper = setup({ publicationsList: [1, 2, 2] });
+        wrapper.setProps({loadingPublicationsList: true});
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('renders no results', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('renders list of publications', () => {
+    it('renders list of publications no facets', () => {
         const wrapper = setup({
-            publicationsList: myRecordsList.data,
+            publicationsList: [1, 2, 3], // myRecordsList.data,
             publicationsListPagingData: {"total": 147, "per_page": 20, "current_page": 1, "from": 1,"to": 20}
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('renders list of publications with facets', () => {
+        const wrapper = setup({
+            publicationsList: [1, 2, 3], // myRecordsList.data,
+            publicationsListPagingData: {"total": 147, "per_page": 20, "current_page": 1, "from": 1,"to": 20},
+            publicationsListFacets: {
+                "Display type": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 3,
+                "buckets": [{"key": 179, "doc_count": 95}, {"key": 130, "doc_count": 34}, {
+                    "key": 177,
+                    "doc_count": 2
+                }, {"key": 183, "doc_count": 2}, {"key": 174, "doc_count": 1}]
+            },
+                "Keywords": {
+                    "doc_count_error_upper_bound": 0,
+                    "sum_other_doc_count": 641,
+                    "buckets": [{"key": "Brca1", "doc_count": 15}, {
+                        "key": "Oncology",
+                        "doc_count": 15
+                    }, {"key": "Breast cancer", "doc_count": 13}, {
+                        "key": "Genetics & Heredity",
+                        "doc_count": 12
+                    }, {"key": "Biochemistry & Molecular Biology", "doc_count": 10}]
+                }
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 
-    it('state is updated', () => {
+    it('renders active filters', () => {
+        const wrapper = setup({location: {state: {activeFacets: {filters: {}, ranges: {Year: {from: 2000, to: 2010}}}}}});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+
+    it('state is updated by sub components', () => {
         const testAction = jest.fn();
         const wrapper = setup({actions: {searchAuthorPublications: testAction}});
 
@@ -72,6 +116,12 @@ describe('MyRecords test', () => {
         expect(testAction).toHaveBeenCalled();
     });
 
+    it('sets forever true has publications on load', () => {
+        const wrapper = setup({location: { state: {page: 2, hasPublications: true}} });
+        expect(wrapper.state().hasPublications).toEqual(true);
+        expect(wrapper.state().page).toEqual(2);
+    });
+
     it('sets forever true has publications', () => {
         const wrapper = setup({loadingPublicationsList: true});
         expect(wrapper.state().hasPublications).toEqual(false);
@@ -80,12 +130,26 @@ describe('MyRecords test', () => {
         expect(wrapper.state().hasPublications).toEqual(true);
     });
 
-    it('gets publications when user clicks back', () => {
+    it('gets publications when user clicks back and state is set', () => {
         const testAction = jest.fn();
         const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}});
 
-        wrapper.instance().componentWillReceiveProps({history: { action: 'POP'}, location: {pathname: routes.pathConfig.records.mine}});
+        wrapper.instance().componentWillReceiveProps({
+            history: {action: 'POP'},
+            location: {pathname: routes.pathConfig.records.mine, state: {page: 2, hasPublications: true}}
+        });
         expect(testAction).toHaveBeenCalled();
+        expect(wrapper.state().hasPublications).toEqual(true);
+        expect(wrapper.state().page).toEqual(2);
+
+    });
+
+    it('gets publications when user clicks back and state is not set', () => {
+        const testAction = jest.fn();
+        const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}});
+        wrapper.instance().componentWillReceiveProps({history: { action: 'POP'}, location: {pathname: routes.pathConfig.records.mine, state: null}});
+        expect(testAction).toHaveBeenCalled();
+        expect(wrapper.state().page).toEqual(1);
     });
 
     it('doesn\'t retrieve data from history if user navigates to next page', () => {

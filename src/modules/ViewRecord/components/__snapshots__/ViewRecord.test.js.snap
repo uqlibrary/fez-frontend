@@ -1,13 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component ViewRecord  should render default props 1`] = `
-<StandardPage
-  className="viewRecord"
->
-  <withRouter(Connect(PublicationCitation))
-    hideTitle={true}
-  />
-</StandardPage>
+<div
+  className="empty"
+/>
 `;
 
 exports[`Component ViewRecord  should render error 1`] = `

@@ -97,7 +97,6 @@ describe('Fix record actions', () => {
     });
 
     describe('fixRecord action', () => {
-
         it('dispatches expected actions with invalid data (missing publication data)', async () => {
             const testInput = {author: ''};
 
@@ -462,7 +461,9 @@ describe('Fix record actions', () => {
             ];
 
             mockApi.onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
-                .reply(200, {data: {...mockData.mockRecordToFix}});
+                .reply(200, {data: {...mockData.mockRecordToFix}})
+                .onPost(repositories.routes.HIDE_POSSIBLE_RECORD_API().apiUrl)
+                .reply(200, {data: {pid: testPid}});
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));

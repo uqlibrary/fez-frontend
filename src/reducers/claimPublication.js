@@ -18,9 +18,7 @@ const handlers = {
         {
             ...state,
             loadingPossiblePublicationsList: true,
-            possiblePublicationsList: [],
-            possiblePublicationsFacets: {},
-            possiblePublicationsPagingData: {}
+            possiblePublicationsList: []
         }
     ),
 
