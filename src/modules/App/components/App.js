@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
 import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
-// import {Offline, Online} from 'react-detect-offline';
-// import Snackbar from 'material-ui/Snackbar';
+import Snackbar from 'material-ui/Snackbar';
 import {locale} from 'locale';
 
 // application components
@@ -43,7 +42,7 @@ export default class App extends React.Component {
             mediaQuery: window.matchMedia('(min-width: 1280px)'),
             isMobile: window.matchMedia('(max-width: 720px)').matches,
             online: typeof navigator.onLine === 'boolean' ? navigator.onLine : true,
-            beenOffline: false
+            hasDisconnected: false
         };
     }
 
@@ -163,8 +162,17 @@ export default class App extends React.Component {
             };
         }
 
-        console.log('Online?', this.state.online);
-
+        // If the app ever goes offline, keep that in the state
+        if (!this.state.online && !this.state.hasDisconnected) {
+            this.setState({hasDisconnected: true});
+        }
+        // Set the props for the snackbar to display online/offline status
+        let snackbarProps = {...locale.global.detectAppOffline.onlineProps};
+        if(!this.state.online) {
+            snackbarProps = {...locale.global.detectAppOffline.offlineProps};
+        } else if (this.state.online && this.state.hasDisconnected) {
+            snackbarProps = {...locale.global.detectAppOffline.backOnlineProps};
+        }
         return (
             <div className="layout-fill align-stretch">
                 <AppBar
@@ -246,6 +254,7 @@ export default class App extends React.Component {
                     }
                 </div>
                 <HelpDrawer/>
+                <Snackbar {...snackbarProps}/>
             </div>
         );
     }

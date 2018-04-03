@@ -1,4 +1,8 @@
 import {APP_URL} from 'config';
+import React from 'react';
+import ActionCheckCircle from 'material-ui/svg-icons/action/check-circle';
+import AlertError from 'material-ui/svg-icons/alert/error';
+
 
 /*
 
@@ -121,6 +125,39 @@ export default {
             externalUrl: 'http://www.sherpa.ac.uk/romeo/search.php?issn=[issn]'
         },
         embargoDateFormat: 'YYYY-MM-DD',
-        defaultLinkDescription: 'Link to publication'
+        defaultLinkDescription: 'Link to publication',
+        detectAppOffline: {
+            onlineProps: {
+                open: false,
+                message: ''
+            },
+            backOnlineProps: {
+                open: true,
+                message: (
+                    <div className="columns is-gapless">
+                        <div className="column is-narrow">
+                            <ActionCheckCircle style={{fill: 'green', width: '32px', height: '32px', margin: '8px 6px 0 0'}}/>
+                        </div>
+                        <div className="column" style={{lineHeight: '48px'}}>
+                            Your connection has been restored
+                        </div>
+                    </div>
+                ),
+                autoHideDuration: 50000
+            },
+            offlineProps: {
+                open: true,
+                message: (
+                    <div className="columns is-gapless">
+                        <div className="column is-narrow">
+                            <AlertError style={{fill: 'red', width: '32px', height: '32px', margin: '8px 6px 0 0'}}/>
+                        </div>
+                        <div className="column" style={{lineHeight: '48px'}}>
+                            Your connection is currently offline
+                        </div>
+                    </div>
+                ),
+            }
+        }
     }
 };
