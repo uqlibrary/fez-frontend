@@ -73,6 +73,7 @@
     "prop-types": "^15.6.0",
     "raven-js": "^3.23.2",
     "react": "^15.6.2",
+    "react-detect-offline": "^2.0.1",
     "react-dom": "^15.6.2",
     "react-dropzone": "^4.2.8",
     "react-google-maps": "^9.4.5",
