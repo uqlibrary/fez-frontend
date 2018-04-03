@@ -255,7 +255,7 @@ export default {
         },
         claimPublications: {
             title: 'Claim possible publications',
-            loadingMessage: 'Searching for your publications...',
+            loadingMessage: 'Searching for possibly your publications...',
             facetSearchMessage: 'Applying filters...',
             noResultsFound: {
                 title: 'No matching publications found',
@@ -396,9 +396,9 @@ export default {
                         record.
                     </p>),
                 fileFailConfirmationAlert: {
-                    title: 'File upload failed',
-                    message: 'Retry uploading files via "Fix record" screen or contact eSpace administrators.',
-                    type: 'info'
+                    title: 'File upload and/or notes post failed',
+                    message: 'Retry uploading files and/or submitting publication notes via "Fix record" screen or contact eSpace administrators.',
+                    type: 'warning'
                 },
                 cancelButtonLabel: 'Add another missing record',
                 confirmButtonLabel: 'Go to my research'

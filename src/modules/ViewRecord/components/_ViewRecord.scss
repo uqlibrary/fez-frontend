@@ -22,6 +22,14 @@
 
   .additionalInformation, .publicationDetails {
     table-layout: auto !important;
+    ul {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+    }
   }
 
   .tableRow, .headingColumn, .dataColumn {
@@ -42,6 +50,9 @@
     @include desktop {
       width: 150px;
     }
+    @include tablet {
+      width: 150px;
+    }
     @include mobile {
       display: inline-block !important;
       width: calc(100% - 12px);
@@ -54,22 +65,12 @@
     white-space: normal !important;
     vertical-align: top;
     @include mobile {
-      padding: 12px 0 12px 18px !important;
+      padding: 12px 0 12px 24px !important;
       display: inline-block !important;
-      width: calc(100% - 12px);
+      width: calc(100% - 24px);
       height: auto !important;
       word-break: normal !important;
     }
-  }
-
-  ul {
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  p {
-    text-align: justify;
-    text-justify: inter-word;
   }
 
   .citationLabel {
@@ -87,6 +88,45 @@
   .sherpaRomeoYellow {
     color: yellow;
     background-color: grey;
+    padding: 1px 3px;
+  }
+
+  .viewRecordLinks {
+    margin-top: 24px !important;
+    .rowLink {
+      width: 40%;
+      @include mobile {
+        width: 80% !important;
+      }
+    }
+    .rowDescription {
+      text-indent: 12px !important;
+      width: 30%;
+    }
+    .rowOA {
+      text-align: right !important;
+    }
+    .tableHeader {
+      tr {
+        height: 24px !important;
+        th {
+          height: $text-line-height-small !important;
+          line-height: $text-line-height-small !important;
+          padding: 0 !important;
+          color: lighten($secondary-color, 33%) !important;
+          font-weight: $text-weight-normal !important;
+        }
+      }
+    }
+    .tableData {
+      tr {
+        height: 30px !important;
+        td {
+          padding: 0 !important;
+          height: $text-line-height-small !important;
+          line-height: $text-line-height-small !important;
+        }
+      }
+    }
   }
 }
-

@@ -96,6 +96,10 @@ export default class FixRecord extends React.PureComponent {
         this.props.history.push(routes.pathConfig.dashboard);
     };
 
+    _cancelFix = () => {
+        this.props.history.goBack();
+    };
+
     _actionSelected = (event, value) => {
         this.setState({
             selectedRecordAction: value
@@ -215,7 +219,7 @@ export default class FixRecord extends React.PureComponent {
                             <ConfirmDialogBox
                                 onRef={this._setSuccessConfirmation}
                                 onAction={this._navigateToMyResearch}
-                                onCancelAction={this._navigateToDashboard}
+                                onCancelAction={this._cancelFix}
                                 locale={txtUnclaimForm.successWorkflowConfirmation}/>
                         </StandardCard>
                     }
@@ -231,7 +235,7 @@ export default class FixRecord extends React.PureComponent {
                                 fullWidth
                                 label={txt.cancel}
                                 disabled={this.props.submitting}
-                                onTouchTap={this._navigateToMyResearch}/>
+                                onTouchTap={this._cancelFix}/>
                         </div>
                         {
                             this.state.selectedRecordAction &&

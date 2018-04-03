@@ -4,7 +4,7 @@ import {locale} from 'locale';
 
 export default class DashboardArticleCount extends PureComponent {
     static propTypes = {
-        articleCount: PropTypes.string,
+        articleCount: PropTypes.number,
         articleFirstYear: PropTypes.number,
         articleLastYear: PropTypes.number
     };

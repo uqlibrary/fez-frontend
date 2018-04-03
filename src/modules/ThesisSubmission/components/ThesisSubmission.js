@@ -23,6 +23,7 @@ import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
 import {RichEditorField} from 'modules/SharedComponents/RichEditor';
 import {thesisSubmissionSubtypes} from 'config/general';
+import Raven from "raven-js/typescript/raven";
 
 export default class ThesisSubmission extends Component {
     static propTypes = {
@@ -42,6 +43,7 @@ export default class ThesisSubmission extends Component {
     }
 
     cancelSubmit = () => {
+        if(process.env.ENABLE_LOG) Raven.captureException('THESIS SUBMISSION CANCELLED', {message: 'Thesis submission cancelled by user'});
         window.location.assign(formLocale.thesisSubmission.cancelLink);
     }
 

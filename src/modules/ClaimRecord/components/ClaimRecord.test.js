@@ -207,16 +207,14 @@ describe('Component ClaimRecord ', () => {
 
     it('should redirect to other pages', () => {
         const testMethod = jest.fn();
+        const goBack = jest.fn();
 
-        const wrapper = setup({history: {push: testMethod}});
+        const wrapper = setup({history: {push: testMethod, goBack: goBack}});
         wrapper.instance()._navigateToMyResearch();
         expect(testMethod).toHaveBeenCalledWith('/records/mine');
 
-        wrapper.instance()._navigateToPossibleMyResearch();
-        expect(testMethod).toHaveBeenCalledWith('/records/possible');
-
-        wrapper.instance()._navigateToAddRecord();
-        expect(testMethod).toHaveBeenCalledWith('/records/add/find');
+        wrapper.instance()._cancelClaim();
+        expect(goBack).toHaveBeenCalled();
     });
 
     it('should render navigation prompt', () => {
