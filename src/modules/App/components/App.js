@@ -19,7 +19,7 @@ import * as pages from './pages';
 import IconButton from 'material-ui/IconButton';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
-export default class App extends React.Component {
+export default class App extends React.PureComponent {
     static propTypes = {
         account: PropTypes.object,
         author: PropTypes.object,
@@ -162,6 +162,15 @@ export default class App extends React.Component {
             };
         }
 
+        // Listeners for changes in connection status
+        window.addEventListener('online', () => {
+            console.log('Back online');
+            this.setState({online: true});
+        }, false);
+        window.addEventListener('offline', () => {
+            console.log('Gone offline');
+            this.setState({online: false});
+        }, false);
         // If the app ever goes offline, keep that recorded in the state
         if (!this.state.online && !this.state.hasDisconnected) {
             this.setState({hasDisconnected: true});
@@ -173,6 +182,7 @@ export default class App extends React.Component {
         } else if (this.state.online && this.state.hasDisconnected) {
             snackbarProps = {...locale.global.detectAppOffline.backOnlineProps};
         }
+        console.log('Are we online?', this.state.online);
         return (
             <div className="layout-fill align-stretch">
                 <AppBar
