@@ -127,10 +127,6 @@ export default {
         embargoDateFormat: 'YYYY-MM-DD',
         defaultLinkDescription: 'Link to publication',
         detectAppOffline: {
-            onlineProps: {
-                open: false,
-                message: ''
-            },
             backOnlineProps: {
                 open: true,
                 message: (
@@ -139,7 +135,7 @@ export default {
                             <ActionCheckCircle/>
                         </div>
                         <div className="column">
-                            Your connection has been restored
+                            Your internet connection has been restored
                         </div>
                     </div>
                 ),
@@ -153,7 +149,7 @@ export default {
                             <AlertError/>
                         </div>
                         <div className="column">
-                            Your connection is currently offline
+                            Your internet connection is currently offline
                         </div>
                     </div>
                 ),

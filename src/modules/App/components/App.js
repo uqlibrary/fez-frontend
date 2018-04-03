@@ -163,26 +163,14 @@ export default class App extends React.PureComponent {
         }
 
         // Listeners for changes in connection status
-        window.addEventListener('online', () => {
-            console.log('Back online');
-            this.setState({online: true});
-        }, false);
-        window.addEventListener('offline', () => {
-            console.log('Gone offline');
-            this.setState({online: false});
-        }, false);
-        // If the app ever goes offline, keep that recorded in the state
+        window.addEventListener('online', () => {this.setState({online: true});});
+        window.addEventListener('offline', () => {this.setState({online: false});});
+
+        // If the app ever goes offline, keep that recorded in the state so we can show when we're back online
         if (!this.state.online && !this.state.hasDisconnected) {
             this.setState({hasDisconnected: true});
         }
-        // Set the props for the snackbar to display online/offline status
-        let snackbarProps = {...locale.global.detectAppOffline.onlineProps};
-        if(!this.state.online) {
-            snackbarProps = {...locale.global.detectAppOffline.offlineProps};
-        } else if (this.state.online && this.state.hasDisconnected) {
-            snackbarProps = {...locale.global.detectAppOffline.backOnlineProps};
-        }
-        console.log('Are we online?', this.state.online);
+        const snackbarProps = this.state.online ? {...locale.global.detectAppOffline.backOnlineProps} : {...locale.global.detectAppOffline.offlineProps};
         return (
             <div className="layout-fill align-stretch">
                 <AppBar
@@ -264,7 +252,10 @@ export default class App extends React.PureComponent {
                     }
                 </div>
                 <HelpDrawer/>
-                <Snackbar {...snackbarProps}/>
+                {
+                    (!this.state.online || (this.state.online && this.state.hasDisconnected)) &&
+                    <Snackbar {...snackbarProps}/>
+                }
             </div>
         );
     }
