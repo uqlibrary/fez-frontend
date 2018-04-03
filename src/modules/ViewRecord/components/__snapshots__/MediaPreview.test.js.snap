@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Media Preview Component  should render component 1`] = `
+<StandardCard
+  className=""
+  title="Image preview"
+>
+  <div
+    className="column is-narrow filePreview"
+  >
+    <RaisedButton
+      disabled={false}
+      fullWidth={false}
+      label="Open file in a new window"
+      labelPosition="after"
+      onTouchTap={[Function]}
+      primary={true}
+      secondary={false}
+    />
+    <RaisedButton
+      disabled={false}
+      fullWidth={false}
+      label="Close"
+      labelPosition="after"
+      onTouchTap={[Function]}
+      primary={false}
+      secondary={false}
+    />
+  </div>
+  <img
+    src="https://test.com/preview_test.jpg"
+  />
+</StandardCard>
+`;
+
+exports[`Media Preview Component  should render component with image 1`] = `
+<StandardCard
+  className=""
+  title="Image preview"
+>
+  <div
+    className="column is-narrow filePreview"
+  >
+    <RaisedButton
+      disabled={false}
+      fullWidth={false}
+      label="Open file in a new window"
+      labelPosition="after"
+      onTouchTap={[Function]}
+      primary={true}
+      secondary={false}
+    />
+    <RaisedButton
+      disabled={false}
+      fullWidth={false}
+      label="Close"
+      labelPosition="after"
+      onTouchTap={[Function]}
+      primary={false}
+      secondary={false}
+    />
+  </div>
+  <img
+    src="https://test.com/preview_test.jpg"
+  />
+</StandardCard>
+`;
+
+exports[`Media Preview Component  should render component with video 1`] = `
+<StandardCard
+  className=""
+  title="Video preview"
+>
+  <div
+    className="column is-narrow filePreview"
+  >
+    <RaisedButton
+      disabled={false}
+      fullWidth={false}
+      label="Open file in a new window"
+      labelPosition="after"
+      onTouchTap={[Function]}
+      primary={true}
+      secondary={false}
+    />
+    <RaisedButton
+      disabled={false}
+      fullWidth={false}
+      label="Close"
+      labelPosition="after"
+      onTouchTap={[Function]}
+      primary={false}
+      secondary={false}
+    />
+  </div>
+  <video
+    controls={true}
+  >
+    <source
+      src="https://test.com/preview_test.jpg"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+</StandardCard>
+`;

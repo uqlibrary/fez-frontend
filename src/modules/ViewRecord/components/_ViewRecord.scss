@@ -1,6 +1,89 @@
 @import '../../../sass/variables';
 
 .viewRecord {
+  .file {
+    td, th {
+      padding: 0 6px !important;
+      height: 14px !important;
+      &.filename {
+        width: 40% !important;
+      }
+      &.description {
+        width: 30% !important;
+      }
+      &.oaStatus {
+        width: 20% !important;
+        @include mobile {
+          width: 5% !important;
+        }
+      }
+      &.size {
+        width: 10% !important;
+      }
+    }
+    .header {
+      margin-top: 24px;
+    }
+    .tableHeader tr {
+      height: 14px !important;
+      th {
+        height: 24px !important;
+        line-height: 14px !important;
+        padding: 0 !important;
+        color: #adadad !important;
+        font-weight: 300 !important;
+      }
+    }
+    .fileDetails {
+      width: 100%;
+      .fileIcon {
+        img, svg {
+          color: lighten($secondary-color, 25%) !important;
+          margin: auto 6px !important;
+        }
+      }
+      .fileInfo {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        //max-width: 200px;
+      }
+      .fileName {
+        margin-left: 12px;
+        line-height: 47px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .audioWrapper {
+        overflow: hidden;
+        .audioButton {
+          transform: scale(0.75);
+          &.play {
+            margin-right: -18px !important;
+          }
+          svg {
+            //width: 12px !important;
+            //height: 12px !important;
+            fill: $secondary-color !important;
+          }
+        }
+        .audioPlayer {
+          margin-top: 8px;
+          width: 100px;
+          overflow: hidden;
+
+        }
+      }
+    }
+  }
+
+  .filePreview {
+    position: relative;
+    top: -46px;
+    text-align: right;
+  }
+
   margin-top: -12px !important;
   .publicationCitation {
     padding-top: 0 !important;
@@ -20,7 +103,7 @@
     margin-bottom: 1em;
   }
 
-  .additionalInformation, .publicationDetails {
+  .additionalInformation, .publicationDetails, .grantInformation {
     table-layout: auto !important;
     ul {
       padding: 0 !important;
