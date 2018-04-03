@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
 import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
-import Snackbar from 'material-ui/Snackbar';
 import {locale} from 'locale';
 
 // application components
@@ -14,6 +13,7 @@ import {HelpDrawer} from 'uqlibrary-react-toolbox/build/HelpDrawer';
 import {AuthButton} from 'uqlibrary-react-toolbox/build/AuthButton';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import AppAlertContainer from '../containers/AppAlert';
+import {OfflineSnackbar} from 'uqlibrary-react-toolbox/build/OfflineSnackbar';
 
 import * as pages from './pages';
 import IconButton from 'material-ui/IconButton';
@@ -41,8 +41,6 @@ export default class App extends React.PureComponent {
             docked: false,
             mediaQuery: window.matchMedia('(min-width: 1280px)'),
             isMobile: window.matchMedia('(max-width: 720px)').matches,
-            online: typeof navigator.onLine === 'boolean' ? navigator.onLine : true,
-            hasDisconnected: false
         };
     }
 
@@ -161,16 +159,6 @@ export default class App extends React.PureComponent {
                 ...locale.global.forceOrcidLinkAlert
             };
         }
-
-        // Listeners for changes in connection status
-        window.addEventListener('online', () => {this.setState({online: true});});
-        window.addEventListener('offline', () => {this.setState({online: false});});
-
-        // If the app ever goes offline, keep that recorded in the state so we can show when we're back online
-        if (!this.state.online && !this.state.hasDisconnected) {
-            this.setState({hasDisconnected: true});
-        }
-        const snackbarProps = this.state.online ? {...locale.global.detectAppOffline.backOnlineProps} : {...locale.global.detectAppOffline.offlineProps};
         return (
             <div className="layout-fill align-stretch">
                 <AppBar
@@ -252,10 +240,7 @@ export default class App extends React.PureComponent {
                     }
                 </div>
                 <HelpDrawer/>
-                {
-                    (!this.state.online || (this.state.online && this.state.hasDisconnected)) &&
-                    <Snackbar {...snackbarProps}/>
-                }
+                <OfflineSnackbar locale={locale.global.offlineSnackbar} />
             </div>
         );
     }

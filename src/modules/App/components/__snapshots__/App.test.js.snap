@@ -290,6 +290,47 @@ exports[`Application component should render alert if user is not fez author 1`]
     </Switch>
   </div>
   <Connect(HelpDrawer) />
+  <OfflineSnackbar
+    locale={
+      Object {
+        "offline": Object {
+          "message": <div
+            className="columns is-gapless connectionStatus offline"
+          >
+            <div
+              className="column is-narrow"
+            >
+              <AlertError />
+            </div>
+            <div
+              className="column"
+            >
+              Your internet connection is currently offline
+            </div>
+          </div>,
+          "open": true,
+        },
+        "online": Object {
+          "autoHideDuration": 5000,
+          "message": <div
+            className="columns is-gapless connectionStatus online"
+          >
+            <div
+              className="column is-narrow"
+            >
+              <ActionCheckCircle />
+            </div>
+            <div
+              className="column"
+            >
+              Your internet connection has been restored
+            </div>
+          </div>,
+          "open": true,
+        },
+      }
+    }
+  />
 </div>
 `;
 
@@ -568,6 +609,47 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     </Switch>
   </div>
   <Connect(HelpDrawer) />
+  <OfflineSnackbar
+    locale={
+      Object {
+        "offline": Object {
+          "message": <div
+            className="columns is-gapless connectionStatus offline"
+          >
+            <div
+              className="column is-narrow"
+            >
+              <AlertError />
+            </div>
+            <div
+              className="column"
+            >
+              Your internet connection is currently offline
+            </div>
+          </div>,
+          "open": true,
+        },
+        "online": Object {
+          "autoHideDuration": 5000,
+          "message": <div
+            className="columns is-gapless connectionStatus online"
+          >
+            <div
+              className="column is-narrow"
+            >
+              <ActionCheckCircle />
+            </div>
+            <div
+              className="column"
+            >
+              Your internet connection has been restored
+            </div>
+          </div>,
+          "open": true,
+        },
+      }
+    }
+  />
 </div>
 `;
 
@@ -729,6 +811,47 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     </Switch>
   </div>
   <Connect(HelpDrawer) />
+  <OfflineSnackbar
+    locale={
+      Object {
+        "offline": Object {
+          "message": <div
+            className="columns is-gapless connectionStatus offline"
+          >
+            <div
+              className="column is-narrow"
+            >
+              <AlertError />
+            </div>
+            <div
+              className="column"
+            >
+              Your internet connection is currently offline
+            </div>
+          </div>,
+          "open": true,
+        },
+        "online": Object {
+          "autoHideDuration": 5000,
+          "message": <div
+            className="columns is-gapless connectionStatus online"
+          >
+            <div
+              className="column is-narrow"
+            >
+              <ActionCheckCircle />
+            </div>
+            <div
+              className="column"
+            >
+              Your internet connection has been restored
+            </div>
+          </div>,
+          "open": true,
+        },
+      }
+    }
+  />
 </div>
 `;
 
@@ -1007,6 +1130,47 @@ exports[`Application component should render app for account with fez author wit
     </Switch>
   </div>
   <Connect(HelpDrawer) />
+  <OfflineSnackbar
+    locale={
+      Object {
+        "offline": Object {
+          "message": <div
+            className="columns is-gapless connectionStatus offline"
+          >
+            <div
+              className="column is-narrow"
+            >
+              <AlertError />
+            </div>
+            <div
+              className="column"
+            >
+              Your internet connection is currently offline
+            </div>
+          </div>,
+          "open": true,
+        },
+        "online": Object {
+          "autoHideDuration": 5000,
+          "message": <div
+            className="columns is-gapless connectionStatus online"
+          >
+            <div
+              className="column is-narrow"
+            >
+              <ActionCheckCircle />
+            </div>
+            <div
+              className="column"
+            >
+              Your internet connection has been restored
+            </div>
+          </div>,
+          "open": true,
+        },
+      }
+    }
+  />
 </div>
 `;
 
@@ -1302,6 +1466,47 @@ exports[`Application component should render app for account with fez author wit
     </Switch>
   </div>
   <Connect(HelpDrawer) />
+  <OfflineSnackbar
+    locale={
+      Object {
+        "offline": Object {
+          "message": <div
+            className="columns is-gapless connectionStatus offline"
+          >
+            <div
+              className="column is-narrow"
+            >
+              <AlertError />
+            </div>
+            <div
+              className="column"
+            >
+              Your internet connection is currently offline
+            </div>
+          </div>,
+          "open": true,
+        },
+        "online": Object {
+          "autoHideDuration": 5000,
+          "message": <div
+            className="columns is-gapless connectionStatus online"
+          >
+            <div
+              className="column is-narrow"
+            >
+              <ActionCheckCircle />
+            </div>
+            <div
+              className="column"
+            >
+              Your internet connection has been restored
+            </div>
+          </div>,
+          "open": true,
+        },
+      }
+    }
+  />
 </div>
 `;
 
@@ -1527,6 +1732,47 @@ exports[`Application component should render app for account with fez author wit
     </Switch>
   </div>
   <Connect(HelpDrawer) />
+  <OfflineSnackbar
+    locale={
+      Object {
+        "offline": Object {
+          "message": <div
+            className="columns is-gapless connectionStatus offline"
+          >
+            <div
+              className="column is-narrow"
+            >
+              <AlertError />
+            </div>
+            <div
+              className="column"
+            >
+              Your internet connection is currently offline
+            </div>
+          </div>,
+          "open": true,
+        },
+        "online": Object {
+          "autoHideDuration": 5000,
+          "message": <div
+            className="columns is-gapless connectionStatus online"
+          >
+            <div
+              className="column is-narrow"
+            >
+              <ActionCheckCircle />
+            </div>
+            <div
+              className="column"
+            >
+              Your internet connection has been restored
+            </div>
+          </div>,
+          "open": true,
+        },
+      }
+    }
+  />
 </div>
 `;
 
@@ -1660,6 +1906,47 @@ exports[`Application component should render application with routing for the us
     </div>
   </div>
   <Connect(HelpDrawer) />
+  <OfflineSnackbar
+    locale={
+      Object {
+        "offline": Object {
+          "message": <div
+            className="columns is-gapless connectionStatus offline"
+          >
+            <div
+              className="column is-narrow"
+            >
+              <AlertError />
+            </div>
+            <div
+              className="column"
+            >
+              Your internet connection is currently offline
+            </div>
+          </div>,
+          "open": true,
+        },
+        "online": Object {
+          "autoHideDuration": 5000,
+          "message": <div
+            className="columns is-gapless connectionStatus online"
+          >
+            <div
+              className="column is-narrow"
+            >
+              <ActionCheckCircle />
+            </div>
+            <div
+              className="column"
+            >
+              Your internet connection has been restored
+            </div>
+          </div>,
+          "open": true,
+        },
+      }
+    }
+  />
 </div>
 `;
 
@@ -1810,6 +2097,47 @@ exports[`Application component should render for anon user 1`] = `
     </Switch>
   </div>
   <Connect(HelpDrawer) />
+  <OfflineSnackbar
+    locale={
+      Object {
+        "offline": Object {
+          "message": <div
+            className="columns is-gapless connectionStatus offline"
+          >
+            <div
+              className="column is-narrow"
+            >
+              <AlertError />
+            </div>
+            <div
+              className="column"
+            >
+              Your internet connection is currently offline
+            </div>
+          </div>,
+          "open": true,
+        },
+        "online": Object {
+          "autoHideDuration": 5000,
+          "message": <div
+            className="columns is-gapless connectionStatus online"
+          >
+            <div
+              className="column is-narrow"
+            >
+              <ActionCheckCircle />
+            </div>
+            <div
+              className="column"
+            >
+              Your internet connection has been restored
+            </div>
+          </div>,
+          "open": true,
+        },
+      }
+    }
+  />
 </div>
 `;
 
@@ -1822,601 +2150,6 @@ exports[`Application component should render loading screen while account is loa
     logoText="UQ eSpace "
     progressColor="#FFF"
     title="UQ eSpace "
-  />
-</div>
-`;
-
-exports[`Application component should render snackbar if connection is offline 1`] = `
-<div
-  className="layout-fill align-stretch"
->
-  <AppBar
-    className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
-          Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
-          }
-        }
-        iconStyle={Object {}}
-        tabIndex={1}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
-      >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
-      >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
-            }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonTouchTap={[Function]}
-    showMenuIconButton={true}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title="UQ eSpace "
-    titleStyle={Object {}}
-    zDepth={1}
-  />
-  <MenuDrawer
-    docked={false}
-    drawerOpen={false}
-    history={Object {}}
-    isMobile={false}
-    locale={
-      Object {
-        "closeMenuLabel": "Close menu",
-        "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
-        "skipNavTitle": "Skip Navigation",
-      }
-    }
-    logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
-    menuItems={
-      Array [
-        Object {
-          "linkTo": "/dashboard",
-          "primaryText": "My dashboard",
-          "secondaryText": undefined,
-        },
-        Object {
-          "linkTo": "/records/mine",
-          "primaryText": "My research",
-        },
-        Object {
-          "linkTo": "/records/possible",
-          "primaryText": "Claim possible publications",
-        },
-        Object {
-          "linkTo": "/records/add/find",
-          "primaryText": "Add a missing record",
-        },
-        Object {
-          "divider": true,
-          "path": "/234234234242",
-        },
-        Object {
-          "linkTo": "/browse",
-          "primaryText": "Browse eSpace",
-          "public": true,
-          "secondaryText": "",
-        },
-        Object {
-          "linkTo": "/about",
-          "primaryText": "About",
-          "public": true,
-          "secondaryText": "",
-        },
-      ]
-    }
-    onToggleDrawer={[Function]}
-  />
-  <div
-    className="content-container"
-    style={Object {}}
-  >
-    <Connect(AppAlert) />
-    <Switch>
-      <Route
-        key="route_0"
-        path="/rhdsubmission_new"
-        render={[Function]}
-      />
-      <Route
-        key="route_1"
-        path="/sbslodge_new"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_2"
-        path="/"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_3"
-        path="/dashboard"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_4"
-        path="/records/mine"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_5"
-        path="/records/possible"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_6"
-        path="/records/claim"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_7"
-        path="/records/:pid(UQ:\\\\d+)/fix"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_8"
-        path="/records/add/find"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_9"
-        path="/records/add/results"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_10"
-        path="/records/add/new"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_11"
-        path="/author-identifiers/orcid/link"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_12"
-        path="/author-identifiers/google-scholar/link"
-      />
-      <Route
-        key="route_13"
-        path="/about"
-        render={[Function]}
-      />
-      <Route
-        key="route_14"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_15"
-        path="/records/:pid(UQ:\\\\d+)"
-      />
-      <Route
-        key="route_16"
-        render={[Function]}
-      />
-    </Switch>
-  </div>
-  <Connect(HelpDrawer) />
-  <Snackbar
-    message={
-      <div
-        className="columns is-gapless connectionStatus offline"
-      >
-        <div
-          className="column is-narrow"
-        >
-          <AlertError />
-        </div>
-        <div
-          className="column"
-        >
-          Your internet connection is currently offline
-        </div>
-      </div>
-    }
-    open={true}
-  />
-</div>
-`;
-
-exports[`Application component should render snackbar if connection is restored 1`] = `
-<div
-  className="layout-fill align-stretch"
->
-  <AppBar
-    className="AppBar align-center"
-    iconElementLeft={
-      <IconButton
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
-          Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
-          }
-        }
-        iconStyle={Object {}}
-        tabIndex={1}
-        tooltip="Main navigation"
-        tooltipPosition="bottom-right"
-        touch={false}
-      >
-        <NavigationMenu />
-      </IconButton>
-    }
-    iconElementRight={
-      <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
-      >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
-            }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
-      </div>
-    }
-    iconStyleLeft={
-      Object {
-        "marginTop": 0,
-      }
-    }
-    onLeftIconButtonTouchTap={[Function]}
-    showMenuIconButton={true}
-    style={
-      Object {
-        "height": 75,
-      }
-    }
-    title="UQ eSpace "
-    titleStyle={Object {}}
-    zDepth={1}
-  />
-  <MenuDrawer
-    docked={false}
-    drawerOpen={false}
-    history={Object {}}
-    isMobile={false}
-    locale={
-      Object {
-        "closeMenuLabel": "Close menu",
-        "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
-        "skipNavTitle": "Skip Navigation",
-      }
-    }
-    logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
-    menuItems={
-      Array [
-        Object {
-          "linkTo": "/dashboard",
-          "primaryText": "My dashboard",
-          "secondaryText": undefined,
-        },
-        Object {
-          "linkTo": "/records/mine",
-          "primaryText": "My research",
-        },
-        Object {
-          "linkTo": "/records/possible",
-          "primaryText": "Claim possible publications",
-        },
-        Object {
-          "linkTo": "/records/add/find",
-          "primaryText": "Add a missing record",
-        },
-        Object {
-          "divider": true,
-          "path": "/234234234242",
-        },
-        Object {
-          "linkTo": "/browse",
-          "primaryText": "Browse eSpace",
-          "public": true,
-          "secondaryText": "",
-        },
-        Object {
-          "linkTo": "/about",
-          "primaryText": "About",
-          "public": true,
-          "secondaryText": "",
-        },
-      ]
-    }
-    onToggleDrawer={[Function]}
-  />
-  <div
-    className="content-container"
-    style={Object {}}
-  >
-    <Connect(AppAlert) />
-    <Switch>
-      <Route
-        key="route_0"
-        path="/rhdsubmission_new"
-        render={[Function]}
-      />
-      <Route
-        key="route_1"
-        path="/sbslodge_new"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_2"
-        path="/"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_3"
-        path="/dashboard"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_4"
-        path="/records/mine"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_5"
-        path="/records/possible"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_6"
-        path="/records/claim"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_7"
-        path="/records/:pid(UQ:\\\\d+)/fix"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_8"
-        path="/records/add/find"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_9"
-        path="/records/add/results"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_10"
-        path="/records/add/new"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_11"
-        path="/author-identifiers/orcid/link"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_12"
-        path="/author-identifiers/google-scholar/link"
-      />
-      <Route
-        key="route_13"
-        path="/about"
-        render={[Function]}
-      />
-      <Route
-        key="route_14"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_15"
-        path="/records/:pid(UQ:\\\\d+)"
-      />
-      <Route
-        key="route_16"
-        render={[Function]}
-      />
-    </Switch>
-  </div>
-  <Connect(HelpDrawer) />
-  <Snackbar
-    autoHideDuration={5000}
-    message={
-      <div
-        className="columns is-gapless connectionStatus online"
-      >
-        <div
-          className="column is-narrow"
-        >
-          <ActionCheckCircle />
-        </div>
-        <div
-          className="column"
-        >
-          Your internet connection has been restored
-        </div>
-      </div>
-    }
-    open={true}
   />
 </div>
 `;
@@ -2523,5 +2256,46 @@ exports[`Application component should render thesis submission for HDR without m
     </Switch>
   </div>
   <Connect(HelpDrawer) />
+  <OfflineSnackbar
+    locale={
+      Object {
+        "offline": Object {
+          "message": <div
+            className="columns is-gapless connectionStatus offline"
+          >
+            <div
+              className="column is-narrow"
+            >
+              <AlertError />
+            </div>
+            <div
+              className="column"
+            >
+              Your internet connection is currently offline
+            </div>
+          </div>,
+          "open": true,
+        },
+        "online": Object {
+          "autoHideDuration": 5000,
+          "message": <div
+            className="columns is-gapless connectionStatus online"
+          >
+            <div
+              className="column is-narrow"
+            >
+              <ActionCheckCircle />
+            </div>
+            <div
+              className="column"
+            >
+              Your internet connection has been restored
+            </div>
+          </div>,
+          "open": true,
+        },
+      }
+    }
+  />
 </div>
 `;

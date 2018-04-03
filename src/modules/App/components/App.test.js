@@ -215,26 +215,4 @@ describe('Application component', () => {
         }, false);
         expect(testMethod).toHaveBeenCalledWith();
     });
-
-
-    it('should render snackbar if connection is offline', () => {
-        const wrapper = setup({
-            account: account,
-            author: author
-        });
-        wrapper.instance().setState({ online: false, hasDisconnected: false });
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render snackbar if connection is restored', () => {
-        const wrapper = setup({
-            account: account,
-            author: author
-        });
-        wrapper.instance().setState({ online: true, hasDisconnected: true });
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
 });

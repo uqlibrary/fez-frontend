@@ -126,8 +126,8 @@ export default {
         },
         embargoDateFormat: 'YYYY-MM-DD',
         defaultLinkDescription: 'Link to publication',
-        detectAppOffline: {
-            backOnlineProps: {
+        offlineSnackbar: {
+            online: {
                 open: true,
                 message: (
                     <div className="columns is-gapless connectionStatus online">
@@ -141,7 +141,7 @@ export default {
                 ),
                 autoHideDuration: 5000
             },
-            offlineProps: {
+            offline: {
                 open: true,
                 message: (
                     <div className="columns is-gapless connectionStatus offline">
