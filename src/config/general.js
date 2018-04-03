@@ -242,6 +242,12 @@ export const publicationTypes = (components) => [
     }
 ];
 
+export const QuickTemplates = {
+    CLOSED_ACCESS_ID: 8,
+    OPEN_ACCESS_ID: 9
+};
+
+
 export const OPEN_ACCESS_ID_NOT_YET_ASSESSED = 453692;
 export const OPEN_ACCESS_ID_DOI = 453693;
 export const OPEN_ACCESS_ID_LINK_NO_DOI = 453694;
@@ -263,7 +269,6 @@ export const openAccessIdLookup = {
     [OPEN_ACCESS_ID_MEDIATED_ACCESS]: 'Mediated Access',
     [OPEN_ACCESS_ID_PMC]: 'PMC'
 };
-
 
 export const thesisSubtypes = [
     'B.A. Thesis',

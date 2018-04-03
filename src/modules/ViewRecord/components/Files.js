@@ -5,7 +5,7 @@ import {Table, TableBody, TableRowColumn, TableHeader, TableRow, TableHeaderColu
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import FileName from './partials/FileName';
 import moment from 'moment';
-import {OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION, OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT, OPEN_ACCESS_ID_OTHER} from 'config/general';
+import {QuickTemplates, OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION, OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT, OPEN_ACCESS_ID_OTHER} from 'config/general';
 import OpenAccessIcon from './partials/OpenAccessIcon';
 
 export default class Files extends Component {
@@ -24,10 +24,16 @@ export default class Files extends Component {
         if (openAccessStatusId === OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION
         || openAccessStatusId === OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT
         || openAccessStatusId === OPEN_ACCESS_ID_OTHER) {
+            // closed access file without embargo date
+            if (accessCondition && !embargoDate
+                && parseInt(accessCondition.rek_file_attachment_access_condition, 10) === QuickTemplates.CLOSED_ACCESS_ID) {
+                return {isOpenAccess: false, embargoDate: null, openAccessStatusId: openAccessStatusId};
+            }
+            // closed access with embargo date or open access file
             const currentDate = moment().format();
             const hasEmbargoDateMatured = !embargoDate || moment(embargoDate.rek_file_attachment_embargo_date).format() < currentDate;
             const displayEmbargoDate = !!embargoDate && !hasEmbargoDateMatured ? moment(embargoDate.rek_file_attachment_embargo_date).format('Do MMMM YYYY') : null;
-            // TODO: check each file accessCondition.rek_file_attachment_access_condition and embargo date
+            // TODO: other quick template ids - do users have access to those files?
             return {isOpenAccess: hasEmbargoDateMatured, embargoDate: displayEmbargoDate, openAccessStatusId: openAccessStatusId};
         } else {
             return {isOpenAccess: false, embargoDate: null, openAccessStatusId: openAccessStatusId};
