@@ -52,7 +52,7 @@ exports[`File Name Component  should display thumbnail and file name link 1`] = 
         }
       }
     >
-      <fileName
+      <FileName
         allowDownload={true}
         fileName="UQ676287_OA.pdf"
         mimeType="application/pdf"
@@ -74,17 +74,61 @@ exports[`File Name Component  should display thumbnail and file name link 1`] = 
           <div
             className="column fileInfo"
           >
-            <a
+            <ExternalLink
               className="fileName"
-              href="#"
-              onClick={[Function]}
-              onKeyPress={[Function]}
+              href="/view/UQ:676287/UQ676287_OA.pdf"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="UQ676287_OA.pdf"
             >
-              UQ676287_OA.pdf
-            </a>
+              <a
+                className="fileName"
+                href="/view/UQ:676287/UQ676287_OA.pdf"
+                rel="noopener noreferrer"
+                tabIndex="0"
+                target="_blank"
+                title="UQ676287_OA.pdf"
+              >
+                UQ676287_OA.pdf
+                <ActionOpenInNew
+                  className="openExternalUrlIcon"
+                >
+                  <SvgIcon
+                    className="openExternalUrlIcon"
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    viewBox="0 0 24 24"
+                  >
+                    <svg
+                      className="openExternalUrlIcon"
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      style={
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.87)",
+                          "display": "inline-block",
+                          "fill": "currentColor",
+                          "height": 24,
+                          "muiPrepared": true,
+                          "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                          "userSelect": "none",
+                          "width": 24,
+                        }
+                      }
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                      />
+                    </svg>
+                  </SvgIcon>
+                </ActionOpenInNew>
+              </a>
+            </ExternalLink>
           </div>
         </div>
-      </fileName>
+      </FileName>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -142,7 +186,7 @@ exports[`File Name Component  should render audio player 1`] = `
         }
       }
     >
-      <fileName
+      <FileName
         allowDownload={true}
         fileName="UQ676287_OA.pdf"
         mimeType="audio/mp3"
@@ -188,14 +232,58 @@ exports[`File Name Component  should render audio player 1`] = `
           <div
             className="column fileInfo"
           >
-            <a
+            <ExternalLink
               className="fileName"
-              href="#"
-              onClick={[Function]}
-              onKeyPress={[Function]}
+              href="/view/UQ:676287/UQ676287_OA.pdf"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="UQ676287_OA.pdf"
             >
-              UQ676287_OA.pdf
-            </a>
+              <a
+                className="fileName"
+                href="/view/UQ:676287/UQ676287_OA.pdf"
+                rel="noopener noreferrer"
+                tabIndex="0"
+                target="_blank"
+                title="UQ676287_OA.pdf"
+              >
+                UQ676287_OA.pdf
+                <ActionOpenInNew
+                  className="openExternalUrlIcon"
+                >
+                  <SvgIcon
+                    className="openExternalUrlIcon"
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    viewBox="0 0 24 24"
+                  >
+                    <svg
+                      className="openExternalUrlIcon"
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      style={
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.87)",
+                          "display": "inline-block",
+                          "fill": "currentColor",
+                          "height": 24,
+                          "muiPrepared": true,
+                          "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                          "userSelect": "none",
+                          "width": 24,
+                        }
+                      }
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                      />
+                    </svg>
+                  </SvgIcon>
+                </ActionOpenInNew>
+              </a>
+            </ExternalLink>
           </div>
           <div
             className="column is-narrow audioWrapper is-hidden-mobile"
@@ -474,7 +562,7 @@ exports[`File Name Component  should render audio player 1`] = `
             </div>
           </div>
         </div>
-      </fileName>
+      </FileName>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -532,7 +620,7 @@ exports[`File Name Component  should render component and display file name only
         }
       }
     >
-      <fileName
+      <FileName
         fileName="UQ676287_OA.pdf"
         mimeType="application/pdf"
         onFileSelect={[MockFunction]}
@@ -580,7 +668,7 @@ exports[`File Name Component  should render component and display file name only
             UQ676287_OA.pdf
           </div>
         </div>
-      </fileName>
+      </FileName>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -638,7 +726,7 @@ exports[`File Name Component  should render default icon 1`] = `
         }
       }
     >
-      <fileName
+      <FileName
         fileName="UQ676287_OA.pdf"
         mimeType="text/plain"
         onFileSelect={[MockFunction]}
@@ -686,7 +774,7 @@ exports[`File Name Component  should render default icon 1`] = `
             UQ676287_OA.pdf
           </div>
         </div>
-      </fileName>
+      </FileName>
     </Router>
   </MemoryRouter>
 </Provider>

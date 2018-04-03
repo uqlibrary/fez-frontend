@@ -7,8 +7,9 @@ import PictureAsPdf from 'material-ui/svg-icons/image/picture-as-pdf';
 import PlayArrow from 'material-ui/svg-icons/av/play-arrow';
 import Pause from 'material-ui/svg-icons/av/pause';
 import IconButton from 'material-ui/IconButton';
+import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
 
-export default class fileName extends PureComponent {
+export default class FileName extends PureComponent {
     static propTypes = {
         pid: PropTypes.string.isRequired,
         fileName: PropTypes.string.isRequired,
@@ -18,10 +19,6 @@ export default class fileName extends PureComponent {
         previewFileName: PropTypes.string,
         allowDownload: PropTypes.bool
     };
-
-    constructor(props) {
-        super(props);
-    }
 
     renderFileIcon = (pid, mimeType, thumbnailFileName, allowDownload) => {
         if (allowDownload && thumbnailFileName) {
@@ -87,20 +84,10 @@ export default class fileName extends PureComponent {
         return fileName && pathConfig.file.url(pid, fileName);
     }
 
-    handleFileNameClick = (e) => {
-        e.preventDefault();
-        const mediaUrl = this.getUrl(this.props.pid, this.props.fileName);
-        const previewMediaUrl = this.getUrl(this.props.pid, this.props.previewFileName || mediaUrl);
-
-        if (this.canShowPreview(this.props.mimeType)) {
-            this.props.onFileSelect(mediaUrl, previewMediaUrl, this.props.mimeType);
-        } else {
-            window.open(mediaUrl);
-        }
-    }
-
-    render = () => {
-        const {pid, fileName, allowDownload, mimeType, thumbnailFileName} = this.props;
+    render() {
+        const {pid, fileName, allowDownload, mimeType, thumbnailFileName, previewFileName} = this.props;
+        const mediaUrl = this.getUrl(pid, fileName);
+        const previewMediaUrl = this.getUrl(pid, previewFileName || fileName);
 
         return (
             <div className="columns is-gapless is-mobile fileDetails">
@@ -109,8 +96,17 @@ export default class fileName extends PureComponent {
                 </div>
                 <div className="column fileInfo">
                     {
-                        allowDownload &&
-                        <a href="#" onClick={this.handleFileNameClick} onKeyPress={this.handleFileNameClick} className={'fileName'}>
+                        allowDownload && !this.canShowPreview(mimeType) &&
+                        <ExternalLink href={mediaUrl} title={fileName} className={'fileName'} openInNewIcon>
+                            {fileName}
+                        </ExternalLink>
+                    }
+                    {
+                        allowDownload && this.canShowPreview(mimeType) &&
+                        <a href="#"
+                            onClick={this.props.onFileSelect(mediaUrl, previewMediaUrl, mimeType)}
+                            onKeyPress={this.props.onFileSelect(mediaUrl, previewMediaUrl, mimeType)}
+                            className={'fileName'}>
                             {fileName}
                         </a>
                     }

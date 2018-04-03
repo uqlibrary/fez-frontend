@@ -13,10 +13,9 @@ function setup(testProps, isShallow = true){
 }
 
 describe('Files Component ', () => {
-    it('should render component and display open access icon', () => {
+    it('should render component', () => {
         const wrapper = setup({}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
-        // expect(wrapper.find('.fez-icon.openAccess').length).toEqual(2);
     });
 
     it('should render component with no files', () => {

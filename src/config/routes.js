@@ -1,6 +1,6 @@
 import {locale} from 'locale';
 
-const fullPath = process.env.NODE_ENV === 'development' ? 'https://fez-staging.library.uq.edu.au' : '';
+const fullPath = process.env.BRANCH === 'development' ? 'https://fez-staging.library.uq.edu.au' : '';
 
 export const pathConfig =  {
     index: '/',
@@ -22,7 +22,7 @@ export const pathConfig =  {
         }
     },
     collection: {
-        view: (pid) => (`/collection/${pid}`),
+        view: (pid) => (`${fullPath}/collection/${pid}`),
     },
     // TODO: update how we get files after security is implemented in fez file api
     file: {

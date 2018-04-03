@@ -7,7 +7,7 @@ function setup(testProps, isShallow = true){
         mediaUrl: testProps.mediaUrl || 'https://test.com/test.jpg',
         previewMediaUrl: testProps.previewMediaUrl || 'https://test.com/preview_test.jpg',
         mimeType: testProps.mimeType || 'text/plain',
-        closeAction: testProps.closeAction || (()=>{})
+        onClose: testProps.closeAction || jest.fn()
     };
     return getElement(MediaPreview, props, isShallow);
 }

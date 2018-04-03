@@ -95,51 +95,59 @@ export default class Files extends Component {
     }
 
     // filter out fezacml, premd, thumbnail, web prefix files
-    renderFiles = (publication) => {
-        const files = [];
+    renderFileRows = (publication) => {
         const fileNames = publication.fez_record_search_key_file_attachment_name;
         const embargoDates = publication.fez_record_search_key_file_attachment_embargo_date;
         const accessConditions = publication.fez_record_search_key_file_attachment_access_condition;
         const dataStreams = publication.fez_datastream_info;
 
-        fileNames.filter((fileName) => (
-            !fileName.rek_file_attachment_name.match('^(FezACML|stream|web|thumbnail|preview|presmd)')
-        )).sort((fileName1, fileName2) => (
-            fileName1.rek_file_attachment_name_order - fileName2.rek_file_attachment_name_order
-        )).map((fileName) => {
-            const order = fileName.rek_file_attachment_name_order;
-            const embargoDate = this.searchByKey(embargoDates, 'rek_file_attachment_embargo_date_order', order);
-            const accessCondition = this.searchByKey(accessConditions, 'rek_file_attachment_access_condition_order', order);
-            const openAccessStatus = this.isFileOpenAccess(this.props.publication, fileName, accessCondition, embargoDate);
-            files.push(this.renderFileDetail(order, publication.rek_pid, fileName.rek_file_attachment_name, openAccessStatus, dataStreams));
-        });
+        const files = !!fileNames
+            ? fileNames.filter((fileName) => (
+                !fileName.rek_file_attachment_name.match('^(FezACML|stream|web|thumbnail|preview|presmd)')
+            )).sort((fileName1, fileName2) => (
+                fileName1.rek_file_attachment_name_order - fileName2.rek_file_attachment_name_order
+            )).map((fileName) => {
+                const order = fileName.rek_file_attachment_name_order;
+                const embargoDate = this.searchByKey(embargoDates, 'rek_file_attachment_embargo_date_order', order);
+                const accessCondition = this.searchByKey(accessConditions, 'rek_file_attachment_access_condition_order', order);
+                const openAccessStatus = this.isFileOpenAccess(this.props.publication, fileName, accessCondition, embargoDate);
+                return this.renderFileDetail(order, publication.rek_pid, fileName.rek_file_attachment_name, openAccessStatus, dataStreams);
+            })
+            : [];
 
-        return (
-            <Table selectable={false} className="file header">
-                <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="tableHeader">
-                    <TableRow>
-                        <TableHeaderColumn className="filename">{locale.viewRecord.sections.files.fileName}</TableHeaderColumn>
-                        <TableHeaderColumn className="description is-hidden-mobile">{locale.viewRecord.sections.files.description}</TableHeaderColumn>
-                        <TableHeaderColumn className="align-right is-hidden-mobile is-hidden-tablet-only size">{locale.viewRecord.sections.files.size}</TableHeaderColumn>
-                        <TableHeaderColumn className="oaStatus"/>
-                    </TableRow>
-                </TableHeader>
-                <TableBody displayRowCheckbox={false}>
-                    {files}
-                </TableBody>
-            </Table>
-        );
+        return files;
     }
 
     render() {
         const {publication} = this.props;
+        const fileRows = this.renderFileRows(publication);
 
         return (
             <StandardCard title={locale.viewRecord.sections.files.title}>
                 {
                     publication.fez_record_search_key_file_attachment_name &&
                     publication.fez_record_search_key_file_attachment_name.length > 0 &&
-                    this.renderFiles(publication)
+                    <Table selectable={false} className="file header">
+                        <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="tableHeader">
+                            <TableRow>
+                                <TableHeaderColumn className="filename">
+                                    {locale.viewRecord.sections.files.fileName}
+                                </TableHeaderColumn>
+                                <TableHeaderColumn className="description is-hidden-mobile">
+                                    {locale.viewRecord.sections.files.description}
+                                </TableHeaderColumn>
+                                <TableHeaderColumn className="align-right is-hidden-mobile is-hidden-tablet-only size">
+                                    {locale.viewRecord.sections.files.size}
+                                </TableHeaderColumn>
+                                <TableHeaderColumn className="oaStatus"/>
+                            </TableRow>
+                        </TableHeader>
+                        <TableBody displayRowCheckbox={false}>
+                            {
+                                fileRows
+                            }
+                        </TableBody>
+                    </Table>
                 }
             </StandardCard>
         );

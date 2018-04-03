@@ -33,8 +33,6 @@ export default class ViewRecord extends Component {
                 mimeType: null
             }
         };
-        this.handleFileNameClick = this.handleFileNameClick.bind(this);
-        this.resetPreviewState = this.resetPreviewState.bind(this);
     }
 
     componentDidMount() {
@@ -50,7 +48,8 @@ export default class ViewRecord extends Component {
         }
     }
 
-    handleFileNameClick(mediaUrl, previewMediaUrl, mimeType) {
+    handleFileNameClick = (mediaUrl, previewMediaUrl, mimeType) => (ev) => {
+        ev.preventDefault();
         this.setState({
             preview: {
                 mediaUrl: mediaUrl,
@@ -60,7 +59,7 @@ export default class ViewRecord extends Component {
         });
     }
 
-    resetPreviewState() {
+    resetPreviewState = () => {
         this.setState({
             preview: {
                 mediaUrl: null,
@@ -104,10 +103,10 @@ export default class ViewRecord extends Component {
                 }
                 {
                     this.state.preview.mediaUrl && this.state.preview.mimeType &&
-                    <MediaPreview mediaUrl={this.state.preview.mediaUrl} previewMediaUrl={this.state.preview.previewMediaUrl} mimeType={this.state.preview.mimeType} closeAction={this.resetPreviewState}/>
+                    <MediaPreview mediaUrl={this.state.preview.mediaUrl} previewMediaUrl={this.state.preview.previewMediaUrl} mimeType={this.state.preview.mimeType} onClose={this.resetPreviewState}/>
                 }
                 {
-                    false && recordToView.rek_display_type_lookup &&
+                    recordToView.rek_display_type_lookup &&
                     (recordToView.fez_record_search_key_link && recordToView.fez_record_search_key_link.length > 0
                     || recordToView.fez_record_search_key_pubmed_central_id && recordToView.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id
                     || recordToView.fez_record_search_key_doi && recordToView.fez_record_search_key_doi.rek_doi

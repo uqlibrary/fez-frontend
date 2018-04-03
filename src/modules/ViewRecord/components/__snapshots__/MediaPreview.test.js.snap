@@ -22,14 +22,11 @@ exports[`Media Preview Component  should render component 1`] = `
       fullWidth={false}
       label="Close"
       labelPosition="after"
-      onTouchTap={[Function]}
+      onTouchTap={[MockFunction]}
       primary={false}
       secondary={false}
     />
   </div>
-  <img
-    src="https://test.com/preview_test.jpg"
-  />
 </StandardCard>
 `;
 
@@ -55,7 +52,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
       fullWidth={false}
       label="Close"
       labelPosition="after"
-      onTouchTap={[Function]}
+      onTouchTap={[MockFunction]}
       primary={false}
       secondary={false}
     />
@@ -88,7 +85,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
       fullWidth={false}
       label="Close"
       labelPosition="after"
-      onTouchTap={[Function]}
+      onTouchTap={[MockFunction]}
       primary={false}
       secondary={false}
     />
