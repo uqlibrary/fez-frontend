@@ -83,7 +83,7 @@ module.exports = {
             'process.env.ORCID_CLIENT_ID': JSON.stringify(config.orcidClientId),
             'process.env.PUBLIC_PATH': JSON.stringify(config.basePath),
             'process.env.GOOGLE_MAP_KEY': JSON.stringify(config.googleMaps),
-            'process.env.ENABLE_LOG': JSON.stringify(!!process.env.CI_BRANCH),
+            'process.env.ENABLE_LOG': JSON.stringify(!!process.env.CI_BRANCH && process.env.NODE_ENV !== 'test'),
             'process.env.TITLE_SUFFIX': JSON.stringify(config.titleSuffix)
         }),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),

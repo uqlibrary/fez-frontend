@@ -129,6 +129,7 @@ export function submitThesis(data, author) {
                 return post(routes.NEW_RECORD_API(), recordRequest);
             })
             .then(response => {
+                if(process.env.ENABLE_LOG) Raven.captureException('THESIS CREATED', {message: 'Thesis created successfully'});
                 dispatch({
                     type: actions.CREATE_RECORD_SUCCESS,
                     payload: {
