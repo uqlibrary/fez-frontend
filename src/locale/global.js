@@ -130,7 +130,7 @@ export default {
             online: {
                 open: true,
                 message: (
-                    <div className="columns is-gapless connectionStatus online">
+                    <div className="columns is-gapless connectionStatus online is-mobile">
                         <div className="column is-narrow">
                             <ActionCheckCircle/>
                         </div>
@@ -144,7 +144,7 @@ export default {
             offline: {
                 open: true,
                 message: (
-                    <div className="columns is-gapless connectionStatus offline">
+                    <div className="columns is-gapless connectionStatus offline is-mobile">
                         <div className="column is-narrow">
                             <AlertError/>
                         </div>
