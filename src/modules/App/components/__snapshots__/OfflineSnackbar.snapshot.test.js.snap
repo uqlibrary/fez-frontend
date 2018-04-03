@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OfflineSnackbar snapshots test renders back online snackbar 1`] = `
+<div
+  className="offlineSnackbar online"
+>
+  <Snackbar
+    autoHideDuration={5000}
+    message="Online"
+    open={true}
+  />
+</div>
+`;
+
+exports[`OfflineSnackbar snapshots test renders nothing 1`] = `
+<div
+  className="offlineSnackbar online"
+/>
+`;
+
+exports[`OfflineSnackbar snapshots test renders offline snackbar 1`] = `
+<div
+  className="offlineSnackbar offline"
+>
+  <Snackbar
+    message="Offline"
+    open={true}
+  />
+</div>
+`;
