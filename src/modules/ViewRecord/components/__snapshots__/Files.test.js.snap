@@ -53,7 +53,7 @@ exports[`Files Component  should render component and display open access icon 1
       }
     >
       <Files
-        handleFileNameClick={[Function]}
+        onFileSelect={[MockFunction]}
         publication={
           Object {
             "fez_datastream_info": Array [
@@ -1377,47 +1377,10 @@ exports[`Files Component  should render component and display open access icon 1
                                           </th>
                                         </TableHeaderColumn>
                                         <TableHeaderColumn
-                                          className="oaStatus"
+                                          className="align-right is-hidden-mobile is-hidden-tablet-only size"
                                           columnNumber={3}
                                           hoverable={false}
                                           key="1-3/.3"
-                                          onClick={[Function]}
-                                          onHover={[Function]}
-                                          onHoverExit={[Function]}
-                                          style={
-                                            Object {
-                                              "backgroundColor": "inherit",
-                                            }
-                                          }
-                                        >
-                                          <th
-                                            className="oaStatus"
-                                            onClick={[Function]}
-                                            onMouseEnter={[Function]}
-                                            onMouseLeave={[Function]}
-                                            style={
-                                              Object {
-                                                "backgroundColor": "inherit",
-                                                "color": "#9e9e9e",
-                                                "fontSize": 12,
-                                                "fontWeight": "normal",
-                                                "height": 56,
-                                                "muiPrepared": true,
-                                                "paddingLeft": 24,
-                                                "paddingRight": 24,
-                                                "position": "relative",
-                                                "textAlign": "left",
-                                                "textOverflow": "ellipsis",
-                                                "whiteSpace": "nowrap",
-                                              }
-                                            }
-                                          />
-                                        </TableHeaderColumn>
-                                        <TableHeaderColumn
-                                          className="align-right is-hidden-mobile is-hidden-tablet-only size"
-                                          columnNumber={4}
-                                          hoverable={false}
-                                          key="1-4/.4"
                                           onClick={[Function]}
                                           onHover={[Function]}
                                           onHoverExit={[Function]}
@@ -1451,6 +1414,43 @@ exports[`Files Component  should render component and display open access icon 1
                                           >
                                             Size
                                           </th>
+                                        </TableHeaderColumn>
+                                        <TableHeaderColumn
+                                          className="oaStatus"
+                                          columnNumber={4}
+                                          hoverable={false}
+                                          key="1-4/.4"
+                                          onClick={[Function]}
+                                          onHover={[Function]}
+                                          onHoverExit={[Function]}
+                                          style={
+                                            Object {
+                                              "backgroundColor": "inherit",
+                                            }
+                                          }
+                                        >
+                                          <th
+                                            className="oaStatus"
+                                            onClick={[Function]}
+                                            onMouseEnter={[Function]}
+                                            onMouseLeave={[Function]}
+                                            style={
+                                              Object {
+                                                "backgroundColor": "inherit",
+                                                "color": "#9e9e9e",
+                                                "fontSize": 12,
+                                                "fontWeight": "normal",
+                                                "height": 56,
+                                                "muiPrepared": true,
+                                                "paddingLeft": 24,
+                                                "paddingRight": 24,
+                                                "position": "relative",
+                                                "textAlign": "left",
+                                                "textOverflow": "ellipsis",
+                                                "whiteSpace": "nowrap",
+                                              }
+                                            }
+                                          />
                                         </TableHeaderColumn>
                                       </tr>
                                     </TableRow>
@@ -1569,10 +1569,10 @@ exports[`Files Component  should render component and display open access icon 1
                                               }
                                             >
                                               <fileName
-                                                accessible={true}
+                                                allowDownload={true}
                                                 fileName="UQ676287_OA.pdf"
-                                                handleFileNameClick={[Function]}
                                                 mimeType=""
+                                                onFileSelect={[MockFunction]}
                                                 pid="UQ:676287"
                                               >
                                                 <div
@@ -1663,45 +1663,10 @@ exports[`Files Component  should render component and display open access icon 1
                                             />
                                           </TableRowColumn>
                                           <TableRowColumn
-                                            className="align-right oaStatus"
+                                            className="align-right is-hidden-mobile is-hidden-tablet-only size"
                                             columnNumber={3}
                                             hoverable={false}
                                             key="0-3/.3"
-                                            onClick={[Function]}
-                                            onHover={[Function]}
-                                            onHoverExit={[Function]}
-                                            style={
-                                              Object {
-                                                "backgroundColor": "inherit",
-                                              }
-                                            }
-                                          >
-                                            <td
-                                              className="align-right oaStatus"
-                                              onClick={[Function]}
-                                              onMouseEnter={[Function]}
-                                              onMouseLeave={[Function]}
-                                              style={
-                                                Object {
-                                                  "backgroundColor": "inherit",
-                                                  "fontSize": 13,
-                                                  "height": 48,
-                                                  "muiPrepared": true,
-                                                  "overflow": "hidden",
-                                                  "paddingLeft": 24,
-                                                  "paddingRight": 24,
-                                                  "textAlign": "left",
-                                                  "textOverflow": "ellipsis",
-                                                  "whiteSpace": "nowrap",
-                                                }
-                                              }
-                                            />
-                                          </TableRowColumn>
-                                          <TableRowColumn
-                                            className="align-right is-hidden-mobile is-hidden-tablet-only size"
-                                            columnNumber={4}
-                                            hoverable={false}
-                                            key="0-4/.4"
                                             onClick={[Function]}
                                             onHover={[Function]}
                                             onHoverExit={[Function]}
@@ -1731,6 +1696,53 @@ exports[`Files Component  should render component and display open access icon 1
                                                 }
                                               }
                                             />
+                                          </TableRowColumn>
+                                          <TableRowColumn
+                                            className="rowOA align-right"
+                                            columnNumber={4}
+                                            hoverable={false}
+                                            key="0-4/.4"
+                                            onClick={[Function]}
+                                            onHover={[Function]}
+                                            onHoverExit={[Function]}
+                                            style={
+                                              Object {
+                                                "backgroundColor": "inherit",
+                                              }
+                                            }
+                                          >
+                                            <td
+                                              className="rowOA align-right"
+                                              onClick={[Function]}
+                                              onMouseEnter={[Function]}
+                                              onMouseLeave={[Function]}
+                                              style={
+                                                Object {
+                                                  "backgroundColor": "inherit",
+                                                  "fontSize": 13,
+                                                  "height": 48,
+                                                  "muiPrepared": true,
+                                                  "overflow": "hidden",
+                                                  "paddingLeft": 24,
+                                                  "paddingRight": 24,
+                                                  "textAlign": "left",
+                                                  "textOverflow": "ellipsis",
+                                                  "whiteSpace": "nowrap",
+                                                }
+                                              }
+                                            >
+                                              <OpenAccessIcon
+                                                embargoDate={null}
+                                                isOpenAccess={true}
+                                                openAccessStatusId={453695}
+                                                showEmbargoText={true}
+                                              >
+                                                <div
+                                                  className="fez-icon openAccess large"
+                                                  title="Open Access - File (Publisher version) - Free to read"
+                                                />
+                                              </OpenAccessIcon>
+                                            </td>
                                           </TableRowColumn>
                                         </tr>
                                       </TableRow>
@@ -1797,10 +1809,10 @@ exports[`Files Component  should render component and display open access icon 1
                                               }
                                             >
                                               <fileName
-                                                accessible={true}
+                                                allowDownload={true}
                                                 fileName="image.jpg"
-                                                handleFileNameClick={[Function]}
                                                 mimeType="image/jpeg"
+                                                onFileSelect={[MockFunction]}
                                                 pid="UQ:676287"
                                                 previewFileName="preview_image.jpg"
                                                 thumbnailFileName="thumbnail_image.jpg"
@@ -1812,6 +1824,7 @@ exports[`Files Component  should render component and display open access icon 1
                                                     className="column is-narrow is-vertical-center fileIcon"
                                                   >
                                                     <img
+                                                      alt="thumbnail_image.jpg"
                                                       src="/view/UQ:676287/thumbnail_image.jpg"
                                                     />
                                                   </div>
@@ -1869,45 +1882,10 @@ exports[`Files Component  should render component and display open access icon 1
                                             </td>
                                           </TableRowColumn>
                                           <TableRowColumn
-                                            className="align-right oaStatus"
+                                            className="align-right is-hidden-mobile is-hidden-tablet-only size"
                                             columnNumber={3}
                                             hoverable={false}
                                             key="1-3/.3"
-                                            onClick={[Function]}
-                                            onHover={[Function]}
-                                            onHoverExit={[Function]}
-                                            style={
-                                              Object {
-                                                "backgroundColor": "inherit",
-                                              }
-                                            }
-                                          >
-                                            <td
-                                              className="align-right oaStatus"
-                                              onClick={[Function]}
-                                              onMouseEnter={[Function]}
-                                              onMouseLeave={[Function]}
-                                              style={
-                                                Object {
-                                                  "backgroundColor": "inherit",
-                                                  "fontSize": 13,
-                                                  "height": 48,
-                                                  "muiPrepared": true,
-                                                  "overflow": "hidden",
-                                                  "paddingLeft": 24,
-                                                  "paddingRight": 24,
-                                                  "textAlign": "left",
-                                                  "textOverflow": "ellipsis",
-                                                  "whiteSpace": "nowrap",
-                                                }
-                                              }
-                                            />
-                                          </TableRowColumn>
-                                          <TableRowColumn
-                                            className="align-right is-hidden-mobile is-hidden-tablet-only size"
-                                            columnNumber={4}
-                                            hoverable={false}
-                                            key="1-4/.4"
                                             onClick={[Function]}
                                             onHover={[Function]}
                                             onHoverExit={[Function]}
@@ -1938,6 +1916,53 @@ exports[`Files Component  should render component and display open access icon 1
                                               }
                                             >
                                               95.49 KB
+                                            </td>
+                                          </TableRowColumn>
+                                          <TableRowColumn
+                                            className="rowOA align-right"
+                                            columnNumber={4}
+                                            hoverable={false}
+                                            key="1-4/.4"
+                                            onClick={[Function]}
+                                            onHover={[Function]}
+                                            onHoverExit={[Function]}
+                                            style={
+                                              Object {
+                                                "backgroundColor": "inherit",
+                                              }
+                                            }
+                                          >
+                                            <td
+                                              className="rowOA align-right"
+                                              onClick={[Function]}
+                                              onMouseEnter={[Function]}
+                                              onMouseLeave={[Function]}
+                                              style={
+                                                Object {
+                                                  "backgroundColor": "inherit",
+                                                  "fontSize": 13,
+                                                  "height": 48,
+                                                  "muiPrepared": true,
+                                                  "overflow": "hidden",
+                                                  "paddingLeft": 24,
+                                                  "paddingRight": 24,
+                                                  "textAlign": "left",
+                                                  "textOverflow": "ellipsis",
+                                                  "whiteSpace": "nowrap",
+                                                }
+                                              }
+                                            >
+                                              <OpenAccessIcon
+                                                embargoDate={null}
+                                                isOpenAccess={true}
+                                                openAccessStatusId={453695}
+                                                showEmbargoText={true}
+                                              >
+                                                <div
+                                                  className="fez-icon openAccess large"
+                                                  title="Open Access - File (Publisher version) - Free to read"
+                                                />
+                                              </OpenAccessIcon>
                                             </td>
                                           </TableRowColumn>
                                         </tr>
@@ -2016,7 +2041,7 @@ exports[`Files Component  should render component with no files 1`] = `
       }
     >
       <Files
-        handleFileNameClick={[Function]}
+        onFileSelect={[MockFunction]}
         publication={
           Object {
             "fez_datastream_info": Array [

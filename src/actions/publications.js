@@ -31,13 +31,16 @@ export function searchLatestPublications() {
  * @param {string} author user name
  * @returns {action}
  */
-export function searchAuthorPublications({userName, page = 1, pageSize = 20, sortBy, sortDirection, facets}) {
+export function searchAuthorPublications({page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
     return dispatch => {
         dispatch({type: actions.AUTHOR_PUBLICATIONS_LOADING});
 
         return get(routes.CURRENT_USER_RECORDS_API({
-            userName: userName, page: page, pageSize: pageSize,
-            sortBy: sortBy, sortDirection: sortDirection, facets: facets
+            page: page,
+            pageSize: pageSize,
+            sortBy: sortBy,
+            sortDirection: sortDirection,
+            facets: activeFacets
         }))
             .then(response => {
                 dispatch({

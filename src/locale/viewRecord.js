@@ -21,7 +21,35 @@ export default {
                     openInNewWindow: 'Open file in a new window',
                     close: 'Close',
                     browserNotSupportVideoTagMsg: 'Your browser does not support the video tag.'
+                },
+            },
+            links: {
+                title: 'Links',
+                headerTitles: {
+                    link: 'Link (will open in a new window)',
+                    description: 'Description',
+                    oaStatus: ' '
+                },
+                linkMissingDescription: 'No description available',
+                linkMissingDescriptionTitle: 'Click to open link in a new window',
+                doiDescription: 'Full text from publisher',
+                openAccessLabel: 'Open Access - [oa_status] - Free to read',
+                openAccessEmbargoedLabel: '[oa_status] - Open access after [embargo_date]',
+                labelNoOpenAccessLookup: 'Open Access - Embargo applies',
+                labelOpenAccessNoStatus: 'Open Access - Free to read',
+                labelClosedAccess: 'Closed access',
+                pubmedCentralLinkDescription: 'Full text from PubMed Central',
+                embargoedUntil: 'Open access after [embargo_date] ',
+                googleScholar: {
+                    linkPrefix: 'https://scholar.google.com/scholar?q=intitle:%22[title]%22',
+                    linkDescription: 'Search Google Scholar for this open access article'
                 }
+            },
+            abstract: {
+                default: 'Abstract',
+                'Journal': 'Summary/Description',
+                'Data Collection': 'Dataset description',
+                'Design': 'Project description'
             }
         },
         headings: {
@@ -2345,6 +2373,6 @@ export default {
             'fez_record_search_key_herdc_code',
             'fez_record_search_key_herdc_status',
             'fez_record_search_key_institutional_status'
-        ]
-    }
+        ],
+    },
 };

@@ -17,9 +17,9 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
           authorDetails={
             Object {
               "espace": Object {
-                "doc_count": "282",
-                "first_year": 1990,
-                "last_year": 2017,
+                "doc_count": 357,
+                "first_year": 1975,
+                "last_year": 2018,
               },
               "espace_id": 20288,
               "family_name": "Researcher",
@@ -404,9 +404,9 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
           authorDetails={
             Object {
               "espace": Object {
-                "doc_count": "282",
-                "first_year": 1990,
-                "last_year": 2017,
+                "doc_count": 357,
+                "first_year": 1975,
+                "last_year": 2018,
               },
               "espace_id": 20288,
               "family_name": "Researcher",
@@ -462,9 +462,9 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
           authorDetails={
             Object {
               "espace": Object {
-                "doc_count": "282",
-                "first_year": 1990,
-                "last_year": 2017,
+                "doc_count": 357,
+                "first_year": 1975,
+                "last_year": 2018,
               },
               "espace_id": 20288,
               "family_name": "Researcher",
@@ -530,9 +530,9 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
           authorDetails={
             Object {
               "espace": Object {
-                "doc_count": "282",
-                "first_year": 1990,
-                "last_year": 2017,
+                "doc_count": 357,
+                "first_year": 1975,
+                "last_year": 2018,
               },
               "espace_id": 20288,
               "family_name": "Researcher",
@@ -588,9 +588,9 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
           authorDetails={
             Object {
               "espace": Object {
-                "doc_count": "282",
-                "first_year": 1990,
-                "last_year": 2017,
+                "doc_count": 357,
+                "first_year": 1975,
+                "last_year": 2018,
               },
               "espace_id": 20288,
               "family_name": "Researcher",
@@ -662,9 +662,9 @@ exports[`Dashboard test renders dashboard header only 1`] = `
           authorDetails={
             Object {
               "espace": Object {
-                "doc_count": "282",
-                "first_year": 1990,
-                "last_year": 2017,
+                "doc_count": 357,
+                "first_year": 1975,
+                "last_year": 2018,
               },
               "espace_id": 20288,
               "family_name": "Researcher",
@@ -730,9 +730,9 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
           authorDetails={
             Object {
               "espace": Object {
-                "doc_count": "282",
-                "first_year": 1990,
-                "last_year": 2017,
+                "doc_count": 357,
+                "first_year": 1975,
+                "last_year": 2018,
               },
               "espace_id": 20288,
               "family_name": "Researcher",

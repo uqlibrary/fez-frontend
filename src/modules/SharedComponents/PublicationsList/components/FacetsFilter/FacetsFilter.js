@@ -9,7 +9,7 @@ import {publicationTypes} from 'config';
 import {locale} from 'locale';
 import DateRange from './DateRange';
 
-export default class FacetsFilter extends React.Component {
+export default class FacetsFilter extends React.PureComponent {
     static propTypes = {
         facetsData: PropTypes.object,
         onFacetsChanged: PropTypes.func,
@@ -29,15 +29,14 @@ export default class FacetsFilter extends React.Component {
 
         // always keep props/state in sync
         this.state = {
-            activeFacets: {...props.activeFacets},
+            activeFacets: props.activeFacets,
         };
     }
 
-    componentWillUpdate(nextProps, nextState) {
-        if (JSON.stringify(nextState.activeFacets) !== JSON.stringify(this.state.activeFacets)
-            && this.props.onFacetsChanged) {
-            this.props.onFacetsChanged(nextState.activeFacets);
-        }
+    componentWillReceiveProps(nextProps) {
+        this.state = {
+            activeFacets: nextProps.activeFacets
+        };
     }
 
     _handleFacetClick = (category, facet) => () => {
@@ -55,8 +54,11 @@ export default class FacetsFilter extends React.Component {
         } else {
             activeFacets.filters[category] = facet;
         }
+
         this.setState({
-            activeFacets: {...activeFacets}
+            activeFacets: activeFacets
+        }, () => {
+            this.props.onFacetsChanged(this.state.activeFacets);
         });
     };
 
@@ -76,7 +78,9 @@ export default class FacetsFilter extends React.Component {
             activeFacets.ranges[category] = range;
         }
         this.setState({
-            activeFacets: {...activeFacets}
+            activeFacets: activeFacets
+        }, () => {
+            this.props.onFacetsChanged(this.state.activeFacets);
         });
     };
 
@@ -86,6 +90,8 @@ export default class FacetsFilter extends React.Component {
                 filters: {},
                 ranges: {}
             }
+        }, () => {
+            this.props.onFacetsChanged(this.state.activeFacets);
         });
     };
 
@@ -149,7 +155,6 @@ export default class FacetsFilter extends React.Component {
         const facetsToDisplay = this.getFacetsToDisplay(this.props.facetsData, this.props.excludeFacetsList, this.props.renameFacetsList);
         const hasActiveFilters = (Object.keys(this.state.activeFacets.filters).length > 0 || Object.keys(this.state.activeFacets.ranges).length > 0);
         if (facetsToDisplay.length === 0 && !hasActiveFilters) return (<span className="facetsFilter empty" />);
-
         return (
             <div className="facetsFilter">
                 <List>
@@ -159,7 +164,7 @@ export default class FacetsFilter extends React.Component {
                             return (
                                 <ListItem
                                     primaryText={item.title}
-                                    open={this.state.activeFacets.filters[item.title] && true}
+                                    open={this.state.activeFacets.filters[item.facetTitle] && true}
                                     disabled={this.props.disabled}
                                     className={'facetsCategory ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
                                     primaryTogglesNestedList
@@ -187,6 +192,7 @@ export default class FacetsFilter extends React.Component {
                         <div className="column is-narrow-tablet">
                             <FlatButton
                                 fullWidth
+                                disabled={this.props.disabled}
                                 label={resetButtonText}
                                 onClick={this._handleResetClick}/>
                         </div>

@@ -4,27 +4,41 @@ import locale from 'locale/viewRecord';
 import {Table, TableBody, TableRowColumn, TableHeader, TableRow, TableHeaderColumn} from 'material-ui/Table';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import FileName from './partials/FileName';
-
-const moment = require('moment');
+import moment from 'moment';
+import {OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION, OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT, OPEN_ACCESS_ID_OTHER} from 'config/general';
+import OpenAccessIcon from './partials/OpenAccessIcon';
 
 export default class Files extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        handleFileNameClick: PropTypes.func.isRequired
+        onFileSelect: PropTypes.func.isRequired
     };
 
     constructor(props) {
         super(props);
     }
 
-    renderFileDetail = (pid, fileName, embargoDate, accessCondition, order, dataStreams) => {
+    isFileOpenAccess = (record, fileName, accessCondition, embargoDate) => {
+        const openAccessStatusId = record.fez_record_search_key_oa_status
+            && record.fez_record_search_key_oa_status.rek_oa_status;
+        if (openAccessStatusId === OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION
+        || openAccessStatusId === OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT
+        || openAccessStatusId === OPEN_ACCESS_ID_OTHER) {
+            const currentDate = moment().format();
+            const hasEmbargoDateMatured = !embargoDate || moment(embargoDate.rek_file_attachment_embargo_date).format() < currentDate;
+            const displayEmbargoDate = !!embargoDate && !hasEmbargoDateMatured ? moment(embargoDate.rek_file_attachment_embargo_date).format('Do MMMM YYYY') : null;
+            // TODO: check each file accessCondition.rek_file_attachment_access_condition and embargo date
+            return {isOpenAccess: hasEmbargoDateMatured, embargoDate: displayEmbargoDate, openAccessStatusId: openAccessStatusId};
+        } else {
+            return {isOpenAccess: false, embargoDate: null, openAccessStatusId: openAccessStatusId};
+        }
+    };
+
+    renderFileDetail = (order, pid, fileName, openAccessStatus, dataStreams) => {
         const dataStream = this.searchByKey(dataStreams, 'dsi_dsid', fileName);
         const thumbnailDataStream = this.searchByKey(dataStreams, 'dsi_dsid', 'thumbnail_' + fileName);
         const previewDataStream = this.searchByKey(dataStreams, 'dsi_dsid', 'preview_' + fileName);
         const mimeType = dataStream && dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
-        // const openAccess = this.isOpenAccess(accessCondition);
-        // const isEmbargoed = this.isEmbargoed(embargoDate);
-
         return (
             <TableRow selectable={false} className="file" key={`file-${order}`}>
                 <TableRowColumn className="filename">
@@ -33,10 +47,10 @@ export default class Files extends Component {
                             pid={pid}
                             fileName={fileName}
                             mimeType={mimeType}
-                            accessible // ={(openAccess && !isEmbargoed)}
+                            allowDownload={openAccessStatus.isOpenAccess}
                             thumbnailFileName={thumbnailDataStream && thumbnailDataStream.dsi_dsid}
                             previewFileName={previewDataStream && previewDataStream.dsi_dsid}
-                            handleFileNameClick={this.props.handleFileNameClick}
+                            onFileSelect={this.props.onFileSelect}
                         />
                     }
                 </TableRowColumn>
@@ -46,39 +60,17 @@ export default class Files extends Component {
                         dataStream.dsi_label
                     }
                 </TableRowColumn>
-                <TableRowColumn className="align-right oaStatus">
-                    {
-                        // this.renderEmbargoDate(embargoDate, isEmbargoed, openAccess)
-                    }
-                </TableRowColumn>
                 <TableRowColumn className="align-right is-hidden-mobile is-hidden-tablet-only size" >
                     {
                         dataStream &&
                         this.formatBytes(dataStream.dsi_size)
                     }
                 </TableRowColumn>
+                <TableRowColumn className="rowOA align-right">
+                    <OpenAccessIcon {...openAccessStatus} showEmbargoText />
+                </TableRowColumn>
             </TableRow>
         );
-    }
-
-    renderEmbargoDate = (embargoDate, isEmbargoed = false, openAccess = false) => {
-        if (!openAccess) {
-            return (<div className="fez-icon closedAccess large"/>);
-        }
-
-        return (isEmbargoed) ?
-            (
-                <div>
-                    <span className="is-hidden-mobile is-hidden-tablet-only">
-                        {locale.viewRecord.sections.files.embargoDate.replace('[embargoDate]', this.formatEmbargoDate(embargoDate))}
-                    </span>
-                    <div className="fez-icon openAccessEmbargoed large"/>
-                </div>
-            )
-            :
-            (
-                <div className="fez-icon openAccess large"/>
-            );
     }
 
     searchByKey = (list, key, value) => {
@@ -94,18 +86,6 @@ export default class Files extends Component {
         const sizes = ['Bytes', 'KB', 'MB', 'GB'];
         const index = Math.floor(Math.log(bytes) / Math.log(k));
         return parseFloat((bytes / Math.pow(k, index)).toFixed(decimals)) + ' ' + sizes[index];
-    }
-
-    formatEmbargoDate = (embargoDate) => {
-        return moment(embargoDate.rek_file_attachment_embargo_date).format('DD/MM/YYYY');
-    }
-
-    isEmbargoed = (embargoDate) => {
-        return embargoDate && moment(embargoDate.rek_file_attachment_embargo_date).isAfter(moment());
-    }
-
-    isOpenAccess = (accessCondition) => {
-        return !(accessCondition && parseInt(accessCondition.rek_file_attachment_access_condition, 10) === 9);
     }
 
     // filter out fezacml, premd, thumbnail, web prefix files
@@ -124,8 +104,8 @@ export default class Files extends Component {
             const order = fileName.rek_file_attachment_name_order;
             const embargoDate = this.searchByKey(embargoDates, 'rek_file_attachment_embargo_date_order', order);
             const accessCondition = this.searchByKey(accessConditions, 'rek_file_attachment_access_condition_order', order);
-
-            files.push(this.renderFileDetail(publication.rek_pid, fileName.rek_file_attachment_name, embargoDate, accessCondition, order, dataStreams));
+            const openAccessStatus = this.isFileOpenAccess(this.props.publication, fileName, accessCondition, embargoDate);
+            files.push(this.renderFileDetail(order, publication.rek_pid, fileName.rek_file_attachment_name, openAccessStatus, dataStreams));
         });
 
         return (
@@ -134,8 +114,8 @@ export default class Files extends Component {
                     <TableRow>
                         <TableHeaderColumn className="filename">{locale.viewRecord.sections.files.fileName}</TableHeaderColumn>
                         <TableHeaderColumn className="description is-hidden-mobile">{locale.viewRecord.sections.files.description}</TableHeaderColumn>
-                        <TableHeaderColumn className="oaStatus"/>
                         <TableHeaderColumn className="align-right is-hidden-mobile is-hidden-tablet-only size">{locale.viewRecord.sections.files.size}</TableHeaderColumn>
+                        <TableHeaderColumn className="oaStatus"/>
                     </TableRow>
                 </TableHeader>
                 <TableBody displayRowCheckbox={false}>

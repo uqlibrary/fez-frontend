@@ -11,6 +11,8 @@ import PublicationDetails from './PublicationDetails';
 import AdditionalInformation from './AdditionalInformation';
 import GrantInformation from './GrantInformation';
 import MediaPreview from './MediaPreview';
+import Links from './Links';
+import {OPEN_ACCESS_ID_LINK_NO_DOI} from 'config/general';
 
 export default class ViewRecord extends Component {
     static propTypes = {
@@ -78,42 +80,50 @@ export default class ViewRecord extends Component {
                     <InlineLoader message={txt.loadingMessage}/>
                 </div>
             );
-        }
-
-        if(recordToViewError) {
+        } else if(recordToViewError) {
             return (
                 <StandardPage>
                     <Alert message={recordToViewError} />
                 </StandardPage>
             );
+        } else if(!recordToView) {
+            return <div className="empty"/>;
         }
 
         return (
-            <StandardPage className="viewRecord" title={recordToView && recordToView.rek_title}>
+            <StandardPage className="viewRecord" title={recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
                 {
-                    recordToView && recordToView.fez_record_search_key_file_attachment_name && recordToView.fez_record_search_key_file_attachment_name.length > 0 &&
-                    !this.props.hideCulturalSensitivityStatement &&
+                    recordToView.fez_record_search_key_file_attachment_name && recordToView.fez_record_search_key_file_attachment_name.length > 0
+                    && !this.props.hideCulturalSensitivityStatement &&
                     <Alert message={locale.viewRecord.sections.files.culturalSensitivityStatement} type={'info'} allowDismiss dismissAction={this.props.actions.hideCulturalSensitivityStatement} />
                 }
                 {
-                    recordToView && recordToView.fez_record_search_key_file_attachment_name && recordToView.fez_record_search_key_file_attachment_name.length > 0 &&
-                    <Files publication={recordToView} handleFileNameClick={this.handleFileNameClick}/>
+                    recordToView.fez_record_search_key_file_attachment_name && recordToView.fez_record_search_key_file_attachment_name.length > 0 &&
+                    <Files publication={recordToView} onFileSelect={this.handleFileNameClick}/>
                 }
                 {
                     this.state.preview.mediaUrl && this.state.preview.mimeType &&
                     <MediaPreview mediaUrl={this.state.preview.mediaUrl} previewMediaUrl={this.state.preview.previewMediaUrl} mimeType={this.state.preview.mimeType} closeAction={this.resetPreviewState}/>
                 }
                 {
-                    recordToView && recordToView.rek_display_type_lookup &&
+                    false && recordToView.rek_display_type_lookup &&
+                    (recordToView.fez_record_search_key_link && recordToView.fez_record_search_key_link.length > 0
+                    || recordToView.fez_record_search_key_pubmed_central_id && recordToView.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id
+                    || recordToView.fez_record_search_key_doi && recordToView.fez_record_search_key_doi.rek_doi
+                    || recordToView.fez_record_search_key_oa_status && recordToView.fez_record_search_key_oa_status.rek_oa_status === OPEN_ACCESS_ID_LINK_NO_DOI) &&
+                    <Links publication={recordToView}/>
+                }
+                {
+                    recordToView.rek_display_type_lookup &&
                     <AdditionalInformation publication={recordToView} />
                 }
                 {
-                    recordToView && recordToView.fez_record_search_key_grant_agency && recordToView.fez_record_search_key_grant_agency.length > 0 &&
+                    recordToView.fez_record_search_key_grant_agency && recordToView.fez_record_search_key_grant_agency.length > 0 &&
                     <GrantInformation publication={recordToView} />
                 }
                 {
-                    recordToView && recordToView.rek_display_type_lookup &&
+                    recordToView.rek_display_type_lookup &&
                     <PublicationDetails publication={recordToView} />
                 }
 

@@ -7,7 +7,7 @@ function setup(testProps, isShallow = true){
     const props = {
         ...testProps,
         publication: testProps.publication || journalArticle,
-        handleFileNameClick: testProps.handleFileNameClick || (()=>{})
+        onFileSelect: testProps.onFileSelect || jest.fn()
     };
     return getElement(files, props, isShallow);
 }
@@ -41,10 +41,5 @@ describe('Files Component ', () => {
         expect(wrapper.instance().formatBytes(0)).toEqual('0 Bytes');
         expect(wrapper.instance().formatBytes(1024)).toEqual('1 KB');
         expect(wrapper.instance().formatBytes(1048576)).toEqual('1 MB');
-    });
-
-    it('should parse embargo date correctly', () => {
-        const wrapper = setup({});
-        expect(wrapper.instance().formatEmbargoDate({rek_file_attachment_embargo_date: '2018-03-30T00:00:00Z'})).toEqual('30/03/2018');
     });
 });

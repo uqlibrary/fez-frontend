@@ -53,10 +53,10 @@ exports[`File Name Component  should display thumbnail and file name link 1`] = 
       }
     >
       <fileName
-        accessible={true}
+        allowDownload={true}
         fileName="UQ676287_OA.pdf"
-        handleFileNameClick={[Function]}
         mimeType="application/pdf"
+        onFileSelect={[MockFunction]}
         pid="UQ:676287"
         thumbnailFileName="test.jpg"
       >
@@ -67,6 +67,7 @@ exports[`File Name Component  should display thumbnail and file name link 1`] = 
             className="column is-narrow is-vertical-center fileIcon"
           >
             <img
+              alt="test.jpg"
               src="/view/UQ:676287/test.jpg"
             />
           </div>
@@ -142,10 +143,10 @@ exports[`File Name Component  should render audio player 1`] = `
       }
     >
       <fileName
-        accessible={true}
+        allowDownload={true}
         fileName="UQ676287_OA.pdf"
-        handleFileNameClick={[Function]}
         mimeType="audio/mp3"
+        onFileSelect={[MockFunction]}
         pid="UQ:676287"
       >
         <div
@@ -533,8 +534,8 @@ exports[`File Name Component  should render component and display file name only
     >
       <fileName
         fileName="UQ676287_OA.pdf"
-        handleFileNameClick={[Function]}
         mimeType="application/pdf"
+        onFileSelect={[MockFunction]}
         pid="UQ:676287"
       >
         <div
@@ -639,8 +640,8 @@ exports[`File Name Component  should render default icon 1`] = `
     >
       <fileName
         fileName="UQ676287_OA.pdf"
-        handleFileNameClick={[Function]}
         mimeType="text/plain"
+        onFileSelect={[MockFunction]}
         pid="UQ:676287"
       >
         <div

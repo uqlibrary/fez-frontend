@@ -13,26 +13,26 @@ export default class fileName extends PureComponent {
         pid: PropTypes.string.isRequired,
         fileName: PropTypes.string.isRequired,
         mimeType: PropTypes.string.isRequired,
-        handleFileNameClick: PropTypes.func.isRequired,
+        onFileSelect: PropTypes.func.isRequired,
         thumbnailFileName: PropTypes.string,
         previewFileName: PropTypes.string,
-        accessible: PropTypes.bool,
+        allowDownload: PropTypes.bool
     };
 
     constructor(props) {
         super(props);
     }
 
-    renderFileIcon = (pid, mimeType, thumbnailFileName, accessible) => {
-        if (accessible && thumbnailFileName) {
-            return <img src={this.getUrl(pid, thumbnailFileName)} />;
+    renderFileIcon = (pid, mimeType, thumbnailFileName, allowDownload) => {
+        if (allowDownload && thumbnailFileName) {
+            return <img src={this.getUrl(pid, thumbnailFileName)} alt={thumbnailFileName}/>;
         }
 
-        if (this.isAudio()) {
+        if (this.isAudio(mimeType)) {
             return <AvVolumeUp />;
         }
 
-        if (this.isPdf()) {
+        if (this.isPdf(mimeType)) {
             return <PictureAsPdf />;
         }
 
@@ -60,28 +60,27 @@ export default class fileName extends PureComponent {
                     <Pause />
                 </IconButton>
             </div>
-
         );
     }
 
-    isAudio = () => {
-        return this.props.mimeType.indexOf('audio') === 0;
+    isAudio = (mimeType) => {
+        return mimeType.indexOf('audio') >= 0;
     }
 
-    isPdf = () => {
-        return this.props.mimeType.indexOf('application/pdf') === 0;
+    isPdf = (mimeType) => {
+        return mimeType.indexOf('application/pdf') >= 0;
     }
 
-    isVideo = () => {
-        return this.props.mimeType.indexOf('video') === 0;
+    isVideo = (mimeType) => {
+        return mimeType.indexOf('video') >= 0;
     }
 
-    isImage = () => {
-        return this.props.mimeType.indexOf('image') === 0;
+    isImage = (mimeType) => {
+        return mimeType.indexOf('image') === 0;
     }
 
-    canShowPreview = () => {
-        return (this.isImage() || this.isVideo());
+    canShowPreview = (mimeType) => {
+        return (this.isImage(mimeType) || this.isVideo(mimeType));
     }
 
     getUrl = (pid, fileName) => {
@@ -93,34 +92,35 @@ export default class fileName extends PureComponent {
         const mediaUrl = this.getUrl(this.props.pid, this.props.fileName);
         const previewMediaUrl = this.getUrl(this.props.pid, this.props.previewFileName || mediaUrl);
 
-        if (this.canShowPreview()) {
-            this.props.handleFileNameClick(mediaUrl, previewMediaUrl, this.props.mimeType);
+        if (this.canShowPreview(this.props.mimeType)) {
+            this.props.onFileSelect(mediaUrl, previewMediaUrl, this.props.mimeType);
         } else {
             window.open(mediaUrl);
         }
     }
 
-    // show icons, thumbnail and audio player
     render = () => {
-        const {pid, fileName, accessible, mimeType, thumbnailFileName, handleFileNameClick} = this.props;
+        const {pid, fileName, allowDownload, mimeType, thumbnailFileName} = this.props;
 
         return (
             <div className="columns is-gapless is-mobile fileDetails">
                 <div className="column is-narrow is-vertical-center fileIcon">
-                    {this.renderFileIcon(pid, mimeType, thumbnailFileName, accessible)}
+                    {this.renderFileIcon(pid, mimeType, thumbnailFileName, allowDownload)}
                 </div>
                 <div className="column fileInfo">
                     {
-                        accessible && handleFileNameClick ?
-                            <a href="#" onClick={this.handleFileNameClick} onKeyPress={this.handleFileNameClick} className={'fileName'}>
-                                {fileName}
-                            </a>
-                            :
-                            fileName
+                        allowDownload &&
+                        <a href="#" onClick={this.handleFileNameClick} onKeyPress={this.handleFileNameClick} className={'fileName'}>
+                            {fileName}
+                        </a>
+                    }
+                    {
+                        !allowDownload &&
+                        fileName
                     }
                 </div>
                 {
-                    accessible && this.isAudio() &&
+                    allowDownload && this.isAudio(this.props.mimeType) &&
                     <div className="column is-narrow audioWrapper is-hidden-mobile">
                         {this.renderAudioPlayer(pid, fileName, mimeType)}
                     </div>

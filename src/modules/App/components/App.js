@@ -65,8 +65,8 @@ export default class App extends React.Component {
     shouldComponentUpdate(nextProps, nextState) {
         return this.props.accountLoading !== nextProps.accountLoading
             || this.props.accountAuthorLoading !== nextProps.accountAuthorLoading
-            || (!!this.props.location && !!nextProps.location && this.props.location.pathname !== nextProps.location.pathname)
-            || (!!this.props.history && !!nextState.history && this.props.history.push !== nextState.history.push)
+            || this.props.location !== nextProps.location
+            || this.props.history !== nextState.history
             || this.state !== nextState;
     }
 
