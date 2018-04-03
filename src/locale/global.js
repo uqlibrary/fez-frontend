@@ -134,25 +134,25 @@ export default {
             backOnlineProps: {
                 open: true,
                 message: (
-                    <div className="columns is-gapless">
+                    <div className="columns is-gapless connectionStatus online">
                         <div className="column is-narrow">
-                            <ActionCheckCircle style={{fill: 'green', width: '32px', height: '32px', margin: '8px 6px 0 0'}}/>
+                            <ActionCheckCircle/>
                         </div>
-                        <div className="column" style={{lineHeight: '48px'}}>
+                        <div className="column">
                             Your connection has been restored
                         </div>
                     </div>
                 ),
-                autoHideDuration: 50000
+                autoHideDuration: 5000
             },
             offlineProps: {
                 open: true,
                 message: (
-                    <div className="columns is-gapless">
+                    <div className="columns is-gapless connectionStatus offline">
                         <div className="column is-narrow">
-                            <AlertError style={{fill: 'red', width: '32px', height: '32px', margin: '8px 6px 0 0'}}/>
+                            <AlertError/>
                         </div>
-                        <div className="column" style={{lineHeight: '48px'}}>
+                        <div className="column">
                             Your connection is currently offline
                         </div>
                     </div>

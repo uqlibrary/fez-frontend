@@ -162,7 +162,7 @@ export default class App extends React.Component {
             };
         }
 
-        // If the app ever goes offline, keep that in the state
+        // If the app ever goes offline, keep that recorded in the state
         if (!this.state.online && !this.state.hasDisconnected) {
             this.setState({hasDisconnected: true});
         }
