@@ -33,27 +33,10 @@ export default class ShareThis extends React.Component {
 
     shareThisConfigInHead() {
         const code = '' +
-            // '(function() { \n' +
-            // '    _waitforShareThis(1000);\n\n' +
-            //
-            // '    function _waitforShareThis(waitmilliseconds) {\n' +
-            // '        if (window.a2a_config === null || typeof window.a2a === "undefined" || !(window.a2a.init_all)) {\n' +
-            // '            if (waitmilliseconds > 0) {\n' +
-            // '                setTimeout(function() {\n' +
-            // '                    _waitforShareThis(waitmilliseconds-100)\n' +
-            // '                },  waitmilliseconds);\n' +
-            // '            }\n' +
-            // '        } else {\n' +
-            // '            _addCode()\n' +
-            // '        }\n' +
-            // '    }\n\n' +
-
-            // '    function _addCode() { \n' +
-            // '        var a2a_config = window.a2a_config || {}; \n' +
             '        var a2a_config = a2a_config || {}; \n' +
-            '        a2a_config.custom_services = [\n' +
+            '        a2a_config.custom_services = [\n' + // puts it in the addtothis flyout
             '            [\n' +
-            '                "researchgate",\n' +
+            '                "ResearchGate",\n' +
             '                "https://www.researchgate.net/go.Share.html?url=http://localhost:3000/records/UQ:310848&title=Webpack%20App",\n' +
             '                "/src/images/Researchgate.svg"\n' +
             '            ]\n' +
@@ -71,11 +54,7 @@ export default class ShareThis extends React.Component {
             '            }\n' +
             '        });\n' +
 
-            // '        window.a2a_config = a2a_config; \n' +
-            // '        window.a2a.init_all("page");  \n' +
             'console.log("a2a done")\n' +
-            // '    } \n' +
-            // '})(window);' +
             '';
 
         const script = document.createElement('script');
@@ -94,6 +73,7 @@ export default class ShareThis extends React.Component {
         const link = document.createElement('a');
         link.href = 'https://www.researchgate.net/go.Share.html?url=' + encodeURI(window.location.href) + '&title=' + encodeURIComponent(document.title);
         link.rel = 'nofollow noopener noreferrer';
+        link.target = '_blank';
         link.appendChild(image);
 
         const parentDiv = document.querySelector('.shareThis div:nth-child(2)');
@@ -104,7 +84,7 @@ export default class ShareThis extends React.Component {
     }
 
     render() {
-        if (this.props.hide === true) return <div className="shareThis_empty" />;
+        if (this.props.hide) return <div className="shareThis_empty" />;
 
         const blockStyle = { paddingBottom: 12 };
 
