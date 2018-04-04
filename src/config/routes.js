@@ -66,7 +66,10 @@ export const pathConfig =  {
             // unlink: '/author-identifiers/google-scholar/link'
         }
     },
-    legacyEspace: `${fullPath}/my_research_claimed.php`
+    legacyEspace: `${fullPath}/my_research_claimed.php`,
+    authorStatistics: {
+        url: (id) => `https://app.library.uq.edu.au/#/authors/${id}`
+    }
 };
 
 // a duplicate list of routes for
@@ -278,6 +281,10 @@ export const getMenuConfig = (account, disabled) => {
             {
                 linkTo: pathConfig.dataset.add,
                 ...locale.menu.addDataset
+            },
+            {
+                linkTo: pathConfig.authorStatistics.url(account.id),
+                ...locale.menu.authorStatistics
             },
             {
                 divider: true,
