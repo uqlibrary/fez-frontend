@@ -10,10 +10,6 @@ exports[`Component ViewRecord  should render error 1`] = `
 <StandardPage
   className=""
 >
-  <ShareThis
-    hide={false}
-  />
-
   <Alert
     allowDismiss={false}
     message="PID not found"

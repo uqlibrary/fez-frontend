@@ -13,6 +13,7 @@ import GrantInformation from './GrantInformation';
 import MediaPreview from './MediaPreview';
 import Links from './Links';
 import {OPEN_ACCESS_ID_LINK_NO_DOI} from 'config/general';
+import {ShareThis} from 'modules/SharedComponents/ShareThis';
 
 export default class ViewRecord extends Component {
     static propTypes = {
@@ -92,6 +93,9 @@ export default class ViewRecord extends Component {
         return (
             <StandardPage className="viewRecord" title={recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
+
+                <ShareThis />
+
                 {
                     recordToView.fez_record_search_key_file_attachment_name && recordToView.fez_record_search_key_file_attachment_name.length > 0
                     && !this.props.hideCulturalSensitivityStatement &&
