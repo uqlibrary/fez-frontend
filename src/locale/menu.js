@@ -10,6 +10,9 @@ export default {
         myDatasets: {
             primaryText: 'My research data collections'
         },
+        authorStatistics: {
+            primaryText: 'Author statistics'
+        },
         claimPublication: {
             primaryText: 'Claim possible publications'
         },
