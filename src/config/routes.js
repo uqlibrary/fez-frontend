@@ -1,4 +1,5 @@
 import {locale} from 'locale';
+import {APP_URL} from 'config';
 
 export const pathConfig =  {
     index: '/',
@@ -20,8 +21,8 @@ export const pathConfig =  {
         }
     },
     dataset: {
-        add: 'https://espace.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315',
-        list: 'https://espace.library.uq.edu.au/my_research_data_claimed.php'
+        add: (url) => (`${url}workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315`),
+        list: (url) => (`${url}my_research_data_claimed.php`)
     },
     collection: {
         view: (pid) => (`/collection/${pid}`),
@@ -252,6 +253,10 @@ export const getMenuConfig = (account, disabled) => {
                 ...locale.menu.myResearch
             },
             {
+                linkTo: pathConfig.dataset.list(APP_URL),
+                ...locale.menu.listDataset
+            },
+            {
                 linkTo: pathConfig.records.possible,
                 ...locale.menu.claimPublication
             },
@@ -260,12 +265,8 @@ export const getMenuConfig = (account, disabled) => {
                 ...locale.menu.addMissingRecord
             },
             {
-                linkTo: pathConfig.dataset.add,
+                linkTo: pathConfig.dataset.add(APP_URL),
                 ...locale.menu.addDataset
-            },
-            {
-                linkTo: pathConfig.dataset.list,
-                ...locale.menu.listDataset
             },
             {
                 divider: true,

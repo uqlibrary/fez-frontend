@@ -89,6 +89,10 @@ exports[`Application component should render alert if user is not fez author 1`]
           "primaryText": "My research",
         },
         Object {
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
+          "primaryText": "My research data collections",
+        },
+        Object {
           "linkTo": "/records/possible",
           "primaryText": "Claim possible publications",
         },
@@ -97,12 +101,8 @@ exports[`Application component should render alert if user is not fez author 1`]
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "https://espace.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
-          "primaryText": "Add dataset",
-        },
-        Object {
-          "linkTo": "https://espace.library.uq.edu.au/my_research_data_claimed.php",
-          "primaryText": "List dataset",
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "primaryText": "Add a missing data collection",
         },
         Object {
           "divider": true,
@@ -390,6 +390,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "My research",
         },
         Object {
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
+          "primaryText": "My research data collections",
+        },
+        Object {
           "linkTo": "/records/possible",
           "primaryText": "Claim possible publications",
         },
@@ -398,12 +402,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "https://espace.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
-          "primaryText": "Add dataset",
-        },
-        Object {
-          "linkTo": "https://espace.library.uq.edu.au/my_research_data_claimed.php",
-          "primaryText": "List dataset",
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "primaryText": "Add a missing data collection",
         },
         Object {
           "divider": true,
@@ -837,6 +837,10 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "My research",
         },
         Object {
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
+          "primaryText": "My research data collections",
+        },
+        Object {
           "linkTo": "/records/possible",
           "primaryText": "Claim possible publications",
         },
@@ -845,12 +849,8 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "https://espace.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
-          "primaryText": "Add dataset",
-        },
-        Object {
-          "linkTo": "https://espace.library.uq.edu.au/my_research_data_claimed.php",
-          "primaryText": "List dataset",
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "primaryText": "Add a missing data collection",
         },
         Object {
           "divider": true,
@@ -1123,6 +1123,10 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "My research",
         },
         Object {
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
+          "primaryText": "My research data collections",
+        },
+        Object {
           "linkTo": "/records/possible",
           "primaryText": "Claim possible publications",
         },
@@ -1131,12 +1135,8 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "https://espace.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
-          "primaryText": "Add dataset",
-        },
-        Object {
-          "linkTo": "https://espace.library.uq.edu.au/my_research_data_claimed.php",
-          "primaryText": "List dataset",
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "primaryText": "Add a missing data collection",
         },
         Object {
           "divider": true,
@@ -1651,6 +1651,10 @@ exports[`Application component should render application with routing for the us
           "primaryText": "My research",
         },
         Object {
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
+          "primaryText": "My research data collections",
+        },
+        Object {
           "linkTo": "/records/possible",
           "primaryText": "Claim possible publications",
         },
@@ -1659,12 +1663,8 @@ exports[`Application component should render application with routing for the us
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "https://espace.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
-          "primaryText": "Add dataset",
-        },
-        Object {
-          "linkTo": "https://espace.library.uq.edu.au/my_research_data_claimed.php",
-          "primaryText": "List dataset",
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "primaryText": "Add a missing data collection",
         },
         Object {
           "divider": true,

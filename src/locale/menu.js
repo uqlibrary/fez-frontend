@@ -7,6 +7,9 @@ export default {
         myResearch: {
             primaryText: 'My research'
         },
+        listDataset: {
+            primaryText: 'My research data collections'
+        },
         claimPublication: {
             primaryText: 'Claim possible publications'
         },
@@ -14,10 +17,7 @@ export default {
             primaryText: 'Add a missing record'
         },
         addDataset: {
-            primaryText: 'Add dataset'
-        },
-        listDataset: {
-            primaryText: 'List dataset'
+            primaryText: 'Add a missing data collection'
         },
         masquerade: {
             primaryText: 'Masquerade',
