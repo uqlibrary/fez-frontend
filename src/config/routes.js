@@ -1,5 +1,5 @@
 import {locale} from 'locale';
-import {APP_URL} from 'config';
+import {FEZ_URL} from 'config';
 
 const fullPath = process.env.BRANCH === 'development' ? 'https://fez-staging.library.uq.edu.au' : '';
 
@@ -259,7 +259,7 @@ export const getMenuConfig = (account, disabled) => {
                 ...locale.menu.myResearch
             },
             {
-                linkTo: pathConfig.dataset.list(APP_URL),
+                linkTo: pathConfig.dataset.list(FEZ_URL),
                 ...locale.menu.listDataset
             },
             {
@@ -271,7 +271,7 @@ export const getMenuConfig = (account, disabled) => {
                 ...locale.menu.addMissingRecord
             },
             {
-                linkTo: pathConfig.dataset.add(APP_URL),
+                linkTo: pathConfig.dataset.add(FEZ_URL),
                 ...locale.menu.addDataset
             },
             {

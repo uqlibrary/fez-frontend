@@ -10,6 +10,7 @@ export const BASE_DN = 'ou=Staff,ou=People,o=The University of Queensland,c=AU';
 // URLS - values are set in webpack build
 export const API_URL = getValue(process.env.API_URL) || 'https://api.library.uq.edu.au/staging/';
 export const APP_URL = getValue(process.env.APP_URL) || 'https://fez-staging.library.uq.edu.au/';
+export const FEZ_URL = getValue(process.env.FEZ_URL) || 'https://fez-staging.library.uq.edu.au/';
 
 export const AUTH_URL_LOGIN = 'https://auth.library.uq.edu.au/login';
 export const AUTH_URL_LOGOUT = 'https://auth.library.uq.edu.au/logout';

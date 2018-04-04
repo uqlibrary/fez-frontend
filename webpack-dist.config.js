@@ -84,7 +84,8 @@ module.exports = {
             'process.env.PUBLIC_PATH': JSON.stringify(config.basePath),
             'process.env.GOOGLE_MAP_KEY': JSON.stringify(config.googleMaps),
             'process.env.ENABLE_LOG': JSON.stringify(!!process.env.CI_BRANCH && process.env.NODE_ENV !== 'test'),
-            'process.env.TITLE_SUFFIX': JSON.stringify(config.titleSuffix)
+            'process.env.TITLE_SUFFIX': JSON.stringify(config.titleSuffix),
+            'process.env.FEZ_URL': JSON.stringify('https://espace.library.uq.edu.au/'),
         }),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         // Put it in the end to capture all the HtmlWebpackPlugin's
