@@ -7,7 +7,7 @@ export default {
         myResearch: {
             primaryText: 'My research'
         },
-        listDataset: {
+        myDatasets: {
             primaryText: 'My research data collections'
         },
         claimPublication: {

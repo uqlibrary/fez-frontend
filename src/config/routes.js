@@ -22,8 +22,8 @@ export const pathConfig =  {
         }
     },
     dataset: {
+        mine: `${fullPath}/my_research_data_claimed.php`,
         add: `${fullPath}/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315`,
-        list: `${fullPath}/my_research_data_claimed.php`
     },
     collection: {
         view: (pid) => (`${fullPath}/collection/${pid}`),
@@ -258,8 +258,8 @@ export const getMenuConfig = (account, disabled) => {
                 ...locale.menu.myResearch
             },
             {
-                linkTo: pathConfig.dataset.list,
-                ...locale.menu.listDataset
+                linkTo: pathConfig.dataset.mine,
+                ...locale.menu.myDatasets
             },
             {
                 linkTo: pathConfig.records.possible,
