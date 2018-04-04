@@ -68,7 +68,7 @@ export default class ShareThis extends React.Component {
         image.src = '/src/images/ResearchGate.svg';
         image.height = 20;
         image.width = 20;
-        image.alt = 'Share this link via Researchgate';
+        image.alt = 'Share this link via ResearchGate';
 
         const link = document.createElement('a');
         link.href = 'https://www.researchgate.net/go.Share.html?url=' + encodeURI(window.location.href) + '&title=' + encodeURIComponent(document.title);
