@@ -123,13 +123,12 @@ export default {
         defaultLinkDescription: 'Link to publication',
         offlineSnackbar: {
             online: {
-                open: true,
                 message: 'You are back online',
                 autoHideDuration: 5000
             },
             offline: {
-                open: true,
                 message: 'You are currently offline',
+                autoHideDuration: 0
             }
         }
     }

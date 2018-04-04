@@ -12,12 +12,10 @@ export default class OfflineSnackbar extends PureComponent {
     static defaultProps = {
         locale: {
             online: {
-                open: true,
                 message: 'Your connection is back online',
                 autoHideDuration: 5000
             },
             offline: {
-                open: true,
                 message: 'Your connection is offline',
                 autoHideDuration: null
             }
@@ -27,6 +25,7 @@ export default class OfflineSnackbar extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
+            open: false,
             online: typeof navigator.onLine === 'boolean' ? navigator.onLine : true,
             hasDisconnected: false
         };
@@ -43,7 +42,7 @@ export default class OfflineSnackbar extends PureComponent {
     }
 
     updateOnlineState = (online, hasDisconnected) => {
-        this.setState({online: online, hasDisconnected: hasDisconnected});
+        this.setState({open: true, online: online, hasDisconnected: hasDisconnected});
     };
 
     renderMessage = (message, icon) => {
@@ -57,6 +56,15 @@ export default class OfflineSnackbar extends PureComponent {
         );
     };
 
+    handleRequestClose = (reason) => {
+        // MUI hack to prevent the snackbar from being hidden by clicking/touchTapping away
+        console.log('PING');
+        if (reason !== 'clickaway') {
+            console.log('PONG');
+            this.setState({open: false});
+        }
+    };
+
     render() {
         const locale = this.props.locale;
         const snackbarProps = this.state.online ?
@@ -64,10 +72,12 @@ export default class OfflineSnackbar extends PureComponent {
             {...locale.offline, message: this.renderMessage(locale.offline.message, <AlertError/>)};
         return  (
             <div className="offlineSnackbar">
-                {
-                    (!this.state.online || (this.state.online && this.state.hasDisconnected)) &&
-                    <Snackbar {...snackbarProps} />
-                }
+                <Snackbar
+                    {...snackbarProps}
+                    open={this.state.open}
+                    onRequestClose={this.handleRequestClose}
+                    onActionTouchTap={this.handleRequestClose}
+                />
             </div>
         );
     }
