@@ -107,8 +107,8 @@ exports[`Application component should render alert if user is not fez author 1`]
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/about",
-          "primaryText": "About",
+          "linkTo": "/contact",
+          "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
         },
@@ -269,7 +269,7 @@ exports[`Application component should render alert if user is not fez author 1`]
       />
       <Route
         key="route_13"
-        path="/about"
+        path="/contact"
         render={[Function]}
       />
       <Route
@@ -400,8 +400,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/about",
-          "primaryText": "About",
+          "linkTo": "/contact",
+          "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
         },
@@ -547,7 +547,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       />
       <Route
         key="route_13"
-        path="/about"
+        path="/contact"
         render={[Function]}
       />
       <Route
@@ -666,8 +666,8 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/about",
-          "primaryText": "About",
+          "linkTo": "/contact",
+          "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
         },
@@ -698,7 +698,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     <Switch>
       <Route
         key="route_0"
-        path="/about"
+        path="/contact"
         render={[Function]}
       />
       <Route
@@ -839,8 +839,8 @@ exports[`Application component should render app for account with fez author wit
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/about",
-          "primaryText": "About",
+          "linkTo": "/contact",
+          "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
         },
@@ -986,7 +986,7 @@ exports[`Application component should render app for account with fez author wit
       />
       <Route
         key="route_13"
-        path="/about"
+        path="/contact"
         render={[Function]}
       />
       <Route
@@ -1117,8 +1117,8 @@ exports[`Application component should render app for account with fez author wit
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/about",
-          "primaryText": "About",
+          "linkTo": "/contact",
+          "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
         },
@@ -1281,7 +1281,7 @@ exports[`Application component should render app for account with fez author wit
       />
       <Route
         key="route_13"
-        path="/about"
+        path="/contact"
         render={[Function]}
       />
       <Route
@@ -1506,7 +1506,7 @@ exports[`Application component should render app for account with fez author wit
       />
       <Route
         key="route_13"
-        path="/about"
+        path="/contact"
         render={[Function]}
       />
       <Route
@@ -1637,8 +1637,8 @@ exports[`Application component should render application with routing for the us
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/about",
-          "primaryText": "About",
+          "linkTo": "/contact",
+          "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
         },
@@ -1749,8 +1749,8 @@ exports[`Application component should render for anon user 1`] = `
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/about",
-          "primaryText": "About",
+          "linkTo": "/contact",
+          "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
         },
@@ -1783,7 +1783,7 @@ exports[`Application component should render for anon user 1`] = `
     <Switch>
       <Route
         key="route_0"
-        path="/about"
+        path="/contact"
         render={[Function]}
       />
       <Route
@@ -1897,7 +1897,7 @@ exports[`Application component should render thesis submission for HDR without m
     <Switch>
       <Route
         key="route_0"
-        path="/about"
+        path="/contact"
         render={[Function]}
       />
       <Route
