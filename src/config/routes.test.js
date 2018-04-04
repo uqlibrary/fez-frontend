@@ -6,22 +6,22 @@ import {locale} from 'locale';
 describe('Routes method', () => {
     it('should return a list of menus for anon user', () => {
         const testRoutes = routes.getMenuConfig(null);
-        expect(testRoutes.length).toEqual(2);
+        expect(testRoutes.length).toEqual(3);
     });
 
     it('should return a list of menus for researcher', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqresearcher);
-        expect(testRoutes.length).toEqual(9);
+        expect(testRoutes.length).toEqual(11);
     });
 
     it('should return a list of menus for a user with dashboard enabled only (eg HDR student without ORCID)', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqresearcher, true);
-        expect(testRoutes.length).toEqual(4);
+        expect(testRoutes.length).toEqual(5);
     });
 
     it('should return a list of menus for user who can masquerade', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff);
-        expect(testRoutes.length).toEqual(11);
+        expect(testRoutes.length).toEqual(13);
     });
 
     it('should return a list of routes for anon user', () => {
