@@ -1,18 +1,14 @@
 import React, {PureComponent} from 'react';
-import {PropTypes} from 'prop-types';
 import Snackbar from 'material-ui/Snackbar';
 import ActionCheckCircle from 'material-ui/svg-icons/action/check-circle';
 import AlertError from 'material-ui/svg-icons/alert/error';
+import {locale} from 'locale';
 
 export default class OfflineSnackbar extends PureComponent {
-    static propTypes = {
-        locale: PropTypes.object
-    };
-
     static defaultProps = {
         locale: {
             online: {
-                message: 'Your connection is back online',
+                message: 'Your connection is online',
                 autoHideDuration: 5000
             },
             offline: {
@@ -32,17 +28,17 @@ export default class OfflineSnackbar extends PureComponent {
     }
 
     componentDidMount() {
-        window.addEventListener('online', () => {this.updateOnlineState(true, true);});
-        window.addEventListener('offline', () => {this.updateOnlineState(false, true);});
+        window.addEventListener('online', this.updateOnlineState);
+        window.addEventListener('offline', this.updateOnlineState);
     }
 
     componentWillUnmount() {
-        window.removeEventListener('online', () => {this.updateOnlineState(true, false);});
-        window.removeEventListener('offline', () => {this.updateOnlineState(false, false);});
+        window.removeEventListener('online', this.updateOnlineState);
+        window.removeEventListener('offline', this.updateOnlineState);
     }
 
-    updateOnlineState = (online, hasDisconnected) => {
-        this.setState({open: true, online: online, hasDisconnected: hasDisconnected});
+    updateOnlineState = () => {
+        this.setState({open: true, online: navigator.onLine, hasDisconnected: true});
     };
 
     renderMessage = (message, icon) => {
@@ -64,10 +60,10 @@ export default class OfflineSnackbar extends PureComponent {
     };
 
     render() {
-        const locale = this.props.locale;
+        const txt = locale.global.offlineSnackbar;
         const snackbarProps = this.state.online ?
-            {...locale.online, message: this.renderMessage(locale.online.message, <ActionCheckCircle/>)} :
-            {...locale.offline, message: this.renderMessage(locale.offline.message, <AlertError/>)};
+            {...txt.online, message: this.renderMessage(txt.online.message, <ActionCheckCircle/>)} :
+            {...txt.offline, message: this.renderMessage(txt.offline.message, <AlertError/>)};
         return  (
             <div className="offlineSnackbar">
                 <Snackbar

@@ -240,7 +240,7 @@ export default class App extends React.PureComponent {
                     }
                 </div>
                 <HelpDrawer/>
-                <OfflineSnackbar locale={locale.global.offlineSnackbar} />
+                <OfflineSnackbar />
             </div>
         );
     }

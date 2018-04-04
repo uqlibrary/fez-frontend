@@ -316,7 +316,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         },
         "online": Object {
           "autoHideDuration": 5000,
-          "message": "Your connection is back online",
+          "message": "Your connection is online",
         },
       }
     }
@@ -625,7 +625,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         },
         "online": Object {
           "autoHideDuration": 5000,
-          "message": "Your connection is back online",
+          "message": "Your connection is online",
         },
       }
     }
@@ -805,7 +805,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         },
         "online": Object {
           "autoHideDuration": 5000,
-          "message": "Your connection is back online",
+          "message": "Your connection is online",
         },
       }
     }
@@ -1114,7 +1114,7 @@ exports[`Application component should render app for account with fez author wit
         },
         "online": Object {
           "autoHideDuration": 5000,
-          "message": "Your connection is back online",
+          "message": "Your connection is online",
         },
       }
     }
@@ -1440,7 +1440,7 @@ exports[`Application component should render app for account with fez author wit
         },
         "online": Object {
           "autoHideDuration": 5000,
-          "message": "Your connection is back online",
+          "message": "Your connection is online",
         },
       }
     }
@@ -1679,7 +1679,7 @@ exports[`Application component should render app for account with fez author wit
         },
         "online": Object {
           "autoHideDuration": 5000,
-          "message": "Your connection is back online",
+          "message": "Your connection is online",
         },
       }
     }
@@ -1843,7 +1843,7 @@ exports[`Application component should render application with routing for the us
         },
         "online": Object {
           "autoHideDuration": 5000,
-          "message": "Your connection is back online",
+          "message": "Your connection is online",
         },
       }
     }
@@ -2012,7 +2012,7 @@ exports[`Application component should render for anon user 1`] = `
         },
         "online": Object {
           "autoHideDuration": 5000,
-          "message": "Your connection is back online",
+          "message": "Your connection is online",
         },
       }
     }
@@ -2144,7 +2144,7 @@ exports[`Application component should render thesis submission for HDR without m
         },
         "online": Object {
           "autoHideDuration": 5000,
-          "message": "Your connection is back online",
+          "message": "Your connection is online",
         },
       }
     }
