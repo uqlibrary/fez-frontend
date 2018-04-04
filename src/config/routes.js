@@ -21,6 +21,10 @@ export const pathConfig =  {
             new: '/records/add/new',
         }
     },
+    dataset: {
+        mine: `${fullPath}/my_research_data_claimed.php`,
+        add: `${fullPath}/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315`,
+    },
     collection: {
         view: (pid) => (`${fullPath}/collection/${pid}`),
     },
@@ -254,12 +258,20 @@ export const getMenuConfig = (account, disabled) => {
                 ...locale.menu.myResearch
             },
             {
+                linkTo: pathConfig.dataset.mine,
+                ...locale.menu.myDatasets
+            },
+            {
                 linkTo: pathConfig.records.possible,
                 ...locale.menu.claimPublication
             },
             {
                 linkTo: pathConfig.records.add.find,
                 ...locale.menu.addMissingRecord
+            },
+            {
+                linkTo: pathConfig.dataset.add,
+                ...locale.menu.addDataset
             },
             {
                 divider: true,
