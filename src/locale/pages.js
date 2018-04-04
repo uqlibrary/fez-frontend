@@ -21,7 +21,7 @@ help: {
 export default {
     pages: {
         contact: {
-            title: 'About UQ eSpace',
+            title: 'Contact UQ eSpace',
             children: (
                 <StandardCard>
                     UQ eSpace is the single authoritative source for the research outputs and research data of the
