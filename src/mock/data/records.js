@@ -3995,8 +3995,45 @@ export const record = {
         "rek_end_page_xsdmf_id": 6384,
         "rek_end_page": "3283"
     },
-    "fez_record_search_key_file_attachment_access_condition": [],
-    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_access_condition": [
+        {
+            "rek_file_attachment_access_condition_id": 17,
+            "rek_file_attachment_access_condition_pid": "UQ:792099",
+            "rek_file_attachment_access_condition_xsdmf_id": 0,
+            "rek_file_attachment_access_condition_order": 2,
+            "rek_file_attachment_access_condition": "8"
+        },
+        {
+            "rek_file_attachment_access_condition_id": 17,
+            "rek_file_attachment_access_condition_pid": "UQ:792099",
+            "rek_file_attachment_access_condition_xsdmf_id": 0,
+            "rek_file_attachment_access_condition_order": 4,
+            "rek_file_attachment_access_condition": "8"
+        },
+        {
+            "rek_file_attachment_access_condition_id": 17,
+            "rek_file_attachment_access_condition_pid": "UQ:792099",
+            "rek_file_attachment_access_condition_xsdmf_id": 0,
+            "rek_file_attachment_access_condition_order": 5,
+            "rek_file_attachment_access_condition": "8"
+        },
+        {
+            "rek_file_attachment_access_condition_id": 17,
+            "rek_file_attachment_access_condition_pid": "UQ:792099",
+            "rek_file_attachment_access_condition_xsdmf_id": 0,
+            "rek_file_attachment_access_condition_order": 6,
+            "rek_file_attachment_access_condition": "9"
+        }
+    ],
+    "fez_record_search_key_file_attachment_embargo_date": [
+        {
+            "rek_file_attachment_embargo_date_id": 83,
+            "rek_file_attachment_embargo_date_pid": "UQ:795494",
+            "rek_file_attachment_embargo_date_xsdmf_id": 0,
+            "rek_file_attachment_embargo_date_order": 2,
+            "rek_file_attachment_embargo_date": "2018-03-29T08:34:47+10:00"
+        }
+    ],
     "fez_record_search_key_file_attachment_name": [
         {
             "rek_file_attachment_name_id": 4215529,
@@ -4004,6 +4041,149 @@ export const record = {
             "rek_file_attachment_name_xsdmf_id": null,
             "rek_file_attachment_name": "FezACML_UQ_396321.xml",
             "rek_file_attachment_name_order": 1
+        },
+        {
+            "rek_file_attachment_name_id": 4330131,
+            "rek_file_attachment_name_pid": "UQ:792099",
+            "rek_file_attachment_name_xsdmf_id": null,
+            "rek_file_attachment_name": "image.jpg",
+            "rek_file_attachment_name_order": 2
+        },
+        {
+            "rek_file_attachment_name_id": 4298925,
+            "rek_file_attachment_name_pid": "UQ:681794",
+            "rek_file_attachment_name_xsdmf_id": 9593,
+            "rek_file_attachment_name": "stream_Collins_audio_only.flv",
+            "rek_file_attachment_name_order": 3
+        },
+        {
+            "rek_file_attachment_name_id": 4298917,
+            "rek_file_attachment_name_pid": "UQ:681794",
+            "rek_file_attachment_name_xsdmf_id": 9593,
+            "rek_file_attachment_name": "Collins_audio_only.mp3",
+            "rek_file_attachment_name_order": 4
+        },
+        {
+            "rek_file_attachment_name_id": 4298918,
+            "rek_file_attachment_name_pid": "UQ:681794",
+            "rek_file_attachment_name_xsdmf_id": 9593,
+            "rek_file_attachment_name": "Collins_audio_with_PPT.m4v",
+            "rek_file_attachment_name_order": 5
+        },
+        {
+            "rek_file_attachment_name_id": 4298919,
+            "rek_file_attachment_name_pid": "UQ:681794",
+            "rek_file_attachment_name_xsdmf_id": 9593,
+            "rek_file_attachment_name": "Collins_eSpace.pdf",
+            "rek_file_attachment_name_order": 6
+        },
+        {
+            "rek_file_attachment_name_id": 4298923,
+            "rek_file_attachment_name_pid": "UQ:681794",
+            "rek_file_attachment_name_xsdmf_id": 9593,
+            "rek_file_attachment_name": "presmd_Collins_audio_with_PPT.xml",
+            "rek_file_attachment_name_order": 7
+        }
+    ],
+    "fez_datastream_info": [
+        {
+            "dsi_pid": "UQ:792099",
+            "dsi_dsid": "image.jpg",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "testing image description",
+            "dsi_mimetype": "image/jpeg",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 97786
+        },
+        {
+            "dsi_pid": "UQ:792099",
+            "dsi_dsid": "presmd_image.xml",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "PresMD for datastream - image.jpg",
+            "dsi_mimetype": "text/xml",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 757
+        },
+        {
+            "dsi_pid": "UQ:792099",
+            "dsi_dsid": "preview_image.jpg",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "preview_image.jpg",
+            "dsi_mimetype": "image/jpeg",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 65857
+        },
+        {
+            "dsi_pid": "UQ:792099",
+            "dsi_dsid": "thumbnail_image.jpg",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "thumbnail_image.jpg",
+            "dsi_mimetype": "image/jpeg",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 3952
+        },
+        {
+            "dsi_pid": "UQ:792099",
+            "dsi_dsid": "web_image.jpg",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "web_image.jpg",
+            "dsi_mimetype": "image/jpeg",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 97345
+        },
+        {
+            "dsi_pid": "UQ:681794",
+            "dsi_dsid": "Collins_audio_only.mp3",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "Audio document (Open Access)",
+            "dsi_mimetype": "audio/mpeg",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 16806028
+        },
+        {
+            "dsi_pid": "UQ:681794",
+            "dsi_dsid": "Collins_audio_with_PPT.m4v",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "Presentation (Open Access)",
+            "dsi_mimetype": "video/mp4",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 29808623
+        },
+        {
+            "dsi_pid": "UQ:681794",
+            "dsi_dsid": "Collins_eSpace.pdf",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "Full text (Open Access)",
+            "dsi_mimetype": "application/pdf",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 186680
+        },
+        {
+            "dsi_pid": "UQ:681794",
+            "dsi_dsid": "stream_Collins_audio_only.flv",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "stream_Collins_audio_only.flv",
+            "dsi_mimetype": "video/x-flv",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 34896360
         }
     ],
     "fez_record_search_key_grant_acronym": [
@@ -4387,7 +4567,7 @@ export const record = {
         "rek_oa_status_id": 281706,
         "rek_oa_status_pid": "UQ:396321",
         "rek_oa_status_xsdmf_id": 16607,
-        "rek_oa_status": 453694,
+        "rek_oa_status": 453695,
         "rek_oa_status_lookup": "Not yet assessed"
     },
     "fez_record_search_key_place_of_publication": {

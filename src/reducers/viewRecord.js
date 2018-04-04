@@ -41,7 +41,12 @@ const handlers = {
         {
             ...initialState
         }
-    )
+    ),
+
+    [actions.VIEW_RECORD_CULTURAL_SENSITIVITY_STATEMENT_HIDE]: (state) => ({
+        ...state,
+        hideCulturalSensitivityStatement: true
+    }),
 };
 
 export default function viewRecordReducer(state = {...initialState}, action) {
