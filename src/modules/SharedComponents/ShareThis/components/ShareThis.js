@@ -22,15 +22,6 @@ export default class ShareThis extends React.Component {
             this.addResearchGateButton();
         }
 
-        console.log(this.props);
-        if (this.props.hide === false) {
-            console.log('props false');
-        } else if (this.props.hide === true) {
-            console.log('props true');
-        } else {
-            console.log('props else');
-        }
-
         this.shareThisConfigInHead();
     }
 
@@ -41,40 +32,34 @@ export default class ShareThis extends React.Component {
     }
 
     shareThisConfigInHead() {
-        const code = '(function() { \n' +
-            '    _waitforShareThis(1000);\n\n' +
+        const code = '' +
+            // '(function() { \n' +
+            // '    _waitforShareThis(1000);\n\n' +
+            //
+            // '    function _waitforShareThis(waitmilliseconds) {\n' +
+            // '        if (window.a2a_config === null || typeof window.a2a === "undefined" || !(window.a2a.init_all)) {\n' +
+            // '            if (waitmilliseconds > 0) {\n' +
+            // '                setTimeout(function() {\n' +
+            // '                    _waitforShareThis(waitmilliseconds-100)\n' +
+            // '                },  waitmilliseconds);\n' +
+            // '            }\n' +
+            // '        } else {\n' +
+            // '            _addCode()\n' +
+            // '        }\n' +
+            // '    }\n\n' +
 
-            '    function _waitforShareThis(waitmilliseconds) {\n' +
-            '        if (window.a2a_config === null || typeof window.a2a === "undefined" || !(window.a2a.init_all)) {\n' +
-            '            if (waitmilliseconds > 0) {\n' +
-            '                setTimeout(function() {\n' +
-            '                    _waitforShareThis(waitmilliseconds-100)\n' +
-            '                },  waitmilliseconds);\n' +
-            '            }\n' +
-            '        } else {\n' +
-            '            _addCode()\n' +
-            '        }\n' +
-            '    }\n\n' +
-
-            '    function my_addtoany_onready() {\n' +
-            '        a2a_config.custom_services = [ \n' +
-            '              [ \n' +
-            '                  "researchgate", \n' +
-            '                  "https://www.researchgate.net/go.Share.html?url=' + encodeURI(window.location.href) + '&title=' + encodeURIComponent(document.title) + '", \n' +
-            '                  "/images/ResearchGate.png" \n' +
-            '              ] \n' +
-            '        ]; \n' +
-            '        // Additional instance configs can be set here\n' +
-            // '        a2a.init("page");\n' +
-            '    }\n\n' +
-
-            '    function _addCode() { \n' +
-            'console.log(window.a2a_config);\n' +
-            '        var a2a_config = window.a2a_config || {}; \n' +
-            '        a2a_config.callbacks = a2a_config.callbacks || [];' +
-            'console.log("a2a_config.callbacks= "+a2a_config.callbacks)\n' +
+            // '    function _addCode() { \n' +
+            // '        var a2a_config = window.a2a_config || {}; \n' +
+            '        var a2a_config = a2a_config || {}; \n' +
+            '        a2a_config.custom_services = [\n' +
+            '            [\n' +
+            '                "researchgate",\n' +
+            '                "https://www.researchgate.net/go.Share.html?url=http://localhost:3000/records/UQ:310848&title=Webpack%20App",\n' +
+            '                "/src/images/Researchgate.svg"\n' +
+            '            ]\n' +
+            '        ];\n' +
+            '        a2a_config.callbacks = a2a_config.callbacks || [];\n' +
             '        a2a_config.callbacks.push({\n' +
-            '            ready: my_addtoany_onready,\n' +
             '            share: function(data) {\n' +
             '                // Track shares in Google Analytics with Google Tag Manager\n' +
             '                dataLayer.push({\n' +
@@ -85,10 +70,13 @@ export default class ShareThis extends React.Component {
             '                });\n' +
             '            }\n' +
             '        });\n' +
-            '        window.a2a_config = a2a_config; \n' +
-            '        window.a2a.init_all("page");  \n' +
-            '    } \n' +
-            '})(window);';
+
+            // '        window.a2a_config = a2a_config; \n' +
+            // '        window.a2a.init_all("page");  \n' +
+            'console.log("a2a done")\n' +
+            // '    } \n' +
+            // '})(window);' +
+            '';
 
         const script = document.createElement('script');
         script.id = 'shareThisHeader';
