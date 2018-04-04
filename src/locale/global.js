@@ -1,9 +1,4 @@
 import {APP_URL} from 'config';
-import React from 'react';
-import ActionCheckCircle from 'material-ui/svg-icons/action/check-circle';
-import AlertError from 'material-ui/svg-icons/alert/error';
-
-
 /*
 
 NOTE:
@@ -129,30 +124,12 @@ export default {
         offlineSnackbar: {
             online: {
                 open: true,
-                message: (
-                    <div className="columns is-gapless connectionStatus online is-mobile">
-                        <div className="column is-narrow">
-                            <ActionCheckCircle/>
-                        </div>
-                        <div className="column">
-                            Your internet connection has been restored
-                        </div>
-                    </div>
-                ),
+                message: 'Your connection is back online',
                 autoHideDuration: 5000
             },
             offline: {
                 open: true,
-                message: (
-                    <div className="columns is-gapless connectionStatus offline is-mobile">
-                        <div className="column is-narrow">
-                            <AlertError/>
-                        </div>
-                        <div className="column">
-                            Your internet connection is currently offline
-                        </div>
-                    </div>
-                ),
+                message: 'Your connection is offline',
             }
         }
     }

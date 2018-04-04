@@ -2,11 +2,32 @@
 
 exports[`OfflineSnackbar snapshots test renders back online snackbar 1`] = `
 <div
-  className="offlineSnackbar online"
+  className="offlineSnackbar"
 >
   <Snackbar
     autoHideDuration={5000}
-    message="Online"
+    message={
+      <div
+        className="columns is-gapless connectionStatus is-mobile online"
+      >
+        <div
+          className="column"
+        />
+        <div
+          className="column is-narrow"
+        >
+          <ActionCheckCircle />
+        </div>
+        <div
+          className="column is-narrow"
+        >
+          Online
+        </div>
+        <div
+          className="column"
+        />
+      </div>
+    }
     open={true}
   />
 </div>
@@ -14,16 +35,37 @@ exports[`OfflineSnackbar snapshots test renders back online snackbar 1`] = `
 
 exports[`OfflineSnackbar snapshots test renders nothing 1`] = `
 <div
-  className="offlineSnackbar online"
+  className="offlineSnackbar"
 />
 `;
 
 exports[`OfflineSnackbar snapshots test renders offline snackbar 1`] = `
 <div
-  className="offlineSnackbar offline"
+  className="offlineSnackbar"
 >
   <Snackbar
-    message="Offline"
+    message={
+      <div
+        className="columns is-gapless connectionStatus is-mobile offline"
+      >
+        <div
+          className="column"
+        />
+        <div
+          className="column is-narrow"
+        >
+          <AlertError />
+        </div>
+        <div
+          className="column is-narrow"
+        >
+          Offline
+        </div>
+        <div
+          className="column"
+        />
+      </div>
+    }
     open={true}
   />
 </div>
