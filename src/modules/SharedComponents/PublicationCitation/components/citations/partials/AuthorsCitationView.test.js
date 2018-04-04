@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Immutable from 'immutable';
 
-function setup({publication, prefix, suffix, className, initialNumberOfAuthors = 10, thresholdNumberOfAuthors = 3, isShallow = false}) {
+function setup({publication, prefix, suffix, className, initialNumberOfAuthors = 10, thresholdNumberOfAuthors = 3, showLink = false, isShallow = false}) {
     const props = {
         publication: publication || {}, // : PropTypes.object.isRequired,
         prefix: prefix,
@@ -17,7 +17,7 @@ function setup({publication, prefix, suffix, className, initialNumberOfAuthors =
         className: className || '',
         initialNumberOfAuthors: initialNumberOfAuthors,
         thresholdNumberOfAuthors: thresholdNumberOfAuthors,
-
+        showLink: showLink
     };
 
     if(isShallow) {
@@ -82,6 +82,40 @@ describe('AuthorsCitationView test ', () => {
             ]
         };
         const wrapper = setup({ publication: testObject });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with 2 authors for publication view page', () => {
+        const testObject = {
+            "fez_record_search_key_author": [
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Pedroso, Marcelo Monteiro",
+                    "rek_author_order": 1
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Smith, J",
+                    "rek_author_order": 2
+                }
+            ],
+            "fez_record_search_key_author_id": [
+                {
+                    "rek_author_id_id": null,
+                    "rek_author_id": 1,
+                    "rek_author_id_order": 1
+                },
+                {
+                    "rek_author_id_id": null,
+                    "rek_author_id": 2,
+                    "rek_author_id_order": 2
+                }
+            ]
+        };
+        const wrapper = setup({ publication: testObject, showLink: true });
+        // expect(wrapper.find('CitationView').get(1).props.prefix).toEqual(', ');
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
