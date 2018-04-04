@@ -87,7 +87,7 @@ export default class AdditionalInformation extends Component {
             case 'rek_doi': return this.renderDoi(data);
             case 'rek_journal_name': return this.renderJournalName();
             case 'rek_publisher': return this.renderLink(pathConfig.list.publisher(data), data);
-            case 'rek_oa_status': return this.renderLink(pathConfig.list.openAccessStatus(object[subkey]), data);
+            case 'rek_oa_status': return !!data ? this.renderLink(pathConfig.list.openAccessStatus(object[subkey]), data) : '';
             case 'rek_herdc_code': return this.renderLink(pathConfig.list.subject(object[subkey]), data);
             case 'rek_herdc_status': return this.renderLink(pathConfig.list.herdcStatus(object[subkey]), data);
             case 'rek_ands_collection_type': return this.renderLink(pathConfig.list.collectionType(object[subkey]), data);
@@ -177,7 +177,7 @@ export default class AdditionalInformation extends Component {
     // get lookup data if it exsts, except rek_issn_lookup as it returns sherpa romeo color
     getData = (object, subkey) => {
         const lookupSuffix = '_lookup';
-        return object[subkey + lookupSuffix] && subkey !== 'rek_issn' ? object[subkey + lookupSuffix] : object[subkey];
+        return (subkey === 'rek_oa_status' || object[subkey + lookupSuffix] && subkey !== 'rek_issn') ? object[subkey + lookupSuffix] : object[subkey];
     }
 
     getAbstract = (publication) => {
