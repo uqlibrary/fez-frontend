@@ -127,4 +127,10 @@ describe('Additional Information Component ', () => {
         const wrapper = setup({publication: records.videoDocument});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render oa status value link in the component with thesis', () => {
+        records.thesis.fez_record_search_key_oa_status.rek_oa_status_lookup = 'File (Author Post-print)';
+        const wrapper = setup({publication: records.thesis});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
