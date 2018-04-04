@@ -33,14 +33,18 @@ export default class OfflineSnackbar extends PureComponent {
     }
 
     componentDidMount() {
-        window.addEventListener('online', () => {this.setState({online: true});});
-        window.addEventListener('offline', () => {this.setState({online: false, hasDisconnected: true});});
+        window.addEventListener('online', () => {this.updateOnlineState(true, true);});
+        window.addEventListener('offline', () => {this.updateOnlineState(false, true);});
     }
 
     componentWillUnmount() {
-        window.removeEventListener('online', () => {this.setState({online: true});});
-        window.removeEventListener('offline', () => {this.setState({online: true, hasDisconnected: false});});
+        window.removeEventListener('online', () => {this.updateOnlineState(true, false);});
+        window.removeEventListener('offline', () => {this.updateOnlineState(false, false);});
     }
+
+    updateOnlineState = (online, hasDisconnected) => {
+        this.setState({online: online, hasDisconnected: hasDisconnected});
+    };
 
     renderMessage = (message, icon) => {
         return (
