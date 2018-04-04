@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component Links  should not render component for empty publication 1`] = `""`;
+
 exports[`Component Links  should render AO DOI link 1`] = `
 <Provider
   store={

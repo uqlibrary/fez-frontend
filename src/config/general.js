@@ -243,8 +243,11 @@ export const publicationTypes = (components) => [
 ];
 
 export const QuickTemplates = {
+    UQ_STAFF_STUDENTS_VIEW: 1,
+    UQ_STAFF_STUDENTS_PRINTERY_VIEW: 6,
+    INHERIT_FROM_ABOVE: 7,
     CLOSED_ACCESS_ID: 8,
-    OPEN_ACCESS_ID: 9
+    OPEN_ACCESS_ID: 9,
 };
 
 

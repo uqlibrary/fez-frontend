@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import {pathConfig} from 'config/routes';
@@ -6,16 +6,16 @@ import {Table, TableBody} from 'material-ui/Table';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import ViewRecordTableRow from './ViewRecordTableRow';
 
-export default class PublicationDetails extends Component {
+export default class PublicationDetails extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired
     };
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
+        if (!this.props.publication.rek_display_type_lookup) {
+            return null;
+        }
+
         return (
             <StandardCard title={locale.viewRecord.sections.publicationDetails}>
                 <Table selectable={false} className="publicationDetails">

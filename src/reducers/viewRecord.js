@@ -37,9 +37,10 @@ const handlers = {
         }
     ),
 
-    [actions.VIEW_RECORD_CLEAR]: () => (
+    [actions.VIEW_RECORD_CLEAR]: (state) => (
         {
-            ...initialState
+            ...initialState,
+            hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement
         }
     ),
 

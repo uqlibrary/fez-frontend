@@ -17,7 +17,7 @@ describe('Publication Details Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render component with empty publication', () => {
+    it('should not render component with empty publication', () => {
         const wrapper = setup({publication: {}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
