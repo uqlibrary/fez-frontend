@@ -623,14 +623,13 @@ exports[`DigilibImageCitation renders  component with a mock espace record 1`] =
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=""
           value="Keniger, Michael, 1947-"
         >
           <span
             className="citationAuthor"
           >
-             
             Keniger, Michael, 1947-
           </span>
         </CitationView>

@@ -569,14 +569,13 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=""
           value="Webster-Mannison, Marci"
         >
           <span
             className="citationAuthor"
           >
-             
             Webster-Mannison, Marci
           </span>
         </CitationView>
