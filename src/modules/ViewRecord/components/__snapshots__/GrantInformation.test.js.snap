@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Grant Information Component  should not render component with empty publication 1`] = `""`;
+
 exports[`Grant Information Component  should render component 1`] = `
 <StandardCard
   className=""
@@ -119,33 +121,6 @@ exports[`Grant Information Component  should render component 1`] = `
         </TableRowColumn>
       </TableRow>
     </TableBody>
-  </Table>
-</StandardCard>
-`;
-
-exports[`Grant Information Component  should render component with empty publication 1`] = `
-<StandardCard
-  className=""
-  title="Grant information"
->
-  <Table
-    allRowsSelected={false}
-    className="grantInformation"
-    fixedFooter={true}
-    fixedHeader={true}
-    height="inherit"
-    multiSelectable={false}
-    selectable={false}
-  >
-    <TableBody
-      allRowsSelected={false}
-      deselectOnClickaway={true}
-      displayRowCheckbox={false}
-      multiSelectable={false}
-      preScanRows={true}
-      selectable={true}
-      style={Object {}}
-    />
   </Table>
 </StandardCard>
 `;

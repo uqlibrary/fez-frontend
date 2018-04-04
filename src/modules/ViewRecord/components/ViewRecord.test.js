@@ -34,6 +34,11 @@ describe('Component ViewRecord ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should not render components for empty record', () => {
+        const wrapper = setup({recordToView: {}});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render record view without a title', () => {
         const wrapper = setup({recordToView: mockRecordToFix, hideTitle: true});
         expect(toJson(wrapper)).toMatchSnapshot();

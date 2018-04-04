@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Additional Information Component  should not render component with empty publication 1`] = `""`;
+
 exports[`Additional Information Component  should render component with audio document 1`] = `
 <Provider
   store={
@@ -11313,33 +11315,6 @@ exports[`Additional Information Component  should render component with digilib 
         key="additional-info-Architectural features"
       />
     </TableBody>
-  </Table>
-</StandardCard>
-`;
-
-exports[`Additional Information Component  should render component with empty publication 1`] = `
-<StandardCard
-  className=""
-  title="Additional information"
->
-  <Table
-    allRowsSelected={false}
-    className="additionalInformation"
-    fixedFooter={true}
-    fixedHeader={true}
-    height="inherit"
-    multiSelectable={false}
-    selectable={false}
-  >
-    <TableBody
-      allRowsSelected={false}
-      deselectOnClickaway={true}
-      displayRowCheckbox={false}
-      multiSelectable={false}
-      preScanRows={true}
-      selectable={true}
-      style={Object {}}
-    />
   </Table>
 </StandardCard>
 `;

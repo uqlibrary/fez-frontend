@@ -10,7 +10,7 @@ function setup(testProps, isShallow = true){
 }
 
 describe('Additional Information Component ', () => {
-    it('should render component with empty publication', () => {
+    it('should not render component with empty publication', () => {
         const wrapper = setup({publication: {}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });

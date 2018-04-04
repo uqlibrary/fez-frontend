@@ -242,6 +242,10 @@ export default class AdditionalInformation extends Component {
     }
 
     render() {
+        if (!this.props.publication.rek_display_type_lookup) {
+            return null;
+        }
+
         return (
             <StandardCard title={locale.viewRecord.sections.additionalInformation}>
                 <Table selectable={false} className="additionalInformation">
