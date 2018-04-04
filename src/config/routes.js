@@ -1,5 +1,4 @@
 import {locale} from 'locale';
-import {FEZ_URL} from 'config';
 
 const fullPath = process.env.BRANCH === 'development' ? 'https://fez-staging.library.uq.edu.au' : '';
 
@@ -23,8 +22,8 @@ export const pathConfig =  {
         }
     },
     dataset: {
-        add: (url) => (`${url}workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315`),
-        list: (url) => (`${url}my_research_data_claimed.php`)
+        add: `${fullPath}/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315`,
+        list: `${fullPath}/my_research_data_claimed.php`
     },
     collection: {
         view: (pid) => (`${fullPath}/collection/${pid}`),
@@ -259,7 +258,7 @@ export const getMenuConfig = (account, disabled) => {
                 ...locale.menu.myResearch
             },
             {
-                linkTo: pathConfig.dataset.list(FEZ_URL),
+                linkTo: pathConfig.dataset.list,
                 ...locale.menu.listDataset
             },
             {
@@ -271,7 +270,7 @@ export const getMenuConfig = (account, disabled) => {
                 ...locale.menu.addMissingRecord
             },
             {
-                linkTo: pathConfig.dataset.add(FEZ_URL),
+                linkTo: pathConfig.dataset.add,
                 ...locale.menu.addDataset
             },
             {

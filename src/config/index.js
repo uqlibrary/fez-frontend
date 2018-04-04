@@ -9,8 +9,7 @@ export {
     ORCID_CLIENT_ID,
     ORCID_AUTHORIZATION_URL,
     FACET_TYPE_FILTER,
-    FACET_TYPE_RANGE,
-    FEZ_URL
+    FACET_TYPE_RANGE
 } from './general';
 
 export {api, generateCancelToken, cache} from './axios';
