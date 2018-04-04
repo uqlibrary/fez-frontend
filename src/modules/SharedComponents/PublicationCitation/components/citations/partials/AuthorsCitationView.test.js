@@ -115,7 +115,53 @@ describe('AuthorsCitationView test ', () => {
             ]
         };
         const wrapper = setup({ publication: testObject, showLink: true });
-        // expect(wrapper.find('CitationView').get(1).props.prefix).toEqual(', ');
+        expect(wrapper.find('CitationView').get(1).props.prefix).toEqual(', ');
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+
+    it('should render component with 3 authors for publication view page', () => {
+        const testObject = {
+            "fez_record_search_key_author": [
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Pedroso, Marcelo Monteiro",
+                    "rek_author_order": 1
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Smith, J",
+                    "rek_author_order": 2
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Smith, J",
+                    "rek_author_order": 3
+                }
+            ],
+            "fez_record_search_key_author_id": [
+                {
+                    "rek_author_id_id": null,
+                    "rek_author_id": 1,
+                    "rek_author_id_order": 1
+                },
+                {
+                    "rek_author_id_id": null,
+                    "rek_author_id": 2,
+                    "rek_author_id_order": 2
+                },
+                {
+                    "rek_author_id_id": null,
+                    "rek_author_id": 3,
+                    "rek_author_id_order": 3
+                }
+            ]
+        };
+        const wrapper = setup({ publication: testObject, showLink: true });
+        expect(wrapper.find('CitationView').get(2).props.prefix).toEqual(', ');
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

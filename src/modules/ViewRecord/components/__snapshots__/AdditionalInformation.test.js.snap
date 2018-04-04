@@ -1624,14 +1624,14 @@ exports[`Additional Information Component  should render component with audio do
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_5"
-                                                        prefix=" "
+                                                        prefix=", "
                                                         suffix=""
                                                         value="Skinner, Peter R."
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
+                                                          , 
                                                           Skinner, Peter R.
                                                         </span>
                                                       </CitationView>
@@ -16537,14 +16537,14 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_9"
-                                                        prefix=" "
+                                                        prefix=", "
                                                         suffix=""
                                                         value="Monteith, Gregory R."
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
+                                                          , 
                                                           Monteith, Gregory R.
                                                         </span>
                                                       </CitationView>
