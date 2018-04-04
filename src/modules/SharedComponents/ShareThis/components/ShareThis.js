@@ -38,7 +38,7 @@ export default class ShareThis extends React.Component {
             '            [\n' +
             '                "ResearchGate",\n' +
             '                "https://www.researchgate.net/go.Share.html?url=http://localhost:3000/records/UQ:310848&title=Webpack%20App",\n' +
-            '                "/src/images/Researchgate.svg"\n' +
+            '                "../../public/images/researchgate.svg"\n' +
             '            ]\n' +
             '        ];\n' +
             '        a2a_config.callbacks = a2a_config.callbacks || [];\n' +
@@ -64,17 +64,12 @@ export default class ShareThis extends React.Component {
     }
 
     addResearchGateButton() {
-        const image = document.createElement('img');
-        image.src = '/src/images/ResearchGate.svg';
-        image.height = 20;
-        image.width = 20;
-        image.alt = 'Share this link via ResearchGate';
-
         const link = document.createElement('a');
         link.href = 'https://www.researchgate.net/go.Share.html?url=' + encodeURI(window.location.href) + '&title=' + encodeURIComponent(document.title);
         link.rel = 'nofollow noopener noreferrer';
         link.target = '_blank';
-        link.appendChild(image);
+        link.className = 'researchgate';
+        link.title = 'Share this link via ResearchGate';
 
         const parentDiv = document.querySelector('.shareThis div:nth-child(2)');
         const secondChild = document.querySelector('.shareThis div:nth-child(2) a:nth-child(2)');
