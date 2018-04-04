@@ -33,7 +33,8 @@ const handlers = {
         {
             ...initialState,
             loadingRecordToView: false,
-            recordToView: action.payload
+            recordToView: action.payload,
+            hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement
         }
     ),
 

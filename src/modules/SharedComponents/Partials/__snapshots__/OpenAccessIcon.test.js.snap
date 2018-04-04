@@ -128,7 +128,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
         <div>
           <div
             className="fez-icon openAccessEmbargoed large"
-            title="Link (no DOI) - Open access after 2019-01-01"
+            title="undefined - Open access after 2019-01-01"
           />
         </div>
       </OpenAccessIcon>
@@ -203,7 +203,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
           </span>
           <div
             className="fez-icon openAccessEmbargoed large"
-            title="Link (no DOI) - Open access after 2019-01-01"
+            title="undefined - Open access after 2019-01-01"
           />
         </div>
       </OpenAccessIcon>

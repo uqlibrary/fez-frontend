@@ -6,14 +6,14 @@ import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {PubmedCentralLink} from 'modules/SharedComponents/PubmedCentralLink';
 import DoiCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DoiCitationView';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
-import OpenAccessIcon from './partials/OpenAccessIcon';
+import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 
 import {locale} from 'locale';
 import {OPEN_ACCESS_ID_LINK_NO_DOI, OPEN_ACCESS_ID_DOI} from 'config/general';
 
 import moment from 'moment';
 
-export default class ViewRecordLinks extends PureComponent {
+export default class Links extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired
     };

@@ -262,14 +262,14 @@ export const OPEN_ACCESS_ID_MEDIATED_ACCESS = 453700;
 export const OPEN_ACCESS_ID_PMC = 453954;
 
 export const openAccessIdLookup = {
-    [OPEN_ACCESS_ID_NOT_YET_ASSESSED]: 'Not yet assessed',
+    // [OPEN_ACCESS_ID_NOT_YET_ASSESSED]: 'Not yet assessed',
     [OPEN_ACCESS_ID_DOI]: 'DOI',
-    [OPEN_ACCESS_ID_LINK_NO_DOI]: 'Link (no DOI)',
+    // [OPEN_ACCESS_ID_LINK_NO_DOI]: 'Link (no DOI)',
     [OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION]: 'File (Publisher version)',
     [OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT]: 'File (Author post-print)',
     [OPEN_ACCESS_ID_OTHER]: 'Other',
-    [OPEN_ACCESS_ID_NOT_OPEN_ACCESS]: 'Not Open Access',
-    [OPEN_ACCESS_ID_MEDIATED_ACCESS]: 'Mediated Access',
+    // [OPEN_ACCESS_ID_NOT_OPEN_ACCESS]: 'Not Open Access',
+    // [OPEN_ACCESS_ID_MEDIATED_ACCESS]: 'Mediated Access',
     [OPEN_ACCESS_ID_PMC]: 'PMC'
 };
 

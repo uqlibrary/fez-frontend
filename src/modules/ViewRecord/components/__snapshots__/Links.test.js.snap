@@ -54,7 +54,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
         }
       }
     >
-      <ViewRecordLinks
+      <Links
         publication={
           Object {
             "fez_record_search_key_doi": Object {
@@ -686,7 +686,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
             </Paper>
           </Card>
         </StandardCard>
-      </ViewRecordLinks>
+      </Links>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -744,7 +744,7 @@ exports[`Component Links  should render a DOI link 1`] = `
         }
       }
     >
-      <ViewRecordLinks
+      <Links
         publication={
           Object {
             "fez_record_search_key_doi": Object {
@@ -1368,7 +1368,7 @@ exports[`Component Links  should render a DOI link 1`] = `
             </Paper>
           </Card>
         </StandardCard>
-      </ViewRecordLinks>
+      </Links>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -1426,7 +1426,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
         }
       }
     >
-      <ViewRecordLinks
+      <Links
         publication={
           Object {
             "fez_record_search_key_oa_status": Object {
@@ -2045,7 +2045,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
             </Paper>
           </Card>
         </StandardCard>
-      </ViewRecordLinks>
+      </Links>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -2103,7 +2103,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
         }
       }
     >
-      <ViewRecordLinks
+      <Links
         publication={
           Object {
             "fez_record_search_key_link": Array [
@@ -3366,7 +3366,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
             </Paper>
           </Card>
         </StandardCard>
-      </ViewRecordLinks>
+      </Links>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -3424,7 +3424,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
         }
       }
     >
-      <ViewRecordLinks
+      <Links
         publication={
           Object {
             "fez_record_search_key_doi": Object {
@@ -4709,7 +4709,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
             </Paper>
           </Card>
         </StandardCard>
-      </ViewRecordLinks>
+      </Links>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -4767,7 +4767,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
         }
       }
     >
-      <ViewRecordLinks
+      <Links
         publication={
           Object {
             "fez_record_search_key_link": Array [
@@ -5609,7 +5609,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                                     </span>
                                                     <div
                                                       className="fez-icon openAccessEmbargoed large"
-                                                      title="Link (no DOI) - Open access after 24th December 2020"
+                                                      title="undefined - Open access after 24th December 2020"
                                                     />
                                                   </div>
                                                 </OpenAccessIcon>
@@ -5818,7 +5818,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                                     </span>
                                                     <div
                                                       className="fez-icon openAccessEmbargoed large"
-                                                      title="Link (no DOI) - Open access after 24th December 2020"
+                                                      title="undefined - Open access after 24th December 2020"
                                                     />
                                                   </div>
                                                 </OpenAccessIcon>
@@ -6027,7 +6027,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                                     </span>
                                                     <div
                                                       className="fez-icon openAccessEmbargoed large"
-                                                      title="Link (no DOI) - Open access after 24th December 2020"
+                                                      title="undefined - Open access after 24th December 2020"
                                                     />
                                                   </div>
                                                 </OpenAccessIcon>
@@ -6051,7 +6051,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
             </Paper>
           </Card>
         </StandardCard>
-      </ViewRecordLinks>
+      </Links>
     </Router>
   </MemoryRouter>
 </Provider>
