@@ -23,7 +23,7 @@ describe('OfflineSnackbar snapshots test', () => {
         }
     };
 
-    it('renders nothing', () => {
+    it('renders empty component', () => {
         const wrapper = setup({locale});
         wrapper.instance().setState({online: true, hasDisconnected: false});
         wrapper.update();

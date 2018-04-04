@@ -33,7 +33,7 @@ exports[`OfflineSnackbar snapshots test renders back online snackbar 1`] = `
 </div>
 `;
 
-exports[`OfflineSnackbar snapshots test renders nothing 1`] = `
+exports[`OfflineSnackbar snapshots test renders empty component 1`] = `
 <div
   className="offlineSnackbar"
 />

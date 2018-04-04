@@ -124,12 +124,12 @@ export default {
         offlineSnackbar: {
             online: {
                 open: true,
-                message: 'Your connection is back online',
+                message: 'You are back online',
                 autoHideDuration: 5000
             },
             offline: {
                 open: true,
-                message: 'Your connection is offline',
+                message: 'You are currently offline',
             }
         }
     }
