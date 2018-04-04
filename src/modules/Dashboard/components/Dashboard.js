@@ -78,7 +78,7 @@ class Dashboard extends React.Component {
     };
 
     _addPublication = () => {
-        this.props.history.push(routes.pathConfig.records.add.new);
+        this.props.history.push(routes.pathConfig.records.add.find);
     };
 
     _viewYourResearch = () => {

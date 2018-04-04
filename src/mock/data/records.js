@@ -1511,6 +1511,7 @@ export const internalTitleSearchList = {
             "fez_record_search_key_software_required": [],
             "rek_pubmed_doc_type": null,
             "fez_record_search_key_herdc_status": null,
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_language_of_proceedings_title": [],
             "rek_scopus_doc_type": null,
             "fez_record_search_key_conference_location": null,
@@ -1830,6 +1831,7 @@ export const internalTitleSearchList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "161"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -2427,6 +2429,7 @@ export const internalTitleSearchList = {
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -2706,6 +2709,7 @@ export const internalTitleSearchList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "59"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -3024,6 +3028,7 @@ export const internalTitleSearchList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "573"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -3377,6 +3382,7 @@ export const internalTitleSearchList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "1188"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -3746,11 +3752,11 @@ export const record = {
     "fez_record_search_key_assigned_user_id": [],
     "fez_record_search_key_author": [
         {
-        "rek_author_id": 28593829,
-        "rek_author_pid": "UQ:396321",
-        "rek_author_xsdmf_id": 6351,
-        "rek_author": "Milevskiy, Michael J. G.",
-        "rek_author_order": 1
+            "rek_author_id": 28593829,
+            "rek_author_pid": "UQ:396321",
+            "rek_author_xsdmf_id": 6351,
+            "rek_author": "Milevskiy, Michael J. G.",
+            "rek_author_order": 1
         },
         {
             "rek_author_id": 28593830,
@@ -3861,114 +3867,114 @@ export const record = {
     "fez_record_search_key_author_affiliation_name": [],
     "fez_record_search_key_author_id": [
         {
-        "rek_author_id_id": 27973928,
-        "rek_author_id_pid": "UQ:396321",
-        "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 410,
-        "rek_author_id_order": 1
-    }, {
-        "rek_author_id_id": 27973929,
-        "rek_author_id_pid": "UQ:396321",
-        "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 4101,
-        "rek_author_id_order": 2
-    }, {
-        "rek_author_id_id": 27973930,
-        "rek_author_id_pid": "UQ:396321",
-        "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 8065,
-        "rek_author_id_order": 3
-    }, {
-        "rek_author_id_id": 27973931,
-        "rek_author_id_pid": "UQ:396321",
-        "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 94252,
-        "rek_author_id_order": 4
-    }, {
-        "rek_author_id_id": 27973932,
-        "rek_author_id_pid": "UQ:396321",
-        "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 84824,
-        "rek_author_id_order": 5
-    }, {
-        "rek_author_id_id": 27973933,
-        "rek_author_id_pid": "UQ:396321",
-        "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 91829,
-        "rek_author_id_order": 6
-    }, {
-        "rek_author_id_id": 27973934,
-        "rek_author_id_pid": "UQ:396321",
-        "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 12312,
-        "rek_author_id_order": 7
-    }, {
-        "rek_author_id_id": 27973935,
-        "rek_author_id_pid": "UQ:396321",
-        "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 0,
-        "rek_author_id_order": 8
-    }, {
-        "rek_author_id_id": 27973936,
-        "rek_author_id_pid": "UQ:396321",
-        "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 0,
-        "rek_author_id_order": 9
-    }, {
-        "rek_author_id_id": 27973937,
-        "rek_author_id_pid": "UQ:396321",
-        "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 0,
-        "rek_author_id_order": 10
-    }, {
-        "rek_author_id_id": 27973938,
-        "rek_author_id_pid": "UQ:396321",
-        "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 0,
-        "rek_author_id_order": 11
-    }, {
-        "rek_author_id_id": 27973939,
-        "rek_author_id_pid": "UQ:396321",
-        "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 91834,
-        "rek_author_id_order": 12
-    }, {
-        "rek_author_id_id": 27973940,
-        "rek_author_id_pid": "UQ:396321",
-        "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 961,
-        "rek_author_id_order": 13
-    }, {
-        "rek_author_id_id": 27973941,
-        "rek_author_id_pid": "UQ:396321",
-        "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 950,
-        "rek_author_id_order": 14
-    }, {
-        "rek_author_id_id": 27973942,
-        "rek_author_id_pid": "UQ:396321",
-        "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 1721,
-        "rek_author_id_order": 15
-    }, {
-        "rek_author_id_id": 27973943,
-        "rek_author_id_pid": "UQ:396321",
-        "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 0,
-        "rek_author_id_order": 16
-    }, {
-        "rek_author_id_id": 27973944,
-        "rek_author_id_pid": "UQ:396321",
-        "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 3247,
-        "rek_author_id_order": 17
-    }, {
-        "rek_author_id_id": 27973945,
-        "rek_author_id_pid": "UQ:396321",
-        "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 410,
-        "rek_author_id_order": 18
-    }],
+            "rek_author_id_id": 27973928,
+            "rek_author_id_pid": "UQ:396321",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 410,
+            "rek_author_id_order": 1
+        }, {
+            "rek_author_id_id": 27973929,
+            "rek_author_id_pid": "UQ:396321",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 4101,
+            "rek_author_id_order": 2
+        }, {
+            "rek_author_id_id": 27973930,
+            "rek_author_id_pid": "UQ:396321",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 8065,
+            "rek_author_id_order": 3
+        }, {
+            "rek_author_id_id": 27973931,
+            "rek_author_id_pid": "UQ:396321",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 94252,
+            "rek_author_id_order": 4
+        }, {
+            "rek_author_id_id": 27973932,
+            "rek_author_id_pid": "UQ:396321",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 84824,
+            "rek_author_id_order": 5
+        }, {
+            "rek_author_id_id": 27973933,
+            "rek_author_id_pid": "UQ:396321",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 91829,
+            "rek_author_id_order": 6
+        }, {
+            "rek_author_id_id": 27973934,
+            "rek_author_id_pid": "UQ:396321",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 12312,
+            "rek_author_id_order": 7
+        }, {
+            "rek_author_id_id": 27973935,
+            "rek_author_id_pid": "UQ:396321",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 0,
+            "rek_author_id_order": 8
+        }, {
+            "rek_author_id_id": 27973936,
+            "rek_author_id_pid": "UQ:396321",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 0,
+            "rek_author_id_order": 9
+        }, {
+            "rek_author_id_id": 27973937,
+            "rek_author_id_pid": "UQ:396321",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 0,
+            "rek_author_id_order": 10
+        }, {
+            "rek_author_id_id": 27973938,
+            "rek_author_id_pid": "UQ:396321",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 0,
+            "rek_author_id_order": 11
+        }, {
+            "rek_author_id_id": 27973939,
+            "rek_author_id_pid": "UQ:396321",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 91834,
+            "rek_author_id_order": 12
+        }, {
+            "rek_author_id_id": 27973940,
+            "rek_author_id_pid": "UQ:396321",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 961,
+            "rek_author_id_order": 13
+        }, {
+            "rek_author_id_id": 27973941,
+            "rek_author_id_pid": "UQ:396321",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 950,
+            "rek_author_id_order": 14
+        }, {
+            "rek_author_id_id": 27973942,
+            "rek_author_id_pid": "UQ:396321",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 1721,
+            "rek_author_id_order": 15
+        }, {
+            "rek_author_id_id": 27973943,
+            "rek_author_id_pid": "UQ:396321",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 0,
+            "rek_author_id_order": 16
+        }, {
+            "rek_author_id_id": 27973944,
+            "rek_author_id_pid": "UQ:396321",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 3247,
+            "rek_author_id_order": 17
+        }, {
+            "rek_author_id_id": 27973945,
+            "rek_author_id_pid": "UQ:396321",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 410,
+            "rek_author_id_order": 18
+        }],
     "fez_record_search_key_contributor": [],
     "fez_record_search_key_contributor_id": [],
     "fez_record_search_key_corresponding_country": [],
@@ -3989,8 +3995,45 @@ export const record = {
         "rek_end_page_xsdmf_id": 6384,
         "rek_end_page": "3283"
     },
-    "fez_record_search_key_file_attachment_access_condition": [],
-    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_access_condition": [
+        {
+            "rek_file_attachment_access_condition_id": 17,
+            "rek_file_attachment_access_condition_pid": "UQ:792099",
+            "rek_file_attachment_access_condition_xsdmf_id": 0,
+            "rek_file_attachment_access_condition_order": 2,
+            "rek_file_attachment_access_condition": "8"
+        },
+        {
+            "rek_file_attachment_access_condition_id": 17,
+            "rek_file_attachment_access_condition_pid": "UQ:792099",
+            "rek_file_attachment_access_condition_xsdmf_id": 0,
+            "rek_file_attachment_access_condition_order": 4,
+            "rek_file_attachment_access_condition": "8"
+        },
+        {
+            "rek_file_attachment_access_condition_id": 17,
+            "rek_file_attachment_access_condition_pid": "UQ:792099",
+            "rek_file_attachment_access_condition_xsdmf_id": 0,
+            "rek_file_attachment_access_condition_order": 5,
+            "rek_file_attachment_access_condition": "8"
+        },
+        {
+            "rek_file_attachment_access_condition_id": 17,
+            "rek_file_attachment_access_condition_pid": "UQ:792099",
+            "rek_file_attachment_access_condition_xsdmf_id": 0,
+            "rek_file_attachment_access_condition_order": 6,
+            "rek_file_attachment_access_condition": "9"
+        }
+    ],
+    "fez_record_search_key_file_attachment_embargo_date": [
+        {
+            "rek_file_attachment_embargo_date_id": 83,
+            "rek_file_attachment_embargo_date_pid": "UQ:795494",
+            "rek_file_attachment_embargo_date_xsdmf_id": 0,
+            "rek_file_attachment_embargo_date_order": 2,
+            "rek_file_attachment_embargo_date": "2018-03-29T08:34:47+10:00"
+        }
+    ],
     "fez_record_search_key_file_attachment_name": [
         {
             "rek_file_attachment_name_id": 4215529,
@@ -3998,6 +4041,149 @@ export const record = {
             "rek_file_attachment_name_xsdmf_id": null,
             "rek_file_attachment_name": "FezACML_UQ_396321.xml",
             "rek_file_attachment_name_order": 1
+        },
+        {
+            "rek_file_attachment_name_id": 4330131,
+            "rek_file_attachment_name_pid": "UQ:792099",
+            "rek_file_attachment_name_xsdmf_id": null,
+            "rek_file_attachment_name": "image.jpg",
+            "rek_file_attachment_name_order": 2
+        },
+        {
+            "rek_file_attachment_name_id": 4298925,
+            "rek_file_attachment_name_pid": "UQ:681794",
+            "rek_file_attachment_name_xsdmf_id": 9593,
+            "rek_file_attachment_name": "stream_Collins_audio_only.flv",
+            "rek_file_attachment_name_order": 3
+        },
+        {
+            "rek_file_attachment_name_id": 4298917,
+            "rek_file_attachment_name_pid": "UQ:681794",
+            "rek_file_attachment_name_xsdmf_id": 9593,
+            "rek_file_attachment_name": "Collins_audio_only.mp3",
+            "rek_file_attachment_name_order": 4
+        },
+        {
+            "rek_file_attachment_name_id": 4298918,
+            "rek_file_attachment_name_pid": "UQ:681794",
+            "rek_file_attachment_name_xsdmf_id": 9593,
+            "rek_file_attachment_name": "Collins_audio_with_PPT.m4v",
+            "rek_file_attachment_name_order": 5
+        },
+        {
+            "rek_file_attachment_name_id": 4298919,
+            "rek_file_attachment_name_pid": "UQ:681794",
+            "rek_file_attachment_name_xsdmf_id": 9593,
+            "rek_file_attachment_name": "Collins_eSpace.pdf",
+            "rek_file_attachment_name_order": 6
+        },
+        {
+            "rek_file_attachment_name_id": 4298923,
+            "rek_file_attachment_name_pid": "UQ:681794",
+            "rek_file_attachment_name_xsdmf_id": 9593,
+            "rek_file_attachment_name": "presmd_Collins_audio_with_PPT.xml",
+            "rek_file_attachment_name_order": 7
+        }
+    ],
+    "fez_datastream_info": [
+        {
+            "dsi_pid": "UQ:792099",
+            "dsi_dsid": "image.jpg",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "testing image description",
+            "dsi_mimetype": "image/jpeg",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 97786
+        },
+        {
+            "dsi_pid": "UQ:792099",
+            "dsi_dsid": "presmd_image.xml",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "PresMD for datastream - image.jpg",
+            "dsi_mimetype": "text/xml",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 757
+        },
+        {
+            "dsi_pid": "UQ:792099",
+            "dsi_dsid": "preview_image.jpg",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "preview_image.jpg",
+            "dsi_mimetype": "image/jpeg",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 65857
+        },
+        {
+            "dsi_pid": "UQ:792099",
+            "dsi_dsid": "thumbnail_image.jpg",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "thumbnail_image.jpg",
+            "dsi_mimetype": "image/jpeg",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 3952
+        },
+        {
+            "dsi_pid": "UQ:792099",
+            "dsi_dsid": "web_image.jpg",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "web_image.jpg",
+            "dsi_mimetype": "image/jpeg",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 97345
+        },
+        {
+            "dsi_pid": "UQ:681794",
+            "dsi_dsid": "Collins_audio_only.mp3",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "Audio document (Open Access)",
+            "dsi_mimetype": "audio/mpeg",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 16806028
+        },
+        {
+            "dsi_pid": "UQ:681794",
+            "dsi_dsid": "Collins_audio_with_PPT.m4v",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "Presentation (Open Access)",
+            "dsi_mimetype": "video/mp4",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 29808623
+        },
+        {
+            "dsi_pid": "UQ:681794",
+            "dsi_dsid": "Collins_eSpace.pdf",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "Full text (Open Access)",
+            "dsi_mimetype": "application/pdf",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 186680
+        },
+        {
+            "dsi_pid": "UQ:681794",
+            "dsi_dsid": "stream_Collins_audio_only.flv",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "stream_Collins_audio_only.flv",
+            "dsi_mimetype": "video/x-flv",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 34896360
         }
     ],
     "fez_record_search_key_grant_acronym": [
@@ -4367,18 +4553,21 @@ export const record = {
     }],
     "fez_record_search_key_language_of_journal_name": [],
     "fez_record_search_key_language_of_title": [],
-    "fez_record_search_key_link": [],
-    "fez_record_search_key_link_description": [],
     "fez_record_search_key_native_script_journal_name": null,
     "fez_record_search_key_native_script_title": null,
     "fez_record_search_key_notes": null,
-    "fez_record_search_key_oa_embargo_days": null,
+    "fez_record_search_key_oa_embargo_days": {
+        rek_oa_embargo_days: 10000
+    },
+    "fez_record_search_key_pubmed_central_id": {
+        "rek_pubmed_central_id": "PMC12345678"
+    },
     "fez_record_search_key_oa_notes": null,
     "fez_record_search_key_oa_status": {
         "rek_oa_status_id": 281706,
         "rek_oa_status_pid": "UQ:396321",
         "rek_oa_status_xsdmf_id": 16607,
-        "rek_oa_status": 453692,
+        "rek_oa_status": 453695,
         "rek_oa_status_lookup": "Not yet assessed"
     },
     "fez_record_search_key_place_of_publication": {
@@ -4441,7 +4630,32 @@ export const record = {
         "rek_volume_number_xsdmf_id": 6379,
         "rek_volume_number": "25"
     },
-    "rek_display_type_lookup": "Journal Article"
+    "rek_display_type_lookup": "Journal Article",
+    "fez_record_search_key_link": [
+        {
+            "rek_link_id": 3240198,
+            "rek_link_pid": "UQ:795347",
+            "rek_link_xsdmf_id": null,
+            "rek_link": "http://www.thisisatest.com",
+            "rek_link_order": 1
+        },
+        {
+            "rek_link_id": 3240199,
+            "rek_link_pid": "UQ:795347",
+            "rek_link_xsdmf_id": null,
+            "rek_link": "http://www.thisisanothertest.com",
+            "rek_link_order": 2
+        }
+    ],
+    "fez_record_search_key_link_description": [
+        {
+            "rek_link_description_id": 3240198,
+            "rek_link_description_pid": "UQ:795347",
+            "rek_link_description_xsdmf_id": null,
+            "rek_link_description": "Link to publication",
+            "rek_link_description_order": 1
+        }
+    ],
 };
 
 export const myRecordsList = {
@@ -4451,7 +4665,6 @@ export const myRecordsList = {
     "from": 1,
     "to": 20,
     "data": [
-
         {
             "rek_pid": "UQ:137936",
             "rek_title_xsdmf_id": 10623,
@@ -4615,6 +4828,7 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": 6266,
                 "rek_end_page": "269"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -5001,6 +5215,7 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "xxi"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -5408,6 +5623,7 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "4090"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -5924,6 +6140,7 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": 6384,
                 "rek_end_page": "253A"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -6459,6 +6676,7 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "478"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -7028,6 +7246,7 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "442"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -7606,6 +7825,7 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "678"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -8179,6 +8399,7 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "6145"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -8738,6 +8959,7 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "328"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -9272,6 +9494,7 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": 6384,
                 "rek_end_page": "3183"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [
@@ -9835,6 +10058,7 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "210"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -10443,6 +10667,7 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": 6384,
                 "rek_end_page": "R1016"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -10931,6 +11156,7 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": 6384,
                 "rek_end_page": "R939"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -11784,6 +12010,7 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "495"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -12316,6 +12543,7 @@ export const myRecordsList = {
                 "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "289"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -12922,6 +13150,7 @@ export const myRecordsList = {
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -13271,6 +13500,7 @@ export const myRecordsList = {
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -13606,6 +13836,7 @@ export const myRecordsList = {
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -13983,6 +14214,7 @@ export const myRecordsList = {
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -14402,6 +14634,7 @@ export const myRecordsList = {
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -14884,6 +15117,7 @@ export const myRecordsList = {
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -15191,6 +15425,7 @@ export const myRecordsList = {
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -15350,6 +15585,212 @@ export const myRecordsList = {
             "fez_record_search_key_translated_title": null,
             "fez_record_search_key_type_of_data": [],
             "fez_record_search_key_volume_number": null
+        },
+        {
+            "rek_pid": "UQ:795895",
+            "rek_title_xsdmf_id": null,
+            "rek_title": "Journal article with a non-DOI link",
+            "rek_description_xsdmf_id": null,
+            "rek_description": null,
+            "rek_display_type_xsdmf_id": null,
+            "rek_display_type": 179,
+            "rek_status_xsdmf_id": null,
+            "rek_status": 2,
+            "rek_date_xsdmf_id": 6386,
+            "rek_date": "2018-03-25T00:00:00Z",
+            "rek_object_type_xsdmf_id": null,
+            "rek_object_type": 3,
+            "rek_depositor_xsdmf_id": null,
+            "rek_depositor": 5389,
+            "rek_created_date_xsdmf_id": null,
+            "rek_created_date": "2018-03-22T02:43:55Z",
+            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date": "2018-03-28T07:43:49Z",
+            "rek_file_downloads": 0,
+            "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Ky Lane\" href=\"\/list\/author_id\/1671\/\">Ky Lane<\/a> (<span class=\"citation_date\">2018<\/span>) <a class=\"citation_title\" title=\"Click to view Journal Article: Journal article with a non-DOI link\" href=\"\/view\/UQ:795895\">Journal article with a non-DOI link<\/a>. <i><span class=\"citation_journal_name\">Test<\/span><\/i>, <i><\/i>  .",
+            "rek_genre_xsdmf_id": 7207,
+            "rek_genre": "Journal Article",
+            "rek_genre_type_xsdmf_id": null,
+            "rek_genre_type": null,
+            "rek_formatted_title_xsdmf_id": null,
+            "rek_formatted_title": null,
+            "rek_formatted_abstract_xsdmf_id": null,
+            "rek_formatted_abstract": null,
+            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation": 1248,
+            "rek_thomson_citation_count": null,
+            "rek_thomson_citation_count_xsdmf_id": null,
+            "rek_subtype_xsdmf_id": null,
+            "rek_subtype": "Other",
+            "rek_scopus_citation_count": null,
+            "rek_herdc_notes_xsdmf_id": null,
+            "rek_herdc_notes": null,
+            "rek_scopus_doc_type_xsdmf_id": null,
+            "rek_scopus_doc_type": null,
+            "rek_wok_doc_type_xsdmf_id": null,
+            "rek_wok_doc_type": null,
+            "rek_pubmed_doc_type_xsdmf_id": null,
+            "rek_pubmed_doc_type": null,
+            "rek_security_inherited": 1,
+            "rek_altmetric_score": null,
+            "rek_altmetric_score_xsdmf_id": null,
+            "rek_altmetric_id": null,
+            "rek_altmetric_id_xsdmf_id": null,
+            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright": "off",
+            "fez_record_search_key_article_number": null,
+            "fez_record_search_key_assigned_group_id": [],
+            "fez_record_search_key_assigned_user_id": [],
+            "fez_record_search_key_author": [{
+                "rek_author_id": 30451938,
+                "rek_author_pid": "UQ:795895",
+                "rek_author_xsdmf_id": null,
+                "rek_author": "Ky Lane",
+                "rek_author_order": 1
+            }],
+            "fez_record_search_key_author_affiliation_country": [],
+            "fez_record_search_key_author_affiliation_full_address": [],
+            "fez_record_search_key_author_affiliation_id": [],
+            "fez_record_search_key_author_affiliation_name": [],
+            "fez_record_search_key_author_id": [{
+                "rek_author_id_id": 29728576,
+                "rek_author_id_pid": "UQ:795895",
+                "rek_author_id_xsdmf_id": null,
+                "rek_author_id": 1671,
+                "rek_author_id_order": 1,
+                "rek_author_id_lookup": "Brown, Melissa Anne"
+            }],
+            "fez_record_search_key_biosis_id": null,
+            "fez_record_search_key_contributor": [],
+            "fez_record_search_key_contributor_id": [],
+            "fez_record_search_key_corresponding_country": [],
+            "fez_record_search_key_corresponding_email": [],
+            "fez_record_search_key_corresponding_name": [],
+            "fez_record_search_key_corresponding_organisation": [],
+            "fez_record_search_key_datastream_policy": null,
+            "fez_record_search_key_date_available": null,
+            "fez_record_search_key_doi": null,
+            "fez_record_search_key_end_page": null,
+            "fez_record_search_key_file_attachment_access_condition": [],
+            "fez_record_search_key_file_attachment_embargo_date": [],
+            "fez_record_search_key_file_attachment_name": [],
+            "fez_record_search_key_grant_acronym": [],
+            "fez_record_search_key_grant_agency": [],
+            "fez_record_search_key_grant_agency_id": [],
+            "fez_record_search_key_grant_id": [],
+            "fez_record_search_key_grant_text": [],
+            "fez_record_search_key_herdc_code": {
+                "rek_herdc_code_id": 4927748,
+                "rek_herdc_code_pid": "UQ:795895",
+                "rek_herdc_code_xsdmf_id": null,
+                "rek_herdc_code": 450013,
+                "rek_herdc_code_lookup": "CX"
+            },
+            "fez_record_search_key_herdc_status": {
+                "rek_herdc_status_id": 3792504,
+                "rek_herdc_status_pid": "UQ:795895",
+                "rek_herdc_status_xsdmf_id": null,
+                "rek_herdc_status": 453220,
+                "rek_herdc_status_lookup": "Provisional Code"
+            },
+            "fez_record_search_key_institutional_status": null,
+            "fez_record_search_key_isbn": [],
+            "fez_record_search_key_isderivationof": [],
+            "fez_record_search_key_isi_loc": null,
+            "fez_record_search_key_ismemberof": [{
+                "rek_ismemberof_id": 12233204,
+                "rek_ismemberof_pid": "UQ:795895",
+                "rek_ismemberof_xsdmf_id": null,
+                "rek_ismemberof": "UQ:218198",
+                "rek_ismemberof_order": 1,
+                "rek_ismemberof_lookup": "Unprocessed Records"
+            }],
+            "fez_record_search_key_issn": [],
+            "fez_record_search_key_issue_number": null,
+            "fez_record_search_key_journal_name": {
+                "rek_journal_name_id": 5270218,
+                "rek_journal_name_pid": "UQ:795895",
+                "rek_journal_name_xsdmf_id": null,
+                "rek_journal_name": "Test"
+            },
+            "fez_record_search_key_keywords": [],
+            "fez_record_search_key_language": [],
+            "fez_record_search_key_language_of_journal_name": [],
+            "fez_record_search_key_language_of_title": [],
+            "fez_record_search_key_link": [{
+                "rek_link_id": 3240229,
+                "rek_link_pid": "UQ:795895",
+                "rek_link_xsdmf_id": null,
+                "rek_link": "http:\/\/www.link.com",
+                "rek_link_order": 1
+            }],
+            "fez_record_search_key_link_description": [{
+                "rek_link_description_id": 3240230,
+                "rek_link_description_pid": "UQ:795895",
+                "rek_link_description_xsdmf_id": null,
+                "rek_link_description": "Link to publication",
+                "rek_link_description_order": 1
+            }],
+            "fez_record_search_key_native_script_journal_name": null,
+            "fez_record_search_key_native_script_title": null,
+            "fez_record_search_key_notes": null,
+            "fez_record_search_key_oa_embargo_days": {
+                "rek_oa_embargo_days_id": 6373,
+                "rek_oa_embargo_days_pid": "UQ:795895",
+                "rek_oa_embargo_days_xsdmf_id": 16609,
+                "rek_oa_embargo_days": "20"
+            },
+            "fez_record_search_key_oa_notes": null,
+            "fez_record_search_key_oa_status": {
+                "rek_oa_status_id": 532160,
+                "rek_oa_status_pid": "UQ:795895",
+                "rek_oa_status_xsdmf_id": 16607,
+                "rek_oa_status": 453694,
+                "rek_oa_status_lookup": "Link (no DOI)"
+            },
+            "fez_record_search_key_place_of_publication": null,
+            "fez_record_search_key_publisher": null,
+            "fez_record_search_key_pubmed_id": null,
+            "fez_record_search_key_pubmed_central_id": null,
+            "fez_record_search_key_refereed": {
+                "rek_refereed_id": 2721652,
+                "rek_refereed_pid": "UQ:795895",
+                "rek_refereed_xsdmf_id": 7940,
+                "rek_refereed": 0
+            },
+            "fez_record_search_key_refereed_source": {
+                "rek_refereed_source_id": 1468812,
+                "rek_refereed_source_pid": "UQ:795895",
+                "rek_refereed_source_xsdmf_id": 16623,
+                "rek_refereed_source": "453638",
+                "rek_refereed_source_lookup": "Not yet assessed"
+            },
+            "fez_record_search_key_retracted": {
+                "rek_retracted_id": 440994,
+                "rek_retracted_pid": "UQ:795895",
+                "rek_retracted_xsdmf_id": 16603,
+                "rek_retracted": 0
+            },
+            "fez_record_search_key_roman_script_journal_name": null,
+            "fez_record_search_key_roman_script_title": null,
+            "fez_record_search_key_scopus_id": null,
+            "fez_record_search_key_start_page": null,
+            "fez_record_search_key_subject": [],
+            "fez_record_search_key_total_pages": null,
+            "fez_record_search_key_translated_journal_name": null,
+            "fez_record_search_key_translated_title": null,
+            "fez_record_search_key_volume_number": null,
+            "fez_record_search_key_wok_doc_types": [],
+            "fez_record_search_key_zoorec_id": null,
+            "fez_datastream_info": [],
+            "fez_matched_journals": [],
+            "fez_record_search_key_file_hashdataset": [],
+            "rek_status_lookup": "Published",
+            "rek_object_type_lookup": "Record",
+            "rek_wok_doc_type_lookup": null,
+            "rek_display_type_lookup": "Journal Article",
+            "rek_scopus_doc_type_lookup": null,
+            "rek_pubmed_doc_type_lookup": null
         }
     ],
     "filters": {
@@ -15372,32 +15813,6 @@ export const myRecordsList = {
                     },
                     {
                         "key": "le",
-                        "doc_count": 1
-                    }
-                ]
-            },
-            "Display type": {
-                "doc_count_error_upper_bound": 0,
-                "sum_other_doc_count": 0,
-                "buckets": [
-                    {
-                        "key": 179,
-                        "doc_count": 110
-                    },
-                    {
-                        "key": 130,
-                        "doc_count": 32
-                    },
-                    {
-                        "key": 174,
-                        "doc_count": 3
-                    },
-                    {
-                        "key": 177,
-                        "doc_count": 1
-                    },
-                    {
-                        "key": 202,
                         "doc_count": 1
                     }
                 ]
@@ -15694,6 +16109,32 @@ export const myRecordsList = {
                     }
                 ]
             },
+            "Display type": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 0,
+                "buckets": [
+                    {
+                        "key": 179,
+                        "doc_count": 110
+                    },
+                    {
+                        "key": 130,
+                        "doc_count": 32
+                    },
+                    {
+                        "key": 174,
+                        "doc_count": 3
+                    },
+                    {
+                        "key": 177,
+                        "doc_count": 1
+                    },
+                    {
+                        "key": 202,
+                        "doc_count": 1
+                    }
+                ]
+            },
             "Display type (lookup)": {
                 "doc_count_error_upper_bound": 0,
                 "sum_other_doc_count": 0,
@@ -15720,6 +16161,16 @@ export const myRecordsList = {
                     }
                 ]
             }
+            // "Display type (lookup)": {
+            //     "doc_count_error_upper_bound": 0,
+            //     "sum_other_doc_count": 0,
+            //     "buckets": [{"key": "Journal Article", "doc_count": 96}]
+            // },
+            // "Display type": {
+            //     "doc_count_error_upper_bound": 0,
+            //     "sum_other_doc_count": 0,
+            //     "buckets": [{"key": 179, "doc_count": 96}]
+            // }
         }
     }
 };
@@ -16308,6 +16759,7 @@ export const possibleUnclaimedList = {
                 "rek_end_page_pid": "UQ:678742",
                 "rek_end_page": "1168"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_name": [],
             "fez_record_search_key_geographic_area": [],
             "fez_record_search_key_grant_acronym": [],
@@ -17444,6 +17896,7 @@ export const possibleUnclaimedList = {
                 "rek_end_page_pid": "UQ:678835",
                 "rek_end_page": "731"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_name": [],
             "fez_record_search_key_geographic_area": [],
             "fez_record_search_key_grant_acronym": [],
@@ -18020,6 +18473,7 @@ export const possibleUnclaimedList = {
                 "rek_end_page_pid": "UQ:678835",
                 "rek_end_page": "731"
             },
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_name": [],
             "fez_record_search_key_geographic_area": [],
             "fez_record_search_key_grant_acronym": [],
@@ -18345,6 +18799,7 @@ export const possibleUnclaimedList = {
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": null,
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -18699,6 +19154,7 @@ export const possibleUnclaimedList = {
             "fez_record_search_key_doi": null,
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_page": null,
+            "fez_record_search_key_fields_of_research": [],
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [],
@@ -18867,223 +19323,4 @@ export const possibleUnclaimedList = {
             }
         }
     }
-};
-
-export const recordWithMap = {
-    "rek_pid": "UQ:164935",
-    "rek_title_xsdmf_id": 10699,
-    "rek_title": "Reference Desk, Library",
-    "rek_description_xsdmf_id": null,
-    "rek_description": null,
-    "rek_display_type_xsdmf_id": 3673,
-    "rek_display_type": 238,
-    "rek_status_xsdmf_id": 3680,
-    "rek_status": 2,
-    "rek_date_xsdmf_id": 8563,
-    "rek_date": "1955-01-01T00:00:00Z",
-    "rek_object_type_xsdmf_id": 3674,
-    "rek_object_type": 3,
-    "rek_depositor_xsdmf_id": 7578,
-    "rek_depositor": 141,
-    "rek_created_date_xsdmf_id": 3677,
-    "rek_created_date": "2009-02-21T13:44:31Z",
-    "rek_updated_date_xsdmf_id": 3678,
-    "rek_updated_date": "2016-08-15T06:03:12Z",
-    "rek_file_downloads": 183,
-    "rek_citation": " (<span class=\"citation_date\">1955<\/span>). <a class=\"citation_title\" title=\"Click to view Image: Reference Desk, Library\" href=\"\/view\/UQ:164935\">Reference Desk, Library<\/a>. ",
-    "rek_genre_xsdmf_id": 8564,
-    "rek_genre": "image\/tiff",
-    "rek_genre_type_xsdmf_id": null,
-    "rek_genre_type": null,
-    "rek_formatted_title_xsdmf_id": null,
-    "rek_formatted_title": null,
-    "rek_formatted_abstract_xsdmf_id": 11449,
-    "rek_formatted_abstract": "Fryer Library University of Queensland Photograph Collection, UQFL466 consist of approximately 1100 photographs relating to the University of Queensland.<br \/>Photographs have been arranged in the following series:<br \/>&bull; AA: University of Queensland site at George Street<br \/>&bull; AB: St Lucia site before the establishment of the University of Queensland<br \/>&bull; AC: Buildings and grounds of the University of Queensland<br \/>&bull; AD: University of Queensland St Lucia campus buildings other than Great Court<br \/>&bull; AE: University of Queensland Non St Lucia Campus Buildings<br \/>&bull; AF: University of Queensland grounds<br \/>&bull; AG: University of Queensland Library<br \/>&bull; AH: University of Queensland ceremonies<br \/>&bull; AI: Research, teaching, business, cultural and support facilities of the University of Queensland<br \/>&bull; AJ: University of Queensland students<br \/>&bull; AK: University of Queensland Alumni (including ceremonies)<br \/>&bull; AL: Staff, benefactors and official associates of the University of Queensland<br \/>&bull; AM: University of Queensland sports<br \/>&bull; AP: University of Queensland honour boards, plaques, etc.",
-    "rek_depositor_affiliation_xsdmf_id": 11881,
-    "rek_depositor_affiliation": 789,
-    "rek_thomson_citation_count": null,
-    "rek_thomson_citation_count_xsdmf_id": null,
-    "rek_subtype_xsdmf_id": null,
-    "rek_subtype": null,
-    "rek_scopus_citation_count": null,
-    "rek_herdc_notes_xsdmf_id": null,
-    "rek_herdc_notes": null,
-    "rek_scopus_doc_type_xsdmf_id": null,
-    "rek_scopus_doc_type": null,
-    "rek_wok_doc_type_xsdmf_id": null,
-    "rek_wok_doc_type": null,
-    "rek_pubmed_doc_type_xsdmf_id": null,
-    "rek_pubmed_doc_type": null,
-    "rek_security_inherited": 1,
-    "rek_altmetric_score": null,
-    "rek_altmetric_score_xsdmf_id": null,
-    "rek_altmetric_id": null,
-    "rek_altmetric_id_xsdmf_id": null,
-    "rek_copyright_xsdmf_id": 3679,
-    "rek_copyright": "on",
-    "fez_record_search_key_acknowledgements": null,
-    "fez_record_search_key_advisory_statement": null,
-    "fez_record_search_key_article_number": null,
-    "fez_record_search_key_assigned_group_id": [],
-    "fez_record_search_key_assigned_user_id": [{
-        "rek_assigned_user_id_id": 903944,
-        "rek_assigned_user_id_pid": "UQ:164935",
-        "rek_assigned_user_id_xsdmf_id": 9501,
-        "rek_assigned_user_id": 141,
-        "rek_assigned_user_id_order": 1
-    }],
-    "fez_record_search_key_author": [],
-    "fez_record_search_key_author_id": [],
-    "fez_record_search_key_author_affiliation_country": [],
-    "fez_record_search_key_author_affiliation_full_address": [],
-    "fez_record_search_key_author_affiliation_id": [],
-    "fez_record_search_key_author_affiliation_name": [],
-    "fez_record_search_key_contributor": [],
-    "fez_record_search_key_contributor_id": [],
-    "fez_record_search_key_corresponding_country": [],
-    "fez_record_search_key_corresponding_email": [],
-    "fez_record_search_key_corresponding_name": [],
-    "fez_record_search_key_corresponding_organisation": [],
-    "fez_record_search_key_datastream_policy": null,
-    "fez_record_search_key_date_available": {
-        "rek_date_available_id": 896555,
-        "rek_date_available_pid": "UQ:164935",
-        "rek_date_available_xsdmf_id": 10697,
-        "rek_date_available": "2009-01-01T00:00:00Z"
-    },
-    "fez_record_search_key_file_attachment_access_condition": [],
-    "fez_record_search_key_file_attachment_embargo_date": [],
-    "fez_record_search_key_file_attachment_name": [{
-        "rek_file_attachment_name_id": 3798608,
-        "rek_file_attachment_name_pid": "UQ:164935",
-        "rek_file_attachment_name_xsdmf_id": 8625,
-        "rek_file_attachment_name": "presmd_uqfl466_b8_AG_P_108.xml",
-        "rek_file_attachment_name_order": 1
-    }, {
-        "rek_file_attachment_name_id": 3798609,
-        "rek_file_attachment_name_pid": "UQ:164935",
-        "rek_file_attachment_name_xsdmf_id": 8625,
-        "rek_file_attachment_name": "preview_uqfl466_b8_AG_P_108.jpg",
-        "rek_file_attachment_name_order": 2
-    }, {
-        "rek_file_attachment_name_id": 3798610,
-        "rek_file_attachment_name_pid": "UQ:164935",
-        "rek_file_attachment_name_xsdmf_id": 8625,
-        "rek_file_attachment_name": "thumbnail_uqfl466_b8_AG_P_108.jpg",
-        "rek_file_attachment_name_order": 3
-    }, {
-        "rek_file_attachment_name_id": 3798611,
-        "rek_file_attachment_name_pid": "UQ:164935",
-        "rek_file_attachment_name_xsdmf_id": 8625,
-        "rek_file_attachment_name": "uqfl466_b8_AG_P_108.jpg",
-        "rek_file_attachment_name_order": 4
-    }, {
-        "rek_file_attachment_name_id": 3798612,
-        "rek_file_attachment_name_pid": "UQ:164935",
-        "rek_file_attachment_name_xsdmf_id": 8625,
-        "rek_file_attachment_name": "web_uqfl466_b8_AG_P_108.jpg",
-        "rek_file_attachment_name_order": 5
-    }],
-    "fez_record_search_key_geographic_area": [{
-        "rek_geographic_area_id": 10759,
-        "rek_geographic_area_pid": "UQ:164935",
-        "rek_geographic_area_xsdmf_id": 17125,
-        "rek_geographic_area_order": 1,
-        "rek_geographic_area": "153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337"
-    }],
-    "fez_record_search_key_grant_acronym": [],
-    "fez_record_search_key_grant_agency": [],
-    "fez_record_search_key_grant_agency_id": [],
-    "fez_record_search_key_grant_text": [],
-    "fez_record_search_key_institutional_status": null,
-    "fez_record_search_key_isderivationof": [],
-    "fez_record_search_key_ismemberof": [{
-        "rek_ismemberof_id": 11406667,
-        "rek_ismemberof_pid": "UQ:164935",
-        "rek_ismemberof_xsdmf_id": 149,
-        "rek_ismemberof": "UQ:278419",
-        "rek_ismemberof_order": 1,
-        "rek_ismemberof_lookup": "Fryer Library"
-    }],
-    "fez_record_search_key_keywords": [{
-        "rek_keywords_id": 28947937,
-        "rek_keywords_pid": "UQ:164935",
-        "rek_keywords_xsdmf_id": 8555,
-        "rek_keywords": "University of Queensland -- History",
-        "rek_keywords_order": 1
-    }, {
-        "rek_keywords_id": 28947938,
-        "rek_keywords_pid": "UQ:164935",
-        "rek_keywords_xsdmf_id": 8555,
-        "rek_keywords": "Central Library, The University of Queensland",
-        "rek_keywords_order": 2
-    }, {
-        "rek_keywords_id": 28947939,
-        "rek_keywords_pid": "UQ:164935",
-        "rek_keywords_xsdmf_id": 8555,
-        "rek_keywords": "Librarians",
-        "rek_keywords_order": 3
-    }],
-    "fez_record_search_key_language": [],
-    "fez_record_search_key_license": null,
-    "fez_record_search_key_link": [],
-    "fez_record_search_key_link_description": [],
-    "fez_record_search_key_notes": {
-        "rek_notes_id": 1097936,
-        "rek_notes_pid": "UQ:164935",
-        "rek_notes_xsdmf_id": 12466,
-        "rek_notes": "Reference Desk, Duhig Building, University of Queensland Library, circa 1955. This area in the Duhig Building houses the AskIT desk and Ezones"
-    },
-    "fez_record_search_key_oa_status": {
-        "rek_oa_status_id": 281614,
-        "rek_oa_status_pid": "UQ:164935",
-        "rek_oa_status_xsdmf_id": 17010,
-        "rek_oa_status": 453697,
-        "rek_oa_status_lookup": "Other"
-    },
-    "fez_record_search_key_original_format": {
-        "rek_original_format_id": 7670,
-        "rek_original_format_pid": "UQ:164935",
-        "rek_original_format_xsdmf_id": 8567,
-        "rek_original_format": "Photograph; b&w."
-    },
-    "fez_record_search_key_place_of_publication": null,
-    "fez_record_search_key_publisher": null,
-    "fez_record_search_key_refereed": null,
-    "fez_record_search_key_refereed_source": {
-        "rek_refereed_source_id": 1120295,
-        "rek_refereed_source_pid": "UQ:164935",
-        "rek_refereed_source_xsdmf_id": 16623,
-        "rek_refereed_source": "453638",
-        "rek_refereed_source_lookup": "Not yet assessed"
-    },
-    "fez_record_search_key_rights": {
-        "rek_rights_id": 108945,
-        "rek_rights_pid": "UQ:164935",
-        "rek_rights_xsdmf_id": 8574,
-        "rek_rights": "Copyright expired"
-    },
-    "fez_record_search_key_series": {
-        "rek_series_id": 187133,
-        "rek_series_pid": "UQ:164935",
-        "rek_series_xsdmf_id": 11046,
-        "rek_series": "Fryer Library University of Queensland Photograph Collection, UQFL466"
-    },
-    "fez_record_search_key_source": {
-        "rek_source_id": 57344,
-        "rek_source_pid": "UQ:164935",
-        "rek_source_xsdmf_id": 8572,
-        "rek_source": "Fryer Library University of Queensland Photograph Collection, UQFL466, Box 8, AG\/P\/108"
-    },
-    "fez_record_search_key_subject": [],
-    "fez_record_search_key_translated_title": null,
-    "fez_record_search_key_issn": [],
-    "fez_matched_journals": [],
-    "fez_record_search_key_file_hashdataset": [],
-    "rek_status_lookup": "Published",
-    "rek_object_type_lookup": "Record",
-    "rek_wok_doc_type_lookup": null,
-    "rek_display_type_lookup": "Image",
-    "rek_scopus_doc_type_lookup": null,
-    "rek_pubmed_doc_type_lookup": null
 };
