@@ -33,29 +33,19 @@ export default class ShareThis extends React.Component {
 
     shareThisConfigInHead() {
         const code = '' +
-            '        var a2a_config = a2a_config || {}; \n' +
-            '        a2a_config.custom_services = [\n' + // puts it in the addtothis flyout
-            '            [\n' +
-            '                "ResearchGate",\n' +
-            '                "https://www.researchgate.net/go.Share.html?url=http://localhost:3000/records/UQ:310848&title=Webpack%20App",\n' +
-            '                "../../public/images/researchgate.svg"\n' +
-            '            ]\n' +
-            '        ];\n' +
-            '        a2a_config.callbacks = a2a_config.callbacks || [];\n' +
-            '        a2a_config.callbacks.push({\n' +
-            '            share: function(data) {\n' +
-            '                // Track shares in Google Analytics with Google Tag Manager\n' +
-            '                dataLayer.push({\n' +
-            '                    "event": "AddToAnyShare", \n' +
-            '                    "socialNetwork": "AddToAny", \n' +
-            '                    "socialAction": data.service, \n' +
-            '                    "socialTarget": data.url\n' +
-            '                });\n' +
-            '            }\n' +
+            'var a2a_config = a2a_config || {}; \n' +
+            'a2a_config.callbacks = a2a_config.callbacks || [];\n' +
+            'a2a_config.callbacks.push({\n' +
+            '    share: function(data) {\n' +
+            '        // Track shares in Google Analytics with Google Tag Manager\n' +
+            '        dataLayer.push({\n' +
+            '            "event": "AddToAnyShare", \n' +
+            '            "socialNetwork": "AddToAny", \n' +
+            '            "socialAction": data.service, \n' +
+            '            "socialTarget": data.url\n' +
             '        });\n' +
-
-            'console.log("a2a done")\n' +
-            '';
+            '    }\n' +
+            '});\n';
 
         const script = document.createElement('script');
         script.id = 'shareThisHeader';
