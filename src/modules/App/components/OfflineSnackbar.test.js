@@ -1,6 +1,7 @@
 jest.dontMock('../components/OfflineSnackbar');
 
 import OfflineSnackbar from './OfflineSnackbar';
+import React from 'react';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -78,8 +79,20 @@ describe('Component OfflineSnackbar', () => {
         expect(wrapper.instance().state).toEqual({"hasDisconnected": true, "online": false, "open": true});
     });
 
-});
+    it('updateOnlineState returns expected state when window event offline is fired', () => {
+        Object.defineProperty(navigator, "onLine", {value: false, writable: true});
+        const goOffline = new window.Event('offline', {bubbles: true});
+        const wrapper = setup();
+        document.dispatchEvent(goOffline);
+        expect(wrapper.state()).toEqual({ open: true, online: false, hasDisconnected: true });
+    });
 
-// Testing eventListeners - https://github.com/dwyl/learn-offline-first/issues/14
-// const goOnline = new window.Event('online');
-// window.dispatchEvent(goOnline);
+    it('updateOnlineState returns expected state when window event online is fired', () => {
+        Object.defineProperty(navigator, "onLine", {value: true, writable: true});
+        const goOnline = new window.Event('online', {bubbles: true});
+        const wrapper = setup();
+        document.dispatchEvent(goOnline);
+        expect(wrapper.state()).toEqual({"hasDisconnected": true, "online": true, "open": true});
+    });
+
+});
