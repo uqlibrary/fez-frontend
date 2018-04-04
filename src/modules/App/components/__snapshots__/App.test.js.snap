@@ -105,6 +105,10 @@ exports[`Application component should render alert if user is not fez author 1`]
           "primaryText": "Add a missing data collection",
         },
         Object {
+          "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
+          "primaryText": "Author statistics",
+        },
+        Object {
           "divider": true,
           "path": "/234234234242",
         },
@@ -119,6 +123,11 @@ exports[`Application component should render alert if user is not fez author 1`]
           "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
+        },
+        Object {
+          "linkTo": "/my_research_claimed.php",
+          "primaryText": "Switch to old interface",
+          "public": true,
         },
       ]
     }
@@ -406,6 +415,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "Add a missing data collection",
         },
         Object {
+          "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
+          "primaryText": "Author statistics",
+        },
+        Object {
           "divider": true,
           "path": "/234234234242",
         },
@@ -420,6 +433,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
+        },
+        Object {
+          "linkTo": "/my_research_claimed.php",
+          "primaryText": "Switch to old interface",
+          "public": true,
         },
       ]
     }
@@ -687,6 +705,11 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           "public": true,
           "secondaryText": "",
         },
+        Object {
+          "linkTo": "/my_research_claimed.php",
+          "primaryText": "Switch to old interface",
+          "public": true,
+        },
       ]
     }
     onToggleDrawer={[Function]}
@@ -853,6 +876,10 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Add a missing data collection",
         },
         Object {
+          "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
+          "primaryText": "Author statistics",
+        },
+        Object {
           "divider": true,
           "path": "/234234234242",
         },
@@ -867,6 +894,11 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
+        },
+        Object {
+          "linkTo": "/my_research_claimed.php",
+          "primaryText": "Switch to old interface",
+          "public": true,
         },
       ]
     }
@@ -1139,6 +1171,10 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Add a missing data collection",
         },
         Object {
+          "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
+          "primaryText": "Author statistics",
+        },
+        Object {
           "divider": true,
           "path": "/234234234242",
         },
@@ -1153,6 +1189,11 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
+        },
+        Object {
+          "linkTo": "/my_research_claimed.php",
+          "primaryText": "Switch to old interface",
+          "public": true,
         },
       ]
     }
@@ -1667,6 +1708,10 @@ exports[`Application component should render application with routing for the us
           "primaryText": "Add a missing data collection",
         },
         Object {
+          "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
+          "primaryText": "Author statistics",
+        },
+        Object {
           "divider": true,
           "path": "/234234234242",
         },
@@ -1681,6 +1726,11 @@ exports[`Application component should render application with routing for the us
           "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
+        },
+        Object {
+          "linkTo": "/my_research_claimed.php",
+          "primaryText": "Switch to old interface",
+          "public": true,
         },
       ]
     }
@@ -1793,6 +1843,11 @@ exports[`Application component should render for anon user 1`] = `
           "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
+        },
+        Object {
+          "linkTo": "/my_research_claimed.php",
+          "primaryText": "Switch to old interface",
+          "public": true,
         },
       ]
     }
