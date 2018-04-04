@@ -31,5 +31,8 @@ export default {
             primaryText: 'Contact',
             secondaryText: ''
         },
+        legacyEspace: {
+            primaryText: 'Switch to old interface'
+        }
     }
 };

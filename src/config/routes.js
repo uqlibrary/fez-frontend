@@ -65,7 +65,8 @@ export const pathConfig =  {
             link: '/author-identifiers/google-scholar/link',
             // unlink: '/author-identifiers/google-scholar/link'
         }
-    }
+    },
+    legacyEspace: `${fullPath}/my_research_claimed.php`
 };
 
 // a duplicate list of routes for
@@ -226,6 +227,11 @@ export const getMenuConfig = (account, disabled) => {
         {
             linkTo: pathConfig.contact,
             ...locale.menu.contact,
+            public: true
+        },
+        {
+            linkTo: pathConfig.legacyEspace,
+            ...locale.menu.legacyEspace,
             public: true
         }
     ];
