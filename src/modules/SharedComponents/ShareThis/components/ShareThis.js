@@ -18,6 +18,8 @@ export default class ShareThis extends React.Component {
             script.id = 'shareThisScript';
             script.async = true;
             document.head.appendChild(script);
+
+            this.addResearchGateButton();
         }
 
         console.log(this.props);
@@ -92,6 +94,25 @@ export default class ShareThis extends React.Component {
         script.id = 'shareThisHeader';
         script.appendChild(document.createTextNode(code));
         document.head.appendChild(script);
+    }
+
+    addResearchGateButton() {
+        const image = document.createElement('img');
+        image.src = '/src/images/ResearchGate.svg';
+        image.height = 20;
+        image.width = 20;
+        image.alt = 'Share this link via Researchgate';
+
+        const link = document.createElement('a');
+        link.href = 'https://www.researchgate.net/go.Share.html?url=' + encodeURI(window.location.href) + '&title=' + encodeURIComponent(document.title);
+        link.rel = 'nofollow noopener noreferrer';
+        link.appendChild(image);
+
+        const parentDiv = document.querySelector('.shareThis div:nth-child(2)');
+        const secondChild = document.querySelector('.shareThis div:nth-child(2) a:nth-child(2)');
+        if (link && parentDiv && secondChild && parentDiv.insertBefore) {
+            parentDiv.insertBefore(link, secondChild);
+        }
     }
 
     render() {
