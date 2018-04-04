@@ -20,7 +20,7 @@ help: {
 
 export default {
     pages: {
-        about: {
+        contact: {
             title: 'About UQ eSpace',
             children: (
                 <StandardCard>

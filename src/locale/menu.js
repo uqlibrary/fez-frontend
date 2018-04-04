@@ -21,8 +21,8 @@ export default {
             primaryText: 'Browse eSpace',
             secondaryText: ''
         },
-        about: {
-            primaryText: 'About',
+        contact: {
+            primaryText: 'Contact',
             secondaryText: ''
         },
     }
