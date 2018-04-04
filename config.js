@@ -16,6 +16,7 @@ const deployment = {
     staging: {
         url: () => ('https://fez-staging.library.uq.edu.au/'),
         api: 'https://api.library.uq.edu.au/staging/',
+        gtm: 'GTM-K597ZS',
         title: 'eSpace - The University of Queensland (STAGING)',
         titleSuffix: 'Staging',
         environment: 'staging',

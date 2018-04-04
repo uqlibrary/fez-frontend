@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 export default class ShareThis extends React.Component {
     static propTypes = {
-        show: PropTypes.bool
+        hide: PropTypes.bool
     };
 
     static defaultProps = {
-        show: true
+        hide: false
     };
 
     componentDidMount() {
@@ -18,9 +18,18 @@ export default class ShareThis extends React.Component {
             script.id = 'shareThisScript';
             script.async = true;
             document.head.appendChild(script);
-
-            this.addResearchGateButton();
         }
+
+        console.log(this.props);
+        if (this.props.hide === false) {
+            console.log('props false');
+        } else if (this.props.hide === true) {
+            console.log('props true');
+        } else {
+            console.log('props else');
+        }
+
+        this.shareThisConfigInHead();
     }
 
     componentWillUnmount() {
@@ -29,27 +38,64 @@ export default class ShareThis extends React.Component {
         scriptShareThis.parentNode.removeChild(scriptShareThis);
     }
 
-    addResearchGateButton() {
-        const image = document.createElement('img');
-        image.src = '/src/images/ResearchGate.svg';
-        image.height = 20;
-        image.width = 20;
-        image.alt = 'Share this link via Researchgate';
+    shareThisConfigInHead() {
+        const code = '(function() { \n' +
+            '    _waitforShareThis(1000);\n\n' +
 
-        const link = document.createElement('a');
-        link.href = 'https://www.researchgate.net/go.Share.html?url=' + encodeURI(window.location.href) + '&title=' + encodeURIComponent(document.title);
-        link.rel = 'nofollow noopener noreferrer';
-        link.appendChild(image);
+            '    function _waitforShareThis(waitmilliseconds) {\n' +
+            '        if (window.a2a_config === null || typeof window.a2a === "undefined" || !(window.a2a.init_all)) {\n' +
+            '            if (waitmilliseconds > 0) {\n' +
+            '                setTimeout(function() {\n' +
+            '                    _waitforShareThis(waitmilliseconds-100)\n' +
+            '                },  waitmilliseconds);\n' +
+            '            }\n' +
+            '        } else {\n' +
+            '            _addCode()\n' +
+            '        }\n' +
+            '    }\n\n' +
 
-        const parentDiv = document.querySelector('.shareThis div:nth-child(2)');
-        const secondChild = document.querySelector('.shareThis div:nth-child(2) a:nth-child(2)');
-        if (link && parentDiv && secondChild && parentDiv.insertBefore) {
-            parentDiv.insertBefore(link, secondChild);
-        }
+            '    function my_addtoany_onready() {\n' +
+            '        a2a_config.custom_services = [ \n' +
+            '              [ \n' +
+            '                  "researchgate", \n' +
+            '                  "https://www.researchgate.net/go.Share.html?url=' + encodeURI(window.location.href) + '&title=' + encodeURIComponent(document.title) + '", \n' +
+            '                  "/images/ResearchGate.png" \n' +
+            '              ] \n' +
+            '        ]; \n' +
+            '        // Additional instance configs can be set here\n' +
+            // '        a2a.init("page");\n' +
+            '    }\n\n' +
+
+            '    function _addCode() { \n' +
+            'console.log(window.a2a_config);\n' +
+            '        var a2a_config = window.a2a_config || {}; \n' +
+            '        a2a_config.callbacks = a2a_config.callbacks || [];' +
+            'console.log("a2a_config.callbacks= "+a2a_config.callbacks)\n' +
+            '        a2a_config.callbacks.push({\n' +
+            '            ready: my_addtoany_onready,\n' +
+            '            share: function(data) {\n' +
+            '                // Track shares in Google Analytics with Google Tag Manager\n' +
+            '                dataLayer.push({\n' +
+            '                    "event": "AddToAnyShare", \n' +
+            '                    "socialNetwork": "AddToAny", \n' +
+            '                    "socialAction": data.service, \n' +
+            '                    "socialTarget": data.url\n' +
+            '                });\n' +
+            '            }\n' +
+            '        });\n' +
+            '        window.a2a_config = a2a_config; \n' +
+            '        window.a2a.init_all("page");  \n' +
+            '    } \n' +
+            '})(window);';
+
+        const script = document.createElement('script');
+        script.id = 'shareThisHeader';
+        script.appendChild(document.createTextNode(code));
+        document.head.appendChild(script);
     }
 
     render() {
-        if (!this.props.show) return <div className="shareThis_empty" />;
+        if (this.props.hide === true) return <div className="shareThis_empty" />;
 
         const blockStyle = { paddingBottom: 12 };
 
