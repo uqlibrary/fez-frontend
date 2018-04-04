@@ -17,7 +17,7 @@ export default class OfflineSnackbar extends PureComponent {
             },
             offline: {
                 message: 'Your connection is offline',
-                autoHideDuration: null
+                autoHideDuration: 0
             }
         }
     };
@@ -25,8 +25,8 @@ export default class OfflineSnackbar extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            open: false,
-            online: typeof navigator.onLine === 'boolean' ? navigator.onLine : true,
+            open: !navigator.onLine,
+            online: navigator.onLine,
             hasDisconnected: false
         };
     }
@@ -58,9 +58,7 @@ export default class OfflineSnackbar extends PureComponent {
 
     handleRequestClose = (reason) => {
         // MUI hack to prevent the snackbar from being hidden by clicking/touchTapping away
-        console.log('PING');
         if (reason !== 'clickaway') {
-            console.log('PONG');
             this.setState({open: false});
         }
     };

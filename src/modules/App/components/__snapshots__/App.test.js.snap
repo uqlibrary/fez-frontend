@@ -303,11 +303,11 @@ exports[`Application component should render alert if user is not fez author 1`]
       Object {
         "offline": Object {
           "autoHideDuration": 0,
-          "message": "You are currently offline",
+          "message": "Your connection is offline",
         },
         "online": Object {
           "autoHideDuration": 5000,
-          "message": "You are back online",
+          "message": "Your connection is back online",
         },
       }
     }
@@ -603,11 +603,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       Object {
         "offline": Object {
           "autoHideDuration": 0,
-          "message": "You are currently offline",
+          "message": "Your connection is offline",
         },
         "online": Object {
           "autoHideDuration": 5000,
-          "message": "You are back online",
+          "message": "Your connection is back online",
         },
       }
     }
@@ -778,11 +778,11 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       Object {
         "offline": Object {
           "autoHideDuration": 0,
-          "message": "You are currently offline",
+          "message": "Your connection is offline",
         },
         "online": Object {
           "autoHideDuration": 5000,
-          "message": "You are back online",
+          "message": "Your connection is back online",
         },
       }
     }
@@ -1078,11 +1078,11 @@ exports[`Application component should render app for account with fez author wit
       Object {
         "offline": Object {
           "autoHideDuration": 0,
-          "message": "You are currently offline",
+          "message": "Your connection is offline",
         },
         "online": Object {
           "autoHideDuration": 5000,
-          "message": "You are back online",
+          "message": "Your connection is back online",
         },
       }
     }
@@ -1395,11 +1395,11 @@ exports[`Application component should render app for account with fez author wit
       Object {
         "offline": Object {
           "autoHideDuration": 0,
-          "message": "You are currently offline",
+          "message": "Your connection is offline",
         },
         "online": Object {
           "autoHideDuration": 5000,
-          "message": "You are back online",
+          "message": "Your connection is back online",
         },
       }
     }
@@ -1634,11 +1634,11 @@ exports[`Application component should render app for account with fez author wit
       Object {
         "offline": Object {
           "autoHideDuration": 0,
-          "message": "You are currently offline",
+          "message": "Your connection is offline",
         },
         "online": Object {
           "autoHideDuration": 5000,
-          "message": "You are back online",
+          "message": "Your connection is back online",
         },
       }
     }
@@ -1789,11 +1789,11 @@ exports[`Application component should render application with routing for the us
       Object {
         "offline": Object {
           "autoHideDuration": 0,
-          "message": "You are currently offline",
+          "message": "Your connection is offline",
         },
         "online": Object {
           "autoHideDuration": 5000,
-          "message": "You are back online",
+          "message": "Your connection is back online",
         },
       }
     }
@@ -1953,11 +1953,11 @@ exports[`Application component should render for anon user 1`] = `
       Object {
         "offline": Object {
           "autoHideDuration": 0,
-          "message": "You are currently offline",
+          "message": "Your connection is offline",
         },
         "online": Object {
           "autoHideDuration": 5000,
-          "message": "You are back online",
+          "message": "Your connection is back online",
         },
       }
     }
@@ -2085,11 +2085,11 @@ exports[`Application component should render thesis submission for HDR without m
       Object {
         "offline": Object {
           "autoHideDuration": 0,
-          "message": "You are currently offline",
+          "message": "Your connection is offline",
         },
         "online": Object {
           "autoHideDuration": 5000,
-          "message": "You are back online",
+          "message": "Your connection is back online",
         },
       }
     }
