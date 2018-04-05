@@ -35,8 +35,8 @@ export default class ShareThis extends React.Component {
     }
 
     addShareThisConfigToHead() {
-        /* from https://www.addtoany.com/ext/google_analytics */
         const code = '' +
+            /* from https://www.addtoany.com/ext/google_analytics */
             'var a2a_config = a2a_config || {}; \n' +
             'a2a_config.callbacks = a2a_config.callbacks || [];\n' +
             'a2a_config.callbacks.push({\n' +
@@ -48,7 +48,30 @@ export default class ShareThis extends React.Component {
             '            "socialTarget": data.url\n' +
             '        });\n' +
             '    }\n' +
-            '});\n';
+            '});\n\n' +
+
+            'var link = document.createElement("a");\n' +
+            'href = "https://www.researchgate.net/go.Share.html?url=" + encodeURI(window.location.href) + "&title=" + encodeURIComponent(document.title);\n' +
+            'link.href = href;\n' +
+            'link.rel = "nofollow noopener noreferrer";\n' +
+            'link.target = "_blank";\n' +
+            'link.className = "researchgate";\n' + // allows css to get image built via webpack
+            'link.title = "Share this link via ResearchGate";\n' +
+            'link.onclick = function(href) {\n' +
+            '    dataLayer.push({\n' +
+            '        "event": "AddToAnyShare",\n' +
+            '        "socialNetwork": "AddToAny",\n' +
+            '        "socialAction": "researchgate",\n' +
+            '        "socialTarget": href\n' +
+            '    });\n' +
+            '};\n\n' +
+
+            /* add researchGate as the second link */
+            'var parentDiv = document.querySelector(".shareThis div:nth-child(2)");\n' +
+            'var secondChild = document.querySelector(".shareThis div:nth-child(2) a:nth-child(2)");\n' +
+            'if (link && parentDiv && secondChild && parentDiv.insertBefore) {\n' +
+            '    parentDiv.insertBefore(link, secondChild);\n' +
+            '}\n';
 
         const script = document.createElement('script');
         script.id = 'shareThisHeader';
@@ -57,19 +80,6 @@ export default class ShareThis extends React.Component {
     }
 
     addResearchGateButton() {
-        const link = document.createElement('a');
-        link.href = 'https://www.researchgate.net/go.Share.html?url=' + encodeURI(window.location.href) + '&title=' + encodeURIComponent(document.title);
-        link.rel = 'nofollow noopener noreferrer';
-        link.target = '_blank';
-        link.className = 'researchgate'; // allows css to get image built via webpack
-        link.title = 'Share this link via ResearchGate';
-
-        /* add researchGate as the second link */
-        const parentDiv = document.querySelector('.shareThis div:nth-child(2)');
-        const secondChild = document.querySelector('.shareThis div:nth-child(2) a:nth-child(2)');
-        if (link && parentDiv && secondChild && parentDiv.insertBefore) {
-            parentDiv.insertBefore(link, secondChild);
-        }
     }
 
     render() {
