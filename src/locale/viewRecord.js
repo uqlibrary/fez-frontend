@@ -1121,7 +1121,7 @@ export default {
                     order: 10
                 },
                 {
-                    field: 'fez_record_search_key_end_date',
+                    field: 'fez_record_search_key_end_page',
                     order: 11
                 },
                 {
