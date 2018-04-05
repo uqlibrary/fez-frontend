@@ -12,6 +12,7 @@ import AdditionalInformation from './AdditionalInformation';
 import GrantInformation from './GrantInformation';
 import RelatedPublications from './RelatedPublications';
 import Links from './Links';
+import AvailableVersions from './AvailableVersions';
 
 export default class ViewRecord extends PureComponent {
     static propTypes = {
@@ -29,6 +30,12 @@ export default class ViewRecord extends PureComponent {
         }
     }
 
+    componentWillReceiveProps(newProps) {
+        if (this.props.match.params.pid !== newProps.match.params.pid) {
+            this.props.actions.loadRecordToView(newProps.match.params.pid);
+        }
+    }
+
     shouldComponentUpdate(nextProps, nextState) {
         return this.props.recordToView !== nextProps.recordToView
             || this.state !== nextState;
@@ -43,7 +50,7 @@ export default class ViewRecord extends PureComponent {
 
     render() {
         const txt = locale.pages.viewRecord;
-        const {loadingRecordToView, recordToViewError, recordToView, actions} = this.props;
+        const {loadingRecordToView, recordToViewError, recordToView} = this.props;
 
         if(loadingRecordToView) {
             return (
@@ -65,14 +72,6 @@ export default class ViewRecord extends PureComponent {
             <StandardPage className="viewRecord" title={recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
 
-                <RelatedPublications
-                    title={locale.viewRecord.sections.relatedPublications.title}
-                    publication={recordToView}
-                    actions={actions}
-                    field={'fez_record_search_key_has_related_datasets'}
-                    subKey={'rek_has_related_datasets'}
-                />
-
                 <Files
                     publication={recordToView}
                     hideCulturalSensitivityStatement={this.props.hideCulturalSensitivityStatement}
@@ -80,20 +79,15 @@ export default class ViewRecord extends PureComponent {
 
                 <Links publication={recordToView}/>
 
+                <RelatedPublications publication={recordToView} />
+
                 <AdditionalInformation publication={recordToView} />
 
                 <GrantInformation publication={recordToView} />
 
                 <PublicationDetails publication={recordToView} />
 
-                <RelatedPublications
-                    title={locale.viewRecord.sections.availableVersions}
-                    publication={recordToView}
-                    actions={actions}
-                    field={'fez_record_search_key_has_derivations'}
-                    subKey={'rek_has_derivations'}
-                    showPublicationTitle
-                />
+                <AvailableVersions publication={recordToView} />
             </StandardPage>
         );
     }

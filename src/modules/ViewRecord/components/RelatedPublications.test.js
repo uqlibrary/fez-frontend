@@ -5,11 +5,7 @@ function setup(testProps, isShallow = true){
     const props = {
         ...testProps,
         publication: testProps.publication || dataCollection,
-        title: testProps.title || '',
-        actions: testProps.actions || {},
-        showPublicationTitle: testProps.showPublicationTitle || false,
-        field: testProps.field || 'fez_record_search_key_has_related_datasets',
-        subKey: testProps.subKey || 'rek_has_related_datasets'
+        title: testProps.title || ''
     };
     return getElement(RelatedPublications, props, isShallow);
 }
@@ -26,13 +22,5 @@ describe('Related publications Component ', () => {
         publication.fez_record_search_key_has_related_datasets = null;
         const wrapper = setup({publication: publication});
         expect(toJson(wrapper)).toEqual('');
-    });
-
-    it('should call loadRecordToView action on click', () => {
-        const loadRecordToViewFuncion = jest.fn();
-        const wrapper = setup({actions: {loadRecordToView: loadRecordToViewFuncion}});
-        const fileTitle = wrapper.find('.publicationList Link').first();
-        fileTitle.simulate('click');
-        expect(loadRecordToViewFuncion).toHaveBeenCalledTimes(1);
     });
 });

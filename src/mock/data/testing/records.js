@@ -501,6 +501,14 @@ export const dataCollection = {
             "rek_has_related_datasets_lookup": "dataset 2"
         }
     ],
+    "fez_record_search_key_has_derivations": [
+        {
+            "rek_has_derivations": "UQ:313292",
+            "rek_has_derivations_pid": "UQ:296498",
+            "rek_has_derivations_order": 1,
+            "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools"
+        }
+    ],
     "fez_record_search_key_rights": {
         "rek_rights_id": 116537,
         "rek_rights_pid": "UQ:407731",

@@ -53,8 +53,7 @@ exports[`Related publications Component  should render component 1`] = `
       }
     >
       <RelatedPublications
-        actions={Object {}}
-        field="fez_record_search_key_has_related_datasets"
+        className="relatedPublications"
         publication={
           Object {
             "fez_record_search_key_access_conditions": Object {
@@ -370,6 +369,14 @@ exports[`Related publications Component  should render component 1`] = `
                 "rek_grant_id_xsdmf_id": 16200,
               },
             ],
+            "fez_record_search_key_has_derivations": Array [
+              Object {
+                "rek_has_derivations": "UQ:313292",
+                "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+                "rek_has_derivations_order": 1,
+                "rek_has_derivations_pid": "UQ:296498",
+              },
+            ],
             "fez_record_search_key_has_related_datasets": Array [
               Object {
                 "rek_has_related_datasets": "UQ:313292",
@@ -634,8 +641,15 @@ exports[`Related publications Component  should render component 1`] = `
             "rek_wok_doc_type_xsdmf_id": null,
           }
         }
+        searchKey={
+          Object {
+            "key": "fez_record_search_key_has_related_datasets",
+            "order": "rek_has_related_datasets_order",
+            "pid": "rek_has_related_datasets",
+            "title": "rek_has_related_datasets_lookup",
+          }
+        }
         showPublicationTitle={false}
-        subKey="rek_has_related_datasets"
         title=""
       >
         <StandardCard
@@ -764,10 +778,9 @@ exports[`Related publications Component  should render component 1`] = `
                           className="publicationList"
                         >
                           <li
-                            key="related-publications-0"
+                            key="relatedPublications-0"
                           >
                             <Link
-                              onClick={[Function]}
                               replace={false}
                               to="/records/UQ:313292"
                             >
@@ -780,10 +793,9 @@ exports[`Related publications Component  should render component 1`] = `
                             </Link>
                           </li>
                           <li
-                            key="related-publications-1"
+                            key="relatedPublications-1"
                           >
                             <Link
-                              onClick={[Function]}
                               replace={false}
                               to="/records/UQ:313292"
                             >

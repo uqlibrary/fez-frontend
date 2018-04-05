@@ -8345,6 +8345,14 @@ exports[`Additional Information Component  should render component with data col
                     "rek_grant_id_xsdmf_id": 16200,
                   },
                 ],
+                "fez_record_search_key_has_derivations": Array [
+                  Object {
+                    "rek_has_derivations": "UQ:313292",
+                    "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+                    "rek_has_derivations_order": 1,
+                    "rek_has_derivations_pid": "UQ:296498",
+                  },
+                ],
                 "fez_record_search_key_has_related_datasets": Array [
                   Object {
                     "rek_has_related_datasets": "UQ:313292",
@@ -8951,6 +8959,14 @@ exports[`Additional Information Component  should render component with data col
                     "rek_grant_id_order": 2,
                     "rek_grant_id_pid": "UQ:407731",
                     "rek_grant_id_xsdmf_id": 16200,
+                  },
+                ],
+                "fez_record_search_key_has_derivations": Array [
+                  Object {
+                    "rek_has_derivations": "UQ:313292",
+                    "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+                    "rek_has_derivations_order": 1,
+                    "rek_has_derivations_pid": "UQ:296498",
                   },
                 ],
                 "fez_record_search_key_has_related_datasets": Array [

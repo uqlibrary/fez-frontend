@@ -43,7 +43,7 @@ export default class PublicationCitation extends PureComponent {
         className: PropTypes.string,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
-        hideTitle: PropTypes.bool,
+        hideTitle: PropTypes.bool
     };
 
     static defaultProps = {
@@ -170,7 +170,7 @@ export default class PublicationCitation extends PureComponent {
 
                         {this.renderCitation(this.props.publication.rek_display_type)}
 
-                        {<CitationCounts publication={this.props.publication} />}
+                        <CitationCounts publication={this.props.publication} />
 
                         {/* display publication source (eg from espace/pubmed/crossref/etc */}
                         {this.props.showSources && this.props.publication.sources && this.renderSources()}
