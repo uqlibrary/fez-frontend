@@ -8,6 +8,9 @@ exports[`Component ViewRecord  should not render components for empty record 1`]
     hideTitle={true}
     publication={Object {}}
   />
+  <ShareThis
+    hide={false}
+  />
   <Files
     publication={Object {}}
   />
