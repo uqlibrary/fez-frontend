@@ -560,7 +560,7 @@ describe('FacetsFilter ', () => {
         wrapper.instance()._handleFacetClick('Category1','Facet1')();
         wrapper.instance()._handleFacetClick('Category2','Facet2')();
         wrapper.instance()._handleFacetClick('Category3','Facet3')();
-        expect(wrapper.state().activeFacets).toEqual({filters: {"Category1": "Facet1", "Category2": "Facet2", "Category3": "Facet3"}, ranges: {}});
+        expect(wrapper.state().activeFacets).toEqual({"filters": {"Category1": "Facet1", "Category2": "Facet2", "Category3": "Facet3"}, "ranges": {}, "showOpenAccessOnly": false});
     });
 
     it('_handleFacetClick returns empty state object when a facet is clicked while disabled', () => {
