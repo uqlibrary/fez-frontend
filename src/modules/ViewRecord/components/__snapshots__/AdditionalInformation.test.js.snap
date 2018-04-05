@@ -26409,8 +26409,8 @@ exports[`Additional Information Component  should render component with thesis 1
             School of Natural and Rural Systems
           </a>
         }
-        heading="School, Center or Institute"
-        key="additional-info-School, Center or Institute"
+        heading="School, Centre or Institute"
+        key="additional-info-School, Centre or Institute"
       />
       <ViewRecordTableRow
         data="The University of Queensland"
@@ -27295,8 +27295,8 @@ exports[`Additional Information Component  should render component with working 
             School of Economics
           </a>
         }
-        heading="School, Department or Center"
-        key="additional-info-School, Department or Center"
+        heading="School, Department or Centre"
+        key="additional-info-School, Department or Centre"
       />
       <ViewRecordTableRow
         data="The University of Queensland"
@@ -27754,8 +27754,8 @@ exports[`Additional Information Component  should render oa status value link in
             School of Natural and Rural Systems
           </a>
         }
-        heading="School, Center or Institute"
-        key="additional-info-School, Center or Institute"
+        heading="School, Centre or Institute"
+        key="additional-info-School, Centre or Institute"
       />
       <ViewRecordTableRow
         data="The University of Queensland"
