@@ -4519,6 +4519,12 @@ export const record = {
         "rek_issue_number_xsdmf_id": 6377,
         "rek_issue_number": "15"
     },
+    "fez_record_search_key_job_number": {
+        "rek_job_number_id": 39,
+        "rek_job_number_pid": "UQ:543799",
+        "rek_job_number_xsdmf_id": 17313,
+        "rek_job_number": "UQFL158, job no. 1006-2"
+    },
     "fez_record_search_key_journal_name": {
         "rek_journal_name_id": 5003159,
         "rek_journal_name_pid": "UQ:396321",
@@ -4630,7 +4636,7 @@ export const record = {
         "rek_volume_number_xsdmf_id": 6379,
         "rek_volume_number": "25"
     },
-    "rek_display_type_lookup": "Journal Article",
+    "rek_display_type_lookup": "Design",
     "fez_record_search_key_link": [
         {
             "rek_link_id": 3240198,
