@@ -1,0 +1,7 @@
+a.researchgate {
+  width: 20px;
+  height: 20px;
+}
+a.researchgate::before {
+  content: url(../../src/images/researchgate_icon.svg);
+}

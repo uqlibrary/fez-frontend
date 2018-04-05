@@ -12,6 +12,7 @@ import AdditionalInformation from './AdditionalInformation';
 import GrantInformation from './GrantInformation';
 import RelatedPublications from './RelatedPublications';
 import Links from './Links';
+import {ShareThis} from 'modules/SharedComponents/ShareThis';
 import AvailableVersions from './AvailableVersions';
 
 export default class ViewRecord extends PureComponent {
@@ -66,6 +67,8 @@ export default class ViewRecord extends PureComponent {
         return (
             <StandardPage className="viewRecord" title={recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
+
+                <ShareThis />
 
                 <Files
                     publication={recordToView}
