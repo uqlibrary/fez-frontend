@@ -38,13 +38,12 @@
   // Table Vertical data
   table.vertical {
     tr {
-      height: 24px !important;
+      height: 32px !important;
     }
     td {
       height: 32px !important;
-      line-height: 32px;
-      overflow: hidden !important;
       line-height: 24px !important;
+      overflow: hidden !important;
       padding: 6px 0 0 0 !important;
       vertical-align: top !important;
       white-space: normal !important;
@@ -61,7 +60,7 @@
     }
     .data {
       white-space: normal !important;
-      // height: auto !important;
+       height: auto !important;
       ul {
         padding: 0 !important;
         margin: 0 !important;
@@ -123,7 +122,7 @@
         width: 47% !important;
       }
       @include tablet-only {
-        width: 40% !important;
+        width: 45% !important;
       }
       @include mobile {
         width: 100% !important;
@@ -134,7 +133,7 @@
         width: 33% !important;
       }
       @include tablet-only {
-        width: 40% !important;
+        width: 35% !important;
       }
     }
     .oa {
