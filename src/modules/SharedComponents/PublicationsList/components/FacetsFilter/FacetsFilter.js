@@ -50,6 +50,7 @@ export default class FacetsFilter extends React.PureComponent {
         const activeFacets = {
             filters: {...this.state.activeFacets.filters},
             ranges: {...this.state.activeFacets.ranges},
+            showOpenAccessOnly: !!this.state.activeFacets.showOpenAccessOnly
         };
 
         if (activeFacets.filters.hasOwnProperty(category) && activeFacets.filters[category] === facet) {
