@@ -10,7 +10,10 @@ import Files from './Files';
 import PublicationDetails from './PublicationDetails';
 import AdditionalInformation from './AdditionalInformation';
 import GrantInformation from './GrantInformation';
+import RelatedPublications from './RelatedPublications';
 import Links from './Links';
+import {ShareThis} from 'modules/SharedComponents/ShareThis';
+import AvailableVersions from './AvailableVersions';
 
 export default class ViewRecord extends PureComponent {
     static propTypes = {
@@ -25,6 +28,12 @@ export default class ViewRecord extends PureComponent {
     componentDidMount() {
         if (this.props.actions && !this.props.recordToView) {
             this.props.actions.loadRecordToView(this.props.match.params.pid);
+        }
+    }
+
+    componentWillReceiveProps(newProps) {
+        if (this.props.match.params.pid !== newProps.match.params.pid) {
+            this.props.actions.loadRecordToView(newProps.match.params.pid);
         }
     }
 
@@ -59,6 +68,8 @@ export default class ViewRecord extends PureComponent {
             <StandardPage className="viewRecord" title={recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
 
+                <ShareThis />
+
                 <Files
                     publication={recordToView}
                     hideCulturalSensitivityStatement={this.props.hideCulturalSensitivityStatement}
@@ -66,12 +77,15 @@ export default class ViewRecord extends PureComponent {
 
                 <Links publication={recordToView}/>
 
+                <RelatedPublications publication={recordToView} />
+
                 <AdditionalInformation publication={recordToView} />
 
                 <GrantInformation publication={recordToView} />
 
                 <PublicationDetails publication={recordToView} />
 
+                <AvailableVersions publication={recordToView} />
             </StandardPage>
         );
     }
