@@ -45,7 +45,8 @@ export default class ShareThis extends React.Component {
             '            "socialTarget": data.url\n' +
             '        });\n' +
             '    }\n' +
-            '});\n';
+            '});\n' +
+            'console.log("a2a done")\n';
 
         const script = document.createElement('script');
         script.id = 'shareThisHeader';
