@@ -5,25 +5,11 @@ import AlertError from 'material-ui/svg-icons/alert/error';
 import {locale} from 'locale';
 
 export default class OfflineSnackbar extends PureComponent {
-    static defaultProps = {
-        locale: {
-            online: {
-                message: 'Your connection is online',
-                autoHideDuration: 5000
-            },
-            offline: {
-                message: 'Your connection is offline',
-                autoHideDuration: 0
-            }
-        }
-    };
-
     constructor(props) {
         super(props);
         this.state = {
             open: !navigator.onLine,
-            online: navigator.onLine,
-            hasDisconnected: false
+            online: navigator.onLine
         };
     }
 
@@ -38,7 +24,7 @@ export default class OfflineSnackbar extends PureComponent {
     }
 
     updateOnlineState = () => {
-        this.setState({open: true, online: navigator.onLine, hasDisconnected: true});
+        this.setState({open: true, online: navigator.onLine});
     };
 
     renderMessage = (message, icon) => {
