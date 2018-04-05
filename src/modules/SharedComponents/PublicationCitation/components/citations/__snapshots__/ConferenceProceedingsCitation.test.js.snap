@@ -1150,14 +1150,13 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
           <CitationView
             className="citationAuthor"
             key="citationAuthor_1"
-            prefix=" "
+            prefix=""
             suffix=""
             value="Frédérique Larrarte"
           >
             <span
               className="citationAuthor"
             >
-               
               Frédérique Larrarte
             </span>
           </CitationView>
@@ -2448,14 +2447,13 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
           <CitationView
             className="citationAuthor"
             key="citationAuthor_1"
-            prefix=" "
+            prefix=""
             suffix=""
             value="Frédérique Larrarte"
           >
             <span
               className="citationAuthor"
             >
-               
               Frédérique Larrarte
             </span>
           </CitationView>

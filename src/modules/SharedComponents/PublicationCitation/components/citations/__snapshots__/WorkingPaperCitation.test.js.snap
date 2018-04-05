@@ -643,14 +643,13 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=""
           value="Laselle, Laurence"
         >
           <span
             className="citationAuthor"
           >
-             
             Laselle, Laurence
           </span>
         </CitationView>
@@ -1416,14 +1415,13 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=""
           value="Laselle, Laurence"
         >
           <span
             className="citationAuthor"
           >
-             
             Laselle, Laurence
           </span>
         </CitationView>
