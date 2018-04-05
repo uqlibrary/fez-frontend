@@ -18,7 +18,7 @@ export default class PublicationDetails extends PureComponent {
 
         return (
             <StandardCard title={locale.viewRecord.sections.publicationDetails}>
-                <Table selectable={false} className="publicationDetails">
+                <Table selectable={false} className="publicationDetails vertical">
                     <TableBody displayRowCheckbox={false}>
                         {
                             this.props.publication.rek_display_type_lookup &&

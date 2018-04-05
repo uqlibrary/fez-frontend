@@ -10,7 +10,7 @@ exports[`Files Component  should not render cultural message 1`] = `
   >
     <Table
       allRowsSelected={false}
-      className="file header"
+      className="files horizontal"
       fixedFooter={true}
       fixedHeader={true}
       height="inherit"
@@ -19,7 +19,7 @@ exports[`Files Component  should not render cultural message 1`] = `
     >
       <TableHeader
         adjustForCheckbox={false}
-        className="tableHeader"
+        className="header"
         displaySelectAll={false}
         enableSelectAll={true}
         selectAllSelected={false}
@@ -53,6 +53,7 @@ exports[`Files Component  should not render cultural message 1`] = `
       </TableHeader>
       <TableBody
         allRowsSelected={false}
+        className="data"
         deselectOnClickaway={true}
         displayRowCheckbox={false}
         multiSelectable={false}
@@ -85,7 +86,7 @@ exports[`Files Component  should not render cultural message 1`] = `
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="UQ676287_OA.pdf"
+              title="UQ676287_OA.pdf - undefined - undefined"
             >
               UQ676287_OA.pdf
             </ExternalLink>
@@ -124,7 +125,7 @@ exports[`Files Component  should not render cultural message 1`] = `
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="image.jpg"
+              title="image.jpg - testing image description - 95.49 KB"
             >
               image.jpg
             </ExternalLink>
@@ -163,7 +164,7 @@ exports[`Files Component  should render component 1`] = `
     />
     <Table
       allRowsSelected={false}
-      className="file header"
+      className="files horizontal"
       fixedFooter={true}
       fixedHeader={true}
       height="inherit"
@@ -172,7 +173,7 @@ exports[`Files Component  should render component 1`] = `
     >
       <TableHeader
         adjustForCheckbox={false}
-        className="tableHeader"
+        className="header"
         displaySelectAll={false}
         enableSelectAll={true}
         selectAllSelected={false}
@@ -206,6 +207,7 @@ exports[`Files Component  should render component 1`] = `
       </TableHeader>
       <TableBody
         allRowsSelected={false}
+        className="data"
         deselectOnClickaway={true}
         displayRowCheckbox={false}
         multiSelectable={false}
@@ -238,7 +240,7 @@ exports[`Files Component  should render component 1`] = `
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="UQ676287_OA.pdf"
+              title="UQ676287_OA.pdf - undefined - undefined"
             >
               UQ676287_OA.pdf
             </ExternalLink>
@@ -277,7 +279,7 @@ exports[`Files Component  should render component 1`] = `
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="image.jpg"
+              title="image.jpg - testing image description - 95.49 KB"
             >
               image.jpg
             </ExternalLink>
