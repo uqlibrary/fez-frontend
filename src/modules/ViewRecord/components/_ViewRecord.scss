@@ -148,7 +148,22 @@
         width: 24px !important;
       }
     }
+  }
 
+  // Related publicaitons
+  .relatedPublications .publicationList {
+    .displayType {
+      font-style: italic;
+    }
+
+    div {
+      display: inline;
+    }
+
+    h3 {
+      display: inline;
+      font-size: 1em !important
+    }
   }
 
   // Grants

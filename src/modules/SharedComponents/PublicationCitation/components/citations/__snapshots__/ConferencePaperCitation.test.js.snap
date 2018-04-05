@@ -1429,14 +1429,13 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Larance, Briony"
         >
           <span
             className="citationAuthor"
           >
-             
             Larance, Briony
             , 
           </span>
@@ -1444,14 +1443,13 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Peacock, Amy"
         >
           <span
             className="citationAuthor"
           >
-             
             Peacock, Amy
             , 
           </span>
@@ -1459,14 +1457,13 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Campbell, Gabrielle"
         >
           <span
             className="citationAuthor"
           >
-             
             Campbell, Gabrielle
             , 
           </span>
@@ -1474,14 +1471,13 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Freckleton, Sarah"
         >
           <span
             className="citationAuthor"
           >
-             
             Freckleton, Sarah
             , 
           </span>
@@ -1489,14 +1485,13 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         <CitationView
           className="citationAuthor"
           key="citationAuthor_5"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Smith, Kimberley"
         >
           <span
             className="citationAuthor"
           >
-             
             Smith, Kimberley
             , 
           </span>
@@ -1504,14 +1499,13 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         <CitationView
           className="citationAuthor"
           key="citationAuthor_6"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Mattick, Richard"
         >
           <span
             className="citationAuthor"
           >
-             
             Mattick, Richard
             , 
           </span>
@@ -1519,14 +1513,13 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         <CitationView
           className="citationAuthor"
           key="citationAuthor_7"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Bruno, Raimondo"
         >
           <span
             className="citationAuthor"
           >
-             
             Bruno, Raimondo
             , 
           </span>
@@ -1534,14 +1527,13 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         <CitationView
           className="citationAuthor"
           key="citationAuthor_8"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Nielsen, Suzanne"
         >
           <span
             className="citationAuthor"
           >
-             
             Nielsen, Suzanne
             , 
           </span>
@@ -1549,14 +1541,13 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         <CitationView
           className="citationAuthor"
           key="citationAuthor_9"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Cohen, Milton"
         >
           <span
             className="citationAuthor"
           >
-             
             Cohen, Milton
             , 
           </span>
@@ -1564,14 +1555,13 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         <CitationView
           className="citationAuthor"
           key="citationAuthor_10"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Lintzeris, Nicholas"
         >
           <span
             className="citationAuthor"
           >
-             
             Lintzeris, Nicholas
             , 
           </span>

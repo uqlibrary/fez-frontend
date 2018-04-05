@@ -1,0 +1,16 @@
+a.researchgate {
+  width: 20px;
+  height: 20px;
+}
+a.researchgate::before {
+  content: url(../../src/images/researchgate_icon.svg);
+}
+
+.shareThis {
+  @include mobile {
+    zoom: 1.75;
+    a {
+      margin: 6px 3px !important;
+    }
+  }
+}

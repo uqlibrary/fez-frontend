@@ -10,6 +10,10 @@ export default {
                 fromFieldLabel: 'From',
                 toFieldLabel: 'To',
                 rangeSubmitButtonLabel: 'Go'
+            },
+            openAccessFilter: {
+                displayTitle: 'Open access status',
+                activeFilter: 'Show only open access records'
             }
         },
         publicationStats: {

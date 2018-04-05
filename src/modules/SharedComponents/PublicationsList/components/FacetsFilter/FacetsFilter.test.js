@@ -7,6 +7,7 @@ function setup(testProps, isShallow = true) {
         facetsData: {} || testProps.facetsData,
         excludeFacetsList: [] || testProps.excludeFacetsList,
         onFacetsChanged: jest.fn() || testProps.onFacetsChanged,
+        showOpenAccessFilter: false,
         ...testProps
     };
     return getElement(FacetsFilter, props, isShallow);
@@ -14,14 +15,29 @@ function setup(testProps, isShallow = true) {
 
 describe('FacetsFilter ', () => {
 
-    it('empty component for empty data', () => {
+    it('renders empty component for empty data', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should set state when component receives new props', () => {
+        const wrapper = setup({});
+        wrapper.instance().componentWillReceiveProps({activeFacets: {filters: {one: 'one'}, ranges: {}}});
+        expect(wrapper.instance().state.activeFacets).toEqual({filters: {one: 'one'}, ranges: {}});
+    });
+
     it('components for mock data', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
-        const wrapper = setup({facetsData});
+        const wrapper = setup({facetsData: facetsData});
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        const categories = wrapper.find('.facetsCategory');
+        expect(categories.length).toEqual(6);
+    });
+
+    it('renders filter for open access', () => {
+        const facetsData = possibleUnclaimedList.filters.facets;
+        const wrapper = setup({facetsData: facetsData, showOpenAccessFilter:true});
         expect(toJson(wrapper)).toMatchSnapshot();
 
         const categories = wrapper.find('.facetsCategory');
@@ -57,7 +73,7 @@ describe('FacetsFilter ', () => {
 
     it('components for mock data deactivating a facet selection', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
-        const wrapper = setup({facetsData, activeFacets: {filters: {'Display type': 179}, ranges: {}}});
+        const wrapper = setup({facetsData, activeFacets: {showOpenAccessOnly: true, filters: {'Display type': 179}, ranges: {}}});
 
         wrapper.instance()._handleFacetClick('Display type', 130)();
         wrapper.update();
@@ -66,6 +82,10 @@ describe('FacetsFilter ', () => {
         wrapper.instance()._handleFacetClick('Display type', 130)();
         wrapper.update();
         expect(JSON.stringify(wrapper.state().activeFacets.filters)).toEqual(JSON.stringify({}));
+
+        wrapper.instance()._handleOpenAccessFilter(false);
+        wrapper.update();
+        expect(wrapper.state().activeFacets.showOpenAccessOnly).toEqual(false);
     });
 
     it('components for mock data activating a facet selection', () => {
@@ -77,6 +97,10 @@ describe('FacetsFilter ', () => {
 
         expect(JSON.stringify(wrapper.state().activeFacets.filters)).toEqual(JSON.stringify({'Display type': 179, 'Keywords': 'Biochemistry'}));
         expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance()._handleOpenAccessFilter(true);
+        wrapper.update();
+        expect(wrapper.state().activeFacets.showOpenAccessOnly).toEqual(true);
     });
 
     it('components for mock data resetting a facet selection', () => {
@@ -536,7 +560,7 @@ describe('FacetsFilter ', () => {
         wrapper.instance()._handleFacetClick('Category1','Facet1')();
         wrapper.instance()._handleFacetClick('Category2','Facet2')();
         wrapper.instance()._handleFacetClick('Category3','Facet3')();
-        expect(wrapper.state().activeFacets).toEqual({filters: {"Category1": "Facet1", "Category2": "Facet2", "Category3": "Facet3"}, ranges: {}});
+        expect(wrapper.state().activeFacets).toEqual({"filters": {"Category1": "Facet1", "Category2": "Facet2", "Category3": "Facet3"}, "ranges": {}, "showOpenAccessOnly": false});
     });
 
     it('_handleFacetClick returns empty state object when a facet is clicked while disabled', () => {
@@ -544,16 +568,17 @@ describe('FacetsFilter ', () => {
         wrapper.instance()._handleFacetClick('Category1','Facet1')();
         wrapper.instance()._handleFacetClick('Category2','Facet2')();
         wrapper.instance()._handleFacetClick('Category3','Facet3')();
+        wrapper.instance()._handleOpenAccessFilter(true);
         expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}});
     });
 
     it('should set ranges values if _handleYearPublishedRangeFacet is called', () => {
         const wrapper = setup({});
         wrapper.instance()._handleYearPublishedRangeFacet('Year')({from: 2000, to: 2010});
-        expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {Year: {from: 2000, to: 2010}}});
+        expect(wrapper.state().activeFacets).toEqual({"filters": {}, "ranges": {"Year": {"from": 2000, "to": 2010}}, "showOpenAccessOnly": false});
 
         wrapper.instance()._handleYearPublishedRangeFacet('Year')({from: null, to: null});
-        expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}});
+        expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}, "showOpenAccessOnly": false});
     });
 
     it('should set ranges values if _handleYearPublishedRangeFacet is called', () => {

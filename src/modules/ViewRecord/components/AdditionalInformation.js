@@ -139,7 +139,7 @@ export default class AdditionalInformation extends Component {
 
     renderContributors = (publication) => {
         return (
-            <EditorsCitationView key="additional-information-editors" publication={publication} prefix={' '} initialNumberOfEditors={publication.fez_record_search_key_contributor.length} showLink />
+            <EditorsCitationView key="additional-information-editors" publication={publication} prefix={' '} suffix={''} initialNumberOfEditors={publication.fez_record_search_key_contributor.length} showLink />
         );
     }
 

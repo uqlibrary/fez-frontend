@@ -1542,14 +1542,13 @@ exports[`Additional Information Component  should render component with audio do
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_1"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Shutter, Leigh"
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Shutter, Leigh
                                                           , 
                                                         </span>
@@ -1563,14 +1562,13 @@ exports[`Additional Information Component  should render component with audio do
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_2"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Arthurs, Andy"
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Arthurs, Andy
                                                           , 
                                                         </span>
@@ -1584,14 +1582,13 @@ exports[`Additional Information Component  should render component with audio do
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_3"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Bamford, Greg"
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Bamford, Greg
                                                           , 
                                                         </span>
@@ -1605,16 +1602,14 @@ exports[`Additional Information Component  should render component with audio do
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_4"
-                                                        prefix=" "
-                                                        suffix=", "
+                                                        prefix=""
+                                                        suffix=""
                                                         value="McColl, Mary Rose"
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           McColl, Mary Rose
-                                                          , 
                                                         </span>
                                                       </CitationView>
                                                     </a>
@@ -1626,14 +1621,14 @@ exports[`Additional Information Component  should render component with audio do
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_5"
-                                                        prefix=" "
+                                                        prefix=", "
                                                         suffix=""
                                                         value="Skinner, Peter R."
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
+                                                          , 
                                                           Skinner, Peter R.
                                                         </span>
                                                       </CitationView>
@@ -3824,6 +3819,7 @@ exports[`Additional Information Component  should render component with book 1`]
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
@@ -4823,6 +4819,7 @@ exports[`Additional Information Component  should render component with book cha
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
@@ -6911,6 +6908,7 @@ exports[`Additional Information Component  should render component with conferen
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
@@ -7363,6 +7361,7 @@ exports[`Additional Information Component  should render component with conferen
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
@@ -8345,6 +8344,28 @@ exports[`Additional Information Component  should render component with data col
                     "rek_grant_id_xsdmf_id": 16200,
                   },
                 ],
+                "fez_record_search_key_has_derivations": Array [
+                  Object {
+                    "rek_has_derivations": "UQ:313292",
+                    "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+                    "rek_has_derivations_order": 1,
+                    "rek_has_derivations_pid": "UQ:296498",
+                  },
+                ],
+                "fez_record_search_key_has_related_datasets": Array [
+                  Object {
+                    "rek_has_related_datasets": "UQ:313292",
+                    "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+                    "rek_has_related_datasets_order": 1,
+                    "rek_has_related_datasets_pid": "UQ:296498",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:313292",
+                    "rek_has_related_datasets_lookup": "dataset 2",
+                    "rek_has_related_datasets_order": 2,
+                    "rek_has_related_datasets_pid": "UQ:296498",
+                  },
+                ],
                 "fez_record_search_key_isdatasetof": Array [
                   Object {
                     "rek_isdatasetof": "UQ:365357",
@@ -8446,8 +8467,7 @@ exports[`Additional Information Component  should render component with data col
                   "rek_publisher_pid": "UQ:407731",
                   "rek_publisher_xsdmf_id": 16050,
                 },
-                "fez_record_search_key_related_datasets": null,
-                "fez_record_search_key_related_publications": null,
+                "fez_record_search_key_related_datasets": Array [],
                 "fez_record_search_key_rights": Object {
                   "rek_rights": "2015, The University of Queensland",
                   "rek_rights_id": 116537,
@@ -8597,6 +8617,7 @@ exports[`Additional Information Component  should render component with data col
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Contact name"
@@ -8940,6 +8961,28 @@ exports[`Additional Information Component  should render component with data col
                     "rek_grant_id_xsdmf_id": 16200,
                   },
                 ],
+                "fez_record_search_key_has_derivations": Array [
+                  Object {
+                    "rek_has_derivations": "UQ:313292",
+                    "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+                    "rek_has_derivations_order": 1,
+                    "rek_has_derivations_pid": "UQ:296498",
+                  },
+                ],
+                "fez_record_search_key_has_related_datasets": Array [
+                  Object {
+                    "rek_has_related_datasets": "UQ:313292",
+                    "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+                    "rek_has_related_datasets_order": 1,
+                    "rek_has_related_datasets_pid": "UQ:296498",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:313292",
+                    "rek_has_related_datasets_lookup": "dataset 2",
+                    "rek_has_related_datasets_order": 2,
+                    "rek_has_related_datasets_pid": "UQ:296498",
+                  },
+                ],
                 "fez_record_search_key_isdatasetof": Array [
                   Object {
                     "rek_isdatasetof": "UQ:365357",
@@ -9041,8 +9084,7 @@ exports[`Additional Information Component  should render component with data col
                   "rek_publisher_pid": "UQ:407731",
                   "rek_publisher_xsdmf_id": 16050,
                 },
-                "fez_record_search_key_related_datasets": null,
-                "fez_record_search_key_related_publications": null,
+                "fez_record_search_key_related_datasets": Array [],
                 "fez_record_search_key_rights": Object {
                   "rek_rights": "2015, The University of Queensland",
                   "rek_rights_id": 116537,
@@ -10741,6 +10783,7 @@ exports[`Additional Information Component  should render component with design d
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Consultant(s)"
@@ -12212,6 +12255,7 @@ exports[`Additional Information Component  should render component with generic 
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
@@ -12678,6 +12722,7 @@ exports[`Additional Information Component  should render component with journal 
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
@@ -16344,14 +16389,13 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_1"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Azimi, Iman"
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Azimi, Iman
                                                           , 
                                                         </span>
@@ -16365,14 +16409,13 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_2"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Milevskiy, Michael J. G."
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Milevskiy, Michael J. G.
                                                           , 
                                                         </span>
@@ -16386,14 +16429,13 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_3"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Kaemmerer, Elke"
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Kaemmerer, Elke
                                                           , 
                                                         </span>
@@ -16407,14 +16449,13 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_4"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Turner, Dane"
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Turner, Dane
                                                           , 
                                                         </span>
@@ -16428,14 +16469,13 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_5"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Yapa, Kunsala T. D. S."
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Yapa, Kunsala T. D. S.
                                                           , 
                                                         </span>
@@ -16449,14 +16489,13 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_6"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Brown, Melissa A."
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Brown, Melissa A.
                                                           , 
                                                         </span>
@@ -16470,14 +16509,13 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_7"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Thompson, Erik W."
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Thompson, Erik W.
                                                           , 
                                                         </span>
@@ -16491,16 +16529,14 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_8"
-                                                        prefix=" "
-                                                        suffix=", "
+                                                        prefix=""
+                                                        suffix=""
                                                         value="Roberts-Thomson, Sarah J."
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Roberts-Thomson, Sarah J.
-                                                          , 
                                                         </span>
                                                       </CitationView>
                                                     </a>
@@ -16512,14 +16548,14 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_9"
-                                                        prefix=" "
+                                                        prefix=", "
                                                         suffix=""
                                                         value="Monteith, Gregory R."
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
+                                                          , 
                                                           Monteith, Gregory R.
                                                         </span>
                                                       </CitationView>
@@ -18845,6 +18881,7 @@ exports[`Additional Information Component  should render component with journal 
                                                       <span
                                                         className="eraYearListed"
                                                       >
+                                                         
                                                         (ERA 2010 Journal(s) Listed)
                                                       </span>
                                                     </a>
@@ -21560,6 +21597,7 @@ exports[`Additional Information Component  should render component with manuscri
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Contributor"
@@ -25583,6 +25621,7 @@ exports[`Additional Information Component  should render component with referenc
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"

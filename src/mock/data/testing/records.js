@@ -486,8 +486,29 @@ export const dataCollection = {
         "rek_publisher_xsdmf_id": 16050,
         "rek_publisher": "Cold Spring Harbor Laboratory Press"
     },
-    "fez_record_search_key_related_datasets": null,
-    "fez_record_search_key_related_publications": null,
+    "fez_record_search_key_related_datasets": [],
+    "fez_record_search_key_has_related_datasets": [
+        {
+            "rek_has_related_datasets": "UQ:313292",
+            "rek_has_related_datasets_pid": "UQ:296498",
+            "rek_has_related_datasets_order": 1,
+            "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools"
+        },
+        {
+            "rek_has_related_datasets": "UQ:313292",
+            "rek_has_related_datasets_pid": "UQ:296498",
+            "rek_has_related_datasets_order": 2,
+            "rek_has_related_datasets_lookup": "dataset 2"
+        }
+    ],
+    "fez_record_search_key_has_derivations": [
+        {
+            "rek_has_derivations": "UQ:313292",
+            "rek_has_derivations_pid": "UQ:296498",
+            "rek_has_derivations_order": 1,
+            "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools"
+        }
+    ],
     "fez_record_search_key_rights": {
         "rek_rights_id": 116537,
         "rek_rights_pid": "UQ:407731",
