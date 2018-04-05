@@ -8,6 +8,7 @@ import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import {publicationTypes} from 'config';
 import {locale} from 'locale';
 import DateRange from './DateRange';
+import OpenAccessFilter from './OpenAccessFilter';
 
 export default class FacetsFilter extends React.PureComponent {
     static propTypes = {
@@ -16,12 +17,14 @@ export default class FacetsFilter extends React.PureComponent {
         activeFacets: PropTypes.object,
         excludeFacetsList: PropTypes.array,
         renameFacetsList: PropTypes.object,
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        showOpenAccessFilter: PropTypes.bool
     };
 
     static defaultProps = {
         excludeFacetsList: [],
-        renameFacetsList: {}
+        renameFacetsList: {},
+        showOpenAccessFilter: false
     };
 
     constructor(props) {
@@ -57,6 +60,21 @@ export default class FacetsFilter extends React.PureComponent {
 
         this.setState({
             activeFacets: activeFacets
+        }, () => {
+            this.props.onFacetsChanged(this.state.activeFacets);
+        });
+    };
+
+    _handleOpenAccessFilter = (isActive) => {
+        if (this.props.disabled) {
+            return;
+        }
+
+        this.setState({
+            activeFacets: {
+                ...this.state.activeFacets,
+                showOpenAccessOnly: isActive
+            }
         }, () => {
             this.props.onFacetsChanged(this.state.activeFacets);
         });
@@ -153,7 +171,9 @@ export default class FacetsFilter extends React.PureComponent {
     render() {
         const {yearPublishedCategory, yearPublishedFacet, resetButtonText} = locale.components.facetsFilter;
         const facetsToDisplay = this.getFacetsToDisplay(this.props.facetsData, this.props.excludeFacetsList, this.props.renameFacetsList);
-        const hasActiveFilters = (Object.keys(this.state.activeFacets.filters).length > 0 || Object.keys(this.state.activeFacets.ranges).length > 0);
+        const hasActiveFilters = (Object.keys(this.state.activeFacets.filters).length > 0
+            || Object.keys(this.state.activeFacets.ranges).length > 0
+            || !!this.state.activeFacets.showOpenAccessOnly);
         if (facetsToDisplay.length === 0 && !hasActiveFilters) return (<span className="facetsFilter empty" />);
         return (
             <div className="facetsFilter">
@@ -173,15 +193,24 @@ export default class FacetsFilter extends React.PureComponent {
                             );
                         })
                     }
+                    <DateRange
+                        itemClassName="dateRange facetsCategory"
+                        subitemClassName="dateRange facetsLink"
+                        open={this.state.activeFacets.ranges[yearPublishedCategory] && true}
+                        value={this.state.activeFacets.ranges.hasOwnProperty(yearPublishedCategory) ? this.state.activeFacets.ranges[yearPublishedCategory] : {}}
+                        disabled={this.props.disabled}
+                        onChange={this._handleYearPublishedRangeFacet(yearPublishedCategory)}
+                        locale={yearPublishedFacet}
+                    />
                     {
-                        <DateRange
-                            itemClassName="dateRange facetsCategory"
-                            subitemClassName="dateRange facetsLink"
-                            open={this.state.activeFacets.ranges[yearPublishedCategory] && true}
-                            value={this.state.activeFacets.ranges.hasOwnProperty(yearPublishedCategory) ? this.state.activeFacets.ranges[yearPublishedCategory] : {}}
+                        this.props.showOpenAccessFilter &&
+                        <OpenAccessFilter
+                            itemClassName="facetsCategory openAccessOnly"
+                            subitemClassName="facetsLink openAccessOnly"
+                            open={this.state.activeFacets.showOpenAccessOnly && true}
+                            value={this.state.activeFacets.showOpenAccessOnly}
                             disabled={this.props.disabled}
-                            onChange={this._handleYearPublishedRangeFacet(yearPublishedCategory)}
-                            locale={yearPublishedFacet}
+                            onChange={this._handleOpenAccessFilter}
                         />
                     }
                 </List>

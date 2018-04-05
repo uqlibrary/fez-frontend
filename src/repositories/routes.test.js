@@ -210,6 +210,17 @@ describe('Backend routes method', () => {
                     sort: 'score',
                     ['filters[facets][one]']: 'one facet'
                 }
+            },
+            {
+                values: {page: 2, pageSize: 30, sortBy: 'score', sortDirection:'asc', facets : { showOpenAccessOnly: true, filters: {one: 'one facet'}}},
+                expected: {
+                    order_by: 'asc',
+                    page: 2,
+                    per_page: 30,
+                    sort: 'score',
+                    ['filters[facets][one]']: 'one facet',
+                    "rek_oa_status": [453693, 453695, 453696, 453697, 453954]
+                }
             }
         ];
 

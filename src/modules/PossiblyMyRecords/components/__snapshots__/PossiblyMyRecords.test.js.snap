@@ -76,6 +76,7 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
               "Display type": "Publication type",
             }
           }
+          showOpenAccessFilter={false}
         />
       </StandardRighthandCard>
     </div>
@@ -294,6 +295,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
               "Display type": "Publication type",
             }
           }
+          showOpenAccessFilter={false}
         />
       </StandardRighthandCard>
     </div>

@@ -11,6 +11,8 @@ import PublicationDetails from './PublicationDetails';
 import AdditionalInformation from './AdditionalInformation';
 import GrantInformation from './GrantInformation';
 import Links from './Links';
+import {Link} from 'react-router-dom';
+import {routes} from 'config';
 
 export default class ViewRecord extends PureComponent {
     static propTypes = {
@@ -25,6 +27,12 @@ export default class ViewRecord extends PureComponent {
     componentDidMount() {
         if (this.props.actions && !this.props.recordToView) {
             this.props.actions.loadRecordToView(this.props.match.params.pid);
+        }
+    }
+
+    componentWillReceiveProps(newProps) {
+        if (this.props.match.params.pid !== newProps.match.params.pid) {
+            this.props.actions.loadRecordToView(newProps.match.params.pid);
         }
     }
 
@@ -59,6 +67,7 @@ export default class ViewRecord extends PureComponent {
             <StandardPage className="viewRecord" title={recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
 
+                <Link to={routes.pathConfig.records.view('UQ:11111')}>Test link</Link>
                 <Files
                     publication={recordToView}
                     hideCulturalSensitivityStatement={this.props.hideCulturalSensitivityStatement}
