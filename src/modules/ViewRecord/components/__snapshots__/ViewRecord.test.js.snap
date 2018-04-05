@@ -8,9 +8,7 @@ exports[`Component ViewRecord  should not render components for empty record 1`]
     hideTitle={true}
     publication={Object {}}
   />
-  <ShareThis
-    hide={false}
-  />
+  <ShareThis />
   <Files
     publication={Object {}}
   />
@@ -459,9 +457,7 @@ exports[`Component ViewRecord  should render record view 1`] = `
       }
     }
   />
-  <ShareThis
-    hide={false}
-  />
+  <ShareThis />
   <Files
     publication={
       Object {
@@ -2841,9 +2837,7 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
       }
     }
   />
-  <ShareThis
-    hide={false}
-  />
+  <ShareThis />
   <Files
     publication={
       Object {

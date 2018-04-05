@@ -1,18 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, {PureComponent} from 'react';
 
-export default class ShareThis extends React.Component {
-    static propTypes = {
-        hide: PropTypes.bool
-    };
-
-    static defaultProps = {
-        hide: false
-    };
-
+export default class ShareThis extends PureComponent {
     componentDidMount() {
         if (!document.getElementById('shareThisScript')) {
-            /* add the script to the body if it hasnt already happened */
+            // add the script to the body if it hasn't already happened
             const script = document.createElement('script');
             script.src = '//static.addtoany.com/menu/page.js';
             script.id = 'shareThisScript';
@@ -24,12 +15,16 @@ export default class ShareThis extends React.Component {
     }
 
     componentWillUnmount() {
-        /* remove the scripts so we can reload them when user returns via the back button  */
+        // remove the scripts so we can reload them when user returns via the back button
         const scriptShareThisHeader = document.getElementById('shareThisHeader');
-        scriptShareThisHeader.parentNode.removeChild(scriptShareThisHeader);
+        if (!!scriptShareThisHeader) {
+            scriptShareThisHeader.parentNode.removeChild(scriptShareThisHeader);
+        }
 
         const scriptShareThis = document.getElementById('shareThisScript');
-        scriptShareThis.parentNode.removeChild(scriptShareThis);
+        if (!!scriptShareThis) {
+            scriptShareThis.parentNode.removeChild(scriptShareThis);
+        }
     }
 
     addShareThisConfigToHead() {
@@ -78,8 +73,6 @@ export default class ShareThis extends React.Component {
     }
 
     render() {
-        if (this.props.hide) return <div className="shareThis_empty" />;
-
         const blockStyle = { paddingBottom: 12 };
 
         return (

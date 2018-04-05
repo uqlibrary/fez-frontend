@@ -1,46 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component Sharethis should render 3rd party elements 1`] = `
-<div
-  className="shareThis columns is-gapless is-clearfix is-marginless"
-  style={
-    Object {
-      "paddingBottom": 12,
-    }
-  }
->
-  <div
-    className="column"
-  />
-  <div
-    className="column is-narrow a2a_kit a2a_kit_size_20 a2a_default_style"
-  >
-    <a
-      className="a2a_button_mendeley"
-    />
-    <a
-      className="a2a_button_twitter"
-    />
-    <a
-      className="a2a_button_linkedin"
-    />
-    <a
-      className="a2a_button_facebook a2a_counter"
-    />
-    <a
-      className="a2a_button_email"
-    />
-    <a
-      className="a2a_button_print"
-    />
-    <a
-      className="a2a_dd"
-      href="https://www.addtoany.com/share"
-    />
-  </div>
-</div>
-`;
-
 exports[`Component Sharethis should render 3rd party elements with default props 1`] = `
 <div
   className="shareThis columns is-gapless is-clearfix is-marginless"
@@ -80,10 +39,4 @@ exports[`Component Sharethis should render 3rd party elements with default props
     />
   </div>
 </div>
-`;
-
-exports[`Component Sharethis should render empty component 1`] = `
-<div
-  className="shareThis_empty"
-/>
 `;
