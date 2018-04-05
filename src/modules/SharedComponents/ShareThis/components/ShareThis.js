@@ -20,8 +20,6 @@ export default class ShareThis extends React.Component {
             document.head.appendChild(script);
 
             this.addShareThisConfigToHead();
-
-            this.addResearchGateButton();
         }
     }
 
@@ -77,9 +75,6 @@ export default class ShareThis extends React.Component {
         script.id = 'shareThisHeader';
         script.appendChild(document.createTextNode(code));
         document.head.appendChild(script);
-    }
-
-    addResearchGateButton() {
     }
 
     render() {
