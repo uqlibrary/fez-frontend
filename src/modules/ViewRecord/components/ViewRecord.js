@@ -100,19 +100,13 @@ export default class ViewRecord extends Component {
             <StandardPage className="viewRecord" title={recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
                 {
-                    recordToView &&
-                    (
-                        (recordToView.fez_record_search_key_related_publications && recordToView.fez_record_search_key_related_publications.length > 0) ||
-                        (recordToView.fez_record_search_key_related_datasets && recordToView.fez_record_search_key_related_datasets.length > 0)
-                    ) &&
+                    recordToView && recordToView.fez_record_search_key_has_related_datasets && recordToView.fez_record_search_key_has_related_datasets.length > 0 &&
                     <RelatedPublications
                         title={locale.viewRecord.sections.relatedPublications.title}
                         publication={recordToView}
                         actions={actions}
-                        fields={[
-                            {field: 'fez_record_search_key_related_publications', subKey: 'rek_related_publications'},
-                            {field: 'fez_record_search_key_related_datasets', subKey: 'rek_related_datasets'}
-                        ]}
+                        field={'fez_record_search_key_has_related_datasets'}
+                        subKey={'rek_has_related_datasets'}
                     />
                 }
                 {
@@ -150,14 +144,13 @@ export default class ViewRecord extends Component {
                     <PublicationDetails publication={recordToView} />
                 }
                 {
-                    recordToView && recordToView.fez_record_search_key_isderivationof && recordToView.fez_record_search_key_isderivationof.length > 0 &&
+                    recordToView && recordToView.fez_record_search_key_has_derivations && recordToView.fez_record_search_key_has_derivations.length > 0 &&
                     <RelatedPublications
                         title={locale.viewRecord.sections.availableVersions}
                         publication={recordToView}
                         actions={actions}
-                        fields={[
-                            {field: 'fez_record_search_key_isderivationof', subKey: 'rek_isderivationof'},
-                        ]}
+                        field={'fez_record_search_key_has_derivations'}
+                        subKey={'rek_has_derivations'}
                         showPublicationTitle
                     />
                 }

@@ -4582,66 +4582,84 @@ export const record = {
         "rek_publisher": "Oxford University Press"
     },
     "fez_record_search_key_pubmed_id": null,
-    "fez_record_search_key_related_datasets": [
+    "fez_record_search_key_related_datasets": [],
+    "fez_record_search_key_related_publications": [],
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_has_related_datasets": [
         {
-            "rek_related_datasets_id": 1258088,
-            "rek_related_datasets_pid": "UQ:137936",
-            "rek_related_datasets": {
-                "rek_pid": "UQ:12345",
-                "rek_title": "related dataset 1",
-                "rek_created_date": "2016-07-15T11:49:38Z",
-                "rek_display_type_lookup": "Data Collection"
-            },
-            "rek_related_datasets_order": 1
+            "rek_has_related_datasets": "UQ:195073",
+            "rek_has_related_datasets_pid": "UQ:409473",
+            "rek_has_related_datasets_order": 1,
+            "rek_has_related_datasets_lookup": "Surveying habitats critical to the survival of grey nurse sharks in South-East Queensland: Grey nurse shark mapping project 2003"
         },
         {
-            "rek_related_datasets_id": 1258088,
-            "rek_related_datasets_pid": "UQ:137936",
-            "rek_related_datasets": {
-                "rek_pid": "UQ:12345",
-                "rek_title": "related dataset 2",
-                "rek_created_date": "2016-07-15T11:49:38Z",
-                "rek_display_type_lookup": "Data Collection"
-            },
-            "rek_related_datasets_order": 2
+            "rek_has_related_datasets": "UQ:354474",
+            "rek_has_related_datasets_pid": "UQ:409473",
+            "rek_has_related_datasets_order": 2,
+            "rek_has_related_datasets_lookup": "Ecological assessment data of the marine flora and fauna of Point Lookout in 2014."
+        },
+        {
+            "rek_has_related_datasets": "UQ:349503",
+            "rek_has_related_datasets_pid": "UQ:409473",
+            "rek_has_related_datasets_order": 3,
+            "rek_has_related_datasets_lookup": "Ecological Assessment of the Flora and Fauna of Point Lookout Dive Sites, North Stradbroke Island, Queensland"
+        },
+        {
+            "rek_has_related_datasets": "UQ:409496",
+            "rek_has_related_datasets_pid": "UQ:409473",
+            "rek_has_related_datasets_order": 4,
+            "rek_has_related_datasets_lookup": "Invertebrates populations of Point Lookout Dive Sites, North Stradbroke Island, Queensland, 2014"
+        },
+        {
+            "rek_has_related_datasets": "UQ:344940",
+            "rek_has_related_datasets_pid": "UQ:409473",
+            "rek_has_related_datasets_order": 5,
+            "rek_has_related_datasets_lookup": "UniDive Point Lookout Ecological Assessment Marine Conservation"
+        },
+        {
+            "rek_has_related_datasets": "UQ:409513",
+            "rek_has_related_datasets_pid": "UQ:409473",
+            "rek_has_related_datasets_order": 6,
+            "rek_has_related_datasets_lookup": "Reef impacts of Point Lookout Dive Sites, North Stradbroke Island, Queensland"
+        },
+        {
+            "rek_has_related_datasets": "UQ:409516",
+            "rek_has_related_datasets_pid": "UQ:409473",
+            "rek_has_related_datasets_order": 7,
+            "rek_has_related_datasets_lookup": "Fish populations on family level of Point Lookout Dive Sites, North Stradbroke Island, Queensland"
+        },
+        {
+            "rek_has_related_datasets": "UQ:409518",
+            "rek_has_related_datasets_pid": "UQ:409473",
+            "rek_has_related_datasets_order": 8,
+            "rek_has_related_datasets_lookup": "Fish populations on species level of Point Lookout Dive Sites, North Stradbroke Island, Queensland"
+        },
+        {
+            "rek_has_related_datasets": "UQ:409974",
+            "rek_has_related_datasets_pid": "UQ:409473",
+            "rek_has_related_datasets_order": 9,
+            "rek_has_related_datasets_lookup": "Dominate algeas and rare animals of Point Lookout Dive Sites, North Stradbroke Island, Queensland"
+        },
+        {
+            "rek_has_related_datasets": "UQ:409477",
+            "rek_has_related_datasets_pid": "UQ:409473",
+            "rek_has_related_datasets_order": 10,
+            "rek_has_related_datasets_lookup": "Habitat Maps derived from Point Lookout Ecological Surveys (PLEA) of the Shag Rock, Manta Ray Bommie and Flat Rock dive sites at Point Lookout, North Stradbroke Island, Australia, in 2014."
+        },
+        {
+            "rek_has_related_datasets": "UQ:409608",
+            "rek_has_related_datasets_pid": "UQ:409473",
+            "rek_has_related_datasets_order": 11,
+            "rek_has_related_datasets_lookup": "Substrate surveys of Point Lookout Dive Sites, North Stradbroke Island, Queensland"
         }
     ],
-    "fez_record_search_key_related_publications": [
+    "fez_record_search_key_has_derivations": [
         {
-            "rek_related_publications_id": 1258088,
-            "rek_related_publications_pid": "UQ:137936",
-            "rek_related_publications": {
-                "rek_pid": "UQ:12345",
-                "rek_title": "related publication 1",
-                "rek_created_date": "2017-07-15T11:49:38Z",
-                "rek_display_type_lookup": "Research Report"
-            },
-            "rek_related_publications_order": 1
-        },
-        {
-            "rek_related_publications_id": 1258088,
-            "rek_related_publications_pid": "UQ:137936",
-            "rek_related_publications": {
-                "rek_pid": "UQ:12345",
-                "rek_title": "related publication 2",
-                "rek_created_date": "2017-07-15T11:49:38Z",
-                "rek_display_type_lookup": "Research Report"
-            },
-            "rek_related_publications_order": 2
+            "rek_has_derivations": "UQ:313292",
+            "rek_has_derivations_pid": "UQ:296498",
+            "rek_has_derivations_order": 1,
+            "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools"
         }
-    ],
-    "fez_record_search_key_isderivationof": [
-        {
-            "rek_isderivationof_id": 1258088,
-            "rek_isderivationof_pid": "UQ:137936",
-            "rek_isderivationof": {
-                "rek_pid": "UQ:33333",
-                "rek_title": "available version 2",
-                "rek_created_date": "2016-03-20T11:49:38Z",
-                "rek_display_type_lookup": "Book"
-            },
-            "rek_isderivationof_order": 1
-        },
     ],
     "fez_record_search_key_refereed": {
         "rek_refereed_id": 2587133,

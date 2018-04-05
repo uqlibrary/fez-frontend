@@ -1,17 +1,19 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
+import {pathConfig} from 'config/routes';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import DateCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DateCitationView';
-import CitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/CitationView';
-import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
+// import DateCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DateCitationView';
+// import CitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/CitationView';
+import {Link} from 'react-router-dom';
 
 export default class RelatedPublications extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
         title: PropTypes.string.isRequired,
-        fields: PropTypes.array.isRequired,
+        field: PropTypes.string.isRequired,
+        subKey: PropTypes.string.isRequired,
         showPublicationTitle: PropTypes.bool
     };
 
@@ -19,20 +21,22 @@ export default class RelatedPublications extends PureComponent {
         showPublicationTitle: false
     }
 
-    constructor(props) {
-        super(props);
-    }
-
-    renderList = (list) => {
+    renderList = (list, subKey) => {
         return(
             <ul className={'publicationList'}>
                 {
-                    list.map((item, index)=> {
+                    list.sort((item1, item2) => (
+                        item1[subKey + '_order'] - item2[subKey + '_order']
+                    )).map((item, index)=> {
                         return (
                             <li key={`related-publications-${index}`}>
-                                <PublicationCitation publication={item} actions={this.props.actions} hideCitation />
-                                <CitationView suffix={' '} value={item.rek_display_type_lookup} className={'displayType'} />
-                                <DateCitationView prefix={'(' + locale.viewRecord.sections.relatedPublications.depositedBy + ' '} suffix={')'} format={'DD-MM-YYYY'} date={item.rek_created_date} />
+                                {
+                                    this.renderTitle(item, subKey)
+                                }
+                                {/*
+                                    <CitationView suffix={' '} value={item.rek_display_type_lookup} className={'displayType'} />
+                                    <DateCitationView prefix={'(' + locale.viewRecord.sections.relatedPublications.depositedBy + ' '} suffix={')'} format={'DD-MM-YYYY'} date={item.rek_created_date} />
+                                */}
                             </li>
                         );
                     })
@@ -42,30 +46,19 @@ export default class RelatedPublications extends PureComponent {
         );
     }
 
-    getPublications = (publications, subKey) => {
-        const list = [];
-        if (Array.isArray(publications)) {
-            publications.sort((publication1, publication2) => (
-                publication1[subKey + '_order'] - publication2[subKey + '_order']
-            )).map((publication) => {
-                publication[subKey] && list.push(publication[subKey]);
-            });
-        }
-
-        return list;
+    viewRecord = (pid) => {
+        this.props.actions.loadRecordToView(pid);
     }
 
-    renderRelatedPublications = (publication, fields = []) => {
-        let list = [];
-        fields.map(item => {
-            list = list.concat(this.getPublications(publication[item.field], item.subKey));
-        });
-
-        return this.renderList(list);
+    renderTitle = (item, subKey) => {
+        const pid = item[subKey];
+        return (
+            <Link to={pathConfig.records.view(pid)} onClick={()=>this.viewRecord(pid)}>{item[subKey + '_lookup']}</Link>
+        );
     }
 
     render() {
-        const {publication, fields, title, showPublicationTitle} = this.props;
+        const {publication, field, subKey, title, showPublicationTitle} = this.props;
 
         return (
             <StandardCard title={title} className={'relatedPublications'}>
@@ -77,7 +70,8 @@ export default class RelatedPublications extends PureComponent {
                         </div>
                 }
                 {
-                    this.renderRelatedPublications(publication, fields)
+                    publication[field] &&
+                    this.renderList(publication[field], subKey)
                 }
             </StandardCard>
         );
