@@ -31,7 +31,6 @@ function setup(testProps, isShallow = true) {
 
 describe('Application component', () => {
     let account, author;
-
     beforeEach(() => {
         account =  {
             "id": "uqauthor1",
@@ -216,6 +215,4 @@ describe('Application component', () => {
         }, false);
         expect(testMethod).toHaveBeenCalledWith();
     });
-
-
 });

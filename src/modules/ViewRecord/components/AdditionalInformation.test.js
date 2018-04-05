@@ -10,7 +10,7 @@ function setup(testProps, isShallow = true){
 }
 
 describe('Additional Information Component ', () => {
-    it('should render component with empty publication', () => {
+    it('should not render component with empty publication', () => {
         const wrapper = setup({publication: {}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -125,6 +125,12 @@ describe('Additional Information Component ', () => {
 
     it('should render component with video document', () => {
         const wrapper = setup({publication: records.videoDocument});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render oa status value link in the component with thesis', () => {
+        records.thesis.fez_record_search_key_oa_status.rek_oa_status_lookup = 'File (Author Post-print)';
+        const wrapper = setup({publication: records.thesis});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

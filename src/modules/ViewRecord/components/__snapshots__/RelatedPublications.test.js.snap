@@ -809,10 +809,3 @@ exports[`Related publications Component  should render component 1`] = `
   </MemoryRouter>
 </Provider>
 `;
-
-exports[`Related publications Component  should render component with empty data 1`] = `
-<StandardCard
-  className="relatedPublications"
-  title=""
-/>
-`;

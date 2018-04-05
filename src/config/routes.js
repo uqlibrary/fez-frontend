@@ -6,7 +6,7 @@ export const pathConfig =  {
     index: '/',
     dashboard: '/dashboard',
     browse: '/browse',
-    about: '/about',
+    contact: '/contact',
     hdrSubmission: '/rhdsubmission_new',
     sbsSubmission: '/sbslodge_new',
     records: {
@@ -20,6 +20,10 @@ export const pathConfig =  {
             results: '/records/add/results',
             new: '/records/add/new',
         }
+    },
+    dataset: {
+        mine: `${fullPath}/my_research_data_claimed.php`,
+        add: `${fullPath}/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315`,
     },
     collection: {
         view: (pid) => (`${fullPath}/collection/${pid}`),
@@ -61,11 +65,15 @@ export const pathConfig =  {
             link: '/author-identifiers/google-scholar/link',
             // unlink: '/author-identifiers/google-scholar/link'
         }
+    },
+    legacyEspace: `${fullPath}/my_research_claimed.php`,
+    authorStatistics: {
+        url: (id) => `https://app.library.uq.edu.au/#/authors/${id}`
     }
 };
 
 // a duplicate list of routes for
-const flattedPathConfig = ['/', '/dashboard', '/browse', '/about', '/rhdsubmission_new', '/sbslodge_new',
+const flattedPathConfig = ['/', '/dashboard', '/browse', '/contact', '/rhdsubmission_new', '/sbslodge_new',
     '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
     '/admin/masquerade', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
 
@@ -79,8 +87,8 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
     const pid = ':pid(UQ:\\d+)';
     const publicPages = [
         {
-            path: pathConfig.about,
-            render: () => components.StandardPage({...locale.pages.about})
+            path: pathConfig.contact,
+            render: () => components.StandardPage({...locale.pages.contact})
         },
         {
             path: pathConfig.browse,
@@ -220,8 +228,13 @@ export const getMenuConfig = (account, disabled) => {
             public: true
         },
         {
-            linkTo: pathConfig.about,
-            ...locale.menu.about,
+            linkTo: pathConfig.contact,
+            ...locale.menu.contact,
+            public: true
+        },
+        {
+            linkTo: pathConfig.legacyEspace,
+            ...locale.menu.legacyEspace,
             public: true
         }
     ];
@@ -254,12 +267,24 @@ export const getMenuConfig = (account, disabled) => {
                 ...locale.menu.myResearch
             },
             {
+                linkTo: pathConfig.dataset.mine,
+                ...locale.menu.myDatasets
+            },
+            {
                 linkTo: pathConfig.records.possible,
                 ...locale.menu.claimPublication
             },
             {
                 linkTo: pathConfig.records.add.find,
                 ...locale.menu.addMissingRecord
+            },
+            {
+                linkTo: pathConfig.dataset.add,
+                ...locale.menu.addDataset
+            },
+            {
+                linkTo: pathConfig.authorStatistics.url(account.id),
+                ...locale.menu.authorStatistics
             },
             {
                 divider: true,

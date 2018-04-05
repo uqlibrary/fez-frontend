@@ -16,17 +16,16 @@ export default {
             availableVersions: 'Available versions',
             files: {
                 title: 'Files',
-                fileName: 'Filename',
+                fileName: 'File name',
                 description: 'Description',
                 size: 'Size',
-                embargoDate: 'Embargoed until [embargoDate]',
-                culturalSensitivityStatement: 'Cultural Sensitivity Statement - Be advised, that some files may contain content which is of a sensitive nature to some cultures or tastes.',
+                culturalSensitivityStatement: 'Cultural Sensitivity Statement - Be advised that some files may contain content which is of a sensitive nature to some cultures or tastes.',
                 preview: {
                     videoTitle: 'Video preview',
                     imageTitle: 'Image preview',
                     openInNewWindow: 'Open file in a new window',
                     close: 'Close',
-                    browserNotSupportVideoTagMsg: 'Your browser does not support the video tag.'
+                    errorMessage: 'Your browser does not support the video tag.'
                 },
             },
             links: {

@@ -60,6 +60,10 @@ export default class RelatedPublications extends PureComponent {
     render() {
         const {publication, field, subKey, title, showPublicationTitle} = this.props;
 
+        if (!publication[field] || publication[field].length === 0) {
+            return null;
+        }
+
         return (
             <StandardCard title={title} className={'relatedPublications'}>
                 {
