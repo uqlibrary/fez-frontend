@@ -143,6 +143,21 @@
     }
   }
 
+  .relatedPublications .publicationList {
+    .displayType {
+      font-style: italic;
+    }
+
+    div {
+      display: inline;
+    }
+
+    h3 {
+      display: inline;
+      font-size: 1em !important
+    }
+  }
+
   .dataColumn {
     font-weight: $text-weight-normal;
     white-space: normal !important;

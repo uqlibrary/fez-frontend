@@ -87,6 +87,7 @@ exports[`MyRecords test renders active filters 1`] = `
               "Display type": "Publication type",
             }
           }
+          showOpenAccessFilter={true}
         />
       </StandardRighthandCard>
     </div>
@@ -372,6 +373,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
               "Display type": "Publication type",
             }
           }
+          showOpenAccessFilter={true}
         />
       </StandardRighthandCard>
     </div>
