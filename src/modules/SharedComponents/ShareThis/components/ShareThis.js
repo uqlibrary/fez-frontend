@@ -19,25 +19,28 @@ export default class ShareThis extends React.Component {
             script.async = true;
             document.head.appendChild(script);
 
+            this.addShareThisConfigToHead();
+
             this.addResearchGateButton();
         }
-
-        this.shareThisConfigInHead();
     }
 
     componentWillUnmount() {
-        /* remove the script so we can reload it when user returns via the back button  */
+        /* remove the scripts so we can reload them when user returns via the back button  */
+        const scriptShareThisHeader = document.getElementById('shareThisHeader');
+        scriptShareThisHeader.parentNode.removeChild(scriptShareThisHeader);
+
         const scriptShareThis = document.getElementById('shareThisScript');
         scriptShareThis.parentNode.removeChild(scriptShareThis);
     }
 
-    shareThisConfigInHead() {
+    addShareThisConfigToHead() {
+        /* from https://www.addtoany.com/ext/google_analytics */
         const code = '' +
             'var a2a_config = a2a_config || {}; \n' +
             'a2a_config.callbacks = a2a_config.callbacks || [];\n' +
             'a2a_config.callbacks.push({\n' +
             '    share: function(data) {\n' +
-            '        // Track shares in Google Analytics with Google Tag Manager\n' +
             '        dataLayer.push({\n' +
             '            "event": "AddToAnyShare", \n' +
             '            "socialNetwork": "AddToAny", \n' +
@@ -45,8 +48,7 @@ export default class ShareThis extends React.Component {
             '            "socialTarget": data.url\n' +
             '        });\n' +
             '    }\n' +
-            '});\n' +
-            'console.log("a2a done")\n';
+            '});\n';
 
         const script = document.createElement('script');
         script.id = 'shareThisHeader';
@@ -59,9 +61,10 @@ export default class ShareThis extends React.Component {
         link.href = 'https://www.researchgate.net/go.Share.html?url=' + encodeURI(window.location.href) + '&title=' + encodeURIComponent(document.title);
         link.rel = 'nofollow noopener noreferrer';
         link.target = '_blank';
-        link.className = 'researchgate';
+        link.className = 'researchgate'; // allows css to get image built via webpack
         link.title = 'Share this link via ResearchGate';
 
+        /* add researchGate as the second link */
         const parentDiv = document.querySelector('.shareThis div:nth-child(2)');
         const secondChild = document.querySelector('.shareThis div:nth-child(2) a:nth-child(2)');
         if (link && parentDiv && secondChild && parentDiv.insertBefore) {
