@@ -65,6 +65,10 @@ export const pathConfig =  {
             link: '/author-identifiers/google-scholar/link',
             // unlink: '/author-identifiers/google-scholar/link'
         }
+    },
+    legacyEspace: `${fullPath}/my_research_claimed.php`,
+    authorStatistics: {
+        url: (id) => `https://app.library.uq.edu.au/#/authors/${id}`
     }
 };
 
@@ -227,6 +231,11 @@ export const getMenuConfig = (account, disabled) => {
             linkTo: pathConfig.contact,
             ...locale.menu.contact,
             public: true
+        },
+        {
+            linkTo: pathConfig.legacyEspace,
+            ...locale.menu.legacyEspace,
+            public: true
         }
     ];
 
@@ -272,6 +281,10 @@ export const getMenuConfig = (account, disabled) => {
             {
                 linkTo: pathConfig.dataset.add,
                 ...locale.menu.addDataset
+            },
+            {
+                linkTo: pathConfig.authorStatistics.url(account.id),
+                ...locale.menu.authorStatistics
             },
             {
                 divider: true,

@@ -18,7 +18,7 @@ describe('Grant Information Component ', () => {
         expect(wrapper.find('Table.grantInformation').length).toEqual(1);
     });
 
-    it('should render component with empty publication', () => {
+    it('should not render component with empty publication', () => {
         const wrapper = setup({publication: {}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });

@@ -6,14 +6,14 @@ import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {PubmedCentralLink} from 'modules/SharedComponents/PubmedCentralLink';
 import DoiCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DoiCitationView';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
-import OpenAccessIcon from './partials/OpenAccessIcon';
+import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 
 import {locale} from 'locale';
 import {OPEN_ACCESS_ID_LINK_NO_DOI, OPEN_ACCESS_ID_DOI} from 'config/general';
 
 import moment from 'moment';
 
-export default class ViewRecordLinks extends PureComponent {
+export default class Links extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired
     };
@@ -116,8 +116,15 @@ export default class ViewRecordLinks extends PureComponent {
 
     render() {
         const record = this.props.publication;
-        const txt = locale.viewRecord.sections.links;
 
+        if (!(record.fez_record_search_key_link && record.fez_record_search_key_link.length > 0
+            || record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id
+            || record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi
+            || record.fez_record_search_key_oa_status && record.fez_record_search_key_oa_status.rek_oa_status === OPEN_ACCESS_ID_LINK_NO_DOI)) {
+            return null;
+        }
+
+        const txt = locale.viewRecord.sections.links;
         const pubmedCentralId = record.fez_record_search_key_pubmed_central_id
             && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id;
         const doi = record.fez_record_search_key_doi

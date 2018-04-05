@@ -10,17 +10,16 @@ export default {
             additionalInformation: 'Additional information',
             files: {
                 title: 'Files',
-                fileName: 'Filename',
+                fileName: 'File name',
                 description: 'Description',
                 size: 'Size',
-                embargoDate: 'Embargoed until [embargoDate]',
-                culturalSensitivityStatement: 'Cultural Sensitivity Statement - Be advised, that some files may contain content which is of a sensitive nature to some cultures or tastes.',
+                culturalSensitivityStatement: 'Cultural Sensitivity Statement - Be advised that some files may contain content which is of a sensitive nature to some cultures or tastes.',
                 preview: {
                     videoTitle: 'Video preview',
                     imageTitle: 'Image preview',
                     openInNewWindow: 'Open file in a new window',
                     close: 'Close',
-                    browserNotSupportVideoTagMsg: 'Your browser does not support the video tag.'
+                    errorMessage: 'Your browser does not support the video tag.'
                 },
             },
             links: {
@@ -103,7 +102,7 @@ export default {
                 fez_record_search_key_proceedings_title: 'Proceedings title',
                 fez_record_search_key_language_of_proceedings_title: 'Language of proceedings title',
                 fez_record_search_key_translated_proceedings_title: 'Translated proceedings title',
-                fez_record_search_key_org_unit_name: 'School, Department or Center',
+                fez_record_search_key_org_unit_name: 'School, Department or Centre',
                 fez_record_search_key_org_name: 'Institution',
                 fez_record_search_key_access_conditions: 'Access conditions',
                 fez_record_search_key_seo_code: 'ANZSRC Socio-Economic Objective (SEO) Code',
@@ -267,7 +266,7 @@ export default {
             'Thesis': {
                 rek_title: 'Thesis title',
                 rek_genre_type: 'Thesis type',
-                fez_record_search_key_org_unit_name: 'School, Center or Institute',
+                fez_record_search_key_org_unit_name: 'School, Centre or Institute',
                 fez_record_search_key_translated_title: 'Translated thesis title'
             },
             'Video Document': {

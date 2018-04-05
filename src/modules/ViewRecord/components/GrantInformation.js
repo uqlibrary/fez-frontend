@@ -52,6 +52,11 @@ export default class GrantInformation extends Component {
     }
 
     render() {
+        if(!this.props.publication.fez_record_search_key_grant_agency
+            || this.props.publication.fez_record_search_key_grant_agency.length === 0) {
+            return null;
+        }
+
         return (
             <StandardCard title={locale.viewRecord.sections.grantInformation}>
                 <Table selectable={false} className="grantInformation">

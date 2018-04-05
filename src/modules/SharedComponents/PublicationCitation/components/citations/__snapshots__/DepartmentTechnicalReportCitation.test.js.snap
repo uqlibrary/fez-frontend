@@ -483,14 +483,13 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=""
           value="Norman, Rosana"
         >
           <span
             className="citationAuthor"
           >
-             
             Norman, Rosana
           </span>
         </CitationView>
@@ -1082,14 +1081,13 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=""
           value="Norman, Rosana"
         >
           <span
             className="citationAuthor"
           >
-             
             Norman, Rosana
           </span>
         </CitationView>

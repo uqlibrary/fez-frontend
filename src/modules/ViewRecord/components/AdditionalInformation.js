@@ -139,7 +139,7 @@ export default class AdditionalInformation extends Component {
 
     renderContributors = (publication) => {
         return (
-            <EditorsCitationView key="additional-information-editors" publication={publication} prefix={' '} initialNumberOfEditors={publication.fez_record_search_key_contributor.length} showLink />
+            <EditorsCitationView key="additional-information-editors" publication={publication} prefix={' '} suffix={''} initialNumberOfEditors={publication.fez_record_search_key_contributor.length} showLink />
         );
     }
 
@@ -242,6 +242,10 @@ export default class AdditionalInformation extends Component {
     }
 
     render() {
+        if (!this.props.publication.rek_display_type_lookup) {
+            return null;
+        }
+
         return (
             <StandardCard title={locale.viewRecord.sections.additionalInformation}>
                 <Table selectable={false} className="additionalInformation">
