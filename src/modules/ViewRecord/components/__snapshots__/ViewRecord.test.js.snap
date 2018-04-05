@@ -8,12 +8,6 @@ exports[`Component ViewRecord  should not render components for empty record 1`]
     hideTitle={true}
     publication={Object {}}
   />
-  <Link
-    replace={false}
-    to="/records/UQ:11111"
-  >
-    Test link
-  </Link>
   <Files
     publication={Object {}}
   />
@@ -462,12 +456,6 @@ exports[`Component ViewRecord  should render record view 1`] = `
       }
     }
   />
-  <Link
-    replace={false}
-    to="/records/UQ:11111"
-  >
-    Test link
-  </Link>
   <Files
     publication={
       Object {
@@ -2847,12 +2835,6 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
       }
     }
   />
-  <Link
-    replace={false}
-    to="/records/UQ:11111"
-  >
-    Test link
-  </Link>
   <Files
     publication={
       Object {
