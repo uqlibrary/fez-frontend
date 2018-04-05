@@ -792,14 +792,13 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
           className="citationAuthor"
           key="citationAuthor_4"
           prefix=""
-          suffix=", "
+          suffix=""
           value="Woo, Kai Hui"
         >
           <span
             className="citationAuthor"
           >
             Woo, Kai Hui
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -1684,14 +1683,13 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
           className="citationAuthor"
           key="citationAuthor_4"
           prefix=""
-          suffix=", "
+          suffix=""
           value="Woo, Kai Hui"
         >
           <span
             className="citationAuthor"
           >
             Woo, Kai Hui
-            , 
           </span>
         </CitationView>
         <CitationView

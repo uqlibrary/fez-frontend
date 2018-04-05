@@ -115,6 +115,7 @@ describe('AuthorsCitationView test ', () => {
             ]
         };
         const wrapper = setup({ publication: testObject, showLink: true });
+        expect(wrapper.find('CitationView').get(0).props.suffix).toEqual('');
         expect(wrapper.find('CitationView').get(1).props.prefix).toEqual(', ');
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -161,6 +162,8 @@ describe('AuthorsCitationView test ', () => {
             ]
         };
         const wrapper = setup({ publication: testObject, showLink: true });
+        expect(wrapper.find('CitationView').get(0).props.suffix).toEqual(', ');
+        expect(wrapper.find('CitationView').get(1).props.suffix).toEqual('');
         expect(wrapper.find('CitationView').get(2).props.prefix).toEqual(', ');
         expect(toJson(wrapper)).toMatchSnapshot();
     });

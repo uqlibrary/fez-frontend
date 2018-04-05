@@ -516,14 +516,13 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
           className="citationAuthor"
           key="citationAuthor_3"
           prefix=""
-          suffix=", "
+          suffix=""
           value="Nagao S"
         >
           <span
             className="citationAuthor"
           >
             Nagao S
-            , 
           </span>
         </CitationView>
         <CitationView

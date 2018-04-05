@@ -684,14 +684,13 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
           className="citationAuthor"
           key="citationAuthor_3"
           prefix=""
-          suffix=", "
+          suffix=""
           value="Proudfoot, Heather"
         >
           <span
             className="citationAuthor"
           >
             Proudfoot, Heather
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -1619,14 +1618,13 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
             className="citationAuthor"
             key="citationAuthor_2"
             prefix=""
-            suffix=", "
+            suffix=""
             value="Smith, C"
           >
             <span
               className="citationAuthor"
             >
               Smith, C
-              , 
             </span>
           </CitationView>
           <CitationView
@@ -2682,14 +2680,13 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
             className="citationAuthor"
             key="citationAuthor_2"
             prefix=""
-            suffix=", "
+            suffix=""
             value="Smith, C"
           >
             <span
               className="citationAuthor"
             >
               Smith, C
-              , 
             </span>
           </CitationView>
           <CitationView

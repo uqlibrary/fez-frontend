@@ -2240,14 +2240,13 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
           className="citationAuthor"
           key="citationAuthor_8"
           prefix=""
-          suffix=", "
+          suffix=""
           value="Roberts-Thomson, Sarah J."
         >
           <span
             className="citationAuthor"
           >
             Roberts-Thomson, Sarah J.
-            , 
           </span>
         </CitationView>
         <CitationView

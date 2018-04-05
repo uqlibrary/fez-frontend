@@ -296,14 +296,13 @@ exports[`AuthorsCitationView test  should render component with 3 authors 1`] = 
       className="citationAuthor"
       key="citationAuthor_2"
       prefix=""
-      suffix=", "
+      suffix=""
       value="Smith, J"
     >
       <span
         className="citationAuthor"
       >
         Smith, J
-        , 
       </span>
     </CitationView>
     <CitationView
@@ -420,14 +419,13 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
         className="citationAuthor"
         key="citationAuthor_2"
         prefix=""
-        suffix=", "
+        suffix=""
         value="Smith, J"
       >
         <span
           className="citationAuthor"
         >
           Smith, J
-          , 
         </span>
       </CitationView>
     </a>
@@ -525,14 +523,13 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
       className="citationAuthor"
       key="citationAuthor_2"
       prefix=""
-      suffix=", "
+      suffix=""
       value="Smith, J"
     >
       <span
         className="citationAuthor"
       >
         Smith, J
-        , 
       </span>
     </CitationView>
     <CitationView
@@ -623,14 +620,13 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
       className="citationAuthor"
       key="citationAuthor_2"
       prefix=""
-      suffix=", "
+      suffix=""
       value="Andersen, J"
     >
       <span
         className="citationAuthor"
       >
         Andersen, J
-        , 
       </span>
     </CitationView>
     <CitationView
@@ -861,14 +857,13 @@ exports[`AuthorsCitationView test  should render component with 10 authors (8 in
       className="citationAuthor"
       key="citationAuthor_9"
       prefix=""
-      suffix=", "
+      suffix=""
       value="Andersen, J"
     >
       <span
         className="citationAuthor"
       >
         Andersen, J
-        , 
       </span>
     </CitationView>
     <CitationView
@@ -1400,14 +1395,13 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
       className="citationAuthor"
       key="citationAuthor_11"
       prefix=""
-      suffix=", "
+      suffix=""
       value="Andersen, J"
     >
       <span
         className="citationAuthor"
       >
         Andersen, J
-        , 
       </span>
     </CitationView>
     <CitationView
@@ -1649,14 +1643,13 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
       className="citationAuthor"
       key="citationAuthor_9"
       prefix=""
-      suffix=", "
+      suffix=""
       value="Andersen, J"
     >
       <span
         className="citationAuthor"
       >
         Andersen, J
-        , 
       </span>
     </CitationView>
     <CitationView

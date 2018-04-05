@@ -642,14 +642,13 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
           className="citationAuthor"
           key="citationAuthor_2"
           prefix=""
-          suffix=", "
+          suffix=""
           value="Kroese, D. P."
         >
           <span
             className="citationAuthor"
           >
             Kroese, D. P.
-            , 
           </span>
         </CitationView>
         <CitationView

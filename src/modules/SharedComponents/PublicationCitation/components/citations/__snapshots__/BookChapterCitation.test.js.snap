@@ -934,14 +934,13 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
           className="citationAuthor"
           key="citationAuthor_4"
           prefix=""
-          suffix=", "
+          suffix=""
           value="Shewan, Annette M."
         >
           <span
             className="citationAuthor"
           >
             Shewan, Annette M.
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -1882,14 +1881,13 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
             className="citationAuthor"
             key="citationAuthor_2"
             prefix=""
-            suffix=", "
+            suffix=""
             value="Smith, C"
           >
             <span
               className="citationAuthor"
             >
               Smith, C
-              , 
             </span>
           </CitationView>
           <CitationView

@@ -1601,14 +1601,13 @@ exports[`Additional Information Component  should render component with audio do
                                                         className="citationAuthor"
                                                         key="citationAuthor_4"
                                                         prefix=""
-                                                        suffix=", "
+                                                        suffix=""
                                                         value="McColl, Mary Rose"
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
                                                           McColl, Mary Rose
-                                                          , 
                                                         </span>
                                                       </CitationView>
                                                     </a>
@@ -3818,6 +3817,7 @@ exports[`Additional Information Component  should render component with book 1`]
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
@@ -4817,6 +4817,7 @@ exports[`Additional Information Component  should render component with book cha
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
@@ -6905,6 +6906,7 @@ exports[`Additional Information Component  should render component with conferen
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
@@ -7357,6 +7359,7 @@ exports[`Additional Information Component  should render component with conferen
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
@@ -8591,6 +8594,7 @@ exports[`Additional Information Component  should render component with data col
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Contact name"
@@ -10735,6 +10739,7 @@ exports[`Additional Information Component  should render component with design d
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Consultant(s)"
@@ -12233,6 +12238,7 @@ exports[`Additional Information Component  should render component with generic 
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
@@ -12699,6 +12705,7 @@ exports[`Additional Information Component  should render component with journal 
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
@@ -16506,14 +16513,13 @@ exports[`Additional Information Component  should render component with journal 
                                                         className="citationAuthor"
                                                         key="citationAuthor_8"
                                                         prefix=""
-                                                        suffix=", "
+                                                        suffix=""
                                                         value="Roberts-Thomson, Sarah J."
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
                                                           Roberts-Thomson, Sarah J.
-                                                          , 
                                                         </span>
                                                       </CitationView>
                                                     </a>
@@ -21573,6 +21579,7 @@ exports[`Additional Information Component  should render component with manuscri
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Contributor"
@@ -25596,6 +25603,7 @@ exports[`Additional Information Component  should render component with referenc
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"

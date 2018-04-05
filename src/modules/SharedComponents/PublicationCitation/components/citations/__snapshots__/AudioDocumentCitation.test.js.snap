@@ -844,14 +844,13 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
           className="citationAuthor"
           key="citationAuthor_4"
           prefix=""
-          suffix=", "
+          suffix=""
           value="McColl, Mary Rose"
         >
           <span
             className="citationAuthor"
           >
             McColl, Mary Rose
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -1778,14 +1777,13 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
           className="citationAuthor"
           key="citationAuthor_4"
           prefix=""
-          suffix=", "
+          suffix=""
           value="McColl, Mary Rose"
         >
           <span
             className="citationAuthor"
           >
             McColl, Mary Rose
-            , 
           </span>
         </CitationView>
         <CitationView

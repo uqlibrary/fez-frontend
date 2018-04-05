@@ -1234,14 +1234,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
           className="citationAuthor"
           key="citationAuthor_4"
           prefix=""
-          suffix=", "
+          suffix=""
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
             Hugenholtz, Philip
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -2626,14 +2625,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           className="citationAuthor"
           key="citationAuthor_4"
           prefix=""
-          suffix=", "
+          suffix=""
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
             Hugenholtz, Philip
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -4014,14 +4012,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           className="citationAuthor"
           key="citationAuthor_4"
           prefix=""
-          suffix=", "
+          suffix=""
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
             Hugenholtz, Philip
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -6651,14 +6648,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           className="citationAuthor"
           key="citationAuthor_4"
           prefix=""
-          suffix=", "
+          suffix=""
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
             Hugenholtz, Philip
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -8029,14 +8025,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           className="citationAuthor"
           key="citationAuthor_4"
           prefix=""
-          suffix=", "
+          suffix=""
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
             Hugenholtz, Philip
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -9347,14 +9342,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           className="citationAuthor"
           key="citationAuthor_4"
           prefix=""
-          suffix=", "
+          suffix=""
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
             Hugenholtz, Philip
-            , 
           </span>
         </CitationView>
         <CitationView
