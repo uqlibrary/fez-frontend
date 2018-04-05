@@ -35,11 +35,13 @@ export default class AdditionalInformation extends Component {
     }
 
     renderList = (list, subkey, getLink) => {
+        const formatDetectionMetaTag = subkey === 'rek_issn' ? {'x-ms-format-detection': 'none'} : {};
+
         return (
             <ul key={subkey}>
                 {
                     list.map((item, index) => (
-                        <li key={`${subkey}-${index}`}>
+                        <li key={`${subkey}-${index}`} {...formatDetectionMetaTag}>
                             {(() => {
                                 const data = this.getData(item, subkey);
                                 if (getLink) {
@@ -118,12 +120,12 @@ export default class AdditionalInformation extends Component {
     }
 
     renderLicense = (cvoId, lookup) => {
-        const licenseLooup = this.renderLink(pathConfig.list.license(cvoId), lookup);
+        const licenseLookup = this.renderLink(pathConfig.list.license(cvoId), lookup);
         const creativeCommonLogo =  viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
 
         return (
             <span>
-                {licenseLooup}
+                {licenseLookup}
                 { creativeCommonLogo &&
                     <div><ExternalLink className={'fez-icon license ' + creativeCommonLogo.className} href={creativeCommonLogo.url} /></div>
                 }

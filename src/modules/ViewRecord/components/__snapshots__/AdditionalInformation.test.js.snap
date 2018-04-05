@@ -4389,7 +4389,9 @@ exports[`Additional Information Component  should render component with book cha
       <ViewRecordTableRow
         data={
           <ul>
-            <li>
+            <li
+              x-ms-format-detection="none"
+            >
               2214-8019
             </li>
           </ul>
@@ -6456,10 +6458,14 @@ exports[`Additional Information Component  should render component with conferen
       <ViewRecordTableRow
         data={
           <ul>
-            <li>
+            <li
+              x-ms-format-detection="none"
+            >
               1477-9137
             </li>
-            <li>
+            <li
+              x-ms-format-detection="none"
+            >
               0021-9533
             </li>
           </ul>
@@ -12712,10 +12718,14 @@ exports[`Additional Information Component  should render component with journal 
       <ViewRecordTableRow
         data={
           <ul>
-            <li>
+            <li
+              x-ms-format-detection="none"
+            >
               0025-181X
             </li>
-            <li>
+            <li
+              x-ms-format-detection="none"
+            >
               0938-8249
             </li>
           </ul>
@@ -18912,7 +18922,9 @@ exports[`Additional Information Component  should render component with journal 
                                       <ViewRecordTableRow
                                         data={
                                           <ul>
-                                            <li>
+                                            <li
+                                              x-ms-format-detection="none"
+                                            >
                                               1477-9137
                                             </li>
                                           </ul>
@@ -19023,6 +19035,7 @@ exports[`Additional Information Component  should render component with journal 
                                                 >
                                                   <li
                                                     key="rek_issn-0"
+                                                    x-ms-format-detection="none"
                                                   >
                                                     1477-9137
                                                   </li>
@@ -23825,7 +23838,9 @@ exports[`Additional Information Component  should render component with newspape
       <ViewRecordTableRow
         data={
           <ul>
-            <li>
+            <li
+              x-ms-format-detection="none"
+            >
               1477-9137
             </li>
           </ul>
