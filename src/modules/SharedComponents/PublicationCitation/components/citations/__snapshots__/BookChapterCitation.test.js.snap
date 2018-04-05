@@ -891,14 +891,13 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Sandhu, Gurveen K."
         >
           <span
             className="citationAuthor"
           >
-             
             Sandhu, Gurveen K.
             , 
           </span>
@@ -906,14 +905,13 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Milevskiy, Michael J.G."
         >
           <span
             className="citationAuthor"
           >
-             
             Milevskiy, Michael J.G.
             , 
           </span>
@@ -921,14 +919,13 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Wilson, Wesley"
         >
           <span
             className="citationAuthor"
           >
-             
             Wilson, Wesley
             , 
           </span>
@@ -936,16 +933,14 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=" "
-          suffix=", "
+          prefix=""
+          suffix=""
           value="Shewan, Annette M."
         >
           <span
             className="citationAuthor"
           >
-             
             Shewan, Annette M.
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -1871,14 +1866,13 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
           <CitationView
             className="citationAuthor"
             key="citationAuthor_1"
-            prefix=" "
+            prefix=""
             suffix=", "
             value="Smith, A"
           >
             <span
               className="citationAuthor"
             >
-               
               Smith, A
               , 
             </span>
@@ -1886,16 +1880,14 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
           <CitationView
             className="citationAuthor"
             key="citationAuthor_2"
-            prefix=" "
-            suffix=", "
+            prefix=""
+            suffix=""
             value="Smith, C"
           >
             <span
               className="citationAuthor"
             >
-               
               Smith, C
-              , 
             </span>
           </CitationView>
           <CitationView

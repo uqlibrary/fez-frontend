@@ -108,7 +108,7 @@ export default {
                 fez_record_search_key_proceedings_title: 'Proceedings title',
                 fez_record_search_key_language_of_proceedings_title: 'Language of proceedings title',
                 fez_record_search_key_translated_proceedings_title: 'Translated proceedings title',
-                fez_record_search_key_org_unit_name: 'School, Department or Center',
+                fez_record_search_key_org_unit_name: 'School, Department or Centre',
                 fez_record_search_key_org_name: 'Institution',
                 fez_record_search_key_access_conditions: 'Access conditions',
                 fez_record_search_key_seo_code: 'ANZSRC Socio-Economic Objective (SEO) Code',
@@ -272,7 +272,7 @@ export default {
             'Thesis': {
                 rek_title: 'Thesis title',
                 rek_genre_type: 'Thesis type',
-                fez_record_search_key_org_unit_name: 'School, Center or Institute',
+                fez_record_search_key_org_unit_name: 'School, Centre or Institute',
                 fez_record_search_key_translated_title: 'Translated thesis title'
             },
             'Video Document': {
@@ -1127,7 +1127,7 @@ export default {
                     order: 10
                 },
                 {
-                    field: 'fez_record_search_key_end_date',
+                    field: 'fez_record_search_key_end_page',
                     order: 11
                 },
                 {
