@@ -11,7 +11,6 @@ import PublicationDetails from './PublicationDetails';
 import AdditionalInformation from './AdditionalInformation';
 import GrantInformation from './GrantInformation';
 import Links from './Links';
-import {routes} from 'config';
 
 export default class ViewRecord extends PureComponent {
     static propTypes = {

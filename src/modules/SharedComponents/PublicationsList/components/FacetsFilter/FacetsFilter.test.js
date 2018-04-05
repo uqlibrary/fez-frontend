@@ -575,10 +575,10 @@ describe('FacetsFilter ', () => {
     it('should set ranges values if _handleYearPublishedRangeFacet is called', () => {
         const wrapper = setup({});
         wrapper.instance()._handleYearPublishedRangeFacet('Year')({from: 2000, to: 2010});
-        expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {Year: {from: 2000, to: 2010}}});
+        expect(wrapper.state().activeFacets).toEqual({"filters": {}, "ranges": {"Year": {"from": 2000, "to": 2010}}, "showOpenAccessOnly": false});
 
         wrapper.instance()._handleYearPublishedRangeFacet('Year')({from: null, to: null});
-        expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}});
+        expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}, "showOpenAccessOnly": false});
     });
 
     it('should set ranges values if _handleYearPublishedRangeFacet is called', () => {

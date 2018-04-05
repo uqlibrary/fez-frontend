@@ -88,6 +88,7 @@ export default class FacetsFilter extends React.PureComponent {
         const activeFacets = {
             filters: {...this.state.activeFacets.filters},
             ranges: {...this.state.activeFacets.ranges},
+            showOpenAccessOnly: !!this.state.activeFacets.showOpenAccessOnly
         };
 
         if (!range.to && !range.from) {
@@ -184,7 +185,7 @@ export default class FacetsFilter extends React.PureComponent {
                             return (
                                 <ListItem
                                     primaryText={item.title}
-                                    open={this.state.activeFacets.filters[item.facetTitle] && true}
+                                    {...(this.state.activeFacets.filters[item.facetTitle] ? {open: true} : {})}
                                     disabled={this.props.disabled}
                                     className={'facetsCategory ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
                                     primaryTogglesNestedList
@@ -196,7 +197,7 @@ export default class FacetsFilter extends React.PureComponent {
                     <DateRange
                         itemClassName="dateRange facetsCategory"
                         subitemClassName="dateRange facetsLink"
-                        open={this.state.activeFacets.ranges[yearPublishedCategory] && true}
+                        {...(this.state.activeFacets.ranges[yearPublishedCategory] ? {open: true} : {})}
                         value={this.state.activeFacets.ranges.hasOwnProperty(yearPublishedCategory) ? this.state.activeFacets.ranges[yearPublishedCategory] : {}}
                         disabled={this.props.disabled}
                         onChange={this._handleYearPublishedRangeFacet(yearPublishedCategory)}
@@ -207,7 +208,7 @@ export default class FacetsFilter extends React.PureComponent {
                         <OpenAccessFilter
                             itemClassName="facetsCategory openAccessOnly"
                             subitemClassName="facetsLink openAccessOnly"
-                            open={this.state.activeFacets.showOpenAccessOnly && true}
+                            {...(!!this.state.activeFacets.showOpenAccessOnly ? {open: true} : {})}
                             value={this.state.activeFacets.showOpenAccessOnly}
                             disabled={this.props.disabled}
                             onChange={this._handleOpenAccessFilter}
