@@ -16,9 +16,7 @@ exports[`Component ViewRecord  should not render components for empty record 1`]
     publication={Object {}}
   />
   <RelatedPublications
-    className="relatedPublications"
-    publication={Object {}}
-    searchKey={
+    childrenSearchKey={
       Object {
         "key": "fez_record_search_key_has_related_datasets",
         "order": "rek_has_related_datasets_order",
@@ -26,6 +24,8 @@ exports[`Component ViewRecord  should not render components for empty record 1`]
         "title": "rek_has_related_datasets_lookup",
       }
     }
+    className="relatedPublications"
+    publication={Object {}}
     showPublicationTitle={false}
     title="Related publications and datasets"
   />
@@ -1266,6 +1266,14 @@ exports[`Component ViewRecord  should render record view 1`] = `
     }
   />
   <RelatedPublications
+    childrenSearchKey={
+      Object {
+        "key": "fez_record_search_key_has_related_datasets",
+        "order": "rek_has_related_datasets_order",
+        "pid": "rek_has_related_datasets",
+        "title": "rek_has_related_datasets_lookup",
+      }
+    }
     className="relatedPublications"
     publication={
       Object {
@@ -1658,14 +1666,6 @@ exports[`Component ViewRecord  should render record view 1`] = `
         "rek_updated_date_xsdmf_id": 3678,
         "rek_wok_doc_type": "MC",
         "rek_wok_doc_type_xsdmf_id": 12551,
-      }
-    }
-    searchKey={
-      Object {
-        "key": "fez_record_search_key_has_related_datasets",
-        "order": "rek_has_related_datasets_order",
-        "pid": "rek_has_related_datasets",
-        "title": "rek_has_related_datasets_lookup",
       }
     }
     showPublicationTitle={false}
@@ -4447,6 +4447,14 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
     }
   />
   <RelatedPublications
+    childrenSearchKey={
+      Object {
+        "key": "fez_record_search_key_has_related_datasets",
+        "order": "rek_has_related_datasets_order",
+        "pid": "rek_has_related_datasets",
+        "title": "rek_has_related_datasets_lookup",
+      }
+    }
     className="relatedPublications"
     publication={
       Object {
@@ -4839,14 +4847,6 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
         "rek_updated_date_xsdmf_id": 3678,
         "rek_wok_doc_type": "MC",
         "rek_wok_doc_type_xsdmf_id": 12551,
-      }
-    }
-    searchKey={
-      Object {
-        "key": "fez_record_search_key_has_related_datasets",
-        "order": "rek_has_related_datasets_order",
-        "pid": "rek_has_related_datasets",
-        "title": "rek_has_related_datasets_lookup",
       }
     }
     showPublicationTitle={false}
