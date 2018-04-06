@@ -137,11 +137,11 @@ export default {
         dashboard: {
             loading: 'Loading your dashboard...',
             header: {
-                help: {
-                    title: 'Your dashboard',
-                    text: 'Your profile help....',
-                    buttonLabel: 'OK'
-                },
+                // help: {
+                //     title: 'Your dashboard',
+                //     text: 'Your profile help....',
+                //     buttonLabel: 'OK'
+                // },
                 dashboardArticleCount: {
                     yearSeparator: ' to ',
                     countTitle: 'eSpace articles from'
@@ -244,11 +244,11 @@ export default {
             },
             facetsFilter: {
                 title: 'Refine results',
-                help: {
-                    title: 'Refining your results',
-                    text: 'Help about ....',
-                    buttonLabel: 'Ok'
-                },
+                // help: {
+                //     title: 'Refining your results',
+                //     text: 'Help about ....',
+                //     buttonLabel: 'Ok'
+                // },
                 excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
                 renameFacetsList: {'Display type': 'Publication type'}
             }
@@ -264,20 +264,20 @@ export default {
                         <p>No publications were automatically matched for you to claim.</p>
                     </div>
                 ),
-                help: {
-                    title: 'No matching records found',
-                    text: 'Why search didn\'t return any items....',
-                    buttonLabel: 'Ok'
-                }
+                // help: {
+                //     title: 'No matching records found',
+                //     text: 'Why search didn\'t return any items....',
+                //     buttonLabel: 'Ok'
+                // }
             },
             searchResults: {
                 title: 'Possibly your publications',
                 text: '[resultsCount] out of [totalCount] potential match(es) displayed. Select any item to claim it as your work.',
-                help: {
-                    title: 'Possibly your publications',
-                    text: 'Help about ....',
-                    buttonLabel: 'Ok'
-                },
+                // help: {
+                //     title: 'Possibly your publications',
+                //     text: 'Help about ....',
+                //     buttonLabel: 'Ok'
+                // },
                 hide: 'Not mine',
                 claim: 'Claim this publication',
                 inProgress: 'In progress'
@@ -301,11 +301,11 @@ export default {
             },
             facetsFilter: {
                 title: 'Refine results',
-                help: {
-                    title: 'Refining your results',
-                    text: 'Help about ....',
-                    buttonLabel: 'Ok'
-                },
+                // help: {
+                //     title: 'Refining your results',
+                //     text: 'Help about ....',
+                //     buttonLabel: 'Ok'
+                // },
                 excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
                 renameFacetsList: {'Display type': 'Publication type'}
             }
@@ -320,11 +320,11 @@ export default {
             step1: {
                 title: 'Search for your publication',
                 text: 'Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.',
-                help: {
-                    title: 'Search for your publication',
-                    text: 'Help about search....',
-                    buttonLabel: 'Ok'
-                },
+                // help: {
+                //     title: 'Search for your publication',
+                //     text: 'Help about search....',
+                //     buttonLabel: 'Ok'
+                // },
                 fieldLabels: {
                     search: 'Enter DOI, Pubmed Id or Title'
                 },
@@ -335,21 +335,21 @@ export default {
                 noResultsFound: {
                     title: 'No matching publications found',
                     text: 'We were unable to match any results to your search criteria. Please search again or create a new eSpace record.',
-                    help: {
-                        title: 'No matching records found',
-                        text: 'Why search didn\'t return any items....',
-                        buttonLabel: 'Ok'
-                    }
+                    // help: {
+                    //     title: 'No matching records found',
+                    //     text: 'Why search didn\'t return any items....',
+                    //     buttonLabel: 'Ok'
+                    // }
                 },
                 searchResults: {
                     title: 'Possible matches found',
                     resultsText: 'Top [noOfResults] potential match(es) displayed for "[searchQuery]".',
                     text: 'Claim a matching publication below, refine your search or create a new eSpace record.',
-                    help: {
-                        title: 'Possible matches found',
-                        text: 'Why search displays these items....',
-                        buttonLabel: 'Ok'
-                    },
+                    // help: {
+                    //     title: 'Possible matches found',
+                    //     text: 'Why search displays these items....',
+                    //     buttonLabel: 'Ok'
+                    // },
                     searchDashboard: {
                         title: 'Repository search',
                         recordSuffix: ' record(s)',

@@ -349,6 +349,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -976,6 +977,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -1782,6 +1784,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -2409,6 +2412,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -3211,6 +3215,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -3838,6 +3843,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -4604,6 +4610,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -5195,6 +5202,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -5931,6 +5939,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -6558,6 +6567,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -7355,6 +7365,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -7977,6 +7988,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -8719,6 +8731,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -9341,6 +9354,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",

@@ -9,7 +9,13 @@ const AvailableVersions = ({publication, showPublicationTitle = true}) => {
             publication={publication}
             title={locale.viewRecord.sections.availableVersions}
             className="availableVersions"
-            searchKey={{
+            parentSearchKey={{
+                key: 'fez_record_search_key_isderivationof',
+                pid: 'rek_isderivationof',
+                title: 'rek_isderivationof_lookup',
+                order: 'rek_isderivationof_order'
+            }}
+            childrenSearchKey={{
                 key: 'fez_record_search_key_has_derivations',
                 pid: 'rek_has_derivations',
                 title: 'rek_has_derivations_lookup',

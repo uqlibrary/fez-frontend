@@ -501,13 +501,6 @@ exports[`Component FixRecord should render fix record form 1`] = `
       />
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Request a change",
-          }
-        }
         title="Suggest a correction"
       >
         <Field
@@ -534,13 +527,6 @@ exports[`Component FixRecord should render fix record form 1`] = `
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Upload files",
-          }
-        }
         title="Upload files"
       >
         <div>
@@ -1613,13 +1599,6 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
       />
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Request a change",
-          }
-        }
         title="Suggest a correction"
       >
         <Field
@@ -1646,13 +1625,6 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Upload files",
-          }
-        }
         title="Upload files"
       >
         <div>
@@ -2208,13 +2180,6 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
       />
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Request a change",
-          }
-        }
         title="Suggest a correction"
       >
         <Field
@@ -2241,13 +2206,6 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Upload files",
-          }
-        }
         title="Upload files"
       >
         <div>
@@ -2769,13 +2727,6 @@ exports[`Component FixRecord should render unclaim form 1`] = `
     </StandardCard>
     <StandardCard
       className=""
-      help={
-        Object {
-          "buttonLabel": "OK",
-          "text": "Enter the text that will help people here",
-          "title": "Unclaim a record",
-        }
-      }
       title="Remove this record from my profile"
     >
       <Alert

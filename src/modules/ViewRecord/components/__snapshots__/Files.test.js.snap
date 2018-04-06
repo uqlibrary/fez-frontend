@@ -155,11 +155,158 @@ exports[`Files Component  should render component 1`] = `
     className=""
     title="Files"
   >
+    <Table
+      allRowsSelected={false}
+      className="files horizontal"
+      fixedFooter={true}
+      fixedHeader={true}
+      height="inherit"
+      multiSelectable={false}
+      selectable={false}
+    >
+      <TableHeader
+        adjustForCheckbox={false}
+        className="header"
+        displaySelectAll={false}
+        enableSelectAll={true}
+        selectAllSelected={false}
+      >
+        <TableRow
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
+        >
+          <TableHeaderColumn
+            className="filetype"
+          />
+          <TableHeaderColumn
+            className="filename"
+          >
+            File name
+          </TableHeaderColumn>
+          <TableHeaderColumn
+            className="description is-hidden-mobile"
+          >
+            Description
+          </TableHeaderColumn>
+          <TableHeaderColumn
+            className="align-right is-hidden-mobile is-hidden-tablet-only size"
+          >
+            Size
+          </TableHeaderColumn>
+        </TableRow>
+      </TableHeader>
+      <TableBody
+        allRowsSelected={false}
+        className="data"
+        deselectOnClickaway={true}
+        displayRowCheckbox={false}
+        multiSelectable={false}
+        preScanRows={true}
+        selectable={true}
+        style={Object {}}
+      >
+        <TableRow
+          className="file"
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          key="file-3"
+          selectable={true}
+          striped={false}
+        >
+          <TableRowColumn
+            className="filetype fileIcon"
+            hoverable={false}
+          >
+            <EditorInsertDriveFile />
+          </TableRowColumn>
+          <TableRowColumn
+            className="filename"
+            hoverable={false}
+          >
+            <ExternalLink
+              className="fileName"
+              href="/view/UQ:676287/UQ676287_OA.pdf"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="UQ676287_OA.pdf - undefined - undefined"
+            >
+              UQ676287_OA.pdf
+            </ExternalLink>
+          </TableRowColumn>
+          <TableRowColumn
+            className="is-hidden-mobile description"
+            hoverable={false}
+          />
+          <TableRowColumn
+            className="align-right is-hidden-mobile is-hidden-tablet-only size"
+            hoverable={false}
+          />
+        </TableRow>
+        <TableRow
+          className="file"
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          key="file-4"
+          selectable={true}
+          striped={false}
+        >
+          <TableRowColumn
+            className="filetype fileIcon"
+            hoverable={false}
+          >
+            <ImageImage />
+          </TableRowColumn>
+          <TableRowColumn
+            className="filename"
+            hoverable={false}
+          >
+            <ExternalLink
+              className="fileName"
+              href="/view/UQ:676287/image.jpg"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="image.jpg - testing image description - 95.49 KB"
+            >
+              image.jpg
+            </ExternalLink>
+          </TableRowColumn>
+          <TableRowColumn
+            className="is-hidden-mobile description"
+            hoverable={false}
+          >
+            testing image description
+          </TableRowColumn>
+          <TableRowColumn
+            className="align-right is-hidden-mobile is-hidden-tablet-only size"
+            hoverable={false}
+          >
+            95.49 KB
+          </TableRowColumn>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </StandardCard>
+</section>
+`;
+
+exports[`Files Component  should render cultural message 1`] = `
+<section>
+  <StandardCard
+    className=""
+    title="Files"
+  >
     <Alert
       allowDismiss={true}
       dismissAction={[MockFunction]}
       dismissTitle="Click to dismiss this alert"
-      message="Cultural Sensitivity Statement - Be advised that some files may contain content which is of a sensitive nature to some cultures or tastes."
+      message="hello"
       showLoader={false}
       type="info"
     />

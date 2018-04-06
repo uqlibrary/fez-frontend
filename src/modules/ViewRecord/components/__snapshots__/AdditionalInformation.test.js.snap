@@ -8376,6 +8376,7 @@ exports[`Additional Information Component  should render component with data col
                     "rek_isdatasetof_xsdmf_id": 16601,
                   },
                 ],
+                "fez_record_search_key_isderivationof": Array [],
                 "fez_record_search_key_ismemberof": Array [
                   Object {
                     "rek_ismemberof": "UQ:289097",
@@ -8993,6 +8994,7 @@ exports[`Additional Information Component  should render component with data col
                     "rek_isdatasetof_xsdmf_id": 16601,
                   },
                 ],
+                "fez_record_search_key_isderivationof": Array [],
                 "fez_record_search_key_ismemberof": Array [
                   Object {
                     "rek_ismemberof": "UQ:289097",

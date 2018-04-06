@@ -138,11 +138,11 @@ export default {
         editors: txt.components.editors,
         optional: {
             title: 'Optional publication details',
-            help: {
-                title: 'Optional publication details',
-                text: 'some help',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Optional publication details',
+            //     text: 'some help',
+            //     buttonLabel: 'OK'
+            // },
             fieldLabels: {
                 articleNumber: 'Article number',
                 notes: 'Notes (not publicly viewable)',

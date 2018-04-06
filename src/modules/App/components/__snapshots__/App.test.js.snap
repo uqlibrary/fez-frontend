@@ -113,12 +113,6 @@ exports[`Application component should render alert if user is not fez author 1`]
           "path": "/234234234242",
         },
         Object {
-          "linkTo": "/browse",
-          "primaryText": "Browse eSpace",
-          "public": true,
-          "secondaryText": "",
-        },
-        Object {
           "linkTo": "/contact",
           "primaryText": "Contact",
           "public": true,
@@ -291,18 +285,13 @@ exports[`Application component should render alert if user is not fez author 1`]
         render={[Function]}
       />
       <Route
-        key="route_14"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         render={[Function]}
       />
     </Switch>
@@ -425,12 +414,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "path": "/234234234242",
         },
         Object {
-          "linkTo": "/browse",
-          "primaryText": "Browse eSpace",
-          "public": true,
-          "secondaryText": "",
-        },
-        Object {
           "linkTo": "/contact",
           "primaryText": "Contact",
           "public": true,
@@ -587,18 +570,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         render={[Function]}
       />
       <Route
-        key="route_14"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         render={[Function]}
       />
     </Switch>
@@ -697,12 +675,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           "path": "/234234234242",
         },
         Object {
-          "linkTo": "/browse",
-          "primaryText": "Browse eSpace",
-          "public": true,
-          "secondaryText": "",
-        },
-        Object {
           "linkTo": "/contact",
           "primaryText": "Contact",
           "public": true,
@@ -745,29 +717,24 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         render={[Function]}
       />
       <Route
-        key="route_1"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
         component={[Function]}
         exact={true}
-        key="route_2"
+        key="route_1"
         path="/records/:pid(UQ:\\\\d+)"
       />
       <Route
-        key="route_3"
+        key="route_2"
         path="/rhdsubmission_new"
         render={[Function]}
       />
       <Route
-        key="route_4"
+        key="route_3"
         path="/sbslodge_new"
         render={[Function]}
       />
       <Route
         component={[Function]}
-        key="route_5"
+        key="route_4"
       />
     </Switch>
   </div>
@@ -889,12 +856,6 @@ exports[`Application component should render app for account with fez author wit
           "path": "/234234234242",
         },
         Object {
-          "linkTo": "/browse",
-          "primaryText": "Browse eSpace",
-          "public": true,
-          "secondaryText": "",
-        },
-        Object {
           "linkTo": "/contact",
           "primaryText": "Contact",
           "public": true,
@@ -1051,18 +1012,13 @@ exports[`Application component should render app for account with fez author wit
         render={[Function]}
       />
       <Route
-        key="route_14"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         render={[Function]}
       />
     </Switch>
@@ -1183,12 +1139,6 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "divider": true,
           "path": "/234234234242",
-        },
-        Object {
-          "linkTo": "/browse",
-          "primaryText": "Browse eSpace",
-          "public": true,
-          "secondaryText": "",
         },
         Object {
           "linkTo": "/contact",
@@ -1365,18 +1315,13 @@ exports[`Application component should render app for account with fez author wit
         render={[Function]}
       />
       <Route
-        key="route_14"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         render={[Function]}
       />
     </Switch>
@@ -1591,18 +1536,13 @@ exports[`Application component should render app for account with fez author wit
         render={[Function]}
       />
       <Route
-        key="route_14"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         render={[Function]}
       />
     </Switch>
@@ -1725,12 +1665,6 @@ exports[`Application component should render application with routing for the us
           "path": "/234234234242",
         },
         Object {
-          "linkTo": "/browse",
-          "primaryText": "Browse eSpace",
-          "public": true,
-          "secondaryText": "",
-        },
-        Object {
           "linkTo": "/contact",
           "primaryText": "Contact",
           "public": true,
@@ -1843,12 +1777,6 @@ exports[`Application component should render for anon user 1`] = `
     menuItems={
       Array [
         Object {
-          "linkTo": "/browse",
-          "primaryText": "Browse eSpace",
-          "public": true,
-          "secondaryText": "",
-        },
-        Object {
           "linkTo": "/contact",
           "primaryText": "Contact",
           "public": true,
@@ -1893,24 +1821,19 @@ exports[`Application component should render for anon user 1`] = `
         render={[Function]}
       />
       <Route
-        key="route_1"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
         component={[Function]}
         exact={true}
-        key="route_2"
+        key="route_1"
         path="/records/:pid(UQ:\\\\d+)"
       />
       <Route
         exact={true}
-        key="route_3"
+        key="route_2"
         path="/"
         render={[Function]}
       />
       <Route
-        key="route_4"
+        key="route_3"
         render={[Function]}
       />
     </Switch>
@@ -2008,29 +1931,24 @@ exports[`Application component should render thesis submission for HDR without m
         render={[Function]}
       />
       <Route
-        key="route_1"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
         component={[Function]}
         exact={true}
-        key="route_2"
+        key="route_1"
         path="/records/:pid(UQ:\\\\d+)"
       />
       <Route
-        key="route_3"
+        key="route_2"
         path="/rhdsubmission_new"
         render={[Function]}
       />
       <Route
-        key="route_4"
+        key="route_3"
         path="/sbslodge_new"
         render={[Function]}
       />
       <Route
         component={[Function]}
-        key="route_5"
+        key="route_4"
       />
     </Switch>
   </div>

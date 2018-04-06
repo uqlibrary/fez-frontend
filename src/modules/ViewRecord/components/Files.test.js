@@ -21,7 +21,12 @@ describe('Files Component ', () => {
     });
 
     it('should not render cultural message', () => {
-        const wrapper = setup({hideCulturalSensitivityStatement: true});
+        const wrapper = setup({publication: {...journalArticle, fez_record_search_key_advisory_statement: {rek_advisory_statement: 'hello'}}, hideCulturalSensitivityStatement: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render cultural message', () => {
+        const wrapper = setup({publication: {...journalArticle, fez_record_search_key_advisory_statement: {rek_advisory_statement: 'hello'}}, hideCulturalSensitivityStatement: false});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

@@ -10,13 +10,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
   >
     <StandardCard
       className=""
-      help={
-        Object {
-          "buttonLabel": "OK",
-          "text": "Enter the text that will help people here",
-          "title": "Claiming a publication",
-        }
-      }
       title="You are claiming to be an author for the following item:"
     >
       <withRouter(Connect(PublicationCitation))
@@ -1015,13 +1008,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
       />
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Additional information",
-          }
-        }
         title="Optional: Suggest changes or add links to this record"
       >
         <Field
@@ -1048,13 +1034,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Files",
-          }
-        }
         title="Optional: Upload additional files"
       >
         <Field
@@ -1116,13 +1095,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
   >
     <StandardCard
       className=""
-      help={
-        Object {
-          "buttonLabel": "OK",
-          "text": "Enter the text that will help people here",
-          "title": "Claiming a publication",
-        }
-      }
       title="You are claiming to be an author for the following item:"
     >
       <withRouter(Connect(PublicationCitation))
@@ -2106,13 +2078,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       />
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Additional information",
-          }
-        }
         title="Optional: Suggest changes or add links to this record"
       >
         <Field
@@ -2139,13 +2104,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Files",
-          }
-        }
         title="Optional: Upload additional files"
       >
         <Field
@@ -2207,13 +2165,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
   >
     <StandardCard
       className=""
-      help={
-        Object {
-          "buttonLabel": "OK",
-          "text": "Enter the text that will help people here",
-          "title": "Claiming a publication",
-        }
-      }
       title="You are claiming to be an author for the following item:"
     >
       <withRouter(Connect(PublicationCitation))
@@ -3300,13 +3251,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
       />
       <StandardCard
         className="requiredField"
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Author linking",
-          }
-        }
         title="Author linking"
       >
         <label
@@ -3449,13 +3393,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Additional information",
-          }
-        }
         title="Optional: Suggest changes or add links to this record"
       >
         <Field
@@ -3482,13 +3419,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Files",
-          }
-        }
         title="Optional: Upload additional files"
       >
         <Field
@@ -3550,13 +3480,6 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
   >
     <StandardCard
       className=""
-      help={
-        Object {
-          "buttonLabel": "OK",
-          "text": "Enter the text that will help people here",
-          "title": "Claiming a publication",
-        }
-      }
       title="You are claiming to be an author for the following item:"
     >
       <withRouter(Connect(PublicationCitation))
@@ -4643,13 +4566,6 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
       />
       <StandardCard
         className="requiredField"
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Author linking",
-          }
-        }
         title="Author linking"
       >
         <label
@@ -4792,13 +4708,6 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Additional information",
-          }
-        }
         title="Optional: Suggest changes or add links to this record"
       >
         <Field
@@ -4825,13 +4734,6 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Files",
-          }
-        }
         title="Optional: Upload additional files"
       >
         <Field
@@ -4893,13 +4795,6 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
   >
     <StandardCard
       className=""
-      help={
-        Object {
-          "buttonLabel": "OK",
-          "text": "Enter the text that will help people here",
-          "title": "Claiming a publication",
-        }
-      }
       title="You are claiming to be an author for the following item:"
     >
       <withRouter(Connect(PublicationCitation))
@@ -5987,13 +5882,6 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
       />
       <StandardCard
         className="requiredField"
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Author linking",
-          }
-        }
         title="Author linking"
       >
         <label
@@ -6136,13 +6024,6 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Additional information",
-          }
-        }
         title="Optional: Suggest changes or add links to this record"
       >
         <Field
@@ -6169,13 +6050,6 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Files",
-          }
-        }
         title="Optional: Upload additional files"
       >
         <Field
@@ -6237,13 +6111,6 @@ exports[`Component ClaimRecord  should render publication citation, error messag
   >
     <StandardCard
       className=""
-      help={
-        Object {
-          "buttonLabel": "OK",
-          "text": "Enter the text that will help people here",
-          "title": "Claiming a publication",
-        }
-      }
       title="You are claiming to be an author for the following item:"
     >
       <withRouter(Connect(PublicationCitation))
@@ -7244,13 +7111,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
   >
     <StandardCard
       className=""
-      help={
-        Object {
-          "buttonLabel": "OK",
-          "text": "Enter the text that will help people here",
-          "title": "Claiming a publication",
-        }
-      }
       title="You are claiming to be an author for the following item:"
     >
       <withRouter(Connect(PublicationCitation))
@@ -8345,13 +8205,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
       />
       <StandardCard
         className="requiredField"
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Author linking",
-          }
-        }
         title="Author linking"
       >
         <label
@@ -8494,13 +8347,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Additional information",
-          }
-        }
         title="Optional: Suggest changes or add links to this record"
       >
         <Field
@@ -8527,13 +8373,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Files",
-          }
-        }
         title="Optional: Upload additional files"
       >
         <Field
@@ -8595,13 +8434,6 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
   >
     <StandardCard
       className=""
-      help={
-        Object {
-          "buttonLabel": "OK",
-          "text": "Enter the text that will help people here",
-          "title": "Claiming a publication",
-        }
-      }
       title="You are claiming to be an author for the following item:"
     >
       <withRouter(Connect(PublicationCitation))
@@ -9688,13 +9520,6 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
       />
       <StandardCard
         className="requiredField"
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Author linking",
-          }
-        }
         title="Author linking"
       >
         <label
@@ -9837,13 +9662,6 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Additional information",
-          }
-        }
         title="Optional: Suggest changes or add links to this record"
       >
         <Field
@@ -9870,13 +9688,6 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Files",
-          }
-        }
         title="Optional: Upload additional files"
       >
         <Field
