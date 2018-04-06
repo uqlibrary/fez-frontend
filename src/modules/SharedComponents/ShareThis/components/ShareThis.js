@@ -77,7 +77,7 @@ export default class ShareThis extends PureComponent {
 
         return (
             <div className="shareThis columns is-gapless is-clearfix is-marginless" style={blockStyle}>
-                <div className="column" />
+                <div className="column is-hidden-mobile" />
                 <div className="column is-narrow a2a_kit a2a_kit_size_20 a2a_default_style">
                     <a className="a2a_button_facebook a2a_counter" />
                     <a className="a2a_button_mendeley" />

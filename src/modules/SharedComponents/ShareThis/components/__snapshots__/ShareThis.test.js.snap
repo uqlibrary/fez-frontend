@@ -10,7 +10,7 @@ exports[`Component Sharethis should render 3rd party elements with default props
   }
 >
   <div
-    className="column"
+    className="column is-hidden-mobile"
   />
   <div
     className="column is-narrow a2a_kit a2a_kit_size_20 a2a_default_style"

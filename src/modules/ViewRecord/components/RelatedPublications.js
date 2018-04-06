@@ -28,7 +28,7 @@ export default class RelatedPublications extends PureComponent {
 
     renderList = (list, searchKey, className) => {
         return(
-            <ul className={'publicationList'}>
+            <ul className="publicationList">
                 {
                     list.sort((item1, item2) => (
                         item1[searchKey.order] - item2[searchKey.order]

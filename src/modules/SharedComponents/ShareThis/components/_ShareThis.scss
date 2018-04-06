@@ -8,9 +8,11 @@ a.researchgate::before {
 
 .shareThis {
   @include mobile {
-    zoom: 1.75;
+    zoom: 2;
+    text-align: center !important;
     a {
-      margin: 6px 3px !important;
+      text-align: center !important;
+      margin: 1px !important;
     }
   }
 }
