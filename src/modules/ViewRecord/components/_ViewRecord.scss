@@ -216,11 +216,16 @@
     margin-bottom: 12px !important;
   }
   .citationCounts {
+    margin-bottom: 6px !important;
+    .citationCount {
+      word-break: normal !important;
+      white-space: nowrap !important;
+      display: inline-block !important;
+    }
     .citationOaIcon {
       width: 24px !important;
       @include mobile {
         zoom: 2;
-        margin: 0 5px !important;
       }
     }
     .citationLink {
@@ -231,10 +236,7 @@
         margin-left: 6px !important;
       }
     }
-
     .citationIcons {
-      white-space: nowrap !important;
-      height: 24px !important;
       overflow: hidden !important;
       @include mobile {
         zoom: 2;

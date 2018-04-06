@@ -7,6 +7,7 @@ a.researchgate::before {
 }
 
 .shareThis {
+  padding-bottom: 12px !important;
   @include mobile {
     zoom: 2;
     text-align: center !important;
