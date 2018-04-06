@@ -13,7 +13,7 @@ const DashboardProfile = ({authorDetails, author, history}) => {
     return (
         <div className="imageCover">
             {
-                !txt.help &&
+                txt.help &&
                 <div className="is-pulled-right">
                     <HelpIcon {...txt.help} />
                 </div>
