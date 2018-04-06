@@ -119,9 +119,9 @@ export default class Files extends Component {
             <section>
                 <StandardCard title={locale.viewRecord.sections.files.title}>
                     {
-                        !this.props.hideCulturalSensitivityStatement &&
+                        !!publication.fez_record_search_key_advisory_statement && !this.props.hideCulturalSensitivityStatement &&
                         <Alert allowDismiss type={'info'}
-                            message={locale.viewRecord.sections.files.culturalSensitivityStatement}
+                            message={publication.fez_record_search_key_advisory_statement.rek_advisory_statement || locale.viewRecord.sections.files.culturalSensitivityStatement}
                             dismissAction={this.props.setHideCulturalSensitivityStatement}/>
                     }
                     <Table selectable={false} className="file header">
