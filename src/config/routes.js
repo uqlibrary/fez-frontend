@@ -103,7 +103,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
         ...(!account ? [
             {
                 path: pathConfig.index,
-                render: () => components.Browse(locale.pages.contact),
+                render: () => components.StandardPage({...locale.pages.contact}),
                 exact: true
             }
         ] : [])];
