@@ -1137,6 +1137,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
         href="#"
         onClick={[Function]}
         onKeyPress={[Function]}
+        title="Click to show 2 more authors"
       >
         Show 2 more...
       </a>
@@ -1425,6 +1426,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
         href="#"
         onClick={[Function]}
         onKeyPress={[Function]}
+        title="Show less authors"
       >
         Show less
       </a>

@@ -77,12 +77,12 @@ export default class ShareThis extends PureComponent {
 
         return (
             <div className="shareThis columns is-gapless is-clearfix is-marginless" style={blockStyle}>
-                <div className="column" />
+                <div className="column is-hidden-mobile" />
                 <div className="column is-narrow a2a_kit a2a_kit_size_20 a2a_default_style">
+                    <a className="a2a_button_facebook a2a_counter" />
                     <a className="a2a_button_mendeley" />
                     <a className="a2a_button_twitter" />
                     <a className="a2a_button_linkedin" />
-                    <a className="a2a_button_facebook a2a_counter" />
                     <a className="a2a_button_email" />
                     <a className="a2a_button_print" />
                     <a className="a2a_dd" href="https://www.addtoany.com/share" />

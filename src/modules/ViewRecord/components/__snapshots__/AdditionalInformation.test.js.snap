@@ -557,7 +557,7 @@ exports[`Additional Information Component  should render component with audio do
                       <div>
                         <Table
                           allRowsSelected={false}
-                          className="additionalInformation"
+                          className="additionalInformation vertical"
                           fixedFooter={true}
                           fixedHeader={true}
                           height="inherit"
@@ -581,7 +581,7 @@ exports[`Additional Information Component  should render component with audio do
                               }
                             >
                               <table
-                                className="additionalInformation"
+                                className="additionalInformation vertical"
                                 style={
                                   Object {
                                     "backgroundColor": "#ffffff",
@@ -605,7 +605,7 @@ exports[`Additional Information Component  should render component with audio do
                               }
                             >
                               <table
-                                className="additionalInformation"
+                                className="additionalInformation vertical"
                                 style={
                                   Object {
                                     "backgroundColor": "#ffffff",
@@ -1049,7 +1049,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -1057,7 +1057,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -1068,7 +1068,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -1082,7 +1082,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1105,7 +1105,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -1119,7 +1119,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1659,7 +1659,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -1667,7 +1667,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -1678,7 +1678,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -1692,7 +1692,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1715,7 +1715,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -1729,7 +1729,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1774,7 +1774,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -1782,7 +1782,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -1793,7 +1793,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -1807,7 +1807,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1830,7 +1830,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -1844,7 +1844,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1895,7 +1895,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -1903,7 +1903,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -1914,7 +1914,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -1928,7 +1928,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1951,7 +1951,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -1965,7 +1965,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2024,7 +2024,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -2032,7 +2032,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -2043,7 +2043,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -2057,7 +2057,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2080,7 +2080,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -2094,7 +2094,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2149,7 +2149,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -2157,7 +2157,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -2168,7 +2168,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -2182,7 +2182,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2205,7 +2205,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -2219,7 +2219,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2260,7 +2260,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -2268,7 +2268,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -2279,7 +2279,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -2293,7 +2293,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2316,7 +2316,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -2330,7 +2330,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2375,7 +2375,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -2383,7 +2383,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -2394,7 +2394,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -2408,7 +2408,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2431,7 +2431,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -2445,7 +2445,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2509,7 +2509,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -2517,7 +2517,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -2528,7 +2528,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -2542,7 +2542,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2565,7 +2565,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -2579,7 +2579,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2685,7 +2685,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -2693,7 +2693,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -2704,7 +2704,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -2718,7 +2718,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2741,7 +2741,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -2755,7 +2755,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2830,7 +2830,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -2838,7 +2838,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -2849,7 +2849,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -2863,7 +2863,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2886,7 +2886,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -2900,7 +2900,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2976,7 +2976,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -2984,7 +2984,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -2995,7 +2995,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -3009,7 +3009,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -3032,7 +3032,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -3046,7 +3046,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -3103,7 +3103,7 @@ exports[`Additional Information Component  should render component with book 1`]
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -3842,7 +3842,7 @@ exports[`Additional Information Component  should render component with book cha
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -4964,7 +4964,7 @@ exports[`Additional Information Component  should render component with conferen
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -6515,7 +6515,7 @@ exports[`Additional Information Component  should render component with conferen
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -7551,7 +7551,7 @@ exports[`Additional Information Component  should render component with creative
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -7990,7 +7990,7 @@ exports[`Additional Information Component  should render component with data col
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -9841,7 +9841,7 @@ exports[`Additional Information Component  should render component with design d
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -10910,7 +10910,7 @@ exports[`Additional Information Component  should render component with digilib 
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -11390,7 +11390,7 @@ exports[`Additional Information Component  should render component with generic 
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -12308,7 +12308,7 @@ exports[`Additional Information Component  should render component with image 1`
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -12384,7 +12384,7 @@ exports[`Additional Information Component  should render component with journal 
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -14085,7 +14085,7 @@ exports[`Additional Information Component  should render component with journal 
                       <div>
                         <Table
                           allRowsSelected={false}
-                          className="additionalInformation"
+                          className="additionalInformation vertical"
                           fixedFooter={true}
                           fixedHeader={true}
                           height="inherit"
@@ -14109,7 +14109,7 @@ exports[`Additional Information Component  should render component with journal 
                               }
                             >
                               <table
-                                className="additionalInformation"
+                                className="additionalInformation vertical"
                                 style={
                                   Object {
                                     "backgroundColor": "#ffffff",
@@ -14133,7 +14133,7 @@ exports[`Additional Information Component  should render component with journal 
                               }
                             >
                               <table
-                                className="additionalInformation"
+                                className="additionalInformation vertical"
                                 style={
                                   Object {
                                     "backgroundColor": "#ffffff",
@@ -15247,7 +15247,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -15255,7 +15255,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -15266,7 +15266,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -15280,7 +15280,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -15303,7 +15303,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -15317,7 +15317,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -16607,7 +16607,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -16615,7 +16615,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -16626,7 +16626,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -16640,7 +16640,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -16663,7 +16663,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -16677,7 +16677,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -17760,7 +17760,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -17768,7 +17768,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -17779,7 +17779,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -17793,7 +17793,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -17816,7 +17816,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -17830,7 +17830,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -18992,7 +18992,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -19000,7 +19000,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -19011,7 +19011,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -19025,7 +19025,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19048,7 +19048,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -19062,7 +19062,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19117,7 +19117,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -19125,7 +19125,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -19136,7 +19136,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -19150,7 +19150,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19173,7 +19173,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -19187,7 +19187,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19246,7 +19246,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -19254,7 +19254,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -19265,7 +19265,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -19279,7 +19279,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19302,7 +19302,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -19316,7 +19316,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19371,7 +19371,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -19379,7 +19379,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -19390,7 +19390,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -19404,7 +19404,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19427,7 +19427,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -19441,7 +19441,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19551,7 +19551,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -19559,7 +19559,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -19570,7 +19570,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -19584,7 +19584,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19607,7 +19607,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -19621,7 +19621,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19658,7 +19658,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -19666,7 +19666,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -19677,7 +19677,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -19691,7 +19691,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19714,7 +19714,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -19728,7 +19728,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19767,7 +19767,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -19775,7 +19775,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -19786,7 +19786,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -19800,7 +19800,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19823,7 +19823,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -19837,7 +19837,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19876,7 +19876,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -19884,7 +19884,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -19895,7 +19895,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -19909,7 +19909,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19932,7 +19932,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -19946,7 +19946,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19985,7 +19985,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -19993,7 +19993,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -20004,7 +20004,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -20018,7 +20018,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20041,7 +20041,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -20055,7 +20055,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20094,7 +20094,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -20102,7 +20102,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -20113,7 +20113,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -20127,7 +20127,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20150,7 +20150,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -20164,7 +20164,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20203,7 +20203,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -20211,7 +20211,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -20222,7 +20222,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -20236,7 +20236,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20259,7 +20259,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -20273,7 +20273,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20318,7 +20318,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -20326,7 +20326,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -20337,7 +20337,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -20351,7 +20351,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20374,7 +20374,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -20388,7 +20388,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20437,7 +20437,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -20445,7 +20445,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -20456,7 +20456,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -20470,7 +20470,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20493,7 +20493,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -20507,7 +20507,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20606,7 +20606,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -20614,7 +20614,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -20625,7 +20625,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -20639,7 +20639,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20662,7 +20662,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -20676,7 +20676,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20786,7 +20786,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -20794,7 +20794,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -20805,7 +20805,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -20819,7 +20819,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20842,7 +20842,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -20856,7 +20856,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20909,7 +20909,7 @@ exports[`Additional Information Component  should render component with manuscri
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -21743,7 +21743,7 @@ exports[`Additional Information Component  should render component with newspape
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -24066,7 +24066,7 @@ exports[`Additional Information Component  should render component with patent 1
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -24431,7 +24431,7 @@ exports[`Additional Information Component  should render component with preprint
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -25005,7 +25005,7 @@ exports[`Additional Information Component  should render component with referenc
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -25774,7 +25774,7 @@ exports[`Additional Information Component  should render component with research
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -26178,7 +26178,7 @@ exports[`Additional Information Component  should render component with thesis 1
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -26577,7 +26577,7 @@ exports[`Additional Information Component  should render component with video do
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -27003,7 +27003,7 @@ exports[`Additional Information Component  should render component with working 
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -27522,7 +27522,7 @@ exports[`Additional Information Component  should render oa status value link in
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"

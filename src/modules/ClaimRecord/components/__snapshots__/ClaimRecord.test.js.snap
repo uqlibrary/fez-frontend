@@ -7204,6 +7204,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
     </StandardCard>
     <Alert
       allowDismiss={false}
+      dismissTitle="Click to dismiss this alert"
       message="This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at espace.admin@email.com.au"
       showLoader={false}
       title="Error"
@@ -8307,6 +8308,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             "confirmationMessage": <div>
               <Alert
                 allowDismiss={false}
+                dismissTitle="Click to dismiss this alert"
                 message="Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators."
                 showLoader={false}
                 title="File upload and/or edits/changes/comments post failed"

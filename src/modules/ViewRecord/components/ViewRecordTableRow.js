@@ -4,11 +4,11 @@ import {TableRow, TableRowColumn} from 'material-ui/Table';
 
 const ViewRecordTableRow = ({heading, data}) => {
     return (
-        <TableRow className="tableRow">
-            <TableRowColumn className="headingColumn">
+        <TableRow className="row">
+            <TableRowColumn className="header">
                 {heading}
             </TableRowColumn>
-            <TableRowColumn className="dataColumn">
+            <TableRowColumn className="data">
                 {data}
             </TableRowColumn>
         </TableRow>

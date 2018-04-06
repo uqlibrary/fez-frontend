@@ -9,7 +9,7 @@ exports[`Publication Details Component  should render component 1`] = `
 >
   <Table
     allRowsSelected={false}
-    className="publicationDetails"
+    className="publicationDetails vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -73,7 +73,7 @@ exports[`Publication Details Component  should render with publication without c
 >
   <Table
     allRowsSelected={false}
-    className="publicationDetails"
+    className="publicationDetails vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -105,7 +105,7 @@ exports[`Publication Details Component  should render with publication without s
 >
   <Table
     allRowsSelected={false}
-    className="publicationDetails"
+    className="publicationDetails vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"

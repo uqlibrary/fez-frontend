@@ -1589,6 +1589,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
             "confirmationMessage": <div>
               <Alert
                 allowDismiss={false}
+                dismissTitle="Click to dismiss this alert"
                 message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
                 showLoader={false}
                 title="File upload failed"
@@ -2779,6 +2780,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
     >
       <Alert
         allowDismiss={false}
+        dismissTitle="Click to dismiss this alert"
         message="You are about to remove this publication from your eSpace profile."
         showLoader={false}
         title="WARNING"

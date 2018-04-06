@@ -10,11 +10,14 @@ exports[`Component Sharethis should render 3rd party elements with default props
   }
 >
   <div
-    className="column"
+    className="column is-hidden-mobile"
   />
   <div
     className="column is-narrow a2a_kit a2a_kit_size_20 a2a_default_style"
   >
+    <a
+      className="a2a_button_facebook a2a_counter"
+    />
     <a
       className="a2a_button_mendeley"
     />
@@ -23,9 +26,6 @@ exports[`Component Sharethis should render 3rd party elements with default props
     />
     <a
       className="a2a_button_linkedin"
-    />
-    <a
-      className="a2a_button_facebook a2a_counter"
     />
     <a
       className="a2a_button_email"
