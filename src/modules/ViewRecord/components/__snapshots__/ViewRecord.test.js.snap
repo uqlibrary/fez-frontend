@@ -59,6 +59,7 @@ exports[`Component ViewRecord  should render error 1`] = `
 >
   <Alert
     allowDismiss={false}
+    dismissTitle="Click to dismiss this alert"
     message="PID not found"
     showLoader={false}
     type="error"
