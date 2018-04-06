@@ -89,7 +89,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           "primaryText": "My research",
         },
         Object {
-          "linkTo": "/my_research_data_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
           "primaryText": "My research data collections",
         },
         Object {
@@ -101,7 +101,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing data collection",
         },
         Object {
@@ -119,7 +119,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/my_research_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
           "primaryText": "Switch to old interface",
           "public": true,
         },
@@ -139,7 +139,6 @@ exports[`Application component should render alert if user is not fez author 1`]
       >
         <Alert
           allowDismiss={false}
-          dismissTitle="Click to dismiss this alert"
           message="Please contact the UQ eSpace administrator to resolve this."
           showLoader={false}
           title="You are not registered in UQ eSpace as an author"
@@ -390,7 +389,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "My research",
         },
         Object {
-          "linkTo": "/my_research_data_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
           "primaryText": "My research data collections",
         },
         Object {
@@ -402,7 +401,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing data collection",
         },
         Object {
@@ -420,7 +419,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/my_research_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
           "primaryText": "Switch to old interface",
           "public": true,
         },
@@ -681,7 +680,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/my_research_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
           "primaryText": "Switch to old interface",
           "public": true,
         },
@@ -701,7 +700,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       >
         <Alert
           allowDismiss={false}
-          dismissTitle="Click to dismiss this alert"
           message="Before you can start using UQ eSpace you have to link your UQ eSpace profile to your ORCID ID."
           showLoader={false}
           title="ORCID ID REQUIRED"
@@ -832,7 +830,7 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "My research",
         },
         Object {
-          "linkTo": "/my_research_data_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
           "primaryText": "My research data collections",
         },
         Object {
@@ -844,7 +842,7 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing data collection",
         },
         Object {
@@ -862,7 +860,7 @@ exports[`Application component should render app for account with fez author wit
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/my_research_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
           "primaryText": "Switch to old interface",
           "public": true,
         },
@@ -1117,7 +1115,7 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "My research",
         },
         Object {
-          "linkTo": "/my_research_data_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
           "primaryText": "My research data collections",
         },
         Object {
@@ -1129,7 +1127,7 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing data collection",
         },
         Object {
@@ -1147,7 +1145,7 @@ exports[`Application component should render app for account with fez author wit
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/my_research_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
           "primaryText": "Switch to old interface",
           "public": true,
         },
@@ -1169,7 +1167,6 @@ exports[`Application component should render app for account with fez author wit
           action={[Function]}
           actionButtonLabel="Click here to link or register"
           allowDismiss={false}
-          dismissTitle="Click to dismiss this alert"
           message="You do not have an ORCID ID linked to your UQ eSpace."
           showLoader={false}
           title="ORCID ID REQUIRED"
@@ -1641,7 +1638,7 @@ exports[`Application component should render application with routing for the us
           "primaryText": "My research",
         },
         Object {
-          "linkTo": "/my_research_data_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
           "primaryText": "My research data collections",
         },
         Object {
@@ -1653,7 +1650,7 @@ exports[`Application component should render application with routing for the us
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing data collection",
         },
         Object {
@@ -1671,7 +1668,7 @@ exports[`Application component should render application with routing for the us
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/my_research_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
           "primaryText": "Switch to old interface",
           "public": true,
         },
@@ -1783,7 +1780,7 @@ exports[`Application component should render for anon user 1`] = `
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/my_research_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
           "primaryText": "Switch to old interface",
           "public": true,
         },
@@ -1805,7 +1802,6 @@ exports[`Application component should render for anon user 1`] = `
           action={[Function]}
           actionButtonLabel="Click to login"
           allowDismiss={false}
-          dismissTitle="Click to dismiss this alert"
           message="Login to UQ eSpace for full search results and more services."
           showLoader={false}
           title="You are not logged in"
