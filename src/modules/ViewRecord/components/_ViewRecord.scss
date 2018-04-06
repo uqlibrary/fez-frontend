@@ -173,7 +173,6 @@
 
   // Publication details
   .publicationDetails {
-
   }
 
   // Additional information
@@ -217,13 +216,34 @@
     margin-bottom: 12px !important;
   }
   .citationCounts {
+    .citationOaIcon {
+      @include mobile {
+        zoom: 2;
+        margin: 0 5px !important;
+      }
+    }
+    .citationLink {
+      @include tablet {
+        margin-left: 12px !important;
+      }
+      @include mobile {
+        margin-left: 6px !important;
+      }
+    }
+
     .citationIcons {
+      white-space: nowrap !important;
       height: 24px !important;
       overflow: hidden !important;
       @include mobile {
         zoom: 2;
         padding-left: 0px !important;
       }
+    }
+  }
+  .shareThis {
+    @include tablet {
+      margin-top: -26px !important;
     }
   }
 }
