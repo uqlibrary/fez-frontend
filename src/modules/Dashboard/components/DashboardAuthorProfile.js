@@ -12,10 +12,12 @@ const DashboardProfile = ({authorDetails, author, history}) => {
 
     return (
         <div className="imageCover">
-            {/* HELP */}
-            <div className="is-pulled-right">
-                <HelpIcon {...txt.help} />
-            </div>
+            {
+                txt.help &&
+                <div className="is-pulled-right">
+                    <HelpIcon {...txt.help} />
+                </div>
+            }
             {
                 authorDetails &&
                 <div className="columns userDetails is-gapless">
