@@ -94,13 +94,11 @@ export default class CitationCounts extends React.PureComponent {
                             title={this.getTitle(txt.google.title)}
                         />
                     }
+                    {
+                        (openAccessStatus.isOpenAccess || !!openAccessStatus.embargoDate) &&
+                            <OpenAccessIcon {...openAccessStatus} />
+                    }
                 </div>
-                {
-                    (openAccessStatus.isOpenAccess || !!openAccessStatus.embargoDate) &&
-                    <div className="column is-narrow citationOaIcon">
-                        <OpenAccessIcon {...openAccessStatus} />
-                    </div>
-                }
                 {
                     !!publication.rek_pid && (counts.wos || counts.scopus) &&
                     <div className="column is-narrow citationLink">

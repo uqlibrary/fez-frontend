@@ -5601,7 +5601,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                                   openAccessStatusId={453694}
                                                   showEmbargoText={true}
                                                 >
-                                                  <div>
+                                                  <span>
                                                     <span
                                                       className="is-hidden-mobile is-hidden-tablet-only"
                                                     >
@@ -5611,7 +5611,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                                       className="fez-icon openAccessEmbargoed large"
                                                       title="undefined - Open access after 24th December 2020"
                                                     />
-                                                  </div>
+                                                  </span>
                                                 </OpenAccessIcon>
                                               </td>
                                             </TableRowColumn>
@@ -5810,7 +5810,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                                   openAccessStatusId={453694}
                                                   showEmbargoText={true}
                                                 >
-                                                  <div>
+                                                  <span>
                                                     <span
                                                       className="is-hidden-mobile is-hidden-tablet-only"
                                                     >
@@ -5820,7 +5820,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                                       className="fez-icon openAccessEmbargoed large"
                                                       title="undefined - Open access after 24th December 2020"
                                                     />
-                                                  </div>
+                                                  </span>
                                                 </OpenAccessIcon>
                                               </td>
                                             </TableRowColumn>
@@ -6019,7 +6019,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                                   openAccessStatusId={453694}
                                                   showEmbargoText={true}
                                                 >
-                                                  <div>
+                                                  <span>
                                                     <span
                                                       className="is-hidden-mobile is-hidden-tablet-only"
                                                     >
@@ -6029,7 +6029,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                                       className="fez-icon openAccessEmbargoed large"
                                                       title="undefined - Open access after 24th December 2020"
                                                     />
-                                                  </div>
+                                                  </span>
                                                 </OpenAccessIcon>
                                               </td>
                                             </TableRowColumn>

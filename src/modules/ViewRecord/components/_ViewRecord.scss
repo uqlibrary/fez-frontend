@@ -217,6 +217,7 @@
   }
   .citationCounts {
     .citationOaIcon {
+      width: 24px !important;
       @include mobile {
         zoom: 2;
         margin: 0 5px !important;

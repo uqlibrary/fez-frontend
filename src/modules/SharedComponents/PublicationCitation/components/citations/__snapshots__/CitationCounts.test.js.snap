@@ -54,10 +54,6 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
       source="google"
       title="Link to undefined (Google scholar) will open in a new window."
     />
-  </div>
-  <div
-    className="column is-narrow citationOaIcon"
-  >
     <OpenAccessIcon
       embargoDate={null}
       isOpenAccess={true}
