@@ -147,7 +147,15 @@ export default class Files extends Component {
                                             {item.icon}
                                         </TableRowColumn>
                                         <TableRowColumn className="filename">
-                                            <ExternalLink href={pathConfig.file.url(item.pid, item.fileName)} title={item.fileName} className={'fileName'} openInNewIcon>
+                                            <ExternalLink
+                                                href={pathConfig.file.url(item.pid, item.fileName)}
+                                                title={locale.viewRecord.sections.files.linkTitle
+                                                    .replace('[filename]', item.fileName)
+                                                    .replace('[description]', item.dataStream && item.dataStream.dsi_label)
+                                                    .replace('[size]', item.calculatedSize)
+                                                }
+                                                className={'fileName'} openInNewIcon
+                                            >
                                                 {item.fileName}
                                             </ExternalLink>
                                         </TableRowColumn>
