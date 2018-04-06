@@ -26,7 +26,6 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
   />
   <Alert
     allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
     message="Error has occurred during request and request cannot be processed. Invalid authorisation state response from ORCID.  Please contact eSpace administrators or try again later."
     orcidStateError="Invalid authorisation state response from ORCID. "
     showLoader={false}
@@ -127,7 +126,6 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
   />
   <Alert
     allowDismiss={false}
-    dismissTitle="Click to dismiss this alert"
     message="Error has occurred during request and request cannot be processed. API IS NOT AVAILABLE Please contact eSpace administrators or try again later."
     orcidStateError="Invalid authorisation state response from ORCID. "
     showLoader={false}
