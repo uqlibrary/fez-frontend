@@ -53,6 +53,14 @@ exports[`Related publications Component  should render component 1`] = `
       }
     >
       <RelatedPublications
+        childrenSearchKey={
+          Object {
+            "key": "fez_record_search_key_has_related_datasets",
+            "order": "rek_has_related_datasets_order",
+            "pid": "rek_has_related_datasets",
+            "title": "rek_has_related_datasets_lookup",
+          }
+        }
         className="relatedPublications"
         publication={
           Object {
@@ -401,6 +409,7 @@ exports[`Related publications Component  should render component 1`] = `
                 "rek_isdatasetof_xsdmf_id": 16601,
               },
             ],
+            "fez_record_search_key_isderivationof": Array [],
             "fez_record_search_key_ismemberof": Array [
               Object {
                 "rek_ismemberof": "UQ:289097",
@@ -641,14 +650,6 @@ exports[`Related publications Component  should render component 1`] = `
             "rek_wok_doc_type_xsdmf_id": null,
           }
         }
-        searchKey={
-          Object {
-            "key": "fez_record_search_key_has_related_datasets",
-            "order": "rek_has_related_datasets_order",
-            "pid": "rek_has_related_datasets",
-            "title": "rek_has_related_datasets_lookup",
-          }
-        }
         showPublicationTitle={false}
         title=""
       >
@@ -778,7 +779,7 @@ exports[`Related publications Component  should render component 1`] = `
                           className="publicationList"
                         >
                           <li
-                            key="relatedPublications-0"
+                            key="fez_record_search_key_has_related_datasets-0"
                           >
                             <Link
                               replace={false}
@@ -793,7 +794,7 @@ exports[`Related publications Component  should render component 1`] = `
                             </Link>
                           </li>
                           <li
-                            key="relatedPublications-1"
+                            key="fez_record_search_key_has_related_datasets-1"
                           >
                             <Link
                               replace={false}
