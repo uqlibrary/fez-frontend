@@ -441,13 +441,6 @@ exports[`BookForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Optional publication details",
-      }
-    }
     title="Optional publication details"
   >
     <div

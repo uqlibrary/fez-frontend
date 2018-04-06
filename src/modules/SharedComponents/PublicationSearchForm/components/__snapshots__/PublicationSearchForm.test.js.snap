@@ -3,13 +3,6 @@
 exports[`PublicationSearchForm renders  component 1`] = `
 <StandardCard
   className=""
-  help={
-    Object {
-      "buttonLabel": "Ok",
-      "text": "Help about search....",
-      "title": "Search for your publication",
-    }
-  }
   title="Search for your publication"
 >
   <div>
