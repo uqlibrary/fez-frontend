@@ -198,7 +198,7 @@
     }
   }
 
-  // Random bits -----------------------------------------------
+  // Other -----------------------------------------------
   .openExternalUrlIcon {
     height: $text-body-small !important;
     width: $text-body-small !important;
@@ -211,8 +211,19 @@
   .publicationCitation {
     padding-top: 0 !important;
     border-bottom: none !important;
+    margin-bottom: 0 !important;
   }
   .cardTitle {
     margin-bottom: 12px !important;
+  }
+  .citationCounts {
+    .citationIcons {
+      height: 24px !important;
+      overflow: hidden !important;
+      @include mobile {
+        zoom: 2;
+        padding-left: 0px !important;
+      }
+    }
   }
 }

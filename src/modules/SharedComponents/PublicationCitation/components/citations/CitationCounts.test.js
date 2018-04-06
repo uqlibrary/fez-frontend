@@ -55,7 +55,7 @@ describe('CitationCounts renders ', () => {
         };
         const wrapper = setup({publication});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('.citationCount').length).toEqual(2);
+        expect(wrapper.find('.citationCount').length).toEqual(1);
     });
 
     it('should calculate OA status', () => {
