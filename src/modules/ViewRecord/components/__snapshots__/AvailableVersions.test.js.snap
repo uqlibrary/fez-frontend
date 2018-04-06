@@ -400,6 +400,7 @@ exports[`Available Versions Component  should render component 1`] = `
                 "rek_isdatasetof_xsdmf_id": 16601,
               },
             ],
+            "fez_record_search_key_isderivationof": Array [],
             "fez_record_search_key_ismemberof": Array [
               Object {
                 "rek_ismemberof": "UQ:289097",
@@ -643,7 +644,23 @@ exports[`Available Versions Component  should render component 1`] = `
         title=""
       >
         <RelatedPublications
+          childrenSearchKey={
+            Object {
+              "key": "fez_record_search_key_has_derivations",
+              "order": "rek_has_derivations_order",
+              "pid": "rek_has_derivations",
+              "title": "rek_has_derivations_lookup",
+            }
+          }
           className="availableVersions"
+          parentSearchKey={
+            Object {
+              "key": "fez_record_search_key_isderivationof",
+              "order": "rek_isderivationof_order",
+              "pid": "rek_isderivationof",
+              "title": "rek_isderivationof_lookup",
+            }
+          }
           publication={
             Object {
               "fez_record_search_key_access_conditions": Object {
@@ -991,6 +1008,7 @@ exports[`Available Versions Component  should render component 1`] = `
                   "rek_isdatasetof_xsdmf_id": 16601,
                 },
               ],
+              "fez_record_search_key_isderivationof": Array [],
               "fez_record_search_key_ismemberof": Array [
                 Object {
                   "rek_ismemberof": "UQ:289097",
@@ -1231,14 +1249,6 @@ exports[`Available Versions Component  should render component 1`] = `
               "rek_wok_doc_type_xsdmf_id": null,
             }
           }
-          searchKey={
-            Object {
-              "key": "fez_record_search_key_has_derivations",
-              "order": "rek_has_derivations_order",
-              "pid": "rek_has_derivations",
-              "title": "rek_has_derivations_lookup",
-            }
-          }
           showPublicationTitle={true}
           title="Available versions"
         >
@@ -1370,21 +1380,19 @@ exports[`Available Versions Component  should render component 1`] = `
                         }
                       >
                         <div>
-                          <div>
-                            <span>
-                              CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
-                            </span>
-                            <span>
-                              <b>
-                                 (Current Record)
-                              </b>
-                            </span>
-                          </div>
                           <ul
                             className="publicationList"
                           >
                             <li
-                              key="availableVersions-0"
+                              key="current"
+                            >
+                              CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
+                              <b>
+                                 (Current Record)
+                              </b>
+                            </li>
+                            <li
+                              key="fez_record_search_key_has_derivations-0"
                             >
                               <Link
                                 replace={false}

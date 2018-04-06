@@ -21,13 +21,13 @@ export default class Links extends PureComponent {
     renderLinkRow = (item) => {
         return (
             <TableRow key={`link-${item.index}`}>
-                <TableRowColumn className="rowLink">
+                <TableRowColumn className="link">
                     {item.link}
                 </TableRowColumn>
-                <TableRowColumn className="rowDescription is-hidden-mobile" title={item.description}>
+                <TableRowColumn className="description is-hidden-mobile" title={item.description}>
                     {item.description}
                 </TableRowColumn>
-                <TableRowColumn className="rowOA align-right">
+                <TableRowColumn className="oa align-right">
                     <OpenAccessIcon {...item.openAccessStatus} showEmbargoText />
                 </TableRowColumn>
             </TableRow>
@@ -138,15 +138,15 @@ export default class Links extends PureComponent {
         return (
             <StandardCard title={txt.title}>
                 <div className="viewRecordLinks">
-                    <Table selectable={false} className="links">
-                        <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="tableHeader">
+                    <Table selectable={false} className="links horizontal">
+                        <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="header">
                             <TableRow>
-                                <TableHeaderColumn className="rowLink">{txt.headerTitles.link}</TableHeaderColumn>
-                                <TableHeaderColumn className="rowDescription is-hidden-mobile">{txt.headerTitles.description}</TableHeaderColumn>
-                                <TableHeaderColumn className="rowOA align-right">{txt.headerTitles.oaStatus}</TableHeaderColumn>
+                                <TableHeaderColumn className="link">{txt.headerTitles.link}</TableHeaderColumn>
+                                <TableHeaderColumn className="description is-hidden-mobile">{txt.headerTitles.description}</TableHeaderColumn>
+                                <TableHeaderColumn className="oa align-right">{txt.headerTitles.oaStatus}</TableHeaderColumn>
                             </TableRow>
                         </TableHeader>
-                        <TableBody displayRowCheckbox={false} className="tableData">
+                        <TableBody displayRowCheckbox={false} className="data">
                             {
                                 !!pubmedCentralId &&
                                 this.renderLinkRow(this.getPMCLink(openAccessStatusId, pubmedCentralId))

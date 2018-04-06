@@ -16,15 +16,15 @@ export default class GrantInformation extends Component {
     renderGrantDetail = (grantAgency, grantId, grantText, order) => {
         const txt = locale.viewRecord.headings.default.grantInformation;
         return (
-            <TableRow className="tableRow" key={order}>
-                <TableRowColumn className="headingColumn">
+            <TableRow className="row" key={order}>
+                <TableRowColumn className="header is-hidden-mobile">
                     <b>{txt.fez_record_search_key_grant_agency}</b>
                     {grantId && ' (' + txt.fez_record_search_key_grant_id + ')'}
                 </TableRowColumn>
-                <TableRowColumn className="dataColumn">
+                <TableRowColumn className="data">
                     <b>{grantAgency.rek_grant_agency}</b>
                     {grantId && ' (' + grantId.rek_grant_id + ')'}
-                    <div className="grantText">{grantText && grantText.rek_grant_text}</div>
+                    <span className="grantText">{grantText && grantText.rek_grant_text}</span>
                 </TableRowColumn>
             </TableRow>
         );
@@ -59,7 +59,7 @@ export default class GrantInformation extends Component {
 
         return (
             <StandardCard title={locale.viewRecord.sections.grantInformation}>
-                <Table selectable={false} className="grantInformation">
+                <Table selectable={false} className="grantInformation vertical">
                     <TableBody displayRowCheckbox={false}>
                         {this.props.publication.fez_record_search_key_grant_agency && this.renderGrants(this.props.publication)}
                     </TableBody>

@@ -51,13 +51,6 @@ exports[`MyRecords test renders active filters 1`] = `
       className="column is-3 is-hidden-mobile"
     >
       <StandardRighthandCard
-        help={
-          Object {
-            "buttonLabel": "Ok",
-            "text": "Help about ....",
-            "title": "Refining your results",
-          }
-        }
         title="Refine results"
       >
         <FacetsFilter
@@ -287,13 +280,6 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
       className="column is-3 is-hidden-mobile"
     >
       <StandardRighthandCard
-        help={
-          Object {
-            "buttonLabel": "Ok",
-            "text": "Help about ....",
-            "title": "Refining your results",
-          }
-        }
         title="Refine results"
       >
         <FacetsFilter

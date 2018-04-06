@@ -119,14 +119,20 @@ export default class AdditionalInformation extends Component {
     }
 
     renderLicense = (cvoId, lookup) => {
-        const licenseLooup = this.renderLink(pathConfig.list.license(cvoId), lookup);
-        const creativeCommonLogo =  viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
+        const licenseLookup = this.renderLink(pathConfig.list.license(cvoId), lookup);
+        const licenseLink =  viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
+        const uqLicenseLinkText = licenseLink && licenseLink.className.indexOf('uq') === 0 ? locale.viewRecord.sections.additionalInformation.licenseLinkText : null;
 
         return (
             <span>
-                {licenseLooup}
-                { creativeCommonLogo &&
-                    <div><ExternalLink className={'fez-icon license ' + creativeCommonLogo.className} href={creativeCommonLogo.url} /></div>
+                {licenseLookup}
+                {
+                    licenseLink && !uqLicenseLinkText &&
+                     <div><ExternalLink className={'fez-icon license ' + licenseLink.className} href={licenseLink.url} /></div>
+                }
+                {
+                    licenseLink && uqLicenseLinkText &&
+                    <div><ExternalLink href={licenseLink.url}>{uqLicenseLinkText}</ExternalLink></div>
                 }
             </span>
         );
@@ -248,8 +254,8 @@ export default class AdditionalInformation extends Component {
         }
 
         return (
-            <StandardCard title={locale.viewRecord.sections.additionalInformation}>
-                <Table selectable={false} className="additionalInformation">
+            <StandardCard title={locale.viewRecord.sections.additionalInformation.title}>
+                <Table selectable={false} className="additionalInformation vertical">
                     <TableBody displayRowCheckbox={false}>
                         {
                             this.renderColumns()

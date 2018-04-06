@@ -9,7 +9,7 @@ exports[`Grant Information Component  should render component 1`] = `
 >
   <Table
     allRowsSelected={false}
-    className="grantInformation"
+    className="grantInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -26,7 +26,7 @@ exports[`Grant Information Component  should render component 1`] = `
       style={Object {}}
     >
       <TableRow
-        className="tableRow"
+        className="row"
         displayBorder={true}
         hoverable={false}
         hovered={false}
@@ -35,7 +35,7 @@ exports[`Grant Information Component  should render component 1`] = `
         striped={false}
       >
         <TableRowColumn
-          className="headingColumn"
+          className="header is-hidden-mobile"
           hoverable={false}
         >
           <b>
@@ -44,22 +44,22 @@ exports[`Grant Information Component  should render component 1`] = `
            (Grant id)
         </TableRowColumn>
         <TableRowColumn
-          className="dataColumn"
+          className="data"
           hoverable={false}
         >
           <b>
             National Health and Medical Research Council
           </b>
            (569645 | 1022263)
-          <div
+          <span
             className="grantText"
           >
             We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
-          </div>
+          </span>
         </TableRowColumn>
       </TableRow>
       <TableRow
-        className="tableRow"
+        className="row"
         displayBorder={true}
         hoverable={false}
         hovered={false}
@@ -68,7 +68,7 @@ exports[`Grant Information Component  should render component 1`] = `
         striped={false}
       >
         <TableRowColumn
-          className="headingColumn"
+          className="header is-hidden-mobile"
           hoverable={false}
         >
           <b>
@@ -77,20 +77,20 @@ exports[`Grant Information Component  should render component 1`] = `
            (Grant id)
         </TableRowColumn>
         <TableRowColumn
-          className="dataColumn"
+          className="data"
           hoverable={false}
         >
           <b>
             Cancer Council Queensland
           </b>
            (1042819)
-          <div
+          <span
             className="grantText"
           />
         </TableRowColumn>
       </TableRow>
       <TableRow
-        className="tableRow"
+        className="row"
         displayBorder={true}
         hoverable={false}
         hovered={false}
@@ -99,7 +99,7 @@ exports[`Grant Information Component  should render component 1`] = `
         striped={false}
       >
         <TableRowColumn
-          className="headingColumn"
+          className="header is-hidden-mobile"
           hoverable={false}
         >
           <b>
@@ -108,14 +108,14 @@ exports[`Grant Information Component  should render component 1`] = `
            (Grant id)
         </TableRowColumn>
         <TableRowColumn
-          className="dataColumn"
+          className="data"
           hoverable={false}
         >
           <b>
             National Breast Cancer Foundation
           </b>
            (CG-12-07 | CG-10-04)
-          <div
+          <span
             className="grantText"
           />
         </TableRowColumn>
@@ -132,7 +132,7 @@ exports[`Grant Information Component  should render with publication without gra
 >
   <Table
     allRowsSelected={false}
-    className="grantInformation"
+    className="grantInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -149,7 +149,7 @@ exports[`Grant Information Component  should render with publication without gra
       style={Object {}}
     >
       <TableRow
-        className="tableRow"
+        className="row"
         displayBorder={true}
         hoverable={false}
         hovered={false}
@@ -158,7 +158,7 @@ exports[`Grant Information Component  should render with publication without gra
         striped={false}
       >
         <TableRowColumn
-          className="headingColumn"
+          className="header is-hidden-mobile"
           hoverable={false}
         >
           <b>
@@ -166,21 +166,21 @@ exports[`Grant Information Component  should render with publication without gra
           </b>
         </TableRowColumn>
         <TableRowColumn
-          className="dataColumn"
+          className="data"
           hoverable={false}
         >
           <b>
             National Health and Medical Research Council
           </b>
-          <div
+          <span
             className="grantText"
           >
             We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
-          </div>
+          </span>
         </TableRowColumn>
       </TableRow>
       <TableRow
-        className="tableRow"
+        className="row"
         displayBorder={true}
         hoverable={false}
         hovered={false}
@@ -189,7 +189,7 @@ exports[`Grant Information Component  should render with publication without gra
         striped={false}
       >
         <TableRowColumn
-          className="headingColumn"
+          className="header is-hidden-mobile"
           hoverable={false}
         >
           <b>
@@ -197,19 +197,19 @@ exports[`Grant Information Component  should render with publication without gra
           </b>
         </TableRowColumn>
         <TableRowColumn
-          className="dataColumn"
+          className="data"
           hoverable={false}
         >
           <b>
             Cancer Council Queensland
           </b>
-          <div
+          <span
             className="grantText"
           />
         </TableRowColumn>
       </TableRow>
       <TableRow
-        className="tableRow"
+        className="row"
         displayBorder={true}
         hoverable={false}
         hovered={false}
@@ -218,7 +218,7 @@ exports[`Grant Information Component  should render with publication without gra
         striped={false}
       >
         <TableRowColumn
-          className="headingColumn"
+          className="header is-hidden-mobile"
           hoverable={false}
         >
           <b>
@@ -226,13 +226,13 @@ exports[`Grant Information Component  should render with publication without gra
           </b>
         </TableRowColumn>
         <TableRowColumn
-          className="dataColumn"
+          className="data"
           hoverable={false}
         >
           <b>
             National Breast Cancer Foundation
           </b>
-          <div
+          <span
             className="grantText"
           />
         </TableRowColumn>

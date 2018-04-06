@@ -1,148 +1,156 @@
 @import '../../../sass/variables';
-
 .viewRecord {
-  .file {
+
+  // Common ----------------------------------------------------
+
+  // Table Horizontal data
+  table.horizontal {
     td, th {
       padding: 0 6px !important;
       height: 14px !important;
-      &.filename {
-        width: 40% !important;
-      }
-      &.description {
-        width: 30% !important;
-      }
-      &.oaStatus {
-        width: 20% !important;
-        @include mobile {
-          width: 5% !important;
-        }
-      }
-      &.size {
-        width: 10% !important;
-      }
     }
     .header {
-      margin-top: 24px;
-    }
-    .tableHeader tr {
-      height: 14px !important;
-      th {
+      height: 24px !important;
+      tr {
         height: 24px !important;
+      }
+      th {
+        height: 14px !important;
         line-height: 14px !important;
-        padding: 0 !important;
+        padding: 0 6px !important;
         color: #adadad !important;
         font-weight: 300 !important;
       }
     }
-    .fileDetails {
-      width: 100%;
-      .fileIcon {
-        img, svg {
-          color: lighten($secondary-color, 25%) !important;
-          margin: auto 6px !important;
-        }
+    .data {
+      tr {
+        height: 38px !important;
       }
-      .fileInfo {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        //max-width: 200px;
+      td {
+        height: 38px !important;
+        line-height: 24px !important;
+        padding: 0 6px !important;
       }
-      .fileName {
-        margin-left: 12px;
-        line-height: 47px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-      .audioWrapper {
-        overflow: hidden;
-        .audioButton {
-          transform: scale(0.75);
-          &.play {
-            margin-right: -18px !important;
-          }
-          svg {
-            //width: 12px !important;
-            //height: 12px !important;
-            fill: $secondary-color !important;
-          }
-        }
-        .audioPlayer {
-          margin-top: 8px;
-          width: 100px;
-          overflow: hidden;
 
-        }
+    }
+  }
+
+  // Table Vertical data
+  table.vertical {
+    tr {
+      height: 32px !important;
+    }
+    td {
+      height: 32px !important;
+      line-height: 24px !important;
+      overflow: hidden !important;
+      padding: 6px 0 0 0 !important;
+      vertical-align: top !important;
+      white-space: normal !important;
+    }
+    .header {
+      font-weight: $text-weight-bold !important;
+      @include tablet {
+        width: 200px !important;
+      }
+      @include mobile {
+        width: 100% !important;
+        display: inline-block;
       }
     }
-  }
-
-  .filePreview {
-    position: relative;
-    top: -46px;
-    text-align: right;
-  }
-
-  margin-top: -12px !important;
-  .publicationCitation {
-    padding-top: 0 !important;
-    border-bottom: none !important;
-  }
-  .openExternalUrlIcon {
-    height: $text-body-small !important;
-    width: $text-body-small !important;
-    font-size: $text-body-small !important;
-    fill: $accent-color !important;
-    color: $accent-color !important;
-    margin: 0 2px;
-    vertical-align: top;
-  }
-
-  table.grantInformation {
-    margin-bottom: 1em;
-  }
-
-  .additionalInformation, .publicationDetails, .grantInformation {
-    table-layout: auto !important;
-    ul {
-      padding: 0 !important;
-      margin: 0 !important;
+    .data {
+      white-space: normal !important;
+       height: auto !important;
+      ul {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      @include tablet {
+        width: 100% !important;
+      }
+      @include mobile {
+        width: 100% !important;
+        display: inline-block !important;
+      }
     }
-    p {
-      text-align: justify;
-      text-justify: inter-word;
+
+
+  }
+
+  // Components ------------------------------------------------
+
+  // Files
+  .files {
+    .fileIcon {
+      svg {
+        fill: lighten($secondary-color, 33%) !important;
+        width: 24px !important;
+        height: 24px !important;
+        padding: 8px 6px 0 0 !important;
+      }
+    }
+    // columns widths
+    .filetype {
+      width: 24px !important;
+    }
+    .filename {
+      width: 45% !important;
+      @include tablet-only {
+        width: 50% !important;
+      }
+      @include mobile {
+        width: 100% !important;
+      }
+    }
+    .description {
+      width: 40% !important;
+      @include tablet-only {
+        width: 50% !important;
+      }
+    }
+    .size {
+      text-align: right !important;
+      width: 15% !important;
+    }
+
+  }
+
+  // Links
+  .links {
+    .link {
+      @include desktop {
+        width: 47% !important;
+      }
+      @include tablet-only {
+        width: 45% !important;
+      }
+      @include mobile {
+        width: 100% !important;
+      }
+    }
+    .description {
+      @include desktop {
+        width: 33% !important;
+      }
+      @include tablet-only {
+        width: 35% !important;
+      }
+    }
+    .oa {
+      text-align: right !important;
+      @include desktop {
+        width: 20% !important;
+      }
+      @include tablet-only {
+        width: 24px !important;
+      }
+      @include mobile {
+        width: 24px !important;
+      }
     }
   }
 
-  .tableRow, .headingColumn, .dataColumn {
-    padding: 8px 6px !important;
-    height: auto !important;
-    @include mobile {
-      padding:  6px 0 0 0 !important;
-      height: auto !important;
-    }
-  }
-
-  .headingColumn {
-    font-weight: $text-weight-bold;
-    font-size: $text-body-normal !important;
-    vertical-align: top;
-    white-space: normal !important;
-
-    @include desktop {
-      width: 150px;
-    }
-    @include tablet {
-      width: 150px;
-    }
-    @include mobile {
-      display: inline-block !important;
-      width: calc(100% - 12px);
-      height: auto !important;
-    }
-  }
-
+  // Related publicaitons
   .relatedPublications .publicationList {
     .displayType {
       font-style: italic;
@@ -158,73 +166,85 @@
     }
   }
 
-  .dataColumn {
-    font-weight: $text-weight-normal;
-    white-space: normal !important;
+  // Grants
+  .grants {
+
+  }
+
+  // Publication details
+  .publicationDetails {
+  }
+
+  // Additional information
+  .additionalInformation {
+
+    .citationLabel {
+      display: none;
+    }
+
+    .sherpaRomeoGreen {
+      color: green;
+    }
+
+    .sherpaRomeoBlue {
+      color: blue;
+    }
+
+    .sherpaRomeoYellow {
+      color: yellow;
+      background-color: grey;
+      padding: 1px 3px;
+    }
+  }
+
+  // Other -----------------------------------------------
+  .openExternalUrlIcon {
+    height: $text-body-small !important;
+    width: $text-body-small !important;
+    font-size: $text-body-small !important;
+    fill: $accent-color !important;
+    color: $accent-color !important;
+    margin: 0 2px;
     vertical-align: top;
-    @include mobile {
-      padding: 12px 0 12px 24px !important;
-      display: inline-block !important;
-      width: calc(100% - 24px);
-      height: auto !important;
-      word-break: normal !important;
-    }
   }
-
-  .citationLabel {
-    display: none;
+  .publicationCitation {
+    padding-top: 0 !important;
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
   }
-
-  .sherpaRomeoGreen {
-    color: green;
+  .cardTitle {
+    margin-bottom: 12px !important;
   }
-
-  .sherpaRomeoBlue {
-    color: blue;
-  }
-
-  .sherpaRomeoYellow {
-    color: yellow;
-    background-color: grey;
-    padding: 1px 3px;
-  }
-
-  .viewRecordLinks {
-    margin-top: 24px !important;
-    .rowLink {
-      width: 40%;
+  .citationCounts {
+    .citationOaIcon {
+      width: 24px !important;
       @include mobile {
-        width: 80% !important;
+        zoom: 2;
+        margin: 0 5px !important;
       }
     }
-    .rowDescription {
-      text-indent: 12px !important;
-      width: 30%;
-    }
-    .rowOA {
-      text-align: right !important;
-    }
-    .tableHeader {
-      tr {
-        height: 24px !important;
-        th {
-          height: $text-line-height-small !important;
-          line-height: $text-line-height-small !important;
-          padding: 0 !important;
-          color: lighten($secondary-color, 33%) !important;
-          font-weight: $text-weight-normal !important;
-        }
+    .citationLink {
+      @include tablet {
+        margin-left: 12px !important;
+      }
+      @include mobile {
+        margin-left: 6px !important;
       }
     }
-    .tableData {
-      tr {
-        height: 30px !important;
-        td {
-          padding: 0 !important;
-          height: $text-line-height-small !important;
-          line-height: $text-line-height-small !important;
-        }
+
+    .citationIcons {
+      white-space: nowrap !important;
+      height: 24px !important;
+      overflow: hidden !important;
+      @include mobile {
+        zoom: 2;
+        padding-left: 0px !important;
       }
+    }
+  }
+  .shareThis {
+    @include tablet {
+      margin-top: -26px !important;
     }
   }
 }
