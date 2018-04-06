@@ -4509,7 +4509,7 @@ export const record = {
         "rek_license_id": 25113,
         "rek_license_pid": "UQ:396321",
         "rek_license_xsdmf_id": null,
-        "rek_license": 453608,
+        "rek_license": 453702,
         "rek_license_lookup": "Creative Commons Attribution (only)"
     },
     "fez_record_search_key_issue_number": {
@@ -4714,7 +4714,7 @@ export const record = {
         "rek_volume_number_xsdmf_id": 6379,
         "rek_volume_number": "25"
     },
-    "rek_display_type_lookup": "Design",
+    "rek_display_type_lookup": "Audio Document",
     "fez_record_search_key_link": [
         {
             "rek_link_id": 3240198,

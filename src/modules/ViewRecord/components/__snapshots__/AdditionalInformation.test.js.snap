@@ -9301,6 +9301,17 @@ exports[`Additional Information Component  should render component with data col
             >
               453701
             </a>
+            <div>
+              <ExternalLink
+                className="externalLink"
+                href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
+                openInNewIcon={true}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                View license details
+              </ExternalLink>
+            </div>
           </span>
         }
         heading="Licencing and terms of access"
