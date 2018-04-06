@@ -149,6 +149,7 @@ export default {
                 fez_record_search_key_time_period_end_date: 'Time coverage end date',
                 fez_record_search_key_start_date: 'Collection start date',
                 fez_record_search_key_end_date: 'Collection end date',
+                fez_record_search_key_fields_of_research: 'ANZSRC Field of Research (FoR) Code',
                 fez_record_search_key_project_start_date: 'Project start date',
                 fez_record_search_key_construction_date: 'Date of construction',
                 fez_record_search_key_date_photo_taken: 'Date photo taken',
@@ -1026,68 +1027,72 @@ export default {
                     order: 11
                 },
                 {
-                    field: 'fez_record_search_key_type_of_data',
+                    field: 'fez_record_search_key_fields_of_research',
                     order: 12
                 },
                 {
-                    field: 'fez_record_search_key_data_volume',
+                    field: 'fez_record_search_key_type_of_data',
                     order: 13
                 },
                 {
-                    field: 'fez_record_search_key_software_required',
+                    field: 'fez_record_search_key_data_volume',
                     order: 14
                 },
                 {
-                    field: 'fez_record_search_key_language',
+                    field: 'fez_record_search_key_software_required',
                     order: 15
                 },
                 {
-                    field: 'fez_record_search_key_start_date',
+                    field: 'fez_record_search_key_language',
                     order: 16
                 },
                 {
-                    field: 'fez_record_search_key_end_date',
+                    field: 'fez_record_search_key_start_date',
                     order: 17
                 },
                 {
-                    field: 'fez_record_search_key_time_period_start_date',
+                    field: 'fez_record_search_key_end_date',
                     order: 18
                 },
                 {
-                    field: 'fez_record_search_key_time_period_end_date',
+                    field: 'fez_record_search_key_time_period_start_date',
                     order: 19
                 },
                 {
-                    field: 'fez_record_search_key_keywords',
+                    field: 'fez_record_search_key_time_period_end_date',
                     order: 20
                 },
                 {
-                    field: 'fez_record_search_key_geographic_area',
+                    field: 'fez_record_search_key_keywords',
                     order: 21
                 },
                 {
-                    field: 'fez_record_search_key_seo_code',
+                    field: 'fez_record_search_key_geographic_area',
                     order: 22
                 },
                 {
-                    field: 'fez_record_search_key_project_id',
+                    field: 'fez_record_search_key_seo_code',
                     order: 23
                 },
                 {
-                    field: 'fez_record_search_key_ands_collection_type',
+                    field: 'fez_record_search_key_project_id',
                     order: 24
                 },
                 {
-                    field: 'fez_record_search_key_publisher',
+                    field: 'fez_record_search_key_ands_collection_type',
                     order: 25
                 },
                 {
-                    field: 'rek_date',
+                    field: 'fez_record_search_key_publisher',
                     order: 26
                 },
                 {
-                    field: 'fez_record_search_key_rights',
+                    field: 'rek_date',
                     order: 27
+                },
+                {
+                    field: 'fez_record_search_key_rights',
+                    order: 28
                 }
             ],
             'Department Technical Report': [
