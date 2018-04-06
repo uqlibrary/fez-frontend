@@ -13,12 +13,13 @@ import {HelpDrawer} from 'uqlibrary-react-toolbox/build/HelpDrawer';
 import {AuthButton} from 'uqlibrary-react-toolbox/build/AuthButton';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import AppAlertContainer from '../containers/AppAlert';
+import OfflineSnackbar from './OfflineSnackbar';
 
 import * as pages from './pages';
 import IconButton from 'material-ui/IconButton';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
-export default class App extends React.Component {
+export default class App extends React.PureComponent {
     static propTypes = {
         account: PropTypes.object,
         author: PropTypes.object,
@@ -28,7 +29,6 @@ export default class App extends React.Component {
         location: PropTypes.object,
         history: PropTypes.object.isRequired
     };
-
     static childContextTypes = {
         isMobile: PropTypes.bool,
         selectFieldMobileOverrides: PropTypes.object
@@ -65,8 +65,8 @@ export default class App extends React.Component {
     shouldComponentUpdate(nextProps, nextState) {
         return this.props.accountLoading !== nextProps.accountLoading
             || this.props.accountAuthorLoading !== nextProps.accountAuthorLoading
-            || (!!this.props.location && !!nextProps.location && this.props.location.pathname !== nextProps.location.pathname)
-            || (!!this.props.history && !!nextState.history && this.props.history.push !== nextState.history.push)
+            || this.props.location !== nextProps.location
+            || this.props.history !== nextState.history
             || this.state !== nextState;
     }
 
@@ -159,7 +159,6 @@ export default class App extends React.Component {
                 ...locale.global.forceOrcidLinkAlert
             };
         }
-
         return (
             <div className="layout-fill align-stretch">
                 <AppBar
@@ -241,6 +240,7 @@ export default class App extends React.Component {
                     }
                 </div>
                 <HelpDrawer/>
+                <OfflineSnackbar />
             </div>
         );
     }

@@ -9,15 +9,21 @@ const zeroPaddedYear = (value) => value ? ('0000' + value).substr(-4) : '*';
  */
 export const getFacetsParams = (facets) => {
     const facetsParam = {};
-    facets.hasOwnProperty('filters') && Object.keys(facets.filters).map(key => {
-        facetsParam[`filters[facets][${key}]`] = facets.filters[key];
-    });
-    facets.hasOwnProperty('ranges') && Object.keys(facets.ranges).map(key => {
-        const {from, to} = facets.ranges[key];
-        const fromValueForEs = (!!from && !!to && from > to) ? zeroPaddedYear(to) : zeroPaddedYear(from);
-        const toValueForEs = (!!from && !!to && to < from) ? zeroPaddedYear(from) : zeroPaddedYear(to);
-        facetsParam[`ranges[facets][${key}]`] = `[${fromValueForEs} TO ${toValueForEs}]`;
-    });
+    if (facets.hasOwnProperty('filters')) {
+        Object.keys(facets.filters).map(key => {
+            facetsParam[`filters[facets][${key}]`] = facets.filters[key];
+        });
+    }
+
+    if (facets.hasOwnProperty('ranges')) {
+        Object.keys(facets.ranges).map(key => {
+            const {from, to} = facets.ranges[key];
+            const fromValueForEs = (!!from && !!to && from > to) ? zeroPaddedYear(to) : zeroPaddedYear(from);
+            const toValueForEs = (!!from && !!to && to < from) ? zeroPaddedYear(from) : zeroPaddedYear(to);
+            facetsParam[`ranges[facets][${key}]`] = `[${fromValueForEs} TO ${toValueForEs}]`;
+        });
+    }
+
     return facetsParam;
 };
 
@@ -30,6 +36,7 @@ export const getStandardSearchParams = ({page = 1, pageSize = 20, sortBy = 'publ
         sort: sortBy,
         order_by: sortDirection.toLowerCase(),
         ...getFacetsParams(facets),
+        ...(!!facets.showOpenAccessOnly ? {rek_oa_status: [453693, 453695, 453696, 453697, 453954]} : {}),
         ...unknownAuthors
     };
 };
@@ -59,9 +66,7 @@ export const AUTHOR_DETAILS_API = ({userId}) => ({apiUrl: `authors/details/${use
 export const AUTHOR_ORCID_DETAILS_API = ({userId, params}) => ({apiUrl: `orcid/${userId}/request`, options: {params: {...params}}});
 
 // academic stats apis
-export const ACADEMIC_STATS_PUBLICATION_YEARS_API = ({userId}) => ({apiUrl: `academic/${userId}/publication-years`});
 export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({userId}) => ({apiUrl: `academic/${userId}/hindex`});
-export const ACADEMIC_STATS_PUBLICATION_STATS_API = ({userId}) => ({apiUrl: `academic/${userId}/publication-stats`});
 export const ACADEMIC_STATS_PUBLICATIONS_TRENDING_API = ({userId}) => ({apiUrl: `academic/${userId}/trending_publications`});
 
 // lookup apis
@@ -82,6 +87,7 @@ export const POSSIBLE_RECORDS_API = ({facets = {}}) => ({apiUrl: 'records/search
 export const HIDE_POSSIBLE_RECORD_API = () => ({apiUrl: 'records/search', options: {params: {rule: 'possible'}}}); // (POST: with data: [\'pid\' => \'UQ:1\', \'type\' => \'H\'])`);
 
 export const CURRENT_USER_RECORDS_API = (values) => ({apiUrl: 'records/search', options: {params: {rule: 'mine', ...getStandardSearchParams(values)}}});
+export const ACADEMIC_PUBLICATIONS_STATS_API = (values) => ({apiUrl: 'records/search', options: {params: {rule: 'mine', 'filters[stats_only]': true, ...getStandardSearchParams(values)}}});
 
 export const SEARCH_INTERNAL_RECORDS_API = (values) => (
     // values = {searchQuery, page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}

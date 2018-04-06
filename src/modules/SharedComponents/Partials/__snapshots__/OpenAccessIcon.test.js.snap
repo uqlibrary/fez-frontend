@@ -1,0 +1,349 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Journal Name Component test  should render closed access 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <OpenAccessIcon
+        embargoDate={null}
+        isOpenAccess={false}
+        openAccessStatusId={1234}
+        showEmbargoText={false}
+      >
+        <div
+          className="openAccessClosed noOaIcon"
+        />
+      </OpenAccessIcon>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
+
+exports[`Journal Name Component test  should render embargoed 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <OpenAccessIcon
+        embargoDate="2019-01-01"
+        isOpenAccess={false}
+        openAccessStatusId={453694}
+        showEmbargoText={false}
+      >
+        <span>
+          <div
+            className="fez-icon openAccessEmbargoed large"
+            title="undefined - Open access after 2019-01-01"
+          />
+        </span>
+      </OpenAccessIcon>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
+
+exports[`Journal Name Component test  should render embargoed 2`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <OpenAccessIcon
+        embargoDate="2019-01-01"
+        isOpenAccess={false}
+        openAccessStatusId={453694}
+        showEmbargoText={true}
+      >
+        <span>
+          <span
+            className="is-hidden-mobile is-hidden-tablet-only"
+          >
+            Open access after 2019-01-01 
+          </span>
+          <div
+            className="fez-icon openAccessEmbargoed large"
+            title="undefined - Open access after 2019-01-01"
+          />
+        </span>
+      </OpenAccessIcon>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
+
+exports[`Journal Name Component test  should render open access 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <OpenAccessIcon
+        embargoDate={null}
+        isOpenAccess={true}
+        openAccessStatusId={1234}
+        showEmbargoText={false}
+      >
+        <div
+          className="fez-icon openAccess large"
+          title="Open Access - undefined - Free to read"
+        />
+      </OpenAccessIcon>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
+
+exports[`Journal Name Component test  should render open access with OPEN_ACCESS_ID_LINK_NO_DOI 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <OpenAccessIcon
+        embargoDate={null}
+        isOpenAccess={true}
+        openAccessStatusId={453694}
+        showEmbargoText={false}
+      >
+        <div
+          className="fez-icon openAccess large"
+          title="Open Access - Free to read"
+        />
+      </OpenAccessIcon>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;

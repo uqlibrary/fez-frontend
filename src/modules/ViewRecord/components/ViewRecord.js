@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
@@ -6,26 +6,34 @@ import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {locale} from 'locale';
+import Files from './Files';
 import PublicationDetails from './PublicationDetails';
 import AdditionalInformation from './AdditionalInformation';
 import GrantInformation from './GrantInformation';
+import RelatedPublications from './RelatedPublications';
+import Links from './Links';
+import {ShareThis} from 'modules/SharedComponents/ShareThis';
+import AvailableVersions from './AvailableVersions';
 
-export default class ViewRecord extends Component {
+export default class ViewRecord extends PureComponent {
     static propTypes = {
         recordToView: PropTypes.object,
         loadingRecordToView: PropTypes.bool,
         recordToViewError: PropTypes.string,
         match: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired
+        actions: PropTypes.object.isRequired,
+        hideCulturalSensitivityStatement: PropTypes.bool
     };
-
-    constructor(props) {
-        super(props);
-    }
 
     componentDidMount() {
         if (this.props.actions && !this.props.recordToView) {
             this.props.actions.loadRecordToView(this.props.match.params.pid);
+        }
+    }
+
+    componentWillReceiveProps(newProps) {
+        if (this.props.match.params.pid !== newProps.match.params.pid) {
+            this.props.actions.loadRecordToView(newProps.match.params.pid);
         }
     }
 
@@ -46,31 +54,38 @@ export default class ViewRecord extends Component {
                     <InlineLoader message={txt.loadingMessage}/>
                 </div>
             );
-        }
-
-        if(recordToViewError) {
+        } else if(recordToViewError) {
             return (
                 <StandardPage>
                     <Alert message={recordToViewError} />
                 </StandardPage>
             );
+        } else if(!recordToView) {
+            return <div className="empty"/>;
         }
 
         return (
-            <StandardPage className="viewRecord" title={recordToView && recordToView.rek_title}>
+            <StandardPage className="viewRecord" title={recordToView.rek_title}>
                 <PublicationCitation publication={recordToView} hideTitle />
-                {
-                    recordToView && recordToView.rek_display_type_lookup &&
-                    <AdditionalInformation publication={recordToView} />
-                }
-                {
-                    recordToView && recordToView.fez_record_search_key_grant_agency && recordToView.fez_record_search_key_grant_agency.length > 0 &&
-                    <GrantInformation publication={recordToView} />
-                }
-                {
-                    recordToView && recordToView.rek_display_type_lookup &&
-                    <PublicationDetails publication={recordToView} />
-                }
+
+                <ShareThis />
+
+                <Files
+                    publication={recordToView}
+                    hideCulturalSensitivityStatement={this.props.hideCulturalSensitivityStatement}
+                    setHideCulturalSensitivityStatement={this.props.actions.setHideCulturalSensitivityStatement} />
+
+                <Links publication={recordToView}/>
+
+                <RelatedPublications publication={recordToView} />
+
+                <AdditionalInformation publication={recordToView} />
+
+                <GrantInformation publication={recordToView} />
+
+                <PublicationDetails publication={recordToView} />
+
+                <AvailableVersions publication={recordToView} />
             </StandardPage>
         );
     }

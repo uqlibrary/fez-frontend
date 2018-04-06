@@ -15,7 +15,7 @@ export default class NewRecord extends React.Component {
         actions: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
         rawSearchQuery: PropTypes.string,
-        newRecordFileUploadingError: PropTypes.bool,
+        newRecordFileUploadingOrIssueError: PropTypes.bool,
         author: PropTypes.object
     };
 
@@ -64,7 +64,7 @@ export default class NewRecord extends React.Component {
         const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
         saveConfirmationLocale.confirmationMessage = (
             <div>
-                {this.props.newRecordFileUploadingError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
+                {this.props.newRecordFileUploadingOrIssueError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
                 {saveConfirmationLocale.recordSuccessConfirmationMessage}
             </div>
         );

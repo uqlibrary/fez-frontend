@@ -291,7 +291,7 @@ exports[`JournalArticleForm renders  component 1`] = `
           floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
           multiLine={true}
-          name="fez_record_search_key_notes.rek_notes"
+          name="comments"
           rows={1}
           type="text"
         />

@@ -1,5 +1,4 @@
 import {APP_URL} from 'config';
-
 /*
 
 NOTE:
@@ -121,6 +120,16 @@ export default {
             externalUrl: 'http://www.sherpa.ac.uk/romeo/search.php?issn=[issn]'
         },
         embargoDateFormat: 'YYYY-MM-DD',
-        defaultLinkDescription: 'Link to publication'
+        defaultLinkDescription: 'Link to publication',
+        offlineSnackbar: {
+            online: {
+                message: 'Your connection is back online',
+                autoHideDuration: 5000
+            },
+            offline: {
+                message: 'Your connection is offline',
+                autoHideDuration: 0
+            }
+        }
     }
 };

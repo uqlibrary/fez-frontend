@@ -9,6 +9,7 @@ import {AuthorsCitationView, DoiCitationView, EditorsCitationView, DateCitationV
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import ReactHtmlParser from 'react-html-parser';
 import ViewRecordTableRow from './ViewRecordTableRow';
+import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 
 const dompurify = require('dompurify');
@@ -63,6 +64,7 @@ export default class AdditionalInformation extends Component {
             case 'rek_subject': return this.renderList(objects, subkey, pathConfig.list.subject);
             case 'rek_seo_code': return this.renderList(objects, subkey, pathConfig.list.subject);
             case 'rek_alternate_genre': return this.renderList(objects, subkey, pathConfig.list.subject);
+            case 'rek_geographic_area': return this.renderMap(objects);
             default: return this.renderList(objects, subkey);
         }
     }
@@ -85,7 +87,7 @@ export default class AdditionalInformation extends Component {
             case 'rek_doi': return this.renderDoi(data);
             case 'rek_journal_name': return this.renderJournalName();
             case 'rek_publisher': return this.renderLink(pathConfig.list.publisher(data), data);
-            case 'rek_oa_status': return this.renderLink(pathConfig.list.openAccessStatus(object[subkey]), data);
+            case 'rek_oa_status': return !!data ? this.renderLink(pathConfig.list.openAccessStatus(object[subkey]), data) : '';
             case 'rek_herdc_code': return this.renderLink(pathConfig.list.subject(object[subkey]), data);
             case 'rek_herdc_status': return this.renderLink(pathConfig.list.herdcStatus(object[subkey]), data);
             case 'rek_ands_collection_type': return this.renderLink(pathConfig.list.collectionType(object[subkey]), data);
@@ -95,6 +97,7 @@ export default class AdditionalInformation extends Component {
             case 'rek_org_unit_name': return this.renderLink(pathConfig.list.orgUnitName(data), data);
             case 'rek_institutional_status': return this.renderLink(pathConfig.list.institutionalStatus(object[subkey]), data);
             case 'rek_book_title': return this.renderLink(pathConfig.list.bookTitle(object[subkey]), data);
+            case 'rek_job_number': return this.renderLink(pathConfig.list.jobNumber(object[subkey]), data);
             case 'rek_conference_name': return this.renderLink(pathConfig.list.conferenceName(object[subkey]), data);
             default: return data;
         }
@@ -116,14 +119,20 @@ export default class AdditionalInformation extends Component {
     }
 
     renderLicense = (cvoId, lookup) => {
-        const licenseLooup = this.renderLink(pathConfig.list.license(cvoId), lookup);
-        const creativeCommonLogo =  viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
+        const licenseLookup = this.renderLink(pathConfig.list.license(cvoId), lookup);
+        const licenseLink =  viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
+        const uqLicenseLinkText = licenseLink && licenseLink.className.indexOf('uq') === 0 ? locale.viewRecord.sections.additionalInformation.licenseLinkText : null;
 
         return (
             <span>
-                {licenseLooup}
-                { creativeCommonLogo &&
-                    <div><ExternalLink className={'fez-icon license ' + creativeCommonLogo.className} href={creativeCommonLogo.url} /></div>
+                {licenseLookup}
+                {
+                    licenseLink && !uqLicenseLinkText &&
+                     <div><ExternalLink className={'fez-icon license ' + licenseLink.className} href={licenseLink.url} /></div>
+                }
+                {
+                    licenseLink && uqLicenseLinkText &&
+                    <div><ExternalLink href={licenseLink.url}>{uqLicenseLinkText}</ExternalLink></div>
                 }
             </span>
         );
@@ -137,7 +146,7 @@ export default class AdditionalInformation extends Component {
 
     renderContributors = (publication) => {
         return (
-            <EditorsCitationView key="additional-information-editors" publication={publication} prefix={' '} initialNumberOfEditors={publication.fez_record_search_key_contributor.length} showLink />
+            <EditorsCitationView key="additional-information-editors" publication={publication} prefix={' '} suffix={''} initialNumberOfEditors={publication.fez_record_search_key_contributor.length} showLink />
         );
     }
 
@@ -146,6 +155,21 @@ export default class AdditionalInformation extends Component {
             <AuthorsCitationView key="additional-information-authors" publication={publication} initialNumberOfAuthors={publication.fez_record_search_key_author.length} showLink />
         );
     }
+
+    renderMap = (coordinatesList) => {
+        if (coordinatesList.length === 0 || !coordinatesList[0].rek_geographic_area) {
+            return (<span />);
+        }
+        return (
+            <PublicationMap
+                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                loadingElement={<div style={{height: '100%'}}/>}
+                containerElement={<div style={{height: '400px'}}/>}
+                mapElement={<div style={{height: '100%'}}/>}
+                coordinates={coordinatesList[0].rek_geographic_area}
+            />
+        );
+    };
 
     renderDoi = (doi) => {
         return (
@@ -160,7 +184,7 @@ export default class AdditionalInformation extends Component {
     // get lookup data if it exsts, except rek_issn_lookup as it returns sherpa romeo color
     getData = (object, subkey) => {
         const lookupSuffix = '_lookup';
-        return object[subkey + lookupSuffix] && subkey !== 'rek_issn' ? object[subkey + lookupSuffix] : object[subkey];
+        return (subkey === 'rek_oa_status' || object[subkey + lookupSuffix] && subkey !== 'rek_issn') ? object[subkey + lookupSuffix] : object[subkey];
     }
 
     getAbstract = (publication) => {
@@ -225,9 +249,13 @@ export default class AdditionalInformation extends Component {
     }
 
     render() {
+        if (!this.props.publication.rek_display_type_lookup) {
+            return null;
+        }
+
         return (
-            <StandardCard title={locale.viewRecord.sections.additionalInformation}>
-                <Table selectable={false} className="additionalInformation">
+            <StandardCard title={locale.viewRecord.sections.additionalInformation.title}>
+                <Table selectable={false} className="additionalInformation vertical">
                     <TableBody displayRowCheckbox={false}>
                         {
                             this.renderColumns()

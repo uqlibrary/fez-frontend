@@ -1,11 +1,203 @@
 @import '../../../sass/variables';
-
 .viewRecord {
-  margin-top: -12px !important;
-  .publicationCitation {
-    padding-top: 0 !important;
-    border-bottom: none !important;
+
+  // Common ----------------------------------------------------
+
+  // Table Horizontal data
+  table.horizontal {
+    td, th {
+      padding: 0 6px !important;
+      height: 14px !important;
+    }
+    .header {
+      height: 24px !important;
+      tr {
+        height: 24px !important;
+      }
+      th {
+        height: 14px !important;
+        line-height: 14px !important;
+        padding: 0 6px !important;
+        color: #adadad !important;
+        font-weight: 300 !important;
+      }
+    }
+    .data {
+      tr {
+        height: 38px !important;
+      }
+      td {
+        height: 38px !important;
+        line-height: 24px !important;
+        padding: 0 6px !important;
+      }
+
+    }
   }
+
+  // Table Vertical data
+  table.vertical {
+    tr {
+      height: 32px !important;
+    }
+    td {
+      height: 32px !important;
+      line-height: 24px !important;
+      overflow: hidden !important;
+      padding: 6px 0 0 0 !important;
+      vertical-align: top !important;
+      white-space: normal !important;
+    }
+    .header {
+      font-weight: $text-weight-bold !important;
+      @include tablet {
+        width: 200px !important;
+      }
+      @include mobile {
+        width: 100% !important;
+        display: inline-block;
+      }
+    }
+    .data {
+      white-space: normal !important;
+       height: auto !important;
+      ul {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      @include tablet {
+        width: 100% !important;
+      }
+      @include mobile {
+        width: 100% !important;
+        display: inline-block !important;
+      }
+    }
+
+
+  }
+
+  // Components ------------------------------------------------
+
+  // Files
+  .files {
+    .fileIcon {
+      svg {
+        fill: lighten($secondary-color, 33%) !important;
+        width: 24px !important;
+        height: 24px !important;
+        padding: 8px 6px 0 0 !important;
+      }
+    }
+    // columns widths
+    .filetype {
+      width: 24px !important;
+    }
+    .filename {
+      width: 45% !important;
+      @include tablet-only {
+        width: 50% !important;
+      }
+      @include mobile {
+        width: 100% !important;
+      }
+    }
+    .description {
+      width: 40% !important;
+      @include tablet-only {
+        width: 50% !important;
+      }
+    }
+    .size {
+      text-align: right !important;
+      width: 15% !important;
+    }
+
+  }
+
+  // Links
+  .links {
+    .link {
+      @include desktop {
+        width: 47% !important;
+      }
+      @include tablet-only {
+        width: 45% !important;
+      }
+      @include mobile {
+        width: 100% !important;
+      }
+    }
+    .description {
+      @include desktop {
+        width: 33% !important;
+      }
+      @include tablet-only {
+        width: 35% !important;
+      }
+    }
+    .oa {
+      text-align: right !important;
+      @include desktop {
+        width: 20% !important;
+      }
+      @include tablet-only {
+        width: 24px !important;
+      }
+      @include mobile {
+        width: 24px !important;
+      }
+    }
+  }
+
+  // Related publicaitons
+  .relatedPublications .publicationList {
+    .displayType {
+      font-style: italic;
+    }
+
+    div {
+      display: inline;
+    }
+
+    h3 {
+      display: inline;
+      font-size: 1em !important
+    }
+  }
+
+  // Grants
+  .grants {
+
+  }
+
+  // Publication details
+  .publicationDetails {
+  }
+
+  // Additional information
+  .additionalInformation {
+
+    .citationLabel {
+      display: none;
+    }
+
+    .sherpaRomeoGreen {
+      color: green;
+    }
+
+    .sherpaRomeoBlue {
+      color: blue;
+    }
+
+    .sherpaRomeoYellow {
+      color: yellow;
+      background-color: grey;
+      padding: 1px 3px;
+    }
+  }
+
+  // Other -----------------------------------------------
   .openExternalUrlIcon {
     height: $text-body-small !important;
     width: $text-body-small !important;
@@ -15,78 +207,44 @@
     margin: 0 2px;
     vertical-align: top;
   }
-
-  table.grantInformation {
-    margin-bottom: 1em;
+  .publicationCitation {
+    padding-top: 0 !important;
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
   }
-
-  .additionalInformation, .publicationDetails {
-    table-layout: auto !important;
+  .cardTitle {
+    margin-bottom: 12px !important;
   }
+  .citationCounts {
+    .citationOaIcon {
+      width: 24px !important;
+      @include mobile {
+        zoom: 2;
+        margin: 0 5px !important;
+      }
+    }
+    .citationLink {
+      @include tablet {
+        margin-left: 12px !important;
+      }
+      @include mobile {
+        margin-left: 6px !important;
+      }
+    }
 
-  .tableRow, .headingColumn, .dataColumn {
-    padding: 8px 6px !important;
-    height: auto !important;
-    @include mobile {
-      padding:  6px 0 0 0 !important;
-      height: auto !important;
+    .citationIcons {
+      white-space: nowrap !important;
+      height: 24px !important;
+      overflow: hidden !important;
+      @include mobile {
+        zoom: 2;
+        padding-left: 0px !important;
+      }
     }
   }
-
-  .headingColumn {
-    font-weight: $text-weight-bold;
-    font-size: $text-body-normal !important;
-    vertical-align: top;
-    white-space: normal !important;
-
-    @include desktop {
-      width: 150px;
+  .shareThis {
+    @include tablet {
+      margin-top: -26px !important;
     }
-    @include mobile {
-      display: inline-block !important;
-      width: calc(100% - 12px);
-      height: auto !important;
-    }
-  }
-
-  .dataColumn {
-    font-weight: $text-weight-normal;
-    white-space: normal !important;
-    vertical-align: top;
-    @include mobile {
-      padding: 12px 0 12px 18px !important;
-      display: inline-block !important;
-      width: calc(100% - 12px);
-      height: auto !important;
-      word-break: normal !important;
-    }
-  }
-
-  ul {
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  p {
-    text-align: justify;
-    text-justify: inter-word;
-  }
-
-  .citationLabel {
-    display: none;
-  }
-
-  .sherpaRomeoGreen {
-    color: green;
-  }
-
-  .sherpaRomeoBlue {
-    color: blue;
-  }
-
-  .sherpaRomeoYellow {
-    color: yellow;
-    background-color: grey;
   }
 }
-

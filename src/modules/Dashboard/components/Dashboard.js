@@ -61,7 +61,6 @@ class Dashboard extends React.Component {
     componentDidMount() {
         if (this.props.account && this.props.account.id) {
             this.props.actions.countPossiblyYourPublications(this.props.account.id);
-            this.props.actions.loadAuthorPublicationsByYear(this.props.account.id);
             this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
             this.props.actions.searchLatestPublications(this.props.account.id);
             this.props.actions.searchTrendingPublications(this.props.account.id);
@@ -79,7 +78,7 @@ class Dashboard extends React.Component {
     };
 
     _addPublication = () => {
-        this.props.history.push(routes.pathConfig.records.add.new);
+        this.props.history.push(routes.pathConfig.records.add.find);
     };
 
     _viewYourResearch = () => {

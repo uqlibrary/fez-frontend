@@ -54,3 +54,13 @@ export function clearRecordToView() {
         });
     };
 }
+
+/**
+ * Hides culture sensitivity statement application-wide
+ * @returns {action}
+ */
+export function setHideCulturalSensitivityStatement() {
+    return {
+        type: actions.VIEW_RECORD_CULTURAL_SENSITIVITY_STATEMENT_HIDE
+    };
+}

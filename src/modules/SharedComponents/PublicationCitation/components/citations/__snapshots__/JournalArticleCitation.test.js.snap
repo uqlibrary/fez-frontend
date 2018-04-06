@@ -4,6 +4,52 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
 <JournalArticleCitation
   publication={
     Object {
+      "fez_datastream_info": Array [
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "image.jpg",
+          "dsi_embargo_date": null,
+          "dsi_label": "testing image description",
+          "dsi_mimetype": "image/jpeg",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:792099",
+          "dsi_size": 97786,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "preview_image.jpg",
+          "dsi_embargo_date": null,
+          "dsi_label": "preview_image.jpg",
+          "dsi_mimetype": "image/jpeg",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:792099",
+          "dsi_size": 65857,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "thumbnail_image.jpg",
+          "dsi_embargo_date": null,
+          "dsi_label": "thumbnail_image.jpg",
+          "dsi_mimetype": "image/jpeg",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:792099",
+          "dsi_size": 3952,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "web_image.jpg",
+          "dsi_embargo_date": null,
+          "dsi_label": "web_image.jpg",
+          "dsi_mimetype": "image/jpeg",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:792099",
+          "dsi_size": 97345,
+          "dsi_state": "A",
+        },
+      ],
       "fez_record_search_key_access_conditions": null,
       "fez_record_search_key_acknowledgements": null,
       "fez_record_search_key_additional_notes": null,
@@ -484,8 +530,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         "rek_end_page_id": null,
         "rek_end_page_pid": "UQ:676287",
       },
-      "fez_record_search_key_file_attachment_access_condition": Array [],
-      "fez_record_search_key_file_attachment_embargo_date": Array [],
+      "fez_record_search_key_file_attachment_access_condition": Array [
+        Object {
+          "rek_file_attachment_access_condition": "8",
+          "rek_file_attachment_access_condition_id": 17,
+          "rek_file_attachment_access_condition_order": 3,
+          "rek_file_attachment_access_condition_pid": "UQ:792099",
+          "rek_file_attachment_access_condition_xsdmf_id": 0,
+        },
+      ],
+      "fez_record_search_key_file_attachment_embargo_date": Array [
+        Object {
+          "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+          "rek_file_attachment_embargo_date_id": 83,
+          "rek_file_attachment_embargo_date_order": 3,
+          "rek_file_attachment_embargo_date_pid": "UQ:795494",
+          "rek_file_attachment_embargo_date_xsdmf_id": 0,
+        },
+      ],
       "fez_record_search_key_file_attachment_name": Array [
         Object {
           "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -503,6 +565,12 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
           "rek_file_attachment_name": "UQ676287_OA.pdf",
           "rek_file_attachment_name_id": null,
           "rek_file_attachment_name_order": 3,
+          "rek_file_attachment_name_pid": "UQ:676287",
+        },
+        Object {
+          "rek_file_attachment_name": "image.jpg",
+          "rek_file_attachment_name_id": null,
+          "rek_file_attachment_name_order": 4,
           "rek_file_attachment_name_pid": "UQ:676287",
         },
       ],
@@ -1017,6 +1085,52 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
       initialNumberOfAuthors={10}
       publication={
         Object {
+          "fez_datastream_info": Array [
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "image.jpg",
+              "dsi_embargo_date": null,
+              "dsi_label": "testing image description",
+              "dsi_mimetype": "image/jpeg",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:792099",
+              "dsi_size": 97786,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "preview_image.jpg",
+              "dsi_embargo_date": null,
+              "dsi_label": "preview_image.jpg",
+              "dsi_mimetype": "image/jpeg",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:792099",
+              "dsi_size": 65857,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "thumbnail_image.jpg",
+              "dsi_embargo_date": null,
+              "dsi_label": "thumbnail_image.jpg",
+              "dsi_mimetype": "image/jpeg",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:792099",
+              "dsi_size": 3952,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "web_image.jpg",
+              "dsi_embargo_date": null,
+              "dsi_label": "web_image.jpg",
+              "dsi_mimetype": "image/jpeg",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:792099",
+              "dsi_size": 97345,
+              "dsi_state": "A",
+            },
+          ],
           "fez_record_search_key_access_conditions": null,
           "fez_record_search_key_acknowledgements": null,
           "fez_record_search_key_additional_notes": null,
@@ -1497,8 +1611,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
             "rek_end_page_id": null,
             "rek_end_page_pid": "UQ:676287",
           },
-          "fez_record_search_key_file_attachment_access_condition": Array [],
-          "fez_record_search_key_file_attachment_embargo_date": Array [],
+          "fez_record_search_key_file_attachment_access_condition": Array [
+            Object {
+              "rek_file_attachment_access_condition": "8",
+              "rek_file_attachment_access_condition_id": 17,
+              "rek_file_attachment_access_condition_order": 3,
+              "rek_file_attachment_access_condition_pid": "UQ:792099",
+              "rek_file_attachment_access_condition_xsdmf_id": 0,
+            },
+          ],
+          "fez_record_search_key_file_attachment_embargo_date": Array [
+            Object {
+              "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+              "rek_file_attachment_embargo_date_id": 83,
+              "rek_file_attachment_embargo_date_order": 3,
+              "rek_file_attachment_embargo_date_pid": "UQ:795494",
+              "rek_file_attachment_embargo_date_xsdmf_id": 0,
+            },
+          ],
           "fez_record_search_key_file_attachment_name": Array [
             Object {
               "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -1516,6 +1646,12 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
               "rek_file_attachment_name": "UQ676287_OA.pdf",
               "rek_file_attachment_name_id": null,
               "rek_file_attachment_name_order": 3,
+              "rek_file_attachment_name_pid": "UQ:676287",
+            },
+            Object {
+              "rek_file_attachment_name": "image.jpg",
+              "rek_file_attachment_name_id": null,
+              "rek_file_attachment_name_order": 4,
               "rek_file_attachment_name_pid": "UQ:676287",
             },
           ],
@@ -2005,14 +2141,13 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Azimi, Iman"
         >
           <span
             className="citationAuthor"
           >
-             
             Azimi, Iman
             , 
           </span>
@@ -2020,14 +2155,13 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Milevskiy, Michael J. G."
         >
           <span
             className="citationAuthor"
           >
-             
             Milevskiy, Michael J. G.
             , 
           </span>
@@ -2035,14 +2169,13 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Kaemmerer, Elke"
         >
           <span
             className="citationAuthor"
           >
-             
             Kaemmerer, Elke
             , 
           </span>
@@ -2050,14 +2183,13 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Turner, Dane"
         >
           <span
             className="citationAuthor"
           >
-             
             Turner, Dane
             , 
           </span>
@@ -2065,14 +2197,13 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_5"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Yapa, Kunsala T. D. S."
         >
           <span
             className="citationAuthor"
           >
-             
             Yapa, Kunsala T. D. S.
             , 
           </span>
@@ -2080,14 +2211,13 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_6"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Brown, Melissa A."
         >
           <span
             className="citationAuthor"
           >
-             
             Brown, Melissa A.
             , 
           </span>
@@ -2095,14 +2225,13 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_7"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Thompson, Erik W."
         >
           <span
             className="citationAuthor"
           >
-             
             Thompson, Erik W.
             , 
           </span>
@@ -2110,16 +2239,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_8"
-          prefix=" "
-          suffix=", "
+          prefix=""
+          suffix=""
           value="Roberts-Thomson, Sarah J."
         >
           <span
             className="citationAuthor"
           >
-             
             Roberts-Thomson, Sarah J.
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -2215,6 +2342,52 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
       prefix=""
       publication={
         Object {
+          "fez_datastream_info": Array [
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "image.jpg",
+              "dsi_embargo_date": null,
+              "dsi_label": "testing image description",
+              "dsi_mimetype": "image/jpeg",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:792099",
+              "dsi_size": 97786,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "preview_image.jpg",
+              "dsi_embargo_date": null,
+              "dsi_label": "preview_image.jpg",
+              "dsi_mimetype": "image/jpeg",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:792099",
+              "dsi_size": 65857,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "thumbnail_image.jpg",
+              "dsi_embargo_date": null,
+              "dsi_label": "thumbnail_image.jpg",
+              "dsi_mimetype": "image/jpeg",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:792099",
+              "dsi_size": 3952,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "web_image.jpg",
+              "dsi_embargo_date": null,
+              "dsi_label": "web_image.jpg",
+              "dsi_mimetype": "image/jpeg",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:792099",
+              "dsi_size": 97345,
+              "dsi_state": "A",
+            },
+          ],
           "fez_record_search_key_access_conditions": null,
           "fez_record_search_key_acknowledgements": null,
           "fez_record_search_key_additional_notes": null,
@@ -2695,8 +2868,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
             "rek_end_page_id": null,
             "rek_end_page_pid": "UQ:676287",
           },
-          "fez_record_search_key_file_attachment_access_condition": Array [],
-          "fez_record_search_key_file_attachment_embargo_date": Array [],
+          "fez_record_search_key_file_attachment_access_condition": Array [
+            Object {
+              "rek_file_attachment_access_condition": "8",
+              "rek_file_attachment_access_condition_id": 17,
+              "rek_file_attachment_access_condition_order": 3,
+              "rek_file_attachment_access_condition_pid": "UQ:792099",
+              "rek_file_attachment_access_condition_xsdmf_id": 0,
+            },
+          ],
+          "fez_record_search_key_file_attachment_embargo_date": Array [
+            Object {
+              "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+              "rek_file_attachment_embargo_date_id": 83,
+              "rek_file_attachment_embargo_date_order": 3,
+              "rek_file_attachment_embargo_date_pid": "UQ:795494",
+              "rek_file_attachment_embargo_date_xsdmf_id": 0,
+            },
+          ],
           "fez_record_search_key_file_attachment_name": Array [
             Object {
               "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -2714,6 +2903,12 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
               "rek_file_attachment_name": "UQ676287_OA.pdf",
               "rek_file_attachment_name_id": null,
               "rek_file_attachment_name_order": 3,
+              "rek_file_attachment_name_pid": "UQ:676287",
+            },
+            Object {
+              "rek_file_attachment_name": "image.jpg",
+              "rek_file_attachment_name_id": null,
+              "rek_file_attachment_name_order": 4,
               "rek_file_attachment_name_pid": "UQ:676287",
             },
           ],
@@ -3207,6 +3402,52 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
           className="citationStartPage"
           publication={
             Object {
+              "fez_datastream_info": Array [
+                Object {
+                  "dsi_copyright": null,
+                  "dsi_dsid": "image.jpg",
+                  "dsi_embargo_date": null,
+                  "dsi_label": "testing image description",
+                  "dsi_mimetype": "image/jpeg",
+                  "dsi_open_access": null,
+                  "dsi_pid": "UQ:792099",
+                  "dsi_size": 97786,
+                  "dsi_state": "A",
+                },
+                Object {
+                  "dsi_copyright": null,
+                  "dsi_dsid": "preview_image.jpg",
+                  "dsi_embargo_date": null,
+                  "dsi_label": "preview_image.jpg",
+                  "dsi_mimetype": "image/jpeg",
+                  "dsi_open_access": null,
+                  "dsi_pid": "UQ:792099",
+                  "dsi_size": 65857,
+                  "dsi_state": "A",
+                },
+                Object {
+                  "dsi_copyright": null,
+                  "dsi_dsid": "thumbnail_image.jpg",
+                  "dsi_embargo_date": null,
+                  "dsi_label": "thumbnail_image.jpg",
+                  "dsi_mimetype": "image/jpeg",
+                  "dsi_open_access": null,
+                  "dsi_pid": "UQ:792099",
+                  "dsi_size": 3952,
+                  "dsi_state": "A",
+                },
+                Object {
+                  "dsi_copyright": null,
+                  "dsi_dsid": "web_image.jpg",
+                  "dsi_embargo_date": null,
+                  "dsi_label": "web_image.jpg",
+                  "dsi_mimetype": "image/jpeg",
+                  "dsi_open_access": null,
+                  "dsi_pid": "UQ:792099",
+                  "dsi_size": 97345,
+                  "dsi_state": "A",
+                },
+              ],
               "fez_record_search_key_access_conditions": null,
               "fez_record_search_key_acknowledgements": null,
               "fez_record_search_key_additional_notes": null,
@@ -3687,8 +3928,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                 "rek_end_page_id": null,
                 "rek_end_page_pid": "UQ:676287",
               },
-              "fez_record_search_key_file_attachment_access_condition": Array [],
-              "fez_record_search_key_file_attachment_embargo_date": Array [],
+              "fez_record_search_key_file_attachment_access_condition": Array [
+                Object {
+                  "rek_file_attachment_access_condition": "8",
+                  "rek_file_attachment_access_condition_id": 17,
+                  "rek_file_attachment_access_condition_order": 3,
+                  "rek_file_attachment_access_condition_pid": "UQ:792099",
+                  "rek_file_attachment_access_condition_xsdmf_id": 0,
+                },
+              ],
+              "fez_record_search_key_file_attachment_embargo_date": Array [
+                Object {
+                  "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                  "rek_file_attachment_embargo_date_id": 83,
+                  "rek_file_attachment_embargo_date_order": 3,
+                  "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                  "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                },
+              ],
               "fez_record_search_key_file_attachment_name": Array [
                 Object {
                   "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -3706,6 +3963,12 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                   "rek_file_attachment_name": "UQ676287_OA.pdf",
                   "rek_file_attachment_name_id": null,
                   "rek_file_attachment_name_order": 3,
+                  "rek_file_attachment_name_pid": "UQ:676287",
+                },
+                Object {
+                  "rek_file_attachment_name": "image.jpg",
+                  "rek_file_attachment_name_id": null,
+                  "rek_file_attachment_name_order": 4,
                   "rek_file_attachment_name_pid": "UQ:676287",
                 },
               ],
@@ -4196,6 +4459,52 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
           className="citationEndPage"
           publication={
             Object {
+              "fez_datastream_info": Array [
+                Object {
+                  "dsi_copyright": null,
+                  "dsi_dsid": "image.jpg",
+                  "dsi_embargo_date": null,
+                  "dsi_label": "testing image description",
+                  "dsi_mimetype": "image/jpeg",
+                  "dsi_open_access": null,
+                  "dsi_pid": "UQ:792099",
+                  "dsi_size": 97786,
+                  "dsi_state": "A",
+                },
+                Object {
+                  "dsi_copyright": null,
+                  "dsi_dsid": "preview_image.jpg",
+                  "dsi_embargo_date": null,
+                  "dsi_label": "preview_image.jpg",
+                  "dsi_mimetype": "image/jpeg",
+                  "dsi_open_access": null,
+                  "dsi_pid": "UQ:792099",
+                  "dsi_size": 65857,
+                  "dsi_state": "A",
+                },
+                Object {
+                  "dsi_copyright": null,
+                  "dsi_dsid": "thumbnail_image.jpg",
+                  "dsi_embargo_date": null,
+                  "dsi_label": "thumbnail_image.jpg",
+                  "dsi_mimetype": "image/jpeg",
+                  "dsi_open_access": null,
+                  "dsi_pid": "UQ:792099",
+                  "dsi_size": 3952,
+                  "dsi_state": "A",
+                },
+                Object {
+                  "dsi_copyright": null,
+                  "dsi_dsid": "web_image.jpg",
+                  "dsi_embargo_date": null,
+                  "dsi_label": "web_image.jpg",
+                  "dsi_mimetype": "image/jpeg",
+                  "dsi_open_access": null,
+                  "dsi_pid": "UQ:792099",
+                  "dsi_size": 97345,
+                  "dsi_state": "A",
+                },
+              ],
               "fez_record_search_key_access_conditions": null,
               "fez_record_search_key_acknowledgements": null,
               "fez_record_search_key_additional_notes": null,
@@ -4676,8 +4985,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                 "rek_end_page_id": null,
                 "rek_end_page_pid": "UQ:676287",
               },
-              "fez_record_search_key_file_attachment_access_condition": Array [],
-              "fez_record_search_key_file_attachment_embargo_date": Array [],
+              "fez_record_search_key_file_attachment_access_condition": Array [
+                Object {
+                  "rek_file_attachment_access_condition": "8",
+                  "rek_file_attachment_access_condition_id": 17,
+                  "rek_file_attachment_access_condition_order": 3,
+                  "rek_file_attachment_access_condition_pid": "UQ:792099",
+                  "rek_file_attachment_access_condition_xsdmf_id": 0,
+                },
+              ],
+              "fez_record_search_key_file_attachment_embargo_date": Array [
+                Object {
+                  "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                  "rek_file_attachment_embargo_date_id": 83,
+                  "rek_file_attachment_embargo_date_order": 3,
+                  "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                  "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                },
+              ],
               "fez_record_search_key_file_attachment_name": Array [
                 Object {
                   "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -4695,6 +5020,12 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                   "rek_file_attachment_name": "UQ676287_OA.pdf",
                   "rek_file_attachment_name_id": null,
                   "rek_file_attachment_name_order": 3,
+                  "rek_file_attachment_name_pid": "UQ:676287",
+                },
+                Object {
+                  "rek_file_attachment_name": "image.jpg",
+                  "rek_file_attachment_name_id": null,
+                  "rek_file_attachment_name_order": 4,
                   "rek_file_attachment_name_pid": "UQ:676287",
                 },
               ],

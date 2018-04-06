@@ -15,15 +15,10 @@ describe('Grant Information Component ', () => {
     it('should render component', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Table.grantInformation').length).toEqual(3);
-
-        // first grant table would have 4 rows, agency, agency id, grant id and text
-        expect(wrapper.find('Table.grantInformation').at(0).find('ViewRecordTableRow').length).toEqual(3);
-        // second grant table would have 3 rows, agency, agency id and grant id
-        expect(wrapper.find('Table.grantInformation').at(1).find('ViewRecordTableRow').length).toEqual(2);
+        expect(wrapper.find('Table.grantInformation').length).toEqual(1);
     });
 
-    it('should render component with empty publication', () => {
+    it('should not render component with empty publication', () => {
         const wrapper = setup({publication: {}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });

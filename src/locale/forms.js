@@ -8,37 +8,37 @@ export default {
             submit: 'Claim this publication',
             claimingInformation: {
                 title: 'You are claiming to be an author for the following item:',
-                help: {
-                    title: 'Claiming a publication',
-                    text: 'Enter the text that will help people here',
-                    buttonLabel: 'OK'
-                }
+                // help: {
+                //     title: 'Claiming a publication',
+                //     text: 'Enter the text that will help people here',
+                //     buttonLabel: 'OK'
+                // }
             },
             authorLinking: {
                 title: 'Author linking',
                 text: 'We were unable to automatically detect who you are from the list of authors on this publication. Please select your name from the list below: ',
-                help: {
-                    title: 'Author linking',
-                    text: '...',
-                    buttonLabel: 'OK'
-                }
+                // help: {
+                //     title: 'Author linking',
+                //     text: '...',
+                //     buttonLabel: 'OK'
+                // }
             },
             contributorLinking: {
                 title: 'Editor linking',
                 text: 'We were unable to automatically detect who you are from the list of editors on this publication. Please select your name from the list below: ',
-                help: {
-                    title: 'Editor linking',
-                    text: '...',
-                    buttonLabel: 'OK'
-                }
+                // help: {
+                //     title: 'Editor linking',
+                //     text: '...',
+                //     buttonLabel: 'OK'
+                // }
             },
             comments: {
                 title: 'Optional: Suggest changes or add links to this record',
-                help: {
-                    title: 'Additional information',
-                    text: '...',
-                    buttonLabel: 'OK'
-                },
+                // help: {
+                //     title: 'Additional information',
+                //     text: '...',
+                //     buttonLabel: 'OK'
+                // },
                 fieldLabels: {
                     comments: 'Type edits/changes/comments here',
                     url: 'Link (URL)'
@@ -46,11 +46,11 @@ export default {
             },
             fileUpload: {
                 title: 'Optional: Upload additional files',
-                help: {
-                    title: 'Files',
-                    text: '...',
-                    buttonLabel: 'OK'
-                }
+                // help: {
+                //     title: 'Files',
+                //     text: '...',
+                //     buttonLabel: 'OK'
+                // }
             },
             cancelWorkflowConfirmation: {
                 confirmationTitle: 'Cancel claiming a publication',
@@ -65,9 +65,9 @@ export default {
                         Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
                     </p>),
                 fileFailConfirmationAlert: {
-                    title: 'File upload failed',
-                    message: 'Retry uploading files via "Fix record" screen or contact eSpace administrators.',
-                    type: 'info'
+                    title: 'File upload and/or edits/changes/comments post failed',
+                    message: 'Retry uploading files and/or posting edits/changes/comments about this claim via "Fix record" screen or contact eSpace administrators.',
+                    type: 'warning'
                 },
                 cancelButtonLabel: 'Claim more publications',
                 addRecordButtonLabel: 'Add another missing record',
@@ -111,11 +111,11 @@ export default {
                 eget ultrices dui onsectetur adipiscing elit. Morbi at neque eros. In et ligula quam. Etiam
                 porttitor gravida tortor, eget ultrices dui scelerisque a.
             </div>),
-            help: {
-                title: 'Unclaim a record',
-                text: 'Enter the text that will help people here',
-                buttonLabel: 'OK'
-            },
+            // help: {
+            //     title: 'Unclaim a record',
+            //     text: 'Enter the text that will help people here',
+            //     buttonLabel: 'OK'
+            // },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Unclaim a record',
                 confirmationMessage: 'You have unclaimed record successfully',
@@ -131,11 +131,11 @@ export default {
         fixPublicationForm: {
             comments: {
                 title: 'Suggest a correction',
-                help: {
-                    title: 'Request a change',
-                    text: '...',
-                    buttonLabel: 'OK'
-                },
+                // help: {
+                //     title: 'Request a change',
+                //     text: '...',
+                //     buttonLabel: 'OK'
+                // },
                 fieldLabels: {
                     comments: 'Describe the problem with this record, eg record is a duplicate, or suggested changes',
                     url: 'Link (URL)'
@@ -146,11 +146,11 @@ export default {
                 description: (<div>
                     Upload an Open Access file, HERDC evidence or an NTRO Research Statement
                 </div>),
-                help: {
-                    title: 'Upload files',
-                    text: '...',
-                    buttonLabel: 'OK'
-                }
+                // help: {
+                //     title: 'Upload files',
+                //     text: '...',
+                //     buttonLabel: 'OK'
+                // }
             },
             cancelWorkflowConfirmation: {
                 confirmationTitle: 'Cancel request',

@@ -14,7 +14,7 @@ describe('Journal Name Component test ', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.sherpaRomeoGreen').length).toEqual(1);
-        expect(wrapper.find('.eraYearListed').text()).toEqual('(ERA 2010 Journal(s) Listed)');
+        expect(wrapper.find('.eraYearListed').text()).toEqual(' (ERA 2010 Journal(s) Listed)');
     });
 
     it('should render with empty props', () => {

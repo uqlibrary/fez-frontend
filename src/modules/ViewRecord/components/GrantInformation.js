@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
-import {Table, TableBody} from 'material-ui/Table';
+import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import ViewRecordTableRow from './ViewRecordTableRow';
 
 export default class GrantInformation extends Component {
     static propTypes = {
@@ -15,22 +14,19 @@ export default class GrantInformation extends Component {
     }
 
     renderGrantDetail = (grantAgency, grantId, grantText, order) => {
+        const txt = locale.viewRecord.headings.default.grantInformation;
         return (
-            <Table selectable={false} className="grantInformation" key={`grantInformation-${order}`}>
-                <TableBody displayRowCheckbox={false}>
-                    {
-                        <ViewRecordTableRow heading={locale.viewRecord.headings.default.grantInformation.fez_record_search_key_grant_agency} data={grantAgency.rek_grant_agency} />
-                    }
-                    {
-                        grantId &&
-                        <ViewRecordTableRow heading={locale.viewRecord.headings.default.grantInformation.fez_record_search_key_grant_id} data={grantId.rek_grant_id} />
-                    }
-                    {
-                        grantText &&
-                        <ViewRecordTableRow heading={locale.viewRecord.headings.default.grantInformation.fez_record_search_key_grant_text} data={grantText.rek_grant_text} />
-                    }
-                </TableBody>
-            </Table>
+            <TableRow className="row" key={order}>
+                <TableRowColumn className="header is-hidden-mobile">
+                    <b>{txt.fez_record_search_key_grant_agency}</b>
+                    {grantId && ' (' + txt.fez_record_search_key_grant_id + ')'}
+                </TableRowColumn>
+                <TableRowColumn className="data">
+                    <b>{grantAgency.rek_grant_agency}</b>
+                    {grantId && ' (' + grantId.rek_grant_id + ')'}
+                    <span className="grantText">{grantText && grantText.rek_grant_text}</span>
+                </TableRowColumn>
+            </TableRow>
         );
     }
 
@@ -56,9 +52,18 @@ export default class GrantInformation extends Component {
     }
 
     render() {
+        if(!this.props.publication.fez_record_search_key_grant_agency
+            || this.props.publication.fez_record_search_key_grant_agency.length === 0) {
+            return null;
+        }
+
         return (
             <StandardCard title={locale.viewRecord.sections.grantInformation}>
-                {this.props.publication.fez_record_search_key_grant_agency && this.renderGrants(this.props.publication)}
+                <Table selectable={false} className="grantInformation vertical">
+                    <TableBody displayRowCheckbox={false}>
+                        {this.props.publication.fez_record_search_key_grant_agency && this.renderGrants(this.props.publication)}
+                    </TableBody>
+                </Table>
             </StandardCard>
         );
     }
