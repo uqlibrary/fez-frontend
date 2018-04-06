@@ -97,6 +97,7 @@ export default class AdditionalInformation extends Component {
             case 'rek_org_unit_name': return this.renderLink(pathConfig.list.orgUnitName(data), data);
             case 'rek_institutional_status': return this.renderLink(pathConfig.list.institutionalStatus(object[subkey]), data);
             case 'rek_book_title': return this.renderLink(pathConfig.list.bookTitle(object[subkey]), data);
+            case 'rek_job_number': return this.renderLink(pathConfig.list.jobNumber(object[subkey]), data);
             case 'rek_conference_name': return this.renderLink(pathConfig.list.conferenceName(object[subkey]), data);
             default: return data;
         }

@@ -104,6 +104,7 @@ export default {
                 fez_record_search_key_translated_conference_name: 'Translated conference name',
                 fez_record_search_key_conference_location: 'Conference Location',
                 fez_record_search_key_conference_dates: 'Conference dates',
+                fez_record_search_key_section: 'Section',
                 fez_record_search_key_convener: 'Convener',
                 fez_record_search_key_proceedings_title: 'Proceedings title',
                 fez_record_search_key_language_of_proceedings_title: 'Language of proceedings title',
@@ -1807,8 +1808,12 @@ export default {
                     order: 17
                 },
                 {
-                    field: 'fez_record_search_key_keywords',
+                    field: 'fez_record_search_key_subject',
                     order: 18
+                },
+                {
+                    field: 'fez_record_search_key_keywords',
+                    order: 19
                 }
             ],
             'Reference Entry': [

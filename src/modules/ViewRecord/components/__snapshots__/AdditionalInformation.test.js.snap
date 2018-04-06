@@ -10094,7 +10094,12 @@ exports[`Additional Information Component  should render component with design d
                     "rek_ismemberof_xsdmf_id": 149,
                   },
                 ],
-                "fez_record_search_key_job_number": null,
+                "fez_record_search_key_job_number": Object {
+                  "rek_job_number": "UQFL158, job no. 1006-2",
+                  "rek_job_number_id": 39,
+                  "rek_job_number_pid": "UQ:543799",
+                  "rek_job_number_xsdmf_id": 17313,
+                },
                 "fez_record_search_key_keywords": Array [
                   Object {
                     "rek_keywords": "Architecture",
@@ -10600,7 +10605,12 @@ exports[`Additional Information Component  should render component with design d
                     "rek_ismemberof_xsdmf_id": 149,
                   },
                 ],
-                "fez_record_search_key_job_number": null,
+                "fez_record_search_key_job_number": Object {
+                  "rek_job_number": "UQFL158, job no. 1006-2",
+                  "rek_job_number_id": 39,
+                  "rek_job_number_pid": "UQ:543799",
+                  "rek_job_number_xsdmf_id": 17313,
+                },
                 "fez_record_search_key_keywords": Array [
                   Object {
                     "rek_keywords": "Architecture",
@@ -10867,6 +10877,17 @@ exports[`Additional Information Component  should render component with design d
         }
         heading="Keyword(s)"
         key="additional-info-Keyword(s)"
+      />
+      <ViewRecordTableRow
+        data={
+          <a
+            href="/list/?cat=quick_filter&search_keys[core_151]=UQFL158, job no. 1006-2"
+          >
+            UQFL158, job no. 1006-2
+          </a>
+        }
+        heading="Job number"
+        key="additional-info-Job number"
       />
       <ViewRecordTableRow
         data={

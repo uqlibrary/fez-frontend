@@ -49,6 +49,7 @@ export const pathConfig =  {
         orgUnitName: (orgUnitName) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_70]=${orgUnitName}`),
         series: (series) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_33]=${series}`),
         bookTitle: (bookTitle) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_37]=${bookTitle}`),
+        jobNumber: (jobNumber) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_151]=${jobNumber}`),
         conferenceName: (conferenceName) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_36]=${conferenceName}`),
         proceedingsTitle: (proceedingsTitle) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_2]=${proceedingsTitle}`),
     },
