@@ -2,199 +2,86 @@
 
 exports[`CitationCounts renders  component with a mock record metrics 1`] = `
 <div
-  className="citationCounts columns is-multiline is-gapless is-marginless"
+  className="citationCounts columns is-gapless is-marginless"
 >
-  <CitationCountView
-    count={null}
-    link="https://scholar.google.com/scholar?q=intitle:[id]Reducing%20preventable%20health%20disadvantage%20for%20people%20with%20disabilities%20through%20physical%20activity%20promotion"
-    source="google"
-    title="Link to Reducing preventable health disadvantage for people with disabilities through physical activity promotion (Google scholar) will open in a new window."
-  />
+  <div
+    className="column is-narrow citationIcons"
+  >
+    <CitationCountView
+      count={1}
+      link="http://www.altmetric.com/details.php?citation_id=23535331"
+      source="altmetric"
+      title="Link to ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network (Altmetric) will open in a new window."
+    />
+    <CitationCountView
+      count={null}
+      link="https://scholar.google.com/scholar?q=intitle:[id]ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
+      source="google"
+      title="Link to ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network (Google scholar) will open in a new window."
+    />
+  </div>
 </div>
 `;
 
 exports[`CitationCounts renders  component with all metrics 1`] = `
 <div
-  className="citationCounts columns is-multiline is-gapless is-marginless"
+  className="citationCounts columns is-gapless is-marginless"
 >
-  <CitationCountView
-    count={1}
-    link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
-    source="wos"
-    title="Link to undefined (Web of science) will open in a new window."
-  />
-  <CitationCountView
-    count={1}
-    link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
-    source="scopus"
-    title="Link to undefined (Scopus) will open in a new window."
-  />
-  <CitationCountView
-    count={1}
-    link="http://www.altmetric.com/details.php?citation_id=12345"
-    source="altmetric"
-    title="Link to undefined (Altmetric) will open in a new window."
-  />
-  <CitationCountView
-    count={1}
-    link="https://scholar.google.com/scholar?q=intitle:[id]undefined"
-    source="google"
-    title="Link to undefined (Google scholar) will open in a new window."
-  />
-  <span
-    className="citationCount"
-  >
-    <div
-      className="fez-icon openAccess large"
-      title="Open Access - DOI - Free to read (embargo date might apply)"
-    />
-  </span>
   <div
-    className="citationCount column"
+    className="column is-narrow citationIcons"
   >
-    <div
-      className="columns is-mobile is-gapless"
-    >
-      <div
-        className="column is-narrow citationCountNumber"
-      >
-        <ExternalLink
-          className="externalLink"
-          href="https://app.library.uq.edu.au/#/authors/view/pid:111"
-          openInNewIcon={true}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          View full statistics
-        </ExternalLink>
-      </div>
-    </div>
+    <CitationCountView
+      count={1}
+      link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+      source="wos"
+      title="Link to undefined (Web of science) will open in a new window."
+    />
+    <CitationCountView
+      count={1}
+      link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+      source="scopus"
+      title="Link to undefined (Scopus) will open in a new window."
+    />
+    <CitationCountView
+      count={1}
+      link="http://www.altmetric.com/details.php?citation_id=12345"
+      source="altmetric"
+      title="Link to undefined (Altmetric) will open in a new window."
+    />
+    <CitationCountView
+      count={1}
+      link="https://scholar.google.com/scholar?q=intitle:[id]undefined"
+      source="google"
+      title="Link to undefined (Google scholar) will open in a new window."
+    />
+    <OpenAccessIcon
+      embargoDate={null}
+      isOpenAccess={true}
+      openAccessStatusId={453693}
+    />
   </div>
-</div>
-`;
-
-exports[`CitationCounts renders  component with all metrics under embargo date 1`] = `
-<div
-  className="citationCounts columns is-multiline is-gapless is-marginless"
->
-  <CitationCountView
-    count={1}
-    link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
-    source="wos"
-    title="Link to undefined (Web of science) will open in a new window."
-  />
-  <CitationCountView
-    count={1}
-    link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
-    source="scopus"
-    title="Link to undefined (Scopus) will open in a new window."
-  />
-  <CitationCountView
-    count={1}
-    link="http://www.altmetric.com/details.php?citation_id=12345"
-    source="altmetric"
-    title="Link to undefined (Altmetric) will open in a new window."
-  />
-  <CitationCountView
-    count={1}
-    link="https://scholar.google.com/scholar?q=intitle:[id]undefined"
-    source="google"
-    title="Link to undefined (Google scholar) will open in a new window."
-  />
-  <span
-    className="citationCount"
-  >
-    <div
-      className="fez-icon openAccess large"
-      title="Open Access - DOI - Free to read (embargo date might apply)"
-    />
-  </span>
   <div
-    className="citationCount column"
+    className="column is-narrow citationLink"
   >
-    <div
-      className="columns is-mobile is-gapless"
+    <ExternalLink
+      className="externalLink"
+      href="https://app.library.uq.edu.au/#/authors/view/pid:111"
+      openInNewIcon={true}
+      rel="noopener noreferrer"
+      target="_blank"
     >
-      <div
-        className="column is-narrow citationCountNumber"
-      >
-        <ExternalLink
-          className="externalLink"
-          href="https://app.library.uq.edu.au/#/authors/view/pid:111"
-          openInNewIcon={true}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          View full statistics
-        </ExternalLink>
-      </div>
-    </div>
+      View full statistics
+    </ExternalLink>
   </div>
 </div>
 `;
 
 exports[`CitationCounts renders  component with no metrics 1`] = `
 <div
-  className="citationCounts columns is-multiline is-gapless is-marginless"
-/>
-`;
-
-exports[`CitationCounts renders  component with non rendering oa status 1`] = `
-<div
-  className="citationCounts columns is-multiline is-gapless is-marginless"
+  className="citationCounts columns is-gapless is-marginless"
 >
-  <CitationCountView
-    count={1}
-    link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
-    source="wos"
-    title="Link to undefined (Web of science) will open in a new window."
-  />
-  <CitationCountView
-    count={1}
-    link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
-    source="scopus"
-    title="Link to undefined (Scopus) will open in a new window."
-  />
-  <CitationCountView
-    count={1}
-    link="http://www.altmetric.com/details.php?citation_id=12345"
-    source="altmetric"
-    title="Link to undefined (Altmetric) will open in a new window."
-  />
-  <CitationCountView
-    count={1}
-    link="https://scholar.google.com/scholar?q=intitle:[id]undefined"
-    source="google"
-    title="Link to undefined (Google scholar) will open in a new window."
-  />
-  <span
-    className="citationCount"
-  >
-    <div
-      className="fez-icon openAccess large"
-      title="Open Access - Not Open Access - Free to read (embargo date might apply)"
-    />
-  </span>
   <div
-    className="citationCount column"
-  >
-    <div
-      className="columns is-mobile is-gapless"
-    >
-      <div
-        className="column is-narrow citationCountNumber"
-      >
-        <ExternalLink
-          className="externalLink"
-          href="https://app.library.uq.edu.au/#/authors/view/pid:111"
-          openInNewIcon={true}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          View full statistics
-        </ExternalLink>
-      </div>
-    </div>
-  </div>
+    className="column is-narrow citationIcons"
+  />
 </div>
 `;

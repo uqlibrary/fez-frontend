@@ -87,6 +87,11 @@ describe('Component Links ', () => {
         expect(wrapper.find('.openAccess').length).toEqual(4);
     });
 
+    it('should not render component for empty publication', () => {
+        const wrapper = setup({publication: {}});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render list of links with 3 embargoed links and a google scholar link', () => {
         const linkProps = {
             fez_record_search_key_oa_embargo_days: {

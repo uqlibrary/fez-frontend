@@ -227,7 +227,12 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
           "rek_ismemberof_xsdmf_id": 149,
         },
       ],
-      "fez_record_search_key_job_number": null,
+      "fez_record_search_key_job_number": Object {
+        "rek_job_number": "UQFL158, job no. 1006-2",
+        "rek_job_number_id": 39,
+        "rek_job_number_pid": "UQ:543799",
+        "rek_job_number_xsdmf_id": 17313,
+      },
       "fez_record_search_key_keywords": Array [
         Object {
           "rek_keywords": "Architecture",
@@ -674,7 +679,12 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
               "rek_ismemberof_xsdmf_id": 149,
             },
           ],
-          "fez_record_search_key_job_number": null,
+          "fez_record_search_key_job_number": Object {
+            "rek_job_number": "UQFL158, job no. 1006-2",
+            "rek_job_number_id": 39,
+            "rek_job_number_pid": "UQ:543799",
+            "rek_job_number_xsdmf_id": 17313,
+          },
           "fez_record_search_key_keywords": Array [
             Object {
               "rek_keywords": "Architecture",
@@ -873,14 +883,13 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=""
           value="Dickson, Michael"
         >
           <span
             className="citationAuthor"
           >
-             
             Dickson, Michael
           </span>
         </CitationView>
@@ -1171,7 +1180,12 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
           "rek_ismemberof_xsdmf_id": 149,
         },
       ],
-      "fez_record_search_key_job_number": null,
+      "fez_record_search_key_job_number": Object {
+        "rek_job_number": "UQFL158, job no. 1006-2",
+        "rek_job_number_id": 39,
+        "rek_job_number_pid": "UQ:543799",
+        "rek_job_number_xsdmf_id": 17313,
+      },
       "fez_record_search_key_keywords": Array [
         Object {
           "rek_keywords": "Architecture",
@@ -1620,7 +1634,12 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
               "rek_ismemberof_xsdmf_id": 149,
             },
           ],
-          "fez_record_search_key_job_number": null,
+          "fez_record_search_key_job_number": Object {
+            "rek_job_number": "UQFL158, job no. 1006-2",
+            "rek_job_number_id": 39,
+            "rek_job_number_pid": "UQ:543799",
+            "rek_job_number_xsdmf_id": 17313,
+          },
           "fez_record_search_key_keywords": Array [
             Object {
               "rek_keywords": "Architecture",
@@ -1821,14 +1840,13 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=""
           value="Dickson, Michael"
         >
           <span
             className="citationAuthor"
           >
-             
             Dickson, Michael
           </span>
         </CitationView>

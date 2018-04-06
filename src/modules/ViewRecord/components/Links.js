@@ -6,14 +6,14 @@ import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {PubmedCentralLink} from 'modules/SharedComponents/PubmedCentralLink';
 import DoiCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DoiCitationView';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
-import OpenAccessIcon from './partials/OpenAccessIcon';
+import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 
 import {locale} from 'locale';
 import {OPEN_ACCESS_ID_LINK_NO_DOI, OPEN_ACCESS_ID_DOI} from 'config/general';
 
 import moment from 'moment';
 
-export default class ViewRecordLinks extends PureComponent {
+export default class Links extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired
     };
@@ -21,13 +21,13 @@ export default class ViewRecordLinks extends PureComponent {
     renderLinkRow = (item) => {
         return (
             <TableRow key={`link-${item.index}`}>
-                <TableRowColumn className="rowLink">
+                <TableRowColumn className="link">
                     {item.link}
                 </TableRowColumn>
-                <TableRowColumn className="rowDescription is-hidden-mobile" title={item.description}>
+                <TableRowColumn className="description is-hidden-mobile" title={item.description}>
                     {item.description}
                 </TableRowColumn>
-                <TableRowColumn className="rowOA align-right">
+                <TableRowColumn className="oa align-right">
                     <OpenAccessIcon {...item.openAccessStatus} showEmbargoText />
                 </TableRowColumn>
             </TableRow>
@@ -116,8 +116,15 @@ export default class ViewRecordLinks extends PureComponent {
 
     render() {
         const record = this.props.publication;
-        const txt = locale.viewRecord.sections.links;
 
+        if (!(record.fez_record_search_key_link && record.fez_record_search_key_link.length > 0
+            || record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id
+            || record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi
+            || record.fez_record_search_key_oa_status && record.fez_record_search_key_oa_status.rek_oa_status === OPEN_ACCESS_ID_LINK_NO_DOI)) {
+            return null;
+        }
+
+        const txt = locale.viewRecord.sections.links;
         const pubmedCentralId = record.fez_record_search_key_pubmed_central_id
             && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id;
         const doi = record.fez_record_search_key_doi
@@ -131,15 +138,15 @@ export default class ViewRecordLinks extends PureComponent {
         return (
             <StandardCard title={txt.title}>
                 <div className="viewRecordLinks">
-                    <Table selectable={false} className="links">
-                        <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="tableHeader">
+                    <Table selectable={false} className="links horizontal">
+                        <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="header">
                             <TableRow>
-                                <TableHeaderColumn className="rowLink">{txt.headerTitles.link}</TableHeaderColumn>
-                                <TableHeaderColumn className="rowDescription is-hidden-mobile">{txt.headerTitles.description}</TableHeaderColumn>
-                                <TableHeaderColumn className="rowOA align-right">{txt.headerTitles.oaStatus}</TableHeaderColumn>
+                                <TableHeaderColumn className="link">{txt.headerTitles.link}</TableHeaderColumn>
+                                <TableHeaderColumn className="description is-hidden-mobile">{txt.headerTitles.description}</TableHeaderColumn>
+                                <TableHeaderColumn className="oa align-right">{txt.headerTitles.oaStatus}</TableHeaderColumn>
                             </TableRow>
                         </TableHeader>
-                        <TableBody displayRowCheckbox={false} className="tableData">
+                        <TableBody displayRowCheckbox={false} className="data">
                             {
                                 !!pubmedCentralId &&
                                 this.renderLinkRow(this.getPMCLink(openAccessStatusId, pubmedCentralId))

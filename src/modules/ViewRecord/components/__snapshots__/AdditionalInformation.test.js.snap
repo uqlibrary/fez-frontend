@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Additional Information Component  should not render component with empty publication 1`] = `""`;
+
 exports[`Additional Information Component  should render component with audio document 1`] = `
 <Provider
   store={
@@ -555,7 +557,7 @@ exports[`Additional Information Component  should render component with audio do
                       <div>
                         <Table
                           allRowsSelected={false}
-                          className="additionalInformation"
+                          className="additionalInformation vertical"
                           fixedFooter={true}
                           fixedHeader={true}
                           height="inherit"
@@ -579,7 +581,7 @@ exports[`Additional Information Component  should render component with audio do
                               }
                             >
                               <table
-                                className="additionalInformation"
+                                className="additionalInformation vertical"
                                 style={
                                   Object {
                                     "backgroundColor": "#ffffff",
@@ -603,7 +605,7 @@ exports[`Additional Information Component  should render component with audio do
                               }
                             >
                               <table
-                                className="additionalInformation"
+                                className="additionalInformation vertical"
                                 style={
                                   Object {
                                     "backgroundColor": "#ffffff",
@@ -1047,7 +1049,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -1055,7 +1057,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -1066,7 +1068,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -1080,7 +1082,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1103,7 +1105,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -1117,7 +1119,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1540,14 +1542,13 @@ exports[`Additional Information Component  should render component with audio do
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_1"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Shutter, Leigh"
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Shutter, Leigh
                                                           , 
                                                         </span>
@@ -1561,14 +1562,13 @@ exports[`Additional Information Component  should render component with audio do
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_2"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Arthurs, Andy"
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Arthurs, Andy
                                                           , 
                                                         </span>
@@ -1582,14 +1582,13 @@ exports[`Additional Information Component  should render component with audio do
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_3"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Bamford, Greg"
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Bamford, Greg
                                                           , 
                                                         </span>
@@ -1603,16 +1602,14 @@ exports[`Additional Information Component  should render component with audio do
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_4"
-                                                        prefix=" "
-                                                        suffix=", "
+                                                        prefix=""
+                                                        suffix=""
                                                         value="McColl, Mary Rose"
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           McColl, Mary Rose
-                                                          , 
                                                         </span>
                                                       </CitationView>
                                                     </a>
@@ -1624,14 +1621,14 @@ exports[`Additional Information Component  should render component with audio do
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_5"
-                                                        prefix=" "
+                                                        prefix=", "
                                                         suffix=""
                                                         value="Skinner, Peter R."
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
+                                                          , 
                                                           Skinner, Peter R.
                                                         </span>
                                                       </CitationView>
@@ -1662,7 +1659,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -1670,7 +1667,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -1681,7 +1678,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -1695,7 +1692,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1718,7 +1715,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -1732,7 +1729,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1777,7 +1774,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -1785,7 +1782,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -1796,7 +1793,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -1810,7 +1807,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1833,7 +1830,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -1847,7 +1844,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1898,7 +1895,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -1906,7 +1903,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -1917,7 +1914,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -1931,7 +1928,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1954,7 +1951,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -1968,7 +1965,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2027,7 +2024,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -2035,7 +2032,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -2046,7 +2043,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -2060,7 +2057,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2083,7 +2080,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -2097,7 +2094,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2152,7 +2149,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -2160,7 +2157,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -2171,7 +2168,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -2185,7 +2182,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2208,7 +2205,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -2222,7 +2219,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2263,7 +2260,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -2271,7 +2268,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -2282,7 +2279,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -2296,7 +2293,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2319,7 +2316,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -2333,7 +2330,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2378,7 +2375,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -2386,7 +2383,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -2397,7 +2394,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -2411,7 +2408,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2434,7 +2431,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -2448,7 +2445,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2512,7 +2509,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -2520,7 +2517,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -2531,7 +2528,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -2545,7 +2542,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2568,7 +2565,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -2582,7 +2579,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2688,7 +2685,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -2696,7 +2693,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -2707,7 +2704,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -2721,7 +2718,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2744,7 +2741,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -2758,7 +2755,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2833,7 +2830,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -2841,7 +2838,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -2852,7 +2849,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -2866,7 +2863,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2889,7 +2886,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -2903,7 +2900,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2979,7 +2976,7 @@ exports[`Additional Information Component  should render component with audio do
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -2987,7 +2984,7 @@ exports[`Additional Information Component  should render component with audio do
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -2998,7 +2995,7 @@ exports[`Additional Information Component  should render component with audio do
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -3012,7 +3009,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -3035,7 +3032,7 @@ exports[`Additional Information Component  should render component with audio do
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -3049,7 +3046,7 @@ exports[`Additional Information Component  should render component with audio do
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -3106,7 +3103,7 @@ exports[`Additional Information Component  should render component with book 1`]
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -3822,6 +3819,7 @@ exports[`Additional Information Component  should render component with book 1`]
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
@@ -3844,7 +3842,7 @@ exports[`Additional Information Component  should render component with book cha
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -4362,13 +4360,7 @@ exports[`Additional Information Component  should render component with book cha
         key="additional-info-DOI"
       />
       <ViewRecordTableRow
-        data={
-          <a
-            href="/list/?cat=quick_filter&search_keys[UQ_54]=453698"
-          >
-            453698
-          </a>
-        }
+        data=""
         heading="Open access status"
         key="additional-info-Open access status"
       />
@@ -4827,6 +4819,7 @@ exports[`Additional Information Component  should render component with book cha
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
@@ -4971,7 +4964,7 @@ exports[`Additional Information Component  should render component with conferen
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -6522,7 +6515,7 @@ exports[`Additional Information Component  should render component with conferen
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -6915,6 +6908,7 @@ exports[`Additional Information Component  should render component with conferen
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
@@ -7367,6 +7361,7 @@ exports[`Additional Information Component  should render component with conferen
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
@@ -7556,7 +7551,7 @@ exports[`Additional Information Component  should render component with creative
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -7874,13 +7869,7 @@ exports[`Additional Information Component  should render component with creative
         key="additional-info-Place of publication"
       />
       <ViewRecordTableRow
-        data={
-          <a
-            href="/list/?cat=quick_filter&search_keys[UQ_54]=453692"
-          >
-            453692
-          </a>
-        }
+        data=""
         heading="Open access status"
         key="additional-info-Open access status"
       />
@@ -8001,7 +7990,7 @@ exports[`Additional Information Component  should render component with data col
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -8355,6 +8344,28 @@ exports[`Additional Information Component  should render component with data col
                     "rek_grant_id_xsdmf_id": 16200,
                   },
                 ],
+                "fez_record_search_key_has_derivations": Array [
+                  Object {
+                    "rek_has_derivations": "UQ:313292",
+                    "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+                    "rek_has_derivations_order": 1,
+                    "rek_has_derivations_pid": "UQ:296498",
+                  },
+                ],
+                "fez_record_search_key_has_related_datasets": Array [
+                  Object {
+                    "rek_has_related_datasets": "UQ:313292",
+                    "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+                    "rek_has_related_datasets_order": 1,
+                    "rek_has_related_datasets_pid": "UQ:296498",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:313292",
+                    "rek_has_related_datasets_lookup": "dataset 2",
+                    "rek_has_related_datasets_order": 2,
+                    "rek_has_related_datasets_pid": "UQ:296498",
+                  },
+                ],
                 "fez_record_search_key_isdatasetof": Array [
                   Object {
                     "rek_isdatasetof": "UQ:365357",
@@ -8365,6 +8376,7 @@ exports[`Additional Information Component  should render component with data col
                     "rek_isdatasetof_xsdmf_id": 16601,
                   },
                 ],
+                "fez_record_search_key_isderivationof": Array [],
                 "fez_record_search_key_ismemberof": Array [
                   Object {
                     "rek_ismemberof": "UQ:289097",
@@ -8456,8 +8468,7 @@ exports[`Additional Information Component  should render component with data col
                   "rek_publisher_pid": "UQ:407731",
                   "rek_publisher_xsdmf_id": 16050,
                 },
-                "fez_record_search_key_related_datasets": null,
-                "fez_record_search_key_related_publications": null,
+                "fez_record_search_key_related_datasets": Array [],
                 "fez_record_search_key_rights": Object {
                   "rek_rights": "2015, The University of Queensland",
                   "rek_rights_id": 116537,
@@ -8607,6 +8618,7 @@ exports[`Additional Information Component  should render component with data col
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Contact name"
@@ -8950,6 +8962,28 @@ exports[`Additional Information Component  should render component with data col
                     "rek_grant_id_xsdmf_id": 16200,
                   },
                 ],
+                "fez_record_search_key_has_derivations": Array [
+                  Object {
+                    "rek_has_derivations": "UQ:313292",
+                    "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+                    "rek_has_derivations_order": 1,
+                    "rek_has_derivations_pid": "UQ:296498",
+                  },
+                ],
+                "fez_record_search_key_has_related_datasets": Array [
+                  Object {
+                    "rek_has_related_datasets": "UQ:313292",
+                    "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+                    "rek_has_related_datasets_order": 1,
+                    "rek_has_related_datasets_pid": "UQ:296498",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:313292",
+                    "rek_has_related_datasets_lookup": "dataset 2",
+                    "rek_has_related_datasets_order": 2,
+                    "rek_has_related_datasets_pid": "UQ:296498",
+                  },
+                ],
                 "fez_record_search_key_isdatasetof": Array [
                   Object {
                     "rek_isdatasetof": "UQ:365357",
@@ -8960,6 +8994,7 @@ exports[`Additional Information Component  should render component with data col
                     "rek_isdatasetof_xsdmf_id": 16601,
                   },
                 ],
+                "fez_record_search_key_isderivationof": Array [],
                 "fez_record_search_key_ismemberof": Array [
                   Object {
                     "rek_ismemberof": "UQ:289097",
@@ -9051,8 +9086,7 @@ exports[`Additional Information Component  should render component with data col
                   "rek_publisher_pid": "UQ:407731",
                   "rek_publisher_xsdmf_id": 16050,
                 },
-                "fez_record_search_key_related_datasets": null,
-                "fez_record_search_key_related_publications": null,
+                "fez_record_search_key_related_datasets": Array [],
                 "fez_record_search_key_rights": Object {
                   "rek_rights": "2015, The University of Queensland",
                   "rek_rights_id": 116537,
@@ -9267,6 +9301,17 @@ exports[`Additional Information Component  should render component with data col
             >
               453701
             </a>
+            <div>
+              <ExternalLink
+                className="externalLink"
+                href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
+                openInNewIcon={true}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                View license details
+              </ExternalLink>
+            </div>
           </span>
         }
         heading="Licencing and terms of access"
@@ -9809,7 +9854,7 @@ exports[`Additional Information Component  should render component with design d
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -10062,7 +10107,12 @@ exports[`Additional Information Component  should render component with design d
                     "rek_ismemberof_xsdmf_id": 149,
                   },
                 ],
-                "fez_record_search_key_job_number": null,
+                "fez_record_search_key_job_number": Object {
+                  "rek_job_number": "UQFL158, job no. 1006-2",
+                  "rek_job_number_id": 39,
+                  "rek_job_number_pid": "UQ:543799",
+                  "rek_job_number_xsdmf_id": 17313,
+                },
                 "fez_record_search_key_keywords": Array [
                   Object {
                     "rek_keywords": "Architecture",
@@ -10568,7 +10618,12 @@ exports[`Additional Information Component  should render component with design d
                     "rek_ismemberof_xsdmf_id": 149,
                   },
                 ],
-                "fez_record_search_key_job_number": null,
+                "fez_record_search_key_job_number": Object {
+                  "rek_job_number": "UQFL158, job no. 1006-2",
+                  "rek_job_number_id": 39,
+                  "rek_job_number_pid": "UQ:543799",
+                  "rek_job_number_xsdmf_id": 17313,
+                },
                 "fez_record_search_key_keywords": Array [
                   Object {
                     "rek_keywords": "Architecture",
@@ -10751,6 +10806,7 @@ exports[`Additional Information Component  should render component with design d
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Consultant(s)"
@@ -10837,6 +10893,17 @@ exports[`Additional Information Component  should render component with design d
       />
       <ViewRecordTableRow
         data={
+          <a
+            href="/list/?cat=quick_filter&search_keys[core_151]=UQFL158, job no. 1006-2"
+          >
+            UQFL158, job no. 1006-2
+          </a>
+        }
+        heading="Job number"
+        key="additional-info-Job number"
+      />
+      <ViewRecordTableRow
+        data={
           Array [
             "The project is an exploration in the role of the garden as a means of generating a sense of place and to become a key focus in the formation and memory of a dwelling. The project is situated in Latvia, in the suburb of Meshaparks, an old established suburb of Riga. The suburb is characterized by larger lot sizes with villas set amongst trees. In the early 1930's Scandinavian functionalist architecture came to prominence and continued in popularity for a short period, dying out in the mid 1930's. The subject project involved the restoration of an existing timber functionalist house designed in 1933 by the architect Lidija Hofmane-Grinberga and constructed in the same year. The site also contained two outbuildings designed and constructed in the mid and late 1980's The project aimed to draw out the latent potential of the site circumstance that comprised the sunny garden hidden from the street and buildings that enclosed the garden to create an informal yet enclosed space that became in effect the major outdoor \\"room\\" of the house. The design draws inspiration from traditional Latvian farmhouse courtyard gardens, Japanese enclosed gardens as well as the work of Finnish architect Alvar Aalto.",
           ]
@@ -10856,7 +10923,7 @@ exports[`Additional Information Component  should render component with digilib 
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -11242,13 +11309,7 @@ exports[`Additional Information Component  should render component with digilib 
         key="additional-info-Location"
       />
       <ViewRecordTableRow
-        data={
-          <a
-            href="/list/?cat=quick_filter&search_keys[UQ_54]=453697"
-          >
-            453697
-          </a>
-        }
+        data=""
         heading="Open access status"
         key="additional-info-Open access status"
       />
@@ -11335,33 +11396,6 @@ exports[`Additional Information Component  should render component with digilib 
 </StandardCard>
 `;
 
-exports[`Additional Information Component  should render component with empty publication 1`] = `
-<StandardCard
-  className=""
-  title="Additional information"
->
-  <Table
-    allRowsSelected={false}
-    className="additionalInformation"
-    fixedFooter={true}
-    fixedHeader={true}
-    height="inherit"
-    multiSelectable={false}
-    selectable={false}
-  >
-    <TableBody
-      allRowsSelected={false}
-      deselectOnClickaway={true}
-      displayRowCheckbox={false}
-      multiSelectable={false}
-      preScanRows={true}
-      selectable={true}
-      style={Object {}}
-    />
-  </Table>
-</StandardCard>
-`;
-
 exports[`Additional Information Component  should render component with generic document 1`] = `
 <StandardCard
   className=""
@@ -11369,7 +11403,7 @@ exports[`Additional Information Component  should render component with generic 
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -12255,19 +12289,14 @@ exports[`Additional Information Component  should render component with generic 
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
         key="additional-info-Editor(s)"
       />
       <ViewRecordTableRow
-        data={
-          <a
-            href="/list/?cat=quick_filter&search_keys[UQ_54]=453697"
-          >
-            453697
-          </a>
-        }
+        data=""
         heading="Open access status"
         key="additional-info-Open access status"
       />
@@ -12292,7 +12321,7 @@ exports[`Additional Information Component  should render component with image 1`
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -12368,7 +12397,7 @@ exports[`Additional Information Component  should render component with journal 
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -12727,6 +12756,7 @@ exports[`Additional Information Component  should render component with journal 
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
@@ -12770,13 +12800,7 @@ exports[`Additional Information Component  should render component with journal 
         key="additional-info-ISSN"
       />
       <ViewRecordTableRow
-        data={
-          <a
-            href="/list/?cat=quick_filter&search_keys[UQ_54]=453698"
-          >
-            453698
-          </a>
-        }
+        data=""
         heading="Open access status"
         key="additional-info-Open access status"
       />
@@ -14074,7 +14098,7 @@ exports[`Additional Information Component  should render component with journal 
                       <div>
                         <Table
                           allRowsSelected={false}
-                          className="additionalInformation"
+                          className="additionalInformation vertical"
                           fixedFooter={true}
                           fixedHeader={true}
                           height="inherit"
@@ -14098,7 +14122,7 @@ exports[`Additional Information Component  should render component with journal 
                               }
                             >
                               <table
-                                className="additionalInformation"
+                                className="additionalInformation vertical"
                                 style={
                                   Object {
                                     "backgroundColor": "#ffffff",
@@ -14122,7 +14146,7 @@ exports[`Additional Information Component  should render component with journal 
                               }
                             >
                               <table
-                                className="additionalInformation"
+                                className="additionalInformation vertical"
                                 style={
                                   Object {
                                     "backgroundColor": "#ffffff",
@@ -15236,7 +15260,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -15244,7 +15268,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -15255,7 +15279,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -15269,7 +15293,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -15292,7 +15316,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -15306,7 +15330,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -16399,14 +16423,13 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_1"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Azimi, Iman"
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Azimi, Iman
                                                           , 
                                                         </span>
@@ -16420,14 +16443,13 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_2"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Milevskiy, Michael J. G."
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Milevskiy, Michael J. G.
                                                           , 
                                                         </span>
@@ -16441,14 +16463,13 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_3"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Kaemmerer, Elke"
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Kaemmerer, Elke
                                                           , 
                                                         </span>
@@ -16462,14 +16483,13 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_4"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Turner, Dane"
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Turner, Dane
                                                           , 
                                                         </span>
@@ -16483,14 +16503,13 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_5"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Yapa, Kunsala T. D. S."
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Yapa, Kunsala T. D. S.
                                                           , 
                                                         </span>
@@ -16504,14 +16523,13 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_6"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Brown, Melissa A."
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Brown, Melissa A.
                                                           , 
                                                         </span>
@@ -16525,14 +16543,13 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_7"
-                                                        prefix=" "
+                                                        prefix=""
                                                         suffix=", "
                                                         value="Thompson, Erik W."
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Thompson, Erik W.
                                                           , 
                                                         </span>
@@ -16546,16 +16563,14 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_8"
-                                                        prefix=" "
-                                                        suffix=", "
+                                                        prefix=""
+                                                        suffix=""
                                                         value="Roberts-Thomson, Sarah J."
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
                                                           Roberts-Thomson, Sarah J.
-                                                          , 
                                                         </span>
                                                       </CitationView>
                                                     </a>
@@ -16567,14 +16582,14 @@ exports[`Additional Information Component  should render component with journal 
                                                       <CitationView
                                                         className="citationAuthor"
                                                         key="citationAuthor_9"
-                                                        prefix=" "
+                                                        prefix=", "
                                                         suffix=""
                                                         value="Monteith, Gregory R."
                                                       >
                                                         <span
                                                           className="citationAuthor"
                                                         >
-                                                           
+                                                          , 
                                                           Monteith, Gregory R.
                                                         </span>
                                                       </CitationView>
@@ -16605,7 +16620,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -16613,7 +16628,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -16624,7 +16639,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -16638,7 +16653,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -16661,7 +16676,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -16675,7 +16690,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -17758,7 +17773,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -17766,7 +17781,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -17777,7 +17792,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -17791,7 +17806,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -17814,7 +17829,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -17828,7 +17843,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -18900,6 +18915,7 @@ exports[`Additional Information Component  should render component with journal 
                                                       <span
                                                         className="eraYearListed"
                                                       >
+                                                         
                                                         (ERA 2010 Journal(s) Listed)
                                                       </span>
                                                     </a>
@@ -18989,7 +19005,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -18997,7 +19013,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -19008,7 +19024,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -19022,7 +19038,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19045,7 +19061,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -19059,7 +19075,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19114,7 +19130,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -19122,7 +19138,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -19133,7 +19149,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -19147,7 +19163,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19170,7 +19186,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -19184,7 +19200,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19243,7 +19259,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -19251,7 +19267,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -19262,7 +19278,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -19276,7 +19292,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19299,7 +19315,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -19313,7 +19329,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19368,7 +19384,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -19376,7 +19392,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -19387,7 +19403,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -19401,7 +19417,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19424,7 +19440,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -19438,7 +19454,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19535,13 +19551,7 @@ exports[`Additional Information Component  should render component with journal 
                                         </TableRow>
                                       </ViewRecordTableRow>
                                       <ViewRecordTableRow
-                                        data={
-                                          <a
-                                            href="/list/?cat=quick_filter&search_keys[UQ_54]=453695"
-                                          >
-                                            453695
-                                          </a>
-                                        }
+                                        data=""
                                         heading="Open access status"
                                         key=".$additional-info-Open access status"
                                         onCellClick={[Function]}
@@ -19554,7 +19564,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -19562,7 +19572,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -19573,7 +19583,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -19587,7 +19597,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19610,7 +19620,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -19624,7 +19634,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19642,13 +19652,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     "whiteSpace": "nowrap",
                                                   }
                                                 }
-                                              >
-                                                <a
-                                                  href="/list/?cat=quick_filter&search_keys[UQ_54]=453695"
-                                                >
-                                                  453695
-                                                </a>
-                                              </td>
+                                              />
                                             </TableRowColumn>
                                           </tr>
                                         </TableRow>
@@ -19667,7 +19671,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -19675,7 +19679,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -19686,7 +19690,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -19700,7 +19704,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19723,7 +19727,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -19737,7 +19741,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19776,7 +19780,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -19784,7 +19788,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -19795,7 +19799,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -19809,7 +19813,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19832,7 +19836,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -19846,7 +19850,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19885,7 +19889,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -19893,7 +19897,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -19904,7 +19908,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -19918,7 +19922,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19941,7 +19945,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -19955,7 +19959,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -19994,7 +19998,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -20002,7 +20006,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -20013,7 +20017,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -20027,7 +20031,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20050,7 +20054,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -20064,7 +20068,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20103,7 +20107,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -20111,7 +20115,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -20122,7 +20126,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -20136,7 +20140,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20159,7 +20163,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -20173,7 +20177,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20212,7 +20216,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -20220,7 +20224,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -20231,7 +20235,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -20245,7 +20249,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20268,7 +20272,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -20282,7 +20286,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20327,7 +20331,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -20335,7 +20339,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -20346,7 +20350,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -20360,7 +20364,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20383,7 +20387,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -20397,7 +20401,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20446,7 +20450,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -20454,7 +20458,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -20465,7 +20469,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -20479,7 +20483,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20502,7 +20506,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -20516,7 +20520,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20615,7 +20619,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -20623,7 +20627,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -20634,7 +20638,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -20648,7 +20652,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20671,7 +20675,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -20685,7 +20689,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20795,7 +20799,7 @@ exports[`Additional Information Component  should render component with journal 
                                         selected={false}
                                       >
                                         <TableRow
-                                          className="tableRow"
+                                          className="row"
                                           displayBorder={true}
                                           hoverable={false}
                                           hovered={false}
@@ -20803,7 +20807,7 @@ exports[`Additional Information Component  should render component with journal 
                                           striped={false}
                                         >
                                           <tr
-                                            className="tableRow"
+                                            className="row"
                                             style={
                                               Object {
                                                 "borderBottom": "1px solid #e0e0e0",
@@ -20814,7 +20818,7 @@ exports[`Additional Information Component  should render component with journal 
                                             }
                                           >
                                             <TableRowColumn
-                                              className="headingColumn"
+                                              className="header"
                                               columnNumber={0}
                                               hoverable={false}
                                               key="undefined-0/.0"
@@ -20828,7 +20832,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="headingColumn"
+                                                className="header"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20851,7 +20855,7 @@ exports[`Additional Information Component  should render component with journal 
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="dataColumn"
+                                              className="data"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="undefined-1/.1"
@@ -20865,7 +20869,7 @@ exports[`Additional Information Component  should render component with journal 
                                               }
                                             >
                                               <td
-                                                className="dataColumn"
+                                                className="data"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -20918,7 +20922,7 @@ exports[`Additional Information Component  should render component with manuscri
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -21281,13 +21285,7 @@ exports[`Additional Information Component  should render component with manuscri
         key="additional-info-Title"
       />
       <ViewRecordTableRow
-        data={
-          <a
-            href="/list/?cat=quick_filter&search_keys[UQ_54]=453697"
-          >
-            453697
-          </a>
-        }
+        data=""
         heading="Open access status"
         key="additional-info-Open access status"
       />
@@ -21633,6 +21631,7 @@ exports[`Additional Information Component  should render component with manuscri
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Contributor"
@@ -21757,7 +21756,7 @@ exports[`Additional Information Component  should render component with newspape
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -23946,13 +23945,7 @@ exports[`Additional Information Component  should render component with newspape
         key="additional-info-DOI"
       />
       <ViewRecordTableRow
-        data={
-          <a
-            href="/list/?cat=quick_filter&search_keys[UQ_54]=453695"
-          >
-            453695
-          </a>
-        }
+        data=""
         heading="Open access status"
         key="additional-info-Open access status"
       />
@@ -24086,7 +24079,7 @@ exports[`Additional Information Component  should render component with patent 1
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -24451,7 +24444,7 @@ exports[`Additional Information Component  should render component with preprint
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -24915,13 +24908,7 @@ exports[`Additional Information Component  should render component with preprint
         key="additional-info-Author(s)"
       />
       <ViewRecordTableRow
-        data={
-          <a
-            href="/list/?cat=quick_filter&search_keys[UQ_54]=453697"
-          >
-            453697
-          </a>
-        }
+        data=""
         heading="Open access status"
         key="additional-info-Open access status"
       />
@@ -25031,7 +25018,7 @@ exports[`Additional Information Component  should render component with referenc
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -25668,6 +25655,7 @@ exports[`Additional Information Component  should render component with referenc
               }
             }
             showLink={true}
+            suffix=""
           />
         }
         heading="Editor(s)"
@@ -25799,7 +25787,7 @@ exports[`Additional Information Component  should render component with research
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -26203,7 +26191,7 @@ exports[`Additional Information Component  should render component with thesis 1
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -26494,8 +26482,8 @@ exports[`Additional Information Component  should render component with thesis 1
             School of Natural and Rural Systems
           </a>
         }
-        heading="School, Center or Institute"
-        key="additional-info-School, Center or Institute"
+        heading="School, Centre or Institute"
+        key="additional-info-School, Centre or Institute"
       />
       <ViewRecordTableRow
         data="The University of Queensland"
@@ -26521,13 +26509,7 @@ exports[`Additional Information Component  should render component with thesis 1
         key="additional-info-Thesis type"
       />
       <ViewRecordTableRow
-        data={
-          <a
-            href="/list/?cat=quick_filter&search_keys[UQ_54]=453695"
-          >
-            453695
-          </a>
-        }
+        data=""
         heading="Open access status"
         key="additional-info-Open access status"
       />
@@ -26608,7 +26590,7 @@ exports[`Additional Information Component  should render component with video do
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -27034,7 +27016,7 @@ exports[`Additional Information Component  should render component with working 
 >
   <Table
     allRowsSelected={false}
-    className="additionalInformation"
+    className="additionalInformation vertical"
     fixedFooter={true}
     fixedHeader={true}
     height="inherit"
@@ -27386,8 +27368,8 @@ exports[`Additional Information Component  should render component with working 
             School of Economics
           </a>
         }
-        heading="School, Department or Center"
-        key="additional-info-School, Department or Center"
+        heading="School, Department or Centre"
+        key="additional-info-School, Department or Centre"
       />
       <ViewRecordTableRow
         data="The University of Queensland"
@@ -27395,13 +27377,7 @@ exports[`Additional Information Component  should render component with working 
         key="additional-info-Institution"
       />
       <ViewRecordTableRow
-        data={
-          <a
-            href="/list/?cat=quick_filter&search_keys[UQ_54]=453697"
-          >
-            453697
-          </a>
-        }
+        data=""
         heading="Open access status"
         key="additional-info-Open access status"
       />
@@ -27542,6 +27518,412 @@ exports[`Additional Information Component  should render component with working 
         data={
           Array [
             "Employment and social inclusion have been regular themes in the agenda of the European Union for the past fifteen years. From a soft coordinated approach mainly focused on the fight against unemployment, the European Union has moved towards a more coordinated but still voluntary strategy for its Member States and this agenda now has multiple economic, social and environmental objectives. A constant feature of these strategies has been the use of education and training policies, in particular for young people who are at risk of social exclusion. This paper reviews the relevant agenda of the European Union and presents the concept of second chance schools initiated by the European Commission in 1995. It seeks to understand how the elements associated with these youth and the policy-makers are combined in order to achieve success in terms of job opportunities and better inclusion for young people.",
+          ]
+        }
+        heading="Abstract"
+        key="additional-info-Abstract"
+      />
+    </TableBody>
+  </Table>
+</StandardCard>
+`;
+
+exports[`Additional Information Component  should render oa status value link in the component with thesis 1`] = `
+<StandardCard
+  className=""
+  title="Additional information"
+>
+  <Table
+    allRowsSelected={false}
+    className="additionalInformation vertical"
+    fixedFooter={true}
+    fixedHeader={true}
+    height="inherit"
+    multiSelectable={false}
+    selectable={false}
+  >
+    <TableBody
+      allRowsSelected={false}
+      deselectOnClickaway={true}
+      displayRowCheckbox={false}
+      multiSelectable={false}
+      preScanRows={true}
+      selectable={true}
+      style={Object {}}
+    >
+      <ViewRecordTableRow
+        data={
+          <AuthorsCitationView
+            className="citationAuthors"
+            idSearchKey={
+              Object {
+                "idKey": "fez_record_search_key_author_id",
+                "idOrder": "rek_author_id_order",
+                "idSubkey": "rek_author_id",
+              }
+            }
+            initialNumberOfAuthors={1}
+            publication={
+              Object {
+                "fez_record_search_key_assigned_group_id": Array [],
+                "fez_record_search_key_assigned_user_id": Array [],
+                "fez_record_search_key_author": Array [
+                  Object {
+                    "rek_author": "Jennifer Moffatt",
+                    "rek_author_id": 30117280,
+                    "rek_author_order": 1,
+                    "rek_author_pid": "UQ:170415",
+                    "rek_author_xsdmf_id": 6823,
+                  },
+                ],
+                "fez_record_search_key_author_id": Array [
+                  Object {
+                    "rek_author_id": 76506,
+                    "rek_author_id_id": 29437412,
+                    "rek_author_id_order": 1,
+                    "rek_author_id_pid": "UQ:170415",
+                    "rek_author_id_xsdmf_id": 6818,
+                  },
+                ],
+                "fez_record_search_key_contributor": Array [],
+                "fez_record_search_key_contributor_id": Array [],
+                "fez_record_search_key_datastream_policy": null,
+                "fez_record_search_key_doi": null,
+                "fez_record_search_key_file_attachment_access_condition": Array [],
+                "fez_record_search_key_file_attachment_embargo_date": Array [],
+                "fez_record_search_key_file_attachment_name": Array [
+                  Object {
+                    "rek_file_attachment_name": "Permission_Moffatt_J.pdf",
+                    "rek_file_attachment_name_id": 4174776,
+                    "rek_file_attachment_name_order": 1,
+                    "rek_file_attachment_name_pid": "UQ:170415",
+                    "rek_file_attachment_name_xsdmf_id": 6905,
+                  },
+                  Object {
+                    "rek_file_attachment_name": "presmd_Permission_Moffatt_J.xml",
+                    "rek_file_attachment_name_id": 4174777,
+                    "rek_file_attachment_name_order": 2,
+                    "rek_file_attachment_name_pid": "UQ:170415",
+                    "rek_file_attachment_name_xsdmf_id": 6905,
+                  },
+                  Object {
+                    "rek_file_attachment_name": "presmd_s31882862_PhD_Totalthesis.xml",
+                    "rek_file_attachment_name_id": 4174778,
+                    "rek_file_attachment_name_order": 3,
+                    "rek_file_attachment_name_pid": "UQ:170415",
+                    "rek_file_attachment_name_xsdmf_id": 6905,
+                  },
+                  Object {
+                    "rek_file_attachment_name": "s31882862_PhD_Totalthesis.pdf",
+                    "rek_file_attachment_name_id": 4174779,
+                    "rek_file_attachment_name_order": 4,
+                    "rek_file_attachment_name_pid": "UQ:170415",
+                    "rek_file_attachment_name_xsdmf_id": 6905,
+                  },
+                ],
+                "fez_record_search_key_isderivationof": Array [],
+                "fez_record_search_key_isi_loc": null,
+                "fez_record_search_key_ismemberof": Array [
+                  Object {
+                    "rek_ismemberof": "UQ:210175",
+                    "rek_ismemberof_id": 12028039,
+                    "rek_ismemberof_order": 1,
+                    "rek_ismemberof_pid": "UQ:170415",
+                    "rek_ismemberof_xsdmf_id": 149,
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:216495",
+                    "rek_ismemberof_id": 12028040,
+                    "rek_ismemberof_order": 2,
+                    "rek_ismemberof_pid": "UQ:170415",
+                    "rek_ismemberof_xsdmf_id": 149,
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:179407",
+                    "rek_ismemberof_id": 12028041,
+                    "rek_ismemberof_order": 3,
+                    "rek_ismemberof_pid": "UQ:170415",
+                    "rek_ismemberof_xsdmf_id": 149,
+                  },
+                ],
+                "fez_record_search_key_keywords": Array [
+                  Object {
+                    "rek_keywords": "Sustainable development; graziers; farmers; agriculture; land management; business",
+                    "rek_keywords_id": 30182157,
+                    "rek_keywords_order": 1,
+                    "rek_keywords_pid": "UQ:170415",
+                    "rek_keywords_xsdmf_id": 7968,
+                  },
+                ],
+                "fez_record_search_key_language": Array [],
+                "fez_record_search_key_link": Array [],
+                "fez_record_search_key_link_description": Array [],
+                "fez_record_search_key_notes": Object {
+                  "rek_notes": "Pages requiring colour printing: 2, 76, 166, 210, 214, 215, 221, 222, 223, 224, 226. Pages in landscape format: 240-245. The author has given permission for this thesis to be made open access.",
+                  "rek_notes_id": 1169545,
+                  "rek_notes_pid": "UQ:170415",
+                  "rek_notes_xsdmf_id": 12516,
+                },
+                "fez_record_search_key_oa_status": Object {
+                  "rek_oa_status": 453695,
+                  "rek_oa_status_id": 366032,
+                  "rek_oa_status_lookup": "File (Author Post-print)",
+                  "rek_oa_status_pid": "UQ:170415",
+                  "rek_oa_status_xsdmf_id": 17004,
+                },
+                "fez_record_search_key_org_name": Object {
+                  "rek_org_name": "The University of Queensland",
+                  "rek_org_name_id": 400082,
+                  "rek_org_name_pid": "UQ:170415",
+                  "rek_org_name_xsdmf_id": 6843,
+                },
+                "fez_record_search_key_org_unit_name": Object {
+                  "rek_org_unit_name": "School of Natural and Rural Systems",
+                  "rek_org_unit_name_id": 389498,
+                  "rek_org_unit_name_pid": "UQ:170415",
+                  "rek_org_unit_name_xsdmf_id": 6840,
+                },
+                "fez_record_search_key_refereed": null,
+                "fez_record_search_key_scopus_id": null,
+                "fez_record_search_key_subject": Array [
+                  Object {
+                    "rek_subject": 300000,
+                    "rek_subject_id": 9479409,
+                    "rek_subject_order": 1,
+                    "rek_subject_pid": "UQ:170415",
+                    "rek_subject_xsdmf_id": 6835,
+                  },
+                ],
+                "fez_record_search_key_supervisor": Array [
+                  Object {
+                    "rek_supervisor": "Professor Helen Ross",
+                    "rek_supervisor_id": 436623,
+                    "rek_supervisor_order": 1,
+                    "rek_supervisor_pid": "UQ:170415",
+                    "rek_supervisor_xsdmf_id": 10555,
+                  },
+                  Object {
+                    "rek_supervisor": "Professor Geoffrey Lawrence",
+                    "rek_supervisor_id": 436624,
+                    "rek_supervisor_order": 2,
+                    "rek_supervisor_pid": "UQ:170415",
+                    "rek_supervisor_xsdmf_id": 10555,
+                  },
+                  Object {
+                    "rek_supervisor": "Professor John Taylor",
+                    "rek_supervisor_id": 436625,
+                    "rek_supervisor_order": 3,
+                    "rek_supervisor_pid": "UQ:170415",
+                    "rek_supervisor_xsdmf_id": 10555,
+                  },
+                ],
+                "fez_record_search_key_supervisor_id": Array [
+                  Object {
+                    "rek_supervisor_id": 0,
+                    "rek_supervisor_id_id": 386386,
+                    "rek_supervisor_id_order": 1,
+                    "rek_supervisor_id_pid": "UQ:170415",
+                    "rek_supervisor_id_xsdmf_id": 10550,
+                  },
+                  Object {
+                    "rek_supervisor_id": 0,
+                    "rek_supervisor_id_id": 386387,
+                    "rek_supervisor_id_order": 2,
+                    "rek_supervisor_id_pid": "UQ:170415",
+                    "rek_supervisor_id_xsdmf_id": 10550,
+                  },
+                  Object {
+                    "rek_supervisor_id": 0,
+                    "rek_supervisor_id_id": 386388,
+                    "rek_supervisor_id_order": 3,
+                    "rek_supervisor_id_pid": "UQ:170415",
+                    "rek_supervisor_id_xsdmf_id": 10550,
+                  },
+                ],
+                "fez_record_search_key_translated_title": null,
+                "rek_altmetric_id": null,
+                "rek_altmetric_id_xsdmf_id": null,
+                "rek_altmetric_score": null,
+                "rek_altmetric_score_xsdmf_id": null,
+                "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Jennifer Moffatt\\" href=\\"/list/author_id/76506/\\">Jennifer Moffatt</a> (<span class=\\"citation_date\\">2008</span>). <i><a class=\\"citation_title\\" title=\\"Click to view Thesis: It's for love not money: Queensland graziers' perceptions of sustainable development\\" href=\\"/view/UQ:170415\\">It's for love not money: Queensland graziers' perceptions of sustainable development</a></i> <span class=\\"citation_genre_type\\">PhD Thesis</span>, <span class=\\"citation_org_unit_name\\">School of Natural and Rural Systems</span>, <span class=\\"citation_org_name\\">The University of Queensland</span>.",
+                "rek_copyright": "on",
+                "rek_copyright_xsdmf_id": 12282,
+                "rek_created_date": "2009-03-18T10:16:36Z",
+                "rek_created_date_xsdmf_id": 12280,
+                "rek_date": "2008-06-01T00:00:00Z",
+                "rek_date_xsdmf_id": 6853,
+                "rek_depositor": 3917,
+                "rek_depositor_affiliation": 804,
+                "rek_depositor_affiliation_xsdmf_id": 12290,
+                "rek_depositor_xsdmf_id": 12285,
+                "rek_description": "Despite a National Strategy for Ecologically Sustainable Development and the embodiment of this in numerous national and state statues, environmental degradation continues to occur on rural land. This raises the question of how the primary land managers in Queensland perceive sustainable development. Australia’s early reliance on agricultural production and international markets contributed substantially to the extensive environmental degradation that has occurred. Consequently economic and environmental issues have dominated the research on sustainable development, with the social dimension relatively neglected. In addition, despite the large quantity of work that has been conducted with farmers and graziers, little is known about how either of these types of land managers interpret sustainable development. The aim of this thesis was to develop an in-depth understanding of graziers’ perceptions of sustainable development to make a contribution to this area. An exploratory interpretative approach was taken to conduct this investigation because previous research had been limited. In-depth unstructured interviews were conducted with 57 Queensland graziers in the tropical savannas in a case study with two locations – the Gulf of Carpentaria and the Central West. This approach was supported by participant observation and a brief questionnaire to provide background information. The fieldwork was conducted over a period of five months which allowed analysis to be conducted as the study progressed. Most of the graziers were interviewed on their properties with the goal of adding richness to the data and assisting with interpretation. Several bodies of literature have been used to interpret the results of this study. Areas of the sustainable development literature relevant to this thesis are reviewed to provide a context for the thesis. The literature on structural change in Australian agriculture provides a background to the broad influences on the agricultural sector and farmers. Also reviewed are the approaches taken to change the land management practices of farmers. The enduring value of farming and the changing values of rural land use are explored through a review of agrarianism, the goals and values of farmers and the post-productivist transition. The results for both study locations showed that these graziers preference the economic dimension of sustainable development over the environmental and social dimensions. The rationale for this preference is that maintaining economic viability will allow them to achieve their social goal – to continue their preferred way of life. A strong focus therefore, is on economic viability as a means to a social end. The objective is to overcome the constraints of being market and season dependent and the costs of operating in rural and remote locations through a whole-of-enterprise business management approach. The need for graziers to continue increasing their productivity to remain economically viable and to continue being competitive in international markets, challenges their ability to balance the economic and environmental dimensions of sustainable development. For some the environmental dimension of sustainable development may be compromised to accommodate their economic priorities and social goals. A perceived future threat, more so for Gulf graziers, arises from the belief that they and their interests are marginalised through consultation processes. This contributes to their belief that the government prioritises Aboriginal land rights and environmental protection interests over their production interests. They believe that if this continues their future is at risk through further decreases to the security of their tenure. The results of this study suggest that a more innovative and integrated approach will be required to meet the challenges of sustainable development in these areas, in early twenty-first century Australia. The holistic approach from a social science perspective has provided an understanding of what graziers value and why. These insights contribute to knowledge of how to progress sustainable development. They could be tested with other types of land managers and as a foundation on which to build a more comprehensive understanding of sustainable development.",
+                "rek_description_xsdmf_id": 11378,
+                "rek_display_type": 187,
+                "rek_display_type_lookup": "Thesis",
+                "rek_display_type_xsdmf_id": 12278,
+                "rek_file_downloads": 523,
+                "rek_formatted_abstract": null,
+                "rek_formatted_abstract_xsdmf_id": null,
+                "rek_formatted_title": "It's for love not money: Queensland graziers' perceptions of sustainable development",
+                "rek_formatted_title_xsdmf_id": null,
+                "rek_genre": "Thesis",
+                "rek_genre_type": "PhD Thesis",
+                "rek_genre_type_xsdmf_id": 7330,
+                "rek_genre_xsdmf_id": 7214,
+                "rek_herdc_notes": null,
+                "rek_herdc_notes_xsdmf_id": null,
+                "rek_object_type": 3,
+                "rek_object_type_xsdmf_id": 12279,
+                "rek_pid": "UQ:170415",
+                "rek_pubmed_doc_type": null,
+                "rek_pubmed_doc_type_xsdmf_id": null,
+                "rek_scopus_citation_count": null,
+                "rek_scopus_doc_type": null,
+                "rek_scopus_doc_type_xsdmf_id": null,
+                "rek_security_inherited": 1,
+                "rek_status": 2,
+                "rek_status_xsdmf_id": 12283,
+                "rek_subtype": null,
+                "rek_subtype_xsdmf_id": null,
+                "rek_thomson_citation_count": null,
+                "rek_thomson_citation_count_xsdmf_id": null,
+                "rek_title": "It's for love not money: Queensland graziers' perceptions of sustainable development",
+                "rek_title_xsdmf_id": 10667,
+                "rek_updated_date": "2015-07-31T07:22:31Z",
+                "rek_updated_date_xsdmf_id": 12281,
+                "rek_wok_doc_type": null,
+                "rek_wok_doc_type_xsdmf_id": null,
+              }
+            }
+            searchKey={
+              Object {
+                "key": "fez_record_search_key_author",
+                "order": "rek_author_order",
+                "subkey": "rek_author",
+              }
+            }
+            showLink={true}
+            suffix=" "
+            thresholdNumberOfAuthors={3}
+          />
+        }
+        heading="Author(s)"
+        key="additional-info-Author(s)"
+      />
+      <ViewRecordTableRow
+        data={
+          Array [
+            "It's for love not money: Queensland graziers' perceptions of sustainable development",
+          ]
+        }
+        heading="Thesis title"
+        key="additional-info-Thesis title"
+      />
+      <ViewRecordTableRow
+        data={
+          <a
+            href="/list/?cat=quick_filter&search_keys[core_70]=School of Natural and Rural Systems"
+          >
+            School of Natural and Rural Systems
+          </a>
+        }
+        heading="School, Centre or Institute"
+        key="additional-info-School, Centre or Institute"
+      />
+      <ViewRecordTableRow
+        data="The University of Queensland"
+        heading="Institution"
+        key="additional-info-Institution"
+      />
+      <ViewRecordTableRow
+        data={
+          <DateCitationView
+            className="citationDate"
+            date="2008-06-01T00:00:00Z"
+            format="YYYY-MM-DD"
+            prefix=""
+            suffix=""
+          />
+        }
+        heading="Publication date"
+        key="additional-info-Publication date"
+      />
+      <ViewRecordTableRow
+        data="PhD Thesis"
+        heading="Thesis type"
+        key="additional-info-Thesis type"
+      />
+      <ViewRecordTableRow
+        data={
+          <a
+            href="/list/?cat=quick_filter&search_keys[UQ_54]=453695"
+          >
+            File (Author Post-print)
+          </a>
+        }
+        heading="Open access status"
+        key="additional-info-Open access status"
+      />
+      <ViewRecordTableRow
+        data={
+          <ul>
+            <li>
+              Professor Helen Ross
+            </li>
+            <li>
+              Professor Geoffrey Lawrence
+            </li>
+            <li>
+              Professor John Taylor
+            </li>
+          </ul>
+        }
+        heading="Supervisor(s)"
+        key="additional-info-Supervisor(s)"
+      />
+      <ViewRecordTableRow
+        data={
+          <ul>
+            <li>
+              <a
+                href="/list/subject/300000"
+              >
+                300000
+              </a>
+            </li>
+          </ul>
+        }
+        heading="Subject(s)"
+        key="additional-info-Subject(s)"
+      />
+      <ViewRecordTableRow
+        data={
+          <ul>
+            <li>
+              <a
+                href="/list/?cat=quick_filter&search_keys[0]=Sustainable development; graziers; farmers; agriculture; land management; business"
+              >
+                Sustainable development; graziers; farmers; agriculture; land management; business
+              </a>
+            </li>
+          </ul>
+        }
+        heading="Keyword(s)"
+        key="additional-info-Keyword(s)"
+      />
+      <ViewRecordTableRow
+        data={
+          Array [
+            "Pages requiring colour printing: 2, 76, 166, 210, 214, 215, 221, 222, 223, 224, 226. Pages in landscape format: 240-245. The author has given permission for this thesis to be made open access.",
+          ]
+        }
+        heading="Additional notes"
+        key="additional-info-Additional notes"
+      />
+      <ViewRecordTableRow
+        data={
+          Array [
+            "Despite a National Strategy for Ecologically Sustainable Development and the embodiment of this in numerous national and state statues, environmental degradation continues to occur on rural land. This raises the question of how the primary land managers in Queensland perceive sustainable development. Australia’s early reliance on agricultural production and international markets contributed substantially to the extensive environmental degradation that has occurred. Consequently economic and environmental issues have dominated the research on sustainable development, with the social dimension relatively neglected. In addition, despite the large quantity of work that has been conducted with farmers and graziers, little is known about how either of these types of land managers interpret sustainable development. The aim of this thesis was to develop an in-depth understanding of graziers’ perceptions of sustainable development to make a contribution to this area. An exploratory interpretative approach was taken to conduct this investigation because previous research had been limited. In-depth unstructured interviews were conducted with 57 Queensland graziers in the tropical savannas in a case study with two locations – the Gulf of Carpentaria and the Central West. This approach was supported by participant observation and a brief questionnaire to provide background information. The fieldwork was conducted over a period of five months which allowed analysis to be conducted as the study progressed. Most of the graziers were interviewed on their properties with the goal of adding richness to the data and assisting with interpretation. Several bodies of literature have been used to interpret the results of this study. Areas of the sustainable development literature relevant to this thesis are reviewed to provide a context for the thesis. The literature on structural change in Australian agriculture provides a background to the broad influences on the agricultural sector and farmers. Also reviewed are the approaches taken to change the land management practices of farmers. The enduring value of farming and the changing values of rural land use are explored through a review of agrarianism, the goals and values of farmers and the post-productivist transition. The results for both study locations showed that these graziers preference the economic dimension of sustainable development over the environmental and social dimensions. The rationale for this preference is that maintaining economic viability will allow them to achieve their social goal – to continue their preferred way of life. A strong focus therefore, is on economic viability as a means to a social end. The objective is to overcome the constraints of being market and season dependent and the costs of operating in rural and remote locations through a whole-of-enterprise business management approach. The need for graziers to continue increasing their productivity to remain economically viable and to continue being competitive in international markets, challenges their ability to balance the economic and environmental dimensions of sustainable development. For some the environmental dimension of sustainable development may be compromised to accommodate their economic priorities and social goals. A perceived future threat, more so for Gulf graziers, arises from the belief that they and their interests are marginalised through consultation processes. This contributes to their belief that the government prioritises Aboriginal land rights and environmental protection interests over their production interests. They believe that if this continues their future is at risk through further decreases to the security of their tenure. The results of this study suggest that a more innovative and integrated approach will be required to meet the challenges of sustainable development in these areas, in early twenty-first century Australia. The holistic approach from a social science perspective has provided an understanding of what graziers value and why. These insights contribute to knowledge of how to progress sustainable development. They could be tested with other types of land managers and as a foundation on which to build a more comprehensive understanding of sustainable development.",
           ]
         }
         heading="Abstract"

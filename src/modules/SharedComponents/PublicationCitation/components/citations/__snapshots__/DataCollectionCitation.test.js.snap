@@ -317,6 +317,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
           "rek_grant_id_xsdmf_id": 16200,
         },
       ],
+      "fez_record_search_key_has_derivations": Array [
+        Object {
+          "rek_has_derivations": "UQ:313292",
+          "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_derivations_order": 1,
+          "rek_has_derivations_pid": "UQ:296498",
+        },
+      ],
+      "fez_record_search_key_has_related_datasets": Array [
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_related_datasets_order": 1,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "dataset 2",
+          "rek_has_related_datasets_order": 2,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+      ],
       "fez_record_search_key_isdatasetof": Array [
         Object {
           "rek_isdatasetof": "UQ:365357",
@@ -327,6 +349,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -418,8 +441,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
       },
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -923,6 +945,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
               "rek_grant_id_xsdmf_id": 16200,
             },
           ],
+          "fez_record_search_key_has_derivations": Array [
+            Object {
+              "rek_has_derivations": "UQ:313292",
+              "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_derivations_order": 1,
+              "rek_has_derivations_pid": "UQ:296498",
+            },
+          ],
+          "fez_record_search_key_has_related_datasets": Array [
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_related_datasets_order": 1,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "dataset 2",
+              "rek_has_related_datasets_order": 2,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+          ],
           "fez_record_search_key_isdatasetof": Array [
             Object {
               "rek_isdatasetof": "UQ:365357",
@@ -933,6 +977,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -1024,8 +1069,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
             "rek_publisher_pid": "UQ:407731",
             "rek_publisher_xsdmf_id": 16050,
           },
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -1191,14 +1235,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Parks, Donovan H."
         >
           <span
             className="citationAuthor"
           >
-             
             Parks, Donovan H.
             , 
           </span>
@@ -1206,14 +1249,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Imelfort, Michael"
         >
           <span
             className="citationAuthor"
           >
-             
             Imelfort, Michael
             , 
           </span>
@@ -1221,14 +1263,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Skennerton, Connor T."
         >
           <span
             className="citationAuthor"
           >
-             
             Skennerton, Connor T.
             , 
           </span>
@@ -1236,16 +1277,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=" "
-          suffix=", "
+          prefix=""
+          suffix=""
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
-             
             Hugenholtz, Philip
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -1713,6 +1752,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_grant_id_xsdmf_id": 16200,
         },
       ],
+      "fez_record_search_key_has_derivations": Array [
+        Object {
+          "rek_has_derivations": "UQ:313292",
+          "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_derivations_order": 1,
+          "rek_has_derivations_pid": "UQ:296498",
+        },
+      ],
+      "fez_record_search_key_has_related_datasets": Array [
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_related_datasets_order": 1,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "dataset 2",
+          "rek_has_related_datasets_order": 2,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+      ],
       "fez_record_search_key_isdatasetof": Array [
         Object {
           "rek_isdatasetof": "UQ:365357",
@@ -1723,6 +1784,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -1814,8 +1876,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
       },
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -2319,6 +2380,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_grant_id_xsdmf_id": 16200,
             },
           ],
+          "fez_record_search_key_has_derivations": Array [
+            Object {
+              "rek_has_derivations": "UQ:313292",
+              "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_derivations_order": 1,
+              "rek_has_derivations_pid": "UQ:296498",
+            },
+          ],
+          "fez_record_search_key_has_related_datasets": Array [
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_related_datasets_order": 1,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "dataset 2",
+              "rek_has_related_datasets_order": 2,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+          ],
           "fez_record_search_key_isdatasetof": Array [
             Object {
               "rek_isdatasetof": "UQ:365357",
@@ -2329,6 +2412,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -2420,8 +2504,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_publisher_pid": "UQ:407731",
             "rek_publisher_xsdmf_id": 16050,
           },
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -2587,14 +2670,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Parks, Donovan H."
         >
           <span
             className="citationAuthor"
           >
-             
             Parks, Donovan H.
             , 
           </span>
@@ -2602,14 +2684,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Imelfort, Michael"
         >
           <span
             className="citationAuthor"
           >
-             
             Imelfort, Michael
             , 
           </span>
@@ -2617,14 +2698,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Skennerton, Connor T."
         >
           <span
             className="citationAuthor"
           >
-             
             Skennerton, Connor T.
             , 
           </span>
@@ -2632,16 +2712,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=" "
-          suffix=", "
+          prefix=""
+          suffix=""
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
-             
             Hugenholtz, Philip
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -3105,6 +3183,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_grant_id_xsdmf_id": 16200,
         },
       ],
+      "fez_record_search_key_has_derivations": Array [
+        Object {
+          "rek_has_derivations": "UQ:313292",
+          "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_derivations_order": 1,
+          "rek_has_derivations_pid": "UQ:296498",
+        },
+      ],
+      "fez_record_search_key_has_related_datasets": Array [
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_related_datasets_order": 1,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "dataset 2",
+          "rek_has_related_datasets_order": 2,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+      ],
       "fez_record_search_key_isdatasetof": Array [
         Object {
           "rek_isdatasetof": "UQ:365357",
@@ -3115,6 +3215,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -3206,8 +3307,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
       },
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -3711,6 +3811,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_grant_id_xsdmf_id": 16200,
             },
           ],
+          "fez_record_search_key_has_derivations": Array [
+            Object {
+              "rek_has_derivations": "UQ:313292",
+              "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_derivations_order": 1,
+              "rek_has_derivations_pid": "UQ:296498",
+            },
+          ],
+          "fez_record_search_key_has_related_datasets": Array [
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_related_datasets_order": 1,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "dataset 2",
+              "rek_has_related_datasets_order": 2,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+          ],
           "fez_record_search_key_isdatasetof": Array [
             Object {
               "rek_isdatasetof": "UQ:365357",
@@ -3721,6 +3843,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -3812,8 +3935,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_publisher_pid": "UQ:407731",
             "rek_publisher_xsdmf_id": 16050,
           },
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -3979,14 +4101,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Parks, Donovan H."
         >
           <span
             className="citationAuthor"
           >
-             
             Parks, Donovan H.
             , 
           </span>
@@ -3994,14 +4115,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Imelfort, Michael"
         >
           <span
             className="citationAuthor"
           >
-             
             Imelfort, Michael
             , 
           </span>
@@ -4009,14 +4129,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Skennerton, Connor T."
         >
           <span
             className="citationAuthor"
           >
-             
             Skennerton, Connor T.
             , 
           </span>
@@ -4024,16 +4143,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=" "
-          suffix=", "
+          prefix=""
+          suffix=""
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
-             
             Hugenholtz, Philip
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -4461,6 +4578,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_grant_id_xsdmf_id": 16200,
         },
       ],
+      "fez_record_search_key_has_derivations": Array [
+        Object {
+          "rek_has_derivations": "UQ:313292",
+          "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_derivations_order": 1,
+          "rek_has_derivations_pid": "UQ:296498",
+        },
+      ],
+      "fez_record_search_key_has_related_datasets": Array [
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_related_datasets_order": 1,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "dataset 2",
+          "rek_has_related_datasets_order": 2,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+      ],
       "fez_record_search_key_isdatasetof": Array [
         Object {
           "rek_isdatasetof": "UQ:365357",
@@ -4471,6 +4610,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -4562,8 +4702,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
       },
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -5031,6 +5170,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_grant_id_xsdmf_id": 16200,
             },
           ],
+          "fez_record_search_key_has_derivations": Array [
+            Object {
+              "rek_has_derivations": "UQ:313292",
+              "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_derivations_order": 1,
+              "rek_has_derivations_pid": "UQ:296498",
+            },
+          ],
+          "fez_record_search_key_has_related_datasets": Array [
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_related_datasets_order": 1,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "dataset 2",
+              "rek_has_related_datasets_order": 2,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+          ],
           "fez_record_search_key_isdatasetof": Array [
             Object {
               "rek_isdatasetof": "UQ:365357",
@@ -5041,6 +5202,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -5132,8 +5294,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_publisher_pid": "UQ:407731",
             "rek_publisher_xsdmf_id": 16050,
           },
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -5746,6 +5907,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_grant_id_xsdmf_id": 16200,
         },
       ],
+      "fez_record_search_key_has_derivations": Array [
+        Object {
+          "rek_has_derivations": "UQ:313292",
+          "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_derivations_order": 1,
+          "rek_has_derivations_pid": "UQ:296498",
+        },
+      ],
+      "fez_record_search_key_has_related_datasets": Array [
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_related_datasets_order": 1,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "dataset 2",
+          "rek_has_related_datasets_order": 2,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+      ],
       "fez_record_search_key_isdatasetof": Array [
         Object {
           "rek_isdatasetof": "UQ:365357",
@@ -5756,6 +5939,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -5847,8 +6031,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
       },
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -6352,6 +6535,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_grant_id_xsdmf_id": 16200,
             },
           ],
+          "fez_record_search_key_has_derivations": Array [
+            Object {
+              "rek_has_derivations": "UQ:313292",
+              "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_derivations_order": 1,
+              "rek_has_derivations_pid": "UQ:296498",
+            },
+          ],
+          "fez_record_search_key_has_related_datasets": Array [
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_related_datasets_order": 1,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "dataset 2",
+              "rek_has_related_datasets_order": 2,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+          ],
           "fez_record_search_key_isdatasetof": Array [
             Object {
               "rek_isdatasetof": "UQ:365357",
@@ -6362,6 +6567,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -6453,8 +6659,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_publisher_pid": "UQ:407731",
             "rek_publisher_xsdmf_id": 16050,
           },
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -6620,14 +6825,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Parks, Donovan H."
         >
           <span
             className="citationAuthor"
           >
-             
             Parks, Donovan H.
             , 
           </span>
@@ -6635,14 +6839,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Imelfort, Michael"
         >
           <span
             className="citationAuthor"
           >
-             
             Imelfort, Michael
             , 
           </span>
@@ -6650,14 +6853,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Skennerton, Connor T."
         >
           <span
             className="citationAuthor"
           >
-             
             Skennerton, Connor T.
             , 
           </span>
@@ -6665,16 +6867,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=" "
-          suffix=", "
+          prefix=""
+          suffix=""
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
-             
             Hugenholtz, Philip
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -7133,6 +7333,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_grant_id_xsdmf_id": 16200,
         },
       ],
+      "fez_record_search_key_has_derivations": Array [
+        Object {
+          "rek_has_derivations": "UQ:313292",
+          "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_derivations_order": 1,
+          "rek_has_derivations_pid": "UQ:296498",
+        },
+      ],
+      "fez_record_search_key_has_related_datasets": Array [
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_related_datasets_order": 1,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "dataset 2",
+          "rek_has_related_datasets_order": 2,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+      ],
       "fez_record_search_key_isdatasetof": Array [
         Object {
           "rek_isdatasetof": "UQ:365357",
@@ -7143,6 +7365,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -7234,8 +7457,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
       },
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -7734,6 +7956,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_grant_id_xsdmf_id": 16200,
             },
           ],
+          "fez_record_search_key_has_derivations": Array [
+            Object {
+              "rek_has_derivations": "UQ:313292",
+              "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_derivations_order": 1,
+              "rek_has_derivations_pid": "UQ:296498",
+            },
+          ],
+          "fez_record_search_key_has_related_datasets": Array [
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_related_datasets_order": 1,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "dataset 2",
+              "rek_has_related_datasets_order": 2,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+          ],
           "fez_record_search_key_isdatasetof": Array [
             Object {
               "rek_isdatasetof": "UQ:365357",
@@ -7744,6 +7988,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -7835,8 +8080,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_publisher_pid": "UQ:407731",
             "rek_publisher_xsdmf_id": 16050,
           },
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -8002,14 +8246,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Parks, Donovan H."
         >
           <span
             className="citationAuthor"
           >
-             
             Parks, Donovan H.
             , 
           </span>
@@ -8017,14 +8260,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Imelfort, Michael"
         >
           <span
             className="citationAuthor"
           >
-             
             Imelfort, Michael
             , 
           </span>
@@ -8032,14 +8274,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Skennerton, Connor T."
         >
           <span
             className="citationAuthor"
           >
-             
             Skennerton, Connor T.
             , 
           </span>
@@ -8047,16 +8288,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=" "
-          suffix=", "
+          prefix=""
+          suffix=""
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
-             
             Hugenholtz, Philip
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -8460,6 +8699,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_grant_id_xsdmf_id": 16200,
         },
       ],
+      "fez_record_search_key_has_derivations": Array [
+        Object {
+          "rek_has_derivations": "UQ:313292",
+          "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_derivations_order": 1,
+          "rek_has_derivations_pid": "UQ:296498",
+        },
+      ],
+      "fez_record_search_key_has_related_datasets": Array [
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_related_datasets_order": 1,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "dataset 2",
+          "rek_has_related_datasets_order": 2,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+      ],
       "fez_record_search_key_isdatasetof": Array [
         Object {
           "rek_isdatasetof": "UQ:365357",
@@ -8470,6 +8731,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -8556,8 +8818,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_project_name_xsdmf_id": 16099,
       },
       "fez_record_search_key_publisher": null,
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -9061,6 +9322,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_grant_id_xsdmf_id": 16200,
             },
           ],
+          "fez_record_search_key_has_derivations": Array [
+            Object {
+              "rek_has_derivations": "UQ:313292",
+              "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_derivations_order": 1,
+              "rek_has_derivations_pid": "UQ:296498",
+            },
+          ],
+          "fez_record_search_key_has_related_datasets": Array [
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_related_datasets_order": 1,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "dataset 2",
+              "rek_has_related_datasets_order": 2,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+          ],
           "fez_record_search_key_isdatasetof": Array [
             Object {
               "rek_isdatasetof": "UQ:365357",
@@ -9071,6 +9354,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -9157,8 +9441,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_project_name_xsdmf_id": 16099,
           },
           "fez_record_search_key_publisher": null,
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -9324,14 +9607,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Parks, Donovan H."
         >
           <span
             className="citationAuthor"
           >
-             
             Parks, Donovan H.
             , 
           </span>
@@ -9339,14 +9621,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Imelfort, Michael"
         >
           <span
             className="citationAuthor"
           >
-             
             Imelfort, Michael
             , 
           </span>
@@ -9354,14 +9635,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Skennerton, Connor T."
         >
           <span
             className="citationAuthor"
           >
-             
             Skennerton, Connor T.
             , 
           </span>
@@ -9369,16 +9649,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=" "
-          suffix=", "
+          prefix=""
+          suffix=""
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
-             
             Hugenholtz, Philip
-            , 
           </span>
         </CitationView>
         <CitationView

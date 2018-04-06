@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component Links  should not render component for empty publication 1`] = `""`;
+
 exports[`Component Links  should render AO DOI link 1`] = `
 <Provider
   store={
@@ -52,7 +54,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
         }
       }
     >
-      <ViewRecordLinks
+      <Links
         publication={
           Object {
             "fez_record_search_key_doi": Object {
@@ -203,7 +205,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
                         >
                           <Table
                             allRowsSelected={false}
-                            className="links"
+                            className="links horizontal"
                             fixedFooter={true}
                             fixedHeader={true}
                             height="inherit"
@@ -227,7 +229,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
                                 }
                               >
                                 <table
-                                  className="links"
+                                  className="links horizontal"
                                   style={
                                     Object {
                                       "backgroundColor": "#ffffff",
@@ -241,14 +243,14 @@ exports[`Component Links  should render AO DOI link 1`] = `
                                 >
                                   <TableHeader
                                     adjustForCheckbox={false}
-                                    className="tableHeader"
+                                    className="header"
                                     displaySelectAll={false}
                                     enableSelectAll={false}
                                     onSelectAll={[Function]}
                                     selectAllSelected={false}
                                   >
                                     <thead
-                                      className="tableHeader"
+                                      className="header"
                                       style={
                                         Object {
                                           "borderBottom": "1px solid #e0e0e0",
@@ -276,7 +278,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
                                           }
                                         >
                                           <TableHeaderColumn
-                                            className="rowLink"
+                                            className="link"
                                             columnNumber={1}
                                             hoverable={false}
                                             key="1-1/.1"
@@ -290,7 +292,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
                                             }
                                           >
                                             <th
-                                              className="rowLink"
+                                              className="link"
                                               onClick={[Function]}
                                               onMouseEnter={[Function]}
                                               onMouseLeave={[Function]}
@@ -315,7 +317,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
                                             </th>
                                           </TableHeaderColumn>
                                           <TableHeaderColumn
-                                            className="rowDescription is-hidden-mobile"
+                                            className="description is-hidden-mobile"
                                             columnNumber={2}
                                             hoverable={false}
                                             key="1-2/.2"
@@ -329,7 +331,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
                                             }
                                           >
                                             <th
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               onClick={[Function]}
                                               onMouseEnter={[Function]}
                                               onMouseLeave={[Function]}
@@ -354,7 +356,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
                                             </th>
                                           </TableHeaderColumn>
                                           <TableHeaderColumn
-                                            className="rowOA align-right"
+                                            className="oa align-right"
                                             columnNumber={3}
                                             hoverable={false}
                                             key="1-3/.3"
@@ -368,7 +370,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
                                             }
                                           >
                                             <th
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               onClick={[Function]}
                                               onMouseEnter={[Function]}
                                               onMouseLeave={[Function]}
@@ -409,7 +411,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
                                 }
                               >
                                 <table
-                                  className="links"
+                                  className="links horizontal"
                                   style={
                                     Object {
                                       "backgroundColor": "#ffffff",
@@ -423,7 +425,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
                                 >
                                   <TableBody
                                     allRowsSelected={false}
-                                    className="tableData"
+                                    className="data"
                                     deselectOnClickaway={true}
                                     displayRowCheckbox={false}
                                     multiSelectable={false}
@@ -441,7 +443,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
                                       onClickAway={[Function]}
                                     >
                                       <tbody
-                                        className="tableData"
+                                        className="data"
                                         style={
                                           Object {
                                             "muiPrepared": true,
@@ -475,7 +477,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
                                             }
                                           >
                                             <TableRowColumn
-                                              className="rowLink"
+                                              className="link"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="0-1/.1"
@@ -489,7 +491,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
                                               }
                                             >
                                               <td
-                                                className="rowLink"
+                                                className="link"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -582,7 +584,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               columnNumber={2}
                                               hoverable={false}
                                               key="0-2/.2"
@@ -597,7 +599,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
                                               title="Full text from publisher"
                                             >
                                               <td
-                                                className="rowDescription is-hidden-mobile"
+                                                className="description is-hidden-mobile"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -621,7 +623,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               columnNumber={3}
                                               hoverable={false}
                                               key="0-3/.3"
@@ -635,7 +637,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
                                               }
                                             >
                                               <td
-                                                className="rowOA align-right"
+                                                className="oa align-right"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -684,7 +686,7 @@ exports[`Component Links  should render AO DOI link 1`] = `
             </Paper>
           </Card>
         </StandardCard>
-      </ViewRecordLinks>
+      </Links>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -742,7 +744,7 @@ exports[`Component Links  should render a DOI link 1`] = `
         }
       }
     >
-      <ViewRecordLinks
+      <Links
         publication={
           Object {
             "fez_record_search_key_doi": Object {
@@ -887,7 +889,7 @@ exports[`Component Links  should render a DOI link 1`] = `
                         >
                           <Table
                             allRowsSelected={false}
-                            className="links"
+                            className="links horizontal"
                             fixedFooter={true}
                             fixedHeader={true}
                             height="inherit"
@@ -911,7 +913,7 @@ exports[`Component Links  should render a DOI link 1`] = `
                                 }
                               >
                                 <table
-                                  className="links"
+                                  className="links horizontal"
                                   style={
                                     Object {
                                       "backgroundColor": "#ffffff",
@@ -925,14 +927,14 @@ exports[`Component Links  should render a DOI link 1`] = `
                                 >
                                   <TableHeader
                                     adjustForCheckbox={false}
-                                    className="tableHeader"
+                                    className="header"
                                     displaySelectAll={false}
                                     enableSelectAll={false}
                                     onSelectAll={[Function]}
                                     selectAllSelected={false}
                                   >
                                     <thead
-                                      className="tableHeader"
+                                      className="header"
                                       style={
                                         Object {
                                           "borderBottom": "1px solid #e0e0e0",
@@ -960,7 +962,7 @@ exports[`Component Links  should render a DOI link 1`] = `
                                           }
                                         >
                                           <TableHeaderColumn
-                                            className="rowLink"
+                                            className="link"
                                             columnNumber={1}
                                             hoverable={false}
                                             key="1-1/.1"
@@ -974,7 +976,7 @@ exports[`Component Links  should render a DOI link 1`] = `
                                             }
                                           >
                                             <th
-                                              className="rowLink"
+                                              className="link"
                                               onClick={[Function]}
                                               onMouseEnter={[Function]}
                                               onMouseLeave={[Function]}
@@ -999,7 +1001,7 @@ exports[`Component Links  should render a DOI link 1`] = `
                                             </th>
                                           </TableHeaderColumn>
                                           <TableHeaderColumn
-                                            className="rowDescription is-hidden-mobile"
+                                            className="description is-hidden-mobile"
                                             columnNumber={2}
                                             hoverable={false}
                                             key="1-2/.2"
@@ -1013,7 +1015,7 @@ exports[`Component Links  should render a DOI link 1`] = `
                                             }
                                           >
                                             <th
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               onClick={[Function]}
                                               onMouseEnter={[Function]}
                                               onMouseLeave={[Function]}
@@ -1038,7 +1040,7 @@ exports[`Component Links  should render a DOI link 1`] = `
                                             </th>
                                           </TableHeaderColumn>
                                           <TableHeaderColumn
-                                            className="rowOA align-right"
+                                            className="oa align-right"
                                             columnNumber={3}
                                             hoverable={false}
                                             key="1-3/.3"
@@ -1052,7 +1054,7 @@ exports[`Component Links  should render a DOI link 1`] = `
                                             }
                                           >
                                             <th
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               onClick={[Function]}
                                               onMouseEnter={[Function]}
                                               onMouseLeave={[Function]}
@@ -1093,7 +1095,7 @@ exports[`Component Links  should render a DOI link 1`] = `
                                 }
                               >
                                 <table
-                                  className="links"
+                                  className="links horizontal"
                                   style={
                                     Object {
                                       "backgroundColor": "#ffffff",
@@ -1107,7 +1109,7 @@ exports[`Component Links  should render a DOI link 1`] = `
                                 >
                                   <TableBody
                                     allRowsSelected={false}
-                                    className="tableData"
+                                    className="data"
                                     deselectOnClickaway={true}
                                     displayRowCheckbox={false}
                                     multiSelectable={false}
@@ -1125,7 +1127,7 @@ exports[`Component Links  should render a DOI link 1`] = `
                                       onClickAway={[Function]}
                                     >
                                       <tbody
-                                        className="tableData"
+                                        className="data"
                                         style={
                                           Object {
                                             "muiPrepared": true,
@@ -1159,7 +1161,7 @@ exports[`Component Links  should render a DOI link 1`] = `
                                             }
                                           >
                                             <TableRowColumn
-                                              className="rowLink"
+                                              className="link"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="0-1/.1"
@@ -1173,7 +1175,7 @@ exports[`Component Links  should render a DOI link 1`] = `
                                               }
                                             >
                                               <td
-                                                className="rowLink"
+                                                className="link"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1266,7 +1268,7 @@ exports[`Component Links  should render a DOI link 1`] = `
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               columnNumber={2}
                                               hoverable={false}
                                               key="0-2/.2"
@@ -1281,7 +1283,7 @@ exports[`Component Links  should render a DOI link 1`] = `
                                               title="Full text from publisher"
                                             >
                                               <td
-                                                className="rowDescription is-hidden-mobile"
+                                                className="description is-hidden-mobile"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1305,7 +1307,7 @@ exports[`Component Links  should render a DOI link 1`] = `
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               columnNumber={3}
                                               hoverable={false}
                                               key="0-3/.3"
@@ -1319,7 +1321,7 @@ exports[`Component Links  should render a DOI link 1`] = `
                                               }
                                             >
                                               <td
-                                                className="rowOA align-right"
+                                                className="oa align-right"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1366,7 +1368,7 @@ exports[`Component Links  should render a DOI link 1`] = `
             </Paper>
           </Card>
         </StandardCard>
-      </ViewRecordLinks>
+      </Links>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -1424,7 +1426,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
         }
       }
     >
-      <ViewRecordLinks
+      <Links
         publication={
           Object {
             "fez_record_search_key_oa_status": Object {
@@ -1575,7 +1577,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
                         >
                           <Table
                             allRowsSelected={false}
-                            className="links"
+                            className="links horizontal"
                             fixedFooter={true}
                             fixedHeader={true}
                             height="inherit"
@@ -1599,7 +1601,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
                                 }
                               >
                                 <table
-                                  className="links"
+                                  className="links horizontal"
                                   style={
                                     Object {
                                       "backgroundColor": "#ffffff",
@@ -1613,14 +1615,14 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
                                 >
                                   <TableHeader
                                     adjustForCheckbox={false}
-                                    className="tableHeader"
+                                    className="header"
                                     displaySelectAll={false}
                                     enableSelectAll={false}
                                     onSelectAll={[Function]}
                                     selectAllSelected={false}
                                   >
                                     <thead
-                                      className="tableHeader"
+                                      className="header"
                                       style={
                                         Object {
                                           "borderBottom": "1px solid #e0e0e0",
@@ -1648,7 +1650,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
                                           }
                                         >
                                           <TableHeaderColumn
-                                            className="rowLink"
+                                            className="link"
                                             columnNumber={1}
                                             hoverable={false}
                                             key="1-1/.1"
@@ -1662,7 +1664,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
                                             }
                                           >
                                             <th
-                                              className="rowLink"
+                                              className="link"
                                               onClick={[Function]}
                                               onMouseEnter={[Function]}
                                               onMouseLeave={[Function]}
@@ -1687,7 +1689,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
                                             </th>
                                           </TableHeaderColumn>
                                           <TableHeaderColumn
-                                            className="rowDescription is-hidden-mobile"
+                                            className="description is-hidden-mobile"
                                             columnNumber={2}
                                             hoverable={false}
                                             key="1-2/.2"
@@ -1701,7 +1703,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
                                             }
                                           >
                                             <th
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               onClick={[Function]}
                                               onMouseEnter={[Function]}
                                               onMouseLeave={[Function]}
@@ -1726,7 +1728,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
                                             </th>
                                           </TableHeaderColumn>
                                           <TableHeaderColumn
-                                            className="rowOA align-right"
+                                            className="oa align-right"
                                             columnNumber={3}
                                             hoverable={false}
                                             key="1-3/.3"
@@ -1740,7 +1742,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
                                             }
                                           >
                                             <th
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               onClick={[Function]}
                                               onMouseEnter={[Function]}
                                               onMouseLeave={[Function]}
@@ -1781,7 +1783,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
                                 }
                               >
                                 <table
-                                  className="links"
+                                  className="links horizontal"
                                   style={
                                     Object {
                                       "backgroundColor": "#ffffff",
@@ -1795,7 +1797,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
                                 >
                                   <TableBody
                                     allRowsSelected={false}
-                                    className="tableData"
+                                    className="data"
                                     deselectOnClickaway={true}
                                     displayRowCheckbox={false}
                                     multiSelectable={false}
@@ -1813,7 +1815,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
                                       onClickAway={[Function]}
                                     >
                                       <tbody
-                                        className="tableData"
+                                        className="data"
                                         style={
                                           Object {
                                             "muiPrepared": true,
@@ -1847,7 +1849,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
                                             }
                                           >
                                             <TableRowColumn
-                                              className="rowLink"
+                                              className="link"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="0-1/.1"
@@ -1861,7 +1863,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
                                               }
                                             >
                                               <td
-                                                className="rowLink"
+                                                className="link"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1941,7 +1943,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               columnNumber={2}
                                               hoverable={false}
                                               key="0-2/.2"
@@ -1956,7 +1958,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
                                               title="Full text from PubMed Central"
                                             >
                                               <td
-                                                className="rowDescription is-hidden-mobile"
+                                                className="description is-hidden-mobile"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -1980,7 +1982,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               columnNumber={3}
                                               hoverable={false}
                                               key="0-3/.3"
@@ -1994,7 +1996,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
                                               }
                                             >
                                               <td
-                                                className="rowOA align-right"
+                                                className="oa align-right"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2043,7 +2045,7 @@ exports[`Component Links  should render a PubMed Central link 1`] = `
             </Paper>
           </Card>
         </StandardCard>
-      </ViewRecordLinks>
+      </Links>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -2101,7 +2103,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
         }
       }
     >
-      <ViewRecordLinks
+      <Links
         publication={
           Object {
             "fez_record_search_key_link": Array [
@@ -2296,7 +2298,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                         >
                           <Table
                             allRowsSelected={false}
-                            className="links"
+                            className="links horizontal"
                             fixedFooter={true}
                             fixedHeader={true}
                             height="inherit"
@@ -2320,7 +2322,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                 }
                               >
                                 <table
-                                  className="links"
+                                  className="links horizontal"
                                   style={
                                     Object {
                                       "backgroundColor": "#ffffff",
@@ -2334,14 +2336,14 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                 >
                                   <TableHeader
                                     adjustForCheckbox={false}
-                                    className="tableHeader"
+                                    className="header"
                                     displaySelectAll={false}
                                     enableSelectAll={false}
                                     onSelectAll={[Function]}
                                     selectAllSelected={false}
                                   >
                                     <thead
-                                      className="tableHeader"
+                                      className="header"
                                       style={
                                         Object {
                                           "borderBottom": "1px solid #e0e0e0",
@@ -2369,7 +2371,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                           }
                                         >
                                           <TableHeaderColumn
-                                            className="rowLink"
+                                            className="link"
                                             columnNumber={1}
                                             hoverable={false}
                                             key="1-1/.1"
@@ -2383,7 +2385,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                             }
                                           >
                                             <th
-                                              className="rowLink"
+                                              className="link"
                                               onClick={[Function]}
                                               onMouseEnter={[Function]}
                                               onMouseLeave={[Function]}
@@ -2408,7 +2410,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                             </th>
                                           </TableHeaderColumn>
                                           <TableHeaderColumn
-                                            className="rowDescription is-hidden-mobile"
+                                            className="description is-hidden-mobile"
                                             columnNumber={2}
                                             hoverable={false}
                                             key="1-2/.2"
@@ -2422,7 +2424,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                             }
                                           >
                                             <th
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               onClick={[Function]}
                                               onMouseEnter={[Function]}
                                               onMouseLeave={[Function]}
@@ -2447,7 +2449,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                             </th>
                                           </TableHeaderColumn>
                                           <TableHeaderColumn
-                                            className="rowOA align-right"
+                                            className="oa align-right"
                                             columnNumber={3}
                                             hoverable={false}
                                             key="1-3/.3"
@@ -2461,7 +2463,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                             }
                                           >
                                             <th
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               onClick={[Function]}
                                               onMouseEnter={[Function]}
                                               onMouseLeave={[Function]}
@@ -2502,7 +2504,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                 }
                               >
                                 <table
-                                  className="links"
+                                  className="links horizontal"
                                   style={
                                     Object {
                                       "backgroundColor": "#ffffff",
@@ -2516,7 +2518,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                 >
                                   <TableBody
                                     allRowsSelected={false}
-                                    className="tableData"
+                                    className="data"
                                     deselectOnClickaway={true}
                                     displayRowCheckbox={false}
                                     multiSelectable={false}
@@ -2534,7 +2536,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                       onClickAway={[Function]}
                                     >
                                       <tbody
-                                        className="tableData"
+                                        className="data"
                                         style={
                                           Object {
                                             "muiPrepared": true,
@@ -2568,7 +2570,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                             }
                                           >
                                             <TableRowColumn
-                                              className="rowLink"
+                                              className="link"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="0-1/.1"
@@ -2582,7 +2584,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               }
                                             >
                                               <td
-                                                className="rowLink"
+                                                className="link"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2656,7 +2658,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               columnNumber={2}
                                               hoverable={false}
                                               key="0-2/.2"
@@ -2671,7 +2673,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               title="Search Google Scholar for this open access article"
                                             >
                                               <td
-                                                className="rowDescription is-hidden-mobile"
+                                                className="description is-hidden-mobile"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2695,7 +2697,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               columnNumber={3}
                                               hoverable={false}
                                               key="0-3/.3"
@@ -2709,7 +2711,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               }
                                             >
                                               <td
-                                                className="rowOA align-right"
+                                                className="oa align-right"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2769,7 +2771,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                             }
                                           >
                                             <TableRowColumn
-                                              className="rowLink"
+                                              className="link"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="1-1/.1"
@@ -2783,7 +2785,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               }
                                             >
                                               <td
-                                                className="rowLink"
+                                                className="link"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2857,7 +2859,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               columnNumber={2}
                                               hoverable={false}
                                               key="1-2/.2"
@@ -2872,7 +2874,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               title="Link to publication"
                                             >
                                               <td
-                                                className="rowDescription is-hidden-mobile"
+                                                className="description is-hidden-mobile"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2896,7 +2898,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               columnNumber={3}
                                               hoverable={false}
                                               key="1-3/.3"
@@ -2910,7 +2912,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               }
                                             >
                                               <td
-                                                className="rowOA align-right"
+                                                className="oa align-right"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -2971,7 +2973,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                             }
                                           >
                                             <TableRowColumn
-                                              className="rowLink"
+                                              className="link"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="2-1/.1"
@@ -2985,7 +2987,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               }
                                             >
                                               <td
-                                                className="rowLink"
+                                                className="link"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -3059,7 +3061,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               columnNumber={2}
                                               hoverable={false}
                                               key="2-2/.2"
@@ -3074,7 +3076,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               title="Another link to publication"
                                             >
                                               <td
-                                                className="rowDescription is-hidden-mobile"
+                                                className="description is-hidden-mobile"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -3098,7 +3100,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               columnNumber={3}
                                               hoverable={false}
                                               key="2-3/.3"
@@ -3112,7 +3114,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               }
                                             >
                                               <td
-                                                className="rowOA align-right"
+                                                className="oa align-right"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -3173,7 +3175,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                             }
                                           >
                                             <TableRowColumn
-                                              className="rowLink"
+                                              className="link"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="3-1/.1"
@@ -3187,7 +3189,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               }
                                             >
                                               <td
-                                                className="rowLink"
+                                                className="link"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -3261,7 +3263,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               columnNumber={2}
                                               hoverable={false}
                                               key="3-2/.2"
@@ -3276,7 +3278,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               title="Click to open link in a new window"
                                             >
                                               <td
-                                                className="rowDescription is-hidden-mobile"
+                                                className="description is-hidden-mobile"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -3300,7 +3302,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               columnNumber={3}
                                               hoverable={false}
                                               key="3-3/.3"
@@ -3314,7 +3316,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
                                               }
                                             >
                                               <td
-                                                className="rowOA align-right"
+                                                className="oa align-right"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -3364,7 +3366,7 @@ exports[`Component Links  should render list of links with 3 OA and a google sch
             </Paper>
           </Card>
         </StandardCard>
-      </ViewRecordLinks>
+      </Links>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -3422,7 +3424,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
         }
       }
     >
-      <ViewRecordLinks
+      <Links
         publication={
           Object {
             "fez_record_search_key_doi": Object {
@@ -3623,7 +3625,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                         >
                           <Table
                             allRowsSelected={false}
-                            className="links"
+                            className="links horizontal"
                             fixedFooter={true}
                             fixedHeader={true}
                             height="inherit"
@@ -3647,7 +3649,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                 }
                               >
                                 <table
-                                  className="links"
+                                  className="links horizontal"
                                   style={
                                     Object {
                                       "backgroundColor": "#ffffff",
@@ -3661,14 +3663,14 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                 >
                                   <TableHeader
                                     adjustForCheckbox={false}
-                                    className="tableHeader"
+                                    className="header"
                                     displaySelectAll={false}
                                     enableSelectAll={false}
                                     onSelectAll={[Function]}
                                     selectAllSelected={false}
                                   >
                                     <thead
-                                      className="tableHeader"
+                                      className="header"
                                       style={
                                         Object {
                                           "borderBottom": "1px solid #e0e0e0",
@@ -3696,7 +3698,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                           }
                                         >
                                           <TableHeaderColumn
-                                            className="rowLink"
+                                            className="link"
                                             columnNumber={1}
                                             hoverable={false}
                                             key="1-1/.1"
@@ -3710,7 +3712,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                             }
                                           >
                                             <th
-                                              className="rowLink"
+                                              className="link"
                                               onClick={[Function]}
                                               onMouseEnter={[Function]}
                                               onMouseLeave={[Function]}
@@ -3735,7 +3737,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                             </th>
                                           </TableHeaderColumn>
                                           <TableHeaderColumn
-                                            className="rowDescription is-hidden-mobile"
+                                            className="description is-hidden-mobile"
                                             columnNumber={2}
                                             hoverable={false}
                                             key="1-2/.2"
@@ -3749,7 +3751,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                             }
                                           >
                                             <th
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               onClick={[Function]}
                                               onMouseEnter={[Function]}
                                               onMouseLeave={[Function]}
@@ -3774,7 +3776,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                             </th>
                                           </TableHeaderColumn>
                                           <TableHeaderColumn
-                                            className="rowOA align-right"
+                                            className="oa align-right"
                                             columnNumber={3}
                                             hoverable={false}
                                             key="1-3/.3"
@@ -3788,7 +3790,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                             }
                                           >
                                             <th
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               onClick={[Function]}
                                               onMouseEnter={[Function]}
                                               onMouseLeave={[Function]}
@@ -3829,7 +3831,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                 }
                               >
                                 <table
-                                  className="links"
+                                  className="links horizontal"
                                   style={
                                     Object {
                                       "backgroundColor": "#ffffff",
@@ -3843,7 +3845,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                 >
                                   <TableBody
                                     allRowsSelected={false}
-                                    className="tableData"
+                                    className="data"
                                     deselectOnClickaway={true}
                                     displayRowCheckbox={false}
                                     multiSelectable={false}
@@ -3861,7 +3863,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                       onClickAway={[Function]}
                                     >
                                       <tbody
-                                        className="tableData"
+                                        className="data"
                                         style={
                                           Object {
                                             "muiPrepared": true,
@@ -3895,7 +3897,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                             }
                                           >
                                             <TableRowColumn
-                                              className="rowLink"
+                                              className="link"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="0-1/.1"
@@ -3909,7 +3911,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               }
                                             >
                                               <td
-                                                className="rowLink"
+                                                className="link"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -4002,7 +4004,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               columnNumber={2}
                                               hoverable={false}
                                               key="0-2/.2"
@@ -4017,7 +4019,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               title="Full text from publisher"
                                             >
                                               <td
-                                                className="rowDescription is-hidden-mobile"
+                                                className="description is-hidden-mobile"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -4041,7 +4043,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               columnNumber={3}
                                               hoverable={false}
                                               key="0-3/.3"
@@ -4055,7 +4057,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               }
                                             >
                                               <td
-                                                className="rowOA align-right"
+                                                className="oa align-right"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -4115,7 +4117,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                             }
                                           >
                                             <TableRowColumn
-                                              className="rowLink"
+                                              className="link"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="1-1/.1"
@@ -4129,7 +4131,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               }
                                             >
                                               <td
-                                                className="rowLink"
+                                                className="link"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -4203,7 +4205,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               columnNumber={2}
                                               hoverable={false}
                                               key="1-2/.2"
@@ -4218,7 +4220,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               title="Link to publication"
                                             >
                                               <td
-                                                className="rowDescription is-hidden-mobile"
+                                                className="description is-hidden-mobile"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -4242,7 +4244,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               columnNumber={3}
                                               hoverable={false}
                                               key="1-3/.3"
@@ -4256,7 +4258,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               }
                                             >
                                               <td
-                                                className="rowOA align-right"
+                                                className="oa align-right"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -4316,7 +4318,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                             }
                                           >
                                             <TableRowColumn
-                                              className="rowLink"
+                                              className="link"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="2-1/.1"
@@ -4330,7 +4332,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               }
                                             >
                                               <td
-                                                className="rowLink"
+                                                className="link"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -4404,7 +4406,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               columnNumber={2}
                                               hoverable={false}
                                               key="2-2/.2"
@@ -4419,7 +4421,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               title="Another link to publication"
                                             >
                                               <td
-                                                className="rowDescription is-hidden-mobile"
+                                                className="description is-hidden-mobile"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -4443,7 +4445,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               columnNumber={3}
                                               hoverable={false}
                                               key="2-3/.3"
@@ -4457,7 +4459,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               }
                                             >
                                               <td
-                                                className="rowOA align-right"
+                                                className="oa align-right"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -4517,7 +4519,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                             }
                                           >
                                             <TableRowColumn
-                                              className="rowLink"
+                                              className="link"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="3-1/.1"
@@ -4531,7 +4533,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               }
                                             >
                                               <td
-                                                className="rowLink"
+                                                className="link"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -4605,7 +4607,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               columnNumber={2}
                                               hoverable={false}
                                               key="3-2/.2"
@@ -4620,7 +4622,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               title="Click to open link in a new window"
                                             >
                                               <td
-                                                className="rowDescription is-hidden-mobile"
+                                                className="description is-hidden-mobile"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -4644,7 +4646,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               columnNumber={3}
                                               hoverable={false}
                                               key="3-3/.3"
@@ -4658,7 +4660,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
                                               }
                                             >
                                               <td
-                                                className="rowOA align-right"
+                                                className="oa align-right"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -4707,7 +4709,7 @@ exports[`Component Links  should render list of links with 3 closed OA icons due
             </Paper>
           </Card>
         </StandardCard>
-      </ViewRecordLinks>
+      </Links>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -4765,7 +4767,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
         }
       }
     >
-      <ViewRecordLinks
+      <Links
         publication={
           Object {
             "fez_record_search_key_link": Array [
@@ -4960,7 +4962,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                         >
                           <Table
                             allRowsSelected={false}
-                            className="links"
+                            className="links horizontal"
                             fixedFooter={true}
                             fixedHeader={true}
                             height="inherit"
@@ -4984,7 +4986,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                 }
                               >
                                 <table
-                                  className="links"
+                                  className="links horizontal"
                                   style={
                                     Object {
                                       "backgroundColor": "#ffffff",
@@ -4998,14 +5000,14 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                 >
                                   <TableHeader
                                     adjustForCheckbox={false}
-                                    className="tableHeader"
+                                    className="header"
                                     displaySelectAll={false}
                                     enableSelectAll={false}
                                     onSelectAll={[Function]}
                                     selectAllSelected={false}
                                   >
                                     <thead
-                                      className="tableHeader"
+                                      className="header"
                                       style={
                                         Object {
                                           "borderBottom": "1px solid #e0e0e0",
@@ -5033,7 +5035,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                           }
                                         >
                                           <TableHeaderColumn
-                                            className="rowLink"
+                                            className="link"
                                             columnNumber={1}
                                             hoverable={false}
                                             key="1-1/.1"
@@ -5047,7 +5049,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                             }
                                           >
                                             <th
-                                              className="rowLink"
+                                              className="link"
                                               onClick={[Function]}
                                               onMouseEnter={[Function]}
                                               onMouseLeave={[Function]}
@@ -5072,7 +5074,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                             </th>
                                           </TableHeaderColumn>
                                           <TableHeaderColumn
-                                            className="rowDescription is-hidden-mobile"
+                                            className="description is-hidden-mobile"
                                             columnNumber={2}
                                             hoverable={false}
                                             key="1-2/.2"
@@ -5086,7 +5088,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                             }
                                           >
                                             <th
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               onClick={[Function]}
                                               onMouseEnter={[Function]}
                                               onMouseLeave={[Function]}
@@ -5111,7 +5113,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                             </th>
                                           </TableHeaderColumn>
                                           <TableHeaderColumn
-                                            className="rowOA align-right"
+                                            className="oa align-right"
                                             columnNumber={3}
                                             hoverable={false}
                                             key="1-3/.3"
@@ -5125,7 +5127,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                             }
                                           >
                                             <th
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               onClick={[Function]}
                                               onMouseEnter={[Function]}
                                               onMouseLeave={[Function]}
@@ -5166,7 +5168,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                 }
                               >
                                 <table
-                                  className="links"
+                                  className="links horizontal"
                                   style={
                                     Object {
                                       "backgroundColor": "#ffffff",
@@ -5180,7 +5182,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                 >
                                   <TableBody
                                     allRowsSelected={false}
-                                    className="tableData"
+                                    className="data"
                                     deselectOnClickaway={true}
                                     displayRowCheckbox={false}
                                     multiSelectable={false}
@@ -5198,7 +5200,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                       onClickAway={[Function]}
                                     >
                                       <tbody
-                                        className="tableData"
+                                        className="data"
                                         style={
                                           Object {
                                             "muiPrepared": true,
@@ -5232,7 +5234,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                             }
                                           >
                                             <TableRowColumn
-                                              className="rowLink"
+                                              className="link"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="0-1/.1"
@@ -5246,7 +5248,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               }
                                             >
                                               <td
-                                                className="rowLink"
+                                                className="link"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -5320,7 +5322,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               columnNumber={2}
                                               hoverable={false}
                                               key="0-2/.2"
@@ -5335,7 +5337,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               title="Search Google Scholar for this open access article"
                                             >
                                               <td
-                                                className="rowDescription is-hidden-mobile"
+                                                className="description is-hidden-mobile"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -5359,7 +5361,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               columnNumber={3}
                                               hoverable={false}
                                               key="0-3/.3"
@@ -5373,7 +5375,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               }
                                             >
                                               <td
-                                                className="rowOA align-right"
+                                                className="oa align-right"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -5433,7 +5435,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                             }
                                           >
                                             <TableRowColumn
-                                              className="rowLink"
+                                              className="link"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="1-1/.1"
@@ -5447,7 +5449,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               }
                                             >
                                               <td
-                                                className="rowLink"
+                                                className="link"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -5521,7 +5523,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               columnNumber={2}
                                               hoverable={false}
                                               key="1-2/.2"
@@ -5536,7 +5538,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               title="Link to publication"
                                             >
                                               <td
-                                                className="rowDescription is-hidden-mobile"
+                                                className="description is-hidden-mobile"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -5560,7 +5562,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               columnNumber={3}
                                               hoverable={false}
                                               key="1-3/.3"
@@ -5574,7 +5576,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               }
                                             >
                                               <td
-                                                className="rowOA align-right"
+                                                className="oa align-right"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -5599,7 +5601,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                                   openAccessStatusId={453694}
                                                   showEmbargoText={true}
                                                 >
-                                                  <div>
+                                                  <span>
                                                     <span
                                                       className="is-hidden-mobile is-hidden-tablet-only"
                                                     >
@@ -5607,9 +5609,9 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                                     </span>
                                                     <div
                                                       className="fez-icon openAccessEmbargoed large"
-                                                      title="Link (no DOI) - Open access after 24th December 2020"
+                                                      title="undefined - Open access after 24th December 2020"
                                                     />
-                                                  </div>
+                                                  </span>
                                                 </OpenAccessIcon>
                                               </td>
                                             </TableRowColumn>
@@ -5642,7 +5644,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                             }
                                           >
                                             <TableRowColumn
-                                              className="rowLink"
+                                              className="link"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="2-1/.1"
@@ -5656,7 +5658,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               }
                                             >
                                               <td
-                                                className="rowLink"
+                                                className="link"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -5730,7 +5732,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               columnNumber={2}
                                               hoverable={false}
                                               key="2-2/.2"
@@ -5745,7 +5747,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               title="Another link to publication"
                                             >
                                               <td
-                                                className="rowDescription is-hidden-mobile"
+                                                className="description is-hidden-mobile"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -5769,7 +5771,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               columnNumber={3}
                                               hoverable={false}
                                               key="2-3/.3"
@@ -5783,7 +5785,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               }
                                             >
                                               <td
-                                                className="rowOA align-right"
+                                                className="oa align-right"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -5808,7 +5810,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                                   openAccessStatusId={453694}
                                                   showEmbargoText={true}
                                                 >
-                                                  <div>
+                                                  <span>
                                                     <span
                                                       className="is-hidden-mobile is-hidden-tablet-only"
                                                     >
@@ -5816,9 +5818,9 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                                     </span>
                                                     <div
                                                       className="fez-icon openAccessEmbargoed large"
-                                                      title="Link (no DOI) - Open access after 24th December 2020"
+                                                      title="undefined - Open access after 24th December 2020"
                                                     />
-                                                  </div>
+                                                  </span>
                                                 </OpenAccessIcon>
                                               </td>
                                             </TableRowColumn>
@@ -5851,7 +5853,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                             }
                                           >
                                             <TableRowColumn
-                                              className="rowLink"
+                                              className="link"
                                               columnNumber={1}
                                               hoverable={false}
                                               key="3-1/.1"
@@ -5865,7 +5867,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               }
                                             >
                                               <td
-                                                className="rowLink"
+                                                className="link"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -5939,7 +5941,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowDescription is-hidden-mobile"
+                                              className="description is-hidden-mobile"
                                               columnNumber={2}
                                               hoverable={false}
                                               key="3-2/.2"
@@ -5954,7 +5956,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               title="Click to open link in a new window"
                                             >
                                               <td
-                                                className="rowDescription is-hidden-mobile"
+                                                className="description is-hidden-mobile"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -5978,7 +5980,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               </td>
                                             </TableRowColumn>
                                             <TableRowColumn
-                                              className="rowOA align-right"
+                                              className="oa align-right"
                                               columnNumber={3}
                                               hoverable={false}
                                               key="3-3/.3"
@@ -5992,7 +5994,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                               }
                                             >
                                               <td
-                                                className="rowOA align-right"
+                                                className="oa align-right"
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
@@ -6017,7 +6019,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                                   openAccessStatusId={453694}
                                                   showEmbargoText={true}
                                                 >
-                                                  <div>
+                                                  <span>
                                                     <span
                                                       className="is-hidden-mobile is-hidden-tablet-only"
                                                     >
@@ -6025,9 +6027,9 @@ exports[`Component Links  should render list of links with 3 embargoed links and
                                                     </span>
                                                     <div
                                                       className="fez-icon openAccessEmbargoed large"
-                                                      title="Link (no DOI) - Open access after 24th December 2020"
+                                                      title="undefined - Open access after 24th December 2020"
                                                     />
-                                                  </div>
+                                                  </span>
                                                 </OpenAccessIcon>
                                               </td>
                                             </TableRowColumn>
@@ -6049,7 +6051,7 @@ exports[`Component Links  should render list of links with 3 embargoed links and
             </Paper>
           </Card>
         </StandardCard>
-      </ViewRecordLinks>
+      </Links>
     </Router>
   </MemoryRouter>
 </Provider>

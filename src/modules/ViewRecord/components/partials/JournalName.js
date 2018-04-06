@@ -61,7 +61,7 @@ export default class JournalName extends PureComponent {
                 <span>{journalName}</span>
                 {
                     eraJournalListedText &&
-                    <span className={'eraYearListed'}>{eraJournalListedText}</span>
+                    <span className={'eraYearListed'}> {eraJournalListedText}</span>
                 }
             </a>
         );

@@ -7,20 +7,29 @@ export default {
         sections: {
             publicationDetails: 'Publication details',
             grantInformation: 'Grant information',
-            additionalInformation: 'Additional information',
+            additionalInformation: {
+                title: 'Additional information',
+                licenseLinkText: 'View license details'
+            },
+            relatedPublications: {
+                title: 'Related publications and datasets',
+                depositedBy: 'deposited',
+                currentRecord: 'Current Record'
+            },
+            availableVersions: 'Available versions',
             files: {
                 title: 'Files',
-                fileName: 'Filename',
+                fileName: 'File name',
                 description: 'Description',
                 size: 'Size',
-                embargoDate: 'Embargoed until [embargoDate]',
-                culturalSensitivityStatement: 'Cultural Sensitivity Statement - Be advised, that some files may contain content which is of a sensitive nature to some cultures or tastes.',
+                culturalSensitivityStatement: 'Cultural Sensitivity Statement - Be advised that some files may contain content which is of a sensitive nature to some cultures or tastes.',
+                linkTitle: 'Click to open this file in a new window - [filename] - [description] - [size]',
                 preview: {
                     videoTitle: 'Video preview',
                     imageTitle: 'Image preview',
                     openInNewWindow: 'Open file in a new window',
                     close: 'Close',
-                    browserNotSupportVideoTagMsg: 'Your browser does not support the video tag.'
+                    errorMessage: 'Your browser does not support the video tag.'
                 },
             },
             links: {
@@ -99,11 +108,12 @@ export default {
                 fez_record_search_key_translated_conference_name: 'Translated conference name',
                 fez_record_search_key_conference_location: 'Conference Location',
                 fez_record_search_key_conference_dates: 'Conference dates',
+                fez_record_search_key_section: 'Section',
                 fez_record_search_key_convener: 'Convener',
                 fez_record_search_key_proceedings_title: 'Proceedings title',
                 fez_record_search_key_language_of_proceedings_title: 'Language of proceedings title',
                 fez_record_search_key_translated_proceedings_title: 'Translated proceedings title',
-                fez_record_search_key_org_unit_name: 'School, Department or Center',
+                fez_record_search_key_org_unit_name: 'School, Department or Centre',
                 fez_record_search_key_org_name: 'Institution',
                 fez_record_search_key_access_conditions: 'Access conditions',
                 fez_record_search_key_seo_code: 'ANZSRC Socio-Economic Objective (SEO) Code',
@@ -267,7 +277,7 @@ export default {
             'Thesis': {
                 rek_title: 'Thesis title',
                 rek_genre_type: 'Thesis type',
-                fez_record_search_key_org_unit_name: 'School, Center or Institute',
+                fez_record_search_key_org_unit_name: 'School, Centre or Institute',
                 fez_record_search_key_translated_title: 'Translated thesis title'
             },
             'Video Document': {
@@ -1122,7 +1132,7 @@ export default {
                     order: 10
                 },
                 {
-                    field: 'fez_record_search_key_end_date',
+                    field: 'fez_record_search_key_end_page',
                     order: 11
                 },
                 {
@@ -1802,8 +1812,12 @@ export default {
                     order: 17
                 },
                 {
-                    field: 'fez_record_search_key_keywords',
+                    field: 'fez_record_search_key_subject',
                     order: 18
+                },
+                {
+                    field: 'fez_record_search_key_keywords',
+                    order: 19
                 }
             ],
             'Reference Entry': [

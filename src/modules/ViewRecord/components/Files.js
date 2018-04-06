@@ -3,85 +3,72 @@ import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import {Table, TableBody, TableRowColumn, TableHeader, TableRow, TableHeaderColumn} from 'material-ui/Table';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import FileName from './partials/FileName';
-import moment from 'moment';
-import {QuickTemplates, OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION, OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT, OPEN_ACCESS_ID_OTHER} from 'config/general';
-import OpenAccessIcon from './partials/OpenAccessIcon';
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+
+import AvVolumeUp from 'material-ui/svg-icons/av/volume-up';
+import InsertDriveFile from 'material-ui/svg-icons/editor/insert-drive-file';
+import PictureAsPdf from 'material-ui/svg-icons/image/picture-as-pdf';
+import Image from 'material-ui/svg-icons/image/image';
+import AvVideocam from 'material-ui/svg-icons/av/videocam';
+import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
+import {pathConfig} from 'config/routes';
 
 export default class Files extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        onFileSelect: PropTypes.func.isRequired
+        hideCulturalSensitivityStatement: PropTypes.bool,
+        setHideCulturalSensitivityStatement: PropTypes.func
     };
 
     constructor(props) {
         super(props);
+        this.state = {
+            preview: {
+                mediaUrl: null,
+                previewMediaUrl: null,
+                mimeType: null
+            }
+        };
     }
 
-    isFileOpenAccess = (record, fileName, accessCondition, embargoDate) => {
-        const openAccessStatusId = record.fez_record_search_key_oa_status
-            && record.fez_record_search_key_oa_status.rek_oa_status;
-        if (openAccessStatusId === OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION
-        || openAccessStatusId === OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT
-        || openAccessStatusId === OPEN_ACCESS_ID_OTHER) {
-            // closed access file without embargo date
-            if (accessCondition && !embargoDate
-                && parseInt(accessCondition.rek_file_attachment_access_condition, 10) === QuickTemplates.CLOSED_ACCESS_ID) {
-                return {isOpenAccess: false, embargoDate: null, openAccessStatusId: openAccessStatusId};
-            }
-            // closed access with embargo date or open access file
-            const currentDate = moment().format();
-            const hasEmbargoDateMatured = !embargoDate || moment(embargoDate.rek_file_attachment_embargo_date).format() < currentDate;
-            const displayEmbargoDate = !!embargoDate && !hasEmbargoDateMatured ? moment(embargoDate.rek_file_attachment_embargo_date).format('Do MMMM YYYY') : null;
-            // TODO: other quick template ids - do users have access to those files?
-            return {isOpenAccess: hasEmbargoDateMatured, embargoDate: displayEmbargoDate, openAccessStatusId: openAccessStatusId};
+    renderFileIcon = (mimeType) => {
+        if (mimeType.indexOf('audio') >= 0) {
+            return <AvVolumeUp />;
+        } else if (mimeType.indexOf('pdf') >= 0) {
+            return <PictureAsPdf />;
+        } else if (mimeType.indexOf('image') >= 0) {
+            return <Image />;
+        } else if (mimeType.indexOf('video') >= 0) {
+            return <AvVideocam />;
         } else {
-            return {isOpenAccess: false, embargoDate: null, openAccessStatusId: openAccessStatusId};
+            return <InsertDriveFile />;
         }
-    };
-
-    renderFileDetail = (order, pid, fileName, openAccessStatus, dataStreams) => {
-        const dataStream = this.searchByKey(dataStreams, 'dsi_dsid', fileName);
-        const thumbnailDataStream = this.searchByKey(dataStreams, 'dsi_dsid', 'thumbnail_' + fileName);
-        const previewDataStream = this.searchByKey(dataStreams, 'dsi_dsid', 'preview_' + fileName);
-        const mimeType = dataStream && dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
-        return (
-            <TableRow selectable={false} className="file" key={`file-${order}`}>
-                <TableRowColumn className="filename">
-                    {
-                        <FileName
-                            pid={pid}
-                            fileName={fileName}
-                            mimeType={mimeType}
-                            allowDownload={openAccessStatus.isOpenAccess}
-                            thumbnailFileName={thumbnailDataStream && thumbnailDataStream.dsi_dsid}
-                            previewFileName={previewDataStream && previewDataStream.dsi_dsid}
-                            onFileSelect={this.props.onFileSelect}
-                        />
-                    }
-                </TableRowColumn>
-                <TableRowColumn className="is-hidden-mobile description">
-                    {
-                        dataStream &&
-                        dataStream.dsi_label
-                    }
-                </TableRowColumn>
-                <TableRowColumn className="align-right is-hidden-mobile is-hidden-tablet-only size" >
-                    {
-                        dataStream &&
-                        this.formatBytes(dataStream.dsi_size)
-                    }
-                </TableRowColumn>
-                <TableRowColumn className="rowOA align-right">
-                    <OpenAccessIcon {...openAccessStatus} showEmbargoText />
-                </TableRowColumn>
-            </TableRow>
-        );
     }
 
     searchByKey = (list, key, value) => {
         return list && list.filter(item=>item[key] === value)[0];
     }
+
+    // TODO: uncomment when preview is available
+    // hidePreview = () => {
+    //     this.setState({
+    //         preview: {
+    //             mediaUrl: null,
+    //             previewMediaUrl: null,
+    //             mimeType: null
+    //         }
+    //     });
+    // }
+    //
+    // showPreview = (mediaUrl, previewMediaUrl, mimeType) => {
+    //     this.setState({
+    //         preview: {
+    //             mediaUrl: mediaUrl,
+    //             previewMediaUrl: previewMediaUrl,
+    //             mimeType: mimeType
+    //         }
+    //     });
+    // }
 
     formatBytes = (bytes) => {
         if (bytes === 0) {
@@ -95,53 +82,95 @@ export default class Files extends Component {
     }
 
     // filter out fezacml, premd, thumbnail, web prefix files
-    renderFiles = (publication) => {
-        const files = [];
+    getFileData = (publication) => {
         const fileNames = publication.fez_record_search_key_file_attachment_name;
-        const embargoDates = publication.fez_record_search_key_file_attachment_embargo_date;
-        const accessConditions = publication.fez_record_search_key_file_attachment_access_condition;
         const dataStreams = publication.fez_datastream_info;
 
-        fileNames.filter((fileName) => (
-            !fileName.rek_file_attachment_name.match('^(FezACML|stream|web|thumbnail|preview|presmd)')
-        )).sort((fileName1, fileName2) => (
-            fileName1.rek_file_attachment_name_order - fileName2.rek_file_attachment_name_order
-        )).map((fileName) => {
-            const order = fileName.rek_file_attachment_name_order;
-            const embargoDate = this.searchByKey(embargoDates, 'rek_file_attachment_embargo_date_order', order);
-            const accessCondition = this.searchByKey(accessConditions, 'rek_file_attachment_access_condition_order', order);
-            const openAccessStatus = this.isFileOpenAccess(this.props.publication, fileName, accessCondition, embargoDate);
-            files.push(this.renderFileDetail(order, publication.rek_pid, fileName.rek_file_attachment_name, openAccessStatus, dataStreams));
-        });
+        const files = !!fileNames && fileNames.length > 0
+            ? fileNames.filter((fileName) => (
+                !fileName.rek_file_attachment_name.match('^(FezACML|stream|web|thumbnail|preview|presmd)')
+            )).sort((fileName1, fileName2) => (
+                fileName1.rek_file_attachment_name_order - fileName2.rek_file_attachment_name_order
+            )).map(fileName => {
+                const order = fileName.rek_file_attachment_name_order;
+                const dataStream = this.searchByKey(dataStreams, 'dsi_dsid', fileName.rek_file_attachment_name);
+                const mimeType = dataStream && dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
+                // TODO: set values for open access/allowDownload when available
+                return {
+                    order: order,
+                    pid: publication.rek_pid,
+                    fileName: fileName.rek_file_attachment_name,
+                    mimeType: mimeType,
+                    dataStream: dataStream,
+                    calculatedSize: dataStream && this.formatBytes(dataStream.dsi_size),
+                    icon: this.renderFileIcon(mimeType)
+                };
+            })
+            : [];
 
-        return (
-            <Table selectable={false} className="file header">
-                <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="tableHeader">
-                    <TableRow>
-                        <TableHeaderColumn className="filename">{locale.viewRecord.sections.files.fileName}</TableHeaderColumn>
-                        <TableHeaderColumn className="description is-hidden-mobile">{locale.viewRecord.sections.files.description}</TableHeaderColumn>
-                        <TableHeaderColumn className="align-right is-hidden-mobile is-hidden-tablet-only size">{locale.viewRecord.sections.files.size}</TableHeaderColumn>
-                        <TableHeaderColumn className="oaStatus"/>
-                    </TableRow>
-                </TableHeader>
-                <TableBody displayRowCheckbox={false}>
-                    {files}
-                </TableBody>
-            </Table>
-        );
+        return files;
     }
 
     render() {
         const {publication} = this.props;
-
+        const fileData = this.getFileData(publication);
+        if (fileData.length === 0) return null;
         return (
-            <StandardCard title={locale.viewRecord.sections.files.title}>
+            <section>
+                <StandardCard title={locale.viewRecord.sections.files.title}>
+                    {
+                        !!publication.fez_record_search_key_advisory_statement && !this.props.hideCulturalSensitivityStatement &&
+                        <Alert allowDismiss type={'info'}
+                            message={publication.fez_record_search_key_advisory_statement.rek_advisory_statement || locale.viewRecord.sections.files.culturalSensitivityStatement}
+                            dismissAction={this.props.setHideCulturalSensitivityStatement}/>
+                    }
+                    <Table selectable={false} className="files horizontal">
+                        <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="header">
+                            <TableRow>
+                                <TableHeaderColumn className="filetype" />
+                                <TableHeaderColumn className="filename">
+                                    {locale.viewRecord.sections.files.fileName}
+                                </TableHeaderColumn>
+                                <TableHeaderColumn className="description is-hidden-mobile">
+                                    {locale.viewRecord.sections.files.description}
+                                </TableHeaderColumn>
+                                <TableHeaderColumn className="align-right is-hidden-mobile is-hidden-tablet-only size">
+                                    {locale.viewRecord.sections.files.size}
+                                </TableHeaderColumn>
+                            </TableRow>
+                        </TableHeader>
+                        <TableBody displayRowCheckbox={false} className="data">
+                            {
+                                fileData.map(item => (
+                                    <TableRow selectable={true} className="file" key={`file-${item.order}`}>
+                                        <TableRowColumn className="filetype fileIcon">
+                                            {item.icon}
+                                        </TableRowColumn>
+                                        <TableRowColumn className="filename">
+                                            <ExternalLink href={pathConfig.file.url(item.pid, item.fileName)}
+                                                title={`${item.fileName} - ${item.dataStream && item.dataStream.dsi_label} - ${item.calculatedSize}`}
+                                                className={'fileName'}
+                                                openInNewIcon
+                                            >
+                                                {item.fileName}
+                                            </ExternalLink>
+                                        </TableRowColumn>
+                                        <TableRowColumn className="is-hidden-mobile description">
+                                            {item.dataStream && item.dataStream.dsi_label}
+                                        </TableRowColumn>
+                                        <TableRowColumn className="align-right is-hidden-mobile is-hidden-tablet-only size" >
+                                            {item.calculatedSize}
+                                        </TableRowColumn>
+                                    </TableRow>
+                                ))
+                            }
+                        </TableBody>
+                    </Table>
+                </StandardCard>
                 {
-                    publication.fez_record_search_key_file_attachment_name &&
-                    publication.fez_record_search_key_file_attachment_name.length > 0 &&
-                    this.renderFiles(publication)
+                    // TODO: MediaPreview will be here...
                 }
-            </StandardCard>
+            </section>
         );
     }
 }
