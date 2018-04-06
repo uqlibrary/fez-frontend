@@ -82,7 +82,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           >
             <ExternalLink
               className="fileName"
-              href="/view/UQ:676287/UQ676287_OA.pdf"
+              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
@@ -121,7 +121,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           >
             <ExternalLink
               className="fileName"
-              href="/view/UQ:676287/image.jpg"
+              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/image.jpg"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
@@ -229,7 +229,7 @@ exports[`Files Component  should render component 1`] = `
           >
             <ExternalLink
               className="fileName"
-              href="/view/UQ:676287/UQ676287_OA.pdf"
+              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
@@ -268,7 +268,7 @@ exports[`Files Component  should render component 1`] = `
           >
             <ExternalLink
               className="fileName"
-              href="/view/UQ:676287/image.jpg"
+              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/image.jpg"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
@@ -384,7 +384,7 @@ exports[`Files Component  should render cultural message 1`] = `
           >
             <ExternalLink
               className="fileName"
-              href="/view/UQ:676287/UQ676287_OA.pdf"
+              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
@@ -423,7 +423,7 @@ exports[`Files Component  should render cultural message 1`] = `
           >
             <ExternalLink
               className="fileName"
-              href="/view/UQ:676287/image.jpg"
+              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/image.jpg"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
