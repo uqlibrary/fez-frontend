@@ -656,9 +656,9 @@ exports[`Available Versions Component  should render component 1`] = `
           parentSearchKey={
             Object {
               "key": "fez_record_search_key_isderivationof",
-              "order": "rek_is_derivationof_order",
-              "pid": "rek_is_derivationof",
-              "title": "rek_is_derivationof_lookup",
+              "order": "rek_isderivationof_order",
+              "pid": "rek_isderivationof",
+              "title": "rek_isderivationof_lookup",
             }
           }
           publication={

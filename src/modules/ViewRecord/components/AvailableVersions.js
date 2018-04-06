@@ -11,9 +11,9 @@ const AvailableVersions = ({publication, showPublicationTitle = true}) => {
             className="availableVersions"
             parentSearchKey={{
                 key: 'fez_record_search_key_isderivationof',
-                pid: 'rek_is_derivationof',
-                title: 'rek_is_derivationof_lookup',
-                order: 'rek_is_derivationof_order'
+                pid: 'rek_isderivationof',
+                title: 'rek_isderivationof_lookup',
+                order: 'rek_isderivationof_order'
             }}
             childrenSearchKey={{
                 key: 'fez_record_search_key_has_derivations',
