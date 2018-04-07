@@ -11,9 +11,10 @@ a.researchgate::before {
   @include mobile {
     zoom: 2;
     text-align: center !important;
+    margin-left: -2px !important;
     a {
       text-align: center !important;
-      margin: 1px !important;
+      margin: 0 2px 2px 0 !important;
     }
   }
 }
