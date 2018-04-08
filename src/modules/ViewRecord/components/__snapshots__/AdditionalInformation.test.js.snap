@@ -9352,6 +9352,20 @@ exports[`Additional Information Component  should render component with data col
         data={
           <ul>
             <li>
+              DP120103498
+            </li>
+            <li>
+              DP1093175
+            </li>
+          </ul>
+        }
+        heading="Grant ID"
+        key="additional-info-Grant ID"
+      />
+      <ViewRecordTableRow
+        data={
+          <ul>
+            <li>
               Text
             </li>
             <li>
