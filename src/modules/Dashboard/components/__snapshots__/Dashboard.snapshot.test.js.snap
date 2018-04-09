@@ -58,7 +58,6 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
         action={[Function]}
         actionButtonLabel="Add a publication"
         allowDismiss={false}
-        dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a publication any time."
         showLoader={false}
         title="Add your work to eSpace"
@@ -504,7 +503,6 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
         action={[Function]}
         actionButtonLabel="Add a publication"
         allowDismiss={false}
-        dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a publication any time."
         showLoader={false}
         title="Add your work to eSpace"
@@ -631,7 +629,6 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
         action={[Function]}
         actionButtonLabel="Add a publication"
         allowDismiss={false}
-        dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a publication any time."
         showLoader={false}
         title="Add your work to eSpace"
@@ -706,7 +703,6 @@ exports[`Dashboard test renders dashboard header only 1`] = `
         action={[Function]}
         actionButtonLabel="Add a publication"
         allowDismiss={false}
-        dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a publication any time."
         showLoader={false}
         title="Add your work to eSpace"
@@ -775,7 +771,6 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
         action={[Function]}
         actionButtonLabel="Claim your publications now"
         allowDismiss={true}
-        dismissTitle="Click to dismiss this alert"
         message="We have found 5 record(s) that could possibly be your work."
         showLoader={false}
         title="Claim now!"

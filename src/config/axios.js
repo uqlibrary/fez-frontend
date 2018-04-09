@@ -4,6 +4,7 @@ import {setupCache} from 'axios-cache-adapter';
 import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME} from './general';
 import {store} from 'config/store';
 import {logout} from 'actions/account';
+import {locale} from 'locale';
 
 export const cache = setupCache({
     maxAge: 15 * 60 * 1000,
@@ -50,19 +51,23 @@ api.interceptors.response.use(response => {
     }
     return Promise.resolve(response.data);
 }, error => {
+    let errorMessage = locale.global.errorMessages.generic;
+
     if (error.response && error.response.status === 403) {
+        errorMessage = locale.global.errorMessages.sessionExpired;
         if (process.env.NODE_ENV === 'test') {
             global.mockActionsStore.dispatch(logout());
         } else {
             store.dispatch(logout());
         }
+    } else if (error.response && error.response.status === 404) {
+         errorMessage = locale.global.errorMessages.notFound;
     }
 
-    const errorMessage = {
+    const errorDetails = {
         status: error.response ? error.response.status : null,
-        message: error.response && error.response.data && error.response.data.message
-            ? error.response.data.message
-            : `Request error with status code ${error.response ? error.response.status : 'NA'}. `
+        message: errorMessage
     };
-    return Promise.reject(errorMessage);
+
+    return Promise.reject(errorDetails);
 });
