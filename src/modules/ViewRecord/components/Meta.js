@@ -9,59 +9,86 @@ export default class Meta extends React.PureComponent {
         publication: PropTypes.object
     };
 
-    getMetaTag = (name, content, scheme = false) => {
+    getMetaTag = (name, content) => {
         return (
-            <meta name={name} content={content} {...(scheme ? {scheme: 'URI'} : {})}/>
+            <meta name={name} content={content} {...(name === 'DC.Identifier' ? {scheme: 'URI'} : {})}/>
         );
     };
 
-    renderMetaTags = (publication) => {
-        const metaTags = [];
 
-        viewRecordsConfig.metaTags.map(metaTag => {
+    getMetaTagContent = (object, key, url, dateFormat) => {
+        const {publication} = this.props;
+
+        switch (key) {
+            case 'rek_pid':
+                return url(publication.rek_pid);
+            case 'rek_date':
+                return moment(object[key]).format(dateFormat);
+            case 'rek_description':
+                const replaceHtmlChars = {
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;'
+                };
+                return (!!publication.rek_formatted_abstract && publication.rek_formatted_abstract || object[key])
+                    .replace(/[&<>]/g, (replace) => (replaceHtmlChars[replace] || replace));
+            case 'rek_file_attachment_name':
+                return object[key].split('.')[1] === 'pdf' &&
+                    url(publication.rek_pid, object[key]);
+            case 'rek_issn':
+                return object[key];
+            default:
+                return !!object[`${key}_lookup`] && object[`${key}_lookup`] || object[key];
+        }
+    };
+
+    getMultipleTagsForField = (tagName, field, subkey, url) => {
+        const {publication} = this.props;
+
+        return publication[field].map(fieldValue => {
+            const content = this.getMetaTagContent(fieldValue, subkey, url);
+            return content && this.getMetaTag(tagName, content);
+        });
+    };
+
+    renderMetaTags = (publication) => {
+        // Loop through each meta tag
+        return viewRecordsConfig.metaTags.reduce((metaTags, metaTag) => {
             const {field, subkey, tags, url} = metaTag;
 
+            // Push dublin core DC.* and/or citation_* meta tags for each field
             metaTags.push(tags.map(tag => {
+                // Check field is one of the search keys of the publication and it exists (fez_record_search_key_*)
                 if (!!field && !!publication[field]) {
+                    // Check search key field has multiple values
                     if (publication[field].length > 0) {
+                        // If multiple tags allowed then get meta tag for each value
                         if (tag.multiple) {
-                            return publication[field].map(fieldValue => {
-                                if (!!fieldValue[subkey] && !!url && subkey === 'rek_file_attachment_name') {
-                                    return fieldValue[subkey].split('.')[1] === 'pdf' && this.getMetaTag(tag.name, url(publication.rek_pid, fieldValue[subkey]));
-                                } else {
-                                    return this.getMetaTag(tag.name, subkey !== 'rek_issn' && fieldValue[`${subkey}_lookup`] || fieldValue[subkey]);
-                                }
-                            });
+                            return this.getMultipleTagsForField(tag.name, field, subkey, url);
                         } else {
-                            return this.getMetaTag(tag.name, publication[field].reduce((metaTagContent, fieldValue) => {
-                                metaTagContent.push(fieldValue[subkey]);
-                                return metaTagContent;
-                            }, []).join('; '));
+                            // Single meta tag for multiple values separated by semicolon
+                            return this.getMetaTag(
+                                tag.name,
+                                publication[field].reduce((metaTagContent, fieldValue) => {
+                                    metaTagContent.push(fieldValue[subkey]);
+                                    return metaTagContent;
+                                }, []).join('; ')
+                            );
                         }
                     } else if (!!publication[field][subkey]) {
+                        // Return meta tag if single value exists in search key
                         return this.getMetaTag(tag.name, publication[field][subkey]);
                     } else {
-                        return '';
+                        return [];
                     }
                 } else {
-                    const replaceHtmlChars = {
-                        '&': '&amp;',
-                        '<': '&lt;',
-                        '>': '&gt;'
-                    };
-
-                    return !!publication[subkey] &&
-                        (
-                            subkey === 'rek_pid' && url && this.getMetaTag(tag.name, url(publication.rek_pid), true) ||
-                            subkey === 'rek_date' && this.getMetaTag(tag.name, moment(publication[subkey]).format(tag.format)) ||
-                            subkey === 'rek_description' && this.getMetaTag(tag.name, publication[subkey].replace(/[&<>]/g, (replace) => (replaceHtmlChars[replace] || replace))) ||
-                            this.getMetaTag(tag.name, publication[subkey])
-                        );
+                    // If field is null and subkey (rek_pid, rek_description, rek_date etc.) exists in publication
+                    const content = !!publication[subkey] && this.getMetaTagContent(publication, subkey, url, tag.format);
+                    return content && this.getMetaTag(tag.name, content);
                 }
             }));
-        });
-
-        return metaTags;
+            return metaTags;
+        }, []);
     };
 
     render() {
