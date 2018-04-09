@@ -30,7 +30,7 @@ export default class Meta extends React.PureComponent {
                     '<': '&lt;',
                     '>': '&gt;'
                 };
-                return (!!publication.rek_formatted_abstract && publication.rek_formatted_abstract || object[key])
+                return (!!object[key] && object[key] || !!publication.rek_formatted_abstract && publication.rek_formatted_abstract)
                     .replace(/[&<>]/g, (replace) => (replaceHtmlChars[replace] || replace));
             case 'rek_file_attachment_name':
                 return object[key].split('.')[1] === 'pdf' &&
