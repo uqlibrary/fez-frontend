@@ -907,11 +907,11 @@ exports[`Meta Component  should render component with digilib image 1`] = `
     name="citation_authors"
   />
   <meta
-    content="2017-11-01"
+    content="2017-10-31"
     name="DC.Date"
   />
   <meta
-    content="2017/11/01"
+    content="2017/10/31"
     name="citation_date"
   />
   <meta

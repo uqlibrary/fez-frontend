@@ -23,7 +23,7 @@ export default class Meta extends React.PureComponent {
             case 'rek_pid':
                 return url(publication.rek_pid);
             case 'rek_date':
-                return moment(object[key]).format(dateFormat);
+                return moment.parseZone(object[key]).format(dateFormat);
             case 'rek_description':
                 const replaceHtmlChars = {
                     '&': '&amp;',
