@@ -61,7 +61,7 @@ api.interceptors.response.use(response => {
             store.dispatch(logout());
         }
     } else if (error.response && error.response.status === 404) {
-         errorMessage = locale.global.errorMessages.notFound;
+        errorMessage = locale.global.errorMessages.notFound;
     }
 
     const errorDetails = {
