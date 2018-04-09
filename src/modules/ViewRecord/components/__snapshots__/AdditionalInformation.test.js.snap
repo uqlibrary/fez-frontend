@@ -9319,15 +9319,6 @@ exports[`Additional Information Component  should render component with data col
       />
       <ViewRecordTableRow
         data={
-          <DoiCitationView
-            doi="10.14264/uql.2016.841"
-          />
-        }
-        heading="DOI"
-        key="additional-info-DOI"
-      />
-      <ViewRecordTableRow
-        data={
           <ul>
             <li>
               <a
@@ -9347,6 +9338,15 @@ exports[`Additional Information Component  should render component with data col
         }
         heading="ANZSRC Field of Research (FoR) Code"
         key="additional-info-ANZSRC Field of Research (FoR) Code"
+      />
+      <ViewRecordTableRow
+        data={
+          <DoiCitationView
+            doi="10.14264/uql.2016.841"
+          />
+        }
+        heading="DOI"
+        key="additional-info-DOI"
       />
       <ViewRecordTableRow
         data={
@@ -10994,15 +10994,6 @@ exports[`Additional Information Component  should render component with data col
       />
       <ViewRecordTableRow
         data={
-          <DoiCitationView
-            doi="10.1594/PANGAEA.830076"
-          />
-        }
-        heading="DOI"
-        key="additional-info-DOI"
-      />
-      <ViewRecordTableRow
-        data={
           <ul>
             <li>
               <a
@@ -11029,6 +11020,15 @@ exports[`Additional Information Component  should render component with data col
         }
         heading="ANZSRC Field of Research (FoR) Code"
         key="additional-info-ANZSRC Field of Research (FoR) Code"
+      />
+      <ViewRecordTableRow
+        data={
+          <DoiCitationView
+            doi="10.1594/PANGAEA.830076"
+          />
+        }
+        heading="DOI"
+        key="additional-info-DOI"
       />
       <ViewRecordTableRow
         data={

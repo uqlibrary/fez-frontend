@@ -1019,11 +1019,11 @@ export default {
                     order: 9
                 },
                 {
-                    field: 'fez_record_search_key_doi',
+                    field: 'fez_record_search_key_subject',
                     order: 10
                 },
                 {
-                    field: 'fez_record_search_key_subject',
+                    field: 'fez_record_search_key_doi',
                     order: 11
                 },
                 {
