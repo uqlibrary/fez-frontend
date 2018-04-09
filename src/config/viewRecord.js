@@ -117,6 +117,16 @@ export const viewRecordsConfig = {
             ]
         },
         {
+            field: 'fez_record_search_key_contributor',
+            subkey: 'rek_contributor',
+            tags: [
+                {
+                    name: 'DC.Contributor',
+                    multiple: true
+                }
+            ]
+        },
+        {
             field: 'fez_record_search_key_author',
             subkey: 'rek_author',
             tags: [
@@ -249,7 +259,7 @@ export const viewRecordsConfig = {
                     multiple: false
                 },
                 {
-                    name: 'citation_description',
+                    name: 'citation_abstract',
                     multiple: false
                 }
             ]
@@ -271,16 +281,6 @@ export const viewRecordsConfig = {
                 {
                     name: 'citation_conference',
                     multiple: false
-                }
-            ]
-        },
-        {
-            field: 'fez_record_search_key_contributor',
-            subkey: 'rek_contributor',
-            tags: [
-                {
-                    name: 'DC.Contributor',
-                    multiple: true
                 }
             ]
         },

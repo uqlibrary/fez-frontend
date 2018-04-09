@@ -11,7 +11,7 @@ export default class Meta extends React.PureComponent {
 
     getMetaTag = (name, content, scheme = false) => {
         return (
-            <meta name={name} content={content} scheme="URI" {...(scheme ? {scheme: 'URI'} : {})}/>
+            <meta name={name} content={content} {...(scheme ? {scheme: 'URI'} : {})}/>
         );
     };
 
@@ -31,8 +31,6 @@ export default class Meta extends React.PureComponent {
                                         case 'rek_file_attachment_name':
                                             return fieldValue[subkey].split('.')[1] === 'pdf' &&
                                                 this.getMetaTag(tag.name, url(publication.rek_pid, fieldValue[subkey]));
-                                        case 'rek_pid':
-                                            return this.getMetaTag(tag.name, url(publication.rek_pid));
                                         default:
                                             return this.getMetaTag(tag.name, fieldValue[subkey]);
                                     }
