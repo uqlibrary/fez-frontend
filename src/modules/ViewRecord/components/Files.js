@@ -124,8 +124,8 @@ export default class Files extends Component {
                             message={publication.fez_record_search_key_advisory_statement.rek_advisory_statement || locale.viewRecord.sections.files.culturalSensitivityStatement}
                             dismissAction={this.props.setHideCulturalSensitivityStatement}/>
                     }
-                    <Table selectable={false} className="file header">
-                        <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="tableHeader">
+                    <Table selectable={false} className="files horizontal">
+                        <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="header">
                             <TableRow>
                                 <TableHeaderColumn className="filetype" />
                                 <TableHeaderColumn className="filename">
@@ -139,7 +139,7 @@ export default class Files extends Component {
                                 </TableHeaderColumn>
                             </TableRow>
                         </TableHeader>
-                        <TableBody displayRowCheckbox={false}>
+                        <TableBody displayRowCheckbox={false} className="data">
                             {
                                 fileData.map(item => (
                                     <TableRow selectable={true} className="file" key={`file-${item.order}`}>
@@ -147,7 +147,11 @@ export default class Files extends Component {
                                             {item.icon}
                                         </TableRowColumn>
                                         <TableRowColumn className="filename">
-                                            <ExternalLink href={pathConfig.file.url(item.pid, item.fileName)} title={item.fileName} className={'fileName'} openInNewIcon>
+                                            <ExternalLink href={pathConfig.file.url(item.pid, item.fileName)}
+                                                title={`${item.fileName} - ${item.dataStream && item.dataStream.dsi_label} - ${item.calculatedSize}`}
+                                                className={'fileName'}
+                                                openInNewIcon
+                                            >
                                                 {item.fileName}
                                             </ExternalLink>
                                         </TableRowColumn>

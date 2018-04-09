@@ -2,7 +2,7 @@
 
 exports[`ViewRecordTableRow Component should render with array 1`] = `
 <TableRow
-  className="tableRow"
+  className="row"
   displayBorder={true}
   hoverable={false}
   hovered={false}
@@ -10,11 +10,11 @@ exports[`ViewRecordTableRow Component should render with array 1`] = `
   striped={false}
 >
   <TableRowColumn
-    className="headingColumn"
+    className="header"
     hoverable={false}
   />
   <TableRowColumn
-    className="dataColumn"
+    className="data"
     hoverable={false}
   />
 </TableRow>
@@ -22,7 +22,7 @@ exports[`ViewRecordTableRow Component should render with array 1`] = `
 
 exports[`ViewRecordTableRow Component should render with default props 1`] = `
 <TableRow
-  className="tableRow"
+  className="row"
   displayBorder={true}
   hoverable={false}
   hovered={false}
@@ -30,11 +30,11 @@ exports[`ViewRecordTableRow Component should render with default props 1`] = `
   striped={false}
 >
   <TableRowColumn
-    className="headingColumn"
+    className="header"
     hoverable={false}
   />
   <TableRowColumn
-    className="dataColumn"
+    className="data"
     hoverable={false}
   />
 </TableRow>
@@ -42,7 +42,7 @@ exports[`ViewRecordTableRow Component should render with default props 1`] = `
 
 exports[`ViewRecordTableRow Component should render with jsx 1`] = `
 <TableRow
-  className="tableRow"
+  className="row"
   displayBorder={true}
   hoverable={false}
   hovered={false}
@@ -50,11 +50,11 @@ exports[`ViewRecordTableRow Component should render with jsx 1`] = `
   striped={false}
 >
   <TableRowColumn
-    className="headingColumn"
+    className="header"
     hoverable={false}
   />
   <TableRowColumn
-    className="dataColumn"
+    className="data"
     hoverable={false}
   />
 </TableRow>
@@ -62,7 +62,7 @@ exports[`ViewRecordTableRow Component should render with jsx 1`] = `
 
 exports[`ViewRecordTableRow Component should render with string 1`] = `
 <TableRow
-  className="tableRow"
+  className="row"
   displayBorder={true}
   hoverable={false}
   hovered={false}
@@ -70,11 +70,11 @@ exports[`ViewRecordTableRow Component should render with string 1`] = `
   striped={false}
 >
   <TableRowColumn
-    className="headingColumn"
+    className="header"
     hoverable={false}
   />
   <TableRowColumn
-    className="dataColumn"
+    className="data"
     hoverable={false}
   />
 </TableRow>

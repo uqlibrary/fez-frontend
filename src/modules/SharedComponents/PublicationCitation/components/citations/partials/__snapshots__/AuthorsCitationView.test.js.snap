@@ -187,7 +187,7 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
   >
     <a
       className="authorIdLink"
-      href="/list/author_id/1"
+      href="https://fez-staging.library.uq.edu.au/list/author_id/1"
       key="citationAuthor_1"
     >
       <CitationView
@@ -206,7 +206,7 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
     </a>
     <a
       className="authorIdLink"
-      href="/list/author_id/2"
+      href="https://fez-staging.library.uq.edu.au/list/author_id/2"
       key="citationAuthor_2"
     >
       <CitationView
@@ -392,7 +392,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
   >
     <a
       className="authorIdLink"
-      href="/list/author_id/1"
+      href="https://fez-staging.library.uq.edu.au/list/author_id/1"
       key="citationAuthor_1"
     >
       <CitationView
@@ -412,7 +412,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
     </a>
     <a
       className="authorIdLink"
-      href="/list/author_id/2"
+      href="https://fez-staging.library.uq.edu.au/list/author_id/2"
       key="citationAuthor_2"
     >
       <CitationView
@@ -431,7 +431,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
     </a>
     <a
       className="authorIdLink"
-      href="/list/author_id/3"
+      href="https://fez-staging.library.uq.edu.au/list/author_id/3"
       key="citationAuthor_3"
     >
       <CitationView
@@ -1137,6 +1137,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
         href="#"
         onClick={[Function]}
         onKeyPress={[Function]}
+        title="Click to show 2 more authors"
       >
         Show 2 more...
       </a>
@@ -1425,6 +1426,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
         href="#"
         onClick={[Function]}
         onKeyPress={[Function]}
+        title="Show less authors"
       >
         Show less
       </a>

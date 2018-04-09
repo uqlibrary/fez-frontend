@@ -32,7 +32,7 @@ export default class RelatedPublications extends PureComponent {
         const children = publication[childrenSearchKey.key];
 
         return(
-            <ul className={'publicationList'}>
+            <ul className="publicationList">
                 {
                     this.renderSubList(parents, parentSearchKey)
                 }

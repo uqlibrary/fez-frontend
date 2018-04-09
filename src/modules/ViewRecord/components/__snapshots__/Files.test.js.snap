@@ -10,7 +10,7 @@ exports[`Files Component  should not render cultural message 1`] = `
   >
     <Table
       allRowsSelected={false}
-      className="file header"
+      className="files horizontal"
       fixedFooter={true}
       fixedHeader={true}
       height="inherit"
@@ -19,7 +19,7 @@ exports[`Files Component  should not render cultural message 1`] = `
     >
       <TableHeader
         adjustForCheckbox={false}
-        className="tableHeader"
+        className="header"
         displaySelectAll={false}
         enableSelectAll={true}
         selectAllSelected={false}
@@ -53,6 +53,7 @@ exports[`Files Component  should not render cultural message 1`] = `
       </TableHeader>
       <TableBody
         allRowsSelected={false}
+        className="data"
         deselectOnClickaway={true}
         displayRowCheckbox={false}
         multiSelectable={false}
@@ -81,11 +82,11 @@ exports[`Files Component  should not render cultural message 1`] = `
           >
             <ExternalLink
               className="fileName"
-              href="/view/UQ:676287/UQ676287_OA.pdf"
+              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="UQ676287_OA.pdf"
+              title="UQ676287_OA.pdf - undefined - undefined"
             >
               UQ676287_OA.pdf
             </ExternalLink>
@@ -120,11 +121,11 @@ exports[`Files Component  should not render cultural message 1`] = `
           >
             <ExternalLink
               className="fileName"
-              href="/view/UQ:676287/image.jpg"
+              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/image.jpg"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="image.jpg"
+              title="image.jpg - testing image description - 95.49 KB"
             >
               image.jpg
             </ExternalLink>
@@ -156,7 +157,7 @@ exports[`Files Component  should render component 1`] = `
   >
     <Table
       allRowsSelected={false}
-      className="file header"
+      className="files horizontal"
       fixedFooter={true}
       fixedHeader={true}
       height="inherit"
@@ -165,7 +166,7 @@ exports[`Files Component  should render component 1`] = `
     >
       <TableHeader
         adjustForCheckbox={false}
-        className="tableHeader"
+        className="header"
         displaySelectAll={false}
         enableSelectAll={true}
         selectAllSelected={false}
@@ -199,6 +200,7 @@ exports[`Files Component  should render component 1`] = `
       </TableHeader>
       <TableBody
         allRowsSelected={false}
+        className="data"
         deselectOnClickaway={true}
         displayRowCheckbox={false}
         multiSelectable={false}
@@ -227,11 +229,11 @@ exports[`Files Component  should render component 1`] = `
           >
             <ExternalLink
               className="fileName"
-              href="/view/UQ:676287/UQ676287_OA.pdf"
+              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="UQ676287_OA.pdf"
+              title="UQ676287_OA.pdf - undefined - undefined"
             >
               UQ676287_OA.pdf
             </ExternalLink>
@@ -266,11 +268,11 @@ exports[`Files Component  should render component 1`] = `
           >
             <ExternalLink
               className="fileName"
-              href="/view/UQ:676287/image.jpg"
+              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/image.jpg"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="image.jpg"
+              title="image.jpg - testing image description - 95.49 KB"
             >
               image.jpg
             </ExternalLink>
@@ -310,7 +312,7 @@ exports[`Files Component  should render cultural message 1`] = `
     />
     <Table
       allRowsSelected={false}
-      className="file header"
+      className="files horizontal"
       fixedFooter={true}
       fixedHeader={true}
       height="inherit"
@@ -319,7 +321,7 @@ exports[`Files Component  should render cultural message 1`] = `
     >
       <TableHeader
         adjustForCheckbox={false}
-        className="tableHeader"
+        className="header"
         displaySelectAll={false}
         enableSelectAll={true}
         selectAllSelected={false}
@@ -353,6 +355,7 @@ exports[`Files Component  should render cultural message 1`] = `
       </TableHeader>
       <TableBody
         allRowsSelected={false}
+        className="data"
         deselectOnClickaway={true}
         displayRowCheckbox={false}
         multiSelectable={false}
@@ -381,11 +384,11 @@ exports[`Files Component  should render cultural message 1`] = `
           >
             <ExternalLink
               className="fileName"
-              href="/view/UQ:676287/UQ676287_OA.pdf"
+              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="UQ676287_OA.pdf"
+              title="UQ676287_OA.pdf - undefined - undefined"
             >
               UQ676287_OA.pdf
             </ExternalLink>
@@ -420,11 +423,11 @@ exports[`Files Component  should render cultural message 1`] = `
           >
             <ExternalLink
               className="fileName"
-              href="/view/UQ:676287/image.jpg"
+              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/image.jpg"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="image.jpg"
+              title="image.jpg - testing image description - 95.49 KB"
             >
               image.jpg
             </ExternalLink>
