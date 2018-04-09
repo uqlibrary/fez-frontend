@@ -9319,6 +9319,15 @@ exports[`Additional Information Component  should render component with data col
       />
       <ViewRecordTableRow
         data={
+          <DoiCitationView
+            doi="10.14264/uql.2016.841"
+          />
+        }
+        heading="DOI"
+        key="additional-info-DOI"
+      />
+      <ViewRecordTableRow
+        data={
           <ul>
             <li>
               <a
@@ -9336,17 +9345,8 @@ exports[`Additional Information Component  should render component with data col
             </li>
           </ul>
         }
-        heading="Subject(s)"
-        key="additional-info-Subject(s)"
-      />
-      <ViewRecordTableRow
-        data={
-          <DoiCitationView
-            doi="10.14264/uql.2016.841"
-          />
-        }
-        heading="DOI"
-        key="additional-info-DOI"
+        heading="ANZSRC Field of Research (FoR) Code"
+        key="additional-info-ANZSRC Field of Research (FoR) Code"
       />
       <ViewRecordTableRow
         data={
@@ -10053,32 +10053,6 @@ exports[`Additional Information Component  should render component with data col
                   "rek_doi_xsdmf_id": null,
                 },
                 "fez_record_search_key_end_date": null,
-                "fez_record_search_key_fields_of_research": Array [
-                  Object {
-                    "rek_fields_of_research": 452067,
-                    "rek_fields_of_research_id": 7826,
-                    "rek_fields_of_research_lookup": "0602 Ecology",
-                    "rek_fields_of_research_order": 1,
-                    "rek_fields_of_research_pid": "UQ:354076",
-                    "rek_fields_of_research_xsdmf_id": null,
-                  },
-                  Object {
-                    "rek_fields_of_research": 452018,
-                    "rek_fields_of_research_id": 7827,
-                    "rek_fields_of_research_lookup": "040699 Physical Geography and Environmental Geoscience not elsewhere classified",
-                    "rek_fields_of_research_order": 2,
-                    "rek_fields_of_research_pid": "UQ:354076",
-                    "rek_fields_of_research_xsdmf_id": null,
-                  },
-                  Object {
-                    "rek_fields_of_research": 452028,
-                    "rek_fields_of_research_id": 7828,
-                    "rek_fields_of_research_lookup": "0502 Environmental Science and Management",
-                    "rek_fields_of_research_order": 3,
-                    "rek_fields_of_research_pid": "UQ:354076",
-                    "rek_fields_of_research_xsdmf_id": null,
-                  },
-                ],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [
@@ -10312,6 +10286,32 @@ exports[`Additional Information Component  should render component with data col
                 "fez_record_search_key_seo_code": Array [],
                 "fez_record_search_key_software_required": Array [],
                 "fez_record_search_key_start_date": null,
+                "fez_record_search_key_subject": Array [
+                  Object {
+                    "rek_subject": 452067,
+                    "rek_subject_id": 7826,
+                    "rek_subject_lookup": "0602 Ecology",
+                    "rek_subject_order": 1,
+                    "rek_subject_pid": "UQ:354076",
+                    "rek_subject_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_subject": 452018,
+                    "rek_subject_id": 7827,
+                    "rek_subject_lookup": "040699 Physical Geography and Environmental Geoscience not elsewhere classified",
+                    "rek_subject_order": 2,
+                    "rek_subject_pid": "UQ:354076",
+                    "rek_subject_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_subject": 452028,
+                    "rek_subject_id": 7828,
+                    "rek_subject_lookup": "0502 Environmental Science and Management",
+                    "rek_subject_order": 3,
+                    "rek_subject_pid": "UQ:354076",
+                    "rek_subject_xsdmf_id": null,
+                  },
+                ],
                 "fez_record_search_key_time_period_end_date": Object {
                   "rek_time_period_end_date": "2007-01-01T00:00:00Z",
                   "rek_time_period_end_date_id": 887,
@@ -10585,32 +10585,6 @@ exports[`Additional Information Component  should render component with data col
                   "rek_doi_xsdmf_id": null,
                 },
                 "fez_record_search_key_end_date": null,
-                "fez_record_search_key_fields_of_research": Array [
-                  Object {
-                    "rek_fields_of_research": 452067,
-                    "rek_fields_of_research_id": 7826,
-                    "rek_fields_of_research_lookup": "0602 Ecology",
-                    "rek_fields_of_research_order": 1,
-                    "rek_fields_of_research_pid": "UQ:354076",
-                    "rek_fields_of_research_xsdmf_id": null,
-                  },
-                  Object {
-                    "rek_fields_of_research": 452018,
-                    "rek_fields_of_research_id": 7827,
-                    "rek_fields_of_research_lookup": "040699 Physical Geography and Environmental Geoscience not elsewhere classified",
-                    "rek_fields_of_research_order": 2,
-                    "rek_fields_of_research_pid": "UQ:354076",
-                    "rek_fields_of_research_xsdmf_id": null,
-                  },
-                  Object {
-                    "rek_fields_of_research": 452028,
-                    "rek_fields_of_research_id": 7828,
-                    "rek_fields_of_research_lookup": "0502 Environmental Science and Management",
-                    "rek_fields_of_research_order": 3,
-                    "rek_fields_of_research_pid": "UQ:354076",
-                    "rek_fields_of_research_xsdmf_id": null,
-                  },
-                ],
                 "fez_record_search_key_file_attachment_access_condition": Array [],
                 "fez_record_search_key_file_attachment_embargo_date": Array [],
                 "fez_record_search_key_file_attachment_name": Array [
@@ -10844,6 +10818,32 @@ exports[`Additional Information Component  should render component with data col
                 "fez_record_search_key_seo_code": Array [],
                 "fez_record_search_key_software_required": Array [],
                 "fez_record_search_key_start_date": null,
+                "fez_record_search_key_subject": Array [
+                  Object {
+                    "rek_subject": 452067,
+                    "rek_subject_id": 7826,
+                    "rek_subject_lookup": "0602 Ecology",
+                    "rek_subject_order": 1,
+                    "rek_subject_pid": "UQ:354076",
+                    "rek_subject_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_subject": 452018,
+                    "rek_subject_id": 7827,
+                    "rek_subject_lookup": "040699 Physical Geography and Environmental Geoscience not elsewhere classified",
+                    "rek_subject_order": 2,
+                    "rek_subject_pid": "UQ:354076",
+                    "rek_subject_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_subject": 452028,
+                    "rek_subject_id": 7828,
+                    "rek_subject_lookup": "0502 Environmental Science and Management",
+                    "rek_subject_order": 3,
+                    "rek_subject_pid": "UQ:354076",
+                    "rek_subject_xsdmf_id": null,
+                  },
+                ],
                 "fez_record_search_key_time_period_end_date": Object {
                   "rek_time_period_end_date": "2007-01-01T00:00:00Z",
                   "rek_time_period_end_date_id": 887,

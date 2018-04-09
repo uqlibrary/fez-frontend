@@ -583,7 +583,7 @@ export const dataCollection = {
     "rek_display_type_lookup": "Data Collection",
     "rek_scopus_doc_type_lookup": null,
     "rek_pubmed_doc_type_lookup": null
-}
+};
 
 export const newspaperArticle = {
     "rek_pid": "UQ:184230",
@@ -10898,30 +10898,30 @@ export const dataCollectionWithFoRCodes = {
         rek_doi: '10.1594/PANGAEA.830076'
     },
     fez_record_search_key_end_date: null,
-    fez_record_search_key_fields_of_research: [
+    fez_record_search_key_subject: [
         {
-            rek_fields_of_research_id: 7826,
-            rek_fields_of_research_pid: 'UQ:354076',
-            rek_fields_of_research_xsdmf_id: null,
-            rek_fields_of_research: 452067,
-            rek_fields_of_research_order: 1,
-            rek_fields_of_research_lookup: '0602 Ecology'
+            rek_subject_id: 7826,
+            rek_subject_pid: 'UQ:354076',
+            rek_subject_xsdmf_id: null,
+            rek_subject: 452067,
+            rek_subject_order: 1,
+            rek_subject_lookup: '0602 Ecology'
         },
         {
-            rek_fields_of_research_id: 7827,
-            rek_fields_of_research_pid: 'UQ:354076',
-            rek_fields_of_research_xsdmf_id: null,
-            rek_fields_of_research: 452018,
-            rek_fields_of_research_order: 2,
-            rek_fields_of_research_lookup: '040699 Physical Geography and Environmental Geoscience not elsewhere classified'
+            rek_subject_id: 7827,
+            rek_subject_pid: 'UQ:354076',
+            rek_subject_xsdmf_id: null,
+            rek_subject: 452018,
+            rek_subject_order: 2,
+            rek_subject_lookup: '040699 Physical Geography and Environmental Geoscience not elsewhere classified'
         },
         {
-            rek_fields_of_research_id: 7828,
-            rek_fields_of_research_pid: 'UQ:354076',
-            rek_fields_of_research_xsdmf_id: null,
-            rek_fields_of_research: 452028,
-            rek_fields_of_research_order: 3,
-            rek_fields_of_research_lookup: '0502 Environmental Science and Management'
+            rek_subject_id: 7828,
+            rek_subject_pid: 'UQ:354076',
+            rek_subject_xsdmf_id: null,
+            rek_subject: 452028,
+            rek_subject_order: 3,
+            rek_subject_lookup: '0502 Environmental Science and Management'
         }
     ],
     fez_record_search_key_file_attachment_access_condition: [],
