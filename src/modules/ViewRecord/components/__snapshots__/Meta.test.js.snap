@@ -1,0 +1,1777 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Meta Component  should not render component with empty publication 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    undefined - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with audio document 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Hearing the city Symposium Title 5: In conversation - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:151787"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content={310199}
+    name="DC.Subject"
+  />
+  <meta
+    content={450019}
+    name="DC.Subject"
+  />
+  <meta
+    content={450776}
+    name="DC.Subject"
+  />
+  <meta
+    content="Hearing the city Symposium Title 5: In conversation"
+    name="DC.Title"
+  />
+  <meta
+    content="Hearing the city Symposium Title 5: In conversation"
+    name="citation_title"
+  />
+  <meta
+    content="Shutter, Leigh"
+    name="DC.Creator"
+  />
+  <meta
+    content="Arthurs, Andy"
+    name="DC.Creator"
+  />
+  <meta
+    content="Bamford, Greg"
+    name="DC.Creator"
+  />
+  <meta
+    content="McColl, Mary Rose"
+    name="DC.Creator"
+  />
+  <meta
+    content="Skinner, Peter R."
+    name="DC.Creator"
+  />
+  <meta
+    content="Shutter, Leigh; Arthurs, Andy; Bamford, Greg; McColl, Mary Rose; Skinner, Peter R."
+    name="citation_authors"
+  />
+  <meta
+    content="2007-01-01"
+    name="DC.Date"
+  />
+  <meta
+    content="2007/01/01"
+    name="citation_date"
+  />
+  <meta
+    content="Centre for Subtropical Design, Queensland University of Technology"
+    name="DC.Publisher"
+  />
+  <meta
+    content="Centre for Subtropical Design, Queensland University of Technology"
+    name="citation_publisher"
+  />
+  <meta
+    content="eng"
+    name="citation_language"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with book 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Addictions - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:295866"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content="Addictions"
+    name="DC.Title"
+  />
+  <meta
+    content="Addictions"
+    name="citation_title"
+  />
+  <meta
+    content="Smith, A"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Smith, B"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Smith, C"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Teesson, Maree"
+    name="DC.Creator"
+  />
+  <meta
+    content="Hall, Wayne"
+    name="DC.Creator"
+  />
+  <meta
+    content="Proudfoot, Heather"
+    name="DC.Creator"
+  />
+  <meta
+    content="Degenhardt, Louisa"
+    name="DC.Creator"
+  />
+  <meta
+    content="Teesson, Maree; Hall, Wayne; Proudfoot, Heather; Degenhardt, Louisa"
+    name="citation_authors"
+  />
+  <meta
+    content="2011-01-01"
+    name="DC.Date"
+  />
+  <meta
+    content="2011/01/01"
+    name="citation_date"
+  />
+  <meta
+    content="Psychology Press"
+    name="DC.Publisher"
+  />
+  <meta
+    content="Psychology Press"
+    name="citation_publisher"
+  />
+  <meta
+    content="9780415583008"
+    name="citation_isbn"
+  />
+  <meta
+    content="9780415582995"
+    name="citation_isbn"
+  />
+  <meta
+    content="0415583004"
+    name="citation_isbn"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with book chapter 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Non-coding RNAs in Mammary Gland Development and Disease - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:376215"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content={453239}
+    name="DC.Subject"
+  />
+  <meta
+    content={453253}
+    name="DC.Subject"
+  />
+  <meta
+    content="Non-coding RNAs in Mammary Gland Development and Disease"
+    name="DC.Title"
+  />
+  <meta
+    content="Non-coding RNAs in Mammary Gland Development and Disease"
+    name="citation_title"
+  />
+  <meta
+    content="Smith, A"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Smith, B"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Smith, C"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Sandhu, Gurveen K."
+    name="DC.Creator"
+  />
+  <meta
+    content="Milevskiy, Michael J.G."
+    name="DC.Creator"
+  />
+  <meta
+    content="Wilson, Wesley"
+    name="DC.Creator"
+  />
+  <meta
+    content="Shewan, Annette M."
+    name="DC.Creator"
+  />
+  <meta
+    content="Brown, Melissa A."
+    name="DC.Creator"
+  />
+  <meta
+    content="Sandhu, Gurveen K.; Milevskiy, Michael J.G.; Wilson, Wesley; Shewan, Annette M.; Brown, Melissa A."
+    name="citation_authors"
+  />
+  <meta
+    content="2214-8019"
+    name="citation_issn"
+  />
+  <meta
+    content="2016-01-01"
+    name="DC.Date"
+  />
+  <meta
+    content="2016/01/01"
+    name="citation_date"
+  />
+  <meta
+    content="10.1007/978-94-017-7417-8_7"
+    name="citation_doi"
+  />
+  <meta
+    content="886"
+    name="citation_volume"
+  />
+  <meta
+    content="121"
+    name="citation_firstpage"
+  />
+  <meta
+    content="153"
+    name="citation_lastpage"
+  />
+  <meta
+    content="Springer New York"
+    name="DC.Publisher"
+  />
+  <meta
+    content="Springer New York"
+    name="citation_publisher"
+  />
+  <meta
+    content="eng"
+    name="citation_language"
+  />
+  <meta
+    content="Non-coding RNAs (ncRNAs) are untranslated RNA molecules that function to regulate the expression of numerous genes and associated biochemical pathways and cellular functions. NcRNAs include small interfering RNAs (siRNAs), microRNAs (miRNAs), PIWI-interacting RNAs (piRNAs), small nucleolar RNAs (snoRNAs) and long non-coding RNAs (lncRNAs). They participate in the regulation of all developmental processes and are frequently aberrantly expressed or functionally defective in disease. This Chapter will focus on the role of ncRNAs, in particular miRNAs and lncRNAs, in mammary gland development and disease."
+    name="DC.Description"
+  />
+  <meta
+    content="Non-coding RNAs (ncRNAs) are untranslated RNA molecules that function to regulate the expression of numerous genes and associated biochemical pathways and cellular functions. NcRNAs include small interfering RNAs (siRNAs), microRNAs (miRNAs), PIWI-interacting RNAs (piRNAs), small nucleolar RNAs (snoRNAs) and long non-coding RNAs (lncRNAs). They participate in the regulation of all developmental processes and are frequently aberrantly expressed or functionally defective in disease. This Chapter will focus on the role of ncRNAs, in particular miRNAs and lncRNAs, in mammary gland development and disease."
+    name="citation_abstract"
+  />
+  <meta
+    content="Breast cancer; EMT; Epithelial cell differentiation; Epithelial-stromal interactions; Hormonal regulation; Signalling pathways"
+    name="citation_keywords"
+  />
+  <meta
+    content="9789401774154"
+    name="citation_isbn"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with conference paper 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Alcohol use disorders, risky alcohol consumption and adverse events among chronic non-cancer pain patients receiving opioid therapy - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:347818"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content="Alcohol use disorders, risky alcohol consumption and adverse events among chronic non-cancer pain patients receiving opioid therapy"
+    name="DC.Title"
+  />
+  <meta
+    content="Alcohol use disorders, risky alcohol consumption and adverse events among chronic non-cancer pain patients receiving opioid therapy"
+    name="citation_title"
+  />
+  <meta
+    content="Larance, Briony"
+    name="DC.Creator"
+  />
+  <meta
+    content="Peacock, Amy"
+    name="DC.Creator"
+  />
+  <meta
+    content="Campbell, Gabrielle"
+    name="DC.Creator"
+  />
+  <meta
+    content="Freckleton, Sarah"
+    name="DC.Creator"
+  />
+  <meta
+    content="Smith, Kimberley"
+    name="DC.Creator"
+  />
+  <meta
+    content="Mattick, Richard"
+    name="DC.Creator"
+  />
+  <meta
+    content="Bruno, Raimondo"
+    name="DC.Creator"
+  />
+  <meta
+    content="Nielsen, Suzanne"
+    name="DC.Creator"
+  />
+  <meta
+    content="Cohen, Milton"
+    name="DC.Creator"
+  />
+  <meta
+    content="Lintzeris, Nicholas"
+    name="DC.Creator"
+  />
+  <meta
+    content="Shand, Fiona"
+    name="DC.Creator"
+  />
+  <meta
+    content="Hall, Wayne D."
+    name="DC.Creator"
+  />
+  <meta
+    content="Farrell, Michael"
+    name="DC.Creator"
+  />
+  <meta
+    content="Degenhardt, Louisa"
+    name="DC.Creator"
+  />
+  <meta
+    content="Larance, Briony; Peacock, Amy; Campbell, Gabrielle; Freckleton, Sarah; Smith, Kimberley; Mattick, Richard; Bruno, Raimondo; Nielsen, Suzanne; Cohen, Milton; Lintzeris, Nicholas; Shand, Fiona; Hall, Wayne D.; Farrell, Michael; Degenhardt, Louisa"
+    name="citation_authors"
+  />
+  <meta
+    content="Drug and Alcohol Review"
+    name="citation_journal_title"
+  />
+  <meta
+    content="1477-9137"
+    name="citation_issn"
+  />
+  <meta
+    content="0021-9533"
+    name="citation_issn"
+  />
+  <meta
+    content="2014-01-01"
+    name="DC.Date"
+  />
+  <meta
+    content="2014/01/01"
+    name="citation_date"
+  />
+  <meta
+    content="10.1111/dar.12222"
+    name="citation_doi"
+  />
+  <meta
+    content="33"
+    name="citation_volume"
+  />
+  <meta
+    content="S1"
+    name="citation_issue"
+  />
+  <meta
+    content="39"
+    name="citation_firstpage"
+  />
+  <meta
+    content="40"
+    name="citation_lastpage"
+  />
+  <meta
+    content="Wiley-Blackwell Publishing"
+    name="DC.Publisher"
+  />
+  <meta
+    content="Wiley-Blackwell Publishing"
+    name="citation_publisher"
+  />
+  <meta
+    content="eng"
+    name="citation_language"
+  />
+  <meta
+    content="Australasian Professional Society on Alcohol and other Drugs Conference 2014"
+    name="citation_conference"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with conference proceedings 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Experiences and Challenges in Sewers: Measurements and Hydrodynamics - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:159544"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content={290000}
+    name="DC.Subject"
+  />
+  <meta
+    content={290800}
+    name="DC.Subject"
+  />
+  <meta
+    content={290802}
+    name="DC.Subject"
+  />
+  <meta
+    content={291104}
+    name="DC.Subject"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/view/UQ:159544/ch7008.pdf"
+    name="citation_pdf_url"
+  />
+  <meta
+    content="Experiences and Challenges in Sewers: Measurements and Hydrodynamics"
+    name="DC.Title"
+  />
+  <meta
+    content="Experiences and Challenges in Sewers: Measurements and Hydrodynamics"
+    name="citation_title"
+  />
+  <meta
+    content="Frédérique Larrarte"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Hubert Chanson"
+    name="DC.Contributor"
+  />
+  <meta
+    content="2008-01-01"
+    name="DC.Date"
+  />
+  <meta
+    content="2008/01/01"
+    name="citation_date"
+  />
+  <meta
+    content="1"
+    name="citation_firstpage"
+  />
+  <meta
+    content="114"
+    name="citation_lastpage"
+  />
+  <meta
+    content="Department of Civil Engineering at The University of Queensland"
+    name="DC.Publisher"
+  />
+  <meta
+    content="Department of Civil Engineering at The University of Queensland"
+    name="citation_publisher"
+  />
+  <meta
+    content="eng"
+    name="citation_language"
+  />
+  <meta
+    content="The International Meeting on Measurements and Hydraulics of Sewers (IMMHS'08) was organised by the Water and Environment Division of the Laboratoire Central des Ponts et Chaussées (LCPC) to foster interactions between industry professionals, researchers and university academics on the topics of experiences and challenges in sewers including measurements, hydrodynamics and sediments. A main feature of the meeting was the direct interactions between a wide range of professionals and researchers working on a broad range of relevant topics, including operational issues, sediments and turbidity, mud rheology, H2S, and flow measurements. Another interesting aspect of this event was the stimulating debates during and after the presentations, as well as during the subsequent discussions and the field measurements. Contributions include: Challenges in Sewer Hydrodynamics, Sediments and Measurements, Sedimentation in Large Combined Sewage Systems: Perspectives of an Operator, A New Velocity and Total Suspended Solid Measurement Device, Measurements of Pollutants by Turbidimetry, Acoustic Doppler Velocimetry (ADV) in the Field and in Laboratory: Practical Experiences, Sewer Sediments - their Diversity, Impact and Modelling Challenges, Use of CFD Techniques to Estimate the Spatial Distribution of Sediment on the Bed of a Large Detention and Settling Basin. The publication of the proceedings marked the successful conclusion of this event. Each paper was peer-reviewed by a minimum of two experts. A key feature of all these contributions is the practical knowledge gained in the last ten to fifteen years, and a particular effort was made by all contributors to share both positive and negative experiences."
+    name="DC.Description"
+  />
+  <meta
+    content="The International Meeting on Measurements and Hydraulics of Sewers (IMMHS'08) was organised by the Water and Environment Division of the Laboratoire Central des Ponts et Chaussées (LCPC) to foster interactions between industry professionals, researchers and university academics on the topics of experiences and challenges in sewers including measurements, hydrodynamics and sediments. A main feature of the meeting was the direct interactions between a wide range of professionals and researchers working on a broad range of relevant topics, including operational issues, sediments and turbidity, mud rheology, H2S, and flow measurements. Another interesting aspect of this event was the stimulating debates during and after the presentations, as well as during the subsequent discussions and the field measurements. Contributions include: Challenges in Sewer Hydrodynamics, Sediments and Measurements, Sedimentation in Large Combined Sewage Systems: Perspectives of an Operator, A New Velocity and Total Suspended Solid Measurement Device, Measurements of Pollutants by Turbidimetry, Acoustic Doppler Velocimetry (ADV) in the Field and in Laboratory: Practical Experiences, Sewer Sediments - their Diversity, Impact and Modelling Challenges, Use of CFD Techniques to Estimate the Spatial Distribution of Sediment on the Bed of a Large Detention and Settling Basin. The publication of the proceedings marked the successful conclusion of this event. Each paper was peer-reviewed by a minimum of two experts. A key feature of all these contributions is the practical knowledge gained in the last ten to fifteen years, and a particular effort was made by all contributors to share both positive and negative experiences."
+    name="citation_abstract"
+  />
+  <meta
+    content="Sewers; Measurements; Hydraulics; Open channel flows; Sediments; Turbidity; Hydrodynamics; Sedimentation; design; operation; rehabilitation; urban environment"
+    name="citation_keywords"
+  />
+  <meta
+    content="International Meeting on Measurements and Hydraulics of Sewers IMMHS'08, Summer School GEMCEA/LCPC"
+    name="citation_conference"
+  />
+  <meta
+    content="9781864999280"
+    name="citation_isbn"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with creative work 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Sustainable home Brisbane - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:177836"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content={452674}
+    name="DC.Subject"
+  />
+  <meta
+    content={452677}
+    name="DC.Subject"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/HCA12UQ177836_plans.pdf"
+    name="citation_pdf_url"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/HCA12UQ177836_project_description_.pdf"
+    name="citation_pdf_url"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/HCA12UQ177836_report.pdf"
+    name="citation_pdf_url"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/UQ177836.pdf"
+    name="citation_pdf_url"
+  />
+  <meta
+    content="Sustainable home Brisbane"
+    name="DC.Title"
+  />
+  <meta
+    content="Sustainable home Brisbane"
+    name="citation_title"
+  />
+  <meta
+    content="Webster-Mannison, Marci"
+    name="DC.Creator"
+  />
+  <meta
+    content="Webster-Mannison, Marci"
+    name="citation_authors"
+  />
+  <meta
+    content="2006-01-01"
+    name="DC.Date"
+  />
+  <meta
+    content="2006/01/01"
+    name="citation_date"
+  />
+  <meta
+    content="School of Architecture, The University of Queensland"
+    name="DC.Publisher"
+  />
+  <meta
+    content="School of Architecture, The University of Queensland"
+    name="citation_publisher"
+  />
+  <meta
+    content="eng"
+    name="citation_language"
+  />
+  <meta
+    content="Original Creative Works - Design/Architectural work"
+    name="citation_keywords"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with data collection 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:407731"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content={452086}
+    name="DC.Subject"
+  />
+  <meta
+    content={452109}
+    name="DC.Subject"
+  />
+  <meta
+    content="CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material"
+    name="DC.Title"
+  />
+  <meta
+    content="CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material"
+    name="citation_title"
+  />
+  <meta
+    content="Tyson, Gene W. "
+    name="DC.Contributor"
+  />
+  <meta
+    content="Parks, Donovan H."
+    name="DC.Creator"
+  />
+  <meta
+    content="Imelfort, Michael"
+    name="DC.Creator"
+  />
+  <meta
+    content="Skennerton, Connor T."
+    name="DC.Creator"
+  />
+  <meta
+    content="Hugenholtz, Philip"
+    name="DC.Creator"
+  />
+  <meta
+    content="Tyson, Gene W."
+    name="DC.Creator"
+  />
+  <meta
+    content="Parks, Donovan H.; Imelfort, Michael; Skennerton, Connor T.; Hugenholtz, Philip; Tyson, Gene W."
+    name="citation_authors"
+  />
+  <meta
+    content="2015-01-01"
+    name="DC.Date"
+  />
+  <meta
+    content="2015/01/01"
+    name="citation_date"
+  />
+  <meta
+    content="10.14264/uql.2016.841"
+    name="citation_doi"
+  />
+  <meta
+    content="Cold Spring Harbor Laboratory Press"
+    name="DC.Publisher"
+  />
+  <meta
+    content="Cold Spring Harbor Laboratory Press"
+    name="citation_publisher"
+  />
+  <meta
+    content="eng"
+    name="citation_language"
+  />
+  <meta
+    content="&lt;strong&gt;Supplementary Results&lt;/strong&gt;&lt;br /&gt;Refinement for Gene Loss and Duplication&lt;br /&gt;Estimates under Opal Stop Codon Recodings&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplementary Methods&lt;/strong&gt;&lt;br /&gt;Identification of Trusted Reference Genomes&lt;br /&gt;Refining Marker Sets for Lineage-specific Gene Loss and Duplication&lt;br /&gt;Determination of Coding Table&lt;br /&gt;Systematic Bias of Completeness and Contamination Estimates&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S1.&lt;/strong&gt; Distribution of the 104 bacterial and 281 gammaproteobacterial marker genes around the E. coli K12 genome.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S2.&lt;/strong&gt; Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the random contig model.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S3.&lt;/strong&gt; Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S4. &lt;/strong&gt;Maximum-likelihood genome tree inferred from 5656 reference genomes. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S5. &lt;/strong&gt;Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the random fragment model using a window size of 20 kbp.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S6. &lt;/strong&gt;Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S7. &lt;/strong&gt;Error in completeness and contamination estimates on simulated genomes from different phyla.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S8. &lt;/strong&gt;Bias in completeness and contamination estimates when modelled as a binomial distribution. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S9. &lt;/strong&gt;GC-distribution plots of the HMP Capnocytophaga sp. oral taxon 329 genome.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S10. &lt;/strong&gt;Phylogenetic placement of the two genomes (Cluster 0 and Cluster 1) identified within the HMP Capnocytophaga sp. oral taxon 329 genome.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S11.&lt;/strong&gt; Completeness estimates for 90 putative population genomes recovered from an acetate-amended aquifer.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S12. &lt;/strong&gt;Contamination estimates for 90 putative population genomes recovered from an acetate-amended aquifer.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S13.&lt;/strong&gt; Identification of the 213 marker genes within the Meyerdierks et al. (2010) ANME-1 genome.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S14.&lt;/strong&gt; Refining a marker set for lineage-specific gene loss and duplication. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Tables&lt;br /&gt;Supplemental Table S1.&lt;/strong&gt; Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using different universal- and domain-specific marker gene sets.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S2. &lt;/strong&gt;Number of marker genes and marker sets for taxonomic groups with &amp;ge; 20 reference genomes. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S3. &lt;/strong&gt;Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS). &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S4. &lt;/strong&gt;Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS).&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S5.&lt;/strong&gt; Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS). &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S6. &lt;/strong&gt;Phylogenetically informative marker genes used to infer the reference genome tree &lt;br /&gt;along with matching PhyloSift genes.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S7. &lt;/strong&gt;Phylogenetically informative genes used in PhyloSift without a matching CheckM gene.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S8. &lt;/strong&gt;Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms).&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S9.&lt;/strong&gt; Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms). &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S10. &lt;/strong&gt;Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms).&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S11. &lt;/strong&gt;Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker set selected by CheckM (sms). &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S12.&lt;/strong&gt; Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker sets selected by CheckM (sms). &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S13.&lt;/strong&gt; Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker sets selected by CheckM (sms).&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S14. T&lt;/strong&gt;axonomic rank of the selected lineage-specific marker set used for evaluating the quality of genomes at different degrees of taxonomic novelty. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S15. &lt;/strong&gt;Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates for simulated genomes at different degrees of taxonomic novelty.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S16. &lt;/strong&gt;Lineage-specific completeness and contamination estimates for isolate genomes from large-scale sequencing initiatives.&lt;br /&gt;(see Excel file)&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S17&lt;/strong&gt;. Completeness and contamination estimates of the Lactobacillus gasseri MV-22 genome for increasingly basal lineage-specific marker sets.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S18&lt;/strong&gt;. Bacterial marker genes identified within the HMP Lactobacillus gasseri genomes. Markers missing from a genome or present in multiple copies are highlighted with a grey background. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S19&lt;/strong&gt;. Lineage-specific completeness and contamination estimates for genomes annotated as finished at IMG, along with predicted translation tables and calculated coding density. (see Excel file)&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S20&lt;/strong&gt;: Lineage-specific completeness and contamination estimates for single-cell genomes from the GEBA-MDM initiative along with traditional assembly statistics. (see Excel file)&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S21&lt;/strong&gt;: Lineage-specific completeness and contamination estimates for population genomes, plasmids, and phage recovered from metagenomic datasets along with traditional assembly statistics. (see Excel file)&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S22&lt;/strong&gt;: Completeness and contamination estimates for population genomes recovered from an acetate-amended aquifer determined using domain-level and lineage-specific marker sets. (see Excel file)&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;"
+    name="DC.Description"
+  />
+  <meta
+    content="&lt;strong&gt;Supplementary Results&lt;/strong&gt;&lt;br /&gt;Refinement for Gene Loss and Duplication&lt;br /&gt;Estimates under Opal Stop Codon Recodings&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplementary Methods&lt;/strong&gt;&lt;br /&gt;Identification of Trusted Reference Genomes&lt;br /&gt;Refining Marker Sets for Lineage-specific Gene Loss and Duplication&lt;br /&gt;Determination of Coding Table&lt;br /&gt;Systematic Bias of Completeness and Contamination Estimates&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S1.&lt;/strong&gt; Distribution of the 104 bacterial and 281 gammaproteobacterial marker genes around the E. coli K12 genome.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S2.&lt;/strong&gt; Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the random contig model.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S3.&lt;/strong&gt; Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S4. &lt;/strong&gt;Maximum-likelihood genome tree inferred from 5656 reference genomes. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S5. &lt;/strong&gt;Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the random fragment model using a window size of 20 kbp.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S6. &lt;/strong&gt;Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S7. &lt;/strong&gt;Error in completeness and contamination estimates on simulated genomes from different phyla.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S8. &lt;/strong&gt;Bias in completeness and contamination estimates when modelled as a binomial distribution. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S9. &lt;/strong&gt;GC-distribution plots of the HMP Capnocytophaga sp. oral taxon 329 genome.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S10. &lt;/strong&gt;Phylogenetic placement of the two genomes (Cluster 0 and Cluster 1) identified within the HMP Capnocytophaga sp. oral taxon 329 genome.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S11.&lt;/strong&gt; Completeness estimates for 90 putative population genomes recovered from an acetate-amended aquifer.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S12. &lt;/strong&gt;Contamination estimates for 90 putative population genomes recovered from an acetate-amended aquifer.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S13.&lt;/strong&gt; Identification of the 213 marker genes within the Meyerdierks et al. (2010) ANME-1 genome.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Figure S14.&lt;/strong&gt; Refining a marker set for lineage-specific gene loss and duplication. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Tables&lt;br /&gt;Supplemental Table S1.&lt;/strong&gt; Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using different universal- and domain-specific marker gene sets.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S2. &lt;/strong&gt;Number of marker genes and marker sets for taxonomic groups with &amp;ge; 20 reference genomes. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S3. &lt;/strong&gt;Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS). &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S4. &lt;/strong&gt;Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS).&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S5.&lt;/strong&gt; Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS). &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S6. &lt;/strong&gt;Phylogenetically informative marker genes used to infer the reference genome tree &lt;br /&gt;along with matching PhyloSift genes.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S7. &lt;/strong&gt;Phylogenetically informative genes used in PhyloSift without a matching CheckM gene.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S8. &lt;/strong&gt;Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms).&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S9.&lt;/strong&gt; Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms). &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S10. &lt;/strong&gt;Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms).&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S11. &lt;/strong&gt;Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker set selected by CheckM (sms). &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S12.&lt;/strong&gt; Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker sets selected by CheckM (sms). &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S13.&lt;/strong&gt; Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker sets selected by CheckM (sms).&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S14. T&lt;/strong&gt;axonomic rank of the selected lineage-specific marker set used for evaluating the quality of genomes at different degrees of taxonomic novelty. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S15. &lt;/strong&gt;Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates for simulated genomes at different degrees of taxonomic novelty.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S16. &lt;/strong&gt;Lineage-specific completeness and contamination estimates for isolate genomes from large-scale sequencing initiatives.&lt;br /&gt;(see Excel file)&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S17&lt;/strong&gt;. Completeness and contamination estimates of the Lactobacillus gasseri MV-22 genome for increasingly basal lineage-specific marker sets.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S18&lt;/strong&gt;. Bacterial marker genes identified within the HMP Lactobacillus gasseri genomes. Markers missing from a genome or present in multiple copies are highlighted with a grey background. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S19&lt;/strong&gt;. Lineage-specific completeness and contamination estimates for genomes annotated as finished at IMG, along with predicted translation tables and calculated coding density. (see Excel file)&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S20&lt;/strong&gt;: Lineage-specific completeness and contamination estimates for single-cell genomes from the GEBA-MDM initiative along with traditional assembly statistics. (see Excel file)&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S21&lt;/strong&gt;: Lineage-specific completeness and contamination estimates for population genomes, plasmids, and phage recovered from metagenomic datasets along with traditional assembly statistics. (see Excel file)&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Supplemental Table S22&lt;/strong&gt;: Completeness and contamination estimates for population genomes recovered from an acetate-amended aquifer determined using domain-level and lineage-specific marker sets. (see Excel file)&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;"
+    name="citation_abstract"
+  />
+  <meta
+    content="Isolates; Single cells; Metagenomic data; Genome quality; CheckM"
+    name="citation_keywords"
+  />
+  <meta
+    content="153.050537,-27.352253"
+    name="DC.Subject"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with design document 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Site setting and circumstance: A house and courtyard garden, Riga, Latvia - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:162308"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content={310000}
+    name="DC.Subject"
+  />
+  <meta
+    content={450025}
+    name="DC.Subject"
+  />
+  <meta
+    content={452674}
+    name="DC.Subject"
+  />
+  <meta
+    content={452675}
+    name="DC.Subject"
+  />
+  <meta
+    content="Site setting and circumstance: A house and courtyard garden, Riga, Latvia"
+    name="DC.Title"
+  />
+  <meta
+    content="Site setting and circumstance: A house and courtyard garden, Riga, Latvia"
+    name="citation_title"
+  />
+  <meta
+    content="Dickson Francis sia Architects"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Azimuts sia Surveyors"
+    name="DC.Contributor"
+  />
+  <meta
+    content="ARB Nams sia Structural consultants"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Projektshanas birojs a.i.d.e Electrical consultants"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Telekom serviss sia Low voltage consultants"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Voteks sia Ventilation consultants"
+    name="DC.Contributor"
+  />
+  <meta
+    content="HVAC sia Heating, water and sewerage consultants"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Latinwest sia Swimming pool consultants"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Aleja D sia Landscape consultants"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Dickson, Michael"
+    name="DC.Creator"
+  />
+  <meta
+    content="Francis, Mara"
+    name="DC.Creator"
+  />
+  <meta
+    content="Dickson, Michael; Francis, Mara"
+    name="citation_authors"
+  />
+  <meta
+    content="2017-10-31"
+    name="DC.Date"
+  />
+  <meta
+    content="2017/10/31"
+    name="citation_date"
+  />
+  <meta
+    content="The project is an exploration in the role of the garden as a means of generating a sense of place and to become a key focus in the formation and memory of a dwelling. The project is situated in Latvia, in the suburb of Meshaparks, an old established suburb of Riga. The suburb is characterized by larger lot sizes with villas set amongst trees. In the early 1930's Scandinavian functionalist architecture came to prominence and continued in popularity for a short period, dying out in the mid 1930's. The subject project involved the restoration of an existing timber functionalist house designed in 1933 by the architect Lidija Hofmane-Grinberga and constructed in the same year. The site also contained two outbuildings designed and constructed in the mid and late 1980's The project aimed to draw out the latent potential of the site circumstance that comprised the sunny garden hidden from the street and buildings that enclosed the garden to create an informal yet enclosed space that became in effect the major outdoor \\"room\\" of the house. The design draws inspiration from traditional Latvian farmhouse courtyard gardens, Japanese enclosed gardens as well as the work of Finnish architect Alvar Aalto."
+    name="DC.Description"
+  />
+  <meta
+    content="The project is an exploration in the role of the garden as a means of generating a sense of place and to become a key focus in the formation and memory of a dwelling. The project is situated in Latvia, in the suburb of Meshaparks, an old established suburb of Riga. The suburb is characterized by larger lot sizes with villas set amongst trees. In the early 1930's Scandinavian functionalist architecture came to prominence and continued in popularity for a short period, dying out in the mid 1930's. The subject project involved the restoration of an existing timber functionalist house designed in 1933 by the architect Lidija Hofmane-Grinberga and constructed in the same year. The site also contained two outbuildings designed and constructed in the mid and late 1980's The project aimed to draw out the latent potential of the site circumstance that comprised the sunny garden hidden from the street and buildings that enclosed the garden to create an informal yet enclosed space that became in effect the major outdoor \\"room\\" of the house. The design draws inspiration from traditional Latvian farmhouse courtyard gardens, Japanese enclosed gardens as well as the work of Finnish architect Alvar Aalto."
+    name="citation_abstract"
+  />
+  <meta
+    content="Architecture; Landscape design; Restoration; Interior and Environmental Design; Original Creative Works - Design/Architectural work"
+    name="citation_keywords"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with digilib image 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Conveyor, copper mine, Mount Morgan - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:151598"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content="Conveyor, copper mine, Mount Morgan"
+    name="DC.Title"
+  />
+  <meta
+    content="Conveyor, copper mine, Mount Morgan"
+    name="citation_title"
+  />
+  <meta
+    content="Keniger, Michael, 1947-"
+    name="DC.Creator"
+  />
+  <meta
+    content="Keniger, Michael, 1947-"
+    name="citation_authors"
+  />
+  <meta
+    content="2017-11-01"
+    name="DC.Date"
+  />
+  <meta
+    content="2017/11/01"
+    name="citation_date"
+  />
+  <meta
+    content="The University of Queensland Library"
+    name="DC.Publisher"
+  />
+  <meta
+    content="The University of Queensland Library"
+    name="citation_publisher"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with generic document 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Numerical solution of partial differential equations - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:239427"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content={451825}
+    name="DC.Subject"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/view/UQ:239427/Lectures_Book.pdf"
+    name="citation_pdf_url"
+  />
+  <meta
+    content="Numerical solution of partial differential equations"
+    name="DC.Title"
+  />
+  <meta
+    content="Numerical solution of partial differential equations"
+    name="citation_title"
+  />
+  <meta
+    content="Dion Weatherley"
+    name="DC.Contributor"
+  />
+  <meta
+    content="V. E. Boros"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Louise Olsen-Kettle"
+    name="DC.Creator"
+  />
+  <meta
+    content="Louise Olsen-Kettle"
+    name="citation_authors"
+  />
+  <meta
+    content="2011-03-29"
+    name="DC.Date"
+  />
+  <meta
+    content="2011/03/29"
+    name="citation_date"
+  />
+  <meta
+    content="Lecture notes on numerical solution of partial differential equations. Topics include parabolic and hyperbolic partial differential equations, explicit and implicit methods, iterative methods, finite difference, stability and error analysis, finite element method, spectral method, central difference method, Forward Euler method, Backward Euler method, Lax method, Jacobi method, Gauss-Seidel method, relaxation methods, wave equation, diffusion and heat equation, nonlinear partial differential equations, soliton, shock wave, Korteweg-de-Vries equation, nonlinear inviscid Burger's equation, method of characteristics."
+    name="DC.Description"
+  />
+  <meta
+    content="Lecture notes on numerical solution of partial differential equations. Topics include parabolic and hyperbolic partial differential equations, explicit and implicit methods, iterative methods, finite difference, stability and error analysis, finite element method, spectral method, central difference method, Forward Euler method, Backward Euler method, Lax method, Jacobi method, Gauss-Seidel method, relaxation methods, wave equation, diffusion and heat equation, nonlinear partial differential equations, soliton, shock wave, Korteweg-de-Vries equation, nonlinear inviscid Burger's equation, method of characteristics."
+    name="citation_abstract"
+  />
+  <meta
+    content="Partial Differential Equations (PDEs); Parabolic; Hyperbolic; Finite difference; Spectral method; Finite element method; Iterative methods; Nonlinear Partial Differential Equations"
+    name="citation_keywords"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with image 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Reference Desk, Library - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:164935"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content="Reference Desk, Library"
+    name="DC.Title"
+  />
+  <meta
+    content="Reference Desk, Library"
+    name="citation_title"
+  />
+  <meta
+    content="1955-01-01"
+    name="DC.Date"
+  />
+  <meta
+    content="1955/01/01"
+    name="citation_date"
+  />
+  <meta
+    content="University of Queensland -- History; Central Library, The University of Queensland; Librarians"
+    name="citation_keywords"
+  />
+  <meta
+    content="153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337"
+    name="DC.Subject"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with journal 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Management international review - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:186337"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content={452815}
+    name="DC.Subject"
+  />
+  <meta
+    content="Management international review"
+    name="DC.Title"
+  />
+  <meta
+    content="Management international review"
+    name="citation_title"
+  />
+  <meta
+    content="Hakanson, Lars"
+    name="DC.Contributor"
+  />
+  <meta
+    content="0025-181X"
+    name="citation_issn"
+  />
+  <meta
+    content="0938-8249"
+    name="citation_issn"
+  />
+  <meta
+    content="2005-01-01"
+    name="DC.Date"
+  />
+  <meta
+    content="2005/01/01"
+    name="citation_date"
+  />
+  <meta
+    content="45"
+    name="citation_volume"
+  />
+  <meta
+    content="1, Special issue"
+    name="citation_issue"
+  />
+  <meta
+    content="Betriebswirtschaftlicher Verlag T. Gabler"
+    name="DC.Publisher"
+  />
+  <meta
+    content="Betriebswirtschaftlicher Verlag T. Gabler"
+    name="citation_publisher"
+  />
+  <meta
+    content="eng"
+    name="citation_language"
+  />
+  <meta
+    content="Knowledge; Multinational corporations"
+    name="citation_keywords"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with manuscript 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944 - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:677394"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/view/UQ:677394/FezACML_UQFL2_i3255_copyright_permission.pdf.xml"
+    name="citation_pdf_url"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/view/UQ:677394/UQFL2_i3255_copyright_permission.pdf"
+    name="citation_pdf_url"
+  />
+  <meta
+    content="Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944"
+    name="DC.Title"
+  />
+  <meta
+    content="Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944"
+    name="citation_title"
+  />
+  <meta
+    content="Astley, Thea, 1925-2004"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Grano, Paul, 1894-1975"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Hayes, Edward Leo, 1889-1967"
+    name="DC.Creator"
+  />
+  <meta
+    content="Hayes, Edward Leo, 1889-1967"
+    name="citation_authors"
+  />
+  <meta
+    content="1944-07-15"
+    name="DC.Date"
+  />
+  <meta
+    content="1944/07/15"
+    name="citation_date"
+  />
+  <meta
+    content="eng"
+    name="citation_language"
+  />
+  <meta
+    content="Hayes, Edward Leo, 1889-1967 -- Archives; Hayes, Edward Leo, 1889-1967 -- Manuscripts; Astley, Thea, 1925-2004 -- Correspondence; Grano, Paul, 1894-1975 -- Correspondence; Authors, Australian -- 20th century"
+    name="citation_keywords"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with newspaper 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    undefined - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with patent 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Bacterial plaques staining composition for evaluating dental caries activity - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:288545"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content={270802}
+    name="DC.Subject"
+  />
+  <meta
+    content={270300}
+    name="DC.Subject"
+  />
+  <meta
+    content={320800}
+    name="DC.Subject"
+  />
+  <meta
+    content="Bacterial plaques staining composition for evaluating dental caries activity"
+    name="DC.Title"
+  />
+  <meta
+    content="Bacterial plaques staining composition for evaluating dental caries activity"
+    name="citation_title"
+  />
+  <meta
+    content="Walsh, Laurence J"
+    name="DC.Creator"
+  />
+  <meta
+    content="Ota R"
+    name="DC.Creator"
+  />
+  <meta
+    content="Nagao S"
+    name="DC.Creator"
+  />
+  <meta
+    content="Sato T"
+    name="DC.Creator"
+  />
+  <meta
+    content="Walsh, Laurence J; Ota R; Nagao S; Sato T"
+    name="citation_authors"
+  />
+  <meta
+    content="2008-08-01"
+    name="DC.Date"
+  />
+  <meta
+    content="2008/08/01"
+    name="citation_date"
+  />
+  <meta
+    content="GC Corporation"
+    name="DC.Publisher"
+  />
+  <meta
+    content="GC Corporation"
+    name="citation_publisher"
+  />
+  <meta
+    content="eng"
+    name="citation_language"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with preprint 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Heavy Tails, Importance Sampling and Cross-Entropy - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:10457"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content={280210}
+    name="DC.Subject"
+  />
+  <meta
+    content={230203}
+    name="DC.Subject"
+  />
+  <meta
+    content={230117}
+    name="DC.Subject"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/view/UQ:10457/dpk_akrfinal.pdf"
+    name="citation_pdf_url"
+  />
+  <meta
+    content="Heavy Tails, Importance Sampling and Cross-Entropy"
+    name="DC.Title"
+  />
+  <meta
+    content="Heavy Tails, Importance Sampling and Cross-Entropy"
+    name="citation_title"
+  />
+  <meta
+    content="Asmussen, S."
+    name="DC.Creator"
+  />
+  <meta
+    content="Kroese, D. P."
+    name="DC.Creator"
+  />
+  <meta
+    content="Rubinstein, R. Y."
+    name="DC.Creator"
+  />
+  <meta
+    content="Asmussen, S.; Kroese, D. P.; Rubinstein, R. Y."
+    name="citation_authors"
+  />
+  <meta
+    content="2004-01-01"
+    name="DC.Date"
+  />
+  <meta
+    content="2004/01/01"
+    name="citation_date"
+  />
+  <meta
+    content="We consider the problem of estimating P (Y1+ ... +Yn &gt; x) by importance sampling when the Yi are i.i.d. and heavy-tailed. The idea is to exploit the cross-entropy method as a tool for choosing good parameters in the importance sampling distribution; in doing so, we use the asymptotic description that given P(Y1+ ... +Yn &gt; x,) n-1 of the Yi have distribution F and one the conditional distribution of Y given Y &gt; x. We show in some parametric examples (Pareto and Weibull) how this leads to precise answers, which as demonstrated numerically, are close to being variance minimal within the parametric class under consideration. Related problems for M/G/1 and GI/G/1 queues are also discussed."
+    name="DC.Description"
+  />
+  <meta
+    content="We consider the problem of estimating P (Y1+ ... +Yn &gt; x) by importance sampling when the Yi are i.i.d. and heavy-tailed. The idea is to exploit the cross-entropy method as a tool for choosing good parameters in the importance sampling distribution; in doing so, we use the asymptotic description that given P(Y1+ ... +Yn &gt; x,) n-1 of the Yi have distribution F and one the conditional distribution of Y given Y &gt; x. We show in some parametric examples (Pareto and Weibull) how this leads to precise answers, which as demonstrated numerically, are close to being variance minimal within the parametric class under consideration. Related problems for M/G/1 and GI/G/1 queues are also discussed."
+    name="citation_abstract"
+  />
+  <meta
+    content="Algorithmic complexity; cross-entropy; GI/G/1 queue; importance sampling; maximum likelihood; Pareto distribution; Pollaczek-Khintchine formula; random walk; rare event; subexponential distribution; Weibull distribution"
+    name="citation_keywords"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with reference entry 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Domestic Technologies - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:120546"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content="430102 History - Asian"
+    name="DC.Subject"
+  />
+  <meta
+    content="420212 Japanese"
+    name="DC.Subject"
+  />
+  <meta
+    content="751001 Languages and literature"
+    name="DC.Subject"
+  />
+  <meta
+    content="M"
+    name="DC.Subject"
+  />
+  <meta
+    content="Domestic Technologies"
+    name="DC.Title"
+  />
+  <meta
+    content="Domestic Technologies"
+    name="citation_title"
+  />
+  <meta
+    content="Sandra Buckley"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Low, Morris"
+    name="DC.Contributor"
+  />
+  <meta
+    content="Low, M."
+    name="DC.Creator"
+  />
+  <meta
+    content="Low, M."
+    name="citation_authors"
+  />
+  <meta
+    content="2001-11-29"
+    name="DC.Date"
+  />
+  <meta
+    content="2001/11/29"
+    name="citation_date"
+  />
+  <meta
+    content="112"
+    name="citation_firstpage"
+  />
+  <meta
+    content="113"
+    name="citation_lastpage"
+  />
+  <meta
+    content="Routledge"
+    name="DC.Publisher"
+  />
+  <meta
+    content="Routledge"
+    name="citation_publisher"
+  />
+  <meta
+    content="eng"
+    name="citation_language"
+  />
+  <meta
+    content="Offering extensive coverage, this Encyclopedia is a new reference that reflects the vibrant, diverse and evolving culture of modern Japan, spanning from the end of the Japanese Imperialist period in 1945 to the present day. Entries cover areas such as literature, film, architecture, food, health, political economy, religion and technology and they range from shorter definitions, histories or biographies to longer overview essays giving an in-depth treatment of major issues. With over 700 alphabetically arranged entries, this Encyclopedia will be an invaluable reference tool for students of Japanese and Asian Studies, as well as providing a fascinating insight into Japanese culture for the general reader. Suggestions for further reading, a comprehensive system of cross-referencing, a thematic contents list and an extensive index all help navigate the reader around the Encyclopedia and on to further study."
+    name="DC.Description"
+  />
+  <meta
+    content="Offering extensive coverage, this Encyclopedia is a new reference that reflects the vibrant, diverse and evolving culture of modern Japan, spanning from the end of the Japanese Imperialist period in 1945 to the present day. Entries cover areas such as literature, film, architecture, food, health, political economy, religion and technology and they range from shorter definitions, histories or biographies to longer overview essays giving an in-depth treatment of major issues. With over 700 alphabetically arranged entries, this Encyclopedia will be an invaluable reference tool for students of Japanese and Asian Studies, as well as providing a fascinating insight into Japanese culture for the general reader. Suggestions for further reading, a comprehensive system of cross-referencing, a thematic contents list and an extensive index all help navigate the reader around the Encyclopedia and on to further study."
+    name="citation_abstract"
+  />
+  <meta
+    content="Japanese culture; Popular culture - Japan - Encyclopedias; Japan - Civilization - 1945- - Encyclopedia"
+    name="citation_keywords"
+  />
+  <meta
+    content="0415143446"
+    name="citation_isbn"
+  />
+  <meta
+    content="978-0-415-14344-8"
+    name="citation_isbn"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with research report 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Accelerated Apprenticeships: Apprentice, Employer and Teaching Staff Perceptions - 4 - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:684901"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content="Accelerated Apprenticeships: Apprentice, Employer and Teaching Staff Perceptions - 4"
+    name="DC.Title"
+  />
+  <meta
+    content="Accelerated Apprenticeships: Apprentice, Employer and Teaching Staff Perceptions - 4"
+    name="citation_title"
+  />
+  <meta
+    content="Vishal Asai"
+    name="DC.Creator"
+  />
+  <meta
+    content="Vishal Asai"
+    name="citation_authors"
+  />
+  <meta
+    content="2017-10-12"
+    name="DC.Date"
+  />
+  <meta
+    content="2017/10/12"
+    name="citation_date"
+  />
+  <meta
+    content="10.129839/sometext"
+    name="citation_doi"
+  />
+  <meta
+    content="UQ"
+    name="DC.Publisher"
+  />
+  <meta
+    content="UQ"
+    name="citation_publisher"
+  />
+  <meta
+    content="asdf asdj ajsdflj lkjsdf;asdfklajds djfkahsdfhdskfhkadgssdy98yfasd  isudyfiuysdfkjhsdjkfh euwyf f "
+    name="DC.Description"
+  />
+  <meta
+    content="asdf asdj ajsdflj lkjsdf;asdfklajds djfkahsdfhdskfhkadgssdy98yfasd  isudyfiuysdfkjhsdjkfh euwyf f "
+    name="citation_abstract"
+  />
+  <meta
+    content="9781921412141"
+    name="citation_isbn"
+  />
+  <meta
+    content="9781921412143"
+    name="citation_isbn"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with thesis 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    It's for love not money: Queensland graziers' perceptions of sustainable development - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:170415"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content={300000}
+    name="DC.Subject"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/view/UQ:170415/Permission_Moffatt_J.pdf"
+    name="citation_pdf_url"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/view/UQ:170415/s31882862_PhD_Totalthesis.pdf"
+    name="citation_pdf_url"
+  />
+  <meta
+    content="It's for love not money: Queensland graziers' perceptions of sustainable development"
+    name="DC.Title"
+  />
+  <meta
+    content="It's for love not money: Queensland graziers' perceptions of sustainable development"
+    name="citation_title"
+  />
+  <meta
+    content="Jennifer Moffatt"
+    name="DC.Creator"
+  />
+  <meta
+    content="Jennifer Moffatt"
+    name="citation_authors"
+  />
+  <meta
+    content="2008-06-01"
+    name="DC.Date"
+  />
+  <meta
+    content="2008/06/01"
+    name="citation_date"
+  />
+  <meta
+    content="Despite a National Strategy for Ecologically Sustainable Development and the embodiment of this in numerous national and state statues, environmental degradation continues to occur on rural land. This raises the question of how the primary land managers in Queensland perceive sustainable development. Australia’s early reliance on agricultural production and international markets contributed substantially to the extensive environmental degradation that has occurred. Consequently economic and environmental issues have dominated the research on sustainable development, with the social dimension relatively neglected. In addition, despite the large quantity of work that has been conducted with farmers and graziers, little is known about how either of these types of land managers interpret sustainable development. The aim of this thesis was to develop an in-depth understanding of graziers’ perceptions of sustainable development to make a contribution to this area. An exploratory interpretative approach was taken to conduct this investigation because previous research had been limited. In-depth unstructured interviews were conducted with 57 Queensland graziers in the tropical savannas in a case study with two locations – the Gulf of Carpentaria and the Central West. This approach was supported by participant observation and a brief questionnaire to provide background information. The fieldwork was conducted over a period of five months which allowed analysis to be conducted as the study progressed. Most of the graziers were interviewed on their properties with the goal of adding richness to the data and assisting with interpretation. Several bodies of literature have been used to interpret the results of this study. Areas of the sustainable development literature relevant to this thesis are reviewed to provide a context for the thesis. The literature on structural change in Australian agriculture provides a background to the broad influences on the agricultural sector and farmers. Also reviewed are the approaches taken to change the land management practices of farmers. The enduring value of farming and the changing values of rural land use are explored through a review of agrarianism, the goals and values of farmers and the post-productivist transition. The results for both study locations showed that these graziers preference the economic dimension of sustainable development over the environmental and social dimensions. The rationale for this preference is that maintaining economic viability will allow them to achieve their social goal – to continue their preferred way of life. A strong focus therefore, is on economic viability as a means to a social end. The objective is to overcome the constraints of being market and season dependent and the costs of operating in rural and remote locations through a whole-of-enterprise business management approach. The need for graziers to continue increasing their productivity to remain economically viable and to continue being competitive in international markets, challenges their ability to balance the economic and environmental dimensions of sustainable development. For some the environmental dimension of sustainable development may be compromised to accommodate their economic priorities and social goals. A perceived future threat, more so for Gulf graziers, arises from the belief that they and their interests are marginalised through consultation processes. This contributes to their belief that the government prioritises Aboriginal land rights and environmental protection interests over their production interests. They believe that if this continues their future is at risk through further decreases to the security of their tenure. The results of this study suggest that a more innovative and integrated approach will be required to meet the challenges of sustainable development in these areas, in early twenty-first century Australia. The holistic approach from a social science perspective has provided an understanding of what graziers value and why. These insights contribute to knowledge of how to progress sustainable development. They could be tested with other types of land managers and as a foundation on which to build a more comprehensive understanding of sustainable development."
+    name="DC.Description"
+  />
+  <meta
+    content="Despite a National Strategy for Ecologically Sustainable Development and the embodiment of this in numerous national and state statues, environmental degradation continues to occur on rural land. This raises the question of how the primary land managers in Queensland perceive sustainable development. Australia’s early reliance on agricultural production and international markets contributed substantially to the extensive environmental degradation that has occurred. Consequently economic and environmental issues have dominated the research on sustainable development, with the social dimension relatively neglected. In addition, despite the large quantity of work that has been conducted with farmers and graziers, little is known about how either of these types of land managers interpret sustainable development. The aim of this thesis was to develop an in-depth understanding of graziers’ perceptions of sustainable development to make a contribution to this area. An exploratory interpretative approach was taken to conduct this investigation because previous research had been limited. In-depth unstructured interviews were conducted with 57 Queensland graziers in the tropical savannas in a case study with two locations – the Gulf of Carpentaria and the Central West. This approach was supported by participant observation and a brief questionnaire to provide background information. The fieldwork was conducted over a period of five months which allowed analysis to be conducted as the study progressed. Most of the graziers were interviewed on their properties with the goal of adding richness to the data and assisting with interpretation. Several bodies of literature have been used to interpret the results of this study. Areas of the sustainable development literature relevant to this thesis are reviewed to provide a context for the thesis. The literature on structural change in Australian agriculture provides a background to the broad influences on the agricultural sector and farmers. Also reviewed are the approaches taken to change the land management practices of farmers. The enduring value of farming and the changing values of rural land use are explored through a review of agrarianism, the goals and values of farmers and the post-productivist transition. The results for both study locations showed that these graziers preference the economic dimension of sustainable development over the environmental and social dimensions. The rationale for this preference is that maintaining economic viability will allow them to achieve their social goal – to continue their preferred way of life. A strong focus therefore, is on economic viability as a means to a social end. The objective is to overcome the constraints of being market and season dependent and the costs of operating in rural and remote locations through a whole-of-enterprise business management approach. The need for graziers to continue increasing their productivity to remain economically viable and to continue being competitive in international markets, challenges their ability to balance the economic and environmental dimensions of sustainable development. For some the environmental dimension of sustainable development may be compromised to accommodate their economic priorities and social goals. A perceived future threat, more so for Gulf graziers, arises from the belief that they and their interests are marginalised through consultation processes. This contributes to their belief that the government prioritises Aboriginal land rights and environmental protection interests over their production interests. They believe that if this continues their future is at risk through further decreases to the security of their tenure. The results of this study suggest that a more innovative and integrated approach will be required to meet the challenges of sustainable development in these areas, in early twenty-first century Australia. The holistic approach from a social science perspective has provided an understanding of what graziers value and why. These insights contribute to knowledge of how to progress sustainable development. They could be tested with other types of land managers and as a foundation on which to build a more comprehensive understanding of sustainable development."
+    name="citation_abstract"
+  />
+  <meta
+    content="Sustainable development; graziers; farmers; agriculture; land management; business"
+    name="citation_keywords"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with video document 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Video 12: 1) Discovery History and Geology of the Cannington Ag-Pb-Zn Deposit 2) Advances in Micro-Analytical Technologies — What a grain can tell you - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:161756"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content={451986}
+    name="DC.Subject"
+  />
+  <meta
+    content="Video 12: 1) Discovery History and Geology of the Cannington Ag-Pb-Zn Deposit 2) Advances in Micro-Analytical Technologies — What a grain can tell you"
+    name="DC.Title"
+  />
+  <meta
+    content="Video 12: 1) Discovery History and Geology of the Cannington Ag-Pb-Zn Deposit 2) Advances in Micro-Analytical Technologies — What a grain can tell you"
+    name="citation_title"
+  />
+  <meta
+    content="Walters, S."
+    name="DC.Creator"
+  />
+  <meta
+    content="Walters, S."
+    name="citation_authors"
+  />
+  <meta
+    content="2002-01-01"
+    name="DC.Date"
+  />
+  <meta
+    content="2002/01/01"
+    name="citation_date"
+  />
+  <meta
+    content="eng"
+    name="citation_language"
+  />
+  <meta
+    content="Recorded lectures from the SEG International Exchange Lecturer tour, Denver"
+    name="DC.Description"
+  />
+  <meta
+    content="Recorded lectures from the SEG International Exchange Lecturer tour, Denver"
+    name="citation_abstract"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with working paper 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Education, Employment and Social Inclusion within the European Union - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/record/UQ:176145"
+    name="DC.Identifier"
+    scheme="URI"
+  />
+  <meta
+    content={452775}
+    name="DC.Subject"
+  />
+  <meta
+    content={452784}
+    name="DC.Subject"
+  />
+  <meta
+    content="https://fez-staging.library.uq.edu.au/view/UQ:176145/wp46.pdf"
+    name="citation_pdf_url"
+  />
+  <meta
+    content="Education, Employment and Social Inclusion within the European Union"
+    name="DC.Title"
+  />
+  <meta
+    content="Education, Employment and Social Inclusion within the European Union"
+    name="citation_title"
+  />
+  <meta
+    content="Laselle, Laurence"
+    name="DC.Creator"
+  />
+  <meta
+    content="Tisdell, Clem"
+    name="DC.Creator"
+  />
+  <meta
+    content="Laselle, Laurence; Tisdell, Clem"
+    name="citation_authors"
+  />
+  <meta
+    content="2006-11-01"
+    name="DC.Date"
+  />
+  <meta
+    content="2006/11/01"
+    name="citation_date"
+  />
+  <meta
+    content="1"
+    name="citation_firstpage"
+  />
+  <meta
+    content="23"
+    name="citation_lastpage"
+  />
+  <meta
+    content="School of Economics"
+    name="DC.Publisher"
+  />
+  <meta
+    content="School of Economics"
+    name="citation_publisher"
+  />
+  <meta
+    content="eng"
+    name="citation_language"
+  />
+  <meta
+    content="Employment and social inclusion have been regular themes in the agenda of the European Union for the past fifteen years. From a soft coordinated approach mainly focused on the fight against unemployment, the European Union has moved towards a more coordinated but still voluntary strategy for its Member States and this agenda now has multiple economic, social and environmental objectives. A constant feature of these strategies has been the use of education and training policies, in particular for young people who are at risk of social exclusion. This paper reviews the relevant agenda of the European Union and presents the concept of second chance schools initiated by the European Commission in 1995. It seeks to understand how the elements associated with these youth and the policy-makers are combined in order to achieve success in terms of job opportunities and better inclusion for young people."
+    name="DC.Description"
+  />
+  <meta
+    content="Employment and social inclusion have been regular themes in the agenda of the European Union for the past fifteen years. From a soft coordinated approach mainly focused on the fight against unemployment, the European Union has moved towards a more coordinated but still voluntary strategy for its Member States and this agenda now has multiple economic, social and environmental objectives. A constant feature of these strategies has been the use of education and training policies, in particular for young people who are at risk of social exclusion. This paper reviews the relevant agenda of the European Union and presents the concept of second chance schools initiated by the European Commission in 1995. It seeks to understand how the elements associated with these youth and the policy-makers are combined in order to achieve success in terms of job opportunities and better inclusion for young people."
+    name="citation_abstract"
+  />
+  <meta
+    content="European Union; Education; Employment; Social inclusion"
+    name="citation_keywords"
+  />
+  <meta
+    content="46"
+    name="citation_technical_report_number"
+  />
+</HelmetWrapper>
+`;

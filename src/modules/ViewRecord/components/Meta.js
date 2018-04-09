@@ -10,9 +10,8 @@ export default class Meta extends React.PureComponent {
     };
 
     getMetaTag = (name, content, scheme = false) => {
-        const replacements = {'&': '&amp;', '<': '&lt;', '>': '&gt;'};
         return (
-            <meta name={name} content={content.replace(/[&<>]/g, (replace) => (replacements[replace] || replace))} {...(scheme ? {scheme: 'URI'} : {})}/>
+            <meta name={name} content={content} {...(scheme ? {scheme: 'URI'} : {})}/>
         );
     };
 
@@ -27,8 +26,8 @@ export default class Meta extends React.PureComponent {
                     if (publication[field].length > 0) {
                         if (tag.multiple) {
                             return publication[field].map(fieldValue => {
-                                if (!!fieldValue[subkey] && !!url && subkey === 'rek_file_attachment_name' && fieldValue[subkey].split('.')[1] === 'pdf') {
-                                    return this.getMetaTag(tag.name, url(publication.rek_pid, fieldValue[subkey]));
+                                if (!!fieldValue[subkey] && !!url && subkey === 'rek_file_attachment_name') {
+                                    return fieldValue[subkey].split('.')[1] === 'pdf' && this.getMetaTag(tag.name, url(publication.rek_pid, fieldValue[subkey]));
                                 } else {
                                     return this.getMetaTag(tag.name, subkey !== 'rek_issn' && fieldValue[`${subkey}_lookup`] || fieldValue[subkey]);
                                 }
@@ -45,10 +44,17 @@ export default class Meta extends React.PureComponent {
                         return '';
                     }
                 } else {
+                    const replaceHtmlChars = {
+                        '&': '&amp;',
+                        '<': '&lt;',
+                        '>': '&gt;'
+                    };
+
                     return !!publication[subkey] &&
                         (
                             subkey === 'rek_pid' && url && this.getMetaTag(tag.name, url(publication.rek_pid), true) ||
                             subkey === 'rek_date' && this.getMetaTag(tag.name, moment(publication[subkey]).format(tag.format)) ||
+                            subkey === 'rek_description' && this.getMetaTag(tag.name, publication[subkey].replace(/[&<>]/g, (replace) => (replaceHtmlChars[replace] || replace))) ||
                             this.getMetaTag(tag.name, publication[subkey])
                         );
                 }
