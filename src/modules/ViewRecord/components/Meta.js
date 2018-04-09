@@ -35,7 +35,7 @@ export default class Meta extends React.PureComponent {
                                             return this.getMetaTag(tag.name, fieldValue[subkey]);
                                     }
                                 } else {
-                                    return this.getMetaTag(tag.name, fieldValue[`${subkey}_lookup`] || fieldValue[subkey]);
+                                    return this.getMetaTag(tag.name, subkey !== 'rek_issn' && fieldValue[`${subkey}_lookup`] || fieldValue[subkey]);
                                 }
                             });
                         } else {
