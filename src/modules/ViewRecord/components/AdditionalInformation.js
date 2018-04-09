@@ -65,6 +65,7 @@ export default class AdditionalInformation extends Component {
             case 'rek_seo_code': return this.renderList(objects, subkey, pathConfig.list.subject);
             case 'rek_alternate_genre': return this.renderList(objects, subkey, pathConfig.list.subject);
             case 'rek_geographic_area': return this.renderMap(objects);
+            case 'rek_field_of_research': return this.renderList(objects, subkey, pathConfig.list.subject);
             default: return this.renderList(objects, subkey);
         }
     }
