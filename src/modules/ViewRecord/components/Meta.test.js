@@ -159,4 +159,12 @@ describe('Meta Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render component with rek_date year mapped to citation_date exactly as it is', () => {
+        const wrapper = setup({publication: {
+            rek_title: 'Record with only year in rek_date',
+            rek_date: '1999'
+        }});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 });

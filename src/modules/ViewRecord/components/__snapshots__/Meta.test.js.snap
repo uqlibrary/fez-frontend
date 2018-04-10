@@ -1536,6 +1536,38 @@ exports[`Meta Component  should render component with reference entry 1`] = `
 </HelmetWrapper>
 `;
 
+exports[`Meta Component  should render component with rek_date year mapped to citation_date exactly as it is 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Record with only year in rek_date - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="Record with only year in rek_date"
+    name="DC.Title"
+  />
+  <meta
+    content="Record with only year in rek_date"
+    name="citation_title"
+  />
+  <meta
+    content="1999"
+    name="DC.Date"
+  />
+  <meta
+    content="1999"
+    name="citation_date"
+  />
+</HelmetWrapper>
+`;
+
 exports[`Meta Component  should render component with research report 1`] = `
 <HelmetWrapper
   defer={true}
