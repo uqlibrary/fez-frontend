@@ -127,3 +127,5 @@ global.mockApi = setupMockAdapter();
 // expect extension
 global.toHaveDispatchedActions = toHaveDispatchedActions;
 global.toHaveAnyOrderDispatchedActions = toHaveAnyOrderDispatchedActions;
+
+process.env.TITLE_SUFFIX = 'Test';

@@ -96,7 +96,7 @@ export default class Meta extends React.PureComponent {
         const metaTags = this.renderMetaTags(this.props.publication);
         return (
             <Helmet>
-                <title>{`${this.props.publication.rek_title} - UQ eSpace`}</title>
+                <title>{`${this.props.publication.rek_title} - UQ eSpace ${process.env.TITLE_SUFFIX}`}</title>
                 <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
                 {metaTags}
             </Helmet>
