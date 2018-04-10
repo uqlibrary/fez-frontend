@@ -172,7 +172,7 @@ export default {
                 fez_record_search_key_notes: 'Additional notes',
                 grantInformation: {
                     fez_record_search_key_grant_agency: 'Grant agency',
-                    fez_record_search_key_grant_id: 'Grant id',
+                    fez_record_search_key_grant_id: 'Grant ID',
                     fez_record_search_key_grant_text: 'Grant text'
                 },
                 publicationDetails: {
