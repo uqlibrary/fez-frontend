@@ -76,7 +76,7 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Identifier',
-                    multiple: false
+                    isMultiple: false
                 }
             ],
             url: (pid) => `${APP_URL}record/${pid}`
@@ -87,7 +87,7 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Subject',
-                    multiple: true
+                    isMultiple: true
                 }
             ]
         },
@@ -97,7 +97,7 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_pdf_url',
-                    multiple: true,
+                    isMultiple: true,
                 }
             ],
             url: (pid, fileName) => `${APP_URL}view/${pid}/${fileName}`.trim()
@@ -108,11 +108,11 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Title',
-                    multiple: false
+                    isMultiple: false
                 },
                 {
                     name: 'citation_title',
-                    multiple: false
+                    isMultiple: false
                 }
             ]
         },
@@ -122,7 +122,7 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Contributor',
-                    multiple: true
+                    isMultiple: true
                 }
             ]
         },
@@ -132,11 +132,11 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Creator',
-                    multiple: true
+                    isMultiple: true
                 },
                 {
                     name: 'citation_authors',
-                    multiple: false
+                    isMultiple: false
                 }
             ]
         },
@@ -146,7 +146,7 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_journal_title',
-                    multiple: false
+                    isMultiple: false
                 }
             ]
         },
@@ -156,7 +156,7 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_issn',
-                    multiple: true
+                    isMultiple: true
                 }
             ]
         },
@@ -166,12 +166,12 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Date',
-                    multiple: false,
+                    isMultiple: false,
                     format: 'YYYY-MM-DD'
                 },
                 {
                     name: 'citation_date',
-                    multiple: false,
+                    isMultiple: false,
                     format: 'YYYY/MM/DD'
                 }
             ]
@@ -182,7 +182,7 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_doi',
-                    multiple: false
+                    isMultiple: false
                 }
             ]
         },
@@ -192,7 +192,7 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_volume',
-                    multiple: false
+                    isMultiple: false
                 }
             ]
         },
@@ -202,7 +202,7 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_issue',
-                    multiple: false
+                    isMultiple: false
                 }
             ]
         },
@@ -212,7 +212,7 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_firstpage',
-                    multiple: false
+                    isMultiple: false
                 }
             ]
         },
@@ -222,7 +222,7 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_lastpage',
-                    multiple: false
+                    isMultiple: false
                 }
             ]
         },
@@ -232,11 +232,11 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Publisher',
-                    multiple: false
+                    isMultiple: false
                 },
                 {
                     name: 'citation_publisher',
-                    multiple: false
+                    isMultiple: false
                 }
             ]
         },
@@ -246,7 +246,7 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_language',
-                    multiple: true
+                    isMultiple: true
                 }
             ]
         },
@@ -256,11 +256,11 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Description',
-                    multiple: false
+                    isMultiple: false
                 },
                 {
                     name: 'citation_abstract',
-                    multiple: false
+                    isMultiple: false
                 }
             ]
         },
@@ -270,7 +270,7 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_keywords',
-                    multiple: false
+                    isMultiple: false
                 }
             ]
         },
@@ -280,7 +280,7 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_conference',
-                    multiple: false
+                    isMultiple: false
                 }
             ]
         },
@@ -290,7 +290,7 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Subject',
-                    multiple: true
+                    isMultiple: true
                 }
             ]
         },
@@ -300,7 +300,7 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Subject',
-                    multiple: true
+                    isMultiple: true
                 }
             ]
         },
@@ -310,7 +310,7 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_isbn',
-                    multiple: true
+                    isMultiple: true
                 }
             ]
         },
@@ -320,7 +320,7 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_technical_report_number',
-                    multiple: false
+                    isMultiple: false
                 }
             ]
         },

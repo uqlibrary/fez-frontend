@@ -64,7 +64,7 @@ export default class Meta extends React.PureComponent {
                     // Check search key field has multiple values
                     if (publication[field].length > 0) {
                         // If multiple tags allowed then get meta tag for each value
-                        if (tag.multiple) {
+                        if (tag.isMultiple) {
                             return this.getMultipleTagsForField(tag.name, field, subkey, url);
                         } else {
                             // Single meta tag for multiple values separated by semicolon
