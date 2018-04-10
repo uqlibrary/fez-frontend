@@ -72,7 +72,6 @@ export default class PublicationsListSorting extends PureComponent {
                     <SelectField
                         id="sortBy"
                         maxHeight={250}
-                        fullWidth
                         onChange={this.sortByChanged}
                         value={this.state.sortBy}
                         disabled={this.props.disabled}

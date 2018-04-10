@@ -17,7 +17,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
       autoWidth={false}
       disabled={false}
       floatingLabelText="Sort results by"
-      fullWidth={true}
+      fullWidth={false}
       id="sortBy"
       maxHeight={250}
       multiple={false}
