@@ -466,6 +466,7 @@ export const currentAuthor = {
             "aut_ref_num": "",
             "aut_researcher_id": "A-1137-2007",
             "aut_scopus_id": "35478294000",
+            "aut_is_scopus_id_authenticated": 1,
             "aut_mypub_url": "",
             "aut_rid_password": "",
             "aut_people_australia_id": "",
