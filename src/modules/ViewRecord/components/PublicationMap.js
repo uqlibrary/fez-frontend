@@ -32,7 +32,7 @@ const PublicationMap = withScriptjs(withGoogleMap((props) => {
     return (
         <GoogleMap
             defaultZoom={geoCoords.length === 1 ? pointZoom : polygonZoom}
-            googleMapURL={'https://maps.googleapis.com/maps/api/js?key=AIzaSyBGKCmMISUEtKaSHx8XiA546v-ZXev2k4I&v=3.exp&libraries=geometry,drawing,places'}
+            googleMapURL={`https://maps.googleapis.com/maps/api/js?${!!process.env.GOOGLE_MAP_KEY ? process.env.GOOGLE_MAP_KEY : ''}v=3.exp&libraries=geometry,drawing,places`}
             defaultCenter={defaultCenter}
             ref={(map) => {map && bounds && geoCoords.length > 1 && map.fitBounds(bounds);}}>
             {
