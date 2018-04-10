@@ -119,4 +119,44 @@ describe('Meta Component ', () => {
         const wrapper = setup({publication: records.videoDocument});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render component with coverage period data mapped to DC.Subject tag', () => {
+        const wrapper = setup({publication: {
+            rek_title: 'Record with coverage period',
+            fez_record_search_key_coverage_period: [
+                {
+                    rek_coverage_period_id: 1,
+                    rek_coverage_period_pid: 'UQ:719166',
+                    rek_coverage_period_xsdmf_id: 17292,
+                    rek_coverage_period_order: 1,
+                    rek_coverage_period: 'Original records were on paper (Photo, heat sensitive, 35mm) then digital'
+                }
+            ]
+        }});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with coverage period data mapped to multiple DC.Subject tag', () => {
+        const wrapper = setup({publication: {
+            rek_title: 'Record with coverage period',
+            fez_record_search_key_coverage_period: [
+                {
+                    rek_coverage_period_id: 1,
+                    rek_coverage_period_pid: 'UQ:719166',
+                    rek_coverage_period_xsdmf_id: 17292,
+                    rek_coverage_period_order: 1,
+                    rek_coverage_period: 'Original records were on paper (Photo, heat sensitive, 35mm) then digital'
+                },
+                {
+                    rek_coverage_period_id: 2,
+                    rek_coverage_period_pid: 'UQ:719166',
+                    rek_coverage_period_xsdmf_id: 17292,
+                    rek_coverage_period_order: 2,
+                    rek_coverage_period: 'Original records were on paper then digital'
+                }
+            ]
+        }});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 });

@@ -569,6 +569,66 @@ exports[`Meta Component  should render component with conference proceedings 1`]
 </HelmetWrapper>
 `;
 
+exports[`Meta Component  should render component with coverage period data mapped to DC.Subject tag 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Record with coverage period - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="Record with coverage period"
+    name="DC.Title"
+  />
+  <meta
+    content="Record with coverage period"
+    name="citation_title"
+  />
+  <meta
+    content="Original records were on paper (Photo, heat sensitive, 35mm) then digital"
+    name="DC.Subject"
+  />
+</HelmetWrapper>
+`;
+
+exports[`Meta Component  should render component with coverage period data mapped to multiple DC.Subject tag 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <title>
+    Record with coverage period - UQ eSpace
+     
+  </title>
+  <link
+    href="http://purl.org/DC/elements/1.0/"
+    rel="schema.DC"
+  />
+  <meta
+    content="Record with coverage period"
+    name="DC.Title"
+  />
+  <meta
+    content="Record with coverage period"
+    name="citation_title"
+  />
+  <meta
+    content="Original records were on paper (Photo, heat sensitive, 35mm) then digital"
+    name="DC.Subject"
+  />
+  <meta
+    content="Original records were on paper then digital"
+    name="DC.Subject"
+  />
+</HelmetWrapper>
+`;
+
 exports[`Meta Component  should render component with creative work 1`] = `
 <HelmetWrapper
   defer={true}
