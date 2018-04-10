@@ -1,6 +1,6 @@
 import {locale} from 'locale';
 
-const fullPath = process.env.BRANCH === 'development' ? 'https://fez-staging.library.uq.edu.au' : '';
+const fullPath = process.env.BRANCH === 'production' ? 'https://espace.library.uq.edu.au' : 'https://fez-staging.library.uq.edu.au';
 
 export const pathConfig =  {
     index: '/',

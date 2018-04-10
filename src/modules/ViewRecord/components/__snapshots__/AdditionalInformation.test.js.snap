@@ -1536,7 +1536,7 @@ exports[`Additional Information Component  should render component with audio do
                                                   >
                                                     <a
                                                       className="authorNameLink"
-                                                      href="/list/author/Shutter, Leigh"
+                                                      href="https://fez-staging.library.uq.edu.au/list/author/Shutter, Leigh"
                                                       key="citationAuthor_1"
                                                     >
                                                       <CitationView
@@ -1556,7 +1556,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     </a>
                                                     <a
                                                       className="authorNameLink"
-                                                      href="/list/author/Arthurs, Andy"
+                                                      href="https://fez-staging.library.uq.edu.au/list/author/Arthurs, Andy"
                                                       key="citationAuthor_2"
                                                     >
                                                       <CitationView
@@ -1576,7 +1576,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="/list/author_id/486"
+                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/486"
                                                       key="citationAuthor_3"
                                                     >
                                                       <CitationView
@@ -1596,7 +1596,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     </a>
                                                     <a
                                                       className="authorNameLink"
-                                                      href="/list/author/McColl, Mary Rose"
+                                                      href="https://fez-staging.library.uq.edu.au/list/author/McColl, Mary Rose"
                                                       key="citationAuthor_4"
                                                     >
                                                       <CitationView
@@ -1615,7 +1615,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="/list/author_id/146"
+                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/146"
                                                       key="citationAuthor_5"
                                                     >
                                                       <CitationView
@@ -1757,7 +1757,7 @@ exports[`Additional Information Component  should render component with audio do
                                       <ViewRecordTableRow
                                         data={
                                           <a
-                                            href="/list/?cat=quick_filter&search_keys[core_29]=Centre for Subtropical Design, Queensland University of Technology"
+                                            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Centre for Subtropical Design, Queensland University of Technology"
                                           >
                                             Centre for Subtropical Design, Queensland University of Technology
                                           </a>
@@ -1864,7 +1864,7 @@ exports[`Additional Information Component  should render component with audio do
                                                 }
                                               >
                                                 <a
-                                                  href="/list/?cat=quick_filter&search_keys[core_29]=Centre for Subtropical Design, Queensland University of Technology"
+                                                  href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Centre for Subtropical Design, Queensland University of Technology"
                                                 >
                                                   Centre for Subtropical Design, Queensland University of Technology
                                                 </a>
@@ -2134,7 +2134,7 @@ exports[`Additional Information Component  should render component with audio do
                                       <ViewRecordTableRow
                                         data={
                                           <a
-                                            href="/list/?cat=quick_filter&search_keys[core_33]=undefined"
+                                            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=undefined"
                                           />
                                         }
                                         heading="Series"
@@ -2239,7 +2239,7 @@ exports[`Additional Information Component  should render component with audio do
                                                 }
                                               >
                                                 <a
-                                                  href="/list/?cat=quick_filter&search_keys[core_33]=undefined"
+                                                  href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=undefined"
                                                 />
                                               </td>
                                             </TableRowColumn>
@@ -2482,7 +2482,7 @@ exports[`Additional Information Component  should render component with audio do
                                         data={
                                           <span>
                                             <a
-                                              href="/list/?cat=quick_filter&search_keys[core_112]=453611"
+                                              href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_112]=453611"
                                             >
                                               Creative Commons Attribution noncommercial no derivatives
                                             </a>
@@ -2600,7 +2600,7 @@ exports[`Additional Information Component  should render component with audio do
                                               >
                                                 <span>
                                                   <a
-                                                    href="/list/?cat=quick_filter&search_keys[core_112]=453611"
+                                                    href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_112]=453611"
                                                   >
                                                     Creative Commons Attribution noncommercial no derivatives
                                                   </a>
@@ -2666,7 +2666,7 @@ exports[`Additional Information Component  should render component with audio do
                                           <ul>
                                             <li>
                                               <a
-                                                href="/list/subject/453663"
+                                                href="https://fez-staging.library.uq.edu.au/list/subject/453663"
                                               >
                                                 Conversation
                                               </a>
@@ -2781,7 +2781,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     key="rek_alternate_genre-0"
                                                   >
                                                     <a
-                                                      href="/list/subject/453663"
+                                                      href="https://fez-staging.library.uq.edu.au/list/subject/453663"
                                                     >
                                                       Conversation
                                                     </a>
@@ -2797,21 +2797,21 @@ exports[`Additional Information Component  should render component with audio do
                                           <ul>
                                             <li>
                                               <a
-                                                href="/list/subject/310199"
+                                                href="https://fez-staging.library.uq.edu.au/list/subject/310199"
                                               >
                                                 310199
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="/list/subject/450019"
+                                                href="https://fez-staging.library.uq.edu.au/list/subject/450019"
                                               >
                                                 450019
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="/list/subject/450776"
+                                                href="https://fez-staging.library.uq.edu.au/list/subject/450776"
                                               >
                                                 450776
                                               </a>
@@ -2926,7 +2926,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     key="rek_subject-0"
                                                   >
                                                     <a
-                                                      href="/list/subject/310199"
+                                                      href="https://fez-staging.library.uq.edu.au/list/subject/310199"
                                                     >
                                                       310199
                                                     </a>
@@ -2935,7 +2935,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     key="rek_subject-1"
                                                   >
                                                     <a
-                                                      href="/list/subject/450019"
+                                                      href="https://fez-staging.library.uq.edu.au/list/subject/450019"
                                                     >
                                                       450019
                                                     </a>
@@ -2944,7 +2944,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     key="rek_subject-2"
                                                   >
                                                     <a
-                                                      href="/list/subject/450776"
+                                                      href="https://fez-staging.library.uq.edu.au/list/subject/450776"
                                                     >
                                                       450776
                                                     </a>
@@ -3461,7 +3461,7 @@ exports[`Additional Information Component  should render component with book 1`]
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_29]=Psychology Press"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Psychology Press"
           >
             Psychology Press
           </a>
@@ -3490,7 +3490,7 @@ exports[`Additional Information Component  should render component with book 1`]
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_33]=Clinical Psychology: A Modular Course"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=Clinical Psychology: A Modular Course"
           >
             Clinical Psychology: A Modular Course
           </a>
@@ -4313,7 +4313,7 @@ exports[`Additional Information Component  should render component with book cha
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_37]=Non-coding RNA and the Reproductive System"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_37]=Non-coding RNA and the Reproductive System"
           >
             Non-coding RNA and the Reproductive System
           </a>
@@ -4329,7 +4329,7 @@ exports[`Additional Information Component  should render component with book cha
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_29]=Springer New York"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Springer New York"
           >
             Springer New York
           </a>
@@ -4367,7 +4367,7 @@ exports[`Additional Information Component  should render component with book cha
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_33]=Advances in Experimental Medicine and Biology"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=Advances in Experimental Medicine and Biology"
           >
             Advances in Experimental Medicine and Biology
           </a>
@@ -4876,14 +4876,14 @@ exports[`Additional Information Component  should render component with book cha
           <ul>
             <li>
               <a
-                href="/list/subject/453239"
+                href="https://fez-staging.library.uq.edu.au/list/subject/453239"
               >
                 453239
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/453253"
+                href="https://fez-staging.library.uq.edu.au/list/subject/453253"
               >
                 453253
               </a>
@@ -4898,42 +4898,42 @@ exports[`Additional Information Component  should render component with book cha
           <ul>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Breast cancer"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Breast cancer"
               >
                 Breast cancer
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=EMT"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=EMT"
               >
                 EMT
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Epithelial cell differentiation"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Epithelial cell differentiation"
               >
                 Epithelial cell differentiation
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Epithelial-stromal interactions"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Epithelial-stromal interactions"
               >
                 Epithelial-stromal interactions
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Hormonal regulation"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hormonal regulation"
               >
                 Hormonal regulation
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Signalling pathways"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Signalling pathways"
               >
                 Signalling pathways
               </a>
@@ -5704,7 +5704,7 @@ exports[`Additional Information Component  should render component with conferen
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_36]=Australasian Professional Society on Alcohol and other Drugs Conference 2014"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_36]=Australasian Professional Society on Alcohol and other Drugs Conference 2014"
           >
             Australasian Professional Society on Alcohol and other Drugs Conference 2014
           </a>
@@ -6423,7 +6423,7 @@ exports[`Additional Information Component  should render component with conferen
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_29]=Wiley-Blackwell Publishing"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Wiley-Blackwell Publishing"
           >
             Wiley-Blackwell Publishing
           </a>
@@ -6917,7 +6917,7 @@ exports[`Additional Information Component  should render component with conferen
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_36]=International Meeting on Measurements and Hydraulics of Sewers IMMHS'08, Summer School GEMCEA/LCPC"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_36]=International Meeting on Measurements and Hydraulics of Sewers IMMHS'08, Summer School GEMCEA/LCPC"
           >
             International Meeting on Measurements and Hydraulics of Sewers IMMHS'08, Summer School GEMCEA/LCPC
           </a>
@@ -6959,7 +6959,7 @@ exports[`Additional Information Component  should render component with conferen
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_29]=Department of Civil Engineering at The University of Queensland"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Department of Civil Engineering at The University of Queensland"
           >
             Department of Civil Engineering at The University of Queensland
           </a>
@@ -7398,28 +7398,28 @@ exports[`Additional Information Component  should render component with conferen
           <ul>
             <li>
               <a
-                href="/list/subject/290000"
+                href="https://fez-staging.library.uq.edu.au/list/subject/290000"
               >
                 290000
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/290800"
+                href="https://fez-staging.library.uq.edu.au/list/subject/290800"
               >
                 290800
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/290802"
+                href="https://fez-staging.library.uq.edu.au/list/subject/290802"
               >
                 290802
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/291104"
+                href="https://fez-staging.library.uq.edu.au/list/subject/291104"
               >
                 291104
               </a>
@@ -7434,84 +7434,84 @@ exports[`Additional Information Component  should render component with conferen
           <ul>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Sewers"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Sewers"
               >
                 Sewers
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Measurements"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Measurements"
               >
                 Measurements
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Hydraulics"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hydraulics"
               >
                 Hydraulics
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Open channel flows"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Open channel flows"
               >
                 Open channel flows
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Sediments"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Sediments"
               >
                 Sediments
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Turbidity"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Turbidity"
               >
                 Turbidity
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Hydrodynamics"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hydrodynamics"
               >
                 Hydrodynamics
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Sedimentation"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Sedimentation"
               >
                 Sedimentation
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=design"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=design"
               >
                 design
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=operation"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=operation"
               >
                 operation
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=rehabilitation"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=rehabilitation"
               >
                 rehabilitation
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=urban environment"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=urban environment"
               >
                 urban environment
               </a>
@@ -7876,7 +7876,7 @@ exports[`Additional Information Component  should render component with creative
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_29]=School of Architecture, The University of Queensland"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=School of Architecture, The University of Queensland"
           >
             School of Architecture, The University of Queensland
           </a>
@@ -7907,14 +7907,14 @@ exports[`Additional Information Component  should render component with creative
           <ul>
             <li>
               <a
-                href="/list/subject/452674"
+                href="https://fez-staging.library.uq.edu.au/list/subject/452674"
               >
                 452674
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/452677"
+                href="https://fez-staging.library.uq.edu.au/list/subject/452677"
               >
                 452677
               </a>
@@ -7940,7 +7940,7 @@ exports[`Additional Information Component  should render component with creative
           <ul>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Original Creative Works - Design/Architectural work"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Original Creative Works - Design/Architectural work"
               >
                 Original Creative Works - Design/Architectural work
               </a>
@@ -9285,7 +9285,7 @@ exports[`Additional Information Component  should render component with data col
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_95]=453619"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_95]=453619"
           >
             453619
           </a>
@@ -9297,7 +9297,7 @@ exports[`Additional Information Component  should render component with data col
         data={
           <span>
             <a
-              href="/list/?cat=quick_filter&search_keys[core_112]=453701"
+              href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_112]=453701"
             >
               453701
             </a>
@@ -9322,22 +9322,22 @@ exports[`Additional Information Component  should render component with data col
           <ul>
             <li>
               <a
-                href="/list/subject/452086"
+                href="https://fez-staging.library.uq.edu.au/list/subject/452086"
               >
                 452086
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/452109"
+                href="https://fez-staging.library.uq.edu.au/list/subject/452109"
               >
                 452109
               </a>
             </li>
           </ul>
         }
-        heading="Subject(s)"
-        key="additional-info-Subject(s)"
+        heading="ANZSRC Field of Research (FoR) Code"
+        key="additional-info-ANZSRC Field of Research (FoR) Code"
       />
       <ViewRecordTableRow
         data={
@@ -9347,6 +9347,20 @@ exports[`Additional Information Component  should render component with data col
         }
         heading="DOI"
         key="additional-info-DOI"
+      />
+      <ViewRecordTableRow
+        data={
+          <ul>
+            <li>
+              DP120103498
+            </li>
+            <li>
+              DP1093175
+            </li>
+          </ul>
+        }
+        heading="Grant ID"
+        key="additional-info-Grant ID"
       />
       <ViewRecordTableRow
         data={
@@ -9447,35 +9461,35 @@ exports[`Additional Information Component  should render component with data col
           <ul>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Isolates"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Isolates"
               >
                 Isolates
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Single cells"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Single cells"
               >
                 Single cells
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Metagenomic data"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Metagenomic data"
               >
                 Metagenomic data
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Genome quality"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Genome quality"
               >
                 Genome quality
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=CheckM"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=CheckM"
               >
                 CheckM
               </a>
@@ -9527,7 +9541,7 @@ exports[`Additional Information Component  should render component with data col
           <ul>
             <li>
               <a
-                href="/list/subject/451600"
+                href="https://fez-staging.library.uq.edu.au/list/subject/451600"
               >
                 970106 Expanding Knowledge in the Biological Sciences
               </a>
@@ -9540,7 +9554,7 @@ exports[`Additional Information Component  should render component with data col
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_92]=453616"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_92]=453616"
           >
             453616
           </a>
@@ -9551,7 +9565,7 @@ exports[`Additional Information Component  should render component with data col
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_29]=Cold Spring Harbor Laboratory Press"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Cold Spring Harbor Laboratory Press"
           >
             Cold Spring Harbor Laboratory Press
           </a>
@@ -9841,6 +9855,1370 @@ exports[`Additional Information Component  should render component with data col
         }
         heading="Dataset description"
         key="additional-info-Dataset description"
+      />
+    </TableBody>
+  </Table>
+</StandardCard>
+`;
+
+exports[`Additional Information Component  should render component with data collection with FoR codes 1`] = `
+<StandardCard
+  className=""
+  title="Additional information"
+>
+  <Table
+    allRowsSelected={false}
+    className="additionalInformation vertical"
+    fixedFooter={true}
+    fixedHeader={true}
+    height="inherit"
+    multiSelectable={false}
+    selectable={false}
+  >
+    <TableBody
+      allRowsSelected={false}
+      deselectOnClickaway={true}
+      displayRowCheckbox={false}
+      multiSelectable={false}
+      preScanRows={true}
+      selectable={true}
+      style={Object {}}
+    >
+      <ViewRecordTableRow
+        data="Mapping shallow waters"
+        heading="Project name"
+        key="additional-info-Project name"
+      />
+      <ViewRecordTableRow
+        data={
+          Array [
+            "A 2002-2007 mosaic of Quickbird, Ikonos and Landsat TM multi-spectral image data of Kubulau, Fiji was used in a multi-scale segmentation and object-based image classification to produce this map of reef type, geomorphic zones and benthic community type.",
+            <br />,
+          ]
+        }
+        heading="Project description"
+        key="additional-info-Project description"
+      />
+      <ViewRecordTableRow
+        data={
+          <EditorsCitationView
+            initialNumberOfEditors={1}
+            prefix=" "
+            publication={
+              Object {
+                "fez_datastream_info": Array [
+                  Object {
+                    "dsi_copyright": null,
+                    "dsi_dsid": "FezACML_UQ_354076.xml",
+                    "dsi_embargo_date": null,
+                    "dsi_label": "FezACML security for PID - UQ:354076",
+                    "dsi_mimetype": "text/xml",
+                    "dsi_open_access": null,
+                    "dsi_pid": "UQ:354076",
+                    "dsi_size": 3705,
+                    "dsi_state": "A",
+                  },
+                ],
+                "fez_matched_journals": Array [],
+                "fez_record_search_key_access_conditions": Object {
+                  "rek_access_conditions": "453619",
+                  "rek_access_conditions_id": 3575,
+                  "rek_access_conditions_lookup": "Open Access",
+                  "rek_access_conditions_pid": "UQ:354076",
+                  "rek_access_conditions_xsdmf_id": null,
+                },
+                "fez_record_search_key_additional_notes": null,
+                "fez_record_search_key_ands_collection_type": Object {
+                  "rek_ands_collection_type": "453616",
+                  "rek_ands_collection_type_id": 3474,
+                  "rek_ands_collection_type_lookup": "Dataset",
+                  "rek_ands_collection_type_pid": "UQ:354076",
+                  "rek_ands_collection_type_xsdmf_id": null,
+                },
+                "fez_record_search_key_assigned_group_id": Array [],
+                "fez_record_search_key_assigned_user_id": Array [],
+                "fez_record_search_key_author": Array [
+                  Object {
+                    "rek_author": "Roelfsema, Christiaan M.",
+                    "rek_author_id": 28663561,
+                    "rek_author_order": 1,
+                    "rek_author_pid": "UQ:354076",
+                    "rek_author_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author": "Phinn, Stuart R.",
+                    "rek_author_id": 28663562,
+                    "rek_author_order": 2,
+                    "rek_author_pid": "UQ:354076",
+                    "rek_author_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author": "Jupiter, Stacy",
+                    "rek_author_id": 28663563,
+                    "rek_author_order": 3,
+                    "rek_author_pid": "UQ:354076",
+                    "rek_author_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author": "Comely, James",
+                    "rek_author_id": 28663564,
+                    "rek_author_order": 4,
+                    "rek_author_pid": "UQ:354076",
+                    "rek_author_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author": "Albert, Simon",
+                    "rek_author_id": 28663565,
+                    "rek_author_order": 5,
+                    "rek_author_pid": "UQ:354076",
+                    "rek_author_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_author_id": Array [
+                  Object {
+                    "rek_author_id": 4040,
+                    "rek_author_id_id": 28040352,
+                    "rek_author_id_lookup": "Roelfsema, Christiaan M.",
+                    "rek_author_id_order": 1,
+                    "rek_author_id_pid": "UQ:354076",
+                    "rek_author_id_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author_id": 100,
+                    "rek_author_id_id": 28040353,
+                    "rek_author_id_lookup": "Phinn, Stuart R.",
+                    "rek_author_id_order": 2,
+                    "rek_author_id_pid": "UQ:354076",
+                    "rek_author_id_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author_id": 59259,
+                    "rek_author_id_id": 28040354,
+                    "rek_author_id_lookup": "Jupiter, Stacy ",
+                    "rek_author_id_order": 3,
+                    "rek_author_id_pid": "UQ:354076",
+                    "rek_author_id_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author_id": 0,
+                    "rek_author_id_id": 28040355,
+                    "rek_author_id_order": 4,
+                    "rek_author_id_pid": "UQ:354076",
+                    "rek_author_id_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author_id": 4495,
+                    "rek_author_id_id": 28040356,
+                    "rek_author_id_lookup": "Simon Albert",
+                    "rek_author_id_order": 5,
+                    "rek_author_id_pid": "UQ:354076",
+                    "rek_author_id_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_author_role": Array [
+                  Object {
+                    "rek_author_role": "Principal Investigator",
+                    "rek_author_role_id": 5787,
+                    "rek_author_role_order": 1,
+                    "rek_author_role_pid": "UQ:354076",
+                    "rek_author_role_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_contact_details_email": Array [
+                  Object {
+                    "rek_contact_details_email": "c.roelfsema@uq.edu.au",
+                    "rek_contact_details_email_id": 4742,
+                    "rek_contact_details_email_order": 1,
+                    "rek_contact_details_email_pid": "UQ:354076",
+                    "rek_contact_details_email_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_contributor": Array [
+                  Object {
+                    "rek_contributor": "Roelfsema, Christiaan M. ",
+                    "rek_contributor_id": 3204262,
+                    "rek_contributor_order": 1,
+                    "rek_contributor_pid": "UQ:354076",
+                    "rek_contributor_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_contributor_id": Array [
+                  Object {
+                    "rek_contributor_id": 4040,
+                    "rek_contributor_id_id": 2290864,
+                    "rek_contributor_id_lookup": "Roelfsema, Christiaan M.",
+                    "rek_contributor_id_order": 1,
+                    "rek_contributor_id_pid": "UQ:354076",
+                    "rek_contributor_id_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_coverage_period": Array [],
+                "fez_record_search_key_data_volume": Object {
+                  "rek_data_volume": "6099.0 kb",
+                  "rek_data_volume_id": 2105,
+                  "rek_data_volume_pid": "UQ:354076",
+                  "rek_data_volume_xsdmf_id": null,
+                },
+                "fez_record_search_key_datastream_policy": null,
+                "fez_record_search_key_doi": Object {
+                  "rek_doi": "10.1594/PANGAEA.830076",
+                  "rek_doi_id": 1494436,
+                  "rek_doi_pid": "UQ:354076",
+                  "rek_doi_xsdmf_id": null,
+                },
+                "fez_record_search_key_end_date": null,
+                "fez_record_search_key_file_attachment_access_condition": Array [],
+                "fez_record_search_key_file_attachment_embargo_date": Array [],
+                "fez_record_search_key_file_attachment_name": Array [
+                  Object {
+                    "rek_file_attachment_name": "FezACML_UQ_354076.xml",
+                    "rek_file_attachment_name_id": 4193730,
+                    "rek_file_attachment_name_order": 1,
+                    "rek_file_attachment_name_pid": "UQ:354076",
+                    "rek_file_attachment_name_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_geographic_area": Array [
+                  Object {
+                    "rek_geographic_area": "178.849182,-16.826275 179.129333,-16.826275 179.129333,-17.251690 178.849182,-17.251690 178.849182,-16.826275",
+                    "rek_geographic_area_id": 18517,
+                    "rek_geographic_area_order": 1,
+                    "rek_geographic_area_pid": "UQ:354076",
+                    "rek_geographic_area_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_grant_acronym": Array [],
+                "fez_record_search_key_grant_agency": Array [],
+                "fez_record_search_key_grant_agency_id": Array [],
+                "fez_record_search_key_grant_id": Array [],
+                "fez_record_search_key_grant_text": Array [],
+                "fez_record_search_key_has_datasets": Array [
+                  Object {
+                    "rek_has_datasets": "UQ:410016",
+                    "rek_has_datasets_lookup": "Coral reef habitat maps derived from a high-spatial-resolution multi-spectral satellite image using object based image analysis",
+                    "rek_has_datasets_order": 1,
+                    "rek_has_datasets_pid": "UQ:354076",
+                  },
+                ],
+                "fez_record_search_key_has_derivations": Array [],
+                "fez_record_search_key_has_related_datasets": Array [
+                  Object {
+                    "rek_has_related_datasets": "UQ:306370",
+                    "rek_has_related_datasets_lookup": "Mapping coral reefs at reef to reef-system scales, 10s-1000s km(2), using object-based image analysis",
+                    "rek_has_related_datasets_order": 1,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:299341",
+                    "rek_has_related_datasets_lookup": "Mapping coral reef resilience indicators using field and remotely sensed data",
+                    "rek_has_related_datasets_order": 2,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:306560",
+                    "rek_has_related_datasets_lookup": "Incorporating uncertainty associated with habitat data in marine reserve design",
+                    "rek_has_related_datasets_order": 3,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:252690",
+                    "rek_has_related_datasets_lookup": "Mapping fish community variables by Integrating field and satellite data, object-based image analysis and modeling in a traditional Fijian fisheries management area",
+                    "rek_has_related_datasets_order": 4,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:354079",
+                    "rek_has_related_datasets_lookup": "Habitat map of Kadavu, Fiji derived from a high-spatial-resolution multi-spectral satellite image using object based image analysis.",
+                    "rek_has_related_datasets_order": 5,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:410016",
+                    "rek_has_related_datasets_lookup": "Coral reef habitat maps derived from a high-spatial-resolution multi-spectral satellite image using object based image analysis",
+                    "rek_has_related_datasets_order": 6,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:354075",
+                    "rek_has_related_datasets_lookup": "Benthic and substrate cover data derived from photo-transect surveys in Kadavu, Fiji on June, July, October and November 2009.",
+                    "rek_has_related_datasets_order": 7,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:354064",
+                    "rek_has_related_datasets_lookup": "Benthic and substrate cover data derived from photo-transect surveys in a Sub Set of Roviana Reef, Solomon Islands, 2013-05-05 to 2013-05-09",
+                    "rek_has_related_datasets_order": 8,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:324740",
+                    "rek_has_related_datasets_lookup": "Improved digital elevation model (DEM) for Lake Eyre, Australia",
+                    "rek_has_related_datasets_order": 9,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:409490",
+                    "rek_has_related_datasets_lookup": "Benthic and substrate cover data derived from photo-transect surveys in Kubulau, Fiji, 2009-09-16 to 2009-09-21.",
+                    "rek_has_related_datasets_order": 10,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:410004",
+                    "rek_has_related_datasets_lookup": "Habitat map of Danajon Bank, Philippines, derived from a high-spatial-resolution multi-spectral satellite image and georeferenced point intercept transect and spot-check survey field data, using an object-based image classification method",
+                    "rek_has_related_datasets_order": 11,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                ],
+                "fez_record_search_key_isdatasetof": Array [
+                  Object {
+                    "rek_isdatasetof": "UQ:306370",
+                    "rek_isdatasetof_id": 2791,
+                    "rek_isdatasetof_lookup": "Mapping coral reefs at reef to reef-system scales, 10s-1000s km(2), using object-based image analysis",
+                    "rek_isdatasetof_order": 1,
+                    "rek_isdatasetof_pid": "UQ:354076",
+                    "rek_isdatasetof_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_isdatasetof": "UQ:299341",
+                    "rek_isdatasetof_id": 2792,
+                    "rek_isdatasetof_lookup": "Mapping coral reef resilience indicators using field and remotely sensed data",
+                    "rek_isdatasetof_order": 2,
+                    "rek_isdatasetof_pid": "UQ:354076",
+                    "rek_isdatasetof_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_isdatasetof": "UQ:306560",
+                    "rek_isdatasetof_id": 2793,
+                    "rek_isdatasetof_lookup": "Incorporating uncertainty associated with habitat data in marine reserve design",
+                    "rek_isdatasetof_order": 3,
+                    "rek_isdatasetof_pid": "UQ:354076",
+                    "rek_isdatasetof_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_isdatasetof": "UQ:252690",
+                    "rek_isdatasetof_id": 2794,
+                    "rek_isdatasetof_lookup": "Mapping fish community variables by Integrating field and satellite data, object-based image analysis and modeling in a traditional Fijian fisheries management area",
+                    "rek_isdatasetof_order": 4,
+                    "rek_isdatasetof_pid": "UQ:354076",
+                    "rek_isdatasetof_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_ismemberof": Array [
+                  Object {
+                    "rek_ismemberof": "UQ:289097",
+                    "rek_ismemberof_id": 11435113,
+                    "rek_ismemberof_lookup": "Research Data Collections",
+                    "rek_ismemberof_order": 1,
+                    "rek_ismemberof_pid": "UQ:354076",
+                    "rek_ismemberof_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:161208",
+                    "rek_ismemberof_id": 11435114,
+                    "rek_ismemberof_lookup": "School of Geography, Planning and Environmental Management Publications",
+                    "rek_ismemberof_order": 2,
+                    "rek_ismemberof_pid": "UQ:354076",
+                    "rek_ismemberof_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_issn": Array [],
+                "fez_record_search_key_keywords": Array [
+                  Object {
+                    "rek_keywords": "Habitat Mapping",
+                    "rek_keywords_id": 28997411,
+                    "rek_keywords_order": 1,
+                    "rek_keywords_pid": "UQ:354076",
+                    "rek_keywords_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_keywords": "Remote Sensing",
+                    "rek_keywords_id": 28997412,
+                    "rek_keywords_order": 2,
+                    "rek_keywords_pid": "UQ:354076",
+                    "rek_keywords_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_keywords": "Kubulau",
+                    "rek_keywords_id": 28997413,
+                    "rek_keywords_order": 3,
+                    "rek_keywords_pid": "UQ:354076",
+                    "rek_keywords_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_keywords": "Environmental Management",
+                    "rek_keywords_id": 28997414,
+                    "rek_keywords_order": 4,
+                    "rek_keywords_pid": "UQ:354076",
+                    "rek_keywords_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_language": Array [
+                  Object {
+                    "rek_language": "eng",
+                    "rek_language_id": 5182098,
+                    "rek_language_order": 1,
+                    "rek_language_pid": "UQ:354076",
+                    "rek_language_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_license": Object {
+                  "rek_license": 453608,
+                  "rek_license_id": 25285,
+                  "rek_license_lookup": "Creative Commons Attribution (only)",
+                  "rek_license_pid": "UQ:354076",
+                  "rek_license_xsdmf_id": null,
+                },
+                "fez_record_search_key_link": Array [],
+                "fez_record_search_key_link_description": Array [],
+                "fez_record_search_key_project_description": Object {
+                  "rek_project_description": "A 2002-2007 mosaic of Quickbird, Ikonos and Landsat TM multi-spectral image data of Kubulau, Fiji was used in a multi-scale segmentation and object-based image classification to produce this map of reef type, geomorphic zones and benthic community type.<br />",
+                  "rek_project_description_id": 3247,
+                  "rek_project_description_pid": "UQ:354076",
+                  "rek_project_description_xsdmf_id": null,
+                },
+                "fez_record_search_key_project_id": null,
+                "fez_record_search_key_project_name": Object {
+                  "rek_project_name": "Mapping shallow waters",
+                  "rek_project_name_id": 3962,
+                  "rek_project_name_pid": "UQ:354076",
+                  "rek_project_name_xsdmf_id": null,
+                },
+                "fez_record_search_key_publisher": Object {
+                  "rek_publisher": "Pangaea",
+                  "rek_publisher_id": 4395709,
+                  "rek_publisher_pid": "UQ:354076",
+                  "rek_publisher_xsdmf_id": null,
+                },
+                "fez_record_search_key_related_datasets": null,
+                "fez_record_search_key_related_publications": null,
+                "fez_record_search_key_rights": Object {
+                  "rek_rights": "2015, The University of Queensland",
+                  "rek_rights_id": 109496,
+                  "rek_rights_pid": "UQ:354076",
+                  "rek_rights_xsdmf_id": null,
+                },
+                "fez_record_search_key_seo_code": Array [],
+                "fez_record_search_key_software_required": Array [],
+                "fez_record_search_key_start_date": null,
+                "fez_record_search_key_subject": Array [
+                  Object {
+                    "rek_subject": 452067,
+                    "rek_subject_id": 7826,
+                    "rek_subject_lookup": "0602 Ecology",
+                    "rek_subject_order": 1,
+                    "rek_subject_pid": "UQ:354076",
+                    "rek_subject_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_subject": 452018,
+                    "rek_subject_id": 7827,
+                    "rek_subject_lookup": "040699 Physical Geography and Environmental Geoscience not elsewhere classified",
+                    "rek_subject_order": 2,
+                    "rek_subject_pid": "UQ:354076",
+                    "rek_subject_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_subject": 452028,
+                    "rek_subject_id": 7828,
+                    "rek_subject_lookup": "0502 Environmental Science and Management",
+                    "rek_subject_order": 3,
+                    "rek_subject_pid": "UQ:354076",
+                    "rek_subject_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_time_period_end_date": Object {
+                  "rek_time_period_end_date": "2007-01-01T00:00:00Z",
+                  "rek_time_period_end_date_id": 887,
+                  "rek_time_period_end_date_pid": "UQ:354076",
+                  "rek_time_period_end_date_xsdmf_id": null,
+                },
+                "fez_record_search_key_time_period_start_date": Object {
+                  "rek_time_period_start_date": "2002-01-01T00:00:00Z",
+                  "rek_time_period_start_date_id": 990,
+                  "rek_time_period_start_date_pid": "UQ:354076",
+                  "rek_time_period_start_date_xsdmf_id": null,
+                },
+                "fez_record_search_key_type_of_data": Array [
+                  Object {
+                    "rek_type_of_data": "ArcMap shapefile",
+                    "rek_type_of_data_id": 371,
+                    "rek_type_of_data_order": 1,
+                    "rek_type_of_data_pid": "UQ:354076",
+                    "rek_type_of_data_xsdmf_id": 0,
+                  },
+                ],
+                "rek_altmetric_id": 0,
+                "rek_altmetric_id_xsdmf_id": null,
+                "rek_altmetric_score": 0,
+                "rek_altmetric_score_xsdmf_id": null,
+                "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Roelfsema, Christiaan M.\\" href=\\"/list/author_id/4040/\\">Roelfsema, Christiaan M.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Phinn, Stuart R.\\" href=\\"/list/author_id/100/\\">Phinn, Stuart R.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Jupiter, Stacy\\" href=\\"/list/author_id/59259/\\">Jupiter, Stacy</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Comely, James\\" href=\\"/list/author/Comely%2C+James/\\">Comely, James</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Albert, Simon\\" href=\\"/list/author_id/4495/\\">Albert, Simon</a> (<span class=\\"citation_date\\">2015</span>): <a class=\\"citation_title\\" title=\\"Click to view Data Collection: Habitat map of Kubulau, Fiji derived from a high-spatial-resolution multi-spectral satellite image using object based image analysis.\\" href=\\"/view/UQ:354076\\">Habitat map of Kubulau, Fiji derived from a high-spatial-resolution multi-spectral satellite image using object based image analysis.</a>. <span class=\\"citation_publisher\\">Pangaea</span>. <span class=\\"citation_ands_collection_type\\">Dataset</span>. doi:<span class=\\"citation_doi\\">10.1594/PANGAEA.830076</span>",
+                "rek_copyright": "on",
+                "rek_copyright_xsdmf_id": 537,
+                "rek_created_date": "2015-03-17T13:32:33Z",
+                "rek_created_date_xsdmf_id": 527,
+                "rek_date": "2015-01-01T00:00:00Z",
+                "rek_date_xsdmf_id": 16037,
+                "rek_depositor": 717,
+                "rek_depositor_affiliation": null,
+                "rek_depositor_affiliation_xsdmf_id": null,
+                "rek_depositor_xsdmf_id": 7575,
+                "rek_description": "These classified maps were provided in ArcMap shapefile format. Projection used was Universal Transverse Mercator Zone 60 South and Datum used was WGS 84.<br />",
+                "rek_description_xsdmf_id": 16079,
+                "rek_display_type": 371,
+                "rek_display_type_lookup": "Data Collection",
+                "rek_display_type_xsdmf_id": 106,
+                "rek_file_downloads": 0,
+                "rek_formatted_abstract": null,
+                "rek_formatted_abstract_xsdmf_id": null,
+                "rek_formatted_title": null,
+                "rek_formatted_title_xsdmf_id": null,
+                "rek_genre": "Dataset Collection",
+                "rek_genre_type": null,
+                "rek_genre_type_xsdmf_id": null,
+                "rek_genre_xsdmf_id": 16248,
+                "rek_herdc_notes": null,
+                "rek_herdc_notes_xsdmf_id": null,
+                "rek_object_type": 3,
+                "rek_object_type_lookup": "Record",
+                "rek_object_type_xsdmf_id": 236,
+                "rek_pid": "UQ:354076",
+                "rek_pubmed_doc_type": null,
+                "rek_pubmed_doc_type_lookup": null,
+                "rek_pubmed_doc_type_xsdmf_id": null,
+                "rek_scopus_citation_count": null,
+                "rek_scopus_doc_type": null,
+                "rek_scopus_doc_type_lookup": null,
+                "rek_scopus_doc_type_xsdmf_id": null,
+                "rek_security_inherited": 1,
+                "rek_status": 2,
+                "rek_status_lookup": "Published",
+                "rek_status_xsdmf_id": 538,
+                "rek_subtype": null,
+                "rek_subtype_xsdmf_id": null,
+                "rek_thomson_citation_count": null,
+                "rek_thomson_citation_count_xsdmf_id": null,
+                "rek_title": "Habitat map of Kubulau, Fiji derived from a high-spatial-resolution multi-spectral satellite image using object based image analysis.",
+                "rek_title_xsdmf_id": 16197,
+                "rek_updated_date": "2017-10-11T17:34:40Z",
+                "rek_updated_date_xsdmf_id": 528,
+                "rek_wok_doc_type": null,
+                "rek_wok_doc_type_lookup": null,
+                "rek_wok_doc_type_xsdmf_id": null,
+              }
+            }
+            showLink={true}
+            suffix=""
+          />
+        }
+        heading="Contact name"
+        key="additional-info-Contact name"
+      />
+      <ViewRecordTableRow
+        data={
+          <ul>
+            <li>
+              c.roelfsema@uq.edu.au
+            </li>
+          </ul>
+        }
+        heading="Contact email"
+        key="additional-info-Contact email"
+      />
+      <ViewRecordTableRow
+        data={
+          <AuthorsCitationView
+            className="citationAuthors"
+            idSearchKey={
+              Object {
+                "idKey": "fez_record_search_key_author_id",
+                "idOrder": "rek_author_id_order",
+                "idSubkey": "rek_author_id",
+              }
+            }
+            initialNumberOfAuthors={5}
+            publication={
+              Object {
+                "fez_datastream_info": Array [
+                  Object {
+                    "dsi_copyright": null,
+                    "dsi_dsid": "FezACML_UQ_354076.xml",
+                    "dsi_embargo_date": null,
+                    "dsi_label": "FezACML security for PID - UQ:354076",
+                    "dsi_mimetype": "text/xml",
+                    "dsi_open_access": null,
+                    "dsi_pid": "UQ:354076",
+                    "dsi_size": 3705,
+                    "dsi_state": "A",
+                  },
+                ],
+                "fez_matched_journals": Array [],
+                "fez_record_search_key_access_conditions": Object {
+                  "rek_access_conditions": "453619",
+                  "rek_access_conditions_id": 3575,
+                  "rek_access_conditions_lookup": "Open Access",
+                  "rek_access_conditions_pid": "UQ:354076",
+                  "rek_access_conditions_xsdmf_id": null,
+                },
+                "fez_record_search_key_additional_notes": null,
+                "fez_record_search_key_ands_collection_type": Object {
+                  "rek_ands_collection_type": "453616",
+                  "rek_ands_collection_type_id": 3474,
+                  "rek_ands_collection_type_lookup": "Dataset",
+                  "rek_ands_collection_type_pid": "UQ:354076",
+                  "rek_ands_collection_type_xsdmf_id": null,
+                },
+                "fez_record_search_key_assigned_group_id": Array [],
+                "fez_record_search_key_assigned_user_id": Array [],
+                "fez_record_search_key_author": Array [
+                  Object {
+                    "rek_author": "Roelfsema, Christiaan M.",
+                    "rek_author_id": 28663561,
+                    "rek_author_order": 1,
+                    "rek_author_pid": "UQ:354076",
+                    "rek_author_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author": "Phinn, Stuart R.",
+                    "rek_author_id": 28663562,
+                    "rek_author_order": 2,
+                    "rek_author_pid": "UQ:354076",
+                    "rek_author_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author": "Jupiter, Stacy",
+                    "rek_author_id": 28663563,
+                    "rek_author_order": 3,
+                    "rek_author_pid": "UQ:354076",
+                    "rek_author_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author": "Comely, James",
+                    "rek_author_id": 28663564,
+                    "rek_author_order": 4,
+                    "rek_author_pid": "UQ:354076",
+                    "rek_author_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author": "Albert, Simon",
+                    "rek_author_id": 28663565,
+                    "rek_author_order": 5,
+                    "rek_author_pid": "UQ:354076",
+                    "rek_author_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_author_id": Array [
+                  Object {
+                    "rek_author_id": 4040,
+                    "rek_author_id_id": 28040352,
+                    "rek_author_id_lookup": "Roelfsema, Christiaan M.",
+                    "rek_author_id_order": 1,
+                    "rek_author_id_pid": "UQ:354076",
+                    "rek_author_id_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author_id": 100,
+                    "rek_author_id_id": 28040353,
+                    "rek_author_id_lookup": "Phinn, Stuart R.",
+                    "rek_author_id_order": 2,
+                    "rek_author_id_pid": "UQ:354076",
+                    "rek_author_id_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author_id": 59259,
+                    "rek_author_id_id": 28040354,
+                    "rek_author_id_lookup": "Jupiter, Stacy ",
+                    "rek_author_id_order": 3,
+                    "rek_author_id_pid": "UQ:354076",
+                    "rek_author_id_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author_id": 0,
+                    "rek_author_id_id": 28040355,
+                    "rek_author_id_order": 4,
+                    "rek_author_id_pid": "UQ:354076",
+                    "rek_author_id_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author_id": 4495,
+                    "rek_author_id_id": 28040356,
+                    "rek_author_id_lookup": "Simon Albert",
+                    "rek_author_id_order": 5,
+                    "rek_author_id_pid": "UQ:354076",
+                    "rek_author_id_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_author_role": Array [
+                  Object {
+                    "rek_author_role": "Principal Investigator",
+                    "rek_author_role_id": 5787,
+                    "rek_author_role_order": 1,
+                    "rek_author_role_pid": "UQ:354076",
+                    "rek_author_role_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_contact_details_email": Array [
+                  Object {
+                    "rek_contact_details_email": "c.roelfsema@uq.edu.au",
+                    "rek_contact_details_email_id": 4742,
+                    "rek_contact_details_email_order": 1,
+                    "rek_contact_details_email_pid": "UQ:354076",
+                    "rek_contact_details_email_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_contributor": Array [
+                  Object {
+                    "rek_contributor": "Roelfsema, Christiaan M. ",
+                    "rek_contributor_id": 3204262,
+                    "rek_contributor_order": 1,
+                    "rek_contributor_pid": "UQ:354076",
+                    "rek_contributor_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_contributor_id": Array [
+                  Object {
+                    "rek_contributor_id": 4040,
+                    "rek_contributor_id_id": 2290864,
+                    "rek_contributor_id_lookup": "Roelfsema, Christiaan M.",
+                    "rek_contributor_id_order": 1,
+                    "rek_contributor_id_pid": "UQ:354076",
+                    "rek_contributor_id_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_coverage_period": Array [],
+                "fez_record_search_key_data_volume": Object {
+                  "rek_data_volume": "6099.0 kb",
+                  "rek_data_volume_id": 2105,
+                  "rek_data_volume_pid": "UQ:354076",
+                  "rek_data_volume_xsdmf_id": null,
+                },
+                "fez_record_search_key_datastream_policy": null,
+                "fez_record_search_key_doi": Object {
+                  "rek_doi": "10.1594/PANGAEA.830076",
+                  "rek_doi_id": 1494436,
+                  "rek_doi_pid": "UQ:354076",
+                  "rek_doi_xsdmf_id": null,
+                },
+                "fez_record_search_key_end_date": null,
+                "fez_record_search_key_file_attachment_access_condition": Array [],
+                "fez_record_search_key_file_attachment_embargo_date": Array [],
+                "fez_record_search_key_file_attachment_name": Array [
+                  Object {
+                    "rek_file_attachment_name": "FezACML_UQ_354076.xml",
+                    "rek_file_attachment_name_id": 4193730,
+                    "rek_file_attachment_name_order": 1,
+                    "rek_file_attachment_name_pid": "UQ:354076",
+                    "rek_file_attachment_name_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_geographic_area": Array [
+                  Object {
+                    "rek_geographic_area": "178.849182,-16.826275 179.129333,-16.826275 179.129333,-17.251690 178.849182,-17.251690 178.849182,-16.826275",
+                    "rek_geographic_area_id": 18517,
+                    "rek_geographic_area_order": 1,
+                    "rek_geographic_area_pid": "UQ:354076",
+                    "rek_geographic_area_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_grant_acronym": Array [],
+                "fez_record_search_key_grant_agency": Array [],
+                "fez_record_search_key_grant_agency_id": Array [],
+                "fez_record_search_key_grant_id": Array [],
+                "fez_record_search_key_grant_text": Array [],
+                "fez_record_search_key_has_datasets": Array [
+                  Object {
+                    "rek_has_datasets": "UQ:410016",
+                    "rek_has_datasets_lookup": "Coral reef habitat maps derived from a high-spatial-resolution multi-spectral satellite image using object based image analysis",
+                    "rek_has_datasets_order": 1,
+                    "rek_has_datasets_pid": "UQ:354076",
+                  },
+                ],
+                "fez_record_search_key_has_derivations": Array [],
+                "fez_record_search_key_has_related_datasets": Array [
+                  Object {
+                    "rek_has_related_datasets": "UQ:306370",
+                    "rek_has_related_datasets_lookup": "Mapping coral reefs at reef to reef-system scales, 10s-1000s km(2), using object-based image analysis",
+                    "rek_has_related_datasets_order": 1,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:299341",
+                    "rek_has_related_datasets_lookup": "Mapping coral reef resilience indicators using field and remotely sensed data",
+                    "rek_has_related_datasets_order": 2,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:306560",
+                    "rek_has_related_datasets_lookup": "Incorporating uncertainty associated with habitat data in marine reserve design",
+                    "rek_has_related_datasets_order": 3,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:252690",
+                    "rek_has_related_datasets_lookup": "Mapping fish community variables by Integrating field and satellite data, object-based image analysis and modeling in a traditional Fijian fisheries management area",
+                    "rek_has_related_datasets_order": 4,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:354079",
+                    "rek_has_related_datasets_lookup": "Habitat map of Kadavu, Fiji derived from a high-spatial-resolution multi-spectral satellite image using object based image analysis.",
+                    "rek_has_related_datasets_order": 5,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:410016",
+                    "rek_has_related_datasets_lookup": "Coral reef habitat maps derived from a high-spatial-resolution multi-spectral satellite image using object based image analysis",
+                    "rek_has_related_datasets_order": 6,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:354075",
+                    "rek_has_related_datasets_lookup": "Benthic and substrate cover data derived from photo-transect surveys in Kadavu, Fiji on June, July, October and November 2009.",
+                    "rek_has_related_datasets_order": 7,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:354064",
+                    "rek_has_related_datasets_lookup": "Benthic and substrate cover data derived from photo-transect surveys in a Sub Set of Roviana Reef, Solomon Islands, 2013-05-05 to 2013-05-09",
+                    "rek_has_related_datasets_order": 8,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:324740",
+                    "rek_has_related_datasets_lookup": "Improved digital elevation model (DEM) for Lake Eyre, Australia",
+                    "rek_has_related_datasets_order": 9,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:409490",
+                    "rek_has_related_datasets_lookup": "Benthic and substrate cover data derived from photo-transect surveys in Kubulau, Fiji, 2009-09-16 to 2009-09-21.",
+                    "rek_has_related_datasets_order": 10,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                  Object {
+                    "rek_has_related_datasets": "UQ:410004",
+                    "rek_has_related_datasets_lookup": "Habitat map of Danajon Bank, Philippines, derived from a high-spatial-resolution multi-spectral satellite image and georeferenced point intercept transect and spot-check survey field data, using an object-based image classification method",
+                    "rek_has_related_datasets_order": 11,
+                    "rek_has_related_datasets_pid": "UQ:354076",
+                  },
+                ],
+                "fez_record_search_key_isdatasetof": Array [
+                  Object {
+                    "rek_isdatasetof": "UQ:306370",
+                    "rek_isdatasetof_id": 2791,
+                    "rek_isdatasetof_lookup": "Mapping coral reefs at reef to reef-system scales, 10s-1000s km(2), using object-based image analysis",
+                    "rek_isdatasetof_order": 1,
+                    "rek_isdatasetof_pid": "UQ:354076",
+                    "rek_isdatasetof_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_isdatasetof": "UQ:299341",
+                    "rek_isdatasetof_id": 2792,
+                    "rek_isdatasetof_lookup": "Mapping coral reef resilience indicators using field and remotely sensed data",
+                    "rek_isdatasetof_order": 2,
+                    "rek_isdatasetof_pid": "UQ:354076",
+                    "rek_isdatasetof_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_isdatasetof": "UQ:306560",
+                    "rek_isdatasetof_id": 2793,
+                    "rek_isdatasetof_lookup": "Incorporating uncertainty associated with habitat data in marine reserve design",
+                    "rek_isdatasetof_order": 3,
+                    "rek_isdatasetof_pid": "UQ:354076",
+                    "rek_isdatasetof_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_isdatasetof": "UQ:252690",
+                    "rek_isdatasetof_id": 2794,
+                    "rek_isdatasetof_lookup": "Mapping fish community variables by Integrating field and satellite data, object-based image analysis and modeling in a traditional Fijian fisheries management area",
+                    "rek_isdatasetof_order": 4,
+                    "rek_isdatasetof_pid": "UQ:354076",
+                    "rek_isdatasetof_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_ismemberof": Array [
+                  Object {
+                    "rek_ismemberof": "UQ:289097",
+                    "rek_ismemberof_id": 11435113,
+                    "rek_ismemberof_lookup": "Research Data Collections",
+                    "rek_ismemberof_order": 1,
+                    "rek_ismemberof_pid": "UQ:354076",
+                    "rek_ismemberof_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:161208",
+                    "rek_ismemberof_id": 11435114,
+                    "rek_ismemberof_lookup": "School of Geography, Planning and Environmental Management Publications",
+                    "rek_ismemberof_order": 2,
+                    "rek_ismemberof_pid": "UQ:354076",
+                    "rek_ismemberof_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_issn": Array [],
+                "fez_record_search_key_keywords": Array [
+                  Object {
+                    "rek_keywords": "Habitat Mapping",
+                    "rek_keywords_id": 28997411,
+                    "rek_keywords_order": 1,
+                    "rek_keywords_pid": "UQ:354076",
+                    "rek_keywords_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_keywords": "Remote Sensing",
+                    "rek_keywords_id": 28997412,
+                    "rek_keywords_order": 2,
+                    "rek_keywords_pid": "UQ:354076",
+                    "rek_keywords_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_keywords": "Kubulau",
+                    "rek_keywords_id": 28997413,
+                    "rek_keywords_order": 3,
+                    "rek_keywords_pid": "UQ:354076",
+                    "rek_keywords_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_keywords": "Environmental Management",
+                    "rek_keywords_id": 28997414,
+                    "rek_keywords_order": 4,
+                    "rek_keywords_pid": "UQ:354076",
+                    "rek_keywords_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_language": Array [
+                  Object {
+                    "rek_language": "eng",
+                    "rek_language_id": 5182098,
+                    "rek_language_order": 1,
+                    "rek_language_pid": "UQ:354076",
+                    "rek_language_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_license": Object {
+                  "rek_license": 453608,
+                  "rek_license_id": 25285,
+                  "rek_license_lookup": "Creative Commons Attribution (only)",
+                  "rek_license_pid": "UQ:354076",
+                  "rek_license_xsdmf_id": null,
+                },
+                "fez_record_search_key_link": Array [],
+                "fez_record_search_key_link_description": Array [],
+                "fez_record_search_key_project_description": Object {
+                  "rek_project_description": "A 2002-2007 mosaic of Quickbird, Ikonos and Landsat TM multi-spectral image data of Kubulau, Fiji was used in a multi-scale segmentation and object-based image classification to produce this map of reef type, geomorphic zones and benthic community type.<br />",
+                  "rek_project_description_id": 3247,
+                  "rek_project_description_pid": "UQ:354076",
+                  "rek_project_description_xsdmf_id": null,
+                },
+                "fez_record_search_key_project_id": null,
+                "fez_record_search_key_project_name": Object {
+                  "rek_project_name": "Mapping shallow waters",
+                  "rek_project_name_id": 3962,
+                  "rek_project_name_pid": "UQ:354076",
+                  "rek_project_name_xsdmf_id": null,
+                },
+                "fez_record_search_key_publisher": Object {
+                  "rek_publisher": "Pangaea",
+                  "rek_publisher_id": 4395709,
+                  "rek_publisher_pid": "UQ:354076",
+                  "rek_publisher_xsdmf_id": null,
+                },
+                "fez_record_search_key_related_datasets": null,
+                "fez_record_search_key_related_publications": null,
+                "fez_record_search_key_rights": Object {
+                  "rek_rights": "2015, The University of Queensland",
+                  "rek_rights_id": 109496,
+                  "rek_rights_pid": "UQ:354076",
+                  "rek_rights_xsdmf_id": null,
+                },
+                "fez_record_search_key_seo_code": Array [],
+                "fez_record_search_key_software_required": Array [],
+                "fez_record_search_key_start_date": null,
+                "fez_record_search_key_subject": Array [
+                  Object {
+                    "rek_subject": 452067,
+                    "rek_subject_id": 7826,
+                    "rek_subject_lookup": "0602 Ecology",
+                    "rek_subject_order": 1,
+                    "rek_subject_pid": "UQ:354076",
+                    "rek_subject_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_subject": 452018,
+                    "rek_subject_id": 7827,
+                    "rek_subject_lookup": "040699 Physical Geography and Environmental Geoscience not elsewhere classified",
+                    "rek_subject_order": 2,
+                    "rek_subject_pid": "UQ:354076",
+                    "rek_subject_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_subject": 452028,
+                    "rek_subject_id": 7828,
+                    "rek_subject_lookup": "0502 Environmental Science and Management",
+                    "rek_subject_order": 3,
+                    "rek_subject_pid": "UQ:354076",
+                    "rek_subject_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_time_period_end_date": Object {
+                  "rek_time_period_end_date": "2007-01-01T00:00:00Z",
+                  "rek_time_period_end_date_id": 887,
+                  "rek_time_period_end_date_pid": "UQ:354076",
+                  "rek_time_period_end_date_xsdmf_id": null,
+                },
+                "fez_record_search_key_time_period_start_date": Object {
+                  "rek_time_period_start_date": "2002-01-01T00:00:00Z",
+                  "rek_time_period_start_date_id": 990,
+                  "rek_time_period_start_date_pid": "UQ:354076",
+                  "rek_time_period_start_date_xsdmf_id": null,
+                },
+                "fez_record_search_key_type_of_data": Array [
+                  Object {
+                    "rek_type_of_data": "ArcMap shapefile",
+                    "rek_type_of_data_id": 371,
+                    "rek_type_of_data_order": 1,
+                    "rek_type_of_data_pid": "UQ:354076",
+                    "rek_type_of_data_xsdmf_id": 0,
+                  },
+                ],
+                "rek_altmetric_id": 0,
+                "rek_altmetric_id_xsdmf_id": null,
+                "rek_altmetric_score": 0,
+                "rek_altmetric_score_xsdmf_id": null,
+                "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Roelfsema, Christiaan M.\\" href=\\"/list/author_id/4040/\\">Roelfsema, Christiaan M.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Phinn, Stuart R.\\" href=\\"/list/author_id/100/\\">Phinn, Stuart R.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Jupiter, Stacy\\" href=\\"/list/author_id/59259/\\">Jupiter, Stacy</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Comely, James\\" href=\\"/list/author/Comely%2C+James/\\">Comely, James</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Albert, Simon\\" href=\\"/list/author_id/4495/\\">Albert, Simon</a> (<span class=\\"citation_date\\">2015</span>): <a class=\\"citation_title\\" title=\\"Click to view Data Collection: Habitat map of Kubulau, Fiji derived from a high-spatial-resolution multi-spectral satellite image using object based image analysis.\\" href=\\"/view/UQ:354076\\">Habitat map of Kubulau, Fiji derived from a high-spatial-resolution multi-spectral satellite image using object based image analysis.</a>. <span class=\\"citation_publisher\\">Pangaea</span>. <span class=\\"citation_ands_collection_type\\">Dataset</span>. doi:<span class=\\"citation_doi\\">10.1594/PANGAEA.830076</span>",
+                "rek_copyright": "on",
+                "rek_copyright_xsdmf_id": 537,
+                "rek_created_date": "2015-03-17T13:32:33Z",
+                "rek_created_date_xsdmf_id": 527,
+                "rek_date": "2015-01-01T00:00:00Z",
+                "rek_date_xsdmf_id": 16037,
+                "rek_depositor": 717,
+                "rek_depositor_affiliation": null,
+                "rek_depositor_affiliation_xsdmf_id": null,
+                "rek_depositor_xsdmf_id": 7575,
+                "rek_description": "These classified maps were provided in ArcMap shapefile format. Projection used was Universal Transverse Mercator Zone 60 South and Datum used was WGS 84.<br />",
+                "rek_description_xsdmf_id": 16079,
+                "rek_display_type": 371,
+                "rek_display_type_lookup": "Data Collection",
+                "rek_display_type_xsdmf_id": 106,
+                "rek_file_downloads": 0,
+                "rek_formatted_abstract": null,
+                "rek_formatted_abstract_xsdmf_id": null,
+                "rek_formatted_title": null,
+                "rek_formatted_title_xsdmf_id": null,
+                "rek_genre": "Dataset Collection",
+                "rek_genre_type": null,
+                "rek_genre_type_xsdmf_id": null,
+                "rek_genre_xsdmf_id": 16248,
+                "rek_herdc_notes": null,
+                "rek_herdc_notes_xsdmf_id": null,
+                "rek_object_type": 3,
+                "rek_object_type_lookup": "Record",
+                "rek_object_type_xsdmf_id": 236,
+                "rek_pid": "UQ:354076",
+                "rek_pubmed_doc_type": null,
+                "rek_pubmed_doc_type_lookup": null,
+                "rek_pubmed_doc_type_xsdmf_id": null,
+                "rek_scopus_citation_count": null,
+                "rek_scopus_doc_type": null,
+                "rek_scopus_doc_type_lookup": null,
+                "rek_scopus_doc_type_xsdmf_id": null,
+                "rek_security_inherited": 1,
+                "rek_status": 2,
+                "rek_status_lookup": "Published",
+                "rek_status_xsdmf_id": 538,
+                "rek_subtype": null,
+                "rek_subtype_xsdmf_id": null,
+                "rek_thomson_citation_count": null,
+                "rek_thomson_citation_count_xsdmf_id": null,
+                "rek_title": "Habitat map of Kubulau, Fiji derived from a high-spatial-resolution multi-spectral satellite image using object based image analysis.",
+                "rek_title_xsdmf_id": 16197,
+                "rek_updated_date": "2017-10-11T17:34:40Z",
+                "rek_updated_date_xsdmf_id": 528,
+                "rek_wok_doc_type": null,
+                "rek_wok_doc_type_lookup": null,
+                "rek_wok_doc_type_xsdmf_id": null,
+              }
+            }
+            searchKey={
+              Object {
+                "key": "fez_record_search_key_author",
+                "order": "rek_author_order",
+                "subkey": "rek_author",
+              }
+            }
+            showLink={true}
+            suffix=" "
+            thresholdNumberOfAuthors={3}
+          />
+        }
+        heading="Creator name"
+        key="additional-info-Creator name"
+      />
+      <ViewRecordTableRow
+        data={
+          <ul>
+            <li>
+              Principal Investigator
+            </li>
+          </ul>
+        }
+        heading="Creator(s) role"
+        key="additional-info-Creator(s) role"
+      />
+      <ViewRecordTableRow
+        data={
+          Array [
+            "Habitat map of Kubulau, Fiji derived from a high-spatial-resolution multi-spectral satellite image using object based image analysis.",
+          ]
+        }
+        heading="Dataset name"
+        key="additional-info-Dataset name"
+      />
+      <ViewRecordTableRow
+        data={
+          <a
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_95]=453619"
+          >
+            Open Access
+          </a>
+        }
+        heading="Access conditions"
+        key="additional-info-Access conditions"
+      />
+      <ViewRecordTableRow
+        data={
+          <span>
+            <a
+              href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_112]=453608"
+            >
+              Creative Commons Attribution (only)
+            </a>
+            <div>
+              <ExternalLink
+                className="fez-icon license cc-by"
+                href="http://creativecommons.org/licenses/by/3.0/deed.en_US"
+                openInNewIcon={true}
+                rel="noopener noreferrer"
+                target="_blank"
+              />
+            </div>
+          </span>
+        }
+        heading="Licencing and terms of access"
+        key="additional-info-Licencing and terms of access"
+      />
+      <ViewRecordTableRow
+        data={
+          <ul>
+            <li>
+              <a
+                href="https://fez-staging.library.uq.edu.au/list/subject/452067"
+              >
+                0602 Ecology
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://fez-staging.library.uq.edu.au/list/subject/452018"
+              >
+                040699 Physical Geography and Environmental Geoscience not elsewhere classified
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://fez-staging.library.uq.edu.au/list/subject/452028"
+              >
+                0502 Environmental Science and Management
+              </a>
+            </li>
+          </ul>
+        }
+        heading="ANZSRC Field of Research (FoR) Code"
+        key="additional-info-ANZSRC Field of Research (FoR) Code"
+      />
+      <ViewRecordTableRow
+        data={
+          <DoiCitationView
+            doi="10.1594/PANGAEA.830076"
+          />
+        }
+        heading="DOI"
+        key="additional-info-DOI"
+      />
+      <ViewRecordTableRow
+        data={
+          <ul>
+            <li>
+              ArcMap shapefile
+            </li>
+          </ul>
+        }
+        heading="Type of data"
+        key="additional-info-Type of data"
+      />
+      <ViewRecordTableRow
+        data={
+          <ul>
+            <li>
+              eng
+            </li>
+          </ul>
+        }
+        heading="Language"
+        key="additional-info-Language"
+      />
+      <ViewRecordTableRow
+        data={
+          <DateCitationView
+            className="citationDate"
+            date="2002-01-01T00:00:00Z"
+            format="YYYY-MM-DD"
+            prefix=""
+            suffix=""
+          />
+        }
+        heading="Time coverage start date"
+        key="additional-info-Time coverage start date"
+      />
+      <ViewRecordTableRow
+        data={
+          <DateCitationView
+            className="citationDate"
+            date="2007-01-01T00:00:00Z"
+            format="YYYY-MM-DD"
+            prefix=""
+            suffix=""
+          />
+        }
+        heading="Time coverage end date"
+        key="additional-info-Time coverage end date"
+      />
+      <ViewRecordTableRow
+        data={
+          <ul>
+            <li>
+              <a
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Habitat Mapping"
+              >
+                Habitat Mapping
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Remote Sensing"
+              >
+                Remote Sensing
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Kubulau"
+              >
+                Kubulau
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Environmental Management"
+              >
+                Environmental Management
+              </a>
+            </li>
+          </ul>
+        }
+        heading="Keyword(s)"
+        key="additional-info-Keyword(s)"
+      />
+      <ViewRecordTableRow
+        data={
+          <withScriptjs(withGoogleMap(Component))
+            containerElement={
+              <div
+                style={
+                  Object {
+                    "height": "400px",
+                  }
+                }
+              />
+            }
+            coordinates="178.849182,-16.826275 179.129333,-16.826275 179.129333,-17.251690 178.849182,-17.251690 178.849182,-16.826275"
+            googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+            loadingElement={
+              <div
+                style={
+                  Object {
+                    "height": "100%",
+                  }
+                }
+              />
+            }
+            mapElement={
+              <div
+                style={
+                  Object {
+                    "height": "100%",
+                  }
+                }
+              />
+            }
+          />
+        }
+        heading="Geographic co-ordinates"
+        key="additional-info-Geographic co-ordinates"
+      />
+      <ViewRecordTableRow
+        data={
+          <a
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_92]=453616"
+          >
+            Dataset
+          </a>
+        }
+        heading="Collection type"
+        key="additional-info-Collection type"
+      />
+      <ViewRecordTableRow
+        data={
+          <a
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Pangaea"
+          >
+            Pangaea
+          </a>
+        }
+        heading="Publisher"
+        key="additional-info-Publisher"
+      />
+      <ViewRecordTableRow
+        data={
+          <DateCitationView
+            className="citationDate"
+            date="2015-01-01T00:00:00Z"
+            format="YYYY"
+            prefix=""
+            suffix=""
+          />
+        }
+        heading="Publication year"
+        key="additional-info-Publication year"
+      />
+      <ViewRecordTableRow
+        data="2015, The University of Queensland"
+        heading="Copyright notice"
+        key="additional-info-Copyright notice"
+      />
+      <ViewRecordTableRow
+        data={
+          Array [
+            "These classified maps were provided in ArcMap shapefile format. Projection used was Universal Transverse Mercator Zone 60 South and Datum used was WGS 84.",
+            <br />,
+          ]
+        }
+        heading="Dataset description"
+        key="additional-info-Dataset description"
+      />
+      <ViewRecordTableRow
+        data="6099.0 kb"
+        heading="Data Volume"
+        key="additional-info-Data Volume"
       />
     </TableBody>
   </Table>
@@ -10817,28 +12195,28 @@ exports[`Additional Information Component  should render component with design d
           <ul>
             <li>
               <a
-                href="/list/subject/310000"
+                href="https://fez-staging.library.uq.edu.au/list/subject/310000"
               >
                 310000
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/450025"
+                href="https://fez-staging.library.uq.edu.au/list/subject/450025"
               >
                 450025
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/452674"
+                href="https://fez-staging.library.uq.edu.au/list/subject/452674"
               >
                 452674
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/452675"
+                href="https://fez-staging.library.uq.edu.au/list/subject/452675"
               >
                 452675
               </a>
@@ -10853,35 +12231,35 @@ exports[`Additional Information Component  should render component with design d
           <ul>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Architecture"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Architecture"
               >
                 Architecture
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Landscape design"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Landscape design"
               >
                 Landscape design
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Restoration"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Restoration"
               >
                 Restoration
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Interior and Environmental Design"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Interior and Environmental Design"
               >
                 Interior and Environmental Design
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Original Creative Works - Design/Architectural work"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Original Creative Works - Design/Architectural work"
               >
                 Original Creative Works - Design/Architectural work
               </a>
@@ -10894,7 +12272,7 @@ exports[`Additional Information Component  should render component with design d
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_151]=UQFL158, job no. 1006-2"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_151]=UQFL158, job no. 1006-2"
           >
             UQFL158, job no. 1006-2
           </a>
@@ -10977,7 +12355,7 @@ exports[`Additional Information Component  should render component with digilib 
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_29]=The University of Queensland Library"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=The University of Queensland Library"
           >
             The University of Queensland Library
           </a>
@@ -11433,56 +12811,56 @@ exports[`Additional Information Component  should render component with generic 
           <ul>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Partial Differential Equations (PDEs)"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Partial Differential Equations (PDEs)"
               >
                 Partial Differential Equations (PDEs)
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Parabolic"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Parabolic"
               >
                 Parabolic
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Hyperbolic"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hyperbolic"
               >
                 Hyperbolic
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Finite difference"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Finite difference"
               >
                 Finite difference
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Spectral method"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Spectral method"
               >
                 Spectral method
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Finite element method"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Finite element method"
               >
                 Finite element method
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Iterative methods"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Iterative methods"
               >
                 Iterative methods
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Nonlinear Partial Differential Equations"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Nonlinear Partial Differential Equations"
               >
                 Nonlinear Partial Differential Equations
               </a>
@@ -11510,7 +12888,7 @@ exports[`Additional Information Component  should render component with generic 
           <ul>
             <li>
               <a
-                href="/list/subject/451825"
+                href="https://fez-staging.library.uq.edu.au/list/subject/451825"
               >
                 451825
               </a>
@@ -12812,7 +14190,7 @@ exports[`Additional Information Component  should render component with journal 
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_29]=Betriebswirtschaftlicher Verlag T. Gabler"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Betriebswirtschaftlicher Verlag T. Gabler"
           >
             Betriebswirtschaftlicher Verlag T. Gabler
           </a>
@@ -12836,7 +14214,7 @@ exports[`Additional Information Component  should render component with journal 
           <ul>
             <li>
               <a
-                href="/list/subject/452815"
+                href="https://fez-staging.library.uq.edu.au/list/subject/452815"
               >
                 452815
               </a>
@@ -12851,14 +14229,14 @@ exports[`Additional Information Component  should render component with journal 
           <ul>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Knowledge"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Knowledge"
               >
                 Knowledge
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Multinational corporations"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Multinational corporations"
               >
                 Multinational corporations
               </a>
@@ -16417,7 +17795,7 @@ exports[`Additional Information Component  should render component with journal 
                                                   >
                                                     <a
                                                       className="authorIdLink"
-                                                      href="/list/author_id/88893"
+                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/88893"
                                                       key="citationAuthor_1"
                                                     >
                                                       <CitationView
@@ -16437,7 +17815,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorNameLink"
-                                                      href="/list/author/Milevskiy, Michael J. G."
+                                                      href="https://fez-staging.library.uq.edu.au/list/author/Milevskiy, Michael J. G."
                                                       key="citationAuthor_2"
                                                     >
                                                       <CitationView
@@ -16457,7 +17835,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="/list/author_id/1706239"
+                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/1706239"
                                                       key="citationAuthor_3"
                                                     >
                                                       <CitationView
@@ -16477,7 +17855,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="/list/author_id/97626"
+                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/97626"
                                                       key="citationAuthor_4"
                                                     >
                                                       <CitationView
@@ -16497,7 +17875,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="/list/author_id/95450"
+                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/95450"
                                                       key="citationAuthor_5"
                                                     >
                                                       <CitationView
@@ -16517,7 +17895,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="/list/author_id/1671"
+                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/1671"
                                                       key="citationAuthor_6"
                                                     >
                                                       <CitationView
@@ -16537,7 +17915,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorNameLink"
-                                                      href="/list/author/Thompson, Erik W."
+                                                      href="https://fez-staging.library.uq.edu.au/list/author/Thompson, Erik W."
                                                       key="citationAuthor_7"
                                                     >
                                                       <CitationView
@@ -16557,7 +17935,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="/list/author_id/973"
+                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/973"
                                                       key="citationAuthor_8"
                                                     >
                                                       <CitationView
@@ -16576,7 +17954,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="/list/author_id/972"
+                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/972"
                                                       key="citationAuthor_9"
                                                     >
                                                       <CitationView
@@ -18907,7 +20285,7 @@ exports[`Additional Information Component  should render component with journal 
                                                 >
                                                   <span>
                                                     <a
-                                                      href="/list/?cat=quick_filter&search_keys[core_34]=Journal of Cell Science"
+                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_34]=Journal of Cell Science"
                                                     >
                                                       <span>
                                                         Journal of Cell Science
@@ -20314,7 +21692,7 @@ exports[`Additional Information Component  should render component with journal 
                                       <ViewRecordTableRow
                                         data={
                                           <a
-                                            href="/list/?cat=quick_filter&search_keys[core_29]=Company of Biologists"
+                                            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Company of Biologists"
                                           >
                                             Company of Biologists
                                           </a>
@@ -20421,7 +21799,7 @@ exports[`Additional Information Component  should render component with journal 
                                                 }
                                               >
                                                 <a
-                                                  href="/list/?cat=quick_filter&search_keys[core_29]=Company of Biologists"
+                                                  href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Company of Biologists"
                                                 >
                                                   Company of Biologists
                                                 </a>
@@ -20558,49 +21936,49 @@ exports[`Additional Information Component  should render component with journal 
                                           <ul>
                                             <li>
                                               <a
-                                                href="/list/?cat=quick_filter&search_keys[0]=Akt"
+                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Akt"
                                               >
                                                 Akt
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="/list/?cat=quick_filter&search_keys[0]=Breast cancer"
+                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Breast cancer"
                                               >
                                                 Breast cancer
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="/list/?cat=quick_filter&search_keys[0]=Ca2+"
+                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Ca2+"
                                               >
                                                 Ca2+
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="/list/?cat=quick_filter&search_keys[0]=Hypoxia"
+                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hypoxia"
                                               >
                                                 Hypoxia
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="/list/?cat=quick_filter&search_keys[0]=PTEN"
+                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=PTEN"
                                               >
                                                 PTEN
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="/list/?cat=quick_filter&search_keys[0]=Signal transduction"
+                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Signal transduction"
                                               >
                                                 Signal transduction
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="/list/?cat=quick_filter&search_keys[0]=TRPC1"
+                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=TRPC1"
                                               >
                                                 TRPC1
                                               </a>
@@ -20715,7 +22093,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-0"
                                                   >
                                                     <a
-                                                      href="/list/?cat=quick_filter&search_keys[0]=Akt"
+                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Akt"
                                                     >
                                                       Akt
                                                     </a>
@@ -20724,7 +22102,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-1"
                                                   >
                                                     <a
-                                                      href="/list/?cat=quick_filter&search_keys[0]=Breast cancer"
+                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Breast cancer"
                                                     >
                                                       Breast cancer
                                                     </a>
@@ -20733,7 +22111,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-2"
                                                   >
                                                     <a
-                                                      href="/list/?cat=quick_filter&search_keys[0]=Ca2+"
+                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Ca2+"
                                                     >
                                                       Ca2+
                                                     </a>
@@ -20742,7 +22120,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-3"
                                                   >
                                                     <a
-                                                      href="/list/?cat=quick_filter&search_keys[0]=Hypoxia"
+                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hypoxia"
                                                     >
                                                       Hypoxia
                                                     </a>
@@ -20751,7 +22129,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-4"
                                                   >
                                                     <a
-                                                      href="/list/?cat=quick_filter&search_keys[0]=PTEN"
+                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=PTEN"
                                                     >
                                                       PTEN
                                                     </a>
@@ -20760,7 +22138,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-5"
                                                   >
                                                     <a
-                                                      href="/list/?cat=quick_filter&search_keys[0]=Signal transduction"
+                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Signal transduction"
                                                     >
                                                       Signal transduction
                                                     </a>
@@ -20769,7 +22147,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-6"
                                                   >
                                                     <a
-                                                      href="/list/?cat=quick_filter&search_keys[0]=TRPC1"
+                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=TRPC1"
                                                     >
                                                       TRPC1
                                                     </a>
@@ -21640,7 +23018,7 @@ exports[`Additional Information Component  should render component with manuscri
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_33]=Father Edward Leo Hayes Collection, UQFL2"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=Father Edward Leo Hayes Collection, UQFL2"
           >
             Father Edward Leo Hayes Collection, UQFL2
           </a>
@@ -21684,35 +23062,35 @@ exports[`Additional Information Component  should render component with manuscri
           <ul>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Hayes, Edward Leo, 1889-1967 -- Archives"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hayes, Edward Leo, 1889-1967 -- Archives"
               >
                 Hayes, Edward Leo, 1889-1967 -- Archives
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Hayes, Edward Leo, 1889-1967 -- Manuscripts"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hayes, Edward Leo, 1889-1967 -- Manuscripts"
               >
                 Hayes, Edward Leo, 1889-1967 -- Manuscripts
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Astley, Thea, 1925-2004 -- Correspondence"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Astley, Thea, 1925-2004 -- Correspondence"
               >
                 Astley, Thea, 1925-2004 -- Correspondence
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Grano, Paul, 1894-1975 -- Correspondence"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Grano, Paul, 1894-1975 -- Correspondence"
               >
                 Grano, Paul, 1894-1975 -- Correspondence
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Authors, Australian -- 20th century"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Authors, Australian -- 20th century"
               >
                 Authors, Australian -- 20th century
               </a>
@@ -23982,7 +25360,7 @@ exports[`Additional Information Component  should render component with newspape
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_29]=Company of Biologists"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Company of Biologists"
           >
             Company of Biologists
           </a>
@@ -24006,49 +25384,49 @@ exports[`Additional Information Component  should render component with newspape
           <ul>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Akt"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Akt"
               >
                 Akt
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Breast cancer"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Breast cancer"
               >
                 Breast cancer
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Ca2+"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Ca2+"
               >
                 Ca2+
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Hypoxia"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hypoxia"
               >
                 Hypoxia
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=PTEN"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=PTEN"
               >
                 PTEN
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Signal transduction"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Signal transduction"
               >
                 Signal transduction
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=TRPC1"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=TRPC1"
               >
                 TRPC1
               </a>
@@ -24361,7 +25739,7 @@ exports[`Additional Information Component  should render component with patent 1
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_29]=GC Corporation"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=GC Corporation"
           >
             GC Corporation
           </a>
@@ -24395,21 +25773,21 @@ exports[`Additional Information Component  should render component with patent 1
           <ul>
             <li>
               <a
-                href="/list/subject/270802"
+                href="https://fez-staging.library.uq.edu.au/list/subject/270802"
               >
                 270802
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/270300"
+                href="https://fez-staging.library.uq.edu.au/list/subject/270300"
               >
                 270300
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/320800"
+                href="https://fez-staging.library.uq.edu.au/list/subject/320800"
               >
                 320800
               </a>
@@ -24474,77 +25852,77 @@ exports[`Additional Information Component  should render component with preprint
           <ul>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Algorithmic complexity"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Algorithmic complexity"
               >
                 Algorithmic complexity
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=cross-entropy"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=cross-entropy"
               >
                 cross-entropy
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=GI/G/1 queue"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=GI/G/1 queue"
               >
                 GI/G/1 queue
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=importance sampling"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=importance sampling"
               >
                 importance sampling
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=maximum likelihood"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=maximum likelihood"
               >
                 maximum likelihood
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Pareto distribution"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Pareto distribution"
               >
                 Pareto distribution
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Pollaczek-Khintchine formula"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Pollaczek-Khintchine formula"
               >
                 Pollaczek-Khintchine formula
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=random walk"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=random walk"
               >
                 random walk
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=rare event"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=rare event"
               >
                 rare event
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=subexponential distribution"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=subexponential distribution"
               >
                 subexponential distribution
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Weibull distribution"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Weibull distribution"
               >
                 Weibull distribution
               </a>
@@ -24572,21 +25950,21 @@ exports[`Additional Information Component  should render component with preprint
           <ul>
             <li>
               <a
-                href="/list/subject/280210"
+                href="https://fez-staging.library.uq.edu.au/list/subject/280210"
               >
                 280210
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/230203"
+                href="https://fez-staging.library.uq.edu.au/list/subject/230203"
               >
                 230203
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/230117"
+                href="https://fez-staging.library.uq.edu.au/list/subject/230117"
               >
                 230117
               </a>
@@ -24917,77 +26295,77 @@ exports[`Additional Information Component  should render component with preprint
           <ul>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Algorithmic complexity"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Algorithmic complexity"
               >
                 Algorithmic complexity
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=cross-entropy"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=cross-entropy"
               >
                 cross-entropy
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=GI/G/1 queue"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=GI/G/1 queue"
               >
                 GI/G/1 queue
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=importance sampling"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=importance sampling"
               >
                 importance sampling
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=maximum likelihood"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=maximum likelihood"
               >
                 maximum likelihood
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Pareto distribution"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Pareto distribution"
               >
                 Pareto distribution
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Pollaczek-Khintchine formula"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Pollaczek-Khintchine formula"
               >
                 Pollaczek-Khintchine formula
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=random walk"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=random walk"
               >
                 random walk
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=rare event"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=rare event"
               >
                 rare event
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=subexponential distribution"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=subexponential distribution"
               >
                 subexponential distribution
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Weibull distribution"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Weibull distribution"
               >
                 Weibull distribution
               </a>
@@ -25353,7 +26731,7 @@ exports[`Additional Information Component  should render component with referenc
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_29]=Routledge"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Routledge"
           >
             Routledge
           </a>
@@ -25706,28 +27084,28 @@ exports[`Additional Information Component  should render component with referenc
           <ul>
             <li>
               <a
-                href="/list/subject/430102"
+                href="https://fez-staging.library.uq.edu.au/list/subject/430102"
               >
                 430102 History - Asian
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/420212"
+                href="https://fez-staging.library.uq.edu.au/list/subject/420212"
               >
                 420212 Japanese
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/450647"
+                href="https://fez-staging.library.uq.edu.au/list/subject/450647"
               >
                 751001 Languages and literature
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/450041"
+                href="https://fez-staging.library.uq.edu.au/list/subject/450041"
               >
                 M
               </a>
@@ -25742,21 +27120,21 @@ exports[`Additional Information Component  should render component with referenc
           <ul>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Japanese culture"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Japanese culture"
               >
                 Japanese culture
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Popular culture - Japan - Encyclopedias"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Popular culture - Japan - Encyclopedias"
               >
                 Popular culture - Japan - Encyclopedias
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Japan - Civilization - 1945- - Encyclopedia"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Japan - Civilization - 1945- - Encyclopedia"
               >
                 Japan - Civilization - 1945- - Encyclopedia
               </a>
@@ -26143,7 +27521,7 @@ exports[`Additional Information Component  should render component with research
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_29]=UQ"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=UQ"
           >
             UQ
           </a>
@@ -26477,7 +27855,7 @@ exports[`Additional Information Component  should render component with thesis 1
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_70]=School of Natural and Rural Systems"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_70]=School of Natural and Rural Systems"
           >
             School of Natural and Rural Systems
           </a>
@@ -26535,7 +27913,7 @@ exports[`Additional Information Component  should render component with thesis 1
           <ul>
             <li>
               <a
-                href="/list/subject/300000"
+                href="https://fez-staging.library.uq.edu.au/list/subject/300000"
               >
                 300000
               </a>
@@ -26550,7 +27928,7 @@ exports[`Additional Information Component  should render component with thesis 1
           <ul>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Sustainable development; graziers; farmers; agriculture; land management; business"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Sustainable development; graziers; farmers; agriculture; land management; business"
               >
                 Sustainable development; graziers; farmers; agriculture; land management; business
               </a>
@@ -26946,7 +28324,7 @@ exports[`Additional Information Component  should render component with video do
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_33]=SEG Special Publication Video Series"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=SEG Special Publication Video Series"
           >
             SEG Special Publication Video Series
           </a>
@@ -26985,7 +28363,7 @@ exports[`Additional Information Component  should render component with video do
           <ul>
             <li>
               <a
-                href="/list/subject/451986"
+                href="https://fez-staging.library.uq.edu.au/list/subject/451986"
               >
                 451986
               </a>
@@ -27363,7 +28741,7 @@ exports[`Additional Information Component  should render component with working 
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_70]=School of Economics"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_70]=School of Economics"
           >
             School of Economics
           </a>
@@ -27384,7 +28762,7 @@ exports[`Additional Information Component  should render component with working 
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_33]=Working papers on Social Economics, Policy and Development"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=Working papers on Social Economics, Policy and Development"
           >
             Working papers on Social Economics, Policy and Development
           </a>
@@ -27413,7 +28791,7 @@ exports[`Additional Information Component  should render component with working 
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_29]=School of Economics"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=School of Economics"
           >
             School of Economics
           </a>
@@ -27452,14 +28830,14 @@ exports[`Additional Information Component  should render component with working 
           <ul>
             <li>
               <a
-                href="/list/subject/452775"
+                href="https://fez-staging.library.uq.edu.au/list/subject/452775"
               >
                 452775
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/452784"
+                href="https://fez-staging.library.uq.edu.au/list/subject/452784"
               >
                 452784
               </a>
@@ -27474,28 +28852,28 @@ exports[`Additional Information Component  should render component with working 
           <ul>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=European Union"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=European Union"
               >
                 European Union
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Education"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Education"
               >
                 Education
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Employment"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Employment"
               >
                 Employment
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Social inclusion"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Social inclusion"
               >
                 Social inclusion
               </a>
@@ -27822,7 +29200,7 @@ exports[`Additional Information Component  should render oa status value link in
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_70]=School of Natural and Rural Systems"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_70]=School of Natural and Rural Systems"
           >
             School of Natural and Rural Systems
           </a>
@@ -27856,7 +29234,7 @@ exports[`Additional Information Component  should render oa status value link in
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[UQ_54]=453695"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[UQ_54]=453695"
           >
             File (Author Post-print)
           </a>
@@ -27886,7 +29264,7 @@ exports[`Additional Information Component  should render oa status value link in
           <ul>
             <li>
               <a
-                href="/list/subject/300000"
+                href="https://fez-staging.library.uq.edu.au/list/subject/300000"
               >
                 300000
               </a>
@@ -27901,7 +29279,7 @@ exports[`Additional Information Component  should render oa status value link in
           <ul>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Sustainable development; graziers; farmers; agriculture; land management; business"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Sustainable development; graziers; farmers; agriculture; land management; business"
               >
                 Sustainable development; graziers; farmers; agriculture; land management; business
               </a>

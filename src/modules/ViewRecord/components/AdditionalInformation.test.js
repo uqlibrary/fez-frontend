@@ -133,4 +133,9 @@ describe('Additional Information Component ', () => {
         const wrapper = setup({publication: records.thesis});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render component with data collection with FoR codes', () => {
+        const wrapper = setup({publication: records.dataCollectionWithFoRCodes});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
