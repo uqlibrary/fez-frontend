@@ -10976,7 +10976,7 @@ exports[`Additional Information Component  should render component with data col
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_95]=453619"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_95]=453619"
           >
             Open Access
           </a>
@@ -10988,7 +10988,7 @@ exports[`Additional Information Component  should render component with data col
         data={
           <span>
             <a
-              href="/list/?cat=quick_filter&search_keys[core_112]=453608"
+              href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_112]=453608"
             >
               Creative Commons Attribution (only)
             </a>
@@ -11011,21 +11011,21 @@ exports[`Additional Information Component  should render component with data col
           <ul>
             <li>
               <a
-                href="/list/subject/452067"
+                href="https://fez-staging.library.uq.edu.au/list/subject/452067"
               >
                 0602 Ecology
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/452018"
+                href="https://fez-staging.library.uq.edu.au/list/subject/452018"
               >
                 040699 Physical Geography and Environmental Geoscience not elsewhere classified
               </a>
             </li>
             <li>
               <a
-                href="/list/subject/452028"
+                href="https://fez-staging.library.uq.edu.au/list/subject/452028"
               >
                 0502 Environmental Science and Management
               </a>
@@ -11054,11 +11054,6 @@ exports[`Additional Information Component  should render component with data col
         }
         heading="Type of data"
         key="additional-info-Type of data"
-      />
-      <ViewRecordTableRow
-        data="6099.0 kb"
-        heading="Data Volume"
-        key="additional-info-Data Volume"
       />
       <ViewRecordTableRow
         data={
@@ -11102,28 +11097,28 @@ exports[`Additional Information Component  should render component with data col
           <ul>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Habitat Mapping"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Habitat Mapping"
               >
                 Habitat Mapping
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Remote Sensing"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Remote Sensing"
               >
                 Remote Sensing
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Kubulau"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Kubulau"
               >
                 Kubulau
               </a>
             </li>
             <li>
               <a
-                href="/list/?cat=quick_filter&search_keys[0]=Environmental Management"
+                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Environmental Management"
               >
                 Environmental Management
               </a>
@@ -11173,7 +11168,7 @@ exports[`Additional Information Component  should render component with data col
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_92]=453616"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_92]=453616"
           >
             Dataset
           </a>
@@ -11184,7 +11179,7 @@ exports[`Additional Information Component  should render component with data col
       <ViewRecordTableRow
         data={
           <a
-            href="/list/?cat=quick_filter&search_keys[core_29]=Pangaea"
+            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Pangaea"
           >
             Pangaea
           </a>
@@ -11219,6 +11214,11 @@ exports[`Additional Information Component  should render component with data col
         }
         heading="Dataset description"
         key="additional-info-Dataset description"
+      />
+      <ViewRecordTableRow
+        data="6099.0 kb"
+        heading="Data Volume"
+        key="additional-info-Data Volume"
       />
     </TableBody>
   </Table>
