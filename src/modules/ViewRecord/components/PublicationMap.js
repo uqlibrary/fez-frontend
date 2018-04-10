@@ -34,7 +34,7 @@ const PublicationMap = withScriptjs(withGoogleMap((props) => {
             defaultZoom={geoCoords.length === 1 ? pointZoom : polygonZoom}
             googleMapURL={'https://maps.googleapis.com/maps/api/js?key=AIzaSyBGKCmMISUEtKaSHx8XiA546v-ZXev2k4I&v=3.exp&libraries=geometry,drawing,places'}
             defaultCenter={defaultCenter}
-            ref={(map) => {bounds && geoCoords.length > 1 && map.fitBounds(bounds);}}>
+            ref={(map) => {map && bounds && geoCoords.length > 1 && map.fitBounds(bounds);}}>
             {
                 geoCoords.length > 1 &&
                 <Polygon paths={geoCoords} options={styles} />
