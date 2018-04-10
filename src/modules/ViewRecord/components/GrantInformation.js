@@ -34,7 +34,7 @@ export default class GrantInformation extends Component {
         return grantData && grantData.filter(grantData=>grantData[orderSubkey] === order)[0];
     }
 
-    renderGrants = (publication) => {
+    renderGrants = (publication, fundingText) => {
         const grants = [];
         const grantAgencies = publication.fez_record_search_key_grant_agency;
         const grantIds = publication.fez_record_search_key_grant_id;
@@ -45,7 +45,7 @@ export default class GrantInformation extends Component {
         )).map((grantAgency) => {
             const order = grantAgency.rek_grant_agency_order;
             const grantId = this.searchByOrder(grantIds, 'rek_grant_id_order', order);
-            const grantText = this.searchByOrder(grantTexts, 'rek_grant_text_order', order);
+            const grantText = !fundingText && this.searchByOrder(grantTexts, 'rek_grant_text_order', order);
             grants.push(this.renderGrantDetail(grantAgency, grantId, grantText, order));
         });
         return grants;
@@ -57,11 +57,18 @@ export default class GrantInformation extends Component {
             return null;
         }
 
+        const fundingText = this.props.publication.fez_record_search_key_grant_text.length === 1 &&
+                this.props.publication.fez_record_search_key_grant_text[0].rek_grant_text || null;
+
         return (
             <StandardCard title={locale.viewRecord.sections.grantInformation}>
+                {
+                    fundingText &&
+                    <p className="singleGrantText">{fundingText}</p>
+                }
                 <Table selectable={false} className="grantInformation vertical">
                     <TableBody displayRowCheckbox={false}>
-                        {this.props.publication.fez_record_search_key_grant_agency && this.renderGrants(this.props.publication)}
+                        {this.props.publication.fez_record_search_key_grant_agency && this.renderGrants(this.props.publication, fundingText)}
                     </TableBody>
                 </Table>
             </StandardCard>
