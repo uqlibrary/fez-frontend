@@ -35,13 +35,17 @@ export default class CitationCounts extends React.PureComponent {
             || openAccessStatusId === OPEN_ACCESS_ID_OTHER) {
             const hasFiles = !!record.fez_datastream_info && record.fez_datastream_info.length > 0;
             const allFiles =  hasFiles
-                ? record.fez_datastream_info.filter(item => (!item.dsi_dsid.match('^(FezACML|stream|web|thumbnail|preview|presmd)')))
+                ? record.fez_datastream_info.filter(item => (
+                    !item.dsi_dsid.match('^(FezACML|stream|web|thumbnail|preview|presmd)')
+                    && !item.dsi_label.match('(ERA|HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections)', 'gi')
+                ))
                 : [];
             const allEmbargoFiles = hasFiles
                 ? record.fez_datastream_info.filter(item => (
                     !!item.dsi_embargo_date
                     && moment(item.dsi_embargo_date).isAfter(moment())
                     && !item.dsi_dsid.match('^(FezACML|stream|web|thumbnail|preview|presmd)'))
+                    && !item.dsi_label.match('(ERA|HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections)', 'gi')
                 ).sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date))
                 : [];
             // OA with a possible file embargo date

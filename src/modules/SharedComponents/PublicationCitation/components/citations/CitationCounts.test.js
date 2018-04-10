@@ -321,7 +321,59 @@ describe('CitationCounts renders ', () => {
                     "dsi_size": 1526884
                 }],
         };
-
+        const publicationOAFileWithERA = {
+            rek_created_date: '2019-12-25T00:00:00Z',
+            rek_pid: 'pid:111',
+            fez_record_search_key_oa_status: {
+                rek_oa_status: 453695
+            },
+            fez_datastream_info: [
+                {
+                    "dsi_pid": "UQ:357538",
+                    "dsi_dsid": "FezACML_UQ357538_OA.pdf.xml",
+                    "dsi_embargo_date": null,
+                    "dsi_open_access": null,
+                    "dsi_label": "FezACML security for datastream - UQ357538_OA.pdf",
+                    "dsi_mimetype": "text\/xml",
+                    "dsi_copyright": null,
+                    "dsi_state": "A",
+                    "dsi_size": 62
+                },
+                {
+                    "dsi_pid": "UQ:357538",
+                    "dsi_dsid": "presmd_UQ357538_OA.xml",
+                    "dsi_embargo_date": null,
+                    "dsi_open_access": null,
+                    "dsi_label": "",
+                    "dsi_mimetype": "application\/xml",
+                    "dsi_copyright": null,
+                    "dsi_state": "A",
+                    "dsi_size": 275290
+                },
+                {
+                    "dsi_pid": "UQ:357538",
+                    "dsi_dsid": "UQ357538_OA.pdf",
+                    "dsi_embargo_date": null,
+                    "dsi_open_access": null,
+                    "dsi_label": "Full text (open access)",
+                    "dsi_mimetype": "application\/pdf",
+                    "dsi_copyright": null,
+                    "dsi_state": "A",
+                    "dsi_size": 1526884
+                },
+                {
+                    "dsi_pid": "UQ:1234",
+                    "dsi_dsid": "123.pdf",
+                    "dsi_embargo_date": '2050-01-01',
+                    "dsi_open_access": null,
+                    "dsi_label": "ERA restricted admins only",
+                    "dsi_mimetype": "application\/pdf",
+                    "dsi_copyright": null,
+                    "dsi_state": "A",
+                    "dsi_size": 1526884
+                }
+            ]
+        };
 
         const expectOADoiNoEmbargoDate = {"embargoDate": null, "isOpenAccess": true, "openAccessStatusId": 453693};
         const expectOADoiWithEmbargoDate = {"embargoDate": "4th February 2021", "isOpenAccess": false, "openAccessStatusId": 453693};
@@ -340,6 +392,7 @@ describe('CitationCounts renders ', () => {
         expect(wrapper.instance().isRecordOpenAccess(publicationEmbargoMaturedOAFile)).toEqual(expectOA);
         expect(wrapper.instance().isRecordOpenAccess(publicationMultipleOAFiles)).toEqual(expectOA);
         expect(wrapper.instance().isRecordOpenAccess(publicationNoEmbargoOAFile)).toEqual(expectOA);
+        expect(wrapper.instance().isRecordOpenAccess(publicationOAFileWithERA)).toEqual(expectOA);
         expect(wrapper.instance().isRecordOpenAccess(publicationMultipleEmbargoOAFiles)).toEqual(expectEmbargoMultipleFiles);
     });
 });
