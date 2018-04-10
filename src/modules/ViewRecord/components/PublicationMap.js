@@ -15,18 +15,26 @@ const PublicationMap = withScriptjs(withGoogleMap((props) => {
             lat: Number(item.split(',')[1])
         }
     ));
+
     const minLngPoint = geoCoords.reduce((min, point) => point.lng < min ? point.lng : min, geoCoords[0].lng);
     const maxLngPoint = geoCoords.reduce((max, point) => point.lng > max ? point.lng : max, geoCoords[0].lng);
     const minLatPoint = geoCoords.reduce((min, point) => point.lat < min ? point.lat : min, geoCoords[0].lat);
     const maxLatPoint = geoCoords.reduce((max, point) => point.lat > max ? point.lat : max, geoCoords[0].lat);
     const defaultCenter = {lng: (maxLngPoint + minLngPoint) / 2, lat: (minLatPoint + maxLatPoint) / 2};
     const pointZoom = 15;
-    const polygonZoom = 13; // todo: calculate zoom
+    const polygonZoom = 13;
+
+    const bounds = new window.google.maps.LatLngBounds();
+    geoCoords.map((coord) => {
+        bounds.extend(new window.google.maps.LatLng(coord.lat, coord.lng));
+    });
+
     return (
         <GoogleMap
             defaultZoom={geoCoords.length === 1 ? pointZoom : polygonZoom}
-            googleMapURL={`https://maps.googleapis.com/maps/api/js?${!!process.env.GOOGLE_MAP_KEY ? process.env.GOOGLE_MAP_KEY : ''}v=3.exp&libraries=geometry,drawing,places`}
-            defaultCenter={defaultCenter} >
+            googleMapURL={'https://maps.googleapis.com/maps/api/js?key=AIzaSyBGKCmMISUEtKaSHx8XiA546v-ZXev2k4I&v=3.exp&libraries=geometry,drawing,places'}
+            defaultCenter={defaultCenter}
+            ref={(map) => {map.fitBounds(bounds);}}>
             {
                 geoCoords.length > 1 &&
                 <Polygon paths={geoCoords} options={styles} />
