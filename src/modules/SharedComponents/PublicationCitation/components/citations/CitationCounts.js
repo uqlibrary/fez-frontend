@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'locale';
-import {OPEN_ACCESS_ID_DOI, OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION, OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT, OPEN_ACCESS_ID_PMC} from 'config/general';
+import {OPEN_ACCESS_ID_DOI, OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION, OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT, OPEN_ACCESS_ID_PMC, OPEN_ACCESS_ID_OTHER} from 'config/general';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import * as Partials from './partials';
@@ -31,10 +31,27 @@ export default class CitationCounts extends React.PureComponent {
             const displayEmbargoDate = !!embargoDate && !pastEmgargoDate && embargoDate > currentDate ? moment(embargoDate).format('Do MMMM YYYY') : null;
             return {isOpenAccess: pastEmgargoDate, embargoDate: displayEmbargoDate, openAccessStatusId: openAccessStatusId};
         } else if (openAccessStatusId === OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION
-            || openAccessStatusId === OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT) {
+            || openAccessStatusId === OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT
+            || openAccessStatusId === OPEN_ACCESS_ID_OTHER) {
+            const hasFiles = !!record.fez_datastream_info && record.fez_datastream_info.length > 0;
+            const allFiles =  hasFiles
+                ? record.fez_datastream_info.filter(item => (!item.dsi_dsid.match('^(FezACML|stream|web|thumbnail|preview|presmd)')))
+                : [];
+            const allEmbargoFiles = hasFiles
+                ? record.fez_datastream_info.filter(item => (
+                    !!item.dsi_embargo_date
+                    && moment(item.dsi_embargo_date).isAfter(moment())
+                    && !item.dsi_dsid.match('^(FezACML|stream|web|thumbnail|preview|presmd)'))
+                ).sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date))
+                : [];
             // OA with a possible file embargo date
-            // TODO: get files' OA status when api is available
-            return {isOpenAccess: false, embargoDate: 'a possible embargo date', openAccessStatusId: openAccessStatusId};
+            return {
+                isOpenAccess: !hasFiles || allFiles.length !== allEmbargoFiles.length,
+                embargoDate: hasFiles && allFiles.length === allEmbargoFiles.length
+                    ? moment(allFiles[0].dsi_embargo_date).format('Do MMMM YYYY')
+                    : null,
+                openAccessStatusId: openAccessStatusId
+            };
         } else if (openAccessStatusId === OPEN_ACCESS_ID_PMC) {
             return {isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId};
         }
