@@ -53,6 +53,13 @@ const DashboardProfile = ({authorDetails, author, history}) => {
                                 google_scholar: author.aut_google_scholar_id,
                                 orcid: author.aut_orcid_id
                             }}
+                            authenticated={{
+                                publons: Boolean(author.aut_publons_id),
+                                researcher: Boolean(author.aut_researcher_id),
+                                scopus: Boolean(author.aut_is_scopus_id_authenticated),
+                                google_scholar: Boolean(author.aut_google_scholar_id),
+                                orcid: Boolean(author.aut_orcid_id)
+                            }}
                             history={history}
                         />
                     </div>

@@ -109,7 +109,7 @@ export default {
                         inputFieldLabel: 'ISBN value',
                         inputFieldHint: 'Type ISBN value',
                         addButtonLabel: 'Add ISBN',
-                        remindToAdd: (<span><b>NOTE:</b> You have not yet added this value value to the list.</span>)
+                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }
                 },
                 header: {
@@ -154,7 +154,7 @@ export default {
                         inputFieldLabel: 'ISSN value',
                         inputFieldHint: 'Type ISSN value',
                         addButtonLabel: 'Add ISSN',
-                        remindToAdd: (<span><b>NOTE:</b> You have not yet added this value value to the list.</span>)
+                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }
                 },
                 header: {

@@ -256,10 +256,15 @@ exports[`ResearchReportForm renders  component 1`] = `
               "inputFieldHint": "Type ISBN value",
               "inputFieldLabel": "ISBN value",
               "remindToAdd": <span>
+                Please, press 
                 <b>
-                  NOTE:
+                  ENTER
                 </b>
-                 You have not yet added this value value to the list.
+                 or click 
+                <b>
+                  ADD
+                </b>
+                 button to add this value to the list
               </span>,
             },
           },
@@ -321,10 +326,15 @@ exports[`ResearchReportForm renders  component 1`] = `
               "inputFieldHint": "Type ISSN value",
               "inputFieldLabel": "ISSN value",
               "remindToAdd": <span>
+                Please, press 
                 <b>
-                  NOTE:
+                  ENTER
                 </b>
-                 You have not yet added this value value to the list.
+                 or click 
+                <b>
+                  ADD
+                </b>
+                 button to add this value to the list
               </span>,
             },
           },
