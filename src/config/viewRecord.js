@@ -1,4 +1,4 @@
-import {APP_URL} from 'config';
+import {routes} from 'config';
 
 export const viewRecordsConfig = {
     licenseLinks: {
@@ -79,7 +79,7 @@ export const viewRecordsConfig = {
                     isMultiple: false
                 }
             ],
-            url: (pid) => `${APP_URL}record/${pid}`
+            url: (pid) => routes.pathConfig.metaTags.identifier(pid)
         },
         {
             field: 'fez_record_search_key_subject',
@@ -100,7 +100,7 @@ export const viewRecordsConfig = {
                     isMultiple: true,
                 }
             ],
-            url: (pid, fileName) => `${APP_URL}view/${pid}/${fileName}`.trim()
+            url: (pid, fileName) => routes.pathConfig.metaTags.fileAttachment(pid, fileName)
         },
         {
             field: null,

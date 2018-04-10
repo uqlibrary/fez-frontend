@@ -70,6 +70,10 @@ export const pathConfig =  {
     legacyEspace: `${fullPath}/my_research_claimed.php`,
     authorStatistics: {
         url: (id) => `https://app.library.uq.edu.au/#/authors/${id}`
+    },
+    metaTags: {
+        identifier: (pid) => `${fullPath}/record/${pid}`,
+        fileAttachment: (pid, fileName) => `${fullPath}/view/${pid}/${fileName}`
     }
 };
 
