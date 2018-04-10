@@ -218,6 +218,7 @@ export default {
                 fez_record_search_key_author_role: 'Creator(s) role',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
                 fez_record_search_key_grant_id: 'Grant ID',
+                fez_record_search_key_subject: 'ANZSRC Field of Research (FoR) Code'
             },
             'Department Technical Report': {},
             'Design': {
