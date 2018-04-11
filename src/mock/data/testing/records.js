@@ -582,7 +582,174 @@ export const dataCollection = {
     "rek_wok_doc_type_lookup": null,
     "rek_display_type_lookup": "Data Collection",
     "rek_scopus_doc_type_lookup": null,
-    "rek_pubmed_doc_type_lookup": null
+    "rek_pubmed_doc_type_lookup": null,
+    "fez_datastream_info": [
+        {
+            dsi_pid: 'UQ:407731',
+            dsi_dsid: 'FezACML_UQ_407731.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'FezACML security for PID - UQ:407731',
+            dsi_mimetype: 'text/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 3705
+        },
+        {
+            dsi_pid: 'UQ:407731',
+            dsi_dsid: 'presmd_Supplemental_information.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 1228
+        },
+        {
+            dsi_pid: 'UQ:407731',
+            dsi_dsid: 'presmd_Supp_Material.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 1203
+        },
+        {
+            dsi_pid: 'UQ:407731',
+            dsi_dsid: 'presmd_Supp_Table_S16.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 1205
+        },
+        {
+            dsi_pid: 'UQ:407731',
+            dsi_dsid: 'presmd_Supp_Table_S19.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 1205
+        },
+        {
+            dsi_pid: 'UQ:407731',
+            dsi_dsid: 'presmd_Supp_Table_S20.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 1204
+        },
+        {
+            dsi_pid: 'UQ:407731',
+            dsi_dsid: 'presmd_Supp_Table_S21.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 1204
+        },
+        {
+            dsi_pid: 'UQ:407731',
+            dsi_dsid: 'presmd_Supp_Table_S22.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 1204
+        },
+        {
+            dsi_pid: 'UQ:407731',
+            dsi_dsid: 'Supplemental_information.docx',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'Full text (open access)',
+            dsi_mimetype: 'application/octet-stream',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 2320778
+        },
+        {
+            dsi_pid: 'UQ:407731',
+            dsi_dsid: 'Supp_Material.zip',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'Full text (open access)',
+            dsi_mimetype: 'application/zip',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 300184
+        },
+        {
+            dsi_pid: 'UQ:407731',
+            dsi_dsid: 'Supp_Table_S16.xls',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'Full text (open access)',
+            dsi_mimetype: 'application/vnd.ms-excel',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 770048
+        },
+        {
+            dsi_pid: 'UQ:407731',
+            dsi_dsid: 'Supp_Table_S19.xls',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'Full text (open access)',
+            dsi_mimetype: 'application/vnd.ms-excel',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 754176
+        },
+        {
+            dsi_pid: 'UQ:407731',
+            dsi_dsid: 'Supp_Table_S20.xls',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'Full text (open access)',
+            dsi_mimetype: 'application/vnd.ms-excel',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 97280
+        },
+        {
+            dsi_pid: 'UQ:407731',
+            dsi_dsid: 'Supp_Table_S21.xls',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'Full text (open access)',
+            dsi_mimetype: 'application/vnd.ms-excel',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 67584
+        },
+        {
+            dsi_pid: 'UQ:407731',
+            dsi_dsid: 'Supp_Table_S22.xls',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'Full text (open access)',
+            dsi_mimetype: 'application/vnd.ms-excel',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 41984
+        }
+    ]
 };
 
 export const newspaperArticle = {
@@ -1157,6 +1324,52 @@ export const thesis = {
     ],
     "fez_record_search_key_translated_title": null,
     "rek_display_type_lookup": "Thesis",
+    "fez_datastream_info": [
+        {
+            dsi_pid: 'UQ:10457',
+            dsi_dsid: 'akrfinal.ps',
+            dsi_embargo_date: null,
+            dsi_open_access: 1,
+            dsi_label: 'akrfinal.ps',
+            dsi_mimetype: 'application/postscript',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 378888
+        },
+        {
+            dsi_pid: 'UQ:10457',
+            dsi_dsid: 'dpk_akrfinal.pdf',
+            dsi_embargo_date: null,
+            dsi_open_access: 1,
+            dsi_label: 'dpk_akrfinal.pdf',
+            dsi_mimetype: 'application/pdf',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 569410
+        },
+        {
+            dsi_pid: 'UQ:10457',
+            dsi_dsid: 'presmd_akrfinal.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 1658
+        },
+        {
+            dsi_pid: 'UQ:10457',
+            dsi_dsid: 'presmd_dpk_akrfinal.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 53146
+        }
+    ]
 };
 
 export const conferenceProceedings = {
@@ -1518,6 +1731,52 @@ export const conferenceProceedings = {
     "fez_record_search_key_translated_title": null,
     "fez_record_search_key_volume_number": null,
     "rek_display_type_lookup": "Conference Proceedings",
+    "fez_datastream_info": [
+        {
+            dsi_pid: 'UQ:159544',
+            dsi_dsid: 'ch7008.pdf',
+            dsi_embargo_date: null,
+            dsi_open_access: 1,
+            dsi_label: 'Link to conference proceedings',
+            dsi_mimetype: 'application/pdf',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 11950980
+        },
+        {
+            dsi_pid: 'UQ:159544',
+            dsi_dsid: 'FezACML_ch7008.pdf.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'FezACML security for datastream - ch7008.pdf',
+            dsi_mimetype: 'text/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 3093
+        },
+        {
+            dsi_pid: 'UQ:159544',
+            dsi_dsid: 'FezACML_UQ_159544.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'FezACML security for PID - UQ:159544',
+            dsi_mimetype: 'text/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 3639
+        },
+        {
+            dsi_pid: 'UQ:159544',
+            dsi_dsid: 'presmd_ch7008.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 221194
+        }
+    ]
 };
 
 export const digilibImage = {
@@ -2090,6 +2349,41 @@ export const workingPaper = {
     },
     "fez_record_search_key_translated_title": null,
     "rek_display_type_lookup": "Working Paper",
+    "fez_datastream_info": [
+        {
+            dsi_pid: 'UQ:176145',
+            dsi_dsid: 'FezACML_UQ_176145.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'FezACML security for PID - UQ:176145',
+            dsi_mimetype: 'text/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 3639
+        },
+        {
+            dsi_pid: 'UQ:176145',
+            dsi_dsid: 'presmd_wp46.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 30860
+        },
+        {
+            dsi_pid: 'UQ:176145',
+            dsi_dsid: 'wp46.pdf',
+            dsi_embargo_date: null,
+            dsi_open_access: 1,
+            dsi_label: 'wp46',
+            dsi_mimetype: 'application/pdf',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 122967
+        }
+    ]
 };
 
 export const design = {
@@ -2755,6 +3049,151 @@ export const creativeWork = {
     },
     "fez_record_search_key_translated_title": null,
     "rek_display_type_lookup": "Creative Work",
+    "fez_datastream_info": [
+        {
+            dsi_pid: 'UQ:177836',
+            dsi_dsid: 'FezACML_HCA10UQ177836.pdf.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'FezACML security for datastream - HCA10UQ177836.pdf',
+            dsi_mimetype: 'text/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 3097
+        },
+        {
+            dsi_pid: 'UQ:177836',
+            dsi_dsid: 'FezACML_UQ177836.pdf.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'FezACML security for datastream - UQ177836.pdf',
+            dsi_mimetype: 'text/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 203
+        },
+        {
+            dsi_pid: 'UQ:177836',
+            dsi_dsid: 'FezACML_UQ_177836.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'FezACML security for PID - UQ:177836',
+            dsi_mimetype: 'text/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 3639
+        },
+        {
+            dsi_pid: 'UQ:177836',
+            dsi_dsid: 'HCA10UQ177836.pdf',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'Full text - not publicly available',
+            dsi_mimetype: 'application/pdf',
+            dsi_copyright: null,
+            dsi_state: 'D',
+            dsi_size: 1106143
+        },
+        {
+            dsi_pid: 'UQ:177836',
+            dsi_dsid: 'HCA12UQ177836_plans.pdf',
+            dsi_embargo_date: null,
+            dsi_open_access: 1,
+            dsi_label: 'Plans - not publicly available',
+            dsi_mimetype: 'application/pdf',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 2937780
+        },
+        {
+            dsi_pid: 'UQ:177836',
+            dsi_dsid: 'HCA12UQ177836_project_description_.pdf',
+            dsi_embargo_date: null,
+            dsi_open_access: 1,
+            dsi_label: 'Full text - not publicly available ',
+            dsi_mimetype: 'application/pdf',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 1559809
+        },
+        {
+            dsi_pid: 'UQ:177836',
+            dsi_dsid: 'HCA12UQ177836_report.pdf',
+            dsi_embargo_date: null,
+            dsi_open_access: 1,
+            dsi_label: 'full text - not publicly available ',
+            dsi_mimetype: 'application/pdf',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 1106143
+        },
+        {
+            dsi_pid: 'UQ:177836',
+            dsi_dsid: 'presmd_HCA10UQ177836.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 46821
+        },
+        {
+            dsi_pid: 'UQ:177836',
+            dsi_dsid: 'presmd_HCA12UQ177836_plans.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 16811
+        },
+        {
+            dsi_pid: 'UQ:177836',
+            dsi_dsid: 'presmd_HCA12UQ177836_project_description_.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 11120
+        },
+        {
+            dsi_pid: 'UQ:177836',
+            dsi_dsid: 'presmd_HCA12UQ177836_report.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 50198
+        },
+        {
+            dsi_pid: 'UQ:177836',
+            dsi_dsid: 'presmd_UQ177836.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 24139
+        },
+        {
+            dsi_pid: 'UQ:177836',
+            dsi_dsid: 'UQ177836.pdf',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'UQ177836.pdf',
+            dsi_mimetype: 'application/pdf',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 117219
+        }
+    ]
 };
 
 export const departmentTechnicalReport = {
@@ -5580,6 +6019,107 @@ export const generic = {
     "fez_record_search_key_type_of_data": [],
     "fez_record_search_key_volume_number": null,
     "rek_display_type_lookup": "Generic Document",
+    "fez_datastream_info": [
+        {
+            dsi_pid: 'UQ:239427',
+            dsi_dsid: 'CodeNumericalSolutionPDEs.zip',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'Full text (open access)',
+            dsi_mimetype: 'application/zip',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 33985
+        },
+        {
+            dsi_pid: 'UQ:239427',
+            dsi_dsid: 'FezACML_UQ_239427.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'FezACML security for PID - UQ:239427',
+            dsi_mimetype: 'text/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 3705
+        },
+        {
+            dsi_pid: 'UQ:239427',
+            dsi_dsid: 'Lectures_Book.pdf',
+            dsi_embargo_date: null,
+            dsi_open_access: 1,
+            dsi_label: 'Full text (open access)',
+            dsi_mimetype: 'application/pdf',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 3425059
+        },
+        {
+            dsi_pid: 'UQ:239427',
+            dsi_dsid: 'NumericalSolutionCode.zip',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'NumericalSolutionOfPartialDifferentialEquations',
+            dsi_mimetype: 'application/zip',
+            dsi_copyright: null,
+            dsi_state: 'D',
+            dsi_size: 46336
+        },
+        {
+            dsi_pid: 'UQ:239427',
+            dsi_dsid: 'NumericalSolutionPartialdifferentialCode.gz',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'Full text (open access)',
+            dsi_mimetype: 'application/octet-stream',
+            dsi_copyright: null,
+            dsi_state: 'D',
+            dsi_size: 12844
+        },
+        {
+            dsi_pid: 'UQ:239427',
+            dsi_dsid: 'presmd_CodeNumericalSolutionPDEs.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 1226
+        },
+        {
+            dsi_pid: 'UQ:239427',
+            dsi_dsid: 'presmd_Lectures_Book.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 1258
+        },
+        {
+            dsi_pid: 'UQ:239427',
+            dsi_dsid: 'presmd_NumericalSolutionCode.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 1184
+        },
+        {
+            dsi_pid: 'UQ:239427',
+            dsi_dsid: 'presmd_NumericalSolutionPartialdifferentialCode.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 1254
+        }
+    ]
 };
 
 export const audioDocument = {
@@ -6343,6 +6883,52 @@ export const preprint = {
         }
     ],
     "rek_display_type_lookup": "Preprint",
+    "fez_datastream_info": [
+        {
+            dsi_pid: 'UQ:10457',
+            dsi_dsid: 'akrfinal.ps',
+            dsi_embargo_date: null,
+            dsi_open_access: 1,
+            dsi_label: 'akrfinal.ps',
+            dsi_mimetype: 'application/postscript',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 378888
+        },
+        {
+            dsi_pid: 'UQ:10457',
+            dsi_dsid: 'dpk_akrfinal.pdf',
+            dsi_embargo_date: null,
+            dsi_open_access: 1,
+            dsi_label: 'dpk_akrfinal.pdf',
+            dsi_mimetype: 'application/pdf',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 569410
+        },
+        {
+            dsi_pid: 'UQ:10457',
+            dsi_dsid: 'presmd_akrfinal.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 1658
+        },
+        {
+            dsi_pid: 'UQ:10457',
+            dsi_dsid: 'presmd_dpk_akrfinal.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: '',
+            dsi_mimetype: 'application/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 53146
+        }
+    ]
 };
 
 export const mockRecordToFix = {
@@ -8023,6 +8609,151 @@ export const manuscript = {
     "fez_record_search_key_transcript": null,
     "fez_record_search_key_translated_title": null,
     "rek_display_type_lookup": "Manuscript",
+    "fez_datastream_info": [
+        {
+            dsi_pid: 'UQ:677394',
+            dsi_dsid: 'FezACML_UQFL2_i3255.tif.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'FezACML security for datastream - UQFL2_i3255.tif',
+            dsi_mimetype: 'text/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 3092
+        },
+        {
+            dsi_pid: 'UQ:677394',
+            dsi_dsid: 'FezACML_UQFL2_i3255a.zip.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'FezACML security for datastream - UQFL2_i3255a.zip',
+            dsi_mimetype: 'text/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 3159
+        },
+        {
+            dsi_pid: 'UQ:677394',
+            dsi_dsid: 'FezACML_UQFL2_i3255_copyright_permission.pdf.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'FezACML security for datastream - UQFL2_i3255_copyright_permission.pdf',
+            dsi_mimetype: 'text/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 359
+        },
+        {
+            dsi_pid: 'UQ:677394',
+            dsi_dsid: 'FezACML_UQ_677394.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'FezACML security for PID - UQ:677394',
+            dsi_mimetype: 'text/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 3660
+        },
+        {
+            dsi_pid: 'UQ:677394',
+            dsi_dsid: 'presmd_UQFL2_i3255.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'PresMD for datastream - UQFL2_i3255.tif',
+            dsi_mimetype: 'text/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 161442
+        },
+        {
+            dsi_pid: 'UQ:677394',
+            dsi_dsid: 'presmd_UQFL2_i3255a.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'PresMD for datastream - UQFL2_i3255a.zip',
+            dsi_mimetype: 'text/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 702
+        },
+        {
+            dsi_pid: 'UQ:677394',
+            dsi_dsid: 'presmd_UQFL2_i3255_copyright_permission.xml',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'PresMD for datastream - UQFL2_i3255_copyright_permission.pdf',
+            dsi_mimetype: 'text/xml',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 781
+        },
+        {
+            dsi_pid: 'UQ:677394',
+            dsi_dsid: 'preview_UQFL2_i3255.jpg',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'preview_UQFL2_i3255.jpg',
+            dsi_mimetype: 'image/jpeg',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 31896
+        },
+        {
+            dsi_pid: 'UQ:677394',
+            dsi_dsid: 'thumbnail_UQFL2_i3255.jpg',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'thumbnail_UQFL2_i3255.jpg',
+            dsi_mimetype: 'image/jpeg',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 1997
+        },
+        {
+            dsi_pid: 'UQ:677394',
+            dsi_dsid: 'UQFL2_i3255.tif',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'Manuscript (open access)',
+            dsi_mimetype: 'image/tiff',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 88462012
+        },
+        {
+            dsi_pid: 'UQ:677394',
+            dsi_dsid: 'UQFL2_i3255a.zip',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'Archival (restricted access)',
+            dsi_mimetype: 'application/zip',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 97285652
+        },
+        {
+            dsi_pid: 'UQ:677394',
+            dsi_dsid: 'UQFL2_i3255_copyright_permission.pdf',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'Permission (restricted access)',
+            dsi_mimetype: 'application/pdf',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 76566
+        },
+        {
+            dsi_pid: 'UQ:677394',
+            dsi_dsid: 'web_UQFL2_i3255.jpg',
+            dsi_embargo_date: null,
+            dsi_open_access: null,
+            dsi_label: 'web_UQFL2_i3255.jpg',
+            dsi_mimetype: 'image/jpeg',
+            dsi_copyright: null,
+            dsi_state: 'A',
+            dsi_size: 71408
+        }
+    ]
 };
 
 export const imageDocument = {

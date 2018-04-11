@@ -26,9 +26,9 @@ export default class Meta extends React.PureComponent {
                 };
                 return (!!object[key] && object[key] || !!publication.rek_formatted_abstract && publication.rek_formatted_abstract)
                     .replace(/[&<>]/g, (replace) => (replaceHtmlChars[replace] || replace));
-            case 'rek_file_attachment_name':
-                return object[key].split('.')[1] === 'pdf' &&
-                    url(publication.rek_pid, object[key]);
+            case 'fez_datastream_info':
+                return object.dsi_mimetype === 'application/pdf' &&
+                    url(publication.rek_pid, object.dsi_dsid);
             case 'rek_issn':
                 return object[key];
             default:
@@ -70,8 +70,15 @@ export default class Meta extends React.PureComponent {
                         }
                     } else {
                         // If field is null and subkey (rek_pid, rek_description, rek_date etc.) exists in publication
-                        const content = !!publication[subkey] && this.getMetaTagContent(publication, subkey, url, tag.format);
-                        content && tagsContent.push({name: tag.name, content});
+                        if (tag.isMultiple) {
+                            !!publication[subkey] && publication[subkey].map(fieldValue => {
+                                const content = this.getMetaTagContent(fieldValue, subkey, url);
+                                content && tagsContent.push({name: tag.name, content});
+                            });
+                        } else {
+                            const content = !!publication[subkey] && this.getMetaTagContent(publication, subkey, url, tag.format);
+                            content && tagsContent.push({name: tag.name, content});
+                        }
                     }
                     return [...tagsContent];
                 }, []))

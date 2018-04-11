@@ -92,8 +92,8 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: 'fez_record_search_key_file_attachment_name',
-            subkey: 'rek_file_attachment_name',
+            field: null,
+            subkey: 'fez_datastream_info',
             tags: [
                 {
                     name: 'citation_pdf_url',

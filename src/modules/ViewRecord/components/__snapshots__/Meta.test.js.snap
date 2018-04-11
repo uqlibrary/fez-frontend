@@ -774,73 +774,78 @@ exports[`Meta Component  should render component with creative work 1`] = `
     name="DC.Subject"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/HCA12UQ177836_plans.pdf"
+    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/HCA10UQ177836.pdf"
     key="citation_pdf_url-3"
     name="citation_pdf_url"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/HCA12UQ177836_project_description_.pdf"
+    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/HCA12UQ177836_plans.pdf"
     key="citation_pdf_url-4"
     name="citation_pdf_url"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/HCA12UQ177836_report.pdf"
+    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/HCA12UQ177836_project_description_.pdf"
     key="citation_pdf_url-5"
     name="citation_pdf_url"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/UQ177836.pdf"
+    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/HCA12UQ177836_report.pdf"
     key="citation_pdf_url-6"
     name="citation_pdf_url"
   />
   <meta
+    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/UQ177836.pdf"
+    key="citation_pdf_url-7"
+    name="citation_pdf_url"
+  />
+  <meta
     content="Sustainable home Brisbane"
-    key="DC.Title-7"
+    key="DC.Title-8"
     name="DC.Title"
   />
   <meta
     content="Sustainable home Brisbane"
-    key="citation_title-8"
+    key="citation_title-9"
     name="citation_title"
   />
   <meta
     content="Webster-Mannison, Marci"
-    key="DC.Creator-9"
+    key="DC.Creator-10"
     name="DC.Creator"
   />
   <meta
     content="Webster-Mannison, Marci"
-    key="citation_authors-10"
+    key="citation_authors-11"
     name="citation_authors"
   />
   <meta
     content="2006-01-01"
-    key="DC.Date-11"
+    key="DC.Date-12"
     name="DC.Date"
   />
   <meta
     content="2006/01/01"
-    key="citation_date-12"
+    key="citation_date-13"
     name="citation_date"
   />
   <meta
     content="School of Architecture, The University of Queensland"
-    key="DC.Publisher-13"
+    key="DC.Publisher-14"
     name="DC.Publisher"
   />
   <meta
     content="School of Architecture, The University of Queensland"
-    key="citation_publisher-14"
+    key="citation_publisher-15"
     name="citation_publisher"
   />
   <meta
     content="eng"
-    key="citation_language-15"
+    key="citation_language-16"
     name="citation_language"
   />
   <meta
     content="Original Creative Works - Design/Architectural work"
-    key="citation_keywords-16"
+    key="citation_keywords-17"
     name="citation_keywords"
   />
 </HelmetWrapper>
@@ -1416,63 +1421,58 @@ exports[`Meta Component  should render component with manuscript 1`] = `
     scheme="URI"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:677394/FezACML_UQFL2_i3255_copyright_permission.pdf.xml"
+    content="https://fez-staging.library.uq.edu.au/view/UQ:677394/UQFL2_i3255_copyright_permission.pdf"
     key="citation_pdf_url-1"
     name="citation_pdf_url"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:677394/UQFL2_i3255_copyright_permission.pdf"
-    key="citation_pdf_url-2"
-    name="citation_pdf_url"
-  />
-  <meta
     content="Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944"
-    key="DC.Title-3"
+    key="DC.Title-2"
     name="DC.Title"
   />
   <meta
     content="Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944"
-    key="citation_title-4"
+    key="citation_title-3"
     name="citation_title"
   />
   <meta
     content="Astley, Thea, 1925-2004"
-    key="DC.Contributor-5"
+    key="DC.Contributor-4"
     name="DC.Contributor"
   />
   <meta
     content="Grano, Paul, 1894-1975"
-    key="DC.Contributor-6"
+    key="DC.Contributor-5"
     name="DC.Contributor"
   />
   <meta
     content="Hayes, Edward Leo, 1889-1967"
-    key="DC.Creator-7"
+    key="DC.Creator-6"
     name="DC.Creator"
   />
   <meta
     content="Hayes, Edward Leo, 1889-1967"
-    key="citation_authors-8"
+    key="citation_authors-7"
     name="citation_authors"
   />
   <meta
     content="1944-07-15"
-    key="DC.Date-9"
+    key="DC.Date-8"
     name="DC.Date"
   />
   <meta
     content="1944/07/15"
-    key="citation_date-10"
+    key="citation_date-9"
     name="citation_date"
   />
   <meta
     content="eng"
-    key="citation_language-11"
+    key="citation_language-10"
     name="citation_language"
   />
   <meta
     content="Hayes, Edward Leo, 1889-1967 -- Archives; Hayes, Edward Leo, 1889-1967 -- Manuscripts; Astley, Thea, 1925-2004 -- Correspondence; Grano, Paul, 1894-1975 -- Correspondence; Authors, Australian -- 20th century"
-    key="citation_keywords-12"
+    key="citation_keywords-11"
     name="citation_keywords"
   />
 </HelmetWrapper>
@@ -1961,58 +1961,53 @@ exports[`Meta Component  should render component with thesis 1`] = `
     name="DC.Subject"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:170415/Permission_Moffatt_J.pdf"
+    content="https://fez-staging.library.uq.edu.au/view/UQ:170415/dpk_akrfinal.pdf"
     key="citation_pdf_url-2"
     name="citation_pdf_url"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:170415/s31882862_PhD_Totalthesis.pdf"
-    key="citation_pdf_url-3"
-    name="citation_pdf_url"
-  />
-  <meta
     content="It's for love not money: Queensland graziers' perceptions of sustainable development"
-    key="DC.Title-4"
+    key="DC.Title-3"
     name="DC.Title"
   />
   <meta
     content="It's for love not money: Queensland graziers' perceptions of sustainable development"
-    key="citation_title-5"
+    key="citation_title-4"
     name="citation_title"
   />
   <meta
     content="Jennifer Moffatt"
-    key="DC.Creator-6"
+    key="DC.Creator-5"
     name="DC.Creator"
   />
   <meta
     content="Jennifer Moffatt"
-    key="citation_authors-7"
+    key="citation_authors-6"
     name="citation_authors"
   />
   <meta
     content="2008-06-01"
-    key="DC.Date-8"
+    key="DC.Date-7"
     name="DC.Date"
   />
   <meta
     content="2008/06/01"
-    key="citation_date-9"
+    key="citation_date-8"
     name="citation_date"
   />
   <meta
     content="Despite a National Strategy for Ecologically Sustainable Development and the embodiment of this in numerous national and state statues, environmental degradation continues to occur on rural land. This raises the question of how the primary land managers in Queensland perceive sustainable development. Australia’s early reliance on agricultural production and international markets contributed substantially to the extensive environmental degradation that has occurred. Consequently economic and environmental issues have dominated the research on sustainable development, with the social dimension relatively neglected. In addition, despite the large quantity of work that has been conducted with farmers and graziers, little is known about how either of these types of land managers interpret sustainable development. The aim of this thesis was to develop an in-depth understanding of graziers’ perceptions of sustainable development to make a contribution to this area. An exploratory interpretative approach was taken to conduct this investigation because previous research had been limited. In-depth unstructured interviews were conducted with 57 Queensland graziers in the tropical savannas in a case study with two locations – the Gulf of Carpentaria and the Central West. This approach was supported by participant observation and a brief questionnaire to provide background information. The fieldwork was conducted over a period of five months which allowed analysis to be conducted as the study progressed. Most of the graziers were interviewed on their properties with the goal of adding richness to the data and assisting with interpretation. Several bodies of literature have been used to interpret the results of this study. Areas of the sustainable development literature relevant to this thesis are reviewed to provide a context for the thesis. The literature on structural change in Australian agriculture provides a background to the broad influences on the agricultural sector and farmers. Also reviewed are the approaches taken to change the land management practices of farmers. The enduring value of farming and the changing values of rural land use are explored through a review of agrarianism, the goals and values of farmers and the post-productivist transition. The results for both study locations showed that these graziers preference the economic dimension of sustainable development over the environmental and social dimensions. The rationale for this preference is that maintaining economic viability will allow them to achieve their social goal – to continue their preferred way of life. A strong focus therefore, is on economic viability as a means to a social end. The objective is to overcome the constraints of being market and season dependent and the costs of operating in rural and remote locations through a whole-of-enterprise business management approach. The need for graziers to continue increasing their productivity to remain economically viable and to continue being competitive in international markets, challenges their ability to balance the economic and environmental dimensions of sustainable development. For some the environmental dimension of sustainable development may be compromised to accommodate their economic priorities and social goals. A perceived future threat, more so for Gulf graziers, arises from the belief that they and their interests are marginalised through consultation processes. This contributes to their belief that the government prioritises Aboriginal land rights and environmental protection interests over their production interests. They believe that if this continues their future is at risk through further decreases to the security of their tenure. The results of this study suggest that a more innovative and integrated approach will be required to meet the challenges of sustainable development in these areas, in early twenty-first century Australia. The holistic approach from a social science perspective has provided an understanding of what graziers value and why. These insights contribute to knowledge of how to progress sustainable development. They could be tested with other types of land managers and as a foundation on which to build a more comprehensive understanding of sustainable development."
-    key="DC.Description-10"
+    key="DC.Description-9"
     name="DC.Description"
   />
   <meta
     content="Despite a National Strategy for Ecologically Sustainable Development and the embodiment of this in numerous national and state statues, environmental degradation continues to occur on rural land. This raises the question of how the primary land managers in Queensland perceive sustainable development. Australia’s early reliance on agricultural production and international markets contributed substantially to the extensive environmental degradation that has occurred. Consequently economic and environmental issues have dominated the research on sustainable development, with the social dimension relatively neglected. In addition, despite the large quantity of work that has been conducted with farmers and graziers, little is known about how either of these types of land managers interpret sustainable development. The aim of this thesis was to develop an in-depth understanding of graziers’ perceptions of sustainable development to make a contribution to this area. An exploratory interpretative approach was taken to conduct this investigation because previous research had been limited. In-depth unstructured interviews were conducted with 57 Queensland graziers in the tropical savannas in a case study with two locations – the Gulf of Carpentaria and the Central West. This approach was supported by participant observation and a brief questionnaire to provide background information. The fieldwork was conducted over a period of five months which allowed analysis to be conducted as the study progressed. Most of the graziers were interviewed on their properties with the goal of adding richness to the data and assisting with interpretation. Several bodies of literature have been used to interpret the results of this study. Areas of the sustainable development literature relevant to this thesis are reviewed to provide a context for the thesis. The literature on structural change in Australian agriculture provides a background to the broad influences on the agricultural sector and farmers. Also reviewed are the approaches taken to change the land management practices of farmers. The enduring value of farming and the changing values of rural land use are explored through a review of agrarianism, the goals and values of farmers and the post-productivist transition. The results for both study locations showed that these graziers preference the economic dimension of sustainable development over the environmental and social dimensions. The rationale for this preference is that maintaining economic viability will allow them to achieve their social goal – to continue their preferred way of life. A strong focus therefore, is on economic viability as a means to a social end. The objective is to overcome the constraints of being market and season dependent and the costs of operating in rural and remote locations through a whole-of-enterprise business management approach. The need for graziers to continue increasing their productivity to remain economically viable and to continue being competitive in international markets, challenges their ability to balance the economic and environmental dimensions of sustainable development. For some the environmental dimension of sustainable development may be compromised to accommodate their economic priorities and social goals. A perceived future threat, more so for Gulf graziers, arises from the belief that they and their interests are marginalised through consultation processes. This contributes to their belief that the government prioritises Aboriginal land rights and environmental protection interests over their production interests. They believe that if this continues their future is at risk through further decreases to the security of their tenure. The results of this study suggest that a more innovative and integrated approach will be required to meet the challenges of sustainable development in these areas, in early twenty-first century Australia. The holistic approach from a social science perspective has provided an understanding of what graziers value and why. These insights contribute to knowledge of how to progress sustainable development. They could be tested with other types of land managers and as a foundation on which to build a more comprehensive understanding of sustainable development."
-    key="citation_abstract-11"
+    key="citation_abstract-10"
     name="citation_abstract"
   />
   <meta
     content="Sustainable development; graziers; farmers; agriculture; land management; business"
-    key="citation_keywords-12"
+    key="citation_keywords-11"
     name="citation_keywords"
   />
 </HelmetWrapper>
