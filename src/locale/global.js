@@ -43,8 +43,8 @@ export default {
         },
         errorMessages: {
             generic: 'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
-            notFound: 'Information not found',
-            sessionExpired: 'Session expired'
+            notFound: 'The requested page could not be found.',
+            sessionExpired: 'Your session expired, please login to continue.'
         },
         notRegisteredAuthorAlert: {
             title: 'You are not registered in UQ eSpace as an author',
