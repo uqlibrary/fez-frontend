@@ -11,9 +11,10 @@ import InsertDriveFile from 'material-ui/svg-icons/editor/insert-drive-file';
 import PictureAsPdf from 'material-ui/svg-icons/image/picture-as-pdf';
 import Image from 'material-ui/svg-icons/image/image';
 import AvVideocam from 'material-ui/svg-icons/av/videocam';
-import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
 import {pathConfig} from 'config/routes';
 import {viewRecordsConfig} from 'config/viewRecord';
+import MediaPreview from './MediaPreview';
+import FileName from './partials/FileName';
 
 export default class Files extends Component {
     static propTypes = {
@@ -33,8 +34,10 @@ export default class Files extends Component {
         };
     }
 
-    renderFileIcon = (mimeType) => {
-        if (mimeType.indexOf('audio') >= 0) {
+    renderFileIcon = (pid, mimeType, thumbnailFileName, allowDownload) => {
+        if (allowDownload && thumbnailFileName) {
+            return <img src={this.getUrl(pid, thumbnailFileName)} alt={thumbnailFileName}/>;
+        } else if (mimeType.indexOf('audio') >= 0) {
             return <AvVolumeUp />;
         } else if (mimeType.indexOf('pdf') >= 0) {
             return <PictureAsPdf />;
@@ -47,26 +50,25 @@ export default class Files extends Component {
         }
     }
 
-    // TODO: uncomment when preview is available
-    // hidePreview = () => {
-    //     this.setState({
-    //         preview: {
-    //             mediaUrl: null,
-    //             previewMediaUrl: null,
-    //             mimeType: null
-    //         }
-    //     });
-    // }
-    //
-    // showPreview = (mediaUrl, previewMediaUrl, mimeType) => {
-    //     this.setState({
-    //         preview: {
-    //             mediaUrl: mediaUrl,
-    //             previewMediaUrl: previewMediaUrl,
-    //             mimeType: mimeType
-    //         }
-    //     });
-    // }
+    hidePreview = () => {
+        this.setState({
+            preview: {
+                mediaUrl: null,
+                previewMediaUrl: null,
+                mimeType: null
+            }
+        });
+    }
+
+    showPreview = (mediaUrl, previewMediaUrl, mimeType) => {
+        this.setState({
+            preview: {
+                mediaUrl: mediaUrl,
+                previewMediaUrl: previewMediaUrl,
+                mimeType: mimeType
+            }
+        });
+    }
 
     formatBytes = (bytes) => {
         if (bytes === 0) {
@@ -83,6 +85,14 @@ export default class Files extends Component {
         return embargoDate && moment(embargoDate).isSameOrAfter(moment(), 'day') ? locale.viewRecord.sections.files.embargoDate.replace('[embargoDate]', moment(embargoDate).format('DD/MM/YYYY')) : null;
     }
 
+    getUrl = (pid, fileName) => {
+        return fileName && pathConfig.file.url(pid, fileName);
+    }
+
+    searchByKey = (list, key, value) => {
+        return list && list.filter(item=>item[key] === value)[0];
+    }
+
     // filter out fezacml, premd, thumbnail, web prefix files
     getFileData = (publication) => {
         const dataStreams = publication.fez_datastream_info;
@@ -92,16 +102,27 @@ export default class Files extends Component {
                 !dataStream.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
                 !dataStream.dsi_label.match(new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi'))
             )).map(dataStream => {
+                const pid = publication.rek_pid;
+                const fileName = dataStream.dsi_dsid;
+                const thumbnailDataStream = this.searchByKey(dataStreams, 'dsi_dsid', 'thumbnail_' + fileName);
+                const previewDataStream = this.searchByKey(dataStreams, 'dsi_dsid', 'preview_' + fileName);
                 const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
+                const thumbnailFileName = thumbnailDataStream && thumbnailDataStream.dsi_dsid;
+                const embargoText = this.renderEmbargoDate(dataStream.dsi_embargo_date);
+                const allowDownload = !embargoText;
+
                 // TODO: set values for open access/allowDownload when available
                 return {
-                    pid: publication.rek_pid,
-                    fileName: dataStream.dsi_dsid,
+                    pid: pid,
+                    fileName: fileName,
                     description: dataStream.dsi_label,
                     mimeType: mimeType,
-                    embargoText: this.renderEmbargoDate(dataStream.dsi_embargo_date),
+                    thumbnailFileName: thumbnailFileName,
+                    previewFileName: previewDataStream && previewDataStream.dsi_dsid,
+                    embargoText: embargoText,
                     calculatedSize: this.formatBytes(dataStream.dsi_size),
-                    icon: this.renderFileIcon(mimeType)
+                    allowDownload: allowDownload,
+                    icon: this.renderFileIcon(pid, mimeType, thumbnailFileName, allowDownload)
                 };
             })
             : [];
@@ -144,20 +165,10 @@ export default class Files extends Component {
                                             {item.icon}
                                         </TableRowColumn>
                                         <TableRowColumn className="filename">
-                                            {
-                                                !item.embargoText &&
-                                                <ExternalLink
-                                                    href={pathConfig.file.url(item.pid, item.fileName)}
-                                                    title={`${item.fileName} - ${item.description} - ${item.calculatedSize}`}
-                                                    className={'fileName'}
-                                                    openInNewIcon
-                                                >
-                                                    {item.fileName}
-                                                </ExternalLink>
-                                            }
-                                            {
-                                                item.embargoText && item.fileName
-                                            }
+                                            <FileName
+                                                {...item}
+                                                onFileSelect={this.showPreview}
+                                            />
                                         </TableRowColumn>
                                         <TableRowColumn className="is-hidden-mobile description">
                                             {item.description}
@@ -175,7 +186,8 @@ export default class Files extends Component {
                     </Table>
                 </StandardCard>
                 {
-                    // TODO: MediaPreview will be here...
+                    this.state.preview.mediaUrl && this.state.preview.mimeType &&
+                    <MediaPreview ref="mediaPreview" mediaUrl={this.state.preview.mediaUrl} previewMediaUrl={this.state.preview.previewMediaUrl} mimeType={this.state.preview.mimeType} onClose={this.hidePreview}/>
                 }
             </section>
         );

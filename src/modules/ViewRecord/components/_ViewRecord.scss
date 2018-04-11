@@ -119,6 +119,53 @@
       width: 10% !important;
     }
 
+    .fileDetails {
+      width: 100%;
+      .fileIcon {
+        img, svg {
+          color: lighten($secondary-color, 25%) !important;
+          margin: auto 6px !important;
+        }
+      }
+      .fileInfo {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        //max-width: 200px;
+      }
+      .fileName {
+        margin-left: 12px;
+        line-height: 47px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .audioWrapper {
+        overflow: hidden;
+        .audioButton {
+          transform: scale(0.75);
+          &.play {
+            margin-right: -18px !important;
+          }
+          svg {
+            //width: 12px !important;
+            //height: 12px !important;
+            fill: $secondary-color !important;
+          }
+        }
+        .audioPlayer {
+          margin-top: 8px;
+          width: 100px;
+          overflow: hidden;
+
+        }
+      }
+    }
+  }
+  .filePreview {
+    position: relative;
+    top: -46px;
+    text-align: right;
   }
 
   // Links
