@@ -80,7 +80,7 @@ export default class Files extends Component {
     }
 
     renderEmbargoDate = (embargoDate) => {
-        return embargoDate && moment(embargoDate).isAfter(moment()) ? locale.viewRecord.sections.files.embargoDate.replace('[embargoDate]', moment(embargoDate).format('DD/MM/YYYY')) : null;
+        return embargoDate && moment(embargoDate).isSameOrAfter(moment(), 'day') ? locale.viewRecord.sections.files.embargoDate.replace('[embargoDate]', moment(embargoDate).format('DD/MM/YYYY')) : null;
     }
 
     // filter out fezacml, premd, thumbnail, web prefix files
