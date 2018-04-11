@@ -34,21 +34,19 @@ export default class GrantInformation extends Component {
         return grantData && grantData.filter(grantData=>grantData[orderSubkey] === order)[0];
     }
 
-    renderGrants = (publication, fundingText) => {
-        const grants = [];
+    renderGrants = (publication, includeFundingText = true) => {
         const grantAgencies = publication.fez_record_search_key_grant_agency;
         const grantIds = publication.fez_record_search_key_grant_id;
         const grantTexts = publication.fez_record_search_key_grant_text;
 
-        grantAgencies.sort((grantAgency1, grantAgency2) => (
+        return grantAgencies.sort((grantAgency1, grantAgency2) => (
             grantAgency1.rek_grant_agency_order - grantAgency2.rek_grant_agency_order
         )).map((grantAgency) => {
             const order = grantAgency.rek_grant_agency_order;
             const grantId = this.searchByOrder(grantIds, 'rek_grant_id_order', order);
-            const grantText = !fundingText && this.searchByOrder(grantTexts, 'rek_grant_text_order', order);
-            grants.push(this.renderGrantDetail(grantAgency, grantId, grantText, order));
+            const grantText = includeFundingText && this.searchByOrder(grantTexts, 'rek_grant_text_order', order);
+            return this.renderGrantDetail(grantAgency, grantId, grantText, order);
         });
-        return grants;
     }
 
     render() {
@@ -68,7 +66,7 @@ export default class GrantInformation extends Component {
                 }
                 <Table selectable={false} className="grantInformation vertical">
                     <TableBody displayRowCheckbox={false}>
-                        {this.props.publication.fez_record_search_key_grant_agency && this.renderGrants(this.props.publication, fundingText)}
+                        {this.props.publication.fez_record_search_key_grant_agency && this.renderGrants(this.props.publication, !fundingText)}
                     </TableBody>
                 </Table>
             </StandardCard>
