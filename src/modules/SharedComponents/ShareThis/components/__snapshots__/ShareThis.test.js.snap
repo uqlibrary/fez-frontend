@@ -3,11 +3,6 @@
 exports[`Component Sharethis should render 3rd party elements with default props 1`] = `
 <div
   className="shareThis columns is-gapless is-clearfix is-marginless"
-  style={
-    Object {
-      "paddingBottom": 12,
-    }
-  }
 >
   <div
     className="column is-hidden-mobile"

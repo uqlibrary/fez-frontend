@@ -17,7 +17,7 @@ export default class CitationCountView extends PureComponent {
     render() {
         const {source, count, link, title} = this.props;
         return (
-            <span className="citationCount">
+            <div className="citationCount">
                 <ExternalLink
                     className={`${source}CitationCount`}
                     href={link}
@@ -27,7 +27,7 @@ export default class CitationCountView extends PureComponent {
                     <div className={`fez-icon ${source} large`}/>
                     <span className="citationCountNumber">{count}</span>
                 </ExternalLink>
-            </span>
+            </div>
         );
     }
 }
