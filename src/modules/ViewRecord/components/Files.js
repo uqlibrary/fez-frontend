@@ -5,6 +5,7 @@ import {Table, TableBody, TableRowColumn, TableHeader, TableRow, TableHeaderColu
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 
+import moment from 'moment';
 import AvVolumeUp from 'material-ui/svg-icons/av/volume-up';
 import InsertDriveFile from 'material-ui/svg-icons/editor/insert-drive-file';
 import PictureAsPdf from 'material-ui/svg-icons/image/picture-as-pdf';
@@ -78,6 +79,10 @@ export default class Files extends Component {
         return parseFloat((bytes / Math.pow(k, index)).toFixed(decimals)) + ' ' + sizes[index];
     }
 
+    renderEmbargoDate = (embargoDate) => {
+        return embargoDate && moment(embargoDate).isAfter(moment()) ? locale.viewRecord.sections.files.embargoDate.replace('[embargoDate]', moment(embargoDate).format('DD/MM/YYYY')) : null;
+    }
+
     // filter out fezacml, premd, thumbnail, web prefix files
     getFileData = (publication) => {
         const dataStreams = publication.fez_datastream_info;
@@ -88,13 +93,13 @@ export default class Files extends Component {
                 !dataStream.dsi_label.match(new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi'))
             )).map(dataStream => {
                 const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
-
                 // TODO: set values for open access/allowDownload when available
                 return {
                     pid: publication.rek_pid,
                     fileName: dataStream.dsi_dsid,
                     description: dataStream.dsi_label,
                     mimeType: mimeType,
+                    embargoText: this.renderEmbargoDate(dataStream.dsi_embargo_date),
                     calculatedSize: this.formatBytes(dataStream.dsi_size),
                     icon: this.renderFileIcon(mimeType)
                 };
@@ -125,6 +130,7 @@ export default class Files extends Component {
                                 <TableHeaderColumn className="description is-hidden-mobile">
                                     {locale.viewRecord.sections.files.description}
                                 </TableHeaderColumn>
+                                <TableHeaderColumn className="oaStatus"/>
                                 <TableHeaderColumn className="align-right is-hidden-mobile is-hidden-tablet-only size">
                                     {locale.viewRecord.sections.files.size}
                                 </TableHeaderColumn>
@@ -138,16 +144,26 @@ export default class Files extends Component {
                                             {item.icon}
                                         </TableRowColumn>
                                         <TableRowColumn className="filename">
-                                            <ExternalLink href={pathConfig.file.url(item.pid, item.fileName)}
-                                                title={`${item.fileName} - ${item.description} - ${item.calculatedSize}`}
-                                                className={'fileName'}
-                                                openInNewIcon
-                                            >
-                                                {item.fileName}
-                                            </ExternalLink>
+                                            {
+                                                !item.embargoText &&
+                                                <ExternalLink
+                                                    href={pathConfig.file.url(item.pid, item.fileName)}
+                                                    title={`${item.fileName} - ${item.description} - ${item.calculatedSize}`}
+                                                    className={'fileName'}
+                                                    openInNewIcon
+                                                >
+                                                    {item.fileName}
+                                                </ExternalLink>
+                                            }
+                                            {
+                                                item.embargoText && item.fileName
+                                            }
                                         </TableRowColumn>
                                         <TableRowColumn className="is-hidden-mobile description">
                                             {item.description}
+                                        </TableRowColumn>
+                                        <TableRowColumn className="oaStatus">
+                                            {item.embargoText}
                                         </TableRowColumn>
                                         <TableRowColumn className="align-right is-hidden-mobile is-hidden-tablet-only size" >
                                             {item.calculatedSize}

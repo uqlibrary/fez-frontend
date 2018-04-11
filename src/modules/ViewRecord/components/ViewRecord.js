@@ -37,6 +37,11 @@ export default class ViewRecord extends PureComponent {
         }
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props.recordToView !== nextProps.recordToView
+            || this.state !== nextState;
+    }
+
     componentWillUnmount() {
         // clear previously selected record
         if (this.props.actions) {

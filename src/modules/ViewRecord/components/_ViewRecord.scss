@@ -94,7 +94,7 @@
       width: 24px !important;
     }
     .filename {
-      width: 45% !important;
+      width: 40% !important;
       @include tablet-only {
         width: 50% !important;
       }
@@ -103,14 +103,20 @@
       }
     }
     .description {
-      width: 40% !important;
+      width: 30% !important;
       @include tablet-only {
         width: 50% !important;
       }
     }
+    .oaStattus {
+      width: 20% !important;
+      @include mobile {
+        width: 5% !important;
+      }
+    }
     .size {
       text-align: right !important;
-      width: 15% !important;
+      width: 10% !important;
     }
 
   }

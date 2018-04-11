@@ -45,6 +45,9 @@ exports[`Files Component  should not render cultural message 1`] = `
             Description
           </TableHeaderColumn>
           <TableHeaderColumn
+            className="oaStatus"
+          />
+          <TableHeaderColumn
             className="align-right is-hidden-mobile is-hidden-tablet-only size"
           >
             Size
@@ -97,6 +100,10 @@ exports[`Files Component  should not render cultural message 1`] = `
           >
             testing image description
           </TableRowColumn>
+          <TableRowColumn
+            className="oaStatus"
+            hoverable={false}
+          />
           <TableRowColumn
             className="align-right is-hidden-mobile is-hidden-tablet-only size"
             hoverable={false}
@@ -153,6 +160,9 @@ exports[`Files Component  should render component 1`] = `
             Description
           </TableHeaderColumn>
           <TableHeaderColumn
+            className="oaStatus"
+          />
+          <TableHeaderColumn
             className="align-right is-hidden-mobile is-hidden-tablet-only size"
           >
             Size
@@ -205,6 +215,10 @@ exports[`Files Component  should render component 1`] = `
           >
             testing image description
           </TableRowColumn>
+          <TableRowColumn
+            className="oaStatus"
+            hoverable={false}
+          />
           <TableRowColumn
             className="align-right is-hidden-mobile is-hidden-tablet-only size"
             hoverable={false}
@@ -269,6 +283,9 @@ exports[`Files Component  should render cultural message 1`] = `
             Description
           </TableHeaderColumn>
           <TableHeaderColumn
+            className="oaStatus"
+          />
+          <TableHeaderColumn
             className="align-right is-hidden-mobile is-hidden-tablet-only size"
           >
             Size
@@ -321,6 +338,10 @@ exports[`Files Component  should render cultural message 1`] = `
           >
             testing image description
           </TableRowColumn>
+          <TableRowColumn
+            className="oaStatus"
+            hoverable={false}
+          />
           <TableRowColumn
             className="align-right is-hidden-mobile is-hidden-tablet-only size"
             hoverable={false}
