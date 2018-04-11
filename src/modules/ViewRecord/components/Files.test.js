@@ -32,7 +32,7 @@ describe('Files Component ', () => {
 
     it('should not render component with no files', () => {
         const publication = Object.assign({}, journalArticle);
-        delete publication.fez_record_search_key_file_attachment_name;
+        delete publication.fez_datastream_info;
         const wrapper = setup({publication:publication});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.fileName').length).toEqual(0);

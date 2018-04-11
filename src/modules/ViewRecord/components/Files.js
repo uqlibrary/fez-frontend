@@ -12,6 +12,7 @@ import Image from 'material-ui/svg-icons/image/image';
 import AvVideocam from 'material-ui/svg-icons/av/videocam';
 import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
 import {pathConfig} from 'config/routes';
+import {viewRecordsConfig} from 'config/viewRecord';
 
 export default class Files extends Component {
     static propTypes = {
@@ -43,10 +44,6 @@ export default class Files extends Component {
         } else {
             return <InsertDriveFile />;
         }
-    }
-
-    searchByKey = (list, key, value) => {
-        return list && list.filter(item=>item[key] === value)[0];
     }
 
     // TODO: uncomment when preview is available
@@ -83,32 +80,26 @@ export default class Files extends Component {
 
     // filter out fezacml, premd, thumbnail, web prefix files
     getFileData = (publication) => {
-        const fileNames = publication.fez_record_search_key_file_attachment_name;
         const dataStreams = publication.fez_datastream_info;
 
-        const files = !!fileNames && fileNames.length > 0
-            ? fileNames.filter((fileName) => (
-                !fileName.rek_file_attachment_name.match('^(FezACML|stream|web|thumbnail|preview|presmd)')
-            )).sort((fileName1, fileName2) => (
-                fileName1.rek_file_attachment_name_order - fileName2.rek_file_attachment_name_order
-            )).map(fileName => {
-                const order = fileName.rek_file_attachment_name_order;
-                const dataStream = this.searchByKey(dataStreams, 'dsi_dsid', fileName.rek_file_attachment_name);
-                const mimeType = dataStream && dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
+        return !!dataStreams && dataStreams.length > 0
+            ? dataStreams.filter((dataStream) => (
+                !dataStream.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
+                !dataStream.dsi_label.match(new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi'))
+            )).map(dataStream => {
+                const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
+
                 // TODO: set values for open access/allowDownload when available
                 return {
-                    order: order,
                     pid: publication.rek_pid,
-                    fileName: fileName.rek_file_attachment_name,
+                    fileName: dataStream.dsi_dsid,
+                    description: dataStream.dsi_label,
                     mimeType: mimeType,
-                    dataStream: dataStream,
-                    calculatedSize: dataStream && this.formatBytes(dataStream.dsi_size),
+                    calculatedSize: this.formatBytes(dataStream.dsi_size),
                     icon: this.renderFileIcon(mimeType)
                 };
             })
             : [];
-
-        return files;
     }
 
     render() {
@@ -141,14 +132,14 @@ export default class Files extends Component {
                         </TableHeader>
                         <TableBody displayRowCheckbox={false} className="data">
                             {
-                                fileData.map(item => (
-                                    <TableRow selectable className="file" key={`file-${item.order}`}>
+                                fileData.map((item, index) => (
+                                    <TableRow selectable className="file" key={`file-${index}`}>
                                         <TableRowColumn className="filetype fileIcon">
                                             {item.icon}
                                         </TableRowColumn>
                                         <TableRowColumn className="filename">
                                             <ExternalLink href={pathConfig.file.url(item.pid, item.fileName)}
-                                                title={`${item.fileName} - ${item.dataStream && item.dataStream.dsi_label} - ${item.calculatedSize}`}
+                                                title={`${item.fileName} - ${item.description} - ${item.calculatedSize}`}
                                                 className={'fileName'}
                                                 openInNewIcon
                                             >
@@ -156,7 +147,7 @@ export default class Files extends Component {
                                             </ExternalLink>
                                         </TableRowColumn>
                                         <TableRowColumn className="is-hidden-mobile description">
-                                            {item.dataStream && item.dataStream.dsi_label}
+                                            {item.description}
                                         </TableRowColumn>
                                         <TableRowColumn className="align-right is-hidden-mobile is-hidden-tablet-only size" >
                                             {item.calculatedSize}

@@ -66,46 +66,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           displayBorder={true}
           hoverable={false}
           hovered={false}
-          key="file-3"
-          selectable={true}
-          striped={false}
-        >
-          <TableRowColumn
-            className="filetype fileIcon"
-            hoverable={false}
-          >
-            <EditorInsertDriveFile />
-          </TableRowColumn>
-          <TableRowColumn
-            className="filename"
-            hoverable={false}
-          >
-            <ExternalLink
-              className="fileName"
-              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
-              openInNewIcon={true}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="UQ676287_OA.pdf - undefined - undefined"
-            >
-              UQ676287_OA.pdf
-            </ExternalLink>
-          </TableRowColumn>
-          <TableRowColumn
-            className="is-hidden-mobile description"
-            hoverable={false}
-          />
-          <TableRowColumn
-            className="align-right is-hidden-mobile is-hidden-tablet-only size"
-            hoverable={false}
-          />
-        </TableRow>
-        <TableRow
-          className="file"
-          displayBorder={true}
-          hoverable={false}
-          hovered={false}
-          key="file-4"
+          key="file-0"
           selectable={true}
           striped={false}
         >
@@ -213,46 +174,7 @@ exports[`Files Component  should render component 1`] = `
           displayBorder={true}
           hoverable={false}
           hovered={false}
-          key="file-3"
-          selectable={true}
-          striped={false}
-        >
-          <TableRowColumn
-            className="filetype fileIcon"
-            hoverable={false}
-          >
-            <EditorInsertDriveFile />
-          </TableRowColumn>
-          <TableRowColumn
-            className="filename"
-            hoverable={false}
-          >
-            <ExternalLink
-              className="fileName"
-              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
-              openInNewIcon={true}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="UQ676287_OA.pdf - undefined - undefined"
-            >
-              UQ676287_OA.pdf
-            </ExternalLink>
-          </TableRowColumn>
-          <TableRowColumn
-            className="is-hidden-mobile description"
-            hoverable={false}
-          />
-          <TableRowColumn
-            className="align-right is-hidden-mobile is-hidden-tablet-only size"
-            hoverable={false}
-          />
-        </TableRow>
-        <TableRow
-          className="file"
-          displayBorder={true}
-          hoverable={false}
-          hovered={false}
-          key="file-4"
+          key="file-0"
           selectable={true}
           striped={false}
         >
@@ -368,46 +290,7 @@ exports[`Files Component  should render cultural message 1`] = `
           displayBorder={true}
           hoverable={false}
           hovered={false}
-          key="file-3"
-          selectable={true}
-          striped={false}
-        >
-          <TableRowColumn
-            className="filetype fileIcon"
-            hoverable={false}
-          >
-            <EditorInsertDriveFile />
-          </TableRowColumn>
-          <TableRowColumn
-            className="filename"
-            hoverable={false}
-          >
-            <ExternalLink
-              className="fileName"
-              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
-              openInNewIcon={true}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="UQ676287_OA.pdf - undefined - undefined"
-            >
-              UQ676287_OA.pdf
-            </ExternalLink>
-          </TableRowColumn>
-          <TableRowColumn
-            className="is-hidden-mobile description"
-            hoverable={false}
-          />
-          <TableRowColumn
-            className="align-right is-hidden-mobile is-hidden-tablet-only size"
-            hoverable={false}
-          />
-        </TableRow>
-        <TableRow
-          className="file"
-          displayBorder={true}
-          hoverable={false}
-          hovered={false}
-          key="file-4"
+          key="file-0"
           selectable={true}
           striped={false}
         >

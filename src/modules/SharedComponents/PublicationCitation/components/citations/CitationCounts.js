@@ -5,6 +5,7 @@ import {OPEN_ACCESS_ID_DOI, OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION, OPEN_ACCESS_I
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import * as Partials from './partials';
+import {viewRecordsConfig} from 'config/viewRecord';
 const moment = require('moment');
 
 export default class CitationCounts extends React.PureComponent {
@@ -36,16 +37,16 @@ export default class CitationCounts extends React.PureComponent {
             const hasFiles = !!record.fez_datastream_info && record.fez_datastream_info.length > 0;
             const allFiles =  hasFiles
                 ? record.fez_datastream_info.filter(item => (
-                    !item.dsi_dsid.match('^(FezACML|stream|web|thumbnail|preview|presmd)')
-                    && !item.dsi_label.match('(ERA|HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections)', 'gi')
+                    !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex)
+                    && !item.dsi_label.match(new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi'))
                 ))
                 : [];
             const allEmbargoFiles = hasFiles
                 ? record.fez_datastream_info.filter(item => (
                     !!item.dsi_embargo_date
                     && moment(item.dsi_embargo_date).isAfter(moment())
-                    && !item.dsi_dsid.match('^(FezACML|stream|web|thumbnail|preview|presmd)'))
-                    && !item.dsi_label.match('(ERA|HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections)', 'gi')
+                    && !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex))
+                    && !item.dsi_label.match(new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi'))
                 ).sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date))
                 : [];
             // OA with a possible file embargo date
