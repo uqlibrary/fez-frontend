@@ -142,7 +142,7 @@ export default class Files extends Component {
                         <TableBody displayRowCheckbox={false} className="data">
                             {
                                 fileData.map(item => (
-                                    <TableRow selectable={true} className="file" key={`file-${item.order}`}>
+                                    <TableRow selectable className="file" key={`file-${item.order}`}>
                                         <TableRowColumn className="filetype fileIcon">
                                             {item.icon}
                                         </TableRowColumn>
