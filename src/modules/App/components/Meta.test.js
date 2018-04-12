@@ -172,5 +172,26 @@ describe('Meta Component ', () => {
     it('should render title only', () => {
         const wrapper = setup({isTitleOnly: true, title: 'My random title'});
         expect(toJson(wrapper)).toMatchSnapshot();
-    })
+    });
+
+    it('should render description from rek_description if rek_formatted_abstract has an empty tag', () => {
+        const publication = {
+            rek_formatted_abstract: '<p></p>',
+            rek_description: ''
+        };
+        const wrapper = setup({publication});
+
+        expect(wrapper.instance().getMetaTagContent(publication, 'rek_description', null, null)).toBeFalsy();
+    });
+
+    it('should render formatted text correctly escaped characters', () => {
+        const publication = {
+            rek_formatted_abstract: '<p>This is some description in <strong>HTML</strong></p>',
+            rek_description: ''
+        };
+        const expectedValue = '&lt;p&gt;This is some description in &lt;strong&gt;HTML&lt;/strong&gt;&lt;/p&gt;';
+        const wrapper = setup({publication});
+
+        expect(wrapper.instance().getMetaTagContent(publication, 'rek_description', null, null)).toEqual(expectedValue);
+    });
 });

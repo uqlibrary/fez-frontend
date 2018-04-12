@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {viewRecordsConfig} from 'config/viewRecord';
 import {locale} from 'locale';
 
+const dompurify = require('dompurify');
 const moment = require('moment');
 export default class Meta extends React.PureComponent {
     static propTypes = {
@@ -26,10 +27,13 @@ export default class Meta extends React.PureComponent {
                 const replaceHtmlChars = {
                     '&': '&amp;',
                     '<': '&lt;',
-                    '>': '&gt;'
+                    '>': '&gt;',
                 };
-                return (!!object[key] && object[key] || !!publication.rek_formatted_abstract && publication.rek_formatted_abstract)
-                    .replace(/[&<>]/g, (replace) => (replaceHtmlChars[replace] || replace));
+                const sanitisedFormattedAbstract = !!publication.rek_formatted_abstract &&
+                    dompurify.sanitize(publication.rek_formatted_abstract, {ALLOWED_TAGS: ['']}).replace(/\s/g, '');
+                const description = !!object[key] && object[key] || sanitisedFormattedAbstract && publication.rek_formatted_abstract;
+                return description.length > 0 &&
+                    description.replace(/[&<>]/g, (replace) => (replaceHtmlChars[replace] || replace));
             case 'fez_datastream_info':
                 return object.dsi_mimetype === 'application/pdf' &&
                     url(publication.rek_pid, object.dsi_dsid);
