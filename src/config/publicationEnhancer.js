@@ -33,13 +33,14 @@ export const calculateOpenAccess = (record) => {
                 !!item.dsi_embargo_date
                 && moment(item.dsi_embargo_date).isAfter(moment())
                 && !item.dsi_dsid.match('^(FezACML|stream|web|thumbnail|preview|presmd)'))
-                && !item.dsi_label.match('(ERA|HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections)', 'gi')
+                && (!item.dsi_label || !item.dsi_label.match('(ERA|HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections)', 'gi'))
             ).sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date))
             : [];
         // OA with a possible file embargo date
+        // OA with a possible file embargo date
         return {
             isOpenAccess: !hasFiles || allFiles.length !== allEmbargoFiles.length,
-            embargoDate: hasFiles && allFiles.length === allEmbargoFiles.length
+            embargoDate: hasFiles && allFiles.length > 0 && allFiles.length === allEmbargoFiles.length
                 ? moment(allFiles[0].dsi_embargo_date).format('Do MMMM YYYY')
                 : null,
             openAccessStatusId: openAccessStatusId
