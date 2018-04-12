@@ -21,13 +21,13 @@ export const calculateOpenAccess = (record) => {
     } else if (openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION
         || openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT
         || openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_OTHER) {
-        const hasFiles = !!record.fez_datastream_info && record.fez_datastream_info.length > 0;
-        const allFiles =  hasFiles
+        const allFiles =  record.fez_datastream_info && record.fez_datastream_info.length > 0
             ? record.fez_datastream_info.filter(item => (
                 !item.dsi_dsid.match('^(FezACML|stream|web|thumbnail|preview|presmd)')
                 && !item.dsi_label.match('(ERA|HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections)', 'gi')
             ))
             : [];
+        const hasFiles = allFiles.length > 0;
         const allEmbargoFiles = hasFiles
             ? record.fez_datastream_info.filter(item => (
                 !!item.dsi_embargo_date
