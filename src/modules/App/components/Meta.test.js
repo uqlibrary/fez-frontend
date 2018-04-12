@@ -184,7 +184,7 @@ describe('Meta Component ', () => {
         expect(wrapper.instance().getMetaTagContent(publication, 'rek_description', null, null)).toBeFalsy();
     });
 
-    it('should render formatted text correctly escaped characters', () => {
+    it('should return rek_formatted_abstract correctly with escaped special characters', () => {
         const publication = {
             rek_formatted_abstract: '<p>This is some description in <strong>HTML</strong></p>',
             rek_description: ''
@@ -193,5 +193,27 @@ describe('Meta Component ', () => {
         const wrapper = setup({publication});
 
         expect(wrapper.instance().getMetaTagContent(publication, 'rek_description', null, null)).toEqual(expectedValue);
+    });
+
+    it('should return rek_title correctly with escaped special characters', () => {
+        const publication = {
+            rek_formatted_title: '<p></p>',
+            rek_title: '<p>This is some title in <strong>HTML</strong></p>'
+        };
+        const expectedValue = '&lt;p&gt;This is some title in &lt;strong&gt;HTML&lt;/strong&gt;&lt;/p&gt;';
+        const wrapper = setup({publication});
+
+        expect(wrapper.instance().getMetaTagContent(publication, 'rek_title', null, null)).toEqual(expectedValue);
+    });
+
+    it('should return rek_formatted_title correctly escaped characters when rek_title has empty value', () => {
+        const publication = {
+            rek_formatted_title: '<p>This is some title in <strong>HTML</strong></p>',
+            rek_title: ''
+        };
+        const expectedValue = '&lt;p&gt;This is some title in &lt;strong&gt;HTML&lt;/strong&gt;&lt;/p&gt;';
+        const wrapper = setup({publication});
+
+        expect(wrapper.instance().getMetaTagContent(publication, 'rek_title', null, null)).toEqual(expectedValue);
     });
 });

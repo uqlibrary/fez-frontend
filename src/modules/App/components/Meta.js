@@ -14,6 +14,19 @@ export default class Meta extends React.PureComponent {
         children: PropTypes.any
     };
 
+    sanitiseAndReplaceHtmlChars = (object, key, alternateKey) => {
+        const replaceHtmlChars = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+        };
+        const sanitisedFormattedText = !!object[alternateKey] &&
+            dompurify.sanitize(object[alternateKey], {ALLOWED_TAGS: ['']}).replace(/\s/g, '');
+        const text = !!object[key] && object[key].length > 0 && object[key] || sanitisedFormattedText && object[alternateKey];
+        return text.length > 0 &&
+            text.replace(/[&<>]/g, (replace) => (replaceHtmlChars[replace] || replace));
+    };
+
     getMetaTagContent = (object, key, url, dateFormat) => {
         const {publication} = this.props;
 
@@ -24,16 +37,9 @@ export default class Meta extends React.PureComponent {
                 return !!object[key] && object[key].length === 4 && object[key] ||
                     moment.parseZone(object[key]).format(dateFormat);
             case 'rek_description':
-                const replaceHtmlChars = {
-                    '&': '&amp;',
-                    '<': '&lt;',
-                    '>': '&gt;',
-                };
-                const sanitisedFormattedAbstract = !!publication.rek_formatted_abstract &&
-                    dompurify.sanitize(publication.rek_formatted_abstract, {ALLOWED_TAGS: ['']}).replace(/\s/g, '');
-                const description = !!object[key] && object[key] || sanitisedFormattedAbstract && publication.rek_formatted_abstract;
-                return description.length > 0 &&
-                    description.replace(/[&<>]/g, (replace) => (replaceHtmlChars[replace] || replace));
+                return this.sanitiseAndReplaceHtmlChars(object, key, 'rek_formatted_abstract');
+            case 'rek_title':
+                return this.sanitiseAndReplaceHtmlChars(object, key, 'rek_formatted_title');
             case 'fez_datastream_info':
                 return object.dsi_mimetype === 'application/pdf' &&
                     url(publication.rek_pid, object.dsi_dsid);
