@@ -4740,6 +4740,15 @@ export const record = {
             "rek_link_description_order": 1
         }
     ],
+    "fez_record_search_key_geographic_area": [
+        {
+            "rek_geographic_area_id": 18517,
+            "rek_geographic_area_pid": "UQ:354076",
+            "rek_geographic_area_xsdmf_id": null,
+            "rek_geographic_area_order": 1,
+            "rek_geographic_area": "178.849182,-16.826275 179.129333,-16.826275 179.129333,-17.251690 178.849182,-17.251690 178.849182,-16.826275"
+        }
+    ],
 };
 
 export const myRecordsList = {
