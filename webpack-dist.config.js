@@ -85,7 +85,6 @@ module.exports = {
             'process.env.GOOGLE_MAP_KEY': JSON.stringify(config.googleMaps),
             'process.env.ENABLE_LOG': JSON.stringify(!!process.env.CI_BRANCH && process.env.NODE_ENV !== 'test'),
             'process.env.TITLE_SUFFIX': JSON.stringify(config.titleSuffix),
-            'process.env.TITLE': JSON.stringify(config.title),
         }),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         // Put it in the end to capture all the HtmlWebpackPlugin's

@@ -7,7 +7,7 @@ exports[`Meta Component  should not render component with empty publication 1`] 
     encodeSpecialCharacters={true}
   >
     <title>
-      UQ eSpace Test
+      UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -24,7 +24,7 @@ exports[`Meta Component  should render component with audio document 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      Hearing the city Symposium Title 5: In conversation - UQ eSpace Test
+      Hearing the city Symposium Title 5: In conversation - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -127,7 +127,7 @@ exports[`Meta Component  should render component with book 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      Addictions - UQ eSpace Test
+      Addictions - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -235,7 +235,7 @@ exports[`Meta Component  should render component with book chapter 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      Non-coding RNAs in Mammary Gland Development and Disease - UQ eSpace Test
+      Non-coding RNAs in Mammary Gland Development and Disease - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -393,7 +393,7 @@ exports[`Meta Component  should render component with conference paper 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      Alcohol use disorders, risky alcohol consumption and adverse events among chronic non-cancer pain patients receiving opioid therapy - UQ eSpace Test
+      Alcohol use disorders, risky alcohol consumption and adverse events among chronic non-cancer pain patients receiving opioid therapy - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -571,7 +571,7 @@ exports[`Meta Component  should render component with conference proceedings 1`]
     encodeSpecialCharacters={true}
   >
     <title>
-      Experiences and Challenges in Sewers: Measurements and Hydrodynamics - UQ eSpace Test
+      Experiences and Challenges in Sewers: Measurements and Hydrodynamics - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -699,7 +699,7 @@ exports[`Meta Component  should render component with coverage period data mappe
     encodeSpecialCharacters={true}
   >
     <title>
-      Record with coverage period - UQ eSpace Test
+      Record with coverage period - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -731,7 +731,7 @@ exports[`Meta Component  should render component with coverage period data mappe
     encodeSpecialCharacters={true}
   >
     <title>
-      Record with coverage period - UQ eSpace Test
+      Record with coverage period - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -768,7 +768,7 @@ exports[`Meta Component  should render component with creative work 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      Sustainable home Brisbane - UQ eSpace Test
+      Sustainable home Brisbane - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -876,7 +876,7 @@ exports[`Meta Component  should render component with data collection 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material - UQ eSpace Test
+      CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -1004,7 +1004,7 @@ exports[`Meta Component  should render component with design document 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      Site setting and circumstance: A house and courtyard garden, Riga, Latvia - UQ eSpace Test
+      Site setting and circumstance: A house and courtyard garden, Riga, Latvia - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -1142,7 +1142,7 @@ exports[`Meta Component  should render component with digilib image 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      Conveyor, copper mine, Mount Morgan - UQ eSpace Test
+      Conveyor, copper mine, Mount Morgan - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -1205,7 +1205,7 @@ exports[`Meta Component  should render component with generic document 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      Numerical solution of partial differential equations - UQ eSpace Test
+      Numerical solution of partial differential equations - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -1293,7 +1293,7 @@ exports[`Meta Component  should render component with image 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      Reference Desk, Library - UQ eSpace Test
+      Reference Desk, Library - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -1346,7 +1346,7 @@ exports[`Meta Component  should render component with journal 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      Management international review - UQ eSpace Test
+      Management international review - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -1439,7 +1439,7 @@ exports[`Meta Component  should render component with manuscript 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944 - UQ eSpace Test
+      Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944 - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -1517,7 +1517,7 @@ exports[`Meta Component  should render component with newspaper 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      Improve Your Communication with Doctors - UQ eSpace Test
+      Improve Your Communication with Doctors - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -1635,7 +1635,7 @@ exports[`Meta Component  should render component with patent 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      Bacterial plaques staining composition for evaluating dental caries activity - UQ eSpace Test
+      Bacterial plaques staining composition for evaluating dental caries activity - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -1733,7 +1733,7 @@ exports[`Meta Component  should render component with preprint 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      Heavy Tails, Importance Sampling and Cross-Entropy - UQ eSpace Test
+      Heavy Tails, Importance Sampling and Cross-Entropy - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -1831,7 +1831,7 @@ exports[`Meta Component  should render component with reference entry 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      Domestic Technologies - UQ eSpace Test
+      Domestic Technologies - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -1964,7 +1964,7 @@ exports[`Meta Component  should render component with rek_date year mapped to ci
     encodeSpecialCharacters={true}
   >
     <title>
-      Record with only year in rek_date - UQ eSpace Test
+      Record with only year in rek_date - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -2001,7 +2001,7 @@ exports[`Meta Component  should render component with research report 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      Accelerated Apprenticeships: Apprentice, Employer and Teaching Staff Perceptions - 4 - UQ eSpace Test
+      Accelerated Apprenticeships: Apprentice, Employer and Teaching Staff Perceptions - 4 - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -2089,7 +2089,7 @@ exports[`Meta Component  should render component with thesis 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      It's for love not money: Queensland graziers' perceptions of sustainable development - UQ eSpace Test
+      It's for love not money: Queensland graziers' perceptions of sustainable development - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -2167,7 +2167,7 @@ exports[`Meta Component  should render component with video document 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      Video 12: 1) Discovery History and Geology of the Cannington Ag-Pb-Zn Deposit 2) Advances in Micro-Analytical Technologies — What a grain can tell you - UQ eSpace Test
+      Video 12: 1) Discovery History and Geology of the Cannington Ag-Pb-Zn Deposit 2) Advances in Micro-Analytical Technologies — What a grain can tell you - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -2240,7 +2240,7 @@ exports[`Meta Component  should render component with working paper 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      Education, Employment and Social Inclusion within the European Union - UQ eSpace Test
+      Education, Employment and Social Inclusion within the European Union - UQ eSpace 
     </title>
     <link
       href="http://purl.org/DC/elements/1.0/"
@@ -2358,7 +2358,7 @@ exports[`Meta Component  should render title only 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      My random title - UQ eSpace Test
+      My random title - UQ eSpace 
     </title>
   </HelmetWrapper>
 </div>
