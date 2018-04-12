@@ -2,6 +2,7 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as recordActions from './records';
 import * as mockData from "../mock/data";
+import {locale} from 'locale';
 
 describe('Record action creators', () => {
     // extend expect to check actions
@@ -530,7 +531,7 @@ describe('Record action creators', () => {
                 await mockActionsStore.dispatch(recordActions.submitThesis(customInput, authorData));
             } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-                expect(e).toEqual('Submit Thesis: File upload failed.  (Request error with status code 500. )');
+                expect(e).toEqual('Submit Thesis: File upload failed.  (' + locale.global.errorMessages.generic + ')');
             }
         });
 
@@ -556,7 +557,7 @@ describe('Record action creators', () => {
                 await mockActionsStore.dispatch(recordActions.submitThesis(customInput, authorData));
             } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-                expect(e).toEqual('Submit Thesis: Error occurred while saving record to eSpace.  (Request error with status code 500. )');
+                expect(e).toEqual('Submit Thesis: Error occurred while saving record to eSpace.  (' + locale.global.errorMessages.generic + ')');
             }
         });
 

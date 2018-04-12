@@ -190,7 +190,7 @@ describe('Backend routes method', () => {
         });
     });
 
-    it('should getStandardSearchParameters', () => {
+    it('should return parameters for search query string from getStandardSearchParameters method', () => {
         const testCases = [
             {
                 values: {},
@@ -219,7 +219,7 @@ describe('Backend routes method', () => {
                     per_page: 30,
                     sort: 'score',
                     ['filters[facets][one]']: 'one facet',
-                    "rek_oa_status": [453693, 453695, 453696, 453697, 453954]
+                    "rek_oa_status": [453693, 453694, 453695, 453696, 453697, 453954]
                 }
             }
         ];
