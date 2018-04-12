@@ -99,15 +99,17 @@ export default class Files extends Component {
         return list && list.filter(item=>item[key] === value)[0];
     }
 
+    isFileValid = (dataStream) => {
+        return !dataStream.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
+            (dataStream.dsi_label ? !dataStream.dsi_label.match(new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi')) : true);
+    }
+
     // filter out fezacml, premd, thumbnail, web prefix files
     getFileData = (publication) => {
         const dataStreams = publication.fez_datastream_info;
 
         return !!dataStreams && dataStreams.length > 0
-            ? dataStreams.filter((dataStream) => (
-                !dataStream.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
-                !dataStream.dsi_label.match(new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi'))
-            )).map(dataStream => {
+            ? dataStreams.filter(this.isFileValid).map(dataStream => {
                 const pid = publication.rek_pid;
                 const fileName = dataStream.dsi_dsid;
                 const thumbnailDataStream = this.searchByKey(dataStreams, 'dsi_dsid', 'thumbnail_' + fileName);

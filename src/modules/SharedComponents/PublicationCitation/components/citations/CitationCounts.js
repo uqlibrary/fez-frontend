@@ -14,6 +14,10 @@ export default class CitationCounts extends React.PureComponent {
     };
 
     getTitle = (title) => (locale.global.linkWillOpenInNewWindow.replace('[destination]', `${this.props.publication.rek_title} (${title})`));
+    isFileValid = (dataStream) => {
+        return !dataStream.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
+            (dataStream.dsi_label ? !dataStream.dsi_label.match(new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi')) : true);
+    }
 
     isRecordOpenAccess = (record) => {
         const openAccessStatusId = !!record.fez_record_search_key_oa_status
@@ -36,18 +40,14 @@ export default class CitationCounts extends React.PureComponent {
             || openAccessStatusId === OPEN_ACCESS_ID_OTHER) {
             const hasFiles = !!record.fez_datastream_info && record.fez_datastream_info.length > 0;
             const allFiles =  hasFiles
-                ? record.fez_datastream_info.filter(item => (
-                    !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex)
-                    && !item.dsi_label.match(new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi'))
-                ))
+                ? record.fez_datastream_info.filter(this.isFileValid)
                 : [];
             const allEmbargoFiles = hasFiles
                 ? record.fez_datastream_info.filter(item => (
                     !!item.dsi_embargo_date
                     && moment(item.dsi_embargo_date).isAfter(moment())
-                    && !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex))
-                    && !item.dsi_label.match(new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi'))
-                ).sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date))
+                    && this.isFileValid(item)
+                )).sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date))
                 : [];
             // OA with a possible file embargo date
             return {

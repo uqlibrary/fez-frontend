@@ -59,18 +59,18 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
         previewMediaUrl="https://test.com/preview_test.jpg"
       >
         <StandardCard
-          className=""
+          className="mediaPreview"
           title="Image preview"
         >
           <Card
-            className=" standard-card"
+            className="mediaPreview standard-card"
             expandable={false}
             expanded={null}
             initiallyExpanded={false}
           >
             <Paper
               circle={false}
-              className=" standard-card"
+              className="mediaPreview standard-card"
               rounded={true}
               style={
                 Object {
@@ -81,7 +81,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
               zDepth={1}
             >
               <div
-                className=" standard-card"
+                className="mediaPreview standard-card"
                 style={
                   Object {
                     "WebkitTapHighlightColor": "rgba(0,0,0,0)",
@@ -187,7 +187,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                     >
                       <div>
                         <div
-                          className="column is-narrow filePreview"
+                          className="column is-narrow buttons"
                         >
                           <RaisedButton
                             disabled={false}
@@ -552,11 +552,11 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
 
 exports[`Media Preview Component  should render component 1`] = `
 <StandardCard
-  className=""
+  className="mediaPreview"
   title="Image preview"
 >
   <div
-    className="column is-narrow filePreview"
+    className="column is-narrow buttons"
   >
     <RaisedButton
       disabled={false}
@@ -582,11 +582,11 @@ exports[`Media Preview Component  should render component 1`] = `
 
 exports[`Media Preview Component  should render component with image 1`] = `
 <StandardCard
-  className=""
+  className="mediaPreview"
   title="Image preview"
 >
   <div
-    className="column is-narrow filePreview"
+    className="column is-narrow buttons"
   >
     <RaisedButton
       disabled={false}
@@ -608,6 +608,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
     />
   </div>
   <img
+    alt="https://test.com/test.jpg"
     src="https://test.com/preview_test.jpg"
   />
 </StandardCard>
@@ -615,11 +616,11 @@ exports[`Media Preview Component  should render component with image 1`] = `
 
 exports[`Media Preview Component  should render component with video 1`] = `
 <StandardCard
-  className=""
+  className="mediaPreview"
   title="Video preview"
 >
   <div
-    className="column is-narrow filePreview"
+    className="column is-narrow buttons"
   >
     <RaisedButton
       disabled={false}

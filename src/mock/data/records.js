@@ -4001,7 +4001,7 @@ export const record = {
             "dsi_dsid": "image.jpg",
             "dsi_embargo_date": null,
             "dsi_open_access": null,
-            "dsi_label": "testing image description",
+            "dsi_label": null,
             "dsi_mimetype": "image/jpeg",
             "dsi_copyright": null,
             "dsi_state": "A",

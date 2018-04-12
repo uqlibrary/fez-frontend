@@ -88,6 +88,10 @@
         height: 24px !important;
         padding: 8px 6px 0 0 !important;
       }
+      img {
+        max-width: 24px;
+        max-height: 24px;
+      }
     }
     // columns widths
     .filetype {
@@ -161,10 +165,16 @@
       }
     }
   }
-  .filePreview {
-    position: relative;
-    top: -46px;
-    text-align: right;
+  .mediaPreview {
+    .buttons {
+      position: relative;
+      top: -46px;
+      text-align: right;
+    }
+    img {
+      max-width: 80vw;
+      max-height: 100vh;
+    }
   }
 
   // Links

@@ -17,14 +17,14 @@ export default class MediaPreview extends PureComponent {
     }
 
     render()  {
-        const {previewMediaUrl, mimeType} = this.props;
+        const {mediaUrl, previewMediaUrl, mimeType} = this.props;
         const isVideo = mimeType.indexOf('video') >= 0;
         const isImage = mimeType.indexOf('image') >= 0;
         const title = isVideo ? locale.viewRecord.sections.files.preview.videoTitle : locale.viewRecord.sections.files.preview.imageTitle;
 
         return (
-            <StandardCard title={title}>
-                <div className="column is-narrow filePreview">
+            <StandardCard title={title} className={'mediaPreview'}>
+                <div className="column is-narrow buttons">
                     <RaisedButton label={locale.viewRecord.sections.files.preview.openInNewWindow} onTouchTap={this.openFileInNewWindow} primary />
                     <RaisedButton label={locale.viewRecord.sections.files.preview.close} onTouchTap={this.props.onClose}/>
                 </div>
@@ -36,9 +36,8 @@ export default class MediaPreview extends PureComponent {
                     </video>
                 }
                 {
-                    // TODO: styles required for large images, alt attribute
                     isImage &&
-                    <img src={previewMediaUrl} />
+                    <img src={previewMediaUrl} alt={mediaUrl}/>
                 }
             </StandardCard>
         );

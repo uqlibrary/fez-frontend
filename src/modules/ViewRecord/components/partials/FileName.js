@@ -52,8 +52,8 @@ export default class FileName extends PureComponent {
                         allowDownload && this.canShowPreview(mimeType) &&
                         <a
                             href="#"
-                            onClick={()=>{onFileSelect(mediaUrl, previewMediaUrl, mimeType);}}
-                            onKeyPress={()=>{onFileSelect(mediaUrl, previewMediaUrl, mimeType);}}
+                            onClick={(e)=>{e.preventDefault(); onFileSelect(mediaUrl, previewMediaUrl, mimeType);}}
+                            onKeyPress={(e)=>{e.preventDefault(); onFileSelect(mediaUrl, previewMediaUrl, mimeType);}}
                             className={'fileName'}>
                             {fileName}
                         </a>
