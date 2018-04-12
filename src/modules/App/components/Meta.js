@@ -32,25 +32,25 @@ export default class Meta extends React.PureComponent {
 
         switch (key) {
             case 'rek_pid':
-                return url(publication.rek_pid);
+                return !!object[key] && url(object[key]);
             case 'rek_date':
-                return !!object[key] && object[key].length === 4 && object[key] ||
-                    moment.parseZone(object[key]).format(dateFormat);
+                return !!object[key] && (object[key].length === 4 && object[key] ||
+                    moment.parseZone(object[key]).format(dateFormat));
             case 'rek_description':
                 return this.sanitiseAndReplaceHtmlChars(object, key, 'rek_formatted_abstract');
             case 'rek_title':
                 return this.sanitiseAndReplaceHtmlChars(object, key, 'rek_formatted_title');
             case 'fez_datastream_info':
-                return object.dsi_mimetype === 'application/pdf' &&
+                return !!object.dsi_dsid && object.dsi_mimetype === 'application/pdf' &&
                     url(publication.rek_pid, object.dsi_dsid);
             case 'rek_issn':
                 return object[key];
             default:
-                return !!object[`${key}_lookup`] && object[`${key}_lookup`] || object[key];
+                return !!object[`${key}_lookup`] && object[`${key}_lookup`] || !!object[key] && object[key];
         }
     };
 
-    renderMetaTags = (publication) => {
+    getMetaTags = (publication) => {
         // Loop through each meta tag
         return viewRecordsConfig.metaTags.reduce((metaTags, metaTag) => {
             const {field, subkey, tags, url} = metaTag;
@@ -90,7 +90,7 @@ export default class Meta extends React.PureComponent {
                                 content && tagsContent.push({name: tag.name, content});
                             });
                         } else {
-                            const content = !!publication[subkey] && this.getMetaTagContent(publication, subkey, url, tag.format);
+                            const content = this.getMetaTagContent(publication, subkey, url, tag.format);
                             content && tagsContent.push({name: tag.name, content});
                         }
                     }
@@ -98,12 +98,12 @@ export default class Meta extends React.PureComponent {
                 }, []))
             );
             return metaTags;
-        }, []);
+        }, []).filter(tag => tag);
     };
 
     render() {
         const {isTitleOnly, publication, title} = this.props;
-        const metaTags = !isTitleOnly && this.renderMetaTags(publication);
+        const metaTags = !isTitleOnly && this.getMetaTags(publication);
         const pageTitle = !!publication && publication.rek_title || !!title && title;
         return (
             <div>
@@ -116,7 +116,9 @@ export default class Meta extends React.PureComponent {
                     {
                         metaTags &&
                         metaTags.map((metaTag, index) => {
-                            return metaTag ? (<meta key={`${metaTag.name}-${index}`} name={metaTag.name} content={metaTag.content} {...(metaTag.name === 'DC.Identifier' ? {scheme: 'URI'} : {})}/>) : null;
+                            const {name} = metaTag;
+                            const scheme = name === 'DC.Identifier' ? {scheme: 'URI'} : {};
+                            return <meta key={`${name}-${index}`} {...metaTag} {...scheme} />;
                         })
                     }
                 </Helmet>

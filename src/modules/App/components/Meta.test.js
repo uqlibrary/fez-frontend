@@ -216,4 +216,20 @@ describe('Meta Component ', () => {
 
         expect(wrapper.instance().getMetaTagContent(publication, 'rek_title', null, null)).toEqual(expectedValue);
     });
+
+    it('should return meta tags correctly', () => {
+        const publication = {
+            rek_formatted_title: '<p>This is some title in <strong>HTML</strong></p>',
+            rek_title: '',
+            rek_description: 'This is test description',
+            rek_formatted_abstract: '<p></p>'
+        };
+        const wrapper = setup({publication});
+        expect(wrapper.instance().getMetaTags(publication)).toEqual([
+            {name: 'DC.Title', content: '&lt;p&gt;This is some title in &lt;strong&gt;HTML&lt;/strong&gt;&lt;/p&gt;'},
+            {name: 'citation_title', content: '&lt;p&gt;This is some title in &lt;strong&gt;HTML&lt;/strong&gt;&lt;/p&gt;'},
+            {name: 'DC.Description', content: 'This is test description'},
+            {name: 'citation_abstract', content: 'This is test description'},
+        ]);
+    });
 });
