@@ -4504,8 +4504,8 @@ export const record = {
         "rek_oa_status_id": 281706,
         "rek_oa_status_pid": "UQ:396321",
         "rek_oa_status_xsdmf_id": 16607,
-        "rek_oa_status": 453695,
-        "rek_oa_status_lookup": "Not yet assessed"
+        "rek_oa_status": 453693,
+        "rek_oa_status_lookup": "DOI"
     },
     "fez_record_search_key_place_of_publication": {
         "rek_place_of_publication_id": 4125279,
@@ -4670,6 +4670,15 @@ export const record = {
             "rek_link_description_xsdmf_id": null,
             "rek_link_description": "Link to publication",
             "rek_link_description_order": 1
+        }
+    ],
+    "fez_record_search_key_geographic_area": [
+        {
+            "rek_geographic_area_id": 18517,
+            "rek_geographic_area_pid": "UQ:354076",
+            "rek_geographic_area_xsdmf_id": null,
+            "rek_geographic_area_order": 1,
+            "rek_geographic_area": "178.849182,-16.826275 179.129333,-16.826275 179.129333,-17.251690 178.849182,-17.251690 178.849182,-16.826275"
         }
     ],
 };

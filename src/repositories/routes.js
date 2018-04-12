@@ -1,4 +1,4 @@
-import {validation} from 'config';
+import {validation, openAccessConfig} from 'config';
 
 const zeroPaddedYear = (value) => value ? ('0000' + value).substr(-4) : '*';
 
@@ -36,7 +36,7 @@ export const getStandardSearchParams = ({page = 1, pageSize = 20, sortBy = 'publ
         sort: sortBy,
         order_by: sortDirection.toLowerCase(),
         ...getFacetsParams(facets),
-        ...(!!facets.showOpenAccessOnly ? {rek_oa_status: [453693, 453695, 453696, 453697, 453954]} : {}),
+        ...(!!facets.showOpenAccessOnly ? {rek_oa_status: openAccessConfig.openAccessIds} : {}),
         ...unknownAuthors
     };
 };
