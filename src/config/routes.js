@@ -157,8 +157,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 path: pathConfig.dashboard,
                 component: components.Dashboard,
                 access: [roles.researcher, roles.admin],
-                exact: true,
-                pageTitle: locale.pages.dashboard.title
+                exact: true
             },
             {
                 path: pathConfig.records.mine,
