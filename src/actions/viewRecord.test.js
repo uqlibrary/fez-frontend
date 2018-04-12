@@ -2,6 +2,7 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as viewRecordActions from './viewRecord';
 import * as mockData from 'mock/data';
+import {locale} from 'locale'
 
 describe('View record actions', () => {
     const testPid = "UQ:396321";
@@ -46,12 +47,10 @@ describe('View record actions', () => {
                 actions.VIEW_RECORD_LOADING,
                 actions.VIEW_RECORD_LOAD_FAILED
             ];
-            try {
-                await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
-                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            } catch (e) {
-                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            }
+
+            await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            expect(mockActionsStore.getActions()).toContainEqual({type: actions.VIEW_RECORD_LOAD_FAILED, payload: locale.global.errorMessages.generic});
         });
 
         it('dispatches expected actions when loading a record to view from API for anon user', async () => {
@@ -64,8 +63,25 @@ describe('View record actions', () => {
                 actions.CURRENT_ACCOUNT_ANONYMOUS,
                 actions.VIEW_RECORD_LOAD_FAILED
             ];
+
             await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            expect(mockActionsStore.getActions()).toContainEqual({type: actions.VIEW_RECORD_LOAD_FAILED, payload: locale.global.errorMessages.sessionExpired});
+        });
+
+        it('dispatches expected actions when loading a non-exist record to view from API', async () => {
+            mockApi
+                .onAny()
+                .reply(404);
+
+            const expectedActions = [
+                actions.VIEW_RECORD_LOADING,
+                actions.VIEW_RECORD_LOAD_FAILED
+            ];
+
+            await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            expect(mockActionsStore.getActions()).toContainEqual({type: actions.VIEW_RECORD_LOAD_FAILED, payload: locale.global.errorMessages.notFound});
         });
     });
 
