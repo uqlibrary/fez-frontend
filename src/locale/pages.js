@@ -135,6 +135,7 @@ export default {
             )
         },
         dashboard: {
+            title: 'My Dashboard',
             loading: 'Loading your dashboard...',
             header: {
                 // help: {

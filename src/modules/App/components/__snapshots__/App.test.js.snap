@@ -160,10 +160,10 @@ exports[`Application component should render alert if user is not fez author 1`]
         render={[Function]}
       />
       <Route
-        component={[Function]}
         exact={true}
         key="route_2"
         path="/"
+        render={[Function]}
       />
       <Route
         access={
@@ -172,10 +172,10 @@ exports[`Application component should render alert if user is not fez author 1`]
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_3"
         path="/dashboard"
+        render={[Function]}
       />
       <Route
         access={
@@ -184,10 +184,10 @@ exports[`Application component should render alert if user is not fez author 1`]
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_4"
         path="/records/mine"
+        render={[Function]}
       />
       <Route
         access={
@@ -196,10 +196,10 @@ exports[`Application component should render alert if user is not fez author 1`]
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_5"
         path="/records/possible"
+        render={[Function]}
       />
       <Route
         access={
@@ -208,10 +208,10 @@ exports[`Application component should render alert if user is not fez author 1`]
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_6"
         path="/records/claim"
+        render={[Function]}
       />
       <Route
         access={
@@ -220,10 +220,10 @@ exports[`Application component should render alert if user is not fez author 1`]
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_7"
         path="/records/:pid(UQ:\\\\d+)/fix"
+        render={[Function]}
       />
       <Route
         access={
@@ -262,10 +262,10 @@ exports[`Application component should render alert if user is not fez author 1`]
         render={[Function]}
       />
       <Route
-        component={[Function]}
         exact={true}
         key="route_11"
         path="/author-identifiers/orcid/link"
+        render={[Function]}
       />
       <Route
         access={
@@ -274,10 +274,10 @@ exports[`Application component should render alert if user is not fez author 1`]
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_12"
         path="/author-identifiers/google-scholar/link"
+        render={[Function]}
       />
       <Route
         key="route_13"
@@ -285,10 +285,10 @@ exports[`Application component should render alert if user is not fez author 1`]
         render={[Function]}
       />
       <Route
-        component={[Function]}
         exact={true}
         key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
+        render={[Function]}
       />
       <Route
         key="route_15"
@@ -445,10 +445,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         render={[Function]}
       />
       <Route
-        component={[Function]}
         exact={true}
         key="route_2"
         path="/"
+        render={[Function]}
       />
       <Route
         access={
@@ -457,10 +457,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_3"
         path="/dashboard"
+        render={[Function]}
       />
       <Route
         access={
@@ -469,10 +469,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_4"
         path="/records/mine"
+        render={[Function]}
       />
       <Route
         access={
@@ -481,10 +481,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_5"
         path="/records/possible"
+        render={[Function]}
       />
       <Route
         access={
@@ -493,10 +493,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_6"
         path="/records/claim"
+        render={[Function]}
       />
       <Route
         access={
@@ -505,10 +505,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_7"
         path="/records/:pid(UQ:\\\\d+)/fix"
+        render={[Function]}
       />
       <Route
         access={
@@ -547,10 +547,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         render={[Function]}
       />
       <Route
-        component={[Function]}
         exact={true}
         key="route_11"
         path="/author-identifiers/orcid/link"
+        render={[Function]}
       />
       <Route
         access={
@@ -559,10 +559,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_12"
         path="/author-identifiers/google-scholar/link"
+        render={[Function]}
       />
       <Route
         key="route_13"
@@ -570,10 +570,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         render={[Function]}
       />
       <Route
-        component={[Function]}
         exact={true}
         key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
+        render={[Function]}
       />
       <Route
         key="route_15"
@@ -717,10 +717,10 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         render={[Function]}
       />
       <Route
-        component={[Function]}
         exact={true}
         key="route_1"
         path="/records/:pid(UQ:\\\\d+)"
+        render={[Function]}
       />
       <Route
         key="route_2"
@@ -733,8 +733,8 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         render={[Function]}
       />
       <Route
-        component={[Function]}
         key="route_4"
+        render={[Function]}
       />
     </Switch>
   </div>
@@ -887,10 +887,10 @@ exports[`Application component should render app for account with fez author wit
         render={[Function]}
       />
       <Route
-        component={[Function]}
         exact={true}
         key="route_2"
         path="/"
+        render={[Function]}
       />
       <Route
         access={
@@ -899,10 +899,10 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_3"
         path="/dashboard"
+        render={[Function]}
       />
       <Route
         access={
@@ -911,10 +911,10 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_4"
         path="/records/mine"
+        render={[Function]}
       />
       <Route
         access={
@@ -923,10 +923,10 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_5"
         path="/records/possible"
+        render={[Function]}
       />
       <Route
         access={
@@ -935,10 +935,10 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_6"
         path="/records/claim"
+        render={[Function]}
       />
       <Route
         access={
@@ -947,10 +947,10 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_7"
         path="/records/:pid(UQ:\\\\d+)/fix"
+        render={[Function]}
       />
       <Route
         access={
@@ -989,10 +989,10 @@ exports[`Application component should render app for account with fez author wit
         render={[Function]}
       />
       <Route
-        component={[Function]}
         exact={true}
         key="route_11"
         path="/author-identifiers/orcid/link"
+        render={[Function]}
       />
       <Route
         access={
@@ -1001,10 +1001,10 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_12"
         path="/author-identifiers/google-scholar/link"
+        render={[Function]}
       />
       <Route
         key="route_13"
@@ -1012,10 +1012,10 @@ exports[`Application component should render app for account with fez author wit
         render={[Function]}
       />
       <Route
-        component={[Function]}
         exact={true}
         key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
+        render={[Function]}
       />
       <Route
         key="route_15"
@@ -1190,10 +1190,10 @@ exports[`Application component should render app for account with fez author wit
         render={[Function]}
       />
       <Route
-        component={[Function]}
         exact={true}
         key="route_2"
         path="/"
+        render={[Function]}
       />
       <Route
         access={
@@ -1202,10 +1202,10 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_3"
         path="/dashboard"
+        render={[Function]}
       />
       <Route
         access={
@@ -1214,10 +1214,10 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_4"
         path="/records/mine"
+        render={[Function]}
       />
       <Route
         access={
@@ -1226,10 +1226,10 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_5"
         path="/records/possible"
+        render={[Function]}
       />
       <Route
         access={
@@ -1238,10 +1238,10 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_6"
         path="/records/claim"
+        render={[Function]}
       />
       <Route
         access={
@@ -1250,10 +1250,10 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_7"
         path="/records/:pid(UQ:\\\\d+)/fix"
+        render={[Function]}
       />
       <Route
         access={
@@ -1292,10 +1292,10 @@ exports[`Application component should render app for account with fez author wit
         render={[Function]}
       />
       <Route
-        component={[Function]}
         exact={true}
         key="route_11"
         path="/author-identifiers/orcid/link"
+        render={[Function]}
       />
       <Route
         access={
@@ -1304,10 +1304,10 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_12"
         path="/author-identifiers/google-scholar/link"
+        render={[Function]}
       />
       <Route
         key="route_13"
@@ -1315,10 +1315,10 @@ exports[`Application component should render app for account with fez author wit
         render={[Function]}
       />
       <Route
-        component={[Function]}
         exact={true}
         key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
+        render={[Function]}
       />
       <Route
         key="route_15"
@@ -1411,10 +1411,10 @@ exports[`Application component should render app for account with fez author wit
         render={[Function]}
       />
       <Route
-        component={[Function]}
         exact={true}
         key="route_2"
         path="/"
+        render={[Function]}
       />
       <Route
         access={
@@ -1423,10 +1423,10 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_3"
         path="/dashboard"
+        render={[Function]}
       />
       <Route
         access={
@@ -1435,10 +1435,10 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_4"
         path="/records/mine"
+        render={[Function]}
       />
       <Route
         access={
@@ -1447,10 +1447,10 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_5"
         path="/records/possible"
+        render={[Function]}
       />
       <Route
         access={
@@ -1459,10 +1459,10 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_6"
         path="/records/claim"
+        render={[Function]}
       />
       <Route
         access={
@@ -1471,10 +1471,10 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_7"
         path="/records/:pid(UQ:\\\\d+)/fix"
+        render={[Function]}
       />
       <Route
         access={
@@ -1513,10 +1513,10 @@ exports[`Application component should render app for account with fez author wit
         render={[Function]}
       />
       <Route
-        component={[Function]}
         exact={true}
         key="route_11"
         path="/author-identifiers/orcid/link"
+        render={[Function]}
       />
       <Route
         access={
@@ -1525,10 +1525,10 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_12"
         path="/author-identifiers/google-scholar/link"
+        render={[Function]}
       />
       <Route
         key="route_13"
@@ -1536,10 +1536,10 @@ exports[`Application component should render app for account with fez author wit
         render={[Function]}
       />
       <Route
-        component={[Function]}
         exact={true}
         key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
+        render={[Function]}
       />
       <Route
         key="route_15"
@@ -1821,10 +1821,10 @@ exports[`Application component should render for anon user 1`] = `
         render={[Function]}
       />
       <Route
-        component={[Function]}
         exact={true}
         key="route_1"
         path="/records/:pid(UQ:\\\\d+)"
+        render={[Function]}
       />
       <Route
         exact={true}
@@ -1931,10 +1931,10 @@ exports[`Application component should render thesis submission for HDR without m
         render={[Function]}
       />
       <Route
-        component={[Function]}
         exact={true}
         key="route_1"
         path="/records/:pid(UQ:\\\\d+)"
+        render={[Function]}
       />
       <Route
         key="route_2"
@@ -1947,8 +1947,8 @@ exports[`Application component should render thesis submission for HDR without m
         render={[Function]}
       />
       <Route
-        component={[Function]}
         key="route_4"
+        render={[Function]}
       />
     </Switch>
   </div>

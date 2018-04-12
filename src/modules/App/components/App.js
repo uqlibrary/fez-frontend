@@ -14,6 +14,7 @@ import {AuthButton} from 'uqlibrary-react-toolbox/build/AuthButton';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import AppAlertContainer from '../containers/AppAlert';
 import OfflineSnackbar from './OfflineSnackbar';
+import Meta from '../containers/Meta';
 
 import * as pages from './pages';
 import IconButton from 'material-ui/IconButton';
@@ -232,9 +233,19 @@ export default class App extends React.PureComponent {
                                     account: this.props.account,
                                     forceOrcidRegistration: isOrcidRequired && isHdrStudent,
                                     isHdrStudent: isHdrStudent
-                                }).map((route, index) => (
-                                    <Route key={`route_${index}`} {...route} />
-                                ))
+                                }).map((route, index) => {
+                                    const {component: Component, render, pageTitle, ...rest} = route;
+
+                                    return (
+                                        <Route
+                                            key={`route_${index}`}
+                                            {...rest}
+                                            render={(props) => (
+                                                <Meta title={pageTitle}>{Component ? <Component {...props} /> : render(props)}</Meta>
+                                            )}
+                                        />
+                                    );
+                                })
                             }
                         </Switch>
                     }

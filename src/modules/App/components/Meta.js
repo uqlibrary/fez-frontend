@@ -6,7 +6,10 @@ import {viewRecordsConfig} from 'config/viewRecord';
 const moment = require('moment');
 export default class Meta extends React.PureComponent {
     static propTypes = {
-        publication: PropTypes.object
+        publication: PropTypes.object,
+        isTitleOnly: PropTypes.bool,
+        title: PropTypes.string,
+        children: PropTypes.any
     };
 
     getMetaTagContent = (object, key, url, dateFormat) => {
@@ -88,17 +91,28 @@ export default class Meta extends React.PureComponent {
     };
 
     render() {
-        const metaTags = this.renderMetaTags(this.props.publication);
+        const {isTitleOnly, publication, title} = this.props;
+        const metaTags = !isTitleOnly && this.renderMetaTags(publication);
+        const pageTitle = !!publication && publication.rek_title || !!title && title;
         return (
-            <Helmet>
-                <title>{`${this.props.publication.rek_title} - UQ eSpace ${process.env.TITLE_SUFFIX}`}</title>
-                <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
+            <div>
+                <Helmet>
+                    <title>{`${pageTitle ? pageTitle + ' - ' : ''}${process.env.TITLE} ${process.env.TITLE_SUFFIX}`}</title>
+                    {
+                        !isTitleOnly &&
+                        <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
+                    }
+                    {
+                        metaTags &&
+                        metaTags.map((metaTag, index) => {
+                            return metaTag ? (<meta key={`${metaTag.name}-${index}`} name={metaTag.name} content={metaTag.content} {...(metaTag.name === 'DC.Identifier' ? {scheme: 'URI'} : {})}/>) : null;
+                        })
+                    }
+                </Helmet>
                 {
-                    metaTags.map((metaTag, index) => {
-                        return metaTag ? (<meta key={`${metaTag.name}-${index}`} name={metaTag.name} content={metaTag.content} {...(metaTag.name === 'DC.Identifier' ? {scheme: 'URI'} : {})}/>) : null;
-                    })
+                    this.props.children
                 }
-            </Helmet>
+            </div>
         );
     }
 }

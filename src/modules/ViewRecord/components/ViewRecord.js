@@ -14,7 +14,6 @@ import RelatedPublications from './RelatedPublications';
 import Links from './Links';
 import {ShareThis} from 'modules/SharedComponents/ShareThis';
 import AvailableVersions from './AvailableVersions';
-import Meta from './Meta';
 
 export default class ViewRecord extends PureComponent {
     static propTypes = {
@@ -67,7 +66,6 @@ export default class ViewRecord extends PureComponent {
 
         return (
             <StandardPage className="viewRecord" title={recordToView.rek_title}>
-                <Meta publication={recordToView} />
                 <PublicationCitation publication={recordToView} hideTitle />
 
                 <ShareThis />

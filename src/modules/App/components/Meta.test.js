@@ -4,12 +4,14 @@ import Meta from "./Meta";
 function setup(testProps, isShallow = true){
     const props = {
         publication: testProps.publication || {},
+        ...testProps
     };
     return getElement(Meta, props, isShallow);
 }
 
 
 describe('Meta Component ', () => {
+
     it('should not render component with empty publication', () => {
         const wrapper = setup({publication: {}});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -81,7 +83,7 @@ describe('Meta Component ', () => {
     });
 
     it('should render component with newspaper', () => {
-        const wrapper = setup({publication: records.newspaper});
+        const wrapper = setup({publication: records.newspaperArticle});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -167,4 +169,8 @@ describe('Meta Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render title only', () => {
+        const wrapper = setup({isTitleOnly: true, title: 'My random title'});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    })
 });

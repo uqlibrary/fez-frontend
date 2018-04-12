@@ -128,4 +128,5 @@ global.mockApi = setupMockAdapter();
 global.toHaveDispatchedActions = toHaveDispatchedActions;
 global.toHaveAnyOrderDispatchedActions = toHaveAnyOrderDispatchedActions;
 
+process.env.TITLE = 'UQ eSpace';
 process.env.TITLE_SUFFIX = 'Test';
