@@ -51,7 +51,7 @@ export default class CitationCounts extends React.PureComponent {
             // OA with a possible file embargo date
             return {
                 isOpenAccess: !hasFiles || allFiles.length !== allEmbargoFiles.length,
-                embargoDate: hasFiles && allFiles.length === allEmbargoFiles.length
+                embargoDate: hasFiles && allFiles.length > 0 && allFiles.length === allEmbargoFiles.length
                     ? moment(allFiles[0].dsi_embargo_date).format('Do MMMM YYYY')
                     : null,
                 openAccessStatusId: openAccessStatusId
