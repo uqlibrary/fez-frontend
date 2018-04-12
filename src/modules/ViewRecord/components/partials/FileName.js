@@ -35,7 +35,7 @@ export default class FileName extends PureComponent {
     }
 
     render() {
-        const {pid, fileName, allowDownload, mimeType, previewFileName} = this.props;
+        const {pid, fileName, allowDownload, mimeType, previewFileName, onFileSelect} = this.props;
         const mediaUrl = this.getUrl(pid, fileName);
         const previewMediaUrl = this.getUrl(pid, previewFileName || fileName);
 
@@ -52,8 +52,8 @@ export default class FileName extends PureComponent {
                         allowDownload && this.canShowPreview(mimeType) &&
                         <a
                             href="#"
-                            onClick={()=>{this.props.onFileSelect(mediaUrl, previewMediaUrl, mimeType);}}
-                            onKeyPress={()=>{this.props.onFileSelect(mediaUrl, previewMediaUrl, mimeType);}}
+                            onClick={()=>{onFileSelect(mediaUrl, previewMediaUrl, mimeType);}}
+                            onKeyPress={()=>{onFileSelect(mediaUrl, previewMediaUrl, mimeType);}}
                             className={'fileName'}>
                             {fileName}
                         </a>

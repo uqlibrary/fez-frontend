@@ -1,5 +1,8 @@
 import {journalArticle} from 'mock/data/testing/records';
 import MediaPreview from "./MediaPreview";
+import injectTapEventPlugin from 'react-tap-event-plugin'
+
+injectTapEventPlugin();
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -28,5 +31,14 @@ describe('Media Preview Component ', () => {
         const wrapper = setup({mimeType: 'video/mp4'});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('RaisedButton').length).toEqual(2);
+    });
+
+    it('should call open new window on touch tap', () => {
+        const open = jest.fn();
+        global.open = open;
+        const wrapper = setup({}, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.find('RaisedButton').first().find('button').simulate('touchTap');
+        expect(open).toHaveBeenCalledTimes(1);
     });
 });

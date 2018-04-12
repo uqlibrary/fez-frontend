@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import {Table, TableBody, TableRowColumn, TableHeader, TableRow, TableHeaderColumn} from 'material-ui/Table';
@@ -68,6 +69,11 @@ export default class Files extends Component {
                 mimeType: mimeType
             }
         });
+
+        setTimeout(() => {
+            const files = ReactDOM.findDOMNode(this.refs.files);
+            window.scrollTo(0, (files.offsetTop + files.scrollHeight - 30));
+        }, 80);
     }
 
     formatBytes = (bytes) => {
@@ -141,7 +147,7 @@ export default class Files extends Component {
                             message={publication.fez_record_search_key_advisory_statement.rek_advisory_statement || locale.viewRecord.sections.files.culturalSensitivityStatement}
                             dismissAction={this.props.setHideCulturalSensitivityStatement}/>
                     }
-                    <Table selectable={false} className="files horizontal">
+                    <Table selectable={false} className="files horizontal" ref="files">
                         <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="header">
                             <TableRow>
                                 <TableHeaderColumn className="filetype" />

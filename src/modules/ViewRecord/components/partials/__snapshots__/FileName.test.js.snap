@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`File Name Component  should display thumbnail and file name link 1`] = `
+exports[`File Name Component  should display file name link 1`] = `
 <Provider
   store={
     Object {
@@ -604,7 +604,7 @@ exports[`File Name Component  should render component and display file name only
 </Provider>
 `;
 
-exports[`File Name Component  should render default icon 1`] = `
+exports[`File Name Component  should run onFileSelect function on click 1`] = `
 <Provider
   store={
     Object {
@@ -657,10 +657,12 @@ exports[`File Name Component  should render default icon 1`] = `
       }
     >
       <FileName
+        allowDownload={true}
         fileName="UQ676287_OA.pdf"
-        mimeType="text/plain"
+        mimeType="image/jpeg"
         onFileSelect={[MockFunction]}
         pid="UQ:676287"
+        thumbnailFileName="test.jpg"
       >
         <div
           className="columns is-gapless is-mobile fileDetails"
@@ -668,7 +670,96 @@ exports[`File Name Component  should render default icon 1`] = `
           <div
             className="column fileInfo"
           >
-            UQ676287_OA.pdf
+            <a
+              className="fileName"
+              href="#"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+            >
+              UQ676287_OA.pdf
+            </a>
+          </div>
+        </div>
+      </FileName>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
+
+exports[`File Name Component  should run onFileSelect function on key press 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <FileName
+        allowDownload={true}
+        fileName="UQ676287_OA.pdf"
+        mimeType="image/jpeg"
+        onFileSelect={[MockFunction]}
+        pid="UQ:676287"
+        thumbnailFileName="test.jpg"
+      >
+        <div
+          className="columns is-gapless is-mobile fileDetails"
+        >
+          <div
+            className="column fileInfo"
+          >
+            <a
+              className="fileName"
+              href="#"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+            >
+              UQ676287_OA.pdf
+            </a>
           </div>
         </div>
       </FileName>

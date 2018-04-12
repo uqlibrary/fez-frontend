@@ -19,15 +19,13 @@ describe('File Name Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('FileName').length).toEqual(1);
         expect(wrapper.find('FileName a').length).toEqual(0);
-        expect(wrapper.find('FileName img').length).toEqual(0);
         expect(wrapper.find('FileName audio').length).toEqual(0);
     });
 
-    it('should display thumbnail and file name link', () => {
+    it('should display file name link', () => {
         const wrapper = setup({allowDownload: true, thumbnailFileName: 'test.jpg'}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('FileName').length).toEqual(1);
-        expect(wrapper.find('FileName img').length).toEqual(1);
         expect(wrapper.find('FileName a').length).toEqual(1);
     });
 
@@ -37,12 +35,6 @@ describe('File Name Component ', () => {
         expect(wrapper.find('FileName audio').length).toEqual(1);
     });
 
-    it('should render default icon', () => {
-        const wrapper = setup({mimeType: 'text/plain'}, false);
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('FileName EditorInsertDriveFile').length).toEqual(1);
-    });
-
     it('should return canShowPreview as true for image/video files', () => {
         let wrapper = setup({mimeType: 'image/jpeg'});
         expect(wrapper.instance().canShowPreview('image/jpeg')).toEqual(true);
@@ -50,5 +42,23 @@ describe('File Name Component ', () => {
         expect(wrapper.instance().canShowPreview('video/mp4')).toEqual(true);
         wrapper = setup({mimeType: 'some/text'});
         expect(wrapper.instance().canShowPreview('some/text')).toEqual(false);
+    });
+
+    it('should run onFileSelect function on click', () => {
+        const onFileSelect = jest.fn();
+        const wrapper = setup({allowDownload: true, thumbnailFileName: 'test.jpg', mimeType: 'image/jpeg', onFileSelect: onFileSelect}, false);
+        const element = wrapper.find('FileName a');
+        expect(toJson(wrapper)).toMatchSnapshot();
+        element.simulate('click');
+        expect(onFileSelect).toHaveBeenCalledTimes(1);
+    });
+
+    it('should run onFileSelect function on key press', () => {
+        const onFileSelect = jest.fn();
+        const wrapper = setup({allowDownload: true, thumbnailFileName: 'test.jpg', mimeType: 'image/jpeg', onFileSelect: onFileSelect}, false);
+        const element = wrapper.find('FileName a');
+        expect(toJson(wrapper)).toMatchSnapshot();
+        element.simulate('keyPress');
+        expect(onFileSelect).toHaveBeenCalledTimes(1);
     });
 });

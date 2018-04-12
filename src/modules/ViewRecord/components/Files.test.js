@@ -47,10 +47,33 @@ describe('Files Component ', () => {
 
     it('should render icon for mimeType', () => {
         const wrapper = setup({});
-        expect(shallow(wrapper.instance().renderFileIcon('blablabla'))).toMatchSnapshot();
-        expect(shallow(wrapper.instance().renderFileIcon('image/jpg'))).toMatchSnapshot();
-        expect(shallow(wrapper.instance().renderFileIcon('video/quicktime'))).toMatchSnapshot();
-        expect(shallow(wrapper.instance().renderFileIcon('audio/mp3'))).toMatchSnapshot();
-        expect(shallow(wrapper.instance().renderFileIcon('app/pdf'))).toMatchSnapshot();
+        expect(shallow(wrapper.instance().renderFileIcon('UQ:1', 'blablabla'))).toMatchSnapshot();
+        expect(shallow(wrapper.instance().renderFileIcon('UQ:1', 'image/jpg'))).toMatchSnapshot();
+        expect(shallow(wrapper.instance().renderFileIcon('UQ:1', 'video/quicktime'))).toMatchSnapshot();
+        expect(shallow(wrapper.instance().renderFileIcon('UQ:1', 'audio/mp3'))).toMatchSnapshot();
+        expect(shallow(wrapper.instance().renderFileIcon('UQ:1', 'app/pdf'))).toMatchSnapshot();
+    });
+
+    it('should set state on showPreview', () => {
+        const wrapper = setup({});
+        const mediaUrl = 'mediaUrl';
+        const previewMediaUrl = 'previewMediaUrl';
+        const mimeType = 'image/jpeg';
+        wrapper.instance().showPreview(mediaUrl, previewMediaUrl, mimeType);
+        expect(wrapper.state().preview.previewMediaUrl).toEqual(previewMediaUrl);
+        expect(wrapper.state().preview.mediaUrl).toEqual(mediaUrl);
+        expect(wrapper.state().preview.mimeType).toEqual(mimeType);
+    });
+
+    it('should clean up state on hidePreview', () => {
+        const wrapper = setup({});
+        const mediaUrl = 'mediaUrl';
+        const previewMediaUrl = 'previewMediaUrl';
+        const mimeType = 'image/jpeg';
+        wrapper.instance().showPreview(mediaUrl, previewMediaUrl, mimeType);
+        wrapper.instance().hidePreview();
+        expect(wrapper.state().preview.previewMediaUrl).toEqual(null);
+        expect(wrapper.state().preview.mediaUrl).toEqual(null);
+        expect(wrapper.state().preview.mimeType).toEqual(null);
     });
 });

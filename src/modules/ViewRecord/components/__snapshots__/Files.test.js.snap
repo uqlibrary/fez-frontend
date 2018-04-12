@@ -77,22 +77,33 @@ exports[`Files Component  should not render cultural message 1`] = `
             className="filetype fileIcon"
             hoverable={false}
           >
-            <ImageImage />
+            <img
+              alt="thumbnail_image.jpg"
+              src="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+            />
           </TableRowColumn>
           <TableRowColumn
             className="filename"
             hoverable={false}
           >
-            <ExternalLink
-              className="fileName"
-              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/image.jpg"
-              openInNewIcon={true}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="image.jpg - testing image description - 95.49 KB"
-            >
-              image.jpg
-            </ExternalLink>
+            <FileName
+              allowDownload={true}
+              calculatedSize="95.49 KB"
+              description="testing image description"
+              embargoText={null}
+              fileName="image.jpg"
+              icon={
+                <img
+                  alt="thumbnail_image.jpg"
+                  src="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+                />
+              }
+              mimeType="image/jpeg"
+              onFileSelect={[Function]}
+              pid="UQ:676287"
+              previewFileName="preview_image.jpg"
+              thumbnailFileName="thumbnail_image.jpg"
+            />
           </TableRowColumn>
           <TableRowColumn
             className="is-hidden-mobile description"
@@ -192,22 +203,33 @@ exports[`Files Component  should render component 1`] = `
             className="filetype fileIcon"
             hoverable={false}
           >
-            <ImageImage />
+            <img
+              alt="thumbnail_image.jpg"
+              src="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+            />
           </TableRowColumn>
           <TableRowColumn
             className="filename"
             hoverable={false}
           >
-            <ExternalLink
-              className="fileName"
-              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/image.jpg"
-              openInNewIcon={true}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="image.jpg - testing image description - 95.49 KB"
-            >
-              image.jpg
-            </ExternalLink>
+            <FileName
+              allowDownload={true}
+              calculatedSize="95.49 KB"
+              description="testing image description"
+              embargoText={null}
+              fileName="image.jpg"
+              icon={
+                <img
+                  alt="thumbnail_image.jpg"
+                  src="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+                />
+              }
+              mimeType="image/jpeg"
+              onFileSelect={[Function]}
+              pid="UQ:676287"
+              previewFileName="preview_image.jpg"
+              thumbnailFileName="thumbnail_image.jpg"
+            />
           </TableRowColumn>
           <TableRowColumn
             className="is-hidden-mobile description"
@@ -315,22 +337,33 @@ exports[`Files Component  should render cultural message 1`] = `
             className="filetype fileIcon"
             hoverable={false}
           >
-            <ImageImage />
+            <img
+              alt="thumbnail_image.jpg"
+              src="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+            />
           </TableRowColumn>
           <TableRowColumn
             className="filename"
             hoverable={false}
           >
-            <ExternalLink
-              className="fileName"
-              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/image.jpg"
-              openInNewIcon={true}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="image.jpg - testing image description - 95.49 KB"
-            >
-              image.jpg
-            </ExternalLink>
+            <FileName
+              allowDownload={true}
+              calculatedSize="95.49 KB"
+              description="testing image description"
+              embargoText={null}
+              fileName="image.jpg"
+              icon={
+                <img
+                  alt="thumbnail_image.jpg"
+                  src="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+                />
+              }
+              mimeType="image/jpeg"
+              onFileSelect={[Function]}
+              pid="UQ:676287"
+              previewFileName="preview_image.jpg"
+              thumbnailFileName="thumbnail_image.jpg"
+            />
           </TableRowColumn>
           <TableRowColumn
             className="is-hidden-mobile description"
