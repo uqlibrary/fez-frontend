@@ -232,4 +232,41 @@ describe('Meta Component ', () => {
             {name: 'citation_abstract', content: 'This is test description'},
         ]);
     });
+
+    it('should return meta tags correctly 2', () => {
+        const publication = {
+            rek_pid: 'UQ:111111',
+            rek_date: '2015-01-01T10:00:00Z'
+        };
+        const wrapper = setup({publication});
+        expect(wrapper.instance().getMetaTags(publication)).toEqual([
+            {name: 'DC.Identifier', content: 'https://fez-staging.library.uq.edu.au/record/UQ:111111'},
+            {name: 'DC.Date', content: '2015-01-01'},
+            {name: 'citation_date', content: '2015/01/01'}
+        ]);
+    });
+
+    it('should return meta tags correctly 3', () => {
+        const publication = {
+            rek_pid: 'UQ:222222',
+            rek_date: '2015-01-01T10:00:00Z',
+            fez_datastream_info: [
+                {
+                    dsi_dsid: 'abc.pdf',
+                    dsi_mimetype: 'application/pdf'
+                },
+                {
+                    dsi_dsid: 'abc.xml',
+                    dsi_mimetype: 'text/xml'
+                }
+            ]
+        };
+        const wrapper = setup({publication});
+        expect(wrapper.instance().getMetaTags(publication)).toEqual([
+            {name: 'DC.Identifier', content: 'https://fez-staging.library.uq.edu.au/record/UQ:222222'},
+            {name: 'citation_pdf_url', content: 'https://fez-staging.library.uq.edu.au/view/UQ:222222/abc.pdf'},
+            {name: 'DC.Date', content: '2015-01-01'},
+            {name: 'citation_date', content: '2015/01/01'},
+        ]);
+    });
 });
