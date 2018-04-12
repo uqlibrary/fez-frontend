@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'locale';
-import {OPEN_ACCESS_ID_DOI, OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION, OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT, OPEN_ACCESS_ID_PMC, OPEN_ACCESS_ID_OTHER} from 'config/general';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import * as Partials from './partials';
-const moment = require('moment');
 
 export default class CitationCounts extends React.PureComponent {
     static propTypes = {
