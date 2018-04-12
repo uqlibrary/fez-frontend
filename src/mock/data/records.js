@@ -4572,8 +4572,8 @@ export const record = {
         "rek_oa_status_id": 281706,
         "rek_oa_status_pid": "UQ:396321",
         "rek_oa_status_xsdmf_id": 16607,
-        "rek_oa_status": 453695,
-        "rek_oa_status_lookup": "Not yet assessed"
+        "rek_oa_status": 453693,
+        "rek_oa_status_lookup": "DOI"
     },
     "fez_record_search_key_place_of_publication": {
         "rek_place_of_publication_id": 4125279,
