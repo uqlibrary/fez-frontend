@@ -70,7 +70,8 @@ export const pathConfig =  {
     legacyEspace: `${fullPath}/my_research_claimed.php`,
     authorStatistics: {
         url: (id) => `https://app.library.uq.edu.au/#/authors/${id}`
-    }
+    },
+    help: 'https://guides.library.uq.edu.au/for-researchers/research-publications-guide'
 };
 
 // a duplicate list of routes for
@@ -229,6 +230,11 @@ export const getMenuConfig = (account, disabled) => {
         //     public: true
         // },
         {
+            linkTo: pathConfig.help,
+            ...locale.menu.help,
+            public: true
+        },
+        {
             linkTo: pathConfig.contact,
             ...locale.menu.contact,
             public: true
@@ -268,16 +274,16 @@ export const getMenuConfig = (account, disabled) => {
                 ...locale.menu.myResearch
             },
             {
-                linkTo: pathConfig.dataset.mine,
-                ...locale.menu.myDatasets
-            },
-            {
                 linkTo: pathConfig.records.possible,
                 ...locale.menu.claimPublication
             },
             {
                 linkTo: pathConfig.records.add.find,
                 ...locale.menu.addMissingRecord
+            },
+            {
+                linkTo: pathConfig.dataset.mine,
+                ...locale.menu.myDatasets
             },
             {
                 linkTo: pathConfig.dataset.add,
