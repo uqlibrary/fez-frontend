@@ -60,7 +60,7 @@ describe('searchRecords reducer', () => {
         const postReducerPublicationsList = records.postReducerPublicationsList;
 
         const loadedState = searchRecordsReducer(initialState, {
-            payload: [...espaceList, ...scopusList, ...wosList],
+            payload: {data: [...espaceList, ...scopusList, ...wosList]},
             type: actions.SEARCH_LOADED
         });
         expect(loadedState.loadingSearch).toBeFalsy();
@@ -74,7 +74,7 @@ describe('searchRecords reducer', () => {
         const postReducerWOSPublicationsList = records.wosList;
 
         const wosState = searchRecordsReducer(initialState, {
-            payload: [...wosList],
+            payload: {data: wosList},
             type: `${actions.SEARCH_LOADED}@wos`
         });
         expect(wosState.loadingSearch).toBeTruthy();
@@ -91,7 +91,7 @@ describe('searchRecords reducer', () => {
             loadingPublicationSources: {"scopus": true, "scopusCount": 5, "totalSearchedCount": 1}
         };
         const wosState2 = searchRecordsReducer(aSourceLoadedState, {
-            payload: [...wosList],
+            payload: {data: [...wosList]},
             type: `${actions.SEARCH_LOADED}@wos`
         });
         expect(wosState2.loadingSearch).toBeTruthy();

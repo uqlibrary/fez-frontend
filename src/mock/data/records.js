@@ -1115,7 +1115,7 @@ export const externalTitleScopusResultsList = {
                 }
             ],
             "rek_description": "Ebola virus (EBOV) infection causes a high death toll, killing a high proportion of EBOV-infected patients within 7 days. Comprehensive data on EBOV infection are fragmented, hampering efforts in developing therapeutics and vaccines against EBOV. Under this circumstance, mathematical models become valuable resources to explore potential controlling strategies. In this paper, we employed experimental data of EBOV-infected nonhuman primates (NHPs) to construct a mathematical framework for determining windows of opportunity for treatment and vaccination. Considering a prophylactic vaccine based on recombinant vesicular stomatitis virus expressing the EBOV glycoprotein (rVSV-EBOV), vaccination could be protective if a subject is vaccinated during a period from one week to four months before infection. For the case of a therapeutic vaccine based on monoclonal antibodies (mAbs), a single dose might resolve the invasive EBOV replication even if it was administrated as late as four days after infection. Our mathematical models can be used as building blocks for evaluating therapeutic and vaccine modalities as well as for evaluating public health intervention strategies in outbreaks. Future laboratory experiments will help to validate and refine the estimates of the windows of opportunity proposed here.",
-            "rek_title": "Windows of opportunity for Ebola virus infection treatment and vaccination",
+            "rek_title": "Windows of opportunity for <sup>Ebola</sup> virus infection treatment and vaccination",
             "fez_record_search_key_doi": {
                 "rek_doi": "10.1038\/s41598-017-08884-0"
             },
@@ -1604,8 +1604,8 @@ export const internalTitleSearchList = {
                 "rek_oa_status_id": 531834,
                 "rek_oa_status_pid": "UQ:795469",
                 "rek_oa_status_xsdmf_id": null,
-                "rek_oa_status": 453692,
-                "rek_oa_status_lookup": "Not yet assessed"
+                "rek_oa_status": 453694,
+                "rek_oa_status_lookup": "link (no DOI)"
             },
             "rek_altmetric_score_xsdmf_id": null,
             "fez_record_search_key_org_name": null,
@@ -2045,7 +2045,7 @@ export const internalTitleSearchList = {
         {
             "rek_pid": "UQ:288545",
             "rek_title_xsdmf_id": 10860,
-            "rek_title": "Bacterial plaques staining composition for evaluating dental caries activity",
+            "rek_title": "Bacterial plaques staining composition <sup>for</sup> evaluating dental <sub>caries</sub> activity",
             "rek_description_xsdmf_id": null,
             "rek_description": null,
             "rek_display_type_xsdmf_id": 3673,

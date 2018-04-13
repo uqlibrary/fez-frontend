@@ -39,7 +39,7 @@ export default class SeminarPaperCitation extends Component {
                 <Partials.DateCitationView date={this.props.publication.rek_date}/>
 
                 {/* <i>{Title| |.}</i> */}
-                <Partials.CitationView className="citationTitle" value={record.title}/>
+                <Partials.CitationTitleView className="citationTitle" value={record.title}/>
 
                 {/* {Seminar series| |.} */}
                 <Partials.CitationView className="citationSeries" value={record.series}/>

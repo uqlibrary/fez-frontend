@@ -24,7 +24,7 @@ export const calculateOpenAccess = (record) => {
         const allFiles =  record.fez_datastream_info && record.fez_datastream_info.length > 0
             ? record.fez_datastream_info.filter(item => (
                 !item.dsi_dsid.match('^(FezACML|stream|web|thumbnail|preview|presmd)')
-                && !item.dsi_label.match('(ERA|HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections)', 'gi')
+                && (!item.dsi_label || !item.dsi_label.match('(ERA|HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections)', 'gi'))
             ))
             : [];
         const hasFiles = allFiles.length > 0;
@@ -34,14 +34,14 @@ export const calculateOpenAccess = (record) => {
                 && moment(item.dsi_embargo_date).isAfter(moment())
                 && !item.dsi_dsid.match('^(FezACML|stream|web|thumbnail|preview|presmd)'))
                 && (!item.dsi_label || !item.dsi_label.match('(ERA|HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections)', 'gi'))
-            ).sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date))
+            ).sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date ? 1 : -1))
             : [];
         // OA with a possible file embargo date
         // OA with a possible file embargo date
         return {
             isOpenAccess: !hasFiles || allFiles.length !== allEmbargoFiles.length,
             embargoDate: hasFiles && allFiles.length > 0 && allFiles.length === allEmbargoFiles.length
-                ? moment(allFiles[0].dsi_embargo_date).format('Do MMMM YYYY')
+                ? moment(allEmbargoFiles[0].dsi_embargo_date).format('Do MMMM YYYY')
                 : null,
             openAccessStatusId: openAccessStatusId
         };
@@ -51,34 +51,54 @@ export const calculateOpenAccess = (record) => {
     return {isOpenAccess: false, embargoDate: null, openAccessStatusId: openAccessStatusId};
 };
 
+export const enhancePublication = (record) => {
+    const dompurify = require('dompurify');
+    const cleanTitleConfig = { ALLOWED_TAGS: ['sub', 'sup'] };
+    const noHtmlConfig = { ALLOWED_TAGS: [''] };
+    const allowedHtmlConfig = { ALLOWED_TAGS: ['p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b', 'sup', 'sub'], ALLOWED_ATTR: [] };
+
+    const cleanHtmlIfValid = (value) => (
+        dompurify.sanitize(value, noHtmlConfig).replace(/\s/g, '').length !== 0
+            ? dompurify.sanitize(value, allowedHtmlConfig)
+            : null
+    );
+
+    return {
+        ...record,
+        rek_title: dompurify.sanitize(record.rek_title, cleanTitleConfig),
+        rek_formatted_title: cleanHtmlIfValid(record.rek_formatted_title),
+        rek_formatted_abstract: cleanHtmlIfValid(record.rek_formatted_abstract),
+        calculateOpenAccess() {
+            if (!!this.rek_pid) return calculateOpenAccess(this);
+            return null;
+        }
+    };
+};
+
 const publicationEnhancer = () => next => action => {
-    if (actions.loadPublicationsListActions.indexOf(action.type) >= 0) {
-        const publicationsWithMethods = action.payload.data.map(publication => ({
-            ...publication,
-            calculateOpenAccess() {
-                return calculateOpenAccess(this);
-            }
+    if (actions.loadPublicationsListActions.test(action.type) && !!action.payload.data) {
+        const enhancedPublications = action.payload.data.map(publication => ({
+            ...enhancePublication(publication)
         }));
+
         const enhancedAction = {
             type: action.type,
             payload: {
                 ...action.payload,
-                data: publicationsWithMethods
+                data: enhancedPublications
             }
         };
         return next(enhancedAction);
-    } else if (actions.loadPublicationActions.indexOf(action.type) >= 0) {
+    } else if (actions.loadPublicationActions.test(action.type)) {
         const enhancedAction = {
             type: action.type,
             payload: {
-                ...action.payload,
-                calculateOpenAccess() {
-                    return calculateOpenAccess(this);
-                }
+                ...enhancePublication(action.payload)
             }
         };
         return next(enhancedAction);
     }
+
     return next(action);
 };
 

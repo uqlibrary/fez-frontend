@@ -2281,7 +2281,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -2294,7 +2294,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationJournalName"
       prefix=" "
@@ -5660,7 +5660,7 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -5668,7 +5668,7 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationJournalName"
       prefix=" "
