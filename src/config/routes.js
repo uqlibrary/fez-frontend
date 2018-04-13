@@ -2,7 +2,7 @@ import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
 
 const fullPath = process.env.BRANCH === 'production' ? 'https://espace.library.uq.edu.au' : 'https://fez-staging.library.uq.edu.au';
-
+const recordsView = (pid) => (`/records/${pid}`);
 export const pathConfig =  {
     index: '/',
     dashboard: '/dashboard',
@@ -14,7 +14,7 @@ export const pathConfig =  {
         mine: '/records/mine',
         possible: '/records/possible',
         claim: '/records/claim',
-        view: (pid) => (`/records/${pid}`),
+        view: (pid) => recordsView(pid),
         fix: (pid) => (`/records/${pid}/fix`),
         add: {
             find: '/records/add/find',
@@ -73,7 +73,7 @@ export const pathConfig =  {
         url: (id) => `https://app.library.uq.edu.au/#/authors/${id}`
     },
     metaTags: {
-        identifier: (pid) => `${fullPath}/records/${pid}`,
+        identifier: (pid) => `${fullPath}${recordsView(pid)}`,
     }
 };
 
