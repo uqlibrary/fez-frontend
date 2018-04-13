@@ -49,6 +49,9 @@ exports[`Files Component  should not render cultural message 1`] = `
           >
             Size
           </TableHeaderColumn>
+          <TableHeaderColumn
+            className="oaStatus"
+          />
         </TableRow>
       </TableHeader>
       <TableBody
@@ -66,7 +69,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           displayBorder={true}
           hoverable={false}
           hovered={false}
-          key="file-3"
+          key="file-0"
           selectable={true}
           striped={false}
         >
@@ -74,61 +77,39 @@ exports[`Files Component  should not render cultural message 1`] = `
             className="filetype fileIcon"
             hoverable={false}
           >
-            <EditorInsertDriveFile />
+            <img
+              alt="thumbnail_image.jpg"
+              src="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+            />
           </TableRowColumn>
           <TableRowColumn
             className="filename"
             hoverable={false}
           >
-            <ExternalLink
-              className="fileName"
-              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
-              openInNewIcon={true}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="UQ676287_OA.pdf - undefined - undefined"
-            >
-              UQ676287_OA.pdf
-            </ExternalLink>
-          </TableRowColumn>
-          <TableRowColumn
-            className="is-hidden-mobile description"
-            hoverable={false}
-          />
-          <TableRowColumn
-            className="align-right is-hidden-mobile is-hidden-tablet-only size"
-            hoverable={false}
-          />
-        </TableRow>
-        <TableRow
-          className="file"
-          displayBorder={true}
-          hoverable={false}
-          hovered={false}
-          key="file-4"
-          selectable={true}
-          striped={false}
-        >
-          <TableRowColumn
-            className="filetype fileIcon"
-            hoverable={false}
-          >
-            <ImageImage />
-          </TableRowColumn>
-          <TableRowColumn
-            className="filename"
-            hoverable={false}
-          >
-            <ExternalLink
-              className="fileName"
-              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/image.jpg"
-              openInNewIcon={true}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="image.jpg - testing image description - 95.49 KB"
-            >
-              image.jpg
-            </ExternalLink>
+            <FileName
+              allowDownload={true}
+              calculatedSize="95.49 KB"
+              description="testing image description"
+              fileName="image.jpg"
+              icon={
+                <img
+                  alt="thumbnail_image.jpg"
+                  src="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+                />
+              }
+              mimeType="image/jpeg"
+              onFileSelect={[Function]}
+              openAccessStatus={
+                Object {
+                  "embargoDate": null,
+                  "isOpenAccess": true,
+                  "openAccessStatusId": 453695,
+                }
+              }
+              pid="UQ:676287"
+              previewFileName="preview_image.jpg"
+              thumbnailFileName="thumbnail_image.jpg"
+            />
           </TableRowColumn>
           <TableRowColumn
             className="is-hidden-mobile description"
@@ -141,6 +122,17 @@ exports[`Files Component  should not render cultural message 1`] = `
             hoverable={false}
           >
             95.49 KB
+          </TableRowColumn>
+          <TableRowColumn
+            className="oaStatus"
+            hoverable={false}
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453695}
+              showEmbargoText={false}
+            />
           </TableRowColumn>
         </TableRow>
       </TableBody>
@@ -196,6 +188,9 @@ exports[`Files Component  should render component 1`] = `
           >
             Size
           </TableHeaderColumn>
+          <TableHeaderColumn
+            className="oaStatus"
+          />
         </TableRow>
       </TableHeader>
       <TableBody
@@ -213,7 +208,7 @@ exports[`Files Component  should render component 1`] = `
           displayBorder={true}
           hoverable={false}
           hovered={false}
-          key="file-3"
+          key="file-0"
           selectable={true}
           striped={false}
         >
@@ -221,61 +216,39 @@ exports[`Files Component  should render component 1`] = `
             className="filetype fileIcon"
             hoverable={false}
           >
-            <EditorInsertDriveFile />
+            <img
+              alt="thumbnail_image.jpg"
+              src="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+            />
           </TableRowColumn>
           <TableRowColumn
             className="filename"
             hoverable={false}
           >
-            <ExternalLink
-              className="fileName"
-              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
-              openInNewIcon={true}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="UQ676287_OA.pdf - undefined - undefined"
-            >
-              UQ676287_OA.pdf
-            </ExternalLink>
-          </TableRowColumn>
-          <TableRowColumn
-            className="is-hidden-mobile description"
-            hoverable={false}
-          />
-          <TableRowColumn
-            className="align-right is-hidden-mobile is-hidden-tablet-only size"
-            hoverable={false}
-          />
-        </TableRow>
-        <TableRow
-          className="file"
-          displayBorder={true}
-          hoverable={false}
-          hovered={false}
-          key="file-4"
-          selectable={true}
-          striped={false}
-        >
-          <TableRowColumn
-            className="filetype fileIcon"
-            hoverable={false}
-          >
-            <ImageImage />
-          </TableRowColumn>
-          <TableRowColumn
-            className="filename"
-            hoverable={false}
-          >
-            <ExternalLink
-              className="fileName"
-              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/image.jpg"
-              openInNewIcon={true}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="image.jpg - testing image description - 95.49 KB"
-            >
-              image.jpg
-            </ExternalLink>
+            <FileName
+              allowDownload={true}
+              calculatedSize="95.49 KB"
+              description="testing image description"
+              fileName="image.jpg"
+              icon={
+                <img
+                  alt="thumbnail_image.jpg"
+                  src="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+                />
+              }
+              mimeType="image/jpeg"
+              onFileSelect={[Function]}
+              openAccessStatus={
+                Object {
+                  "embargoDate": null,
+                  "isOpenAccess": true,
+                  "openAccessStatusId": 453695,
+                }
+              }
+              pid="UQ:676287"
+              previewFileName="preview_image.jpg"
+              thumbnailFileName="thumbnail_image.jpg"
+            />
           </TableRowColumn>
           <TableRowColumn
             className="is-hidden-mobile description"
@@ -288,6 +261,17 @@ exports[`Files Component  should render component 1`] = `
             hoverable={false}
           >
             95.49 KB
+          </TableRowColumn>
+          <TableRowColumn
+            className="oaStatus"
+            hoverable={false}
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453695}
+              showEmbargoText={false}
+            />
           </TableRowColumn>
         </TableRow>
       </TableBody>
@@ -351,6 +335,9 @@ exports[`Files Component  should render cultural message 1`] = `
           >
             Size
           </TableHeaderColumn>
+          <TableHeaderColumn
+            className="oaStatus"
+          />
         </TableRow>
       </TableHeader>
       <TableBody
@@ -368,7 +355,7 @@ exports[`Files Component  should render cultural message 1`] = `
           displayBorder={true}
           hoverable={false}
           hovered={false}
-          key="file-3"
+          key="file-0"
           selectable={true}
           striped={false}
         >
@@ -376,61 +363,39 @@ exports[`Files Component  should render cultural message 1`] = `
             className="filetype fileIcon"
             hoverable={false}
           >
-            <EditorInsertDriveFile />
+            <img
+              alt="thumbnail_image.jpg"
+              src="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+            />
           </TableRowColumn>
           <TableRowColumn
             className="filename"
             hoverable={false}
           >
-            <ExternalLink
-              className="fileName"
-              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
-              openInNewIcon={true}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="UQ676287_OA.pdf - undefined - undefined"
-            >
-              UQ676287_OA.pdf
-            </ExternalLink>
-          </TableRowColumn>
-          <TableRowColumn
-            className="is-hidden-mobile description"
-            hoverable={false}
-          />
-          <TableRowColumn
-            className="align-right is-hidden-mobile is-hidden-tablet-only size"
-            hoverable={false}
-          />
-        </TableRow>
-        <TableRow
-          className="file"
-          displayBorder={true}
-          hoverable={false}
-          hovered={false}
-          key="file-4"
-          selectable={true}
-          striped={false}
-        >
-          <TableRowColumn
-            className="filetype fileIcon"
-            hoverable={false}
-          >
-            <ImageImage />
-          </TableRowColumn>
-          <TableRowColumn
-            className="filename"
-            hoverable={false}
-          >
-            <ExternalLink
-              className="fileName"
-              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/image.jpg"
-              openInNewIcon={true}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="image.jpg - testing image description - 95.49 KB"
-            >
-              image.jpg
-            </ExternalLink>
+            <FileName
+              allowDownload={true}
+              calculatedSize="95.49 KB"
+              description="testing image description"
+              fileName="image.jpg"
+              icon={
+                <img
+                  alt="thumbnail_image.jpg"
+                  src="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+                />
+              }
+              mimeType="image/jpeg"
+              onFileSelect={[Function]}
+              openAccessStatus={
+                Object {
+                  "embargoDate": null,
+                  "isOpenAccess": true,
+                  "openAccessStatusId": 453695,
+                }
+              }
+              pid="UQ:676287"
+              previewFileName="preview_image.jpg"
+              thumbnailFileName="thumbnail_image.jpg"
+            />
           </TableRowColumn>
           <TableRowColumn
             className="is-hidden-mobile description"
@@ -443,6 +408,17 @@ exports[`Files Component  should render cultural message 1`] = `
             hoverable={false}
           >
             95.49 KB
+          </TableRowColumn>
+          <TableRowColumn
+            className="oaStatus"
+            hoverable={false}
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453695}
+              showEmbargoText={false}
+            />
           </TableRowColumn>
         </TableRow>
       </TableBody>
