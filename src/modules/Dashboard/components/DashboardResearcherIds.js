@@ -4,7 +4,7 @@ import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import {locale} from 'locale';
 import {routes} from 'config';
 
-const DashboardResearcherIds = ({values, history}) => {
+const DashboardResearcherIds = ({values, authenticated, history}) => {
     const txt = locale.pages.dashboard.header.dashboardResearcherIds;
     const link = {
         linkedUrl: {
@@ -25,11 +25,12 @@ const DashboardResearcherIds = ({values, history}) => {
     const navigateToRoute = (event, item) => {
         history.push(link.notLinkedUrl[item]);
     };
+
     return (
         <div className="columns researcherIds is-gapless">
 
             {values && Object.keys(values).map((item, index) => (
-                <div key={index} className={'column is-narrow researchIdAvatar ' +  (values[item] ? 'ok' : 'error')}>
+                <div key={index} className={'column is-narrow researchIdAvatar ' +  (values[item] && authenticated[item] ? 'ok' : 'error')}>
 
                     {/* external URL's */}
                     {((values[item] && link.linkedUrl[item].indexOf('http') !== -1) || (!values[item] && link.notLinkedUrl[item].indexOf('http') !== -1)) &&
@@ -78,6 +79,13 @@ DashboardResearcherIds.propTypes = {
         scopus: PropTypes.string,
         google_scholar: PropTypes.string,
         orcid: PropTypes.string
+    }),
+    authenticated: PropTypes.shape({
+        publons: PropTypes.bool,
+        researcher: PropTypes.bool,
+        scopus: PropTypes.bool,
+        google_scholar: PropTypes.bool,
+        orcid: PropTypes.bool
     }),
     history: PropTypes.object.isRequired
 };

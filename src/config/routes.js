@@ -1,6 +1,6 @@
 import {locale} from 'locale';
 
-const fullPath = process.env.BRANCH === 'development' ? 'https://fez-staging.library.uq.edu.au' : '';
+const fullPath = process.env.BRANCH === 'production' ? 'https://espace.library.uq.edu.au' : 'https://fez-staging.library.uq.edu.au';
 
 export const pathConfig =  {
     index: '/',
@@ -49,6 +49,7 @@ export const pathConfig =  {
         orgUnitName: (orgUnitName) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_70]=${orgUnitName}`),
         series: (series) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_33]=${series}`),
         bookTitle: (bookTitle) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_37]=${bookTitle}`),
+        jobNumber: (jobNumber) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_151]=${jobNumber}`),
         conferenceName: (conferenceName) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_36]=${conferenceName}`),
         proceedingsTitle: (proceedingsTitle) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_2]=${proceedingsTitle}`),
     },
@@ -58,7 +59,7 @@ export const pathConfig =  {
     authorIdentifiers: {
         orcid: {
             link: '/author-identifiers/orcid/link',
-            absoluteLink: `${window.location.origin}${window.location.pathname}${!!window.location.hash ? '#' : ''}/author-identifiers/orcid/link`
+            absoluteLink: `${window.location.origin}${process.env.BRANCH === 'development' ? window.location.pathname : ''}${!!window.location.hash ? '#' : ''}/author-identifiers/orcid/link`
             // unlink: '/author-identifiers/orcid/link'
         },
         googleScholar: {
@@ -73,7 +74,7 @@ export const pathConfig =  {
 };
 
 // a duplicate list of routes for
-const flattedPathConfig = ['/', '/dashboard', '/browse', '/contact', '/rhdsubmission_new', '/sbslodge_new',
+const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission_new', '/sbslodge_new',
     '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
     '/admin/masquerade', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
 
@@ -90,10 +91,10 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             path: pathConfig.contact,
             render: () => components.StandardPage({...locale.pages.contact})
         },
-        {
-            path: pathConfig.browse,
-            render: () => components.Browse(locale.pages.browse)
-        },
+        // {
+        //     path: pathConfig.browse,
+        //     render: () => components.Browse(locale.pages.browse)
+        // },
         {
             path: pathConfig.records.view(pid),
             component: components.ViewRecord,
@@ -102,7 +103,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
         ...(!account ? [
             {
                 path: pathConfig.index,
-                render: () => components.Browse(locale.pages.browse),
+                render: () => components.StandardPage({...locale.pages.contact}),
                 exact: true
             }
         ] : [])];
@@ -222,11 +223,11 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
 
 export const getMenuConfig = (account, disabled) => {
     const publicPages = [
-        {
-            linkTo: pathConfig.browse,
-            ...locale.menu.browse,
-            public: true
-        },
+        // {
+        //     linkTo: pathConfig.browse,
+        //     ...locale.menu.browse,
+        //     public: true
+        // },
         {
             linkTo: pathConfig.contact,
             ...locale.menu.contact,

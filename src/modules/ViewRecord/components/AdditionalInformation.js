@@ -35,13 +35,11 @@ export default class AdditionalInformation extends Component {
     }
 
     renderList = (list, subkey, getLink) => {
-        const formatDetectionMetaTag = subkey === 'rek_issn' ? {'x-ms-format-detection': 'none'} : {};
-
         return (
             <ul key={subkey}>
                 {
                     list.map((item, index) => (
-                        <li key={`${subkey}-${index}`} {...formatDetectionMetaTag}>
+                        <li key={`${subkey}-${index}`}>
                             {(() => {
                                 const data = this.getData(item, subkey);
                                 if (getLink) {
@@ -99,6 +97,7 @@ export default class AdditionalInformation extends Component {
             case 'rek_org_unit_name': return this.renderLink(pathConfig.list.orgUnitName(data), data);
             case 'rek_institutional_status': return this.renderLink(pathConfig.list.institutionalStatus(object[subkey]), data);
             case 'rek_book_title': return this.renderLink(pathConfig.list.bookTitle(object[subkey]), data);
+            case 'rek_job_number': return this.renderLink(pathConfig.list.jobNumber(object[subkey]), data);
             case 'rek_conference_name': return this.renderLink(pathConfig.list.conferenceName(object[subkey]), data);
             default: return data;
         }
@@ -121,13 +120,19 @@ export default class AdditionalInformation extends Component {
 
     renderLicense = (cvoId, lookup) => {
         const licenseLookup = this.renderLink(pathConfig.list.license(cvoId), lookup);
-        const creativeCommonLogo =  viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
+        const licenseLink =  viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
+        const uqLicenseLinkText = licenseLink && licenseLink.className.indexOf('uq') === 0 ? locale.viewRecord.sections.additionalInformation.licenseLinkText : null;
 
         return (
             <span>
                 {licenseLookup}
-                { creativeCommonLogo &&
-                    <div><ExternalLink className={'fez-icon license ' + creativeCommonLogo.className} href={creativeCommonLogo.url} /></div>
+                {
+                    licenseLink && !uqLicenseLinkText &&
+                     <div><ExternalLink className={'fez-icon license ' + licenseLink.className} href={licenseLink.url} /></div>
+                }
+                {
+                    licenseLink && uqLicenseLinkText &&
+                    <div><ExternalLink href={licenseLink.url}>{uqLicenseLinkText}</ExternalLink></div>
                 }
             </span>
         );
@@ -249,8 +254,8 @@ export default class AdditionalInformation extends Component {
         }
 
         return (
-            <StandardCard title={locale.viewRecord.sections.additionalInformation}>
-                <Table selectable={false} className="additionalInformation">
+            <StandardCard title={locale.viewRecord.sections.additionalInformation.title}>
+                <Table selectable={false} className="additionalInformation vertical">
                     <TableBody displayRowCheckbox={false}>
                         {
                             this.renderColumns()

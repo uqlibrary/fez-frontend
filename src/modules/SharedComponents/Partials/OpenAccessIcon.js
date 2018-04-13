@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'locale';
-import {OPEN_ACCESS_ID_LINK_NO_DOI, openAccessIdLookup} from 'config/general';
+import {openAccessConfig} from 'config';
 
 export default class OpenAccessIcon extends PureComponent {
     static propTypes = {
@@ -10,12 +10,17 @@ export default class OpenAccessIcon extends PureComponent {
         openAccessStatusId: PropTypes.number,
         showEmbargoText: PropTypes.bool
     };
+    static defaultProps = {
+        isOpenAccess: false,
+        embargoDate: null,
+        showEmbargoText: false
+    };
 
     render() {
         const txt = locale.viewRecord.sections.links;
         if (this.props.isOpenAccess && !this.props.embargoDate) {
-            const openAccessTitle = this.props.openAccessStatusId !== OPEN_ACCESS_ID_LINK_NO_DOI
-                ? txt.openAccessLabel.replace('[oa_status]', openAccessIdLookup[this.props.openAccessStatusId])
+            const openAccessTitle = this.props.openAccessStatusId !== openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI
+                ? txt.openAccessLabel.replace('[oa_status]', openAccessConfig.labels[this.props.openAccessStatusId])
                 : txt.labelOpenAccessNoStatus;
             return (
                 <div className="fez-icon openAccess large" title={openAccessTitle} />
@@ -23,9 +28,9 @@ export default class OpenAccessIcon extends PureComponent {
         } else if (!this.props.isOpenAccess && this.props.embargoDate) {
             const openAccessTitle = txt.openAccessEmbargoedLabel
                 .replace('[embargo_date]', this.props.embargoDate)
-                .replace('[oa_status]', openAccessIdLookup[this.props.openAccessStatusId]);
+                .replace('[oa_status]', openAccessConfig.labels[this.props.openAccessStatusId]);
             return (
-                <div>
+                <span>
                     {
                         this.props.showEmbargoText &&
                         <span className="is-hidden-mobile is-hidden-tablet-only">
@@ -33,9 +38,9 @@ export default class OpenAccessIcon extends PureComponent {
                         </span>
                     }
                     <div className="fez-icon openAccessEmbargoed large" title={openAccessTitle} />
-                </div>
+                </span>
             );
         }
-        return (<div className="openAccessClosed noOaIcon" />);
+        return (<div className="noOaIcon" />);
     }
 }

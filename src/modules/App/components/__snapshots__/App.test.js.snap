@@ -89,7 +89,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           "primaryText": "My research",
         },
         Object {
-          "linkTo": "/my_research_data_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
           "primaryText": "My research data collections",
         },
         Object {
@@ -101,7 +101,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing data collection",
         },
         Object {
@@ -113,19 +113,13 @@ exports[`Application component should render alert if user is not fez author 1`]
           "path": "/234234234242",
         },
         Object {
-          "linkTo": "/browse",
-          "primaryText": "Browse eSpace",
-          "public": true,
-          "secondaryText": "",
-        },
-        Object {
           "linkTo": "/contact",
           "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/my_research_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
           "primaryText": "Switch to old interface",
           "public": true,
         },
@@ -145,6 +139,7 @@ exports[`Application component should render alert if user is not fez author 1`]
       >
         <Alert
           allowDismiss={false}
+          dismissTitle="Click to dismiss this alert"
           message="Please contact the UQ eSpace administrator to resolve this."
           showLoader={false}
           title="You are not registered in UQ eSpace as an author"
@@ -290,18 +285,13 @@ exports[`Application component should render alert if user is not fez author 1`]
         render={[Function]}
       />
       <Route
-        key="route_14"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         render={[Function]}
       />
     </Switch>
@@ -400,7 +390,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "My research",
         },
         Object {
-          "linkTo": "/my_research_data_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
           "primaryText": "My research data collections",
         },
         Object {
@@ -412,7 +402,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing data collection",
         },
         Object {
@@ -424,19 +414,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "path": "/234234234242",
         },
         Object {
-          "linkTo": "/browse",
-          "primaryText": "Browse eSpace",
-          "public": true,
-          "secondaryText": "",
-        },
-        Object {
           "linkTo": "/contact",
           "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/my_research_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
           "primaryText": "Switch to old interface",
           "public": true,
         },
@@ -586,18 +570,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         render={[Function]}
       />
       <Route
-        key="route_14"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         render={[Function]}
       />
     </Switch>
@@ -696,19 +675,13 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           "path": "/234234234242",
         },
         Object {
-          "linkTo": "/browse",
-          "primaryText": "Browse eSpace",
-          "public": true,
-          "secondaryText": "",
-        },
-        Object {
           "linkTo": "/contact",
           "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/my_research_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
           "primaryText": "Switch to old interface",
           "public": true,
         },
@@ -728,6 +701,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       >
         <Alert
           allowDismiss={false}
+          dismissTitle="Click to dismiss this alert"
           message="Before you can start using UQ eSpace you have to link your UQ eSpace profile to your ORCID ID."
           showLoader={false}
           title="ORCID ID REQUIRED"
@@ -743,29 +717,24 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         render={[Function]}
       />
       <Route
-        key="route_1"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
         component={[Function]}
         exact={true}
-        key="route_2"
+        key="route_1"
         path="/records/:pid(UQ:\\\\d+)"
       />
       <Route
-        key="route_3"
+        key="route_2"
         path="/rhdsubmission_new"
         render={[Function]}
       />
       <Route
-        key="route_4"
+        key="route_3"
         path="/sbslodge_new"
         render={[Function]}
       />
       <Route
         component={[Function]}
-        key="route_5"
+        key="route_4"
       />
     </Switch>
   </div>
@@ -863,7 +832,7 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "My research",
         },
         Object {
-          "linkTo": "/my_research_data_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
           "primaryText": "My research data collections",
         },
         Object {
@@ -875,7 +844,7 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing data collection",
         },
         Object {
@@ -887,19 +856,13 @@ exports[`Application component should render app for account with fez author wit
           "path": "/234234234242",
         },
         Object {
-          "linkTo": "/browse",
-          "primaryText": "Browse eSpace",
-          "public": true,
-          "secondaryText": "",
-        },
-        Object {
           "linkTo": "/contact",
           "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/my_research_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
           "primaryText": "Switch to old interface",
           "public": true,
         },
@@ -1049,18 +1012,13 @@ exports[`Application component should render app for account with fez author wit
         render={[Function]}
       />
       <Route
-        key="route_14"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         render={[Function]}
       />
     </Switch>
@@ -1159,7 +1117,7 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "My research",
         },
         Object {
-          "linkTo": "/my_research_data_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
           "primaryText": "My research data collections",
         },
         Object {
@@ -1171,7 +1129,7 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing data collection",
         },
         Object {
@@ -1183,19 +1141,13 @@ exports[`Application component should render app for account with fez author wit
           "path": "/234234234242",
         },
         Object {
-          "linkTo": "/browse",
-          "primaryText": "Browse eSpace",
-          "public": true,
-          "secondaryText": "",
-        },
-        Object {
           "linkTo": "/contact",
           "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/my_research_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
           "primaryText": "Switch to old interface",
           "public": true,
         },
@@ -1217,6 +1169,7 @@ exports[`Application component should render app for account with fez author wit
           action={[Function]}
           actionButtonLabel="Click here to link or register"
           allowDismiss={false}
+          dismissTitle="Click to dismiss this alert"
           message="You do not have an ORCID ID linked to your UQ eSpace."
           showLoader={false}
           title="ORCID ID REQUIRED"
@@ -1362,18 +1315,13 @@ exports[`Application component should render app for account with fez author wit
         render={[Function]}
       />
       <Route
-        key="route_14"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         render={[Function]}
       />
     </Switch>
@@ -1588,18 +1536,13 @@ exports[`Application component should render app for account with fez author wit
         render={[Function]}
       />
       <Route
-        key="route_14"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         render={[Function]}
       />
     </Switch>
@@ -1698,7 +1641,7 @@ exports[`Application component should render application with routing for the us
           "primaryText": "My research",
         },
         Object {
-          "linkTo": "/my_research_data_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
           "primaryText": "My research data collections",
         },
         Object {
@@ -1710,7 +1653,7 @@ exports[`Application component should render application with routing for the us
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing data collection",
         },
         Object {
@@ -1722,19 +1665,13 @@ exports[`Application component should render application with routing for the us
           "path": "/234234234242",
         },
         Object {
-          "linkTo": "/browse",
-          "primaryText": "Browse eSpace",
-          "public": true,
-          "secondaryText": "",
-        },
-        Object {
           "linkTo": "/contact",
           "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/my_research_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
           "primaryText": "Switch to old interface",
           "public": true,
         },
@@ -1840,19 +1777,13 @@ exports[`Application component should render for anon user 1`] = `
     menuItems={
       Array [
         Object {
-          "linkTo": "/browse",
-          "primaryText": "Browse eSpace",
-          "public": true,
-          "secondaryText": "",
-        },
-        Object {
           "linkTo": "/contact",
           "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
         },
         Object {
-          "linkTo": "/my_research_claimed.php",
+          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
           "primaryText": "Switch to old interface",
           "public": true,
         },
@@ -1874,6 +1805,7 @@ exports[`Application component should render for anon user 1`] = `
           action={[Function]}
           actionButtonLabel="Click to login"
           allowDismiss={false}
+          dismissTitle="Click to dismiss this alert"
           message="Login to UQ eSpace for full search results and more services."
           showLoader={false}
           title="You are not logged in"
@@ -1889,24 +1821,19 @@ exports[`Application component should render for anon user 1`] = `
         render={[Function]}
       />
       <Route
-        key="route_1"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
         component={[Function]}
         exact={true}
-        key="route_2"
+        key="route_1"
         path="/records/:pid(UQ:\\\\d+)"
       />
       <Route
         exact={true}
-        key="route_3"
+        key="route_2"
         path="/"
         render={[Function]}
       />
       <Route
-        key="route_4"
+        key="route_3"
         render={[Function]}
       />
     </Switch>
@@ -2004,29 +1931,24 @@ exports[`Application component should render thesis submission for HDR without m
         render={[Function]}
       />
       <Route
-        key="route_1"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
         component={[Function]}
         exact={true}
-        key="route_2"
+        key="route_1"
         path="/records/:pid(UQ:\\\\d+)"
       />
       <Route
-        key="route_3"
+        key="route_2"
         path="/rhdsubmission_new"
         render={[Function]}
       />
       <Route
-        key="route_4"
+        key="route_3"
         path="/sbslodge_new"
         render={[Function]}
       />
       <Route
         component={[Function]}
-        key="route_5"
+        key="route_4"
       />
     </Switch>
   </div>

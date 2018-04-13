@@ -13,10 +13,6 @@ function setup(testProps, isShallow = true) {
 
 describe('CitationCounts renders ', () => {
 
-    beforeEach(() => {
-        Date.now = jest.genMockFunction().mockReturnValue('2020-01-01T00:00:00.000Z');
-    });
-
     it('component with no metrics', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -55,63 +51,5 @@ describe('CitationCounts renders ', () => {
         };
         const wrapper = setup({publication});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('.citationCount').length).toEqual(2);
-    });
-
-    it('should calculate OA status', () => {
-        const publicationDOIOANoEmbargoDate = {
-            fez_record_search_key_oa_embargo_days: {
-                rek_oa_embargo_days: 0
-            },
-            rek_created_date: '2019-12-25T00:00:00Z',
-            rek_pid: 'pid:111',
-            fez_record_search_key_oa_status: {
-                rek_oa_status: 453693
-            }
-        };
-        const publicationDOIOAWithEmbargoDate = {
-            fez_record_search_key_oa_embargo_days: {
-                rek_oa_embargo_days: 400
-            },
-            rek_created_date: '2019-12-25T00:00:00Z',
-            rek_pid: 'pid:111',
-            fez_record_search_key_oa_status: {
-                rek_oa_status: 453693
-            }
-        };
-        const publicationOAPossibleEmbargo = {
-            rek_created_date: '2019-12-25T00:00:00Z',
-            rek_pid: 'pid:111',
-            fez_record_search_key_oa_status: {
-                rek_oa_status: 453695
-            }
-        };
-        const publicationPMC = {
-            rek_created_date: '2019-12-25T00:00:00Z',
-            rek_pid: 'pid:111',
-            fez_record_search_key_oa_status: {
-                rek_oa_status: 453954
-            }
-        };
-        const publicationNotOA = {
-            rek_created_date: '2019-12-25T00:00:00Z',
-            rek_pid: 'pid:111',
-            fez_record_search_key_oa_status: {
-                rek_oa_status: 453700
-            }
-        };
-
-        const expectOADoiNoEmbargoDate = {"embargoDate": null, "isOpenAccess": true, "openAccessStatusId": 453693};
-        const expectOADoiWithEmbargoDate = {"embargoDate": "4th February 2021", "isOpenAccess": false, "openAccessStatusId": 453693};
-        const expectOAPossibleEmbargo = {"embargoDate": "a possible embargo date", "isOpenAccess": false, "openAccessStatusId": 453695};
-        const expectOAPMC = {"embargoDate": null, "isOpenAccess": true, "openAccessStatusId": 453954};
-        const expectNotOA = {"embargoDate": null, "isOpenAccess": false, "openAccessStatusId": 453700};
-
-        const wrapper = setup({});
-        expect(wrapper.instance().isRecordOpenAccess(publicationDOIOANoEmbargoDate)).toEqual(expectOADoiNoEmbargoDate);
-        expect(wrapper.instance().isRecordOpenAccess(publicationDOIOAWithEmbargoDate)).toEqual(expectOADoiWithEmbargoDate);
-        expect(wrapper.instance().isRecordOpenAccess(publicationOAPossibleEmbargo)).toEqual(expectOAPossibleEmbargo);
-        expect(wrapper.instance().isRecordOpenAccess(publicationPMC)).toEqual(expectOAPMC);
-        expect(wrapper.instance().isRecordOpenAccess(publicationNotOA)).toEqual(expectNotOA);
     });
 });

@@ -23,6 +23,14 @@ export const viewRecordsConfig = {
         453613: {
             className: 'cc-by-sa',
             url: 'http://creativecommons.org/licenses/by-sa/3.0/deed.en_US'
+        },
+        453701: {
+            className: 'uq',
+            url: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions'
+        },
+        453702: {
+            className: 'uq',
+            url: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions'
         }
     },
     htmlFields: [

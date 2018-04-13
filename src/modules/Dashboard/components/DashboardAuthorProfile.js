@@ -12,10 +12,12 @@ const DashboardProfile = ({authorDetails, author, history}) => {
 
     return (
         <div className="imageCover">
-            {/* HELP */}
-            <div className="is-pulled-right">
-                <HelpIcon {...txt.help} />
-            </div>
+            {
+                txt.help &&
+                <div className="is-pulled-right">
+                    <HelpIcon {...txt.help} />
+                </div>
+            }
             {
                 authorDetails &&
                 <div className="columns userDetails is-gapless">
@@ -50,6 +52,13 @@ const DashboardProfile = ({authorDetails, author, history}) => {
                                 scopus: author.aut_scopus_id,
                                 google_scholar: author.aut_google_scholar_id,
                                 orcid: author.aut_orcid_id
+                            }}
+                            authenticated={{
+                                publons: Boolean(author.aut_publons_id),
+                                researcher: Boolean(author.aut_researcher_id),
+                                scopus: Boolean(author.aut_is_scopus_id_authenticated),
+                                google_scholar: Boolean(author.aut_google_scholar_id),
+                                orcid: Boolean(author.aut_orcid_id)
                             }}
                             history={history}
                         />
