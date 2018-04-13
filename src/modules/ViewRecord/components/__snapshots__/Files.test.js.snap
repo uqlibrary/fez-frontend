@@ -50,7 +50,7 @@ exports[`Files Component  should not render cultural message 1`] = `
             Size
           </TableHeaderColumn>
           <TableHeaderColumn
-            className="oaStatus"
+            className="oa align-right"
           />
         </TableRow>
       </TableHeader>
@@ -124,7 +124,7 @@ exports[`Files Component  should not render cultural message 1`] = `
             95.49 KB
           </TableRowColumn>
           <TableRowColumn
-            className="oaStatus"
+            className="oa align-right"
             hoverable={false}
           >
             <OpenAccessIcon
@@ -189,7 +189,7 @@ exports[`Files Component  should render component 1`] = `
             Size
           </TableHeaderColumn>
           <TableHeaderColumn
-            className="oaStatus"
+            className="oa align-right"
           />
         </TableRow>
       </TableHeader>
@@ -263,7 +263,7 @@ exports[`Files Component  should render component 1`] = `
             95.49 KB
           </TableRowColumn>
           <TableRowColumn
-            className="oaStatus"
+            className="oa align-right"
             hoverable={false}
           >
             <OpenAccessIcon
@@ -336,7 +336,7 @@ exports[`Files Component  should render cultural message 1`] = `
             Size
           </TableHeaderColumn>
           <TableHeaderColumn
-            className="oaStatus"
+            className="oa align-right"
           />
         </TableRow>
       </TableHeader>
@@ -410,7 +410,7 @@ exports[`Files Component  should render cultural message 1`] = `
             95.49 KB
           </TableRowColumn>
           <TableRowColumn
-            className="oaStatus"
+            className="oa align-right"
             hoverable={false}
           >
             <OpenAccessIcon
