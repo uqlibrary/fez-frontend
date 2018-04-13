@@ -43,7 +43,7 @@ export default class NewspaperArticleCitation extends Component {
                 <Partials.DateCitationView date={this.props.publication.rek_date} format="YYYY[,] MMMM D" />
 
                 {/* {Title| |.} */}
-                <Partials.CitationView className="citationNewspaperArticleTitle" value={record.title} />
+                <Partials.CitationTitleView className="citationNewspaperArticleTitle" value={record.title} />
 
                 {/* <i>{Newspaper| |}</i> */}
                 <Partials.CitationView className="citationNewspaper" value={record.newspaper} suffix="" />

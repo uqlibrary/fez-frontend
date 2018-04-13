@@ -52,13 +52,26 @@ export const calculateOpenAccess = (record) => {
 };
 
 const publicationEnhancer = () => next => action => {
+    const dompurify = require('dompurify');
+    const cleanTitleConfig = { ALLOWED_TAGS: ['sub', 'sup'] };
+    const noHtmlConfig = { ALLOWED_TAGS: [''] };
+    const formattedFieldConfig = { ALLOWED_TAGS: ['p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b'], ALLOWED_ATTR: [] };
+
+    const cleanHtmlIfValid = (value) => {
+        return dompurify.sanitize(value, noHtmlConfig).replace(/\s/g, '').length !== 0
+            ? dompurify.sanitize(value, formattedFieldConfig)
+            : null;
+    };
+
     if (actions.loadPublicationsListActions.indexOf(action.type) >= 0 && !!action.payload.data) {
         const publicationsWithMethods = action.payload.data.map(publication => ({
             ...publication,
+            rek_title: dompurify.sanitize(publication.rek_title, cleanTitleConfig),
             calculateOpenAccess() {
                 return calculateOpenAccess(this);
             }
         }));
+
         const enhancedAction = {
             type: action.type,
             payload: {
@@ -68,17 +81,37 @@ const publicationEnhancer = () => next => action => {
         };
         return next(enhancedAction);
     } else if (actions.loadPublicationActions.indexOf(action.type) >= 0) {
+        const cleanedPublication = {
+            ...action.payload,
+            rek_title: dompurify.sanitize(action.payload.rek_title, cleanTitleConfig),
+            rek_formatted_title: cleanHtmlIfValid(action.payload.rek_formatted_title),
+            rek_formatted_abstract: cleanHtmlIfValid(action.payload.rek_formatted_abstract)
+        };
+
         const enhancedAction = {
             type: action.type,
             payload: {
-                ...action.payload,
+                ...cleanedPublication,
                 calculateOpenAccess() {
                     return calculateOpenAccess(this);
                 }
             }
         };
         return next(enhancedAction);
+    } else if ((actions.loadPublicationSearchActions.indexOf(action.type) >= 0)) {
+        const cleanedPublications = action.payload.map(publication => ({
+            ...publication,
+            rek_title: dompurify.sanitize(publication.rek_title, cleanTitleConfig)
+        }));
+        const enhancedSearchTitleClean = {
+            type: action.type,
+            payload: [
+                ...cleanedPublications,
+            ]
+        };
+        return next(enhancedSearchTitleClean);
     }
+
     return next(action);
 };
 

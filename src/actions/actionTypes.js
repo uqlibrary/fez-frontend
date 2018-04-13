@@ -126,3 +126,4 @@ export const APP_ALERT_HIDE = 'APP_ALERT_HIDE';
 // List of all actions loading publications - for middleware
 export const loadPublicationsListActions = [LATEST_PUBLICATIONS_LOADED, AUTHOR_PUBLICATIONS_LOADED, SEARCH_LOADED, POSSIBLY_YOUR_PUBLICATIONS_LOADED];
 export const loadPublicationActions = [FIX_RECORD_LOADED, VIEW_RECORD_LOADED];
+export const loadPublicationSearchActions = ['SEARCH_LOADED@wos', 'SEARCH_LOADED@crossref', 'SEARCH_LOADED@scopus', 'SEARCH_LOADED@pubmed', 'SEARCH_LOADED@espace'];

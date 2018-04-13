@@ -6,3 +6,4 @@ export PageCitationView from './PageCitationView';
 export PageRangeCitationView from './PageRangeCitationView';
 export DateCitationView from './DateCitationView';
 export CitationCountView from './CitationCountView';
+export CitationTitleView from './CitationTitleView';
