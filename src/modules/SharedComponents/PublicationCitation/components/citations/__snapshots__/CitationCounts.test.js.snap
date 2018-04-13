@@ -19,6 +19,11 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
       source="google"
       title="Link to ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network (Google scholar) will open in a new window."
     />
+    <OpenAccessIcon
+      embargoDate={null}
+      isOpenAccess={false}
+      showEmbargoText={false}
+    />
   </div>
 </div>
 `;
@@ -56,8 +61,8 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
     />
     <OpenAccessIcon
       embargoDate={null}
-      isOpenAccess={true}
-      openAccessStatusId={453693}
+      isOpenAccess={false}
+      showEmbargoText={false}
     />
   </div>
   <div
@@ -82,6 +87,12 @@ exports[`CitationCounts renders  component with no metrics 1`] = `
 >
   <div
     className="column is-narrow citationIcons"
-  />
+  >
+    <OpenAccessIcon
+      embargoDate={null}
+      isOpenAccess={false}
+      showEmbargoText={false}
+    />
+  </div>
 </div>
 `;

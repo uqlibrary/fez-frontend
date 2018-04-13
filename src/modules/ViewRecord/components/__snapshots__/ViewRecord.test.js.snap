@@ -3,6 +3,7 @@
 exports[`Component ViewRecord  should not render components for empty record 1`] = `
 <StandardPage
   className="viewRecord"
+  title={Array []}
 >
   <withRouter(Connect(PublicationCitation))
     hideTitle={true}
@@ -77,7 +78,11 @@ exports[`Component ViewRecord  should render loader 1`] = `
 exports[`Component ViewRecord  should render record view 1`] = `
 <StandardPage
   className="viewRecord"
-  title="Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth"
+  title={
+    Array [
+      "Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth",
+    ]
+  }
 >
   <withRouter(Connect(PublicationCitation))
     hideTitle={true}
@@ -3258,7 +3263,11 @@ exports[`Component ViewRecord  should render record view 1`] = `
 exports[`Component ViewRecord  should render record view without a title 1`] = `
 <StandardPage
   className="viewRecord"
-  title="Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth"
+  title={
+    Array [
+      "Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth",
+    ]
+  }
 >
   <withRouter(Connect(PublicationCitation))
     hideTitle={true}

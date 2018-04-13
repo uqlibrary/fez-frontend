@@ -1,5 +1,6 @@
 import {putUploadFile} from './file';
 import * as repositories from 'repositories';
+import {locale} from 'locale';
 // import * as mockData from 'mock/data';
 
 describe('File repository tests ', () => {
@@ -37,7 +38,7 @@ describe('File repository tests ', () => {
             'FILE_UPLOADED_FAILED@a.txt'
         ];
 
-        await expect(putUploadFile('PID:111111', {name: 'a.txt'}, mockActionsStore.dispatch)).rejects.toEqual(new Error('Request error with status code 500. '));
+        await expect(putUploadFile('PID:111111', {name: 'a.txt'}, mockActionsStore.dispatch)).rejects.toEqual(new Error(locale.global.errorMessages.generic));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 });

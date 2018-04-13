@@ -685,7 +685,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -698,7 +698,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
         Education, Employment and Social Inclusion within the European Union
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSource"
       prefix=" "
@@ -1457,7 +1457,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1470,7 +1470,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
         Education, Employment and Social Inclusion within the European Union
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSource"
       prefix=" "
@@ -1607,7 +1607,7 @@ exports[`WorkingPaperCitation renders  component with empty publication 1`] = `
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1615,7 +1615,7 @@ exports[`WorkingPaperCitation renders  component with empty publication 1`] = `
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSource"
       prefix=" "

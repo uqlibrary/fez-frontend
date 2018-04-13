@@ -46,7 +46,7 @@ export default class ConferenceProceedingsCitation extends Component {
                 <Partials.DateCitationView date={this.props.publication.rek_date} />
 
                 {/* <i>{Title of proceedings| |.}</i> */}
-                <Partials.CitationView className="citationTitle" value={record.title} />
+                <Partials.CitationTitleView className="citationTitle" value={record.title} />
 
                 {/* {Conference Name| |,} */}
                 <Partials.CitationView className="citationConferenceName" value={record.conferenceName} suffix=", " />

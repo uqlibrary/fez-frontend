@@ -41,7 +41,7 @@ export default class ResearchReportCitation extends Component {
                 <Partials.DateCitationView date={this.props.publication.rek_date} />
 
                 {/* research report title */}
-                <Partials.CitationView className="citationTitle" value={record.title} />
+                <Partials.CitationTitleView className="citationTitle" value={record.title} />
 
                 {/* series */}
                 <Partials.CitationView className="citationSeries" value={record.series} />

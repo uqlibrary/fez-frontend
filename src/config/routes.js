@@ -59,7 +59,7 @@ export const pathConfig =  {
     authorIdentifiers: {
         orcid: {
             link: '/author-identifiers/orcid/link',
-            absoluteLink: `${window.location.origin}${window.location.pathname}${!!window.location.hash ? '#' : ''}/author-identifiers/orcid/link`
+            absoluteLink: `${window.location.origin}${process.env.BRANCH === 'development' ? window.location.pathname : ''}${!!window.location.hash ? '#' : ''}/author-identifiers/orcid/link`
             // unlink: '/author-identifiers/orcid/link'
         },
         googleScholar: {
@@ -70,7 +70,8 @@ export const pathConfig =  {
     legacyEspace: `${fullPath}/my_research_claimed.php`,
     authorStatistics: {
         url: (id) => `https://app.library.uq.edu.au/#/authors/${id}`
-    }
+    },
+    help: 'https://guides.library.uq.edu.au/for-researchers/research-publications-guide'
 };
 
 // a duplicate list of routes for
@@ -229,6 +230,11 @@ export const getMenuConfig = (account, disabled) => {
         //     public: true
         // },
         {
+            linkTo: pathConfig.help,
+            ...locale.menu.help,
+            public: true
+        },
+        {
             linkTo: pathConfig.contact,
             ...locale.menu.contact,
             public: true
@@ -268,10 +274,6 @@ export const getMenuConfig = (account, disabled) => {
                 ...locale.menu.myResearch
             },
             {
-                linkTo: pathConfig.dataset.mine,
-                ...locale.menu.myDatasets
-            },
-            {
                 linkTo: pathConfig.records.possible,
                 ...locale.menu.claimPublication
             },
@@ -279,10 +281,16 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.records.add.find,
                 ...locale.menu.addMissingRecord
             },
+            /*
+            {
+                linkTo: pathConfig.dataset.mine,
+                ...locale.menu.myDatasets
+            },
             {
                 linkTo: pathConfig.dataset.add,
                 ...locale.menu.addDataset
             },
+            */
             {
                 linkTo: pathConfig.authorStatistics.url(account.id),
                 ...locale.menu.authorStatistics

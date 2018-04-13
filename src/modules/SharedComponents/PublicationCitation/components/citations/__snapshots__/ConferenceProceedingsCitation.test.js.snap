@@ -1193,7 +1193,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1206,7 +1206,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
         Experiences and Challenges in Sewers: Measurements and Hydrodynamics
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationConferenceName"
       prefix=" "
@@ -2490,7 +2490,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -2503,7 +2503,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
         Experiences and Challenges in Sewers: Measurements and Hydrodynamics
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationConferenceName"
       prefix=" "
@@ -2661,7 +2661,7 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -2669,7 +2669,7 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationConferenceName"
       prefix=" "
