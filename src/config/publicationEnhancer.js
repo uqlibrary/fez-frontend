@@ -57,11 +57,11 @@ const publicationEnhancer = () => next => action => {
     const noHtmlConfig = { ALLOWED_TAGS: [''] };
     const formattedFieldConfig = { ALLOWED_TAGS: ['p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b', 'sup', 'sub'], ALLOWED_ATTR: [] };
 
-    const cleanHtmlIfValid = (value) => {
-        return dompurify.sanitize(value, noHtmlConfig).replace(/\s/g, '').length !== 0
+    const cleanHtmlIfValid = (value) => (
+        dompurify.sanitize(value, noHtmlConfig).replace(/\s/g, '').length !== 0
             ? dompurify.sanitize(value, formattedFieldConfig)
-            : null;
-    };
+            : null
+    );
 
     if (actions.loadPublicationsListActions.indexOf(action.type) >= 0 && !!action.payload.data) {
         const publicationsWithMethods = action.payload.data.map(publication => ({
