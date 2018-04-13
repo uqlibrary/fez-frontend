@@ -45,13 +45,13 @@ exports[`Files Component  should not render cultural message 1`] = `
             Description
           </TableHeaderColumn>
           <TableHeaderColumn
-            className="oaStatus"
-          />
-          <TableHeaderColumn
             className="align-right is-hidden-mobile is-hidden-tablet-only size"
           >
             Size
           </TableHeaderColumn>
+          <TableHeaderColumn
+            className="oaStatus"
+          />
         </TableRow>
       </TableHeader>
       <TableBody
@@ -79,7 +79,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           >
             <img
               alt="thumbnail_image.jpg"
-              src="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+              src="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
             />
           </TableRowColumn>
           <TableRowColumn
@@ -90,16 +90,22 @@ exports[`Files Component  should not render cultural message 1`] = `
               allowDownload={true}
               calculatedSize="95.49 KB"
               description="testing image description"
-              embargoText={null}
               fileName="image.jpg"
               icon={
                 <img
                   alt="thumbnail_image.jpg"
-                  src="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+                  src="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
                 />
               }
               mimeType="image/jpeg"
               onFileSelect={[Function]}
+              openAccessStatus={
+                Object {
+                  "embargoDate": null,
+                  "isOpenAccess": true,
+                  "openAccessStatusId": 453695,
+                }
+              }
               pid="UQ:676287"
               previewFileName="preview_image.jpg"
               thumbnailFileName="thumbnail_image.jpg"
@@ -112,14 +118,21 @@ exports[`Files Component  should not render cultural message 1`] = `
             testing image description
           </TableRowColumn>
           <TableRowColumn
-            className="oaStatus"
-            hoverable={false}
-          />
-          <TableRowColumn
             className="align-right is-hidden-mobile is-hidden-tablet-only size"
             hoverable={false}
           >
             95.49 KB
+          </TableRowColumn>
+          <TableRowColumn
+            className="oaStatus"
+            hoverable={false}
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453695}
+              showEmbargoText={false}
+            />
           </TableRowColumn>
         </TableRow>
       </TableBody>
@@ -171,13 +184,13 @@ exports[`Files Component  should render component 1`] = `
             Description
           </TableHeaderColumn>
           <TableHeaderColumn
-            className="oaStatus"
-          />
-          <TableHeaderColumn
             className="align-right is-hidden-mobile is-hidden-tablet-only size"
           >
             Size
           </TableHeaderColumn>
+          <TableHeaderColumn
+            className="oaStatus"
+          />
         </TableRow>
       </TableHeader>
       <TableBody
@@ -205,7 +218,7 @@ exports[`Files Component  should render component 1`] = `
           >
             <img
               alt="thumbnail_image.jpg"
-              src="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+              src="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
             />
           </TableRowColumn>
           <TableRowColumn
@@ -216,16 +229,22 @@ exports[`Files Component  should render component 1`] = `
               allowDownload={true}
               calculatedSize="95.49 KB"
               description="testing image description"
-              embargoText={null}
               fileName="image.jpg"
               icon={
                 <img
                   alt="thumbnail_image.jpg"
-                  src="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+                  src="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
                 />
               }
               mimeType="image/jpeg"
               onFileSelect={[Function]}
+              openAccessStatus={
+                Object {
+                  "embargoDate": null,
+                  "isOpenAccess": true,
+                  "openAccessStatusId": 453695,
+                }
+              }
               pid="UQ:676287"
               previewFileName="preview_image.jpg"
               thumbnailFileName="thumbnail_image.jpg"
@@ -238,14 +257,21 @@ exports[`Files Component  should render component 1`] = `
             testing image description
           </TableRowColumn>
           <TableRowColumn
-            className="oaStatus"
-            hoverable={false}
-          />
-          <TableRowColumn
             className="align-right is-hidden-mobile is-hidden-tablet-only size"
             hoverable={false}
           >
             95.49 KB
+          </TableRowColumn>
+          <TableRowColumn
+            className="oaStatus"
+            hoverable={false}
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453695}
+              showEmbargoText={false}
+            />
           </TableRowColumn>
         </TableRow>
       </TableBody>
@@ -305,13 +331,13 @@ exports[`Files Component  should render cultural message 1`] = `
             Description
           </TableHeaderColumn>
           <TableHeaderColumn
-            className="oaStatus"
-          />
-          <TableHeaderColumn
             className="align-right is-hidden-mobile is-hidden-tablet-only size"
           >
             Size
           </TableHeaderColumn>
+          <TableHeaderColumn
+            className="oaStatus"
+          />
         </TableRow>
       </TableHeader>
       <TableBody
@@ -339,7 +365,7 @@ exports[`Files Component  should render cultural message 1`] = `
           >
             <img
               alt="thumbnail_image.jpg"
-              src="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+              src="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
             />
           </TableRowColumn>
           <TableRowColumn
@@ -350,16 +376,22 @@ exports[`Files Component  should render cultural message 1`] = `
               allowDownload={true}
               calculatedSize="95.49 KB"
               description="testing image description"
-              embargoText={null}
               fileName="image.jpg"
               icon={
                 <img
                   alt="thumbnail_image.jpg"
-                  src="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+                  src="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
                 />
               }
               mimeType="image/jpeg"
               onFileSelect={[Function]}
+              openAccessStatus={
+                Object {
+                  "embargoDate": null,
+                  "isOpenAccess": true,
+                  "openAccessStatusId": 453695,
+                }
+              }
               pid="UQ:676287"
               previewFileName="preview_image.jpg"
               thumbnailFileName="thumbnail_image.jpg"
@@ -372,14 +404,21 @@ exports[`Files Component  should render cultural message 1`] = `
             testing image description
           </TableRowColumn>
           <TableRowColumn
-            className="oaStatus"
-            hoverable={false}
-          />
-          <TableRowColumn
             className="align-right is-hidden-mobile is-hidden-tablet-only size"
             hoverable={false}
           >
             95.49 KB
+          </TableRowColumn>
+          <TableRowColumn
+            className="oaStatus"
+            hoverable={false}
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453695}
+              showEmbargoText={false}
+            />
           </TableRowColumn>
         </TableRow>
       </TableBody>

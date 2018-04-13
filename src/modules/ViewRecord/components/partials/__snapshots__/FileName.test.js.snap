@@ -68,7 +68,7 @@ exports[`File Name Component  should display file name link 1`] = `
           >
             <ExternalLink
               className="fileName"
-              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
+              href="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
@@ -76,7 +76,7 @@ exports[`File Name Component  should display file name link 1`] = `
             >
               <a
                 className="fileName"
-                href="https://fez-staging.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
+                href="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
                 rel="noopener noreferrer"
                 tabIndex="0"
                 target="_blank"
@@ -193,7 +193,7 @@ exports[`File Name Component  should render audio player 1`] = `
           >
             <ExternalLink
               className="fileName"
-              href="https://fez-staging.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
+              href="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
@@ -201,7 +201,7 @@ exports[`File Name Component  should render audio player 1`] = `
             >
               <a
                 className="fileName"
-                href="https://fez-staging.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
+                href="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
                 rel="noopener noreferrer"
                 tabIndex="0"
                 target="_blank"
@@ -255,7 +255,7 @@ exports[`File Name Component  should render audio player 1`] = `
               <div>
                 <audio>
                   <source
-                    src="https://fez-staging.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
+                    src="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
                     type="audio/mp3"
                   />
                 </audio>

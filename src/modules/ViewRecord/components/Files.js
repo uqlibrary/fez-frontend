@@ -12,10 +12,10 @@ import InsertDriveFile from 'material-ui/svg-icons/editor/insert-drive-file';
 import PictureAsPdf from 'material-ui/svg-icons/image/picture-as-pdf';
 import Image from 'material-ui/svg-icons/image/image';
 import AvVideocam from 'material-ui/svg-icons/av/videocam';
-import {pathConfig} from 'config/routes';
-import {viewRecordsConfig} from 'config/viewRecord';
+import {openAccessConfig, viewRecordsConfig, routes} from 'config';
 import MediaPreview from './MediaPreview';
 import FileName from './partials/FileName';
+import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 
 export default class Files extends Component {
     static propTypes = {
@@ -87,12 +87,19 @@ export default class Files extends Component {
         return parseFloat((bytes / Math.pow(k, index)).toFixed(decimals)) + ' ' + sizes[index];
     }
 
-    renderEmbargoDate = (embargoDate) => {
-        return embargoDate && moment(embargoDate).isSameOrAfter(moment(), 'day') ? locale.viewRecord.sections.files.embargoDate.replace('[embargoDate]', moment(embargoDate).format('DD/MM/YYYY')) : null;
+    getFileOpenAccessStatus = (publication, embargoDate) => {
+        const openAccessStatusId = !!publication.fez_record_search_key_oa_status
+            && publication.fez_record_search_key_oa_status.rek_oa_status;
+        if (openAccessConfig.openAccessFiles.indexOf(openAccessStatusId) < 0) {
+            return {isOpenAccess: false, embargoDate: null, openAccessStatusId: openAccessStatusId};
+        } else if (embargoDate && moment(embargoDate).isSameOrAfter(moment(), 'day')) {
+            return {isOpenAccess: false, embargoDate: moment(embargoDate).format('Do MMMM YYYY'), openAccessStatusId: openAccessStatusId};
+        }
+        return {isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId};
     }
 
     getUrl = (pid, fileName) => {
-        return fileName && pathConfig.file.url(pid, fileName);
+        return fileName && routes.pathConfig.file.url(pid, fileName);
     }
 
     searchByKey = (list, key, value) => {
@@ -101,10 +108,9 @@ export default class Files extends Component {
 
     isFileValid = (dataStream) => {
         return !dataStream.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
-            (dataStream.dsi_label ? !dataStream.dsi_label.match(new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi')) : true);
+            (!dataStream.dsi_label || !dataStream.dsi_label.match(new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi')));
     }
 
-    // filter out fezacml, premd, thumbnail, web prefix files
     getFileData = (publication) => {
         const dataStreams = publication.fez_datastream_info;
 
@@ -116,10 +122,8 @@ export default class Files extends Component {
                 const previewDataStream = this.searchByKey(dataStreams, 'dsi_dsid', 'preview_' + fileName);
                 const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
                 const thumbnailFileName = thumbnailDataStream && thumbnailDataStream.dsi_dsid;
-                const embargoText = this.renderEmbargoDate(dataStream.dsi_embargo_date);
-                const allowDownload = !embargoText;
+                const openAccessStatus = this.getFileOpenAccessStatus(publication, dataStream.dsi_embargo_date);
 
-                // TODO: set values for open access/allowDownload when available
                 return {
                     pid: pid,
                     fileName: fileName,
@@ -127,10 +131,10 @@ export default class Files extends Component {
                     mimeType: mimeType,
                     thumbnailFileName: thumbnailFileName,
                     previewFileName: previewDataStream && previewDataStream.dsi_dsid,
-                    embargoText: embargoText,
                     calculatedSize: this.formatBytes(dataStream.dsi_size),
-                    allowDownload: allowDownload,
-                    icon: this.renderFileIcon(pid, mimeType, thumbnailFileName, allowDownload)
+                    allowDownload: openAccessStatus.isOpenAccess,
+                    icon: this.renderFileIcon(pid, mimeType, thumbnailFileName, openAccessStatus.isOpenAccess),
+                    openAccessStatus: openAccessStatus
                 };
             })
             : [];
@@ -159,10 +163,10 @@ export default class Files extends Component {
                                 <TableHeaderColumn className="description is-hidden-mobile">
                                     {locale.viewRecord.sections.files.description}
                                 </TableHeaderColumn>
-                                <TableHeaderColumn className="oaStatus"/>
                                 <TableHeaderColumn className="align-right is-hidden-mobile is-hidden-tablet-only size">
                                     {locale.viewRecord.sections.files.size}
                                 </TableHeaderColumn>
+                                <TableHeaderColumn className="oaStatus"/>
                             </TableRow>
                         </TableHeader>
                         <TableBody displayRowCheckbox={false} className="data">
@@ -181,11 +185,11 @@ export default class Files extends Component {
                                         <TableRowColumn className="is-hidden-mobile description">
                                             {item.description}
                                         </TableRowColumn>
-                                        <TableRowColumn className="oaStatus">
-                                            {item.embargoText}
-                                        </TableRowColumn>
                                         <TableRowColumn className="align-right is-hidden-mobile is-hidden-tablet-only size" >
                                             {item.calculatedSize}
+                                        </TableRowColumn>
+                                        <TableRowColumn className="oaStatus">
+                                            <OpenAccessIcon {...item.openAccessStatus} />
                                         </TableRowColumn>
                                     </TableRow>
                                 ))
@@ -195,7 +199,12 @@ export default class Files extends Component {
                 </StandardCard>
                 {
                     this.state.preview.mediaUrl && this.state.preview.mimeType &&
-                    <MediaPreview ref="mediaPreview" mediaUrl={this.state.preview.mediaUrl} previewMediaUrl={this.state.preview.previewMediaUrl} mimeType={this.state.preview.mimeType} onClose={this.hidePreview}/>
+                    <MediaPreview
+                        ref="mediaPreview"
+                        mediaUrl={this.state.preview.mediaUrl}
+                        previewMediaUrl={this.state.preview.previewMediaUrl}
+                        mimeType={this.state.preview.mimeType}
+                        onClose={this.hidePreview}/>
                 }
             </section>
         );

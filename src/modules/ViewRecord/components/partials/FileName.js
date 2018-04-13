@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {pathConfig} from 'config/routes';
+import {routes} from 'config';
 import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
 import AudioPlayer from './AudioPlayer';
 
@@ -31,11 +31,16 @@ export default class FileName extends PureComponent {
     }
 
     getUrl = (pid, fileName) => {
-        return fileName && pathConfig.file.url(pid, fileName);
+        return fileName && routes.pathConfig.file.url(pid, fileName);
+    }
+
+    showPreview = (mediaUrl, previewMediaUrl, mimeType) => (e) => {
+        e.preventDefault();
+        this.props.onFileSelect(mediaUrl, previewMediaUrl, mimeType);
     }
 
     render() {
-        const {pid, fileName, allowDownload, mimeType, previewFileName, onFileSelect} = this.props;
+        const {pid, fileName, allowDownload, mimeType, previewFileName} = this.props;
         const mediaUrl = this.getUrl(pid, fileName);
         const previewMediaUrl = this.getUrl(pid, previewFileName || fileName);
 
@@ -52,8 +57,8 @@ export default class FileName extends PureComponent {
                         allowDownload && this.canShowPreview(mimeType) &&
                         <a
                             href="#"
-                            onClick={(e)=>{e.preventDefault(); onFileSelect(mediaUrl, previewMediaUrl, mimeType);}}
-                            onKeyPress={(e)=>{e.preventDefault(); onFileSelect(mediaUrl, previewMediaUrl, mimeType);}}
+                            onClick={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
+                            onKeyPress={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
                             className={'fileName'}>
                             {fileName}
                         </a>
