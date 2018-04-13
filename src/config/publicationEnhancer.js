@@ -55,7 +55,7 @@ const publicationEnhancer = () => next => action => {
     const dompurify = require('dompurify');
     const cleanTitleConfig = { ALLOWED_TAGS: ['sub', 'sup'] };
     const noHtmlConfig = { ALLOWED_TAGS: [''] };
-    const formattedFieldConfig = { ALLOWED_TAGS: ['p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b'], ALLOWED_ATTR: [] };
+    const formattedFieldConfig = { ALLOWED_TAGS: ['p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b', 'sup', 'sub'], ALLOWED_ATTR: [] };
 
     const cleanHtmlIfValid = (value) => {
         return dompurify.sanitize(value, noHtmlConfig).replace(/\s/g, '').length !== 0
@@ -67,6 +67,7 @@ const publicationEnhancer = () => next => action => {
         const publicationsWithMethods = action.payload.data.map(publication => ({
             ...publication,
             rek_title: dompurify.sanitize(publication.rek_title, cleanTitleConfig),
+            rek_description: dompurify.sanitize(publication.rek_description, formattedFieldConfig),
             calculateOpenAccess() {
                 return calculateOpenAccess(this);
             }
@@ -84,6 +85,7 @@ const publicationEnhancer = () => next => action => {
         const cleanedPublication = {
             ...action.payload,
             rek_title: dompurify.sanitize(action.payload.rek_title, cleanTitleConfig),
+            rek_description: dompurify.sanitize(action.payload.rek_description, formattedFieldConfig),
             rek_formatted_title: cleanHtmlIfValid(action.payload.rek_formatted_title),
             rek_formatted_abstract: cleanHtmlIfValid(action.payload.rek_formatted_abstract)
         };
@@ -101,7 +103,8 @@ const publicationEnhancer = () => next => action => {
     } else if ((actions.loadPublicationSearchActions.indexOf(action.type) >= 0)) {
         const cleanedPublications = action.payload.map(publication => ({
             ...publication,
-            rek_title: dompurify.sanitize(publication.rek_title, cleanTitleConfig)
+            rek_title: dompurify.sanitize(publication.rek_title, cleanTitleConfig),
+            rek_description: dompurify.sanitize(publication.rek_description, formattedFieldConfig)
         }));
         const enhancedSearchTitleClean = {
             type: action.type,
