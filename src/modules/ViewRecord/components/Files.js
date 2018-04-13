@@ -166,7 +166,7 @@ export default class Files extends Component {
                                 <TableHeaderColumn className="align-right is-hidden-mobile is-hidden-tablet-only size">
                                     {locale.viewRecord.sections.files.size}
                                 </TableHeaderColumn>
-                                <TableHeaderColumn className="oaStatus"/>
+                                <TableHeaderColumn className="oa align-right"/>
                             </TableRow>
                         </TableHeader>
                         <TableBody displayRowCheckbox={false} className="data">
@@ -188,7 +188,7 @@ export default class Files extends Component {
                                         <TableRowColumn className="align-right is-hidden-mobile is-hidden-tablet-only size" >
                                             {item.calculatedSize}
                                         </TableRowColumn>
-                                        <TableRowColumn className="oaStatus">
+                                        <TableRowColumn className="oa align-right">
                                             <OpenAccessIcon {...item.openAccessStatus} />
                                         </TableRowColumn>
                                     </TableRow>

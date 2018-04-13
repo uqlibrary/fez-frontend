@@ -112,17 +112,22 @@
         width: 50% !important;
       }
     }
-    .oaStattus {
-      width: 20% !important;
+    .oa {
+      text-align: right !important;
+      @include desktop {
+        width: 20% !important;
+      }
+      @include tablet-only {
+        width: 24px !important;
+      }
       @include mobile {
-        width: 5% !important;
+        width: 24px !important;
       }
     }
     .size {
       text-align: right !important;
       width: 10% !important;
     }
-
     .fileDetails {
       width: 100%;
       .fileIcon {
