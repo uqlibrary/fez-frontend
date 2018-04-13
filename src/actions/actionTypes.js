@@ -123,4 +123,6 @@ export const APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_HIDE = 'APP_DASHBOARD
 export const APP_ALERT_SHOW = 'APP_ALERT_SHOW';
 export const APP_ALERT_HIDE = 'APP_ALERT_HIDE';
 
-// TODO: other actions...
+// List of all actions loading publications - for middleware
+export const loadPublicationsListActions = [LATEST_PUBLICATIONS_LOADED, AUTHOR_PUBLICATIONS_LOADED, SEARCH_LOADED, POSSIBLY_YOUR_PUBLICATIONS_LOADED];
+export const loadPublicationActions = [FIX_RECORD_LOADED, VIEW_RECORD_LOADED];
