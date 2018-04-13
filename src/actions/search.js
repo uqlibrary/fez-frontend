@@ -38,7 +38,7 @@ export function createSearchPromise(source, queryString, dispatch) {
 
                 dispatch({
                     type: `${actions.SEARCH_LOADED}@${source}`,
-                    payload: processResponse
+                    payload: {data: processResponse}
                 });
                 resolve(processResponse);
             })

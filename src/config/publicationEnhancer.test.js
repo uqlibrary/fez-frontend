@@ -33,8 +33,8 @@ describe('publication enhancer', () => {
         const next = jest.fn();
         const expectedPayload = {
             data: [
-                {rek_pid: 'UQ:1234', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract', "calculateOpenAccess": expect.any(Function)},
-                {rek_pid: 'UQ:1235', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract', "calculateOpenAccess": expect.any(Function)}
+                {rek_pid: 'UQ:1234', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract', "rek_formatted_title": null, "calculateOpenAccess": expect.any(Function)},
+                {rek_pid: 'UQ:1235', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract', "rek_formatted_title": null, "calculateOpenAccess": expect.any(Function)}
             ],
             count: 2
         };
@@ -443,27 +443,31 @@ describe('publication enhancer', () => {
         expect(calculateOpenAccess(publicationOtherNoFiles)).toEqual(expectOAOther);
     });
 
-    it('clean up invalid HTML in rek_title from a search list', () => {
+    it('should clean up invalid HTML in rek_title from a search list', () => {
         const publication = {
             rek_pid: 'UQ:1234',
             rek_title: '<br/>This is a <u>title</u> with <sup>sup</sup> and <sub>sub</sub>',
         };
         const next = jest.fn();
-        publicationEnhancer()(next)({type: 'SEARCH_LOADED@wos', payload: [publication]});
+        publicationEnhancer()(next)({type: 'SEARCH_LOADED@wos', payload: {data: [publication]}});
         expect(next).toBeCalledWith(expect.objectContaining(
             {
                 type: 'SEARCH_LOADED@wos',
-                payload: [{
+                payload: {data: [{
                     rek_pid: 'UQ:1234',
                     rek_title: 'This is a title with <sup>sup</sup> and <sub>sub</sub>',
-                }]
+                    "rek_formatted_abstract": null,
+                    "rek_formatted_title": null,
+                    calculateOpenAccess: expect.any(Function)
+                }]}
             }));
     });
 
-    it('clean up invalid HTML in rek_title from a publication list', () => {
+    it('should clean up invalid HTML in rek_title from a publication list', () => {
         const publication = {
             rek_pid: 'UQ:1234',
             rek_title: '<br/>This is a <u>title</u> with <sup>sup</sup> and <sub>sub</sub>',
+            rek_formatted_abstract: '<ul><li>one</li><li>tow</li></ul><span>hello</span><p class="some-css">good bye</p>'
         };
         const next = jest.fn();
         publicationEnhancer()(next)({type: 'LATEST_PUBLICATIONS_LOADED', payload: {data: [publication]}});
@@ -475,7 +479,9 @@ describe('publication enhancer', () => {
                             {
                                 rek_pid: 'UQ:1234',
                                 rek_title: 'This is a title with <sup>sup</sup> and <sub>sub</sub>',
-                                calculateOpenAccess: expect.any(Function)
+                                calculateOpenAccess: expect.any(Function),
+                                "rek_formatted_abstract": "onetowhello<p>good bye</p>",
+                                "rek_formatted_title": null,
                             }
                         ]
                 }

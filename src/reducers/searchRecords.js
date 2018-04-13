@@ -192,7 +192,7 @@ const handlers = {
                 ...state.loadingPublicationSources,
                 totalSearchedCount: state.loadingPublicationSources.totalSearchedCount + 1,
                 [source]: true,
-                [`${source}Count`]: action.payload.length
+                [`${source}Count`]: action.payload.data.length
             }
         };
 
@@ -202,7 +202,7 @@ const handlers = {
             publicationsList:
                 deduplicateResults([
                     ...state.publicationsList,
-                    ...action.payload
+                    ...action.payload.data
                 ]),
             ...loadingPublicationSources
         };
