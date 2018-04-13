@@ -30,6 +30,7 @@ export const pathConfig =  {
         view: (pid) => (`${fullPath}/collection/${pid}`),
     },
     // TODO: update how we get files after security is implemented in fez file api
+    // (this is used in metadata to reflect legacy file urls for citation_pdf_url - Google Scholar)
     file: {
         url: (pid, fileName) => (`${fullPath}/view/${pid}/${fileName}`)
     },
