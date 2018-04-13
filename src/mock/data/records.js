@@ -1604,8 +1604,8 @@ export const internalTitleSearchList = {
                 "rek_oa_status_id": 531834,
                 "rek_oa_status_pid": "UQ:795469",
                 "rek_oa_status_xsdmf_id": null,
-                "rek_oa_status": 453692,
-                "rek_oa_status_lookup": "Not yet assessed"
+                "rek_oa_status": 453694,
+                "rek_oa_status_lookup": "link (no DOI)"
             },
             "rek_altmetric_score_xsdmf_id": null,
             "fez_record_search_key_org_name": null,

@@ -148,9 +148,9 @@ const handlers = {
         return {
             ...state,
             loadingSearch: false,
-            publicationsList: deduplicateResults(action.payload.map(item => {
-                return JSON.parse(JSON.stringify(item));
-            }))
+            publicationsList: action.payload.data
+                ? deduplicateResults(action.payload.data)
+                : []
         };
     },
 
@@ -200,15 +200,10 @@ const handlers = {
             ...state,
             loadingSearch: true,
             publicationsList:
-                deduplicateResults(
-                    [
-                        ...state.publicationsList.map(item => {
-                            return JSON.parse(JSON.stringify(item));
-                        }),
-                        ...action.payload.map(item => {
-                            return JSON.parse(JSON.stringify(item));
-                        })
-                    ]),
+                deduplicateResults([
+                    ...state.publicationsList,
+                    ...action.payload
+                ]),
             ...loadingPublicationSources
         };
     }

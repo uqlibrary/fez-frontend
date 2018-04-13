@@ -60,7 +60,7 @@ describe('searchRecords reducer', () => {
         const postReducerPublicationsList = records.postReducerPublicationsList;
 
         const loadedState = searchRecordsReducer(initialState, {
-            payload: [...espaceList, ...scopusList, ...wosList],
+            payload: {data: [...espaceList, ...scopusList, ...wosList]},
             type: actions.SEARCH_LOADED
         });
         expect(loadedState.loadingSearch).toBeFalsy();
