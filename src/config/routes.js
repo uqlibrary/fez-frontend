@@ -281,6 +281,7 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.records.add.find,
                 ...locale.menu.addMissingRecord
             },
+            /*
             {
                 linkTo: pathConfig.dataset.mine,
                 ...locale.menu.myDatasets
@@ -289,6 +290,7 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.dataset.add,
                 ...locale.menu.addDataset
             },
+            */
             {
                 linkTo: pathConfig.authorStatistics.url(account.id),
                 ...locale.menu.authorStatistics
