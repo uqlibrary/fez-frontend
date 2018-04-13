@@ -79,7 +79,7 @@ export const viewRecordsConfig = {
                     isMultiple: false
                 }
             ],
-            url: (pid) => routes.pathConfig.metaTags.identifier(pid)
+            url: (pid) => routes.pathConfig.records.view(pid, true)
         },
         {
             field: 'fez_record_search_key_subject',

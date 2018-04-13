@@ -71,7 +71,7 @@
     "moment": "^2.22.0",
     "moment-timezone": "^0.5.14",
     "prop-types": "^15.6.0",
-    "raven-js": "^3.23.2",
+    "raven-js": "^3.24.1",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
     "react-dropzone": "^4.2.8",

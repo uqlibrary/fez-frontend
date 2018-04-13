@@ -2,7 +2,7 @@ import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
 
 const fullPath = process.env.BRANCH === 'production' ? 'https://espace.library.uq.edu.au' : 'https://fez-staging.library.uq.edu.au';
-const recordsView = (pid) => (`/records/${pid}`);
+
 export const pathConfig =  {
     index: '/',
     dashboard: '/dashboard',
@@ -14,7 +14,7 @@ export const pathConfig =  {
         mine: '/records/mine',
         possible: '/records/possible',
         claim: '/records/claim',
-        view: (pid) => recordsView(pid),
+        view: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/records/${pid}`),
         fix: (pid) => (`/records/${pid}/fix`),
         add: {
             find: '/records/add/find',
@@ -71,9 +71,6 @@ export const pathConfig =  {
     legacyEspace: `${fullPath}/my_research_claimed.php`,
     authorStatistics: {
         url: (id) => `https://app.library.uq.edu.au/#/authors/${id}`
-    },
-    metaTags: {
-        identifier: (pid) => `${fullPath}${recordsView(pid)}`,
     }
 };
 
@@ -90,30 +87,28 @@ export const roles = {
 
 export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegistration = false, isHdrStudent = false}) => {
     const pid = ':pid(UQ:\\d+)';
+    const regExpPid = '(UQ:\\d+)';
     const publicPages = [
         {
             path: pathConfig.contact,
             render: () => components.StandardPage({...locale.pages.contact}),
             pageTitle: locale.pages.contact.title
         },
-        // {
-        //     path: pathConfig.browse,
-        //     render: () => components.Browse(locale.pages.browse)
-        // },
         {
             path: pathConfig.records.view(pid),
             component: components.ViewRecord,
             exact: true,
-            pageTitle: locale.pages.viewRecord.title
+            pageTitle: locale.pages.viewRecord.title,
+            regExPath: pathConfig.records.view(regExpPid)
         },
-        ...(!account ? [
-            {
+        ...(!account
+            ? [{
                 path: pathConfig.index,
                 render: () => components.StandardPage({...locale.pages.contact}),
                 exact: true,
                 pageTitle: locale.pages.contact.title
-            }
-        ] : [])];
+            }] : [])
+    ];
 
     const thesisSubmissionPages = (account ? [
         {
@@ -156,7 +151,8 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 path: pathConfig.dashboard,
                 component: components.Dashboard,
                 access: [roles.researcher, roles.admin],
-                exact: true
+                exact: true,
+                pageTitle: locale.pages.dashboard.title
             },
             {
                 path: pathConfig.records.mine,
@@ -184,7 +180,8 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 component: components.FixRecord,
                 access: [roles.researcher, roles.admin],
                 exact: true,
-                pageTitle: locale.pages.fixRecord.title
+                pageTitle: locale.pages.fixRecord.title,
+                regExPath: pathConfig.records.fix(regExpPid)
             },
             {
                 path: pathConfig.records.add.find,
@@ -245,11 +242,6 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
 
 export const getMenuConfig = (account, disabled) => {
     const publicPages = [
-        // {
-        //     linkTo: pathConfig.browse,
-        //     ...locale.menu.browse,
-        //     public: true
-        // },
         {
             linkTo: pathConfig.contact,
             ...locale.menu.contact,

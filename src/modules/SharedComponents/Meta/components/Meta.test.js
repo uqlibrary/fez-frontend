@@ -1,9 +1,24 @@
 import * as records from 'mock/data/testing/records';
 import Meta from "./Meta";
+import {routes} from 'config';
 
 function setup(testProps, isShallow = true){
     const props = {
-        publication: testProps.publication || {},
+        routesConfig: [
+            {
+                path: routes.pathConfig.index,
+                pageTitle: 'Index page'
+            },
+            {
+                regExPath: routes.pathConfig.records.fix('(UQ:\\d+)'),
+                pageTitle: 'Fix my record page title'
+            },
+            {
+                path: routes.pathConfig.hdrSubmission,
+                pageTitle: 'RHD submission page title'
+            }
+        ],
+        location: {pathname: '/records/UQ:1234'},
         ...testProps
     };
     return getElement(Meta, props, isShallow);
@@ -11,11 +26,6 @@ function setup(testProps, isShallow = true){
 
 
 describe('Meta Component ', () => {
-
-    it('should not render component with empty publication', () => {
-        const wrapper = setup({publication: {}});
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
 
     it('should render component with journal', () => {
         const wrapper = setup({publication: records.journal});
@@ -170,7 +180,7 @@ describe('Meta Component ', () => {
     });
 
     it('should render title only', () => {
-        const wrapper = setup({isTitleOnly: true, title: 'My random title'});
+        const wrapper = setup({location:{pathname: '/'}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -179,7 +189,7 @@ describe('Meta Component ', () => {
             rek_formatted_abstract: '<p></p>',
             rek_description: ''
         };
-        const wrapper = setup({publication});
+        const wrapper = setup({});
 
         expect(wrapper.instance().getMetaTagContent(publication, 'rek_description', null, null)).toBeFalsy();
     });
@@ -190,7 +200,7 @@ describe('Meta Component ', () => {
             rek_description: ''
         };
         const expectedValue = '&lt;p&gt;This is some description in &lt;strong&gt;HTML&lt;/strong&gt;&lt;/p&gt;';
-        const wrapper = setup({publication});
+        const wrapper = setup({});
 
         expect(wrapper.instance().getMetaTagContent(publication, 'rek_description', null, null)).toEqual(expectedValue);
     });
@@ -201,7 +211,7 @@ describe('Meta Component ', () => {
             rek_title: '<p>This is some title in <strong>HTML</strong></p>'
         };
         const expectedValue = '&lt;p&gt;This is some title in &lt;strong&gt;HTML&lt;/strong&gt;&lt;/p&gt;';
-        const wrapper = setup({publication});
+        const wrapper = setup({});
 
         expect(wrapper.instance().getMetaTagContent(publication, 'rek_title', null, null)).toEqual(expectedValue);
     });
@@ -212,7 +222,7 @@ describe('Meta Component ', () => {
             rek_title: ''
         };
         const expectedValue = '&lt;p&gt;This is some title in &lt;strong&gt;HTML&lt;/strong&gt;&lt;/p&gt;';
-        const wrapper = setup({publication});
+        const wrapper = setup({});
 
         expect(wrapper.instance().getMetaTagContent(publication, 'rek_title', null, null)).toEqual(expectedValue);
     });
@@ -224,7 +234,7 @@ describe('Meta Component ', () => {
             rek_description: 'This is test description',
             rek_formatted_abstract: '<p></p>'
         };
-        const wrapper = setup({publication});
+        const wrapper = setup({});
         expect(wrapper.instance().getMetaTags(publication)).toEqual([
             {name: 'DC.Title', content: '&lt;p&gt;This is some title in &lt;strong&gt;HTML&lt;/strong&gt;&lt;/p&gt;'},
             {name: 'citation_title', content: '&lt;p&gt;This is some title in &lt;strong&gt;HTML&lt;/strong&gt;&lt;/p&gt;'},
@@ -238,7 +248,7 @@ describe('Meta Component ', () => {
             rek_pid: 'UQ:111111',
             rek_date: '2015-01-01T10:00:00Z'
         };
-        const wrapper = setup({publication});
+        const wrapper = setup({});
         expect(wrapper.instance().getMetaTags(publication)).toEqual([
             {name: 'DC.Identifier', content: 'https://fez-staging.library.uq.edu.au/records/UQ:111111'},
             {name: 'DC.Date', content: '2015-01-01'},
@@ -246,7 +256,7 @@ describe('Meta Component ', () => {
         ]);
     });
 
-    it('should return meta tags correctly 3', () => {
+    it('should return 4 meta tags', () => {
         const publication = {
             rek_pid: 'UQ:222222',
             rek_date: '2015-01-01T10:00:00Z',
@@ -261,7 +271,7 @@ describe('Meta Component ', () => {
                 }
             ]
         };
-        const wrapper = setup({publication});
+        const wrapper = setup({});
         expect(wrapper.instance().getMetaTags(publication)).toEqual([
             {name: 'DC.Identifier', content: 'https://fez-staging.library.uq.edu.au/records/UQ:222222'},
             {name: 'citation_pdf_url', content: 'https://fez-staging.library.uq.edu.au/view/UQ:222222/abc.pdf'},

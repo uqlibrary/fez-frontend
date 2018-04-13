@@ -9,9 +9,8 @@ const moment = require('moment');
 export default class Meta extends React.PureComponent {
     static propTypes = {
         publication: PropTypes.object,
-        isTitleOnly: PropTypes.bool,
-        title: PropTypes.string,
-        children: PropTypes.any
+        routesConfig: PropTypes.array,
+        location: PropTypes.object.isRequired
     };
 
     sanitiseAndReplaceHtmlChars = (object, key, alternateKey) => {
@@ -27,9 +26,7 @@ export default class Meta extends React.PureComponent {
             text.replace(/[&<>]/g, (replace) => (replaceHtmlChars[replace] || replace));
     };
 
-    getMetaTagContent = (object, key, url, dateFormat) => {
-        const {publication} = this.props;
-
+    getMetaTagContent = (object, key, url, dateFormat, pid) => {
         switch (key) {
             case 'rek_pid':
                 return !!object[key] && url(object[key]);
@@ -42,7 +39,7 @@ export default class Meta extends React.PureComponent {
                 return this.sanitiseAndReplaceHtmlChars(object, key, 'rek_formatted_title');
             case 'fez_datastream_info':
                 return !!object.dsi_dsid && object.dsi_mimetype === 'application/pdf' &&
-                    url(publication.rek_pid, object.dsi_dsid);
+                    url(pid, object.dsi_dsid);
             case 'rek_issn':
                 return object[key];
             default:
@@ -54,7 +51,6 @@ export default class Meta extends React.PureComponent {
         // Loop through each meta tag
         return viewRecordsConfig.metaTags.reduce((metaTags, metaTag) => {
             const {field, subkey, tags, url} = metaTag;
-
             // Push dublin core DC.* and/or citation_* meta tags for each field
             metaTags.push(
                 ...(tags.reduce((tagsContent, tag) => {
@@ -65,7 +61,7 @@ export default class Meta extends React.PureComponent {
                             // If multiple tags allowed then get meta tag for each value
                             if (tag.isMultiple) {
                                 publication[field].map(fieldValue => {
-                                    const content = this.getMetaTagContent(fieldValue, subkey, url);
+                                    const content = this.getMetaTagContent(fieldValue, subkey, url, null, publication.rek_pid);
                                     content && tagsContent.push({name: tag.name, content});
                                 });
                             } else {
@@ -86,11 +82,11 @@ export default class Meta extends React.PureComponent {
                         // If field is null and subkey (rek_pid, rek_description, rek_date etc.) exists in publication
                         if (tag.isMultiple) {
                             !!publication[subkey] && publication[subkey].map(fieldValue => {
-                                const content = this.getMetaTagContent(fieldValue, subkey, url);
+                                const content = this.getMetaTagContent(fieldValue, subkey, url, null, publication.rek_pid);
                                 content && tagsContent.push({name: tag.name, content});
                             });
                         } else {
-                            const content = this.getMetaTagContent(publication, subkey, url, tag.format);
+                            const content = this.getMetaTagContent(publication, subkey, url, tag.format, publication.rek_pid);
                             content && tagsContent.push({name: tag.name, content});
                         }
                     }
@@ -102,30 +98,30 @@ export default class Meta extends React.PureComponent {
     };
 
     render() {
-        const {isTitleOnly, publication, title} = this.props;
-        const metaTags = !isTitleOnly && this.getMetaTags(publication);
-        const pageTitle = !!publication && publication.rek_title || !!title && title;
+        const {publication, routesConfig} = this.props;
+        const metaTags = !!publication && this.getMetaTags(publication);
+        const filteredRoutes = !publication && routesConfig.filter(route => !!route.regExPath
+            ? (new RegExp(route.regExPath, 'i')).test(this.props.location.pathname)
+            : route.path === this.props.location.pathname);
+        const pageTitle = !!publication
+            ? publication.rek_title
+            : filteredRoutes.length > 0 && filteredRoutes[0].pageTitle;
         return (
-            <div>
-                <Helmet>
-                    <title>{`${pageTitle ? pageTitle + ' - ' : ''}${locale.global.title}`}</title>
-                    {
-                        !isTitleOnly &&
-                        <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
-                    }
-                    {
-                        metaTags &&
-                        metaTags.map((metaTag, index) => {
-                            const {name} = metaTag;
-                            const scheme = name === 'DC.Identifier' ? {scheme: 'URI'} : {};
-                            return <meta key={`${name}-${index}`} {...metaTag} {...scheme} />;
-                        })
-                    }
-                </Helmet>
+            <Helmet>
+                <title>{`${pageTitle ? `${pageTitle} - ` : ''}${locale.global.title}`}</title>
                 {
-                    this.props.children
+                    !!publication &&
+                    <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
                 }
-            </div>
+                {
+                    metaTags &&
+                    metaTags.map((metaTag, index) => {
+                        const {name} = metaTag;
+                        const scheme = name === 'DC.Identifier' ? {scheme: 'URI'} : {};
+                        return <meta key={`${name}-${index}`} {...metaTag} {...scheme} />;
+                    })
+                }
+            </Helmet>
         );
     }
 }
