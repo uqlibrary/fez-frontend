@@ -46,6 +46,13 @@ describe('publication enhancer', () => {
         expect(next).toBeCalledWith(expect.objectContaining({type: 'FIX_RECORD_LOAD_FAILED', payload: publication}));
     });
 
+    it('should not add anything to data if there\'s no data', () => {
+        const next = jest.fn();
+        publicationEnhancer()(next)({type: 'SEARCH_LOADED', payload: {nothing: 'here'}});
+
+        expect(next).toBeCalledWith(expect.objectContaining({type: 'SEARCH_LOADED', payload: {nothing: 'here'}}));
+    });
+
     it('should calculate OA status', () => {
         const publicationDOIOANoEmbargoDate = {
             fez_record_search_key_oa_embargo_days: {
