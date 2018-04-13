@@ -100,7 +100,7 @@ export const viewRecordsConfig = {
                     isMultiple: true,
                 }
             ],
-            url: (pid, fileName) => routes.pathConfig.metaTags.fileAttachment(pid, fileName)
+            url: (pid, fileName) => routes.pathConfig.file.url(pid, fileName)
         },
         {
             field: null,

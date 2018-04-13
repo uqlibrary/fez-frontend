@@ -73,8 +73,7 @@ export const pathConfig =  {
         url: (id) => `https://app.library.uq.edu.au/#/authors/${id}`
     },
     metaTags: {
-        identifier: (pid) => `${fullPath}/record/${pid}`,
-        fileAttachment: (pid, fileName) => `${fullPath}/view/${pid}/${fileName}`
+        identifier: (pid) => `${fullPath}/records/${pid}`,
     }
 };
 
