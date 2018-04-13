@@ -447,7 +447,6 @@ describe('publication enhancer', () => {
         const publication = {
             rek_pid: 'UQ:1234',
             rek_title: '<br/>This is a <u>title</u> with <sup>sup</sup> and <sub>sub</sub>',
-            rek_description: '<p>This is a <invalid>description</invalid></p>'
         };
         const next = jest.fn();
         publicationEnhancer()(next)({type: 'SEARCH_LOADED@wos', payload: [publication]});
@@ -457,7 +456,6 @@ describe('publication enhancer', () => {
                 payload: [{
                     rek_pid: 'UQ:1234',
                     rek_title: 'This is a title with <sup>sup</sup> and <sub>sub</sub>',
-                    rek_description: '<p>This is a description</p>',
                 }]
             }));
     });
@@ -466,7 +464,6 @@ describe('publication enhancer', () => {
         const publication = {
             rek_pid: 'UQ:1234',
             rek_title: '<br/>This is a <u>title</u> with <sup>sup</sup> and <sub>sub</sub>',
-            rek_description: '<p>This is a <invalid>description</invalid></p>'
         };
         const next = jest.fn();
         publicationEnhancer()(next)({type: 'LATEST_PUBLICATIONS_LOADED', payload: {data: [publication]}});
@@ -478,7 +475,6 @@ describe('publication enhancer', () => {
                             {
                                 rek_pid: 'UQ:1234',
                                 rek_title: 'This is a title with <sup>sup</sup> and <sub>sub</sub>',
-                                rek_description: '<p>This is a description</p>',
                                 calculateOpenAccess: expect.any(Function)
                             }
                         ]
@@ -491,7 +487,6 @@ describe('publication enhancer', () => {
             rek_pid: 'UQ:1234',
             rek_title: 'Title',
             rek_formatted_title: '<b> </b>',
-            rek_description: 'Description',
             rek_formatted_abstract: '<br/>'
         };
         const next = jest.fn();
@@ -504,7 +499,6 @@ describe('publication enhancer', () => {
                     rek_pid: 'UQ:1234',
                     rek_title: 'Title',
                     rek_formatted_title: null,
-                    rek_description: 'Description',
                     rek_formatted_abstract: null,
                     calculateOpenAccess: expect.any(Function),
 
