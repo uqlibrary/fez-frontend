@@ -443,7 +443,7 @@ describe('publication enhancer', () => {
         expect(calculateOpenAccess(publicationOtherNoFiles)).toEqual(expectOAOther);
     });
 
-    it('clean up invalid HTML in rek_title and rek_description from a search list', () => {
+    it('clean up invalid HTML in rek_title from a search list', () => {
         const publication = {
             rek_pid: 'UQ:1234',
             rek_title: '<br/>This is a <u>title</u> with <sup>sup</sup> and <sub>sub</sub>',
