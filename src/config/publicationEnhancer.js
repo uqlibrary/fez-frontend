@@ -52,7 +52,7 @@ export const calculateOpenAccess = (record) => {
 };
 
 const publicationEnhancer = () => next => action => {
-    if (actions.loadPublicationsListActions.indexOf(action.type) >= 0) {
+    if (actions.loadPublicationsListActions.indexOf(action.type) >= 0 && !!action.payload.data) {
         const publicationsWithMethods = action.payload.data.map(publication => ({
             ...publication,
             calculateOpenAccess() {
