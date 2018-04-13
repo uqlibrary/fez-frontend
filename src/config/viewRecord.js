@@ -66,5 +66,11 @@ export const viewRecordsConfig = {
         'Conference Paper': 'YYYY',
         'Data Collection': 'YYYY',
         'Design': 'YYYY'
+    },
+    files: {
+        blacklist: {
+            namePrefixRegex: '^(FezACML|stream|web|thumbnail|preview|presmd)',
+            descriptionKeywordsRegex: '(ERA |HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections)'
+        }
     }
 };

@@ -30,7 +30,7 @@ export const pathConfig =  {
     },
     // TODO: update how we get files after security is implemented in fez file api
     file: {
-        url: (pid, fileName) => (`${fullPath}/view/${pid}/${fileName}`)
+        url: (pid, fileName) => (`https://espace.library.uq.edu.au/view/${pid}/${fileName}`)
     },
     // TODO: update links when we have list pages
     list: {

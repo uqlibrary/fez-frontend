@@ -26,7 +26,7 @@ export default class Links extends PureComponent {
                     {item.description}
                 </TableRowColumn>
                 <TableRowColumn className="oa align-right">
-                    <OpenAccessIcon {...item.openAccessStatus} showEmbargoText />
+                    <OpenAccessIcon {...item.openAccessStatus} />
                 </TableRowColumn>
             </TableRow>
         );
