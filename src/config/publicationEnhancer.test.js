@@ -135,6 +135,17 @@ describe('publication enhancer', () => {
                     "dsi_copyright": null,
                     "dsi_state": "A",
                     "dsi_size": 1526884
+                },
+                {
+                    "dsi_pid": "UQ:1232313",
+                    "dsi_dsid": "earlierFile.pdf",
+                    "dsi_embargo_date": "2021-11-01",
+                    "dsi_open_access": null,
+                    "dsi_label": "Full text (open access)",
+                    "dsi_mimetype": "application\/pdf",
+                    "dsi_copyright": null,
+                    "dsi_state": "A",
+                    "dsi_size": 1526884
                 }],
         };
         const publicationEmbargoMaturedOAFile = {
@@ -407,7 +418,7 @@ describe('publication enhancer', () => {
         const expectOAPMC = {"embargoDate": null, "isOpenAccess": true, "openAccessStatusId": 453954};
         const expectNotOA = {"embargoDate": null, "isOpenAccess": false, "openAccessStatusId": 453700};
         const expectEmbargoOA = {
-            "embargoDate": "1st December 2021",
+            "embargoDate": "1st November 2021",
             "isOpenAccess": false,
             "openAccessStatusId": 453695
         };
