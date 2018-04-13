@@ -107,7 +107,6 @@ describe('Component FixRecord', () => {
     it('should load record if record is not loaded', () => {
         const actionFunction = jest.fn();
         const wrapper = setup({loadingRecordToFix: false, recordToFix: null, actions: {loadRecordToFix: actionFunction}, match: {params: {pid: 'UQ:1001'}}});
-        // console.log(wrapper.instance().props.match.params.pid);
         wrapper.update;
         wrapper.instance().componentDidMount();
         expect(actionFunction).toHaveBeenCalledWith('UQ:1001');
