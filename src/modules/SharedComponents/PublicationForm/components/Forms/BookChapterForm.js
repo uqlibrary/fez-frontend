@@ -135,6 +135,7 @@ export default class BookChapterForm extends Component {
                     <div>{locale.components.isbnForm.text}</div>
                     <Field
                         component={ListEditorField}
+                        remindToAdd
                         name="fez_record_search_key_isbn"
                         isValid={validation.isValidIsbn}
                         maxCount={5}
@@ -147,6 +148,7 @@ export default class BookChapterForm extends Component {
                     <div>{locale.components.issnForm.text}</div>
                     <Field
                         component={ListEditorField}
+                        remindToAdd
                         isValid={validation.isValidIssn}
                         name="fez_record_search_key_issn"
                         maxCount={5}

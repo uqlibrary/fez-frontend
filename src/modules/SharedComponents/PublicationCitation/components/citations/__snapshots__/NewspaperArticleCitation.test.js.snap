@@ -833,7 +833,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationNewspaperArticleTitle"
       prefix=" "
       suffix="."
@@ -846,7 +846,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
         Improve Your Communication with Doctors
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationNewspaper"
       prefix=" "
@@ -1724,7 +1724,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationNewspaperArticleTitle"
       prefix=" "
       suffix="."
@@ -1737,7 +1737,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
         Improve Your Communication with Doctors
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationNewspaper"
       prefix=" "
@@ -1847,7 +1847,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationNewspaperArticleTitle"
       prefix=" "
       suffix="."
@@ -1855,7 +1855,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
       <span
         className="citationNewspaperArticleTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationNewspaper"
       prefix=" "

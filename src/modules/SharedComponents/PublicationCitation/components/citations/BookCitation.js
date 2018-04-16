@@ -57,7 +57,7 @@ export default class BookCitation extends Component {
                 <Partials.DateCitationView date={this.props.publication.rek_date} />
 
                 {/* <i>{Title| |.}</i> */}
-                <Partials.CitationView className="citationTitle" value={record.title} />
+                <Partials.CitationTitleView className="citationTitle" value={record.title} />
 
                 {/* {Edition| | ed.} */}
                 <Partials.CitationView className="citationEdition" value={record.edition} suffix=" ed." />

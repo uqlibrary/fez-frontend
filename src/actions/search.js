@@ -38,7 +38,7 @@ export function createSearchPromise(source, queryString, dispatch) {
 
                 dispatch({
                     type: `${actions.SEARCH_LOADED}@${source}`,
-                    payload: processResponse
+                    payload: {data: processResponse}
                 });
                 resolve(processResponse);
             })
@@ -73,7 +73,9 @@ export function searchPublications(searchQuery) {
                 flattenedResults = flattenedResults.slice(0, flattenedResults.length);
                 dispatch({
                     type: actions.SEARCH_LOADED,
-                    payload: flattenedResults
+                    payload: {
+                        data: flattenedResults
+                    }
                 });
             }, error => {
                 dispatch({

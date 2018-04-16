@@ -41,9 +41,11 @@ export default {
             type: 'info_outline',
             actionButtonLabel: 'Click to login'
         },
-        genericErrorMessage: (message) => (
-            `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`
-        ),
+        errorMessages: {
+            generic: 'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+            notFound: 'The requested page could not be found.',
+            sessionExpired: 'Your session expired, please login to continue.'
+        },
         notRegisteredAuthorAlert: {
             title: 'You are not registered in UQ eSpace as an author',
             message: 'Please contact the UQ eSpace administrator to resolve this.',

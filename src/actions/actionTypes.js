@@ -123,4 +123,6 @@ export const APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_HIDE = 'APP_DASHBOARD
 export const APP_ALERT_SHOW = 'APP_ALERT_SHOW';
 export const APP_ALERT_HIDE = 'APP_ALERT_HIDE';
 
-// TODO: other actions...
+// List of all actions loading publications - for middleware
+export const loadPublicationsListActions = new RegExp(`^(${LATEST_PUBLICATIONS_LOADED}|${AUTHOR_PUBLICATIONS_LOADED}|${SEARCH_LOADED}(|@\\w+)|${POSSIBLY_YOUR_PUBLICATIONS_LOADED})$`);
+export const loadPublicationActions = new RegExp(`^(${FIX_RECORD_LOADED}|${VIEW_RECORD_LOADED})$`);

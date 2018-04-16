@@ -18,3 +18,5 @@ export * as validation from './validation';
 export * as general from './general';
 export {publicationTypes} from './general';
 export * as routes from './routes';
+export * as openAccessConfig from './openAccess';
+export {viewRecordsConfig} from './viewRecord';

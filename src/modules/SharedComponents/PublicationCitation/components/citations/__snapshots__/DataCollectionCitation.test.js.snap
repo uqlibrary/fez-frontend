@@ -1318,7 +1318,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1331,7 +1331,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -2749,7 +2749,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -2762,7 +2762,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -4184,7 +4184,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -4193,7 +4193,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -5473,7 +5473,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -5486,7 +5486,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -6908,7 +6908,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -6921,7 +6921,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -8329,7 +8329,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -8342,7 +8342,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -9690,7 +9690,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -9703,7 +9703,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -9872,7 +9872,7 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -9880,7 +9880,7 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
