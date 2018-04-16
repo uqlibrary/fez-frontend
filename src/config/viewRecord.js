@@ -71,7 +71,7 @@ export const viewRecordsConfig = {
     },
     metaTags: [
         {
-            field: null,
+            searchKey: null,
             subkey: 'rek_pid',
             tags: [
                 {
@@ -82,7 +82,7 @@ export const viewRecordsConfig = {
             url: (pid) => routes.pathConfig.records.view(pid, true)
         },
         {
-            field: 'fez_record_search_key_subject',
+            searchKey: 'fez_record_search_key_subject',
             subkey: 'rek_subject',
             tags: [
                 {
@@ -92,7 +92,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: null,
+            searchKey: null,
             subkey: 'fez_datastream_info',
             tags: [
                 {
@@ -103,7 +103,7 @@ export const viewRecordsConfig = {
             url: (pid, fileName) => routes.pathConfig.file.url(pid, fileName)
         },
         {
-            field: null,
+            searchKey: null,
             subkey: 'rek_title',
             tags: [
                 {
@@ -117,7 +117,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: 'fez_record_search_key_contributor',
+            searchKey: 'fez_record_search_key_contributor',
             subkey: 'rek_contributor',
             tags: [
                 {
@@ -127,7 +127,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: 'fez_record_search_key_author',
+            searchKey: 'fez_record_search_key_author',
             subkey: 'rek_author',
             tags: [
                 {
@@ -141,7 +141,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: 'fez_record_search_key_journal_name',
+            searchKey: 'fez_record_search_key_journal_name',
             subkey: 'rek_journal_name',
             tags: [
                 {
@@ -151,7 +151,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: 'fez_record_search_key_issn',
+            searchKey: 'fez_record_search_key_issn',
             subkey: 'rek_issn',
             tags: [
                 {
@@ -161,7 +161,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: null,
+            searchKey: null,
             subkey: 'rek_date',
             tags: [
                 {
@@ -177,7 +177,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: 'fez_record_search_key_doi',
+            searchKey: 'fez_record_search_key_doi',
             subkey: 'rek_doi',
             tags: [
                 {
@@ -187,7 +187,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: 'fez_record_search_key_volume_number',
+            searchKey: 'fez_record_search_key_volume_number',
             subkey: 'rek_volume_number',
             tags: [
                 {
@@ -197,7 +197,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: 'fez_record_search_key_issue_number',
+            searchKey: 'fez_record_search_key_issue_number',
             subkey: 'rek_issue_number',
             tags: [
                 {
@@ -207,7 +207,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: 'fez_record_search_key_start_page',
+            searchKey: 'fez_record_search_key_start_page',
             subkey: 'rek_start_page',
             tags: [
                 {
@@ -217,7 +217,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: 'fez_record_search_key_end_page',
+            searchKey: 'fez_record_search_key_end_page',
             subkey: 'rek_end_page',
             tags: [
                 {
@@ -227,7 +227,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: 'fez_record_search_key_publisher',
+            searchKey: 'fez_record_search_key_publisher',
             subkey: 'rek_publisher',
             tags: [
                 {
@@ -241,7 +241,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: 'fez_record_search_key_language',
+            searchKey: 'fez_record_search_key_language',
             subkey: 'rek_language',
             tags: [
                 {
@@ -251,7 +251,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: null,
+            searchKey: null,
             subkey: 'rek_description',
             tags: [
                 {
@@ -265,7 +265,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: 'fez_record_search_key_keywords',
+            searchKey: 'fez_record_search_key_keywords',
             subkey: 'rek_keywords',
             tags: [
                 {
@@ -275,7 +275,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: 'fez_record_search_key_conference_name',
+            searchKey: 'fez_record_search_key_conference_name',
             subkey: 'rek_conference_name',
             tags: [
                 {
@@ -285,7 +285,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: 'fez_record_search_key_coverage_period',
+            searchKey: 'fez_record_search_key_coverage_period',
             subkey: 'rek_coverage_period',
             tags: [
                 {
@@ -295,7 +295,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: 'fez_record_search_key_geographic_area',
+            searchKey: 'fez_record_search_key_geographic_area',
             subkey: 'rek_geographic_area',
             tags: [
                 {
@@ -305,7 +305,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: 'fez_record_search_key_isbn',
+            searchKey: 'fez_record_search_key_isbn',
             subkey: 'rek_isbn',
             tags: [
                 {
@@ -315,7 +315,7 @@ export const viewRecordsConfig = {
             ]
         },
         {
-            field: 'fez_record_search_key_report_number',
+            searchKey: 'fez_record_search_key_report_number',
             subkey: 'rek_report_number',
             tags: [
                 {
