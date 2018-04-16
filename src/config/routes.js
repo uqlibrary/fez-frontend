@@ -8,7 +8,7 @@ export const pathConfig =  {
     browse: '/browse',
     contact: '/contact',
     hdrSubmission: '/rhdsubmission',
-    sbsSubmission: '/sbslodge',
+    sbsSubmission: '/sbslodge_new',
     records: {
         mine: '/records/mine',
         possible: '/records/possible',
@@ -75,7 +75,7 @@ export const pathConfig =  {
 };
 
 // a duplicate list of routes for
-const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge',
+const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new',
     '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
     '/admin/masquerade', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
 
