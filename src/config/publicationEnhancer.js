@@ -1,5 +1,5 @@
 import * as actions from 'actions/actionTypes';
-import {openAccessConfig} from 'config';
+import {openAccessConfig, viewRecordsConfig} from 'config';
 import moment from 'moment';
 
 export const calculateOpenAccess = (record) => {
@@ -23,8 +23,8 @@ export const calculateOpenAccess = (record) => {
         || openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_OTHER) {
         const allFiles =  record.fez_datastream_info && record.fez_datastream_info.length > 0
             ? record.fez_datastream_info.filter(item => (
-                !item.dsi_dsid.match('^(FezACML|stream|web|thumbnail|preview|presmd)')
-                && (!item.dsi_label || !item.dsi_label.match('(ERA|HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections)', 'gi'))
+                !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex)
+                && (!item.dsi_label || !item.dsi_label.match(new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi')))
                 && item.dsi_state === 'A'
             ))
             : [];
@@ -33,10 +33,10 @@ export const calculateOpenAccess = (record) => {
             ? record.fez_datastream_info.filter(item => (
                 !!item.dsi_embargo_date
                 && moment(item.dsi_embargo_date).isAfter(moment())
-                && !item.dsi_dsid.match('^(FezACML|stream|web|thumbnail|preview|presmd)'))
-                && (!item.dsi_label || !item.dsi_label.match('(ERA|HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections)', 'gi'))
+                && !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex)
+                && (!item.dsi_label || !item.dsi_label.match(new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi')))
                 && item.dsi_state === 'A'
-            ).sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date ? 1 : -1))
+            )).sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date ? 1 : -1))
             : [];
         // OA with a possible file embargo date
         // OA with a possible file embargo date
