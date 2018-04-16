@@ -185,6 +185,9 @@ export default {
                 }
             }
         },
+        externalLink: {
+            openInNew: 'Open link in a new window'
+        },
 
         authors: {
             title: 'Authors',

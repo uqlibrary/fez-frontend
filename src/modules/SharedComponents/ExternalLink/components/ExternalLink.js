@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ActionOpenInNew from 'material-ui/svg-icons/action/open-in-new';
+import {locale} from 'locale';
 
 const ExternalLink = (props) => {
     const {className, children, openInNewIcon, ...rest} = props;
-
     return (
-        <a {...rest} className={className} tabIndex="0">
+        <a {...rest}
+            className={className + (openInNewIcon && ' showIcon') + ' externalLink'}
+            tabIndex="0"
+            title={openInNewIcon && locale.components.externalLink.openInNew}
+        >
             {!!children && children}
-            {
-                openInNewIcon &&
-                <ActionOpenInNew className="openExternalUrlIcon"/>
-            }
         </a>
     );
 };

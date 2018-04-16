@@ -75,47 +75,14 @@ exports[`File Name Component  should display file name link 1`] = `
               title="UQ676287_OA.pdf"
             >
               <a
-                className="fileName"
+                className="fileName showIcon externalLink"
                 href="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
                 rel="noopener noreferrer"
                 tabIndex="0"
                 target="_blank"
-                title="UQ676287_OA.pdf"
+                title="Open link in a new window"
               >
                 UQ676287_OA.pdf
-                <ActionOpenInNew
-                  className="openExternalUrlIcon"
-                >
-                  <SvgIcon
-                    className="openExternalUrlIcon"
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    viewBox="0 0 24 24"
-                  >
-                    <svg
-                      className="openExternalUrlIcon"
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      style={
-                        Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "display": "inline-block",
-                          "fill": "currentColor",
-                          "height": 24,
-                          "muiPrepared": true,
-                          "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                          "userSelect": "none",
-                          "width": 24,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                      />
-                    </svg>
-                  </SvgIcon>
-                </ActionOpenInNew>
               </a>
             </ExternalLink>
           </div>
@@ -200,47 +167,14 @@ exports[`File Name Component  should render audio player 1`] = `
               title="UQ676287_OA.pdf"
             >
               <a
-                className="fileName"
+                className="fileName showIcon externalLink"
                 href="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
                 rel="noopener noreferrer"
                 tabIndex="0"
                 target="_blank"
-                title="UQ676287_OA.pdf"
+                title="Open link in a new window"
               >
                 UQ676287_OA.pdf
-                <ActionOpenInNew
-                  className="openExternalUrlIcon"
-                >
-                  <SvgIcon
-                    className="openExternalUrlIcon"
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    viewBox="0 0 24 24"
-                  >
-                    <svg
-                      className="openExternalUrlIcon"
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      style={
-                        Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "display": "inline-block",
-                          "fill": "currentColor",
-                          "height": 24,
-                          "muiPrepared": true,
-                          "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                          "userSelect": "none",
-                          "width": 24,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                      />
-                    </svg>
-                  </SvgIcon>
-                </ActionOpenInNew>
               </a>
             </ExternalLink>
           </div>
