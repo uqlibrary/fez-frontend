@@ -148,7 +148,7 @@ exports[`Application component should render alert if user is not fez author 1`]
     <Switch>
       <Route
         key="route_0"
-        path="/rhdsubmission_new"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
@@ -430,7 +430,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     <Switch>
       <Route
         key="route_0"
-        path="/rhdsubmission_new"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
@@ -723,7 +723,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       />
       <Route
         key="route_2"
-        path="/rhdsubmission_new"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
@@ -874,7 +874,7 @@ exports[`Application component should render app for account with fez author wit
     <Switch>
       <Route
         key="route_0"
-        path="/rhdsubmission_new"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
@@ -1174,7 +1174,7 @@ exports[`Application component should render app for account with fez author wit
     <Switch>
       <Route
         key="route_0"
-        path="/rhdsubmission_new"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
@@ -1395,7 +1395,7 @@ exports[`Application component should render app for account with fez author wit
     <Switch>
       <Route
         key="route_0"
-        path="/rhdsubmission_new"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
@@ -1933,7 +1933,7 @@ exports[`Application component should render thesis submission for HDR without m
       />
       <Route
         key="route_2"
-        path="/rhdsubmission_new"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
