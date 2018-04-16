@@ -704,7 +704,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   embargoDate={null}
                                                   isOpenAccess={true}
                                                   openAccessStatusId={453693}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="fez-icon openAccess large"
@@ -925,7 +925,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   embargoDate={null}
                                                   isOpenAccess={true}
                                                   openAccessStatusId={453693}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="fez-icon openAccess large"
@@ -1126,7 +1126,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -1326,7 +1326,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -1526,7 +1526,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -2259,7 +2259,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC not OA li
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -2478,7 +2478,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC not OA li
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -2678,7 +2678,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC not OA li
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -2878,7 +2878,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC not OA li
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -3078,7 +3078,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC not OA li
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -3794,7 +3794,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                   embargoDate={null}
                                                   isOpenAccess={true}
                                                   openAccessStatusId={453694}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="fez-icon openAccess large"
@@ -3995,7 +3995,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -4195,7 +4195,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -4395,7 +4395,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -5129,7 +5129,7 @@ exports[`Component Links  should render 3 not OA links and PMC and DOI link with
                                                   embargoDate={null}
                                                   isOpenAccess={true}
                                                   openAccessStatusId={453954}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="fez-icon openAccess large"
@@ -5350,7 +5350,7 @@ exports[`Component Links  should render 3 not OA links and PMC and DOI link with
                                                   embargoDate={null}
                                                   isOpenAccess={true}
                                                   openAccessStatusId={453954}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="fez-icon openAccess large"
@@ -5551,7 +5551,7 @@ exports[`Component Links  should render 3 not OA links and PMC and DOI link with
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -5751,7 +5751,7 @@ exports[`Component Links  should render 3 not OA links and PMC and DOI link with
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -5951,7 +5951,7 @@ exports[`Component Links  should render 3 not OA links and PMC and DOI link with
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -6679,7 +6679,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   embargoDate={null}
                                                   isOpenAccess={true}
                                                   openAccessStatusId={453954}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="fez-icon openAccess large"
@@ -6880,7 +6880,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -7080,7 +7080,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -7280,7 +7280,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -8021,14 +8021,9 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   embargoDate="24th December 2020"
                                                   isOpenAccess={false}
                                                   openAccessStatusId={453693}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <span>
-                                                    <span
-                                                      className="is-hidden-mobile is-hidden-tablet-only"
-                                                    >
-                                                      Open access after 24th December 2020 
-                                                    </span>
                                                     <div
                                                       className="fez-icon openAccessEmbargoed large"
                                                       title="DOI - Open access after 24th December 2020"
@@ -8229,7 +8224,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -8429,7 +8424,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"
@@ -8629,7 +8624,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                 <OpenAccessIcon
                                                   embargoDate={null}
                                                   isOpenAccess={false}
-                                                  showEmbargoText={true}
+                                                  showEmbargoText={false}
                                                 >
                                                   <div
                                                     className="noOaIcon"

@@ -88,31 +88,102 @@
         height: 24px !important;
         padding: 8px 6px 0 0 !important;
       }
+      img {
+        max-width: 24px;
+        max-height: 24px;
+      }
     }
     // columns widths
     .filetype {
       width: 24px !important;
     }
     .filename {
-      width: 45% !important;
+      @include desktop {
+        width: 45% !important;
+      }
       @include tablet-only {
-        width: 50% !important;
+        width: 48% !important;
       }
       @include mobile {
         width: 100% !important;
       }
     }
     .description {
-      width: 40% !important;
+      @include desktop {
+        width: 25% !important;
+      }
       @include tablet-only {
-        width: 50% !important;
+        width: 52% !important;
+      }
+    }
+    .oa {
+      text-align: right !important;
+      @include desktop {
+        width: 20% !important;
+      }
+      @include tablet-only {
+        width: 24px !important;
+      }
+      @include mobile {
+        width: 24px !important;
       }
     }
     .size {
       text-align: right !important;
-      width: 15% !important;
+      width: 10% !important;
     }
+    .fileDetails {
+      width: 100%;
+      .fileIcon {
+        img, svg {
+          color: lighten($secondary-color, 25%) !important;
+          margin: auto 6px !important;
+        }
+      }
+      .fileInfo {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        //max-width: 200px;
+      }
+      .fileName {
+        line-height: 47px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .audioWrapper {
+        overflow: hidden;
+        .audioButton {
+          transform: scale(0.75);
+          &.play {
+            margin-right: -18px !important;
+          }
+          svg {
+            //width: 12px !important;
+            //height: 12px !important;
+            fill: $secondary-color !important;
+          }
+        }
+        .audioPlayer {
+          margin-top: 8px;
+          width: 100px;
+          overflow: hidden;
 
+        }
+      }
+    }
+  }
+  .mediaPreview {
+    .buttons {
+      position: relative;
+      top: -46px;
+      text-align: right;
+    }
+    img {
+      max-width: 80vw;
+      max-height: 100vh;
+    }
   }
 
   // Links
@@ -122,7 +193,7 @@
         width: 47% !important;
       }
       @include tablet-only {
-        width: 45% !important;
+        width: 50% !important;
       }
       @include mobile {
         width: 100% !important;
@@ -133,7 +204,7 @@
         width: 33% !important;
       }
       @include tablet-only {
-        width: 35% !important;
+        width: 50% !important;
       }
     }
     .oa {
@@ -201,15 +272,7 @@
   }
 
   // Other -----------------------------------------------
-  .openExternalUrlIcon {
-    height: $text-body-small !important;
-    width: $text-body-small !important;
-    font-size: $text-body-small !important;
-    fill: $accent-color !important;
-    color: $accent-color !important;
-    margin: 0 2px;
-    vertical-align: top;
-  }
+
   .publicationCitation {
     padding-top: 0 !important;
     border-bottom: none !important;

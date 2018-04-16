@@ -511,7 +511,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -524,7 +524,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
         Estimates of injury mortality and disability based on the Cape Metropole study
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSeries"
       prefix=" "
@@ -1109,7 +1109,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1122,7 +1122,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
         Estimates of injury mortality and disability based on the Cape Metropole study
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSeries"
       prefix=" "
@@ -1255,7 +1255,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1263,7 +1263,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSeries"
       prefix=" "

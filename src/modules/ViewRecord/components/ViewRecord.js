@@ -14,6 +14,7 @@ import RelatedPublications from './RelatedPublications';
 import Links from './Links';
 import {ShareThis} from 'modules/SharedComponents/ShareThis';
 import AvailableVersions from './AvailableVersions';
+import ReactHtmlParser from 'react-html-parser';
 
 export default class ViewRecord extends PureComponent {
     static propTypes = {
@@ -35,6 +36,11 @@ export default class ViewRecord extends PureComponent {
         if (this.props.match.params.pid !== newProps.match.params.pid) {
             this.props.actions.loadRecordToView(newProps.match.params.pid);
         }
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props.recordToView !== nextProps.recordToView
+            || this.state !== nextState;
     }
 
     componentWillUnmount() {
@@ -65,7 +71,7 @@ export default class ViewRecord extends PureComponent {
         }
 
         return (
-            <StandardPage className="viewRecord" title={recordToView.rek_title}>
+            <StandardPage className="viewRecord" title={ReactHtmlParser(recordToView.rek_title)}>
                 <PublicationCitation publication={recordToView} hideTitle />
 
                 <ShareThis />

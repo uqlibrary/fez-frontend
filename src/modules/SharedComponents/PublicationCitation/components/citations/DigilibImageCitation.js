@@ -36,7 +36,7 @@ export default class DigilibImageCitation extends Component {
                 <Partials.DateCitationView date={record.datePhotoTaken} />
 
                 {/* <i>{Title| |.}</i> */}
-                <Partials.CitationView className="citationTitle" value={record.title} />
+                <Partials.CitationTitleView className="citationTitle" value={record.title} />
             </div>
         );
     }

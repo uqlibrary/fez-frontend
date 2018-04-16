@@ -36,6 +36,9 @@ export default {
         },
         legacyEspace: {
             primaryText: 'Switch to old interface'
+        },
+        help: {
+            primaryText: 'Help'
         }
     }
 };

@@ -1596,7 +1596,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1609,7 +1609,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         Alcohol use disorders, risky alcohol consumption and adverse events among chronic non-cancer pain patients receiving opioid therapy
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationConferenceName"
       prefix=" "
@@ -1824,7 +1824,7 @@ exports[`ConferencePaperCitation renders  component with empty publication 1`] =
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1832,7 +1832,7 @@ exports[`ConferencePaperCitation renders  component with empty publication 1`] =
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationConferenceName"
       prefix=" "

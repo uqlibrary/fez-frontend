@@ -11,8 +11,7 @@ export const Orcid = () => (<Async load={import('modules/AuthorIdentifiers/conta
 export const GoogleScholar = () => (<Async load={import('modules/AuthorIdentifiers/containers/GoogleScholar')} />);
 export const ThesisSubmission = (componentProps) => (<Async load={import('modules/ThesisSubmission/containers/ThesisSubmission')} componentProps={componentProps} />);
 
-// build in components
-export {Browse} from 'modules/Browse';
+// always load components
 export {AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord} from 'modules/AddMissingRecord';
 export {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
 export {Masquerade} from 'modules/Masquerade';
