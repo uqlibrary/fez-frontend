@@ -98,18 +98,22 @@
       width: 24px !important;
     }
     .filename {
-      width: 40% !important;
+      @include desktop {
+        width: 45% !important;
+      }
       @include tablet-only {
-        width: 50% !important;
+        width: 48% !important;
       }
       @include mobile {
         width: 100% !important;
       }
     }
     .description {
-      width: 30% !important;
+      @include desktop {
+        width: 25% !important;
+      }
       @include tablet-only {
-        width: 50% !important;
+        width: 52% !important;
       }
     }
     .oa {
@@ -189,7 +193,7 @@
         width: 47% !important;
       }
       @include tablet-only {
-        width: 45% !important;
+        width: 50% !important;
       }
       @include mobile {
         width: 100% !important;
@@ -200,7 +204,7 @@
         width: 33% !important;
       }
       @include tablet-only {
-        width: 35% !important;
+        width: 50% !important;
       }
     }
     .oa {
