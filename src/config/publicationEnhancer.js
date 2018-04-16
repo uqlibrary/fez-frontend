@@ -25,6 +25,7 @@ export const calculateOpenAccess = (record) => {
             ? record.fez_datastream_info.filter(item => (
                 !item.dsi_dsid.match('^(FezACML|stream|web|thumbnail|preview|presmd)')
                 && (!item.dsi_label || !item.dsi_label.match('(ERA|HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections)', 'gi'))
+                && item.dsi_state === 'A'
             ))
             : [];
         const hasFiles = allFiles.length > 0;
@@ -34,6 +35,7 @@ export const calculateOpenAccess = (record) => {
                 && moment(item.dsi_embargo_date).isAfter(moment())
                 && !item.dsi_dsid.match('^(FezACML|stream|web|thumbnail|preview|presmd)'))
                 && (!item.dsi_label || !item.dsi_label.match('(ERA|HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections)', 'gi'))
+                && item.dsi_state === 'A'
             ).sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date ? 1 : -1))
             : [];
         // OA with a possible file embargo date
