@@ -1,4 +1,4 @@
-import {validation} from 'config';
+import {validation, openAccessConfig} from 'config';
 
 const zeroPaddedYear = (value) => value ? ('0000' + value).substr(-4) : '*';
 
@@ -9,15 +9,21 @@ const zeroPaddedYear = (value) => value ? ('0000' + value).substr(-4) : '*';
  */
 export const getFacetsParams = (facets) => {
     const facetsParam = {};
-    facets.hasOwnProperty('filters') && Object.keys(facets.filters).map(key => {
-        facetsParam[`filters[facets][${key}]`] = facets.filters[key];
-    });
-    facets.hasOwnProperty('ranges') && Object.keys(facets.ranges).map(key => {
-        const {from, to} = facets.ranges[key];
-        const fromValueForEs = (!!from && !!to && from > to) ? zeroPaddedYear(to) : zeroPaddedYear(from);
-        const toValueForEs = (!!from && !!to && to < from) ? zeroPaddedYear(from) : zeroPaddedYear(to);
-        facetsParam[`ranges[facets][${key}]`] = `[${fromValueForEs} TO ${toValueForEs}]`;
-    });
+    if (facets.hasOwnProperty('filters')) {
+        Object.keys(facets.filters).map(key => {
+            facetsParam[`filters[facets][${key}]`] = facets.filters[key];
+        });
+    }
+
+    if (facets.hasOwnProperty('ranges')) {
+        Object.keys(facets.ranges).map(key => {
+            const {from, to} = facets.ranges[key];
+            const fromValueForEs = (!!from && !!to && from > to) ? zeroPaddedYear(to) : zeroPaddedYear(from);
+            const toValueForEs = (!!from && !!to && to < from) ? zeroPaddedYear(from) : zeroPaddedYear(to);
+            facetsParam[`ranges[facets][${key}]`] = `[${fromValueForEs} TO ${toValueForEs}]`;
+        });
+    }
+
     return facetsParam;
 };
 
@@ -30,6 +36,7 @@ export const getStandardSearchParams = ({page = 1, pageSize = 20, sortBy = 'publ
         sort: sortBy,
         order_by: sortDirection.toLowerCase(),
         ...getFacetsParams(facets),
+        ...(!!facets.showOpenAccessOnly ? {rek_oa_status: openAccessConfig.openAccessIds} : {}),
         ...unknownAuthors
     };
 };

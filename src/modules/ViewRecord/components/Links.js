@@ -6,14 +6,12 @@ import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {PubmedCentralLink} from 'modules/SharedComponents/PubmedCentralLink';
 import DoiCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DoiCitationView';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
-import OpenAccessIcon from './partials/OpenAccessIcon';
+import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 
 import {locale} from 'locale';
-import {OPEN_ACCESS_ID_LINK_NO_DOI, OPEN_ACCESS_ID_DOI} from 'config/general';
+import {openAccessConfig} from 'config';
 
-import moment from 'moment';
-
-export default class ViewRecordLinks extends PureComponent {
+export default class Links extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired
     };
@@ -21,44 +19,38 @@ export default class ViewRecordLinks extends PureComponent {
     renderLinkRow = (item) => {
         return (
             <TableRow key={`link-${item.index}`}>
-                <TableRowColumn className="rowLink">
+                <TableRowColumn className="link">
                     {item.link}
                 </TableRowColumn>
-                <TableRowColumn className="rowDescription is-hidden-mobile" title={item.description}>
+                <TableRowColumn className="description is-hidden-mobile" title={item.description}>
                     {item.description}
                 </TableRowColumn>
-                <TableRowColumn className="rowOA align-right">
-                    <OpenAccessIcon {...item.openAccessStatus} showEmbargoText />
+                <TableRowColumn className="oa align-right">
+                    <OpenAccessIcon {...item.openAccessStatus} />
                 </TableRowColumn>
             </TableRow>
         );
     };
 
-    getDOILink = (openAccessStatusId, doi, pubmedCentralId) => {
+    getDOILink = (doi, openAccessStatus) => {
         return {
             index: 'doi',
             link: (<DoiCitationView doi={doi} />),
             description: locale.viewRecord.sections.links.doiDescription,
-            openAccessStatus: {
-                isOpenAccess: openAccessStatusId === OPEN_ACCESS_ID_DOI && !pubmedCentralId,
-                openAccessStatusId: openAccessStatusId,
-            }
+            openAccessStatus: openAccessStatus
         };
     };
 
-    getPMCLink = (openAccessStatusId, pubmedCentralId) => {
+    getPMCLink = (pubmedCentralId, openAccessStatus) => {
         return {
             index: 'pmc',
             link: <PubmedCentralLink pubmedCentralId={pubmedCentralId}/>,
             description: locale.viewRecord.sections.links.pubmedCentralLinkDescription,
-            openAccessStatus: {
-                isOpenAccess: true,
-                openAccessStatusId: openAccessStatusId,
-            }
+            openAccessStatus: openAccessStatus
         };
     };
 
-    getGoogleScholarLink = (openAccessStatusId, title) => {
+    getGoogleScholarLink = (title, openAccessStatus) => {
         return {
             index: 'google',
             link: (
@@ -69,14 +61,11 @@ export default class ViewRecordLinks extends PureComponent {
                 </ExternalLink>
             ),
             description: locale.viewRecord.sections.links.googleScholar.linkDescription,
-            openAccessStatus: {
-                isOpenAccess: true,
-                openAccessStatusId: openAccessStatusId,
-            }
+            openAccessStatus: openAccessStatus
         };
     };
 
-    getPublicationLink = (openAccessStatusId, link, index, isOpenAccess, embargoDate) => {
+    getPublicationLink = (link, index, openAccessStatus = {}) => {
         const linkDescription = this.props.publication.fez_record_search_key_link_description
             && this.props.publication.fez_record_search_key_link_description[index]
             && this.props.publication.fez_record_search_key_link_description[index].rek_link_description
@@ -89,35 +78,21 @@ export default class ViewRecordLinks extends PureComponent {
                 </ExternalLink>
             ),
             description: linkDescription,
-            openAccessStatus: {
-                isOpenAccess: isOpenAccess,
-                embargoDate: embargoDate,
-                openAccessStatusId: openAccessStatusId,
-            }
+            openAccessStatus: openAccessStatus
         };
-    };
-
-    isRecordOpenAccess = (record) => {
-        const openAccessStatusId = record.fez_record_search_key_oa_status
-            && record.fez_record_search_key_oa_status.rek_oa_status;
-        const embargoDays = record.fez_record_search_key_oa_embargo_days
-            && record.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days
-            || 0;
-        const publishedDate = record.rek_date;
-        const currentDate = moment().format();
-        const embargoDate = embargoDays ? moment(publishedDate).add(embargoDays, 'days').format() : null;
-        const pastEmgargoDate = !embargoDate || embargoDate < currentDate;
-        let isOpenAccess = false;
-        if (openAccessStatusId !== OPEN_ACCESS_ID_LINK_NO_DOI) return {isOpenAccess: false, embargoDate: null};
-        else isOpenAccess = pastEmgargoDate;
-        const displayEmbargoDate = !!embargoDate && !isOpenAccess && embargoDate > currentDate ? moment(embargoDate).format('Do MMMM YYYY') : null;
-        return {isOpenAccess: isOpenAccess, embargoDate: displayEmbargoDate};
     };
 
     render() {
         const record = this.props.publication;
-        const txt = locale.viewRecord.sections.links;
 
+        if (!(record.fez_record_search_key_link && record.fez_record_search_key_link.length > 0
+            || record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id
+            || record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi
+            || record.fez_record_search_key_oa_status && record.fez_record_search_key_oa_status.rek_oa_status === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI)) {
+            return null;
+        }
+
+        const txt = locale.viewRecord.sections.links;
         const pubmedCentralId = record.fez_record_search_key_pubmed_central_id
             && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id;
         const doi = record.fez_record_search_key_doi
@@ -127,36 +102,42 @@ export default class ViewRecordLinks extends PureComponent {
         const hasLinks = record.fez_record_search_key_link
             && record.fez_record_search_key_link.length > 0;
 
-        const {isOpenAccess, embargoDate} = this.isRecordOpenAccess(record);
+        // show open access status on links only if open access status is related to links, eg DOI, LINK, PMC
+        const openAccessStatus = openAccessConfig.openAccessLinks.indexOf(openAccessStatusId) >= 0 && record.calculateOpenAccess
+            ? record.calculateOpenAccess()
+            : {};
+
         return (
             <StandardCard title={txt.title}>
                 <div className="viewRecordLinks">
-                    <Table selectable={false} className="links">
-                        <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="tableHeader">
+                    <Table selectable={false} className="links horizontal">
+                        <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="header">
                             <TableRow>
-                                <TableHeaderColumn className="rowLink">{txt.headerTitles.link}</TableHeaderColumn>
-                                <TableHeaderColumn className="rowDescription is-hidden-mobile">{txt.headerTitles.description}</TableHeaderColumn>
-                                <TableHeaderColumn className="rowOA align-right">{txt.headerTitles.oaStatus}</TableHeaderColumn>
+                                <TableHeaderColumn className="link">{txt.headerTitles.link}</TableHeaderColumn>
+                                <TableHeaderColumn className="description is-hidden-mobile">{txt.headerTitles.description}</TableHeaderColumn>
+                                <TableHeaderColumn className="oa align-right">{txt.headerTitles.oaStatus}</TableHeaderColumn>
                             </TableRow>
                         </TableHeader>
-                        <TableBody displayRowCheckbox={false} className="tableData">
+                        <TableBody displayRowCheckbox={false} className="data">
                             {
+                                // if record has a PubMedCentral Id - display link, should be always OA
                                 !!pubmedCentralId &&
-                                this.renderLinkRow(this.getPMCLink(openAccessStatusId, pubmedCentralId))
+                                this.renderLinkRow(this.getPMCLink(pubmedCentralId, openAccessStatus))
                             }
                             {
+                                // if record has a DOI - display a link, should be OA or OA with a date
                                 !!doi &&
-                                this.renderLinkRow(this.getDOILink(openAccessStatusId, doi, pubmedCentralId))
+                                this.renderLinkRow(this.getDOILink(doi, openAccessStatus))
                             }
                             {
                                 // record has OA status of "Link (no DOI)" then produce a google scholar link for the publication title
-                                openAccessStatusId === OPEN_ACCESS_ID_LINK_NO_DOI &&
-                                this.renderLinkRow(this.getGoogleScholarLink(openAccessStatusId, record.rek_title))
+                                openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI &&
+                                this.renderLinkRow(this.getGoogleScholarLink(record.rek_title, openAccessStatus))
                             }
                             {
                                 hasLinks &&
                                 record.fez_record_search_key_link.map((item, index) => (
-                                    this.renderLinkRow(this.getPublicationLink(openAccessStatusId, item, index, isOpenAccess, embargoDate))
+                                    this.renderLinkRow(this.getPublicationLink(item, index))
                                 ))
                             }
                         </TableBody>

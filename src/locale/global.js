@@ -1,5 +1,4 @@
 import {APP_URL} from 'config';
-
 /*
 
 NOTE:
@@ -42,9 +41,11 @@ export default {
             type: 'info_outline',
             actionButtonLabel: 'Click to login'
         },
-        genericErrorMessage: (message) => (
-            `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`
-        ),
+        errorMessages: {
+            generic: 'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+            notFound: 'The requested page could not be found.',
+            sessionExpired: 'Your session expired, please login to continue.'
+        },
         notRegisteredAuthorAlert: {
             title: 'You are not registered in UQ eSpace as an author',
             message: 'Please contact the UQ eSpace administrator to resolve this.',
@@ -121,6 +122,16 @@ export default {
             externalUrl: 'http://www.sherpa.ac.uk/romeo/search.php?issn=[issn]'
         },
         embargoDateFormat: 'YYYY-MM-DD',
-        defaultLinkDescription: 'Link to publication'
+        defaultLinkDescription: 'Link to publication',
+        offlineSnackbar: {
+            online: {
+                message: 'Your connection is back online',
+                autoHideDuration: 5000
+            },
+            offline: {
+                message: 'Your connection is offline',
+                autoHideDuration: 0
+            }
+        }
     }
 };

@@ -487,14 +487,13 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Walsh, Laurence J"
         >
           <span
             className="citationAuthor"
           >
-             
             Walsh, Laurence J
             , 
           </span>
@@ -502,14 +501,13 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Ota R"
         >
           <span
             className="citationAuthor"
           >
-             
             Ota R
             , 
           </span>
@@ -517,16 +515,14 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
-          suffix=", "
+          prefix=""
+          suffix=""
           value="Nagao S"
         >
           <span
             className="citationAuthor"
           >
-             
             Nagao S
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -561,7 +557,7 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -574,7 +570,7 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
         Bacterial plaques staining composition for evaluating dental caries activity
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPatentNumber"
       prefix=" "
@@ -662,7 +658,7 @@ exports[`PatentCitation renders  component with empty publication 1`] = `
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -670,7 +666,7 @@ exports[`PatentCitation renders  component with empty publication 1`] = `
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPatentNumber"
       prefix=" "

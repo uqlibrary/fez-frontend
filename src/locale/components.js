@@ -10,6 +10,10 @@ export default {
                 fromFieldLabel: 'From',
                 toFieldLabel: 'To',
                 rangeSubmitButtonLabel: 'Go'
+            },
+            openAccessFilter: {
+                displayTitle: 'Open access status',
+                activeFilter: 'Show only open access records'
             }
         },
         publicationStats: {
@@ -45,7 +49,9 @@ export default {
             },
             citationAuthors: {
                 showMoreLabel: 'Show [numberOfAuthors] more...',
-                showLessLabel: 'Show less'
+                showMoreTitle: 'Click to show [numberOfAuthors] more authors',
+                showLessLabel: 'Show less',
+                showLessTitle: 'Show less authors'
             },
             defaultActions: [
                 {key: 'fixRecord', label: 'Request Correction', primary: false},
@@ -102,7 +108,8 @@ export default {
                     locale: {
                         inputFieldLabel: 'ISBN value',
                         inputFieldHint: 'Type ISBN value',
-                        addButtonLabel: 'Add ISBN'
+                        addButtonLabel: 'Add ISBN',
+                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }
                 },
                 header: {
@@ -146,7 +153,8 @@ export default {
                     locale: {
                         inputFieldLabel: 'ISSN value',
                         inputFieldHint: 'Type ISSN value',
-                        addButtonLabel: 'Add ISSN'
+                        addButtonLabel: 'Add ISSN',
+                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }
                 },
                 header: {

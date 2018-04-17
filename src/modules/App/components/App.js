@@ -13,12 +13,14 @@ import {HelpDrawer} from 'uqlibrary-react-toolbox/build/HelpDrawer';
 import {AuthButton} from 'uqlibrary-react-toolbox/build/AuthButton';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import AppAlertContainer from '../containers/AppAlert';
+import {Meta} from 'modules/SharedComponents/Meta';
+import {OfflineSnackbar} from 'modules/SharedComponents/OfflineSnackbar';
 
 import * as pages from './pages';
 import IconButton from 'material-ui/IconButton';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
-export default class App extends React.Component {
+export default class App extends React.PureComponent {
     static propTypes = {
         account: PropTypes.object,
         author: PropTypes.object,
@@ -28,7 +30,6 @@ export default class App extends React.Component {
         location: PropTypes.object,
         history: PropTypes.object.isRequired
     };
-
     static childContextTypes = {
         isMobile: PropTypes.bool,
         selectFieldMobileOverrides: PropTypes.object
@@ -159,9 +160,15 @@ export default class App extends React.Component {
                 ...locale.global.forceOrcidLinkAlert
             };
         }
-
+        const routesConfig = routes.getRoutesConfig({
+            components: pages,
+            account: this.props.account,
+            forceOrcidRegistration: isOrcidRequired && isHdrStudent,
+            isHdrStudent: isHdrStudent
+        });
         return (
             <div className="layout-fill align-stretch">
+                <Meta routesConfig={routesConfig} />
                 <AppBar
                     className="AppBar align-center"
                     showMenuIconButton={showMenu && !this.state.docked}
@@ -228,12 +235,7 @@ export default class App extends React.Component {
                         !isAuthorLoading &&
                         <Switch>
                             {
-                                routes.getRoutesConfig({
-                                    components: pages,
-                                    account: this.props.account,
-                                    forceOrcidRegistration: isOrcidRequired && isHdrStudent,
-                                    isHdrStudent: isHdrStudent
-                                }).map((route, index) => (
+                                routesConfig.map((route, index) => (
                                     <Route key={`route_${index}`} {...route} />
                                 ))
                             }
@@ -241,6 +243,7 @@ export default class App extends React.Component {
                     }
                 </div>
                 <HelpDrawer/>
+                <OfflineSnackbar />
             </div>
         );
     }

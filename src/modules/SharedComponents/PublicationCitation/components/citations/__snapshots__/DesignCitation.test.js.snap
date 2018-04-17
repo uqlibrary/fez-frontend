@@ -227,7 +227,12 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
           "rek_ismemberof_xsdmf_id": 149,
         },
       ],
-      "fez_record_search_key_job_number": null,
+      "fez_record_search_key_job_number": Object {
+        "rek_job_number": "UQFL158, job no. 1006-2",
+        "rek_job_number_id": 39,
+        "rek_job_number_pid": "UQ:543799",
+        "rek_job_number_xsdmf_id": 17313,
+      },
       "fez_record_search_key_keywords": Array [
         Object {
           "rek_keywords": "Architecture",
@@ -674,7 +679,12 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
               "rek_ismemberof_xsdmf_id": 149,
             },
           ],
-          "fez_record_search_key_job_number": null,
+          "fez_record_search_key_job_number": Object {
+            "rek_job_number": "UQFL158, job no. 1006-2",
+            "rek_job_number_id": 39,
+            "rek_job_number_pid": "UQ:543799",
+            "rek_job_number_xsdmf_id": 17313,
+          },
           "fez_record_search_key_keywords": Array [
             Object {
               "rek_keywords": "Architecture",
@@ -873,14 +883,13 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=""
           value="Dickson, Michael"
         >
           <span
             className="citationAuthor"
           >
-             
             Dickson, Michael
           </span>
         </CitationView>
@@ -916,7 +925,7 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -929,7 +938,7 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
         Site setting and circumstance: A house and courtyard garden, Riga, Latvia
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSource"
       prefix=" "
@@ -1171,7 +1180,12 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
           "rek_ismemberof_xsdmf_id": 149,
         },
       ],
-      "fez_record_search_key_job_number": null,
+      "fez_record_search_key_job_number": Object {
+        "rek_job_number": "UQFL158, job no. 1006-2",
+        "rek_job_number_id": 39,
+        "rek_job_number_pid": "UQ:543799",
+        "rek_job_number_xsdmf_id": 17313,
+      },
       "fez_record_search_key_keywords": Array [
         Object {
           "rek_keywords": "Architecture",
@@ -1620,7 +1634,12 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
               "rek_ismemberof_xsdmf_id": 149,
             },
           ],
-          "fez_record_search_key_job_number": null,
+          "fez_record_search_key_job_number": Object {
+            "rek_job_number": "UQFL158, job no. 1006-2",
+            "rek_job_number_id": 39,
+            "rek_job_number_pid": "UQ:543799",
+            "rek_job_number_xsdmf_id": 17313,
+          },
           "fez_record_search_key_keywords": Array [
             Object {
               "rek_keywords": "Architecture",
@@ -1821,14 +1840,13 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=""
           value="Dickson, Michael"
         >
           <span
             className="citationAuthor"
           >
-             
             Dickson, Michael
           </span>
         </CitationView>
@@ -1864,7 +1882,7 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1877,7 +1895,7 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
         Site setting and circumstance: A house and courtyard garden, Riga, Latvia
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSource"
       prefix=" "
@@ -1961,7 +1979,7 @@ exports[`DesignCitation renders  component with empty publication 1`] = `
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1969,7 +1987,7 @@ exports[`DesignCitation renders  component with empty publication 1`] = `
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSource"
       prefix=" "

@@ -3,7 +3,8 @@ const deployment = {
     development: {
         url: (branch) => (`https://development.library.uq.edu.au/espace/${branch}`),
         api: 'https://api.library.uq.edu.au/staging/',
-        title: 'eSpace - The University of Queensland (DEVELOPMENT)',
+        gtm: 'GTM-K597ZS',
+        title: 'UQ eSpace (DEVELOPMENT)',
         titleSuffix: 'Development',
         environment: 'development',
         basePath: 'espace/', // updated in webpack
@@ -15,7 +16,8 @@ const deployment = {
     staging: {
         url: () => ('https://fez-staging.library.uq.edu.au/'),
         api: 'https://api.library.uq.edu.au/staging/',
-        title: 'eSpace - The University of Queensland (STAGING)',
+        gtm: 'GTM-K597ZS',
+        title: 'UQ eSpace (STAGING)',
         titleSuffix: 'Staging',
         environment: 'staging',
         basePath: '',
@@ -28,7 +30,7 @@ const deployment = {
         url: () => ('https://espace.library.uq.edu.au/'),
         api: 'https://api.library.uq.edu.au/v1/',
         gtm: 'GTM-T4NPC25',
-        title: 'eSpace - The University of Queensland',
+        title: 'UQ eSpace',
         titleSuffix: 'BETA',
         environment: 'production',
         basePath: '',

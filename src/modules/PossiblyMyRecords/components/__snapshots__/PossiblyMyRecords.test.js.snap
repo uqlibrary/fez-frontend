@@ -13,13 +13,6 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
     >
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "Ok",
-            "text": "Why search didn't return any items....",
-            "title": "No matching records found",
-          }
-        }
         text={
           <div>
             <p>
@@ -40,13 +33,6 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
       className="column is-3 is-hidden-mobile"
     >
       <StandardRighthandCard
-        help={
-          Object {
-            "buttonLabel": "Ok",
-            "text": "Help about ....",
-            "title": "Refining your results",
-          }
-        }
         title="Refine results"
       >
         <FacetsFilter
@@ -76,6 +62,7 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
               "Display type": "Publication type",
             }
           }
+          showOpenAccessFilter={false}
         />
       </StandardRighthandCard>
     </div>
@@ -90,6 +77,7 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
 >
   <Alert
     allowDismiss={false}
+    dismissTitle="Click to dismiss this alert"
     message="Error has occurred during request and request cannot be processed. Test error message Please contact eSpace administrators or try again later."
     showLoader={false}
     title="Error"
@@ -103,13 +91,6 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
     >
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "Ok",
-            "text": "Why search didn't return any items....",
-            "title": "No matching records found",
-          }
-        }
         text={
           <div>
             <p>
@@ -156,13 +137,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
     >
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "Ok",
-            "text": "Help about ....",
-            "title": "Possibly your publications",
-          }
-        }
         title="Possibly your publications"
       >
         <div>
@@ -208,13 +182,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
       className="column is-3 is-hidden-mobile"
     >
       <StandardRighthandCard
-        help={
-          Object {
-            "buttonLabel": "Ok",
-            "text": "Help about ....",
-            "title": "Refining your results",
-          }
-        }
         title="Refine results"
       >
         <FacetsFilter
@@ -294,6 +261,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
               "Display type": "Publication type",
             }
           }
+          showOpenAccessFilter={false}
         />
       </StandardRighthandCard>
     </div>
@@ -350,13 +318,6 @@ exports[`Component PossiblyMyRecords renders no results 1`] = `
     >
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "Ok",
-            "text": "Why search didn't return any items....",
-            "title": "No matching records found",
-          }
-        }
         text={
           <div>
             <p>

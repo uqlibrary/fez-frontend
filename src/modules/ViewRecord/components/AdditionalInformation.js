@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'locale';
-import {pathConfig} from 'config/routes';
-import {viewRecordsConfig} from 'config/viewRecord';
+import {viewRecordsConfig, routes} from 'config';
 import {Table, TableBody} from 'material-ui/Table';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {AuthorsCitationView, DoiCitationView, EditorsCitationView, DateCitationView} from 'modules/SharedComponents/PublicationCitation/components/citations/partials';
@@ -11,9 +10,6 @@ import ReactHtmlParser from 'react-html-parser';
 import ViewRecordTableRow from './ViewRecordTableRow';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
-
-const dompurify = require('dompurify');
-const dompurifyConfig = { ALLOWED_TAGS: ['p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b'], ALLOWED_ATTR: [] };
 
 export default class AdditionalInformation extends Component {
     static propTypes = {
@@ -60,10 +56,10 @@ export default class AdditionalInformation extends Component {
         switch (subkey) {
             case 'rek_author': return this.renderAuthors(this.props.publication);
             case 'rek_contributor': return this.renderContributors(this.props.publication);
-            case 'rek_keywords': return this.renderList(objects, subkey, pathConfig.list.keyword);
-            case 'rek_subject': return this.renderList(objects, subkey, pathConfig.list.subject);
-            case 'rek_seo_code': return this.renderList(objects, subkey, pathConfig.list.subject);
-            case 'rek_alternate_genre': return this.renderList(objects, subkey, pathConfig.list.subject);
+            case 'rek_keywords': return this.renderList(objects, subkey, routes.pathConfig.list.keyword);
+            case 'rek_subject': return this.renderList(objects, subkey, routes.pathConfig.list.subject);
+            case 'rek_seo_code': return this.renderList(objects, subkey, routes.pathConfig.list.subject);
+            case 'rek_alternate_genre': return this.renderList(objects, subkey, routes.pathConfig.list.subject);
             case 'rek_geographic_area': return this.renderMap(objects);
             default: return this.renderList(objects, subkey);
         }
@@ -86,18 +82,19 @@ export default class AdditionalInformation extends Component {
         switch (subkey) {
             case 'rek_doi': return this.renderDoi(data);
             case 'rek_journal_name': return this.renderJournalName();
-            case 'rek_publisher': return this.renderLink(pathConfig.list.publisher(data), data);
-            case 'rek_oa_status': return this.renderLink(pathConfig.list.openAccessStatus(object[subkey]), data);
-            case 'rek_herdc_code': return this.renderLink(pathConfig.list.subject(object[subkey]), data);
-            case 'rek_herdc_status': return this.renderLink(pathConfig.list.herdcStatus(object[subkey]), data);
-            case 'rek_ands_collection_type': return this.renderLink(pathConfig.list.collectionType(object[subkey]), data);
-            case 'rek_access_conditions': return this.renderLink(pathConfig.list.accessCondition(object[subkey]), data);
-            case 'rek_series': return this.renderLink(pathConfig.list.series(object[subkey]), object[subkey]);
+            case 'rek_publisher': return this.renderLink(routes.pathConfig.list.publisher(data), data);
+            case 'rek_oa_status': return !!data ? this.renderLink(routes.pathConfig.list.openAccessStatus(object[subkey]), data) : '';
+            case 'rek_herdc_code': return this.renderLink(routes.pathConfig.list.subject(object[subkey]), data);
+            case 'rek_herdc_status': return this.renderLink(routes.pathConfig.list.herdcStatus(object[subkey]), data);
+            case 'rek_ands_collection_type': return this.renderLink(routes.pathConfig.list.collectionType(object[subkey]), data);
+            case 'rek_access_conditions': return this.renderLink(routes.pathConfig.list.accessCondition(object[subkey]), data);
+            case 'rek_series': return this.renderLink(routes.pathConfig.list.series(object[subkey]), object[subkey]);
             case 'rek_license': return this.renderLicense(object[subkey], data);
-            case 'rek_org_unit_name': return this.renderLink(pathConfig.list.orgUnitName(data), data);
-            case 'rek_institutional_status': return this.renderLink(pathConfig.list.institutionalStatus(object[subkey]), data);
-            case 'rek_book_title': return this.renderLink(pathConfig.list.bookTitle(object[subkey]), data);
-            case 'rek_conference_name': return this.renderLink(pathConfig.list.conferenceName(object[subkey]), data);
+            case 'rek_org_unit_name': return this.renderLink(routes.pathConfig.list.orgUnitName(data), data);
+            case 'rek_institutional_status': return this.renderLink(routes.pathConfig.list.institutionalStatus(object[subkey]), data);
+            case 'rek_book_title': return this.renderLink(routes.pathConfig.list.bookTitle(object[subkey]), data);
+            case 'rek_job_number': return this.renderLink(routes.pathConfig.list.jobNumber(object[subkey]), data);
+            case 'rek_conference_name': return this.renderLink(routes.pathConfig.list.conferenceName(object[subkey]), data);
             default: return data;
         }
     }
@@ -118,14 +115,20 @@ export default class AdditionalInformation extends Component {
     }
 
     renderLicense = (cvoId, lookup) => {
-        const licenseLooup = this.renderLink(pathConfig.list.license(cvoId), lookup);
-        const creativeCommonLogo =  viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
+        const licenseLookup = this.renderLink(routes.pathConfig.list.license(cvoId), lookup);
+        const licenseLink =  viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
+        const uqLicenseLinkText = licenseLink && licenseLink.className.indexOf('uq') === 0 ? locale.viewRecord.sections.additionalInformation.licenseLinkText : null;
 
         return (
             <span>
-                {licenseLooup}
-                { creativeCommonLogo &&
-                    <div><ExternalLink className={'fez-icon license ' + creativeCommonLogo.className} href={creativeCommonLogo.url} /></div>
+                {licenseLookup}
+                {
+                    licenseLink && !uqLicenseLinkText &&
+                     <div><ExternalLink className={'fez-icon license ' + licenseLink.className} href={licenseLink.url} /></div>
+                }
+                {
+                    licenseLink && uqLicenseLinkText &&
+                    <div><ExternalLink href={licenseLink.url}>{uqLicenseLinkText}</ExternalLink></div>
                 }
             </span>
         );
@@ -139,7 +142,7 @@ export default class AdditionalInformation extends Component {
 
     renderContributors = (publication) => {
         return (
-            <EditorsCitationView key="additional-information-editors" publication={publication} prefix={' '} initialNumberOfEditors={publication.fez_record_search_key_contributor.length} showLink />
+            <EditorsCitationView key="additional-information-editors" publication={publication} prefix={' '} suffix={''} initialNumberOfEditors={publication.fez_record_search_key_contributor.length} showLink />
         );
     }
 
@@ -170,14 +173,15 @@ export default class AdditionalInformation extends Component {
         );
     }
 
+    // title/description/abstract have been sanitized in middleware
     renderHTML = (data) => {
-        return ReactHtmlParser(dompurify.sanitize(data, dompurifyConfig));
+        return ReactHtmlParser(data);
     }
 
     // get lookup data if it exsts, except rek_issn_lookup as it returns sherpa romeo color
     getData = (object, subkey) => {
         const lookupSuffix = '_lookup';
-        return object[subkey + lookupSuffix] && subkey !== 'rek_issn' ? object[subkey + lookupSuffix] : object[subkey];
+        return (subkey === 'rek_oa_status' || object[subkey + lookupSuffix] && subkey !== 'rek_issn') ? object[subkey + lookupSuffix] : object[subkey];
     }
 
     getAbstract = (publication) => {
@@ -242,9 +246,13 @@ export default class AdditionalInformation extends Component {
     }
 
     render() {
+        if (!this.props.publication.rek_display_type_lookup) {
+            return null;
+        }
+
         return (
-            <StandardCard title={locale.viewRecord.sections.additionalInformation}>
-                <Table selectable={false} className="additionalInformation">
+            <StandardCard title={locale.viewRecord.sections.additionalInformation.title}>
+                <Table selectable={false} className="additionalInformation vertical">
                     <TableBody displayRowCheckbox={false}>
                         {
                             this.renderColumns()

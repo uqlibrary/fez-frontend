@@ -37,7 +37,7 @@ module.exports = {
     // The entry file. All your app roots from here.
     entry: {
         main: resolve(__dirname, './src/index.js'),
-        vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux']
+        vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'redux-form', 'moment', 'babel-polyfill']
     },
     // Where you want the output to go
     output: {
@@ -84,7 +84,7 @@ module.exports = {
             'process.env.PUBLIC_PATH': JSON.stringify(config.basePath),
             'process.env.GOOGLE_MAP_KEY': JSON.stringify(config.googleMaps),
             'process.env.ENABLE_LOG': JSON.stringify(!!process.env.CI_BRANCH && process.env.NODE_ENV !== 'test'),
-            'process.env.TITLE_SUFFIX': JSON.stringify(config.titleSuffix)
+            'process.env.TITLE_SUFFIX': JSON.stringify(config.titleSuffix),
         }),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         // Put it in the end to capture all the HtmlWebpackPlugin's

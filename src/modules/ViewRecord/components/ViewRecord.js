@@ -1,36 +1,40 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
 import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {locale} from 'locale';
+import Files from './Files';
 import PublicationDetails from './PublicationDetails';
 import AdditionalInformation from './AdditionalInformation';
 import GrantInformation from './GrantInformation';
+import RelatedPublications from './RelatedPublications';
 import Links from './Links';
-import {OPEN_ACCESS_ID_LINK_NO_DOI} from 'config/general';
+import {ShareThis} from 'modules/SharedComponents/ShareThis';
+import AvailableVersions from './AvailableVersions';
 import ReactHtmlParser from 'react-html-parser';
-const dompurify = require('dompurify');
 
-export default class ViewRecord extends Component {
+export default class ViewRecord extends PureComponent {
     static propTypes = {
         recordToView: PropTypes.object,
         loadingRecordToView: PropTypes.bool,
         recordToViewError: PropTypes.string,
         match: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired
+        actions: PropTypes.object.isRequired,
+        hideCulturalSensitivityStatement: PropTypes.bool
     };
-
-    constructor(props) {
-        super(props);
-    }
 
     componentDidMount() {
         if (this.props.actions && !this.props.recordToView) {
             this.props.actions.loadRecordToView(this.props.match.params.pid);
+        }
+    }
+
+    componentWillReceiveProps(newProps) {
+        if (this.props.match.params.pid !== newProps.match.params.pid) {
+            this.props.actions.loadRecordToView(newProps.match.params.pid);
         }
     }
 
@@ -62,36 +66,27 @@ export default class ViewRecord extends Component {
         }
 
         return (
-            <StandardPage className="viewRecord" title={recordToView.rek_title}>
+            <StandardPage className="viewRecord" title={ReactHtmlParser(recordToView.rek_title)}>
                 <PublicationCitation publication={recordToView} hideTitle />
-                {
-                    (recordToView.fez_record_search_key_link && recordToView.fez_record_search_key_link.length > 0
-                    || recordToView.fez_record_search_key_pubmed_central_id && recordToView.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id
-                    || recordToView.fez_record_search_key_doi && recordToView.fez_record_search_key_doi.rek_doi
-                    || recordToView.fez_record_search_key_oa_status && recordToView.fez_record_search_key_oa_status.rek_oa_status === OPEN_ACCESS_ID_LINK_NO_DOI) &&
-                    <Links publication={recordToView}/>
-                }
-                {
-                    (recordToView.rek_formatted_abstract || recordToView.rek_description) &&
-                    <StandardCard title={locale.viewRecord.sections.abstract[recordToView.rek_display_type_lookup] || locale.viewRecord.sections.abstract.default}>
-                        {
-                            ReactHtmlParser(dompurify.sanitize(recordToView.rek_formatted_abstract || recordToView.rek_description))
-                        }
-                    </StandardCard>
-                }
-                {
-                    recordToView.rek_display_type_lookup &&
-                    <AdditionalInformation publication={recordToView} />
-                }
-                {
-                    recordToView.fez_record_search_key_grant_agency && recordToView.fez_record_search_key_grant_agency.length > 0 &&
-                    <GrantInformation publication={recordToView} />
-                }
-                {
-                    recordToView.rek_display_type_lookup &&
-                    <PublicationDetails publication={recordToView} />
-                }
 
+                <ShareThis />
+
+                <Files
+                    publication={recordToView}
+                    hideCulturalSensitivityStatement={this.props.hideCulturalSensitivityStatement}
+                    setHideCulturalSensitivityStatement={this.props.actions.setHideCulturalSensitivityStatement} />
+
+                <Links publication={recordToView}/>
+
+                <RelatedPublications publication={recordToView} />
+
+                <AdditionalInformation publication={recordToView} />
+
+                <GrantInformation publication={recordToView} />
+
+                <PublicationDetails publication={recordToView} />
+
+                <AvailableVersions publication={recordToView} />
             </StandardPage>
         );
     }

@@ -3,13 +3,15 @@ import * as actions from 'actions/actionTypes';
 export const initialState = {
     recordToView: null,
     loadingRecordToView: true,
-    recordToViewError: null
+    recordToViewError: null,
+    hideCulturalSensitivityStatement: false
 };
 
 const handlers = {
-    [actions.VIEW_RECORD_LOADING]: () => (
+    [actions.VIEW_RECORD_LOADING]: (state) => (
         {
-            ...initialState
+            ...initialState,
+            hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement
         }
     ),
 
@@ -17,7 +19,8 @@ const handlers = {
         {
             ...initialState,
             loadingRecordToView: false,
-            recordToView: action.payload
+            recordToView: action.payload,
+            hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement
         }
     ),
 
@@ -25,7 +28,8 @@ const handlers = {
         {
             ...initialState,
             loadingRecordToView: false,
-            recordToViewError: action.payload
+            recordToViewError: action.payload,
+            hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement
         }
     ),
 
@@ -33,15 +37,22 @@ const handlers = {
         {
             ...initialState,
             loadingRecordToView: false,
-            recordToView: action.payload
+            recordToView: action.payload,
+            hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement
         }
     ),
 
-    [actions.VIEW_RECORD_CLEAR]: () => (
+    [actions.VIEW_RECORD_CLEAR]: (state) => (
         {
-            ...initialState
+            ...initialState,
+            hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement
         }
-    )
+    ),
+
+    [actions.VIEW_RECORD_CULTURAL_SENSITIVITY_STATEMENT_HIDE]: (state) => ({
+        ...state,
+        hideCulturalSensitivityStatement: true
+    }),
 };
 
 export default function viewRecordReducer(state = {...initialState}, action) {

@@ -20,42 +20,47 @@ help: {
 
 export default {
     pages: {
-        about: {
-            title: 'About UQ eSpace',
+        contact: {
+            title: 'Contact UQ eSpace',
             children: (
                 <StandardCard>
-                    UQ eSpace is the single authoritative source for the research outputs and research data of the
-                    staff and students of the University of Queensland and is the archival home of UQ Research
-                    Higher Degree digital theses. UQ eSpace raises the visibility and accessibility of UQ
-                    publications to the wider world and provides data for mandatory Government reporting
-                    requirements such as Excellence in Research for Australia (ERA), as well as for internal UQ
-                    systems, including Academic Portal and the DataHub. It operates as an institutional repository
-                    for open access publications, research datasets and other digitised materials created by staff
-                    of the University such as print materials, photographs, audio materials, videos, manuscripts and
-                    other original works. UQ eSpace provides metadata to UQ Researchers in order to raise the
-                    publication profile of researchers at UQ.
-                    <p>The University of Queensland has implemented an Open Access for UQ Research Outputs policy that
-                        requires UQ researchers to make publications arising from their research openly available via UQ
-                        eSpace. It has also implemented a Research Data Management policy that sets out the requirements
-                        for University of Queensland researchers to ensure that their research data are managed
-                        according to legal, statutory, ethical and funding body requirements.</p>
                     <h3>General Enquiries</h3>
                     <p>
                         Tel: 07 334 69775 <br/>
-                        Email: espace@library.uq.edu.au <br/>
+                        Email: <a href="mailto:espace@library.uq.edu.au">espace@library.uq.edu.au</a><br/>
                     </p>
                     <h3>Staff contact</h3>
                     <p>
                         Andrew Heath <br/>
                         Manager, UQ eSpace<br/>
                         Tel: 07 334 69981<br/>
-                        Email: a.heath@library.uq.edu.au<br/>
+                        Email: <a href="mailto:a.heath@library.uq.edu.au">a.heath@library.uq.edu.au</a><br/>
                     </p>
                     <p>
                         Mary-Anne Marrington<br/>
                         Senior Librarian, UQ eSpace<br/>
                         Tel: 07 334 69775<br/>
-                        Email: m.marrington@library.uq.edu.au<br/>
+                        Email: <a href="mailto:m.marrington@library.uq.edu.au">m.marrington@library.uq.edu.au</a><br/>
+                    </p>
+                    <h3>About UQ eSpace</h3>
+                    <p>
+                        UQ eSpace is the single authoritative source for the research outputs and research data of the
+                        staff and students of the University of Queensland and is the archival home of UQ Research
+                        Higher Degree digital theses. UQ eSpace raises the visibility and accessibility of UQ
+                        publications to the wider world and provides data for mandatory Government reporting
+                        requirements such as Excellence in Research for Australia (ERA), as well as for internal UQ
+                        systems, including Academic Portal and the DataHub. It operates as an institutional repository
+                        for open access publications, research datasets and other digitised materials created by staff
+                        of the University such as print materials, photographs, audio materials, videos, manuscripts and
+                        other original works. UQ eSpace provides metadata to UQ Researchers in order to raise the
+                        publication profile of researchers at UQ.
+                    </p>
+                    <p>
+                        The University of Queensland has implemented an Open Access for UQ Research Outputs policy that
+                        requires UQ researchers to make publications arising from their research openly available via UQ
+                        eSpace. It has also implemented a Research Data Management policy that sets out the requirements
+                        for University of Queensland researchers to ensure that their research data are managed
+                        according to legal, statutory, ethical and funding body requirements.
                     </p>
                 </StandardCard>
             )
@@ -137,11 +142,11 @@ export default {
         dashboard: {
             loading: 'Loading your dashboard...',
             header: {
-                help: {
-                    title: 'Your dashboard',
-                    text: 'Your profile help....',
-                    buttonLabel: 'OK'
-                },
+                // help: {
+                //     title: 'Your dashboard',
+                //     text: 'Your profile help....',
+                //     buttonLabel: 'OK'
+                // },
                 dashboardArticleCount: {
                     yearSeparator: ' to ',
                     countTitle: 'eSpace articles from'
@@ -244,11 +249,11 @@ export default {
             },
             facetsFilter: {
                 title: 'Refine results',
-                help: {
-                    title: 'Refining your results',
-                    text: 'Help about ....',
-                    buttonLabel: 'Ok'
-                },
+                // help: {
+                //     title: 'Refining your results',
+                //     text: 'Help about ....',
+                //     buttonLabel: 'Ok'
+                // },
                 excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
                 renameFacetsList: {'Display type': 'Publication type'}
             }
@@ -264,20 +269,20 @@ export default {
                         <p>No publications were automatically matched for you to claim.</p>
                     </div>
                 ),
-                help: {
-                    title: 'No matching records found',
-                    text: 'Why search didn\'t return any items....',
-                    buttonLabel: 'Ok'
-                }
+                // help: {
+                //     title: 'No matching records found',
+                //     text: 'Why search didn\'t return any items....',
+                //     buttonLabel: 'Ok'
+                // }
             },
             searchResults: {
                 title: 'Possibly your publications',
                 text: '[resultsCount] out of [totalCount] potential match(es) displayed. Select any item to claim it as your work.',
-                help: {
-                    title: 'Possibly your publications',
-                    text: 'Help about ....',
-                    buttonLabel: 'Ok'
-                },
+                // help: {
+                //     title: 'Possibly your publications',
+                //     text: 'Help about ....',
+                //     buttonLabel: 'Ok'
+                // },
                 hide: 'Not mine',
                 claim: 'Claim this publication',
                 inProgress: 'In progress'
@@ -301,11 +306,11 @@ export default {
             },
             facetsFilter: {
                 title: 'Refine results',
-                help: {
-                    title: 'Refining your results',
-                    text: 'Help about ....',
-                    buttonLabel: 'Ok'
-                },
+                // help: {
+                //     title: 'Refining your results',
+                //     text: 'Help about ....',
+                //     buttonLabel: 'Ok'
+                // },
                 excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
                 renameFacetsList: {'Display type': 'Publication type'}
             }
@@ -320,11 +325,11 @@ export default {
             step1: {
                 title: 'Search for your publication',
                 text: 'Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.',
-                help: {
-                    title: 'Search for your publication',
-                    text: 'Help about search....',
-                    buttonLabel: 'Ok'
-                },
+                // help: {
+                //     title: 'Search for your publication',
+                //     text: 'Help about search....',
+                //     buttonLabel: 'Ok'
+                // },
                 fieldLabels: {
                     search: 'Enter DOI, Pubmed Id or Title'
                 },
@@ -335,21 +340,21 @@ export default {
                 noResultsFound: {
                     title: 'No matching publications found',
                     text: 'We were unable to match any results to your search criteria. Please search again or create a new eSpace record.',
-                    help: {
-                        title: 'No matching records found',
-                        text: 'Why search didn\'t return any items....',
-                        buttonLabel: 'Ok'
-                    }
+                    // help: {
+                    //     title: 'No matching records found',
+                    //     text: 'Why search didn\'t return any items....',
+                    //     buttonLabel: 'Ok'
+                    // }
                 },
                 searchResults: {
                     title: 'Possible matches found',
                     resultsText: 'Top [noOfResults] potential match(es) displayed for "[searchQuery]".',
                     text: 'Claim a matching publication below, refine your search or create a new eSpace record.',
-                    help: {
-                        title: 'Possible matches found',
-                        text: 'Why search displays these items....',
-                        buttonLabel: 'Ok'
-                    },
+                    // help: {
+                    //     title: 'Possible matches found',
+                    //     text: 'Why search displays these items....',
+                    //     buttonLabel: 'Ok'
+                    // },
                     searchDashboard: {
                         title: 'Repository search',
                         recordSuffix: ' record(s)',
