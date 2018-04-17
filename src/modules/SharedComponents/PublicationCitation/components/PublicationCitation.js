@@ -33,6 +33,7 @@ import ThesisCitation from './citations/ThesisCitation';
 import NewspaperArticleCitation from './citations/NewspaperArticleCitation';
 import DataCollectionCitation from './citations/DataCollectionCitation';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
+import ReactHtmlParser from 'react-html-parser';
 
 export default class PublicationCitation extends PureComponent {
     static propTypes = {
@@ -92,8 +93,8 @@ export default class PublicationCitation extends PureComponent {
 
     renderTitle = () => {
         return this.props.publication.rek_pid
-            ? (<Link to={routes.pathConfig.records.view(this.props.publication.rek_pid)} onClick={this.viewRecord}>{this.props.publication.rek_title}</Link>)
-            : (this.props.publication.rek_title);
+            ? (<Link to={routes.pathConfig.records.view(this.props.publication.rek_pid)} onClick={this.viewRecord}>{ReactHtmlParser(this.props.publication.rek_title)}</Link>)
+            : (ReactHtmlParser(this.props.publication.rek_title));
     }
 
     renderCitation = (publicationTypeId) => {

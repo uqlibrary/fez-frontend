@@ -9,7 +9,7 @@ exports[`Application component should render alert if user is not fez author 1`]
       Array [
         Object {
           "pageTitle": "Higher degree by research thesis deposit",
-          "path": "/rhdsubmission_new",
+          "path": "/rhdsubmission",
           "render": [Function],
         },
         Object {
@@ -224,10 +224,6 @@ exports[`Application component should render alert if user is not fez author 1`]
           "primaryText": "My research",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
-          "primaryText": "My research data collections",
-        },
-        Object {
           "linkTo": "/records/possible",
           "primaryText": "Claim possible publications",
         },
@@ -236,16 +232,17 @@ exports[`Application component should render alert if user is not fez author 1`]
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
-          "primaryText": "Add a missing data collection",
-        },
-        Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
           "primaryText": "Author statistics",
         },
         Object {
           "divider": true,
           "path": "/234234234242",
+        },
+        Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
         },
         Object {
           "linkTo": "/contact",
@@ -287,7 +284,7 @@ exports[`Application component should render alert if user is not fez author 1`]
       <Route
         key="route_0"
         pageTitle="Higher degree by research thesis deposit"
-        path="/rhdsubmission_new"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
@@ -460,7 +457,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       Array [
         Object {
           "pageTitle": "Higher degree by research thesis deposit",
-          "path": "/rhdsubmission_new",
+          "path": "/rhdsubmission",
           "render": [Function],
         },
         Object {
@@ -675,10 +672,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "My research",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
-          "primaryText": "My research data collections",
-        },
-        Object {
           "linkTo": "/records/possible",
           "primaryText": "Claim possible publications",
         },
@@ -687,16 +680,17 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
-          "primaryText": "Add a missing data collection",
-        },
-        Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
           "primaryText": "Author statistics",
         },
         Object {
           "divider": true,
           "path": "/234234234242",
+        },
+        Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
         },
         Object {
           "linkTo": "/contact",
@@ -722,7 +716,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       <Route
         key="route_0"
         pageTitle="Higher degree by research thesis deposit"
-        path="/rhdsubmission_new"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
@@ -907,7 +901,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         },
         Object {
           "pageTitle": "Higher degree by research thesis deposit",
-          "path": "/rhdsubmission_new",
+          "path": "/rhdsubmission",
           "render": [Function],
         },
         Object {
@@ -1007,6 +1001,11 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           "path": "/234234234242",
         },
         Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
+        },
+        Object {
           "linkTo": "/contact",
           "primaryText": "Contact",
           "public": true,
@@ -1059,7 +1058,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       <Route
         key="route_2"
         pageTitle="Higher degree by research thesis deposit"
-        path="/rhdsubmission_new"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
@@ -1089,7 +1088,7 @@ exports[`Application component should render app for account with fez author wit
       Array [
         Object {
           "pageTitle": "Higher degree by research thesis deposit",
-          "path": "/rhdsubmission_new",
+          "path": "/rhdsubmission",
           "render": [Function],
         },
         Object {
@@ -1304,10 +1303,6 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "My research",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
-          "primaryText": "My research data collections",
-        },
-        Object {
           "linkTo": "/records/possible",
           "primaryText": "Claim possible publications",
         },
@@ -1316,16 +1311,17 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
-          "primaryText": "Add a missing data collection",
-        },
-        Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
           "primaryText": "Author statistics",
         },
         Object {
           "divider": true,
           "path": "/234234234242",
+        },
+        Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
         },
         Object {
           "linkTo": "/contact",
@@ -1351,7 +1347,7 @@ exports[`Application component should render app for account with fez author wit
       <Route
         key="route_0"
         pageTitle="Higher degree by research thesis deposit"
-        path="/rhdsubmission_new"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
@@ -1524,7 +1520,7 @@ exports[`Application component should render app for account with fez author wit
       Array [
         Object {
           "pageTitle": "Higher degree by research thesis deposit",
-          "path": "/rhdsubmission_new",
+          "path": "/rhdsubmission",
           "render": [Function],
         },
         Object {
@@ -1739,10 +1735,6 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "My research",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
-          "primaryText": "My research data collections",
-        },
-        Object {
           "linkTo": "/records/possible",
           "primaryText": "Claim possible publications",
         },
@@ -1751,16 +1743,17 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
-          "primaryText": "Add a missing data collection",
-        },
-        Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
           "primaryText": "Author statistics",
         },
         Object {
           "divider": true,
           "path": "/234234234242",
+        },
+        Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
         },
         Object {
           "linkTo": "/contact",
@@ -1804,7 +1797,7 @@ exports[`Application component should render app for account with fez author wit
       <Route
         key="route_0"
         pageTitle="Higher degree by research thesis deposit"
-        path="/rhdsubmission_new"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
@@ -1977,7 +1970,7 @@ exports[`Application component should render app for account with fez author wit
       Array [
         Object {
           "pageTitle": "Higher degree by research thesis deposit",
-          "path": "/rhdsubmission_new",
+          "path": "/rhdsubmission",
           "render": [Function],
         },
         Object {
@@ -2175,7 +2168,7 @@ exports[`Application component should render app for account with fez author wit
       <Route
         key="route_0"
         pageTitle="Higher degree by research thesis deposit"
-        path="/rhdsubmission_new"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
@@ -2348,7 +2341,7 @@ exports[`Application component should render application with routing for the us
       Array [
         Object {
           "pageTitle": "Higher degree by research thesis deposit",
-          "path": "/rhdsubmission_new",
+          "path": "/rhdsubmission",
           "render": [Function],
         },
         Object {
@@ -2563,10 +2556,6 @@ exports[`Application component should render application with routing for the us
           "primaryText": "My research",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_data_claimed.php",
-          "primaryText": "My research data collections",
-        },
-        Object {
           "linkTo": "/records/possible",
           "primaryText": "Claim possible publications",
         },
@@ -2575,16 +2564,17 @@ exports[`Application component should render application with routing for the us
           "primaryText": "Add a missing record",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
-          "primaryText": "Add a missing data collection",
-        },
-        Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
           "primaryText": "Author statistics",
         },
         Object {
           "divider": true,
           "path": "/234234234242",
+        },
+        Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
         },
         Object {
           "linkTo": "/contact",
@@ -2727,6 +2717,11 @@ exports[`Application component should render for anon user 1`] = `
     menuItems={
       Array [
         Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
+        },
+        Object {
           "linkTo": "/contact",
           "primaryText": "Contact",
           "public": true,
@@ -2831,7 +2826,7 @@ exports[`Application component should render thesis submission for HDR without m
         },
         Object {
           "pageTitle": "Higher degree by research thesis deposit",
-          "path": "/rhdsubmission_new",
+          "path": "/rhdsubmission",
           "render": [Function],
         },
         Object {
@@ -2927,7 +2922,7 @@ exports[`Application component should render thesis submission for HDR without m
       <Route
         key="route_2"
         pageTitle="Higher degree by research thesis deposit"
-        path="/rhdsubmission_new"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route

@@ -1,5 +1,6 @@
 import {calculateOpenAccess} from './publicationEnhancer'; 
 import publicationEnhancer from './publicationEnhancer';
+import {LATEST_PUBLICATIONS_LOADED, VIEW_RECORD_LOADED} from "../actions/actionTypes";
 describe('publication enhancer', () => {
 
     beforeEach(() => {
@@ -7,26 +8,33 @@ describe('publication enhancer', () => {
     });
 
     it('should add a method to a publication to calculate open access', () => {
-        const publication = {rek_pid: 'UQ:1234'};
+        const publication = {rek_pid: 'UQ:1234', rek_title: 'Title', rek_description: 'Description', rek_formatted_title: null, rek_formatted_abstract: 'Abstract'};
         const next = jest.fn();
         publicationEnhancer()(next)({type: 'FIX_RECORD_LOADED', payload: publication});
 
         expect(next).toBeCalledWith(expect.objectContaining({
             "payload": {
-                "calculateOpenAccess": expect.any(Function),
-                "rek_pid": "UQ:1234"
+                calculateOpenAccess: expect.any(Function),
+                rek_pid: "UQ:1234",
+                rek_title: 'Title',
+                rek_description: 'Description',
+                rek_formatted_abstract: 'Abstract',
+                rek_formatted_title: null,
             },
             "type": "FIX_RECORD_LOADED"
         }));
     });
 
     it('should add a method to a list of publication to calculate open access', () => {
-        const payload = {data: [{rek_pid: 'UQ:1234'}, {rek_pid: 'UQ:1235'}], count: 2};
+        const payload = {data: [
+                {rek_pid: 'UQ:1234', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract'},
+                {rek_pid: 'UQ:1235', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract'}],
+            count: 2};
         const next = jest.fn();
         const expectedPayload = {
             data: [
-                {rek_pid: 'UQ:1234', "calculateOpenAccess": expect.any(Function)},
-                {rek_pid: 'UQ:1235', "calculateOpenAccess": expect.any(Function)}
+                {rek_pid: 'UQ:1234', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract', "rek_formatted_title": null, "calculateOpenAccess": expect.any(Function)},
+                {rek_pid: 'UQ:1235', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract', "rek_formatted_title": null, "calculateOpenAccess": expect.any(Function)}
             ],
             count: 2
         };
@@ -121,6 +129,17 @@ describe('publication enhancer', () => {
                     "dsi_pid": "UQ:357538",
                     "dsi_dsid": "UQ357538_OA.pdf",
                     "dsi_embargo_date": "2021-12-01",
+                    "dsi_open_access": null,
+                    "dsi_label": "Full text (open access)",
+                    "dsi_mimetype": "application\/pdf",
+                    "dsi_copyright": null,
+                    "dsi_state": "A",
+                    "dsi_size": 1526884
+                },
+                {
+                    "dsi_pid": "UQ:1232313",
+                    "dsi_dsid": "earlierFile.pdf",
+                    "dsi_embargo_date": "2021-11-01",
                     "dsi_open_access": null,
                     "dsi_label": "Full text (open access)",
                     "dsi_mimetype": "application\/pdf",
@@ -399,7 +418,7 @@ describe('publication enhancer', () => {
         const expectOAPMC = {"embargoDate": null, "isOpenAccess": true, "openAccessStatusId": 453954};
         const expectNotOA = {"embargoDate": null, "isOpenAccess": false, "openAccessStatusId": 453700};
         const expectEmbargoOA = {
-            "embargoDate": "1st December 2021",
+            "embargoDate": "1st November 2021",
             "isOpenAccess": false,
             "openAccessStatusId": 453695
         };
@@ -410,7 +429,7 @@ describe('publication enhancer', () => {
             "openAccessStatusId": 453695
         };
         const expectOAOther = {"embargoDate": null, "isOpenAccess": true, "openAccessStatusId": 453697};
-        
+
         expect(calculateOpenAccess(publicationDOIOANoEmbargoDate)).toEqual(expectOADoiNoEmbargoDate);
         expect(calculateOpenAccess(publicationDOIOAWithEmbargoDate)).toEqual(expectOADoiWithEmbargoDate);
         expect(calculateOpenAccess(publicationPMC)).toEqual(expectOAPMC);
@@ -422,5 +441,74 @@ describe('publication enhancer', () => {
         expect(calculateOpenAccess(publicationOAFileWithERA)).toEqual(expectOA);
         expect(calculateOpenAccess(publicationMultipleEmbargoOAFiles)).toEqual(expectEmbargoMultipleFiles);
         expect(calculateOpenAccess(publicationOtherNoFiles)).toEqual(expectOAOther);
+    });
+
+    it('should clean up invalid HTML in rek_title from a search list', () => {
+        const publication = {
+            rek_pid: 'UQ:1234',
+            rek_title: '<br/>This is a <u>title</u> with <sup>sup</sup> and <sub>sub</sub>',
+        };
+        const next = jest.fn();
+        publicationEnhancer()(next)({type: 'SEARCH_LOADED@wos', payload: {data: [publication]}});
+        expect(next).toBeCalledWith(expect.objectContaining(
+            {
+                type: 'SEARCH_LOADED@wos',
+                payload: {data: [{
+                    rek_pid: 'UQ:1234',
+                    rek_title: 'This is a title with <sup>sup</sup> and <sub>sub</sub>',
+                    "rek_formatted_abstract": null,
+                    "rek_formatted_title": null,
+                    calculateOpenAccess: expect.any(Function)
+                }]}
+            }));
+    });
+
+    it('should clean up invalid HTML in rek_title from a publication list', () => {
+        const publication = {
+            rek_pid: 'UQ:1234',
+            rek_title: '<br/>This is a <u>title</u> with <sup>sup</sup> and <sub>sub</sub>',
+            rek_formatted_abstract: '<ul><li>one</li><li>tow</li></ul><span>hello</span><p class="some-css">good bye</p>'
+        };
+        const next = jest.fn();
+        publicationEnhancer()(next)({type: 'LATEST_PUBLICATIONS_LOADED', payload: {data: [publication]}});
+        expect(next).toBeCalledWith(expect.objectContaining(
+            {
+                type: 'LATEST_PUBLICATIONS_LOADED',
+                payload: {
+                    data:[
+                            {
+                                rek_pid: 'UQ:1234',
+                                rek_title: 'This is a title with <sup>sup</sup> and <sub>sub</sub>',
+                                calculateOpenAccess: expect.any(Function),
+                                "rek_formatted_abstract": "onetowhello<p>good bye</p>",
+                                "rek_formatted_title": null,
+                            }
+                        ]
+                }
+        }));
+    });
+
+    it('should set rek_formatted_abstract and rek_formatted_title to null due to invalid html', () => {
+        const publication = {
+            rek_pid: 'UQ:1234',
+            rek_title: 'Title',
+            rek_formatted_title: '<b> </b>',
+            rek_formatted_abstract: '<br/>'
+        };
+        const next = jest.fn();
+        publicationEnhancer()(next)({type: 'VIEW_RECORD_LOADED', payload: publication});
+
+        expect(next).toBeCalledWith(expect.objectContaining(
+            {
+                type: 'VIEW_RECORD_LOADED',
+                payload: {
+                    rek_pid: 'UQ:1234',
+                    rek_title: 'Title',
+                    rek_formatted_title: null,
+                    rek_formatted_abstract: null,
+                    calculateOpenAccess: expect.any(Function),
+
+                }
+            }));
     });
 });

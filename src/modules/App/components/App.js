@@ -13,8 +13,8 @@ import {HelpDrawer} from 'uqlibrary-react-toolbox/build/HelpDrawer';
 import {AuthButton} from 'uqlibrary-react-toolbox/build/AuthButton';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import AppAlertContainer from '../containers/AppAlert';
-import OfflineSnackbar from './OfflineSnackbar';
 import {Meta} from 'modules/SharedComponents/Meta';
+import {OfflineSnackbar} from 'modules/SharedComponents/OfflineSnackbar';
 
 import * as pages from './pages';
 import IconButton from 'material-ui/IconButton';

@@ -1023,7 +1023,7 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1032,7 +1032,7 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -2072,7 +2072,7 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -2085,7 +2085,7 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
         Numerical solution of partial differential equations
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -3129,7 +3129,7 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -3138,7 +3138,7 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -3222,7 +3222,7 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -3231,7 +3231,7 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "

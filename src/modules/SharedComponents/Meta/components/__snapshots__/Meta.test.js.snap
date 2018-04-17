@@ -578,7 +578,7 @@ exports[`Meta Component  should render component with conference proceedings 1`]
     name="DC.Subject"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:159544/ch7008.pdf"
+    content="https://espace.library.uq.edu.au/view/UQ:159544/ch7008.pdf"
     key="citation_pdf_url-5"
     name="citation_pdf_url"
   />
@@ -759,27 +759,27 @@ exports[`Meta Component  should render component with creative work 1`] = `
     name="DC.Subject"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/HCA10UQ177836.pdf"
+    content="https://espace.library.uq.edu.au/view/UQ:177836/HCA10UQ177836.pdf"
     key="citation_pdf_url-3"
     name="citation_pdf_url"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/HCA12UQ177836_plans.pdf"
+    content="https://espace.library.uq.edu.au/view/UQ:177836/HCA12UQ177836_plans.pdf"
     key="citation_pdf_url-4"
     name="citation_pdf_url"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/HCA12UQ177836_project_description_.pdf"
+    content="https://espace.library.uq.edu.au/view/UQ:177836/HCA12UQ177836_project_description_.pdf"
     key="citation_pdf_url-5"
     name="citation_pdf_url"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/HCA12UQ177836_report.pdf"
+    content="https://espace.library.uq.edu.au/view/UQ:177836/HCA12UQ177836_report.pdf"
     key="citation_pdf_url-6"
     name="citation_pdf_url"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/UQ177836.pdf"
+    content="https://espace.library.uq.edu.au/view/UQ:177836/UQ177836.pdf"
     key="citation_pdf_url-7"
     name="citation_pdf_url"
   />
@@ -1193,7 +1193,7 @@ exports[`Meta Component  should render component with generic document 1`] = `
     name="DC.Subject"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:239427/Lectures_Book.pdf"
+    content="https://espace.library.uq.edu.au/view/UQ:239427/Lectures_Book.pdf"
     key="citation_pdf_url-2"
     name="citation_pdf_url"
   />
@@ -1426,7 +1426,7 @@ exports[`Meta Component  should render component with manuscript 1`] = `
     scheme="URI"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:677394/UQFL2_i3255_copyright_permission.pdf"
+    content="https://espace.library.uq.edu.au/view/UQ:677394/UQFL2_i3255_copyright_permission.pdf"
     key="citation_pdf_url-1"
     name="citation_pdf_url"
   />
@@ -1759,7 +1759,7 @@ exports[`Meta Component  should render component with preprint 1`] = `
     name="DC.Subject"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:10457/dpk_akrfinal.pdf"
+    content="https://espace.library.uq.edu.au/view/UQ:10457/dpk_akrfinal.pdf"
     key="citation_pdf_url-4"
     name="citation_pdf_url"
   />
@@ -2097,7 +2097,7 @@ exports[`Meta Component  should render component with thesis 1`] = `
     name="DC.Subject"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:170415/dpk_akrfinal.pdf"
+    content="https://espace.library.uq.edu.au/view/UQ:170415/dpk_akrfinal.pdf"
     key="citation_pdf_url-2"
     name="citation_pdf_url"
   />
@@ -2249,7 +2249,7 @@ exports[`Meta Component  should render component with working paper 1`] = `
     name="DC.Subject"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:176145/wp46.pdf"
+    content="https://espace.library.uq.edu.au/view/UQ:176145/wp46.pdf"
     key="citation_pdf_url-3"
     name="citation_pdf_url"
   />

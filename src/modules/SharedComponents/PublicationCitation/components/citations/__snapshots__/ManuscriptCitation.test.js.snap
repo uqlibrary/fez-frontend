@@ -997,7 +997,7 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1010,7 +1010,7 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
         Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSource"
       prefix=" "
@@ -1098,7 +1098,7 @@ exports[`ManuscriptCitation renders  component with empty publication 1`] = `
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1106,7 +1106,7 @@ exports[`ManuscriptCitation renders  component with empty publication 1`] = `
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSource"
       prefix=" "

@@ -8,7 +8,7 @@ export const pathConfig =  {
     dashboard: '/dashboard',
     browse: '/browse',
     contact: '/contact',
-    hdrSubmission: '/rhdsubmission_new',
+    hdrSubmission: '/rhdsubmission',
     sbsSubmission: '/sbslodge_new',
     records: {
         mine: '/records/mine',
@@ -32,7 +32,7 @@ export const pathConfig =  {
     // TODO: update how we get files after security is implemented in fez file api
     // (this is used in metadata to reflect legacy file urls for citation_pdf_url - Google Scholar)
     file: {
-        url: (pid, fileName) => (`${fullPath}/view/${pid}/${fileName}`)
+        url: (pid, fileName) => (`https://espace.library.uq.edu.au/view/${pid}/${fileName}`)
     },
     // TODO: update links when we have list pages
     list: {
@@ -72,11 +72,12 @@ export const pathConfig =  {
     legacyEspace: `${fullPath}/my_research_claimed.php`,
     authorStatistics: {
         url: (id) => `https://app.library.uq.edu.au/#/authors/${id}`
-    }
+    },
+    help: 'https://guides.library.uq.edu.au/for-researchers/research-publications-guide'
 };
 
 // a duplicate list of routes for
-const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission_new', '/sbslodge_new',
+const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new',
     '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
     '/admin/masquerade', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
 
@@ -244,6 +245,11 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
 export const getMenuConfig = (account, disabled) => {
     const publicPages = [
         {
+            linkTo: pathConfig.help,
+            ...locale.menu.help,
+            public: true
+        },
+        {
             linkTo: pathConfig.contact,
             ...locale.menu.contact,
             public: true
@@ -283,10 +289,6 @@ export const getMenuConfig = (account, disabled) => {
                 ...locale.menu.myResearch
             },
             {
-                linkTo: pathConfig.dataset.mine,
-                ...locale.menu.myDatasets
-            },
-            {
                 linkTo: pathConfig.records.possible,
                 ...locale.menu.claimPublication
             },
@@ -294,10 +296,16 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.records.add.find,
                 ...locale.menu.addMissingRecord
             },
+            /*
+            {
+                linkTo: pathConfig.dataset.mine,
+                ...locale.menu.myDatasets
+            },
             {
                 linkTo: pathConfig.dataset.add,
                 ...locale.menu.addDataset
             },
+            */
             {
                 linkTo: pathConfig.authorStatistics.url(account.id),
                 ...locale.menu.authorStatistics

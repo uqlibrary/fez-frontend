@@ -1115,7 +1115,7 @@ export const externalTitleScopusResultsList = {
                 }
             ],
             "rek_description": "Ebola virus (EBOV) infection causes a high death toll, killing a high proportion of EBOV-infected patients within 7 days. Comprehensive data on EBOV infection are fragmented, hampering efforts in developing therapeutics and vaccines against EBOV. Under this circumstance, mathematical models become valuable resources to explore potential controlling strategies. In this paper, we employed experimental data of EBOV-infected nonhuman primates (NHPs) to construct a mathematical framework for determining windows of opportunity for treatment and vaccination. Considering a prophylactic vaccine based on recombinant vesicular stomatitis virus expressing the EBOV glycoprotein (rVSV-EBOV), vaccination could be protective if a subject is vaccinated during a period from one week to four months before infection. For the case of a therapeutic vaccine based on monoclonal antibodies (mAbs), a single dose might resolve the invasive EBOV replication even if it was administrated as late as four days after infection. Our mathematical models can be used as building blocks for evaluating therapeutic and vaccine modalities as well as for evaluating public health intervention strategies in outbreaks. Future laboratory experiments will help to validate and refine the estimates of the windows of opportunity proposed here.",
-            "rek_title": "Windows of opportunity for Ebola virus infection treatment and vaccination",
+            "rek_title": "Windows of opportunity for <sup>Ebola</sup> virus infection treatment and vaccination",
             "fez_record_search_key_doi": {
                 "rek_doi": "10.1038\/s41598-017-08884-0"
             },
@@ -1604,8 +1604,8 @@ export const internalTitleSearchList = {
                 "rek_oa_status_id": 531834,
                 "rek_oa_status_pid": "UQ:795469",
                 "rek_oa_status_xsdmf_id": null,
-                "rek_oa_status": 453692,
-                "rek_oa_status_lookup": "Not yet assessed"
+                "rek_oa_status": 453694,
+                "rek_oa_status_lookup": "link (no DOI)"
             },
             "rek_altmetric_score_xsdmf_id": null,
             "fez_record_search_key_org_name": null,
@@ -2045,7 +2045,7 @@ export const internalTitleSearchList = {
         {
             "rek_pid": "UQ:288545",
             "rek_title_xsdmf_id": 10860,
-            "rek_title": "Bacterial plaques staining composition for evaluating dental caries activity",
+            "rek_title": "Bacterial plaques staining composition <sup>for</sup> evaluating dental <sub>caries</sub> activity",
             "rek_description_xsdmf_id": null,
             "rek_description": null,
             "rek_display_type_xsdmf_id": 3673,
@@ -3995,103 +3995,13 @@ export const record = {
         "rek_end_page_xsdmf_id": 6384,
         "rek_end_page": "3283"
     },
-    "fez_record_search_key_file_attachment_access_condition": [
-        {
-            "rek_file_attachment_access_condition_id": 17,
-            "rek_file_attachment_access_condition_pid": "UQ:792099",
-            "rek_file_attachment_access_condition_xsdmf_id": 0,
-            "rek_file_attachment_access_condition_order": 2,
-            "rek_file_attachment_access_condition": "8"
-        },
-        {
-            "rek_file_attachment_access_condition_id": 17,
-            "rek_file_attachment_access_condition_pid": "UQ:792099",
-            "rek_file_attachment_access_condition_xsdmf_id": 0,
-            "rek_file_attachment_access_condition_order": 4,
-            "rek_file_attachment_access_condition": "8"
-        },
-        {
-            "rek_file_attachment_access_condition_id": 17,
-            "rek_file_attachment_access_condition_pid": "UQ:792099",
-            "rek_file_attachment_access_condition_xsdmf_id": 0,
-            "rek_file_attachment_access_condition_order": 5,
-            "rek_file_attachment_access_condition": "8"
-        },
-        {
-            "rek_file_attachment_access_condition_id": 17,
-            "rek_file_attachment_access_condition_pid": "UQ:792099",
-            "rek_file_attachment_access_condition_xsdmf_id": 0,
-            "rek_file_attachment_access_condition_order": 6,
-            "rek_file_attachment_access_condition": "9"
-        }
-    ],
-    "fez_record_search_key_file_attachment_embargo_date": [
-        {
-            "rek_file_attachment_embargo_date_id": 83,
-            "rek_file_attachment_embargo_date_pid": "UQ:795494",
-            "rek_file_attachment_embargo_date_xsdmf_id": 0,
-            "rek_file_attachment_embargo_date_order": 2,
-            "rek_file_attachment_embargo_date": "2018-03-29T08:34:47+10:00"
-        }
-    ],
-    "fez_record_search_key_file_attachment_name": [
-        {
-            "rek_file_attachment_name_id": 4215529,
-            "rek_file_attachment_name_pid": "UQ:396321",
-            "rek_file_attachment_name_xsdmf_id": null,
-            "rek_file_attachment_name": "FezACML_UQ_396321.xml",
-            "rek_file_attachment_name_order": 1
-        },
-        {
-            "rek_file_attachment_name_id": 4330131,
-            "rek_file_attachment_name_pid": "UQ:792099",
-            "rek_file_attachment_name_xsdmf_id": null,
-            "rek_file_attachment_name": "image.jpg",
-            "rek_file_attachment_name_order": 2
-        },
-        {
-            "rek_file_attachment_name_id": 4298925,
-            "rek_file_attachment_name_pid": "UQ:681794",
-            "rek_file_attachment_name_xsdmf_id": 9593,
-            "rek_file_attachment_name": "stream_Collins_audio_only.flv",
-            "rek_file_attachment_name_order": 3
-        },
-        {
-            "rek_file_attachment_name_id": 4298917,
-            "rek_file_attachment_name_pid": "UQ:681794",
-            "rek_file_attachment_name_xsdmf_id": 9593,
-            "rek_file_attachment_name": "Collins_audio_only.mp3",
-            "rek_file_attachment_name_order": 4
-        },
-        {
-            "rek_file_attachment_name_id": 4298918,
-            "rek_file_attachment_name_pid": "UQ:681794",
-            "rek_file_attachment_name_xsdmf_id": 9593,
-            "rek_file_attachment_name": "Collins_audio_with_PPT.m4v",
-            "rek_file_attachment_name_order": 5
-        },
-        {
-            "rek_file_attachment_name_id": 4298919,
-            "rek_file_attachment_name_pid": "UQ:681794",
-            "rek_file_attachment_name_xsdmf_id": 9593,
-            "rek_file_attachment_name": "Collins_eSpace.pdf",
-            "rek_file_attachment_name_order": 6
-        },
-        {
-            "rek_file_attachment_name_id": 4298923,
-            "rek_file_attachment_name_pid": "UQ:681794",
-            "rek_file_attachment_name_xsdmf_id": 9593,
-            "rek_file_attachment_name": "presmd_Collins_audio_with_PPT.xml",
-            "rek_file_attachment_name_order": 7
-        }
-    ],
     "fez_datastream_info": [
         {
             "dsi_pid": "UQ:792099",
             "dsi_dsid": "image.jpg",
             "dsi_embargo_date": null,
             "dsi_open_access": null,
-            "dsi_label": "testing image description",
+            "dsi_label": null,
             "dsi_mimetype": "image/jpeg",
             "dsi_copyright": null,
             "dsi_state": "A",
@@ -4184,7 +4094,40 @@ export const record = {
             "dsi_copyright": null,
             "dsi_state": "A",
             "dsi_size": 34896360
-        }
+        },
+        {
+            "dsi_pid": "UQ:681794",
+            "dsi_dsid": "ERAFile.pdf",
+            "dsi_embargo_date": '2018-11-11',
+            "dsi_open_access": null,
+            "dsi_label": "ERA evidence",
+            "dsi_mimetype": "application/pdf",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 186680
+        },
+        {
+            "dsi_pid": "UQ:681794",
+            "dsi_dsid": "n3rd_Iteration.pdf",
+            "dsi_embargo_date": '2018-11-11',
+            "dsi_open_access": null,
+            "dsi_label": "iteration file",
+            "dsi_mimetype": "application/pdf",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 186680
+        },
+        {
+            "dsi_pid": "UQ:681794",
+            "dsi_dsid": "deleted.pdf",
+            "dsi_embargo_date": '2018-11-11',
+            "dsi_open_access": null,
+            "dsi_label": "deleted file",
+            "dsi_mimetype": "application/pdf",
+            "dsi_copyright": null,
+            "dsi_state": "D",
+            "dsi_size": 186680
+        },
     ],
     "fez_record_search_key_grant_acronym": [
         {
@@ -4572,7 +4515,7 @@ export const record = {
         "rek_oa_status_id": 281706,
         "rek_oa_status_pid": "UQ:396321",
         "rek_oa_status_xsdmf_id": 16607,
-        "rek_oa_status": 453693,
+        "rek_oa_status": 453696,
         "rek_oa_status_lookup": "DOI"
     },
     "fez_record_search_key_place_of_publication": {

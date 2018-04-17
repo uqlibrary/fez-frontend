@@ -725,7 +725,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -738,7 +738,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         Addictions
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationEdition"
       prefix=" "
@@ -1660,7 +1660,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1673,7 +1673,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
         Addictions
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationEdition"
       prefix=" "
@@ -1810,7 +1810,7 @@ exports[`BookCitation renders  component with empty publication 1`] = `
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1818,7 +1818,7 @@ exports[`BookCitation renders  component with empty publication 1`] = `
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationEdition"
       prefix=" "
@@ -2722,7 +2722,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -2735,7 +2735,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
         Addictions
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationEdition"
       prefix=" "

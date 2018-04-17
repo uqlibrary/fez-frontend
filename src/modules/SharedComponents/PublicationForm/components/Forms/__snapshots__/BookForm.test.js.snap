@@ -341,6 +341,17 @@ exports[`BookForm renders  component 1`] = `
               "addButtonLabel": "Add ISBN",
               "inputFieldHint": "Type ISBN value",
               "inputFieldLabel": "ISBN value",
+              "remindToAdd": <span>
+                Please, press 
+                <b>
+                  ENTER
+                </b>
+                 or click 
+                <b>
+                  ADD
+                </b>
+                 button to add this value to the list
+              </span>,
             },
           },
           "header": Object {
@@ -373,6 +384,7 @@ exports[`BookForm renders  component 1`] = `
       }
       maxCount={5}
       name="fez_record_search_key_isbn"
+      remindToAdd={true}
       searchKey={
         Object {
           "order": "rek_isbn_order",
@@ -399,6 +411,17 @@ exports[`BookForm renders  component 1`] = `
               "addButtonLabel": "Add ISSN",
               "inputFieldHint": "Type ISSN value",
               "inputFieldLabel": "ISSN value",
+              "remindToAdd": <span>
+                Please, press 
+                <b>
+                  ENTER
+                </b>
+                 or click 
+                <b>
+                  ADD
+                </b>
+                 button to add this value to the list
+              </span>,
             },
           },
           "header": Object {
@@ -431,6 +454,7 @@ exports[`BookForm renders  component 1`] = `
       }
       maxCount={5}
       name="fez_record_search_key_issn"
+      remindToAdd={true}
       searchKey={
         Object {
           "order": "rek_issn_order",

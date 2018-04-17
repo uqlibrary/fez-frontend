@@ -108,7 +108,8 @@ export default {
                     locale: {
                         inputFieldLabel: 'ISBN value',
                         inputFieldHint: 'Type ISBN value',
-                        addButtonLabel: 'Add ISBN'
+                        addButtonLabel: 'Add ISBN',
+                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }
                 },
                 header: {
@@ -152,7 +153,8 @@ export default {
                     locale: {
                         inputFieldLabel: 'ISSN value',
                         inputFieldHint: 'Type ISSN value',
-                        addButtonLabel: 'Add ISSN'
+                        addButtonLabel: 'Add ISSN',
+                        remindToAdd: (<span>Please, press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
                     }
                 },
                 header: {

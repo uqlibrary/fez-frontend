@@ -775,7 +775,7 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -788,7 +788,7 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
         Heavy Tails, Importance Sampling and Cross-Entropy
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
   </div>
 </PreprintCitation>
 `;
@@ -862,7 +862,7 @@ exports[`PreprintCitation renders  component with empty publication 1`] = `
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -870,7 +870,7 @@ exports[`PreprintCitation renders  component with empty publication 1`] = `
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
   </div>
 </PreprintCitation>
 `;
