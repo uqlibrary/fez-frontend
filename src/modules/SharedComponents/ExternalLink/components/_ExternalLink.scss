@@ -1,18 +1,23 @@
 @import '../../../../sass/variables';
 
 .externalLink {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  display: inline-block;
-  max-width: 100%;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  overflow-wrap: break-word !important;
+  word-break: break-all !important;
+  white-space: nowrap !important;
+  display: inline-block !important;
+  max-width: 100% !important;
 }
 
-.externalLink.showIcon:before {
-  @extend .material-icons;
-  font-family: 'Material Icons';
-  content: '\E89E';
-  margin-left: 3px;
-  font-size: $text-body-xsmall;
-  float: right;
+.externalLink.showIcon {
+  margin-bottom: -3px;
+  &:before {
+    font-family: 'Material Icons';
+    content: '\E89E';
+    margin-left: 3px;
+    margin-top: -0.2em;
+    font-size: 0.8em;
+    float: right;
+  }
 }

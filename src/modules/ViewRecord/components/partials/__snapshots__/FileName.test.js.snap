@@ -75,12 +75,12 @@ exports[`File Name Component  should display file name link 1`] = `
               title="UQ676287_OA.pdf"
             >
               <a
-                className="fileName showIcon externalLink"
+                className="fileName externalLink  showIcon"
                 href="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
                 rel="noopener noreferrer"
                 tabIndex="0"
                 target="_blank"
-                title="Open link in a new window"
+                title="UQ676287_OA.pdf"
               >
                 UQ676287_OA.pdf
               </a>
@@ -167,12 +167,12 @@ exports[`File Name Component  should render audio player 1`] = `
               title="UQ676287_OA.pdf"
             >
               <a
-                className="fileName showIcon externalLink"
+                className="fileName externalLink  showIcon"
                 href="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
                 rel="noopener noreferrer"
                 tabIndex="0"
                 target="_blank"
-                title="Open link in a new window"
+                title="UQ676287_OA.pdf"
               >
                 UQ676287_OA.pdf
               </a>

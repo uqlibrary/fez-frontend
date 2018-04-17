@@ -21,12 +21,12 @@ exports[`CitationCountView test  should render component with given count 1`] = 
     >
       <a
         aria-label="Google"
-        className="wosCitationCountfalse externalLink"
+        className="wosCitationCount externalLink false"
         href="www.google.com"
         rel="noopener noreferrer"
         tabIndex="0"
         target="_blank"
-        title={false}
+        title="Google"
       >
         <div
           className="fez-icon wos large"

@@ -4,12 +4,12 @@ import {locale} from 'locale';
 
 const ExternalLink = (props) => {
     const {className, children, openInNewIcon, ...rest} = props;
+    const showIcon = openInNewIcon && ' showIcon';
     return (
         <a {...rest}
-            className={className + (openInNewIcon && ' showIcon') + ' externalLink'}
+            className={className + ' externalLink ' + showIcon}
             tabIndex="0"
-            title={openInNewIcon && locale.components.externalLink.openInNew}
-        >
+            title={rest.title || (openInNewIcon && locale.components.externalLink.openInNew)}>
             {!!children && children}
         </a>
     );

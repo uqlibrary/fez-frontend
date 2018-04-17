@@ -690,40 +690,27 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
     <DoiCitationView
       doi="10.129839/sometext"
     >
-      <span
-        className="citationDOI"
+      <ExternalLink
+        aria-label="Open this DOI in an new window"
+        className="citationDoiLink"
+        href="https://doi.org/10.129839/sometext"
+        openInNewIcon={true}
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Open this DOI in an new window"
       >
-        <ExternalLink
+        <a
           aria-label="Open this DOI in an new window"
-          className="citationDoiLink"
+          className="citationDoiLink externalLink  showIcon"
           href="https://doi.org/10.129839/sometext"
-          openInNewIcon={true}
           rel="noopener noreferrer"
+          tabIndex="0"
           target="_blank"
           title="Open this DOI in an new window"
         >
-          <a
-            aria-label="Open this DOI in an new window"
-            className="citationDoiLink showIcon externalLink"
-            href="https://doi.org/10.129839/sometext"
-            rel="noopener noreferrer"
-            tabIndex="0"
-            target="_blank"
-            title="Open link in a new window"
-          >
-            <span
-              className="citationLabel"
-            >
-              https://doi.org/
-            </span>
-            <span
-              className="citationValue"
-            >
-              10.129839/sometext
-            </span>
-          </a>
-        </ExternalLink>
-      </span>
+          https://doi.org/10.129839/sometext
+        </a>
+      </ExternalLink>
     </DoiCitationView>
   </div>
 </ResearchReportCitation>
@@ -1419,40 +1406,27 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
     <DoiCitationView
       doi="10.129839/sometext"
     >
-      <span
-        className="citationDOI"
+      <ExternalLink
+        aria-label="Open this DOI in an new window"
+        className="citationDoiLink"
+        href="https://doi.org/10.129839/sometext"
+        openInNewIcon={true}
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Open this DOI in an new window"
       >
-        <ExternalLink
+        <a
           aria-label="Open this DOI in an new window"
-          className="citationDoiLink"
+          className="citationDoiLink externalLink  showIcon"
           href="https://doi.org/10.129839/sometext"
-          openInNewIcon={true}
           rel="noopener noreferrer"
+          tabIndex="0"
           target="_blank"
           title="Open this DOI in an new window"
         >
-          <a
-            aria-label="Open this DOI in an new window"
-            className="citationDoiLink showIcon externalLink"
-            href="https://doi.org/10.129839/sometext"
-            rel="noopener noreferrer"
-            tabIndex="0"
-            target="_blank"
-            title="Open link in a new window"
-          >
-            <span
-              className="citationLabel"
-            >
-              https://doi.org/
-            </span>
-            <span
-              className="citationValue"
-            >
-              10.129839/sometext
-            </span>
-          </a>
-        </ExternalLink>
-      </span>
+          https://doi.org/10.129839/sometext
+        </a>
+      </ExternalLink>
     </DoiCitationView>
   </div>
 </ResearchReportCitation>
@@ -2152,40 +2126,27 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
     <DoiCitationView
       doi="10.129839/sometext"
     >
-      <span
-        className="citationDOI"
+      <ExternalLink
+        aria-label="Open this DOI in an new window"
+        className="citationDoiLink"
+        href="https://doi.org/10.129839/sometext"
+        openInNewIcon={true}
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Open this DOI in an new window"
       >
-        <ExternalLink
+        <a
           aria-label="Open this DOI in an new window"
-          className="citationDoiLink"
+          className="citationDoiLink externalLink  showIcon"
           href="https://doi.org/10.129839/sometext"
-          openInNewIcon={true}
           rel="noopener noreferrer"
+          tabIndex="0"
           target="_blank"
           title="Open this DOI in an new window"
         >
-          <a
-            aria-label="Open this DOI in an new window"
-            className="citationDoiLink showIcon externalLink"
-            href="https://doi.org/10.129839/sometext"
-            rel="noopener noreferrer"
-            tabIndex="0"
-            target="_blank"
-            title="Open link in a new window"
-          >
-            <span
-              className="citationLabel"
-            >
-              https://doi.org/
-            </span>
-            <span
-              className="citationValue"
-            >
-              10.129839/sometext
-            </span>
-          </a>
-        </ExternalLink>
-      </span>
+          https://doi.org/10.129839/sometext
+        </a>
+      </ExternalLink>
     </DoiCitationView>
   </div>
 </ResearchReportCitation>

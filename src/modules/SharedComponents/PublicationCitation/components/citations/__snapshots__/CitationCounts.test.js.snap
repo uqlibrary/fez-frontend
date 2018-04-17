@@ -2,10 +2,10 @@
 
 exports[`CitationCounts renders  component with a mock record metrics 1`] = `
 <div
-  className="citationCounts columns is-gapless is-marginless"
+  className="citationCounts columns is-gapless is-marginless is-multiline"
 >
   <div
-    className="column is-narrow citationIcons"
+    className="column is-narrow-tablet is-12-mobile citationIcons"
   >
     <CitationCountView
       count={1}
@@ -19,21 +19,28 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
       source="google"
       title="Link to ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network (Google scholar) will open in a new window."
     />
+  </div>
+  <div
+    className="column is-narrow"
+  >
     <OpenAccessIcon
       embargoDate={null}
       isOpenAccess={false}
       showEmbargoText={false}
     />
   </div>
+  <div
+    className="column is-hidden-mobile"
+  />
 </div>
 `;
 
 exports[`CitationCounts renders  component with all metrics 1`] = `
 <div
-  className="citationCounts columns is-gapless is-marginless"
+  className="citationCounts columns is-gapless is-marginless is-multiline"
 >
   <div
-    className="column is-narrow citationIcons"
+    className="column is-narrow-tablet is-12-mobile citationIcons"
   >
     <CitationCountView
       count={1}
@@ -59,15 +66,15 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
       source="google"
       title="Link to undefined (Google scholar) will open in a new window."
     />
+  </div>
+  <div
+    className="column is-narrow"
+  >
     <OpenAccessIcon
       embargoDate={null}
       isOpenAccess={false}
       showEmbargoText={false}
     />
-  </div>
-  <div
-    className="column is-narrow citationLink"
-  >
     <ExternalLink
       className="externalLink"
       href="https://app.library.uq.edu.au/#/authors/view/pid:111"
@@ -78,15 +85,21 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
       View full statistics
     </ExternalLink>
   </div>
+  <div
+    className="column is-hidden-mobile"
+  />
 </div>
 `;
 
 exports[`CitationCounts renders  component with no metrics 1`] = `
 <div
-  className="citationCounts columns is-gapless is-marginless"
+  className="citationCounts columns is-gapless is-marginless is-multiline"
 >
   <div
-    className="column is-narrow citationIcons"
+    className="column is-narrow-tablet is-12-mobile citationIcons"
+  />
+  <div
+    className="column is-narrow"
   >
     <OpenAccessIcon
       embargoDate={null}
@@ -94,5 +107,8 @@ exports[`CitationCounts renders  component with no metrics 1`] = `
       showEmbargoText={false}
     />
   </div>
+  <div
+    className="column is-hidden-mobile"
+  />
 </div>
 `;

@@ -581,12 +581,12 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   >
                                                     <a
                                                       aria-label="Full text via Pubmed Central (open access)"
-                                                      className="pubmedCentralLinkUrl showIcon externalLink"
+                                                      className="pubmedCentralLinkUrl externalLink  showIcon"
                                                       href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                                                       rel="noopener noreferrer"
                                                       tabIndex="0"
                                                       target="_blank"
-                                                      title="Open link in a new window"
+                                                      title="Full text via Pubmed Central (open access)"
                                                     >
                                                       https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926
                                                     </a>
@@ -745,40 +745,27 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                 <DoiCitationView
                                                   doi="10.1016/j.pnsc.2012.12.004"
                                                 >
-                                                  <span
-                                                    className="citationDOI"
+                                                  <ExternalLink
+                                                    aria-label="Open this DOI in an new window"
+                                                    className="citationDoiLink"
+                                                    href="https://doi.org/10.1016/j.pnsc.2012.12.004"
+                                                    openInNewIcon={true}
+                                                    rel="noopener noreferrer"
+                                                    target="_blank"
+                                                    title="Open this DOI in an new window"
                                                   >
-                                                    <ExternalLink
+                                                    <a
                                                       aria-label="Open this DOI in an new window"
-                                                      className="citationDoiLink"
+                                                      className="citationDoiLink externalLink  showIcon"
                                                       href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                      openInNewIcon={true}
                                                       rel="noopener noreferrer"
+                                                      tabIndex="0"
                                                       target="_blank"
                                                       title="Open this DOI in an new window"
                                                     >
-                                                      <a
-                                                        aria-label="Open this DOI in an new window"
-                                                        className="citationDoiLink showIcon externalLink"
-                                                        href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                        rel="noopener noreferrer"
-                                                        tabIndex="0"
-                                                        target="_blank"
-                                                        title="Open link in a new window"
-                                                      >
-                                                        <span
-                                                          className="citationLabel"
-                                                        >
-                                                          https://doi.org/
-                                                        </span>
-                                                        <span
-                                                          className="citationValue"
-                                                        >
-                                                          10.1016/j.pnsc.2012.12.004
-                                                        </span>
-                                                      </a>
-                                                    </ExternalLink>
-                                                  </span>
+                                                      https://doi.org/10.1016/j.pnsc.2012.12.004
+                                                    </a>
+                                                  </ExternalLink>
                                                 </DoiCitationView>
                                               </td>
                                             </TableRowColumn>
@@ -939,12 +926,12 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   title="Link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="http://www.thisisatest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Link to publication"
                                                   >
                                                     http://www.thisisatest.com
                                                   </a>
@@ -1106,12 +1093,12 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   title="Another link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="http://www.thisisanothertest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Another link to publication"
                                                   >
                                                     http://www.thisisanothertest.com
                                                   </a>
@@ -1273,12 +1260,12 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   title="Click to open link in a new window"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="http://www.nodescription.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Click to open link in a new window"
                                                   >
                                                     http://www.nodescription.com
                                                   </a>
@@ -1972,12 +1959,12 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC not OA li
                                                   >
                                                     <a
                                                       aria-label="Full text via Pubmed Central (open access)"
-                                                      className="pubmedCentralLinkUrl showIcon externalLink"
+                                                      className="pubmedCentralLinkUrl externalLink  showIcon"
                                                       href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                                                       rel="noopener noreferrer"
                                                       tabIndex="0"
                                                       target="_blank"
-                                                      title="Open link in a new window"
+                                                      title="Full text via Pubmed Central (open access)"
                                                     >
                                                       https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926
                                                     </a>
@@ -2134,40 +2121,27 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC not OA li
                                                 <DoiCitationView
                                                   doi="10.1016/j.pnsc.2012.12.004"
                                                 >
-                                                  <span
-                                                    className="citationDOI"
+                                                  <ExternalLink
+                                                    aria-label="Open this DOI in an new window"
+                                                    className="citationDoiLink"
+                                                    href="https://doi.org/10.1016/j.pnsc.2012.12.004"
+                                                    openInNewIcon={true}
+                                                    rel="noopener noreferrer"
+                                                    target="_blank"
+                                                    title="Open this DOI in an new window"
                                                   >
-                                                    <ExternalLink
+                                                    <a
                                                       aria-label="Open this DOI in an new window"
-                                                      className="citationDoiLink"
+                                                      className="citationDoiLink externalLink  showIcon"
                                                       href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                      openInNewIcon={true}
                                                       rel="noopener noreferrer"
+                                                      tabIndex="0"
                                                       target="_blank"
                                                       title="Open this DOI in an new window"
                                                     >
-                                                      <a
-                                                        aria-label="Open this DOI in an new window"
-                                                        className="citationDoiLink showIcon externalLink"
-                                                        href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                        rel="noopener noreferrer"
-                                                        tabIndex="0"
-                                                        target="_blank"
-                                                        title="Open link in a new window"
-                                                      >
-                                                        <span
-                                                          className="citationLabel"
-                                                        >
-                                                          https://doi.org/
-                                                        </span>
-                                                        <span
-                                                          className="citationValue"
-                                                        >
-                                                          10.1016/j.pnsc.2012.12.004
-                                                        </span>
-                                                      </a>
-                                                    </ExternalLink>
-                                                  </span>
+                                                      https://doi.org/10.1016/j.pnsc.2012.12.004
+                                                    </a>
+                                                  </ExternalLink>
                                                 </DoiCitationView>
                                               </td>
                                             </TableRowColumn>
@@ -2326,12 +2300,12 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC not OA li
                                                   title="Link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="http://www.thisisatest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Link to publication"
                                                   >
                                                     http://www.thisisatest.com
                                                   </a>
@@ -2493,12 +2467,12 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC not OA li
                                                   title="Another link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="http://www.thisisanothertest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Another link to publication"
                                                   >
                                                     http://www.thisisanothertest.com
                                                   </a>
@@ -2660,12 +2634,12 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC not OA li
                                                   title="Click to open link in a new window"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="http://www.nodescription.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Click to open link in a new window"
                                                   >
                                                     http://www.nodescription.com
                                                   </a>
@@ -3342,12 +3316,12 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                   title="Search Google Scholar for this open access article"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="https://scholar.google.com/scholar?q=intitle:%22undefined%22"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Search Google Scholar for this open access article"
                                                   >
                                                     https://scholar.google.com/scholar?q=intitle:"undefined%22
                                                   </a>
@@ -3511,12 +3485,12 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                   title="Link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="http://www.thisisatest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Link to publication"
                                                   >
                                                     http://www.thisisatest.com
                                                   </a>
@@ -3678,12 +3652,12 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                   title="Another link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="http://www.thisisanothertest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Another link to publication"
                                                   >
                                                     http://www.thisisanothertest.com
                                                   </a>
@@ -3845,12 +3819,12 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                   title="Click to open link in a new window"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="http://www.nodescription.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Click to open link in a new window"
                                                   >
                                                     http://www.nodescription.com
                                                   </a>
@@ -4544,12 +4518,12 @@ exports[`Component Links  should render 3 not OA links and PMC and DOI link with
                                                   >
                                                     <a
                                                       aria-label="Full text via Pubmed Central (open access)"
-                                                      className="pubmedCentralLinkUrl showIcon externalLink"
+                                                      className="pubmedCentralLinkUrl externalLink  showIcon"
                                                       href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                                                       rel="noopener noreferrer"
                                                       tabIndex="0"
                                                       target="_blank"
-                                                      title="Open link in a new window"
+                                                      title="Full text via Pubmed Central (open access)"
                                                     >
                                                       https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926
                                                     </a>
@@ -4708,40 +4682,27 @@ exports[`Component Links  should render 3 not OA links and PMC and DOI link with
                                                 <DoiCitationView
                                                   doi="10.1016/j.pnsc.2012.12.004"
                                                 >
-                                                  <span
-                                                    className="citationDOI"
+                                                  <ExternalLink
+                                                    aria-label="Open this DOI in an new window"
+                                                    className="citationDoiLink"
+                                                    href="https://doi.org/10.1016/j.pnsc.2012.12.004"
+                                                    openInNewIcon={true}
+                                                    rel="noopener noreferrer"
+                                                    target="_blank"
+                                                    title="Open this DOI in an new window"
                                                   >
-                                                    <ExternalLink
+                                                    <a
                                                       aria-label="Open this DOI in an new window"
-                                                      className="citationDoiLink"
+                                                      className="citationDoiLink externalLink  showIcon"
                                                       href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                      openInNewIcon={true}
                                                       rel="noopener noreferrer"
+                                                      tabIndex="0"
                                                       target="_blank"
                                                       title="Open this DOI in an new window"
                                                     >
-                                                      <a
-                                                        aria-label="Open this DOI in an new window"
-                                                        className="citationDoiLink showIcon externalLink"
-                                                        href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                        rel="noopener noreferrer"
-                                                        tabIndex="0"
-                                                        target="_blank"
-                                                        title="Open link in a new window"
-                                                      >
-                                                        <span
-                                                          className="citationLabel"
-                                                        >
-                                                          https://doi.org/
-                                                        </span>
-                                                        <span
-                                                          className="citationValue"
-                                                        >
-                                                          10.1016/j.pnsc.2012.12.004
-                                                        </span>
-                                                      </a>
-                                                    </ExternalLink>
-                                                  </span>
+                                                      https://doi.org/10.1016/j.pnsc.2012.12.004
+                                                    </a>
+                                                  </ExternalLink>
                                                 </DoiCitationView>
                                               </td>
                                             </TableRowColumn>
@@ -4902,12 +4863,12 @@ exports[`Component Links  should render 3 not OA links and PMC and DOI link with
                                                   title="Link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="http://www.thisisatest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Link to publication"
                                                   >
                                                     http://www.thisisatest.com
                                                   </a>
@@ -5069,12 +5030,12 @@ exports[`Component Links  should render 3 not OA links and PMC and DOI link with
                                                   title="Another link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="http://www.thisisanothertest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Another link to publication"
                                                   >
                                                     http://www.thisisanothertest.com
                                                   </a>
@@ -5236,12 +5197,12 @@ exports[`Component Links  should render 3 not OA links and PMC and DOI link with
                                                   title="Click to open link in a new window"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="http://www.nodescription.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Click to open link in a new window"
                                                   >
                                                     http://www.nodescription.com
                                                   </a>
@@ -5929,12 +5890,12 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   >
                                                     <a
                                                       aria-label="Full text via Pubmed Central (open access)"
-                                                      className="pubmedCentralLinkUrl showIcon externalLink"
+                                                      className="pubmedCentralLinkUrl externalLink  showIcon"
                                                       href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                                                       rel="noopener noreferrer"
                                                       tabIndex="0"
                                                       target="_blank"
-                                                      title="Open link in a new window"
+                                                      title="Full text via Pubmed Central (open access)"
                                                     >
                                                       https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926
                                                     </a>
@@ -6099,12 +6060,12 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   title="Link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="http://www.thisisatest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Link to publication"
                                                   >
                                                     http://www.thisisatest.com
                                                   </a>
@@ -6266,12 +6227,12 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   title="Another link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="http://www.thisisanothertest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Another link to publication"
                                                   >
                                                     http://www.thisisanothertest.com
                                                   </a>
@@ -6433,12 +6394,12 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   title="Click to open link in a new window"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="http://www.nodescription.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Click to open link in a new window"
                                                   >
                                                     http://www.nodescription.com
                                                   </a>
@@ -7115,40 +7076,27 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                 <DoiCitationView
                                                   doi="10.1016/j.pnsc.2012.12.004"
                                                 >
-                                                  <span
-                                                    className="citationDOI"
+                                                  <ExternalLink
+                                                    aria-label="Open this DOI in an new window"
+                                                    className="citationDoiLink"
+                                                    href="https://doi.org/10.1016/j.pnsc.2012.12.004"
+                                                    openInNewIcon={true}
+                                                    rel="noopener noreferrer"
+                                                    target="_blank"
+                                                    title="Open this DOI in an new window"
                                                   >
-                                                    <ExternalLink
+                                                    <a
                                                       aria-label="Open this DOI in an new window"
-                                                      className="citationDoiLink"
+                                                      className="citationDoiLink externalLink  showIcon"
                                                       href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                      openInNewIcon={true}
                                                       rel="noopener noreferrer"
+                                                      tabIndex="0"
                                                       target="_blank"
                                                       title="Open this DOI in an new window"
                                                     >
-                                                      <a
-                                                        aria-label="Open this DOI in an new window"
-                                                        className="citationDoiLink showIcon externalLink"
-                                                        href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                        rel="noopener noreferrer"
-                                                        tabIndex="0"
-                                                        target="_blank"
-                                                        title="Open link in a new window"
-                                                      >
-                                                        <span
-                                                          className="citationLabel"
-                                                        >
-                                                          https://doi.org/
-                                                        </span>
-                                                        <span
-                                                          className="citationValue"
-                                                        >
-                                                          10.1016/j.pnsc.2012.12.004
-                                                        </span>
-                                                      </a>
-                                                    </ExternalLink>
-                                                  </span>
+                                                      https://doi.org/10.1016/j.pnsc.2012.12.004
+                                                    </a>
+                                                  </ExternalLink>
                                                 </DoiCitationView>
                                               </td>
                                             </TableRowColumn>
@@ -7231,12 +7179,12 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   openAccessStatusId={453693}
                                                   showEmbargoText={false}
                                                 >
-                                                  <span>
+                                                  <div>
                                                     <div
                                                       className="fez-icon openAccessEmbargoed large"
                                                       title="DOI - Open access after 24th December 2020"
                                                     />
-                                                  </span>
+                                                  </div>
                                                 </OpenAccessIcon>
                                               </td>
                                             </TableRowColumn>
@@ -7311,12 +7259,12 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   title="Link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="http://www.thisisatest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Link to publication"
                                                   >
                                                     http://www.thisisatest.com
                                                   </a>
@@ -7478,12 +7426,12 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   title="Another link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="http://www.thisisanothertest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Another link to publication"
                                                   >
                                                     http://www.thisisanothertest.com
                                                   </a>
@@ -7645,12 +7593,12 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   title="Click to open link in a new window"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon externalLink"
+                                                    className="externalLink externalLink  showIcon"
                                                     href="http://www.nodescription.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
                                                     target="_blank"
-                                                    title="Open link in a new window"
+                                                    title="Click to open link in a new window"
                                                   >
                                                     http://www.nodescription.com
                                                   </a>

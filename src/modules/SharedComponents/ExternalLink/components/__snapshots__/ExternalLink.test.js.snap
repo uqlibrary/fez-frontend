@@ -9,7 +9,7 @@ exports[`ExternalLink test  should render component with open-in-new window icon
   target="_blank"
 >
   <a
-    className="externalLink showIcon externalLink"
+    className="externalLink externalLink  showIcon"
     href="www.google.com"
     rel="noopener noreferrer"
     tabIndex="0"
@@ -30,7 +30,7 @@ exports[`ExternalLink test  should render component without open-in-new window i
   target="_blank"
 >
   <a
-    className="externalLinkfalse externalLink"
+    className="externalLink externalLink false"
     href="www.google.com"
     rel="noopener noreferrer"
     tabIndex="0"

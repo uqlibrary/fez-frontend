@@ -125,12 +125,12 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
         openAccessStatusId={453694}
         showEmbargoText={false}
       >
-        <span>
+        <div>
           <div
             className="fez-icon openAccessEmbargoed large"
             title="Link (no DOI) - Open access after 2019-01-01"
           />
-        </span>
+        </div>
       </OpenAccessIcon>
     </Router>
   </MemoryRouter>
@@ -195,7 +195,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
         openAccessStatusId={453694}
         showEmbargoText={true}
       >
-        <span>
+        <div>
           <span
             className="is-hidden-mobile is-hidden-tablet-only"
           >
@@ -205,7 +205,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
             className="fez-icon openAccessEmbargoed large"
             title="Link (no DOI) - Open access after 2019-01-01"
           />
-        </span>
+        </div>
       </OpenAccessIcon>
     </Router>
   </MemoryRouter>
