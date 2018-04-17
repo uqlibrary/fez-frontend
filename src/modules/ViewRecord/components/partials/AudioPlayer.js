@@ -13,11 +13,11 @@ export default class AudioPlayer extends Component {
     };
 
     audioPlayerPlay = () => {
-        this.refs.audioPlayer.play();
+        this.audioPlayerRef.play();
     };
 
     audioPlayerPause = () => {
-        this.refs.audioPlayer.pause();
+        this.audioPlayerRef.pause();
     };
 
     render() {
@@ -25,7 +25,7 @@ export default class AudioPlayer extends Component {
 
         return (
             <div>
-                <audio ref="audioPlayer">
+                <audio ref={(player) => (this.audioPlayerRef = player)}>
                     <source src={pathConfig.file.url(pid, fileName)} type={mimeType} />
                 </audio>
                 <IconButton touch onTouchTap={this.audioPlayerPlay} className="audioButton play">
