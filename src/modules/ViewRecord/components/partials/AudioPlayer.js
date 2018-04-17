@@ -12,12 +12,25 @@ export default class AudioPlayer extends Component {
         mimeType: PropTypes.string.isRequired
     };
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            isPlaying: false
+        };
+        this.audioPlayerRef = null;
+    }
+
     audioPlayerPlay = () => {
-        this.audioPlayerRef.play();
+        const playPromise = this.audioPlayerRef.play();
+
+        if (!!playPromise) {
+            playPromise.then(() => this.setState({isPlaying: true}));
+        }
     };
 
     audioPlayerPause = () => {
         this.audioPlayerRef.pause();
+        this.setState({isPlaying: false});
     };
 
     render() {
@@ -28,12 +41,15 @@ export default class AudioPlayer extends Component {
                 <audio ref={(player) => (this.audioPlayerRef = player)}>
                     <source src={pathConfig.file.url(pid, fileName)} type={mimeType} />
                 </audio>
-                <IconButton touch onTouchTap={this.audioPlayerPlay} className="audioButton play">
-                    <PlayArrow />
-                </IconButton>
-                <IconButton touch onTouchTap={this.audioPlayerPause} className="audioButton pause">
-                    <Pause />
-                </IconButton>
+                {
+                    !this.state.isPlaying
+                        ? <IconButton touch onTouchTap={this.audioPlayerPlay} className="audioButton play">
+                            <PlayArrow />
+                        </IconButton>
+                        : <IconButton touch onTouchTap={this.audioPlayerPause} className="audioButton pause">
+                            <Pause />
+                        </IconButton>
+                }
             </div>
         );
     }

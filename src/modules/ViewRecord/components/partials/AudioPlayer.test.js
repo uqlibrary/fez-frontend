@@ -1,7 +1,7 @@
 import React from 'react';
 import {journalArticle} from 'mock/data/testing/records';
-import AudioPlayer from "./AudioPlayer";
-import injectTapEventPlugin from 'react-tap-event-plugin'
+import AudioPlayer from './AudioPlayer';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 injectTapEventPlugin();
 
@@ -33,7 +33,17 @@ describe('Audio Player Component ', () => {
     });
 
     it('should pause audio', () => {
-        const wrapper = setup({}, false);
+        const shallowWrapper = setup({});
+        shallowWrapper.setState({isPlaying: true});
+        expect(toJson(shallowWrapper)).toMatchSnapshot();
+
+        const props = {
+            pid: journalArticle.rek_pid,
+            fileName: journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
+            mimeType: 'audio/mp3'
+        };
+
+        const wrapper = getElement(() => shallowWrapper.instance(), props, false);
         expect(toJson(wrapper)).toMatchSnapshot();
         const element = wrapper.find('IconButton.audioButton.pause');
         const audio = wrapper.find('audio');
@@ -41,5 +51,12 @@ describe('Audio Player Component ', () => {
         audio.getDOMNode().pause = pause;
         element.simulate('touchTap');
         expect(pause).toHaveBeenCalledTimes(1);
+    });
+
+    it('should set component state to playing', () => {
+        const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.setState({isPlaying: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
