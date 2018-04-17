@@ -76,7 +76,7 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
       showEmbargoText={false}
     />
     <ExternalLink
-      className="externalLink"
+      className=""
       href="https://app.library.uq.edu.au/#/authors/view/pid:111"
       openInNewIcon={true}
       rel="noopener noreferrer"

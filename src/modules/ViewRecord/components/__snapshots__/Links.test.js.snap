@@ -581,7 +581,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   >
                                                     <a
                                                       aria-label="Full text via Pubmed Central (open access)"
-                                                      className="pubmedCentralLinkUrl showIcon"
+                                                      className="pubmedCentralLinkUrl externalLink showIcon"
                                                       href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                                                       rel="noopener noreferrer"
                                                       tabIndex="0"
@@ -756,7 +756,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   >
                                                     <a
                                                       aria-label="Open this DOI in an new window"
-                                                      className="citationDoiLink showIcon"
+                                                      className="citationDoiLink externalLink showIcon"
                                                       href="https://doi.org/10.1016/j.pnsc.2012.12.004"
                                                       rel="noopener noreferrer"
                                                       tabIndex="0"
@@ -918,7 +918,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisatest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -926,7 +926,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   title="Link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisatest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -1085,7 +1085,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisanothertest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -1093,7 +1093,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   title="Another link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisanothertest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -1252,7 +1252,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.nodescription.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -1260,7 +1260,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   title="Click to open link in a new window"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.nodescription.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -1959,7 +1959,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC not OA li
                                                   >
                                                     <a
                                                       aria-label="Full text via Pubmed Central (open access)"
-                                                      className="pubmedCentralLinkUrl showIcon"
+                                                      className="pubmedCentralLinkUrl externalLink showIcon"
                                                       href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                                                       rel="noopener noreferrer"
                                                       tabIndex="0"
@@ -2132,7 +2132,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC not OA li
                                                   >
                                                     <a
                                                       aria-label="Open this DOI in an new window"
-                                                      className="citationDoiLink showIcon"
+                                                      className="citationDoiLink externalLink showIcon"
                                                       href="https://doi.org/10.1016/j.pnsc.2012.12.004"
                                                       rel="noopener noreferrer"
                                                       tabIndex="0"
@@ -2292,7 +2292,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC not OA li
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisatest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -2300,7 +2300,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC not OA li
                                                   title="Link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisatest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -2459,7 +2459,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC not OA li
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisanothertest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -2467,7 +2467,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC not OA li
                                                   title="Another link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisanothertest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -2626,7 +2626,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC not OA li
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.nodescription.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -2634,7 +2634,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC not OA li
                                                   title="Click to open link in a new window"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.nodescription.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -3308,7 +3308,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="https://scholar.google.com/scholar?q=intitle:%22undefined%22"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -3316,7 +3316,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                   title="Search Google Scholar for this open access article"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="https://scholar.google.com/scholar?q=intitle:%22undefined%22"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -3477,7 +3477,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisatest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -3485,7 +3485,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                   title="Link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisatest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -3644,7 +3644,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisanothertest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -3652,7 +3652,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                   title="Another link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisanothertest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -3811,7 +3811,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.nodescription.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -3819,7 +3819,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                   title="Click to open link in a new window"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.nodescription.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -4518,7 +4518,7 @@ exports[`Component Links  should render 3 not OA links and PMC and DOI link with
                                                   >
                                                     <a
                                                       aria-label="Full text via Pubmed Central (open access)"
-                                                      className="pubmedCentralLinkUrl showIcon"
+                                                      className="pubmedCentralLinkUrl externalLink showIcon"
                                                       href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                                                       rel="noopener noreferrer"
                                                       tabIndex="0"
@@ -4693,7 +4693,7 @@ exports[`Component Links  should render 3 not OA links and PMC and DOI link with
                                                   >
                                                     <a
                                                       aria-label="Open this DOI in an new window"
-                                                      className="citationDoiLink showIcon"
+                                                      className="citationDoiLink externalLink showIcon"
                                                       href="https://doi.org/10.1016/j.pnsc.2012.12.004"
                                                       rel="noopener noreferrer"
                                                       tabIndex="0"
@@ -4855,7 +4855,7 @@ exports[`Component Links  should render 3 not OA links and PMC and DOI link with
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisatest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -4863,7 +4863,7 @@ exports[`Component Links  should render 3 not OA links and PMC and DOI link with
                                                   title="Link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisatest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -5022,7 +5022,7 @@ exports[`Component Links  should render 3 not OA links and PMC and DOI link with
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisanothertest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -5030,7 +5030,7 @@ exports[`Component Links  should render 3 not OA links and PMC and DOI link with
                                                   title="Another link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisanothertest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -5189,7 +5189,7 @@ exports[`Component Links  should render 3 not OA links and PMC and DOI link with
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.nodescription.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -5197,7 +5197,7 @@ exports[`Component Links  should render 3 not OA links and PMC and DOI link with
                                                   title="Click to open link in a new window"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.nodescription.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -5890,7 +5890,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   >
                                                     <a
                                                       aria-label="Full text via Pubmed Central (open access)"
-                                                      className="pubmedCentralLinkUrl showIcon"
+                                                      className="pubmedCentralLinkUrl externalLink showIcon"
                                                       href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                                                       rel="noopener noreferrer"
                                                       tabIndex="0"
@@ -6052,7 +6052,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisatest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -6060,7 +6060,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   title="Link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisatest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -6219,7 +6219,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisanothertest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -6227,7 +6227,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   title="Another link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisanothertest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -6386,7 +6386,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.nodescription.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -6394,7 +6394,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   title="Click to open link in a new window"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.nodescription.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -7087,7 +7087,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   >
                                                     <a
                                                       aria-label="Open this DOI in an new window"
-                                                      className="citationDoiLink showIcon"
+                                                      className="citationDoiLink externalLink showIcon"
                                                       href="https://doi.org/10.1016/j.pnsc.2012.12.004"
                                                       rel="noopener noreferrer"
                                                       tabIndex="0"
@@ -7251,7 +7251,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisatest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -7259,7 +7259,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   title="Link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisatest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -7418,7 +7418,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisanothertest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -7426,7 +7426,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   title="Another link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisanothertest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -7585,7 +7585,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.nodescription.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -7593,7 +7593,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   title="Click to open link in a new window"
                                                 >
                                                   <a
-                                                    className="externalLink showIcon"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.nodescription.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"

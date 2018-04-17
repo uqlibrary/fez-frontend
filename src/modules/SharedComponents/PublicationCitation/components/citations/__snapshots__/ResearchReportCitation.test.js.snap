@@ -701,7 +701,7 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
       >
         <a
           aria-label="Open this DOI in an new window"
-          className="citationDoiLink showIcon"
+          className="citationDoiLink externalLink showIcon"
           href="https://doi.org/10.129839/sometext"
           rel="noopener noreferrer"
           tabIndex="0"
@@ -1417,7 +1417,7 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
       >
         <a
           aria-label="Open this DOI in an new window"
-          className="citationDoiLink showIcon"
+          className="citationDoiLink externalLink showIcon"
           href="https://doi.org/10.129839/sometext"
           rel="noopener noreferrer"
           tabIndex="0"
@@ -2137,7 +2137,7 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
       >
         <a
           aria-label="Open this DOI in an new window"
-          className="citationDoiLink showIcon"
+          className="citationDoiLink externalLink showIcon"
           href="https://doi.org/10.129839/sometext"
           rel="noopener noreferrer"
           tabIndex="0"

@@ -2488,7 +2488,7 @@ exports[`Additional Information Component  should render component with audio do
                                             </a>
                                             <div>
                                               <ExternalLink
-                                                className="externalLink"
+                                                className=""
                                                 href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
                                                 openInNewIcon={false}
                                                 rel="noopener noreferrer"
@@ -2610,14 +2610,14 @@ exports[`Additional Information Component  should render component with audio do
                                                   </a>
                                                   <div>
                                                     <ExternalLink
-                                                      className="externalLink"
+                                                      className=""
                                                       href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
                                                       openInNewIcon={false}
                                                       rel="noopener noreferrer"
                                                       target="_blank"
                                                     >
                                                       <a
-                                                        className="externalLinkfalse"
+                                                        className=" externalLinkfalse"
                                                         href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
                                                         rel="noopener noreferrer"
                                                         tabIndex="0"
@@ -9278,7 +9278,7 @@ exports[`Additional Information Component  should render component with data col
             </a>
             <div>
               <ExternalLink
-                className="externalLink"
+                className=""
                 href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                 openInNewIcon={true}
                 rel="noopener noreferrer"
@@ -10969,7 +10969,7 @@ exports[`Additional Information Component  should render component with data col
             </a>
             <div>
               <ExternalLink
-                className="externalLink"
+                className=""
                 href="http://creativecommons.org/licenses/by/3.0/deed.en_US"
                 openInNewIcon={false}
                 rel="noopener noreferrer"
@@ -20335,7 +20335,7 @@ exports[`Additional Information Component  should render component with journal 
                                                        
                                                       <ExternalLink
                                                         aria-label="View publisher's open access policy in an new window"
-                                                        className="externalLink"
+                                                        className=""
                                                         href="http://www.sherpa.ac.uk/romeo/search.php?issn=1477-9137"
                                                         openInNewIcon={true}
                                                         rel="noopener noreferrer"
@@ -20343,7 +20343,7 @@ exports[`Additional Information Component  should render component with journal 
                                                       >
                                                         <a
                                                           aria-label="View publisher's open access policy in an new window"
-                                                          className="externalLink showIcon"
+                                                          className=" externalLink showIcon"
                                                           href="http://www.sherpa.ac.uk/romeo/search.php?issn=1477-9137"
                                                           rel="noopener noreferrer"
                                                           tabIndex="0"
@@ -20868,7 +20868,7 @@ exports[`Additional Information Component  should render component with journal 
                                                   >
                                                     <a
                                                       aria-label="Open this DOI in an new window"
-                                                      className="citationDoiLink showIcon"
+                                                      className="citationDoiLink externalLink showIcon"
                                                       href="https://doi.org/10.1242/jcs.196659"
                                                       rel="noopener noreferrer"
                                                       tabIndex="0"

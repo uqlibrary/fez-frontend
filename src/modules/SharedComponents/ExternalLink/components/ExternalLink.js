@@ -7,7 +7,7 @@ const ExternalLink = (props) => {
     const showIcon = openInNewIcon && ' showIcon';
     return (
         <a {...rest}
-            className={className + showIcon}
+            className={className + ' externalLink' + showIcon}
             tabIndex="0"
             title={rest.title || (openInNewIcon && locale.components.externalLink.openInNew)}>
             {!!children && children}
@@ -22,7 +22,7 @@ ExternalLink.propTypes = {
 };
 
 ExternalLink.defaultProps = {
-    className: 'externalLink',
+    className: '',
     target: '_blank',
     rel: 'noopener noreferrer',
     openInNewIcon: true

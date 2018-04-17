@@ -21,7 +21,7 @@ exports[`CitationCountView test  should render component with given count 1`] = 
     >
       <a
         aria-label="Google"
-        className="wosCitationCountfalse"
+        className="wosCitationCount externalLinkfalse"
         href="www.google.com"
         rel="noopener noreferrer"
         tabIndex="0"
