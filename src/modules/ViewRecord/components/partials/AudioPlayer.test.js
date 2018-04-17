@@ -37,13 +37,7 @@ describe('Audio Player Component ', () => {
         shallowWrapper.setState({isPlaying: true});
         expect(toJson(shallowWrapper)).toMatchSnapshot();
 
-        const props = {
-            pid: journalArticle.rek_pid,
-            fileName: journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
-            mimeType: 'audio/mp3'
-        };
-
-        const wrapper = getElement(() => shallowWrapper.instance(), props, false);
+        const wrapper = getElement(() => shallowWrapper.instance(), shallowWrapper.instance().props, false);
         expect(toJson(wrapper)).toMatchSnapshot();
         const element = wrapper.find('IconButton.audioButton.pause');
         const audio = wrapper.find('audio');
