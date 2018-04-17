@@ -124,7 +124,9 @@ export default class AdditionalInformation extends Component {
                 {licenseLookup}
                 {
                     licenseLink && !uqLicenseLinkText &&
-                     <div><ExternalLink className={'fez-icon license ' + licenseLink.className} href={licenseLink.url} /></div>
+                     <div><ExternalLink href={licenseLink.url} openInNewIcon={false} />
+                         <div className={`fez-icon license ${licenseLink.className}`} />
+                     </div>
                 }
                 {
                     licenseLink && uqLicenseLinkText &&

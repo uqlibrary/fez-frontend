@@ -2488,11 +2488,14 @@ exports[`Additional Information Component  should render component with audio do
                                             </a>
                                             <div>
                                               <ExternalLink
-                                                className="fez-icon license cc-by-nc-nd"
+                                                className="externalLink"
                                                 href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
-                                                openInNewIcon={true}
+                                                openInNewIcon={false}
                                                 rel="noopener noreferrer"
                                                 target="_blank"
+                                              />
+                                              <div
+                                                className="fez-icon license cc-by-nc-nd"
                                               />
                                             </div>
                                           </span>
@@ -2606,21 +2609,24 @@ exports[`Additional Information Component  should render component with audio do
                                                   </a>
                                                   <div>
                                                     <ExternalLink
-                                                      className="fez-icon license cc-by-nc-nd"
+                                                      className="externalLink"
                                                       href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
-                                                      openInNewIcon={true}
+                                                      openInNewIcon={false}
                                                       rel="noopener noreferrer"
                                                       target="_blank"
                                                     >
                                                       <a
-                                                        className="fez-icon license cc-by-nc-nd externalLink  showIcon"
+                                                        className="externalLink externalLink false"
                                                         href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
                                                         rel="noopener noreferrer"
                                                         tabIndex="0"
                                                         target="_blank"
-                                                        title="Open link in a new window"
+                                                        title={false}
                                                       />
                                                     </ExternalLink>
+                                                    <div
+                                                      className="fez-icon license cc-by-nc-nd"
+                                                    />
                                                   </div>
                                                 </span>
                                               </td>
@@ -10961,11 +10967,14 @@ exports[`Additional Information Component  should render component with data col
             </a>
             <div>
               <ExternalLink
-                className="fez-icon license cc-by"
+                className="externalLink"
                 href="http://creativecommons.org/licenses/by/3.0/deed.en_US"
-                openInNewIcon={true}
+                openInNewIcon={false}
                 rel="noopener noreferrer"
                 target="_blank"
+              />
+              <div
+                className="fez-icon license cc-by"
               />
             </div>
           </span>
