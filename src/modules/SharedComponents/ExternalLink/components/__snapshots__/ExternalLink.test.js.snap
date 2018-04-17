@@ -1,43 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ExternalLink test  should render component with open-in-new window icon 1`] = `
-<ExternalLink
-  className="externalLink"
+exports[`ExternalLink test  should render component with open-in-new window icon class 1`] = `
+<a
+  className="externalLink showIcon"
   href="www.google.com"
-  openInNewIcon={true}
   rel="noopener noreferrer"
+  tabIndex="0"
   target="_blank"
->
-  <a
-    className="externalLink externalLink  showIcon"
-    href="www.google.com"
-    rel="noopener noreferrer"
-    tabIndex="0"
-    target="_blank"
-    title="Open link in a new window"
-  >
-    Google
-  </a>
-</ExternalLink>
+  text="Google"
+  title="Open link in a new window"
+/>
 `;
 
 exports[`ExternalLink test  should render component without open-in-new window icon 1`] = `
-<ExternalLink
-  className="externalLink"
+<a
+  className="externalLinkfalse"
   href="www.google.com"
-  openInNewIcon={false}
   rel="noopener noreferrer"
+  tabIndex="0"
   target="_blank"
->
-  <a
-    className="externalLink externalLink false"
-    href="www.google.com"
-    rel="noopener noreferrer"
-    tabIndex="0"
-    target="_blank"
-    title={false}
-  >
-    Google
-  </a>
-</ExternalLink>
+  text="Google"
+  title={false}
+/>
 `;

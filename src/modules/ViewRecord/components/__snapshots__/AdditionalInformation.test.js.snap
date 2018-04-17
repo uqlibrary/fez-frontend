@@ -2493,10 +2493,11 @@ exports[`Additional Information Component  should render component with audio do
                                                 openInNewIcon={false}
                                                 rel="noopener noreferrer"
                                                 target="_blank"
-                                              />
-                                              <div
-                                                className="fez-icon license cc-by-nc-nd"
-                                              />
+                                              >
+                                                <div
+                                                  className="fez-icon license cc-by-nc-nd"
+                                                />
+                                              </ExternalLink>
                                             </div>
                                           </span>
                                         }
@@ -2616,17 +2617,18 @@ exports[`Additional Information Component  should render component with audio do
                                                       target="_blank"
                                                     >
                                                       <a
-                                                        className="externalLink externalLink false"
+                                                        className="externalLinkfalse"
                                                         href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
                                                         rel="noopener noreferrer"
                                                         tabIndex="0"
                                                         target="_blank"
                                                         title={false}
-                                                      />
+                                                      >
+                                                        <div
+                                                          className="fez-icon license cc-by-nc-nd"
+                                                        />
+                                                      </a>
                                                     </ExternalLink>
-                                                    <div
-                                                      className="fez-icon license cc-by-nc-nd"
-                                                    />
                                                   </div>
                                                 </span>
                                               </td>
@@ -10972,10 +10974,11 @@ exports[`Additional Information Component  should render component with data col
                 openInNewIcon={false}
                 rel="noopener noreferrer"
                 target="_blank"
-              />
-              <div
-                className="fez-icon license cc-by"
-              />
+              >
+                <div
+                  className="fez-icon license cc-by"
+                />
+              </ExternalLink>
             </div>
           </span>
         }
@@ -20340,7 +20343,7 @@ exports[`Additional Information Component  should render component with journal 
                                                       >
                                                         <a
                                                           aria-label="View publisher's open access policy in an new window"
-                                                          className="externalLink externalLink  showIcon"
+                                                          className="externalLink showIcon"
                                                           href="http://www.sherpa.ac.uk/romeo/search.php?issn=1477-9137"
                                                           rel="noopener noreferrer"
                                                           tabIndex="0"
@@ -20865,7 +20868,7 @@ exports[`Additional Information Component  should render component with journal 
                                                   >
                                                     <a
                                                       aria-label="Open this DOI in an new window"
-                                                      className="citationDoiLink externalLink  showIcon"
+                                                      className="citationDoiLink showIcon"
                                                       href="https://doi.org/10.1242/jcs.196659"
                                                       rel="noopener noreferrer"
                                                       tabIndex="0"

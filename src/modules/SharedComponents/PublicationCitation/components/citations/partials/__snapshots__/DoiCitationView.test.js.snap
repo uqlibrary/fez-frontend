@@ -15,7 +15,7 @@ exports[`DoiCitationView test  should render component with doi 1`] = `
   >
     <a
       aria-label="Open this DOI in an new window"
-      className="citationDoiLink externalLink  showIcon"
+      className="citationDoiLink showIcon"
       href="https://doi.org/10.121212/lskdjflsdjf"
       rel="noopener noreferrer"
       tabIndex="0"

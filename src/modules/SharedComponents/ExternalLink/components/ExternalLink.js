@@ -7,7 +7,7 @@ const ExternalLink = (props) => {
     const showIcon = openInNewIcon && ' showIcon';
     return (
         <a {...rest}
-            className={className + ' externalLink ' + showIcon}
+            className={className + showIcon}
             tabIndex="0"
             title={rest.title || (openInNewIcon && locale.components.externalLink.openInNew)}>
             {!!children && children}

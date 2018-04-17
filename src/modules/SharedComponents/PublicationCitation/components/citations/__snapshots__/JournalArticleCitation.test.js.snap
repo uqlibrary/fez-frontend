@@ -5585,7 +5585,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
       >
         <a
           aria-label="Open this DOI in an new window"
-          className="citationDoiLink externalLink  showIcon"
+          className="citationDoiLink showIcon"
           href="https://doi.org/10.1242/jcs.196659"
           rel="noopener noreferrer"
           tabIndex="0"
