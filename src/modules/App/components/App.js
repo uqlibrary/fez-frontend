@@ -13,6 +13,7 @@ import {HelpDrawer} from 'uqlibrary-react-toolbox/build/HelpDrawer';
 import {AuthButton} from 'uqlibrary-react-toolbox/build/AuthButton';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import AppAlertContainer from '../containers/AppAlert';
+import {Meta} from 'modules/SharedComponents/Meta';
 import {OfflineSnackbar} from 'modules/SharedComponents/OfflineSnackbar';
 
 import * as pages from './pages';
@@ -159,8 +160,15 @@ export default class App extends React.PureComponent {
                 ...locale.global.forceOrcidLinkAlert
             };
         }
+        const routesConfig = routes.getRoutesConfig({
+            components: pages,
+            account: this.props.account,
+            forceOrcidRegistration: isOrcidRequired && isHdrStudent,
+            isHdrStudent: isHdrStudent
+        });
         return (
             <div className="layout-fill align-stretch">
+                <Meta routesConfig={routesConfig} />
                 <AppBar
                     className="AppBar align-center"
                     showMenuIconButton={showMenu && !this.state.docked}
@@ -227,12 +235,7 @@ export default class App extends React.PureComponent {
                         !isAuthorLoading &&
                         <Switch>
                             {
-                                routes.getRoutesConfig({
-                                    components: pages,
-                                    account: this.props.account,
-                                    forceOrcidRegistration: isOrcidRequired && isHdrStudent,
-                                    isHdrStudent: isHdrStudent
-                                }).map((route, index) => (
+                                routesConfig.map((route, index) => (
                                     <Route key={`route_${index}`} {...route} />
                                 ))
                             }

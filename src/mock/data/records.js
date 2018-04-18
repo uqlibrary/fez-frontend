@@ -4117,6 +4117,17 @@ export const record = {
             "dsi_state": "A",
             "dsi_size": 186680
         },
+        {
+            "dsi_pid": "UQ:681794",
+            "dsi_dsid": "deleted.pdf",
+            "dsi_embargo_date": '2018-11-11',
+            "dsi_open_access": null,
+            "dsi_label": "deleted file",
+            "dsi_mimetype": "application/pdf",
+            "dsi_copyright": null,
+            "dsi_state": "D",
+            "dsi_size": 186680
+        },
     ],
     "fez_record_search_key_grant_acronym": [
         {
