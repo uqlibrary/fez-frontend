@@ -10,13 +10,12 @@ if [[ "$PT_TOKEN" == "" || "$CI_BRANCH" == "" || "$PT_PROJECT" == "" ]]; then
 fi
 
 # generage notes only for production/staging branches
-#if [[ "$CI_BRANCH" != "production" && "$CI_BRANCH" != "staging" ]]; then
-#  echo "release notes are generated only for production/staging branch"
-#  exit 0
-#fi
+if [[ "$CI_BRANCH" != "production" && "$CI_BRANCH" != "staging" ]]; then
+  echo "release notes are generated only for production/staging branch"
+  exit 0
+fi
 
-#gitComment="into $CI_BRANCH"
-gitComment="into master"
+gitComment="into $CI_BRANCH"
 
 # get all comments since last merge with PT ids
 lastMerge="$(git log -1 --grep "$gitComment" --pretty=format:'%h')"
