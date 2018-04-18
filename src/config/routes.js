@@ -1,4 +1,5 @@
 import {locale} from 'locale';
+import {default as formLocale} from 'locale/publicationForm';
 
 const fullPath = process.env.BRANCH === 'production' ? 'https://espace.library.uq.edu.au' : 'https://fez-staging.library.uq.edu.au';
 
@@ -7,13 +8,13 @@ export const pathConfig =  {
     dashboard: '/dashboard',
     browse: '/browse',
     contact: '/contact',
-    hdrSubmission: '/rhdsubmission_new',
+    hdrSubmission: '/rhdsubmission',
     sbsSubmission: '/sbslodge_new',
     records: {
         mine: '/records/mine',
         possible: '/records/possible',
         claim: '/records/claim',
-        view: (pid) => (`/records/${pid}`),
+        view: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/records/${pid}`),
         fix: (pid) => (`/records/${pid}/fix`),
         add: {
             find: '/records/add/find',
@@ -29,6 +30,7 @@ export const pathConfig =  {
         view: (pid) => (`${fullPath}/collection/${pid}`),
     },
     // TODO: update how we get files after security is implemented in fez file api
+    // (this is used in metadata to reflect legacy file urls for citation_pdf_url - Google Scholar)
     file: {
         url: (pid, fileName) => (`https://espace.library.uq.edu.au/view/${pid}/${fileName}`)
     },
@@ -75,7 +77,7 @@ export const pathConfig =  {
 };
 
 // a duplicate list of routes for
-const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission_new', '/sbslodge_new',
+const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new',
     '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
     '/admin/masquerade', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
 
@@ -87,40 +89,43 @@ export const roles = {
 
 export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegistration = false, isHdrStudent = false}) => {
     const pid = ':pid(UQ:\\d+)';
+    const regExpPid = '(UQ:\\d+)';
     const publicPages = [
         {
             path: pathConfig.contact,
-            render: () => components.StandardPage({...locale.pages.contact})
+            render: () => components.StandardPage({...locale.pages.contact}),
+            pageTitle: locale.pages.contact.title
         },
-        // {
-        //     path: pathConfig.browse,
-        //     render: () => components.Browse(locale.pages.browse)
-        // },
         {
             path: pathConfig.records.view(pid),
             component: components.ViewRecord,
-            exact: true
+            exact: true,
+            pageTitle: locale.pages.viewRecord.title,
+            regExPath: pathConfig.records.view(regExpPid)
         },
-        ...(!account ? [
-            {
+        ...(!account
+            ? [{
                 path: pathConfig.index,
                 render: () => components.StandardPage({...locale.pages.contact}),
-                exact: true
-            }
-        ] : [])];
+                exact: true,
+                pageTitle: locale.pages.contact.title
+            }] : [])
+    ];
 
     const thesisSubmissionPages = (account ? [
         {
             path: pathConfig.hdrSubmission,
             render: isHdrStudent
                 ? () => components.ThesisSubmission({isHdrThesis: true})
-                : () => components.StandardPage({...locale.pages.thesisSubmissionDenied})
+                : () => components.StandardPage({...locale.pages.thesisSubmissionDenied}),
+            pageTitle: formLocale.thesisSubmission.hdrTitle
         },
         {
             path: pathConfig.sbsSubmission,
             render: isHdrStudent
                 ? () => components.ThesisSubmission({isHdrThesis: false})
-                : () => components.StandardPage({...locale.pages.thesisSubmissionDenied})
+                : () => components.StandardPage({...locale.pages.thesisSubmissionDenied}),
+            pageTitle: formLocale.thesisSubmission.sbsTitle
         },
     ] : []);
 
@@ -129,7 +134,8 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             ...publicPages,
             ...thesisSubmissionPages,
             {
-                component: components.Orcid
+                component: components.Orcid,
+                pageTitle: locale.pages.orcidLink.title
             }
         ];
     }
@@ -140,66 +146,78 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             {
                 path: pathConfig.index,
                 component: components.Dashboard,
-                exact: true
+                exact: true,
+                pageTitle: locale.pages.dashboard.title
             },
             {
                 path: pathConfig.dashboard,
                 component: components.Dashboard,
                 access: [roles.researcher, roles.admin],
-                exact: true
+                exact: true,
+                pageTitle: locale.pages.dashboard.title
             },
             {
                 path: pathConfig.records.mine,
                 component: components.MyRecords,
                 access: [roles.researcher, roles.admin],
-                exact: true
+                exact: true,
+                pageTitle: locale.pages.myResearch.pageTitle
             },
             {
                 path: pathConfig.records.possible,
                 component: components.PossiblyMyRecords,
                 access: [roles.researcher, roles.admin],
-                exact: true
+                exact: true,
+                pageTitle: locale.pages.claimPublications.title
             },
             {
                 path: pathConfig.records.claim,
                 component: components.ClaimRecord,
                 access: [roles.researcher, roles.admin],
-                exact: true
+                exact: true,
+                pageTitle: locale.forms.claimPublicationForm.title
             },
             {
                 path: pathConfig.records.fix(pid),
                 component: components.FixRecord,
                 access: [roles.researcher, roles.admin],
-                exact: true
+                exact: true,
+                pageTitle: locale.pages.fixRecord.title,
+                regExPath: pathConfig.records.fix(regExpPid)
             },
             {
                 path: pathConfig.records.add.find,
                 render: (props) => components.AddMissingRecord({...props, addRecordStep: components.FindRecords}),
                 access: [roles.researcher, roles.admin],
-                exact: true
+                exact: true,
+                pageTitle: locale.pages.addRecord.title
             },
             {
                 path: pathConfig.records.add.results,
                 render: (props) => components.AddMissingRecord({...props, addRecordStep: components.RecordsSearchResults}),
                 access: [roles.researcher, roles.admin],
-                exact: true
+                exact: true,
+                pageTitle: locale.pages.addRecord.title
             },
             {
                 path: pathConfig.records.add.new,
                 render: (props) => components.AddMissingRecord({...props, addRecordStep: components.NewRecord}),
                 access: [roles.researcher, roles.admin],
-                exact: true
+                exact: true,
+                pageTitle: locale.pages.addRecord.title
             },
             {
                 path: pathConfig.authorIdentifiers.orcid.link,
                 component: components.Orcid,
-                exact: true
+                exact: true,
+                pageTitle: locale.pages.orcidLink.title
             },
             {
                 path: pathConfig.authorIdentifiers.googleScholar.link,
                 component: components.GoogleScholar,
                 access: [roles.researcher, roles.admin],
-                exact: true
+                exact: true,
+                pageTitle: locale.pages.googleScholarLink.title
             },
         ] : []),
         ...(account && account.canMasquerade ? [
@@ -207,7 +225,8 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 path: pathConfig.admin.masquerade,
                 component: components.Masquerade,
                 exact: true,
-                access: [roles.admin]
+                access: [roles.admin],
+                pageTitle: locale.pages.masquerade.title
             }
         ] : []),
         ...publicPages,
@@ -217,18 +236,14 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 if (isValidRoute && account) return components.StandardPage({...locale.pages.permissionDenied});
                 if (isValidRoute) return components.StandardPage({...locale.pages.authenticationRequired});
                 return components.StandardPage({...locale.pages.notFound});
-            }
+            },
+            pageTitle: locale.pages.notFound.title
         }
     ];
 };
 
 export const getMenuConfig = (account, disabled) => {
     const publicPages = [
-        // {
-        //     linkTo: pathConfig.browse,
-        //     ...locale.menu.browse,
-        //     public: true
-        // },
         {
             linkTo: pathConfig.help,
             ...locale.menu.help,

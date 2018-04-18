@@ -4,6 +4,141 @@ exports[`Application component should render alert if user is not fez author 1`]
 <div
   className="layout-fill align-stretch"
 >
+  <withRouter(Connect(Meta))
+    routesConfig={
+      Array [
+        Object {
+          "pageTitle": "Higher degree by research thesis deposit",
+          "path": "/rhdsubmission",
+          "render": [Function],
+        },
+        Object {
+          "pageTitle": "Professional doctorate deposit",
+          "path": "/sbslodge_new",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/dashboard",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research",
+          "path": "/records/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim possible publications",
+          "path": "/records/possible",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim a publication",
+          "path": "/records/claim",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Request a correction or upload files",
+          "path": "/records/:pid(UQ:\\\\d+)/fix",
+          "regExPath": "/records/(UQ:\\\\d+)/fix",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing record to eSpace",
+          "path": "/records/add/find",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing record to eSpace",
+          "path": "/records/add/results",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing record to eSpace",
+          "path": "/records/add/new",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Link ORCID ID to UQ eSpace",
+          "path": "/author-identifiers/orcid/link",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Google Scholar identifier",
+          "path": "/author-identifiers/google-scholar/link",
+        },
+        Object {
+          "pageTitle": "Contact UQ eSpace",
+          "path": "/contact",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/:pid(UQ:\\\\d+)",
+          "regExPath": "/records/(UQ:\\\\d+)",
+        },
+        Object {
+          "pageTitle": "Page not found",
+          "render": [Function],
+        },
+      ]
+    }
+  />
   <AppBar
     className="AppBar align-center"
     iconElementLeft={
@@ -148,11 +283,13 @@ exports[`Application component should render alert if user is not fez author 1`]
     <Switch>
       <Route
         key="route_0"
-        path="/rhdsubmission_new"
+        pageTitle="Higher degree by research thesis deposit"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
         key="route_1"
+        pageTitle="Professional doctorate deposit"
         path="/sbslodge_new"
         render={[Function]}
       />
@@ -184,6 +321,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_4"
+        pageTitle="My research"
         path="/records/mine"
       />
       <Route
@@ -196,6 +334,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_5"
+        pageTitle="Claim possible publications"
         path="/records/possible"
       />
       <Route
@@ -208,6 +347,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_6"
+        pageTitle="Claim a publication"
         path="/records/claim"
       />
       <Route
@@ -220,7 +360,9 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_7"
+        pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:\\\\d+)/fix"
+        regExPath="/records/(UQ:\\\\d+)/fix"
       />
       <Route
         access={
@@ -231,6 +373,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         exact={true}
         key="route_8"
+        pageTitle="Add a missing record to eSpace"
         path="/records/add/find"
         render={[Function]}
       />
@@ -243,6 +386,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         exact={true}
         key="route_9"
+        pageTitle="Add a missing record to eSpace"
         path="/records/add/results"
         render={[Function]}
       />
@@ -255,6 +399,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         exact={true}
         key="route_10"
+        pageTitle="Add a missing record to eSpace"
         path="/records/add/new"
         render={[Function]}
       />
@@ -262,6 +407,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_11"
+        pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
       <Route
@@ -274,10 +420,12 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_12"
+        pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         key="route_13"
+        pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
       />
@@ -286,9 +434,11 @@ exports[`Application component should render alert if user is not fez author 1`]
         exact={true}
         key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
+        regExPath="/records/(UQ:\\\\d+)"
       />
       <Route
         key="route_15"
+        pageTitle="Page not found"
         render={[Function]}
       />
     </Switch>
@@ -302,6 +452,141 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
 <div
   className="layout-fill align-stretch"
 >
+  <withRouter(Connect(Meta))
+    routesConfig={
+      Array [
+        Object {
+          "pageTitle": "Higher degree by research thesis deposit",
+          "path": "/rhdsubmission",
+          "render": [Function],
+        },
+        Object {
+          "pageTitle": "Professional doctorate deposit",
+          "path": "/sbslodge_new",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/dashboard",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research",
+          "path": "/records/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim possible publications",
+          "path": "/records/possible",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim a publication",
+          "path": "/records/claim",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Request a correction or upload files",
+          "path": "/records/:pid(UQ:\\\\d+)/fix",
+          "regExPath": "/records/(UQ:\\\\d+)/fix",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing record to eSpace",
+          "path": "/records/add/find",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing record to eSpace",
+          "path": "/records/add/results",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing record to eSpace",
+          "path": "/records/add/new",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Link ORCID ID to UQ eSpace",
+          "path": "/author-identifiers/orcid/link",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Google Scholar identifier",
+          "path": "/author-identifiers/google-scholar/link",
+        },
+        Object {
+          "pageTitle": "Contact UQ eSpace",
+          "path": "/contact",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/:pid(UQ:\\\\d+)",
+          "regExPath": "/records/(UQ:\\\\d+)",
+        },
+        Object {
+          "pageTitle": "Page not found",
+          "render": [Function],
+        },
+      ]
+    }
+  />
   <AppBar
     className="AppBar align-center"
     iconElementLeft={
@@ -430,11 +715,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     <Switch>
       <Route
         key="route_0"
-        path="/rhdsubmission_new"
+        pageTitle="Higher degree by research thesis deposit"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
         key="route_1"
+        pageTitle="Professional doctorate deposit"
         path="/sbslodge_new"
         render={[Function]}
       />
@@ -466,6 +753,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_4"
+        pageTitle="My research"
         path="/records/mine"
       />
       <Route
@@ -478,6 +766,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_5"
+        pageTitle="Claim possible publications"
         path="/records/possible"
       />
       <Route
@@ -490,6 +779,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_6"
+        pageTitle="Claim a publication"
         path="/records/claim"
       />
       <Route
@@ -502,7 +792,9 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_7"
+        pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:\\\\d+)/fix"
+        regExPath="/records/(UQ:\\\\d+)/fix"
       />
       <Route
         access={
@@ -513,6 +805,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         exact={true}
         key="route_8"
+        pageTitle="Add a missing record to eSpace"
         path="/records/add/find"
         render={[Function]}
       />
@@ -525,6 +818,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         exact={true}
         key="route_9"
+        pageTitle="Add a missing record to eSpace"
         path="/records/add/results"
         render={[Function]}
       />
@@ -537,6 +831,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         exact={true}
         key="route_10"
+        pageTitle="Add a missing record to eSpace"
         path="/records/add/new"
         render={[Function]}
       />
@@ -544,6 +839,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_11"
+        pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
       <Route
@@ -556,10 +852,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_12"
+        pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         key="route_13"
+        pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
       />
@@ -568,9 +866,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         exact={true}
         key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
+        regExPath="/records/(UQ:\\\\d+)"
       />
       <Route
         key="route_15"
+        pageTitle="Page not found"
         render={[Function]}
       />
     </Switch>
@@ -584,6 +884,38 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
 <div
   className="layout-fill align-stretch"
 >
+  <withRouter(Connect(Meta))
+    routesConfig={
+      Array [
+        Object {
+          "pageTitle": "Contact UQ eSpace",
+          "path": "/contact",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/:pid(UQ:\\\\d+)",
+          "regExPath": "/records/(UQ:\\\\d+)",
+        },
+        Object {
+          "pageTitle": "Higher degree by research thesis deposit",
+          "path": "/rhdsubmission",
+          "render": [Function],
+        },
+        Object {
+          "pageTitle": "Professional doctorate deposit",
+          "path": "/sbslodge_new",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "pageTitle": "Link ORCID ID to UQ eSpace",
+        },
+      ]
+    }
+  />
   <AppBar
     className="AppBar align-center"
     iconElementLeft={
@@ -712,6 +1044,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     <Switch>
       <Route
         key="route_0"
+        pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
       />
@@ -720,20 +1053,24 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         exact={true}
         key="route_1"
         path="/records/:pid(UQ:\\\\d+)"
+        regExPath="/records/(UQ:\\\\d+)"
       />
       <Route
         key="route_2"
-        path="/rhdsubmission_new"
+        pageTitle="Higher degree by research thesis deposit"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
         key="route_3"
+        pageTitle="Professional doctorate deposit"
         path="/sbslodge_new"
         render={[Function]}
       />
       <Route
         component={[Function]}
         key="route_4"
+        pageTitle="Link ORCID ID to UQ eSpace"
       />
     </Switch>
   </div>
@@ -746,6 +1083,141 @@ exports[`Application component should render app for account with fez author wit
 <div
   className="layout-fill align-stretch"
 >
+  <withRouter(Connect(Meta))
+    routesConfig={
+      Array [
+        Object {
+          "pageTitle": "Higher degree by research thesis deposit",
+          "path": "/rhdsubmission",
+          "render": [Function],
+        },
+        Object {
+          "pageTitle": "Professional doctorate deposit",
+          "path": "/sbslodge_new",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/dashboard",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research",
+          "path": "/records/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim possible publications",
+          "path": "/records/possible",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim a publication",
+          "path": "/records/claim",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Request a correction or upload files",
+          "path": "/records/:pid(UQ:\\\\d+)/fix",
+          "regExPath": "/records/(UQ:\\\\d+)/fix",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing record to eSpace",
+          "path": "/records/add/find",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing record to eSpace",
+          "path": "/records/add/results",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing record to eSpace",
+          "path": "/records/add/new",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Link ORCID ID to UQ eSpace",
+          "path": "/author-identifiers/orcid/link",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Google Scholar identifier",
+          "path": "/author-identifiers/google-scholar/link",
+        },
+        Object {
+          "pageTitle": "Contact UQ eSpace",
+          "path": "/contact",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/:pid(UQ:\\\\d+)",
+          "regExPath": "/records/(UQ:\\\\d+)",
+        },
+        Object {
+          "pageTitle": "Page not found",
+          "render": [Function],
+        },
+      ]
+    }
+  />
   <AppBar
     className="AppBar align-center"
     iconElementLeft={
@@ -874,11 +1346,13 @@ exports[`Application component should render app for account with fez author wit
     <Switch>
       <Route
         key="route_0"
-        path="/rhdsubmission_new"
+        pageTitle="Higher degree by research thesis deposit"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
         key="route_1"
+        pageTitle="Professional doctorate deposit"
         path="/sbslodge_new"
         render={[Function]}
       />
@@ -910,6 +1384,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_4"
+        pageTitle="My research"
         path="/records/mine"
       />
       <Route
@@ -922,6 +1397,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_5"
+        pageTitle="Claim possible publications"
         path="/records/possible"
       />
       <Route
@@ -934,6 +1410,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_6"
+        pageTitle="Claim a publication"
         path="/records/claim"
       />
       <Route
@@ -946,7 +1423,9 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_7"
+        pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:\\\\d+)/fix"
+        regExPath="/records/(UQ:\\\\d+)/fix"
       />
       <Route
         access={
@@ -957,6 +1436,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_8"
+        pageTitle="Add a missing record to eSpace"
         path="/records/add/find"
         render={[Function]}
       />
@@ -969,6 +1449,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_9"
+        pageTitle="Add a missing record to eSpace"
         path="/records/add/results"
         render={[Function]}
       />
@@ -981,6 +1462,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_10"
+        pageTitle="Add a missing record to eSpace"
         path="/records/add/new"
         render={[Function]}
       />
@@ -988,6 +1470,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_11"
+        pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
       <Route
@@ -1000,10 +1483,12 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_12"
+        pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         key="route_13"
+        pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
       />
@@ -1012,9 +1497,11 @@ exports[`Application component should render app for account with fez author wit
         exact={true}
         key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
+        regExPath="/records/(UQ:\\\\d+)"
       />
       <Route
         key="route_15"
+        pageTitle="Page not found"
         render={[Function]}
       />
     </Switch>
@@ -1028,6 +1515,141 @@ exports[`Application component should render app for account with fez author wit
 <div
   className="layout-fill align-stretch"
 >
+  <withRouter(Connect(Meta))
+    routesConfig={
+      Array [
+        Object {
+          "pageTitle": "Higher degree by research thesis deposit",
+          "path": "/rhdsubmission",
+          "render": [Function],
+        },
+        Object {
+          "pageTitle": "Professional doctorate deposit",
+          "path": "/sbslodge_new",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/dashboard",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research",
+          "path": "/records/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim possible publications",
+          "path": "/records/possible",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim a publication",
+          "path": "/records/claim",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Request a correction or upload files",
+          "path": "/records/:pid(UQ:\\\\d+)/fix",
+          "regExPath": "/records/(UQ:\\\\d+)/fix",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing record to eSpace",
+          "path": "/records/add/find",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing record to eSpace",
+          "path": "/records/add/results",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing record to eSpace",
+          "path": "/records/add/new",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Link ORCID ID to UQ eSpace",
+          "path": "/author-identifiers/orcid/link",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Google Scholar identifier",
+          "path": "/author-identifiers/google-scholar/link",
+        },
+        Object {
+          "pageTitle": "Contact UQ eSpace",
+          "path": "/contact",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/:pid(UQ:\\\\d+)",
+          "regExPath": "/records/(UQ:\\\\d+)",
+        },
+        Object {
+          "pageTitle": "Page not found",
+          "render": [Function],
+        },
+      ]
+    }
+  />
   <AppBar
     className="AppBar align-center"
     iconElementLeft={
@@ -1174,11 +1796,13 @@ exports[`Application component should render app for account with fez author wit
     <Switch>
       <Route
         key="route_0"
-        path="/rhdsubmission_new"
+        pageTitle="Higher degree by research thesis deposit"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
         key="route_1"
+        pageTitle="Professional doctorate deposit"
         path="/sbslodge_new"
         render={[Function]}
       />
@@ -1210,6 +1834,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_4"
+        pageTitle="My research"
         path="/records/mine"
       />
       <Route
@@ -1222,6 +1847,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_5"
+        pageTitle="Claim possible publications"
         path="/records/possible"
       />
       <Route
@@ -1234,6 +1860,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_6"
+        pageTitle="Claim a publication"
         path="/records/claim"
       />
       <Route
@@ -1246,7 +1873,9 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_7"
+        pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:\\\\d+)/fix"
+        regExPath="/records/(UQ:\\\\d+)/fix"
       />
       <Route
         access={
@@ -1257,6 +1886,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_8"
+        pageTitle="Add a missing record to eSpace"
         path="/records/add/find"
         render={[Function]}
       />
@@ -1269,6 +1899,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_9"
+        pageTitle="Add a missing record to eSpace"
         path="/records/add/results"
         render={[Function]}
       />
@@ -1281,6 +1912,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_10"
+        pageTitle="Add a missing record to eSpace"
         path="/records/add/new"
         render={[Function]}
       />
@@ -1288,6 +1920,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_11"
+        pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
       <Route
@@ -1300,10 +1933,12 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_12"
+        pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         key="route_13"
+        pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
       />
@@ -1312,9 +1947,11 @@ exports[`Application component should render app for account with fez author wit
         exact={true}
         key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
+        regExPath="/records/(UQ:\\\\d+)"
       />
       <Route
         key="route_15"
+        pageTitle="Page not found"
         render={[Function]}
       />
     </Switch>
@@ -1328,6 +1965,141 @@ exports[`Application component should render app for account with fez author wit
 <div
   className="layout-fill align-stretch"
 >
+  <withRouter(Connect(Meta))
+    routesConfig={
+      Array [
+        Object {
+          "pageTitle": "Higher degree by research thesis deposit",
+          "path": "/rhdsubmission",
+          "render": [Function],
+        },
+        Object {
+          "pageTitle": "Professional doctorate deposit",
+          "path": "/sbslodge_new",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/dashboard",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research",
+          "path": "/records/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim possible publications",
+          "path": "/records/possible",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim a publication",
+          "path": "/records/claim",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Request a correction or upload files",
+          "path": "/records/:pid(UQ:\\\\d+)/fix",
+          "regExPath": "/records/(UQ:\\\\d+)/fix",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing record to eSpace",
+          "path": "/records/add/find",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing record to eSpace",
+          "path": "/records/add/results",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing record to eSpace",
+          "path": "/records/add/new",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Link ORCID ID to UQ eSpace",
+          "path": "/author-identifiers/orcid/link",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Google Scholar identifier",
+          "path": "/author-identifiers/google-scholar/link",
+        },
+        Object {
+          "pageTitle": "Contact UQ eSpace",
+          "path": "/contact",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/:pid(UQ:\\\\d+)",
+          "regExPath": "/records/(UQ:\\\\d+)",
+        },
+        Object {
+          "pageTitle": "Page not found",
+          "render": [Function],
+        },
+      ]
+    }
+  />
   <AppBar
     className="AppBar align-center"
     iconElementLeft={
@@ -1395,11 +2167,13 @@ exports[`Application component should render app for account with fez author wit
     <Switch>
       <Route
         key="route_0"
-        path="/rhdsubmission_new"
+        pageTitle="Higher degree by research thesis deposit"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
         key="route_1"
+        pageTitle="Professional doctorate deposit"
         path="/sbslodge_new"
         render={[Function]}
       />
@@ -1431,6 +2205,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_4"
+        pageTitle="My research"
         path="/records/mine"
       />
       <Route
@@ -1443,6 +2218,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_5"
+        pageTitle="Claim possible publications"
         path="/records/possible"
       />
       <Route
@@ -1455,6 +2231,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_6"
+        pageTitle="Claim a publication"
         path="/records/claim"
       />
       <Route
@@ -1467,7 +2244,9 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_7"
+        pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:\\\\d+)/fix"
+        regExPath="/records/(UQ:\\\\d+)/fix"
       />
       <Route
         access={
@@ -1478,6 +2257,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_8"
+        pageTitle="Add a missing record to eSpace"
         path="/records/add/find"
         render={[Function]}
       />
@@ -1490,6 +2270,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_9"
+        pageTitle="Add a missing record to eSpace"
         path="/records/add/results"
         render={[Function]}
       />
@@ -1502,6 +2283,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_10"
+        pageTitle="Add a missing record to eSpace"
         path="/records/add/new"
         render={[Function]}
       />
@@ -1509,6 +2291,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_11"
+        pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
       <Route
@@ -1521,10 +2304,12 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_12"
+        pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         key="route_13"
+        pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
       />
@@ -1533,9 +2318,11 @@ exports[`Application component should render app for account with fez author wit
         exact={true}
         key="route_14"
         path="/records/:pid(UQ:\\\\d+)"
+        regExPath="/records/(UQ:\\\\d+)"
       />
       <Route
         key="route_15"
+        pageTitle="Page not found"
         render={[Function]}
       />
     </Switch>
@@ -1549,6 +2336,141 @@ exports[`Application component should render application with routing for the us
 <div
   className="layout-fill align-stretch"
 >
+  <withRouter(Connect(Meta))
+    routesConfig={
+      Array [
+        Object {
+          "pageTitle": "Higher degree by research thesis deposit",
+          "path": "/rhdsubmission",
+          "render": [Function],
+        },
+        Object {
+          "pageTitle": "Professional doctorate deposit",
+          "path": "/sbslodge_new",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/dashboard",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research",
+          "path": "/records/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim possible publications",
+          "path": "/records/possible",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim a publication",
+          "path": "/records/claim",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Request a correction or upload files",
+          "path": "/records/:pid(UQ:\\\\d+)/fix",
+          "regExPath": "/records/(UQ:\\\\d+)/fix",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing record to eSpace",
+          "path": "/records/add/find",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing record to eSpace",
+          "path": "/records/add/results",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing record to eSpace",
+          "path": "/records/add/new",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Link ORCID ID to UQ eSpace",
+          "path": "/author-identifiers/orcid/link",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Google Scholar identifier",
+          "path": "/author-identifiers/google-scholar/link",
+        },
+        Object {
+          "pageTitle": "Contact UQ eSpace",
+          "path": "/contact",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/:pid(UQ:\\\\d+)",
+          "regExPath": "/records/(UQ:\\\\d+)",
+        },
+        Object {
+          "pageTitle": "Page not found",
+          "render": [Function],
+        },
+      ]
+    }
+  />
   <AppBar
     className="AppBar align-center"
     iconElementLeft={
@@ -1691,6 +2613,34 @@ exports[`Application component should render for anon user 1`] = `
 <div
   className="layout-fill align-stretch"
 >
+  <withRouter(Connect(Meta))
+    routesConfig={
+      Array [
+        Object {
+          "pageTitle": "Contact UQ eSpace",
+          "path": "/contact",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/:pid(UQ:\\\\d+)",
+          "regExPath": "/records/(UQ:\\\\d+)",
+        },
+        Object {
+          "exact": true,
+          "pageTitle": "Contact UQ eSpace",
+          "path": "/",
+          "render": [Function],
+        },
+        Object {
+          "pageTitle": "Page not found",
+          "render": [Function],
+        },
+      ]
+    }
+  />
   <AppBar
     className="AppBar align-center"
     iconElementLeft={
@@ -1812,6 +2762,7 @@ exports[`Application component should render for anon user 1`] = `
     <Switch>
       <Route
         key="route_0"
+        pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
       />
@@ -1820,15 +2771,18 @@ exports[`Application component should render for anon user 1`] = `
         exact={true}
         key="route_1"
         path="/records/:pid(UQ:\\\\d+)"
+        regExPath="/records/(UQ:\\\\d+)"
       />
       <Route
         exact={true}
         key="route_2"
+        pageTitle="Contact UQ eSpace"
         path="/"
         render={[Function]}
       />
       <Route
         key="route_3"
+        pageTitle="Page not found"
         render={[Function]}
       />
     </Switch>
@@ -1855,6 +2809,38 @@ exports[`Application component should render thesis submission for HDR without m
 <div
   className="layout-fill align-stretch"
 >
+  <withRouter(Connect(Meta))
+    routesConfig={
+      Array [
+        Object {
+          "pageTitle": "Contact UQ eSpace",
+          "path": "/contact",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/:pid(UQ:\\\\d+)",
+          "regExPath": "/records/(UQ:\\\\d+)",
+        },
+        Object {
+          "pageTitle": "Higher degree by research thesis deposit",
+          "path": "/rhdsubmission",
+          "render": [Function],
+        },
+        Object {
+          "pageTitle": "Professional doctorate deposit",
+          "path": "/sbslodge_new",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "pageTitle": "Link ORCID ID to UQ eSpace",
+        },
+      ]
+    }
+  />
   <AppBar
     className="AppBar align-center"
     iconElementLeft={
@@ -1922,6 +2908,7 @@ exports[`Application component should render thesis submission for HDR without m
     <Switch>
       <Route
         key="route_0"
+        pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
       />
@@ -1930,20 +2917,24 @@ exports[`Application component should render thesis submission for HDR without m
         exact={true}
         key="route_1"
         path="/records/:pid(UQ:\\\\d+)"
+        regExPath="/records/(UQ:\\\\d+)"
       />
       <Route
         key="route_2"
-        path="/rhdsubmission_new"
+        pageTitle="Higher degree by research thesis deposit"
+        path="/rhdsubmission"
         render={[Function]}
       />
       <Route
         key="route_3"
+        pageTitle="Professional doctorate deposit"
         path="/sbslodge_new"
         render={[Function]}
       />
       <Route
         component={[Function]}
         key="route_4"
+        pageTitle="Link ORCID ID to UQ eSpace"
       />
     </Switch>
   </div>
