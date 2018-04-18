@@ -6,7 +6,7 @@
 
 if [[ "$PT_TOKEN" == "" || "$CI_BRANCH" == "" || "$PT_PROJECT" == "" ]]; then
   echo "Please set environmental variables to run the script...."
-  exit
+  exit 0
 fi
 
 # generage notes only for production/staging branches
@@ -17,15 +17,22 @@ fi
 
 gitComment="into $CI_BRANCH"
 
-# get all comments since last merge with PT ids
-lastMerge="$(git log -1 --grep "$gitComment" --pretty=format:'%h')"
-if [ "$lastMerge" == "" ]; then
+# get all comments since previous merge with PT ids
+lastMerge="$(git log -2 --grep "$gitComment" --pretty=format:'%h')"
+IFS=$'\n' lastMerge=($lastMerge)
+
+if [[ "$lastMerge" == "" || ${#lastMerge[@]} -ne 2 ]]; then
   echo "no merges to $CI_BRANCH found"
   exit 0
 fi
 
-commentsWithPT="$(git log $lastMerge..HEAD --pretty=format:"%s" | grep -Poe '\d{9}')"
-if [ "$commentsWithPT" == "" ]; then
+# codeship grep (uses perl style regexp)
+commentsWithPT="$(git log ${lastMerge[1]}..HEAD --pretty=format:"%s" | grep -Poe '\d{9}')"
+
+# local dev
+#commentsWithPT="$(git log ${lastMerge[1]}..HEAD --pretty=format:"%s" | grep -oe '\d\{9\}')"
+
+if [[ "$commentsWithPT" == "" ]]; then
   echo "no PT stories attached to this release"
   exit 0
 fi
@@ -70,7 +77,7 @@ NEWLINE=$'\n'
 DATE=$(date +%d-%m-%Y" "%H:%M:%S);
 releaseNotes="## RELEASE ON $DATE${NEWLINE}"
 releaseNotes="$releaseNotes### Bugs: $bugCount${NEWLINE}"
-releaseNotes="$releaseNotes### Features: $featuresCount${NEWLINE}"
+releaseNotes="$releaseNotes### Features/Chores: $featuresCount${NEWLINE}"
 releaseNotes="$releaseNotes### Stories:${NEWLINE}"
 
 for story in ${stories[@]}; do
