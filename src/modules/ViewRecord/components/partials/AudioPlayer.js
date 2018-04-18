@@ -4,6 +4,7 @@ import {pathConfig} from 'config/routes';
 import PlayArrow from 'material-ui/svg-icons/av/play-arrow';
 import Pause from 'material-ui/svg-icons/av/pause';
 import IconButton from 'material-ui/IconButton';
+import {locale} from 'locale';
 
 export default class AudioPlayer extends Component {
     static propTypes = {
@@ -37,7 +38,7 @@ export default class AudioPlayer extends Component {
 
     render() {
         const {pid, fileName, mimeType} = this.props;
-
+        const {controls} = locale.viewRecord.sections.files;
         return (
             <div>
                 <audio ref={(player) => (this.audioPlayerRef = player)}>
@@ -45,10 +46,10 @@ export default class AudioPlayer extends Component {
                 </audio>
                 {
                     !this.state.isPlaying
-                        ? <IconButton touch onTouchTap={this.audioPlayerPlay} className="audioButton play">
+                        ? <IconButton touch onTouchTap={this.audioPlayerPlay} className="audioButton play" aria-label={controls.playAudio}>
                             <PlayArrow />
                         </IconButton>
-                        : <IconButton touch onTouchTap={this.audioPlayerPause} className="audioButton pause">
+                        : <IconButton touch onTouchTap={this.audioPlayerPause} className="audioButton pause" aria-label={controls.pauseAudio}>
                             <Pause />
                         </IconButton>
                 }
