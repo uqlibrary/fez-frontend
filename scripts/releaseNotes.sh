@@ -25,7 +25,7 @@ if [ "$lastMerge" == "" ]; then
   exit 0
 fi
 
-commentsWithPT="$(git log $lastMerge..HEAD --pretty=format:"%s" --date=short | grep -oe '\d\{9\}')"
+commentsWithPT="$(git log $lastMerge..HEAD --pretty=format:"%s" | grep -Poe '\d{9}')"
 if [ "$commentsWithPT" == "" ]; then
   echo "no PT stories attached to this release"
   exit 0
