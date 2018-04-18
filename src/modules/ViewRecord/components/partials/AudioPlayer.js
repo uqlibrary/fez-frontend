@@ -39,20 +39,20 @@ export default class AudioPlayer extends Component {
     render() {
         const {pid, fileName, mimeType} = this.props;
         const {controls} = locale.global.audioPlayer;
+        const {isPlaying} = this.state;
         return (
             <div>
                 <audio ref={(player) => (this.audioPlayerRef = player)}>
                     <source src={pathConfig.file.url(pid, fileName)} type={mimeType} />
                 </audio>
-                {
-                    !this.state.isPlaying
-                        ? <IconButton touch onTouchTap={this.audioPlayerPlay} className="audioButton play" aria-label={controls.playAudio.replace('[fileName]', fileName)}>
-                            <PlayArrow />
-                        </IconButton>
-                        : <IconButton touch onTouchTap={this.audioPlayerPause} className="audioButton pause" aria-label={controls.pauseAudio.replace('[fileName]', fileName)}>
-                            <Pause />
-                        </IconButton>
-                }
+                <IconButton
+                    touch
+                    onTouchTap={isPlaying ? this.audioPlayerPause : this.audioPlayerPlay}
+                    className={`audioButton ${isPlaying ? 'pause' : 'play'}`}
+                    aria-label={(isPlaying ? controls.pauseAudio : controls.playAudio).replace('[fileName]', fileName)}
+                >
+                    {isPlaying ? <Pause/> : <PlayArrow/>}
+                </IconButton>
             </div>
         );
     }
