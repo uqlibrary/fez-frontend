@@ -75,7 +75,7 @@ done
 
 NEWLINE=$'\n'
 DATE=$(date +%d-%m-%Y" "%H:%M:%S);
-releaseNotes="## RELEASE ON $DATE${NEWLINE}"
+releaseNotes="## **$CI_BRANCH** - RELEASE ON $DATE${NEWLINE}"
 releaseNotes="$releaseNotes### Bugs: $bugCount${NEWLINE}"
 releaseNotes="$releaseNotes### Features/Chores: $featuresCount${NEWLINE}"
 releaseNotes="$releaseNotes### Stories:${NEWLINE}"
