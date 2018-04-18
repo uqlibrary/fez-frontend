@@ -25,6 +25,8 @@ export default class AudioPlayer extends Component {
 
         if (!!playPromise) {
             playPromise.then(() => this.setState({isPlaying: true}));
+        } else {
+            this.setState({isPlaying: true});
         }
     };
 
