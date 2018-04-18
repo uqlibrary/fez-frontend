@@ -1,29 +1,48 @@
 #!/bin/bash
 
-export LAST_MERGE="$(git log -1 --grep 'into production' --pretty=format:'%h')"
-export PT_LIST="$(git log $LAST_MERGE..HEAD --pretty=format:"%s" --date=short | grep -oe '\d\{9\}')"
+# required environment variables:
+# PT_TOKEN - pivotal tracker api token
+# PT_PROJECT - pivotal tracker project id
 
-IFS=$'\n' ptList=($PT_LIST)
+# generage notes only for production/staging branches
+#if [[ "$CI_BRANCH" != "production" && "$CI_BRANCH" != "staging" ]]; then
+#  echo "release notes are generated only for production/staging branch"
+#  exit 0
+#fi
 
-uniquePtList=($(printf "%s\n" "${ptList[@]}" | sort -u | tr '\n' ' '))
-IFS=$' ' uniquePtList=($uniquePtList)
+gitComment="into $CI_BRANCH"
 
-export TOKEN='b8d72792a0de6ccbe17756ab5fb404d6'
-export PROJECT_ID=1589667
+# get all comments since last merge with PT ids
+lastMerge="$(git log -1 --grep "$gitComment" --pretty=format:'%h')"
+if [ "$lastMerge" == "" ]; then
+  echo "no merges to $CI_BRANCH found"
+  exit 0
+fi
 
-url='https://www.pivotaltracker.com/n/projects/1589667/stories/'
+commentsWithPT="$(git log $lastMerge..HEAD --pretty=format:"%s" --date=short | grep -oe '\d\{9\}')"
+if [ "$commentsWithPT" == "" ]; then
+  echo "no PT stories attached to this release"
+  exit 0
+fi
+
+# clean up tasks - get unique tasks only
+IFS=$'\n' allTasksList=($commentsWithPT)
+tasksList=($(printf "%s\n" "${allTasksList[@]}" | sort -u | tr '\n' ' '))
+IFS=$' ' tasksList=($tasksList)
+
+taskUrl='https://www.pivotaltracker.com/n/projects/$PT_PROJECT/stories/'
 stories=()
 bugCount=0
 featuresCount=0
-for task in ${uniquePtList[@]}; do
-  ptStory=$(curl -X GET "https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/stories/$task" -H "X-TrackerToken: $TOKEN" -s)
-  #echo $ptStory
+
+for task in ${tasksList[@]}; do
+  # get PT story details
+  ptStory=$(curl -X GET "https://www.pivotaltracker.com/services/v5/projects/$PT_PROJECT/stories/$task" -H "X-TrackerToken: $PT_TOKEN" -s)
 
   IFS=$',' attributes=($ptStory)
   storyType=''
   storyName=''
   for attribute in ${attributes[@]}; do
-    #echo $attribute
     if [[ "$attribute" =~ story_type ]]; then
       if [[ "$attribute" =~ bug ]]; then
         ((bugCount++))
@@ -37,20 +56,20 @@ for task in ${uniquePtList[@]}; do
     fi
   done
 
-  SUBSTRING=" - ${storyName//\"name\":\"/} (${storyType//\"story_type\":\"/}) [#$task]($url$task)"
-  SUBSTRING=${SUBSTRING//\"/}
-  stories+=($SUBSTRING)
+  changeLogLine=" - ${storyName//\"name\":\"/} (${storyType//\"story_type\":\"/}) [#$task]($taskUrl$task)"
+  changeLogLine=${changeLogLine//\"/}
+  stories+=($changeLogLine)
 done
 
+NEWLINE=$'\n'
 DATE=$(date +%d-%m-%Y" "%H:%M:%S);
-echo "# RELEASE ON $DATE" >> changelog.md
-echo "## Bugs: $bugCount" >> changelog.md
-echo "## Features: $featuresCount" >> changelog.md
-echo "## Stories: " >> changelog.md
+releaseNotes="## RELEASE ON $DATE${NEWLINE}"
+releaseNotes="$releaseNotes### Bugs: $bugCount${NEWLINE}"
+releaseNotes="$releaseNotes### Features: $featuresCount${NEWLINE}"
+releaseNotes="$releaseNotes### Stories:${NEWLINE}"
+
 for story in ${stories[@]}; do
-  echo $story >> changelog.md
+  releaseNotes="$releaseNotes$story${NEWLINE}"
 done
 
-git add .
-git commit -m 'updated changelog [skip ci]'
-git push
+echo $releaseNotes
