@@ -10,7 +10,8 @@
 #  exit 0
 #fi
 
-gitComment="into $CI_BRANCH"
+#gitComment="into $CI_BRANCH"
+gitComment="into production"
 
 # get all comments since last merge with PT ids
 lastMerge="$(git log -1 --grep "$gitComment" --pretty=format:'%h')"
