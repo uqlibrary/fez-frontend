@@ -40,7 +40,6 @@ export default class AudioPlayer extends Component {
         const {pid, fileName, mimeType} = this.props;
         const {controls} = locale.global.audioPlayer;
         const {isPlaying} = this.state;
-
         return (
             <div>
                 <audio ref={(player) => (this.audioPlayerRef = player)}>
