@@ -4,6 +4,11 @@
 # PT_TOKEN - pivotal tracker api token
 # PT_PROJECT - pivotal tracker project id
 
+if [[ "$PT_TOKEN" == "" || "$CI_BRANCH" == "" || "$PT_PROJECT" == "" ]]; then
+  echo "Please set environmental variables to run the script...."
+  exit
+fi
+
 # generage notes only for production/staging branches
 #if [[ "$CI_BRANCH" != "production" && "$CI_BRANCH" != "staging" ]]; then
 #  echo "release notes are generated only for production/staging branch"
@@ -11,7 +16,7 @@
 #fi
 
 #gitComment="into $CI_BRANCH"
-gitComment="into production"
+gitComment="into master"
 
 # get all comments since last merge with PT ids
 lastMerge="$(git log -1 --grep "$gitComment" --pretty=format:'%h')"
