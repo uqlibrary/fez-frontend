@@ -9,7 +9,7 @@ exports[`Audio Player Component  should pause audio 1`] = `
     />
   </audio>
   <IconButton
-    aria-label="Pause audio"
+    aria-label="Click to pause audio file UQ676287_OA.pdf"
     className="audioButton pause"
     disableTouchRipple={false}
     disabled={false}
@@ -88,7 +88,7 @@ exports[`Audio Player Component  should pause audio 2`] = `
             />
           </audio>
           <IconButton
-            aria-label="Pause audio"
+            aria-label="Click to pause audio file UQ676287_OA.pdf"
             className="audioButton pause"
             disableTouchRipple={false}
             disabled={false}
@@ -98,7 +98,7 @@ exports[`Audio Player Component  should pause audio 2`] = `
             touch={true}
           >
             <EnhancedButton
-              aria-label="Pause audio"
+              aria-label="Click to pause audio file UQ676287_OA.pdf"
               centerRipple={true}
               className="audioButton pause"
               containerElement="button"
@@ -130,7 +130,7 @@ exports[`Audio Player Component  should pause audio 2`] = `
               type="button"
             >
               <button
-                aria-label="Pause audio"
+                aria-label="Click to pause audio file UQ676287_OA.pdf"
                 className="audioButton pause"
                 disabled={false}
                 onBlur={[Function]}
@@ -293,7 +293,7 @@ exports[`Audio Player Component  should play audio 1`] = `
             />
           </audio>
           <IconButton
-            aria-label="Play audio"
+            aria-label="Click to play audio file UQ676287_OA.pdf"
             className="audioButton play"
             disableTouchRipple={false}
             disabled={false}
@@ -303,7 +303,7 @@ exports[`Audio Player Component  should play audio 1`] = `
             touch={true}
           >
             <EnhancedButton
-              aria-label="Play audio"
+              aria-label="Click to play audio file UQ676287_OA.pdf"
               centerRipple={true}
               className="audioButton play"
               containerElement="button"
@@ -335,7 +335,7 @@ exports[`Audio Player Component  should play audio 1`] = `
               type="button"
             >
               <button
-                aria-label="Play audio"
+                aria-label="Click to play audio file UQ676287_OA.pdf"
                 className="audioButton play"
                 disabled={false}
                 onBlur={[Function]}
@@ -442,7 +442,7 @@ exports[`Audio Player Component  should render component 1`] = `
     />
   </audio>
   <IconButton
-    aria-label="Play audio"
+    aria-label="Click to play audio file UQ676287_OA.pdf"
     className="audioButton play"
     disableTouchRipple={false}
     disabled={false}
@@ -465,7 +465,7 @@ exports[`Audio Player Component  should set component state to playing 1`] = `
     />
   </audio>
   <IconButton
-    aria-label="Play audio"
+    aria-label="Click to play audio file UQ676287_OA.pdf"
     className="audioButton play"
     disableTouchRipple={false}
     disabled={false}
@@ -488,7 +488,7 @@ exports[`Audio Player Component  should set component state to playing 2`] = `
     />
   </audio>
   <IconButton
-    aria-label="Pause audio"
+    aria-label="Click to pause audio file UQ676287_OA.pdf"
     className="audioButton pause"
     disableTouchRipple={false}
     disabled={false}

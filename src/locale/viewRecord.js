@@ -31,10 +31,6 @@ export default {
                     openInNewWindow: 'Open file in a new window',
                     close: 'Close',
                     errorMessage: 'Your browser does not support the video tag.'
-                },
-                controls: {
-                    playAudio: 'Play audio',
-                    pauseAudio: 'Pause audio'
                 }
             },
             links: {

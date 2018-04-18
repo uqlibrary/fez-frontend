@@ -38,7 +38,7 @@ export default class AudioPlayer extends Component {
 
     render() {
         const {pid, fileName, mimeType} = this.props;
-        const {controls} = locale.viewRecord.sections.files;
+        const {controls} = locale.global.audioPlayer;
         return (
             <div>
                 <audio ref={(player) => (this.audioPlayerRef = player)}>
@@ -46,10 +46,10 @@ export default class AudioPlayer extends Component {
                 </audio>
                 {
                     !this.state.isPlaying
-                        ? <IconButton touch onTouchTap={this.audioPlayerPlay} className="audioButton play" aria-label={controls.playAudio}>
+                        ? <IconButton touch onTouchTap={this.audioPlayerPlay} className="audioButton play" aria-label={controls.playAudio.replace('[fileName]', fileName)}>
                             <PlayArrow />
                         </IconButton>
-                        : <IconButton touch onTouchTap={this.audioPlayerPause} className="audioButton pause" aria-label={controls.pauseAudio}>
+                        : <IconButton touch onTouchTap={this.audioPlayerPause} className="audioButton pause" aria-label={controls.pauseAudio.replace('[fileName]', fileName)}>
                             <Pause />
                         </IconButton>
                 }

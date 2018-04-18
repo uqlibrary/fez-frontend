@@ -260,7 +260,7 @@ exports[`File Name Component  should render audio player 1`] = `
                   />
                 </audio>
                 <IconButton
-                  aria-label="Play audio"
+                  aria-label="Click to play audio file UQ676287_OA.pdf"
                   className="audioButton play"
                   disableTouchRipple={false}
                   disabled={false}
@@ -270,7 +270,7 @@ exports[`File Name Component  should render audio player 1`] = `
                   touch={true}
                 >
                   <EnhancedButton
-                    aria-label="Play audio"
+                    aria-label="Click to play audio file UQ676287_OA.pdf"
                     centerRipple={true}
                     className="audioButton play"
                     containerElement="button"
@@ -302,7 +302,7 @@ exports[`File Name Component  should render audio player 1`] = `
                     type="button"
                   >
                     <button
-                      aria-label="Play audio"
+                      aria-label="Click to play audio file UQ676287_OA.pdf"
                       className="audioButton play"
                       disabled={false}
                       onBlur={[Function]}
