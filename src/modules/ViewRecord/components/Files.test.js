@@ -23,6 +23,7 @@ describe('Files Component ', () => {
     it('should render component', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('FileName').length).toEqual(1);
     });
 
     it('should not render cultural message', () => {

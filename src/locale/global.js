@@ -132,6 +132,12 @@ export default {
                 message: 'Your connection is offline',
                 autoHideDuration: 0
             }
+        },
+        audioPlayer: {
+            controls: {
+                playAudio: 'Click to play audio file [fileName]',
+                pauseAudio: 'Click to pause audio file [fileName]'
+            }
         }
     }
 };

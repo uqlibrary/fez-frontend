@@ -108,7 +108,8 @@ export default class Files extends Component {
 
     isFileValid = (dataStream) => {
         return !dataStream.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
-            (!dataStream.dsi_label || !dataStream.dsi_label.match(new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi')));
+            (!dataStream.dsi_label || !dataStream.dsi_label.match(new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi'))) &&
+            dataStream.dsi_state === 'A';
     }
 
     getFileData = (publication) => {

@@ -31,7 +31,7 @@ export default {
                     openInNewWindow: 'Open file in a new window',
                     close: 'Close',
                     errorMessage: 'Your browser does not support the video tag.'
-                },
+                }
             },
             links: {
                 title: 'Links',
