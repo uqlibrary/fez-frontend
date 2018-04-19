@@ -144,13 +144,14 @@ To run website on mock data run `yarn start:mock` webserver will start on `http:
 The project allows the user to "login" as any test user. Simply add `?user=<username>` to the request and it will log you
 in as that user. Usernames can be found in the `src/mock/data/accounts.js` file.
 
-- anonymous user: http://localhost:3000/?user=anon#/
-- researcher user: http://localhost:3000/?user=uqresearcher#/
-- researcher user without orcid: http://localhost:3000/?user=noorcid#/
-- staff/not author user: http://localhost:3000/?user=uqstaff#/
-- undegrad student user: http://localhost:3000/?user=s1111111#/
-- postgrad student user: http://localhost:3000/?user=s2222222#/
-- user with expired token: http://localhost:3000/?user=uqexpired#/
+- anonymous user: http://localhost:3000/?user=anon
+- researcher user: http://localhost:3000/?user=uqresearcher
+- researcher user without orcid: http://localhost:3000/?user=noorcid
+- staff/not author user: http://localhost:3000/?user=uqstaff
+- undegrad student user: http://localhost:3000/?user=s1111111
+- postgrad student user: http://localhost:3000/?user=s2222222
+- RHD submission form: http://localhost:3000/rhdsubmission?user=s2222222
+- user with expired token: http://localhost:3000/?user=uqexpired
 
 ## Deployment
 Application deployment is 100% automated using Codeship, and is hosted in S3. 
