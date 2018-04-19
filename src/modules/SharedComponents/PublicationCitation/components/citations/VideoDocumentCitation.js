@@ -35,7 +35,7 @@ export default class VideoDocumentCitation extends Component {
                 <Partials.DateCitationView date={this.props.publication.rek_date}/>
 
                 {/* <i>{Title| |.}</i> */}
-                <Partials.CitationView className="citationTitle" value={record.title}/>
+                <Partials.CitationTitleView className="citationTitle" value={record.title}/>
 
                 {/* {Series| |.} */}
                 <Partials.CitationView className="citationSeries" value={record.series}/>

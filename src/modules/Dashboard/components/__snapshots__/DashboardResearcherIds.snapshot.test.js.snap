@@ -23,20 +23,20 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
     </ExternalLink>
   </div>
   <div
-    className="column is-narrow researchIdAvatar error"
+    className="column is-narrow researchIdAvatar ok"
     key="1"
   >
     <ExternalLink
       className="researcherIDlink"
-      href="https://app.library.uq.edu.au/#/id"
+      href="http://www.researcherid.com/rid/A-1137-2007"
       openInNewIcon={false}
       rel="noopener noreferrer"
       target="_blank"
-      title="You are not linked to Researcher (ISI) - Click to amend"
+      title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
     >
       <div
         className="fez-icon researcher dashboard"
-        title="You are not linked to Researcher (ISI) - Click to amend"
+        title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
       />
     </ExternalLink>
   </div>
@@ -46,15 +46,15 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
   >
     <ExternalLink
       className="researcherIDlink"
-      href="https://app.library.uq.edu.au/#/id"
+      href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
       openInNewIcon={false}
       rel="noopener noreferrer"
       target="_blank"
-      title="You are not linked to Scopus - Click to amend"
+      title="Your Scopus ID is 35478294000 - Click to review"
     >
       <div
         className="fez-icon scopus dashboard"
-        title="You are not linked to Scopus - Click to amend"
+        title="Your Scopus ID is 35478294000 - Click to review"
       />
     </ExternalLink>
   </div>
@@ -62,32 +62,52 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
     className="column is-narrow researchIdAvatar error"
     key="3"
   >
-    <a
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      tabIndex="0"
-      title="You are not linked to Google Scholar - Click to amend"
+    <ExternalLink
+      className="researcherIDlink"
+      href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
+      openInNewIcon={false}
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
     >
       <div
         className="fez-icon google_scholar dashboard"
-        title="You are not linked to Google Scholar - Click to amend"
+        title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
       />
-    </a>
+    </ExternalLink>
   </div>
   <div
-    className="column is-narrow researchIdAvatar error"
+    className="column is-narrow researchIdAvatar ok"
     key="4"
   >
-    <a
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      tabIndex="0"
-      title="You are not linked to ORCID - Click to amend"
+    <ExternalLink
+      className="researcherIDlink"
+      href="https://orcid.org/0000-0001-1111-1111"
+      openInNewIcon={false}
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
     >
       <div
         className="fez-icon orcid dashboard"
-        title="You are not linked to ORCID - Click to amend"
+        title="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
       />
+    </ExternalLink>
+  </div>
+  <div
+    className="column is-narrow"
+  >
+     
+    <a
+      aria-label="Click to visit your ORCId profile"
+      className="orcidLink"
+      href="https://orcid.org/0000-0001-1111-1111"
+      tabIndex="0"
+      target="_blank"
+      title="Click to visit your ORCId profile"
+    >
+      orcid.org/
+      0000-0001-1111-1111
     </a>
   </div>
 </div>

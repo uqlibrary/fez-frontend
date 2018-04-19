@@ -29,7 +29,7 @@ export function putUploadFile(pid, file, dispatch) {
             return Promise.resolve(uploadResponse);
         })
         .catch(error => {
-            if(!process.env.USE_MOCK && process.env.NODE_ENV !== 'test') Raven.captureException(error);
+            if(process.env.ENABLE_LOG) Raven.captureException(error);
 
             // only send issues for PIDs
             if (/^UQ:\d+/g.test(pid)) {

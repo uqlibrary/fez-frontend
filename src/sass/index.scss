@@ -1,3 +1,6 @@
+// Breakpoint override for bulma
+$tablet: 720px;
+$desktop: 1024px;
 // Import the main toolbox styles
 @import '~uqlibrary-react-toolbox/sass/index';
 // Frontend specific variables override toolbox defaults if defined

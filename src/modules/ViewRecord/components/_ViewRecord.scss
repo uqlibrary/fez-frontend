@@ -1,97 +1,254 @@
 @import '../../../sass/variables';
-
 .viewRecord {
-  margin-top: -12px !important;
 
-  .publicationCitation {
-    padding-top: 0 !important;
-    border-bottom: none !important;
-  }
+  // Common ----------------------------------------------------
 
-  .openExternalUrlIcon {
-    height: $text-body-small !important;
-    width: $text-body-small !important;
-    font-size: $text-body-small !important;
-    fill: $accent-color !important;
-    color: $accent-color !important;
-    margin: 0 2px;
-    vertical-align: top;
-  }
-
-  // Universal table data styles
-  .additionalInformation, .publicationDetails, .grantInformation {
-    table-layout: auto !important;
-    .tableRow, .headingColumn, .dataColumn {
-      padding: 8px 6px !important;
-      height: auto !important;
-      @include mobile {
-        padding:  6px 0 0 0 !important;
-        height: auto !important;
+  // Table Horizontal data
+  table.horizontal {
+    td, th {
+      padding: 0 6px !important;
+      height: 14px !important;
+    }
+    .header {
+      height: 24px !important;
+      tr {
+        height: 24px !important;
+      }
+      th {
+        height: 14px !important;
+        line-height: 14px !important;
+        padding: 0 6px !important;
+        color: #adadad !important;
+        font-weight: 300 !important;
       }
     }
-    .headingColumn {
-      font-weight: $text-weight-bold;
-      font-size: $text-body-normal !important;
-      vertical-align: top;
-      white-space: normal !important;
+    .data {
+      tr {
+        height: 38px !important;
+      }
+      td {
+        height: 38px !important;
+        line-height: 24px !important;
+        padding: 0 6px !important;
+      }
 
-      @include desktop {
-        width: 150px;
+    }
+  }
+
+  // Table Vertical data
+  table.vertical {
+    tr {
+      height: 32px !important;
+    }
+    td {
+      height: 32px !important;
+      line-height: 24px !important;
+      overflow: hidden !important;
+      padding: 6px 0 0 0 !important;
+      vertical-align: top !important;
+      white-space: normal !important;
+    }
+    .header {
+      font-weight: $text-weight-bold !important;
+      @include tablet {
+        width: 200px !important;
+      }
+      @include mobile {
+        width: 100% !important;
+        display: inline-block;
+      }
+    }
+    .data {
+      white-space: normal !important;
+       height: auto !important;
+      ul {
+        padding: 0 !important;
+        margin: 0 !important;
       }
       @include tablet {
-        width: 150px;
+        width: 100% !important;
       }
       @include mobile {
+        width: 100% !important;
         display: inline-block !important;
-        width: calc(100% - 12px);
-        height: auto !important;
       }
     }
 
-    .dataColumn {
-      font-weight: $text-weight-normal;
-      white-space: normal !important;
-      vertical-align: top;
-      @include mobile {
-        padding: 12px 0 12px 12px !important;
-        display: inline-block !important;
-        width: calc(100% - 12px);
-        height: auto !important;
-        -ms-word-break: break-word;
-        word-break: break-word !important;
+
+  }
+
+  // Components ------------------------------------------------
+
+  // Files
+  .files {
+    .fileIcon {
+      svg {
+        fill: lighten($secondary-color, 33%) !important;
+        width: 24px !important;
+        height: 24px !important;
+        padding: 8px 6px 0 0 !important;
+      }
+      img {
+        max-width: 24px;
+        max-height: 24px;
       }
     }
+    // columns widths
+    .filetype {
+      width: 24px !important;
+    }
+    .filename {
+      @include desktop {
+        width: 45% !important;
+      }
+      @include tablet-only {
+        width: 48% !important;
+      }
+      @include mobile {
+        width: 100% !important;
+      }
+    }
+    .description {
+      @include desktop {
+        width: 25% !important;
+      }
+      @include tablet-only {
+        width: 52% !important;
+      }
+    }
+    .oa {
+      text-align: right !important;
+      @include desktop {
+        width: 20% !important;
+      }
+      @include tablet-only {
+        width: 24px !important;
+      }
+      @include mobile {
+        width: 24px !important;
+      }
+    }
+    .size {
+      text-align: right !important;
+      width: 10% !important;
+    }
+    .fileDetails {
+      width: 100%;
+      .fileIcon {
+        img, svg {
+          color: lighten($secondary-color, 25%) !important;
+          margin: auto 6px !important;
+        }
+      }
+      .fileInfo {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        //max-width: 200px;
+      }
+      .fileName {
+        line-height: 47px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .audioWrapper {
+        overflow: hidden;
+        .audioButton {
+          transform: scale(0.75);
+          svg {
+            //width: 12px !important;
+            //height: 12px !important;
+            fill: $secondary-color !important;
+          }
+        }
+        .audioPlayer {
+          margin-top: 8px;
+          width: 100px;
+          overflow: hidden;
 
-    ul {
-      padding: 0 !important;
-      margin: 0 !important;
-      li {
-        margin-left: 12px;
+        }
+      }
+    }
+  }
+  .mediaPreview {
+    .buttons {
+      position: relative;
+      top: -46px;
+      text-align: right;
+    }
+    img {
+      max-width: 80vw;
+      max-height: 100vh;
+    }
+  }
+
+  // Links
+  .links {
+    .link {
+      @include desktop {
+        width: 47% !important;
+      }
+      @include tablet-only {
+        width: 50% !important;
+      }
+      @include mobile {
+        width: 100% !important;
+      }
+    }
+    .description {
+      @include desktop {
+        width: 33% !important;
+      }
+      @include tablet-only {
+        width: 50% !important;
+      }
+    }
+    .oa {
+      text-align: right !important;
+      @include desktop {
+        width: 20% !important;
+      }
+      @include tablet-only {
+        width: 24px !important;
+      }
+      @include mobile {
+        width: 24px !important;
       }
     }
   }
 
-  // Grant specific styles
-  .grantInformation {
-    margin-bottom: 0 !important;
-    margin-top: 6px !important;
-    .grantText {
-      margin-top: 6px;
+  // Related publicaitons
+  .relatedPublications .publicationList {
+    .displayType {
+      font-style: italic;
     }
-    .headingColumn {
-      @include mobile {
-        display: none !important;
-      }
+
+    div {
+      display: inline;
     }
-    .dataColumn {
-      @include mobile {
-        padding: 6px 0 !important;
-      }
+
+    h3 {
+      display: inline;
+      font-size: 1em !important
     }
   }
 
-  // Additional info specific styles
+  // Grants
+  .grants {
+
+  }
+  .singleGrantText {
+    font-size: 13px !important;
+  }
+
+  // Publication details
+  .publicationDetails {
+  }
+
+  // Additional information
   .additionalInformation {
+
     .citationLabel {
       display: none;
     }
@@ -107,8 +264,56 @@
     .sherpaRomeoYellow {
       color: yellow;
       background-color: grey;
+      padding: 1px 3px;
     }
   }
 
-}
+  // Other -----------------------------------------------
 
+  .publicationCitation {
+    padding-top: 0 !important;
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+  }
+  .cardTitle {
+    margin-bottom: 12px !important;
+  }
+  .citationCounts {
+    margin-bottom: 6px !important;
+    .citationCount {
+      word-break: normal !important;
+      white-space: nowrap !important;
+      display: inline-block !important;
+    }
+    .citationOaIcon {
+      width: 24px !important;
+      @include mobile {
+        zoom: 2;
+      }
+    }
+    .citationLink {
+      @include tablet {
+        margin-left: 12px !important;
+      }
+      @include mobile {
+        margin-top: 12px !important;
+        margin-left: 6px !important;
+      }
+    }
+    .citationIcons {
+      overflow: hidden !important;
+      @include mobile {
+        zoom: 2;
+        padding-left: 0px !important;
+      }
+    }
+  }
+  .shareThis {
+    @include tablet {
+      margin-top: -26px !important;
+    }
+    @include mobile {
+      margin-left: -3px;
+    }
+  }
+}

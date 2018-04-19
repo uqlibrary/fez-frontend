@@ -4,6 +4,173 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
 <DataCollectionCitation
   publication={
     Object {
+      "fez_datastream_info": Array [
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_UQ_407731.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "FezACML security for PID - UQ:407731",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 3705,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supplemental_information.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1228,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Material.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1203,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S16.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1205,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S19.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1205,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S20.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S21.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S22.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supplemental_information.docx",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/octet-stream",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 2320778,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Material.zip",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/zip",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 300184,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S16.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 770048,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S19.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 754176,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S20.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 97280,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S21.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 67584,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S22.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 41984,
+          "dsi_state": "A",
+        },
+      ],
       "fez_record_search_key_access_conditions": Object {
         "rek_access_conditions": "453619",
         "rek_access_conditions_id": 3968,
@@ -317,6 +484,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
           "rek_grant_id_xsdmf_id": 16200,
         },
       ],
+      "fez_record_search_key_has_derivations": Array [
+        Object {
+          "rek_has_derivations": "UQ:313292",
+          "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_derivations_order": 1,
+          "rek_has_derivations_pid": "UQ:296498",
+        },
+      ],
+      "fez_record_search_key_has_related_datasets": Array [
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_related_datasets_order": 1,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "dataset 2",
+          "rek_has_related_datasets_order": 2,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+      ],
       "fez_record_search_key_isdatasetof": Array [
         Object {
           "rek_isdatasetof": "UQ:365357",
@@ -327,6 +516,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -418,8 +608,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
       },
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -610,6 +799,173 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
       initialNumberOfAuthors={10}
       publication={
         Object {
+          "fez_datastream_info": Array [
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "FezACML_UQ_407731.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "FezACML security for PID - UQ:407731",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 3705,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supplemental_information.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1228,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Material.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1203,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S16.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1205,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S19.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1205,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S20.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S21.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S22.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supplemental_information.docx",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/octet-stream",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 2320778,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Material.zip",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/zip",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 300184,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S16.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 770048,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S19.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 754176,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S20.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 97280,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S21.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 67584,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S22.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 41984,
+              "dsi_state": "A",
+            },
+          ],
           "fez_record_search_key_access_conditions": Object {
             "rek_access_conditions": "453619",
             "rek_access_conditions_id": 3968,
@@ -923,6 +1279,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
               "rek_grant_id_xsdmf_id": 16200,
             },
           ],
+          "fez_record_search_key_has_derivations": Array [
+            Object {
+              "rek_has_derivations": "UQ:313292",
+              "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_derivations_order": 1,
+              "rek_has_derivations_pid": "UQ:296498",
+            },
+          ],
+          "fez_record_search_key_has_related_datasets": Array [
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_related_datasets_order": 1,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "dataset 2",
+              "rek_has_related_datasets_order": 2,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+          ],
           "fez_record_search_key_isdatasetof": Array [
             Object {
               "rek_isdatasetof": "UQ:365357",
@@ -933,6 +1311,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -1024,8 +1403,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
             "rek_publisher_pid": "UQ:407731",
             "rek_publisher_xsdmf_id": 16050,
           },
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -1191,14 +1569,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Parks, Donovan H."
         >
           <span
             className="citationAuthor"
           >
-             
             Parks, Donovan H.
             , 
           </span>
@@ -1206,14 +1583,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Imelfort, Michael"
         >
           <span
             className="citationAuthor"
           >
-             
             Imelfort, Michael
             , 
           </span>
@@ -1221,14 +1597,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Skennerton, Connor T."
         >
           <span
             className="citationAuthor"
           >
-             
             Skennerton, Connor T.
             , 
           </span>
@@ -1236,16 +1611,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=" "
-          suffix=", "
+          prefix=""
+          suffix=""
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
-             
             Hugenholtz, Philip
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -1279,7 +1652,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1292,7 +1665,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -1400,6 +1773,173 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
 <DataCollectionCitation
   publication={
     Object {
+      "fez_datastream_info": Array [
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_UQ_407731.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "FezACML security for PID - UQ:407731",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 3705,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supplemental_information.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1228,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Material.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1203,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S16.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1205,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S19.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1205,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S20.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S21.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S22.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supplemental_information.docx",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/octet-stream",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 2320778,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Material.zip",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/zip",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 300184,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S16.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 770048,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S19.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 754176,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S20.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 97280,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S21.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 67584,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S22.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 41984,
+          "dsi_state": "A",
+        },
+      ],
       "fez_record_search_key_access_conditions": Object {
         "rek_access_conditions": "453619",
         "rek_access_conditions_id": 3968,
@@ -1713,6 +2253,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_grant_id_xsdmf_id": 16200,
         },
       ],
+      "fez_record_search_key_has_derivations": Array [
+        Object {
+          "rek_has_derivations": "UQ:313292",
+          "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_derivations_order": 1,
+          "rek_has_derivations_pid": "UQ:296498",
+        },
+      ],
+      "fez_record_search_key_has_related_datasets": Array [
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_related_datasets_order": 1,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "dataset 2",
+          "rek_has_related_datasets_order": 2,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+      ],
       "fez_record_search_key_isdatasetof": Array [
         Object {
           "rek_isdatasetof": "UQ:365357",
@@ -1723,6 +2285,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -1814,8 +2377,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
       },
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -2006,6 +2568,173 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       initialNumberOfAuthors={10}
       publication={
         Object {
+          "fez_datastream_info": Array [
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "FezACML_UQ_407731.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "FezACML security for PID - UQ:407731",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 3705,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supplemental_information.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1228,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Material.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1203,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S16.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1205,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S19.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1205,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S20.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S21.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S22.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supplemental_information.docx",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/octet-stream",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 2320778,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Material.zip",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/zip",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 300184,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S16.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 770048,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S19.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 754176,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S20.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 97280,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S21.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 67584,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S22.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 41984,
+              "dsi_state": "A",
+            },
+          ],
           "fez_record_search_key_access_conditions": Object {
             "rek_access_conditions": "453619",
             "rek_access_conditions_id": 3968,
@@ -2319,6 +3048,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_grant_id_xsdmf_id": 16200,
             },
           ],
+          "fez_record_search_key_has_derivations": Array [
+            Object {
+              "rek_has_derivations": "UQ:313292",
+              "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_derivations_order": 1,
+              "rek_has_derivations_pid": "UQ:296498",
+            },
+          ],
+          "fez_record_search_key_has_related_datasets": Array [
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_related_datasets_order": 1,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "dataset 2",
+              "rek_has_related_datasets_order": 2,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+          ],
           "fez_record_search_key_isdatasetof": Array [
             Object {
               "rek_isdatasetof": "UQ:365357",
@@ -2329,6 +3080,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -2420,8 +3172,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_publisher_pid": "UQ:407731",
             "rek_publisher_xsdmf_id": 16050,
           },
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -2587,14 +3338,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Parks, Donovan H."
         >
           <span
             className="citationAuthor"
           >
-             
             Parks, Donovan H.
             , 
           </span>
@@ -2602,14 +3352,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Imelfort, Michael"
         >
           <span
             className="citationAuthor"
           >
-             
             Imelfort, Michael
             , 
           </span>
@@ -2617,14 +3366,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Skennerton, Connor T."
         >
           <span
             className="citationAuthor"
           >
-             
             Skennerton, Connor T.
             , 
           </span>
@@ -2632,16 +3380,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=" "
-          suffix=", "
+          prefix=""
+          suffix=""
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
-             
             Hugenholtz, Philip
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -2671,7 +3417,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -2684,7 +3430,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -2792,6 +3538,173 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
 <DataCollectionCitation
   publication={
     Object {
+      "fez_datastream_info": Array [
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_UQ_407731.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "FezACML security for PID - UQ:407731",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 3705,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supplemental_information.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1228,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Material.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1203,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S16.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1205,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S19.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1205,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S20.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S21.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S22.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supplemental_information.docx",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/octet-stream",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 2320778,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Material.zip",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/zip",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 300184,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S16.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 770048,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S19.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 754176,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S20.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 97280,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S21.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 67584,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S22.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 41984,
+          "dsi_state": "A",
+        },
+      ],
       "fez_record_search_key_access_conditions": Object {
         "rek_access_conditions": "453619",
         "rek_access_conditions_id": 3968,
@@ -3105,6 +4018,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_grant_id_xsdmf_id": 16200,
         },
       ],
+      "fez_record_search_key_has_derivations": Array [
+        Object {
+          "rek_has_derivations": "UQ:313292",
+          "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_derivations_order": 1,
+          "rek_has_derivations_pid": "UQ:296498",
+        },
+      ],
+      "fez_record_search_key_has_related_datasets": Array [
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_related_datasets_order": 1,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "dataset 2",
+          "rek_has_related_datasets_order": 2,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+      ],
       "fez_record_search_key_isdatasetof": Array [
         Object {
           "rek_isdatasetof": "UQ:365357",
@@ -3115,6 +4050,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -3206,8 +4142,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
       },
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -3398,6 +4333,173 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       initialNumberOfAuthors={10}
       publication={
         Object {
+          "fez_datastream_info": Array [
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "FezACML_UQ_407731.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "FezACML security for PID - UQ:407731",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 3705,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supplemental_information.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1228,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Material.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1203,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S16.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1205,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S19.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1205,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S20.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S21.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S22.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supplemental_information.docx",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/octet-stream",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 2320778,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Material.zip",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/zip",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 300184,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S16.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 770048,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S19.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 754176,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S20.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 97280,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S21.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 67584,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S22.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 41984,
+              "dsi_state": "A",
+            },
+          ],
           "fez_record_search_key_access_conditions": Object {
             "rek_access_conditions": "453619",
             "rek_access_conditions_id": 3968,
@@ -3711,6 +4813,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_grant_id_xsdmf_id": 16200,
             },
           ],
+          "fez_record_search_key_has_derivations": Array [
+            Object {
+              "rek_has_derivations": "UQ:313292",
+              "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_derivations_order": 1,
+              "rek_has_derivations_pid": "UQ:296498",
+            },
+          ],
+          "fez_record_search_key_has_related_datasets": Array [
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_related_datasets_order": 1,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "dataset 2",
+              "rek_has_related_datasets_order": 2,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+          ],
           "fez_record_search_key_isdatasetof": Array [
             Object {
               "rek_isdatasetof": "UQ:365357",
@@ -3721,6 +4845,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -3812,8 +4937,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_publisher_pid": "UQ:407731",
             "rek_publisher_xsdmf_id": 16050,
           },
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -3979,14 +5103,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Parks, Donovan H."
         >
           <span
             className="citationAuthor"
           >
-             
             Parks, Donovan H.
             , 
           </span>
@@ -3994,14 +5117,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Imelfort, Michael"
         >
           <span
             className="citationAuthor"
           >
-             
             Imelfort, Michael
             , 
           </span>
@@ -4009,14 +5131,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Skennerton, Connor T."
         >
           <span
             className="citationAuthor"
           >
-             
             Skennerton, Connor T.
             , 
           </span>
@@ -4024,16 +5145,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=" "
-          suffix=", "
+          prefix=""
+          suffix=""
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
-             
             Hugenholtz, Philip
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -4067,7 +5186,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -4076,7 +5195,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -4184,6 +5303,173 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
 <DataCollectionCitation
   publication={
     Object {
+      "fez_datastream_info": Array [
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_UQ_407731.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "FezACML security for PID - UQ:407731",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 3705,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supplemental_information.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1228,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Material.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1203,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S16.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1205,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S19.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1205,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S20.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S21.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S22.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supplemental_information.docx",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/octet-stream",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 2320778,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Material.zip",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/zip",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 300184,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S16.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 770048,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S19.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 754176,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S20.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 97280,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S21.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 67584,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S22.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 41984,
+          "dsi_state": "A",
+        },
+      ],
       "fez_record_search_key_access_conditions": Object {
         "rek_access_conditions": "453619",
         "rek_access_conditions_id": 3968,
@@ -4461,6 +5747,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_grant_id_xsdmf_id": 16200,
         },
       ],
+      "fez_record_search_key_has_derivations": Array [
+        Object {
+          "rek_has_derivations": "UQ:313292",
+          "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_derivations_order": 1,
+          "rek_has_derivations_pid": "UQ:296498",
+        },
+      ],
+      "fez_record_search_key_has_related_datasets": Array [
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_related_datasets_order": 1,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "dataset 2",
+          "rek_has_related_datasets_order": 2,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+      ],
       "fez_record_search_key_isdatasetof": Array [
         Object {
           "rek_isdatasetof": "UQ:365357",
@@ -4471,6 +5779,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -4562,8 +5871,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
       },
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -4754,6 +6062,173 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       initialNumberOfAuthors={10}
       publication={
         Object {
+          "fez_datastream_info": Array [
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "FezACML_UQ_407731.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "FezACML security for PID - UQ:407731",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 3705,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supplemental_information.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1228,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Material.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1203,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S16.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1205,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S19.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1205,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S20.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S21.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S22.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supplemental_information.docx",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/octet-stream",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 2320778,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Material.zip",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/zip",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 300184,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S16.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 770048,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S19.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 754176,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S20.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 97280,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S21.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 67584,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S22.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 41984,
+              "dsi_state": "A",
+            },
+          ],
           "fez_record_search_key_access_conditions": Object {
             "rek_access_conditions": "453619",
             "rek_access_conditions_id": 3968,
@@ -5031,6 +6506,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_grant_id_xsdmf_id": 16200,
             },
           ],
+          "fez_record_search_key_has_derivations": Array [
+            Object {
+              "rek_has_derivations": "UQ:313292",
+              "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_derivations_order": 1,
+              "rek_has_derivations_pid": "UQ:296498",
+            },
+          ],
+          "fez_record_search_key_has_related_datasets": Array [
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_related_datasets_order": 1,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "dataset 2",
+              "rek_has_related_datasets_order": 2,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+          ],
           "fez_record_search_key_isdatasetof": Array [
             Object {
               "rek_isdatasetof": "UQ:365357",
@@ -5041,6 +6538,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -5132,8 +6630,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_publisher_pid": "UQ:407731",
             "rek_publisher_xsdmf_id": 16050,
           },
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -5312,7 +6809,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -5325,7 +6822,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -5433,6 +6930,173 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
 <DataCollectionCitation
   publication={
     Object {
+      "fez_datastream_info": Array [
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_UQ_407731.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "FezACML security for PID - UQ:407731",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 3705,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supplemental_information.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1228,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Material.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1203,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S16.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1205,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S19.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1205,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S20.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S21.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S22.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supplemental_information.docx",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/octet-stream",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 2320778,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Material.zip",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/zip",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 300184,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S16.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 770048,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S19.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 754176,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S20.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 97280,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S21.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 67584,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S22.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 41984,
+          "dsi_state": "A",
+        },
+      ],
       "fez_record_search_key_access_conditions": Object {
         "rek_access_conditions": "453619",
         "rek_access_conditions_id": 3968,
@@ -5746,6 +7410,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_grant_id_xsdmf_id": 16200,
         },
       ],
+      "fez_record_search_key_has_derivations": Array [
+        Object {
+          "rek_has_derivations": "UQ:313292",
+          "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_derivations_order": 1,
+          "rek_has_derivations_pid": "UQ:296498",
+        },
+      ],
+      "fez_record_search_key_has_related_datasets": Array [
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_related_datasets_order": 1,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "dataset 2",
+          "rek_has_related_datasets_order": 2,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+      ],
       "fez_record_search_key_isdatasetof": Array [
         Object {
           "rek_isdatasetof": "UQ:365357",
@@ -5756,6 +7442,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -5847,8 +7534,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
       },
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -6039,6 +7725,173 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       initialNumberOfAuthors={10}
       publication={
         Object {
+          "fez_datastream_info": Array [
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "FezACML_UQ_407731.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "FezACML security for PID - UQ:407731",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 3705,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supplemental_information.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1228,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Material.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1203,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S16.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1205,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S19.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1205,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S20.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S21.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S22.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supplemental_information.docx",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/octet-stream",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 2320778,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Material.zip",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/zip",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 300184,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S16.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 770048,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S19.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 754176,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S20.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 97280,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S21.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 67584,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S22.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 41984,
+              "dsi_state": "A",
+            },
+          ],
           "fez_record_search_key_access_conditions": Object {
             "rek_access_conditions": "453619",
             "rek_access_conditions_id": 3968,
@@ -6352,6 +8205,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_grant_id_xsdmf_id": 16200,
             },
           ],
+          "fez_record_search_key_has_derivations": Array [
+            Object {
+              "rek_has_derivations": "UQ:313292",
+              "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_derivations_order": 1,
+              "rek_has_derivations_pid": "UQ:296498",
+            },
+          ],
+          "fez_record_search_key_has_related_datasets": Array [
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_related_datasets_order": 1,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "dataset 2",
+              "rek_has_related_datasets_order": 2,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+          ],
           "fez_record_search_key_isdatasetof": Array [
             Object {
               "rek_isdatasetof": "UQ:365357",
@@ -6362,6 +8237,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -6453,8 +8329,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_publisher_pid": "UQ:407731",
             "rek_publisher_xsdmf_id": 16050,
           },
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -6620,14 +8495,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Parks, Donovan H."
         >
           <span
             className="citationAuthor"
           >
-             
             Parks, Donovan H.
             , 
           </span>
@@ -6635,14 +8509,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Imelfort, Michael"
         >
           <span
             className="citationAuthor"
           >
-             
             Imelfort, Michael
             , 
           </span>
@@ -6650,14 +8523,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Skennerton, Connor T."
         >
           <span
             className="citationAuthor"
           >
-             
             Skennerton, Connor T.
             , 
           </span>
@@ -6665,16 +8537,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=" "
-          suffix=", "
+          prefix=""
+          suffix=""
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
-             
             Hugenholtz, Philip
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -6708,7 +8578,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -6721,7 +8591,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -6825,6 +8695,173 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
 <DataCollectionCitation
   publication={
     Object {
+      "fez_datastream_info": Array [
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_UQ_407731.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "FezACML security for PID - UQ:407731",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 3705,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supplemental_information.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1228,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Material.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1203,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S16.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1205,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S19.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1205,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S20.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S21.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S22.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supplemental_information.docx",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/octet-stream",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 2320778,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Material.zip",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/zip",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 300184,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S16.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 770048,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S19.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 754176,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S20.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 97280,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S21.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 67584,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S22.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 41984,
+          "dsi_state": "A",
+        },
+      ],
       "fez_record_search_key_access_conditions": Object {
         "rek_access_conditions": "453619",
         "rek_access_conditions_id": 3968,
@@ -7133,6 +9170,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_grant_id_xsdmf_id": 16200,
         },
       ],
+      "fez_record_search_key_has_derivations": Array [
+        Object {
+          "rek_has_derivations": "UQ:313292",
+          "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_derivations_order": 1,
+          "rek_has_derivations_pid": "UQ:296498",
+        },
+      ],
+      "fez_record_search_key_has_related_datasets": Array [
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_related_datasets_order": 1,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "dataset 2",
+          "rek_has_related_datasets_order": 2,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+      ],
       "fez_record_search_key_isdatasetof": Array [
         Object {
           "rek_isdatasetof": "UQ:365357",
@@ -7143,6 +9202,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -7234,8 +9294,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
       },
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -7426,6 +9485,173 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       initialNumberOfAuthors={10}
       publication={
         Object {
+          "fez_datastream_info": Array [
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "FezACML_UQ_407731.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "FezACML security for PID - UQ:407731",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 3705,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supplemental_information.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1228,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Material.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1203,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S16.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1205,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S19.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1205,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S20.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S21.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S22.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supplemental_information.docx",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/octet-stream",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 2320778,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Material.zip",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/zip",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 300184,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S16.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 770048,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S19.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 754176,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S20.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 97280,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S21.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 67584,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S22.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 41984,
+              "dsi_state": "A",
+            },
+          ],
           "fez_record_search_key_access_conditions": Object {
             "rek_access_conditions": "453619",
             "rek_access_conditions_id": 3968,
@@ -7734,6 +9960,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_grant_id_xsdmf_id": 16200,
             },
           ],
+          "fez_record_search_key_has_derivations": Array [
+            Object {
+              "rek_has_derivations": "UQ:313292",
+              "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_derivations_order": 1,
+              "rek_has_derivations_pid": "UQ:296498",
+            },
+          ],
+          "fez_record_search_key_has_related_datasets": Array [
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_related_datasets_order": 1,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "dataset 2",
+              "rek_has_related_datasets_order": 2,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+          ],
           "fez_record_search_key_isdatasetof": Array [
             Object {
               "rek_isdatasetof": "UQ:365357",
@@ -7744,6 +9992,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -7835,8 +10084,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_publisher_pid": "UQ:407731",
             "rek_publisher_xsdmf_id": 16050,
           },
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -8002,14 +10250,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Parks, Donovan H."
         >
           <span
             className="citationAuthor"
           >
-             
             Parks, Donovan H.
             , 
           </span>
@@ -8017,14 +10264,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Imelfort, Michael"
         >
           <span
             className="citationAuthor"
           >
-             
             Imelfort, Michael
             , 
           </span>
@@ -8032,14 +10278,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Skennerton, Connor T."
         >
           <span
             className="citationAuthor"
           >
-             
             Skennerton, Connor T.
             , 
           </span>
@@ -8047,16 +10292,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=" "
-          suffix=", "
+          prefix=""
+          suffix=""
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
-             
             Hugenholtz, Philip
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -8090,7 +10333,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -8103,7 +10346,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -8147,6 +10390,173 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
 <DataCollectionCitation
   publication={
     Object {
+      "fez_datastream_info": Array [
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_UQ_407731.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "FezACML security for PID - UQ:407731",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 3705,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supplemental_information.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1228,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Material.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1203,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S16.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1205,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S19.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1205,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S20.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S21.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_Supp_Table_S22.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 1204,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supplemental_information.docx",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/octet-stream",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 2320778,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Material.zip",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/zip",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 300184,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S16.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 770048,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S19.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 754176,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S20.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 97280,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S21.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 67584,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "Supp_Table_S22.xls",
+          "dsi_embargo_date": null,
+          "dsi_label": "Full text (open access)",
+          "dsi_mimetype": "application/vnd.ms-excel",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:407731",
+          "dsi_size": 41984,
+          "dsi_state": "A",
+        },
+      ],
       "fez_record_search_key_access_conditions": Object {
         "rek_access_conditions": "453619",
         "rek_access_conditions_id": 3968,
@@ -8460,6 +10870,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_grant_id_xsdmf_id": 16200,
         },
       ],
+      "fez_record_search_key_has_derivations": Array [
+        Object {
+          "rek_has_derivations": "UQ:313292",
+          "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_derivations_order": 1,
+          "rek_has_derivations_pid": "UQ:296498",
+        },
+      ],
+      "fez_record_search_key_has_related_datasets": Array [
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+          "rek_has_related_datasets_order": 1,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+        Object {
+          "rek_has_related_datasets": "UQ:313292",
+          "rek_has_related_datasets_lookup": "dataset 2",
+          "rek_has_related_datasets_order": 2,
+          "rek_has_related_datasets_pid": "UQ:296498",
+        },
+      ],
       "fez_record_search_key_isdatasetof": Array [
         Object {
           "rek_isdatasetof": "UQ:365357",
@@ -8470,6 +10902,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "rek_isdatasetof_xsdmf_id": 16601,
         },
       ],
+      "fez_record_search_key_isderivationof": Array [],
       "fez_record_search_key_ismemberof": Array [
         Object {
           "rek_ismemberof": "UQ:289097",
@@ -8556,8 +10989,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         "rek_project_name_xsdmf_id": 16099,
       },
       "fez_record_search_key_publisher": null,
-      "fez_record_search_key_related_datasets": null,
-      "fez_record_search_key_related_publications": null,
+      "fez_record_search_key_related_datasets": Array [],
       "fez_record_search_key_rights": Object {
         "rek_rights": "2015, The University of Queensland",
         "rek_rights_id": 116537,
@@ -8748,6 +11180,173 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       initialNumberOfAuthors={10}
       publication={
         Object {
+          "fez_datastream_info": Array [
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "FezACML_UQ_407731.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "FezACML security for PID - UQ:407731",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 3705,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supplemental_information.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1228,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Material.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1203,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S16.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1205,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S19.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1205,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S20.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S21.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_Supp_Table_S22.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 1204,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supplemental_information.docx",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/octet-stream",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 2320778,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Material.zip",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/zip",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 300184,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S16.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 770048,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S19.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 754176,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S20.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 97280,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S21.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 67584,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "Supp_Table_S22.xls",
+              "dsi_embargo_date": null,
+              "dsi_label": "Full text (open access)",
+              "dsi_mimetype": "application/vnd.ms-excel",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:407731",
+              "dsi_size": 41984,
+              "dsi_state": "A",
+            },
+          ],
           "fez_record_search_key_access_conditions": Object {
             "rek_access_conditions": "453619",
             "rek_access_conditions_id": 3968,
@@ -9061,6 +11660,28 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_grant_id_xsdmf_id": 16200,
             },
           ],
+          "fez_record_search_key_has_derivations": Array [
+            Object {
+              "rek_has_derivations": "UQ:313292",
+              "rek_has_derivations_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_derivations_order": 1,
+              "rek_has_derivations_pid": "UQ:296498",
+            },
+          ],
+          "fez_record_search_key_has_related_datasets": Array [
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "Toxicity characterization of urban stormwater with bioanalytical tools",
+              "rek_has_related_datasets_order": 1,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+            Object {
+              "rek_has_related_datasets": "UQ:313292",
+              "rek_has_related_datasets_lookup": "dataset 2",
+              "rek_has_related_datasets_order": 2,
+              "rek_has_related_datasets_pid": "UQ:296498",
+            },
+          ],
           "fez_record_search_key_isdatasetof": Array [
             Object {
               "rek_isdatasetof": "UQ:365357",
@@ -9071,6 +11692,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "rek_isdatasetof_xsdmf_id": 16601,
             },
           ],
+          "fez_record_search_key_isderivationof": Array [],
           "fez_record_search_key_ismemberof": Array [
             Object {
               "rek_ismemberof": "UQ:289097",
@@ -9157,8 +11779,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
             "rek_project_name_xsdmf_id": 16099,
           },
           "fez_record_search_key_publisher": null,
-          "fez_record_search_key_related_datasets": null,
-          "fez_record_search_key_related_publications": null,
+          "fez_record_search_key_related_datasets": Array [],
           "fez_record_search_key_rights": Object {
             "rek_rights": "2015, The University of Queensland",
             "rek_rights_id": 116537,
@@ -9324,14 +11945,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Parks, Donovan H."
         >
           <span
             className="citationAuthor"
           >
-             
             Parks, Donovan H.
             , 
           </span>
@@ -9339,14 +11959,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Imelfort, Michael"
         >
           <span
             className="citationAuthor"
           >
-             
             Imelfort, Michael
             , 
           </span>
@@ -9354,14 +11973,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Skennerton, Connor T."
         >
           <span
             className="citationAuthor"
           >
-             
             Skennerton, Connor T.
             , 
           </span>
@@ -9369,16 +11987,14 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=" "
-          suffix=", "
+          prefix=""
+          suffix=""
           value="Hugenholtz, Philip"
         >
           <span
             className="citationAuthor"
           >
-             
             Hugenholtz, Philip
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -9412,7 +12028,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -9425,7 +12041,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -9594,7 +12210,7 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -9602,7 +12218,7 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "

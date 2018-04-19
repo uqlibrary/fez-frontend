@@ -635,14 +635,13 @@ exports[`VideoDocumentCitation renders  component with a mock espace record 1`] 
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=""
           value="Walters, S."
         >
           <span
             className="citationAuthor"
           >
-             
             Walters, S.
           </span>
         </CitationView>
@@ -664,7 +663,7 @@ exports[`VideoDocumentCitation renders  component with a mock espace record 1`] 
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -677,7 +676,7 @@ exports[`VideoDocumentCitation renders  component with a mock espace record 1`] 
         Video 12: 1) Discovery History and Geology of the Cannington Ag-Pb-Zn Deposit 2) Advances in Micro-Analytical Technologies — What a grain can tell you
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSeries"
       prefix=" "
@@ -765,7 +764,7 @@ exports[`VideoDocumentCitation renders  component with empty publication 1`] = `
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -773,7 +772,7 @@ exports[`VideoDocumentCitation renders  component with empty publication 1`] = `
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSeries"
       prefix=" "

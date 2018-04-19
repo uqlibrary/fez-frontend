@@ -4,6 +4,151 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
 <ManuscriptCitation
   publication={
     Object {
+      "fez_datastream_info": Array [
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_UQFL2_i3255.tif.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "FezACML security for datastream - UQFL2_i3255.tif",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:677394",
+          "dsi_size": 3092,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_UQFL2_i3255a.zip.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "FezACML security for datastream - UQFL2_i3255a.zip",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:677394",
+          "dsi_size": 3159,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_UQFL2_i3255_copyright_permission.pdf.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "FezACML security for datastream - UQFL2_i3255_copyright_permission.pdf",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:677394",
+          "dsi_size": 359,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_UQ_677394.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "FezACML security for PID - UQ:677394",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:677394",
+          "dsi_size": 3660,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_UQFL2_i3255.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "PresMD for datastream - UQFL2_i3255.tif",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:677394",
+          "dsi_size": 161442,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_UQFL2_i3255a.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "PresMD for datastream - UQFL2_i3255a.zip",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:677394",
+          "dsi_size": 702,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_UQFL2_i3255_copyright_permission.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "PresMD for datastream - UQFL2_i3255_copyright_permission.pdf",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:677394",
+          "dsi_size": 781,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "preview_UQFL2_i3255.jpg",
+          "dsi_embargo_date": null,
+          "dsi_label": "preview_UQFL2_i3255.jpg",
+          "dsi_mimetype": "image/jpeg",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:677394",
+          "dsi_size": 31896,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "thumbnail_UQFL2_i3255.jpg",
+          "dsi_embargo_date": null,
+          "dsi_label": "thumbnail_UQFL2_i3255.jpg",
+          "dsi_mimetype": "image/jpeg",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:677394",
+          "dsi_size": 1997,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "UQFL2_i3255.tif",
+          "dsi_embargo_date": null,
+          "dsi_label": "Manuscript (open access)",
+          "dsi_mimetype": "image/tiff",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:677394",
+          "dsi_size": 88462012,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "UQFL2_i3255a.zip",
+          "dsi_embargo_date": null,
+          "dsi_label": "Archival (restricted access)",
+          "dsi_mimetype": "application/zip",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:677394",
+          "dsi_size": 97285652,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "UQFL2_i3255_copyright_permission.pdf",
+          "dsi_embargo_date": null,
+          "dsi_label": "Permission (restricted access)",
+          "dsi_mimetype": "application/pdf",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:677394",
+          "dsi_size": 76566,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "web_UQFL2_i3255.jpg",
+          "dsi_embargo_date": null,
+          "dsi_label": "web_UQFL2_i3255.jpg",
+          "dsi_mimetype": "image/jpeg",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:677394",
+          "dsi_size": 71408,
+          "dsi_state": "A",
+        },
+      ],
       "fez_record_search_key_acknowledgements": null,
       "fez_record_search_key_additional_notes": Object {
         "rek_additional_notes": "Letter dated 15 July 1944 from Thea Astley to Mr [Paul] Grano sending 9 poems for criticism. Poems not included in collection.",
@@ -354,6 +499,151 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
       initialNumberOfAuthors={10}
       publication={
         Object {
+          "fez_datastream_info": Array [
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "FezACML_UQFL2_i3255.tif.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "FezACML security for datastream - UQFL2_i3255.tif",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:677394",
+              "dsi_size": 3092,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "FezACML_UQFL2_i3255a.zip.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "FezACML security for datastream - UQFL2_i3255a.zip",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:677394",
+              "dsi_size": 3159,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "FezACML_UQFL2_i3255_copyright_permission.pdf.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "FezACML security for datastream - UQFL2_i3255_copyright_permission.pdf",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:677394",
+              "dsi_size": 359,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "FezACML_UQ_677394.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "FezACML security for PID - UQ:677394",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:677394",
+              "dsi_size": 3660,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_UQFL2_i3255.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "PresMD for datastream - UQFL2_i3255.tif",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:677394",
+              "dsi_size": 161442,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_UQFL2_i3255a.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "PresMD for datastream - UQFL2_i3255a.zip",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:677394",
+              "dsi_size": 702,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_UQFL2_i3255_copyright_permission.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "PresMD for datastream - UQFL2_i3255_copyright_permission.pdf",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:677394",
+              "dsi_size": 781,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "preview_UQFL2_i3255.jpg",
+              "dsi_embargo_date": null,
+              "dsi_label": "preview_UQFL2_i3255.jpg",
+              "dsi_mimetype": "image/jpeg",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:677394",
+              "dsi_size": 31896,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "thumbnail_UQFL2_i3255.jpg",
+              "dsi_embargo_date": null,
+              "dsi_label": "thumbnail_UQFL2_i3255.jpg",
+              "dsi_mimetype": "image/jpeg",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:677394",
+              "dsi_size": 1997,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "UQFL2_i3255.tif",
+              "dsi_embargo_date": null,
+              "dsi_label": "Manuscript (open access)",
+              "dsi_mimetype": "image/tiff",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:677394",
+              "dsi_size": 88462012,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "UQFL2_i3255a.zip",
+              "dsi_embargo_date": null,
+              "dsi_label": "Archival (restricted access)",
+              "dsi_mimetype": "application/zip",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:677394",
+              "dsi_size": 97285652,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "UQFL2_i3255_copyright_permission.pdf",
+              "dsi_embargo_date": null,
+              "dsi_label": "Permission (restricted access)",
+              "dsi_mimetype": "application/pdf",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:677394",
+              "dsi_size": 76566,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "web_UQFL2_i3255.jpg",
+              "dsi_embargo_date": null,
+              "dsi_label": "web_UQFL2_i3255.jpg",
+              "dsi_mimetype": "image/jpeg",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:677394",
+              "dsi_size": 71408,
+              "dsi_state": "A",
+            },
+          ],
           "fez_record_search_key_acknowledgements": null,
           "fez_record_search_key_additional_notes": Object {
             "rek_additional_notes": "Letter dated 15 July 1944 from Thea Astley to Mr [Paul] Grano sending 9 poems for criticism. Poems not included in collection.",
@@ -679,14 +969,13 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=""
           value="Hayes, Edward Leo, 1889-1967"
         >
           <span
             className="citationAuthor"
           >
-             
             Hayes, Edward Leo, 1889-1967
           </span>
         </CitationView>
@@ -708,7 +997,7 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -721,7 +1010,7 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
         Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSource"
       prefix=" "
@@ -809,7 +1098,7 @@ exports[`ManuscriptCitation renders  component with empty publication 1`] = `
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -817,7 +1106,7 @@ exports[`ManuscriptCitation renders  component with empty publication 1`] = `
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSource"
       prefix=" "

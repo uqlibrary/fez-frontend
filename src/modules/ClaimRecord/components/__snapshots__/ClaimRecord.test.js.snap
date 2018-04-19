@@ -10,18 +10,68 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
   >
     <StandardCard
       className=""
-      help={
-        Object {
-          "buttonLabel": "OK",
-          "text": "Enter the text that will help people here",
-          "title": "Claiming a publication",
-        }
-      }
       title="You are claiming to be an author for the following item:"
     >
       <withRouter(Connect(PublicationCitation))
         publication={
           Object {
+            "fez_datastream_info": Array [
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "testing image description",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97786,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "preview_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "preview_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 65857,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "thumbnail_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "thumbnail_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 3952,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "web_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "web_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97345,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "deleted.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "deleted jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97345,
+                "dsi_state": "D",
+              },
+            ],
             "fez_record_search_key_access_conditions": null,
             "fez_record_search_key_acknowledgements": null,
             "fez_record_search_key_additional_notes": null,
@@ -414,8 +464,24 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_file_attachment_access_condition": Array [],
-            "fez_record_search_key_file_attachment_embargo_date": Array [],
+            "fez_record_search_key_file_attachment_access_condition": Array [
+              Object {
+                "rek_file_attachment_access_condition": "8",
+                "rek_file_attachment_access_condition_id": 17,
+                "rek_file_attachment_access_condition_order": 3,
+                "rek_file_attachment_access_condition_pid": "UQ:792099",
+                "rek_file_attachment_access_condition_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_file_attachment_embargo_date": Array [
+              Object {
+                "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                "rek_file_attachment_embargo_date_id": 83,
+                "rek_file_attachment_embargo_date_order": 3,
+                "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                "rek_file_attachment_embargo_date_xsdmf_id": 0,
+              },
+            ],
             "fez_record_search_key_file_attachment_name": Array [
               Object {
                 "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -433,6 +499,12 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                 "rek_file_attachment_name": "UQ676287_OA.pdf",
                 "rek_file_attachment_name_id": null,
                 "rek_file_attachment_name_order": 3,
+                "rek_file_attachment_name_pid": "UQ:676287",
+              },
+              Object {
+                "rek_file_attachment_name": "image.jpg",
+                "rek_file_attachment_name_id": null,
+                "rek_file_attachment_name_order": 4,
                 "rek_file_attachment_name_pid": "UQ:676287",
               },
             ],
@@ -947,13 +1019,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
       />
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Additional information",
-          }
-        }
         title="Optional: Suggest changes or add links to this record"
       >
         <Field
@@ -980,13 +1045,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Files",
-          }
-        }
         title="Optional: Upload additional files"
       >
         <Field
@@ -1048,18 +1106,68 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
   >
     <StandardCard
       className=""
-      help={
-        Object {
-          "buttonLabel": "OK",
-          "text": "Enter the text that will help people here",
-          "title": "Claiming a publication",
-        }
-      }
       title="You are claiming to be an author for the following item:"
     >
       <withRouter(Connect(PublicationCitation))
         publication={
           Object {
+            "fez_datastream_info": Array [
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "testing image description",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97786,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "preview_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "preview_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 65857,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "thumbnail_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "thumbnail_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 3952,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "web_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "web_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97345,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "deleted.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "deleted jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97345,
+                "dsi_state": "D",
+              },
+            ],
             "fez_record_search_key_access_conditions": null,
             "fez_record_search_key_acknowledgements": null,
             "fez_record_search_key_additional_notes": null,
@@ -1437,8 +1545,24 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_file_attachment_access_condition": Array [],
-            "fez_record_search_key_file_attachment_embargo_date": Array [],
+            "fez_record_search_key_file_attachment_access_condition": Array [
+              Object {
+                "rek_file_attachment_access_condition": "8",
+                "rek_file_attachment_access_condition_id": 17,
+                "rek_file_attachment_access_condition_order": 3,
+                "rek_file_attachment_access_condition_pid": "UQ:792099",
+                "rek_file_attachment_access_condition_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_file_attachment_embargo_date": Array [
+              Object {
+                "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                "rek_file_attachment_embargo_date_id": 83,
+                "rek_file_attachment_embargo_date_order": 3,
+                "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                "rek_file_attachment_embargo_date_xsdmf_id": 0,
+              },
+            ],
             "fez_record_search_key_file_attachment_name": Array [
               Object {
                 "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -1456,6 +1580,12 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                 "rek_file_attachment_name": "UQ676287_OA.pdf",
                 "rek_file_attachment_name_id": null,
                 "rek_file_attachment_name_order": 3,
+                "rek_file_attachment_name_pid": "UQ:676287",
+              },
+              Object {
+                "rek_file_attachment_name": "image.jpg",
+                "rek_file_attachment_name_id": null,
+                "rek_file_attachment_name_order": 4,
                 "rek_file_attachment_name_pid": "UQ:676287",
               },
             ],
@@ -1970,13 +2100,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       />
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Additional information",
-          }
-        }
         title="Optional: Suggest changes or add links to this record"
       >
         <Field
@@ -2003,13 +2126,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Files",
-          }
-        }
         title="Optional: Upload additional files"
       >
         <Field
@@ -2071,18 +2187,68 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
   >
     <StandardCard
       className=""
-      help={
-        Object {
-          "buttonLabel": "OK",
-          "text": "Enter the text that will help people here",
-          "title": "Claiming a publication",
-        }
-      }
       title="You are claiming to be an author for the following item:"
     >
       <withRouter(Connect(PublicationCitation))
         publication={
           Object {
+            "fez_datastream_info": Array [
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "testing image description",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97786,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "preview_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "preview_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 65857,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "thumbnail_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "thumbnail_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 3952,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "web_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "web_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97345,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "deleted.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "deleted jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97345,
+                "dsi_state": "D",
+              },
+            ],
             "fez_record_search_key_access_conditions": null,
             "fez_record_search_key_acknowledgements": null,
             "fez_record_search_key_additional_notes": null,
@@ -2563,8 +2729,24 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_file_attachment_access_condition": Array [],
-            "fez_record_search_key_file_attachment_embargo_date": Array [],
+            "fez_record_search_key_file_attachment_access_condition": Array [
+              Object {
+                "rek_file_attachment_access_condition": "8",
+                "rek_file_attachment_access_condition_id": 17,
+                "rek_file_attachment_access_condition_order": 3,
+                "rek_file_attachment_access_condition_pid": "UQ:792099",
+                "rek_file_attachment_access_condition_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_file_attachment_embargo_date": Array [
+              Object {
+                "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                "rek_file_attachment_embargo_date_id": 83,
+                "rek_file_attachment_embargo_date_order": 3,
+                "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                "rek_file_attachment_embargo_date_xsdmf_id": 0,
+              },
+            ],
             "fez_record_search_key_file_attachment_name": Array [
               Object {
                 "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -2582,6 +2764,12 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                 "rek_file_attachment_name": "UQ676287_OA.pdf",
                 "rek_file_attachment_name_id": null,
                 "rek_file_attachment_name_order": 3,
+                "rek_file_attachment_name_pid": "UQ:676287",
+              },
+              Object {
+                "rek_file_attachment_name": "image.jpg",
+                "rek_file_attachment_name_id": null,
+                "rek_file_attachment_name_order": 4,
                 "rek_file_attachment_name_pid": "UQ:676287",
               },
             ],
@@ -3096,13 +3284,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
       />
       <StandardCard
         className="requiredField"
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Author linking",
-          }
-        }
         title="Author linking"
       >
         <label
@@ -3245,13 +3426,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Additional information",
-          }
-        }
         title="Optional: Suggest changes or add links to this record"
       >
         <Field
@@ -3278,13 +3452,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Files",
-          }
-        }
         title="Optional: Upload additional files"
       >
         <Field
@@ -3346,18 +3513,68 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
   >
     <StandardCard
       className=""
-      help={
-        Object {
-          "buttonLabel": "OK",
-          "text": "Enter the text that will help people here",
-          "title": "Claiming a publication",
-        }
-      }
       title="You are claiming to be an author for the following item:"
     >
       <withRouter(Connect(PublicationCitation))
         publication={
           Object {
+            "fez_datastream_info": Array [
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "testing image description",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97786,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "preview_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "preview_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 65857,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "thumbnail_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "thumbnail_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 3952,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "web_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "web_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97345,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "deleted.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "deleted jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97345,
+                "dsi_state": "D",
+              },
+            ],
             "fez_record_search_key_access_conditions": null,
             "fez_record_search_key_acknowledgements": null,
             "fez_record_search_key_additional_notes": null,
@@ -3838,8 +4055,24 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_file_attachment_access_condition": Array [],
-            "fez_record_search_key_file_attachment_embargo_date": Array [],
+            "fez_record_search_key_file_attachment_access_condition": Array [
+              Object {
+                "rek_file_attachment_access_condition": "8",
+                "rek_file_attachment_access_condition_id": 17,
+                "rek_file_attachment_access_condition_order": 3,
+                "rek_file_attachment_access_condition_pid": "UQ:792099",
+                "rek_file_attachment_access_condition_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_file_attachment_embargo_date": Array [
+              Object {
+                "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                "rek_file_attachment_embargo_date_id": 83,
+                "rek_file_attachment_embargo_date_order": 3,
+                "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                "rek_file_attachment_embargo_date_xsdmf_id": 0,
+              },
+            ],
             "fez_record_search_key_file_attachment_name": Array [
               Object {
                 "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -3857,6 +4090,12 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                 "rek_file_attachment_name": "UQ676287_OA.pdf",
                 "rek_file_attachment_name_id": null,
                 "rek_file_attachment_name_order": 3,
+                "rek_file_attachment_name_pid": "UQ:676287",
+              },
+              Object {
+                "rek_file_attachment_name": "image.jpg",
+                "rek_file_attachment_name_id": null,
+                "rek_file_attachment_name_order": 4,
                 "rek_file_attachment_name_pid": "UQ:676287",
               },
             ],
@@ -4371,13 +4610,6 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
       />
       <StandardCard
         className="requiredField"
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Author linking",
-          }
-        }
         title="Author linking"
       >
         <label
@@ -4520,13 +4752,6 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Additional information",
-          }
-        }
         title="Optional: Suggest changes or add links to this record"
       >
         <Field
@@ -4553,13 +4778,6 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Files",
-          }
-        }
         title="Optional: Upload additional files"
       >
         <Field
@@ -4621,18 +4839,68 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
   >
     <StandardCard
       className=""
-      help={
-        Object {
-          "buttonLabel": "OK",
-          "text": "Enter the text that will help people here",
-          "title": "Claiming a publication",
-        }
-      }
       title="You are claiming to be an author for the following item:"
     >
       <withRouter(Connect(PublicationCitation))
         publication={
           Object {
+            "fez_datastream_info": Array [
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "testing image description",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97786,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "preview_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "preview_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 65857,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "thumbnail_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "thumbnail_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 3952,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "web_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "web_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97345,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "deleted.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "deleted jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97345,
+                "dsi_state": "D",
+              },
+            ],
             "fez_record_search_key_access_conditions": null,
             "fez_record_search_key_acknowledgements": null,
             "fez_record_search_key_additional_notes": null,
@@ -5113,8 +5381,24 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_file_attachment_access_condition": Array [],
-            "fez_record_search_key_file_attachment_embargo_date": Array [],
+            "fez_record_search_key_file_attachment_access_condition": Array [
+              Object {
+                "rek_file_attachment_access_condition": "8",
+                "rek_file_attachment_access_condition_id": 17,
+                "rek_file_attachment_access_condition_order": 3,
+                "rek_file_attachment_access_condition_pid": "UQ:792099",
+                "rek_file_attachment_access_condition_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_file_attachment_embargo_date": Array [
+              Object {
+                "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                "rek_file_attachment_embargo_date_id": 83,
+                "rek_file_attachment_embargo_date_order": 3,
+                "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                "rek_file_attachment_embargo_date_xsdmf_id": 0,
+              },
+            ],
             "fez_record_search_key_file_attachment_name": Array [
               Object {
                 "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -5132,6 +5416,12 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                 "rek_file_attachment_name": "UQ676287_OA.pdf",
                 "rek_file_attachment_name_id": null,
                 "rek_file_attachment_name_order": 3,
+                "rek_file_attachment_name_pid": "UQ:676287",
+              },
+              Object {
+                "rek_file_attachment_name": "image.jpg",
+                "rek_file_attachment_name_id": null,
+                "rek_file_attachment_name_order": 4,
                 "rek_file_attachment_name_pid": "UQ:676287",
               },
             ],
@@ -5647,13 +5937,6 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
       />
       <StandardCard
         className="requiredField"
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Author linking",
-          }
-        }
         title="Author linking"
       >
         <label
@@ -5796,13 +6079,6 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Additional information",
-          }
-        }
         title="Optional: Suggest changes or add links to this record"
       >
         <Field
@@ -5829,13 +6105,6 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Files",
-          }
-        }
         title="Optional: Upload additional files"
       >
         <Field
@@ -5897,18 +6166,68 @@ exports[`Component ClaimRecord  should render publication citation, error messag
   >
     <StandardCard
       className=""
-      help={
-        Object {
-          "buttonLabel": "OK",
-          "text": "Enter the text that will help people here",
-          "title": "Claiming a publication",
-        }
-      }
       title="You are claiming to be an author for the following item:"
     >
       <withRouter(Connect(PublicationCitation))
         publication={
           Object {
+            "fez_datastream_info": Array [
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "testing image description",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97786,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "preview_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "preview_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 65857,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "thumbnail_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "thumbnail_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 3952,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "web_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "web_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97345,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "deleted.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "deleted jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97345,
+                "dsi_state": "D",
+              },
+            ],
             "fez_record_search_key_access_conditions": null,
             "fez_record_search_key_acknowledgements": null,
             "fez_record_search_key_additional_notes": null,
@@ -6301,8 +6620,24 @@ exports[`Component ClaimRecord  should render publication citation, error messag
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_file_attachment_access_condition": Array [],
-            "fez_record_search_key_file_attachment_embargo_date": Array [],
+            "fez_record_search_key_file_attachment_access_condition": Array [
+              Object {
+                "rek_file_attachment_access_condition": "8",
+                "rek_file_attachment_access_condition_id": 17,
+                "rek_file_attachment_access_condition_order": 3,
+                "rek_file_attachment_access_condition_pid": "UQ:792099",
+                "rek_file_attachment_access_condition_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_file_attachment_embargo_date": Array [
+              Object {
+                "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                "rek_file_attachment_embargo_date_id": 83,
+                "rek_file_attachment_embargo_date_order": 3,
+                "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                "rek_file_attachment_embargo_date_xsdmf_id": 0,
+              },
+            ],
             "fez_record_search_key_file_attachment_name": Array [
               Object {
                 "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -6320,6 +6655,12 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                 "rek_file_attachment_name": "UQ676287_OA.pdf",
                 "rek_file_attachment_name_id": null,
                 "rek_file_attachment_name_order": 3,
+                "rek_file_attachment_name_pid": "UQ:676287",
+              },
+              Object {
+                "rek_file_attachment_name": "image.jpg",
+                "rek_file_attachment_name_id": null,
+                "rek_file_attachment_name_order": 4,
                 "rek_file_attachment_name_pid": "UQ:676287",
               },
             ],
@@ -6796,6 +7137,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
     </StandardCard>
     <Alert
       allowDismiss={false}
+      dismissTitle="Click to dismiss this alert"
       message="This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at espace.admin@email.com.au"
       showLoader={false}
       title="Error"
@@ -6835,18 +7177,68 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
   >
     <StandardCard
       className=""
-      help={
-        Object {
-          "buttonLabel": "OK",
-          "text": "Enter the text that will help people here",
-          "title": "Claiming a publication",
-        }
-      }
       title="You are claiming to be an author for the following item:"
     >
       <withRouter(Connect(PublicationCitation))
         publication={
           Object {
+            "fez_datastream_info": Array [
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "testing image description",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97786,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "preview_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "preview_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 65857,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "thumbnail_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "thumbnail_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 3952,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "web_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "web_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97345,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "deleted.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "deleted jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97345,
+                "dsi_state": "D",
+              },
+            ],
             "fez_record_search_key_access_conditions": null,
             "fez_record_search_key_acknowledgements": null,
             "fez_record_search_key_additional_notes": null,
@@ -7327,8 +7719,24 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_file_attachment_access_condition": Array [],
-            "fez_record_search_key_file_attachment_embargo_date": Array [],
+            "fez_record_search_key_file_attachment_access_condition": Array [
+              Object {
+                "rek_file_attachment_access_condition": "8",
+                "rek_file_attachment_access_condition_id": 17,
+                "rek_file_attachment_access_condition_order": 3,
+                "rek_file_attachment_access_condition_pid": "UQ:792099",
+                "rek_file_attachment_access_condition_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_file_attachment_embargo_date": Array [
+              Object {
+                "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                "rek_file_attachment_embargo_date_id": 83,
+                "rek_file_attachment_embargo_date_order": 3,
+                "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                "rek_file_attachment_embargo_date_xsdmf_id": 0,
+              },
+            ],
             "fez_record_search_key_file_attachment_name": Array [
               Object {
                 "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -7346,6 +7754,12 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                 "rek_file_attachment_name": "UQ676287_OA.pdf",
                 "rek_file_attachment_name_id": null,
                 "rek_file_attachment_name_order": 3,
+                "rek_file_attachment_name_pid": "UQ:676287",
+              },
+              Object {
+                "rek_file_attachment_name": "image.jpg",
+                "rek_file_attachment_name_id": null,
+                "rek_file_attachment_name_order": 4,
                 "rek_file_attachment_name_pid": "UQ:676287",
               },
             ],
@@ -7831,6 +8245,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             "confirmationMessage": <div>
               <Alert
                 allowDismiss={false}
+                dismissTitle="Click to dismiss this alert"
                 message="Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators."
                 showLoader={false}
                 title="File upload and/or edits/changes/comments post failed"
@@ -7867,13 +8282,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
       />
       <StandardCard
         className="requiredField"
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Author linking",
-          }
-        }
         title="Author linking"
       >
         <label
@@ -8016,13 +8424,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Additional information",
-          }
-        }
         title="Optional: Suggest changes or add links to this record"
       >
         <Field
@@ -8049,13 +8450,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Files",
-          }
-        }
         title="Optional: Upload additional files"
       >
         <Field
@@ -8117,18 +8511,68 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
   >
     <StandardCard
       className=""
-      help={
-        Object {
-          "buttonLabel": "OK",
-          "text": "Enter the text that will help people here",
-          "title": "Claiming a publication",
-        }
-      }
       title="You are claiming to be an author for the following item:"
     >
       <withRouter(Connect(PublicationCitation))
         publication={
           Object {
+            "fez_datastream_info": Array [
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "testing image description",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97786,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "preview_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "preview_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 65857,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "thumbnail_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "thumbnail_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 3952,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "web_image.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "web_image.jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97345,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "deleted.jpg",
+                "dsi_embargo_date": null,
+                "dsi_label": "deleted jpg",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97345,
+                "dsi_state": "D",
+              },
+            ],
             "fez_record_search_key_access_conditions": null,
             "fez_record_search_key_acknowledgements": null,
             "fez_record_search_key_additional_notes": null,
@@ -8609,8 +9053,24 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
               "rek_end_page_id": null,
               "rek_end_page_pid": "UQ:676287",
             },
-            "fez_record_search_key_file_attachment_access_condition": Array [],
-            "fez_record_search_key_file_attachment_embargo_date": Array [],
+            "fez_record_search_key_file_attachment_access_condition": Array [
+              Object {
+                "rek_file_attachment_access_condition": "8",
+                "rek_file_attachment_access_condition_id": 17,
+                "rek_file_attachment_access_condition_order": 3,
+                "rek_file_attachment_access_condition_pid": "UQ:792099",
+                "rek_file_attachment_access_condition_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_file_attachment_embargo_date": Array [
+              Object {
+                "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                "rek_file_attachment_embargo_date_id": 83,
+                "rek_file_attachment_embargo_date_order": 3,
+                "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                "rek_file_attachment_embargo_date_xsdmf_id": 0,
+              },
+            ],
             "fez_record_search_key_file_attachment_name": Array [
               Object {
                 "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
@@ -8628,6 +9088,12 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                 "rek_file_attachment_name": "UQ676287_OA.pdf",
                 "rek_file_attachment_name_id": null,
                 "rek_file_attachment_name_order": 3,
+                "rek_file_attachment_name_pid": "UQ:676287",
+              },
+              Object {
+                "rek_file_attachment_name": "image.jpg",
+                "rek_file_attachment_name_id": null,
+                "rek_file_attachment_name_order": 4,
                 "rek_file_attachment_name_pid": "UQ:676287",
               },
             ],
@@ -9142,13 +9608,6 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
       />
       <StandardCard
         className="requiredField"
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Author linking",
-          }
-        }
         title="Author linking"
       >
         <label
@@ -9291,13 +9750,6 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Additional information",
-          }
-        }
         title="Optional: Suggest changes or add links to this record"
       >
         <Field
@@ -9324,13 +9776,6 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
       </StandardCard>
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": "...",
-            "title": "Files",
-          }
-        }
         title="Optional: Upload additional files"
       >
         <Field

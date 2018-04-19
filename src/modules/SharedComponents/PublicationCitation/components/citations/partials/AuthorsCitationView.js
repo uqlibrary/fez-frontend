@@ -86,8 +86,8 @@ export default class AuthorsCitationView extends React.Component {
 
     renderAuthors = (authors, showLink) => {
         return authors.map((author, index) => {
-            const prefix = authors.length > 1 && index === authors.length - 1 && !showLink ? ' and ' : ' ';
-            const suffix = authors.length > 2 && index < authors.length - 1 ? ', ' : '';
+            const prefix = authors.length > 1 && index === authors.length - 1 ? (showLink && ', ' || ' and ') : '';
+            const suffix = authors.length > 2 && index < authors.length - 2 ? ', ' : '';
             const key = `citationAuthor_${index + 1}`;
             const element = (
                 <CitationView
@@ -116,7 +116,7 @@ export default class AuthorsCitationView extends React.Component {
     };
 
     render() {
-        const {showMoreLabel, showLessLabel} = locale.components.publicationCitation.citationAuthors;
+        const {showMoreLabel, showMoreTitle, showLessTitle, showLessLabel} = locale.components.publicationCitation.citationAuthors;
         const {className, prefix, suffix, initialNumberOfAuthors, showLink} = this.props;
         const {authors, hasMoreAuthors, toggleShowMoreLink} = this.state;
 
@@ -138,7 +138,11 @@ export default class AuthorsCitationView extends React.Component {
                         <a href="#"
                             className="citationShowMoreAuthors"
                             onClick={this._toggleShowMore}
-                            onKeyPress={this._toggleShowMore}>
+                            onKeyPress={this._toggleShowMore}
+                            title={toggleShowMoreLink
+                                ? showMoreTitle.replace('[numberOfAuthors]', `${authors.length - initialNumberOfAuthors}`)
+                                : showLessTitle}
+                        >
                             {
                                 toggleShowMoreLink
                                     ? showMoreLabel.replace('[numberOfAuthors]', `${authors.length - initialNumberOfAuthors}`)

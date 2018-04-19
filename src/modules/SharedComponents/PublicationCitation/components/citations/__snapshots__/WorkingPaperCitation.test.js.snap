@@ -4,6 +4,41 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
 <WorkingPaperCitation
   publication={
     Object {
+      "fez_datastream_info": Array [
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_UQ_176145.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "FezACML security for PID - UQ:176145",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:176145",
+          "dsi_size": 3639,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_wp46.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:176145",
+          "dsi_size": 30860,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "wp46.pdf",
+          "dsi_embargo_date": null,
+          "dsi_label": "wp46",
+          "dsi_mimetype": "application/pdf",
+          "dsi_open_access": 1,
+          "dsi_pid": "UQ:176145",
+          "dsi_size": 122967,
+          "dsi_state": "A",
+        },
+      ],
       "fez_record_search_key_article_number": null,
       "fez_record_search_key_assigned_group_id": Array [],
       "fez_record_search_key_assigned_user_id": Array [],
@@ -336,6 +371,41 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
       initialNumberOfAuthors={10}
       publication={
         Object {
+          "fez_datastream_info": Array [
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "FezACML_UQ_176145.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "FezACML security for PID - UQ:176145",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:176145",
+              "dsi_size": 3639,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_wp46.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:176145",
+              "dsi_size": 30860,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "wp46.pdf",
+              "dsi_embargo_date": null,
+              "dsi_label": "wp46",
+              "dsi_mimetype": "application/pdf",
+              "dsi_open_access": 1,
+              "dsi_pid": "UQ:176145",
+              "dsi_size": 122967,
+              "dsi_state": "A",
+            },
+          ],
           "fez_record_search_key_article_number": null,
           "fez_record_search_key_assigned_group_id": Array [],
           "fez_record_search_key_assigned_user_id": Array [],
@@ -643,14 +713,13 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=""
           value="Laselle, Laurence"
         >
           <span
             className="citationAuthor"
           >
-             
             Laselle, Laurence
           </span>
         </CitationView>
@@ -686,7 +755,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -699,7 +768,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
         Education, Employment and Social Inclusion within the European Union
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSource"
       prefix=" "
@@ -771,6 +840,41 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
 <WorkingPaperCitation
   publication={
     Object {
+      "fez_datastream_info": Array [
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_UQ_176145.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "FezACML security for PID - UQ:176145",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:176145",
+          "dsi_size": 3639,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_wp46.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:176145",
+          "dsi_size": 30860,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "wp46.pdf",
+          "dsi_embargo_date": null,
+          "dsi_label": "wp46",
+          "dsi_mimetype": "application/pdf",
+          "dsi_open_access": 1,
+          "dsi_pid": "UQ:176145",
+          "dsi_size": 122967,
+          "dsi_state": "A",
+        },
+      ],
       "fez_record_search_key_article_number": null,
       "fez_record_search_key_assigned_group_id": Array [],
       "fez_record_search_key_assigned_user_id": Array [],
@@ -1106,6 +1210,41 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
       initialNumberOfAuthors={10}
       publication={
         Object {
+          "fez_datastream_info": Array [
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "FezACML_UQ_176145.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "FezACML security for PID - UQ:176145",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:176145",
+              "dsi_size": 3639,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_wp46.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:176145",
+              "dsi_size": 30860,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "wp46.pdf",
+              "dsi_embargo_date": null,
+              "dsi_label": "wp46",
+              "dsi_mimetype": "application/pdf",
+              "dsi_open_access": 1,
+              "dsi_pid": "UQ:176145",
+              "dsi_size": 122967,
+              "dsi_state": "A",
+            },
+          ],
           "fez_record_search_key_article_number": null,
           "fez_record_search_key_assigned_group_id": Array [],
           "fez_record_search_key_assigned_user_id": Array [],
@@ -1416,14 +1555,13 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=""
           value="Laselle, Laurence"
         >
           <span
             className="citationAuthor"
           >
-             
             Laselle, Laurence
           </span>
         </CitationView>
@@ -1459,7 +1597,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1472,7 +1610,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
         Education, Employment and Social Inclusion within the European Union
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSource"
       prefix=" "
@@ -1609,7 +1747,7 @@ exports[`WorkingPaperCitation renders  component with empty publication 1`] = `
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1617,7 +1755,7 @@ exports[`WorkingPaperCitation renders  component with empty publication 1`] = `
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSource"
       prefix=" "

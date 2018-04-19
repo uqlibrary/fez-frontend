@@ -4,6 +4,52 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
 <ConferenceProceedingsCitation
   publication={
     Object {
+      "fez_datastream_info": Array [
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "ch7008.pdf",
+          "dsi_embargo_date": null,
+          "dsi_label": "Link to conference proceedings",
+          "dsi_mimetype": "application/pdf",
+          "dsi_open_access": 1,
+          "dsi_pid": "UQ:159544",
+          "dsi_size": 11950980,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_ch7008.pdf.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "FezACML security for datastream - ch7008.pdf",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:159544",
+          "dsi_size": 3093,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_UQ_159544.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "FezACML security for PID - UQ:159544",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:159544",
+          "dsi_size": 3639,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_ch7008.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:159544",
+          "dsi_size": 221194,
+          "dsi_state": "A",
+        },
+      ],
       "fez_record_search_key_article_number": null,
       "fez_record_search_key_assigned_group_id": Array [],
       "fez_record_search_key_assigned_user_id": Array [],
@@ -398,6 +444,52 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
       prefix=""
       publication={
         Object {
+          "fez_datastream_info": Array [
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "ch7008.pdf",
+              "dsi_embargo_date": null,
+              "dsi_label": "Link to conference proceedings",
+              "dsi_mimetype": "application/pdf",
+              "dsi_open_access": 1,
+              "dsi_pid": "UQ:159544",
+              "dsi_size": 11950980,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "FezACML_ch7008.pdf.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "FezACML security for datastream - ch7008.pdf",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:159544",
+              "dsi_size": 3093,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "FezACML_UQ_159544.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "FezACML security for PID - UQ:159544",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:159544",
+              "dsi_size": 3639,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_ch7008.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:159544",
+              "dsi_size": 221194,
+              "dsi_state": "A",
+            },
+          ],
           "fez_record_search_key_article_number": null,
           "fez_record_search_key_assigned_group_id": Array [],
           "fez_record_search_key_assigned_user_id": Array [],
@@ -773,6 +865,52 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
         prefix=""
         publication={
           Object {
+            "fez_datastream_info": Array [
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "ch7008.pdf",
+                "dsi_embargo_date": null,
+                "dsi_label": "Link to conference proceedings",
+                "dsi_mimetype": "application/pdf",
+                "dsi_open_access": 1,
+                "dsi_pid": "UQ:159544",
+                "dsi_size": 11950980,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "FezACML_ch7008.pdf.xml",
+                "dsi_embargo_date": null,
+                "dsi_label": "FezACML security for datastream - ch7008.pdf",
+                "dsi_mimetype": "text/xml",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:159544",
+                "dsi_size": 3093,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "FezACML_UQ_159544.xml",
+                "dsi_embargo_date": null,
+                "dsi_label": "FezACML security for PID - UQ:159544",
+                "dsi_mimetype": "text/xml",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:159544",
+                "dsi_size": 3639,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "presmd_ch7008.xml",
+                "dsi_embargo_date": null,
+                "dsi_label": "",
+                "dsi_mimetype": "application/xml",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:159544",
+                "dsi_size": 221194,
+                "dsi_state": "A",
+              },
+            ],
             "fez_record_search_key_article_number": null,
             "fez_record_search_key_assigned_group_id": Array [],
             "fez_record_search_key_assigned_user_id": Array [],
@@ -1150,14 +1288,13 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
           <CitationView
             className="citationAuthor"
             key="citationAuthor_1"
-            prefix=" "
+            prefix=""
             suffix=""
             value="Frédérique Larrarte"
           >
             <span
               className="citationAuthor"
             >
-               
               Frédérique Larrarte
             </span>
           </CitationView>
@@ -1194,7 +1331,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1207,7 +1344,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
         Experiences and Challenges in Sewers: Measurements and Hydrodynamics
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationConferenceName"
       prefix=" "
@@ -1293,6 +1430,52 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
 <ConferenceProceedingsCitation
   publication={
     Object {
+      "fez_datastream_info": Array [
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "ch7008.pdf",
+          "dsi_embargo_date": null,
+          "dsi_label": "Link to conference proceedings",
+          "dsi_mimetype": "application/pdf",
+          "dsi_open_access": 1,
+          "dsi_pid": "UQ:159544",
+          "dsi_size": 11950980,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_ch7008.pdf.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "FezACML security for datastream - ch7008.pdf",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:159544",
+          "dsi_size": 3093,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_UQ_159544.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "FezACML security for PID - UQ:159544",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:159544",
+          "dsi_size": 3639,
+          "dsi_state": "A",
+        },
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "presmd_ch7008.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "",
+          "dsi_mimetype": "application/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:159544",
+          "dsi_size": 221194,
+          "dsi_state": "A",
+        },
+      ],
       "fez_record_search_key_article_number": null,
       "fez_record_search_key_assigned_group_id": Array [],
       "fez_record_search_key_assigned_user_id": Array [],
@@ -1690,6 +1873,52 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
       prefix=""
       publication={
         Object {
+          "fez_datastream_info": Array [
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "ch7008.pdf",
+              "dsi_embargo_date": null,
+              "dsi_label": "Link to conference proceedings",
+              "dsi_mimetype": "application/pdf",
+              "dsi_open_access": 1,
+              "dsi_pid": "UQ:159544",
+              "dsi_size": 11950980,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "FezACML_ch7008.pdf.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "FezACML security for datastream - ch7008.pdf",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:159544",
+              "dsi_size": 3093,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "FezACML_UQ_159544.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "FezACML security for PID - UQ:159544",
+              "dsi_mimetype": "text/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:159544",
+              "dsi_size": 3639,
+              "dsi_state": "A",
+            },
+            Object {
+              "dsi_copyright": null,
+              "dsi_dsid": "presmd_ch7008.xml",
+              "dsi_embargo_date": null,
+              "dsi_label": "",
+              "dsi_mimetype": "application/xml",
+              "dsi_open_access": null,
+              "dsi_pid": "UQ:159544",
+              "dsi_size": 221194,
+              "dsi_state": "A",
+            },
+          ],
           "fez_record_search_key_article_number": null,
           "fez_record_search_key_assigned_group_id": Array [],
           "fez_record_search_key_assigned_user_id": Array [],
@@ -2068,6 +2297,52 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
         prefix=""
         publication={
           Object {
+            "fez_datastream_info": Array [
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "ch7008.pdf",
+                "dsi_embargo_date": null,
+                "dsi_label": "Link to conference proceedings",
+                "dsi_mimetype": "application/pdf",
+                "dsi_open_access": 1,
+                "dsi_pid": "UQ:159544",
+                "dsi_size": 11950980,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "FezACML_ch7008.pdf.xml",
+                "dsi_embargo_date": null,
+                "dsi_label": "FezACML security for datastream - ch7008.pdf",
+                "dsi_mimetype": "text/xml",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:159544",
+                "dsi_size": 3093,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "FezACML_UQ_159544.xml",
+                "dsi_embargo_date": null,
+                "dsi_label": "FezACML security for PID - UQ:159544",
+                "dsi_mimetype": "text/xml",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:159544",
+                "dsi_size": 3639,
+                "dsi_state": "A",
+              },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "presmd_ch7008.xml",
+                "dsi_embargo_date": null,
+                "dsi_label": "",
+                "dsi_mimetype": "application/xml",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:159544",
+                "dsi_size": 221194,
+                "dsi_state": "A",
+              },
+            ],
             "fez_record_search_key_article_number": null,
             "fez_record_search_key_assigned_group_id": Array [],
             "fez_record_search_key_assigned_user_id": Array [],
@@ -2448,14 +2723,13 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
           <CitationView
             className="citationAuthor"
             key="citationAuthor_1"
-            prefix=" "
+            prefix=""
             suffix=""
             value="Frédérique Larrarte"
           >
             <span
               className="citationAuthor"
             >
-               
               Frédérique Larrarte
             </span>
           </CitationView>
@@ -2492,7 +2766,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -2505,7 +2779,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
         Experiences and Challenges in Sewers: Measurements and Hydrodynamics
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationConferenceName"
       prefix=" "
@@ -2663,7 +2937,7 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -2671,7 +2945,7 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationConferenceName"
       prefix=" "

@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component OfflineSnackbar renderMessage returns expected message 1`] = `
+<div
+  className="columns is-gapless connectionStatus is-mobile online"
+>
+  <div
+    className="column"
+  />
+  <div
+    className="column is-narrow"
+  >
+    icon
+  </div>
+  <div
+    className="column is-narrow"
+  >
+    message
+  </div>
+  <div
+    className="column"
+  />
+</div>
+`;
+
+exports[`Component OfflineSnackbar renders back online snackbar 1`] = `
+<div
+  className="offlineSnackbar"
+>
+  <Snackbar
+    autoHideDuration={5000}
+    message={
+      <div
+        className="columns is-gapless connectionStatus is-mobile online"
+      >
+        <div
+          className="column"
+        />
+        <div
+          className="column is-narrow"
+        >
+          <ActionCheckCircle />
+        </div>
+        <div
+          className="column is-narrow"
+        >
+          Your connection is back online
+        </div>
+        <div
+          className="column"
+        />
+      </div>
+    }
+    onActionTouchTap={[Function]}
+    onRequestClose={[Function]}
+    open={true}
+  />
+</div>
+`;
+
+exports[`Component OfflineSnackbar renders hidden (open: false) snackbar 1`] = `
+<div
+  className="offlineSnackbar"
+>
+  <Snackbar
+    autoHideDuration={5000}
+    message={
+      <div
+        className="columns is-gapless connectionStatus is-mobile online"
+      >
+        <div
+          className="column"
+        />
+        <div
+          className="column is-narrow"
+        >
+          <ActionCheckCircle />
+        </div>
+        <div
+          className="column is-narrow"
+        >
+          Your connection is back online
+        </div>
+        <div
+          className="column"
+        />
+      </div>
+    }
+    onActionTouchTap={[Function]}
+    onRequestClose={[Function]}
+    open={false}
+  />
+</div>
+`;
+
+exports[`Component OfflineSnackbar renders offline snackbar 1`] = `
+<div
+  className="offlineSnackbar"
+>
+  <Snackbar
+    autoHideDuration={0}
+    message={
+      <div
+        className="columns is-gapless connectionStatus is-mobile offline"
+      >
+        <div
+          className="column"
+        />
+        <div
+          className="column is-narrow"
+        >
+          <AlertError />
+        </div>
+        <div
+          className="column is-narrow"
+        >
+          Your connection is offline
+        </div>
+        <div
+          className="column"
+        />
+      </div>
+    }
+    onActionTouchTap={[Function]}
+    onRequestClose={[Function]}
+    open={true}
+  />
+</div>
+`;

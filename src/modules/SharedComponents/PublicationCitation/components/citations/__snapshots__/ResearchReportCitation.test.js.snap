@@ -607,14 +607,13 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=""
           value="Vishal Asai"
         >
           <span
             className="citationAuthor"
           >
-             
             Vishal Asai
           </span>
         </CitationView>
@@ -636,7 +635,7 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -649,7 +648,7 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
         Accelerated Apprenticeships: Apprentice, Employer and Teaching Staff Perceptions - 4
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSeries"
       prefix=" "
@@ -1370,14 +1369,13 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=""
           value="Vishal Asai"
         >
           <span
             className="citationAuthor"
           >
-             
             Vishal Asai
           </span>
         </CitationView>
@@ -1399,7 +1397,7 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1412,7 +1410,7 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
         Accelerated Apprenticeships: Apprentice, Employer and Teaching Staff Perceptions - 4
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSeries"
       prefix=" "
@@ -2137,14 +2135,13 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=""
           value="Vishal Asai"
         >
           <span
             className="citationAuthor"
           >
-             
             Vishal Asai
           </span>
         </CitationView>
@@ -2166,7 +2163,7 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -2179,7 +2176,7 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
         Accelerated Apprenticeships: Apprentice, Employer and Teaching Staff Perceptions - 4
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSeries"
       prefix=" "
@@ -2362,7 +2359,7 @@ exports[`ResearchReportCitation renders  component with empty publication 1`] = 
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -2370,7 +2367,7 @@ exports[`ResearchReportCitation renders  component with empty publication 1`] = 
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationSeries"
       prefix=" "

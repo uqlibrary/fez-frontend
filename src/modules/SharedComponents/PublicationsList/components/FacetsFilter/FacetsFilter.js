@@ -8,20 +8,23 @@ import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import {publicationTypes} from 'config';
 import {locale} from 'locale';
 import DateRange from './DateRange';
+import OpenAccessFilter from './OpenAccessFilter';
 
-export default class FacetsFilter extends React.Component {
+export default class FacetsFilter extends React.PureComponent {
     static propTypes = {
         facetsData: PropTypes.object,
         onFacetsChanged: PropTypes.func,
         activeFacets: PropTypes.object,
         excludeFacetsList: PropTypes.array,
         renameFacetsList: PropTypes.object,
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        showOpenAccessFilter: PropTypes.bool
     };
 
     static defaultProps = {
         excludeFacetsList: [],
-        renameFacetsList: {}
+        renameFacetsList: {},
+        showOpenAccessFilter: false
     };
 
     constructor(props) {
@@ -47,6 +50,7 @@ export default class FacetsFilter extends React.Component {
         const activeFacets = {
             filters: {...this.state.activeFacets.filters},
             ranges: {...this.state.activeFacets.ranges},
+            showOpenAccessOnly: !!this.state.activeFacets.showOpenAccessOnly
         };
 
         if (activeFacets.filters.hasOwnProperty(category) && activeFacets.filters[category] === facet) {
@@ -62,6 +66,21 @@ export default class FacetsFilter extends React.Component {
         });
     };
 
+    _handleOpenAccessFilter = (isActive) => {
+        if (this.props.disabled) {
+            return;
+        }
+
+        this.setState({
+            activeFacets: {
+                ...this.state.activeFacets,
+                showOpenAccessOnly: isActive
+            }
+        }, () => {
+            this.props.onFacetsChanged(this.state.activeFacets);
+        });
+    };
+
     _handleYearPublishedRangeFacet = (category) => (range) => {
         if (this.props.disabled) {
             return;
@@ -70,6 +89,7 @@ export default class FacetsFilter extends React.Component {
         const activeFacets = {
             filters: {...this.state.activeFacets.filters},
             ranges: {...this.state.activeFacets.ranges},
+            showOpenAccessOnly: !!this.state.activeFacets.showOpenAccessOnly
         };
 
         if (!range.to && !range.from) {
@@ -153,7 +173,9 @@ export default class FacetsFilter extends React.Component {
     render() {
         const {yearPublishedCategory, yearPublishedFacet, resetButtonText} = locale.components.facetsFilter;
         const facetsToDisplay = this.getFacetsToDisplay(this.props.facetsData, this.props.excludeFacetsList, this.props.renameFacetsList);
-        const hasActiveFilters = (Object.keys(this.state.activeFacets.filters).length > 0 || Object.keys(this.state.activeFacets.ranges).length > 0);
+        const hasActiveFilters = (Object.keys(this.state.activeFacets.filters).length > 0
+            || Object.keys(this.state.activeFacets.ranges).length > 0
+            || !!this.state.activeFacets.showOpenAccessOnly);
         if (facetsToDisplay.length === 0 && !hasActiveFilters) return (<span className="facetsFilter empty" />);
         return (
             <div className="facetsFilter">
@@ -164,7 +186,7 @@ export default class FacetsFilter extends React.Component {
                             return (
                                 <ListItem
                                     primaryText={item.title}
-                                    open={this.state.activeFacets.filters[item.facetTitle] && true}
+                                    {...(this.state.activeFacets.filters[item.facetTitle] ? {open: true} : {})}
                                     disabled={this.props.disabled}
                                     className={'facetsCategory ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
                                     primaryTogglesNestedList
@@ -173,15 +195,24 @@ export default class FacetsFilter extends React.Component {
                             );
                         })
                     }
+                    <DateRange
+                        itemClassName="dateRange facetsCategory"
+                        subitemClassName="dateRange facetsLink"
+                        {...(this.state.activeFacets.ranges[yearPublishedCategory] ? {open: true} : {})}
+                        value={this.state.activeFacets.ranges.hasOwnProperty(yearPublishedCategory) ? this.state.activeFacets.ranges[yearPublishedCategory] : {}}
+                        disabled={this.props.disabled}
+                        onChange={this._handleYearPublishedRangeFacet(yearPublishedCategory)}
+                        locale={yearPublishedFacet}
+                    />
                     {
-                        <DateRange
-                            itemClassName="dateRange facetsCategory"
-                            subitemClassName="dateRange facetsLink"
-                            open={this.state.activeFacets.ranges[yearPublishedCategory] && true}
-                            value={this.state.activeFacets.ranges.hasOwnProperty(yearPublishedCategory) ? this.state.activeFacets.ranges[yearPublishedCategory] : {}}
+                        this.props.showOpenAccessFilter &&
+                        <OpenAccessFilter
+                            itemClassName="facetsCategory openAccessOnly"
+                            subitemClassName="facetsLink openAccessOnly"
+                            {...(!!this.state.activeFacets.showOpenAccessOnly ? {open: true} : {})}
+                            value={this.state.activeFacets.showOpenAccessOnly}
                             disabled={this.props.disabled}
-                            onChange={this._handleYearPublishedRangeFacet(yearPublishedCategory)}
-                            locale={yearPublishedFacet}
+                            onChange={this._handleOpenAccessFilter}
                         />
                     }
                 </List>
@@ -192,6 +223,7 @@ export default class FacetsFilter extends React.Component {
                         <div className="column is-narrow-tablet">
                             <FlatButton
                                 fullWidth
+                                disabled={this.props.disabled}
                                 label={resetButtonText}
                                 onClick={this._handleResetClick}/>
                         </div>

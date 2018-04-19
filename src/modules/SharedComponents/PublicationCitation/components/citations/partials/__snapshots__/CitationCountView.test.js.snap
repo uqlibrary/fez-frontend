@@ -7,7 +7,7 @@ exports[`CitationCountView test  should render component with given count 1`] = 
   source="wos"
   title="Google"
 >
-  <span
+  <div
     className="citationCount"
   >
     <ExternalLink
@@ -38,6 +38,6 @@ exports[`CitationCountView test  should render component with given count 1`] = 
         </span>
       </a>
     </ExternalLink>
-  </span>
+  </div>
 </CitationCountView>
 `;

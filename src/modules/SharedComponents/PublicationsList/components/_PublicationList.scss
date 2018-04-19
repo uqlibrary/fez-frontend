@@ -75,21 +75,12 @@
     }
   }
 
-  .openExternalUrlIcon {
-    height: $text-body-small !important;
-    width: $text-body-small !important;
-    font-size: $text-body-small !important;
-    fill: $accent-color !important;
-    color: $accent-color !important;
-    margin: 0 2px;
-    vertical-align: top;
-  }
-
   .citationCounts {
     margin-top: 10px;
 
     .citationCount {
-      margin: 0 5px;
+      display: inline-block !important;
+      margin: 0 6px 0 0;
       .fez-icon{
         margin-right: 3px;
       }

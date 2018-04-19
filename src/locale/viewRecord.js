@@ -7,7 +7,60 @@ export default {
         sections: {
             publicationDetails: 'Publication details',
             grantInformation: 'Grant information',
-            additionalInformation: 'Additional information'
+            additionalInformation: {
+                title: 'Additional information',
+                licenseLinkText: 'View license details'
+            },
+            relatedPublications: {
+                title: 'Related publications and datasets',
+                depositedBy: 'deposited',
+                currentRecord: 'Current Record'
+            },
+            availableVersions: 'Available versions',
+            files: {
+                title: 'Files',
+                fileName: 'File name',
+                description: 'Description',
+                embargoDate: 'Open access after [embargoDate]',
+                size: 'Size',
+                culturalSensitivityStatement: 'Cultural Sensitivity Statement - Be advised that some files may contain content which is of a sensitive nature to some cultures or tastes.',
+                linkTitle: 'Click to open this file in a new window - [filename] - [description] - [size]',
+                preview: {
+                    videoTitle: 'Video preview',
+                    imageTitle: 'Image preview',
+                    openInNewWindow: 'Open file in a new window',
+                    close: 'Close',
+                    errorMessage: 'Your browser does not support the video tag.'
+                }
+            },
+            links: {
+                title: 'Links',
+                headerTitles: {
+                    link: 'Link (will open in a new window)',
+                    description: 'Description',
+                    oaStatus: ' '
+                },
+                linkMissingDescription: 'No description available',
+                linkMissingDescriptionTitle: 'Click to open link in a new window',
+                doiDescription: 'Full text from publisher',
+                openAccessLabel: 'Open Access - [oa_status] - Free to read',
+                openAccessEmbargoedLabel: '[oa_status] - Open access after [embargo_date]',
+                labelNoOpenAccessLookup: 'Open Access - Embargo applies',
+                labelOpenAccessNoStatus: 'Open Access - Free to read',
+                labelClosedAccess: 'Closed access',
+                pubmedCentralLinkDescription: 'Full text from PubMed Central',
+                embargoedUntil: 'Open access after [embargo_date] ',
+                googleScholar: {
+                    linkPrefix: 'https://scholar.google.com/scholar?q=intitle:%22[title]%22',
+                    linkDescription: 'Search Google Scholar for this open access article'
+                }
+            },
+            abstract: {
+                default: 'Abstract',
+                'Journal': 'Summary/Description',
+                'Data Collection': 'Dataset description',
+                'Design': 'Project description'
+            }
         },
         headings: {
             default: {
@@ -56,11 +109,12 @@ export default {
                 fez_record_search_key_translated_conference_name: 'Translated conference name',
                 fez_record_search_key_conference_location: 'Conference Location',
                 fez_record_search_key_conference_dates: 'Conference dates',
+                fez_record_search_key_section: 'Section',
                 fez_record_search_key_convener: 'Convener',
                 fez_record_search_key_proceedings_title: 'Proceedings title',
                 fez_record_search_key_language_of_proceedings_title: 'Language of proceedings title',
                 fez_record_search_key_translated_proceedings_title: 'Translated proceedings title',
-                fez_record_search_key_org_unit_name: 'School, Department or Center',
+                fez_record_search_key_org_unit_name: 'School, Department or Centre',
                 fez_record_search_key_org_name: 'Institution',
                 fez_record_search_key_access_conditions: 'Access conditions',
                 fez_record_search_key_seo_code: 'ANZSRC Socio-Economic Objective (SEO) Code',
@@ -119,7 +173,7 @@ export default {
                 fez_record_search_key_notes: 'Additional notes',
                 grantInformation: {
                     fez_record_search_key_grant_agency: 'Grant agency',
-                    fez_record_search_key_grant_id: 'Grant id',
+                    fez_record_search_key_grant_id: 'Grant ID',
                     fez_record_search_key_grant_text: 'Grant text'
                 },
                 publicationDetails: {
@@ -163,7 +217,9 @@ export default {
                 fez_record_search_key_author: 'Creator name',
                 fez_record_search_key_contributor: 'Contact name',
                 fez_record_search_key_author_role: 'Creator(s) role',
-                fez_record_search_key_geographic_area: 'Geographic co-ordinates'
+                fez_record_search_key_geographic_area: 'Geographic co-ordinates',
+                fez_record_search_key_grant_id: 'Grant ID',
+                fez_record_search_key_subject: 'ANZSRC Field of Research (FoR) Code'
             },
             'Department Technical Report': {},
             'Design': {
@@ -224,7 +280,7 @@ export default {
             'Thesis': {
                 rek_title: 'Thesis title',
                 rek_genre_type: 'Thesis type',
-                fez_record_search_key_org_unit_name: 'School, Center or Institute',
+                fez_record_search_key_org_unit_name: 'School, Centre or Institute',
                 fez_record_search_key_translated_title: 'Translated thesis title'
             },
             'Video Document': {
@@ -973,68 +1029,72 @@ export default {
                     order: 11
                 },
                 {
-                    field: 'fez_record_search_key_type_of_data',
+                    field: 'fez_record_search_key_grant_id',
                     order: 12
                 },
                 {
-                    field: 'fez_record_search_key_data_volume',
+                    field: 'fez_record_search_key_type_of_data',
                     order: 13
                 },
                 {
-                    field: 'fez_record_search_key_software_required',
-                    order: 14
+                    field: 'fez_record_search_key_data_volume',
+                    order: 144
                 },
                 {
-                    field: 'fez_record_search_key_language',
+                    field: 'fez_record_search_key_software_required',
                     order: 15
                 },
                 {
-                    field: 'fez_record_search_key_start_date',
+                    field: 'fez_record_search_key_language',
                     order: 16
                 },
                 {
-                    field: 'fez_record_search_key_end_date',
+                    field: 'fez_record_search_key_start_date',
                     order: 17
                 },
                 {
-                    field: 'fez_record_search_key_time_period_start_date',
+                    field: 'fez_record_search_key_end_date',
                     order: 18
                 },
                 {
-                    field: 'fez_record_search_key_time_period_end_date',
+                    field: 'fez_record_search_key_time_period_start_date',
                     order: 19
                 },
                 {
-                    field: 'fez_record_search_key_keywords',
+                    field: 'fez_record_search_key_time_period_end_date',
                     order: 20
                 },
                 {
-                    field: 'fez_record_search_key_geographic_area',
+                    field: 'fez_record_search_key_keywords',
                     order: 21
                 },
                 {
-                    field: 'fez_record_search_key_seo_code',
+                    field: 'fez_record_search_key_geographic_area',
                     order: 22
                 },
                 {
-                    field: 'fez_record_search_key_project_id',
+                    field: 'fez_record_search_key_seo_code',
                     order: 23
                 },
                 {
-                    field: 'fez_record_search_key_ands_collection_type',
+                    field: 'fez_record_search_key_project_id',
                     order: 24
                 },
                 {
-                    field: 'fez_record_search_key_publisher',
+                    field: 'fez_record_search_key_ands_collection_type',
                     order: 25
                 },
                 {
-                    field: 'rek_date',
+                    field: 'fez_record_search_key_publisher',
                     order: 26
                 },
                 {
-                    field: 'fez_record_search_key_rights',
+                    field: 'rek_date',
                     order: 27
+                },
+                {
+                    field: 'fez_record_search_key_rights',
+                    order: 28
                 }
             ],
             'Department Technical Report': [
@@ -1079,7 +1139,7 @@ export default {
                     order: 10
                 },
                 {
-                    field: 'fez_record_search_key_end_date',
+                    field: 'fez_record_search_key_end_page',
                     order: 11
                 },
                 {
@@ -1759,8 +1819,12 @@ export default {
                     order: 17
                 },
                 {
-                    field: 'fez_record_search_key_keywords',
+                    field: 'fez_record_search_key_subject',
                     order: 18
+                },
+                {
+                    field: 'fez_record_search_key_keywords',
+                    order: 19
                 }
             ],
             'Reference Entry': [
@@ -2330,6 +2394,6 @@ export default {
             'fez_record_search_key_herdc_code',
             'fez_record_search_key_herdc_status',
             'fez_record_search_key_institutional_status'
-        ]
-    }
+        ],
+    },
 };

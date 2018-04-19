@@ -14,73 +14,106 @@ const initialState = {
     ...initialSearchSources
 };
 
-export const deduplicateResults = (publicationsList) => {
-    // get a list of DOI counts
-    const doiCountHash = publicationsList
+const idSearchKeys = [
+    {key: 'fez_record_search_key_doi', value: 'rek_doi'},
+    {key: 'fez_record_search_key_scopus_id', value: 'rek_scopus_id'},
+    {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'}
+];
+
+export const getIdCountHash = (list, idSearchKey, isOnlyForEspace = false) => {
+    return list
         .filter(item => {
-            return !!item.fez_record_search_key_doi;
+            return !!item[idSearchKey.key] && (!isOnlyForEspace || item.currentSource === 'espace');
         })
         .map(item => {
-            return item.fez_record_search_key_doi.rek_doi;
+            return item[idSearchKey.key][idSearchKey.value];
         })
-        .reduce((duplicatesCount, doi) => {
-            duplicatesCount[doi.toLowerCase()] = (duplicatesCount[doi.toLowerCase()] || 0) + 1;
+        .reduce((duplicatesCount, id) => {
+            duplicatesCount[id.toLowerCase()] = (duplicatesCount[id.toLowerCase()] || 0) + 1;
             return duplicatesCount;
-        }, []);
+        }, {});
+};
 
-    // get a list of duplicate doi records and dois
-    const doiDuplicatesList = [];
-    const duplicates = publicationsList
+export const getDuplicateList = (publicationsList, idSearchKey, isOnlyForEspace = false, espacePublicationWithDuplicateIds = []) => {
+    const idCountHash = getIdCountHash(publicationsList, idSearchKey, isOnlyForEspace);
+
+    return publicationsList
         .filter(item => {
-            if (item.fez_record_search_key_doi && doiCountHash[item.fez_record_search_key_doi.rek_doi.toLowerCase()] > 1
-                && doiDuplicatesList.indexOf(item.fez_record_search_key_doi.rek_doi.toLowerCase()) === -1) {
-                doiDuplicatesList.push(item.fez_record_search_key_doi.rek_doi.toLowerCase());
-            }
-            return !!item.fez_record_search_key_doi && doiCountHash[item.fez_record_search_key_doi.rek_doi.toLowerCase()] > 1;
-        });
-
-    // remove all duplicates from full list of results
-    const cleanedPublicationsList = publicationsList
+            return !!item[idSearchKey.key] && (!isOnlyForEspace || item.currentSource === 'espace');
+        })
         .filter(item => {
-            return !item.fez_record_search_key_doi || doiCountHash[item.fez_record_search_key_doi.rek_doi.toLowerCase()] === 1;
+            return idCountHash[item[idSearchKey.key][idSearchKey.value].toLowerCase()] > 1;
+        })
+        .filter(item => {
+            return isOnlyForEspace ||
+                item.currentSource !== 'espace' ||
+                espacePublicationWithDuplicateIds.filter(espaceItem => {
+                    return espaceItem.rek_pid === item.rek_pid;
+                }).length === 0;
         });
+};
 
-    // filter duplicate records based on source priority
-    const highPriorityItem = doiDuplicatesList
-        .map(doi => {
-            // get a record with most priority
-            return duplicates
-                .filter(item => {
-                    return !!item.fez_record_search_key_doi && doi === item.fez_record_search_key_doi.rek_doi.toLowerCase();
-                })
-                .reduce((list, item) => {
-                    if (list.length === 0) {
-                        list.push(item);
-                    } else {
-                        const currentItem = {...list[0]}; // the first item
-                        const currentItemPriority = Math
-                            .min(...currentItem.sources
-                                .map(source => {
-                                    return locale.global.sources[source.source].priority;
-                                })); // returns the lowest valued priority source this record has
-                        const itemPriority = locale.global.sources[item.sources[0].source].priority; // items current source priority
+export const getEspaceDuplicatePublicationsByIdExceptLastItem = (list, idSearchKey) => {
+    const duplicateList = getDuplicateList(list, idSearchKey, true);
+    return duplicateList.slice(0, duplicateList.length - 1);
+};
 
-                        if (itemPriority < currentItemPriority) {
-                            currentItem.sources.push(item.sources[0]);
-                            item.sources = currentItem.sources;
-                            list[0] = item;
+export const deduplicateResults = (list) => {
+    return idSearchKeys.reduce((publicationsList, idSearchKey) => {
+        const espacePublicationWithDuplicateIds = getEspaceDuplicatePublicationsByIdExceptLastItem(publicationsList, idSearchKey);
+
+        // get a list of doi/scopus_id/isi_loc counts
+        const idCountHash = getIdCountHash(publicationsList, idSearchKey);
+
+        // get a list of duplicate doi records and dois/scopus_ids/isi_loc
+        const duplicates = getDuplicateList(publicationsList, idSearchKey, false, espacePublicationWithDuplicateIds);
+
+        // remove all duplicates from full list of results
+        const cleanedPublicationsList = publicationsList
+            .filter(item => {
+                return !item[idSearchKey.key] || idCountHash[item[idSearchKey.key][idSearchKey.value].toLowerCase()] === 1;
+            });
+
+        // filter duplicate records based on source priority
+        const highPriorityItem = Object.keys(idCountHash)
+            .filter(id => idCountHash[id] > 1)
+            .map(id => {
+                // get a record with most priority
+                return duplicates
+                    .filter(item => {
+                        return !!item[idSearchKey.key] && id === item[idSearchKey.key][idSearchKey.value].toLowerCase();
+                    })
+                    .reduce((list, item) => {
+                        if (list.length === 0) {
+                            return [item];
                         } else {
-                            list[0].sources.push(item.sources[0]);
-                        }
-                    }
-                    return list;
-                }, [])[0];
-        });
+                            const currentItem = {...list[0]}; // the first item
+                            const currentItemSources = [...currentItem.sources];
+                            const currentItemPriority = Math
+                                .min(
+                                    ...currentItemSources.map(source => locale.global.sources[source.source].priority)
+                                ); // returns the lowest valued priority source this record has
+                            const itemPriority = locale.global.sources[item.sources[0].source].priority; // items current source priority
 
-    // re-add de-duplicated items
-    return [...highPriorityItem, ...cleanedPublicationsList]
-        .sort((item1, item2) =>
-            (locale.global.sources[item1.currentSource].priority - locale.global.sources[item2.currentSource].priority));
+                            if (itemPriority < currentItemPriority) {
+                                currentItemSources.push(item.sources[0]);
+                                const itemWithNewSources = {...item};
+                                itemWithNewSources.sources = [...currentItemSources];
+                                return [itemWithNewSources];
+                            } else {
+                                currentItemSources.push(item.sources[0]);
+                                currentItem.sources = [...currentItemSources];
+                                return [{...currentItem}];
+                            }
+                        }
+                    }, [])[0];
+            });
+
+        // re-add de-duplicated items
+        return [...espacePublicationWithDuplicateIds, ...highPriorityItem, ...cleanedPublicationsList]
+            .sort((item1, item2) =>
+                (locale.global.sources[item1.currentSource].priority - locale.global.sources[item2.currentSource].priority));
+    }, [...list]);
 };
 
 const handlers = {
@@ -115,9 +148,9 @@ const handlers = {
         return {
             ...state,
             loadingSearch: false,
-            publicationsList: deduplicateResults(action.payload.map(item => {
-                return JSON.parse(JSON.stringify(item));
-            }))
+            publicationsList: action.payload.data
+                ? deduplicateResults(action.payload.data)
+                : []
         };
     },
 
@@ -159,7 +192,7 @@ const handlers = {
                 ...state.loadingPublicationSources,
                 totalSearchedCount: state.loadingPublicationSources.totalSearchedCount + 1,
                 [source]: true,
-                [`${source}Count`]: action.payload.length
+                [`${source}Count`]: action.payload.data.length
             }
         };
 
@@ -167,15 +200,10 @@ const handlers = {
             ...state,
             loadingSearch: true,
             publicationsList:
-                deduplicateResults(
-                    [
-                        ...state.publicationsList.map(item => {
-                            return JSON.parse(JSON.stringify(item));
-                        }),
-                        ...action.payload.map(item => {
-                            return JSON.parse(JSON.stringify(item));
-                        })
-                    ]),
+                deduplicateResults([
+                    ...state.publicationsList,
+                    ...action.payload.data
+                ]),
             ...loadingPublicationSources
         };
     }

@@ -360,7 +360,7 @@ exports[`JournalCitation renders  component with a mock espace record 1`] = `
         format_quote
       </span>
     </FontIcon>
-    <CitationView
+    <CitationTitleView
       className="citationJournalName"
       prefix=""
       suffix=" "
@@ -372,7 +372,7 @@ exports[`JournalCitation renders  component with a mock espace record 1`] = `
         Management international review
          
       </span>
-    </CitationView>
+    </CitationTitleView>
     <DateCitationView
       className="citationDate"
       date="2005-01-01T00:00:00Z"
@@ -453,7 +453,7 @@ exports[`JournalCitation renders  component with empty publication 1`] = `
         format_quote
       </span>
     </FontIcon>
-    <CitationView
+    <CitationTitleView
       className="citationJournalName"
       prefix=""
       suffix=" "
@@ -461,7 +461,7 @@ exports[`JournalCitation renders  component with empty publication 1`] = `
       <span
         className="citationJournalName empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <DateCitationView
       className="citationDate"
       format="YYYY"

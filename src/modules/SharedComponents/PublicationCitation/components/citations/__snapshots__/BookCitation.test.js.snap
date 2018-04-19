@@ -655,14 +655,13 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Teesson, Maree"
         >
           <span
             className="citationAuthor"
           >
-             
             Teesson, Maree
             , 
           </span>
@@ -670,14 +669,13 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Hall, Wayne"
         >
           <span
             className="citationAuthor"
           >
-             
             Hall, Wayne
             , 
           </span>
@@ -685,16 +683,14 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
-          suffix=", "
+          prefix=""
+          suffix=""
           value="Proudfoot, Heather"
         >
           <span
             className="citationAuthor"
           >
-             
             Proudfoot, Heather
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -729,7 +725,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -742,7 +738,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         Addictions
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationEdition"
       prefix=" "
@@ -1607,14 +1603,13 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
           <CitationView
             className="citationAuthor"
             key="citationAuthor_1"
-            prefix=" "
+            prefix=""
             suffix=", "
             value="Smith, A"
           >
             <span
               className="citationAuthor"
             >
-               
               Smith, A
               , 
             </span>
@@ -1622,16 +1617,14 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
           <CitationView
             className="citationAuthor"
             key="citationAuthor_2"
-            prefix=" "
-            suffix=", "
+            prefix=""
+            suffix=""
             value="Smith, C"
           >
             <span
               className="citationAuthor"
             >
-               
               Smith, C
-              , 
             </span>
           </CitationView>
           <CitationView
@@ -1667,7 +1660,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1680,7 +1673,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
         Addictions
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationEdition"
       prefix=" "
@@ -1817,7 +1810,7 @@ exports[`BookCitation renders  component with empty publication 1`] = `
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1825,7 +1818,7 @@ exports[`BookCitation renders  component with empty publication 1`] = `
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationEdition"
       prefix=" "
@@ -2672,14 +2665,13 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
           <CitationView
             className="citationAuthor"
             key="citationAuthor_1"
-            prefix=" "
+            prefix=""
             suffix=", "
             value="Smith, A"
           >
             <span
               className="citationAuthor"
             >
-               
               Smith, A
               , 
             </span>
@@ -2687,16 +2679,14 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
           <CitationView
             className="citationAuthor"
             key="citationAuthor_2"
-            prefix=" "
-            suffix=", "
+            prefix=""
+            suffix=""
             value="Smith, C"
           >
             <span
               className="citationAuthor"
             >
-               
               Smith, C
-              , 
             </span>
           </CitationView>
           <CitationView
@@ -2732,7 +2722,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -2745,7 +2735,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
         Addictions
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationEdition"
       prefix=" "

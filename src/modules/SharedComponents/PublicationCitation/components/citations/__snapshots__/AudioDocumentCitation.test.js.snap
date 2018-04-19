@@ -801,14 +801,13 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Shutter, Leigh"
         >
           <span
             className="citationAuthor"
           >
-             
             Shutter, Leigh
             , 
           </span>
@@ -816,14 +815,13 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Arthurs, Andy"
         >
           <span
             className="citationAuthor"
           >
-             
             Arthurs, Andy
             , 
           </span>
@@ -831,14 +829,13 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Bamford, Greg"
         >
           <span
             className="citationAuthor"
           >
-             
             Bamford, Greg
             , 
           </span>
@@ -846,16 +843,14 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=" "
-          suffix=", "
+          prefix=""
+          suffix=""
           value="McColl, Mary Rose"
         >
           <span
             className="citationAuthor"
           >
-             
             McColl, Mary Rose
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -890,7 +885,7 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -903,7 +898,7 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
         Hearing the city Symposium Title 5: In conversation
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -1739,14 +1734,13 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
         <CitationView
           className="citationAuthor"
           key="citationAuthor_1"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Shutter, Leigh"
         >
           <span
             className="citationAuthor"
           >
-             
             Shutter, Leigh
             , 
           </span>
@@ -1754,14 +1748,13 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
         <CitationView
           className="citationAuthor"
           key="citationAuthor_2"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Arthurs, Andy"
         >
           <span
             className="citationAuthor"
           >
-             
             Arthurs, Andy
             , 
           </span>
@@ -1769,14 +1762,13 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
         <CitationView
           className="citationAuthor"
           key="citationAuthor_3"
-          prefix=" "
+          prefix=""
           suffix=", "
           value="Bamford, Greg"
         >
           <span
             className="citationAuthor"
           >
-             
             Bamford, Greg
             , 
           </span>
@@ -1784,16 +1776,14 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
         <CitationView
           className="citationAuthor"
           key="citationAuthor_4"
-          prefix=" "
-          suffix=", "
+          prefix=""
+          suffix=""
           value="McColl, Mary Rose"
         >
           <span
             className="citationAuthor"
           >
-             
             McColl, Mary Rose
-            , 
           </span>
         </CitationView>
         <CitationView
@@ -1828,7 +1818,7 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
         ).
       </span>
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1841,7 +1831,7 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
         Hearing the city Symposium Title 5: In conversation
         .
       </span>
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "
@@ -1943,7 +1933,7 @@ exports[`AudioDocumentCitation renders  component with empty publication 1`] = `
         className="citationDate empty"
       />
     </DateCitationView>
-    <CitationView
+    <CitationTitleView
       className="citationTitle"
       prefix=" "
       suffix="."
@@ -1951,7 +1941,7 @@ exports[`AudioDocumentCitation renders  component with empty publication 1`] = `
       <span
         className="citationTitle empty"
       />
-    </CitationView>
+    </CitationTitleView>
     <CitationView
       className="citationPublisher"
       prefix=" "

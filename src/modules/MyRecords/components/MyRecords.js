@@ -9,7 +9,7 @@ import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
 import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
 import {locale} from 'locale';
 import {routes} from 'config';
-export default class MyRecords extends React.Component {
+export default class MyRecords extends React.PureComponent {
     static propTypes = {
         publicationsList: PropTypes.array,
         publicationsListFacets: PropTypes.object,
@@ -41,7 +41,7 @@ export default class MyRecords extends React.Component {
             // check if user has publications, once true always true
             // facets filtering might return no results, but facets should still be visible
             hasPublications: !props.loadingPublicationsList && props.publicationsList.length > 0,
-            ...(!!this.props.location.state ? this.props.location.state : this.initState)
+            ...(!!props.location.state ? props.location.state : this.initState)
         };
     }
 
@@ -66,12 +66,6 @@ export default class MyRecords extends React.Component {
             && !!newProps.publicationsList && newProps.publicationsList.length > 0) {
             this.setState({ hasPublications: true });
         }
-    }
-
-    shouldComponentUpdate(nextProps) {
-        // do not re-render on state change
-        // state change will trigger a dispatch which will update props
-        return this.props !== nextProps;
     }
 
     pageSizeChanged = (pageSize) => {
@@ -122,19 +116,22 @@ export default class MyRecords extends React.Component {
         this.props.history.push(routes.pathConfig.records.fix(item.rek_pid));
         this.props.actions.setFixRecord(item);
     }
-
     render() {
+        if (this.props.accountLoading) return null;
+
         const txt = locale.pages.myResearch;
         const pagingData = this.props.publicationsListPagingData;
         return (
             <StandardPage title={txt.pageTitle}>
                 {
-                    (this.props.accountLoading || (!this.state.hasPublications && this.props.loadingPublicationsList)) &&
+                    // first time loading my publications - account hasn't been loaded or any my publications haven't been loaded
+                    !this.state.hasPublications && this.props.loadingPublicationsList &&
                     <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
                 }
                 <div className="columns">
                     {
-                        !this.props.accountLoading && !this.props.loadingPublicationsList && !!this.props.publicationsList && this.props.publicationsList.length === 0 &&
+                        // no results to display
+                        !this.props.loadingPublicationsList && this.props.publicationsList.length === 0 &&
                         <div className="column">
                             <StandardCard {...txt.noResultsFound}>
                                 {txt.noResultsFound.text}
@@ -142,7 +139,8 @@ export default class MyRecords extends React.Component {
                         </div>
                     }
                     {
-                        !this.props.accountLoading && this.props.publicationsList.length > 0 &&
+                        // results to display or loading if user is filtering/paging
+                        this.state.hasPublications && (this.props.loadingPublicationsList || this.props.publicationsList.length > 0) &&
                         <div className="column">
                             <StandardCard>
                                 {
@@ -187,12 +185,11 @@ export default class MyRecords extends React.Component {
                         </div>
                     }
                     {
-                        !this.props.accountLoading && !this.props.loadingPublicationsList && this.state.hasPublications
-                        && (
-                            (this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
-                            || Object.keys(this.state.activeFacets.filters).length > 0
-                            || Object.keys(this.state.activeFacets.ranges).length > 0
-                        ) &&
+                        // show available filters or selected filters (even if there are no results)
+                        ((this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
+                        || (this.state.activeFacets && this.state.activeFacets.filters && Object.keys(this.state.activeFacets.filters).length > 0)
+                        || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)
+                        || (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
                         <div className="column is-3 is-hidden-mobile">
                             <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                 <FacetsFilter
@@ -201,7 +198,8 @@ export default class MyRecords extends React.Component {
                                     activeFacets={this.state.activeFacets}
                                     disabled={this.props.loadingPublicationsList}
                                     excludeFacetsList={txt.facetsFilter.excludeFacetsList}
-                                    renameFacetsList={txt.facetsFilter.renameFacetsList} />
+                                    renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                    showOpenAccessFilter />
                             </StandardRighthandCard>
                         </div>
                     }

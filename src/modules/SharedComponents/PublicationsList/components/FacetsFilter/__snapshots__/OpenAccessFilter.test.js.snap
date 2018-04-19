@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OpenAccessFilter  should render empty component 1`] = `
+<ListItem
+  autoGenerateNestedIndicator={true}
+  className="undefined active  "
+  containerElement="span"
+  disableKeyboardFocus={false}
+  disabled={false}
+  initiallyOpen={false}
+  insetChildren={false}
+  nestedItems={
+    Array [
+      <ListItem
+        autoGenerateNestedIndicator={true}
+        className="undefined active  "
+        containerElement="span"
+        disableKeyboardFocus={false}
+        disabled={false}
+        initiallyOpen={false}
+        insetChildren={false}
+        leftIcon={
+          <NavigationClose
+            disabled={undefined}
+          />
+        }
+        nestedItems={Array []}
+        nestedLevel={0}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onNestedListToggle={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
+        open={null}
+        primaryText="Show only open access records"
+        primaryTogglesNestedList={false}
+        secondaryTextLines={1}
+      />,
+    ]
+  }
+  nestedLevel={0}
+  onKeyboardFocus={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onNestedListToggle={[Function]}
+  onTouchEnd={[Function]}
+  onTouchStart={[Function]}
+  open={null}
+  primaryText="Open access status"
+  primaryTogglesNestedList={true}
+  secondaryTextLines={1}
+/>
+`;
+
+exports[`OpenAccessFilter  should render selected component 1`] = `
+<ListItem
+  autoGenerateNestedIndicator={true}
+  className="undefined active  "
+  containerElement="span"
+  disableKeyboardFocus={false}
+  disabled={false}
+  initiallyOpen={false}
+  insetChildren={false}
+  nestedItems={
+    Array [
+      <ListItem
+        autoGenerateNestedIndicator={true}
+        className="undefined active  "
+        containerElement="span"
+        disableKeyboardFocus={false}
+        disabled={false}
+        initiallyOpen={false}
+        insetChildren={false}
+        leftIcon={
+          <NavigationClose
+            disabled={undefined}
+          />
+        }
+        nestedItems={Array []}
+        nestedLevel={0}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onNestedListToggle={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
+        open={null}
+        primaryText="Show only open access records"
+        primaryTogglesNestedList={false}
+        secondaryTextLines={1}
+      />,
+    ]
+  }
+  nestedLevel={0}
+  onKeyboardFocus={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onNestedListToggle={[Function]}
+  onTouchEnd={[Function]}
+  onTouchStart={[Function]}
+  open={null}
+  primaryText="Open access status"
+  primaryTogglesNestedList={true}
+  secondaryTextLines={1}
+/>
+`;
