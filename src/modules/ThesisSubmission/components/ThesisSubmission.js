@@ -43,7 +43,6 @@ export default class ThesisSubmission extends Component {
     }
 
     cancelSubmit = () => {
-        if(process.env.ENABLE_LOG) Raven.captureException('THESIS SUBMISSION CANCELLED', {message: 'Thesis submission cancelled by user'});
         window.location.assign(formLocale.thesisSubmission.cancelLink);
     }
 

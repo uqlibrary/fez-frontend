@@ -42,7 +42,7 @@ IFS=$'\n' allTasksList=($commentsWithPT)
 tasksList=($(printf "%s\n" "${allTasksList[@]}" | sort -u | tr '\n' ' '))
 IFS=$' ' tasksList=($tasksList)
 
-taskUrl='https://www.pivotaltracker.com/n/projects/$PT_PROJECT/stories/'
+taskUrl="https://www.pivotaltracker.com/n/projects/$PT_PROJECT/stories/"
 stories=()
 bugCount=0
 featuresCount=0
