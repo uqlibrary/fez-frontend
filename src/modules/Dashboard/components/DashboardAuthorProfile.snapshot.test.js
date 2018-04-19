@@ -23,7 +23,7 @@ describe('Dashboard Author Profile test', () => {
         const wrapper = setup({
             author: {
                 ...mock.currentAuthor.uqresearcher.data,
-                aut_publons_id: 1
+                aut_publons_id: '1'
             },
         }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
