@@ -23,7 +23,6 @@ import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
 import {RichEditorField} from 'modules/SharedComponents/RichEditor';
 import {thesisSubmissionSubtypes} from 'config/general';
-// import Raven from 'raven-js';
 
 export default class ThesisSubmission extends Component {
     static propTypes = {
