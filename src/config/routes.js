@@ -2,6 +2,7 @@ import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
 
 const fullPath = process.env.BRANCH === 'production' ? 'https://espace.library.uq.edu.au' : 'https://fez-staging.library.uq.edu.au';
+export const pidRegExp = 'UQ:[a-z0-9]+';
 
 export const pathConfig =  {
     index: '/',
@@ -88,8 +89,7 @@ export const roles = {
 };
 
 export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegistration = false, isHdrStudent = false}) => {
-    const pid = ':pid(UQ:\\d+)';
-    const regExpPid = '(UQ:\\d+)';
+    const pid = `:pid(${pidRegExp})`;
     const publicPages = [
         {
             path: pathConfig.contact,
@@ -101,7 +101,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             component: components.ViewRecord,
             exact: true,
             pageTitle: locale.pages.viewRecord.title,
-            regExPath: pathConfig.records.view(regExpPid)
+            regExPath: pathConfig.records.view(`(${pidRegExp})`)
         },
         ...(!account
             ? [{
@@ -183,7 +183,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 access: [roles.researcher, roles.admin],
                 exact: true,
                 pageTitle: locale.pages.fixRecord.title,
-                regExPath: pathConfig.records.fix(regExpPid)
+                regExPath: pathConfig.records.fix(`(${pidRegExp})`)
             },
             {
                 path: pathConfig.records.add.find,
