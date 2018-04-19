@@ -23,7 +23,27 @@ describe('Dashboard Author Profile test', () => {
         const wrapper = setup({
             author: {
                 ...mock.currentAuthor.uqresearcher.data,
+                aut_publons_id: '1'
+            },
+        }, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('Render the authors profile with publon id url constructed using ORCID id if publons id is integer 1', () => {
+        const wrapper = setup({
+            author: {
+                ...mock.currentAuthor.uqresearcher.data,
                 aut_publons_id: 1
+            },
+        }, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('Render the authors profile with publon id url constructed using ORCID id if publons id is string 0', () => {
+        const wrapper = setup({
+            author: {
+                ...mock.currentAuthor.uqresearcher.data,
+                aut_publons_id: '0'
             },
         }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
