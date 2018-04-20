@@ -196,13 +196,16 @@ export default {
                 title: 'My trending publications',
                 metrics: {
                     altmetric: {
-                        title: 'Altmetric score'
+                        title: 'Altmetric score',
+                        order: 2
                     },
                     thomson: {
-                        title: 'Web of Science citation count'
+                        title: 'Web of Science citation count',
+                        order: 1
                     },
                     scopus: {
-                        title: 'Scopus citation count'
+                        title: 'Scopus citation count',
+                        order: 0
                     }
                 },
                 viewFullCitationLinkTitle: 'View full citation',

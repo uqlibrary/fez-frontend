@@ -86,7 +86,7 @@ mock
         }
         // ACADEMIC_STATS_PUBLICATIONS_TRENDING_API
         else if (config.params.rule === 'trending') {
-            reply(200, mockData.trendingPublications);
+            return [200, mockData.trendingPublications];
         }
         // SEARCH_INTERNAL_RECORDS_API
         else if (config.params.id || config.params.doi || config.params.title) {
