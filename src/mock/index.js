@@ -55,8 +55,6 @@ mock
     })
     .onGet(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: user}).apiUrl)
     .reply(200, mockData.hindexResponse)
-    .onGet(routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API({userId: user}).apiUrl)
-    .reply(200, mockData.trendingPublications)
     .onGet(routes.SEARCH_EXTERNAL_RECORDS_API({}).apiUrl)
     .reply(config => {
         if (config.params.source === 'scopus' && config.params.title) return [200, mockData.externalTitleScopusResultsList];
@@ -85,6 +83,10 @@ mock
         // SEARCH_KEY_LOOKUP_API
         else if (config.params.rule === 'lookup') {
             return [200, mockData.searchKeyList[config.params.search_key]];
+        }
+        // ACADEMIC_STATS_PUBLICATIONS_TRENDING_API
+        else if (config.params.rule === 'trending') {
+            reply(200, mockData.trendingPublications);
         }
         // SEARCH_INTERNAL_RECORDS_API
         else if (config.params.id || config.params.doi || config.params.title) {
