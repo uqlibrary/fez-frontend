@@ -12,6 +12,7 @@ import {HelpIcon} from 'uqlibrary-react-toolbox/build/HelpDrawer';
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
 import {PublicationStats} from 'modules/SharedComponents/PublicationStats';
+import {PublicationTitle} from 'modules/SharedComponents/PublicationTitle';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import {routes} from 'config';
@@ -244,7 +245,9 @@ class Dashboard extends React.Component {
                                                                 <div className="columns is-gapless is-mobile">
                                                                     <div className="column">
                                                                         <div className="citationContent">
-                                                                            <h3 className="publicationTitle">{recordValue.title}</h3>
+                                                                            <h3 className="publicationTitle">
+                                                                                <PublicationTitle pid={recordValue.rek_pid} title={recordValue.rek_title}/>
+                                                                            </h3>
                                                                             <FontIcon className="material-icons citationIcon" data-place="left">
                                                                                 format_quote
                                                                             </FontIcon>
