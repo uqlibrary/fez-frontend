@@ -1,26 +1,15 @@
 jest.dontMock('./ExternalLink');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
-import ExternalLink from './ExternalLink';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-function setup({text, isShallow = false, ...rest}) {
-    if(isShallow) {
-        return shallow(<ExternalLink {...rest}>{text}</ExternalLink>);
-    }
 
-    return mount(<ExternalLink {...rest}>{text}</ExternalLink>, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+import ExternalLink from './ExternalLink';
+
+function setup(testProps, isShallow = true) {
+    // build full props list required by the component
+    const props = {
+        ...testProps
+    };
+    return getElement(ExternalLink, props, isShallow);
 }
 
 beforeAll(() => {
@@ -28,7 +17,7 @@ beforeAll(() => {
 });
 
 describe('ExternalLink test ', () => {
-    it('should render component with open-in-new window icon', () => {
+    it('should render component with open-in-new window icon class', () => {
         const wrapper = setup({href: 'www.google.com', text: 'Google'});
         expect(toJson(wrapper)).toMatchSnapshot();
     });

@@ -8,12 +8,9 @@ const DoiCitationView = ({doi}) => {
     const txt = locale.global.doiCitationLink;
     const doiLink = txt.externalUrl.replace('[id]', doi);
     return (
-        <span className="citationDOI">
-            <ExternalLink className="citationDoiLink" href={doiLink} title={txt.ariaLabel} aria-label={txt.ariaLabel}>
-                <span className="citationLabel">{txt.prefix}</span>
-                <span className="citationValue">{doi}</span>
-            </ExternalLink>
-        </span>
+        <ExternalLink className="citationDoiLink" href={doiLink} title={txt.ariaLabel} aria-label={txt.ariaLabel}>
+            {txt.prefix + doi}
+        </ExternalLink>
     );
 };
 

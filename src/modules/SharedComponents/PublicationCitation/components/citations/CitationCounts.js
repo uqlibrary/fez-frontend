@@ -24,8 +24,8 @@ export default class CitationCounts extends React.PureComponent {
         };
 
         return (
-            <div className="citationCounts columns is-gapless is-marginless">
-                <div className="column is-narrow citationIcons">
+            <div className="citationCounts columns is-gapless is-marginless is-multiline">
+                <div className="column is-narrow-tablet is-12-mobile citationIcons">
                     {
                         !!counts.wos && counts.wos > 0 && !!publication.fez_record_search_key_isi_loc
                         && !!publication.fez_record_search_key_isi_loc.rek_isi_loc &&
@@ -64,14 +64,15 @@ export default class CitationCounts extends React.PureComponent {
                             title={this.getTitle(txt.google.title)}
                         />
                     }
-                    <OpenAccessIcon {...(this.props.publication.calculateOpenAccess ? this.props.publication.calculateOpenAccess() : {})} />
                 </div>
-                {
-                    !!publication.rek_pid && (counts.wos || counts.scopus) &&
-                    <div className="column is-narrow citationLink">
+                <div className="column is-narrow">
+                    <OpenAccessIcon {...(this.props.publication.calculateOpenAccess ? this.props.publication.calculateOpenAccess() : {})} />
+                    {
+                        !!publication.rek_pid && (counts.wos || counts.scopus) &&
                         <ExternalLink href={`https://app.library.uq.edu.au/#/authors/view/${publication.rek_pid}`}>{txt.statsLabel}</ExternalLink>
-                    </div>
-                }
+                    }
+                </div>
+                <div className="column is-hidden-mobile" />
             </div>
         );
     }
