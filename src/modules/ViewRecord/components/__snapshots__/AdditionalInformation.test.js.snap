@@ -21176,7 +21176,7 @@ exports[`Additional Information Component  should render component with journal 
                                                           rel="noopener noreferrer"
                                                           tabIndex="0"
                                                           target="_blank"
-                                                          title="Open link in a new window"
+                                                          title="Link to http://www.sherpa.ac.uk/romeo/search.php?issn=1477-9137 will open in a new window."
                                                         >
                                                           <span
                                                             className="sherpaRomeoGreen"

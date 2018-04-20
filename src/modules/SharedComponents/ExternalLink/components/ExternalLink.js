@@ -9,7 +9,8 @@ const ExternalLink = (props) => {
         <a {...rest}
             className={className + ' externalLink' + showIcon}
             tabIndex="0"
-            title={rest.title || (openInNewIcon && locale.components.externalLink.openInNew)}>
+            title={rest.title
+            || (openInNewIcon && locale.global.linkWillOpenInNewWindow.replace('[destination]', rest.href))}>
             {!!children && children}
         </a>
     );

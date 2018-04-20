@@ -185,10 +185,6 @@ export default {
                 }
             }
         },
-        externalLink: {
-            openInNew: 'Open link in a new window'
-        },
-
         authors: {
             title: 'Authors',
             description: 'Please provide a list of authors and then select your name from the list.',
