@@ -60,6 +60,7 @@ export default class AdditionalInformation extends Component {
             case 'rek_subject': return this.renderList(objects, subkey, routes.pathConfig.list.subject);
             case 'rek_seo_code': return this.renderList(objects, subkey, routes.pathConfig.list.subject);
             case 'rek_alternate_genre': return this.renderList(objects, subkey, routes.pathConfig.list.subject);
+            case 'rek_contact_details_email': return this.getContactEmail();
             case 'rek_geographic_area': return this.renderMap(objects);
             default: return this.renderList(objects, subkey);
         }
@@ -190,6 +191,11 @@ export default class AdditionalInformation extends Component {
 
     getAbstract = (publication) => {
         return publication.rek_formatted_abstract || publication.rek_description;
+    }
+
+    // TODO: display original contact email for admin users
+    getContactEmail = () => {
+        return viewRecordsConfig.genericDataEmail;
     }
 
     formatPublicationDate = (publicationDate) => {
