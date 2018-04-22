@@ -60,6 +60,9 @@
   .researcherIds {
     margin: 24px 0 -12px 24px !important;
     height: 60px !important;
+    .researcherIDlink {
+      overflow: visible !important;
+    }
     .researchIdAvatar {
       background-color: transparent !important;
       width: 52px;
@@ -79,6 +82,7 @@
       margin-top: -3px;
       zoom: 1.2;
       -moz-transform: scale(1.2);
+      overflow: visible !important;
       // Firefox doesnt consider the zoom into the margin
       @-moz-document url-prefix() {
         margin: 0 12px 0 0;
@@ -87,8 +91,7 @@
     a.orcidLink {
       color: rgba($text-color-reverse, 0.8);
       font-size: $text-body-small;
-      line-height: 3;
-      margin: 0;
+      line-height: 4;
       &:hover {
         color: rgba($text-color-reverse, 1);
       }

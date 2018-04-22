@@ -581,7 +581,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   >
                                                     <a
                                                       aria-label="Full text via Pubmed Central (open access)"
-                                                      className="pubmedCentralLinkUrl"
+                                                      className="pubmedCentralLinkUrl externalLink showIcon"
                                                       href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                                                       rel="noopener noreferrer"
                                                       tabIndex="0"
@@ -589,39 +589,6 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                       title="Full text via Pubmed Central (open access)"
                                                     >
                                                       https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926
-                                                      <ActionOpenInNew
-                                                        className="openExternalUrlIcon"
-                                                      >
-                                                        <SvgIcon
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <svg
-                                                            className="openExternalUrlIcon"
-                                                            onMouseEnter={[Function]}
-                                                            onMouseLeave={[Function]}
-                                                            style={
-                                                              Object {
-                                                                "color": "rgba(0, 0, 0, 0.87)",
-                                                                "display": "inline-block",
-                                                                "fill": "currentColor",
-                                                                "height": 24,
-                                                                "muiPrepared": true,
-                                                                "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                                "userSelect": "none",
-                                                                "width": 24,
-                                                              }
-                                                            }
-                                                            viewBox="0 0 24 24"
-                                                          >
-                                                            <path
-                                                              d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                            />
-                                                          </svg>
-                                                        </SvgIcon>
-                                                      </ActionOpenInNew>
                                                     </a>
                                                   </ExternalLink>
                                                 </PubmedCentralLink>
@@ -778,73 +745,27 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                 <DoiCitationView
                                                   doi="10.1016/j.pnsc.2012.12.004"
                                                 >
-                                                  <span
-                                                    className="citationDOI"
+                                                  <ExternalLink
+                                                    aria-label="Open this DOI in an new window"
+                                                    className="citationDoiLink"
+                                                    href="https://doi.org/10.1016/j.pnsc.2012.12.004"
+                                                    openInNewIcon={true}
+                                                    rel="noopener noreferrer"
+                                                    target="_blank"
+                                                    title="Open this DOI in an new window"
                                                   >
-                                                    <ExternalLink
+                                                    <a
                                                       aria-label="Open this DOI in an new window"
-                                                      className="citationDoiLink"
+                                                      className="citationDoiLink externalLink showIcon"
                                                       href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                      openInNewIcon={true}
                                                       rel="noopener noreferrer"
+                                                      tabIndex="0"
                                                       target="_blank"
                                                       title="Open this DOI in an new window"
                                                     >
-                                                      <a
-                                                        aria-label="Open this DOI in an new window"
-                                                        className="citationDoiLink"
-                                                        href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                        rel="noopener noreferrer"
-                                                        tabIndex="0"
-                                                        target="_blank"
-                                                        title="Open this DOI in an new window"
-                                                      >
-                                                        <span
-                                                          className="citationLabel"
-                                                        >
-                                                          https://doi.org/
-                                                        </span>
-                                                        <span
-                                                          className="citationValue"
-                                                        >
-                                                          10.1016/j.pnsc.2012.12.004
-                                                        </span>
-                                                        <ActionOpenInNew
-                                                          className="openExternalUrlIcon"
-                                                        >
-                                                          <SvgIcon
-                                                            className="openExternalUrlIcon"
-                                                            onMouseEnter={[Function]}
-                                                            onMouseLeave={[Function]}
-                                                            viewBox="0 0 24 24"
-                                                          >
-                                                            <svg
-                                                              className="openExternalUrlIcon"
-                                                              onMouseEnter={[Function]}
-                                                              onMouseLeave={[Function]}
-                                                              style={
-                                                                Object {
-                                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                                  "display": "inline-block",
-                                                                  "fill": "currentColor",
-                                                                  "height": 24,
-                                                                  "muiPrepared": true,
-                                                                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                                  "userSelect": "none",
-                                                                  "width": 24,
-                                                                }
-                                                              }
-                                                              viewBox="0 0 24 24"
-                                                            >
-                                                              <path
-                                                                d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                              />
-                                                            </svg>
-                                                          </SvgIcon>
-                                                        </ActionOpenInNew>
-                                                      </a>
-                                                    </ExternalLink>
-                                                  </span>
+                                                      https://doi.org/10.1016/j.pnsc.2012.12.004
+                                                    </a>
+                                                  </ExternalLink>
                                                 </DoiCitationView>
                                               </td>
                                             </TableRowColumn>
@@ -997,7 +918,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisatest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -1005,7 +926,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   title="Link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisatest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -1013,39 +934,6 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                     title="Link to publication"
                                                   >
                                                     http://www.thisisatest.com
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>
@@ -1197,7 +1085,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisanothertest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -1205,7 +1093,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   title="Another link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisanothertest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -1213,39 +1101,6 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                     title="Another link to publication"
                                                   >
                                                     http://www.thisisanothertest.com
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>
@@ -1397,7 +1252,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.nodescription.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -1405,7 +1260,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   title="Click to open link in a new window"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.nodescription.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -1413,39 +1268,6 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                     title="Click to open link in a new window"
                                                   >
                                                     http://www.nodescription.com
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>
@@ -2137,7 +1959,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                                                   >
                                                     <a
                                                       aria-label="Full text via Pubmed Central (open access)"
-                                                      className="pubmedCentralLinkUrl"
+                                                      className="pubmedCentralLinkUrl externalLink showIcon"
                                                       href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                                                       rel="noopener noreferrer"
                                                       tabIndex="0"
@@ -2145,39 +1967,6 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                                                       title="Full text via Pubmed Central (open access)"
                                                     >
                                                       https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926
-                                                      <ActionOpenInNew
-                                                        className="openExternalUrlIcon"
-                                                      >
-                                                        <SvgIcon
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <svg
-                                                            className="openExternalUrlIcon"
-                                                            onMouseEnter={[Function]}
-                                                            onMouseLeave={[Function]}
-                                                            style={
-                                                              Object {
-                                                                "color": "rgba(0, 0, 0, 0.87)",
-                                                                "display": "inline-block",
-                                                                "fill": "currentColor",
-                                                                "height": 24,
-                                                                "muiPrepared": true,
-                                                                "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                                "userSelect": "none",
-                                                                "width": 24,
-                                                              }
-                                                            }
-                                                            viewBox="0 0 24 24"
-                                                          >
-                                                            <path
-                                                              d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                            />
-                                                          </svg>
-                                                        </SvgIcon>
-                                                      </ActionOpenInNew>
                                                     </a>
                                                   </ExternalLink>
                                                 </PubmedCentralLink>
@@ -2334,73 +2123,27 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                                                 <DoiCitationView
                                                   doi="10.1016/j.pnsc.2012.12.004"
                                                 >
-                                                  <span
-                                                    className="citationDOI"
+                                                  <ExternalLink
+                                                    aria-label="Open this DOI in an new window"
+                                                    className="citationDoiLink"
+                                                    href="https://doi.org/10.1016/j.pnsc.2012.12.004"
+                                                    openInNewIcon={true}
+                                                    rel="noopener noreferrer"
+                                                    target="_blank"
+                                                    title="Open this DOI in an new window"
                                                   >
-                                                    <ExternalLink
+                                                    <a
                                                       aria-label="Open this DOI in an new window"
-                                                      className="citationDoiLink"
+                                                      className="citationDoiLink externalLink showIcon"
                                                       href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                      openInNewIcon={true}
                                                       rel="noopener noreferrer"
+                                                      tabIndex="0"
                                                       target="_blank"
                                                       title="Open this DOI in an new window"
                                                     >
-                                                      <a
-                                                        aria-label="Open this DOI in an new window"
-                                                        className="citationDoiLink"
-                                                        href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                        rel="noopener noreferrer"
-                                                        tabIndex="0"
-                                                        target="_blank"
-                                                        title="Open this DOI in an new window"
-                                                      >
-                                                        <span
-                                                          className="citationLabel"
-                                                        >
-                                                          https://doi.org/
-                                                        </span>
-                                                        <span
-                                                          className="citationValue"
-                                                        >
-                                                          10.1016/j.pnsc.2012.12.004
-                                                        </span>
-                                                        <ActionOpenInNew
-                                                          className="openExternalUrlIcon"
-                                                        >
-                                                          <SvgIcon
-                                                            className="openExternalUrlIcon"
-                                                            onMouseEnter={[Function]}
-                                                            onMouseLeave={[Function]}
-                                                            viewBox="0 0 24 24"
-                                                          >
-                                                            <svg
-                                                              className="openExternalUrlIcon"
-                                                              onMouseEnter={[Function]}
-                                                              onMouseLeave={[Function]}
-                                                              style={
-                                                                Object {
-                                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                                  "display": "inline-block",
-                                                                  "fill": "currentColor",
-                                                                  "height": 24,
-                                                                  "muiPrepared": true,
-                                                                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                                  "userSelect": "none",
-                                                                  "width": 24,
-                                                                }
-                                                              }
-                                                              viewBox="0 0 24 24"
-                                                            >
-                                                              <path
-                                                                d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                              />
-                                                            </svg>
-                                                          </SvgIcon>
-                                                        </ActionOpenInNew>
-                                                      </a>
-                                                    </ExternalLink>
-                                                  </span>
+                                                      https://doi.org/10.1016/j.pnsc.2012.12.004
+                                                    </a>
+                                                  </ExternalLink>
                                                 </DoiCitationView>
                                               </td>
                                             </TableRowColumn>
@@ -2551,7 +2294,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisatest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -2559,7 +2302,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                                                   title="Link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisatest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -2567,39 +2310,6 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                                                     title="Link to publication"
                                                   >
                                                     http://www.thisisatest.com
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>
@@ -2751,7 +2461,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisanothertest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -2759,7 +2469,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                                                   title="Another link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisanothertest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -2767,39 +2477,6 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                                                     title="Another link to publication"
                                                   >
                                                     http://www.thisisanothertest.com
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>
@@ -2951,7 +2628,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.nodescription.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -2959,7 +2636,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                                                   title="Click to open link in a new window"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.nodescription.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -2967,39 +2644,6 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                                                     title="Click to open link in a new window"
                                                   >
                                                     http://www.nodescription.com
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>
@@ -3666,7 +3310,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="https://scholar.google.com/scholar?q=intitle:%22undefined%22"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -3674,7 +3318,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                   title="Search Google Scholar for this open access article"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="https://scholar.google.com/scholar?q=intitle:%22undefined%22"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -3682,39 +3326,6 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                     title="Search Google Scholar for this open access article"
                                                   >
                                                     https://scholar.google.com/scholar?q=intitle:"undefined%22
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>
@@ -3868,7 +3479,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisatest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -3876,7 +3487,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                   title="Link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisatest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -3884,39 +3495,6 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                     title="Link to publication"
                                                   >
                                                     http://www.thisisatest.com
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>
@@ -4068,7 +3646,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisanothertest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -4076,7 +3654,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                   title="Another link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisanothertest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -4084,39 +3662,6 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                     title="Another link to publication"
                                                   >
                                                     http://www.thisisanothertest.com
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>
@@ -4268,7 +3813,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.nodescription.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -4276,7 +3821,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                   title="Click to open link in a new window"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.nodescription.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -4284,39 +3829,6 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                     title="Click to open link in a new window"
                                                   >
                                                     http://www.nodescription.com
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>
@@ -5002,7 +4514,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   >
                                                     <a
                                                       aria-label="Full text via Pubmed Central (open access)"
-                                                      className="pubmedCentralLinkUrl"
+                                                      className="pubmedCentralLinkUrl externalLink showIcon"
                                                       href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                                                       rel="noopener noreferrer"
                                                       tabIndex="0"
@@ -5010,39 +4522,6 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                       title="Full text via Pubmed Central (open access)"
                                                     >
                                                       https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926
-                                                      <ActionOpenInNew
-                                                        className="openExternalUrlIcon"
-                                                      >
-                                                        <SvgIcon
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <svg
-                                                            className="openExternalUrlIcon"
-                                                            onMouseEnter={[Function]}
-                                                            onMouseLeave={[Function]}
-                                                            style={
-                                                              Object {
-                                                                "color": "rgba(0, 0, 0, 0.87)",
-                                                                "display": "inline-block",
-                                                                "fill": "currentColor",
-                                                                "height": 24,
-                                                                "muiPrepared": true,
-                                                                "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                                "userSelect": "none",
-                                                                "width": 24,
-                                                              }
-                                                            }
-                                                            viewBox="0 0 24 24"
-                                                          >
-                                                            <path
-                                                              d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                            />
-                                                          </svg>
-                                                        </SvgIcon>
-                                                      </ActionOpenInNew>
                                                     </a>
                                                   </ExternalLink>
                                                 </PubmedCentralLink>
@@ -5197,7 +4676,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisatest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -5205,7 +4684,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   title="Link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisatest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -5213,39 +4692,6 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                     title="Link to publication"
                                                   >
                                                     http://www.thisisatest.com
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>
@@ -5397,7 +4843,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisanothertest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -5405,7 +4851,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   title="Another link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisanothertest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -5413,39 +4859,6 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                     title="Another link to publication"
                                                   >
                                                     http://www.thisisanothertest.com
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>
@@ -5597,7 +5010,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.nodescription.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -5605,7 +5018,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   title="Click to open link in a new window"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.nodescription.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -5613,39 +5026,6 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                     title="Click to open link in a new window"
                                                   >
                                                     http://www.nodescription.com
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>
@@ -6337,7 +5717,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   >
                                                     <a
                                                       aria-label="Full text via Pubmed Central (open access)"
-                                                      className="pubmedCentralLinkUrl"
+                                                      className="pubmedCentralLinkUrl externalLink showIcon"
                                                       href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                                                       rel="noopener noreferrer"
                                                       tabIndex="0"
@@ -6345,39 +5725,6 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                       title="Full text via Pubmed Central (open access)"
                                                     >
                                                       https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926
-                                                      <ActionOpenInNew
-                                                        className="openExternalUrlIcon"
-                                                      >
-                                                        <SvgIcon
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <svg
-                                                            className="openExternalUrlIcon"
-                                                            onMouseEnter={[Function]}
-                                                            onMouseLeave={[Function]}
-                                                            style={
-                                                              Object {
-                                                                "color": "rgba(0, 0, 0, 0.87)",
-                                                                "display": "inline-block",
-                                                                "fill": "currentColor",
-                                                                "height": 24,
-                                                                "muiPrepared": true,
-                                                                "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                                "userSelect": "none",
-                                                                "width": 24,
-                                                              }
-                                                            }
-                                                            viewBox="0 0 24 24"
-                                                          >
-                                                            <path
-                                                              d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                            />
-                                                          </svg>
-                                                        </SvgIcon>
-                                                      </ActionOpenInNew>
                                                     </a>
                                                   </ExternalLink>
                                                 </PubmedCentralLink>
@@ -6534,73 +5881,27 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                 <DoiCitationView
                                                   doi="10.1016/j.pnsc.2012.12.004"
                                                 >
-                                                  <span
-                                                    className="citationDOI"
+                                                  <ExternalLink
+                                                    aria-label="Open this DOI in an new window"
+                                                    className="citationDoiLink"
+                                                    href="https://doi.org/10.1016/j.pnsc.2012.12.004"
+                                                    openInNewIcon={true}
+                                                    rel="noopener noreferrer"
+                                                    target="_blank"
+                                                    title="Open this DOI in an new window"
                                                   >
-                                                    <ExternalLink
+                                                    <a
                                                       aria-label="Open this DOI in an new window"
-                                                      className="citationDoiLink"
+                                                      className="citationDoiLink externalLink showIcon"
                                                       href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                      openInNewIcon={true}
                                                       rel="noopener noreferrer"
+                                                      tabIndex="0"
                                                       target="_blank"
                                                       title="Open this DOI in an new window"
                                                     >
-                                                      <a
-                                                        aria-label="Open this DOI in an new window"
-                                                        className="citationDoiLink"
-                                                        href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                        rel="noopener noreferrer"
-                                                        tabIndex="0"
-                                                        target="_blank"
-                                                        title="Open this DOI in an new window"
-                                                      >
-                                                        <span
-                                                          className="citationLabel"
-                                                        >
-                                                          https://doi.org/
-                                                        </span>
-                                                        <span
-                                                          className="citationValue"
-                                                        >
-                                                          10.1016/j.pnsc.2012.12.004
-                                                        </span>
-                                                        <ActionOpenInNew
-                                                          className="openExternalUrlIcon"
-                                                        >
-                                                          <SvgIcon
-                                                            className="openExternalUrlIcon"
-                                                            onMouseEnter={[Function]}
-                                                            onMouseLeave={[Function]}
-                                                            viewBox="0 0 24 24"
-                                                          >
-                                                            <svg
-                                                              className="openExternalUrlIcon"
-                                                              onMouseEnter={[Function]}
-                                                              onMouseLeave={[Function]}
-                                                              style={
-                                                                Object {
-                                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                                  "display": "inline-block",
-                                                                  "fill": "currentColor",
-                                                                  "height": 24,
-                                                                  "muiPrepared": true,
-                                                                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                                  "userSelect": "none",
-                                                                  "width": 24,
-                                                                }
-                                                              }
-                                                              viewBox="0 0 24 24"
-                                                            >
-                                                              <path
-                                                                d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                              />
-                                                            </svg>
-                                                          </SvgIcon>
-                                                        </ActionOpenInNew>
-                                                      </a>
-                                                    </ExternalLink>
-                                                  </span>
+                                                      https://doi.org/10.1016/j.pnsc.2012.12.004
+                                                    </a>
+                                                  </ExternalLink>
                                                 </DoiCitationView>
                                               </td>
                                             </TableRowColumn>
@@ -6751,7 +6052,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisatest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -6759,7 +6060,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   title="Link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisatest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -6767,39 +6068,6 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                     title="Link to publication"
                                                   >
                                                     http://www.thisisatest.com
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>
@@ -6951,7 +6219,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisanothertest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -6959,7 +6227,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   title="Another link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisanothertest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -6967,39 +6235,6 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                     title="Another link to publication"
                                                   >
                                                     http://www.thisisanothertest.com
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>
@@ -7151,7 +6386,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.nodescription.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -7159,7 +6394,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   title="Click to open link in a new window"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.nodescription.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -7167,39 +6402,6 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                     title="Click to open link in a new window"
                                                   >
                                                     http://www.nodescription.com
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>
@@ -7874,73 +7076,27 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                 <DoiCitationView
                                                   doi="10.1016/j.pnsc.2012.12.004"
                                                 >
-                                                  <span
-                                                    className="citationDOI"
+                                                  <ExternalLink
+                                                    aria-label="Open this DOI in an new window"
+                                                    className="citationDoiLink"
+                                                    href="https://doi.org/10.1016/j.pnsc.2012.12.004"
+                                                    openInNewIcon={true}
+                                                    rel="noopener noreferrer"
+                                                    target="_blank"
+                                                    title="Open this DOI in an new window"
                                                   >
-                                                    <ExternalLink
+                                                    <a
                                                       aria-label="Open this DOI in an new window"
-                                                      className="citationDoiLink"
+                                                      className="citationDoiLink externalLink showIcon"
                                                       href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                      openInNewIcon={true}
                                                       rel="noopener noreferrer"
+                                                      tabIndex="0"
                                                       target="_blank"
                                                       title="Open this DOI in an new window"
                                                     >
-                                                      <a
-                                                        aria-label="Open this DOI in an new window"
-                                                        className="citationDoiLink"
-                                                        href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                        rel="noopener noreferrer"
-                                                        tabIndex="0"
-                                                        target="_blank"
-                                                        title="Open this DOI in an new window"
-                                                      >
-                                                        <span
-                                                          className="citationLabel"
-                                                        >
-                                                          https://doi.org/
-                                                        </span>
-                                                        <span
-                                                          className="citationValue"
-                                                        >
-                                                          10.1016/j.pnsc.2012.12.004
-                                                        </span>
-                                                        <ActionOpenInNew
-                                                          className="openExternalUrlIcon"
-                                                        >
-                                                          <SvgIcon
-                                                            className="openExternalUrlIcon"
-                                                            onMouseEnter={[Function]}
-                                                            onMouseLeave={[Function]}
-                                                            viewBox="0 0 24 24"
-                                                          >
-                                                            <svg
-                                                              className="openExternalUrlIcon"
-                                                              onMouseEnter={[Function]}
-                                                              onMouseLeave={[Function]}
-                                                              style={
-                                                                Object {
-                                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                                  "display": "inline-block",
-                                                                  "fill": "currentColor",
-                                                                  "height": 24,
-                                                                  "muiPrepared": true,
-                                                                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                                  "userSelect": "none",
-                                                                  "width": 24,
-                                                                }
-                                                              }
-                                                              viewBox="0 0 24 24"
-                                                            >
-                                                              <path
-                                                                d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                              />
-                                                            </svg>
-                                                          </SvgIcon>
-                                                        </ActionOpenInNew>
-                                                      </a>
-                                                    </ExternalLink>
-                                                  </span>
+                                                      https://doi.org/10.1016/j.pnsc.2012.12.004
+                                                    </a>
+                                                  </ExternalLink>
                                                 </DoiCitationView>
                                               </td>
                                             </TableRowColumn>
@@ -8023,12 +7179,12 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   openAccessStatusId={453693}
                                                   showEmbargoText={false}
                                                 >
-                                                  <span>
+                                                  <div>
                                                     <div
                                                       className="fez-icon openAccessEmbargoed large"
                                                       title="DOI - Open access after 24th December 2020"
                                                     />
-                                                  </span>
+                                                  </div>
                                                 </OpenAccessIcon>
                                               </td>
                                             </TableRowColumn>
@@ -8095,7 +7251,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisatest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -8103,7 +7259,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   title="Link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisatest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -8111,39 +7267,6 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                     title="Link to publication"
                                                   >
                                                     http://www.thisisatest.com
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>
@@ -8295,7 +7418,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.thisisanothertest.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -8303,7 +7426,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   title="Another link to publication"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.thisisanothertest.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -8311,39 +7434,6 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                     title="Another link to publication"
                                                   >
                                                     http://www.thisisanothertest.com
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>
@@ -8495,7 +7585,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                 }
                                               >
                                                 <ExternalLink
-                                                  className="externalLink"
+                                                  className=""
                                                   href="http://www.nodescription.com"
                                                   openInNewIcon={true}
                                                   rel="noopener noreferrer"
@@ -8503,7 +7593,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   title="Click to open link in a new window"
                                                 >
                                                   <a
-                                                    className="externalLink"
+                                                    className=" externalLink showIcon"
                                                     href="http://www.nodescription.com"
                                                     rel="noopener noreferrer"
                                                     tabIndex="0"
@@ -8511,39 +7601,6 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                     title="Click to open link in a new window"
                                                   >
                                                     http://www.nodescription.com
-                                                    <ActionOpenInNew
-                                                      className="openExternalUrlIcon"
-                                                    >
-                                                      <SvgIcon
-                                                        className="openExternalUrlIcon"
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <svg
-                                                          className="openExternalUrlIcon"
-                                                          onMouseEnter={[Function]}
-                                                          onMouseLeave={[Function]}
-                                                          style={
-                                                            Object {
-                                                              "color": "rgba(0, 0, 0, 0.87)",
-                                                              "display": "inline-block",
-                                                              "fill": "currentColor",
-                                                              "height": 24,
-                                                              "muiPrepared": true,
-                                                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                              "userSelect": "none",
-                                                              "width": 24,
-                                                            }
-                                                          }
-                                                          viewBox="0 0 24 24"
-                                                        >
-                                                          <path
-                                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                          />
-                                                        </svg>
-                                                      </SvgIcon>
-                                                    </ActionOpenInNew>
                                                   </a>
                                                 </ExternalLink>
                                               </td>

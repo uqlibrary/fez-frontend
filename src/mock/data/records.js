@@ -4266,7 +4266,7 @@ export const record = {
             "rek_grant_id_pid": "UQ:396321",
             "rek_grant_id_xsdmf_id": 0,
             "rek_grant_id_order": 6,
-            "rek_grant_id": "ECF-10-05"
+            "rek_grant_id": " "
         }
     ],
     "fez_record_search_key_grant_text": [

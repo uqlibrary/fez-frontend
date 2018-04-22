@@ -35,7 +35,7 @@ describe('Additional Information Component ', () => {
     it('should render component with audio document', () => {
         const wrapper = setup({publication: records.audioDocument}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('a.license.cc-by-nc-nd').length).toEqual(1);
+        expect(wrapper.find('.license.cc-by-nc-nd').length).toEqual(1);
     });
 
     it('should render component with book', () => {

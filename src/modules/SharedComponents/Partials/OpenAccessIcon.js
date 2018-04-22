@@ -30,7 +30,7 @@ export default class OpenAccessIcon extends PureComponent {
                 .replace('[embargo_date]', this.props.embargoDate)
                 .replace('[oa_status]', openAccessConfig.labels[this.props.openAccessStatusId]);
             return (
-                <span>
+                <div>
                     {
                         this.props.showEmbargoText &&
                         <span className="is-hidden-mobile is-hidden-tablet-only">
@@ -38,7 +38,7 @@ export default class OpenAccessIcon extends PureComponent {
                         </span>
                     }
                     <div className="fez-icon openAccessEmbargoed large" title={openAccessTitle} />
-                </span>
+                </div>
             );
         }
         return (<div className="noOaIcon" />);
