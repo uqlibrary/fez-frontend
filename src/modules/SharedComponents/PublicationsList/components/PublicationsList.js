@@ -9,14 +9,16 @@ export default class PublicationsList extends PureComponent {
         subsetCustomActions: PropTypes.array,
         customActions: PropTypes.array,
         showDefaultActions: PropTypes.bool,
-        showSources: PropTypes.bool
+        showSources: PropTypes.bool,
+        showMetrics: PropTypes.bool
     };
 
     static defaultProps = {
         publicationsListSubset: [],
         subsetCustomActions: [],
         showSources: false,
-        showDefaultActions: false
+        showDefaultActions: false,
+        showMetrics: false
     };
 
     constructor(props) {
@@ -31,7 +33,9 @@ export default class PublicationsList extends PureComponent {
                     publication={publication}
                     customActions={!publication.rek_pid || this.props.publicationsListSubset.indexOf(publication.rek_pid) === -1 ? this.props.customActions : this.props.subsetCustomActions}
                     showSources={this.props.showSources}
-                    showDefaultActions={this.props.showDefaultActions} />
+                    showDefaultActions={this.props.showDefaultActions}
+                    showMetrics={this.props.showMetrics}
+                />
             );
         });
 

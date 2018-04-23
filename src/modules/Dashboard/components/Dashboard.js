@@ -12,12 +12,10 @@ import {HelpIcon} from 'uqlibrary-react-toolbox/build/HelpDrawer';
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
 import {PublicationStats} from 'modules/SharedComponents/PublicationStats';
-import {PublicationTitle} from 'modules/SharedComponents/PublicationTitle';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import {routes} from 'config';
 import {locale} from 'locale';
-import FontIcon from 'material-ui/FontIcon';
 
 class Dashboard extends React.Component {
     static propTypes = {
@@ -239,54 +237,10 @@ class Dashboard extends React.Component {
                                                             <HelpIcon {...txt.myTrendingPublications.help} />
                                                         </div>
                                                     </div>
-                                                    {
-                                                        metric.values.map((recordValue, recordIndex) => (
-                                                            <div className="publicationCitation" key={`trendingPublication_${recordIndex}`}>
-                                                                <div className="columns is-gapless is-mobile">
-                                                                    <div className="column">
-                                                                        <div className="citationContent">
-                                                                            <h3 className="publicationTitle">
-                                                                                <PublicationTitle pid={recordValue.rek_pid} title={recordValue.rek_title}/>
-                                                                            </h3>
-                                                                            <FontIcon className="material-icons citationIcon" data-place="left">
-                                                                                format_quote
-                                                                            </FontIcon>
-                                                                            {recordValue.authors} ({recordValue.rek_date.substring(0, 4)})
-                                                                        </div>
-                                                                        <div className="citationCounts">
-                                                                            <div className="citationCount column" style={{margin: '0px', padding: '0px'}}>
-                                                                                <a
-                                                                                    href={recordValue.citation_url}
-                                                                                    className="citationCountLink"
-                                                                                    target="_blank"
-                                                                                    rel="noopener noreferrer"
-                                                                                    title={locale.global.linkWillOpenInNewWindow.replace('[destination]', recordValue.title)}>
-                                                                                    <div className="columns is-mobile is-gapless">
-                                                                                        <div className="column is-narrow citationCountNumber">{txt.myTrendingPublications.viewFullCitationLinkTitle}
-                                                                                            <FontIcon className="material-icons citationIcon openExternalUrlIcon" data-place="left">
-                                                                                                open_in_new
-                                                                                            </FontIcon>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="column is-narrow">
-                                                                        <span
-                                                                            className="trendingPubsCount"
-                                                                            title={txt.myTrendingPublications.trendSharesThisMonth}>{Math.round(recordValue.count)}</span>
-                                                                    </div>
-                                                                    <div
-                                                                        className="column is-narrow">
-                                                                        <span
-                                                                            className="trendingPubsDifference"
-                                                                            title={txt.myTrendingPublications.trendDifferenceSharesThisMonth}>+{Math.round(recordValue.difference)}</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        ))
-                                                    }
+                                                    <PublicationsList
+                                                        publicationsList={metric.values}
+                                                        showMetrics
+                                                    />
                                                 </div>
                                             ))
                                         }
