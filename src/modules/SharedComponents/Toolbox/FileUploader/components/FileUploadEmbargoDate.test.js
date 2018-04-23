@@ -11,11 +11,6 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('Component FileUploadEmbargoDate', () => {
-    beforeEach(() => {
-        // Set a mock date for account API
-        Date.now = jest.genMockFunction().mockReturnValue('2016-01-01T00:00:00.000Z');
-    });
-
     it('should render with default setup', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();

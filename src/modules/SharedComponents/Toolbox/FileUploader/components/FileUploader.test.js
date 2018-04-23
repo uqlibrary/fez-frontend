@@ -20,7 +20,7 @@ describe('Component FileUploader', () => {
     let getMockFile;
     beforeEach(() => {
         // Set a mock date for account API
-        Date.now = jest.genMockFunction().mockReturnValue('2016-01-01T00:00:00.000Z');
+        // Date.now = jest.genMockFunction().mockReturnValue('2016-01-01T00:00:00.000Z');
 
         const _File = window.File;
         const FILE = (data = [''], name) => new _File(data, name, {lastModified: 12345678912});

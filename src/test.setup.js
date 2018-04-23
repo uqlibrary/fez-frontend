@@ -129,3 +129,4 @@ global.mockApi = setupMockAdapter();
 // expect extension
 global.toHaveDispatchedActions = toHaveDispatchedActions;
 global.toHaveAnyOrderDispatchedActions = toHaveAnyOrderDispatchedActions;
+jest.spyOn(Date, 'now').mockImplementation(() => 1451606400000);
