@@ -103,7 +103,7 @@ exports[`Component FileUploadEmbargoDate should render datepicker on key pressed
                 rows={1}
                 type="text"
                 underlineShow={true}
-                value=""
+                value="01/01/2016"
               >
                 <div
                   style={
@@ -148,7 +148,7 @@ exports[`Component FileUploadEmbargoDate should render datepicker on key pressed
                       }
                     }
                     type="text"
-                    value=""
+                    value="01/01/2016"
                   />
                   <TextFieldUnderline
                     disabled={false}
