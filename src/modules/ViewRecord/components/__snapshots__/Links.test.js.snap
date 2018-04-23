@@ -7179,10 +7179,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   openAccessStatusId={453693}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div>
+                                                  <div
+                                                    title="DOI - Open access after 24th December 2020"
+                                                  >
                                                     <div
                                                       className="fez-icon openAccessEmbargoed large"
-                                                      title="DOI - Open access after 24th December 2020"
                                                     />
                                                   </div>
                                                 </OpenAccessIcon>
