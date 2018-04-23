@@ -225,21 +225,14 @@ class Dashboard extends React.Component {
                                 this.props.trendingPublicationsList.length > 0 &&
                                 <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications"
                                     className="publicationTabs">
-                                    <div style={{padding: '12px 24px'}}>
+                                    <div className="trendingPubsHelp is-pulled-right">
+                                        <HelpIcon {...txt.myTrendingPublications.help}/>
+                                    </div>
+                                    <div className="trendingPubs" style={{padding: '12px 24px'}}>
                                         {
                                             this.props.trendingPublicationsList.map((metric, metricIndex) => (
-                                                <div key={'metrics_' + metricIndex}>
-                                                    <div className="columns is-gapless is-mobile">
-                                                        <div className="column">
-                                                            <h2 className="trendingPubsSource">{txt.myTrendingPublications.metrics[metric.key].title}</h2>
-                                                        </div>
-                                                        {
-                                                            metricIndex === 0 &&
-                                                            <div className="column is-narrow is-hidden-mobile">
-                                                                <HelpIcon {...txt.myTrendingPublications.help} className="is-right"/>
-                                                            </div>
-                                                        }
-                                                    </div>
+                                                <div key={'metrics_' + metricIndex} className="trendingPubsSection">
+                                                    <h2 className="trendingPubsSource">{txt.myTrendingPublications.metrics[metric.key].title}</h2>
                                                     <PublicationsList
                                                         publicationsList={metric.values}
                                                         showMetrics

@@ -168,6 +168,9 @@ h2.trendingPubsSource {
     font-size: $title-large;
     line-height: $title-large;
   }
+  a.trendingPubsCount:hover {
+    text-decoration: none;
+  }
   .trendingPubsDifference {
     color: $secondary-color;
     font-size: $title-small;
@@ -181,6 +184,17 @@ h2.trendingPubsSource {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
   }
+}
+.trendingPubs {
+  padding: 12px 24px;
+  .trendingPubsSection {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.trendingPubsHelp {
+  padding-top: 6px;
+  padding-right: 12px;
 }
 
 // Mobile
