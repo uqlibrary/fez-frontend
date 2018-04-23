@@ -215,11 +215,13 @@ export default {
                     title: 'About these metrics',
                     text: (
                         <div>
+                            <h3>WOS and Scopus</h3>
                             <p>
-                                For the above metrics, the larger number is the total current citation count, and the +
-                                (plus) value indicates how much the citation count has changed in the last month. The
-                                Altmetric score plus value is slightly different, as it shows the 3 most recent
-                                increases first, ranging from 1 day to 1 year.
+                                The large number is the total citation count and the + (plus) value indicates how much the citation count has increased in the last month.
+                            </p>
+                            <h3>Altmetric score (social media activity)</h3>
+                            <p>
+                                The Altmetric score measures social media activity. The + (plus) value shows the increase in social media activity over time.
                             </p>
                             <p>
                                 You can click on the number as a link to see who is citing each publication, or in the

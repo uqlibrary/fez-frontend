@@ -233,9 +233,12 @@ class Dashboard extends React.Component {
                                                         <div className="column">
                                                             <h2 className="trendingPubsSource">{txt.myTrendingPublications.metrics[metric.key].title}</h2>
                                                         </div>
-                                                        <div className="column is-narrow is-hidden-mobile">
-                                                            <HelpIcon {...txt.myTrendingPublications.help} />
-                                                        </div>
+                                                        {
+                                                            metricIndex === 0 &&
+                                                            <div className="column is-narrow is-hidden-mobile">
+                                                                <HelpIcon {...txt.myTrendingPublications.help} className="is-right"/>
+                                                            </div>
+                                                        }
                                                     </div>
                                                     <PublicationsList
                                                         publicationsList={metric.values}
