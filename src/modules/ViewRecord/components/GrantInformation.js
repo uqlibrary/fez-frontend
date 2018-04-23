@@ -19,11 +19,11 @@ export default class GrantInformation extends Component {
             <TableRow className="row" key={order}>
                 <TableRowColumn className="header is-hidden-mobile">
                     <b>{txt.fez_record_search_key_grant_agency}</b>
-                    {grantId && grantId.rek_grant_id.trim().length > 0 && ' (' + txt.fez_record_search_key_grant_id + ')'}
+                    {grantId && grantId.rek_grant_id.trim().length > 0 && ` (${txt.fez_record_search_key_grant_id})`}
                 </TableRowColumn>
                 <TableRowColumn className="data">
                     <b>{grantAgency.rek_grant_agency}</b>
-                    {grantId && grantId.rek_grant_id.trim().length > 0 && ' (' + grantId.rek_grant_id + ')'}
+                    {grantId && grantId.rek_grant_id.trim().length > 0 && ` (${grantId.rek_grant_id})`}
                     <span className="grantText">{grantText && grantText.rek_grant_text}</span>
                 </TableRowColumn>
             </TableRow>
