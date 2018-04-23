@@ -5054,10 +5054,6 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
       >
         23
       </ExternalLink>
-    </div>
-    <div
-      className="column is-narrow"
-    >
       <span
         className="trendingPubsDifference"
         title="Difference in shares since last month"

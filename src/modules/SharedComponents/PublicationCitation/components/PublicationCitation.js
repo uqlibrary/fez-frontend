@@ -190,11 +190,6 @@ export default class PublicationCitation extends PureComponent {
                             >
                                 {recordValue.count}
                             </ExternalLink>
-                        </div>
-                    }
-                    {
-                        this.props.showMetrics &&
-                        <div className="column is-narrow">
                             <span
                                 className="trendingPubsDifference"
                                 title={txt.myTrendingPublications.trendDifferenceSharesThisMonth}>+{Math.round(recordValue.difference)}
