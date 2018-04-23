@@ -4,10 +4,10 @@ import {createHash} from 'crypto';
 import {parse} from 'querystring';
 
 import RaisedButton from 'material-ui/RaisedButton';
-import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 
 import {locale} from 'locale';
 import {routes, ORCID_CLIENT_ID, ORCID_AUTHORIZATION_URL} from 'config';

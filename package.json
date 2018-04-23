@@ -90,7 +90,11 @@
     "redux-form": "^7.2.3",
     "redux-immutable": "^4.0.0",
     "redux-thunk": "^2.2.0",
-    "uqlibrary-react-toolbox": "github:uqlibrary/uqlibrary-react-toolbox#master"
+    "@material/animation": "^0.25.0",
+    "bulma": "^0.6.0",
+    "highcharts": "^6.0.2",
+    "highcharts-exporting": "^0.1.2",
+    "timezones.json": "^1.2.1"
   },
   "scripts": {
     "start": "webpack-dev-server",

@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationPrompt component should render 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
+    }
+  }
+>
+  <NavigationPrompt
+    history={
+      Object {
+        "block": [MockFunction] {
+          "calls": Array [
+            Array [
+              [Function],
+            ],
+          ],
+        },
+      }
+    }
+    when={false}
+  >
+    <div>
+      <ConfirmDialogBox
+        hideCancelButton={false}
+        locale={
+          Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure?",
+            "confirmationTitle": "Confirmation",
+          }
+        }
+        onAction={[Function]}
+        onCancelAction={[Function]}
+        onRef={[Function]}
+      >
+        <Dialog
+          actions={
+            Array [
+              <div
+                className="columns dialog-actions ConfirmDialogBox-actions"
+              >
+                <div
+                  className="column is-hidden-mobile"
+                />
+                <div
+                  className="column is-narrow"
+                >
+                  <RaisedButton
+                    className="ConfirmDialogBox-actions-cancel"
+                    disabled={false}
+                    fullWidth={true}
+                    label="No"
+                    labelPosition="after"
+                    onTouchTap={[Function]}
+                    primary={false}
+                    secondary={false}
+                  />
+                </div>
+                <div
+                  className="column is-narrow"
+                >
+                  <RaisedButton
+                    className="ConfirmDialogBox-actions-confirm"
+                    disabled={false}
+                    fullWidth={true}
+                    keyboardFocused={true}
+                    label="Yes"
+                    labelPosition="after"
+                    onTouchTap={[Function]}
+                    primary={false}
+                    secondary={true}
+                  />
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>,
+            ]
+          }
+          autoDetectWindowHeight={true}
+          autoScrollBodyContent={false}
+          modal={true}
+          open={false}
+          repositionOnUpdate={true}
+          title="Confirmation"
+        >
+          <RenderToLayer
+            open={true}
+            render={[Function]}
+            useLayerForClickAway={false}
+          />
+        </Dialog>
+      </ConfirmDialogBox>
+    </div>
+  </NavigationPrompt>
+</Provider>
+`;

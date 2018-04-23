@@ -1,0 +1,338 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert snapshots test renders Alert of error type 1`] = `
+<div
+  className="error alertWrapper "
+>
+  <div
+    className="columns is-multiline is-mobile"
+  >
+    <div
+      className="column is-narrow alertIcon"
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        error
+      </FontIcon>
+    </div>
+    <div
+      className="column alertText"
+    >
+      <div>
+        <b>
+          This is a title - 
+        </b>
+        This is the message
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Alert snapshots test renders Alert of error type should render action button 1`] = `
+<div
+  className="error alertWrapper "
+>
+  <div
+    className="columns is-multiline is-mobile"
+  >
+    <div
+      className="column is-narrow alertIcon linked"
+      onClick={[MockFunction]}
+      onKeyDown={[MockFunction]}
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        error
+      </FontIcon>
+    </div>
+    <div
+      className="column alertText linked"
+      onClick={[MockFunction]}
+      onKeyDown={[MockFunction]}
+    >
+      <div>
+        <b />
+        Unexpected error
+      </div>
+    </div>
+    <div
+      className="column is-narrow-tablet is-12-mobile noDismiss"
+    >
+      <FlatButton
+        className="alertAction"
+        disabled={false}
+        fullWidth={true}
+        label="Do something"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        onTouchTap={[MockFunction]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Alert snapshots test renders Alert of error type should render dismiss icon button 1`] = `
+<div
+  className="error alertWrapper "
+>
+  <div
+    className="columns is-multiline is-mobile"
+  >
+    <div
+      className="column is-narrow alertIcon"
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        error
+      </FontIcon>
+    </div>
+    <div
+      className="column alertText"
+    >
+      <div>
+        <b />
+        Unexpected error
+      </div>
+    </div>
+    <div
+      className="column is-narrow is-hidden-tablet"
+    >
+      <IconButton
+        aria-label="Click to dismiss this alert"
+        className="alertDismissButton"
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
+        onTouchTap={[MockFunction]}
+        title="Click to dismiss this alert"
+        tooltipPosition="bottom-center"
+        touch={false}
+      >
+        <NavigationClose
+          className="alertDismiss"
+        />
+      </IconButton>
+    </div>
+    <div
+      className="column is-narrow is-hidden-mobile"
+    >
+      <IconButton
+        aria-label="Click to dismiss this alert"
+        className="alertDismissButton"
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
+        onTouchTap={[MockFunction]}
+        title="Click to dismiss this alert"
+        tooltipPosition="bottom-center"
+        touch={false}
+      >
+        <NavigationClose
+          className="alertDismiss"
+        />
+      </IconButton>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Alert snapshots test renders Alert of error type should render dismiss icon button and action button 1`] = `
+<div
+  className="error alertWrapper "
+>
+  <div
+    className="columns is-multiline is-mobile"
+  >
+    <div
+      className="column is-narrow alertIcon linked"
+      onClick={[MockFunction]}
+      onKeyDown={[MockFunction]}
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        error
+      </FontIcon>
+    </div>
+    <div
+      className="column alertText linked"
+      onClick={[MockFunction]}
+      onKeyDown={[MockFunction]}
+    >
+      <div>
+        <b />
+        Unexpected error
+      </div>
+    </div>
+    <div
+      className="column is-narrow is-hidden-tablet"
+    >
+      <IconButton
+        aria-label="Click to dismiss this alert"
+        className="alertDismissButton"
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
+        onTouchTap={[MockFunction]}
+        title="Click to dismiss this alert"
+        tooltipPosition="bottom-center"
+        touch={false}
+      >
+        <NavigationClose
+          className="alertDismiss"
+        />
+      </IconButton>
+    </div>
+    <div
+      className="column is-narrow-tablet is-12-mobile"
+    >
+      <FlatButton
+        className="alertAction"
+        disabled={false}
+        fullWidth={true}
+        label="Do something"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        onTouchTap={[MockFunction]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
+    <div
+      className="column is-narrow is-hidden-mobile"
+    >
+      <IconButton
+        aria-label="Click to dismiss this alert"
+        className="alertDismissButton"
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
+        onTouchTap={[MockFunction]}
+        title="Click to dismiss this alert"
+        tooltipPosition="bottom-center"
+        touch={false}
+      >
+        <NavigationClose
+          className="alertDismiss"
+        />
+      </IconButton>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Alert snapshots test renders Alert of error type should render dismiss icon button and action button and spinner 1`] = `
+<div
+  className="error alertWrapper "
+>
+  <div
+    className="columns is-multiline is-mobile"
+  >
+    <div
+      className="column is-narrow alertIcon linked"
+      onClick={[MockFunction]}
+      onKeyDown={[MockFunction]}
+    >
+      <CircularProgress
+        className="alertSpinner"
+        max={100}
+        min={0}
+        mode="indeterminate"
+        size={32}
+        thickness={4}
+        value={0}
+      />
+    </div>
+    <div
+      className="column alertText linked"
+      onClick={[MockFunction]}
+      onKeyDown={[MockFunction]}
+    >
+      <div>
+        <b />
+        Unexpected error
+      </div>
+    </div>
+    <div
+      className="column is-narrow is-hidden-tablet"
+    >
+      <IconButton
+        aria-label="Click to dismiss this alert"
+        className="alertDismissButton"
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
+        onTouchTap={[MockFunction]}
+        title="Click to dismiss this alert"
+        tooltipPosition="bottom-center"
+        touch={false}
+      >
+        <NavigationClose
+          className="alertDismiss"
+        />
+      </IconButton>
+    </div>
+    <div
+      className="column is-narrow-tablet is-12-mobile"
+    >
+      <FlatButton
+        className="alertAction"
+        disabled={false}
+        fullWidth={true}
+        label="Do something"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        onTouchTap={[MockFunction]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
+    <div
+      className="column is-narrow is-hidden-mobile"
+    >
+      <IconButton
+        aria-label="Click to dismiss this alert"
+        className="alertDismissButton"
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
+        onTouchTap={[MockFunction]}
+        title="Click to dismiss this alert"
+        tooltipPosition="bottom-center"
+        touch={false}
+      >
+        <NavigationClose
+          className="alertDismiss"
+        />
+      </IconButton>
+    </div>
+  </div>
+</div>
+`;

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
+import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import Async from 'modules/SharedComponents/Async';
 const PublicationForm = (componentProps) => (<Async load={import('modules/SharedComponents/PublicationForm/containers/PublicationForm')} componentProps={componentProps} />);
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 
 // forms & custom components
 import {validation, routes} from 'config';

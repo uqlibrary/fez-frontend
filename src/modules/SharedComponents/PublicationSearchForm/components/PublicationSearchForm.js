@@ -3,8 +3,8 @@ import {Field} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';

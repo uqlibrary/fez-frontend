@@ -13,7 +13,7 @@ export const ThesisSubmission = (componentProps) => (<Async load={import('module
 
 // always load components
 export {AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord} from 'modules/AddMissingRecord';
-export {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
+export {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 export {Masquerade} from 'modules/Masquerade';
 export {ViewRecord} from 'modules/ViewRecord';
 

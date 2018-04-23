@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot tests for StandardPage component renders StandardPage with title 1`] = `
+<div
+  className=""
+>
+  <h1
+    className="pageTitle"
+  >
+    standard page title
+  </h1>
+  <div
+    className="layout-card"
+  />
+</div>
+`;

@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {AuthorsPublicationsPerYearChart} from 'uqlibrary-react-toolbox/build/Charts';
-import {AuthorsPublicationTypesCountChart} from 'uqlibrary-react-toolbox/build/Charts';
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
-import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
-import {HelpIcon} from 'uqlibrary-react-toolbox/build/HelpDrawer';
+import {AuthorsPublicationsPerYearChart} from 'modules/SharedComponents/Toolbox/Charts';
+import {AuthorsPublicationTypesCountChart} from 'modules/SharedComponents/Toolbox/Charts';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
+import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
+import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
 
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';

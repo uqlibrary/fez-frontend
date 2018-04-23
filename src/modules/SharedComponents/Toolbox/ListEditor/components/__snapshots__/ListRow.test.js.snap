@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListRow renders  a row with index and item and delete button 1`] = `
+<div
+  className="columns is-gapless is-mobile listRow datalist datalist-row"
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this item?",
+        "confirmationTitle": "Delete item",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <div
+    className="column datalist-text"
+  >
+    one
+  </div>
+  <div
+    className="column is-narrow is-hidden-mobile listReorder datalist-buttons"
+  />
+  <div
+    className="column is-narrow listDelete datalist-buttons"
+  >
+    <IconButton
+      className="itemDelete"
+      disableTouchRipple={false}
+      disabled={false}
+      iconStyle={Object {}}
+      onTouchTap={[Function]}
+      tooltip="Remove this item"
+      tooltipPosition="bottom-center"
+      touch={false}
+    >
+      <FontIcon
+        className="material-icons deleteIcon"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        delete
+      </FontIcon>
+    </IconButton>
+  </div>
+</div>
+`;
+
+exports[`ListRow renders  a row with index and item set calls delete function 1`] = `
+<div
+  className="columns is-gapless is-mobile listRow datalist datalist-row"
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this item?",
+        "confirmationTitle": "Delete item",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <div
+    className="column datalist-text"
+  >
+    one
+  </div>
+  <div
+    className="column is-narrow is-hidden-mobile listReorder datalist-buttons"
+  />
+  <div
+    className="column is-narrow listDelete datalist-buttons"
+  >
+    <IconButton
+      className="itemDelete"
+      disableTouchRipple={false}
+      disabled={false}
+      iconStyle={Object {}}
+      onTouchTap={[Function]}
+      tooltip="Remove this item"
+      tooltipPosition="bottom-center"
+      touch={false}
+    >
+      <FontIcon
+        className="material-icons deleteIcon"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        delete
+      </FontIcon>
+    </IconButton>
+  </div>
+</div>
+`;
+
+exports[`ListRow renders  a row with index and item set, renders reorder buttons, and delete button 1`] = `
+<div
+  className="columns is-gapless is-mobile listRow datalist datalist-row"
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this item?",
+        "confirmationTitle": "Delete item",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <div
+    className="column datalist-text"
+  >
+    one
+  </div>
+  <div
+    className="column is-narrow is-hidden-mobile listReorder datalist-buttons"
+  >
+    <IconButton
+      className="reorderUp"
+      disableTouchRipple={false}
+      disabled={false}
+      iconStyle={Object {}}
+      onTouchTap={[Function]}
+      tooltip="Move item up the order"
+      tooltipPosition="bottom-center"
+      touch={false}
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        keyboard_arrow_up
+      </FontIcon>
+    </IconButton>
+    <IconButton
+      className="reorderDown"
+      disableTouchRipple={false}
+      disabled={false}
+      iconStyle={Object {}}
+      onTouchTap={[Function]}
+      tooltip="Move item down the order"
+      tooltipPosition="bottom-center"
+      touch={false}
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        keyboard_arrow_down
+      </FontIcon>
+    </IconButton>
+  </div>
+  <div
+    className="column is-narrow listDelete datalist-buttons"
+  >
+    <IconButton
+      className="itemDelete"
+      disableTouchRipple={false}
+      disabled={false}
+      iconStyle={Object {}}
+      onTouchTap={[Function]}
+      tooltip="Remove this item"
+      tooltipPosition="bottom-center"
+      touch={false}
+    >
+      <FontIcon
+        className="material-icons deleteIcon"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        delete
+      </FontIcon>
+    </IconButton>
+  </div>
+</div>
+`;

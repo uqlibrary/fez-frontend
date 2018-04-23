@@ -4,13 +4,13 @@ import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
 
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
-import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
-import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
-import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
-import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPrompt';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
+import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
+import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 
 
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';

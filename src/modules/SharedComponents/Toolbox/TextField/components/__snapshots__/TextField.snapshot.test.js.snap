@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
+<div
+  style={
+    Object {
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <TextField
+    className=" mui-long-labels-fix"
+    disabled={false}
+    floatingLabelFixed={false}
+    floatingLabelText="This is a test textfield component"
+    fullWidth={true}
+    multiLine={false}
+    name="testField"
+    rows={1}
+    type="text"
+    underlineShow={true}
+  />
+</div>
+`;
+
+exports[`TextFieldWrapper snapshots tests renders TextField component appending a class 1`] = `
+<div
+  style={
+    Object {
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <TextField
+    className="requiredField mui-long-labels-fix"
+    disabled={false}
+    floatingLabelFixed={false}
+    floatingLabelText="This is a test textfield component"
+    fullWidth={true}
+    multiLine={false}
+    name="testField"
+    rows={1}
+    type="text"
+    underlineShow={true}
+  />
+</div>
+`;

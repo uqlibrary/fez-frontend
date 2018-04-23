@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import {Table, TableBody, TableRowColumn, TableHeader, TableRow, TableHeaderColumn} from 'material-ui/Table';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 
 import moment from 'moment';
 import AvVolumeUp from 'material-ui/svg-icons/av/volume-up';

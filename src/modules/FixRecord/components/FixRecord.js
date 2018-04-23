@@ -6,15 +6,15 @@ import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
 import MenuItem from 'material-ui/MenuItem';
 
-import {SelectField} from 'uqlibrary-react-toolbox/build/SelectField';
-import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
-import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
-import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
-import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPrompt';
-import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
-import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
+import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
+import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
+import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
+import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
+import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {validation, routes} from 'config';

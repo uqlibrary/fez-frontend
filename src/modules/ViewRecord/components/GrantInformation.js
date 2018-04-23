@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 
 export default class GrantInformation extends Component {
     static propTypes = {

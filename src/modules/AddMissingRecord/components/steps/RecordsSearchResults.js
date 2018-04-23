@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {StandardRighthandCard} from 'uqlibrary-react-toolbox/build/StandardRighthandCard';
-import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {StandardRighthandCard} from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
+import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 
 
 // forms & custom components

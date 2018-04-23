@@ -1,4 +1,4 @@
-import {AutoSuggestField} from 'uqlibrary-react-toolbox/build/AutoSuggestField';
+import {AutoSuggestField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
 

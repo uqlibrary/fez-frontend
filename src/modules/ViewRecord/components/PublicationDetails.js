@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import {pathConfig} from 'config/routes';
 import {Table, TableBody} from 'material-ui/Table';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import ViewRecordTableRow from './ViewRecordTableRow';
 
 export default class PublicationDetails extends PureComponent {

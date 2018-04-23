@@ -15,6 +15,7 @@ import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
 import {api} from 'config';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 const setupStoreForActions = () => {
     const middlewares = [thunk];
@@ -112,6 +113,7 @@ global.shallow = shallow;
 global.render = render;
 global.mount = mount;
 global.toJson = toJson;
+global.injectTapEventPlugin = injectTapEventPlugin;
 
 // make standard libraries/methods globally available to all tests
 global.getElement = getElement;
