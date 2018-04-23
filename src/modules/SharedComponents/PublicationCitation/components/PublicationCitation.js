@@ -182,10 +182,14 @@ export default class PublicationCitation extends PureComponent {
                     {
                         this.props.showMetrics &&
                         <div className="column is-narrow">
-                            <span
+                            <ExternalLink
                                 className="trendingPubsCount"
-                                title={txt.myTrendingPublications.trendSharesThisMonth}>{Math.round(recordValue.count)}
-                            </span>
+                                href={recordValue.citation_url}
+                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', recordValue.rek_title)}
+                                openInNewIcon={false}
+                            >
+                                {recordValue.count}
+                            </ExternalLink>
                         </div>
                     }
                     {
