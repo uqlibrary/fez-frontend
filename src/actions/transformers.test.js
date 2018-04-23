@@ -860,48 +860,58 @@ describe('getAuthorIdentifierOrcidPatchRequest() ', () => {
                 key: 'scopus',
                 values: [
                     {
-                        "rek_pid": "UQ:333333",
-                        "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                        "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                        "id": 3638458,
-                        "count": "23",
-                        "difference": "45",
-                        "created": 1424092210,
-                        "last_checked": 1517253819,
-                        "citation_url": "http://www.scopus.com/details.php?citation_id=23432423",
-                        "rek_date": "2018-01-01T00:00:00Z",
-                        "title": "Test record 3"
+                        rek_pid: 'UQ:333333',
+                        rek_title: 'Test record 3',
+                        rek_date: '2018-01-01T00:00:00Z',
+                        metricData: {
+                            "rek_pid": "UQ:333333",
+                            "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
+                            "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
+                            "id": 3638458,
+                            "count": "23",
+                            "difference": "45",
+                            "created": 1424092210,
+                            "last_checked": 1517253819,
+                            "citation_url": "http://www.scopus.com/details.php?citation_id=23432423",
+                        }
                     }
+
                 ]
             },
             {
                 key: 'thomson',
                 values: [
                     {
-                        "rek_pid": "UQ:222222",
-                        "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                        "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                        "id": 3638458,
-                        "count": "6",
-                        "difference": "4",
-                        "created": 1424092210,
-                        "last_checked": 1517253819,
-                        "citation_url": "http://www.wos.com?citation_id=123242",
-                        "rek_date": "2017-01-01T00:00:00Z",
-                        "title": "Test record 2"
+                        rek_pid: 'UQ:222222',
+                        rek_title: 'Test record 2',
+                        rek_date: '2017-01-01T00:00:00Z',
+                        metricData: {
+                            "rek_pid": "UQ:222222",
+                            "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
+                            "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
+                            "id": 3638458,
+                            "count": "6",
+                            "difference": "4",
+                            "created": 1424092210,
+                            "last_checked": 1517253819,
+                            "citation_url": "http://www.wos.com?citation_id=123242"
+                        }
                     },
                     {
-                        "rek_pid": "UQ:333333",
-                        "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                        "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                        "id": 3638458,
-                        "count": "15",
-                        "difference": "8",
-                        "created": 1424092210,
-                        "last_checked": 1517253819,
-                        "citation_url": "http://www.wos.com?details.php?citation_id=548872",
-                        "rek_date": "2018-01-01T00:00:00Z",
-                        "title": "Test record 3"
+                        rek_pid: 'UQ:333333',
+                        rek_title: 'Test record 3',
+                        rek_date: '2018-01-01T00:00:00Z',
+                        metricData: {
+                            "rek_pid": "UQ:333333",
+                            "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
+                            "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
+                            "id": 3638458,
+                            "count": "15",
+                            "difference": "8",
+                            "created": 1424092210,
+                            "last_checked": 1517253819,
+                            "citation_url": "http://www.wos.com?details.php?citation_id=548872"
+                        }
                     }
                 ]
             },
@@ -909,30 +919,36 @@ describe('getAuthorIdentifierOrcidPatchRequest() ', () => {
                 key: 'altmetric',
                 values: [
                     {
-                        "rek_pid": "UQ:111111",
-                        "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                        "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                        "id": 3638458,
-                        "count": "3",
-                        "difference": "3",
-                        "created": 1424092210,
-                        "last_checked": 1517253819,
-                        "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
-                        "rek_date": "2016-01-01T00:00:00Z",
-                        "title": "Test record 1"
+                        rek_pid: 'UQ:111111',
+                        rek_title: 'Test record 1',
+                        rek_date: '2016-01-01T00:00:00Z',
+                        metricData: {
+                            "rek_pid": "UQ:111111",
+                            "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
+                            "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
+                            "id": 3638458,
+                            "count": "3",
+                            "difference": "3",
+                            "created": 1424092210,
+                            "last_checked": 1517253819,
+                            "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
+                        }
                     },
                     {
-                        "rek_pid": "UQ:222222",
-                        "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                        "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                        "id": 3638458,
-                        "count": "10",
-                        "difference": "4",
-                        "created": 1424092210,
-                        "last_checked": 1517253819,
-                        "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
-                        "rek_date": "2017-01-01T00:00:00Z",
-                        "title": "Test record 2"
+                        rek_pid: 'UQ:222222',
+                        rek_title: 'Test record 2',
+                        rek_date: '2017-01-01T00:00:00Z',
+                        metricData: {
+                            "rek_pid": "UQ:222222",
+                            "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
+                            "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
+                            "id": 3638458,
+                            "count": "10",
+                            "difference": "4",
+                            "created": 1424092210,
+                            "last_checked": 1517253819,
+                            "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
+                        }
                     }
                 ]
             }
@@ -986,30 +1002,36 @@ describe('getAuthorIdentifierOrcidPatchRequest() ', () => {
                 key: 'thomson',
                 values: [
                     {
-                        "rek_pid": "UQ:222222",
-                        "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                        "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                        "id": 3638458,
-                        "count": "6",
-                        "difference": "4",
-                        "created": 1424092210,
-                        "last_checked": 1517253819,
-                        "citation_url": "http://www.wos.com?citation_id=123242",
-                        "rek_date": "2017-01-01T00:00:00Z",
-                        "title": "Test record 2"
+                        rek_pid: 'UQ:222222',
+                        rek_title: 'Test record 2',
+                        rek_date: '2017-01-01T00:00:00Z',
+                        metricData: {
+                            "rek_pid": "UQ:222222",
+                            "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
+                            "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
+                            "id": 3638458,
+                            "count": "6",
+                            "difference": "4",
+                            "created": 1424092210,
+                            "last_checked": 1517253819,
+                            "citation_url": "http://www.wos.com?citation_id=123242",
+                        }
                     },
                     {
-                        "rek_pid": "UQ:333333",
-                        "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                        "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                        "id": 3638458,
-                        "count": "15",
-                        "difference": "8",
-                        "created": 1424092210,
-                        "last_checked": 1517253819,
-                        "citation_url": "http://www.wos.com?details.php?citation_id=548872",
-                        "rek_date": "2018-01-01T00:00:00Z",
-                        "title": "Test record 3"
+                        rek_pid: 'UQ:333333',
+                        rek_title: 'Test record 3',
+                        rek_date: '2018-01-01T00:00:00Z',
+                        metricData: {
+                            "rek_pid": "UQ:333333",
+                            "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
+                            "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
+                            "id": 3638458,
+                            "count": "15",
+                            "difference": "8",
+                            "created": 1424092210,
+                            "last_checked": 1517253819,
+                            "citation_url": "http://www.wos.com?details.php?citation_id=548872",
+                        }
                     }
                 ]
             }

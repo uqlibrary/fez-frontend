@@ -160,7 +160,7 @@ export default class PublicationCitation extends PureComponent {
 
     render() {
         const txt = locale.pages.dashboard;
-        const recordValue = this.props.showMetrics && this.props.publication.metric;
+        const recordValue = this.props.showMetrics && this.props.publication.metricData;
         return (
             <div className={`publicationCitation ${this.props.className}`}>
                 <div className="columns is-gapless is-mobile">
