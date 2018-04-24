@@ -10,7 +10,7 @@ export default class CitationCounts extends React.PureComponent {
         publication: PropTypes.object.isRequired,
     };
 
-    getTitle = (title) => (locale.global.linkWillOpenInNewWindow.replace('[destination]', `${this.props.publication.rek_title} (${title})`));
+    getTitle = (title) => (locale.components.publicationCitation.linkWillOpenInNewWindow.replace('[destination]', title));
 
     render() {
         const txt = locale.components.publicationCitation.citationCounts;

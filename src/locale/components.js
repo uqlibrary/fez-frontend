@@ -47,6 +47,7 @@ export default {
                     title: 'Google scholar',
                 }
             },
+            linkWillOpenInNewWindow: 'Full citation in [destination] will open in a new window',
             citationAuthors: {
                 showMoreLabel: 'Show [numberOfAuthors] more...',
                 showMoreTitle: 'Click to show [numberOfAuthors] more authors',
@@ -58,7 +59,16 @@ export default {
                 // {key: 'shareRecord', primaryText: 'Share'} // TODO: implement shareRecord
             ],
             myTrendingPublications: {
-                trendDifferenceSharesThisMonth: 'Difference in shares since last month',
+                trendDifferenceShares: {
+                    scopus: 'Difference in shares since last month',
+                    thomson: 'Difference in shares since last month',
+                    altmetric: 'Difference in social media activities for the past one year'
+                },
+                sourceTitles: {
+                    scopus: 'Scopus',
+                    thomson: 'Web of science',
+                    altmetric: 'Altmetric'
+                }
             }
         },
         keywordsForm: {

@@ -232,7 +232,11 @@ class Dashboard extends React.Component {
                                         {
                                             this.props.trendingPublicationsList.map((metric, metricIndex) => (
                                                 <div key={'metrics_' + metricIndex} className="trendingPubsSection">
-                                                    <h2 className="trendingPubsSource">{txt.myTrendingPublications.metrics[metric.key].title}</h2>
+                                                    <h2 className="trendingPubsSource">
+                                                        <div className={`fez-icon ${metric.key} xxlarge`}/>
+                                                        {txt.myTrendingPublications.metrics[metric.key].title}
+                                                    </h2>
+                                                    <div className="is-hidden-mobile subTitle">{txt.myTrendingPublications.metrics[metric.key].subtitle}</div>
                                                     <PublicationsList
                                                         publicationsList={metric.values}
                                                         showMetrics

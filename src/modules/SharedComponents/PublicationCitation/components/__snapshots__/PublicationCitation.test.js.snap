@@ -4584,6 +4584,7 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
               "citation_url": "http://www.test.com",
               "count": 23,
               "difference": 5,
+              "source": "altmetric",
             },
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
@@ -4984,6 +4985,7 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
               "citation_url": "http://www.test.com",
               "count": 23,
               "difference": 5,
+              "source": "altmetric",
             },
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
@@ -5045,19 +5047,19 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
       className="column is-narrow"
     >
       <ExternalLink
-        aria-label="Link to Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth will open in a new window."
+        aria-label="Full citation in Altmetric will open in a new window"
         className="trendingPubsCount"
         href="http://www.test.com"
         openInNewIcon={false}
         rel="noopener noreferrer"
         target="_blank"
-        title="Link to Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth will open in a new window."
+        title="Full citation in Altmetric will open in a new window"
       >
         23
       </ExternalLink>
       <span
         className="trendingPubsDifference"
-        title="Difference in shares since last month"
+        title="Difference in social media activities for the past one year"
       >
         +
         5

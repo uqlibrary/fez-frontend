@@ -465,6 +465,7 @@ describe('Academic data transformers ', () => {
                             "created": 1424092210,
                             "last_checked": 1517253819,
                             "citation_url": "http://www.scopus.com/details.php?citation_id=23432423",
+                            "source": "scopus"
                         }
                     }
 
@@ -486,7 +487,8 @@ describe('Academic data transformers ', () => {
                             "difference": "4",
                             "created": 1424092210,
                             "last_checked": 1517253819,
-                            "citation_url": "http://www.wos.com?citation_id=123242"
+                            "citation_url": "http://www.wos.com?citation_id=123242",
+                            "source": "thomson"
                         }
                     },
                     {
@@ -502,7 +504,8 @@ describe('Academic data transformers ', () => {
                             "difference": "8",
                             "created": 1424092210,
                             "last_checked": 1517253819,
-                            "citation_url": "http://www.wos.com?details.php?citation_id=548872"
+                            "citation_url": "http://www.wos.com?details.php?citation_id=548872",
+                            "source": "thomson"
                         }
                     }
                 ]
@@ -524,6 +527,7 @@ describe('Academic data transformers ', () => {
                             "created": 1424092210,
                             "last_checked": 1517253819,
                             "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
+                            "source": "altmetric"
                         }
                     },
                     {
@@ -540,6 +544,7 @@ describe('Academic data transformers ', () => {
                             "created": 1424092210,
                             "last_checked": 1517253819,
                             "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
+                            "source": "altmetric"
                         }
                     }
                 ]
@@ -607,6 +612,7 @@ describe('Academic data transformers ', () => {
                             "created": 1424092210,
                             "last_checked": 1517253819,
                             "citation_url": "http://www.wos.com?citation_id=123242",
+                            "source": "thomson"
                         }
                     },
                     {
@@ -623,6 +629,7 @@ describe('Academic data transformers ', () => {
                             "created": 1424092210,
                             "last_checked": 1517253819,
                             "citation_url": "http://www.wos.com?details.php?citation_id=548872",
+                            "source": "thomson"
                         }
                     }
                 ]

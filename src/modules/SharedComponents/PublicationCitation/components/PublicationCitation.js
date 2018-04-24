@@ -185,15 +185,15 @@ export default class PublicationCitation extends PureComponent {
                             <ExternalLink
                                 className="trendingPubsCount"
                                 href={recordValue.citation_url}
-                                title={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title)}
-                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title)}
+                                title={txt.linkWillOpenInNewWindow.replace('[destination]', txt.myTrendingPublications.sourceTitles[recordValue.source])}
+                                aria-label={txt.linkWillOpenInNewWindow.replace('[destination]', txt.myTrendingPublications.sourceTitles[recordValue.source])}
                                 openInNewIcon={false}
                             >
                                 {recordValue.count}
                             </ExternalLink>
                             <span
                                 className="trendingPubsDifference"
-                                title={txt.myTrendingPublications.trendDifferenceSharesThisMonth}>+{Math.round(recordValue.difference)}
+                                title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}>+{Math.round(recordValue.difference)}
                             </span>
                         </div>
                     }

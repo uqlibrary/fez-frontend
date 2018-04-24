@@ -138,6 +138,9 @@ h2.trendingPubsSource {
   font-size: $title-medium;
   font-weight: $text-weight-normal;
   margin: 12px 0 0 0 !important;
+  .fez-icon {
+    margin-right: 4px;
+  }
 }
 .publicationCitation {
   border-bottom: 1px solid rgba($text-color, 0.15);
@@ -192,6 +195,11 @@ h2.trendingPubsSource {
   padding: 12px 24px;
   .trendingPubsSection {
     margin-bottom: 1.5rem;
+    .subTitle {
+      font-size: 14px;
+      padding-left: 28px;
+      padding-top: 4px;
+    }
   }
 }
 
@@ -219,6 +227,9 @@ h2.trendingPubsSource {
     font-size: $title-xsmall;
     font-weight: $text-weight-normal;
     margin: 6px 0 0 0 !important;
+    .fez-icon {
+      margin-right: 4px !important;
+    }
   }
 
   .publicationCitation {

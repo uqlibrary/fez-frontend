@@ -11,13 +11,13 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
       count={1}
       link="http://www.altmetric.com/details.php?citation_id=23535331"
       source="altmetric"
-      title="Link to ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network (Altmetric) will open in a new window."
+      title="Full citation in Altmetric will open in a new window"
     />
     <CitationCountView
       count={null}
       link="https://scholar.google.com/scholar?q=intitle:[id]ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
       source="google"
-      title="Link to ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network (Google scholar) will open in a new window."
+      title="Full citation in Google scholar will open in a new window"
     />
   </div>
   <div
@@ -46,25 +46,25 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
       count={1}
       link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
       source="wos"
-      title="Link to This is test title (Web of science) will open in a new window."
+      title="Full citation in Web of science will open in a new window"
     />
     <CitationCountView
       count={1}
       link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
       source="scopus"
-      title="Link to This is test title (Scopus) will open in a new window."
+      title="Full citation in Scopus will open in a new window"
     />
     <CitationCountView
       count={1}
       link="http://www.altmetric.com/details.php?citation_id=12345"
       source="altmetric"
-      title="Link to This is test title (Altmetric) will open in a new window."
+      title="Full citation in Altmetric will open in a new window"
     />
     <CitationCountView
       count={1}
       link="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
       source="google"
-      title="Link to This is test title (Google scholar) will open in a new window."
+      title="Full citation in Google scholar will open in a new window"
     />
   </div>
   <div

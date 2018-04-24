@@ -129,9 +129,10 @@ export const transformTrendingPublicationsMetricsData = (response) => {
         .map(key => {
             const values = metrics[key].map(metricItem => {
                 const publication = data.filter(publication => publication.rek_pid === metricItem.rek_pid)[0];
+                const metricData = {source: key, ...metricItem};
                 return {
                     ...publication,
-                    metricData: metricItem
+                    metricData
                 };
             });
             return {key, values};

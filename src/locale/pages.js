@@ -197,14 +197,17 @@ export default {
                 metrics: {
                     altmetric: {
                         title: 'Altmetric score',
+                        subtitle: 'The +plus score indicates recent increase in social media activity',
                         order: 2
                     },
                     thomson: {
                         title: 'Web of Science citation count',
+                        subtitle: 'The +plus score indicates the increase in citations over the last month',
                         order: 1
                     },
                     scopus: {
                         title: 'Scopus citation count',
+                        subtitle: 'The +plus score indicates the increase in citations over the last month',
                         order: 0
                     }
                 },
