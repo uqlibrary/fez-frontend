@@ -1,7 +1,6 @@
 import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
 import * as routes from 'repositories/routes';
-import {transformTrendingPublicationsMetricsData} from './academicDataTransformers';
 
 /**
  * Get latest publications
@@ -70,7 +69,7 @@ export function searchTrendingPublications() {
             .then(response => {
                 dispatch({
                     type: actions.TRENDING_PUBLICATIONS_LOADED,
-                    payload: transformTrendingPublicationsMetricsData(response)
+                    payload: response
                 });
             })
             .catch(error => {

@@ -47,17 +47,33 @@ describe('publication enhancer', () => {
     });
 
     it('should add a method to a list of publication to calculate open access for trending publications', () => {
-        const payload = {data: [
+        const payload = {
+            data: [
                 {rek_pid: 'UQ:1234', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract'},
-                {rek_pid: 'UQ:1235', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract'}],
-            count: 2};
+                {rek_pid: 'UQ:1235', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract'}
+            ],
+            filters: {
+                mertrics: {
+                    altmetric: [
+                        {}
+                    ]
+                }
+            }
+        };
+
         const next = jest.fn();
         const expectedPayload = {
             data: [
                 {rek_pid: 'UQ:1234', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract', "rek_formatted_title": null, "calculateOpenAccess": expect.any(Function)},
                 {rek_pid: 'UQ:1235', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract', "rek_formatted_title": null, "calculateOpenAccess": expect.any(Function)}
             ],
-            count: 2
+            filters: {
+                mertrics: {
+                    altmetric: [
+                        {}
+                    ]
+                }
+            }
         };
         publicationEnhancer()(next)({type: 'TRENDING_PUBLICATIONS_LOADED', payload: payload});
 
