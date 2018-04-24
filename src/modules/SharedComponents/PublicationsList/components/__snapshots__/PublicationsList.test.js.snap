@@ -254,7 +254,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
         ],
         "fez_record_search_key_author_id": Array [
           Object {
-            "rek_author_id": 84876,
+            "rek_author_id": 410,
             "rek_author_id_id": 29597409,
             "rek_author_id_lookup": "Vanesa Tomatis",
             "rek_author_id_order": 1,
@@ -830,7 +830,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
         "rek_object_type": 3,
         "rek_object_type_lookup": "Record",
         "rek_object_type_xsdmf_id": 3674,
-        "rek_pid": "UQ:678728",
+        "rek_pid": "UQ:67abc8",
         "rek_pubmed_doc_type": null,
         "rek_pubmed_doc_type_lookup": null,
         "rek_pubmed_doc_type_xsdmf_id": null,

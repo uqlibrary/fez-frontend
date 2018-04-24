@@ -125,12 +125,14 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
         openAccessStatusId={453694}
         showEmbargoText={false}
       >
-        <span>
-          <div
+        <div>
+          <span
+            aria-label="Link (no DOI) - Open access after 2019-01-01"
             className="fez-icon openAccessEmbargoed large"
+            role="img"
             title="Link (no DOI) - Open access after 2019-01-01"
           />
-        </span>
+        </div>
       </OpenAccessIcon>
     </Router>
   </MemoryRouter>
@@ -195,17 +197,19 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
         openAccessStatusId={453694}
         showEmbargoText={true}
       >
-        <span>
+        <div>
           <span
             className="is-hidden-mobile is-hidden-tablet-only"
           >
             Open access after 2019-01-01 
           </span>
-          <div
+          <span
+            aria-label="Link (no DOI) - Open access after 2019-01-01"
             className="fez-icon openAccessEmbargoed large"
+            role="img"
             title="Link (no DOI) - Open access after 2019-01-01"
           />
-        </span>
+        </div>
       </OpenAccessIcon>
     </Router>
   </MemoryRouter>
@@ -270,8 +274,10 @@ exports[`Journal Name Component test  should render open access 1`] = `
         openAccessStatusId={1234}
         showEmbargoText={false}
       >
-        <div
+        <span
+          aria-label="Open Access - undefined - Free to read"
           className="fez-icon openAccess large"
+          role="img"
           title="Open Access - undefined - Free to read"
         />
       </OpenAccessIcon>
@@ -338,8 +344,10 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
         openAccessStatusId={453694}
         showEmbargoText={false}
       >
-        <div
+        <span
+          aria-label="Open Access - Free to read"
           className="fez-icon openAccess large"
+          role="img"
           title="Open Access - Free to read"
         />
       </OpenAccessIcon>

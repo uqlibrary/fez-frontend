@@ -23,14 +23,10 @@
 
   .publicationSources, .citationSources {
     font-size: $text-body-small;
+    margin-right: 3px;
 
     .publicationSource {
-      &:after {
-        content: ', ';
-      }
-      &:last-of-type:after {
-        content: '';
-      }
+      margin-right: 6px;
     }
   }
 
@@ -77,7 +73,10 @@
 
   .citationCounts {
     margin-top: 10px;
-
+    display: inline-flex !important;
+    .oaIcon {
+      margin-right: 6px !important;
+    }
     .citationCount {
       display: inline-block !important;
       margin: 0 6px 0 0;

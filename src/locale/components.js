@@ -185,7 +185,6 @@ export default {
                 }
             }
         },
-
         authors: {
             title: 'Authors',
             description: 'Please provide a list of authors and then select your name from the list.',

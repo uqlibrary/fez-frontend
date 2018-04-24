@@ -102,8 +102,19 @@ export default class Links extends PureComponent {
         const hasLinks = record.fez_record_search_key_link
             && record.fez_record_search_key_link.length > 0;
 
-        // show open access status on links only if open access status is related to links, eg DOI, LINK, PMC
-        const openAccessStatus = openAccessConfig.openAccessLinks.indexOf(openAccessStatusId) >= 0 && record.calculateOpenAccess
+        const pmcOpenAccessStatus = {
+            isOpenAccess: true,
+            embargoDate: null,
+            openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_PMC
+        };
+
+        const gcOpenAccessStatus = {
+            isOpenAccess: true,
+            embargoDate: null,
+            openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_PMC
+        };
+
+        const doiOpenAccessStatus = record.calculateOpenAccess && openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_DOI
             ? record.calculateOpenAccess()
             : {};
 
@@ -122,17 +133,17 @@ export default class Links extends PureComponent {
                             {
                                 // if record has a PubMedCentral Id - display link, should be always OA
                                 !!pubmedCentralId &&
-                                this.renderLinkRow(this.getPMCLink(pubmedCentralId, openAccessStatus))
+                                this.renderLinkRow(this.getPMCLink(pubmedCentralId, pmcOpenAccessStatus))
                             }
                             {
                                 // if record has a DOI - display a link, should be OA or OA with a date
                                 !!doi &&
-                                this.renderLinkRow(this.getDOILink(doi, openAccessStatus))
+                                this.renderLinkRow(this.getDOILink(doi, doiOpenAccessStatus))
                             }
                             {
                                 // record has OA status of "Link (no DOI)" then produce a google scholar link for the publication title
                                 openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI &&
-                                this.renderLinkRow(this.getGoogleScholarLink(record.rek_title, openAccessStatus))
+                                this.renderLinkRow(this.getGoogleScholarLink(record.rek_title, gcOpenAccessStatus))
                             }
                             {
                                 hasLinks &&
