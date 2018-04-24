@@ -23,7 +23,7 @@ export default class OpenAccessIcon extends PureComponent {
                 ? txt.openAccessLabel.replace('[oa_status]', openAccessConfig.labels[this.props.openAccessStatusId])
                 : txt.labelOpenAccessNoStatus;
             return (
-                <div className="fez-icon openAccess large" title={openAccessTitle} />
+                <span className="fez-icon openAccess large" role="img" aria-label={openAccessTitle} title={openAccessTitle}/>
             );
         } else if (!this.props.isOpenAccess && this.props.embargoDate) {
             const openAccessTitle = txt.openAccessEmbargoedLabel
@@ -37,7 +37,7 @@ export default class OpenAccessIcon extends PureComponent {
                             {txt.embargoedUntil.replace('[embargo_date]', this.props.embargoDate)}
                         </span>
                     }
-                    <div className="fez-icon openAccessEmbargoed large" title={openAccessTitle} />
+                    <span className="fez-icon openAccessEmbargoed large" role="img" title={openAccessTitle} aria-label={openAccessTitle} />
                 </div>
             );
         }
