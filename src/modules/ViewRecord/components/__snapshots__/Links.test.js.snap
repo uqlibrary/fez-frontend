@@ -673,8 +673,10 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   openAccessStatusId={453954}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
+                                                    aria-label="Open Access - PMC - Free to read"
                                                     className="fez-icon openAccess large"
+                                                    role="img"
                                                     title="Open Access - PMC - Free to read"
                                                   />
                                                 </OpenAccessIcon>
@@ -848,8 +850,10 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   openAccessStatusId={453693}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
+                                                    aria-label="Open Access - DOI - Free to read"
                                                     className="fez-icon openAccess large"
+                                                    role="img"
                                                     title="Open Access - DOI - Free to read"
                                                   />
                                                 </OpenAccessIcon>
@@ -2051,8 +2055,10 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                                                   openAccessStatusId={453954}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
+                                                    aria-label="Open Access - PMC - Free to read"
                                                     className="fez-icon openAccess large"
+                                                    role="img"
                                                     title="Open Access - PMC - Free to read"
                                                   />
                                                 </OpenAccessIcon>
@@ -3409,8 +3415,10 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                   openAccessStatusId={453954}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
+                                                    aria-label="Open Access - PMC - Free to read"
                                                     className="fez-icon openAccess large"
+                                                    role="img"
                                                     title="Open Access - PMC - Free to read"
                                                   />
                                                 </OpenAccessIcon>
@@ -4606,8 +4614,10 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   openAccessStatusId={453954}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
+                                                    aria-label="Open Access - PMC - Free to read"
                                                     className="fez-icon openAccess large"
+                                                    role="img"
                                                     title="Open Access - PMC - Free to read"
                                                   />
                                                 </OpenAccessIcon>
@@ -5809,8 +5819,10 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   openAccessStatusId={453954}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
+                                                    aria-label="Open Access - PMC - Free to read"
                                                     className="fez-icon openAccess large"
+                                                    role="img"
                                                     title="Open Access - PMC - Free to read"
                                                   />
                                                 </OpenAccessIcon>
@@ -7180,8 +7192,10 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   showEmbargoText={false}
                                                 >
                                                   <div>
-                                                    <div
+                                                    <span
+                                                      aria-label="DOI - Open access after 24th December 2020"
                                                       className="fez-icon openAccessEmbargoed large"
+                                                      role="img"
                                                       title="DOI - Open access after 24th December 2020"
                                                     />
                                                   </div>
