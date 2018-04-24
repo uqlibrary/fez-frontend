@@ -1,5 +1,4 @@
 import * as actions from 'actions/actionTypes';
-import {transformTrendingPublicationsMetricsData} from '../actions/academicDataTransformers';
 
 export const initialState = {
     publicationsList: [],
@@ -90,7 +89,7 @@ const handlers = {
     [actions.TRENDING_PUBLICATIONS_LOADED]: (state, action) => {
         return {
             ...state,
-            trendingPublicationsList: transformTrendingPublicationsMetricsData(action.payload),
+            trendingPublicationsList: action.payload,
             loadingTrendingPublications: false
         };
     },

@@ -1,6 +1,7 @@
 import * as actions from 'actions/actionTypes';
 import {openAccessConfig, viewRecordsConfig} from 'config';
 import moment from 'moment';
+import {transformTrendingPublicationsMetricsData} from '../actions/academicDataTransformers';
 
 export const calculateOpenAccess = (record) => {
     const openAccessStatusId = !!record.fez_record_search_key_oa_status
@@ -84,12 +85,14 @@ const publicationEnhancer = () => next => action => {
             ...enhancePublication(publication)
         }));
 
+        const payload = {
+            ...action.payload,
+            data: enhancedPublications
+        };
+
         const enhancedAction = {
             type: action.type,
-            payload: {
-                ...action.payload,
-                data: enhancedPublications
-            }
+            payload: action.type === actions.TRENDING_PUBLICATIONS_LOADED ? transformTrendingPublicationsMetricsData(payload) : payload
         };
         return next(enhancedAction);
     } else if (actions.loadPublicationActions.test(action.type)) {
