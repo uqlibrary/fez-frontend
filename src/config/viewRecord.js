@@ -72,7 +72,7 @@ export const viewRecordsConfig = {
     files: {
         blacklist: {
             namePrefixRegex: '^(FezACML|stream|web|thumbnail|preview|presmd)',
-            descriptionKeywordsRegex: '(ERA |HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections)'
+            descriptionKeywordsRegex: '(ERA |HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections|staffdata)'
         }
     },
     metaTags: [

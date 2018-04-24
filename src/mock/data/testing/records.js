@@ -3930,6 +3930,17 @@ export const journalArticle = {
             "dsi_state": "D",
             "dsi_size": 97345
         },
+        {
+            "dsi_pid": "UQ:792099",
+            "dsi_dsid": "staffdata.pdf",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "staffdata.pdf",
+            "dsi_mimetype": "image/jpeg",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 97345
+        },
     ],
     "fez_record_search_key_geographic_area": [],
     "fez_record_search_key_grant_acronym": [],

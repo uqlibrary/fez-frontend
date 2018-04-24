@@ -4266,7 +4266,7 @@ export const record = {
             "rek_grant_id_pid": "UQ:396321",
             "rek_grant_id_xsdmf_id": 0,
             "rek_grant_id_order": 6,
-            "rek_grant_id": "ECF-10-05"
+            "rek_grant_id": " "
         }
     ],
     "fez_record_search_key_grant_text": [
@@ -4702,7 +4702,7 @@ export const myRecordsList = {
     "from": 1,
     "to": 20,
     "data": [{
-        "rek_pid": "UQ:678728",
+        "rek_pid": "UQ:67abc8",
         "rek_title_xsdmf_id": 10588,
         "rek_title": "ENA\/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network",
         "rek_description_xsdmf_id": 11441,
@@ -4756,7 +4756,8 @@ export const myRecordsList = {
         "fez_record_search_key_article_number": null,
         "fez_record_search_key_assigned_group_id": [],
         "fez_record_search_key_assigned_user_id": [],
-        "fez_record_search_key_author": [{
+        "fez_record_search_key_author": [
+            {
             "rek_author_id": 30322336,
             "rek_author_pid": "UQ:678728",
             "rek_author_xsdmf_id": null,
@@ -4933,7 +4934,7 @@ export const myRecordsList = {
             "rek_author_id_id": 29597409,
             "rek_author_id_pid": "UQ:678728",
             "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 84876,
+            "rek_author_id": 410,
             "rek_author_id_order": 1,
             "rek_author_id_lookup": "Vanesa Tomatis"
         }, {
