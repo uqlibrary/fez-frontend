@@ -208,9 +208,6 @@ export default {
                         order: 0
                     }
                 },
-                viewFullCitationLinkTitle: 'View full citation',
-                trendSharesThisMonth: 'Number of shares in the past month',
-                trendDifferenceSharesThisMonth: 'Difference in shares since last month',
                 help: {
                     title: 'About these metrics',
                     text: (

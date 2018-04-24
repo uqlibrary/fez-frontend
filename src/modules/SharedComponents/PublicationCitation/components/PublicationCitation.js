@@ -159,7 +159,7 @@ export default class PublicationCitation extends PureComponent {
     }
 
     render() {
-        const txt = locale.pages.dashboard;
+        const txt = locale.components.publicationCitation;
         const recordValue = this.props.showMetrics && this.props.publication.metricData;
         return (
             <div className={`publicationCitation ${this.props.className}`}>
@@ -185,6 +185,7 @@ export default class PublicationCitation extends PureComponent {
                             <ExternalLink
                                 className="trendingPubsCount"
                                 href={recordValue.citation_url}
+                                title={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title)}
                                 aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title)}
                                 openInNewIcon={false}
                             >

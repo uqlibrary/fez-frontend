@@ -69,7 +69,9 @@ export default class CitationCounts extends React.PureComponent {
                     <OpenAccessIcon {...(this.props.publication.calculateOpenAccess ? this.props.publication.calculateOpenAccess() : {})} />
                     {
                         !!publication.rek_pid && (counts.wos || counts.scopus) &&
-                        <ExternalLink href={`https://app.library.uq.edu.au/#/authors/view/${publication.rek_pid}`}>{txt.statsLabel}</ExternalLink>
+                        <ExternalLink href={`https://app.library.uq.edu.au/#/authors/view/${publication.rek_pid}`} title={publication.rek_title}>
+                            {txt.statsLabel}
+                        </ExternalLink>
                     }
                 </div>
                 <div className="column is-hidden-mobile" />

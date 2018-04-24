@@ -46,6 +46,27 @@ describe('publication enhancer', () => {
         }));
     });
 
+    it('should add a method to a list of publication to calculate open access for trending publications', () => {
+        const payload = {data: [
+                {rek_pid: 'UQ:1234', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract'},
+                {rek_pid: 'UQ:1235', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract'}],
+            count: 2};
+        const next = jest.fn();
+        const expectedPayload = {
+            data: [
+                {rek_pid: 'UQ:1234', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract', "rek_formatted_title": null, "calculateOpenAccess": expect.any(Function)},
+                {rek_pid: 'UQ:1235', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract', "rek_formatted_title": null, "calculateOpenAccess": expect.any(Function)}
+            ],
+            count: 2
+        };
+        publicationEnhancer()(next)({type: 'TRENDING_PUBLICATIONS_LOADED', payload: payload});
+
+        expect(next).toBeCalledWith(expect.objectContaining({
+            "payload": expectedPayload,
+            "type": "TRENDING_PUBLICATIONS_LOADED"
+        }));
+    });
+
     it('should not add anything to data if action is not on the list', () => {
         const publication = {rek_pid: 'UQ:1234'};
         const next = jest.fn();

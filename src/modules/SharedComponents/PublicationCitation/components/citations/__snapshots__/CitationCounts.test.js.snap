@@ -46,25 +46,25 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
       count={1}
       link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
       source="wos"
-      title="Link to undefined (Web of science) will open in a new window."
+      title="Link to This is test title (Web of science) will open in a new window."
     />
     <CitationCountView
       count={1}
       link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
       source="scopus"
-      title="Link to undefined (Scopus) will open in a new window."
+      title="Link to This is test title (Scopus) will open in a new window."
     />
     <CitationCountView
       count={1}
       link="http://www.altmetric.com/details.php?citation_id=12345"
       source="altmetric"
-      title="Link to undefined (Altmetric) will open in a new window."
+      title="Link to This is test title (Altmetric) will open in a new window."
     />
     <CitationCountView
       count={1}
-      link="https://scholar.google.com/scholar?q=intitle:[id]undefined"
+      link="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
       source="google"
-      title="Link to undefined (Google scholar) will open in a new window."
+      title="Link to This is test title (Google scholar) will open in a new window."
     />
   </div>
   <div
@@ -81,6 +81,7 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
       openInNewIcon={true}
       rel="noopener noreferrer"
       target="_blank"
+      title="This is test title"
     >
       View full statistics
     </ExternalLink>

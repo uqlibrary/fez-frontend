@@ -305,26 +305,3 @@ export const getAuthorIdentifierOrcidPatchRequest = (authorId, orcidId, data = n
 
     return patchRequest;
 };
-
-export const transformTrendingPublicationsMetricsData = (response) => {
-    const data = [...response.data];
-    const metrics = {...response.filters.metrics};
-    const metricsOrder = Object.keys(metrics).length > 1
-        ? Object.keys(metrics).sort((metric1, metric2) => {
-            return locale.pages.dashboard.myTrendingPublications.metrics[metric1].order - locale.pages.dashboard.myTrendingPublications.metrics[metric2].order;
-        })
-        : Object.keys(metrics);
-
-    return metricsOrder
-        .filter(metric => Object.keys(metrics).indexOf(metric) > -1)
-        .map(key => {
-            const values = metrics[key].map(metricItem => {
-                const publication = data.filter(publication => publication.rek_pid === metricItem.rek_pid)[0];
-                return {
-                    ...publication,
-                    metricData: metricItem
-                };
-            });
-            return {key, values};
-        });
-};

@@ -45,7 +45,7 @@ export default {
                 google: {
                     externalUrl: 'https://scholar.google.com/scholar?q=intitle:[id]',
                     title: 'Google scholar',
-                },
+                }
             },
             citationAuthors: {
                 showMoreLabel: 'Show [numberOfAuthors] more...',
@@ -56,7 +56,10 @@ export default {
             defaultActions: [
                 {key: 'fixRecord', label: 'Request Correction', primary: false},
                 // {key: 'shareRecord', primaryText: 'Share'} // TODO: implement shareRecord
-            ]
+            ],
+            myTrendingPublications: {
+                trendDifferenceSharesThisMonth: 'Difference in shares since last month',
+            }
         },
         keywordsForm: {
             field: {

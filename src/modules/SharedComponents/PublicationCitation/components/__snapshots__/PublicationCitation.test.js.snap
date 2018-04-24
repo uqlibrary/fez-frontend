@@ -5051,6 +5051,7 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
         openInNewIcon={false}
         rel="noopener noreferrer"
         target="_blank"
+        title="Link to Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth will open in a new window."
       >
         23
       </ExternalLink>

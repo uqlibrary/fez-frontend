@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
 import * as routes from 'repositories/routes';
-import {transformTrendingPublicationsMetricsData} from './transformers';
+import {transformTrendingPublicationsMetricsData} from './academicDataTransformers';
 
 /**
  * Get latest publications
