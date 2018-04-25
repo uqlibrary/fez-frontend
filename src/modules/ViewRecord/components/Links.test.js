@@ -138,8 +138,7 @@ describe('Component Links ', () => {
         expect(wrapper.find('.openAccess').length).toEqual(1);
     });
 
-
-    it('should render 3 not OA links and PMC and DOI link with OA for OPEN_ACCESS_ID_PMC', () => {
+    it('should render 3 not OA links and PMC with OA and DOI link no OA for OPEN_ACCESS_ID_PMC', () => {
         const pmcProps = {
             ...getPublication(0, openAccessConfig.OPEN_ACCESS_ID_PMC),
             "fez_record_search_key_pubmed_central_id": {
@@ -158,11 +157,11 @@ describe('Component Links ', () => {
 
         const wrapper = setup({publication: pmcProps}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('.noOaIcon').length).toEqual(3);
-        expect(wrapper.find('.openAccess').length).toEqual(2);
+        expect(wrapper.find('.noOaIcon').length).toEqual(4);
+        expect(wrapper.find('.openAccess').length).toEqual(1);
     });
 
-    it('should render 3 not OA links and DOI and PMC not OA link for OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT', () => {
+    it('should render 3 not OA links and DOI not OA and PMC always OA link for OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT', () => {
         const pmcProps = {
             ...getPublication(0, openAccessConfig.OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT),
             "fez_record_search_key_pubmed_central_id": {
@@ -181,6 +180,7 @@ describe('Component Links ', () => {
 
         const wrapper = setup({publication: pmcProps}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('.noOaIcon').length).toEqual(5);
+        expect(wrapper.find('.noOaIcon').length).toEqual(4);
+        expect(wrapper.find('.openAccess').length).toEqual(1);
     });
 });
