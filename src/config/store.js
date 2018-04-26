@@ -6,6 +6,7 @@ import rootReducer from '../reducer';
 import Immutable from 'immutable';
 import thunk from 'redux-thunk';
 import publicationEnhancer from './publicationEnhancer';
+import {trendingPublicationsMiddleware} from 'modules/SharedComponents/MyTrendingPublications';
 
 import Raven from 'raven-js';
 
@@ -25,7 +26,8 @@ const getStore = () => {
             applyMiddleware(
                 routerMiddleware(history),
                 thunk,
-                publicationEnhancer
+                publicationEnhancer,
+                trendingPublicationsMiddleware
             ),
         ),
     );

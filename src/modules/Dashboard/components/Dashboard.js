@@ -7,11 +7,11 @@ import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
-import {HelpIcon} from 'uqlibrary-react-toolbox/build/HelpDrawer';
 
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
 import {PublicationStats} from 'modules/SharedComponents/PublicationStats';
+import {MyTrendingPublications} from 'modules/SharedComponents/MyTrendingPublications';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import {routes} from 'config';
@@ -44,10 +44,6 @@ class Dashboard extends React.Component {
         latestPublicationsList: PropTypes.array,
         totalPublicationsCount: PropTypes.number,
 
-        // author's trending publications
-        loadingTrendingPublications: PropTypes.bool,
-        trendingPublicationsList: PropTypes.array,
-
         // navigations, app actions
         actions: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired
@@ -62,14 +58,12 @@ class Dashboard extends React.Component {
             this.props.actions.countPossiblyYourPublications(this.props.account.id);
             this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
             this.props.actions.searchLatestPublications(this.props.account.id);
-            this.props.actions.searchTrendingPublications();
         }
     }
 
     shouldComponentUpdate(nextProps) {
         return !(nextProps.loadingPublicationsByYear || nextProps.accountAuthorDetailsLoading
-            || nextProps.loadingPublicationsStats || nextProps.loadingTrendingPublications
-            || nextProps.loadingLatestPublications);
+            || nextProps.loadingPublicationsStats || nextProps.loadingLatestPublications);
     }
 
     _claimYourPublications = () => {
@@ -87,8 +81,7 @@ class Dashboard extends React.Component {
     render() {
         const txt = locale.pages.dashboard;
         const loading = this.props.loadingPublicationsByYear || this.props.accountAuthorDetailsLoading
-            || this.props.loadingPublicationsStats || this.props.loadingTrendingPublications
-            || this.props.loadingLatestPublications;
+            || this.props.loadingPublicationsStats || this.props.loadingLatestPublications;
         const barChart = !loading && this.props.publicationsByYear && this.props.publicationsByYear.series.length > 0
             ? (
                 <StandardCard className="barChart" title={txt.publicationsByYearChart.title}>
@@ -196,8 +189,7 @@ class Dashboard extends React.Component {
                 }
                 {
                     !loading
-                    && ((this.props.latestPublicationsList && this.props.latestPublicationsList.length > 0) ||
-                        (this.props.trendingPublicationsList && this.props.trendingPublicationsList.length > 0)) &&
+                    && ((this.props.latestPublicationsList && this.props.latestPublicationsList.length > 0)) &&
                     <StandardCard className="card-paddingless">
                         <Tabs className="publicationTabs"
                             inkBarStyle={{height: '4px', marginTop: '-4px'}}>
@@ -222,29 +214,9 @@ class Dashboard extends React.Component {
                                 </Tab>
                             }
                             {
-                                this.props.trendingPublicationsList.length > 0 &&
                                 <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications"
                                     className="publicationTabs">
-                                    <div className="trendingPubsHelp is-pulled-right">
-                                        <HelpIcon {...txt.myTrendingPublications.help}/>
-                                    </div>
-                                    <div className="trendingPubs" style={{padding: '12px 24px'}}>
-                                        {
-                                            this.props.trendingPublicationsList.map((metric, metricIndex) => (
-                                                <div key={'metrics_' + metricIndex} className="trendingPubsSection">
-                                                    <h2 className="trendingPubsSource">
-                                                        <div className={`fez-icon ${metric.key} xxlarge`}/>
-                                                        {txt.myTrendingPublications.metrics[metric.key].title}
-                                                    </h2>
-                                                    <div className="is-hidden-mobile subTitle">{txt.myTrendingPublications.metrics[metric.key].subtitle}</div>
-                                                    <PublicationsList
-                                                        publicationsList={metric.values}
-                                                        showMetrics
-                                                    />
-                                                </div>
-                                            ))
-                                        }
-                                    </div>
+                                    <MyTrendingPublications/>
                                 </Tab>
                             }
                         </Tabs>

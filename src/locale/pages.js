@@ -193,43 +193,7 @@ export default {
                 viewAllButtonLabel: 'View all'
             },
             myTrendingPublications: {
-                title: 'My trending publications',
-                metrics: {
-                    altmetric: {
-                        title: 'Altmetric score',
-                        subtitle: 'The +plus score indicates recent increase in social media activity',
-                        order: 2
-                    },
-                    thomson: {
-                        title: 'Web of Science citation count',
-                        subtitle: 'The +plus score indicates the increase in citations over the last month',
-                        order: 1
-                    },
-                    scopus: {
-                        title: 'Scopus citation count',
-                        subtitle: 'The +plus score indicates the increase in citations over the last month',
-                        order: 0
-                    }
-                },
-                help: {
-                    title: 'About these metrics',
-                    text: (
-                        <div>
-                            <h3>WOS and Scopus</h3>
-                            <p>
-                                The large number is the total citation count and the + (plus) value indicates how much the citation count has increased in the last month.
-                            </p>
-                            <h3>Altmetric score (social media activity)</h3>
-                            <p>
-                                The Altmetric score measures social media activity. The + (plus) value shows the increase in social media activity over time.
-                            </p>
-                            <p>
-                                You can click on the number as a link to see who is citing each publication, or in the
-                                case of Altmetric who is referencing the publication in social media and news outlets.
-                            </p>
-                        </div>),
-                    buttonLabel: 'OK'
-                },
+                title: 'My trending publications'
             },
         },
         myResearch: {

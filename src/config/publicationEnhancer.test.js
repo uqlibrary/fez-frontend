@@ -66,20 +66,37 @@ describe('publication enhancer', () => {
         };
 
         const next = jest.fn();
-        const expectedPayload = [
-            {
-                key: 'thomson',
-                values: [
-                    {rek_pid: 'UQ:1235', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract', "rek_formatted_title": null, "calculateOpenAccess": expect.any(Function), metricData: {rek_pid: "UQ:1235", source: 'thomson'}},
-                ]
-            },
-            {
-                key: 'altmetric',
-                values: [
-                    {rek_pid: 'UQ:1234', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract', "rek_formatted_title": null, "calculateOpenAccess": expect.any(Function), metricData: {rek_pid: "UQ:1234", source: 'altmetric'}},
-                ]
+        const expectedPayload = {
+            total: 2,
+            data: [
+                {
+                    rek_pid: 'UQ:1234',
+                    rek_title: 'Title',
+                    rek_description: 'Description',
+                    rek_formatted_abstract: 'Abstract',
+                    "rek_formatted_title": null,
+                    "calculateOpenAccess": expect.any(Function)
+                },
+                {
+                    rek_pid: 'UQ:1235',
+                    rek_title: 'Title',
+                    rek_description: 'Description',
+                    rek_formatted_abstract: 'Abstract',
+                    "rek_formatted_title": null,
+                    "calculateOpenAccess": expect.any(Function)
+                },
+            ],
+            filters: {
+                metrics: {
+                    altmetric: [
+                        {rek_pid: 'UQ:1234'}
+                    ],
+                    thomson: [
+                        {rek_pid: 'UQ:1235'}
+                    ]
+                }
             }
-        ];
+        };
         publicationEnhancer()(next)({type: 'TRENDING_PUBLICATIONS_LOADED', payload: payload});
 
         expect(next).toBeCalledWith(expect.objectContaining({

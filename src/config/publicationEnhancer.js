@@ -85,14 +85,12 @@ const publicationEnhancer = () => next => action => {
             ...enhancePublication(publication)
         }));
 
-        const payload = {
-            ...action.payload,
-            data: enhancedPublications
-        };
-
         const enhancedAction = {
             type: action.type,
-            payload: action.type === actions.TRENDING_PUBLICATIONS_LOADED ? transformTrendingPublicationsMetricsData(payload) : payload
+            payload: {
+                ...action.payload,
+                data: enhancedPublications
+            }
         };
         return next(enhancedAction);
     } else if (actions.loadPublicationActions.test(action.type)) {
