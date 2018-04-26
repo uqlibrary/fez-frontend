@@ -1,0 +1,66 @@
+@import '../../../../sass/variables';
+
+.trendingPubs {
+  padding: 12px 24px;
+  .trendingPubsSection {
+    margin-bottom: 1.5rem;
+    h2.trendingPubsSource {
+      color: $theme-color !important;
+      font-size: $title-medium;
+      font-weight: $text-weight-normal;
+      margin: 12px 0 0 0 !important;
+      .fez-icon {
+        margin-right: 4px;
+      }
+    }
+    .subTitle {
+      font-size: 14px;
+      padding-left: 28px;
+      padding-top: 4px;
+    }
+    .publicationCitation {
+      .trendingPubsCitation {
+        font-size: $text-body-small;
+        line-height: $text-line-height-small;
+      }
+      .trendingPubsCount {
+        text-align: right;
+        margin-left: 24px !important;
+        font-size: $title-large;
+        line-height: $title-large;
+      }
+      a.trendingPubsCount:hover {
+        text-decoration: none;
+      }
+      .trendingPubsDifference {
+        color: $secondary-color;
+        font-size: $title-small;
+        line-height: $title-small;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+
+
+// Mobile
+@include mobile {
+  h2.trendingPubsSource {
+    font-size: $title-xsmall;
+    font-weight: $text-weight-normal;
+    margin: 6px 0 0 0 !important;
+    .fez-icon {
+      margin-right: 4px !important;
+    }
+  }
+  .publicationCitation {
+    .trendingPubsCount {
+      margin-left: 6px !important;
+      font-size: $title-medium;
+    }
+    .trendingPubsDifference {
+      font-size: $title-xxsmall;
+    }
+  }
+}
