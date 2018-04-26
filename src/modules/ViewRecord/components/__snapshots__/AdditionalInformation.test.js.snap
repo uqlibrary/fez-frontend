@@ -9004,7 +9004,13 @@ exports[`Additional Information Component  should render component with data col
         key="additional-info-Contact name"
       />
       <ViewRecordTableRow
-        data="data@library.uq.edu.au"
+        data={
+          <a
+            href="mailto:data@library.uq.edu.au"
+          >
+            data@library.uq.edu.au
+          </a>
+        }
         heading="Contact email"
         key="additional-info-Contact email"
       />
@@ -10954,7 +10960,13 @@ exports[`Additional Information Component  should render component with data col
         key="additional-info-Contact name"
       />
       <ViewRecordTableRow
-        data="data@library.uq.edu.au"
+        data={
+          <a
+            href="mailto:data@library.uq.edu.au"
+          >
+            data@library.uq.edu.au
+          </a>
+        }
         heading="Contact email"
         key="additional-info-Contact email"
       />
