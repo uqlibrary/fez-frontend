@@ -18,7 +18,13 @@
       padding-left: 28px;
       padding-top: 4px;
     }
+    .publicationList {
+      margin-top: 0 !important;
+    }
     .publicationCitation {
+      .citationCounts {
+        margin-bottom: 4px !important;
+      }
       .trendingPubsCitation {
         font-size: $text-body-small;
         line-height: $text-line-height-small;
