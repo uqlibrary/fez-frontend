@@ -1,9 +1,7 @@
 import * as actions from 'actions/actionTypes';
 import {locale} from 'locale';
 
-export const transformTrendingPublicationsMetricsData = (response) => {
-    const data = [...response.data];
-    const metrics = {...response.filters.metrics};
+export const transformTrendingPublicationsMetricsData = ({data, filters: {metrics}}) => {
     const metricsOrder = Object.keys(metrics).length > 1
         ? Object.keys(metrics).sort((metric1, metric2) => {
             return locale.components.myTrendingPublications.metrics[metric1].order - locale.components.myTrendingPublications.metrics[metric2].order;
