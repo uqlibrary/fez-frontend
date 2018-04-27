@@ -1,5 +1,4 @@
-import {calculateOpenAccess} from './publicationEnhancer'; 
-import publicationEnhancer from './publicationEnhancer';
+import publicationEnhancer, {calculateOpenAccess} from './publicationEnhancer';
 import {LATEST_PUBLICATIONS_LOADED, VIEW_RECORD_LOADED} from "../actions/actionTypes";
 describe('publication enhancer', () => {
 
@@ -43,6 +42,65 @@ describe('publication enhancer', () => {
         expect(next).toBeCalledWith(expect.objectContaining({
             "payload": expectedPayload,
             "type": "LATEST_PUBLICATIONS_LOADED"
+        }));
+    });
+
+    it('should add a method to a list of publication to calculate open access for trending publications', () => {
+        const payload = {
+            total: 2,
+            data: [
+                {rek_pid: 'UQ:1234', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract'},
+                {rek_pid: 'UQ:1235', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract'}
+            ],
+            filters: {
+                metrics: {
+                    altmetric: [
+                        {rek_pid: 'UQ:1234'}
+                    ],
+                    thomson: [
+                        {rek_pid: 'UQ:1235'}
+                    ]
+                }
+            }
+        };
+
+        const next = jest.fn();
+        const expectedPayload = {
+            total: 2,
+            data: [
+                {
+                    rek_pid: 'UQ:1234',
+                    rek_title: 'Title',
+                    rek_description: 'Description',
+                    rek_formatted_abstract: 'Abstract',
+                    "rek_formatted_title": null,
+                    "calculateOpenAccess": expect.any(Function)
+                },
+                {
+                    rek_pid: 'UQ:1235',
+                    rek_title: 'Title',
+                    rek_description: 'Description',
+                    rek_formatted_abstract: 'Abstract',
+                    "rek_formatted_title": null,
+                    "calculateOpenAccess": expect.any(Function)
+                },
+            ],
+            filters: {
+                metrics: {
+                    altmetric: [
+                        {rek_pid: 'UQ:1234'}
+                    ],
+                    thomson: [
+                        {rek_pid: 'UQ:1235'}
+                    ]
+                }
+            }
+        };
+        publicationEnhancer()(next)({type: 'TRENDING_PUBLICATIONS_LOADED', payload: payload});
+
+        expect(next).toBeCalledWith(expect.objectContaining({
+            "payload": expectedPayload,
+            "type": "TRENDING_PUBLICATIONS_LOADED"
         }));
     });
 
