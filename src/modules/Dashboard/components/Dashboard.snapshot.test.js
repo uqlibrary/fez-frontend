@@ -15,8 +15,7 @@ function setup(testProps, isShallow = true) {
         actions: {
             countPossiblyYourPublications: jest.fn(),
             loadAuthorPublicationsStats: jest.fn(),
-            searchLatestPublications: jest.fn(),
-            searchTrendingPublications: jest.fn(),
+            searchLatestPublications: jest.fn()
         },
         history: {},
         ...testProps,

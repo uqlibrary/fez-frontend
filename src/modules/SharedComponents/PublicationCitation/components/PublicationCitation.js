@@ -44,7 +44,8 @@ export default class PublicationCitation extends PureComponent {
         className: PropTypes.string,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
-        hideTitle: PropTypes.bool
+        hideTitle: PropTypes.bool,
+        showMetrics: PropTypes.bool
     };
 
     static defaultProps = {
@@ -158,6 +159,8 @@ export default class PublicationCitation extends PureComponent {
     }
 
     render() {
+        const txt = locale.components.publicationCitation;
+        const recordValue = this.props.showMetrics && this.props.publication.metricData;
         return (
             <div className={`publicationCitation ${this.props.className}`}>
                 <div className="columns is-gapless is-mobile">
@@ -176,6 +179,24 @@ export default class PublicationCitation extends PureComponent {
                         {/* display publication source (eg from espace/pubmed/crossref/etc */}
                         {this.props.showSources && this.props.publication.sources && this.renderSources()}
                     </div>
+                    {
+                        this.props.showMetrics &&
+                        <div className="column is-narrow">
+                            <ExternalLink
+                                className="trendingPubsCount"
+                                href={recordValue.citation_url}
+                                title={txt.linkWillOpenInNewWindow.replace('[destination]', txt.myTrendingPublications.sourceTitles[recordValue.source])}
+                                aria-label={txt.linkWillOpenInNewWindow.replace('[destination]', txt.myTrendingPublications.sourceTitles[recordValue.source])}
+                                openInNewIcon={false}
+                            >
+                                {recordValue.count}
+                            </ExternalLink>
+                            <span
+                                className="trendingPubsDifference"
+                                title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}>+{Math.round(recordValue.difference)}
+                            </span>
+                        </div>
+                    }
                 </div>
                 {
                     (this.props.showDefaultActions || this.props.customActions) &&
