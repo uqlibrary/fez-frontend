@@ -3977,6 +3977,15 @@ export const record = {
         }],
     "fez_record_search_key_contributor": [],
     "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_contact_details_email": [
+        {
+            "rek_contact_details_email_id": 4672,
+            "rek_contact_details_email_pid": "UQ:415301",
+            "rek_contact_details_email_xsdmf_id": null,
+            "rek_contact_details_email_order": 1,
+            "rek_contact_details_email": "test@uq.edu.au"
+        }
+    ],
     "fez_record_search_key_corresponding_country": [],
     "fez_record_search_key_corresponding_email": [],
     "fez_record_search_key_corresponding_name": [],
@@ -4657,7 +4666,7 @@ export const record = {
         "rek_volume_number_xsdmf_id": 6379,
         "rek_volume_number": "25"
     },
-    "rek_display_type_lookup": "Audio Document",
+    "rek_display_type_lookup": "Data Collection",
     "fez_record_search_key_link": [
         {
             "rek_link_id": 3240198,
