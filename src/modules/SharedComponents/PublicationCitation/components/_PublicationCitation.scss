@@ -1,0 +1,132 @@
+@import '../../../../sass/variables';
+
+.publicationCitation {
+  margin-bottom: 12px;
+  padding: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  word-break: break-word;
+
+  &:first-child {
+    padding-top: 24px;
+  }
+
+  & > div.columns:nth-child(1) {
+    margin-bottom: 0px !important;
+  }
+
+  h3.publicationTitle {
+    margin: 0 0 6px 0 !important;
+    font-size: $title-small !important;
+    line-height: 24px;
+    font-weight: $text-weight-normal !important;
+  }
+
+  .publicationSources, .citationSources {
+    font-size: $text-body-small;
+    margin-right: 3px;
+
+    .publicationSource {
+      margin-right: 6px;
+    }
+  }
+
+  .citationContent {
+    font-size: $text-body-normal;
+    line-height: $text-line-height-normal;
+    color: rgba($text-color, 0.8);
+    margin-bottom: 12px;
+    @include mobile {
+      font-size: $text-body-small !important;
+    }
+
+    .citationJournalName {
+      font-style: italic;
+    }
+
+    .citationTitle {
+      font-style: italic;
+    }
+
+    .citationNewspaper {
+      font-style: italic;
+    }
+
+    .citationVolumeNumber {
+      font-style: italic;
+    }
+
+    .citationIcon {
+      height: $text-body-small !important;
+      width: $text-body-small !important;
+      font-size: $text-body-small !important;
+    }
+  }
+
+  .citationCounts {
+    margin-top: 10px;
+    display: inline-flex !important;
+    .oaIcon {
+      margin-right: 6px !important;
+    }
+    .citationCount {
+      display: inline-block !important;
+      margin: 0 6px 0 0;
+      .fez-icon {
+        margin-right: 3px;
+      }
+
+      .citationCountIcon {
+        margin: 3px 3px -3px 0;
+        width: 16px !important;
+        height: 16px !important;
+        color: $text-color !important;
+        &.material-icons {
+          margin: 1px 3px 0 0 !important;
+          font-size: $text-body-small !important;
+          height: $text-body-normal !important;
+          width: $text-body-normal !important;
+          line-height: 12px !important;
+        }
+      }
+
+      .citationCountNumber {
+        font-weight: $text-weight-bold;
+      }
+    }
+  }
+
+  .publicationActions {
+    margin: 12px 0 !important;
+  }
+
+  a.citationCountLink {
+    color: $accent-color !important;
+    font-size: $text-body-small !important;
+    font-weight: $text-weight-light !important;
+    .citationCountIcon.material-icons {
+      width: 12px;
+      height: 12px;
+      vertical-align: top;
+      color: $accent-color !important;
+    }
+  }
+}
+
+// Mobile
+@include mobile {
+  .publicationCitation {
+    padding: 0 0 12px 0 !important;
+    h3.publicationTitle {
+      font-size: $title-xsmall !important;
+      font-weight: $text-weight-normal !important;
+      line-height: $text-line-height-large !important;
+      margin: 12px 0 6px 0 !important;
+    }
+
+    .publicationActions {
+      margin: 12px;
+      text-align: right;
+    }
+  }
+}

@@ -12,6 +12,9 @@
   &.wos::before, &.researcher::before {
     content: url(../../src/images/thomson_icon.svg);
   }
+  &.thomson::before, &.researcher::before {
+       content: url(../../src/images/thomson_icon.svg);
+  }
   &.orcid::before {
     content: url(../../src/images/orcid_icon.svg);
   }
@@ -74,6 +77,10 @@
   &.xlarge {
     width: 18px;
     height: 18px;
+  }
+  &.xxlarge {
+    width: 24px;
+    height: 24px;
   }
   &.dashboard {
     border-radius: 50% !important;
