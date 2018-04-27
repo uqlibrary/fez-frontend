@@ -3,7 +3,7 @@ import React from 'react';
 import Links from './Links';
 import {recordLinks} from 'mock/data/testing/records';
 import {openAccessConfig} from 'config';
-import {calculateOpenAccess} from 'config/publicationEnhancer';
+import {calculateOpenAccess} from 'middleware/publicationEnhancer';
 
 function setup(testProps, isShallow = true){
     const props = {

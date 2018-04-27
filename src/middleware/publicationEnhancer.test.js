@@ -1,5 +1,4 @@
-import {calculateOpenAccess} from './publicationEnhancer'; 
-import publicationEnhancer from './publicationEnhancer';
+import publicationEnhancer, {calculateOpenAccess} from './publicationEnhancer';
 import {LATEST_PUBLICATIONS_LOADED, VIEW_RECORD_LOADED} from "../actions/actionTypes";
 describe('publication enhancer', () => {
 
