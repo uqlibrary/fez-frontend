@@ -22,13 +22,7 @@
       margin-top: 0 !important;
     }
     .publicationCitation {
-      .citationCounts {
-        margin-bottom: 4px !important;
-      }
-      .trendingPubsCitation {
-        font-size: $text-body-small;
-        line-height: $text-line-height-small;
-      }
+      padding-bottom: 12px !important;
       .trendingPubsCount {
         text-align: right;
         margin-left: 24px !important;
@@ -52,21 +46,26 @@
 
 // Mobile
 @include mobile {
-  h2.trendingPubsSource {
-    font-size: $title-xsmall;
-    font-weight: $text-weight-normal;
-    margin: 6px 0 0 0 !important;
-    .fez-icon {
-      margin-right: 4px !important;
+  .trendingPubsSection {
+    h2.trendingPubsSource {
+      font-size: $title-xsmall;
+      font-weight: $text-weight-normal;
+      margin: 6px 0 0 0 !important;
+      .fez-icon {
+        margin-right: 4px !important;
+      }
     }
-  }
-  .publicationCitation {
-    .trendingPubsCount {
-      margin-left: 6px !important;
-      font-size: $title-medium;
-    }
-    .trendingPubsDifference {
-      font-size: $title-xxsmall;
+    .publicationCitation {
+      div.columns > div.column:nth-child(2) {
+        padding-top: 6px !important;
+      }
+      .trendingPubsCount {
+        margin-left: 6px !important;
+        font-size: $title-medium !important;
+      }
+      .trendingPubsDifference {
+        font-size: $title-xxsmall !important;
+      }
     }
   }
 }
