@@ -93,11 +93,29 @@
         max-height: 24px;
       }
     }
+    .fileInfo {
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      overflow-wrap: break-word !important;
+      word-break: break-all !important;
+      white-space: nowrap !important;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      a {
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        overflow-wrap: break-word !important;
+        word-break: break-all !important;
+        white-space: nowrap !important;
+      }
+    }
     // columns widths
     .filetype {
       width: 24px !important;
     }
     .filename {
+      line-height: 48px !important;
       @include desktop {
         width: 45% !important;
       }
@@ -134,6 +152,11 @@
     }
     .fileDetails {
       width: 100%;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      overflow-wrap: break-word !important;
+      word-break: break-all !important;
+      white-space: nowrap !important;
       .fileIcon {
         img, svg {
           color: lighten($secondary-color, 25%) !important;
@@ -141,24 +164,13 @@
         }
       }
       .fileInfo {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        //max-width: 200px;
-      }
-      .fileName {
-        line-height: 47px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        .fileName {
+        }
       }
       .audioWrapper {
         overflow: hidden;
         .audioButton {
           transform: scale(0.75);
-          &.play {
-            margin-right: -18px !important;
-          }
           svg {
             //width: 12px !important;
             //height: 12px !important;
@@ -188,6 +200,9 @@
 
   // Links
   .links {
+    .externalLink {
+      margin-top: 3px;
+    }
     .link {
       @include desktop {
         width: 47% !important;
@@ -282,11 +297,21 @@
     margin-bottom: 12px !important;
   }
   .citationCounts {
-    margin-bottom: 6px !important;
+    &>div:nth-of-type(2) {
+      margin-top: 1px !important;
+      @include mobile {
+        margin-top: 6px !important;
+      }
+    }
+    .externalLink {
+      line-height: 1.25em !important;
+      margin: -0.15em 0 !important;
+    }
     .citationCount {
       word-break: normal !important;
       white-space: nowrap !important;
-      display: inline-block !important;
+      display: inline-flex !important;
+      align-items: baseline !important;
     }
     .citationOaIcon {
       width: 24px !important;
@@ -295,6 +320,8 @@
       }
     }
     .citationLink {
+      line-height: 1.2em;
+      margin: -0.1em 0;
       @include tablet {
         margin-left: 12px !important;
       }
@@ -312,9 +339,6 @@
     }
   }
   .shareThis {
-    @include tablet {
-      margin-top: -26px !important;
-    }
     @include mobile {
       margin-left: -3px;
     }

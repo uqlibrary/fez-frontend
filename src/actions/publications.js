@@ -62,21 +62,14 @@ export function searchAuthorPublications({page = 1, pageSize = 20, sortBy = 'pub
  * @param {string} author user name
  * @returns {action}
  */
-export function searchTrendingPublications(userName) {
+export function searchTrendingPublications() {
     return dispatch => {
         dispatch({type: actions.TRENDING_PUBLICATIONS_LOADING});
-        return get(routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API({userId: userName}))
+        return get(routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API())
             .then(response => {
-                // TODO: this response will change when this api endpoint will be moved to fez
                 dispatch({
                     type: actions.TRENDING_PUBLICATIONS_LOADED,
-                    payload: Object.keys(response)
-                        .filter(item => {
-                            return item !== 'author_details';
-                        })
-                        .map(item => {
-                            return {key: item, values: response[item]};
-                        })
+                    payload: response
                 });
             })
             .catch(error => {

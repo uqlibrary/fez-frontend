@@ -2488,12 +2488,16 @@ exports[`Additional Information Component  should render component with audio do
                                             </a>
                                             <div>
                                               <ExternalLink
-                                                className="fez-icon license cc-by-nc-nd"
+                                                className=""
                                                 href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
-                                                openInNewIcon={true}
+                                                openInNewIcon={false}
                                                 rel="noopener noreferrer"
                                                 target="_blank"
-                                              />
+                                              >
+                                                <div
+                                                  className="fez-icon license cc-by-nc-nd"
+                                                />
+                                              </ExternalLink>
                                             </div>
                                           </span>
                                         }
@@ -2606,52 +2610,23 @@ exports[`Additional Information Component  should render component with audio do
                                                   </a>
                                                   <div>
                                                     <ExternalLink
-                                                      className="fez-icon license cc-by-nc-nd"
+                                                      className=""
                                                       href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
-                                                      openInNewIcon={true}
+                                                      openInNewIcon={false}
                                                       rel="noopener noreferrer"
                                                       target="_blank"
                                                     >
                                                       <a
-                                                        className="fez-icon license cc-by-nc-nd"
+                                                        className=" externalLinkfalse"
                                                         href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
                                                         rel="noopener noreferrer"
                                                         tabIndex="0"
                                                         target="_blank"
+                                                        title={false}
                                                       >
-                                                        <ActionOpenInNew
-                                                          className="openExternalUrlIcon"
-                                                        >
-                                                          <SvgIcon
-                                                            className="openExternalUrlIcon"
-                                                            onMouseEnter={[Function]}
-                                                            onMouseLeave={[Function]}
-                                                            viewBox="0 0 24 24"
-                                                          >
-                                                            <svg
-                                                              className="openExternalUrlIcon"
-                                                              onMouseEnter={[Function]}
-                                                              onMouseLeave={[Function]}
-                                                              style={
-                                                                Object {
-                                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                                  "display": "inline-block",
-                                                                  "fill": "currentColor",
-                                                                  "height": 24,
-                                                                  "muiPrepared": true,
-                                                                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                                  "userSelect": "none",
-                                                                  "width": 24,
-                                                                }
-                                                              }
-                                                              viewBox="0 0 24 24"
-                                                            >
-                                                              <path
-                                                                d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                              />
-                                                            </svg>
-                                                          </SvgIcon>
-                                                        </ActionOpenInNew>
+                                                        <div
+                                                          className="fez-icon license cc-by-nc-nd"
+                                                        />
                                                       </a>
                                                     </ExternalLink>
                                                   </div>
@@ -9030,11 +9005,11 @@ exports[`Additional Information Component  should render component with data col
       />
       <ViewRecordTableRow
         data={
-          <ul>
-            <li>
-              g.tyson@uq.edu.au
-            </li>
-          </ul>
+          <a
+            href="mailto:data@library.uq.edu.au"
+          >
+            data@library.uq.edu.au
+          </a>
         }
         heading="Contact email"
         key="additional-info-Contact email"
@@ -9874,7 +9849,7 @@ exports[`Additional Information Component  should render component with data col
             </a>
             <div>
               <ExternalLink
-                className="externalLink"
+                className=""
                 href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                 openInNewIcon={true}
                 rel="noopener noreferrer"
@@ -10986,11 +10961,11 @@ exports[`Additional Information Component  should render component with data col
       />
       <ViewRecordTableRow
         data={
-          <ul>
-            <li>
-              c.roelfsema@uq.edu.au
-            </li>
-          </ul>
+          <a
+            href="mailto:data@library.uq.edu.au"
+          >
+            data@library.uq.edu.au
+          </a>
         }
         heading="Contact email"
         key="additional-info-Contact email"
@@ -11565,12 +11540,16 @@ exports[`Additional Information Component  should render component with data col
             </a>
             <div>
               <ExternalLink
-                className="fez-icon license cc-by"
+                className=""
                 href="http://creativecommons.org/licenses/by/3.0/deed.en_US"
-                openInNewIcon={true}
+                openInNewIcon={false}
                 rel="noopener noreferrer"
                 target="_blank"
-              />
+              >
+                <div
+                  className="fez-icon license cc-by"
+                />
+              </ExternalLink>
             </div>
           </span>
         }
@@ -15135,6 +15114,17 @@ exports[`Additional Information Component  should render component with journal 
                 "dsi_size": 97345,
                 "dsi_state": "D",
               },
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "staffdata.pdf",
+                "dsi_embargo_date": null,
+                "dsi_label": "staffdata.pdf",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:792099",
+                "dsi_size": 97345,
+                "dsi_state": "A",
+              },
             ],
             "fez_record_search_key_access_conditions": null,
             "fez_record_search_key_acknowledgements": null,
@@ -16415,6 +16405,17 @@ exports[`Additional Information Component  should render component with journal 
                                                     "dsi_size": 97345,
                                                     "dsi_state": "D",
                                                   },
+                                                  Object {
+                                                    "dsi_copyright": null,
+                                                    "dsi_dsid": "staffdata.pdf",
+                                                    "dsi_embargo_date": null,
+                                                    "dsi_label": "staffdata.pdf",
+                                                    "dsi_mimetype": "image/jpeg",
+                                                    "dsi_open_access": null,
+                                                    "dsi_pid": "UQ:792099",
+                                                    "dsi_size": 97345,
+                                                    "dsi_state": "A",
+                                                  },
                                                 ],
                                                 "fez_record_search_key_access_conditions": null,
                                                 "fez_record_search_key_acknowledgements": null,
@@ -17590,6 +17591,17 @@ exports[`Additional Information Component  should render component with journal 
                                                           "dsi_pid": "UQ:792099",
                                                           "dsi_size": 97345,
                                                           "dsi_state": "D",
+                                                        },
+                                                        Object {
+                                                          "dsi_copyright": null,
+                                                          "dsi_dsid": "staffdata.pdf",
+                                                          "dsi_embargo_date": null,
+                                                          "dsi_label": "staffdata.pdf",
+                                                          "dsi_mimetype": "image/jpeg",
+                                                          "dsi_open_access": null,
+                                                          "dsi_pid": "UQ:792099",
+                                                          "dsi_size": 97345,
+                                                          "dsi_state": "A",
                                                         },
                                                       ],
                                                       "fez_record_search_key_access_conditions": null,
@@ -18960,6 +18972,17 @@ exports[`Additional Information Component  should render component with journal 
                                                     "dsi_size": 97345,
                                                     "dsi_state": "D",
                                                   },
+                                                  Object {
+                                                    "dsi_copyright": null,
+                                                    "dsi_dsid": "staffdata.pdf",
+                                                    "dsi_embargo_date": null,
+                                                    "dsi_label": "staffdata.pdf",
+                                                    "dsi_mimetype": "image/jpeg",
+                                                    "dsi_open_access": null,
+                                                    "dsi_pid": "UQ:792099",
+                                                    "dsi_size": 97345,
+                                                    "dsi_state": "A",
+                                                  },
                                                 ],
                                                 "fez_record_search_key_access_conditions": null,
                                                 "fez_record_search_key_acknowledgements": null,
@@ -20116,6 +20139,17 @@ exports[`Additional Information Component  should render component with journal 
                                                           "dsi_size": 97345,
                                                           "dsi_state": "D",
                                                         },
+                                                        Object {
+                                                          "dsi_copyright": null,
+                                                          "dsi_dsid": "staffdata.pdf",
+                                                          "dsi_embargo_date": null,
+                                                          "dsi_label": "staffdata.pdf",
+                                                          "dsi_mimetype": "image/jpeg",
+                                                          "dsi_open_access": null,
+                                                          "dsi_pid": "UQ:792099",
+                                                          "dsi_size": 97345,
+                                                          "dsi_state": "A",
+                                                        },
                                                       ],
                                                       "fez_record_search_key_access_conditions": null,
                                                       "fez_record_search_key_acknowledgements": null,
@@ -21129,7 +21163,7 @@ exports[`Additional Information Component  should render component with journal 
                                                        
                                                       <ExternalLink
                                                         aria-label="View publisher's open access policy in an new window"
-                                                        className="externalLink"
+                                                        className=""
                                                         href="http://www.sherpa.ac.uk/romeo/search.php?issn=1477-9137"
                                                         openInNewIcon={true}
                                                         rel="noopener noreferrer"
@@ -21137,50 +21171,18 @@ exports[`Additional Information Component  should render component with journal 
                                                       >
                                                         <a
                                                           aria-label="View publisher's open access policy in an new window"
-                                                          className="externalLink"
+                                                          className=" externalLink showIcon"
                                                           href="http://www.sherpa.ac.uk/romeo/search.php?issn=1477-9137"
                                                           rel="noopener noreferrer"
                                                           tabIndex="0"
                                                           target="_blank"
+                                                          title="Link to http://www.sherpa.ac.uk/romeo/search.php?issn=1477-9137 will open in a new window."
                                                         >
                                                           <span
                                                             className="sherpaRomeoGreen"
                                                           >
                                                             Check publisher's open access policy
                                                           </span>
-                                                          <ActionOpenInNew
-                                                            className="openExternalUrlIcon"
-                                                          >
-                                                            <SvgIcon
-                                                              className="openExternalUrlIcon"
-                                                              onMouseEnter={[Function]}
-                                                              onMouseLeave={[Function]}
-                                                              viewBox="0 0 24 24"
-                                                            >
-                                                              <svg
-                                                                className="openExternalUrlIcon"
-                                                                onMouseEnter={[Function]}
-                                                                onMouseLeave={[Function]}
-                                                                style={
-                                                                  Object {
-                                                                    "color": "rgba(0, 0, 0, 0.87)",
-                                                                    "display": "inline-block",
-                                                                    "fill": "currentColor",
-                                                                    "height": 24,
-                                                                    "muiPrepared": true,
-                                                                    "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                                    "userSelect": "none",
-                                                                    "width": 24,
-                                                                  }
-                                                                }
-                                                                viewBox="0 0 24 24"
-                                                              >
-                                                                <path
-                                                                  d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                                />
-                                                              </svg>
-                                                            </SvgIcon>
-                                                          </ActionOpenInNew>
                                                         </a>
                                                       </ExternalLink>
                                                     </span>
@@ -21683,73 +21685,27 @@ exports[`Additional Information Component  should render component with journal 
                                                   doi="10.1242/jcs.196659"
                                                   key="additional-information-doi"
                                                 >
-                                                  <span
-                                                    className="citationDOI"
+                                                  <ExternalLink
+                                                    aria-label="Open this DOI in an new window"
+                                                    className="citationDoiLink"
+                                                    href="https://doi.org/10.1242/jcs.196659"
+                                                    openInNewIcon={true}
+                                                    rel="noopener noreferrer"
+                                                    target="_blank"
+                                                    title="Open this DOI in an new window"
                                                   >
-                                                    <ExternalLink
+                                                    <a
                                                       aria-label="Open this DOI in an new window"
-                                                      className="citationDoiLink"
+                                                      className="citationDoiLink externalLink showIcon"
                                                       href="https://doi.org/10.1242/jcs.196659"
-                                                      openInNewIcon={true}
                                                       rel="noopener noreferrer"
+                                                      tabIndex="0"
                                                       target="_blank"
                                                       title="Open this DOI in an new window"
                                                     >
-                                                      <a
-                                                        aria-label="Open this DOI in an new window"
-                                                        className="citationDoiLink"
-                                                        href="https://doi.org/10.1242/jcs.196659"
-                                                        rel="noopener noreferrer"
-                                                        tabIndex="0"
-                                                        target="_blank"
-                                                        title="Open this DOI in an new window"
-                                                      >
-                                                        <span
-                                                          className="citationLabel"
-                                                        >
-                                                          https://doi.org/
-                                                        </span>
-                                                        <span
-                                                          className="citationValue"
-                                                        >
-                                                          10.1242/jcs.196659
-                                                        </span>
-                                                        <ActionOpenInNew
-                                                          className="openExternalUrlIcon"
-                                                        >
-                                                          <SvgIcon
-                                                            className="openExternalUrlIcon"
-                                                            onMouseEnter={[Function]}
-                                                            onMouseLeave={[Function]}
-                                                            viewBox="0 0 24 24"
-                                                          >
-                                                            <svg
-                                                              className="openExternalUrlIcon"
-                                                              onMouseEnter={[Function]}
-                                                              onMouseLeave={[Function]}
-                                                              style={
-                                                                Object {
-                                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                                  "display": "inline-block",
-                                                                  "fill": "currentColor",
-                                                                  "height": 24,
-                                                                  "muiPrepared": true,
-                                                                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                                                  "userSelect": "none",
-                                                                  "width": 24,
-                                                                }
-                                                              }
-                                                              viewBox="0 0 24 24"
-                                                            >
-                                                              <path
-                                                                d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                                              />
-                                                            </svg>
-                                                          </SvgIcon>
-                                                        </ActionOpenInNew>
-                                                      </a>
-                                                    </ExternalLink>
-                                                  </span>
+                                                      https://doi.org/10.1242/jcs.196659
+                                                    </a>
+                                                  </ExternalLink>
                                                 </DoiCitationView>
                                               </td>
                                             </TableRowColumn>
@@ -24338,6 +24294,17 @@ exports[`Additional Information Component  should render component with newspape
                     "dsi_size": 97345,
                     "dsi_state": "D",
                   },
+                  Object {
+                    "dsi_copyright": null,
+                    "dsi_dsid": "staffdata.pdf",
+                    "dsi_embargo_date": null,
+                    "dsi_label": "staffdata.pdf",
+                    "dsi_mimetype": "image/jpeg",
+                    "dsi_open_access": null,
+                    "dsi_pid": "UQ:792099",
+                    "dsi_size": 97345,
+                    "dsi_state": "A",
+                  },
                 ],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
@@ -25416,6 +25383,17 @@ exports[`Additional Information Component  should render component with newspape
                     "dsi_pid": "UQ:792099",
                     "dsi_size": 97345,
                     "dsi_state": "D",
+                  },
+                  Object {
+                    "dsi_copyright": null,
+                    "dsi_dsid": "staffdata.pdf",
+                    "dsi_embargo_date": null,
+                    "dsi_label": "staffdata.pdf",
+                    "dsi_mimetype": "image/jpeg",
+                    "dsi_open_access": null,
+                    "dsi_pid": "UQ:792099",
+                    "dsi_size": 97345,
+                    "dsi_state": "A",
                   },
                 ],
                 "fez_record_search_key_access_conditions": null,

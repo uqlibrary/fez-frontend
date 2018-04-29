@@ -3977,6 +3977,15 @@ export const record = {
         }],
     "fez_record_search_key_contributor": [],
     "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_contact_details_email": [
+        {
+            "rek_contact_details_email_id": 4672,
+            "rek_contact_details_email_pid": "UQ:415301",
+            "rek_contact_details_email_xsdmf_id": null,
+            "rek_contact_details_email_order": 1,
+            "rek_contact_details_email": "test@uq.edu.au"
+        }
+    ],
     "fez_record_search_key_corresponding_country": [],
     "fez_record_search_key_corresponding_email": [],
     "fez_record_search_key_corresponding_name": [],
@@ -4266,7 +4275,7 @@ export const record = {
             "rek_grant_id_pid": "UQ:396321",
             "rek_grant_id_xsdmf_id": 0,
             "rek_grant_id_order": 6,
-            "rek_grant_id": "ECF-10-05"
+            "rek_grant_id": " "
         }
     ],
     "fez_record_search_key_grant_text": [
@@ -4657,7 +4666,7 @@ export const record = {
         "rek_volume_number_xsdmf_id": 6379,
         "rek_volume_number": "25"
     },
-    "rek_display_type_lookup": "Audio Document",
+    "rek_display_type_lookup": "Data Collection",
     "fez_record_search_key_link": [
         {
             "rek_link_id": 3240198,
@@ -4702,7 +4711,7 @@ export const myRecordsList = {
     "from": 1,
     "to": 20,
     "data": [{
-        "rek_pid": "UQ:678728",
+        "rek_pid": "UQ:67abc8",
         "rek_title_xsdmf_id": 10588,
         "rek_title": "ENA\/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network",
         "rek_description_xsdmf_id": 11441,
@@ -4756,7 +4765,8 @@ export const myRecordsList = {
         "fez_record_search_key_article_number": null,
         "fez_record_search_key_assigned_group_id": [],
         "fez_record_search_key_assigned_user_id": [],
-        "fez_record_search_key_author": [{
+        "fez_record_search_key_author": [
+            {
             "rek_author_id": 30322336,
             "rek_author_pid": "UQ:678728",
             "rek_author_xsdmf_id": null,
@@ -4933,7 +4943,7 @@ export const myRecordsList = {
             "rek_author_id_id": 29597409,
             "rek_author_id_pid": "UQ:678728",
             "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 84876,
+            "rek_author_id": 410,
             "rek_author_id_order": 1,
             "rek_author_id_lookup": "Vanesa Tomatis"
         }, {

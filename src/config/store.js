@@ -5,7 +5,7 @@ import {createBrowserHistory, createHashHistory} from 'history';
 import rootReducer from '../reducer';
 import Immutable from 'immutable';
 import thunk from 'redux-thunk';
-import publicationEnhancer from './publicationEnhancer';
+import {publicationEnhancer, trendingPublicationsMiddleware} from '../middleware';
 
 import Raven from 'raven-js';
 
@@ -25,7 +25,8 @@ const getStore = () => {
             applyMiddleware(
                 routerMiddleware(history),
                 thunk,
-                publicationEnhancer
+                publicationEnhancer,
+                trendingPublicationsMiddleware
             ),
         ),
     );

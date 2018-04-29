@@ -60,6 +60,9 @@
   .researcherIds {
     margin: 24px 0 -12px 24px !important;
     height: 60px !important;
+    .researcherIDlink {
+      overflow: visible !important;
+    }
     .researchIdAvatar {
       background-color: transparent !important;
       width: 52px;
@@ -79,6 +82,7 @@
       margin-top: -3px;
       zoom: 1.2;
       -moz-transform: scale(1.2);
+      overflow: visible !important;
       // Firefox doesnt consider the zoom into the margin
       @-moz-document url-prefix() {
         margin: 0 12px 0 0;
@@ -87,8 +91,7 @@
     a.orcidLink {
       color: rgba($text-color-reverse, 0.8);
       font-size: $text-body-small;
-      line-height: 3;
-      margin: 0;
+      line-height: 4;
       &:hover {
         color: rgba($text-color-reverse, 1);
       }
@@ -129,52 +132,6 @@
   }
 }
 
-// My Trending Pubs
-h2.trendingPubsSource {
-  color: $theme-color !important;
-  font-size: $title-medium;
-  font-weight: $text-weight-normal;
-  margin: 12px 0 0 0 !important;
-}
-.publicationCitation {
-  border-bottom: 1px solid rgba($text-color, 0.15);
-  margin-bottom: 12px;
-  padding-bottom: 12px;
-
-  h3.publicationTitle {
-    margin: 0 0 6px 0 !important;
-    font-size: $title-small !important;
-    line-height: 24px;
-    font-weight: $text-weight-normal !important;
-  }
-  .trendingPubsCitation {
-    font-size: $text-body-small;
-    line-height: $text-line-height-small;
-  }
-  a.citationCountLink {
-    color: $accent-color !important;
-    font-size: $text-body-small !important;
-    font-weight: $text-weight-light !important;
-    .citationCountIcon.material-icons {
-      width: 12px;
-      height: 12px;
-      vertical-align: top;
-      color: $accent-color !important;
-    }
-  }
-  .trendingPubsCount {
-    text-align: right;
-    margin-left: 24px !important;
-    font-size: $title-large;
-    line-height: $title-large;
-  }
-  .trendingPubsDifference {
-    color: $secondary-color;
-    font-size: $title-small;
-    line-height: $title-small;
-    vertical-align: top;
-  }
-}
 // Fix for Dashboard alerts so they dont space down because of layout-fill and layout-card
 .dashAlert {
   &.layout-fill, .layout-card{
@@ -196,30 +153,5 @@ h2.trendingPubsSource {
   button.publicationTabs > div > div {
     white-space: normal;
     text-overflow: ellipsis;
-  }
-
-  h2.trendingPubsSource {
-    font-size: $title-xsmall;
-    font-weight: $text-weight-normal;
-    margin: 6px 0 0 0 !important;
-  }
-
-  .publicationCitation {
-    padding: 0 0 12px 0 !important;
-
-    // My Trending Pubs
-    h3.publicationTitle {
-      font-size: $title-xsmall !important;
-      font-weight: $text-weight-normal !important;
-      line-height: $text-line-height-large !important;
-      margin: 12px 0 6px 0 !important;
-    }
-    .trendingPubsCount {
-      margin-left: 6px !important;
-      font-size: $title-medium;
-    }
-    .trendingPubsDifference {
-      font-size: $title-xxsmall;
-    }
   }
 }
