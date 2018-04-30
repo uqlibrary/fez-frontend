@@ -103,14 +103,7 @@ export default {
         },
         unclaimPublicationForm: {
             title: 'Remove this record from my profile',
-            description: (<div>
-                Some explanation about what this means etc, lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Morbi at neque eros. In et ligula quam.
-                Etiam porttitor gravida tortor, eget ultrices duidolor sit amet, consectetur adipiscing elit. Morbi
-                at neque eros. In et ligula quam. Etiam porttitor gravida tortor,
-                eget ultrices dui onsectetur adipiscing elit. Morbi at neque eros. In et ligula quam. Etiam
-                porttitor gravida tortor, eget ultrices dui scelerisque a.
-            </div>),
+            description: '',
             // help: {
             //     title: 'Unclaim a record',
             //     text: 'Enter the text that will help people here',
