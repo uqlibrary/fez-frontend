@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentLoader snapshots tests renders loader 1`] = `
+<Card
+  className="layout-card"
+  expandable={false}
+  expanded={null}
+  initiallyExpanded={false}
+>
+  <CardText
+    className="column layout-fill align-center justify-center"
+  >
+    <InlineLoader
+      message="Waiting to load..."
+    />
+  </CardText>
+</Card>
+`;

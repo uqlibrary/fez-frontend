@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InlineLoader snapshots tests renders loader 1`] = `
+<div
+  className="column align-center"
+>
+  <br />
+  <br />
+  <CircularProgress
+    max={100}
+    min={0}
+    mode="indeterminate"
+    size={60}
+    thickness={8}
+    value={0}
+  />
+   
+  <br />
+  <br />
+  <span
+    className="cardTitle"
+  >
+    Waiting to load...
+  </span>
+   
+  <br />
+  <br />
+</div>
+`;

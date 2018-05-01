@@ -2,7 +2,7 @@
 $tablet: 720px;
 $desktop: 1024px;
 // Import the main toolbox styles
-@import '~uqlibrary-react-toolbox/sass/index';
+@import './toolbox/index';
 // Frontend specific variables override toolbox defaults if defined
 @import "./variables";
 // Various fixes and hacks to make MUI work

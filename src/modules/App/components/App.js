@@ -6,12 +6,12 @@ import {locale} from 'locale';
 
 // application components
 import AppBar from 'material-ui/AppBar';
-import {AppLoader} from 'uqlibrary-react-toolbox/build/Loaders';
-import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
-import {MenuDrawer} from 'uqlibrary-react-toolbox/build/MenuDrawer';
-import {HelpDrawer} from 'uqlibrary-react-toolbox/build/HelpDrawer';
-import {AuthButton} from 'uqlibrary-react-toolbox/build/AuthButton';
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+import {AppLoader} from 'modules/SharedComponents/Toolbox/Loaders';
+import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
+import {MenuDrawer} from 'modules/SharedComponents/Toolbox/MenuDrawer';
+import {HelpDrawer} from 'modules/SharedComponents/Toolbox/HelpDrawer';
+import {AuthButton} from 'modules/SharedComponents/Toolbox/AuthButton';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import AppAlertContainer from '../containers/AppAlert';
 import {Meta} from 'modules/SharedComponents/Meta';
 import {OfflineSnackbar} from 'modules/SharedComponents/OfflineSnackbar';

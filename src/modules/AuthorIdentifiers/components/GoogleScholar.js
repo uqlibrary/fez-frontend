@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
-import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 
 import {locale} from 'locale';
 import {routes, validation} from 'config';

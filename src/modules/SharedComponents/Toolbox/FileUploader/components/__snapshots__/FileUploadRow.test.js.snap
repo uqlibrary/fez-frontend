@@ -1,0 +1,414 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileUploadRow renders for edge browser if file is being uploaded but no progress data 1`] = `
+<div
+  className="columns is-gapless is-multiline uploadedFileRow datalist datalist-row is-clearfix"
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+        "confirmationTitle": "Delete file",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <div
+    className="column datalist-text file-info is-6-desktop is-5-tablet is-12-mobile"
+  >
+    <FontIcon
+      className="material-icons mobile-icon is-hidden-desktop is-hidden-tablet"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      attachment
+    </FontIcon>
+    <div
+      className="file-name"
+    >
+      <span
+        className="truncated"
+      >
+        a.txt
+         (
+        100.0B
+        )
+      </span>
+      <span
+        className="is-mobile label is-hidden-desktop is-hidden-tablet datalist-text-subtitle"
+      >
+        File name
+      </span>
+    </div>
+  </div>
+  <div
+    className="column datalist-text is-3-desktop is-4-tablet is-12-mobile"
+  />
+  <div
+    className="column datalist-text is-2-desktop is-2-tablet is-three-quarters-mobile is-inline-block-mobile"
+  >
+    <div
+      className="embargo-date-info"
+    />
+  </div>
+  <div
+    className="column is-1-desktop is-1-tablet is-one-quarter-mobile is-inline-block-mobile is-centered is-vcentered"
+  >
+    <div
+      className="upload-progress-info"
+    >
+      <div
+        className="upload-progress"
+      >
+        <CircularProgress
+          max={100}
+          min={0}
+          mode="indeterminate"
+          size={20}
+          thickness={4}
+          value={0}
+        />
+      </div>
+      <div
+        className="upload-progress-number"
+      >
+        <span
+          aria-label="Uploading..."
+        >
+          Uploading...
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FileUploadRow renders if file uploaded successfully but later other file failed 1`] = `
+<div
+  className="columns is-gapless is-multiline uploadedFileRow datalist datalist-row is-clearfix"
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+        "confirmationTitle": "Delete file",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <div
+    className="column datalist-text file-info is-6-desktop is-5-tablet is-12-mobile"
+  >
+    <FontIcon
+      className="material-icons mobile-icon is-hidden-desktop is-hidden-tablet"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      attachment
+    </FontIcon>
+    <div
+      className="file-name"
+    >
+      <span
+        className="truncated"
+      >
+        a.txt
+         (
+        100.0B
+        )
+      </span>
+      <span
+        className="is-mobile label is-hidden-desktop is-hidden-tablet datalist-text-subtitle"
+      >
+        File name
+      </span>
+    </div>
+  </div>
+  <div
+    className="column datalist-text is-3-desktop is-4-tablet is-12-mobile"
+  />
+  <div
+    className="column datalist-text is-2-desktop is-2-tablet is-three-quarters-mobile is-inline-block-mobile"
+  >
+    <div
+      className="embargo-date-info"
+    />
+  </div>
+  <div
+    className="column is-1-desktop is-1-tablet is-one-quarter-mobile is-inline-block-mobile is-centered is-vcentered"
+  >
+    <div
+      className="datalist-buttons"
+    >
+      <IconButton
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
+        onTouchTap={[Function]}
+        tooltip="Remove this file"
+        tooltipPosition="bottom-center"
+        touch={false}
+      >
+        <FontIcon
+          className="material-icons deleteIcon"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          delete
+        </FontIcon>
+      </IconButton>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FileUploadRow renders with file upload success 1`] = `
+<div
+  className="columns is-gapless is-multiline uploadedFileRow datalist datalist-row is-clearfix"
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+        "confirmationTitle": "Delete file",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <div
+    className="column datalist-text file-info is-6-desktop is-5-tablet is-12-mobile"
+  >
+    <FontIcon
+      className="material-icons mobile-icon is-hidden-desktop is-hidden-tablet"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      attachment
+    </FontIcon>
+    <div
+      className="file-name"
+    >
+      <span
+        className="truncated"
+      >
+        a.txt
+         (
+        100.0B
+        )
+      </span>
+      <span
+        className="is-mobile label is-hidden-desktop is-hidden-tablet datalist-text-subtitle"
+      >
+        File name
+      </span>
+    </div>
+  </div>
+  <div
+    className="column datalist-text is-3-desktop is-4-tablet is-12-mobile"
+  />
+  <div
+    className="column datalist-text is-2-desktop is-2-tablet is-three-quarters-mobile is-inline-block-mobile"
+  >
+    <div
+      className="embargo-date-info"
+    />
+  </div>
+  <div
+    className="column is-1-desktop is-1-tablet is-one-quarter-mobile is-inline-block-mobile is-centered is-vcentered"
+  >
+    <div
+      className="upload-progress"
+    >
+      <FontIcon
+        className="material-icons green-tick"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        done
+      </FontIcon>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FileUploadRow renders with uploaded file 1`] = `
+<div
+  className="columns is-gapless is-multiline uploadedFileRow datalist datalist-row is-clearfix"
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+        "confirmationTitle": "Delete file",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <div
+    className="column datalist-text file-info is-6-desktop is-5-tablet is-12-mobile"
+  >
+    <FontIcon
+      className="material-icons mobile-icon is-hidden-desktop is-hidden-tablet"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      attachment
+    </FontIcon>
+    <div
+      className="file-name"
+    >
+      <span
+        className="truncated"
+      >
+        a.txt
+         (
+        100.0B
+        )
+      </span>
+      <span
+        className="is-mobile label is-hidden-desktop is-hidden-tablet datalist-text-subtitle"
+      >
+        File name
+      </span>
+    </div>
+  </div>
+  <div
+    className="column datalist-text is-3-desktop is-4-tablet is-12-mobile"
+  />
+  <div
+    className="column datalist-text is-2-desktop is-2-tablet is-three-quarters-mobile is-inline-block-mobile"
+  >
+    <div
+      className="embargo-date-info"
+    />
+  </div>
+  <div
+    className="column is-1-desktop is-1-tablet is-one-quarter-mobile is-inline-block-mobile is-centered is-vcentered"
+  >
+    <div
+      className="datalist-buttons"
+    >
+      <IconButton
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
+        onTouchTap={[Function]}
+        tooltip="Remove this file"
+        tooltipPosition="bottom-center"
+        touch={false}
+      >
+        <FontIcon
+          className="material-icons deleteIcon"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          delete
+        </FontIcon>
+      </IconButton>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FileUploadRow renders with uploaded file with some progress 1`] = `
+<div
+  className="columns is-gapless is-multiline uploadedFileRow datalist datalist-row is-clearfix"
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+        "confirmationTitle": "Delete file",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <div
+    className="column datalist-text file-info is-6-desktop is-5-tablet is-12-mobile"
+  >
+    <FontIcon
+      className="material-icons mobile-icon is-hidden-desktop is-hidden-tablet"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      attachment
+    </FontIcon>
+    <div
+      className="file-name"
+    >
+      <span
+        className="truncated"
+      >
+        a.txt
+         (
+        100.0B
+        )
+      </span>
+      <span
+        className="is-mobile label is-hidden-desktop is-hidden-tablet datalist-text-subtitle"
+      >
+        File name
+      </span>
+    </div>
+  </div>
+  <div
+    className="column datalist-text is-3-desktop is-4-tablet is-12-mobile"
+  />
+  <div
+    className="column datalist-text is-2-desktop is-2-tablet is-three-quarters-mobile is-inline-block-mobile"
+  >
+    <div
+      className="embargo-date-info"
+    />
+  </div>
+  <div
+    className="column is-1-desktop is-1-tablet is-one-quarter-mobile is-inline-block-mobile is-centered is-vcentered"
+  >
+    <div
+      className="upload-progress-info"
+    >
+      <div
+        className="upload-progress"
+      >
+        <CircularProgress
+          max={100}
+          min={0}
+          mode="determinate"
+          size={20}
+          thickness={4}
+          value={50}
+        />
+      </div>
+      <div
+        className="upload-progress-number"
+      >
+        <span
+          aria-label="50%"
+        >
+          50%
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

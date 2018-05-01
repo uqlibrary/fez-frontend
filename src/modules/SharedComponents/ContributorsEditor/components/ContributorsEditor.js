@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import Infinite from 'react-infinite';
 
 export class ContributorsEditor extends React.PureComponent {

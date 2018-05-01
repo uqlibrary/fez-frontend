@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
 
-import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {PartialDateField} from 'uqlibrary-react-toolbox/build/PartialDate';
-import {ListEditorField} from 'uqlibrary-react-toolbox/build/ListEditor';
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
+import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {SeriesField} from 'modules/SharedComponents/LookupFields';

@@ -3,20 +3,20 @@ import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
 
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
-import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPrompt';
-import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
+import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
+import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
 import RaisedButton from 'material-ui/RaisedButton';
-import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
-import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
+import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import {ThesisSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
 import {OrgUnitNameField, FilteredFieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {ListEditorField} from 'uqlibrary-react-toolbox/build/ListEditor';
-import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
+import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
+import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
 
 import {validation} from 'config';
 import {locale} from 'locale';

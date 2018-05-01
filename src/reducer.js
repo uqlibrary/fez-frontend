@@ -2,8 +2,8 @@ import {combineReducers} from 'redux-immutable';
 
 // Load reducers
 import {reducer as formReducer} from 'redux-form/immutable';
-import {default as helpDrawerReducer} from 'uqlibrary-react-toolbox/build/HelpDrawer/reducer';
-import {default as fileUploadReducer} from 'uqlibrary-react-toolbox/build/FileUploader/reducer';
+import {default as helpDrawerReducer} from 'modules/SharedComponents/Toolbox/HelpDrawer/reducer';
+import {default as fileUploadReducer} from 'modules/SharedComponents/Toolbox/FileUploader/reducer';
 
 import * as reducers from './reducers';
 import * as plugins from './reducers/formReducerPlugins';

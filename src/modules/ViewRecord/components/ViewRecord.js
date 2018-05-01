@@ -1,9 +1,9 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
-import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
-import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
+import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {locale} from 'locale';
 import Files from './Files';

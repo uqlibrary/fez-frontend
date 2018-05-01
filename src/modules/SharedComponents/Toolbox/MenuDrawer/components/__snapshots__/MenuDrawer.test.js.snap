@@ -1,0 +1,266 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuDrawer snapshots tests should render empty drawer 1`] = `
+<Drawer
+  containerClassName="main-drawer"
+  disableSwipeToOpen={false}
+  docked={false}
+  onRequestChange={[MockFunction]}
+  open={false}
+  openSecondary={false}
+  swipeAreaWidth={30}
+  width={320}
+  zDepth={2}
+/>
+`;
+
+exports[`MenuDrawer snapshots tests should render opened drawer with menus, divider 1`] = `
+<Drawer
+  containerClassName="main-drawer"
+  disableSwipeToOpen={false}
+  docked={false}
+  onRequestChange={[MockFunction]}
+  open={true}
+  openSecondary={false}
+  swipeAreaWidth={30}
+  width={320}
+  zDepth={2}
+>
+  <div
+    className="layout-fill side-drawer"
+  >
+    <div
+      className="logo-wrapper"
+    >
+      <div
+        className="columns is-gapless is-mobile"
+      >
+        <div
+          className="column is-centered"
+        />
+        <div
+          className="column is-narrow is-hidden-tablet menuCloseButton"
+        >
+          <IconButton
+            aria-label="Close menu"
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onTouchTap={[MockFunction]}
+            tooltipPosition="bottom-center"
+            touch={false}
+          >
+            <HardwareKeyboardArrowLeft />
+          </IconButton>
+        </div>
+      </div>
+    </div>
+    <List
+      className="main-menu"
+      id="mainMenu"
+      tabIndex={-1}
+    >
+      <span
+        className="menu-item-container"
+        key="menu_item_0"
+      >
+        <ListItem
+          autoGenerateNestedIndicator={true}
+          containerElement="span"
+          disableKeyboardFocus={false}
+          disabled={false}
+          initiallyOpen={false}
+          insetChildren={false}
+          leftIcon={null}
+          nestedItems={Array []}
+          nestedLevel={0}
+          onKeyboardFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onNestedListToggle={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          onTouchTap={[Function]}
+          open={null}
+          primaryText="Primary text 0"
+          primaryTogglesNestedList={false}
+          secondaryText="secondary text 0"
+          secondaryTextLines={1}
+        />
+      </span>
+      <Divider
+        inset={false}
+        key="menu_item_1"
+      />
+      <span
+        className="menu-item-container"
+        key="menu_item_2"
+      >
+        <ListItem
+          autoGenerateNestedIndicator={true}
+          containerElement="span"
+          disableKeyboardFocus={false}
+          disabled={false}
+          initiallyOpen={false}
+          insetChildren={false}
+          leftIcon={null}
+          nestedItems={Array []}
+          nestedLevel={0}
+          onKeyboardFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onNestedListToggle={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          onTouchTap={[Function]}
+          open={null}
+          primaryText="Primary text 1"
+          primaryTogglesNestedList={false}
+          secondaryText="secondary text 1"
+          secondaryTextLines={1}
+        />
+      </span>
+    </List>
+    <div
+      id="afterMenuDrawer"
+      tabIndex={-1}
+    />
+  </div>
+</Drawer>
+`;
+
+exports[`MenuDrawer snapshots tests should render opened drawer with menus, divider and skip nav button 1`] = `
+<Drawer
+  containerClassName="main-drawer"
+  disableSwipeToOpen={false}
+  docked={true}
+  onRequestChange={[MockFunction]}
+  open={true}
+  openSecondary={false}
+  swipeAreaWidth={30}
+  width={320}
+  zDepth={2}
+>
+  <div
+    className="layout-fill side-drawer"
+  >
+    <div
+      className="logo-wrapper"
+    >
+      <div
+        className="columns is-gapless is-mobile"
+      >
+        <div
+          className="column is-centered"
+        />
+        <div
+          className="column is-narrow is-hidden-tablet menuCloseButton"
+        >
+          <IconButton
+            aria-label="Close menu"
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onTouchTap={[MockFunction]}
+            tooltipPosition="bottom-center"
+            touch={false}
+          >
+            <HardwareKeyboardArrowLeft />
+          </IconButton>
+        </div>
+      </div>
+    </div>
+    <List
+      className="main-menu"
+      id="mainMenu"
+      tabIndex={-1}
+    >
+      <div
+        aria-label="Skip navigation"
+        className="skipNav"
+        id="skipNav"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex={1}
+        type="button"
+      >
+        <RaisedButton
+          className="skipNavButton"
+          disabled={false}
+          fullWidth={false}
+          label="Skip navigation"
+          labelPosition="after"
+          onTouchTap={[Function]}
+          primary={false}
+          secondary={true}
+          tabIndex={-1}
+        />
+      </div>
+      <span
+        className="menu-item-container"
+        key="menu_item_0"
+      >
+        <ListItem
+          autoGenerateNestedIndicator={true}
+          containerElement="span"
+          disableKeyboardFocus={false}
+          disabled={false}
+          initiallyOpen={false}
+          insetChildren={false}
+          leftIcon={null}
+          nestedItems={Array []}
+          nestedLevel={0}
+          onKeyboardFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onNestedListToggle={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          onTouchTap={[Function]}
+          open={null}
+          primaryText="Primary text 0"
+          primaryTogglesNestedList={false}
+          secondaryText="secondary text 0"
+          secondaryTextLines={1}
+        />
+      </span>
+      <Divider
+        inset={false}
+        key="menu_item_1"
+      />
+      <span
+        className="menu-item-container"
+        key="menu_item_2"
+      >
+        <ListItem
+          autoGenerateNestedIndicator={true}
+          containerElement="span"
+          disableKeyboardFocus={false}
+          disabled={false}
+          initiallyOpen={false}
+          insetChildren={false}
+          leftIcon={null}
+          nestedItems={Array []}
+          nestedLevel={0}
+          onKeyboardFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onNestedListToggle={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          onTouchTap={[Function]}
+          open={null}
+          primaryText="Primary text 1"
+          primaryTogglesNestedList={false}
+          secondaryText="secondary text 1"
+          secondaryTextLines={1}
+        />
+      </span>
+    </List>
+    <div
+      id="afterMenuDrawer"
+      tabIndex={-1}
+    />
+  </div>
+</Drawer>
+`;

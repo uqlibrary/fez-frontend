@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HelpIcon snapshots tests renders menu 1`] = `
+<IconButton
+  disableTouchRipple={false}
+  disabled={false}
+  iconStyle={Object {}}
+  onClick={[Function]}
+  style={Object {}}
+  tooltip="Click for more information"
+  tooltipPosition="bottom-left"
+  touch={false}
+>
+  <FontIcon
+    className="material-icons helpIcon"
+    color="#CCCCCC"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    help_outline
+  </FontIcon>
+</IconButton>
+`;
