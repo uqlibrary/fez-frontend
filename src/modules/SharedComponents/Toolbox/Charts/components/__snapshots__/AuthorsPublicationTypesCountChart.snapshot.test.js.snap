@@ -42,7 +42,11 @@ exports[`AuthorsPublicationTypesCountChart  should render empty chart component 
               "format": "{y}",
               "padding": 2,
               "softConnector": true,
-              "useHTML": true,
+              "style": Object {
+                "color": "#FFFFFF",
+                "textOutline": "none",
+              },
+              "useHTML": false,
             },
             "innerSize": "65%",
             "shadow": false,
