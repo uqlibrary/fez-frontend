@@ -72,11 +72,11 @@ exports[`Alert snapshots test renders Alert of error type should render action b
         label="Do something"
         labelPosition="after"
         labelStyle={Object {}}
+        onClick={[MockFunction]}
         onKeyboardFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[MockFunction]}
         primary={false}
         secondary={false}
       />
@@ -120,7 +120,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
         disableTouchRipple={false}
         disabled={false}
         iconStyle={Object {}}
-        onTouchTap={[MockFunction]}
+        onClick={[MockFunction]}
         title="Click to dismiss this alert"
         tooltipPosition="bottom-center"
         touch={false}
@@ -139,7 +139,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
         disableTouchRipple={false}
         disabled={false}
         iconStyle={Object {}}
-        onTouchTap={[MockFunction]}
+        onClick={[MockFunction]}
         title="Click to dismiss this alert"
         tooltipPosition="bottom-center"
         touch={false}
@@ -192,7 +192,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
         disableTouchRipple={false}
         disabled={false}
         iconStyle={Object {}}
-        onTouchTap={[MockFunction]}
+        onClick={[MockFunction]}
         title="Click to dismiss this alert"
         tooltipPosition="bottom-center"
         touch={false}
@@ -212,11 +212,11 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
         label="Do something"
         labelPosition="after"
         labelStyle={Object {}}
+        onClick={[MockFunction]}
         onKeyboardFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[MockFunction]}
         primary={false}
         secondary={false}
       />
@@ -230,7 +230,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
         disableTouchRipple={false}
         disabled={false}
         iconStyle={Object {}}
-        onTouchTap={[MockFunction]}
+        onClick={[MockFunction]}
         title="Click to dismiss this alert"
         tooltipPosition="bottom-center"
         touch={false}
@@ -285,7 +285,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
         disableTouchRipple={false}
         disabled={false}
         iconStyle={Object {}}
-        onTouchTap={[MockFunction]}
+        onClick={[MockFunction]}
         title="Click to dismiss this alert"
         tooltipPosition="bottom-center"
         touch={false}
@@ -305,11 +305,11 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
         label="Do something"
         labelPosition="after"
         labelStyle={Object {}}
+        onClick={[MockFunction]}
         onKeyboardFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[MockFunction]}
         primary={false}
         secondary={false}
       />
@@ -323,7 +323,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
         disableTouchRipple={false}
         disabled={false}
         iconStyle={Object {}}
-        onTouchTap={[MockFunction]}
+        onClick={[MockFunction]}
         title="Click to dismiss this alert"
         tooltipPosition="bottom-center"
         touch={false}

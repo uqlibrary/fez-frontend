@@ -68,7 +68,7 @@ export default class ContributorRowHeader extends React.PureComponent {
                         <IconButton
                             tooltip={deleteAll}
                             tooltipPosition="top-left"
-                            onTouchTap={this._showConfirmation}
+                            onClick={this._showConfirmation}
                             disabled={this.props.disabled}>
                             <FontIcon className="material-icons">delete_forever</FontIcon>
                         </IconButton>

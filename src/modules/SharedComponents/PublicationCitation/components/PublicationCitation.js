@@ -119,7 +119,7 @@ export default class PublicationCitation extends PureComponent {
                     disabled: action.disabled,
                     label: action.label,
                     className: `publicationAction buttonOrder${index}`,
-                    onTouchTap: () => (this.props.showDefaultActions
+                    onClick: () => (this.props.showDefaultActions
                         ? this._handleDefaultActions(action.key)
                         : action.handleAction(this.props.publication))
                 };

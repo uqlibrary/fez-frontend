@@ -75,7 +75,7 @@ export default class AuthorItem extends React.Component {
                 <div className="authorButton">
                     <FlatButton
                         label={authorName}
-                        onTouchTap={(!linked && !selected) ? this._selectAuthor : undefined}
+                        onClick={(!linked && !selected) ? this._selectAuthor : undefined}
                         fullWidth
                         icon={icon}
                         primary={selected}

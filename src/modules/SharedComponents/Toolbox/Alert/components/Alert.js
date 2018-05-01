@@ -55,7 +55,7 @@ export default class Alert extends PureComponent {
                     {
                         this.props.allowDismiss && this.props.dismissAction &&
                         <div className="column is-narrow is-hidden-tablet">
-                            <IconButton onTouchTap={this.props.dismissAction} className="alertDismissButton" title={this.props.dismissTitle} aria-label={this.props.dismissTitle}>
+                            <IconButton onClick={this.props.dismissAction} className="alertDismissButton" title={this.props.dismissTitle} aria-label={this.props.dismissTitle}>
                                 <NavigationClose className="alertDismiss"/>
                             </IconButton>
                         </div>
@@ -66,7 +66,7 @@ export default class Alert extends PureComponent {
                             className={`column is-narrow-tablet is-12-mobile${(!this.props.allowDismiss && !this.props.dismissAction) ? ' noDismiss' : ''}`}>
                             <FlatButton
                                 label={this.props.actionButtonLabel}
-                                onTouchTap={this.props.action}
+                                onClick={this.props.action}
                                 fullWidth
                                 className="alertAction"/>
                         </div>
@@ -74,7 +74,7 @@ export default class Alert extends PureComponent {
                     {
                         this.props.allowDismiss && this.props.dismissAction &&
                         <div className="column is-narrow is-hidden-mobile">
-                            <IconButton onTouchTap={this.props.dismissAction} className="alertDismissButton" title={this.props.dismissTitle} aria-label={this.props.dismissTitle}>
+                            <IconButton onClick={this.props.dismissAction} className="alertDismissButton" title={this.props.dismissTitle} aria-label={this.props.dismissTitle}>
                                 <NavigationClose className="alertDismiss"/>
                             </IconButton>
                         </div>

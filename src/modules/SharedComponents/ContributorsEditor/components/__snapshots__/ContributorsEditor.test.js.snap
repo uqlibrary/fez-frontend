@@ -582,6 +582,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                               },
                               "tooltip": Object {
                                 "color": "#ffffff",
+                                "opacity": 0.9,
                                 "rippleBackgroundColor": "#616161",
                               },
                               "userAgent": undefined,
@@ -1030,6 +1031,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                               },
                               "tooltip": Object {
                                 "color": "#ffffff",
+                                "opacity": 0.9,
                                 "rippleBackgroundColor": "#616161",
                               },
                               "userAgent": undefined,
@@ -1503,6 +1505,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                               },
                               "tooltip": Object {
                                 "color": "#ffffff",
+                                "opacity": 0.9,
                                 "rippleBackgroundColor": "#616161",
                               },
                               "userAgent": undefined,
@@ -1624,7 +1627,6 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                             onKeyDown={[Function]}
                             onKeyUp={[Function]}
                             onKeyboardFocus={[Function]}
-                            onTouchTap={[Function]}
                             style={
                               Object {
                                 "backgroundColor": "rgb(229, 229, 229)",
@@ -1649,7 +1651,6 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                               onFocus={[Function]}
                               onKeyDown={[Function]}
                               onKeyUp={[Function]}
-                              onTouchTap={[Function]}
                               style={
                                 Object {
                                   "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
@@ -1674,7 +1675,6 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                                   "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
                                   "verticalAlign": null,
                                   "width": "100%",
-                                  "zIndex": 1,
                                 }
                               }
                               tabIndex={-1}
@@ -2311,6 +2311,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                               },
                               "tooltip": Object {
                                 "color": "#ffffff",
+                                "opacity": 0.9,
                                 "rippleBackgroundColor": "#616161",
                               },
                               "userAgent": undefined,
@@ -2759,6 +2760,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                               },
                               "tooltip": Object {
                                 "color": "#ffffff",
+                                "opacity": 0.9,
                                 "rippleBackgroundColor": "#616161",
                               },
                               "userAgent": undefined,
@@ -3232,6 +3234,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                               },
                               "tooltip": Object {
                                 "color": "#ffffff",
+                                "opacity": 0.9,
                                 "rippleBackgroundColor": "#616161",
                               },
                               "userAgent": undefined,
@@ -3791,6 +3794,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                                   },
                                   "tooltip": Object {
                                     "color": "#ffffff",
+                                    "opacity": 0.9,
                                     "rippleBackgroundColor": "#616161",
                                   },
                                   "userAgent": undefined,
@@ -4239,6 +4243,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                                   },
                                   "tooltip": Object {
                                     "color": "#ffffff",
+                                    "opacity": 0.9,
                                     "rippleBackgroundColor": "#616161",
                                   },
                                   "userAgent": undefined,
@@ -4714,6 +4719,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                                   },
                                   "tooltip": Object {
                                     "color": "#ffffff",
+                                    "opacity": 0.9,
                                     "rippleBackgroundColor": "#616161",
                                   },
                                   "userAgent": undefined,
@@ -4881,7 +4887,6 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                             onKeyDown={[Function]}
                             onKeyUp={[Function]}
                             onKeyboardFocus={[Function]}
-                            onTouchTap={[Function]}
                             style={
                               Object {
                                 "backgroundColor": "rgb(229, 229, 229)",
@@ -4906,7 +4911,6 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                               onFocus={[Function]}
                               onKeyDown={[Function]}
                               onKeyUp={[Function]}
-                              onTouchTap={[Function]}
                               style={
                                 Object {
                                   "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
@@ -4931,7 +4935,6 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                                   "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
                                   "verticalAlign": null,
                                   "width": "100%",
-                                  "zIndex": 1,
                                 }
                               }
                               tabIndex={-1}
@@ -5981,6 +5984,7 @@ exports[`ContributorsEditor tests  should show validation error 1`] = `
                               },
                               "tooltip": Object {
                                 "color": "#ffffff",
+                                "opacity": 0.9,
                                 "rippleBackgroundColor": "#616161",
                               },
                               "userAgent": undefined,
@@ -6429,6 +6433,7 @@ exports[`ContributorsEditor tests  should show validation error 1`] = `
                               },
                               "tooltip": Object {
                                 "color": "#ffffff",
+                                "opacity": 0.9,
                                 "rippleBackgroundColor": "#616161",
                               },
                               "userAgent": undefined,
@@ -6902,6 +6907,7 @@ exports[`ContributorsEditor tests  should show validation error 1`] = `
                               },
                               "tooltip": Object {
                                 "color": "#ffffff",
+                                "opacity": 0.9,
                                 "rippleBackgroundColor": "#616161",
                               },
                               "userAgent": undefined,
@@ -7023,7 +7029,6 @@ exports[`ContributorsEditor tests  should show validation error 1`] = `
                             onKeyDown={[Function]}
                             onKeyUp={[Function]}
                             onKeyboardFocus={[Function]}
-                            onTouchTap={[Function]}
                             style={
                               Object {
                                 "backgroundColor": "rgb(229, 229, 229)",
@@ -7048,7 +7053,6 @@ exports[`ContributorsEditor tests  should show validation error 1`] = `
                               onFocus={[Function]}
                               onKeyDown={[Function]}
                               onKeyUp={[Function]}
-                              onTouchTap={[Function]}
                               style={
                                 Object {
                                   "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
@@ -7073,7 +7077,6 @@ exports[`ContributorsEditor tests  should show validation error 1`] = `
                                   "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
                                   "verticalAlign": null,
                                   "width": "100%",
-                                  "zIndex": 1,
                                 }
                               }
                               tabIndex={-1}

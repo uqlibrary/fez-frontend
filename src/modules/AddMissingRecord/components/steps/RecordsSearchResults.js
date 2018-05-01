@@ -137,7 +137,7 @@ export default class RecordsSearchResults extends React.Component {
                                 <RaisedButton
                                     fullWidth
                                     label={searchResultsTxt.cancel}
-                                    onTouchTap={this._cancelWorkflow}
+                                    onClick={this._cancelWorkflow}
                                 />
                             </div>
                             <div className="column is-narrow-desktop">
@@ -147,7 +147,7 @@ export default class RecordsSearchResults extends React.Component {
                                     fullWidth
                                     autoFocus={this.props.publicationsList.length === 0}
                                     keyboardFocused={this.props.publicationsList.length === 0}
-                                    onTouchTap={this._showNewRecordForm}
+                                    onClick={this._showNewRecordForm}
                                 />
                             </div>
                         </div>

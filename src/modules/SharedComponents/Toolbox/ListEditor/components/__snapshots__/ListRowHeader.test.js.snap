@@ -34,7 +34,7 @@ exports[`ListRowHeader renders  header for contributor editor control with delet
       disableTouchRipple={false}
       disabled={true}
       iconStyle={Object {}}
-      onTouchTap={[Function]}
+      onClick={[Function]}
       tooltip="Remove all items"
       tooltipPosition="bottom-center"
       touch={false}
@@ -85,7 +85,7 @@ exports[`ListRowHeader renders  header for contributor editor control with name 
       disableTouchRipple={false}
       disabled={false}
       iconStyle={Object {}}
-      onTouchTap={[Function]}
+      onClick={[Function]}
       tooltip="Remove all items"
       tooltipPosition="bottom-center"
       touch={false}

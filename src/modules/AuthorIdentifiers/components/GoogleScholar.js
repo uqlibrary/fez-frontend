@@ -110,7 +110,7 @@ export default class GoogleScholar extends React.PureComponent {
                                 fullWidth
                                 disabled={this.props.submitting}
                                 label={txt.labels.cancel}
-                                onTouchTap={this._navigateToDashboard} />
+                                onClick={this._navigateToDashboard} />
                         </div>
                         <div className="column is-narrow-desktop">
                             <RaisedButton
@@ -118,7 +118,7 @@ export default class GoogleScholar extends React.PureComponent {
                                 fullWidth
                                 disabled={this.props.submitting || this.props.invalid}
                                 label={txt.labels.submit}
-                                onTouchTap={this.props.handleSubmit} />
+                                onClick={this.props.handleSubmit} />
                         </div>
                     </div>
                 </form>

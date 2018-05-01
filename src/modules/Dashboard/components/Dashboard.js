@@ -207,7 +207,7 @@ class Dashboard extends React.Component {
                                                 <RaisedButton
                                                     secondary
                                                     label={`${txt.myPublications.viewAllButtonLabel} (${this.props.totalPublicationsCount})`}
-                                                    onTouchTap={this._viewYourResearch}/>
+                                                    onClick={this._viewYourResearch}/>
                                             </div>
                                         </div>
                                     </div>

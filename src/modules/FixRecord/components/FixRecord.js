@@ -235,7 +235,7 @@ export default class FixRecord extends React.PureComponent {
                                 fullWidth
                                 label={txt.cancel}
                                 disabled={this.props.submitting}
-                                onTouchTap={this._cancelFix}/>
+                                onClick={this._cancelFix}/>
                         </div>
                         {
                             this.state.selectedRecordAction &&
@@ -244,7 +244,7 @@ export default class FixRecord extends React.PureComponent {
                                     secondary
                                     fullWidth
                                     label={txt.submit}
-                                    onTouchTap={this.props.handleSubmit}
+                                    onClick={this.props.handleSubmit}
                                     disabled={this.props.submitting || this.props.disableSubmit}/>
                             </div>
                         }

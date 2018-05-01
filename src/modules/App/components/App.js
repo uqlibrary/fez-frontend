@@ -176,7 +176,7 @@ export default class App extends React.PureComponent {
                     iconStyleLeft={{marginTop: 0}}
                     title={locale.global.title}
                     titleStyle={titleStyle}
-                    onLeftIconButtonTouchTap={this.toggleDrawer}
+                    onLeftIconButtonClick={this.toggleDrawer}
                     iconElementLeft={
                         <IconButton
                             tooltip={locale.global.mainNavButton.tooltip}
