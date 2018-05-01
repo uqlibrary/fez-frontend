@@ -1,4 +1,8 @@
-import trendingPublicationsMiddleware, {transformTrendingPublicationsMetricsData} from './trendingPublicationsMiddleware';
+import {
+    transformTrendingPublicationsMetricsData,
+    trendingPublicationsEnhancer,
+    trendingPublicationsNotFound
+} from './trendingPublicationsMiddleware';
 
 describe('Trending publications middleware', () => {
     describe('transformTrendingPublicationsMetricsData', () => {
@@ -277,7 +281,7 @@ describe('Trending publications middleware', () => {
         });
     });
 
-    describe('trendingPublicationsMiddleware', () => {
+    describe('middleware trendingPublicationsEnhancer', () => {
         it('should add metric data to a list of publication and transform the incoming response for trending publications', () => {
             const payload = {
                 total: 2,
@@ -312,7 +316,7 @@ describe('Trending publications middleware', () => {
                     ]
                 }
             ];
-            trendingPublicationsMiddleware()(next)({type: 'TRENDING_PUBLICATIONS_LOADED', payload: payload});
+            trendingPublicationsEnhancer()(next)({type: 'TRENDING_PUBLICATIONS_LOADED', payload: payload});
 
             expect(next).toBeCalledWith(expect.objectContaining({
                 "payload": expectedPayload,
@@ -331,12 +335,41 @@ describe('Trending publications middleware', () => {
 
             const next = jest.fn();
 
-            trendingPublicationsMiddleware()(next)({type: 'LATEST_PUBLICATIONS_LOADED', payload: payload});
+            trendingPublicationsEnhancer()(next)({type: 'LATEST_PUBLICATIONS_LOADED', payload: payload});
 
             expect(next).toBeCalledWith(expect.objectContaining({
                 "payload": payload,
                 "type": "LATEST_PUBLICATIONS_LOADED"
             }));
-        })
+        });
+    });
+
+    describe('middleware trendingPublicationsNotFound', () => {
+        it('should dispatch TRENDING_PUBLICATIONS_NOT_FOUND action on API failed', () => {
+            const dispatch = jest.fn();
+            const next = jest.fn();
+
+            trendingPublicationsNotFound({dispatch})(next)({type: 'TRENDING_PUBLICATIONS_FAILED', payload: 'Something went wrong'});
+
+            expect(dispatch).toBeCalledWith(expect.objectContaining({
+                "type": "TRENDING_PUBLICATIONS_NOT_FOUND"
+            }));
+        });
+
+        it('should dispatch TRENDING_PUBLICATIONS_NOT_FOUND action on API success with 0 publications', () => {
+            const dispatch = jest.fn();
+            const next = jest.fn();
+
+            const payload = {
+                total: 0,
+                data: []
+            };
+
+            trendingPublicationsNotFound({dispatch})(next)({type: 'TRENDING_PUBLICATIONS_LOADED', payload: payload});
+
+            expect(dispatch).toBeCalledWith(expect.objectContaining({
+                "type": "TRENDING_PUBLICATIONS_NOT_FOUND"
+            }));
+        });
     });
 });

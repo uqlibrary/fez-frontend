@@ -9,7 +9,8 @@ const initialState = {
     loadingPublicationsList: true,
     latestPublicationsList: [],
     loadingLatestPublications: true,
-    totalPublicationsCount: null
+    totalPublicationsCount: null,
+    showTrendingPublicationsTab: true
 };
 const latestPubsPayload = {
     "total": 137,
@@ -3715,6 +3716,11 @@ describe('Authors publications reducer', () => {
         expect(test.publicationsListPagingData).toEqual({});
         expect(test.publicationsListFacets).toEqual({});
         expect(test.loadingPublicationsList).toBeFalsy();
+    });
+
+    it('returns the correct state if no trending publications found', () => {
+        const test = publicationsReducer(initialState, {type: actions.TRENDING_PUBLICATIONS_NOT_FOUND});
+        expect(test.showTrendingPublicationsTab).toBeFalsy();
     });
 });
 

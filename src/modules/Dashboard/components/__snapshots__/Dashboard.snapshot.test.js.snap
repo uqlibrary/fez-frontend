@@ -385,6 +385,29 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
       </StandardCard>
     </div>
   </div>
+  <StandardCard
+    className="card-paddingless"
+  >
+    <Tabs
+      className="publicationTabs"
+      initialSelectedIndex={0}
+      inkBarStyle={
+        Object {
+          "height": "4px",
+          "marginTop": "-4px",
+        }
+      }
+      onChange={[Function]}
+    >
+      <Tab
+        className="publicationTabs"
+        label="My trending publications"
+        value="myTrendingPublications"
+      >
+        <Connect(MyTrendingPublications) />
+      </Tab>
+    </Tabs>
+  </StandardCard>
 </StandardPage>
 `;
 
@@ -442,6 +465,98 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
     <div
       className="column is-12 possiblePublicationLure"
     />
+  </div>
+  <StandardCard
+    className="card-paddingless"
+  >
+    <Tabs
+      className="publicationTabs"
+      initialSelectedIndex={0}
+      inkBarStyle={
+        Object {
+          "height": "4px",
+          "marginTop": "-4px",
+        }
+      }
+      onChange={[Function]}
+    >
+      <Tab
+        className="publicationTabs"
+        label="My trending publications"
+        value="myTrendingPublications"
+      >
+        <Connect(MyTrendingPublications) />
+      </Tab>
+    </Tabs>
+  </StandardCard>
+</StandardPage>
+`;
+
+exports[`Dashboard test doesn't render my trending publications tab 1`] = `
+<StandardPage
+  className="dashboard"
+>
+  <div
+    className="columns is-multiline is-gapless"
+  >
+    <div
+      className="column is-12 is-hidden-mobile"
+    >
+      <div
+        className="is-hidden-mobile"
+      >
+        <DashboardProfile
+          authorDetails={
+            Object {
+              "espace": Object {
+                "doc_count": 357,
+                "first_year": 1975,
+                "last_year": 2018,
+              },
+              "espace_id": 20288,
+              "family_name": "Researcher",
+              "given_name": "J",
+              "google_scholar_id": "kUemDfMAAAAJ",
+              "image_exists": 1,
+              "mypub_url": "uqresearcher",
+              "orcid_id": "0000-0001-1111-1111",
+              "org_units": Array [
+                "Institute for Molecular Bioscience",
+                "School of Chemistry and Molecular Biosciences",
+                "The University of Queensland Diamantina Institute",
+              ],
+              "positions": Array [
+                "Affiliate Professor",
+                "Affiliate Professorial Res Fellow",
+                "ARC Australian Laureate Fellow",
+              ],
+              "publons_id": "",
+              "researcher_id": "G-111-1111",
+              "scopus_id": "",
+              "staff_id": "0000111",
+              "title": "Professor",
+              "uqr_id": 14,
+              "username": "uqresearcher",
+            }
+          }
+          history={Object {}}
+        />
+      </div>
+    </div>
+    <div
+      className="column is-12 possiblePublicationLure"
+    >
+      <Alert
+        action={[Function]}
+        actionButtonLabel="Add a publication"
+        allowDismiss={false}
+        dismissTitle="Click to dismiss this alert"
+        message="We found nothing new for you to claim, but you may add a publication any time."
+        showLoader={false}
+        title="Add your work to eSpace"
+        type="info_outline"
+      />
+    </div>
   </div>
 </StandardPage>
 `;
@@ -512,6 +627,29 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
       />
     </div>
   </div>
+  <StandardCard
+    className="card-paddingless"
+  >
+    <Tabs
+      className="publicationTabs"
+      initialSelectedIndex={0}
+      inkBarStyle={
+        Object {
+          "height": "4px",
+          "marginTop": "-4px",
+        }
+      }
+      onChange={[Function]}
+    >
+      <Tab
+        className="publicationTabs"
+        label="My trending publications"
+        value="myTrendingPublications"
+      >
+        <Connect(MyTrendingPublications) />
+      </Tab>
+    </Tabs>
+  </StandardCard>
 </StandardPage>
 `;
 
@@ -570,6 +708,29 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
       className="column is-12 possiblePublicationLure"
     />
   </div>
+  <StandardCard
+    className="card-paddingless"
+  >
+    <Tabs
+      className="publicationTabs"
+      initialSelectedIndex={0}
+      inkBarStyle={
+        Object {
+          "height": "4px",
+          "marginTop": "-4px",
+        }
+      }
+      onChange={[Function]}
+    >
+      <Tab
+        className="publicationTabs"
+        label="My trending publications"
+        value="myTrendingPublications"
+      >
+        <Connect(MyTrendingPublications) />
+      </Tab>
+    </Tabs>
+  </StandardCard>
 </StandardPage>
 `;
 
@@ -639,13 +800,60 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
       />
     </div>
   </div>
+  <StandardCard
+    className="card-paddingless"
+  >
+    <Tabs
+      className="publicationTabs"
+      initialSelectedIndex={0}
+      inkBarStyle={
+        Object {
+          "height": "4px",
+          "marginTop": "-4px",
+        }
+      }
+      onChange={[Function]}
+    >
+      <Tab
+        className="publicationTabs"
+        label="My trending publications"
+        value="myTrendingPublications"
+      >
+        <Connect(MyTrendingPublications) />
+      </Tab>
+    </Tabs>
+  </StandardCard>
 </StandardPage>
 `;
 
 exports[`Dashboard test renders alert for non-authors 1`] = `
 <StandardPage
   className="dashboard"
-/>
+>
+  <StandardCard
+    className="card-paddingless"
+  >
+    <Tabs
+      className="publicationTabs"
+      initialSelectedIndex={0}
+      inkBarStyle={
+        Object {
+          "height": "4px",
+          "marginTop": "-4px",
+        }
+      }
+      onChange={[Function]}
+    >
+      <Tab
+        className="publicationTabs"
+        label="My trending publications"
+        value="myTrendingPublications"
+      >
+        <Connect(MyTrendingPublications) />
+      </Tab>
+    </Tabs>
+  </StandardCard>
+</StandardPage>
 `;
 
 exports[`Dashboard test renders dashboard header only 1`] = `
@@ -714,6 +922,29 @@ exports[`Dashboard test renders dashboard header only 1`] = `
       />
     </div>
   </div>
+  <StandardCard
+    className="card-paddingless"
+  >
+    <Tabs
+      className="publicationTabs"
+      initialSelectedIndex={0}
+      inkBarStyle={
+        Object {
+          "height": "4px",
+          "marginTop": "-4px",
+        }
+      }
+      onChange={[Function]}
+    >
+      <Tab
+        className="publicationTabs"
+        label="My trending publications"
+        value="myTrendingPublications"
+      >
+        <Connect(MyTrendingPublications) />
+      </Tab>
+    </Tabs>
+  </StandardCard>
 </StandardPage>
 `;
 
@@ -783,5 +1014,28 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
       />
     </div>
   </div>
+  <StandardCard
+    className="card-paddingless"
+  >
+    <Tabs
+      className="publicationTabs"
+      initialSelectedIndex={0}
+      inkBarStyle={
+        Object {
+          "height": "4px",
+          "marginTop": "-4px",
+        }
+      }
+      onChange={[Function]}
+    >
+      <Tab
+        className="publicationTabs"
+        label="My trending publications"
+        value="myTrendingPublications"
+      >
+        <Connect(MyTrendingPublications) />
+      </Tab>
+    </Tabs>
+  </StandardCard>
 </StandardPage>
 `;

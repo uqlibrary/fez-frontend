@@ -23,15 +23,16 @@ export const transformTrendingPublicationsMetricsData = ({data, filters: {metric
         });
 };
 
-const trendingPublicationsMiddleware = () => next => action => {
+export const trendingPublicationsEnhancer = () => next => action => {
     if (
-        actions.loadPublicationsListActions.test(action.type) &&
-        !!action.payload.data &&
-        action.type === actions.TRENDING_PUBLICATIONS_LOADED
+        action.type === actions.TRENDING_PUBLICATIONS_LOADED &&
+        !!action.payload.data && action.payload.data.length > 0
     ) {
         const enhancedAction = {
             type: action.type,
-            payload: transformTrendingPublicationsMetricsData(action.payload)
+            payload: transformTrendingPublicationsMetricsData(
+                action.payload
+            )
         };
         return next(enhancedAction);
     }
@@ -39,4 +40,15 @@ const trendingPublicationsMiddleware = () => next => action => {
     return next(action);
 };
 
-export default trendingPublicationsMiddleware;
+export const trendingPublicationsNotFound = ({dispatch}) => next => action => {
+    if (
+        action.type === actions.TRENDING_PUBLICATIONS_FAILED ||
+        action.type === actions.TRENDING_PUBLICATIONS_LOADED && !!action.payload.data && action.payload.data.length === 0
+    ) {
+        dispatch({type: actions.TRENDING_PUBLICATIONS_NOT_FOUND});
+    }
+
+    return next(action);
+};
+
+export default [trendingPublicationsEnhancer, trendingPublicationsNotFound];

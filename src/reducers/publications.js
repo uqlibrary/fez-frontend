@@ -8,11 +8,11 @@ export const initialState = {
 
     latestPublicationsList: [],
     loadingLatestPublications: true,
-    totalPublicationsCount: null
+    totalPublicationsCount: null,
+    showTrendingPublicationsTab: true
 };
 
 const handlers = {
-
     [actions.LATEST_PUBLICATIONS_LOADING]: (state) => {
         return {
             ...state,
@@ -74,6 +74,11 @@ const handlers = {
             loadingPublicationsList: false
         };
     },
+
+    [actions.TRENDING_PUBLICATIONS_NOT_FOUND]: (state) => ({
+        ...state,
+        showTrendingPublicationsTab: false
+    })
 };
 
 export default function publicationsReducer(state = initialState, action) {
