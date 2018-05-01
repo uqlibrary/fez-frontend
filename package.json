@@ -64,7 +64,7 @@
     "babel-loader": "^7.1.4",
     "connected-react-router": "^4.3.0",
     "dompurify": "^1.0.3",
-    "eslint-plugin-eslint-uqlibrary": "file:eslint-uqlibrary",
+    "eslint-plugin-uqlibrary": "file:eslint-plugin-uqlibrary",
     "history": "^4.7.2",
     "immutable": "^3.8.2",
     "js-cookie": "^2.2.0",

@@ -175,11 +175,11 @@
     "jsx-a11y/img-has-alt": "off",
     "jsx-a11y/onclick-has-focus" : "off",
     "jsx-a11y/href-no-hash": "off",
-    "eslint-uqlibrary/no-uql-token": 2
+    "uqlibrary/no-uql-token": 2
   },
   "plugins": [
     "react",
     "jsx-a11y",
-    "eslint-uqlibrary"
+    "uqlibrary"
   ]
 }
