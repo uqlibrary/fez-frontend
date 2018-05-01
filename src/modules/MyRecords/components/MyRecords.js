@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
@@ -9,7 +9,7 @@ import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
 import {locale} from 'locale';
 import {routes} from 'config';
-export default class MyRecords extends React.PureComponent {
+export default class MyRecords extends PureComponent {
     static propTypes = {
         publicationsList: PropTypes.array,
         publicationsListFacets: PropTypes.object,

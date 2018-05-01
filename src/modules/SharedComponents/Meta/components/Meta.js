@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import {Helmet} from 'react-helmet';
 import PropTypes from 'prop-types';
 import {viewRecordsConfig} from 'config/viewRecord';
@@ -6,7 +6,7 @@ import {locale} from 'locale';
 
 const dompurify = require('dompurify');
 const moment = require('moment');
-export default class Meta extends React.PureComponent {
+export default class Meta extends PureComponent {
     static propTypes = {
         publication: PropTypes.object,
         routesConfig: PropTypes.array,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 
@@ -6,16 +6,24 @@ import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardRighthandCard} from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 
-
 // forms & custom components
 import Async from 'modules/SharedComponents/Async';
-const PublicationsList = (componentProps) => (<Async load={import('modules/SharedComponents/PublicationsList/components/PublicationsList')}  componentProps={componentProps} />);
-const PublicationListLoadingProgress = (componentProps) => (<Async load={import('modules/SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress')}  componentProps={componentProps} />);
+const PublicationsList = (componentProps) => (
+    <Async
+        load={import('modules/SharedComponents/PublicationsList/components/PublicationsList')}
+        componentProps={componentProps} />
+);
+
+const PublicationListLoadingProgress = (componentProps) => (
+    <Async
+        load={import('modules/SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress')}
+        componentProps={componentProps} />
+);
 
 import {routes} from 'config';
 import {locale} from 'locale';
 
-export default class RecordsSearchResults extends React.Component {
+export default class RecordsSearchResults extends PureComponent {
     static propTypes = {
         publicationsList: PropTypes.array,
         loadingSearch: PropTypes.bool,
@@ -32,13 +40,6 @@ export default class RecordsSearchResults extends React.Component {
 
     constructor(props) {
         super(props);
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return  nextProps.loadingSearch !== this.props.loadingSearch
-        || nextProps.rawSearchQuery !== this.props.rawSearchQuery
-        || nextProps.loadingPublicationSources !== this.props.loadingPublicationSources
-        || nextProps.publicationsList !== this.props.publicationsList;
     }
 
     _showNewRecordForm = () => {

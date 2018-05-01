@@ -8,7 +8,7 @@ import FontIcon from 'material-ui/FontIcon';
 
 export default class Alert extends PureComponent {
     static propTypes = {
-        message: PropTypes.string.isRequired,
+        message: PropTypes.any.isRequired,
         title: PropTypes.string,
         type: PropTypes.oneOf(['error', 'error_outline', 'warning', 'info', 'info_outline', 'help', 'help_outline', 'done']),
         action: PropTypes.func,
@@ -29,16 +29,6 @@ export default class Alert extends PureComponent {
 
     constructor(props) {
         super(props);
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.message !== this.props.message
-            || nextProps.title !== this.props.title
-            || nextProps.type !== this.props.type
-            || nextProps.action !== this.props.action
-            || nextProps.actionButtonLabel !== this.props.actionButtonLabel
-            || nextProps.allowDismiss !== this.props.allowDismiss
-            || nextProps.dismissAction !== this.props.dismissAction;
     }
 
     render() {

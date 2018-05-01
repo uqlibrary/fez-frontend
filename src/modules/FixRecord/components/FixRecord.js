@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
@@ -20,7 +20,7 @@ import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation'
 import {validation, routes} from 'config';
 import {locale} from 'locale';
 
-export default class FixRecord extends React.PureComponent {
+export default class FixRecord extends PureComponent {
     static propTypes = {
         ...propTypes, // all redux-form props
         disableSubmit: PropTypes.bool,
@@ -65,10 +65,6 @@ export default class FixRecord extends React.PureComponent {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.successConfirmationBox.showConfirmation();
         }
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return this.props !== nextProps || this.state !== nextState;
     }
 
     componentWillUnmount() {

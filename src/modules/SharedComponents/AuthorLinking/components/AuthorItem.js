@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
 import Link from 'material-ui/svg-icons/content/link';
 import RadioButtonUnchecked from 'material-ui/svg-icons/toggle/radio-button-unchecked';
 import RadioButtonChecked from 'material-ui/svg-icons/toggle/radio-button-checked';
 
-export default class AuthorItem extends React.Component {
+export default class AuthorItem extends PureComponent {
     static propTypes = {
         type: PropTypes.string,
         linked: PropTypes.bool,

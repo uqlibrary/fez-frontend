@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
-export default class ContributorRowHeader extends React.PureComponent {
+export default class ContributorRowHeader extends PureComponent {
     static propTypes = {
         onDeleteAll: PropTypes.func.isRequired,
         showIdentifierLookup: PropTypes.bool,
@@ -33,12 +33,6 @@ export default class ContributorRowHeader extends React.PureComponent {
 
     constructor(props) {
         super(props);
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return this.props.showContributorAssignment !== nextProps.showContributorAssignment ||
-        this.props.disabled !== nextProps.disabled ||
-        this.props.isInfinite !== nextProps.isInfinite;
     }
 
     _showConfirmation = () => {

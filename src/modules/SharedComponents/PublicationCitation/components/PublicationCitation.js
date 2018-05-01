@@ -68,10 +68,6 @@ export default class PublicationCitation extends PureComponent {
         this.defaultActions = locale.components.publicationCitation.defaultActions;
     }
 
-    shouldComponentUpdate(nextProps) {
-        return JSON.stringify(nextProps.publication) !== JSON.stringify(this.props.publication);
-    }
-
     _handleDefaultActions = (action) => {
         switch (action) {
             case 'fixRecord':

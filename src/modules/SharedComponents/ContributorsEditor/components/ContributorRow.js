@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
-export default class ContributorRow extends React.PureComponent {
+export default class ContributorRow extends PureComponent {
     static propTypes = {
         index: PropTypes.number.isRequired,
         contributor: PropTypes.object.isRequired,
@@ -40,10 +40,6 @@ export default class ContributorRow extends React.PureComponent {
 
     constructor(props) {
         super(props);
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return this.props !== nextProps;
     }
 
     _showConfirmation = () => {

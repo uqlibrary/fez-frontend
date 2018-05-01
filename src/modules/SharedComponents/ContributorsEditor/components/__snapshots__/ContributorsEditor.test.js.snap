@@ -5032,7 +5032,7 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
       }
       disabledContributorAssignment={false}
       index={0}
-      key="0"
+      key="ContributorRow_0"
       locale={
         Object {
           "deleteHint": "Remove this record",
@@ -5077,7 +5077,7 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
       }
       disabledContributorAssignment={false}
       index={1}
-      key="1"
+      key="ContributorRow_1"
       locale={
         Object {
           "deleteHint": "Remove this record",
@@ -5122,7 +5122,7 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
       }
       disabledContributorAssignment={false}
       index={2}
-      key="2"
+      key="ContributorRow_2"
       locale={
         Object {
           "deleteHint": "Remove this record",
@@ -5214,7 +5214,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       }
       disabledContributorAssignment={false}
       index={0}
-      key="0"
+      key="ContributorRow_0"
       locale={
         Object {
           "deleteHint": "Remove this record",
@@ -5259,7 +5259,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       }
       disabledContributorAssignment={false}
       index={1}
-      key="1"
+      key="ContributorRow_1"
       locale={
         Object {
           "deleteHint": "Remove this record",
@@ -5304,7 +5304,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       }
       disabledContributorAssignment={false}
       index={2}
-      key="2"
+      key="ContributorRow_2"
       locale={
         Object {
           "deleteHint": "Remove this record",
@@ -5349,7 +5349,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       }
       disabledContributorAssignment={false}
       index={3}
-      key="3"
+      key="ContributorRow_3"
       locale={
         Object {
           "deleteHint": "Remove this record",

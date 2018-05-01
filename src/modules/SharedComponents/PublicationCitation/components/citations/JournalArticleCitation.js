@@ -1,19 +1,15 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import * as Partials from './partials';
 
-export default class JournalArticleCitation extends Component {
+export default class JournalArticleCitation extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired
     };
 
     constructor(props) {
         super(props);
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return JSON.stringify(nextProps.publication) !== JSON.stringify(this.props.publication);
     }
 
     render() {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
@@ -11,7 +11,7 @@ import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {locale} from 'locale';
 import {routes, validation} from 'config';
 
-export default class GoogleScholar extends React.PureComponent {
+export default class GoogleScholar extends PureComponent {
     static propTypes = {
         ...propTypes,
         author: PropTypes.object,
