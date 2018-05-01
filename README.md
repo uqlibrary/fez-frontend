@@ -101,8 +101,8 @@ new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
 - component should extend React.PureComponent if props are simple 
 - component should extend React.Component, shouldComponentUpdate() should be implemented if props have objects
 - import explicit and specific components (do not import all):
-   - *DO NOT* `import {HelpIcon} from 'uqlibrary-react-toolbox';` 
-   - *DO* `import {HelpIcon} from 'uqlibrary-react-toolbox/build/HelpDrawer';`
+   - *DO NOT* `import {Button} from 'material-ui';` 
+   - *DO* `import {Button} from 'material-ui/Button';`
 - any set of components which is not required in the initial load, eg PublicationForm, FixForm, ClaimForm etc, should lazy loaded using `<Async>`
 ```
 const PublicationsList = (componentProps) => (<Async load={import('modules/SharedComponents/PublicationsList/components/PublicationsList')}  componentProps={componentProps} />);
