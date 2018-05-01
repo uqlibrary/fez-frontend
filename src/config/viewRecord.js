@@ -1,6 +1,7 @@
 import {routes} from 'config';
 
 export const viewRecordsConfig = {
+    genericDataEmail: 'data@library.uq.edu.au',
     licenseLinks: {
         453608: {
             className: 'cc-by',

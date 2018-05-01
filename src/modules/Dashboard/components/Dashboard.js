@@ -7,16 +7,15 @@ import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
 
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
 import {PublicationStats} from 'modules/SharedComponents/PublicationStats';
+import {MyTrendingPublications} from 'modules/SharedComponents/MyTrendingPublications';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import {routes} from 'config';
 import {locale} from 'locale';
-import FontIcon from 'material-ui/FontIcon';
 
 class Dashboard extends React.Component {
     static propTypes = {
@@ -45,10 +44,6 @@ class Dashboard extends React.Component {
         latestPublicationsList: PropTypes.array,
         totalPublicationsCount: PropTypes.number,
 
-        // author's trending publications
-        loadingTrendingPublications: PropTypes.bool,
-        trendingPublicationsList: PropTypes.array,
-
         // navigations, app actions
         actions: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired
@@ -63,14 +58,12 @@ class Dashboard extends React.Component {
             this.props.actions.countPossiblyYourPublications(this.props.account.id);
             this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
             this.props.actions.searchLatestPublications(this.props.account.id);
-            this.props.actions.searchTrendingPublications(this.props.account.id);
         }
     }
 
     shouldComponentUpdate(nextProps) {
         return !(nextProps.loadingPublicationsByYear || nextProps.accountAuthorDetailsLoading
-            || nextProps.loadingPublicationsStats || nextProps.loadingTrendingPublications
-            || nextProps.loadingLatestPublications);
+            || nextProps.loadingPublicationsStats || nextProps.loadingLatestPublications);
     }
 
     _claimYourPublications = () => {
@@ -88,8 +81,7 @@ class Dashboard extends React.Component {
     render() {
         const txt = locale.pages.dashboard;
         const loading = this.props.loadingPublicationsByYear || this.props.accountAuthorDetailsLoading
-            || this.props.loadingPublicationsStats || this.props.loadingTrendingPublications
-            || this.props.loadingLatestPublications;
+            || this.props.loadingPublicationsStats || this.props.loadingLatestPublications;
         const barChart = !loading && this.props.publicationsByYear && this.props.publicationsByYear.series.length > 0
             ? (
                 <StandardCard className="barChart" title={txt.publicationsByYearChart.title}>
@@ -197,8 +189,7 @@ class Dashboard extends React.Component {
                 }
                 {
                     !loading
-                    && ((this.props.latestPublicationsList && this.props.latestPublicationsList.length > 0) ||
-                        (this.props.trendingPublicationsList && this.props.trendingPublicationsList.length > 0)) &&
+                    && ((this.props.latestPublicationsList && this.props.latestPublicationsList.length > 0)) &&
                     <StandardCard className="card-paddingless">
                         <Tabs className="publicationTabs"
                             inkBarStyle={{height: '4px', marginTop: '-4px'}}>
@@ -223,71 +214,9 @@ class Dashboard extends React.Component {
                                 </Tab>
                             }
                             {
-                                this.props.trendingPublicationsList.length > 0 &&
                                 <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications"
                                     className="publicationTabs">
-                                    <div style={{padding: '12px 24px'}}>
-                                        {
-                                            this.props.trendingPublicationsList.map((metric, metricIndex) => (
-                                                <div key={'metrics_' + metricIndex}>
-                                                    <div className="columns is-gapless is-mobile">
-                                                        <div className="column">
-                                                            <h2 className="trendingPubsSource">{txt.myTrendingPublications.metrics[metric.key].title}</h2>
-                                                        </div>
-                                                        <div className="column is-narrow is-hidden-mobile">
-                                                            <HelpIcon {...txt.myTrendingPublications.help} />
-                                                        </div>
-                                                    </div>
-                                                    {
-                                                        metric.values.map((recordValue, recordIndex) => (
-                                                            <div className="publicationCitation" key={`trendingPublication_${recordIndex}`}>
-                                                                <div className="columns is-gapless is-mobile">
-                                                                    <div className="column">
-                                                                        <div className="citationContent">
-                                                                            <h3 className="publicationTitle">{recordValue.title}</h3>
-                                                                            <FontIcon className="material-icons citationIcon" data-place="left">
-                                                                                format_quote
-                                                                            </FontIcon>
-                                                                            {recordValue.authors} ({recordValue.rek_date.substring(0, 4)})
-                                                                        </div>
-                                                                        <div className="citationCounts">
-                                                                            <div className="citationCount column" style={{margin: '0px', padding: '0px'}}>
-                                                                                <a
-                                                                                    href={recordValue.citation_url}
-                                                                                    className="citationCountLink"
-                                                                                    target="_blank"
-                                                                                    rel="noopener noreferrer"
-                                                                                    title={locale.global.linkWillOpenInNewWindow.replace('[destination]', recordValue.title)}>
-                                                                                    <div className="columns is-mobile is-gapless">
-                                                                                        <div className="column is-narrow citationCountNumber">{txt.myTrendingPublications.viewFullCitationLinkTitle}
-                                                                                            <FontIcon className="material-icons citationIcon openExternalUrlIcon" data-place="left">
-                                                                                                open_in_new
-                                                                                            </FontIcon>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="column is-narrow">
-                                                                        <span
-                                                                            className="trendingPubsCount"
-                                                                            title={txt.myTrendingPublications.trendSharesThisMonth}>{Math.round(recordValue.count)}</span>
-                                                                    </div>
-                                                                    <div
-                                                                        className="column is-narrow">
-                                                                        <span
-                                                                            className="trendingPubsDifference"
-                                                                            title={txt.myTrendingPublications.trendDifferenceSharesThisMonth}>+{Math.round(recordValue.difference)}</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        ))
-                                                    }
-                                                </div>
-                                            ))
-                                        }
-                                    </div>
+                                    <MyTrendingPublications/>
                                 </Tab>
                             }
                         </Tabs>

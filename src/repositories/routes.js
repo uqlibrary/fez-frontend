@@ -67,7 +67,7 @@ export const AUTHOR_ORCID_DETAILS_API = ({userId, params}) => ({apiUrl: `orcid/$
 
 // academic stats apis
 export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({userId}) => ({apiUrl: `academic/${userId}/hindex`});
-export const ACADEMIC_STATS_PUBLICATIONS_TRENDING_API = ({userId}) => ({apiUrl: `academic/${userId}/trending_publications`});
+export const ACADEMIC_STATS_PUBLICATIONS_TRENDING_API = () => ({apiUrl: 'records/search', options: {params: {rule: 'trending'}}});
 
 // lookup apis
 export const GET_ACML_QUICK_TEMPLATES_API = () => ({apiUrl: 'acml/quick-templates'});

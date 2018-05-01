@@ -86,4 +86,10 @@ describe('PublicationCitation ', () => {
         wrapper.instance()._handleDefaultActions('NAN');
         // TODO
     });
+
+    it('should render publication with citation metric', () => {
+        const publicationWithMetricData = {...mockRecordToFix, metricData: {count: 23, difference: 5, citation_url: 'http://www.test.com', source: 'altmetric'}};
+        const wrapper = setup({publication: publicationWithMetricData, showMetrics: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

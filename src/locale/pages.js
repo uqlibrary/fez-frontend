@@ -193,38 +193,7 @@ export default {
                 viewAllButtonLabel: 'View all'
             },
             myTrendingPublications: {
-                title: 'My trending publications',
-                metrics: {
-                    altmetric: {
-                        title: 'Altmetric score'
-                    },
-                    thomson: {
-                        title: 'Web of Science citation count'
-                    },
-                    scopus: {
-                        title: 'Scopus citation count'
-                    }
-                },
-                viewFullCitationLinkTitle: 'View full citation',
-                trendSharesThisMonth: 'Number of shares in the past month',
-                trendDifferenceSharesThisMonth: 'Difference in shares since last month',
-                help: {
-                    title: 'About these metrics',
-                    text: (
-                        <div>
-                            <p>
-                                For the above metrics, the larger number is the total current citation count, and the +
-                                (plus) value indicates how much the citation count has changed in the last month. The
-                                Altmetric score plus value is slightly different, as it shows the 3 most recent
-                                increases first, ranging from 1 day to 1 year.
-                            </p>
-                            <p>
-                                You can click on the number as a link to see who is citing each publication, or in the
-                                case of Altmetric who is referencing the publication in social media and news outlets.
-                            </p>
-                        </div>),
-                    buttonLabel: 'OK'
-                },
+                title: 'My trending publications'
             },
         },
         myResearch: {
