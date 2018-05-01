@@ -19,7 +19,7 @@ fi
 
 for FILE in $STAGED_FILES
 do
-  "$ESLINT" "$FILE"
+  "$ESLINT" --config "$(git rev-parse --show-toplevel)/.eslintrc" "$FILE" --quiet
 
   if [[ "$?" == 0 ]]; then
     echo "ESLint Passed: $FILE"
