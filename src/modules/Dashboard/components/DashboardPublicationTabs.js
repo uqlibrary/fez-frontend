@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import {Tabs, Tab} from 'material-ui/Tabs';
@@ -8,7 +8,7 @@ import {MyLatestPublications} from 'modules/SharedComponents/MyLatestPublication
 
 import {locale} from 'locale';
 
-class DashboardPublicationTabs extends React.Component {
+class DashboardPublicationTabs extends Component {
     static propTypes = {
         account: PropTypes.object.isRequired,
         latestPublicationsList: PropTypes.array,
@@ -52,7 +52,7 @@ class DashboardPublicationTabs extends React.Component {
                         !!trendingPublicationsList && trendingPublicationsList.length > 0 &&
                         <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications"
                             className="publicationTabs">
-                            <MyTrendingPublications trendingPublicationsList={trendingPublicationsList} />
+                            <MyTrendingPublications trendingPublicationsList={trendingPublicationsList}/>
                         </Tab>
                     }
                 </Tabs>
