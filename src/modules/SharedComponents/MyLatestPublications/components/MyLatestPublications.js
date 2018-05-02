@@ -5,6 +5,7 @@ import {withRouter} from 'react-router-dom';
 import {routes} from 'config';
 import {locale} from 'locale';
 
+import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
 import RaisedButton from 'material-ui/RaisedButton';
 
@@ -12,12 +13,14 @@ export class MyLatestPublications extends PureComponent {
     static propTypes = {
         latestPublicationsList: PropTypes.array,
         totalPublicationsCount: PropTypes.number,
+        isLoading: PropTypes.bool,
         history: PropTypes.object.isRequired
     };
 
     static defaultProps = {
         latestPublicationsList: [],
-        totalPublicationsCount: null
+        totalPublicationsCount: null,
+        isLoading: false
     };
 
     _viewYourResearch = () => {
@@ -26,6 +29,15 @@ export class MyLatestPublications extends PureComponent {
 
     render() {
         const txt = locale.components.myLatestPublications;
+
+        if (this.props.isLoading) {
+            return (
+                <div className="isLoading is-centered">
+                    <InlineLoader message={txt.loading}/>
+                </div>
+            );
+        }
+
         return (
             <div  className="latestPubs">
                 <PublicationsList

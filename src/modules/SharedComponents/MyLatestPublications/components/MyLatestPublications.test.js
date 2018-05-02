@@ -13,4 +13,9 @@ describe('Component MyLatestPublications', () => {
         const wrapper = setup({latestPublicationsList: latestPubsPayload.data, totalPublicationsCount: latestPubsPayload.total});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render loading indicator', () => {
+        const wrapper = setup({isLoading: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

@@ -111,6 +111,7 @@ export default {
             },
         },
         myLatestPublications: {
+            loading: 'Loading your latest publications...',
             title: 'My publications',
             viewAllButtonLabel: 'View all'
         },

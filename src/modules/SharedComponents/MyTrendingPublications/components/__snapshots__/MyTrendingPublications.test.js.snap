@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component MyTrendingPublications should render loading indicator 1`] = `
+<div
+  className="isLoading is-centered"
+>
+  <InlineLoader
+    message="Loading your trending publications..."
+  />
+</div>
+`;
+
 exports[`Component MyTrendingPublications should render trending publications 1`] = `
 <div
   className="trendingPubs"

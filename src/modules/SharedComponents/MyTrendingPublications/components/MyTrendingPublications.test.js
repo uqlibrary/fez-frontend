@@ -14,4 +14,9 @@ describe('Component MyTrendingPublications', () => {
         const wrapper = setup({trendingPublicationsList: transformTrendingPublicationsMetricsData(trendingPublications)});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render loading indicator', () => {
+        const wrapper = setup({isLoading: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

@@ -1421,6 +1421,7 @@ exports[`Dashboard publication tabs should render my trending publications tab 1
       value="myTrendingPublications"
     >
       <MyTrendingPublications
+        isLoading={false}
         trendingPublicationsList={
           Array [
             Object {
@@ -5100,6 +5101,7 @@ exports[`Dashboard publication tabs should render two tabs for latest publicatio
       value="myTrendingPublications"
     >
       <MyTrendingPublications
+        isLoading={false}
         trendingPublicationsList={
           Array [
             Object {

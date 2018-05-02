@@ -5,3 +5,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
   render={[Function]}
 />
 `;
+
+exports[`Component MyLatestPublications should render loading indicator 1`] = `
+<Route
+  render={[Function]}
+/>
+`;
