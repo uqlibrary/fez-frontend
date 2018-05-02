@@ -1,10 +1,11 @@
 import * as actions from '../actions/actionTypes';
-import myTrendingpublicationsReducer from './myTrendingPublications';
+import myTrendingPublicationsReducer from './myTrendingPublications';
 
 const initialState = {
     trendingPublicationsList: [],
     loadingTrendingPublications: true
 };
+
 const trendingPubsPayload = [
     {
         "key": "altmetric",
@@ -119,13 +120,13 @@ const trendingPubsPayload = [
 
 describe('Trending publications reducer', () => {
     it('returns the correct state while trending publications are loading', () => {
-        const test = myTrendingpublicationsReducer(initialState, {type: actions.TRENDING_PUBLICATIONS_LOADING});
+        const test = myTrendingPublicationsReducer(initialState, {type: actions.TRENDING_PUBLICATIONS_LOADING});
         expect(test.trendingPublicationsList).toEqual([]);
         expect(test.loadingTrendingPublications).toBeTruthy();
     });
 
     it('returns the correct state when trending publications are loaded', () => {
-        const test = myTrendingpublicationsReducer(initialState, {
+        const test = myTrendingPublicationsReducer(initialState, {
             type: actions.TRENDING_PUBLICATIONS_LOADED,
             payload: trendingPubsPayload
         });
@@ -134,7 +135,7 @@ describe('Trending publications reducer', () => {
     });
 
     it('returns the correct state when trending publications fail to load', () => {
-        const test = myTrendingpublicationsReducer(initialState, {type: actions.TRENDING_PUBLICATIONS_FAILED});
+        const test = myTrendingPublicationsReducer(initialState, {type: actions.TRENDING_PUBLICATIONS_FAILED});
         expect(test.trendingPublicationsList).toEqual([]);
         expect(test.loadingTrendingPublications).toBeFalsy();
     });

@@ -2,7 +2,7 @@ import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     trendingPublicationsList: [],
-    loadingTrendingPublications: true
+    loadingTrendingPublications: false
 };
 
 const handlers = {

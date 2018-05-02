@@ -73,7 +73,11 @@ mock
             const totalRecords = mockData.myRecordsList.data.length;
             const fromRecord = 5 * (config.params.page - 1);
             const toRecord = 5 * (config.params.page);
-            return [200, {...mockData.myRecordsList, current_page: config.params.page, data: mockData.myRecordsList.data.slice(fromRecord, totalRecords > toRecord ? toRecord : totalRecords)}];
+            return [
+                200,
+                // {total: 0, data: []}
+                {...mockData.myRecordsList, current_page: config.params.page, data: mockData.myRecordsList.data.slice(fromRecord, totalRecords > toRecord ? toRecord : totalRecords)}
+            ];
         }
         // POSSIBLE_RECORDS_API
         else if (config.params.rule === 'possible') {
@@ -86,7 +90,11 @@ mock
         }
         // ACADEMIC_STATS_PUBLICATIONS_TRENDING_API
         else if (config.params.rule === 'trending') {
-            return [200, mockData.trendingPublications];
+            return [
+                200,
+                {total: 0, data: [], filters: []}
+                // mockData.trendingPublications
+            ];
         }
         // SEARCH_INTERNAL_RECORDS_API
         else if (config.params.id || config.params.doi || config.params.title) {

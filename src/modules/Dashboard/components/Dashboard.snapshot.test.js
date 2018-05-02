@@ -3,7 +3,6 @@ jest.dontMock('./Dashboard');
 import Dashboard from './Dashboard';
 import * as mock from 'mock/data';
 
-
 function setup(testProps, isShallow = true) {
     const props = {
         account: mock.accounts.uqresearcher,
@@ -14,11 +13,9 @@ function setup(testProps, isShallow = true) {
         possiblyYourPublicationsCountLoading: false,
         actions: {
             countPossiblyYourPublications: jest.fn(),
-            loadAuthorPublicationsStats: jest.fn(),
-            searchLatestPublications: jest.fn()
+            loadAuthorPublicationsStats: jest.fn()
         },
         history: {},
-        showTrendingPublicationsTab: true,
         ...testProps,
     };
     return getElement(Dashboard, props, isShallow);
@@ -99,15 +96,5 @@ describe('Dashboard test', () => {
         const wrapper = setup({history: {push: testPushFn}});
         wrapper.instance()._addPublication();
         expect(testPushFn).toHaveBeenCalledWith('/records/add/find');
-    });
-
-    it('doesn\'t render my trending publications tab', () => {
-        const wrapper = setup({
-            authorDetails: mock.authorDetails.uqresearcher,
-            publicationsByYear: {series: {}},
-            publicationTypesCount: [],
-            showTrendingPublicationsTab: false
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

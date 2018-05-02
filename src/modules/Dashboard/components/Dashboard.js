@@ -9,11 +9,9 @@ import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 
 import DashboardAuthorProfile from './DashboardAuthorProfile';
-import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
 import {PublicationStats} from 'modules/SharedComponents/PublicationStats';
-import {MyTrendingPublications} from 'modules/SharedComponents/MyTrendingPublications';
-import RaisedButton from 'material-ui/RaisedButton';
-import {Tabs, Tab} from 'material-ui/Tabs';
+import DashboardPublicationTabs from '../containers/DashboardPublicationTabs';
+
 import {routes} from 'config';
 import {locale} from 'locale';
 
@@ -39,13 +37,6 @@ class Dashboard extends React.Component {
         loadingPublicationsStats: PropTypes.bool,
         publicationsStats: PropTypes.object,
 
-        // author's latest publications
-        loadingLatestPublications: PropTypes.bool,
-        latestPublicationsList: PropTypes.array,
-        totalPublicationsCount: PropTypes.number,
-
-        showTrendingPublicationsTab: PropTypes.bool,
-
         // navigations, app actions
         actions: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired
@@ -59,13 +50,15 @@ class Dashboard extends React.Component {
         if (this.props.account && this.props.account.id) {
             this.props.actions.countPossiblyYourPublications(this.props.account.id);
             this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
-            this.props.actions.searchLatestPublications(this.props.account.id);
         }
     }
 
     shouldComponentUpdate(nextProps) {
-        return !(nextProps.loadingPublicationsByYear || nextProps.accountAuthorDetailsLoading
-            || nextProps.loadingPublicationsStats || nextProps.loadingLatestPublications);
+        return !(
+            nextProps.loadingPublicationsByYear ||
+            nextProps.accountAuthorDetailsLoading ||
+            nextProps.loadingPublicationsStats
+        );
     }
 
     _claimYourPublications = () => {
@@ -76,14 +69,13 @@ class Dashboard extends React.Component {
         this.props.history.push(routes.pathConfig.records.add.find);
     };
 
-    _viewYourResearch = () => {
-        this.props.history.push(routes.pathConfig.records.mine);
-    };
-
     render() {
         const txt = locale.pages.dashboard;
-        const loading = this.props.loadingPublicationsByYear || this.props.accountAuthorDetailsLoading
-            || this.props.loadingPublicationsStats || this.props.loadingLatestPublications;
+        const loading = (
+            this.props.loadingPublicationsByYear ||
+            this.props.accountAuthorDetailsLoading ||
+            this.props.loadingPublicationsStats
+        );
         const barChart = !loading && this.props.publicationsByYear && this.props.publicationsByYear.series.length > 0
             ? (
                 <StandardCard className="barChart" title={txt.publicationsByYearChart.title}>
@@ -190,40 +182,8 @@ class Dashboard extends React.Component {
                     </div>
                 }
                 {
-                    !loading
-                    && ((this.props.latestPublicationsList && this.props.latestPublicationsList.length > 0) || this.props.showTrendingPublicationsTab) &&
-                    <StandardCard className="card-paddingless">
-                        <Tabs className="publicationTabs"
-                            inkBarStyle={{height: '4px', marginTop: '-4px'}}>
-                            {
-                                this.props.latestPublicationsList && this.props.latestPublicationsList.length > 0 &&
-                                <Tab label={txt.myPublications.title} value="myPublications"
-                                    className="publicationTabs">
-                                    <div style={{padding: '12px 24px'}}>
-                                        <PublicationsList
-                                            publicationsList={this.props.latestPublicationsList}
-                                            showDefaultActions/>
-                                        <div className="columns">
-                                            <div className="column is-hidden-mobile"/>
-                                            <div className="column is-narrow">
-                                                <RaisedButton
-                                                    secondary
-                                                    label={`${txt.myPublications.viewAllButtonLabel} (${this.props.totalPublicationsCount})`}
-                                                    onTouchTap={this._viewYourResearch}/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Tab>
-                            }
-                            {
-                                this.props.showTrendingPublicationsTab &&
-                                <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications"
-                                    className="publicationTabs">
-                                    <MyTrendingPublications/>
-                                </Tab>
-                            }
-                        </Tabs>
-                    </StandardCard>
+                    !loading &&
+                    <DashboardPublicationTabs/>
                 }
             </StandardPage>
         );

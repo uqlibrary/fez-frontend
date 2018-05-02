@@ -1,12 +1,13 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import MyTrendingPublications from '../components/MyTrendingPublications';
+import DashboardPublicationTabs from '../components/DashboardPublicationTabs';
 import * as actions from 'actions';
 
 const mapStateToProps = (state) => {
     return {
         ...state.get('accountReducer'),
         ...state.get('myTrendingPublicationsReducer'),
+        ...state.get('myLatestPublicationsReducer'),
     };
 };
 
@@ -16,6 +17,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const MyTrendingPublicationsContainer = connect(mapStateToProps, mapDispatchToProps)(MyTrendingPublications);
+const DashboardPublicationTabsContainer = connect(mapStateToProps, mapDispatchToProps)(DashboardPublicationTabs);
 
-export default MyTrendingPublicationsContainer;
+export default DashboardPublicationTabsContainer;

@@ -5,40 +5,9 @@ export const initialState = {
     publicationsListPagingData: {},
     publicationsListFacets: {},
     loadingPublicationsList: true,
-
-    latestPublicationsList: [],
-    loadingLatestPublications: true,
-    totalPublicationsCount: null,
-    showTrendingPublicationsTab: true
 };
 
 const handlers = {
-    [actions.LATEST_PUBLICATIONS_LOADING]: (state) => {
-        return {
-            ...state,
-            latestPublicationsList: [],
-            totalPublicationsCount: null,
-            loadingLatestPublications: true
-        };
-    },
-
-    [actions.LATEST_PUBLICATIONS_LOADED]: (state, action) => {
-        return {
-            ...state,
-            latestPublicationsList: action.payload.data,
-            totalPublicationsCount: action.payload.total,
-            loadingLatestPublications: false,
-        };
-    },
-
-    [actions.LATEST_PUBLICATIONS_FAILED]: (state) => {
-        return {
-            ...state,
-            latestPublicationsList: [],
-            totalPublicationsCount: null,
-            loadingLatestPublications: false
-        };
-    },
 
     [actions.AUTHOR_PUBLICATIONS_LOADING]: (state) => {
         return {
@@ -69,16 +38,12 @@ const handlers = {
         return {
             ...state,
             publicationsList: [],
+
             publicationsListPagingData: {},
             publicationsListFacets: {},
             loadingPublicationsList: false
         };
     },
-
-    [actions.TRENDING_PUBLICATIONS_NOT_FOUND]: (state) => ({
-        ...state,
-        showTrendingPublicationsTab: false
-    })
 };
 
 export default function publicationsReducer(state = initialState, action) {
