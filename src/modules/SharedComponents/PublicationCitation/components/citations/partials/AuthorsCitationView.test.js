@@ -6,7 +6,7 @@ import React from 'react';
 import AuthorsCitationView from './AuthorsCitationView';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+
 import Immutable from 'immutable';
 
 function setup({publication, prefix, suffix, className, initialNumberOfAuthors = 10, thresholdNumberOfAuthors = 3, showLink = false, isShallow = false}) {
@@ -35,7 +35,7 @@ function setup({publication, prefix, suffix, className, initialNumberOfAuthors =
 }
 
 beforeAll(() => {
-    injectTapEventPlugin();
+    
 });
 
 describe('AuthorsCitationView test ', () => {

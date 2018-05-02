@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 // forms & custom components
@@ -14,7 +14,7 @@ import {StandardRighthandCard} from 'modules/SharedComponents/Toolbox/StandardRi
 import {routes} from 'config';
 import {locale} from 'locale';
 
-export default class PossiblyMyRecords extends React.PureComponent {
+export default class PossiblyMyRecords extends PureComponent {
     static propTypes = {
         possiblePublicationsList: PropTypes.array,
         publicationsClaimedInProgress: PropTypes.array,

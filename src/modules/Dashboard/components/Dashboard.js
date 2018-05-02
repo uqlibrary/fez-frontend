@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 import {AuthorsPublicationsPerYearChart} from 'modules/SharedComponents/Toolbox/Charts';
@@ -15,7 +15,7 @@ import DashboardPublicationTabs from '../containers/DashboardPublicationTabs';
 import {routes} from 'config';
 import {locale} from 'locale';
 
-class Dashboard extends React.Component {
+class Dashboard extends PureComponent {
     static propTypes = {
         // account data
         account: PropTypes.object.isRequired,
@@ -52,15 +52,6 @@ class Dashboard extends React.Component {
             this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
         }
     }
-
-    shouldComponentUpdate(nextProps) {
-        return !(
-            nextProps.loadingPublicationsByYear ||
-            nextProps.accountAuthorDetailsLoading ||
-            nextProps.loadingPublicationsStats
-        );
-    }
-
     _claimYourPublications = () => {
         this.props.history.push(routes.pathConfig.records.possible);
     };

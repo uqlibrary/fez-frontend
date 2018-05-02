@@ -26,7 +26,7 @@ exports[`ThesisSubmission test should display successfull submission screen 1`] 
         fullWidth={true}
         label="Return to the Graduate School website"
         labelPosition="after"
-        onTouchTap={[Function]}
+        onClick={[Function]}
         primary={false}
         secondary={true}
       />
@@ -61,7 +61,7 @@ exports[`ThesisSubmission test should render hdr thesis submission acknowledgeme
         fullWidth={true}
         label="Return to the Graduate School website"
         labelPosition="after"
-        onTouchTap={[Function]}
+        onClick={[Function]}
         primary={false}
         secondary={true}
       />
@@ -515,7 +515,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
           fullWidth={true}
           label="Cancel"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={false}
         />
@@ -528,7 +528,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
           fullWidth={true}
           label="Deposit your thesis"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={true}
         />
@@ -564,7 +564,7 @@ exports[`ThesisSubmission test should render sbs thesis submission acknowledgeme
         fullWidth={true}
         label="Return to the Graduate School website"
         labelPosition="after"
-        onTouchTap={[Function]}
+        onClick={[Function]}
         primary={false}
         secondary={true}
       />
@@ -1018,7 +1018,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
           fullWidth={true}
           label="Cancel"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={false}
         />
@@ -1031,7 +1031,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
           fullWidth={true}
           label="Deposit your thesis"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={true}
         />

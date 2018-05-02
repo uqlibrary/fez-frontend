@@ -540,6 +540,7 @@ exports[`Component ContributorForm rendering display name field and identifier f
                         },
                         "tooltip": Object {
                           "color": "#ffffff",
+                          "opacity": 0.9,
                           "rippleBackgroundColor": "#616161",
                         },
                         "userAgent": undefined,
@@ -988,6 +989,7 @@ exports[`Component ContributorForm rendering display name field and identifier f
                         },
                         "tooltip": Object {
                           "color": "#ffffff",
+                          "opacity": 0.9,
                           "rippleBackgroundColor": "#616161",
                         },
                         "userAgent": undefined,
@@ -1461,6 +1463,7 @@ exports[`Component ContributorForm rendering display name field and identifier f
                         },
                         "tooltip": Object {
                           "color": "#ffffff",
+                          "opacity": 0.9,
                           "rippleBackgroundColor": "#616161",
                         },
                         "userAgent": undefined,
@@ -2020,6 +2023,7 @@ exports[`Component ContributorForm rendering display name field and identifier f
                             },
                             "tooltip": Object {
                               "color": "#ffffff",
+                              "opacity": 0.9,
                               "rippleBackgroundColor": "#616161",
                             },
                             "userAgent": undefined,
@@ -2468,6 +2472,7 @@ exports[`Component ContributorForm rendering display name field and identifier f
                             },
                             "tooltip": Object {
                               "color": "#ffffff",
+                              "opacity": 0.9,
                               "rippleBackgroundColor": "#616161",
                             },
                             "userAgent": undefined,
@@ -2943,6 +2948,7 @@ exports[`Component ContributorForm rendering display name field and identifier f
                             },
                             "tooltip": Object {
                               "color": "#ffffff",
+                              "opacity": 0.9,
                               "rippleBackgroundColor": "#616161",
                             },
                             "userAgent": undefined,
@@ -3110,7 +3116,6 @@ exports[`Component ContributorForm rendering display name field and identifier f
                       onKeyDown={[Function]}
                       onKeyUp={[Function]}
                       onKeyboardFocus={[Function]}
-                      onTouchTap={[Function]}
                       style={
                         Object {
                           "backgroundColor": "rgb(229, 229, 229)",
@@ -3135,7 +3140,6 @@ exports[`Component ContributorForm rendering display name field and identifier f
                         onFocus={[Function]}
                         onKeyDown={[Function]}
                         onKeyUp={[Function]}
-                        onTouchTap={[Function]}
                         style={
                           Object {
                             "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
@@ -3160,7 +3164,6 @@ exports[`Component ContributorForm rendering display name field and identifier f
                             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
                             "verticalAlign": null,
                             "width": "100%",
-                            "zIndex": 1,
                           }
                         }
                         tabIndex={-1}
@@ -3754,6 +3757,7 @@ exports[`Component ContributorForm rendering display name field only 1`] = `
                         },
                         "tooltip": Object {
                           "color": "#ffffff",
+                          "opacity": 0.9,
                           "rippleBackgroundColor": "#616161",
                         },
                         "userAgent": undefined,
@@ -4202,6 +4206,7 @@ exports[`Component ContributorForm rendering display name field only 1`] = `
                         },
                         "tooltip": Object {
                           "color": "#ffffff",
+                          "opacity": 0.9,
                           "rippleBackgroundColor": "#616161",
                         },
                         "userAgent": undefined,
@@ -4675,6 +4680,7 @@ exports[`Component ContributorForm rendering display name field only 1`] = `
                         },
                         "tooltip": Object {
                           "color": "#ffffff",
+                          "opacity": 0.9,
                           "rippleBackgroundColor": "#616161",
                         },
                         "userAgent": undefined,
@@ -4796,7 +4802,6 @@ exports[`Component ContributorForm rendering display name field only 1`] = `
                       onKeyDown={[Function]}
                       onKeyUp={[Function]}
                       onKeyboardFocus={[Function]}
-                      onTouchTap={[Function]}
                       style={
                         Object {
                           "backgroundColor": "rgb(229, 229, 229)",
@@ -4821,7 +4826,6 @@ exports[`Component ContributorForm rendering display name field only 1`] = `
                         onFocus={[Function]}
                         onKeyDown={[Function]}
                         onKeyUp={[Function]}
-                        onTouchTap={[Function]}
                         style={
                           Object {
                             "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
@@ -4846,7 +4850,6 @@ exports[`Component ContributorForm rendering display name field only 1`] = `
                             "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
                             "verticalAlign": null,
                             "width": "100%",
-                            "zIndex": 1,
                           }
                         }
                         tabIndex={-1}

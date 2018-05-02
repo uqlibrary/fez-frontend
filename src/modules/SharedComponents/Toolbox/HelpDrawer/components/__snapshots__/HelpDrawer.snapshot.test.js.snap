@@ -38,7 +38,7 @@ exports[`HelpDrawer snapshots tests renders menu 1`] = `
         fullWidth={false}
         label="Close"
         labelPosition="after"
-        onTouchTap={[Function]}
+        onClick={[Function]}
         primary={false}
         secondary={true}
       />

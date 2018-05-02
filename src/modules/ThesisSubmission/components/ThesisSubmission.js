@@ -75,7 +75,7 @@ export default class ThesisSubmission extends Component {
                                 secondary
                                 fullWidth
                                 label={formLocale.thesisSubmission.afterSubmit}
-                                onTouchTap={this.afterSubmit}/>
+                                onClick={this.afterSubmit}/>
                         </div>
                     </div>
                 </StandardPage>
@@ -228,14 +228,14 @@ export default class ThesisSubmission extends Component {
                                 fullWidth
                                 label={formLocale.thesisSubmission.cancel}
                                 disabled={this.props.submitting}
-                                onTouchTap={this.cancelSubmit}/>
+                                onClick={this.cancelSubmit}/>
                         </div>
                         <div className="column is-narrow-desktop">
                             <RaisedButton
                                 secondary
                                 fullWidth
                                 label={formLocale.thesisSubmission.submit}
-                                onTouchTap={this.openDepositConfirmation}
+                                onClick={this.openDepositConfirmation}
                                 disabled={this.props.submitting || this.props.disableSubmit}/>
                         </div>
                     </div>

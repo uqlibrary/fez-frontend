@@ -117,7 +117,7 @@ export default class PublicationForm extends Component {
                             fullWidth
                             label={txt.cancel}
                             disabled={this.props.submitting}
-                            onTouchTap={this.props.onFormCancel} />
+                            onClick={this.props.onFormCancel} />
                     </div>
                     {this.props.formValues.get('rek_display_type') > 0 &&
                     <div className="column is-narrow-desktop">
@@ -125,7 +125,7 @@ export default class PublicationForm extends Component {
                             secondary
                             fullWidth
                             label={txt.submit}
-                            onTouchTap={this.props.handleSubmit}
+                            onClick={this.props.handleSubmit}
                             disabled={this.props.submitting || this.props.disableSubmit}/>
                     </div>
                     }

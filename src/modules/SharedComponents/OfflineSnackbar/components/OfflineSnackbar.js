@@ -56,7 +56,7 @@ export default class OfflineSnackbar extends PureComponent {
                     {...snackbarProps}
                     open={this.state.open}
                     onRequestClose={this.handleRequestClose}
-                    onActionTouchTap={this.handleRequestClose}
+                    onActionClick={this.handleRequestClose}
                 />
             </div>
         );

@@ -639,6 +639,7 @@ exports[`AutoSuggestField component should render autosuggest field and call act
                       },
                       "tooltip": Object {
                         "color": "#ffffff",
+                        "opacity": 0.9,
                         "rippleBackgroundColor": "#616161",
                       },
                       "userAgent": undefined,
@@ -1087,6 +1088,7 @@ exports[`AutoSuggestField component should render autosuggest field and call act
                       },
                       "tooltip": Object {
                         "color": "#ffffff",
+                        "opacity": 0.9,
                         "rippleBackgroundColor": "#616161",
                       },
                       "userAgent": undefined,
@@ -1562,6 +1564,7 @@ exports[`AutoSuggestField component should render autosuggest field and call act
                       },
                       "tooltip": Object {
                         "color": "#ffffff",
+                        "opacity": 0.9,
                         "rippleBackgroundColor": "#616161",
                       },
                       "userAgent": undefined,
@@ -2262,6 +2265,7 @@ exports[`AutoSuggestField component should render with className set 1`] = `
                       },
                       "tooltip": Object {
                         "color": "#ffffff",
+                        "opacity": 0.9,
                         "rippleBackgroundColor": "#616161",
                       },
                       "userAgent": undefined,
@@ -2710,6 +2714,7 @@ exports[`AutoSuggestField component should render with className set 1`] = `
                       },
                       "tooltip": Object {
                         "color": "#ffffff",
+                        "opacity": 0.9,
                         "rippleBackgroundColor": "#616161",
                       },
                       "userAgent": undefined,
@@ -3185,6 +3190,7 @@ exports[`AutoSuggestField component should render with className set 1`] = `
                       },
                       "tooltip": Object {
                         "color": "#ffffff",
+                        "opacity": 0.9,
                         "rippleBackgroundColor": "#616161",
                       },
                       "userAgent": undefined,
@@ -3887,6 +3893,7 @@ exports[`AutoSuggestField component should render with disabled flag set to true
                       },
                       "tooltip": Object {
                         "color": "#ffffff",
+                        "opacity": 0.9,
                         "rippleBackgroundColor": "#616161",
                       },
                       "userAgent": undefined,
@@ -4335,6 +4342,7 @@ exports[`AutoSuggestField component should render with disabled flag set to true
                       },
                       "tooltip": Object {
                         "color": "#ffffff",
+                        "opacity": 0.9,
                         "rippleBackgroundColor": "#616161",
                       },
                       "userAgent": undefined,
@@ -4810,6 +4818,7 @@ exports[`AutoSuggestField component should render with disabled flag set to true
                       },
                       "tooltip": Object {
                         "color": "#ffffff",
+                        "opacity": 0.9,
                         "rippleBackgroundColor": "#616161",
                       },
                       "userAgent": undefined,
