@@ -158,6 +158,7 @@ export default class MyRecords extends React.PureComponent {
                                     sortDirection={this.state.sortDirection}
                                     pageSize={this.state.pageSize}
                                     pagingData={pagingData}
+                                    publicationsList={this.props.publicationsList}
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
                                     disabled={this.props.loadingPublicationsList} />

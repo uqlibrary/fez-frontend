@@ -94,7 +94,8 @@
     "redux-form": "7.3.0",
     "redux-immutable": "^4.0.0",
     "redux-thunk": "^2.2.0",
-    "timezones.json": "^1.2.1"
+    "timezones.json": "^1.2.1",
+    "xlsx": "^0.12.11"
   },
   "scripts": {
     "start": "webpack-dev-server",

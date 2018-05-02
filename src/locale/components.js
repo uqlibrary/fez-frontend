@@ -726,5 +726,97 @@ export default {
                 'Asc'
             ]
         },
+        export: {
+            label: 'Export results',
+            format: [
+                {value: 'excel', label: 'Excel File'},
+                {value: 'endnote', label: 'Export for Endnote'}
+            ],
+            mapping: {
+                excel: {
+                    'PID': 'rek_pid',
+                    'Title': 'rek_title',
+                    'Type': 'rek_genre',
+                    'Details': 'rek_citation_stripped',
+                    'WoS citations': 'rek_thomson_citation_count',
+                    'Scopus citations': 'rek_scopus_citation_count',
+                    'Altmetric Score': 'rek_altmetric_score',
+                    'ERA 2010 Journal ranking': 'rj_2010_rank',
+                    'ERA 2012 Journal listed': 'rj_2012_title',
+                    'HERDC code': 'rek_herdc_code_lookup',
+                    'HERDC status': 'rek_herdc_status_lookup',
+                    'HERDC affiliation': 'rek_institutional_status_lookup',
+                    'Created Date': 'rek_created_date',
+                    'Updated Date': 'rek_updated_date',
+                    'ANDS Collection Type': 'rek_ands_collection_type',
+                    'Geographic Area': {
+                        'fez_record_search_key_geographic_area.rek_geographic_area': '|'
+                    },
+                    'Author Role': {
+                        'fez_record_search_key_author_role.rek_author_role': '|'
+                    },
+                    'Contact Details Email': {
+                        'fez_record_search_key_contact_details_email.rek_contact_details_email': '|'
+                    },
+                    'Institutional Status': 'rek_institutional_status_lookup',
+                    'Acknowledgements': 'rek_acknowledgements',
+                    'Genre': 'rek_genre',
+                    'Original Format': 'rek_original_format',
+                    'Source': 'rek_source',
+                    'Length': 'rek_length',
+                    'Author': {
+                        'fez_record_search_key_author.rek_author': '|'
+                    },
+                    'Formatted Title': 'rek_formatted_title',
+                    'Project Name': 'rek_project_name',
+                    'Project Description': 'rek_project_description',
+                    'Journal Name': 'rek_journal_name',
+                    'ISSN': {
+                        'fez_record_search_key_issn.rek_issn': '|'
+                    },
+                    'ISBN': {
+                        'fez_record_search_key_isbn.rek_isbn': '|'
+                    },
+                    'Org Unit Name': 'rek_org_unit_name',
+                    'Org Name': 'rek_org_name',
+                    'DOI': 'rek_doi',
+                    'Related Publications': 'rek_related_publications',
+                    'Date': 'rek_date',
+                    'Date Recorded': 'rek_date_recorded',
+                    'Location': 'rek_location',
+                    'Rights': 'rek_rights',
+                    'Date Available': 'rek_date_available',
+                    'Subtype': 'rek_subtype',
+                    'Genre Type': 'rek_genre_type',
+                    'OA Status': 'rek_oa_status_lookup',
+                    'Series': 'rek_series',
+                    'Report Number': 'rek_report_number',
+                    'Volume Number': 'rek_volume_number',
+                    'Issue Number': 'rek_issue_number',
+                    'Start Page': 'rek_start_page',
+                    'End Page': 'rek_end_page',
+                    'Supervisor': {
+                        'fez_record_search_key_supervisor.rek_supervisor': '|'
+                    },
+                    'Contributor': {
+                        'fez_record_search_key_contributor.rek_contributor': '|'
+                    },
+                    'Place of Publication': 'rek_place_of_publication',
+                    'Access Conditions': 'rek_access_conditions',
+                    'License': 'rek_license',
+                    'Fields of Research': {
+                        'fez_record_search_key_fields_of_research.rek_fields_of_research': '|'
+                    },
+                    'Publisher': 'rek_publisher',
+                    'Total Pages': 'rek_total_pages',
+                    'Total Pages Colour': 'rek_total_pages_colour',
+                    'Total Pages BW': 'rek_total_pages_bw',
+                    'Language': 'rek_language',
+                    'Keywords': 'rek_keywords',
+                    'Additional Notes': 'rek_additional_notes',
+                    'References	Notes': 'rek_references_notes'
+                }
+            }
+        }
     }
 };

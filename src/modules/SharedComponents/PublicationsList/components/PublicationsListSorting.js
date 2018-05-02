@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import {locale} from 'locale';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
+import ExportPublications from './ExportPublications';
+import XLSX from 'xlsx';
 
 export default class PublicationsListSorting extends PureComponent {
     static propTypes = {
@@ -18,7 +20,8 @@ export default class PublicationsListSorting extends PureComponent {
             per_page: PropTypes.number,
             current_page: PropTypes.number
         }),
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        publicationsList: PropTypes.array,
     };
 
     constructor(props) {
@@ -61,6 +64,52 @@ export default class PublicationsListSorting extends PureComponent {
         this.props.onSortByChanged(value, this.state.sortDirection);
     }
 
+    exportFormatChanged = (exportFormat) => {
+        // TODO refactor reducers n' move to actions
+        const rows = [];
+        switch (exportFormat) {
+            case 'excel':
+                const mappings = locale.components.export.mapping[exportFormat];
+                const columns = Object.keys(mappings);
+                rows.push(columns);
+
+                this.props.publicationsList.forEach(record => {
+                    console.log(record);
+                    const row = [];
+
+                    columns.forEach(key => {
+                        const mapping = mappings[key];
+
+                        let value = null;
+                        if (mapping in record) {
+                            value = record[mapping];
+                        }
+
+                        row.push(value);
+                    });
+
+                    if (row.length) {
+                        rows.push(row);
+                    }
+                });
+
+                break;
+            default:
+                return;
+        }
+
+        console.log(rows);
+
+        if (rows.length > 1) {
+            const ws = XLSX.utils.aoa_to_sheet(rows);
+            const wb = XLSX.utils.book_new();
+            // console.log(ws);
+            XLSX.utils.book_append_sheet(wb, ws, 'SheetJS');
+            /* generate XLSX file and send to client */
+            XLSX.writeFile(wb, 'export.xls');
+        }
+    };
+
     render() {
         if (!this.props.pagingData || this.props.pagingData.total === 0) {
             return (<span className="publicationsListSorting empty"/>);
@@ -100,7 +149,7 @@ export default class PublicationsListSorting extends PureComponent {
                         }
                     </SelectField>
                 </div>
-                <div className="column is-narrow is-spacer is-hidden-mobile" />
+                <div className="column is- is-narrow is-spacer is-hidden-mobile" />
                 <div className="column is-hidden-mobile">
                     <SelectField
                         id="pageSize"
@@ -116,6 +165,11 @@ export default class PublicationsListSorting extends PureComponent {
                         <MenuItem value={1000} primaryText={1000}/>
                     </SelectField>
                 </div>
+                <div className="column is- is-narrow is-spacer is-hidden-mobile" />
+                <ExportPublications
+                    format={this.state.exportFormat}
+                    onFormatChanged={this.exportFormatChanged}
+                    disabled={this.props.disabled}/>
             </div>
 
         );
