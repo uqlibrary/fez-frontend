@@ -106,6 +106,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
             ],
             "positions": Array [
               "Affiliate Professor",
+              "Casual Affiliate Professor",
               "Affiliate Professorial Res Fellow",
               "ARC Australian Laureate Fellow",
             ],
@@ -196,6 +197,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                 positions={
                   Array [
                     "Affiliate Professor",
+                    "Casual Affiliate Professor",
                     "Affiliate Professorial Res Fellow",
                     "ARC Australian Laureate Fellow",
                   ]
@@ -589,6 +591,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
             ],
             "positions": Array [
               "Affiliate Professor",
+              "Casual Affiliate Professor",
               "Affiliate Professorial Res Fellow",
               "ARC Australian Laureate Fellow",
             ],
@@ -679,6 +682,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                 positions={
                   Array [
                     "Affiliate Professor",
+                    "Casual Affiliate Professor",
                     "Affiliate Professorial Res Fellow",
                     "ARC Australian Laureate Fellow",
                   ]
@@ -1072,6 +1076,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
             ],
             "positions": Array [
               "Affiliate Professor",
+              "Casual Affiliate Professor",
               "Affiliate Professorial Res Fellow",
               "ARC Australian Laureate Fellow",
             ],
@@ -1162,6 +1167,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                 positions={
                   Array [
                     "Affiliate Professor",
+                    "Casual Affiliate Professor",
                     "Affiliate Professorial Res Fellow",
                     "ARC Australian Laureate Fellow",
                   ]
@@ -1555,6 +1561,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
             ],
             "positions": Array [
               "Affiliate Professor",
+              "Casual Affiliate Professor",
               "Affiliate Professorial Res Fellow",
               "ARC Australian Laureate Fellow",
             ],
@@ -1645,6 +1652,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                 positions={
                   Array [
                     "Affiliate Professor",
+                    "Casual Affiliate Professor",
                     "Affiliate Professorial Res Fellow",
                     "ARC Australian Laureate Fellow",
                   ]
@@ -2038,6 +2046,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
             ],
             "positions": Array [
               "Affiliate Professor",
+              "Casual Affiliate Professor",
               "Affiliate Professorial Res Fellow",
               "ARC Australian Laureate Fellow",
             ],
@@ -2128,6 +2137,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                 positions={
                   Array [
                     "Affiliate Professor",
+                    "Casual Affiliate Professor",
                     "Affiliate Professorial Res Fellow",
                     "ARC Australian Laureate Fellow",
                   ]

@@ -559,7 +559,7 @@ export const authorDetails = {
         "publons_id": "",
         "mypub_url": "uqresearcher",
         "org_units": ["Institute for Molecular Bioscience", "School of Chemistry and Molecular Biosciences", "The University of Queensland Diamantina Institute"],
-        "positions": ["Affiliate Professor", "Affiliate Professorial Res Fellow", "ARC Australian Laureate Fellow"],
+        "positions": ["Affiliate Professor", "Casual Affiliate Professor", "Affiliate Professorial Res Fellow", "ARC Australian Laureate Fellow"],
         "espace": {"first_year":1975,"last_year":2018,"doc_count":357}
     },
     s2222222: {

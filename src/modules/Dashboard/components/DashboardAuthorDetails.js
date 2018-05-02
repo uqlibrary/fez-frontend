@@ -14,7 +14,22 @@ export default class DashboardAuthorDetails extends PureComponent {
         super(props);
     }
 
+    /**
+     * Hide roles that include the word 'Casual', where multiple roles are currently displayed,
+     * and at least one does not include the word 'Casual'
+     * If all appointments include the word 'Casual' we will need to display all roles.
+     */
+    getPositions() {
+        const positions = this.props.positions && this.props.positions.filter((position)=>{
+            return position.indexOf('Casual ') === -1;
+        });
+
+        return positions && positions.length > 0 ? positions : this.props.positions;
+    }
+
     render() {
+        const positions = this.getPositions();
+
         return (
             <div className="authorDetails">
                 {/* Title and name */}
@@ -24,7 +39,7 @@ export default class DashboardAuthorDetails extends PureComponent {
                 {/* Author Name/Positions/OrgUnits */}
                 <div className="is-paddingless is-marginless is-narrow">
                     {
-                        this.props.positions && this.props.positions.length > 0 && this.props.positions.map((item, index) => (
+                        positions && positions.length > 0 && positions.map((item, index) => (
                             <div key={index} className="authorPositionOrg">
                                 <strong>{item}</strong>
                                 {
