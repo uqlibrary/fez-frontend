@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
@@ -18,7 +18,7 @@ import {AuthorLinkingField, ContributorLinkingField} from 'modules/SharedCompone
 import {validation, routes} from 'config';
 import {locale} from 'locale';
 
-export default class ClaimRecord extends React.PureComponent {
+export default class ClaimRecord extends PureComponent {
     static propTypes = {
         ...propTypes, // all redux-form props
         disableSubmit: PropTypes.bool,
@@ -45,10 +45,6 @@ export default class ClaimRecord extends React.PureComponent {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.successConfirmationBox.showConfirmation();
         }
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return this.props !== nextProps || this.state !== nextState;
     }
 
     componentWillUnmount() {
@@ -211,7 +207,7 @@ export default class ClaimRecord extends React.PureComponent {
                                 fullWidth
                                 label={txt.cancel}
                                 disabled={this.props.submitting}
-                                onTouchTap={this._cancelClaim}/>
+                                onClick={this._cancelClaim}/>
                         </div>
                         {
                             (!publication.rek_pid || !(authorLinked || contributorLinked)) && !(!publication.rek_pid && this.props.submitFailed) &&
@@ -220,7 +216,7 @@ export default class ClaimRecord extends React.PureComponent {
                                     secondary
                                     fullWidth
                                     label={txt.submit}
-                                    onTouchTap={this.props.handleSubmit}
+                                    onClick={this.props.handleSubmit}
                                     disabled={this.props.submitting || this.props.disableSubmit}/>
                             </div>
                         }

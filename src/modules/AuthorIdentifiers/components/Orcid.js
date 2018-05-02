@@ -212,7 +212,7 @@ export default class Orcid extends Component {
                                 fullWidth
                                 disabled={this.props.accountAuthorSaving}
                                 label={txt.linkOrcid.labels.submit}
-                                onTouchTap={this._showAuthoriseConfirmation}
+                                onClick={this._showAuthoriseConfirmation}
                             />
                         </div>
                     </div>
@@ -228,7 +228,7 @@ export default class Orcid extends Component {
                                 fullWidth
                                 disabled={this.props.accountAuthorSaving}
                                 label={txt.createOrcid.labels.submit}
-                                onTouchTap={this._showAuthoriseConfirmation.bind(this, false)}
+                                onClick={this._showAuthoriseConfirmation.bind(this, false)}
                             />
                         </div>
                     </div>

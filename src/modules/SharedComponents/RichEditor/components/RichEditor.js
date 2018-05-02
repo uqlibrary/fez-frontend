@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import 'ckeditor';
 
-export default class RichEditor extends React.PureComponent {
+export default class RichEditor extends PureComponent {
     static propTypes = {
         value: PropTypes.any,
         className: PropTypes.string,

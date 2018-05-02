@@ -59,7 +59,7 @@ export default class Masquerade extends Component {
                             secondary
                             label={txt.labels.submit}
                             disabled={this.state.loading}
-                            onTouchTap={this._masqueradeAs}/>
+                            onClick={this._masqueradeAs}/>
                     </div>
                 </div>
             </StandardPage>

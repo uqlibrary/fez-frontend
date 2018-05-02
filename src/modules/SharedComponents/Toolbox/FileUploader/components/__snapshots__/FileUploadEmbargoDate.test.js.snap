@@ -98,8 +98,8 @@ exports[`Component FileUploadEmbargoDate should render datepicker on key pressed
                 id="accessDatePicker"
                 multiLine={false}
                 onChange={[Function]}
+                onClick={[Function]}
                 onFocus={[Function]}
-                onTouchTap={[Function]}
                 rows={1}
                 type="text"
                 underlineShow={true}
@@ -127,8 +127,8 @@ exports[`Component FileUploadEmbargoDate should render datepicker on key pressed
                     id="accessDatePicker"
                     onBlur={[Function]}
                     onChange={[Function]}
+                    onClick={[Function]}
                     onFocus={[Function]}
-                    onTouchTap={[Function]}
                     style={
                       Object {
                         "WebkitOpacity": 1,
@@ -558,6 +558,7 @@ exports[`Component FileUploadEmbargoDate should render datepicker on key pressed
                         },
                         "tooltip": Object {
                           "color": "#ffffff",
+                          "opacity": 0.9,
                           "rippleBackgroundColor": "#616161",
                         },
                         "userAgent": undefined,

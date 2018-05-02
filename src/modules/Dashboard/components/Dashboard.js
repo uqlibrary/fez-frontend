@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 import {AuthorsPublicationsPerYearChart} from 'modules/SharedComponents/Toolbox/Charts';
@@ -17,7 +17,7 @@ import {Tabs, Tab} from 'material-ui/Tabs';
 import {routes} from 'config';
 import {locale} from 'locale';
 
-class Dashboard extends React.Component {
+class Dashboard extends PureComponent {
     static propTypes = {
         // account data
         account: PropTypes.object.isRequired,
@@ -60,12 +60,6 @@ class Dashboard extends React.Component {
             this.props.actions.searchLatestPublications(this.props.account.id);
         }
     }
-
-    shouldComponentUpdate(nextProps) {
-        return !(nextProps.loadingPublicationsByYear || nextProps.accountAuthorDetailsLoading
-            || nextProps.loadingPublicationsStats || nextProps.loadingLatestPublications);
-    }
-
     _claimYourPublications = () => {
         this.props.history.push(routes.pathConfig.records.possible);
     };
@@ -207,7 +201,7 @@ class Dashboard extends React.Component {
                                                 <RaisedButton
                                                     secondary
                                                     label={`${txt.myPublications.viewAllButtonLabel} (${this.props.totalPublicationsCount})`}
-                                                    onTouchTap={this._viewYourResearch}/>
+                                                    onClick={this._viewYourResearch}/>
                                             </div>
                                         </div>
                                     </div>

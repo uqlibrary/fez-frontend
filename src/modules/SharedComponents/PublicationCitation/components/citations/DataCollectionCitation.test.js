@@ -6,7 +6,7 @@ import React from 'react';
 import DataCollectionCitation from './DataCollectionCitation';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+
 import {dataCollection} from 'mock/data/testing/records';
 
 function setup({publication, isShallow = false}) {
@@ -29,7 +29,7 @@ function setup({publication, isShallow = false}) {
 }
 
 beforeAll(() => {
-    injectTapEventPlugin();
+    
 });
 
 describe('DataCollectionCitation renders ', () => {

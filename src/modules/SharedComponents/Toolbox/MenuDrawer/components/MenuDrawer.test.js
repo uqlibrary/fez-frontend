@@ -94,7 +94,7 @@ describe('MenuDrawer snapshots tests', () => {
         const wrapper = setup({drawerOpen: true, docked: true, history: {push: testMethod}});
         // navigateToLink
         wrapper.find('span.menu-item-container ListItem').forEach(listItem => {
-            listItem.props().onTouchTap();
+            listItem.props().onClick();
             expect(testMethod).toHaveBeenCalled();
         });
     });

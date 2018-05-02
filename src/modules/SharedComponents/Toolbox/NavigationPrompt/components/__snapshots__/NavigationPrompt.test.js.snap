@@ -57,7 +57,7 @@ exports[`NavigationPrompt component should render 1`] = `
                     fullWidth={true}
                     label="No"
                     labelPosition="after"
-                    onTouchTap={[Function]}
+                    onClick={[Function]}
                     primary={false}
                     secondary={false}
                   />
@@ -72,7 +72,7 @@ exports[`NavigationPrompt component should render 1`] = `
                     keyboardFocused={true}
                     label="Yes"
                     labelPosition="after"
-                    onTouchTap={[Function]}
+                    onClick={[Function]}
                     primary={false}
                     secondary={true}
                   />

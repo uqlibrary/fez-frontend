@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import Checkbox from 'material-ui/Checkbox';
 import AuthorItem from './AuthorItem';
 import Infinite from 'react-infinite';
 
-export default class AuthorLinking extends React.Component {
+export default class AuthorLinking extends PureComponent {
     static contextTypes = {
         isMobile: PropTypes.bool
     };

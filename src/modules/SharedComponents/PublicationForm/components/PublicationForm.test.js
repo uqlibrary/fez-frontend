@@ -1,6 +1,6 @@
 jest.dontMock('./PublicationForm');
 import PublicationForm from './PublicationForm';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+
 import Immutable from 'immutable';
 
 function setup(testProps, isShallow = true) {
@@ -20,7 +20,7 @@ function setup(testProps, isShallow = true) {
 }
 
 beforeAll(() => {
-    injectTapEventPlugin();
+
 });
 
 describe('Component PublicationForm', () => {

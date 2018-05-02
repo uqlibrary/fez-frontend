@@ -46,7 +46,7 @@ exports[`MenuDrawer snapshots tests should render opened drawer with menus, divi
             disableTouchRipple={false}
             disabled={false}
             iconStyle={Object {}}
-            onTouchTap={[MockFunction]}
+            onClick={[MockFunction]}
             tooltipPosition="bottom-center"
             touch={false}
           >
@@ -74,13 +74,13 @@ exports[`MenuDrawer snapshots tests should render opened drawer with menus, divi
           leftIcon={null}
           nestedItems={Array []}
           nestedLevel={0}
+          onClick={[Function]}
           onKeyboardFocus={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onNestedListToggle={[Function]}
           onTouchEnd={[Function]}
           onTouchStart={[Function]}
-          onTouchTap={[Function]}
           open={null}
           primaryText="Primary text 0"
           primaryTogglesNestedList={false}
@@ -106,13 +106,13 @@ exports[`MenuDrawer snapshots tests should render opened drawer with menus, divi
           leftIcon={null}
           nestedItems={Array []}
           nestedLevel={0}
+          onClick={[Function]}
           onKeyboardFocus={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onNestedListToggle={[Function]}
           onTouchEnd={[Function]}
           onTouchStart={[Function]}
-          onTouchTap={[Function]}
           open={null}
           primaryText="Primary text 1"
           primaryTogglesNestedList={false}
@@ -161,7 +161,7 @@ exports[`MenuDrawer snapshots tests should render opened drawer with menus, divi
             disableTouchRipple={false}
             disabled={false}
             iconStyle={Object {}}
-            onTouchTap={[MockFunction]}
+            onClick={[MockFunction]}
             tooltipPosition="bottom-center"
             touch={false}
           >
@@ -190,7 +190,7 @@ exports[`MenuDrawer snapshots tests should render opened drawer with menus, divi
           fullWidth={false}
           label="Skip navigation"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={true}
           tabIndex={-1}
@@ -210,13 +210,13 @@ exports[`MenuDrawer snapshots tests should render opened drawer with menus, divi
           leftIcon={null}
           nestedItems={Array []}
           nestedLevel={0}
+          onClick={[Function]}
           onKeyboardFocus={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onNestedListToggle={[Function]}
           onTouchEnd={[Function]}
           onTouchStart={[Function]}
-          onTouchTap={[Function]}
           open={null}
           primaryText="Primary text 0"
           primaryTogglesNestedList={false}
@@ -242,13 +242,13 @@ exports[`MenuDrawer snapshots tests should render opened drawer with menus, divi
           leftIcon={null}
           nestedItems={Array []}
           nestedLevel={0}
+          onClick={[Function]}
           onKeyboardFocus={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onNestedListToggle={[Function]}
           onTouchEnd={[Function]}
           onTouchStart={[Function]}
-          onTouchTap={[Function]}
           open={null}
           primaryText="Primary text 1"
           primaryTogglesNestedList={false}

@@ -105,7 +105,7 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
             disableTouchRipple={false}
             disabled={false}
             iconStyle={Object {}}
-            onTouchTap={[Function]}
+            onClick={[Function]}
             tooltip="Remove this record"
             tooltipPosition="bottom-left"
             touch={false}
@@ -218,7 +218,7 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
             disableTouchRipple={false}
             disabled={false}
             iconStyle={Object {}}
-            onTouchTap={[Function]}
+            onClick={[Function]}
             tooltip="Remove this record"
             tooltipPosition="bottom-left"
             touch={false}
@@ -331,7 +331,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
             disableTouchRipple={false}
             disabled={false}
             iconStyle={Object {}}
-            onTouchTap={[Function]}
+            onClick={[Function]}
             tooltip="Remove this record"
             tooltipPosition="bottom-left"
             touch={false}
@@ -432,7 +432,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
             disableTouchRipple={false}
             disabled={false}
             iconStyle={Object {}}
-            onTouchTap={[Function]}
+            onClick={[Function]}
             tooltip="Move record up the order"
             tooltipPosition="bottom-left"
             touch={false}
@@ -455,7 +455,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
             disableTouchRipple={false}
             disabled={false}
             iconStyle={Object {}}
-            onTouchTap={[Function]}
+            onClick={[Function]}
             tooltip="Move record down the order"
             tooltipPosition="bottom-left"
             touch={false}
@@ -478,7 +478,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
             disableTouchRipple={false}
             disabled={false}
             iconStyle={Object {}}
-            onTouchTap={[Function]}
+            onClick={[Function]}
             tooltip="Remove this record"
             tooltipPosition="bottom-left"
             touch={false}
@@ -601,7 +601,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
             disableTouchRipple={false}
             disabled={false}
             iconStyle={Object {}}
-            onTouchTap={[Function]}
+            onClick={[Function]}
             tooltip="Remove this record"
             tooltipPosition="bottom-left"
             touch={false}
@@ -728,7 +728,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
             disableTouchRipple={false}
             disabled={false}
             iconStyle={Object {}}
-            onTouchTap={[Function]}
+            onClick={[Function]}
             tooltip="Remove this record"
             tooltipPosition="bottom-left"
             touch={false}
