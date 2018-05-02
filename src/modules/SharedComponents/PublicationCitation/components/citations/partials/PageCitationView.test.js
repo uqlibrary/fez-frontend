@@ -6,7 +6,7 @@ import React from 'react';
 import PageCitationView from './PageCitationView';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+
 import {conferencePaper} from 'mock/data/testing/records';
 
 function setup({publication, searchKey, className, isShallow = false}) {
@@ -31,7 +31,7 @@ function setup({publication, searchKey, className, isShallow = false}) {
 }
 
 beforeAll(() => {
-    injectTapEventPlugin();
+
 });
 
 describe('PageCitationView test ', () => {

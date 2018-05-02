@@ -68,10 +68,6 @@ export default class PublicationCitation extends PureComponent {
         this.defaultActions = locale.components.publicationCitation.defaultActions;
     }
 
-    shouldComponentUpdate(nextProps) {
-        return JSON.stringify(nextProps.publication) !== JSON.stringify(this.props.publication);
-    }
-
     _handleDefaultActions = (action) => {
         switch (action) {
             case 'fixRecord':
@@ -119,7 +115,7 @@ export default class PublicationCitation extends PureComponent {
                     disabled: action.disabled,
                     label: action.label,
                     className: `publicationAction buttonOrder${index}`,
-                    onTouchTap: () => (this.props.showDefaultActions
+                    onClick: () => (this.props.showDefaultActions
                         ? this._handleDefaultActions(action.key)
                         : action.handleAction(this.props.publication))
                 };

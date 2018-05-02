@@ -35,7 +35,7 @@ const HelpDrawer = ({title, text, buttonLabel, open, hide}) => {
                     <div className="body-1">{text}</div>
                 </div>
                 <div className="layout-padding">
-                    <RaisedButton secondary label={buttonLabel} onTouchTap={toggleDrawer} className="is-pulled-right" />
+                    <RaisedButton secondary label={buttonLabel} onClick={toggleDrawer} className="is-pulled-right" />
                 </div>
             </div>
         </Drawer>

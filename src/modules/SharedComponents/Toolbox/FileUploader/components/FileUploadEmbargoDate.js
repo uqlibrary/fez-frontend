@@ -6,7 +6,7 @@ export default class FileUploadEmbargoDate extends PureComponent {
     static propTypes = {
         onChange: PropTypes.func,
         locale: PropTypes.object,
-        dateTimeFormat: PropTypes.string,
+        dateTimeFormat: PropTypes.func,
         disabled: PropTypes.bool,
         value: PropTypes.instanceOf(Date),
         minDate: PropTypes.instanceOf(Date)

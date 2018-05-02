@@ -152,7 +152,7 @@ exports[`FileUploadRow renders if file uploaded successfully but later other fil
         disableTouchRipple={false}
         disabled={false}
         iconStyle={Object {}}
-        onTouchTap={[Function]}
+        onClick={[Function]}
         tooltip="Remove this file"
         tooltipPosition="bottom-center"
         touch={false}
@@ -308,7 +308,7 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
         disableTouchRipple={false}
         disabled={false}
         iconStyle={Object {}}
-        onTouchTap={[Function]}
+        onClick={[Function]}
         tooltip="Remove this file"
         tooltipPosition="bottom-center"
         touch={false}

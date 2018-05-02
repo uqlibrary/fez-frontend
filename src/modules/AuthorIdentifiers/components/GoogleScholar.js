@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
@@ -11,7 +11,7 @@ import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {locale} from 'locale';
 import {routes, validation} from 'config';
 
-export default class GoogleScholar extends React.PureComponent {
+export default class GoogleScholar extends PureComponent {
     static propTypes = {
         ...propTypes,
         author: PropTypes.object,
@@ -110,7 +110,7 @@ export default class GoogleScholar extends React.PureComponent {
                                 fullWidth
                                 disabled={this.props.submitting}
                                 label={txt.labels.cancel}
-                                onTouchTap={this._navigateToDashboard} />
+                                onClick={this._navigateToDashboard} />
                         </div>
                         <div className="column is-narrow-desktop">
                             <RaisedButton
@@ -118,7 +118,7 @@ export default class GoogleScholar extends React.PureComponent {
                                 fullWidth
                                 disabled={this.props.submitting || this.props.invalid}
                                 label={txt.labels.submit}
-                                onTouchTap={this.props.handleSubmit} />
+                                onClick={this.props.handleSubmit} />
                         </div>
                     </div>
                 </form>

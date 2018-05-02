@@ -8,7 +8,7 @@ import FontIcon from 'material-ui/FontIcon';
 
 export default class Alert extends PureComponent {
     static propTypes = {
-        message: PropTypes.string.isRequired,
+        message: PropTypes.any.isRequired,
         title: PropTypes.string,
         type: PropTypes.oneOf(['error', 'error_outline', 'warning', 'info', 'info_outline', 'help', 'help_outline', 'done']),
         action: PropTypes.func,
@@ -31,16 +31,6 @@ export default class Alert extends PureComponent {
         super(props);
     }
 
-    shouldComponentUpdate(nextProps) {
-        return nextProps.message !== this.props.message
-            || nextProps.title !== this.props.title
-            || nextProps.type !== this.props.type
-            || nextProps.action !== this.props.action
-            || nextProps.actionButtonLabel !== this.props.actionButtonLabel
-            || nextProps.allowDismiss !== this.props.allowDismiss
-            || nextProps.dismissAction !== this.props.dismissAction;
-    }
-
     render() {
         return (
             <div className={this.props.type + ' alertWrapper '}>
@@ -55,7 +45,7 @@ export default class Alert extends PureComponent {
                     {
                         this.props.allowDismiss && this.props.dismissAction &&
                         <div className="column is-narrow is-hidden-tablet">
-                            <IconButton onTouchTap={this.props.dismissAction} className="alertDismissButton" title={this.props.dismissTitle} aria-label={this.props.dismissTitle}>
+                            <IconButton onClick={this.props.dismissAction} className="alertDismissButton" title={this.props.dismissTitle} aria-label={this.props.dismissTitle}>
                                 <NavigationClose className="alertDismiss"/>
                             </IconButton>
                         </div>
@@ -66,7 +56,7 @@ export default class Alert extends PureComponent {
                             className={`column is-narrow-tablet is-12-mobile${(!this.props.allowDismiss && !this.props.dismissAction) ? ' noDismiss' : ''}`}>
                             <FlatButton
                                 label={this.props.actionButtonLabel}
-                                onTouchTap={this.props.action}
+                                onClick={this.props.action}
                                 fullWidth
                                 className="alertAction"/>
                         </div>
@@ -74,7 +64,7 @@ export default class Alert extends PureComponent {
                     {
                         this.props.allowDismiss && this.props.dismissAction &&
                         <div className="column is-narrow is-hidden-mobile">
-                            <IconButton onTouchTap={this.props.dismissAction} className="alertDismissButton" title={this.props.dismissTitle} aria-label={this.props.dismissTitle}>
+                            <IconButton onClick={this.props.dismissAction} className="alertDismissButton" title={this.props.dismissTitle} aria-label={this.props.dismissTitle}>
                                 <NavigationClose className="alertDismiss"/>
                             </IconButton>
                         </div>
