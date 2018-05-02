@@ -15,6 +15,11 @@ export class MyLatestPublications extends PureComponent {
         history: PropTypes.object.isRequired
     };
 
+    static defaultProps = {
+        latestPublicationsList: [],
+        totalPublicationsCount: null
+    };
+
     _viewYourResearch = () => {
         this.props.history.push(routes.pathConfig.records.mine);
     };

@@ -92,8 +92,8 @@ mock
         else if (config.params.rule === 'trending') {
             return [
                 200,
-                {total: 0, data: [], filters: []}
-                // mockData.trendingPublications
+                // {total: 0, data: [], filters: []}
+                mockData.trendingPublications
             ];
         }
         // SEARCH_INTERNAL_RECORDS_API

@@ -17,6 +17,12 @@ class DashboardPublicationTabs extends React.Component {
         actions: PropTypes.object.isRequired
     };
 
+    static defaultProps = {
+        latestPublicationsList: [],
+        trendingPublicationsList: [],
+        totalPublicationsCount: null,
+    };
+
     componentDidMount() {
         if (this.props.account && this.props.account.id) {
             this.props.actions.searchLatestPublications(this.props.account.id);
