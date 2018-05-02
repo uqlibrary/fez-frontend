@@ -1,5 +1,5 @@
 import ContributorRow from './ContributorRow';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+
 import {authorsSearch} from 'mock/data';
 
 function setup(testProps, isShallow = true) {
@@ -19,7 +19,7 @@ function setup(testProps, isShallow = true) {
 }
 
 beforeAll(() => {
-    injectTapEventPlugin();
+    
 });
 
 describe('Component ContributorRow ', () => {

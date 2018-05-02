@@ -7,10 +7,6 @@ import {Provider} from 'react-redux';
 import {connectRouter} from 'connected-react-router/immutable';
 import {AppContainer} from 'react-hot-loader';
 
-// Tap fix for material-ui
-import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
-
 // Internal
 import Root from './Root';
 import rootReducer from './reducer';

@@ -46,7 +46,7 @@ export default class PublicationsListPaging extends Component {
                 return (
                     <FlatButton
                         key={index}
-                        onTouchTap={() => {
+                        onClick={() => {
                             this.pageChanged(index + 1);
                         }}
                         disabled={this.props.disabled || (index + 1) === this.state.current_page}
@@ -65,7 +65,7 @@ export default class PublicationsListPaging extends Component {
                                 <div className="column is-narrow is-pulled-left">
                                     <FlatButton
                                         className="pagingPrevious"
-                                        onTouchTap={() => {
+                                        onClick={() => {
                                             this.pageChanged(this.state.current_page - 1);
                                         }}
                                         disabled={this.props.disabled || this.state.current_page === 1}
@@ -89,7 +89,7 @@ export default class PublicationsListPaging extends Component {
                             <div className="column is-narrow is-pulled-right">
                                 <FlatButton
                                     className="pagingNext"
-                                    onTouchTap={() => {
+                                    onClick={() => {
                                         this.pageChanged(this.state.current_page + 1);
                                     }}
                                     disabled={this.props.disabled || this.state.current_page === totalPages}

@@ -68,7 +68,7 @@ export default class ListRow extends Component {
                     {!this.props.hideReorder && this.props.canMoveUp &&
                     <IconButton
                         tooltip={this.props.locale.moveUpHint}
-                        onTouchTap={this.onMoveUp}
+                        onClick={this.onMoveUp}
                         className="reorderUp"
                         disabled={this.props.disabled}>
                         <FontIcon className="material-icons">keyboard_arrow_up</FontIcon>
@@ -77,7 +77,7 @@ export default class ListRow extends Component {
                     {!this.props.hideReorder && this.props.canMoveDown &&
                     <IconButton
                         tooltip={this.props.locale.moveDownHint}
-                        onTouchTap={this.onMoveDown}
+                        onClick={this.onMoveDown}
                         className="reorderDown"
                         disabled={this.props.disabled}>
                         <FontIcon className="material-icons">keyboard_arrow_down</FontIcon>
@@ -88,7 +88,7 @@ export default class ListRow extends Component {
                     <IconButton
                         className="itemDelete"
                         tooltip={this.props.locale.deleteHint}
-                        onTouchTap={this.showConfirmation}
+                        onClick={this.showConfirmation}
                         disabled={this.props.disabled}>
                         <FontIcon className="material-icons deleteIcon">delete</FontIcon>
                     </IconButton>

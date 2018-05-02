@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 // forms & custom components
@@ -7,7 +7,7 @@ import {Stepper} from 'modules/SharedComponents/Toolbox/Stepper';
 import {routes} from 'config';
 import {locale} from 'locale';
 
-export default class AddMissingRecord extends React.Component {
+export default class AddMissingRecord extends PureComponent {
     static propTypes = {
         rawSearchQuery: PropTypes.string,
         addRecordStep: PropTypes.func,

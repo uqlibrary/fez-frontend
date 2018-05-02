@@ -6,7 +6,7 @@ import React from 'react';
 import PublicationsListSorting from './PublicationsListSorting';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+
 
 function setup({onPageSizeChanged, onSortByChanged, disabled, pagingData, isShallow = true}) {
     const defaultPagingData = {
@@ -39,7 +39,7 @@ function setup({onPageSizeChanged, onSortByChanged, disabled, pagingData, isShal
 }
 
 beforeAll(() => {
-    injectTapEventPlugin();
+    
 });
 
 describe('PublicationsListSorting renders ', () => {
@@ -178,7 +178,7 @@ describe('PublicationsListSorting renders ', () => {
     //
     //     const nextPage = wrapper.find('.pagingNext');
     //     expect(nextPage.length).toBe(1);
-    //     nextPage.props().onTouchTap();
+    //     nextPage.props().onClick();
     //     expect(testFunction).toBeCalled();
     // });
     //
@@ -195,7 +195,7 @@ describe('PublicationsListSorting renders ', () => {
     //
     //     const page = wrapper.find('.pagingPrevious');
     //     expect(page.length).toBe(1);
-    //     page.props().onTouchTap();
+    //     page.props().onClick();
     //     expect(testFunction).toBeCalled();
     // });
     //
@@ -210,7 +210,7 @@ describe('PublicationsListSorting renders ', () => {
     //     const testFunction = jest.fn();
     //     const wrapper = setup({pagingData: data, onPageChanged: testFunction, isShallow: false});
     //     const pages = wrapper.find('.publicationsListSorting .page');
-    //     pages.at(1).props().onTouchTap();
+    //     pages.at(1).props().onClick();
     //     expect(testFunction).toBeCalled();
     // });
     //

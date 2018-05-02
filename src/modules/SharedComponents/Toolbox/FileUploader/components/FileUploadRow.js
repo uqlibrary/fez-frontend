@@ -135,7 +135,7 @@ export class FileUploadRow extends PureComponent {
                     {
                         !isUploadInProgress &&
                         <div className="datalist-buttons">
-                            <IconButton tooltip={deleteHint} onTouchTap={this._showConfirmation} disabled={disabled}>
+                            <IconButton tooltip={deleteHint} onClick={this._showConfirmation} disabled={disabled}>
                                 <FontIcon className="material-icons deleteIcon">delete</FontIcon>
                             </IconButton>
                         </div>

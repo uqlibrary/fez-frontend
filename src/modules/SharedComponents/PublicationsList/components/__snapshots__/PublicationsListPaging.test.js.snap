@@ -22,11 +22,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         label="Previous"
         labelPosition="after"
         labelStyle={Object {}}
+        onClick={[Function]}
         onKeyboardFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         primary={false}
         secondary={false}
       />
@@ -42,11 +42,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         label={1}
         labelPosition="after"
         labelStyle={Object {}}
+        onClick={[Function]}
         onKeyboardFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         primary={false}
         secondary={false}
       />
@@ -58,11 +58,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         label={2}
         labelPosition="after"
         labelStyle={Object {}}
+        onClick={[Function]}
         onKeyboardFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         primary={false}
         secondary={false}
       />
@@ -74,11 +74,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         label={3}
         labelPosition="after"
         labelStyle={Object {}}
+        onClick={[Function]}
         onKeyboardFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         primary={false}
         secondary={false}
       />
@@ -112,11 +112,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         label="Next"
         labelPosition="before"
         labelStyle={Object {}}
+        onClick={[Function]}
         onKeyboardFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         primary={false}
         secondary={false}
       />
@@ -141,11 +141,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         label="Previous"
         labelPosition="after"
         labelStyle={Object {}}
+        onClick={[Function]}
         onKeyboardFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         primary={false}
         secondary={false}
       />
@@ -161,11 +161,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         label={1}
         labelPosition="after"
         labelStyle={Object {}}
+        onClick={[Function]}
         onKeyboardFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         primary={false}
         secondary={false}
       />
@@ -177,11 +177,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         label={2}
         labelPosition="after"
         labelStyle={Object {}}
+        onClick={[Function]}
         onKeyboardFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         primary={false}
         secondary={false}
       />
@@ -193,11 +193,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         label={3}
         labelPosition="after"
         labelStyle={Object {}}
+        onClick={[Function]}
         onKeyboardFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         primary={false}
         secondary={false}
       />
@@ -231,11 +231,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         label="Next"
         labelPosition="before"
         labelStyle={Object {}}
+        onClick={[Function]}
         onKeyboardFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         primary={false}
         secondary={false}
       />
@@ -260,11 +260,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         label="Previous"
         labelPosition="after"
         labelStyle={Object {}}
+        onClick={[Function]}
         onKeyboardFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         primary={false}
         secondary={false}
       />
@@ -280,11 +280,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         label={1}
         labelPosition="after"
         labelStyle={Object {}}
+        onClick={[Function]}
         onKeyboardFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         primary={false}
         secondary={false}
       />
@@ -296,11 +296,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         label={2}
         labelPosition="after"
         labelStyle={Object {}}
+        onClick={[Function]}
         onKeyboardFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         primary={false}
         secondary={false}
       />
@@ -312,11 +312,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         label={3}
         labelPosition="after"
         labelStyle={Object {}}
+        onClick={[Function]}
         onKeyboardFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         primary={false}
         secondary={false}
       />
@@ -350,11 +350,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         label="Next"
         labelPosition="before"
         labelStyle={Object {}}
+        onClick={[Function]}
         onKeyboardFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onTouchStart={[Function]}
-        onTouchTap={[Function]}
         primary={false}
         secondary={false}
       />

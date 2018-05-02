@@ -66,7 +66,7 @@ export default class MenuDrawer extends Component {
                     <ListItem
                         primaryText={menuItem.primaryText}
                         secondaryText={menuItem.secondaryText}
-                        onTouchTap={this.navigateToLink.bind(this, menuItem.linkTo, menuItem.target)}
+                        onClick={this.navigateToLink.bind(this, menuItem.linkTo, menuItem.target)}
                         leftIcon={menuItem.leftIcon ? menuItem.leftIcon : null}/>
                 </span>
         )))
@@ -95,7 +95,7 @@ export default class MenuDrawer extends Component {
                                     {logoImage && <img src={logoImage} alt={logoText}/>}
                                 </div>
                                 <div className="column is-narrow is-hidden-tablet menuCloseButton">
-                                    <IconButton onTouchTap={onToggleDrawer} aria-label={locale.closeMenuLabel}>
+                                    <IconButton onClick={onToggleDrawer} aria-label={locale.closeMenuLabel}>
                                         <HardwareKeyboardArrowLeft/>
                                     </IconButton>
                                 </div>
@@ -112,7 +112,7 @@ export default class MenuDrawer extends Component {
                                     aria-label={locale.skipNavAriaLabel}>
                                     <RaisedButton
                                         secondary
-                                        onTouchTap={this.skipMenuItems}
+                                        onClick={this.skipMenuItems}
                                         className="skipNavButton"
                                         label={locale.skipNavTitle}
                                         tabIndex={-1}/>

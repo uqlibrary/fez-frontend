@@ -47,7 +47,7 @@ export default class AudioPlayer extends Component {
                 </audio>
                 <IconButton
                     touch
-                    onTouchTap={isPlaying ? this.audioPlayerPause : this.audioPlayerPlay}
+                    onClick={isPlaying ? this.audioPlayerPause : this.audioPlayerPlay}
                     className={`audioButton ${isPlaying ? 'pause' : 'play'}`}
                     aria-label={(isPlaying ? controls.pauseAudio : controls.playAudio).replace('[fileName]', fileName)}
                 >

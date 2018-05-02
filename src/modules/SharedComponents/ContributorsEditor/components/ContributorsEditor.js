@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import ContributorRowHeader from './ContributorRowHeader';
@@ -7,7 +7,7 @@ import ContributorForm from './ContributorForm';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import Infinite from 'react-infinite';
 
-export class ContributorsEditor extends React.PureComponent {
+export class ContributorsEditor extends PureComponent {
     static propTypes = {
         showIdentifierLookup: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
@@ -36,10 +36,6 @@ export class ContributorsEditor extends React.PureComponent {
             isCurrentAuthorSelected: false,
             errorMessage: ''
         };
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return this.props !== nextProps || this.state !== nextState;
     }
 
     componentWillUpdate(nextProps, nextState) {
@@ -125,7 +121,7 @@ export class ContributorsEditor extends React.PureComponent {
     render() {
         const renderContributorsRows = this.state.contributors.map((contributor, index) => (
             <ContributorRow
-                key={index}
+                key={`ContributorRow_${index}`}
                 index={index}
                 contributor={contributor}
                 canMoveDown={index !== this.state.contributors.length - 1}
@@ -169,15 +165,14 @@ export class ContributorsEditor extends React.PureComponent {
                     />
                 }
                 {
-                    this.state.contributors.length > 3 ?
-                        <Infinite containerHeight={195}
+                    this.state.contributors.length > 3
+                        ? <Infinite containerHeight={195}
                             elementHeight={65}
                             threshold={130}
                             className="authors-infinite">
                             {renderContributorsRows}
                         </Infinite>
-                        :
-                        <div>{renderContributorsRows.map(item => item)}</div>
+                        : <div>{renderContributorsRows}</div>
                 }
                 {
                     this.props.meta && this.props.meta.error &&

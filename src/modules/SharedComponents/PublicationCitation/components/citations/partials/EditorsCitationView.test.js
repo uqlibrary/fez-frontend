@@ -7,7 +7,7 @@ import React from 'react';
 import EditorsCitationView from './EditorsCitationView';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+
 
 function setup({publication, isShallow = false}) {
     const props = {
@@ -29,7 +29,7 @@ function setup({publication, isShallow = false}) {
 }
 
 beforeAll(() => {
-    injectTapEventPlugin();
+    
 });
 
 describe('EditorsCitationView test ', () => {

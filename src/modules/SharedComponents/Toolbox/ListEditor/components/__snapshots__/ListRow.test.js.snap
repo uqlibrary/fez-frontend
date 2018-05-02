@@ -33,7 +33,7 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
       disableTouchRipple={false}
       disabled={false}
       iconStyle={Object {}}
-      onTouchTap={[Function]}
+      onClick={[Function]}
       tooltip="Remove this item"
       tooltipPosition="bottom-center"
       touch={false}
@@ -83,7 +83,7 @@ exports[`ListRow renders  a row with index and item set calls delete function 1`
       disableTouchRipple={false}
       disabled={false}
       iconStyle={Object {}}
-      onTouchTap={[Function]}
+      onClick={[Function]}
       tooltip="Remove this item"
       tooltipPosition="bottom-center"
       touch={false}
@@ -130,7 +130,7 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
       disableTouchRipple={false}
       disabled={false}
       iconStyle={Object {}}
-      onTouchTap={[Function]}
+      onClick={[Function]}
       tooltip="Move item up the order"
       tooltipPosition="bottom-center"
       touch={false}
@@ -148,7 +148,7 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
       disableTouchRipple={false}
       disabled={false}
       iconStyle={Object {}}
-      onTouchTap={[Function]}
+      onClick={[Function]}
       tooltip="Move item down the order"
       tooltipPosition="bottom-center"
       touch={false}
@@ -170,7 +170,7 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
       disableTouchRipple={false}
       disabled={false}
       iconStyle={Object {}}
-      onTouchTap={[Function]}
+      onClick={[Function]}
       tooltip="Remove this item"
       tooltipPosition="bottom-center"
       touch={false}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 // forms & custom components
@@ -6,7 +6,7 @@ import {PublicationSearchForm} from 'modules/SharedComponents/PublicationSearchF
 import {routes} from 'config';
 import {locale} from 'locale';
 
-export default class FindRecords extends React.Component {
+export default class FindRecords extends PureComponent {
     static propTypes = {
         actions: PropTypes.object,
         history: PropTypes.object.isRequired

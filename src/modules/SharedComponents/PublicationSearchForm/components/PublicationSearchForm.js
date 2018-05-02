@@ -44,7 +44,7 @@ export default class PublicationSearchForm extends Component {
                                 label={this.props.locale.submit}
                                 fullWidth
                                 secondary
-                                onTouchTap={this.props.handleSubmit}
+                                onClick={this.props.handleSubmit}
                                 disabled={this.props.invalid}
                             />
                         </div>
@@ -55,7 +55,7 @@ export default class PublicationSearchForm extends Component {
                                     className="is-mui-spacing-button"
                                     label={this.props.locale.skip}
                                     fullWidth
-                                    onTouchTap={this.props.onSkipSearch}
+                                    onClick={this.props.onSkipSearch}
                                 />
                             </div>
                         }

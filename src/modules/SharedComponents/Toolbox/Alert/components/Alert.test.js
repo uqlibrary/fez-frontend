@@ -28,7 +28,7 @@ function setup({title, message, type, allowDismiss, dismissAction, action, actio
 }
 
 beforeAll(() => {
-    injectTapEventPlugin();
+
 });
 
 describe('Alert component functionality test ', () => {
@@ -65,7 +65,7 @@ describe('Alert component functionality test ', () => {
         const wrapper = setup({action: alertFunc, actionButtonLabel: 'button'});
         expect(wrapper.find('button.alertAction').exists()).toBeTruthy();
         expect(wrapper.find('button.alertAction')).toHaveLength(1);
-        wrapper.find('button.alertAction').simulate('touchTap');
+        wrapper.find('button.alertAction').simulate('click');
         expect(alertFunc).toHaveBeenCalled();
     });
 
@@ -74,7 +74,7 @@ describe('Alert component functionality test ', () => {
         const wrapper = setup({dismissAction: dismissFunc, allowDismiss: true});
         expect(wrapper.find('button.alertDismissButton').exists()).toBeTruthy();
         expect(wrapper.find('button.alertDismissButton')).toHaveLength(2);
-        wrapper.find('button.alertDismissButton').at(0).simulate('touchTap');
+        wrapper.find('button.alertDismissButton').at(0).simulate('click');
         expect(dismissFunc).toHaveBeenCalled();
     });
 

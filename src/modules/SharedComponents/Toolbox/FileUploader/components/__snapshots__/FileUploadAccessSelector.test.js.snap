@@ -518,6 +518,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                     },
                     "tooltip": Object {
                       "color": "#ffffff",
+                      "opacity": 0.9,
                       "rippleBackgroundColor": "#616161",
                     },
                     "userAgent": undefined,
@@ -635,7 +636,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                   }
                 >
                   <ClearFix
-                    onTouchTap={[Function]}
+                    onClick={[Function]}
                     style={
                       Object {
                         "cursor": "not-allowed",
@@ -662,7 +663,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                         }
                       }
                       elementType="div"
-                      onTouchTap={[Function]}
+                      onClick={[Function]}
                       style={
                         Object {
                           "cursor": "not-allowed",
@@ -673,7 +674,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                       }
                     >
                       <div
-                        onTouchTap={[Function]}
+                        onClick={[Function]}
                         style={
                           Object {
                             "cursor": "not-allowed",
@@ -748,7 +749,6 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                             onMouseLeave={[Function]}
                             onMouseOut={[Function]}
                             onTouchStart={[Function]}
-                            onTouchTap={[Function]}
                             style={
                               Object {
                                 "boxSizing": "border-box",
@@ -778,7 +778,6 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                               onMouseLeave={[Function]}
                               onMouseOut={[Function]}
                               onTouchStart={[Function]}
-                              onTouchTap={[Function]}
                               style={
                                 Object {
                                   "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
@@ -804,7 +803,6 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                   "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
                                   "verticalAlign": null,
                                   "width": 48,
-                                  "zIndex": 1,
                                 }
                               }
                               tabIndex={-1}
@@ -820,9 +818,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                   }
                                 }
                               >
-                                <SvgIcon
-                                  onMouseEnter={[Function]}
-                                  onMouseLeave={[Function]}
+                                <NavigationArrowDropDown
                                   style={
                                     Object {
                                       "color": "rgba(0, 0, 0, 0.3)",
@@ -830,31 +826,43 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                       "fill": "rgba(0, 0, 0, 0.3)",
                                     }
                                   }
-                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
+                                  <SvgIcon
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
                                     style={
                                       Object {
                                         "color": "rgba(0, 0, 0, 0.3)",
                                         "cursor": "default",
-                                        "display": "inline-block",
                                         "fill": "rgba(0, 0, 0, 0.3)",
-                                        "height": 24,
-                                        "muiPrepared": true,
-                                        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                        "userSelect": "none",
-                                        "width": 24,
                                       }
                                     }
                                     viewBox="0 0 24 24"
                                   >
-                                    <path
-                                      d="M7 10l5 5 5-5z"
-                                    />
-                                  </svg>
-                                </SvgIcon>
+                                    <svg
+                                      onMouseEnter={[Function]}
+                                      onMouseLeave={[Function]}
+                                      style={
+                                        Object {
+                                          "color": "rgba(0, 0, 0, 0.3)",
+                                          "cursor": "default",
+                                          "display": "inline-block",
+                                          "fill": "rgba(0, 0, 0, 0.3)",
+                                          "height": 24,
+                                          "muiPrepared": true,
+                                          "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                                          "userSelect": "none",
+                                          "width": 24,
+                                        }
+                                      }
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="M7 10l5 5 5-5z"
+                                      />
+                                    </svg>
+                                  </SvgIcon>
+                                </NavigationArrowDropDown>
                               </NavigationArrowDropDown>
                             </button>
                           </EnhancedButton>
@@ -1345,6 +1353,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                     },
                     "tooltip": Object {
                       "color": "#ffffff",
+                      "opacity": 0.9,
                       "rippleBackgroundColor": "#616161",
                     },
                     "userAgent": undefined,
@@ -1949,6 +1958,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                     },
                     "tooltip": Object {
                       "color": "#ffffff",
+                      "opacity": 0.9,
                       "rippleBackgroundColor": "#616161",
                     },
                     "userAgent": undefined,
@@ -2066,7 +2076,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                   }
                 >
                   <ClearFix
-                    onTouchTap={[Function]}
+                    onClick={[Function]}
                     style={
                       Object {
                         "cursor": "not-allowed",
@@ -2093,7 +2103,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                         }
                       }
                       elementType="div"
-                      onTouchTap={[Function]}
+                      onClick={[Function]}
                       style={
                         Object {
                           "cursor": "not-allowed",
@@ -2104,7 +2114,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                       }
                     >
                       <div
-                        onTouchTap={[Function]}
+                        onClick={[Function]}
                         style={
                           Object {
                             "cursor": "not-allowed",
@@ -2179,7 +2189,6 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                             onMouseLeave={[Function]}
                             onMouseOut={[Function]}
                             onTouchStart={[Function]}
-                            onTouchTap={[Function]}
                             style={
                               Object {
                                 "boxSizing": "border-box",
@@ -2209,7 +2218,6 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                               onMouseLeave={[Function]}
                               onMouseOut={[Function]}
                               onTouchStart={[Function]}
-                              onTouchTap={[Function]}
                               style={
                                 Object {
                                   "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
@@ -2235,7 +2243,6 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                   "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
                                   "verticalAlign": null,
                                   "width": 48,
-                                  "zIndex": 1,
                                 }
                               }
                               tabIndex={-1}
@@ -2251,9 +2258,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                   }
                                 }
                               >
-                                <SvgIcon
-                                  onMouseEnter={[Function]}
-                                  onMouseLeave={[Function]}
+                                <NavigationArrowDropDown
                                   style={
                                     Object {
                                       "color": "rgba(0, 0, 0, 0.3)",
@@ -2261,31 +2266,43 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                       "fill": "rgba(0, 0, 0, 0.3)",
                                     }
                                   }
-                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
+                                  <SvgIcon
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
                                     style={
                                       Object {
                                         "color": "rgba(0, 0, 0, 0.3)",
                                         "cursor": "default",
-                                        "display": "inline-block",
                                         "fill": "rgba(0, 0, 0, 0.3)",
-                                        "height": 24,
-                                        "muiPrepared": true,
-                                        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                        "userSelect": "none",
-                                        "width": 24,
                                       }
                                     }
                                     viewBox="0 0 24 24"
                                   >
-                                    <path
-                                      d="M7 10l5 5 5-5z"
-                                    />
-                                  </svg>
-                                </SvgIcon>
+                                    <svg
+                                      onMouseEnter={[Function]}
+                                      onMouseLeave={[Function]}
+                                      style={
+                                        Object {
+                                          "color": "rgba(0, 0, 0, 0.3)",
+                                          "cursor": "default",
+                                          "display": "inline-block",
+                                          "fill": "rgba(0, 0, 0, 0.3)",
+                                          "height": 24,
+                                          "muiPrepared": true,
+                                          "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                                          "userSelect": "none",
+                                          "width": 24,
+                                        }
+                                      }
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="M7 10l5 5 5-5z"
+                                      />
+                                    </svg>
+                                  </SvgIcon>
+                                </NavigationArrowDropDown>
                               </NavigationArrowDropDown>
                             </button>
                           </EnhancedButton>
@@ -2776,6 +2793,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                     },
                     "tooltip": Object {
                       "color": "#ffffff",
+                      "opacity": 0.9,
                       "rippleBackgroundColor": "#616161",
                     },
                     "userAgent": undefined,

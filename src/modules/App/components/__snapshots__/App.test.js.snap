@@ -187,7 +187,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         "marginTop": 0,
       }
     }
-    onLeftIconButtonTouchTap={[Function]}
+    onLeftIconButtonClick={[Function]}
     showMenuIconButton={true}
     style={
       Object {
@@ -635,7 +635,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         "marginTop": 0,
       }
     }
-    onLeftIconButtonTouchTap={[Function]}
+    onLeftIconButtonClick={[Function]}
     showMenuIconButton={true}
     style={
       Object {
@@ -964,7 +964,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         "marginTop": 0,
       }
     }
-    onLeftIconButtonTouchTap={[Function]}
+    onLeftIconButtonClick={[Function]}
     showMenuIconButton={true}
     style={
       Object {
@@ -1266,7 +1266,7 @@ exports[`Application component should render app for account with fez author wit
         "marginTop": 0,
       }
     }
-    onLeftIconButtonTouchTap={[Function]}
+    onLeftIconButtonClick={[Function]}
     showMenuIconButton={true}
     style={
       Object {
@@ -1698,7 +1698,7 @@ exports[`Application component should render app for account with fez author wit
         "marginTop": 0,
       }
     }
-    onLeftIconButtonTouchTap={[Function]}
+    onLeftIconButtonClick={[Function]}
     showMenuIconButton={true}
     style={
       Object {
@@ -2148,7 +2148,7 @@ exports[`Application component should render app for account with fez author wit
         "marginTop": 0,
       }
     }
-    onLeftIconButtonTouchTap={[Function]}
+    onLeftIconButtonClick={[Function]}
     showMenuIconButton={false}
     style={
       Object {
@@ -2519,7 +2519,7 @@ exports[`Application component should render application with routing for the us
         "marginTop": 0,
       }
     }
-    onLeftIconButtonTouchTap={[Function]}
+    onLeftIconButtonClick={[Function]}
     showMenuIconButton={true}
     style={
       Object {
@@ -2689,7 +2689,7 @@ exports[`Application component should render for anon user 1`] = `
         "marginTop": 0,
       }
     }
-    onLeftIconButtonTouchTap={[Function]}
+    onLeftIconButtonClick={[Function]}
     showMenuIconButton={true}
     style={
       Object {
@@ -2889,7 +2889,7 @@ exports[`Application component should render thesis submission for HDR without m
         "marginTop": 0,
       }
     }
-    onLeftIconButtonTouchTap={[Function]}
+    onLeftIconButtonClick={[Function]}
     showMenuIconButton={false}
     style={
       Object {

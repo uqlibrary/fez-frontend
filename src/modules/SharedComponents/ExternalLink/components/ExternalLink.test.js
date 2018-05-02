@@ -1,5 +1,5 @@
 jest.dontMock('./ExternalLink');
-import injectTapEventPlugin from 'react-tap-event-plugin';
+
 
 
 import ExternalLink from './ExternalLink';
@@ -13,7 +13,7 @@ function setup(testProps, isShallow = true) {
 }
 
 beforeAll(() => {
-    injectTapEventPlugin();
+    
 });
 
 describe('ExternalLink test ', () => {
