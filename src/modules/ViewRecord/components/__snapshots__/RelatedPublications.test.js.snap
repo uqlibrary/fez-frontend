@@ -1,5 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Related publications Component  should not render data with empty lookups 1`] = `
+<StandardCard
+  className="relatedPublications"
+  title=""
+>
+  <ul
+    className="publicationList"
+  >
+    <li
+      key="fez_record_search_key_has_related_datasets-0"
+    >
+      <Link
+        replace={false}
+        to="/records/UQ:313292"
+      >
+        Toxicity characterization of urban stormwater with bioanalytical tools
+      </Link>
+    </li>
+    <li
+      key="fez_record_search_key_has_related_datasets-1"
+    >
+      <Link
+        replace={false}
+        to="/records/UQ:313292"
+      >
+        dataset 2
+      </Link>
+    </li>
+  </ul>
+</StandardCard>
+`;
+
 exports[`Related publications Component  should render component 1`] = `
 <Provider
   store={
