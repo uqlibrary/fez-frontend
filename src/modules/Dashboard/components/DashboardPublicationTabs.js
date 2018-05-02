@@ -45,7 +45,10 @@ class DashboardPublicationTabs extends Component {
                         !!latestPublicationsList && latestPublicationsList.length > 0 &&
                         <Tab label={txt.myPublications.title} value="myPublications"
                             className="publicationTabs">
-                            <MyLatestPublications latestPublicationsList={latestPublicationsList} totalPublicationsCount={totalPublicationsCount}/>
+                            <MyLatestPublications
+                                latestPublicationsList={latestPublicationsList}
+                                totalPublicationsCount={totalPublicationsCount}
+                            />
                         </Tab>
                     }
                     {
