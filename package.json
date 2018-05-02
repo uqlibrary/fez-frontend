@@ -63,7 +63,6 @@
     "bulma": "0.7.1",
     "connected-react-router": "^4.3.0",
     "dompurify": "^1.0.4",
-    "eslint-plugin-uqlibrary": "file:eslint-plugin-uqlibrary",
     "highcharts": "^6.0.2",
     "highcharts-exporting": "^0.1.2",
     "history": "^4.7.2",
