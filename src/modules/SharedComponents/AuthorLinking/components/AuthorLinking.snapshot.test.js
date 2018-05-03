@@ -111,6 +111,47 @@ describe('AuthorLinking', () => {
         const wrapper = setup({ disabled: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render authors correctly', () => {
+        const wrapper = setup({
+            authorList: [
+                {
+                    rek_author_id: 30445289,
+                    rek_author_pid: 'UQ:795480',
+                    rek_author_xsdmf_id: null,
+                    rek_author: 'J Smith',
+                    rek_author_order: 1
+                },
+                {
+                    rek_author_id: 30445290,
+                    rek_author_pid: 'UQ:795480',
+                    rek_author_xsdmf_id: null,
+                    rek_author: 'A Smith',
+                    rek_author_order: 2
+                }
+            ],
+            linkedAuthorIdList: [
+                {
+                    rek_author_id_id: 29723144,
+                    rek_author_id_pid: 'UQ:795480',
+                    rek_author_id_xsdmf_id: null,
+                    rek_author_id: 1671,
+                    rek_author_id_order: 1,
+                    rek_author_id_lookup: 'Brown, Melissa Anne'
+                },
+                {
+                    rek_author_id_id: 29723145,
+                    rek_author_id_pid: 'UQ:795480',
+                    rek_author_id_xsdmf_id: null,
+                    rek_author_id: null,
+                    rek_author_id_order: 2
+                }
+            ]
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        expect(wrapper.find('AuthorItem').get(1).props.linked).toBeFalsy();
+    })
 });
 
 describe('ContributorLinking', () => {
