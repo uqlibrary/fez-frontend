@@ -197,7 +197,6 @@ export default {
         },
         myResearch: {
             pageTitle: 'My research',
-
             recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             text: (
                 <span>

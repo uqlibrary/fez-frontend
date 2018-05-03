@@ -43,7 +43,7 @@ export default class MyLatestPublications extends PureComponent {
         }
 
         return (
-            <div  className="latestPubs">
+            <div className="latestPubs">
                 <PublicationsList
                     publicationsList={this.props.latestPublicationsList}
                     showDefaultActions/>
