@@ -80,3 +80,19 @@ export function searchTrendingPublications() {
             });
     };
 }
+
+/**
+ * Export publications list
+ * @param {array} publication list
+ * @param {string} format
+ * @returns {action}
+ */
+export function exportPublications(payload, format) {
+    return dispatch => {
+        dispatch({
+            type: actions.AUTHOR_PUBLICATIONS_EXPORT,
+            payload,
+            format
+        });
+    };
+}

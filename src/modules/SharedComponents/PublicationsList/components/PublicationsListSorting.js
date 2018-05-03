@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import {locale} from 'locale';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
-import ExportPublications from './ExportPublications';
-import XLSX from 'xlsx';
+import {ExportPublications} from '../../ExportPublications';
 
 export default class PublicationsListSorting extends PureComponent {
     static propTypes = {
@@ -57,58 +56,12 @@ export default class PublicationsListSorting extends PureComponent {
         this.props.onSortByChanged(this.state.sortBy, value);
     }
 
-    sortByChanged =  (event, index, value) => {
+    sortByChanged = (event, index, value) => {
         this.setState({
             sortBy: value
         });
         this.props.onSortByChanged(value, this.state.sortDirection);
     }
-
-    exportFormatChanged = (exportFormat) => {
-        // TODO refactor reducers n' move to actions
-        const rows = [];
-        switch (exportFormat) {
-            case 'excel':
-                const mappings = locale.components.export.mapping[exportFormat];
-                const columns = Object.keys(mappings);
-                rows.push(columns);
-
-                this.props.publicationsList.forEach(record => {
-                    console.log(record);
-                    const row = [];
-
-                    columns.forEach(key => {
-                        const mapping = mappings[key];
-
-                        let value = null;
-                        if (mapping in record) {
-                            value = record[mapping];
-                        }
-
-                        row.push(value);
-                    });
-
-                    if (row.length) {
-                        rows.push(row);
-                    }
-                });
-
-                break;
-            default:
-                return;
-        }
-
-        console.log(rows);
-
-        if (rows.length > 1) {
-            const ws = XLSX.utils.aoa_to_sheet(rows);
-            const wb = XLSX.utils.book_new();
-            // console.log(ws);
-            XLSX.utils.book_append_sheet(wb, ws, 'SheetJS');
-            /* generate XLSX file and send to client */
-            XLSX.writeFile(wb, 'export.xls');
-        }
-    };
 
     render() {
         if (!this.props.pagingData || this.props.pagingData.total === 0) {
@@ -167,8 +120,7 @@ export default class PublicationsListSorting extends PureComponent {
                 </div>
                 <div className="column is- is-narrow is-spacer is-hidden-mobile" />
                 <ExportPublications
-                    format={this.state.exportFormat}
-                    onFormatChanged={this.exportFormatChanged}
+                    publicationsList={this.props.publicationsList}
                     disabled={this.props.disabled}/>
             </div>
 
