@@ -71,6 +71,14 @@ export default {
                 }
             }
         },
+        dashboardPublicationsTabs: {
+            myLatestPublications: {
+                title: 'My publications',
+            },
+            myTrendingPublications: {
+                title: 'My trending publications'
+            },
+        },
         myTrendingPublications: {
             loading: 'Loading your trending publications...',
             metrics: {
@@ -112,7 +120,6 @@ export default {
         },
         myLatestPublications: {
             loading: 'Loading your latest publications...',
-            title: 'My publications',
             viewAllButtonLabel: 'View all'
         },
         keywordsForm: {

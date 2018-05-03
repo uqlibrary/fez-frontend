@@ -28,7 +28,7 @@ class DashboardPublicationsTabs extends Component {
     }
 
     render() {
-        const txt = locale.pages.dashboard;
+        const txt = locale.components.dashboardPublicationsTabs;
         const {latestPublicationsList, trendingPublicationsList, totalPublicationsCount} = this.props;
 
         if (latestPublicationsList.length === 0 && trendingPublicationsList.length === 0) {
@@ -40,7 +40,7 @@ class DashboardPublicationsTabs extends Component {
                 <Tabs className="publicationTabs" inkBarStyle={{height: '4px', marginTop: '-4px'}}>
                     {
                         !!latestPublicationsList && latestPublicationsList.length > 0 &&
-                        <Tab label={txt.myPublications.title} value="myPublications"
+                        <Tab label={txt.myLatestPublications.title} value="myPublications"
                             className="publicationTabs">
                             <MyLatestPublications
                                 latestPublicationsList={latestPublicationsList}

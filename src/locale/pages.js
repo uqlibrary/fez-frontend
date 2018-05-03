@@ -188,16 +188,10 @@ export default {
             publicationTypesCountChart: {
                 title: 'Publication types overview'
             },
-            myPublications: {
-                title: 'My publications',
-                viewAllButtonLabel: 'View all'
-            },
-            myTrendingPublications: {
-                title: 'My trending publications'
-            },
         },
         myResearch: {
             pageTitle: 'My research',
+
             recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             text: (
                 <span>

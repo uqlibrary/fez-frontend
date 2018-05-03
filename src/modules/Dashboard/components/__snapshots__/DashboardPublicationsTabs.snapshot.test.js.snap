@@ -122,8 +122,7 @@ exports[`Dashboard publication tabs should render my latest publications tab 1`]
       label="My publications"
       value="myPublications"
     >
-      <MyLatestPublications
-        isLoading={false}
+      <withRouter(MyLatestPublications)
         latestPublicationsList={
           Array [
             Object {
@@ -3822,8 +3821,7 @@ exports[`Dashboard publication tabs should render two tabs for latest publicatio
       label="My publications"
       value="myPublications"
     >
-      <MyLatestPublications
-        isLoading={false}
+      <withRouter(MyLatestPublications)
         latestPublicationsList={
           Array [
             Object {
