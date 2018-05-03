@@ -2,7 +2,8 @@ import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     trendingPublicationsList: [],
-    loadingTrendingPublications: false
+    loadingTrendingPublications: false,
+    showTrendingPublicationsTab: true
 };
 
 const handlers = {
@@ -18,7 +19,8 @@ const handlers = {
         return {
             ...state,
             trendingPublicationsList: action.payload,
-            loadingTrendingPublications: false
+            loadingTrendingPublications: false,
+            showTrendingPublicationsTab: action.payload.length > 0
         };
     },
 
@@ -26,7 +28,8 @@ const handlers = {
         return {
             ...state,
             trendingPublicationsList: [],
-            loadingTrendingPublications: false
+            loadingTrendingPublications: false,
+            showTrendingPublicationsTab: false
         };
     }
 };

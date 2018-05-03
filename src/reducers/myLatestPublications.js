@@ -3,7 +3,8 @@ import * as actions from 'actions/actionTypes';
 export const initialState = {
     latestPublicationsList: [],
     loadingLatestPublications: false,
-    totalPublicationsCount: null
+    totalPublicationsCount: null,
+    showLatestPublicationsTab: true
 };
 
 const handlers = {
@@ -21,7 +22,8 @@ const handlers = {
             ...state,
             latestPublicationsList: action.payload.data,
             totalPublicationsCount: action.payload.total,
-            loadingLatestPublications: false
+            loadingLatestPublications: false,
+            showLatestPublicationsTab: action.payload.total > 0
         };
     },
 
@@ -30,7 +32,8 @@ const handlers = {
             ...state,
             latestPublicationsList: [],
             totalPublicationsCount: null,
-            loadingLatestPublications: false
+            loadingLatestPublications: false,
+            showLatestPublicationsTab: false
         };
     }
 };

@@ -9,18 +9,23 @@ import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
 export default class MyTrendingPublications extends PureComponent {
     static propTypes = {
         trendingPublicationsList: PropTypes.array,
-        isLoading: PropTypes.bool
+        loadingTrendingPublications: PropTypes.bool,
+        actions: PropTypes.object
     };
 
     static defaultProps = {
         trendingPublicationsList: [],
-        isLoading: false
+        loadingTrendingPublications: false
     };
+
+    componentDidMount() {
+        this.props.actions.searchTrendingPublications();
+    }
 
     render() {
         const txt = locale.components.myTrendingPublications;
 
-        if (this.props.isLoading) {
+        if (this.props.loadingTrendingPublications) {
             return (
                 <div className="isLoading is-centered">
                     <InlineLoader message={txt.loading}/>

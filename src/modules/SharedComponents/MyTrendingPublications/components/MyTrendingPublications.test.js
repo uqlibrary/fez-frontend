@@ -4,6 +4,9 @@ import {transformTrendingPublicationsMetricsData} from 'middleware/trendingPubli
 
 function setup(testProps, isShallow = true){
     const props = {
+        actions: {
+            searchTrendingPublications: jest.fn()
+        },
         ...testProps
     };
     return getElement(MyTrendingPublications, props, isShallow);
@@ -16,7 +19,7 @@ describe('Component MyTrendingPublications', () => {
     });
 
     it('should render loading indicator', () => {
-        const wrapper = setup({isLoading: true});
+        const wrapper = setup({loadingTrendingPublications: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

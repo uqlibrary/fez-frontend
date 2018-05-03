@@ -1,6 +1,8 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
+import {Tabs, Tab} from 'material-ui/Tabs';
+
 import {AuthorsPublicationsPerYearChart} from 'modules/SharedComponents/Toolbox/Charts';
 import {AuthorsPublicationTypesCountChart} from 'modules/SharedComponents/Toolbox/Charts';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
@@ -8,9 +10,10 @@ import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 
+import {MyTrendingPublications} from 'modules/SharedComponents/MyTrendingPublications';
+import {MyLatestPublications} from 'modules/SharedComponents/MyLatestPublications';
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import {PublicationStats} from 'modules/SharedComponents/PublicationStats';
-import DashboardPublicationsTabs from '../containers/DashboardPublicationsTabs';
 
 import {routes} from 'config';
 import {locale} from 'locale';
@@ -36,6 +39,10 @@ class Dashboard extends PureComponent {
         // wos/scopus data
         loadingPublicationsStats: PropTypes.bool,
         publicationsStats: PropTypes.object,
+
+        // show latest/trending publications tab
+        showLatestPublicationsTab: PropTypes.bool,
+        showTrendingPublicationsTab: PropTypes.bool,
 
         // navigations, app actions
         actions: PropTypes.object.isRequired,
@@ -173,8 +180,25 @@ class Dashboard extends PureComponent {
                     </div>
                 }
                 {
-                    !loading &&
-                    <DashboardPublicationsTabs/>
+                    !loading && (this.props.showLatestPublicationsTab || this.props.showTrendingPublicationsTab) &&
+                    <StandardCard className="card-paddingless">
+                        <Tabs className="publicationTabs" inkBarStyle={{height: '4px', marginTop: '-4px'}}>
+                            {
+                                this.props.showLatestPublicationsTab &&
+                                <Tab label={txt.myLatestPublications.title} value="myPublications"
+                                    className="publicationTabs">
+                                    <MyLatestPublications />
+                                </Tab>
+                            }
+                            {
+                                this.props.showTrendingPublicationsTab &&
+                                <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications"
+                                    className="publicationTabs">
+                                    <MyTrendingPublications />
+                                </Tab>
+                            }
+                        </Tabs>
+                    </StandardCard>
                 }
             </StandardPage>
         );

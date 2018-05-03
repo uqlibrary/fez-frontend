@@ -169,6 +169,12 @@ export default {
                     },
                 }
             },
+            myLatestPublications: {
+                title: 'My publications',
+            },
+            myTrendingPublications: {
+                title: 'My trending publications'
+            },
             possiblePublicationsLure: {
                 title: 'Claim now!',
                 message: 'We have found [count] record(s) that could possibly be your work.',

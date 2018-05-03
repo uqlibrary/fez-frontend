@@ -71,14 +71,6 @@ export default {
                 }
             }
         },
-        dashboardPublicationsTabs: {
-            myLatestPublications: {
-                title: 'My publications',
-            },
-            myTrendingPublications: {
-                title: 'My trending publications'
-            },
-        },
         myTrendingPublications: {
             loading: 'Loading your trending publications...',
             metrics: {

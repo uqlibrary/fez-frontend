@@ -3,6 +3,9 @@ import MyLatestPublications from './MyLatestPublications';
 
 function setup(testProps, isShallow = true){
     const props = {
+        actions: {
+            searchLatestPublications: jest.fn()
+        },
         ...testProps
     };
     return getElement(MyLatestPublications, props, isShallow);
@@ -15,7 +18,7 @@ describe('Component MyLatestPublications', () => {
     });
 
     it('should render loading indicator', () => {
-        const wrapper = setup({isLoading: true});
+        const wrapper = setup({loadingLatestPublications: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

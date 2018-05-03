@@ -385,7 +385,6 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
       </StandardCard>
     </div>
   </div>
-  <Connect(DashboardPublicationsTabs) />
 </StandardPage>
 `;
 
@@ -444,7 +443,6 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
       className="column is-12 possiblePublicationLure"
     />
   </div>
-  <Connect(DashboardPublicationsTabs) />
 </StandardPage>
 `;
 
@@ -514,7 +512,6 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
       />
     </div>
   </div>
-  <Connect(DashboardPublicationsTabs) />
 </StandardPage>
 `;
 
@@ -573,7 +570,6 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
       className="column is-12 possiblePublicationLure"
     />
   </div>
-  <Connect(DashboardPublicationsTabs) />
 </StandardPage>
 `;
 
@@ -643,16 +639,13 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
       />
     </div>
   </div>
-  <Connect(DashboardPublicationsTabs) />
 </StandardPage>
 `;
 
 exports[`Dashboard test renders alert for non-authors 1`] = `
 <StandardPage
   className="dashboard"
->
-  <Connect(DashboardPublicationsTabs) />
-</StandardPage>
+/>
 `;
 
 exports[`Dashboard test renders dashboard header only 1`] = `
@@ -721,7 +714,6 @@ exports[`Dashboard test renders dashboard header only 1`] = `
       />
     </div>
   </div>
-  <Connect(DashboardPublicationsTabs) />
 </StandardPage>
 `;
 
@@ -791,6 +783,5 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
       />
     </div>
   </div>
-  <Connect(DashboardPublicationsTabs) />
 </StandardPage>
 `;

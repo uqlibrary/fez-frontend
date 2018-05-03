@@ -12,15 +12,20 @@ export default class MyLatestPublications extends PureComponent {
     static propTypes = {
         latestPublicationsList: PropTypes.array,
         totalPublicationsCount: PropTypes.number,
-        isLoading: PropTypes.bool,
+        loadingLatestPublications: PropTypes.bool,
+        actions: PropTypes.object,
         history: PropTypes.object.isRequired
     };
 
     static defaultProps = {
         latestPublicationsList: [],
         totalPublicationsCount: null,
-        isLoading: false
+        loadingLatestPublications: false
     };
+
+    componentDidMount() {
+        this.props.actions.searchLatestPublications();
+    }
 
     _viewMyResearch = () => {
         this.props.history.push(routes.pathConfig.records.mine);
@@ -29,7 +34,7 @@ export default class MyLatestPublications extends PureComponent {
     render() {
         const txt = locale.components.myLatestPublications;
 
-        if (this.props.isLoading) {
+        if (this.props.loadingLatestPublications) {
             return (
                 <div className="isLoading is-centered">
                     <InlineLoader message={txt.loading}/>
