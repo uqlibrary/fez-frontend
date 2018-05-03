@@ -13,7 +13,9 @@ export const ThesisSubmission = (componentProps) => (<Async load={import('module
 
 // always load components
 export {AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord} from 'modules/AddMissingRecord';
-export {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
+export {Index} from 'modules/Index';
 export {Masquerade} from 'modules/Masquerade';
+export {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 export {ViewRecord} from 'modules/ViewRecord';
+export {SearchRecords} from 'modules/SearchRecords';
 

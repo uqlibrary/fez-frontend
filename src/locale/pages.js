@@ -20,6 +20,9 @@ help: {
 
 export default {
     pages: {
+        index: {
+            title: 'eSpace'
+        },
         contact: {
             title: 'Contact UQ eSpace',
             children: (
@@ -400,6 +403,10 @@ export default {
         },
         viewRecord: {
             loadingMessage: 'Loading record...'
+        },
+        searchRecords: {
+            title: 'eSpace search',
+            loadingMessage: 'Searching for records...'
         },
         masquerade: {
             title: 'Masquerade',

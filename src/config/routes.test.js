@@ -6,47 +6,47 @@ import {locale} from 'locale';
 describe('Routes method', () => {
     it('should return a list of menus for anon user', () => {
         const testRoutes = routes.getMenuConfig(null);
-        expect(testRoutes.length).toEqual(3);
+        expect(testRoutes.length).toEqual(4);
     });
 
     it('should return a list of menus for researcher', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqresearcher);
-        expect(testRoutes.length).toEqual(9);
+        expect(testRoutes.length).toEqual(10);
     });
 
     it('should return a list of menus for a user with dashboard enabled only (eg HDR student without ORCID)', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqresearcher, true);
-        expect(testRoutes.length).toEqual(5);
+        expect(testRoutes.length).toEqual(6);
     });
 
     it('should return a list of menus for user who can masquerade', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff);
-        expect(testRoutes.length).toEqual(11);
+        expect(testRoutes.length).toEqual(12);
     });
 
     it('should return a list of routes for anon user', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: null});
-        expect(testRoutes.length).toEqual(4);
+        expect(testRoutes.length).toEqual(6);
     });
 
     it('should return a list of routes for researcher', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.uqresearcher});
-        expect(testRoutes.length).toEqual(16);
+        expect(testRoutes.length).toEqual(17);
     });
 
     it('should return a list of routes for user who can masquerade', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.uqstaff});
-        expect(testRoutes.length).toEqual(17);
+        expect(testRoutes.length).toEqual(18);
     });
 
     it('should return a list of routes for hdr student without ORCID', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.s2222222, forceOrcidRegistration: true, isHdrStudent: true});
-        expect(testRoutes.length).toEqual(5);
+        expect(testRoutes.length).toEqual(6);
     });
 
     it('should return a list of routes for hdr student with ORCID', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.s2222222, forceOrcidRegistration: false, isHdrStudent: true});
-        expect(testRoutes.length).toEqual(16);
+        expect(testRoutes.length).toEqual(17);
     });
 
     it('should render auth required page', () => {

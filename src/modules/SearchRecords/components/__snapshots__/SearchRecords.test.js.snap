@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchRecords page should render placeholders 1`] = `
+<StandardPage
+  className="page-search-records"
+  title="Search results"
+>
+  <StandardCard
+    className=""
+  >
+    <p>
+      XXXXX Total results found...
+    </p>
+  </StandardCard>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+      >
+        <p>
+          Paging, sorting...
+        </p>
+      </StandardCard>
+      <StandardCard
+        className=""
+      >
+        <p>
+          Search results publications list...
+        </p>
+      </StandardCard>
+    </div>
+    <div
+      className="column is-4"
+    >
+      <StandardCard
+        className=""
+        title="Refine"
+      >
+        <p>
+          Filter results...
+        </p>
+      </StandardCard>
+    </div>
+  </div>
+</StandardPage>
+`;

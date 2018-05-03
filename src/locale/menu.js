@@ -26,6 +26,10 @@ export default {
             primaryText: 'Masquerade',
             secondaryText: 'as another user'
         },
+        search: {
+            primaryText: 'Search eSpace',
+            secondaryText: ''
+        },
         browse: {
             primaryText: 'Browse eSpace',
             secondaryText: ''
