@@ -190,7 +190,8 @@
       "text"
     ],
     "modulePaths": [
-      "<rootDir>/src"
+      "<rootDir>/src",
+      "<rootDir>/eslint-plugin-uqlibrary"
     ],
     "moduleNameMapper": {
       "\\.(css|scss|sass)$": "<rootDir>/__mocks__/styles.js",
