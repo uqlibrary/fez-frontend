@@ -185,16 +185,18 @@ class Dashboard extends PureComponent {
                         <Tabs className="publicationTabs" inkBarStyle={{height: '4px', marginTop: '-4px'}}>
                             {
                                 this.props.showLatestPublicationsTab &&
-                                <Tab label={txt.myLatestPublications.title} value="myPublications"
-                                    className="publicationTabs">
-                                    <MyLatestPublications />
+                                <Tab label={txt.myLatestPublications.title} value="myPublications" className="publicationTabs">
+                                    <div className="publicationTabContent">
+                                        <MyLatestPublications/>
+                                    </div>
                                 </Tab>
                             }
                             {
                                 this.props.showTrendingPublicationsTab &&
-                                <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications"
-                                    className="publicationTabs">
-                                    <MyTrendingPublications />
+                                <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications" className="publicationTabs">
+                                    <div className="publicationTabContent">
+                                        <MyTrendingPublications/>
+                                    </div>
                                 </Tab>
                             }
                         </Tabs>
