@@ -97,4 +97,31 @@ describe('Dashboard test', () => {
         wrapper.instance()._addPublication();
         expect(testPushFn).toHaveBeenCalledWith('/records/add/find');
     });
+
+    it('does render latest and trending publications tabs correctly', () => {
+        const wrapper = setup({
+            authorDetails: mock.authorDetails.uqresearcher,
+            showLatestPublicationsTab: true,
+            showTrendingPublicationsTab: true
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('does render latest publications tab correctly', () => {
+        const wrapper = setup({
+            authorDetails: mock.authorDetails.uqresearcher,
+            showLatestPublicationsTab: true,
+            showTrendingPublicationsTab: false
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('does render trending publications tab correctly', () => {
+        const wrapper = setup({
+            authorDetails: mock.authorDetails.uqresearcher,
+            showLatestPublicationsTab: false,
+            showTrendingPublicationsTab: true
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
