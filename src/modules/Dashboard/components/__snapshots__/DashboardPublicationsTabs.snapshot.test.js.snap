@@ -52,7 +52,7 @@ exports[`Dashboard publication tabs should not render any tab by default 1`] = `
         }
       }
     >
-      <DashboardPublicationTabs
+      <DashboardPublicationsTabs
         account={
           Object {
             "barcode": "240675201000000",
@@ -81,9 +81,7 @@ exports[`Dashboard publication tabs should not render any tab by default 1`] = `
           Object {
             "searchLatestPublications": [MockFunction] {
               "calls": Array [
-                Array [
-                  "uqresearcher",
-                ],
+                Array [],
               ],
             },
             "searchTrendingPublications": [MockFunction] {
@@ -98,7 +96,7 @@ exports[`Dashboard publication tabs should not render any tab by default 1`] = `
         trendingPublicationsList={Array []}
       >
         <div />
-      </DashboardPublicationTabs>
+      </DashboardPublicationsTabs>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -124,7 +122,8 @@ exports[`Dashboard publication tabs should render my latest publications tab 1`]
       label="My publications"
       value="myPublications"
     >
-      <withRouter(MyLatestPublications)
+      <MyLatestPublications
+        isLoading={false}
         latestPublicationsList={
           Array [
             Object {
@@ -3823,7 +3822,8 @@ exports[`Dashboard publication tabs should render two tabs for latest publicatio
       label="My publications"
       value="myPublications"
     >
-      <withRouter(MyLatestPublications)
+      <MyLatestPublications
+        isLoading={false}
         latestPublicationsList={
           Array [
             Object {

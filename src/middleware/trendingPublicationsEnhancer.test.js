@@ -1,6 +1,6 @@
-import trendingPublicationsEnhancer, {transformTrendingPublicationsMetricsData} from './trendingPublicationsMiddleware';
+import trendingPublicationsEnhancer, {transformTrendingPublicationsMetricsData} from './trendingPublicationsEnhancer';
 
-describe('Trending publications middleware', () => {
+describe('Trending publications enhancer', () => {
     describe('transformTrendingPublicationsMetricsData', () => {
         it('should transform trending publications response in correct order if more than one metrics data returned from api', () => {
             const data = [

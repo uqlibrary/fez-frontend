@@ -8,9 +8,8 @@ import {MyLatestPublications} from 'modules/SharedComponents/MyLatestPublication
 
 import {locale} from 'locale';
 
-class DashboardPublicationTabs extends Component {
+class DashboardPublicationsTabs extends Component {
     static propTypes = {
-        account: PropTypes.object.isRequired,
         latestPublicationsList: PropTypes.array,
         trendingPublicationsList: PropTypes.array,
         totalPublicationsCount: PropTypes.number,
@@ -24,17 +23,15 @@ class DashboardPublicationTabs extends Component {
     };
 
     componentDidMount() {
-        if (this.props.account && this.props.account.id) {
-            this.props.actions.searchLatestPublications(this.props.account.id);
-            this.props.actions.searchTrendingPublications();
-        }
+        this.props.actions.searchLatestPublications();
+        this.props.actions.searchTrendingPublications();
     }
 
     render() {
         const txt = locale.pages.dashboard;
         const {latestPublicationsList, trendingPublicationsList, totalPublicationsCount} = this.props;
 
-        if (!latestPublicationsList.length > 0 && !trendingPublicationsList.length > 0) {
+        if (latestPublicationsList.length === 0 && trendingPublicationsList.length === 0) {
             return <div/>;
         }
 
@@ -63,4 +60,4 @@ class DashboardPublicationTabs extends Component {
         );
     }
 }
-export default DashboardPublicationTabs;
+export default DashboardPublicationsTabs;

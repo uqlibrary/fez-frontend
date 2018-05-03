@@ -10,7 +10,7 @@ import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import {PublicationStats} from 'modules/SharedComponents/PublicationStats';
-import DashboardPublicationTabs from '../containers/DashboardPublicationTabs';
+import DashboardPublicationsTabs from '../containers/DashboardPublicationsTabs';
 
 import {routes} from 'config';
 import {locale} from 'locale';
@@ -174,7 +174,7 @@ class Dashboard extends PureComponent {
                 }
                 {
                     !loading &&
-                    <DashboardPublicationTabs/>
+                    <DashboardPublicationsTabs/>
                 }
             </StandardPage>
         );

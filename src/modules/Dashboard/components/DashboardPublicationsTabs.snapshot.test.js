@@ -1,9 +1,9 @@
-jest.dontMock('./DashboardPublicationTabs');
+jest.dontMock('./DashboardPublicationsTabs');
 
-import DashboardPublicationTabs from './DashboardPublicationTabs';
+import DashboardPublicationsTabs from './DashboardPublicationsTabs';
 import * as mock from 'mock/data';
 import {trendingPublications} from 'mock/data/testing/trendingPublications';
-import {transformTrendingPublicationsMetricsData} from 'middleware/trendingPublicationsMiddleware';
+import {transformTrendingPublicationsMetricsData} from 'middleware/trendingPublicationsEnhancer';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -14,7 +14,7 @@ function setup(testProps, isShallow = true) {
         },
         ...testProps
     };
-    return getElement(DashboardPublicationTabs, props, isShallow);
+    return getElement(DashboardPublicationsTabs, props, isShallow);
 }
 
 describe('Dashboard publication tabs', () => {

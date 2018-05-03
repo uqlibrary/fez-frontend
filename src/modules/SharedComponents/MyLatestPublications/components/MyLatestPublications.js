@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {withRouter} from 'react-router-dom';
 
 import {routes} from 'config';
 import {locale} from 'locale';
@@ -9,7 +8,7 @@ import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
 import RaisedButton from 'material-ui/RaisedButton';
 
-export class MyLatestPublications extends PureComponent {
+export default class MyLatestPublications extends PureComponent {
     static propTypes = {
         latestPublicationsList: PropTypes.array,
         totalPublicationsCount: PropTypes.number,
@@ -23,7 +22,7 @@ export class MyLatestPublications extends PureComponent {
         isLoading: false
     };
 
-    _viewYourResearch = () => {
+    _viewMyResearch = () => {
         this.props.history.push(routes.pathConfig.records.mine);
     };
 
@@ -49,7 +48,7 @@ export class MyLatestPublications extends PureComponent {
                         <RaisedButton
                             secondary
                             label={`${txt.viewAllButtonLabel} (${this.props.totalPublicationsCount})`}
-                            onTouchTap={this._viewYourResearch}/>
+                            onClick={this._viewMyResearch}/>
                     </div>
                 </div>
             </div>
@@ -57,5 +56,4 @@ export class MyLatestPublications extends PureComponent {
     }
 }
 
-export default withRouter(MyLatestPublications);
 
