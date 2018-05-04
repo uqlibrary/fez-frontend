@@ -71,10 +71,10 @@ export function searchTrendingPublications() {
                 if (response.data.length > 0) {
                     const transformedTrendingPublications = transformTrendingPublicationsMetricsData(response);
 
-                    transformedTrendingPublications.map(metricsData => {
+                    transformedTrendingPublications.map(({key, values}) => {
                         dispatch({
-                            type: `${actions.TRENDING_PUBLICATIONS_LOADED}@${metricsData.key}`,
-                            payload: {data: metricsData.values},
+                            type: `${actions.TRENDING_PUBLICATIONS_LOADED}@${key}`,
+                            payload: {data: values},
                         });
                     });
                 } else {
