@@ -1,4 +1,4 @@
-.authorButton {
+.author-button {
   margin: 2px !important;
   button {
     text-align: left !important;
@@ -21,6 +21,13 @@
         margin-right: 8px !important;
       }
     }
+  }
+}
+
+.author-linking-checkbox.error-checkbox {
+  div:first-of-type {
+    display: table !important;
+    margin-bottom: 0 !important;
   }
 }
 
