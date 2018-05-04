@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import {pathConfig} from 'config/routes';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Link} from 'react-router-dom';
 
 export default class RelatedPublications extends PureComponent {
@@ -51,7 +51,9 @@ export default class RelatedPublications extends PureComponent {
 
     renderSubList = (subList, searchKey) => {
         return (
-            subList.sort((item1, item2) => (
+            subList.filter(item => (
+                item[searchKey.title] && item[searchKey.title].trim().length > 0
+            )).sort((item1, item2) => (
                 item1[searchKey.order] - item2[searchKey.order]
             )).map((item, index)=> {
                 return (

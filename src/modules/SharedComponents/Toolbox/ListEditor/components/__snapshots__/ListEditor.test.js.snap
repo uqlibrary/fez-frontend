@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListEditor tests  should render full component as disabled 1`] = `
+<div
+  className="testClass"
+>
+  <mockConstructor
+    disabled={true}
+    errorText=""
+    inputField={[MockFunction]}
+    isValid={[MockFunction]}
+    onAdd={[Function]}
+  />
+</div>
+`;
+
+exports[`ListEditor tests  should render full component with a defined className 1`] = `
+<div
+  className="requiredField"
+>
+  <mockConstructor
+    disabled={false}
+    errorText=""
+    inputField={[MockFunction]}
+    isValid={[MockFunction]}
+    onAdd={[Function]}
+  />
+</div>
+`;

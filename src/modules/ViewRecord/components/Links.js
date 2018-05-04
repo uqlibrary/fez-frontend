@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import {PubmedCentralLink} from 'modules/SharedComponents/PubmedCentralLink';
 import DoiCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DoiCitationView';

@@ -23,4 +23,19 @@ describe('Related publications Component ', () => {
         const wrapper = setup({publication: publication});
         expect(toJson(wrapper)).toEqual('');
     });
+
+    it('should not render data with empty lookups', () => {
+        const publication = Object.assign({}, dataCollection);
+        publication.fez_record_search_key_has_related_datasets.push({
+            rek_has_related_datasets_lookup: null,
+            rek_has_related_datasets_order: 3
+        }, {
+            rek_has_related_datasets_lookup: " ",
+            rek_has_related_datasets_order: 4
+        });
+        console.log(publication.fez_record_search_key_has_related_datasets);
+        const wrapper = setup({publication: publication});
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('.relatedPublications li').length).toEqual(2);
+    });
 });

@@ -382,7 +382,7 @@ exports[`Search record results should render a single claimable item with no aut
           fullWidth={true}
           label="Abandon and search again"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={false}
         />
@@ -397,7 +397,7 @@ exports[`Search record results should render a single claimable item with no aut
           keyboardFocused={false}
           label="Create a new eSpace record"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={true}
         />
@@ -569,7 +569,7 @@ exports[`Search record results should render a single unclaimable item with no a
           fullWidth={true}
           label="Abandon and search again"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={false}
         />
@@ -584,7 +584,7 @@ exports[`Search record results should render a single unclaimable item with no a
           keyboardFocused={false}
           label="Create a new eSpace record"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={true}
         />
@@ -641,7 +641,7 @@ exports[`Search record results should render stepper and no results 1`] = `
           fullWidth={true}
           label="Abandon and search again"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={false}
         />
@@ -656,7 +656,7 @@ exports[`Search record results should render stepper and no results 1`] = `
           keyboardFocused={true}
           label="Create a new eSpace record"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={true}
         />

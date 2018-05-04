@@ -1,9 +1,9 @@
 import React from 'react';
 import {journalArticle} from 'mock/data/testing/records';
 import AudioPlayer from './AudioPlayer';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
-injectTapEventPlugin();
+
+
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -28,7 +28,7 @@ describe('Audio Player Component ', () => {
         const audio = wrapper.find('audio');
         const play = jest.fn();
         audio.getDOMNode().play = play;
-        element.simulate('touchTap');
+        element.simulate('click');
         expect(play).toHaveBeenCalledTimes(1);
     });
 
@@ -43,7 +43,7 @@ describe('Audio Player Component ', () => {
         const audio = wrapper.find('audio');
         const pause = jest.fn();
         audio.getDOMNode().pause = pause;
-        element.simulate('touchTap');
+        element.simulate('click');
         expect(pause).toHaveBeenCalledTimes(1);
     });
 

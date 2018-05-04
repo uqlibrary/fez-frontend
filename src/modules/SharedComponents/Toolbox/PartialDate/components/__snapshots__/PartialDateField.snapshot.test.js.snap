@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateField component 1`] = `
+<PartialDateForm
+  allowPartial={true}
+  className=""
+  dateFormat="YYYY-MM-DD"
+  floatingTitle="Enter a date"
+  floatingTitleRequired={false}
+  input={
+    Object {
+      "onChange": [Function],
+    }
+  }
+  locale={
+    Object {
+      "dayLabel": "Day",
+      "maxNumberCharCode": 57,
+      "minNumberCharCode": 48,
+      "monthLabel": "Month",
+      "validationMessage": Object {
+        "day": "Invalid day",
+        "month": "Invalid month",
+        "year": "Invalid year",
+      },
+      "yearLabel": "Year",
+    }
+  }
+  months={
+    Array [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ]
+  }
+  name="partialDate"
+  onChange={[Function]}
+/>
+`;
+
+exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateField component with requiredField class on all fields 1`] = `
+<PartialDateForm
+  allowPartial={false}
+  className="requiredField"
+  dateFormat="YYYY-MM-DD"
+  floatingTitle="Enter a date"
+  floatingTitleRequired={false}
+  input={
+    Object {
+      "onChange": [Function],
+    }
+  }
+  locale={
+    Object {
+      "dayLabel": "Day",
+      "maxNumberCharCode": 57,
+      "minNumberCharCode": 48,
+      "monthLabel": "Month",
+      "validationMessage": Object {
+        "day": "Invalid day",
+        "month": "Invalid month",
+        "year": "Invalid year",
+      },
+      "yearLabel": "Year",
+    }
+  }
+  months={
+    Array [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ]
+  }
+  name="partialDate"
+  onChange={[Function]}
+/>
+`;
+
+exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateField component with requiredField class on year field 1`] = `
+<PartialDateForm
+  allowPartial={true}
+  className="requiredField"
+  dateFormat="YYYY-MM-DD"
+  floatingTitle="Enter a date"
+  floatingTitleRequired={false}
+  input={
+    Object {
+      "onChange": [Function],
+    }
+  }
+  locale={
+    Object {
+      "dayLabel": "Day",
+      "maxNumberCharCode": 57,
+      "minNumberCharCode": 48,
+      "monthLabel": "Month",
+      "validationMessage": Object {
+        "day": "Invalid day",
+        "month": "Invalid month",
+        "year": "Invalid year",
+      },
+      "yearLabel": "Year",
+    }
+  }
+  months={
+    Array [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ]
+  }
+  name="partialDate"
+  onChange={[Function]}
+/>
+`;

@@ -1,15 +1,15 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
-import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
-import {StandardRighthandCard} from 'uqlibrary-react-toolbox/build/StandardRighthandCard';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
+import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
+import {StandardRighthandCard} from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 
 import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
 import {locale} from 'locale';
 import {routes} from 'config';
-export default class MyRecords extends React.PureComponent {
+export default class MyRecords extends PureComponent {
     static propTypes = {
         publicationsList: PropTypes.array,
         publicationsListFacets: PropTypes.object,

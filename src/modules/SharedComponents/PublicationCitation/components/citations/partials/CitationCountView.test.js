@@ -6,7 +6,7 @@ import React from 'react';
 import CitationCountView from './CitationCountView';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+
 import {researchReport} from 'mock/data/testing/records';
 
 function setup({source, count, link, title, isShallow = false}) {
@@ -32,7 +32,7 @@ function setup({source, count, link, title, isShallow = false}) {
 }
 
 beforeAll(() => {
-    injectTapEventPlugin();
+    
 });
 
 describe('CitationCountView test ', () => {

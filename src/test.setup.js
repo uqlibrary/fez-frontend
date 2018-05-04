@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Enzyme, { shallow, render, mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-15';
+import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
 import 'babel-polyfill';
 
@@ -15,6 +15,7 @@ import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
 import {api} from 'config';
+
 
 const setupStoreForActions = () => {
     const middlewares = [thunk];
@@ -127,3 +128,4 @@ global.mockApi = setupMockAdapter();
 // expect extension
 global.toHaveDispatchedActions = toHaveDispatchedActions;
 global.toHaveAnyOrderDispatchedActions = toHaveAnyOrderDispatchedActions;
+jest.spyOn(Date, 'now').mockImplementation(() => 1451606400000);

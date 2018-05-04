@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component FileUploadDropzoneStaticContent should render with default setup 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <FileUploadDropzoneStaticContent
+        locale={
+          Object {
+            "fileUploadInstruction": "Upload whatever you like :)",
+            "fileUploadRestrictionHeading": "Restrictions for file upload",
+            "fileUploadRestrictions": "No restrictions applies to Tests!!!",
+          }
+        }
+      >
+        <div
+          className="columns file-instructions"
+        >
+          <div
+            className="column"
+          >
+            Restrictions for file upload
+            No restrictions applies to Tests!!!
+          </div>
+          <div
+            className="column upload-instructions"
+          >
+            <FontIcon
+              className="material-icons"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <span
+                className="material-icons"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "color": "rgba(0, 0, 0, 0.87)",
+                    "display": "inline-block",
+                    "fontSize": 24,
+                    "muiPrepared": true,
+                    "position": "relative",
+                    "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                    "userSelect": "none",
+                  }
+                }
+              >
+                cloud_upload
+              </span>
+            </FontIcon>
+            Upload whatever you like :)
+          </div>
+        </div>
+      </FileUploadDropzoneStaticContent>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;

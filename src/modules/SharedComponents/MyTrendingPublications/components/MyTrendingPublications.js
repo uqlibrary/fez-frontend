@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import {locale} from 'locale';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
 
-import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
-import {HelpIcon} from 'uqlibrary-react-toolbox/build/HelpDrawer';
+import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
+import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
 
 export default class MyTrendingPublications extends PureComponent {
     static propTypes = {

@@ -16,7 +16,7 @@ UQ's branding for Fez is UQ eSpace.
 
 
 ## Technology
-- Code: `React (~0.15), Javascript (ES2015 - Babel), Immutable, SASS`
+- Code: `React (~0.16), Javascript (ES2015 - Babel), Immutable, SASS`
 - State: `Redux, ReduxForm`
 - Design: `Google Material Design - Material UI`
 - Build and dev tools: `Webpack`
@@ -25,19 +25,23 @@ UQ's branding for Fez is UQ eSpace.
 - Styling: [Bulma](https://bulma.io/)
 
 ## Development
-This project is using `yarn` for dependency management.  Make sure `yarn` is installed on your machine.
-- `npm install yarn -g` - install `yarn` globally
-- `yarn`
-- `find node_modules/ -type f -name .babelrc | grep -v packager | xargs rm -rf` - because https://github.com/okonet/react-dropzone/issues/383#issuecomment-303554125 - may be fixed by babel 7.
-- `yarn start` - The website is now running on `http://localhost:3000/` on dev api (requires additional setup of uqlibrary/api project)
-- `yarn start:mock` - The website is now running on `http://localhost:3000/` on mock data
+This project is using `npm` for dependency management.  Make sure `npm` is installed on your machine.
+- `npm install`
+- `npm run start` - The website is now running on `http://localhost:3000/` on dev api (requires additional setup of uqlibrary/api project)
+- `npm run start:mock` - The website is now running on `http://localhost:3000/` on mock data
 - for Hot Reloading to work in IntelliJ products, turn "safe write" off in the settings
-- `yarn start:build` will run production build version on `http://dev-espace.library.uq.edu.au:9000/` and `http://localhost:9000` (add `dev-espace.library.uq.edu.au` to your /etc/hosts)
-- `yarn start:build:e2e` will run production build version on `http://localhost:9000` with mock data
+- `npm run start:build` will run production build version on `http://dev-espace.library.uq.edu.au:9000/` and `http://localhost:9000` (add `dev-espace.library.uq.edu.au` to your /etc/hosts)
+- `npm run start:build:e2e` will run production build version on `http://localhost:9000` with mock data (async loading is not working since chuncks are not saved, navigate directly to required routes)
 
 Mock data is provided for all pages and actions under `src/mock/`.
 
 ### Development notes
+
+#### ESLint
+
+There are two ways to run `eslint`:
+- Run `npm run eslint` command
+- Copy `scripts/pre-commit` to `.git/hooks` directory to run eslint automatically before every commit locally
 
 #### Naming conventions
 
@@ -101,8 +105,8 @@ new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
 - component should extend React.PureComponent if props are simple 
 - component should extend React.Component, shouldComponentUpdate() should be implemented if props have objects
 - import explicit and specific components (do not import all):
-   - *DO NOT* `import {HelpIcon} from 'uqlibrary-react-toolbox';` 
-   - *DO* `import {HelpIcon} from 'uqlibrary-react-toolbox/build/HelpDrawer';`
+   - *DO NOT* `import {Button} from 'material-ui';` 
+   - *DO* `import {Button} from 'material-ui/Button';`
 - any set of components which is not required in the initial load, eg PublicationForm, FixForm, ClaimForm etc, should lazy loaded using `<Async>`
 ```
 const PublicationsList = (componentProps) => (<Async load={import('modules/SharedComponents/PublicationsList/components/PublicationsList')}  componentProps={componentProps} />);
@@ -139,7 +143,7 @@ TBA
 
 ## Mocking
 
-To run website on mock data run `yarn start:mock` webserver will start on `http://localhost:3000/`
+To run website on mock data run `npm run start:mock` webserver will start on `http://localhost:3000/`
 
 The project allows the user to "login" as any test user. Simply add `?user=<username>` to the request and it will log you
 in as that user. Usernames can be found in the `src/mock/data/accounts.js` file.

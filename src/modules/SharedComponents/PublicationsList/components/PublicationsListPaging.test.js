@@ -6,7 +6,7 @@ import React from 'react';
 import PublicationsListPaging from './PublicationsListPaging';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+
 
 function setup({onPageChanged, disabled, pagingData, isShallow = true}) {
     const defaultPagingData = {
@@ -38,7 +38,7 @@ function setup({onPageChanged, disabled, pagingData, isShallow = true}) {
 }
 
 beforeAll(() => {
-    injectTapEventPlugin();
+
 });
 
 describe('PublicationsListPaging renders ', () => {
@@ -165,7 +165,7 @@ describe('PublicationsListPaging renders ', () => {
 
         const nextPage = wrapper.find('FlatButton.pagingNext');
         expect(nextPage.length).toBe(1);
-        nextPage.props().onTouchTap();
+        nextPage.props().onClick();
         expect(testFunction).toBeCalled();
     });
 
@@ -182,7 +182,7 @@ describe('PublicationsListPaging renders ', () => {
 
         const page = wrapper.find('FlatButton.pagingPrevious');
         expect(page.length).toBe(1);
-        page.props().onTouchTap();
+        page.props().onClick();
         expect(testFunction).toBeCalled();
     });
 
@@ -197,7 +197,7 @@ describe('PublicationsListPaging renders ', () => {
         const testFunction = jest.fn();
         const wrapper = setup({pagingData: data, onPageChanged: testFunction, isShallow: false});
         const pages = wrapper.find('.publicationsListPaging .page');
-        pages.at(1).props().onTouchTap();
+        pages.at(1).props().onClick();
         expect(testFunction).toBeCalled();
     });
 

@@ -1084,7 +1084,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
           fullWidth={true}
           label="Cancel this claim"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={false}
         />
@@ -1097,7 +1097,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
           fullWidth={true}
           label="Claim this publication"
           labelPosition="after"
-          onTouchTap={[MockFunction]}
+          onClick={[MockFunction]}
           primary={false}
           secondary={true}
         />
@@ -2176,7 +2176,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           fullWidth={true}
           label="Cancel this claim"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={false}
         />
@@ -2189,7 +2189,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           fullWidth={true}
           label="Claim this publication"
           labelPosition="after"
-          onTouchTap={[MockFunction]}
+          onClick={[MockFunction]}
           primary={false}
           secondary={true}
         />
@@ -3513,7 +3513,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           fullWidth={true}
           label="Cancel this claim"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={false}
         />
@@ -3526,7 +3526,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           fullWidth={true}
           label="Claim this publication"
           labelPosition="after"
-          onTouchTap={[MockFunction]}
+          onClick={[MockFunction]}
           primary={false}
           secondary={true}
         />
@@ -4850,7 +4850,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
           fullWidth={true}
           label="Cancel this claim"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={false}
         />
@@ -4863,7 +4863,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
           fullWidth={true}
           label="Claim this publication"
           labelPosition="after"
-          onTouchTap={[MockFunction]}
+          onClick={[MockFunction]}
           primary={false}
           secondary={true}
         />
@@ -6188,7 +6188,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
           fullWidth={true}
           label="Cancel this claim"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={false}
         />
@@ -6201,7 +6201,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
           fullWidth={true}
           label="Claim this publication"
           labelPosition="after"
-          onTouchTap={[MockFunction]}
+          onClick={[MockFunction]}
           primary={false}
           secondary={true}
         />
@@ -7223,7 +7223,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
           fullWidth={true}
           label="Cancel this claim"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={false}
         />
@@ -8555,7 +8555,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
           fullWidth={true}
           label="Cancel this claim"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={false}
         />
@@ -8568,7 +8568,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
           fullWidth={true}
           label="Claim this publication"
           labelPosition="after"
-          onTouchTap={[MockFunction]}
+          onClick={[MockFunction]}
           primary={false}
           secondary={true}
         />
@@ -9892,7 +9892,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
           fullWidth={true}
           label="Cancel this claim"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={false}
         />
@@ -9905,7 +9905,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
           fullWidth={true}
           label="Claim this publication"
           labelPosition="after"
-          onTouchTap={[MockFunction]}
+          onClick={[MockFunction]}
           primary={false}
           secondary={true}
         />

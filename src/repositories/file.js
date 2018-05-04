@@ -1,5 +1,5 @@
 import {generateCancelToken} from 'config';
-import * as fileUploadActions from 'uqlibrary-react-toolbox/build/FileUploader/actions';
+import * as fileUploadActions from 'modules/SharedComponents/Toolbox/FileUploader/actions';
 import * as routes from './routes';
 import {get, put} from './generic';
 import Raven from 'raven-js';

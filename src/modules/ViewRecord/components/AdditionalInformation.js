@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {locale} from 'locale';
 import {viewRecordsConfig, routes} from 'config';
 import {Table, TableBody} from 'material-ui/Table';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {AuthorsCitationView, DoiCitationView, EditorsCitationView, DateCitationView} from 'modules/SharedComponents/PublicationCitation/components/citations/partials';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import ReactHtmlParser from 'react-html-parser';

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
-import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
+import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
-export default class ContributorRow extends React.PureComponent {
+export default class ContributorRow extends PureComponent {
     static propTypes = {
         index: PropTypes.number.isRequired,
         contributor: PropTypes.object.isRequired,
@@ -40,10 +40,6 @@ export default class ContributorRow extends React.PureComponent {
 
     constructor(props) {
         super(props);
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return this.props !== nextProps;
     }
 
     _showConfirmation = () => {
@@ -151,7 +147,7 @@ export default class ContributorRow extends React.PureComponent {
                                     <IconButton
                                         tooltip={this.props.locale.moveUpHint}
                                         tooltipPosition="bottom-left"
-                                        onTouchTap={this._onMoveUp}
+                                        onClick={this._onMoveUp}
                                         className="reorderUp"
                                         disabled={this.props.disabled}
                                         aria-label={this.props.locale.moveUpHint}>
@@ -166,7 +162,7 @@ export default class ContributorRow extends React.PureComponent {
                                     <IconButton
                                         tooltip={this.props.locale.moveDownHint}
                                         tooltipPosition="bottom-left"
-                                        onTouchTap={this._onMoveDown}
+                                        onClick={this._onMoveDown}
                                         className="reorderDown"
                                         disabled={this.props.disabled}
                                         aria-label={this.props.locale.moveDownHint}>
@@ -181,7 +177,7 @@ export default class ContributorRow extends React.PureComponent {
                                     className="contributorDelete"
                                     tooltip={this.props.locale.deleteHint}
                                     tooltipPosition="bottom-left"
-                                    onTouchTap={this._showConfirmation}
+                                    onClick={this._showConfirmation}
                                     disabled={this.props.disabled}
                                     aria-label={this.props.locale.deleteHint}>
                                     <FontIcon className="material-icons deleteIcon">delete</FontIcon>

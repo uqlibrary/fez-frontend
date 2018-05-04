@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
-import {AuthorsPublicationsPerYearChart} from 'uqlibrary-react-toolbox/build/Charts';
-import {AuthorsPublicationTypesCountChart} from 'uqlibrary-react-toolbox/build/Charts';
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
-import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
+import {AuthorsPublicationsPerYearChart} from 'modules/SharedComponents/Toolbox/Charts';
+import {AuthorsPublicationTypesCountChart} from 'modules/SharedComponents/Toolbox/Charts';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
+import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
@@ -17,7 +17,7 @@ import {Tabs, Tab} from 'material-ui/Tabs';
 import {routes} from 'config';
 import {locale} from 'locale';
 
-class Dashboard extends React.Component {
+class Dashboard extends PureComponent {
     static propTypes = {
         // account data
         account: PropTypes.object.isRequired,
@@ -60,12 +60,6 @@ class Dashboard extends React.Component {
             this.props.actions.searchLatestPublications(this.props.account.id);
         }
     }
-
-    shouldComponentUpdate(nextProps) {
-        return !(nextProps.loadingPublicationsByYear || nextProps.accountAuthorDetailsLoading
-            || nextProps.loadingPublicationsStats || nextProps.loadingLatestPublications);
-    }
-
     _claimYourPublications = () => {
         this.props.history.push(routes.pathConfig.records.possible);
     };
@@ -207,7 +201,7 @@ class Dashboard extends React.Component {
                                                 <RaisedButton
                                                     secondary
                                                     label={`${txt.myPublications.viewAllButtonLabel} (${this.props.totalPublicationsCount})`}
-                                                    onTouchTap={this._viewYourResearch}/>
+                                                    onClick={this._viewYourResearch}/>
                                             </div>
                                         </div>
                                     </div>

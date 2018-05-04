@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as actions from 'actions';
 
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 
 const AppAlert = ({appAlert}) => {
     if (!appAlert) return null;
