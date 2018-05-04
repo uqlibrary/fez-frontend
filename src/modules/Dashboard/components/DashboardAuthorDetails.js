@@ -14,7 +14,28 @@ export default class DashboardAuthorDetails extends PureComponent {
         super(props);
     }
 
+    isCasualPosition(position) {
+        return position.indexOf('Casual ') > -1;
+    }
+
+    /**
+     * Hide roles that include the word 'Casual', where multiple roles are currently displayed,
+     * and at least one does not include the word 'Casual'
+     * If all appointments include the word 'Casual' we will need to display all roles.
+     */
+    areAllCasualPositions(positions) {
+        if (!positions || positions.length === 0) {
+            return false;
+        }
+
+        return positions.filter((position) => {
+            return this.isCasualPosition(position);
+        }).length === positions.length;
+    }
+
     render() {
+        const areAllCasualPositions = this.areAllCasualPositions(this.props.positions);
+
         return (
             <div className="authorDetails">
                 {/* Title and name */}
@@ -25,6 +46,7 @@ export default class DashboardAuthorDetails extends PureComponent {
                 <div className="is-paddingless is-marginless is-narrow">
                     {
                         this.props.positions && this.props.positions.length > 0 && this.props.positions.map((item, index) => (
+                            ((!areAllCasualPositions && !this.isCasualPosition(item)) || areAllCasualPositions) &&
                             <div key={index} className="authorPositionOrg">
                                 <strong>{item}</strong>
                                 {
