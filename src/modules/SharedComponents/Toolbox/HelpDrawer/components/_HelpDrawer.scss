@@ -1,0 +1,22 @@
+@import '../../../../../sass/variables';
+
+.help-drawer {
+  .cardTitle{
+    color: $theme-color;
+  }
+  .app-bar {
+    height: 75px;
+    background-color: $theme-color;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .body-1 {
+    padding-top: 24px;
+  }
+  .content {
+    padding: 24px;
+    overflow-y: auto;
+  }
+}

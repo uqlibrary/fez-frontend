@@ -1,20 +1,20 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 // forms & custom components
 import {PublicationsList, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
 
-import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
-import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
-import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
-import {StandardRighthandCard} from 'uqlibrary-react-toolbox/build/StandardRighthandCard';
+import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
+import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
+import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import {StandardRighthandCard} from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 
 import {routes} from 'config';
 import {locale} from 'locale';
 
-export default class PossiblyMyRecords extends React.PureComponent {
+export default class PossiblyMyRecords extends PureComponent {
     static propTypes = {
         possiblePublicationsList: PropTypes.array,
         publicationsClaimedInProgress: PropTypes.array,

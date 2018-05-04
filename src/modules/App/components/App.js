@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
 import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
@@ -6,12 +6,12 @@ import {locale} from 'locale';
 
 // application components
 import AppBar from 'material-ui/AppBar';
-import {AppLoader} from 'uqlibrary-react-toolbox/build/Loaders';
-import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
-import {MenuDrawer} from 'uqlibrary-react-toolbox/build/MenuDrawer';
-import {HelpDrawer} from 'uqlibrary-react-toolbox/build/HelpDrawer';
-import {AuthButton} from 'uqlibrary-react-toolbox/build/AuthButton';
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+import {AppLoader} from 'modules/SharedComponents/Toolbox/Loaders';
+import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
+import {MenuDrawer} from 'modules/SharedComponents/Toolbox/MenuDrawer';
+import {HelpDrawer} from 'modules/SharedComponents/Toolbox/HelpDrawer';
+import {AuthButton} from 'modules/SharedComponents/Toolbox/AuthButton';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import AppAlertContainer from '../containers/AppAlert';
 import {Meta} from 'modules/SharedComponents/Meta';
 import {OfflineSnackbar} from 'modules/SharedComponents/OfflineSnackbar';
@@ -20,7 +20,7 @@ import * as pages from './pages';
 import IconButton from 'material-ui/IconButton';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
-export default class App extends React.PureComponent {
+export default class App extends PureComponent {
     static propTypes = {
         account: PropTypes.object,
         author: PropTypes.object,
@@ -61,14 +61,6 @@ export default class App extends React.PureComponent {
         this.props.actions.loadCurrentAccount();
         this.handleResize(this.state.mediaQuery);
         this.state.mediaQuery.addListener(this.handleResize);
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return this.props.accountLoading !== nextProps.accountLoading
-            || this.props.accountAuthorLoading !== nextProps.accountAuthorLoading
-            || this.props.location !== nextProps.location
-            || this.props.history !== nextState.history
-            || this.state !== nextState;
     }
 
     componentWillUnmount() {
@@ -176,7 +168,7 @@ export default class App extends React.PureComponent {
                     iconStyleLeft={{marginTop: 0}}
                     title={locale.global.title}
                     titleStyle={titleStyle}
-                    onLeftIconButtonTouchTap={this.toggleDrawer}
+                    onLeftIconButtonClick={this.toggleDrawer}
                     iconElementLeft={
                         <IconButton
                             tooltip={locale.global.mainNavButton.tooltip}

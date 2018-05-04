@@ -6,7 +6,7 @@ import React from 'react';
 import ImageDocumentCitation from './ImageDocumentCitation';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+
 import {imageDocument} from 'mock/data/testing/records';
 
 function setup({publication, isShallow = false}) {
@@ -29,7 +29,7 @@ function setup({publication, isShallow = false}) {
 }
 
 beforeAll(() => {
-    injectTapEventPlugin();
+    
 });
 
 describe('ImageDocumentCitation renders ', () => {

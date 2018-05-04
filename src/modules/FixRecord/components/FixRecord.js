@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
@@ -6,21 +6,21 @@ import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
 import MenuItem from 'material-ui/MenuItem';
 
-import {SelectField} from 'uqlibrary-react-toolbox/build/SelectField';
-import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
-import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
-import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
-import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPrompt';
-import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
-import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
+import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
+import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
+import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
+import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
+import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {validation, routes} from 'config';
 import {locale} from 'locale';
 
-export default class FixRecord extends React.PureComponent {
+export default class FixRecord extends PureComponent {
     static propTypes = {
         ...propTypes, // all redux-form props
         disableSubmit: PropTypes.bool,
@@ -65,10 +65,6 @@ export default class FixRecord extends React.PureComponent {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.successConfirmationBox.showConfirmation();
         }
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return this.props !== nextProps || this.state !== nextState;
     }
 
     componentWillUnmount() {
@@ -235,7 +231,7 @@ export default class FixRecord extends React.PureComponent {
                                 fullWidth
                                 label={txt.cancel}
                                 disabled={this.props.submitting}
-                                onTouchTap={this._cancelFix}/>
+                                onClick={this._cancelFix}/>
                         </div>
                         {
                             this.state.selectedRecordAction &&
@@ -244,7 +240,7 @@ export default class FixRecord extends React.PureComponent {
                                     secondary
                                     fullWidth
                                     label={txt.submit}
-                                    onTouchTap={this.props.handleSubmit}
+                                    onClick={this.props.handleSubmit}
                                     disabled={this.props.submitting || this.props.disableSubmit}/>
                             </div>
                         }

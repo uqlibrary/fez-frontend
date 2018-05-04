@@ -6,7 +6,7 @@ import React from 'react';
 import DoiCitationView from './DoiCitationView';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+
 import {researchReport} from 'mock/data/testing/records';
 
 function setup({doi, isShallow = false}) {
@@ -29,7 +29,7 @@ function setup({doi, isShallow = false}) {
 }
 
 beforeAll(() => {
-    injectTapEventPlugin();
+    
 });
 
 describe('DoiCitationView test ', () => {

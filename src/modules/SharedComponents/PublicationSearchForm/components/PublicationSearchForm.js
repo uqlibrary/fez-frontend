@@ -3,8 +3,8 @@ import {Field} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
@@ -44,7 +44,7 @@ export default class PublicationSearchForm extends Component {
                                 label={this.props.locale.submit}
                                 fullWidth
                                 secondary
-                                onTouchTap={this.props.handleSubmit}
+                                onClick={this.props.handleSubmit}
                                 disabled={this.props.invalid}
                             />
                         </div>
@@ -55,7 +55,7 @@ export default class PublicationSearchForm extends Component {
                                     className="is-mui-spacing-button"
                                     label={this.props.locale.skip}
                                     fullWidth
-                                    onTouchTap={this.props.onSkipSearch}
+                                    onClick={this.props.onSkipSearch}
                                 />
                             </div>
                         }

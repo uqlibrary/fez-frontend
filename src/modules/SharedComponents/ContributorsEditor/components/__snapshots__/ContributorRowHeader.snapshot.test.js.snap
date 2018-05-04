@@ -47,7 +47,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         disableTouchRipple={false}
         disabled={false}
         iconStyle={Object {}}
-        onTouchTap={[Function]}
+        onClick={[Function]}
         tooltip="Remove all records"
         tooltipPosition="top-left"
         touch={false}
@@ -106,7 +106,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         disableTouchRipple={false}
         disabled={true}
         iconStyle={Object {}}
-        onTouchTap={[Function]}
+        onClick={[Function]}
         tooltip="Remove all records"
         tooltipPosition="top-left"
         touch={false}
@@ -165,7 +165,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         disableTouchRipple={false}
         disabled={false}
         iconStyle={Object {}}
-        onTouchTap={[Function]}
+        onClick={[Function]}
         tooltip="Remove all records"
         tooltipPosition="top-left"
         touch={false}

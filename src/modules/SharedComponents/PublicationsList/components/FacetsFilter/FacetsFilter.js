@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 import FlatButton from 'material-ui/RaisedButton';
@@ -10,7 +10,7 @@ import {locale} from 'locale';
 import DateRange from './DateRange';
 import OpenAccessFilter from './OpenAccessFilter';
 
-export default class FacetsFilter extends React.PureComponent {
+export default class FacetsFilter extends PureComponent {
     static propTypes = {
         facetsData: PropTypes.object,
         onFacetsChanged: PropTypes.func,
@@ -37,9 +37,9 @@ export default class FacetsFilter extends React.PureComponent {
     }
 
     componentWillReceiveProps(nextProps) {
-        this.state = {
+        this.setState({
             activeFacets: nextProps.activeFacets
-        };
+        });
     }
 
     _handleFacetClick = (category, facet) => () => {

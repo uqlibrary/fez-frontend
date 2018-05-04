@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfirmDialogBox snapshots tests renders component with customised locale 1`] = `
+<Dialog
+  actions={
+    Array [
+      <div
+        className="columns dialog-actions ConfirmDialogBox-actions"
+      >
+        <div
+          className="column is-hidden-mobile"
+        />
+        <div
+          className="column is-narrow"
+        >
+          <RaisedButton
+            className="ConfirmDialogBox-actions-cancel"
+            disabled={false}
+            fullWidth={true}
+            label="ENG: No"
+            labelPosition="after"
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+          />
+        </div>
+        <div
+          className="column is-narrow"
+        >
+          <RaisedButton
+            className="ConfirmDialogBox-actions-confirm"
+            disabled={false}
+            fullWidth={true}
+            keyboardFocused={true}
+            label="ENG: Yes"
+            labelPosition="after"
+            onClick={[Function]}
+            primary={false}
+            secondary={true}
+          />
+        </div>
+        <div
+          className="is-clearfix"
+        />
+      </div>,
+    ]
+  }
+  autoDetectWindowHeight={true}
+  autoScrollBodyContent={false}
+  modal={true}
+  open={false}
+  repositionOnUpdate={true}
+  title="ENG: Confirmation"
+>
+  ENG: Are you sure?
+</Dialog>
+`;
+
+exports[`ConfirmDialogBox snapshots tests renders component with yes 1`] = `
+<Dialog
+  actions={
+    Array [
+      <div
+        className="columns dialog-actions ConfirmDialogBox-actions"
+      >
+        <div
+          className="column is-hidden-mobile"
+        />
+        <div
+          className="column is-narrow"
+        >
+          <RaisedButton
+            className="ConfirmDialogBox-actions-confirm"
+            disabled={false}
+            fullWidth={true}
+            keyboardFocused={true}
+            label="Yes"
+            labelPosition="after"
+            onClick={[Function]}
+            primary={false}
+            secondary={true}
+          />
+        </div>
+        <div
+          className="is-clearfix"
+        />
+      </div>,
+    ]
+  }
+  autoDetectWindowHeight={true}
+  autoScrollBodyContent={false}
+  modal={true}
+  open={false}
+  repositionOnUpdate={true}
+  title="Confirmation"
+>
+  Are you sure?
+</Dialog>
+`;
+
+exports[`ConfirmDialogBox snapshots tests renders component with yes/no buttons 1`] = `
+<Dialog
+  actions={
+    Array [
+      <div
+        className="columns dialog-actions ConfirmDialogBox-actions"
+      >
+        <div
+          className="column is-hidden-mobile"
+        />
+        <div
+          className="column is-narrow"
+        >
+          <RaisedButton
+            className="ConfirmDialogBox-actions-cancel"
+            disabled={false}
+            fullWidth={true}
+            label="No"
+            labelPosition="after"
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+          />
+        </div>
+        <div
+          className="column is-narrow"
+        >
+          <RaisedButton
+            className="ConfirmDialogBox-actions-confirm"
+            disabled={false}
+            fullWidth={true}
+            keyboardFocused={true}
+            label="Yes"
+            labelPosition="after"
+            onClick={[Function]}
+            primary={false}
+            secondary={true}
+          />
+        </div>
+        <div
+          className="is-clearfix"
+        />
+      </div>,
+    ]
+  }
+  autoDetectWindowHeight={true}
+  autoScrollBodyContent={false}
+  modal={true}
+  open={false}
+  repositionOnUpdate={true}
+  title="Confirmation"
+>
+  Are you sure?
+</Dialog>
+`;

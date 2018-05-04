@@ -5,11 +5,11 @@ import {Field} from 'redux-form/immutable';
 import MenuItem from 'material-ui/MenuItem';
 import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {SelectField} from 'uqlibrary-react-toolbox/build/SelectField';
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
-import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
-import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPrompt';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
+import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
+import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 
 import {publicationTypes, validation} from 'config';
 import {default as txt} from 'locale/publicationForm';
@@ -117,7 +117,7 @@ export default class PublicationForm extends Component {
                             fullWidth
                             label={txt.cancel}
                             disabled={this.props.submitting}
-                            onTouchTap={this.props.onFormCancel} />
+                            onClick={this.props.onFormCancel} />
                     </div>
                     {this.props.formValues.get('rek_display_type') > 0 &&
                     <div className="column is-narrow-desktop">
@@ -125,7 +125,7 @@ export default class PublicationForm extends Component {
                             secondary
                             fullWidth
                             label={txt.submit}
-                            onTouchTap={this.props.handleSubmit}
+                            onClick={this.props.handleSubmit}
                             disabled={this.props.submitting || this.props.disableSubmit}/>
                     </div>
                     }

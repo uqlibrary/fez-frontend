@@ -1,0 +1,867 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component FileUploadRowHeader should render confirmation on delete all 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <FileUploadRowHeader
+        locale={
+          Object {
+            "deleteAllFiles": "Remove all files from the upload queue",
+            "deleteAllFilesConfirmation": Object {
+              "cancelButtonLabel": "No",
+              "confirmButtonLabel": "Yes",
+              "confirmationMessage": "Are you sure you want to delete all files?",
+              "confirmationTitle": "Delete all",
+            },
+            "embargoDateColumn": "Embargo release date",
+            "fileAccessColumn": "Access conditions",
+            "filenameColumn": "Filename",
+          }
+        }
+        onDeleteAll={[MockFunction]}
+        requireOpenAccessStatus={true}
+      >
+        <div
+          className="columns is-gapless is-mobile uploadedFileHeader datalist datalist-header headers is-hidden-mobile"
+        >
+          <ConfirmDialogBox
+            hideCancelButton={false}
+            locale={
+              Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to delete all files?",
+                "confirmationTitle": "Delete all",
+              }
+            }
+            onAction={[MockFunction]}
+            onRef={[Function]}
+          >
+            <Dialog
+              actions={
+                Array [
+                  <div
+                    className="columns dialog-actions ConfirmDialogBox-actions"
+                  >
+                    <div
+                      className="column is-hidden-mobile"
+                    />
+                    <div
+                      className="column is-narrow"
+                    >
+                      <RaisedButton
+                        className="ConfirmDialogBox-actions-cancel"
+                        disabled={false}
+                        fullWidth={true}
+                        label="No"
+                        labelPosition="after"
+                        onClick={[Function]}
+                        primary={false}
+                        secondary={false}
+                      />
+                    </div>
+                    <div
+                      className="column is-narrow"
+                    >
+                      <RaisedButton
+                        className="ConfirmDialogBox-actions-confirm"
+                        disabled={false}
+                        fullWidth={true}
+                        keyboardFocused={true}
+                        label="Yes"
+                        labelPosition="after"
+                        onClick={[Function]}
+                        primary={false}
+                        secondary={true}
+                      />
+                    </div>
+                    <div
+                      className="is-clearfix"
+                    />
+                  </div>,
+                ]
+              }
+              autoDetectWindowHeight={true}
+              autoScrollBodyContent={false}
+              modal={true}
+              open={false}
+              repositionOnUpdate={true}
+              title="Delete all"
+            >
+              <RenderToLayer
+                open={true}
+                render={[Function]}
+                useLayerForClickAway={false}
+              />
+            </Dialog>
+          </ConfirmDialogBox>
+          <div
+            className="column datalist-title is-6-desktop is-5-tablet is-12-mobile header"
+          >
+            Filename
+          </div>
+          <div
+            className="column datalist-title is-3-desktop is-4-tablet is-12-mobile header"
+          >
+            Access conditions
+          </div>
+          <div
+            className="column datalist-title is-2-desktop is-2-tablet is-12-mobile header"
+          >
+            Embargo release date
+          </div>
+          <div
+            className="column is-narrow buttons datalist-buttons is-1-desktop is-1-tablet is-12-mobile header is-centered is-vcentered"
+          >
+            <IconButton
+              disableTouchRipple={false}
+              disabled={false}
+              iconStyle={Object {}}
+              onClick={[Function]}
+              tooltip="Remove all files from the upload queue"
+              tooltipPosition="bottom-center"
+              touch={false}
+            >
+              <EnhancedButton
+                centerRipple={true}
+                containerElement="button"
+                disableTouchRipple={false}
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onKeyboardFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseOut={[Function]}
+                onTouchStart={[Function]}
+                style={
+                  Object {
+                    "boxSizing": "border-box",
+                    "fontSize": 0,
+                    "height": 48,
+                    "overflow": "visible",
+                    "padding": 12,
+                    "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                    "width": 48,
+                  }
+                }
+                tabIndex={0}
+                type="button"
+              >
+                <button
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOut={[Function]}
+                  onTouchStart={[Function]}
+                  style={
+                    Object {
+                      "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+                      "background": "none",
+                      "border": 10,
+                      "boxSizing": "border-box",
+                      "cursor": "pointer",
+                      "display": "inline-block",
+                      "fontFamily": "Roboto, sans-serif",
+                      "fontSize": 0,
+                      "fontWeight": "inherit",
+                      "height": 48,
+                      "margin": 0,
+                      "muiPrepared": true,
+                      "outline": "none",
+                      "overflow": "visible",
+                      "padding": 12,
+                      "position": "relative",
+                      "textDecoration": "none",
+                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                      "verticalAlign": null,
+                      "width": 48,
+                    }
+                  }
+                  tabIndex={0}
+                  type="button"
+                >
+                  <TouchRipple
+                    abortOnScroll={true}
+                    centerRipple={true}
+                    key="touchRipple"
+                  >
+                    <div
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchStart={[Function]}
+                    >
+                      <Tooltip
+                        horizontalPosition="center"
+                        label="Remove all files from the upload queue"
+                        show={false}
+                        style={
+                          Object {
+                            "boxSizing": "border-box",
+                          }
+                        }
+                        touch={false}
+                        verticalPosition="bottom"
+                      >
+                        <div
+                          style={
+                            Object {
+                              "borderRadius": 2,
+                              "boxSizing": "border-box",
+                              "color": "#ffffff",
+                              "fontFamily": "Roboto, sans-serif",
+                              "fontSize": "10px",
+                              "left": 24,
+                              "lineHeight": "22px",
+                              "muiPrepared": true,
+                              "opacity": 0,
+                              "overflow": "hidden",
+                              "padding": "0 8px",
+                              "position": "absolute",
+                              "right": null,
+                              "top": -10000,
+                              "transition": "top 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              "userSelect": "none",
+                              "zIndex": 3000,
+                            }
+                          }
+                        >
+                          <div
+                            style={
+                              Object {
+                                "backgroundColor": "transparent",
+                                "borderRadius": "50%",
+                                "left": "50%",
+                                "muiPrepared": true,
+                                "position": "absolute",
+                                "top": 0,
+                                "transform": "translate(-50%, -50%)",
+                                "transition": "width 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, height 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, backgroundColor 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              }
+                            }
+                          />
+                          <span
+                            style={
+                              Object {
+                                "muiPrepared": true,
+                                "position": "relative",
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            Remove all files from the upload queue
+                          </span>
+                        </div>
+                      </Tooltip>
+                      <FontIcon
+                        className="material-icons"
+                        key=".0"
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        style={Object {}}
+                      >
+                        <span
+                          className="material-icons"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          style={
+                            Object {
+                              "color": "rgba(0, 0, 0, 0.87)",
+                              "display": "inline-block",
+                              "fontSize": 24,
+                              "muiPrepared": true,
+                              "position": "relative",
+                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              "userSelect": "none",
+                            }
+                          }
+                        >
+                          delete_forever
+                        </span>
+                      </FontIcon>
+                    </div>
+                  </TouchRipple>
+                </button>
+              </EnhancedButton>
+            </IconButton>
+          </div>
+        </div>
+      </FileUploadRowHeader>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
+
+exports[`Component FileUploadRowHeader should render confirmation on delete all 2`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <FileUploadRowHeader
+        locale={
+          Object {
+            "deleteAllFiles": "Remove all files from the upload queue",
+            "deleteAllFilesConfirmation": Object {
+              "cancelButtonLabel": "No",
+              "confirmButtonLabel": "Yes",
+              "confirmationMessage": "Are you sure you want to delete all files?",
+              "confirmationTitle": "Delete all",
+            },
+            "embargoDateColumn": "Embargo release date",
+            "fileAccessColumn": "Access conditions",
+            "filenameColumn": "Filename",
+          }
+        }
+        onDeleteAll={[MockFunction]}
+        requireOpenAccessStatus={true}
+      >
+        <div
+          className="columns is-gapless is-mobile uploadedFileHeader datalist datalist-header headers is-hidden-mobile"
+        >
+          <ConfirmDialogBox
+            hideCancelButton={false}
+            locale={
+              Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to delete all files?",
+                "confirmationTitle": "Delete all",
+              }
+            }
+            onAction={[MockFunction]}
+            onRef={[Function]}
+          >
+            <Dialog
+              actions={
+                Array [
+                  <div
+                    className="columns dialog-actions ConfirmDialogBox-actions"
+                  >
+                    <div
+                      className="column is-hidden-mobile"
+                    />
+                    <div
+                      className="column is-narrow"
+                    >
+                      <RaisedButton
+                        className="ConfirmDialogBox-actions-cancel"
+                        disabled={false}
+                        fullWidth={true}
+                        label="No"
+                        labelPosition="after"
+                        onClick={[Function]}
+                        primary={false}
+                        secondary={false}
+                      />
+                    </div>
+                    <div
+                      className="column is-narrow"
+                    >
+                      <RaisedButton
+                        className="ConfirmDialogBox-actions-confirm"
+                        disabled={false}
+                        fullWidth={true}
+                        keyboardFocused={true}
+                        label="Yes"
+                        labelPosition="after"
+                        onClick={[Function]}
+                        primary={false}
+                        secondary={true}
+                      />
+                    </div>
+                    <div
+                      className="is-clearfix"
+                    />
+                  </div>,
+                ]
+              }
+              autoDetectWindowHeight={true}
+              autoScrollBodyContent={false}
+              modal={true}
+              open={true}
+              repositionOnUpdate={true}
+              title="Delete all"
+            >
+              <RenderToLayer
+                open={true}
+                render={[Function]}
+                useLayerForClickAway={false}
+              />
+            </Dialog>
+          </ConfirmDialogBox>
+          <div
+            className="column datalist-title is-6-desktop is-5-tablet is-12-mobile header"
+          >
+            Filename
+          </div>
+          <div
+            className="column datalist-title is-3-desktop is-4-tablet is-12-mobile header"
+          >
+            Access conditions
+          </div>
+          <div
+            className="column datalist-title is-2-desktop is-2-tablet is-12-mobile header"
+          >
+            Embargo release date
+          </div>
+          <div
+            className="column is-narrow buttons datalist-buttons is-1-desktop is-1-tablet is-12-mobile header is-centered is-vcentered"
+          >
+            <IconButton
+              disableTouchRipple={false}
+              disabled={false}
+              iconStyle={Object {}}
+              onClick={[Function]}
+              tooltip="Remove all files from the upload queue"
+              tooltipPosition="bottom-center"
+              touch={false}
+            >
+              <EnhancedButton
+                centerRipple={true}
+                containerElement="button"
+                disableTouchRipple={false}
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onKeyboardFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseOut={[Function]}
+                onTouchStart={[Function]}
+                style={
+                  Object {
+                    "boxSizing": "border-box",
+                    "fontSize": 0,
+                    "height": 48,
+                    "overflow": "visible",
+                    "padding": 12,
+                    "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                    "width": 48,
+                  }
+                }
+                tabIndex={0}
+                type="button"
+              >
+                <button
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOut={[Function]}
+                  onTouchStart={[Function]}
+                  style={
+                    Object {
+                      "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+                      "background": "none",
+                      "border": 10,
+                      "boxSizing": "border-box",
+                      "cursor": "pointer",
+                      "display": "inline-block",
+                      "fontFamily": "Roboto, sans-serif",
+                      "fontSize": 0,
+                      "fontWeight": "inherit",
+                      "height": 48,
+                      "margin": 0,
+                      "muiPrepared": true,
+                      "outline": "none",
+                      "overflow": "visible",
+                      "padding": 12,
+                      "position": "relative",
+                      "textDecoration": "none",
+                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                      "verticalAlign": null,
+                      "width": 48,
+                    }
+                  }
+                  tabIndex={0}
+                  type="button"
+                >
+                  <TouchRipple
+                    abortOnScroll={true}
+                    centerRipple={true}
+                    key="touchRipple"
+                  >
+                    <div
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchStart={[Function]}
+                    >
+                      <Tooltip
+                        horizontalPosition="center"
+                        label="Remove all files from the upload queue"
+                        show={false}
+                        style={
+                          Object {
+                            "boxSizing": "border-box",
+                          }
+                        }
+                        touch={false}
+                        verticalPosition="bottom"
+                      >
+                        <div
+                          style={
+                            Object {
+                              "borderRadius": 2,
+                              "boxSizing": "border-box",
+                              "color": "#ffffff",
+                              "fontFamily": "Roboto, sans-serif",
+                              "fontSize": "10px",
+                              "left": 24,
+                              "lineHeight": "22px",
+                              "muiPrepared": true,
+                              "opacity": 0,
+                              "overflow": "hidden",
+                              "padding": "0 8px",
+                              "position": "absolute",
+                              "right": null,
+                              "top": -10000,
+                              "transition": "top 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              "userSelect": "none",
+                              "zIndex": 3000,
+                            }
+                          }
+                        >
+                          <div
+                            style={
+                              Object {
+                                "backgroundColor": "transparent",
+                                "borderRadius": "50%",
+                                "left": "50%",
+                                "muiPrepared": true,
+                                "position": "absolute",
+                                "top": 0,
+                                "transform": "translate(-50%, -50%)",
+                                "transition": "width 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, height 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, backgroundColor 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              }
+                            }
+                          />
+                          <span
+                            style={
+                              Object {
+                                "muiPrepared": true,
+                                "position": "relative",
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            Remove all files from the upload queue
+                          </span>
+                        </div>
+                      </Tooltip>
+                      <FontIcon
+                        className="material-icons"
+                        key=".0"
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        style={Object {}}
+                      >
+                        <span
+                          className="material-icons"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          style={
+                            Object {
+                              "color": "rgba(0, 0, 0, 0.87)",
+                              "display": "inline-block",
+                              "fontSize": 24,
+                              "muiPrepared": true,
+                              "position": "relative",
+                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              "userSelect": "none",
+                            }
+                          }
+                        >
+                          delete_forever
+                        </span>
+                      </FontIcon>
+                    </div>
+                  </TouchRipple>
+                </button>
+              </EnhancedButton>
+            </IconButton>
+          </div>
+        </div>
+      </FileUploadRowHeader>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
+
+exports[`Component FileUploadRowHeader should render with access condition and embargo date column 1`] = `
+<div
+  className="columns is-gapless is-mobile uploadedFileHeader datalist datalist-header headers is-hidden-mobile"
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all files?",
+        "confirmationTitle": "Delete all",
+      }
+    }
+    onAction={[MockFunction]}
+    onRef={[Function]}
+  />
+  <div
+    className="column datalist-title is-6-desktop is-5-tablet is-12-mobile header"
+  >
+    Filename
+  </div>
+  <div
+    className="column datalist-title is-3-desktop is-4-tablet is-12-mobile header"
+  >
+    Access conditions
+  </div>
+  <div
+    className="column datalist-title is-2-desktop is-2-tablet is-12-mobile header"
+  >
+    Embargo release date
+  </div>
+  <div
+    className="column is-narrow buttons datalist-buttons is-1-desktop is-1-tablet is-12-mobile header is-centered is-vcentered"
+  >
+    <IconButton
+      disableTouchRipple={false}
+      disabled={false}
+      iconStyle={Object {}}
+      onClick={[Function]}
+      tooltip="Remove all files from the upload queue"
+      tooltipPosition="bottom-center"
+      touch={false}
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        delete_forever
+      </FontIcon>
+    </IconButton>
+  </div>
+</div>
+`;
+
+exports[`Component FileUploadRowHeader should render with default setup 1`] = `
+<div
+  className="columns is-gapless is-mobile uploadedFileHeader datalist datalist-header headers is-hidden-mobile"
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all files?",
+        "confirmationTitle": "Delete all",
+      }
+    }
+    onAction={[MockFunction]}
+    onRef={[Function]}
+  />
+  <div
+    className="column datalist-title is-6-desktop is-5-tablet is-12-mobile header"
+  >
+    File name
+  </div>
+  <div
+    className="column datalist-title is-3-desktop is-4-tablet is-12-mobile header"
+  />
+  <div
+    className="column datalist-title is-2-desktop is-2-tablet is-12-mobile header"
+  />
+  <div
+    className="column is-narrow buttons datalist-buttons is-1-desktop is-1-tablet is-12-mobile header is-centered is-vcentered"
+  >
+    <IconButton
+      disableTouchRipple={false}
+      disabled={false}
+      iconStyle={Object {}}
+      onClick={[Function]}
+      tooltip="Remove all files from the upload queue"
+      tooltipPosition="bottom-center"
+      touch={false}
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        delete_forever
+      </FontIcon>
+    </IconButton>
+  </div>
+</div>
+`;
+
+exports[`Component FileUploadRowHeader should render without access condition even if requireAccessCondition true but default access condition is provided 1`] = `
+<div
+  className="columns is-gapless is-mobile uploadedFileHeader datalist datalist-header headers is-hidden-mobile"
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all files?",
+        "confirmationTitle": "Delete all",
+      }
+    }
+    onAction={[MockFunction]}
+    onRef={[Function]}
+  />
+  <div
+    className="column datalist-title is-6-desktop is-5-tablet is-12-mobile header"
+  >
+    Filename
+  </div>
+  <div
+    className="column datalist-title is-3-desktop is-4-tablet is-12-mobile header"
+  >
+    Access conditions
+  </div>
+  <div
+    className="column datalist-title is-2-desktop is-2-tablet is-12-mobile header"
+  >
+    Embargo release date
+  </div>
+  <div
+    className="column is-narrow buttons datalist-buttons is-1-desktop is-1-tablet is-12-mobile header is-centered is-vcentered"
+  >
+    <IconButton
+      disableTouchRipple={false}
+      disabled={false}
+      iconStyle={Object {}}
+      onClick={[Function]}
+      tooltip="Remove all files from the upload queue"
+      tooltipPosition="bottom-center"
+      touch={false}
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        delete_forever
+      </FontIcon>
+    </IconButton>
+  </div>
+</div>
+`;

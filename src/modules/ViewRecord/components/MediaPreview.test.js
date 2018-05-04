@@ -1,8 +1,5 @@
 import {journalArticle} from 'mock/data/testing/records';
 import MediaPreview from "./MediaPreview";
-import injectTapEventPlugin from 'react-tap-event-plugin'
-
-injectTapEventPlugin();
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -38,7 +35,7 @@ describe('Media Preview Component ', () => {
         global.open = open;
         const wrapper = setup({}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.find('RaisedButton').first().find('button').simulate('touchTap');
+        wrapper.find('RaisedButton').first().find('button').simulate('click');
         expect(open).toHaveBeenCalledTimes(1);
     });
 });

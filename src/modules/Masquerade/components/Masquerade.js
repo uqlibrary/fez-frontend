@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {locale} from 'locale';
 
 export default class Masquerade extends Component {
@@ -59,7 +59,7 @@ export default class Masquerade extends Component {
                             secondary
                             label={txt.labels.submit}
                             disabled={this.state.loading}
-                            onTouchTap={this._masqueradeAs}/>
+                            onClick={this._masqueradeAs}/>
                     </div>
                 </div>
             </StandardPage>

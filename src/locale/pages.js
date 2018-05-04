@@ -1,5 +1,5 @@
 import React from 'react';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 /*
 
 NOTE:

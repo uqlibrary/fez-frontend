@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectfieldWrapper snapshots tests renders SelectField component 1`] = `
+<div
+  style={
+    Object {
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <SelectField
+    autoWidth={false}
+    className=" mui-long-labels-fix"
+    disabled={false}
+    floatingLabelText="This is a test selectfield component"
+    fullWidth={true}
+    maxHeight={250}
+    multiple={false}
+    name="selectfield"
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="text"
+  />
+</div>
+`;

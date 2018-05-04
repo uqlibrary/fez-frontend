@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import CitationView from './CitationView';
 import {locale} from 'locale';
 import {pathConfig} from 'config/routes';
 
-export default class AuthorsCitationView extends React.Component {
+export default class AuthorsCitationView extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         searchKey: PropTypes.object,
@@ -60,11 +60,6 @@ export default class AuthorsCitationView extends React.Component {
                 ))
                 : []
         };
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return nextState !== this.state
-            || JSON.stringify(nextProps.publication[nextProps.searchKey]) !== JSON.stringify(this.props.publication[this.props.searchKey]);
     }
 
     getAuthorId = (order) => {

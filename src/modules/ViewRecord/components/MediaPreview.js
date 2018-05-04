@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'locale';
-import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import RaisedButton from 'material-ui/RaisedButton';
 
 export default class MediaPreview extends PureComponent {
@@ -25,8 +25,8 @@ export default class MediaPreview extends PureComponent {
         return (
             <StandardCard title={title} className={'mediaPreview'}>
                 <div className="column is-narrow buttons">
-                    <RaisedButton label={locale.viewRecord.sections.files.preview.openInNewWindow} onTouchTap={this.openFileInNewWindow} primary />
-                    <RaisedButton label={locale.viewRecord.sections.files.preview.close} onTouchTap={this.props.onClose}/>
+                    <RaisedButton label={locale.viewRecord.sections.files.preview.openInNewWindow} onClick={this.openFileInNewWindow} primary />
+                    <RaisedButton label={locale.viewRecord.sections.files.preview.close} onClick={this.props.onClose}/>
                 </div>
                 {
                     isVideo &&
