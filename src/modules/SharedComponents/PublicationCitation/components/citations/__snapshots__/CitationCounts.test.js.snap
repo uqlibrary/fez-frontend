@@ -19,16 +19,15 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
       source="google"
       title="Full citation in Google scholar will open in a new window"
     />
-  </div>
-  <div
-    className="column is-narrow"
-  >
     <OpenAccessIcon
       embargoDate={null}
       isOpenAccess={false}
       showEmbargoText={false}
     />
   </div>
+  <div
+    className="column is-narrow"
+  />
   <div
     className="column is-hidden-mobile"
   />
@@ -66,15 +65,15 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
       source="google"
       title="Full citation in Google scholar will open in a new window"
     />
-  </div>
-  <div
-    className="column is-narrow"
-  >
     <OpenAccessIcon
       embargoDate={null}
       isOpenAccess={false}
       showEmbargoText={false}
     />
+  </div>
+  <div
+    className="column is-narrow"
+  >
     <ExternalLink
       className=""
       href="https://app.library.uq.edu.au/#/authors/view/pid:111"
@@ -98,9 +97,6 @@ exports[`CitationCounts renders  component with no metrics 1`] = `
 >
   <div
     className="column is-narrow-tablet is-12-mobile citationIcons"
-  />
-  <div
-    className="column is-narrow"
   >
     <OpenAccessIcon
       embargoDate={null}
@@ -108,6 +104,9 @@ exports[`CitationCounts renders  component with no metrics 1`] = `
       showEmbargoText={false}
     />
   </div>
+  <div
+    className="column is-narrow"
+  />
   <div
     className="column is-hidden-mobile"
   />
