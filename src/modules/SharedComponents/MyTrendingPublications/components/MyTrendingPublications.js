@@ -10,7 +10,8 @@ export default class MyTrendingPublications extends PureComponent {
     static propTypes = {
         trendingPublicationsList: PropTypes.array,
         loadingTrendingPublications: PropTypes.bool,
-        actions: PropTypes.object
+        actions: PropTypes.object,
+        accountAuthorDetailsLoading: PropTypes.bool
     };
 
     static defaultProps = {
@@ -19,7 +20,9 @@ export default class MyTrendingPublications extends PureComponent {
     };
 
     componentDidMount() {
-        this.props.actions.searchTrendingPublications();
+        if (!this.props.accountAuthorDetailsLoading) {
+            this.props.actions.searchTrendingPublications();
+        }
     }
 
     render() {

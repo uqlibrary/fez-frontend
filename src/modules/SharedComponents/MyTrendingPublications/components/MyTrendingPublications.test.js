@@ -22,4 +22,16 @@ describe('Component MyTrendingPublications', () => {
         const wrapper = setup({loadingTrendingPublications: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should fetch data if account author details is loaded', () => {
+        const testFn = jest.fn();
+        setup({accountAuthorDetailsLoading: false, actions: {searchTrendingPublications: testFn}});
+        expect(testFn).toHaveBeenCalled();
+    });
+
+    it('should not fetch data if account author details is still loading', () => {
+        const testFn = jest.fn();
+        setup({accountAuthorDetailsLoading: true, actions: {searchTrendingPublications: testFn}});
+        expect(testFn).toHaveBeenCalledTimes(0);
+    });
 });

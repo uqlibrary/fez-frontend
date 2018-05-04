@@ -21,4 +21,16 @@ describe('Component MyLatestPublications', () => {
         const wrapper = setup({loadingLatestPublications: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should fetch data if account author details is loaded', () => {
+        const testFn = jest.fn();
+        setup({accountAuthorDetailsLoading: false, actions: {searchLatestPublications: testFn}});
+        expect(testFn).toHaveBeenCalled();
+    });
+
+    it('should not fetch data if account author details is still loading', () => {
+        const testFn = jest.fn();
+        setup({accountAuthorDetailsLoading: true, actions: {searchLatestPublications: testFn}});
+        expect(testFn).toHaveBeenCalledTimes(0);
+    });
 });

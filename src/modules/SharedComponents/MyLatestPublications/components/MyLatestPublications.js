@@ -13,6 +13,7 @@ export default class MyLatestPublications extends PureComponent {
         latestPublicationsList: PropTypes.array,
         totalPublicationsCount: PropTypes.number,
         loadingLatestPublications: PropTypes.bool,
+        accountAuthorDetailsLoading: PropTypes.bool,
         actions: PropTypes.object,
         history: PropTypes.object.isRequired
     };
@@ -24,7 +25,9 @@ export default class MyLatestPublications extends PureComponent {
     };
 
     componentDidMount() {
-        this.props.actions.searchLatestPublications();
+        if (!this.props.accountAuthorDetailsLoading) {
+            this.props.actions.searchLatestPublications();
+        }
     }
 
     _viewMyResearch = () => {
