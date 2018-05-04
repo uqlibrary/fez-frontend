@@ -87,12 +87,28 @@ export function searchTrendingPublications() {
  * @param {string} format
  * @returns {action}
  */
-export function exportPublications(payload, format) {
+export function exportPublications({page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
     return dispatch => {
-        dispatch({
-            type: actions.AUTHOR_PUBLICATIONS_EXPORT,
-            payload,
-            format
-        });
+        dispatch({type: actions.AUTHOR_PUBLICATIONS_EXPORT_LOADING});
+
+        return get(routes.CURRENT_USER_RECORDS_API({
+            page: page,
+            pageSize: pageSize,
+            sortBy: sortBy,
+            sortDirection: sortDirection,
+            facets: activeFacets
+        }))
+            .then(response => {
+                dispatch({
+                    type: actions.AUTHOR_PUBLICATIONS_EXPORT_LOADED,
+                    payload: response
+                });
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.AUTHOR_PUBLICATIONS_EXPORT_FAILED,
+                    payload: error.message
+                });
+            });
     };
 }
