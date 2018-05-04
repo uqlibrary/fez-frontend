@@ -2,21 +2,17 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import DatePicker from 'material-ui/DatePicker';
 
+const moment = require('moment');
+
 export default class FileUploadEmbargoDate extends PureComponent {
     static propTypes = {
         onChange: PropTypes.func,
-        locale: PropTypes.object,
-        dateTimeFormat: PropTypes.func,
         disabled: PropTypes.bool,
         value: PropTypes.instanceOf(Date),
         minDate: PropTypes.instanceOf(Date)
     };
 
     static defaultProps = {
-        locale: {
-            datePickerLocale: 'en-AU'
-        },
-        dateTimeFormat: global.Intl.DateTimeFormat,
         value: new Date(),
         minDate: new Date()
     };
@@ -34,16 +30,17 @@ export default class FileUploadEmbargoDate extends PureComponent {
         this.datePickerRef.openDialog();
     };
 
+    formatDate = (date) => {
+        return moment(date).format('DD/MM/YYYY');
+    }
+
     render() {
-        const {datePickerLocale} = this.props.locale;
-        const dateTimeFormat = this.props.dateTimeFormat;
         return (
             <div tabIndex={0} onKeyPress={this._onKeyPress}>
                 <DatePicker
                     className="embargo-date-picker requiredField"
-                    DateTimeFormat={dateTimeFormat}
                     firstDayOfWeek={0}
-                    locale={datePickerLocale}
+                    formatDate={this.formatDate}
                     autoOk
                     minDate={this.props.minDate}
                     value={this.props.value}

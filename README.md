@@ -37,6 +37,12 @@ Mock data is provided for all pages and actions under `src/mock/`.
 
 ### Development notes
 
+#### ESLint
+
+There are two ways to run `eslint`:
+- Run `npm run eslint` command
+- Copy `scripts/pre-commit` to `.git/hooks` directory to run eslint automatically before every commit locally
+
 #### Naming conventions
 
 - React components and files of components and related files (eg scss) are to be named with upper case (eg MenuDrawer.js). Do not add UQ, UQLibrary or similar prefixes to components

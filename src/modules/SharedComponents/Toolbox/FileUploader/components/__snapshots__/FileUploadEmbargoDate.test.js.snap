@@ -53,12 +53,6 @@ exports[`Component FileUploadEmbargoDate should render datepicker on key pressed
       }
     >
       <FileUploadEmbargoDate
-        dateTimeFormat={[Function]}
-        locale={
-          Object {
-            "datePickerLocale": "en-AU",
-          }
-        }
         minDate={2016-01-01T00:00:00.000Z}
         value={2016-01-01T00:00:00.000Z}
       >
@@ -67,16 +61,15 @@ exports[`Component FileUploadEmbargoDate should render datepicker on key pressed
           tabIndex={0}
         >
           <DatePicker
-            DateTimeFormat={[Function]}
             autoOk={true}
             className="embargo-date-picker requiredField"
             container="dialog"
             disableYearSelection={false}
             disabled={false}
             firstDayOfWeek={0}
+            formatDate={[Function]}
             hideCalendarDate={false}
             id="accessDatePicker"
-            locale="en-AU"
             minDate={2016-01-01T00:00:00.000Z}
             onChange={[Function]}
             openToYearSelection={false}
@@ -103,7 +96,7 @@ exports[`Component FileUploadEmbargoDate should render datepicker on key pressed
                 rows={1}
                 type="text"
                 underlineShow={true}
-                value="1/1/2016"
+                value="01/01/2016"
               >
                 <div
                   style={
@@ -148,7 +141,7 @@ exports[`Component FileUploadEmbargoDate should render datepicker on key pressed
                       }
                     }
                     type="text"
-                    value="1/1/2016"
+                    value="01/01/2016"
                   />
                   <TextFieldUnderline
                     disabled={false}
@@ -631,7 +624,7 @@ exports[`Component FileUploadEmbargoDate should render datepicker on key pressed
                 disableYearSelection={false}
                 firstDayOfWeek={0}
                 hideCalendarDate={false}
-                locale="en-AU"
+                locale="en-US"
                 minDate={2016-01-01T00:00:00.000Z}
                 okLabel="OK"
                 onAccept={[Function]}
@@ -689,16 +682,15 @@ exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
   tabIndex={0}
 >
   <DatePicker
-    DateTimeFormat={[Function]}
     autoOk={true}
     className="embargo-date-picker requiredField"
     container="dialog"
     disableYearSelection={false}
     disabled={true}
     firstDayOfWeek={0}
+    formatDate={[Function]}
     hideCalendarDate={false}
     id="accessDatePicker"
-    locale="en-AU"
     minDate={2016-01-01T00:00:00.000Z}
     onChange={[Function]}
     openToYearSelection={false}
@@ -714,16 +706,15 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
   tabIndex={0}
 >
   <DatePicker
-    DateTimeFormat={[Function]}
     autoOk={true}
     className="embargo-date-picker requiredField"
     container="dialog"
     disableYearSelection={false}
     disabled={false}
     firstDayOfWeek={0}
+    formatDate={[Function]}
     hideCalendarDate={false}
     id="accessDatePicker"
-    locale="en-AU"
     minDate={2016-01-01T00:00:00.000Z}
     onChange={[Function]}
     openToYearSelection={false}
@@ -739,16 +730,15 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
   tabIndex={0}
 >
   <DatePicker
-    DateTimeFormat={[Function]}
     autoOk={true}
     className="embargo-date-picker requiredField"
     container="dialog"
     disableYearSelection={false}
     disabled={false}
     firstDayOfWeek={0}
+    formatDate={[Function]}
     hideCalendarDate={false}
     id="accessDatePicker"
-    locale="en-AU"
     minDate={2016-01-01T00:00:00.000Z}
     onChange={[Function]}
     openToYearSelection={false}
@@ -764,16 +754,15 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
   tabIndex={0}
 >
   <DatePicker
-    DateTimeFormat={[Function]}
     autoOk={true}
     className="embargo-date-picker requiredField"
     container="dialog"
     disableYearSelection={false}
     disabled={false}
     firstDayOfWeek={0}
+    formatDate={[Function]}
     hideCalendarDate={false}
     id="accessDatePicker"
-    locale="en-AU"
     minDate={2016-01-01T00:00:00.000Z}
     onChange={[Function]}
     openToYearSelection={false}
