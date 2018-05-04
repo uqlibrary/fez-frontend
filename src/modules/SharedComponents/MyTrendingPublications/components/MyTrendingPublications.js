@@ -39,15 +39,15 @@ export default class MyTrendingPublications extends PureComponent {
                     <HelpIcon {...txt.help}/>
                 </div>
                 {
-                    this.props.trendingPublicationsList.map((metric, metricIndex) => (
+                    this.props.trendingPublicationsList.map(({key, values}, metricIndex) => (
                         <div key={'metrics_' + metricIndex} className="trendingPubsSection">
                             <h2 className="trendingPubsSource">
-                                <div className={`fez-icon ${metric.key} xxlarge`}/>
-                                {txt.metrics[metric.key].title}
+                                <div className={`fez-icon ${key} xxlarge`}/>
+                                {txt.metrics[key].title}
                             </h2>
-                            <div className="is-hidden-mobile subTitle">{txt.metrics[metric.key].subtitle}</div>
+                            <div className="is-hidden-mobile subTitle">{txt.metrics[key].subtitle}</div>
                             <PublicationsList
-                                publicationsList={metric.values}
+                                publicationsList={values}
                                 showMetrics
                             />
                         </div>

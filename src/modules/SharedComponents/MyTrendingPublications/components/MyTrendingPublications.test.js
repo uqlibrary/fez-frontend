@@ -1,6 +1,6 @@
 import {trendingPublications} from 'mock/data/testing/trendingPublications';
 import MyTrendingPublications from './MyTrendingPublications';
-import {transformTrendingPublicationsMetricsData} from 'middleware/trendingPublicationsEnhancer';
+import {transformTrendingPublicationsMetricsData} from 'actions/academicDataTransformers';
 
 function setup(testProps, isShallow = true){
     const props = {
