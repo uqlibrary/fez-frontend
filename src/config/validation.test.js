@@ -92,7 +92,6 @@ describe('Validation method', () => {
         expect(validation.maxLength10('123')).toEqual(undefined);
     });
 
-
     it('should validate doi', () => {
         expect(validation.isValidDOIValue(' 10.1007/978-3-319-60492-3_52 ')).toBeTruthy();
         expect(validation.isValidDOIValue(' 10.1007/something ')).toBeTruthy();
@@ -123,6 +122,14 @@ describe('Validation method', () => {
         expect(validation.isValidAuthorLink('Invalid data')).toEqual(locale.validationErrors.authorLinking);
         expect(validation.isValidContributorLink(contributorLinkValid)).toEqual('');
         expect(validation.isValidContributorLink('Invalid data')).toEqual(locale.validationErrors.contributorLinking);
+    });
+
+    it('should validate google scholar id', () => {
+        expect(validation.isValidGoogleScholarId('231234252345')).toEqual('');
+        expect(validation.isValidGoogleScholarId('rtgtwDFRjuHn')).toEqual('');
+        expect(validation.isValidGoogleScholarId('-31234252345')).toEqual('');
+        expect(validation.isValidGoogleScholarId('12345vbgHJ0p')).toEqual('');
+        expect(validation.isValidGoogleScholarId('rtgtwDFRjuH')).toEqual(locale.validationErrors.googleScholarId);
     });
 });
 
