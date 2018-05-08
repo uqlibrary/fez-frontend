@@ -30,11 +30,13 @@ exports[`Dashboard test does render latest and trending publications tabs correc
               "orcid_id": "0000-0001-1111-1111",
               "org_units": Array [
                 "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
                 "School of Chemistry and Molecular Biosciences",
                 "The University of Queensland Diamantina Institute",
               ],
               "positions": Array [
                 "Affiliate Professor",
+                "Casual Affiliate Professor",
                 "Affiliate Professorial Res Fellow",
                 "ARC Australian Laureate Fellow",
               ],
@@ -137,11 +139,13 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
               "orcid_id": "0000-0001-1111-1111",
               "org_units": Array [
                 "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
                 "School of Chemistry and Molecular Biosciences",
                 "The University of Queensland Diamantina Institute",
               ],
               "positions": Array [
                 "Affiliate Professor",
+                "Casual Affiliate Professor",
                 "Affiliate Professorial Res Fellow",
                 "ARC Australian Laureate Fellow",
               ],
@@ -623,11 +627,13 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
               "orcid_id": "0000-0001-1111-1111",
               "org_units": Array [
                 "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
                 "School of Chemistry and Molecular Biosciences",
                 "The University of Queensland Diamantina Institute",
               ],
               "positions": Array [
                 "Affiliate Professor",
+                "Casual Affiliate Professor",
                 "Affiliate Professorial Res Fellow",
                 "ARC Australian Laureate Fellow",
               ],
