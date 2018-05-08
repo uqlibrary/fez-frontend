@@ -138,26 +138,22 @@ describe('Publications actions', () => {
     describe('searchTrendingPublications()', () => {
 
         it('dispatches expected actions on successful request', async () => {
-            const testParam = 'uqresearcher';
-            const testRequest = {userId: testParam};
-
             mockApi
-                .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API(testRequest).apiUrl)
+                .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API().apiUrl)
                 .reply(200, mockData.trendingPublications);
 
             const expectedActions = [
                 actions.TRENDING_PUBLICATIONS_LOADING,
-                actions.TRENDING_PUBLICATIONS_LOADED
+                `${actions.TRENDING_PUBLICATIONS_LOADED}@scopus`,
+                `${actions.TRENDING_PUBLICATIONS_LOADED}@thomson`,
+                `${actions.TRENDING_PUBLICATIONS_LOADED}@altmetric`,
             ];
 
-            await mockActionsStore.dispatch(publicationsActions.searchTrendingPublications(testParam));
+            await mockActionsStore.dispatch(publicationsActions.searchTrendingPublications());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
         it('dispatches expected actions for anon user', async () => {
-            const testParam = 'uqresearcher';
-            const testRequest = {userId: testParam};
-
             mockApi
                 .onAny()
                 .reply(403, {});
@@ -168,14 +164,11 @@ describe('Publications actions', () => {
                 actions.TRENDING_PUBLICATIONS_FAILED
             ];
 
-            await mockActionsStore.dispatch(publicationsActions.searchTrendingPublications(testParam));
+            await mockActionsStore.dispatch(publicationsActions.searchTrendingPublications());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
         it('dispatches expected actions if api fails', async () => {
-            const testParam = 'uqresearcher';
-            const testRequest = {userId: testParam};
-
             mockApi
                 .onAny()
                 .reply(500, {});
@@ -185,7 +178,21 @@ describe('Publications actions', () => {
                 actions.TRENDING_PUBLICATIONS_FAILED
             ];
 
-            await mockActionsStore.dispatch(publicationsActions.searchTrendingPublications(testParam));
+            await mockActionsStore.dispatch(publicationsActions.searchTrendingPublications());
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions if api return 0 publications', async () => {
+            mockApi
+                .onAny()
+                .reply(200, {total: 0, data: [], filters: []});
+
+            const expectedActions = [
+                actions.TRENDING_PUBLICATIONS_LOADING,
+                actions.TRENDING_PUBLICATIONS_LOADED
+            ];
+
+            await mockActionsStore.dispatch(publicationsActions.searchTrendingPublications());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });

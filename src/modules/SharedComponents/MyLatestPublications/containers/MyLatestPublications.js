@@ -1,11 +1,12 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import MyTrendingPublications from '../components/MyTrendingPublications';
+import {withRouter} from 'react-router-dom';
+import MyLatestPublications from '../components/MyLatestPublications';
 import * as actions from 'actions';
 
 const mapStateToProps = (state) => {
     return {
-        ...state.get('myTrendingPublicationsReducer'),
+        ...state.get('myLatestPublicationsReducer'),
         accountAuthorDetailsLoading: state.get('accountReducer').accountAuthorDetailsLoading
     };
 };
@@ -16,6 +17,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const MyTrendingPublicationsContainer = connect(mapStateToProps, mapDispatchToProps)(MyTrendingPublications);
+const MyTrendingPublicationsContainer = connect(mapStateToProps, mapDispatchToProps)(MyLatestPublications);
 
-export default MyTrendingPublicationsContainer;
+export default withRouter(MyTrendingPublicationsContainer);
