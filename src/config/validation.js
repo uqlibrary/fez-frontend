@@ -92,7 +92,7 @@ export const isValidContributorLink = (link) => {
 
 // Google Scholar ID
 export const isValidGoogleScholarId = id => {
-    const regex = /^\w{12}$/;
+    const regex = /^[\w-]{12}$/;
     if (regex.test(id)) {
         return '';
     } else {
