@@ -233,11 +233,13 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
               "orcid_id": "0000-0001-1111-1111",
               "org_units": Array [
                 "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
                 "School of Chemistry and Molecular Biosciences",
                 "The University of Queensland Diamantina Institute",
               ],
               "positions": Array [
                 "Affiliate Professor",
+                "Casual Affiliate Professor",
                 "Affiliate Professorial Res Fellow",
                 "ARC Australian Laureate Fellow",
               ],
@@ -717,11 +719,13 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
               "orcid_id": "0000-0001-1111-1111",
               "org_units": Array [
                 "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
                 "School of Chemistry and Molecular Biosciences",
                 "The University of Queensland Diamantina Institute",
               ],
               "positions": Array [
                 "Affiliate Professor",
+                "Casual Affiliate Professor",
                 "Affiliate Professorial Res Fellow",
                 "ARC Australian Laureate Fellow",
               ],
@@ -775,11 +779,13 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
               "orcid_id": "0000-0001-1111-1111",
               "org_units": Array [
                 "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
                 "School of Chemistry and Molecular Biosciences",
                 "The University of Queensland Diamantina Institute",
               ],
               "positions": Array [
                 "Affiliate Professor",
+                "Casual Affiliate Professor",
                 "Affiliate Professorial Res Fellow",
                 "ARC Australian Laureate Fellow",
               ],
@@ -844,11 +850,13 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
               "orcid_id": "0000-0001-1111-1111",
               "org_units": Array [
                 "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
                 "School of Chemistry and Molecular Biosciences",
                 "The University of Queensland Diamantina Institute",
               ],
               "positions": Array [
                 "Affiliate Professor",
+                "Casual Affiliate Professor",
                 "Affiliate Professorial Res Fellow",
                 "ARC Australian Laureate Fellow",
               ],
@@ -902,11 +910,13 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
               "orcid_id": "0000-0001-1111-1111",
               "org_units": Array [
                 "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
                 "School of Chemistry and Molecular Biosciences",
                 "The University of Queensland Diamantina Institute",
               ],
               "positions": Array [
                 "Affiliate Professor",
+                "Casual Affiliate Professor",
                 "Affiliate Professorial Res Fellow",
                 "ARC Australian Laureate Fellow",
               ],
@@ -977,11 +987,13 @@ exports[`Dashboard test renders dashboard header only 1`] = `
               "orcid_id": "0000-0001-1111-1111",
               "org_units": Array [
                 "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
                 "School of Chemistry and Molecular Biosciences",
                 "The University of Queensland Diamantina Institute",
               ],
               "positions": Array [
                 "Affiliate Professor",
+                "Casual Affiliate Professor",
                 "Affiliate Professorial Res Fellow",
                 "ARC Australian Laureate Fellow",
               ],
@@ -1046,11 +1058,13 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
               "orcid_id": "0000-0001-1111-1111",
               "org_units": Array [
                 "Institute for Molecular Bioscience",
+                "Institute for Molecular Bioscience",
                 "School of Chemistry and Molecular Biosciences",
                 "The University of Queensland Diamantina Institute",
               ],
               "positions": Array [
                 "Affiliate Professor",
+                "Casual Affiliate Professor",
                 "Affiliate Professorial Res Fellow",
                 "ARC Australian Laureate Fellow",
               ],

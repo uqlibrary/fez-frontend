@@ -101,11 +101,13 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
               "Institute for Molecular Bioscience",
+              "Institute for Molecular Bioscience",
               "School of Chemistry and Molecular Biosciences",
               "The University of Queensland Diamantina Institute",
             ],
             "positions": Array [
               "Affiliate Professor",
+              "Casual Affiliate Professor",
               "Affiliate Professorial Res Fellow",
               "ARC Australian Laureate Fellow",
             ],
@@ -189,6 +191,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                 orgUnits={
                   Array [
                     "Institute for Molecular Bioscience",
+                    "Institute for Molecular Bioscience",
                     "School of Chemistry and Molecular Biosciences",
                     "The University of Queensland Diamantina Institute",
                   ]
@@ -196,6 +199,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                 positions={
                   Array [
                     "Affiliate Professor",
+                    "Casual Affiliate Professor",
                     "Affiliate Professorial Res Fellow",
                     "ARC Australian Laureate Fellow",
                   ]
@@ -233,7 +237,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                     </div>
                     <div
                       className="authorPositionOrg"
-                      key="1"
+                      key="2"
                     >
                       <strong>
                         Affiliate Professorial Res Fellow
@@ -247,7 +251,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                     </div>
                     <div
                       className="authorPositionOrg"
-                      key="2"
+                      key="3"
                     >
                       <strong>
                         ARC Australian Laureate Fellow
@@ -584,11 +588,13 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
               "Institute for Molecular Bioscience",
+              "Institute for Molecular Bioscience",
               "School of Chemistry and Molecular Biosciences",
               "The University of Queensland Diamantina Institute",
             ],
             "positions": Array [
               "Affiliate Professor",
+              "Casual Affiliate Professor",
               "Affiliate Professorial Res Fellow",
               "ARC Australian Laureate Fellow",
             ],
@@ -672,6 +678,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                 orgUnits={
                   Array [
                     "Institute for Molecular Bioscience",
+                    "Institute for Molecular Bioscience",
                     "School of Chemistry and Molecular Biosciences",
                     "The University of Queensland Diamantina Institute",
                   ]
@@ -679,6 +686,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                 positions={
                   Array [
                     "Affiliate Professor",
+                    "Casual Affiliate Professor",
                     "Affiliate Professorial Res Fellow",
                     "ARC Australian Laureate Fellow",
                   ]
@@ -716,7 +724,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                     </div>
                     <div
                       className="authorPositionOrg"
-                      key="1"
+                      key="2"
                     >
                       <strong>
                         Affiliate Professorial Res Fellow
@@ -730,7 +738,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                     </div>
                     <div
                       className="authorPositionOrg"
-                      key="2"
+                      key="3"
                     >
                       <strong>
                         ARC Australian Laureate Fellow
@@ -1067,11 +1075,13 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
               "Institute for Molecular Bioscience",
+              "Institute for Molecular Bioscience",
               "School of Chemistry and Molecular Biosciences",
               "The University of Queensland Diamantina Institute",
             ],
             "positions": Array [
               "Affiliate Professor",
+              "Casual Affiliate Professor",
               "Affiliate Professorial Res Fellow",
               "ARC Australian Laureate Fellow",
             ],
@@ -1155,6 +1165,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                 orgUnits={
                   Array [
                     "Institute for Molecular Bioscience",
+                    "Institute for Molecular Bioscience",
                     "School of Chemistry and Molecular Biosciences",
                     "The University of Queensland Diamantina Institute",
                   ]
@@ -1162,6 +1173,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                 positions={
                   Array [
                     "Affiliate Professor",
+                    "Casual Affiliate Professor",
                     "Affiliate Professorial Res Fellow",
                     "ARC Australian Laureate Fellow",
                   ]
@@ -1199,7 +1211,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                     </div>
                     <div
                       className="authorPositionOrg"
-                      key="1"
+                      key="2"
                     >
                       <strong>
                         Affiliate Professorial Res Fellow
@@ -1213,7 +1225,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                     </div>
                     <div
                       className="authorPositionOrg"
-                      key="2"
+                      key="3"
                     >
                       <strong>
                         ARC Australian Laureate Fellow
@@ -1550,11 +1562,13 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
               "Institute for Molecular Bioscience",
+              "Institute for Molecular Bioscience",
               "School of Chemistry and Molecular Biosciences",
               "The University of Queensland Diamantina Institute",
             ],
             "positions": Array [
               "Affiliate Professor",
+              "Casual Affiliate Professor",
               "Affiliate Professorial Res Fellow",
               "ARC Australian Laureate Fellow",
             ],
@@ -1638,6 +1652,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                 orgUnits={
                   Array [
                     "Institute for Molecular Bioscience",
+                    "Institute for Molecular Bioscience",
                     "School of Chemistry and Molecular Biosciences",
                     "The University of Queensland Diamantina Institute",
                   ]
@@ -1645,6 +1660,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                 positions={
                   Array [
                     "Affiliate Professor",
+                    "Casual Affiliate Professor",
                     "Affiliate Professorial Res Fellow",
                     "ARC Australian Laureate Fellow",
                   ]
@@ -1682,7 +1698,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                     </div>
                     <div
                       className="authorPositionOrg"
-                      key="1"
+                      key="2"
                     >
                       <strong>
                         Affiliate Professorial Res Fellow
@@ -1696,7 +1712,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                     </div>
                     <div
                       className="authorPositionOrg"
-                      key="2"
+                      key="3"
                     >
                       <strong>
                         ARC Australian Laureate Fellow
@@ -2033,11 +2049,13 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
               "Institute for Molecular Bioscience",
+              "Institute for Molecular Bioscience",
               "School of Chemistry and Molecular Biosciences",
               "The University of Queensland Diamantina Institute",
             ],
             "positions": Array [
               "Affiliate Professor",
+              "Casual Affiliate Professor",
               "Affiliate Professorial Res Fellow",
               "ARC Australian Laureate Fellow",
             ],
@@ -2121,6 +2139,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                 orgUnits={
                   Array [
                     "Institute for Molecular Bioscience",
+                    "Institute for Molecular Bioscience",
                     "School of Chemistry and Molecular Biosciences",
                     "The University of Queensland Diamantina Institute",
                   ]
@@ -2128,6 +2147,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                 positions={
                   Array [
                     "Affiliate Professor",
+                    "Casual Affiliate Professor",
                     "Affiliate Professorial Res Fellow",
                     "ARC Australian Laureate Fellow",
                   ]
@@ -2165,7 +2185,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                     </div>
                     <div
                       className="authorPositionOrg"
-                      key="1"
+                      key="2"
                     >
                       <strong>
                         Affiliate Professorial Res Fellow
@@ -2179,7 +2199,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
                     </div>
                     <div
                       className="authorPositionOrg"
-                      key="2"
+                      key="3"
                     >
                       <strong>
                         ARC Australian Laureate Fellow

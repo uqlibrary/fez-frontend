@@ -64,9 +64,9 @@ export default class CitationCounts extends PureComponent {
                             title={this.getTitle(txt.google.title)}
                         />
                     }
+                    <OpenAccessIcon {...(this.props.publication.calculateOpenAccess ? this.props.publication.calculateOpenAccess() : {})} />
                 </div>
                 <div className="column is-narrow">
-                    <OpenAccessIcon {...(this.props.publication.calculateOpenAccess ? this.props.publication.calculateOpenAccess() : {})} />
                     {
                         !!publication.rek_pid && (counts.wos || counts.scopus) &&
                         <ExternalLink href={`https://app.library.uq.edu.au/#/authors/view/${publication.rek_pid}`} title={publication.rek_title}>
