@@ -4,9 +4,8 @@ import {latestPubsPayload} from 'mock/data/testing/latestPublications';
 
 const initialState = {
     latestPublicationsList: [],
-    loadingLatestPublications: false,
-    totalPublicationsCount: null,
-    showLatestPublicationsTab: true
+    loadingLatestPublications: true,
+    totalPublicationsCount: null
 };
 
 describe('My latest publications reducer', () => {
@@ -32,13 +31,11 @@ describe('My latest publications reducer', () => {
         });
         expect(test.latestPublicationsList.length).toEqual(0);
         expect(test.loadingLatestPublications).toBeFalsy();
-        expect(test.showLatestPublicationsTab).toBeFalsy();
     });
 
     it('returns the correct state when latest publications fail to load', () => {
         const test = myLatestPublicationsReducer(initialState, {type: actions.LATEST_PUBLICATIONS_FAILED});
         expect(test.latestPublicationsList).toEqual([]);
         expect(test.loadingLatestPublications).toBeFalsy();
-        expect(test.showLatestPublicationsTab).toBeFalsy();
     });
 });

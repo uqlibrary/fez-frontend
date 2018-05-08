@@ -3,8 +3,7 @@ import myTrendingPublicationsReducer from './myTrendingPublications';
 
 const initialState = {
     trendingPublicationsList: [],
-    loadingTrendingPublications: false,
-    showTrendingPublicationsTab: true
+    loadingTrendingPublications: true
 };
 
 const trendingPubsPayload = [
@@ -177,13 +176,11 @@ describe('Trending publications reducer', () => {
         });
         expect(test.trendingPublicationsList.length).toEqual(0);
         expect(test.loadingTrendingPublications).toBeFalsy();
-        expect(test.showTrendingPublicationsTab).toBeFalsy();
     });
 
     it('returns the correct state when trending publications fail to load', () => {
         const test = myTrendingPublicationsReducer(initialState, {type: actions.TRENDING_PUBLICATIONS_FAILED});
         expect(test.trendingPublicationsList).toEqual([]);
         expect(test.loadingTrendingPublications).toBeFalsy();
-        expect(test.showTrendingPublicationsTab).toBeFalsy();
     });
 });

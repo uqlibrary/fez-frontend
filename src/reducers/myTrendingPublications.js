@@ -2,8 +2,7 @@ import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     trendingPublicationsList: [],
-    loadingTrendingPublications: false,
-    showTrendingPublicationsTab: true
+    loadingTrendingPublications: true
 };
 
 const handlers = {
@@ -29,8 +28,7 @@ const handlers = {
         return {
             ...state,
             trendingPublicationsList,
-            loadingTrendingPublications: false,
-            showTrendingPublicationsTab: trendingPublicationsList.length > 0
+            loadingTrendingPublications: false
         };
     },
 
@@ -38,8 +36,7 @@ const handlers = {
         return {
             ...state,
             trendingPublicationsList: action.payload.data,
-            loadingTrendingPublications: false,
-            showTrendingPublicationsTab: action.payload.data.length > 0
+            loadingTrendingPublications: false
         };
     },
 
@@ -47,8 +44,7 @@ const handlers = {
         return {
             ...state,
             trendingPublicationsList: [],
-            loadingTrendingPublications: false,
-            showTrendingPublicationsTab: false
+            loadingTrendingPublications: false
         };
     }
 };
