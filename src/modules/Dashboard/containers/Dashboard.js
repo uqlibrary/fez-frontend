@@ -5,13 +5,19 @@ import * as actions from 'actions';
 import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state) => {
+    const {loadingLatestPublications, latestPublicationsList} = state.get('myLatestPublicationsReducer');
+    const {loadingTrendingPublications, trendingPublicationsList} = state.get('myTrendingPublicationsReducer');
+    const {possibleCounts, loadingPossibleCounts} = state.get('claimPublicationReducer');
+
     return {
         ...state.get('accountReducer'),
         ...state.get('academicStatsReducer'),
         ...state.get('appReducer'),
         ...state.get('publicationsReducer'),
-        possiblyYourPublicationsCount: state.get('claimPublicationReducer').possibleCounts,
-        possiblyYourPublicationsCountLoading: state.get('claimPublicationReducer').loadingPossibleCounts,
+        showLatestPublicationsTab: loadingLatestPublications || latestPublicationsList.length > 0,
+        showTrendingPublicationsTab: loadingTrendingPublications || trendingPublicationsList.length > 0,
+        possiblyYourPublicationsCount: possibleCounts,
+        possiblyYourPublicationsCountLoading: loadingPossibleCounts,
     };
 };
 

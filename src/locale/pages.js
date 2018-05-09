@@ -172,6 +172,12 @@ export default {
                     },
                 }
             },
+            myLatestPublications: {
+                title: 'My publications',
+            },
+            myTrendingPublications: {
+                title: 'My trending publications'
+            },
             possiblePublicationsLure: {
                 title: 'Claim now!',
                 message: 'We have found [count] record(s) that could possibly be your work.',
@@ -190,13 +196,6 @@ export default {
             },
             publicationTypesCountChart: {
                 title: 'Publication types overview'
-            },
-            myPublications: {
-                title: 'My publications',
-                viewAllButtonLabel: 'View all'
-            },
-            myTrendingPublications: {
-                title: 'My trending publications'
             },
         },
         myResearch: {
