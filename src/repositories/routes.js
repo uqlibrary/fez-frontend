@@ -71,6 +71,7 @@ export const ACADEMIC_STATS_PUBLICATIONS_TRENDING_API = () => ({apiUrl: 'records
 
 // lookup apis
 export const GET_ACML_QUICK_TEMPLATES_API = () => ({apiUrl: 'acml/quick-templates'});
+export const GET_NEWS_API = () => ({apiUrl: 'fez-news'});
 export const VOCABULARIES_API  = ({id}) => ({apiUrl: `vocabularies/${id}`});
 export const GET_PUBLICATION_TYPES_API = () => ({apiUrl: 'records/types'});
 
