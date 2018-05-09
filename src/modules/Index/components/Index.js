@@ -1,7 +1,8 @@
 import React, {PureComponent} from 'react';
 
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {NewsFeed} from 'modules/SharedComponents/NewsFeed';
 
 class Index extends PureComponent {
     render() {
@@ -34,28 +35,7 @@ class Index extends PureComponent {
                                 requirements... <a href="#">read more</a>
                             </p>
                         </StandardCard>
-                        <StandardCard title={'Latest news'}>
-                            <p>
-                                <b>21 May 2018</b> Launch of new eSpace application. Sed ornare
-                                suscipit lobortis. Suspendisse scelerisque
-                                tempus risus quis vulputate. Donec eleifend
-                                mi euismod, tincidunt lacus vel, accumsan
-                                neque. Nulla diam lectus, interdum sed
-                                varius sit amet, condimentum laoreet eros.
-                                Nulla auctor at lectus ut euismod.
-                                <a href="#">read more</a>
-                            </p>
-                            <p>
-                                <b>20 May 2018</b> The end of the world is near
-                                suscipit lobortis. Suspendisse scelerisque
-                                tempus risus quis vulputate. Donec eleifend
-                                mi euismod, tincidunt lacus vel, accumsan
-                                neque. Nulla diam lectus, interdum sed
-                                varius sit amet, condimentum laoreet eros.
-                                Nulla auctor at lectus ut euismod.
-                                <a href="#">read more</a>
-                            </p>
-                        </StandardCard>
+                        <NewsFeed />
                     </div>
                 </div>
             </StandardPage>

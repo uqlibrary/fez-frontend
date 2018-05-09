@@ -1,0 +1,31 @@
+@import '../../../../sass/variables';
+
+.newsFeed {
+  .newsItemContainer {
+    margin: 8px 0;
+
+    .dateContainer {
+      float: left;
+      margin: 8px 0 0;
+    }
+  }
+
+  .dateContainer {
+    color: $theme-color-lighter;
+    align-items: center;
+    padding-right: 16px;
+    .date {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      .day {
+        font-weight: 400;
+        font-size: 2em;
+      }
+      .month {
+        font-weight: 600;
+      }
+    }
+  }
+}

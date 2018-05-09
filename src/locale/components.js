@@ -730,5 +730,8 @@ export default {
                 'Asc'
             ]
         },
+        newsFeed: {
+            title: 'Latest news'
+        }
     }
 };
