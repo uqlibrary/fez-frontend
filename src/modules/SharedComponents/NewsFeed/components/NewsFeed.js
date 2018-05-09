@@ -4,17 +4,21 @@ import PropTypes from 'prop-types';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {locale} from 'locale';
 const moment = require('moment');
+const dompurify = require('dompurify');
+import ReactHtmlParser from 'react-html-parser';
 
 export default class NewsFeed extends PureComponent {
     static propTypes = {
         newsFeedList: PropTypes.array,
         loadingNewsFeedList: PropTypes.bool,
+        showNewsCount: PropTypes.number,
         actions: PropTypes.object
     };
 
     static defaultProps = {
         newsFeedList: [],
-        loadingNewsFeedList: true
+        loadingNewsFeedList: true,
+        showNewsCount: 3
     };
 
     componentDidMount() {
@@ -30,20 +34,28 @@ export default class NewsFeed extends PureComponent {
             return null;
         }
 
+        const allowedHtmlConfig = { ALLOWED_TAGS: ['p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b', 'sup', 'sub'], ALLOWED_ATTR: [] };
+        const subNewsFeed = this.props.newsFeedList
+            .slice(0,
+                this.props.newsFeedList.length > this.props.showNewsCount
+                    ? this.props.showNewsCount
+                    : this.props.newsFeedList.length
+            );
+
         return (
             <StandardCard title={txt.title} className={'newsFeed with-theme-header'}>
                 {
-                    !this.props.loadingNewsFeedList &&
-                    this.props.newsFeedList.map((newsItem, index) => (
+                    !this.props.loadingNewsFeedList && subNewsFeed.map((newsItem, index) => (
                         <div key={`newsItem-${index}`} className="newsItemContainer">
                             <div className="dateContainer">
                                 <div className="date" item-icon="">
                                     <span className="day">{moment(newsItem.nws_updated_date).format('D')}</span>
                                     <span className="month">{moment(newsItem.nws_updated_date).format('MMM')}</span>
+                                    <span className="year">{moment(newsItem.nws_updated_date).format('YYYY')}</span>
                                 </div>
                             </div>
                             <p className="newsItemText">
-                                <b>{newsItem.nws_title}</b> {newsItem.nws_message}
+                                <b>{newsItem.nws_title}</b> {ReactHtmlParser(dompurify.sanitize(newsItem.nws_message, allowedHtmlConfig))}
                             </p>
                         </div>
                     ))
