@@ -13,7 +13,7 @@ export function loadNewsFeed() {
             .then(newsData => {
                 dispatch({
                     type: actions.NEWS_LOADED,
-                    payload: newsData.data
+                    payload: newsData
                 });
             })
             .catch(error => {
