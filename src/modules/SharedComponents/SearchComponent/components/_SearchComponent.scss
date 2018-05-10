@@ -18,17 +18,12 @@
   input[type="search"] {
     -webkit-appearance: textfield !important;
     &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      height: 24px;
+      width: 24px;
+      background-image: url('/public/images/baseline-close-24px.svg');
+      opacity: 0.5;
     }
-    -webkit-appearance: none;
-    height: 24px;
-    width: 24px;
-    &:before {
-      font-family: 'Material Icons' !important;
-      font-size: 24px !important;
-      content: '\e89c' !important;
-      color: red !important;
-    }
-    border: 1px solid red;
   }
 
 

@@ -114,6 +114,17 @@ button[type=button] {
     height: 75px !important;
     line-height: 75px !important;
   }
+  .auth-button-column {
+    padding-left: 12px !important;
+  }
+  .right-columns {
+    @include tablet {
+      width: 300px !important;
+    }
+    @include desktop {
+      width: 500px !important;
+    }
+  }
 }
 #contentContainer:focus {
   outline: none;
@@ -169,17 +180,4 @@ margin-top: 6px !important;
 .no-overflow {
   overflow: hidden !important;
   text-overflow: ellipsis !important;
-}
-
-// search applet columns sizing for header
-.AppBar {
-  .search-column {
-    width: 600px;
-    @include tablet {
-      width: 400px !important;
-    }
-    @include desktop {
-      width: 500px !important;
-    }
-  }
 }

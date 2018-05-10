@@ -186,11 +186,11 @@ export default class App extends PureComponent {
                         </IconButton>
                     }
                     iconElementRight={
-                        <div className="columns is-gapless search-column">
-                            <div className="column is-hidden-mobile">
+                        <div className="columns is-gapless right-columns">
+                            <div className="column is-hidden-mobile search-column">
                                 <SearchComponent applyInverseStyle showPrefixIcon />
                             </div>
-                            <div className="column is-narrow">
+                            <div className="column is-narrow auth-button-column">
                                 <AuthButton
                                     isAuthorizedUser={isAuthorizedUser}
                                     hoveredStyle={appBarButtonStyles}
