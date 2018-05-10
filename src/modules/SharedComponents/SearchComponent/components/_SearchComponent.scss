@@ -1,18 +1,17 @@
 @import '../../../../sass/variables';
 
 .search-component {
-
+  min-width: 320px;
   &.inverse {
-    .search-button-wrapper {
-      margin-top: -10px;
-    }
-
     .search-field {
       padding: 0 3px;
       min-width: 250px;
       background-color: $text-color-reverse;
     }
 
+    .search-button-wrapper {
+      margin-left: 6px;
+    }
     .search-button {
       color: $text-color-reverse;
       svg {

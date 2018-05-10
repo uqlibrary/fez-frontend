@@ -13,6 +13,7 @@ export default class SearchComponent extends PureComponent {
         searchParams: PropTypes.object,
         applyInverseStyle: PropTypes.bool,
         showAdvancedSearchButton: PropTypes.bool,
+        showSearchButton: PropTypes.bool,
         actions: PropTypes.object,
         history: PropTypes.object.isRequired
     };
@@ -63,7 +64,7 @@ export default class SearchComponent extends PureComponent {
             <div className={`search-component ${this.props.applyInverseStyle ? 'inverse' : ''}`}>
                 {
                     !this.state.showAdvancedSearch &&
-                    <div className="columns">
+                    <div className="columns is-gapless">
                         <div className="column">
                             <div className="search-field">
                                 <TextField
@@ -77,7 +78,7 @@ export default class SearchComponent extends PureComponent {
                             </div>
                         </div>
                         {
-                            !this.props.showAdvancedSearchButton &&
+                            this.props.showSearchButton &&
                             <div className="column is-narrow search-button-wrapper">
                                 <IconButton
                                     tooltipPosition="bottom-left"

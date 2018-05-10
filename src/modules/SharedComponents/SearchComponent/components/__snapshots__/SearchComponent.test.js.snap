@@ -34,7 +34,7 @@ exports[`SearchComponent should render default view 1`] = `
   className="search-component "
 >
   <div
-    className="columns"
+    className="columns is-gapless"
   >
     <div
       className="column"
@@ -58,28 +58,6 @@ exports[`SearchComponent should render default view 1`] = `
         />
       </div>
     </div>
-    <div
-      className="column is-narrow search-button-wrapper"
-    >
-      <IconButton
-        className="search-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
-          Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
-          }
-        }
-        iconStyle={Object {}}
-        onClick={[Function]}
-        tooltip="Search eSpace"
-        tooltipPosition="bottom-left"
-        touch={false}
-      >
-        <ActionSearch />
-      </IconButton>
-    </div>
   </div>
 </div>
 `;
@@ -89,7 +67,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
   className="search-component "
 >
   <div
-    className="columns"
+    className="columns is-gapless"
   >
     <div
       className="column"
@@ -148,7 +126,7 @@ exports[`SearchComponent should render inverse colour-themed view 1`] = `
   className="search-component inverse"
 >
   <div
-    className="columns"
+    className="columns is-gapless"
   >
     <div
       className="column"
@@ -172,28 +150,6 @@ exports[`SearchComponent should render inverse colour-themed view 1`] = `
         />
       </div>
     </div>
-    <div
-      className="column is-narrow search-button-wrapper"
-    >
-      <IconButton
-        className="search-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
-          Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
-          }
-        }
-        iconStyle={Object {}}
-        onClick={[Function]}
-        tooltip="Search eSpace"
-        tooltipPosition="bottom-left"
-        touch={false}
-      >
-        <ActionSearch />
-      </IconButton>
-    </div>
   </div>
 </div>
 `;
@@ -203,7 +159,7 @@ exports[`SearchComponent should set search value from prop 1`] = `
   className="search-component "
 >
   <div
-    className="columns"
+    className="columns is-gapless"
   >
     <div
       className="column"

@@ -180,16 +180,17 @@ export default class App extends PureComponent {
                             tooltip={locale.global.mainNavButton.tooltip}
                             tooltipPosition="bottom-right"
                             hoveredStyle={appBarButtonStyles}
-                            tabIndex={(this.state.docked || !this.state.menuDrawerOpen) ? 1 : -1}>
+                            tabIndex={(this.state.docked || !this.state.menuDrawerOpen) ? 1 : -1}
+                            className="main-menu-button">
                             <NavigationMenu/>
                         </IconButton>
                     }
                     iconElementRight={
-                        <div className="columns">
-                            <div className="column is-hidden-mobile">
-                                <SearchComponent applyInverseStyle/>
+                        <div className="columns is-gapless">
+                            <div className="column is-narrow">
+                                <SearchComponent applyInverseStyle showSearchButton />
                             </div>
-                            <div className="column">
+                            <div className="column is-narrow">
                                 <AuthButton
                                     isAuthorizedUser={isAuthorizedUser}
                                     hoveredStyle={appBarButtonStyles}
