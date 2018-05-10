@@ -110,6 +110,10 @@ export default {
                 buttonLabel: 'OK'
             },
         },
+        myLatestPublications: {
+            loading: 'Loading your latest publications...',
+            viewAllButtonLabel: 'View all'
+        },
         keywordsForm: {
             field: {
                 form: {

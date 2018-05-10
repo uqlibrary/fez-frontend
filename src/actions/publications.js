@@ -1,6 +1,7 @@
 import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
 import * as routes from 'repositories/routes';
+import {transformTrendingPublicationsMetricsData} from './academicDataTransformers';
 
 /**
  * Get latest publications
@@ -67,10 +68,21 @@ export function searchTrendingPublications() {
         dispatch({type: actions.TRENDING_PUBLICATIONS_LOADING});
         return get(routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API())
             .then(response => {
-                dispatch({
-                    type: actions.TRENDING_PUBLICATIONS_LOADED,
-                    payload: response
-                });
+                if (response.data.length > 0) {
+                    const transformedTrendingPublications = transformTrendingPublicationsMetricsData(response);
+
+                    transformedTrendingPublications.map(({key, values}) => {
+                        dispatch({
+                            type: `${actions.TRENDING_PUBLICATIONS_LOADED}@${key}`,
+                            payload: {data: values},
+                        });
+                    });
+                } else {
+                    dispatch({
+                        type: actions.TRENDING_PUBLICATIONS_LOADED,
+                        payload: response
+                    });
+                }
             })
             .catch(error => {
                 dispatch({
