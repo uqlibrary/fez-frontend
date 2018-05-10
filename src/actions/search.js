@@ -112,7 +112,7 @@ export function searchEspacePublications(searchParams) {
             payload: searchParams
         });
 
-        dispatch({type: actions.SEARCH_LOADING, payload: ''});
+        dispatch({type: actions.SEARCH_LOADING, payload: {}});
 
         return get(routes.SEARCH_INTERNAL_RECORDS_API({
             searchParams: searchParams,
@@ -121,9 +121,7 @@ export function searchEspacePublications(searchParams) {
             .then(response => {
                 dispatch({
                     type: actions.SEARCH_LOADED,
-                    payload: {
-                        data: response.data
-                    }
+                    payload: response
                 });
             })
             .catch(error => {
