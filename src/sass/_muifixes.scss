@@ -106,7 +106,7 @@ button[type=button] {
   position: fixed !important;
   top: 0px;
   left: 0px;
-  // spaces the right hand AppBar panel and manu menu button correctly
+  // spaces the right hand AppBar panel and main menu button correctly
   >div:nth-child(3), .main-menu-button {
     margin-top: 12px !important;
   }
@@ -169,4 +169,17 @@ margin-top: 6px !important;
 .no-overflow {
   overflow: hidden !important;
   text-overflow: ellipsis !important;
+}
+
+// search applet columns sizing for header
+.AppBar {
+  .search-column {
+    width: 600px;
+    @include tablet {
+      width: 400px !important;
+    }
+    @include desktop {
+      width: 500px !important;
+    }
+  }
 }

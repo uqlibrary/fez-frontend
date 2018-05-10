@@ -14,6 +14,7 @@ export default class SearchComponent extends PureComponent {
         applyInverseStyle: PropTypes.bool,
         showAdvancedSearchButton: PropTypes.bool,
         showSearchButton: PropTypes.bool,
+        showPrefixIcon: PropTypes.bool,
         actions: PropTypes.object,
         history: PropTypes.object.isRequired
     };
@@ -65,16 +66,26 @@ export default class SearchComponent extends PureComponent {
                 {
                     !this.state.showAdvancedSearch &&
                     <div className="columns is-gapless">
-                        <div className="column">
-                            <div className="search-field">
-                                <TextField
-                                    id="searchField"
-                                    fullWidth
-                                    hintText={txt.searchBoxPlaceholder}
-                                    onChange={this.searchTextChanged}
-                                    onKeyPress={this.handleSearch}
-                                    value={this.state.searchText}
-                                />
+                        <div className="column search-field">
+                            <div className="columns is-gapless search-field">
+                                {
+                                    this.props.showPrefixIcon &&
+                                    <div className="column is-narrow search-icon-prefix">
+                                        <SearchIcon/>
+                                    </div>
+                                }
+                                <div className="column">
+                                    <TextField
+                                        type="search"
+                                        id="searchField"
+                                        fullWidth
+                                        hintText={txt.searchBoxPlaceholder}
+                                        onChange={this.searchTextChanged}
+                                        onKeyPress={this.handleSearch}
+                                        value={this.state.searchText}
+                                        underlineStyle={this.props.applyInverseStyle && {display: 'none'}}
+                                    />
+                                </div>
                             </div>
                         </div>
                         {
@@ -95,6 +106,7 @@ export default class SearchComponent extends PureComponent {
                             <div className="column is-narrow">
                                 <RaisedButton
                                     label={txt.searchButtonText}
+                                    secondary
                                     onClick={this.handleSearch}/>
                             </div>
                         }
@@ -103,7 +115,6 @@ export default class SearchComponent extends PureComponent {
                             <div className="column is-narrow">
                                 <RaisedButton
                                     label={txt.advancedSearchButtonText}
-                                    secondary
                                     onClick={this.toggleAdvancedSearch}/>
                             </div>
                         }

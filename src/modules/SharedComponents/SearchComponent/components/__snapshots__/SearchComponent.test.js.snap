@@ -37,25 +37,30 @@ exports[`SearchComponent should render default view 1`] = `
     className="columns is-gapless"
   >
     <div
-      className="column"
+      className="column search-field"
     >
       <div
-        className="search-field"
+        className="columns is-gapless search-field"
       >
-        <TextField
-          disabled={false}
-          floatingLabelFixed={false}
-          fullWidth={true}
-          hintText="Search eSpace"
-          id="searchField"
-          multiLine={false}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          rows={1}
-          type="text"
-          underlineShow={true}
-          value=""
-        />
+        <div
+          className="column"
+        >
+          <TextField
+            disabled={false}
+            floatingLabelFixed={false}
+            fullWidth={true}
+            hintText="Search eSpace"
+            id="searchField"
+            multiLine={false}
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            rows={1}
+            type="search"
+            underlineShow={true}
+            underlineStyle={false}
+            value=""
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -70,25 +75,30 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
     className="columns is-gapless"
   >
     <div
-      className="column"
+      className="column search-field"
     >
       <div
-        className="search-field"
+        className="columns is-gapless search-field"
       >
-        <TextField
-          disabled={false}
-          floatingLabelFixed={false}
-          fullWidth={true}
-          hintText="Search eSpace"
-          id="searchField"
-          multiLine={false}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          rows={1}
-          type="text"
-          underlineShow={true}
-          value=""
-        />
+        <div
+          className="column"
+        >
+          <TextField
+            disabled={false}
+            floatingLabelFixed={false}
+            fullWidth={true}
+            hintText="Search eSpace"
+            id="searchField"
+            multiLine={false}
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            rows={1}
+            type="search"
+            underlineShow={true}
+            underlineStyle={false}
+            value=""
+          />
+        </div>
       </div>
     </div>
     <div
@@ -101,7 +111,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
         labelPosition="after"
         onClick={[Function]}
         primary={false}
-        secondary={false}
+        secondary={true}
       />
     </div>
     <div
@@ -114,7 +124,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
         labelPosition="after"
         onClick={[Function]}
         primary={false}
-        secondary={true}
+        secondary={false}
       />
     </div>
   </div>
@@ -129,25 +139,34 @@ exports[`SearchComponent should render inverse colour-themed view 1`] = `
     className="columns is-gapless"
   >
     <div
-      className="column"
+      className="column search-field"
     >
       <div
-        className="search-field"
+        className="columns is-gapless search-field"
       >
-        <TextField
-          disabled={false}
-          floatingLabelFixed={false}
-          fullWidth={true}
-          hintText="Search eSpace"
-          id="searchField"
-          multiLine={false}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          rows={1}
-          type="text"
-          underlineShow={true}
-          value=""
-        />
+        <div
+          className="column"
+        >
+          <TextField
+            disabled={false}
+            floatingLabelFixed={false}
+            fullWidth={true}
+            hintText="Search eSpace"
+            id="searchField"
+            multiLine={false}
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            rows={1}
+            type="search"
+            underlineShow={true}
+            underlineStyle={
+              Object {
+                "display": "none",
+              }
+            }
+            value=""
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -162,25 +181,30 @@ exports[`SearchComponent should set search value from prop 1`] = `
     className="columns is-gapless"
   >
     <div
-      className="column"
+      className="column search-field"
     >
       <div
-        className="search-field"
+        className="columns is-gapless search-field"
       >
-        <TextField
-          disabled={false}
-          floatingLabelFixed={false}
-          fullWidth={true}
-          hintText="Search eSpace"
-          id="searchField"
-          multiLine={false}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          rows={1}
-          type="text"
-          underlineShow={true}
-          value="i feel lucky"
-        />
+        <div
+          className="column"
+        >
+          <TextField
+            disabled={false}
+            floatingLabelFixed={false}
+            fullWidth={true}
+            hintText="Search eSpace"
+            id="searchField"
+            multiLine={false}
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            rows={1}
+            type="search"
+            underlineShow={true}
+            underlineStyle={false}
+            value="i feel lucky"
+          />
+        </div>
       </div>
     </div>
     <div
@@ -193,7 +217,7 @@ exports[`SearchComponent should set search value from prop 1`] = `
         labelPosition="after"
         onClick={[Function]}
         primary={false}
-        secondary={false}
+        secondary={true}
       />
     </div>
     <div
@@ -206,7 +230,7 @@ exports[`SearchComponent should set search value from prop 1`] = `
         labelPosition="after"
         onClick={[Function]}
         primary={false}
-        secondary={true}
+        secondary={false}
       />
     </div>
   </div>

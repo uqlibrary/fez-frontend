@@ -169,14 +169,14 @@ exports[`Application component should render alert if user is not fez author 1`]
     }
     iconElementRight={
       <div
-        className="columns is-gapless"
+        className="columns is-gapless search-column"
       >
         <div
-          className="column is-narrow"
+          className="column is-hidden-mobile"
         >
           <withRouter(Connect(SearchComponent))
             applyInverseStyle={true}
-            showSearchButton={true}
+            showPrefixIcon={true}
           />
         </div>
         <div
@@ -646,14 +646,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     }
     iconElementRight={
       <div
-        className="columns is-gapless"
+        className="columns is-gapless search-column"
       >
         <div
-          className="column is-narrow"
+          className="column is-hidden-mobile"
         >
           <withRouter(Connect(SearchComponent))
             applyInverseStyle={true}
-            showSearchButton={true}
+            showPrefixIcon={true}
           />
         </div>
         <div
@@ -1004,14 +1004,14 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     }
     iconElementRight={
       <div
-        className="columns is-gapless"
+        className="columns is-gapless search-column"
       >
         <div
-          className="column is-narrow"
+          className="column is-hidden-mobile"
         >
           <withRouter(Connect(SearchComponent))
             applyInverseStyle={true}
-            showSearchButton={true}
+            showPrefixIcon={true}
           />
         </div>
         <div
@@ -1334,14 +1334,14 @@ exports[`Application component should render app for account with fez author wit
     }
     iconElementRight={
       <div
-        className="columns is-gapless"
+        className="columns is-gapless search-column"
       >
         <div
-          className="column is-narrow"
+          className="column is-hidden-mobile"
         >
           <withRouter(Connect(SearchComponent))
             applyInverseStyle={true}
-            showSearchButton={true}
+            showPrefixIcon={true}
           />
         </div>
         <div
@@ -1795,14 +1795,14 @@ exports[`Application component should render app for account with fez author wit
     }
     iconElementRight={
       <div
-        className="columns is-gapless"
+        className="columns is-gapless search-column"
       >
         <div
-          className="column is-narrow"
+          className="column is-hidden-mobile"
         >
           <withRouter(Connect(SearchComponent))
             applyInverseStyle={true}
-            showSearchButton={true}
+            showPrefixIcon={true}
           />
         </div>
         <div
@@ -2274,14 +2274,14 @@ exports[`Application component should render app for account with fez author wit
     }
     iconElementRight={
       <div
-        className="columns is-gapless"
+        className="columns is-gapless search-column"
       >
         <div
-          className="column is-narrow"
+          className="column is-hidden-mobile"
         >
           <withRouter(Connect(SearchComponent))
             applyInverseStyle={true}
-            showSearchButton={true}
+            showPrefixIcon={true}
           />
         </div>
         <div
@@ -2668,14 +2668,14 @@ exports[`Application component should render application with routing for the us
     }
     iconElementRight={
       <div
-        className="columns is-gapless"
+        className="columns is-gapless search-column"
       >
         <div
-          className="column is-narrow"
+          className="column is-hidden-mobile"
         >
           <withRouter(Connect(SearchComponent))
             applyInverseStyle={true}
-            showSearchButton={true}
+            showPrefixIcon={true}
           />
         </div>
         <div
@@ -2865,14 +2865,14 @@ exports[`Application component should render for anon user 1`] = `
     }
     iconElementRight={
       <div
-        className="columns is-gapless"
+        className="columns is-gapless search-column"
       >
         <div
-          className="column is-narrow"
+          className="column is-hidden-mobile"
         >
           <withRouter(Connect(SearchComponent))
             applyInverseStyle={true}
-            showSearchButton={true}
+            showPrefixIcon={true}
           />
         </div>
         <div
@@ -3100,14 +3100,14 @@ exports[`Application component should render thesis submission for HDR without m
     }
     iconElementRight={
       <div
-        className="columns is-gapless"
+        className="columns is-gapless search-column"
       >
         <div
-          className="column is-narrow"
+          className="column is-hidden-mobile"
         >
           <withRouter(Connect(SearchComponent))
             applyInverseStyle={true}
-            showSearchButton={true}
+            showPrefixIcon={true}
           />
         </div>
         <div
