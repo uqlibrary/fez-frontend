@@ -1,0 +1,34 @@
+@import '../../../../sass/variables';
+
+.search-component {
+
+  &.inverse {
+    .search-button-wrapper {
+      margin-top: -10px;
+    }
+
+    .search-field {
+      padding: 0 3px;
+      min-width: 250px;
+      background-color: $text-color-reverse;
+    }
+
+    .search-button {
+      color: $text-color-reverse;
+      svg {
+        fill: $text-color-reverse !important;
+      }
+    }
+
+    button.search-button:focus {
+      color: $theme-color-dark;
+
+      svg {
+        fill: $theme-color-dark;
+        color: $theme-color-dark;
+      }
+
+    }
+  }
+}
+

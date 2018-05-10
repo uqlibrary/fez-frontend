@@ -1,0 +1,258 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchComponent should render advanced search 1`] = `
+<div
+  className="search-component "
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      Advanced search component goes here
+    </div>
+    <div
+      className="column is-narrow"
+    >
+      <RaisedButton
+        disabled={false}
+        fullWidth={false}
+        label="Simple search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={true}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SearchComponent should render default view 1`] = `
+<div
+  className="search-component "
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <div
+        className="search-field"
+      >
+        <TextField
+          disabled={false}
+          floatingLabelFixed={false}
+          fullWidth={true}
+          hintText="Search eSpace"
+          id="searchField"
+          multiLine={false}
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          rows={1}
+          type="text"
+          underlineShow={true}
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="column is-narrow search-button-wrapper"
+    >
+      <IconButton
+        className="search-button"
+        disableTouchRipple={false}
+        disabled={false}
+        hoveredStyle={
+          Object {
+            "backgroundColor": "rgba(0,0,0,0.3)",
+            "borderRadius": "50%",
+          }
+        }
+        iconStyle={Object {}}
+        onClick={[Function]}
+        tooltip="Search eSpace"
+        tooltipPosition="bottom-left"
+        touch={false}
+      >
+        <ActionSearch />
+      </IconButton>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SearchComponent should render default view with advanced search 1`] = `
+<div
+  className="search-component "
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <div
+        className="search-field"
+      >
+        <TextField
+          disabled={false}
+          floatingLabelFixed={false}
+          fullWidth={true}
+          hintText="Search eSpace"
+          id="searchField"
+          multiLine={false}
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          rows={1}
+          type="text"
+          underlineShow={true}
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="column is-narrow"
+    >
+      <RaisedButton
+        disabled={false}
+        fullWidth={false}
+        label="Search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
+    <div
+      className="column is-narrow"
+    >
+      <RaisedButton
+        disabled={false}
+        fullWidth={false}
+        label="Advanced search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={true}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SearchComponent should render inverse colour-themed view 1`] = `
+<div
+  className="search-component inverse"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <div
+        className="search-field"
+      >
+        <TextField
+          disabled={false}
+          floatingLabelFixed={false}
+          fullWidth={true}
+          hintText="Search eSpace"
+          id="searchField"
+          multiLine={false}
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          rows={1}
+          type="text"
+          underlineShow={true}
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="column is-narrow search-button-wrapper"
+    >
+      <IconButton
+        className="search-button"
+        disableTouchRipple={false}
+        disabled={false}
+        hoveredStyle={
+          Object {
+            "backgroundColor": "rgba(0,0,0,0.3)",
+            "borderRadius": "50%",
+          }
+        }
+        iconStyle={Object {}}
+        onClick={[Function]}
+        tooltip="Search eSpace"
+        tooltipPosition="bottom-left"
+        touch={false}
+      >
+        <ActionSearch />
+      </IconButton>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SearchComponent should set search value from prop 1`] = `
+<div
+  className="search-component "
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <div
+        className="search-field"
+      >
+        <TextField
+          disabled={false}
+          floatingLabelFixed={false}
+          fullWidth={true}
+          hintText="Search eSpace"
+          id="searchField"
+          multiLine={false}
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          rows={1}
+          type="text"
+          underlineShow={true}
+          value="i feel lucky"
+        />
+      </div>
+    </div>
+    <div
+      className="column is-narrow"
+    >
+      <RaisedButton
+        disabled={false}
+        fullWidth={false}
+        label="Search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
+    <div
+      className="column is-narrow"
+    >
+      <RaisedButton
+        disabled={false}
+        fullWidth={false}
+        label="Advanced search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={true}
+      />
+    </div>
+  </div>
+</div>
+`;

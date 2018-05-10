@@ -20,7 +20,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -168,24 +168,31 @@ exports[`Application component should render alert if user is not fez author 1`]
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
+        <div
+          className="column is-hidden-mobile"
+        >
+          <withRouter(Connect(SearchComponent))
+            applyInverseStyle={true}
+          />
+        </div>
+        <div
+          className="column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
             }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -309,6 +316,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -487,7 +495,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -635,24 +643,31 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
+        <div
+          className="column is-hidden-mobile"
+        >
+          <withRouter(Connect(SearchComponent))
+            applyInverseStyle={true}
+          />
+        </div>
+        <div
+          className="column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
             }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -760,6 +775,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -983,24 +999,31 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
+        <div
+          className="column is-hidden-mobile"
+        >
+          <withRouter(Connect(SearchComponent))
+            applyInverseStyle={true}
+          />
+        </div>
+        <div
+          className="column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
             }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -1156,7 +1179,7 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -1304,24 +1327,31 @@ exports[`Application component should render app for account with fez author wit
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
+        <div
+          className="column is-hidden-mobile"
+        >
+          <withRouter(Connect(SearchComponent))
+            applyInverseStyle={true}
+          />
+        </div>
+        <div
+          className="column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
             }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -1429,6 +1459,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -1607,7 +1638,7 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -1755,24 +1786,31 @@ exports[`Application component should render app for account with fez author wit
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
+        <div
+          className="column is-hidden-mobile"
+        >
+          <withRouter(Connect(SearchComponent))
+            applyInverseStyle={true}
+          />
+        </div>
+        <div
+          className="column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
             }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -1898,6 +1936,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -2076,7 +2115,7 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -2224,24 +2263,31 @@ exports[`Application component should render app for account with fez author wit
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
+        <div
+          className="column is-hidden-mobile"
+        >
+          <withRouter(Connect(SearchComponent))
+            applyInverseStyle={true}
+          />
+        </div>
+        <div
+          className="column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
             }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -2282,6 +2328,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -2460,7 +2507,7 @@ exports[`Application component should render application with routing for the us
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -2608,24 +2655,31 @@ exports[`Application component should render application with routing for the us
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
+        <div
+          className="column is-hidden-mobile"
+        >
+          <withRouter(Connect(SearchComponent))
+            applyInverseStyle={true}
+          />
+        </div>
+        <div
+          className="column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
             }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -2796,24 +2850,31 @@ exports[`Application component should render for anon user 1`] = `
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
+        <div
+          className="column is-hidden-mobile"
+        >
+          <withRouter(Connect(SearchComponent))
+            applyInverseStyle={true}
+          />
+        </div>
+        <div
+          className="column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
             }
-          }
-          isAuthorizedUser={false}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText=""
-        />
+            isAuthorizedUser={false}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText=""
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -3022,24 +3083,31 @@ exports[`Application component should render thesis submission for HDR without m
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
+        <div
+          className="column is-hidden-mobile"
+        >
+          <withRouter(Connect(SearchComponent))
+            applyInverseStyle={true}
+          />
+        </div>
+        <div
+          className="column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
             }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={

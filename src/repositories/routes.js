@@ -91,8 +91,17 @@ export const CURRENT_USER_RECORDS_API = (values) => ({apiUrl: 'records/search', 
 export const ACADEMIC_PUBLICATIONS_STATS_API = (values) => ({apiUrl: 'records/search', options: {params: {rule: 'mine', 'filters[stats_only]': true, ...getStandardSearchParams(values)}}});
 
 export const SEARCH_INTERNAL_RECORDS_API = (values) => (
-    // values = {searchQuery, page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}
-    {apiUrl: 'records/search', options: {params: {...getSearchType(values.searchQuery), ...getStandardSearchParams(values)}}}
+    // values = {searchQuery (text value - title search, doi or pubmed id), searchParams = {} (advanced search parameters)
+    // page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}
+    {
+        apiUrl: 'records/search',
+        options: {
+            params: {
+                ...(!!values.searchQuery ? getSearchType(values.searchQuery) : values.searchParams),
+                ...getStandardSearchParams(values)
+            }
+        }
+    }
 );
 
 export const SEARCH_EXTERNAL_RECORDS_API = ({source = 'wos', searchQuery = ''}) => (

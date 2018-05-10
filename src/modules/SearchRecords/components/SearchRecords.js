@@ -2,16 +2,16 @@ import React, {PureComponent} from 'react';
 
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
+import {SearchComponent} from 'modules/SharedComponents/SearchComponent';
 
 class SearchRecords extends PureComponent {
     render() {
         return (
             <StandardPage className="page-search-records" title={'Search results'}>
                 <StandardCard>
-                    <p>
-                        XXXXX Total results found...
-                    </p>
+                    <SearchComponent showAdvancedSearchButton/>
                 </StandardCard>
+
                 <div className="columns">
                     <div className="column">
                         <StandardCard>
@@ -37,4 +37,5 @@ class SearchRecords extends PureComponent {
         );
     }
 }
+
 export default SearchRecords;

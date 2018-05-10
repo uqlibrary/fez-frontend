@@ -4,14 +4,6 @@ exports[`Index page should render placeholders 1`] = `
 <StandardPage
   className="page-index"
 >
-  <StandardCard
-    className=""
-    title="eSpace search"
-  >
-    <p>
-      eSpace search goes here... or on app tool bar?
-    </p>
-  </StandardCard>
   <div
     className="columns"
   >

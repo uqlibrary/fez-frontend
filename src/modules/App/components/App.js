@@ -6,6 +6,8 @@ import {locale} from 'locale';
 
 // application components
 import AppBar from 'material-ui/AppBar';
+import IconButton from 'material-ui/IconButton';
+
 import {AppLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {MenuDrawer} from 'modules/SharedComponents/Toolbox/MenuDrawer';
@@ -15,9 +17,9 @@ import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import AppAlertContainer from '../containers/AppAlert';
 import {Meta} from 'modules/SharedComponents/Meta';
 import {OfflineSnackbar} from 'modules/SharedComponents/OfflineSnackbar';
+import {SearchComponent} from 'modules/SharedComponents/SearchComponent';
 
 import * as pages from './pages';
-import IconButton from 'material-ui/IconButton';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
 export default class App extends PureComponent {
@@ -52,7 +54,11 @@ export default class App extends PureComponent {
                 style: !this.state.isMobile ? {width: '100%'} : {},
                 autoWidth: !this.state.isMobile,
                 fullWidth: this.state.isMobile,
-                menuItemStyle: this.state.isMobile ? {whiteSpace: 'normal', lineHeight: '18px', paddingBottom: '8px'} : {},
+                menuItemStyle: this.state.isMobile ? {
+                    whiteSpace: 'normal',
+                    lineHeight: '18px',
+                    paddingBottom: '8px'
+                } : {},
             }
         };
     }
@@ -129,7 +135,7 @@ export default class App extends PureComponent {
         }
 
         let userStatusAlert = null;
-        if(!this.props.accountLoading && !this.props.account) {
+        if (!this.props.accountLoading && !this.props.account) {
             // user is not logged in
             userStatusAlert = {
                 ...locale.global.loginAlert,
@@ -160,7 +166,7 @@ export default class App extends PureComponent {
         });
         return (
             <div className="layout-fill align-stretch">
-                <Meta routesConfig={routesConfig} />
+                <Meta routesConfig={routesConfig}/>
                 <AppBar
                     className="AppBar align-center"
                     showMenuIconButton={showMenu && !this.state.docked}
@@ -174,18 +180,23 @@ export default class App extends PureComponent {
                             tooltip={locale.global.mainNavButton.tooltip}
                             tooltipPosition="bottom-right"
                             hoveredStyle={appBarButtonStyles}
-                            tabIndex={(this.state.docked || !this.state.menuDrawerOpen) ? 1 : -1} >
-                            <NavigationMenu />
+                            tabIndex={(this.state.docked || !this.state.menuDrawerOpen) ? 1 : -1}>
+                            <NavigationMenu/>
                         </IconButton>
                     }
                     iconElementRight={
-                        <div style={{marginTop: '-10px'}}>
-                            <AuthButton
-                                isAuthorizedUser={isAuthorizedUser}
-                                hoveredStyle={appBarButtonStyles}
-                                onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
-                                signInTooltipText={locale.global.authentication.signInText}
-                                signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''} />
+                        <div className="columns">
+                            <div className="column is-hidden-mobile">
+                                <SearchComponent applyInverseStyle/>
+                            </div>
+                            <div className="column">
+                                <AuthButton
+                                    isAuthorizedUser={isAuthorizedUser}
+                                    hoveredStyle={appBarButtonStyles}
+                                    onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
+                                    signInTooltipText={locale.global.authentication.signInText}
+                                    signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''}/>
+                            </div>
                         </div>
                     }
                 />
@@ -215,7 +226,7 @@ export default class App extends PureComponent {
                             </div>
                         </div>
                     }
-                    <AppAlertContainer />
+                    <AppAlertContainer/>
                     {
                         isAuthorLoading &&
                         <div className="isLoading is-centered">
@@ -235,7 +246,7 @@ export default class App extends PureComponent {
                     }
                 </div>
                 <HelpDrawer/>
-                <OfflineSnackbar />
+                <OfflineSnackbar/>
             </div>
         );
     }

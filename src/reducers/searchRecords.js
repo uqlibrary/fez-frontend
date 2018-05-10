@@ -11,6 +11,7 @@ const initialSearchSources = {
 const initialState = {
     publicationsList: [],
     loadingSearch: false,
+    searchParams: {},
     ...initialSearchSources
 };
 
@@ -130,6 +131,15 @@ const handlers = {
         return {
             ...state,
             ...loadingPublicationSources
+        };
+    },
+
+    [actions.SET_SEARCH_QUERY]: (state, action) => {
+        return {
+            ...state,
+            searchParams: {
+                ...action.payload
+            }
         };
     },
 

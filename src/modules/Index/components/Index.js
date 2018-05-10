@@ -8,11 +8,6 @@ class Index extends PureComponent {
     render() {
         return (
             <StandardPage className="page-index">
-                <StandardCard title={'eSpace search'}>
-                    <p>
-                        eSpace search goes here... or on app tool bar?
-                    </p>
-                </StandardCard>
                 <div className="columns">
                     <div className="column">
                         <StandardCard title={'Most cited publications/Trending publications'}>

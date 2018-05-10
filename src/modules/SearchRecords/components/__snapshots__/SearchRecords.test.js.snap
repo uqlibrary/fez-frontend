@@ -8,9 +8,9 @@ exports[`SearchRecords page should render placeholders 1`] = `
   <StandardCard
     className=""
   >
-    <p>
-      XXXXX Total results found...
-    </p>
+    <withRouter(Connect(SearchComponent))
+      showAdvancedSearchButton={true}
+    />
   </StandardCard>
   <div
     className="columns"

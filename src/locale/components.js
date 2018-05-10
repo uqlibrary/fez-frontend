@@ -732,6 +732,12 @@ export default {
         },
         newsFeed: {
             title: 'Latest news'
+        },
+        searchComponent: {
+            searchBoxPlaceholder: 'Search eSpace',
+            searchButtonHint: 'Search eSpace',
+            advancedSearchButtonText: 'Advanced search',
+            searchButtonText: 'Search'
         }
     }
 };
