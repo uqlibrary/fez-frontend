@@ -41,8 +41,6 @@
     line-height: $text-line-height-normal;
     color: rgba($text-color, 0.8);
     margin-bottom: 12px;
-    width: 100% !important;
-    overflow: hidden !important;
     @include mobile {
       font-size: $text-body-small !important;
     }
