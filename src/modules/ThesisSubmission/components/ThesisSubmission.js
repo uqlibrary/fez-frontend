@@ -31,8 +31,7 @@ export default class ThesisSubmission extends Component {
         isHdrThesis: PropTypes.bool, // HDR thesis if true or SBS thesis if false
         disableSubmit: PropTypes.bool,
         fileAccessId: PropTypes.number,
-        logout: PropTypes.func,
-        checkSession: PropTypes.func
+        actions: PropTypes.object
     };
 
     static contextTypes = {
@@ -44,7 +43,7 @@ export default class ThesisSubmission extends Component {
     }
 
     deposit = () => {
-        this.props.checkSession()
+        this.props.actions.checkSession()
             .then(() => this.openDepositConfirmation())
             .catch(() => this.openSessionExpiredConfirmation());
     }
@@ -125,7 +124,7 @@ export default class ThesisSubmission extends Component {
 
                     <ConfirmDialogBox
                         onRef={this.setSessionExpiredConfirmation}
-                        onAction={this.props.logout}
+                        onAction={this.props.actions.logout}
                         locale={formLocale.thesisSubmission.sessionExpiredConfirmation}
                     />
 

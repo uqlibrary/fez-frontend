@@ -120,6 +120,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
           "confirmationTitle": "Session Expired",
         }
       }
+      onAction={[MockFunction]}
       onRef={[Function]}
     />
     <StandardCard
@@ -635,6 +636,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
           "confirmationTitle": "Session Expired",
         }
       }
+      onAction={[MockFunction]}
       onRef={[Function]}
     />
     <StandardCard

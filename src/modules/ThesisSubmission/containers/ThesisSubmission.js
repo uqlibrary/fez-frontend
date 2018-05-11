@@ -62,8 +62,7 @@ const mapStateToProps = (state, props) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    actions: bindActionCreators(logout, dispatch),
-    checkSession: bindActionCreators(checkSession, dispatch)
+    actions: bindActionCreators({logout, checkSession}, dispatch)
 });
 
 ThesisSubmissionContainer = connect(mapStateToProps, mapDispatchToProps)(ThesisSubmissionContainer);
