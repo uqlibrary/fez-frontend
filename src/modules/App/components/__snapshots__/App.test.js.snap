@@ -20,7 +20,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -309,6 +309,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -487,7 +488,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -760,6 +761,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -1156,7 +1158,7 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -1429,6 +1431,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -1607,7 +1610,7 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -1898,6 +1901,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -2076,7 +2080,7 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -2282,6 +2286,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -2460,7 +2465,7 @@ exports[`Application component should render application with routing for the us
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
