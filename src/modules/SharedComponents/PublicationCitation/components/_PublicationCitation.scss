@@ -6,6 +6,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;
   word-break: break-word;
+  width: 100% !important;
 
   &:first-child {
     padding-top: 24px;
@@ -30,12 +31,18 @@
       margin-right: 6px;
     }
   }
+  .citationColumn {
+    width: 100%;
+    overflow: hidden;
+  }
 
   .citationContent {
     font-size: $text-body-normal;
     line-height: $text-line-height-normal;
     color: rgba($text-color, 0.8);
     margin-bottom: 12px;
+    width: 100% !important;
+    overflow: hidden !important;
     @include mobile {
       font-size: $text-body-small !important;
     }
