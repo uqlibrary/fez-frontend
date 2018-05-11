@@ -5,6 +5,7 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('Search record results', () => {
+
     it('should render stepper and no results', () => {
         const wrapper = setup({
             history: {}
@@ -465,6 +466,399 @@ describe('Search record results', () => {
         const wrapper = setup({
             publicationsList: publicationsList
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual([]);
+    });
+
+    it('should not return unclaimablePublicationsList (no pid)', () => {
+        const navigateToClaimPublication = jest.fn();
+        const setClaimPublication = jest.fn();
+        const actions = {
+            setClaimPublication: setClaimPublication
+        };
+        const history = {
+            push: navigateToClaimPublication
+        };
+
+        const publicationsList = [{
+            fez_record_search_key_author: [{
+                    rek_author_id: 29052679,
+                    rek_author_pid: 'UQ:255472',
+                    rek_author_xsdmf_id: 7049,
+                    rek_author: 'Jory, Patrick',
+                    rek_author_order: 1
+                },
+                {
+                    rek_author_id: 29052680,
+                    rek_author_pid: 'UQ:255472',
+                    rek_author_xsdmf_id: 7049,
+                    rek_author: 'Montesano, Michael J.',
+                    rek_author_order: 2
+                }
+            ],
+            fez_record_search_key_author_id: [{
+                    rek_author_id_id: 28420647,
+                    rek_author_id_pid: 'UQ:255472',
+                    rek_author_id_xsdmf_id: 7044,
+                    rek_author_id: 86825,
+                    rek_author_id_order: 1,
+                    rek_author_id_lookup: 'Patrick Jory'
+                },
+                {
+                    rek_author_id_id: 28420648,
+                    rek_author_id_pid: 'UQ:255472',
+                    rek_author_id_xsdmf_id: 7044,
+                    rek_author_id: 0,
+                    rek_author_id_order: 2
+                }
+            ],
+            fez_record_search_key_contributor: [],
+            fez_record_search_key_contributor_id: [],
+        }];
+
+        const wrapper = setup({
+            publicationsList: publicationsList
+        });
+        expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual([]);
+    });
+
+    it('should not return unclaimablePublicationsList (number of authors !== number of author_ids)', () => {
+        const navigateToClaimPublication = jest.fn();
+        const setClaimPublication = jest.fn();
+        const actions = {
+            setClaimPublication: setClaimPublication
+        };
+        const history = {
+            push: navigateToClaimPublication
+        };
+
+        const publicationsList = [{
+            rek_pid: "UQ:111111",
+            fez_record_search_key_author: [{
+                    rek_author_id: 29052679,
+                    rek_author_pid: 'UQ:255472',
+                    rek_author_xsdmf_id: 7049,
+                    rek_author: 'Jory, Patrick',
+                    rek_author_order: 1
+                },
+                {
+                    rek_author_id: 29052680,
+                    rek_author_pid: 'UQ:255472',
+                    rek_author_xsdmf_id: 7049,
+                    rek_author: 'Montesano, Michael J.',
+                    rek_author_order: 2
+                }
+            ],
+            fez_record_search_key_author_id: [{
+                rek_author_id_id: 28420647,
+                rek_author_id_pid: 'UQ:255472',
+                rek_author_id_xsdmf_id: 7044,
+                rek_author_id: 86825,
+                rek_author_id_order: 1,
+                rek_author_id_lookup: 'Patrick Jory'
+            }],
+            fez_record_search_key_contributor: [],
+            fez_record_search_key_contributor_id: [],
+        }];
+
+        const wrapper = setup({
+            publicationsList: publicationsList
+        });
+        expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual([]);
+    });
+
+    it('should not return unclaimablePublicationsList (number of authors === 0 AND number of contributors !== number of contributor_id)', () => {
+        const navigateToClaimPublication = jest.fn();
+        const setClaimPublication = jest.fn();
+        const actions = {
+            setClaimPublication: setClaimPublication
+        };
+        const history = {
+            push: navigateToClaimPublication
+        };
+        const publicationsList = [{
+            rek_pid: 'UQ:255472',
+            fez_record_search_key_author: [],
+            fez_record_search_key_author_id: [],
+            fez_record_search_key_contributor: [{
+                "rek_contributor_id": 3210380,
+                "rek_contributor_pid": "UQ:795469",
+                "rek_contributor_xsdmf_id": null,
+                "rek_contributor": "El-Hawary, Ron",
+                "rek_contributor_order": 1
+            }, {
+                "rek_contributor_id": 3210381,
+                "rek_contributor_pid": "UQ:795469",
+                "rek_contributor_xsdmf_id": null,
+                "rek_contributor": "Eberson, Craig P.",
+                "rek_contributor_order": 2
+            }],
+            fez_record_search_key_contributor_id: [],
+        }];
+
+        const wrapper = setup({
+            publicationsList: publicationsList
+        });
+        expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual([]);
+    });
+
+    it('should not return unclaimablePublicationsList (found author ids, but one of them is 0)', () => {
+        const navigateToClaimPublication = jest.fn();
+        const setClaimPublication = jest.fn();
+        const actions = {
+            setClaimPublication: setClaimPublication
+        };
+        const history = {
+            push: navigateToClaimPublication
+        };
+
+        const publicationsList = [{
+            rek_pid: "UQ:111111",
+            fez_record_search_key_author: [{
+                    rek_author_id: 29052679,
+                    rek_author_pid: 'UQ:255472',
+                    rek_author_xsdmf_id: 7049,
+                    rek_author: 'Jory, Patrick',
+                    rek_author_order: 1
+                },
+                {
+                    rek_author_id: 29052680,
+                    rek_author_pid: 'UQ:255472',
+                    rek_author_xsdmf_id: 7049,
+                    rek_author: 'Montesano, Michael J.',
+                    rek_author_order: 2
+                }
+            ],
+            fez_record_search_key_author_id: [{
+                    rek_author_id_id: 28420647,
+                    rek_author_id_pid: 'UQ:255472',
+                    rek_author_id_xsdmf_id: 7044,
+                    rek_author_id: 86825,
+                    rek_author_id_order: 1,
+                    rek_author_id_lookup: 'Patrick Jory'
+                },
+                {
+                    rek_author_id_id: 28420648,
+                    rek_author_id_pid: 'UQ:255472',
+                    rek_author_id_xsdmf_id: 7044,
+                    rek_author_id: 0,
+                    rek_author_id_order: 2
+                }
+            ],
+            fez_record_search_key_contributor: [],
+            fez_record_search_key_contributor_id: [],
+        }];
+
+        const wrapper = setup({
+            publicationsList: publicationsList
+        });
+        expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual([]);
+    });
+
+    it('should not return unclaimablePublicationsList (found author ids, but one of them is null)', () => {
+        const navigateToClaimPublication = jest.fn();
+        const setClaimPublication = jest.fn();
+        const actions = {
+            setClaimPublication: setClaimPublication
+        };
+        const history = {
+            push: navigateToClaimPublication
+        };
+
+        const publicationsList = [{
+            rek_pid: "UQ:111111",
+            fez_record_search_key_author: [{
+                    rek_author_id: 29052679,
+                    rek_author_pid: 'UQ:255472',
+                    rek_author_xsdmf_id: 7049,
+                    rek_author: 'Jory, Patrick',
+                    rek_author_order: 1
+                },
+                {
+                    rek_author_id: 29052680,
+                    rek_author_pid: 'UQ:255472',
+                    rek_author_xsdmf_id: 7049,
+                    rek_author: 'Montesano, Michael J.',
+                    rek_author_order: 2
+                }
+            ],
+            fez_record_search_key_author_id: [{
+                    rek_author_id_id: 28420647,
+                    rek_author_id_pid: 'UQ:255472',
+                    rek_author_id_xsdmf_id: 7044,
+                    rek_author_id: 86825,
+                    rek_author_id_order: 1,
+                    rek_author_id_lookup: 'Patrick Jory'
+                },
+                {
+                    rek_author_id_id: 28420648,
+                    rek_author_id_pid: 'UQ:255472',
+                    rek_author_id_xsdmf_id: 7044,
+                    rek_author_id: null,
+                    rek_author_id_order: 2
+                }
+            ],
+            fez_record_search_key_contributor: [],
+            fez_record_search_key_contributor_id: [],
+        }];
+
+        const wrapper = setup({
+            publicationsList: publicationsList
+        });
+        expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual([]);
+    });
+
+    it('should not return unclaimablePublicationsList (found contributor ids, but one of them is 0)', () => {
+        const navigateToClaimPublication = jest.fn();
+        const setClaimPublication = jest.fn();
+        const actions = {
+            setClaimPublication: setClaimPublication
+        };
+        const history = {
+            push: navigateToClaimPublication
+        };
+
+        const publicationsList = [{
+            rek_pid: "UQ:111111",
+            fez_record_search_key_author: [],
+            fez_record_search_key_author_id: [],
+            fez_record_search_key_contributor: [{
+                    rek_contributor_id: 29052679,
+                    rek_contributor_pid: 'UQ:255472',
+                    rek_contributor_xsdmf_id: 7049,
+                    rek_contributor: 'Jory, Patrick',
+                    rek_contributor_order: 1
+                },
+                {
+                    rek_contributor_id: 29052680,
+                    rek_contributor_pid: 'UQ:255472',
+                    rek_contributor_xsdmf_id: 7049,
+                    rek_contributor: 'Montesano, Michael J.',
+                    rek_contributor_order: 2
+                }
+            ],
+            fez_record_search_key_contributor_id: [{
+                    rek_contributor_id_id: 28420647,
+                    rek_contributor_id_pid: 'UQ:255472',
+                    rek_contributor_id_xsdmf_id: 7044,
+                    rek_contributor_id: 86825,
+                    rek_contributor_id_order: 1,
+                    rek_contributor_id_lookup: 'Patrick Jory'
+                },
+                {
+                    rek_contributor_id_id: 28420648,
+                    rek_contributor_id_pid: 'UQ:255472',
+                    rek_contributor_id_xsdmf_id: 7044,
+                    rek_contributor_id: 0,
+                    rek_contributor_id_order: 2
+                }
+            ],
+        }];
+
+        const wrapper = setup({
+            publicationsList: publicationsList
+        });
+        expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual([]);
+    });
+
+    it('should not return unclaimablePublicationsList (found contributor ids, but one of them is null)', () => {
+        const navigateToClaimPublication = jest.fn();
+        const setClaimPublication = jest.fn();
+        const actions = {
+            setClaimPublication: setClaimPublication
+        };
+        const history = {
+            push: navigateToClaimPublication
+        };
+        const publicationsList = [{
+            rek_pid: "UQ:111111",
+            fez_record_search_key_author: [],
+            fez_record_search_key_author_id: [],
+            fez_record_search_key_contributor: [{
+                    rek_contributor_id: 29052679,
+                    rek_contributor_pid: 'UQ:255472',
+                    rek_contributor_xsdmf_id: 7049,
+                    rek_contributor: 'Jory, Patrick',
+                    rek_contributor_order: 1
+                },
+                {
+                    rek_contributor_id: 29052680,
+                    rek_contributor_pid: 'UQ:255472',
+                    rek_contributor_xsdmf_id: 7049,
+                    rek_contributor: 'Montesano, Michael J.',
+                    rek_contributor_order: 2
+                }
+            ],
+            fez_record_search_key_contributor_id: [{
+                    rek_contributor_id_id: 28420647,
+                    rek_contributor_id_pid: 'UQ:255472',
+                    rek_contributor_id_xsdmf_id: 7044,
+                    rek_contributor_id: 86825,
+                    rek_contributor_id_order: 1,
+                    rek_contributor_id_lookup: 'Patrick Jory'
+                },
+                {
+                    rek_contributor_id_id: 28420648,
+                    rek_contributor_id_pid: 'UQ:255472',
+                    rek_contributor_id_xsdmf_id: 7044,
+                    rek_contributor_id: null,
+                    rek_contributor_id_order: 2
+                }
+            ],
+        }];
+
+        const wrapper = setup({
+            publicationsList: publicationsList
+        });
+        expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual([]);
+    });
+
+    it('should return one publication in unclaimablePublicationsList (has rek_pid, number of authors === number of author ids, number of contributors === number of contributos ids, all author ids > 0, all contributor ids > 0)', () => {
+        const navigateToClaimPublication = jest.fn();
+        const setClaimPublication = jest.fn();
+        const actions = {
+            setClaimPublication: setClaimPublication
+        };
+        const history = {
+            push: navigateToClaimPublication
+        };
+        const publicationsList = [{
+            rek_pid: 'UQ:255472',
+            fez_record_search_key_author: [],
+            fez_record_search_key_author_id: [],
+            fez_record_search_key_contributor: [{
+                    rek_contributor_id: 29052679,
+                    rek_contributor_pid: 'UQ:255472',
+                    rek_contributor_xsdmf_id: 7049,
+                    rek_contributor: 'Jory, Patrick',
+                    rek_contributor_order: 1
+                },
+                {
+                    rek_contributor_id: 29052680,
+                    rek_contributor_pid: 'UQ:255472',
+                    rek_contributor_xsdmf_id: 7049,
+                    rek_contributor: 'Montesano, Michael J.',
+                    rek_contributor_order: 2
+                }
+            ],
+            fez_record_search_key_contributor_id: [{
+                    rek_contributor_id_id: 28420647,
+                    rek_contributor_id_pid: 'UQ:255472',
+                    rek_contributor_id_xsdmf_id: 7044,
+                    rek_contributor_id: 86825,
+                    rek_contributor_id_order: 1,
+                    rek_contributor_id_lookup: 'Patrick Jory'
+                },
+                {
+                    rek_contributor_id_id: 28420648,
+                    rek_contributor_id_pid: 'UQ:255472',
+                    rek_contributor_id_xsdmf_id: 7044,
+                    rek_contributor_id: 5481,
+                    rek_contributor_id_order: 2
+                }
+            ],
+        }];
+
+        const wrapper = setup({});
+        expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual(['UQ:255472']);
     });
 });
