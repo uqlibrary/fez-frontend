@@ -76,8 +76,8 @@ describe('Component MenuDrawer', () => {
         const testMethod = jest.fn();
         const wrapper = setup({drawerOpen: true, docked: true, history: {push: testMethod}});
         // TODO: how to spy?
-        // const spy = jest.spyOn(wrapper.find('div#afterMenuDrawer'), 'focus');
-        // wrapper.find('SkipNavigation').props().onClick();
+        // const spy = jest.spyOn(wrapper.find('#afterMenuDrawer').getElement(), 'focus');
+        // wrapper.find('#skipNav').simulate('click');
         // expect(spy).toHaveBeenCalled();
     });
 
@@ -86,6 +86,14 @@ describe('Component MenuDrawer', () => {
         const testMethod = jest.fn();
         const wrapper = setup({drawerOpen: true, docked: true, history: {push: testMethod}});
         expect(toJson(wrapper.find('.mainMenuFooter'))).toMatchSnapshot();
+    });
+
+    it('should call the lifecycle method of the component if props change', () => {
+        const testFunction = jest.fn();
+        const wrapper = setup({drawerOpen: true, docked: true});
+        wrapper.instance().shouldComponentUpdate = testFunction;
+        wrapper.setProps({docked: false});
+        expect(testFunction).toBeCalled();
     });
 
 });
