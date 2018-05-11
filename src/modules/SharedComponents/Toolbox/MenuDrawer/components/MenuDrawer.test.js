@@ -1,76 +1,43 @@
-import { mount } from 'enzyme';
-import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import {Provider} from 'react-redux';
-import Immutable from 'immutable';
 import MenuDrawer from './MenuDrawer';
 
-const create = () => {
-    const initialState = Immutable.Map();
+const defaultMenuItems = [
+    {
+        linkTo: '/',
+        primaryText: 'Primary text 0',
+        secondaryText: 'secondary text 0'
+    },
+    {
+        divider: true
+    },
+    {
+        linkTo: '/xyz',
+        primaryText: 'Primary text 1',
+        secondaryText: 'secondary text 1'
+    }
+];
 
-    const store = {
-        getState: jest.fn(() => (initialState)),
-        dispatch: jest.fn(),
-        subscribe: jest.fn()
-    };
-    const next = jest.fn();
-    const invoke = (action) => thunk(store)(next)(action);
-    return {store, next, invoke}
+const defaultLocale = {
+    skipNavTitle: 'Skip navigation',
+    skipNavAriaLabel: 'Skip navigation',
+    closeMenuLabel: 'Close menu'
 };
 
-function setup({isShallow = true, ...props}) {
-    // {menuItems, onToggleDrawer, drawerOpen, docked, logoImage, logoText, history, locale}
-    const defaultMenuItems = [
-        {
-            linkTo: '/',
-            primaryText: 'Primary text 0',
-            secondaryText: 'secondary text 0'
-        },
-        {
-            divider: true
-        },
-        {
-            linkTo: '/xyz',
-            primaryText: 'Primary text 1',
-            secondaryText: 'secondary text 1'
-        }
-    ];
-    const defaultLocale = {
-        skipNavTitle: 'Skip navigation',
-        skipNavAriaLabel: 'Skip navigation',
-        closeMenuLabel: 'Close menu'
+function setup(testProps, isShallow = true) {
+    // build full props list required by the component
+    const props = {
+        ...testProps,
+        menuItems: testProps.menuItems || defaultMenuItems,
+        onToggleDrawer: testProps.onToggleDrawer || jest.fn(),
+        history: testProps.history || {push: jest.fn()},
+        locale: testProps.locale || defaultLocale,
+        drawerOpen: testProps.drawerOpen || false,
+        docked: testProps.docked || false
     };
-    const testProps = {
-        ...props,
-        menuItems: props.menuItems || defaultMenuItems,
-        onToggleDrawer: props.onToggleDrawer || jest.fn(),
-        history: props.history || {push: jest.fn()},
-        locale: props.locale || defaultLocale,
-        drawerOpen: props.drawerOpen || false,
-        docked: props.docked || false
-    };
-
-    if (!isShallow) {
-        return mount(
-            <Provider store={create().store}>
-                <MenuDrawer {...testProps} />
-            </Provider>, {
-                context: {
-                    muiTheme: getMuiTheme()
-                },
-                childContextTypes: {
-                    muiTheme: PropTypes.object.isRequired
-                }
-            });
-    }
-
-    return shallow(<MenuDrawer {...testProps} />);
+    return getElement(MenuDrawer, props, isShallow);
 }
 
-describe('MenuDrawer snapshots tests', () => {
+describe('Component MenuDrawer', () => {
+
     it('should render empty drawer', () => {
         const wrapper = setup({});
         const tree = toJson(wrapper);
@@ -79,6 +46,12 @@ describe('MenuDrawer snapshots tests', () => {
 
     it('should render opened drawer with menus, divider', () => {
         const wrapper = setup({drawerOpen: true});
+        const tree = toJson(wrapper);
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('should render opened drawer with menus, divider and skip nav button', () => {
+        const wrapper = setup({drawerOpen: true, docked: true});
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
@@ -107,6 +80,12 @@ describe('MenuDrawer snapshots tests', () => {
         // wrapper.find('SkipNavigation').props().onClick();
         // expect(spy).toHaveBeenCalled();
     });
+
+
+    it('should render CRICOS footer', () => {
+        const testMethod = jest.fn();
+        const wrapper = setup({drawerOpen: true, docked: true, history: {push: testMethod}});
+        expect(toJson(wrapper.find('.mainMenuFooter'))).toMatchSnapshot();
+    });
+
 });
-
-

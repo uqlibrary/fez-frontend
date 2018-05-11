@@ -6,6 +6,8 @@ import Drawer from 'material-ui/Drawer';
 import IconButton from 'material-ui/IconButton';
 import HardwareKeyboardArrowLeft from 'material-ui/svg-icons/hardware/keyboard-arrow-left';
 import RaisedButton from 'material-ui/RaisedButton';
+import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
+import {default as menuLocale} from 'locale/menu';
 
 export default class MenuDrawer extends Component {
     static propTypes = {
@@ -72,6 +74,7 @@ export default class MenuDrawer extends Component {
         )))
 
     render() {
+        const txt = menuLocale.footer;
         const {menuItems, onToggleDrawer, drawerOpen, docked, logoImage,
             logoText, locale } = this.props;
 
@@ -123,6 +126,9 @@ export default class MenuDrawer extends Component {
                             }
                         </List>
                         <div id="afterMenuDrawer" tabIndex={-1}/>
+                        <div className="mainMenuFooter">
+                            {txt.cricos.prefix}<ExternalLink href={txt.cricos.link} openInNewIcon={false} >{txt.cricos.number}</ExternalLink>
+                        </div>
                     </div>
                 }
             </Drawer>
