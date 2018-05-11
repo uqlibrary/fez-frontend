@@ -139,19 +139,6 @@ exports[`Application component should render alert if user is not fez author 1`]
       ]
     }
   />
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "Cancel",
-        "confirmButtonLabel": "Redirect to login",
-        "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
-        "confirmationTitle": "Session Expired",
-      }
-    }
-    onAction={[Function]}
-    onRef={[Function]}
-  />
   <AppBar
     className="AppBar align-center"
     iconElementLeft={
@@ -600,19 +587,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       ]
     }
   />
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "Cancel",
-        "confirmButtonLabel": "Redirect to login",
-        "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
-        "confirmationTitle": "Session Expired",
-      }
-    }
-    onAction={[Function]}
-    onRef={[Function]}
-  />
   <AppBar
     className="AppBar align-center"
     iconElementLeft={
@@ -942,19 +916,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       ]
     }
   />
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "Cancel",
-        "confirmButtonLabel": "Redirect to login",
-        "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
-        "confirmationTitle": "Session Expired",
-      }
-    }
-    onAction={[Function]}
-    onRef={[Function]}
-  />
   <AppBar
     className="AppBar align-center"
     iconElementLeft={
@@ -1256,19 +1217,6 @@ exports[`Application component should render app for account with fez author wit
         },
       ]
     }
-  />
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "Cancel",
-        "confirmButtonLabel": "Redirect to login",
-        "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
-        "confirmationTitle": "Session Expired",
-      }
-    }
-    onAction={[Function]}
-    onRef={[Function]}
   />
   <AppBar
     className="AppBar align-center"
@@ -1701,19 +1649,6 @@ exports[`Application component should render app for account with fez author wit
         },
       ]
     }
-  />
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "Cancel",
-        "confirmButtonLabel": "Redirect to login",
-        "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
-        "confirmationTitle": "Session Expired",
-      }
-    }
-    onAction={[Function]}
-    onRef={[Function]}
   />
   <AppBar
     className="AppBar align-center"
@@ -2165,19 +2100,6 @@ exports[`Application component should render app for account with fez author wit
       ]
     }
   />
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "Cancel",
-        "confirmButtonLabel": "Redirect to login",
-        "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
-        "confirmationTitle": "Session Expired",
-      }
-    }
-    onAction={[Function]}
-    onRef={[Function]}
-  />
   <AppBar
     className="AppBar align-center"
     iconElementLeft={
@@ -2549,19 +2471,6 @@ exports[`Application component should render application with routing for the us
       ]
     }
   />
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "Cancel",
-        "confirmButtonLabel": "Redirect to login",
-        "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
-        "confirmationTitle": "Session Expired",
-      }
-    }
-    onAction={[Function]}
-    onRef={[Function]}
-  />
   <AppBar
     className="AppBar align-center"
     iconElementLeft={
@@ -2731,19 +2640,6 @@ exports[`Application component should render for anon user 1`] = `
         },
       ]
     }
-  />
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "Cancel",
-        "confirmButtonLabel": "Redirect to login",
-        "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
-        "confirmationTitle": "Session Expired",
-      }
-    }
-    onAction={[Function]}
-    onRef={[Function]}
   />
   <AppBar
     className="AppBar align-center"
@@ -2944,19 +2840,6 @@ exports[`Application component should render thesis submission for HDR without m
         },
       ]
     }
-  />
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "Cancel",
-        "confirmButtonLabel": "Redirect to login",
-        "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
-        "confirmationTitle": "Session Expired",
-      }
-    }
-    onAction={[Function]}
-    onRef={[Function]}
   />
   <AppBar
     className="AppBar align-center"

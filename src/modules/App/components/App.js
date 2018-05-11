@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
 import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
 import {locale} from 'locale';
-import {default as formLocale} from 'locale/publicationForm';
 
 // application components
 import AppBar from 'material-ui/AppBar';
@@ -20,7 +19,6 @@ import {OfflineSnackbar} from 'modules/SharedComponents/OfflineSnackbar';
 import * as pages from './pages';
 import IconButton from 'material-ui/IconButton';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
-import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
 export default class App extends PureComponent {
     static propTypes = {
@@ -96,10 +94,6 @@ export default class App extends PureComponent {
         }
     };
 
-    setSessionExpiredConfirmation = (ref) => {
-        this.sessionExpiredConfirmationBox = ref;
-    };
-
     render() {
         // display loader while user account is loading
         if (this.props.accountLoading) {
@@ -130,7 +124,8 @@ export default class App extends PureComponent {
         const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
 
         if (!isAuthorizedUser && isThesisSubmissionPage) {
-            this.sessionExpiredConfirmationBox.showConfirmation();
+            this.redirectUserToLogin()();
+            return (<div/>);
         }
 
         let userStatusAlert = null;
@@ -166,11 +161,6 @@ export default class App extends PureComponent {
         return (
             <div className="layout-fill align-stretch">
                 <Meta routesConfig={routesConfig} />
-                <ConfirmDialogBox
-                    onRef={this.setSessionExpiredConfirmation}
-                    onAction={this.redirectUserToLogin()}
-                    locale={formLocale.thesisSubmission.sessionExpiredConfirmation}
-                />
                 <AppBar
                     className="AppBar align-center"
                     showMenuIconButton={showMenu && !this.state.docked}
