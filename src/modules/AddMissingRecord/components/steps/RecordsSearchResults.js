@@ -68,14 +68,22 @@ export default class RecordsSearchResults extends PureComponent {
                 if (
                     item.fez_record_search_key_contributor_id.length > 0 &&
                     item.fez_record_search_key_contributor_id
-                        .reduce((total, item) => (total || item.rek_contributor_id === 0 || item.rek_contributor_id === null), false)
+                        .reduce((total, item) => (
+                            total ||
+                            item.rek_contributor_id === 0 ||
+                            item.rek_contributor_id === null
+                        ), false)
                 ) return false;
 
                 // If the item has had authors assigned, but have unclaimed/unassigned ie. id = 0 or null
                 if (
                     item.fez_record_search_key_author_id.length > 0 &&
                     item.fez_record_search_key_author_id
-                        .reduce((total, item) => (total || item.rek_author_id === 0 || item.rek_author_id === null))
+                        .reduce((total, item) => (
+                            total ||
+                            item.rek_author_id === 0 ||
+                            item.rek_author_id === null
+                        ), false)
                 ) return false;
 
 
