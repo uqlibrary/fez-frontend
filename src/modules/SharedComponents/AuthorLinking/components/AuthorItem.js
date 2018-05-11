@@ -72,7 +72,7 @@ export default class AuthorItem extends PureComponent {
 
         return (
             <div className="column is-one-third-desktop is-one-third-tablet is-full-mobile">
-                <div className="authorButton">
+                <div className="author-button">
                     <FlatButton
                         label={authorName}
                         onClick={(!linked && !selected) ? this._selectAuthor : undefined}
