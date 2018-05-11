@@ -30,7 +30,9 @@ export default class ThesisSubmission extends Component {
         author: PropTypes.object,
         isHdrThesis: PropTypes.bool, // HDR thesis if true or SBS thesis if false
         disableSubmit: PropTypes.bool,
-        fileAccessId: PropTypes.number
+        fileAccessId: PropTypes.number,
+        logout: PropTypes.func,
+        checkSession: PropTypes.func
     };
 
     static contextTypes = {
@@ -39,6 +41,12 @@ export default class ThesisSubmission extends Component {
 
     constructor(props) {
         super(props);
+    }
+
+    deposit = () => {
+        this.props.checkSession()
+            .then(() => this.openDepositConfirmation())
+            .catch(() => this.openSessionExpiredConfirmation());
     }
 
     cancelSubmit = () => {
@@ -53,8 +61,16 @@ export default class ThesisSubmission extends Component {
         this.depositConfirmationBox.showConfirmation();
     };
 
+    openSessionExpiredConfirmation = () => {
+        this.sessionExpiredConfirmationBox.showConfirmation();
+    };
+
     setDepositConfirmation = (ref) => {
         this.depositConfirmationBox = ref;
+    };
+
+    setSessionExpiredConfirmation = (ref) => {
+        this.sessionExpiredConfirmationBox = ref;
     };
 
     render() {
@@ -105,6 +121,12 @@ export default class ThesisSubmission extends Component {
                         onRef={this.setDepositConfirmation}
                         onAction={this.props.handleSubmit}
                         locale={formLocale.thesisSubmission.depositConfirmation}
+                    />
+
+                    <ConfirmDialogBox
+                        onRef={this.setSessionExpiredConfirmation}
+                        onAction={this.props.logout}
+                        locale={formLocale.thesisSubmission.sessionExpiredConfirmation}
                     />
 
                     <StandardCard title={txt.information.title} help={txt.information.help}>
@@ -235,7 +257,7 @@ export default class ThesisSubmission extends Component {
                                 secondary
                                 fullWidth
                                 label={formLocale.thesisSubmission.submit}
-                                onClick={this.openDepositConfirmation}
+                                onClick={this.deposit}
                                 disabled={this.props.submitting || this.props.disableSubmit}/>
                         </div>
                     </div>

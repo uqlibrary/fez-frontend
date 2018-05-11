@@ -1,5 +1,5 @@
 /* eslint-disable */
-import {api} from 'config';
+import {api, sessionApi} from 'config';
 import MockAdapter from 'axios-mock-adapter';
 import Cookies from 'js-cookie';
 import {SESSION_COOKIE_NAME} from 'config';
@@ -8,6 +8,7 @@ import * as mockData from './data';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api, {delayResponse: 200});
+const mockSessionApi = new MockAdapter(sessionApi, {delayResponse: 200});
 const escapeRegExp = (input) => (input.replace('.\\*', '.*').replace(/[\-\[\]\{\}\(\)\+\?\\\^\$\|]/g, "\\$&"));
 const standardQueryString = {page: '.*', pageSize: '.*', sortBy: '.*', sortDirection: '.*', facets: {}};
 // set session cookie in mock mode
@@ -23,6 +24,20 @@ if (user && !mockData.accounts[user]) {
 // default user is researcher if user is not defined
 user = user || 'uqresearcher';
 
+/*
+ * Mocking CURRENT_ACCOUNT_API endpoint to check session with different instance of API
+ * for thesis submissions for now
+ */
+mockSessionApi
+    .onGet(routes.CURRENT_ACCOUNT_API().apiUrl).reply(config => {
+    // mock account response
+    if (user === 's2222222') {
+        return [403, {}];
+    } else if (mockData.accounts[user]) {
+        return [200, mockData.accounts[user]];
+    }
+    return [404, {}];
+});
 
 mock
     .onGet(routes.CURRENT_ACCOUNT_API().apiUrl).reply(config => {

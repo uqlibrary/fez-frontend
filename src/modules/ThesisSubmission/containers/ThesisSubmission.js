@@ -2,14 +2,16 @@ import {connect} from 'react-redux';
 import {reduxForm, getFormValues, SubmissionError, getFormSyncErrors} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import ThesisSubmission from '../components/ThesisSubmission';
-import {submitThesis} from 'actions';
+import {submitThesis, checkSession, logout} from 'actions';
 import {general} from 'config';
+import {bindActionCreators} from 'redux';
 
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 
 const FORM_NAME = 'ThesisSubmission';
 
 const onSubmit = (values, dispatch, props) => {
+    // dispatch(checkSession());
     return dispatch(submitThesis({...values.toJS()}, props.author))
         .then(() => {
             // console.log(record);
@@ -59,6 +61,11 @@ const mapStateToProps = (state, props) => {
     };
 };
 
-ThesisSubmissionContainer = connect(mapStateToProps)(ThesisSubmissionContainer);
+const mapDispatchToProps = (dispatch) => ({
+    actions: bindActionCreators(logout, dispatch),
+    checkSession: bindActionCreators(checkSession, dispatch)
+});
+
+ThesisSubmissionContainer = connect(mapStateToProps, mapDispatchToProps)(ThesisSubmissionContainer);
 
 export default ThesisSubmissionContainer;

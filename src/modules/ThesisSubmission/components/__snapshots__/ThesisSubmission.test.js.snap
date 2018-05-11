@@ -110,6 +110,18 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
       }
       onRef={[Function]}
     />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Redirect to login",
+          "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
+          "confirmationTitle": "Session Expired",
+        }
+      }
+      onRef={[Function]}
+    />
     <StandardCard
       className=""
       title="Thesis information"
@@ -609,6 +621,18 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
           "confirmButtonLabel": "Yes, deposit thesis",
           "confirmationMessage": "You are about to deposit your thesis with attached files. Are you sure you want to proceed?",
           "confirmationTitle": "Thesis deposit",
+        }
+      }
+      onRef={[Function]}
+    />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Redirect to login",
+          "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
+          "confirmationTitle": "Session Expired",
         }
       }
       onRef={[Function]}

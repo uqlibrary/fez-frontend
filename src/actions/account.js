@@ -2,6 +2,7 @@ import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
 import * as routes from 'repositories/routes';
 import Raven from 'raven-js';
+import {sessionApi} from 'config';
 
 /**
  * Loads the user's account and author details into the application
@@ -70,5 +71,11 @@ export function loadCurrentAccount() {
 export function logout() {
     return dispatch => {
         dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
+    };
+}
+
+export function checkSession() {
+    return () => {
+        return sessionApi.get(routes.CURRENT_ACCOUNT_API().apiUrl);
     };
 }
