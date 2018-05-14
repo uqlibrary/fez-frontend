@@ -51,7 +51,9 @@ export default class RelatedPublications extends PureComponent {
 
     renderSubList = (subList, searchKey) => {
         return (
-            subList.sort((item1, item2) => (
+            subList.filter(item => (
+                item[searchKey.title] && item[searchKey.title].trim().length > 0
+            )).sort((item1, item2) => (
                 item1[searchKey.order] - item2[searchKey.order]
             )).map((item, index)=> {
                 return (

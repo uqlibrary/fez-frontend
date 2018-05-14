@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import Checkbox from 'material-ui/Checkbox';
 import AuthorItem from './AuthorItem';
 import Infinite from 'react-infinite';
 
-export default class AuthorLinking extends React.Component {
+export default class AuthorLinking extends PureComponent {
     static contextTypes = {
         isMobile: PropTypes.bool
     };
@@ -77,7 +77,11 @@ export default class AuthorLinking extends React.Component {
      */
     getAuthorsToRender = ({authorList, linkedAuthorIdList, disabled} = {}, {selectedAuthor = {}} = {}) => {
         const authors = authorList.map((author, index) => {
-            const linked = linkedAuthorIdList.length > 0 && linkedAuthorIdList[index][this.props.searchKey.value] !== 0;
+            const linked = (
+                linkedAuthorIdList.length > 0 &&
+                linkedAuthorIdList[index][this.props.searchKey.value] !== null &&
+                linkedAuthorIdList[index][this.props.searchKey.value] !== 0
+            );
             const selected = (selectedAuthor && (author[`rek_${this.props.searchKey.type}_order`] === selectedAuthor[`rek_${this.props.searchKey.type}_id_order`]));
             return (
                 <AuthorItem

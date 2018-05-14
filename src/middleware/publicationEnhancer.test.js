@@ -47,26 +47,14 @@ describe('publication enhancer', () => {
 
     it('should add a method to a list of publication to calculate open access for trending publications', () => {
         const payload = {
-            total: 2,
             data: [
                 {rek_pid: 'UQ:1234', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract'},
                 {rek_pid: 'UQ:1235', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract'}
-            ],
-            filters: {
-                metrics: {
-                    altmetric: [
-                        {rek_pid: 'UQ:1234'}
-                    ],
-                    thomson: [
-                        {rek_pid: 'UQ:1235'}
-                    ]
-                }
-            }
+            ]
         };
 
         const next = jest.fn();
         const expectedPayload = {
-            total: 2,
             data: [
                 {
                     rek_pid: 'UQ:1234',
@@ -84,23 +72,13 @@ describe('publication enhancer', () => {
                     "rek_formatted_title": null,
                     "calculateOpenAccess": expect.any(Function)
                 },
-            ],
-            filters: {
-                metrics: {
-                    altmetric: [
-                        {rek_pid: 'UQ:1234'}
-                    ],
-                    thomson: [
-                        {rek_pid: 'UQ:1235'}
-                    ]
-                }
-            }
+            ]
         };
-        publicationEnhancer()(next)({type: 'TRENDING_PUBLICATIONS_LOADED', payload: payload});
+        publicationEnhancer()(next)({type: 'TRENDING_PUBLICATIONS_LOADED@altmetric', payload: payload});
 
         expect(next).toBeCalledWith(expect.objectContaining({
             "payload": expectedPayload,
-            "type": "TRENDING_PUBLICATIONS_LOADED"
+            "type": "TRENDING_PUBLICATIONS_LOADED@altmetric"
         }));
     });
 

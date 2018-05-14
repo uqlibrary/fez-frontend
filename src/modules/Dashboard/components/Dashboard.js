@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
+
+import {Tabs, Tab} from 'material-ui/Tabs';
 
 import {AuthorsPublicationsPerYearChart} from 'modules/SharedComponents/Toolbox/Charts';
 import {AuthorsPublicationTypesCountChart} from 'modules/SharedComponents/Toolbox/Charts';
@@ -8,16 +10,15 @@ import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 
-import DashboardAuthorProfile from './DashboardAuthorProfile';
-import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
-import {PublicationStats} from 'modules/SharedComponents/PublicationStats';
 import {MyTrendingPublications} from 'modules/SharedComponents/MyTrendingPublications';
-import RaisedButton from 'material-ui/RaisedButton';
-import {Tabs, Tab} from 'material-ui/Tabs';
+import {MyLatestPublications} from 'modules/SharedComponents/MyLatestPublications';
+import DashboardAuthorProfile from './DashboardAuthorProfile';
+import {PublicationStats} from 'modules/SharedComponents/PublicationStats';
+
 import {routes} from 'config';
 import {locale} from 'locale';
 
-class Dashboard extends React.Component {
+class Dashboard extends PureComponent {
     static propTypes = {
         // account data
         account: PropTypes.object.isRequired,
@@ -39,10 +40,9 @@ class Dashboard extends React.Component {
         loadingPublicationsStats: PropTypes.bool,
         publicationsStats: PropTypes.object,
 
-        // author's latest publications
-        loadingLatestPublications: PropTypes.bool,
-        latestPublicationsList: PropTypes.array,
-        totalPublicationsCount: PropTypes.number,
+        // show latest/trending publications tab
+        showLatestPublicationsTab: PropTypes.bool,
+        showTrendingPublicationsTab: PropTypes.bool,
 
         // navigations, app actions
         actions: PropTypes.object.isRequired,
@@ -57,15 +57,8 @@ class Dashboard extends React.Component {
         if (this.props.account && this.props.account.id) {
             this.props.actions.countPossiblyYourPublications(this.props.account.id);
             this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
-            this.props.actions.searchLatestPublications(this.props.account.id);
         }
     }
-
-    shouldComponentUpdate(nextProps) {
-        return !(nextProps.loadingPublicationsByYear || nextProps.accountAuthorDetailsLoading
-            || nextProps.loadingPublicationsStats || nextProps.loadingLatestPublications);
-    }
-
     _claimYourPublications = () => {
         this.props.history.push(routes.pathConfig.records.possible);
     };
@@ -74,14 +67,13 @@ class Dashboard extends React.Component {
         this.props.history.push(routes.pathConfig.records.add.find);
     };
 
-    _viewYourResearch = () => {
-        this.props.history.push(routes.pathConfig.records.mine);
-    };
-
     render() {
         const txt = locale.pages.dashboard;
-        const loading = this.props.loadingPublicationsByYear || this.props.accountAuthorDetailsLoading
-            || this.props.loadingPublicationsStats || this.props.loadingLatestPublications;
+        const loading = (
+            this.props.loadingPublicationsByYear ||
+            this.props.accountAuthorDetailsLoading ||
+            this.props.loadingPublicationsStats
+        );
         const barChart = !loading && this.props.publicationsByYear && this.props.publicationsByYear.series.length > 0
             ? (
                 <StandardCard className="barChart" title={txt.publicationsByYearChart.title}>
@@ -188,35 +180,23 @@ class Dashboard extends React.Component {
                     </div>
                 }
                 {
-                    !loading
-                    && ((this.props.latestPublicationsList && this.props.latestPublicationsList.length > 0)) &&
+                    !loading && (this.props.showLatestPublicationsTab || this.props.showTrendingPublicationsTab) &&
                     <StandardCard className="card-paddingless">
-                        <Tabs className="publicationTabs"
-                            inkBarStyle={{height: '4px', marginTop: '-4px'}}>
+                        <Tabs className="publicationTabs" inkBarStyle={{height: '4px', marginTop: '-4px'}}>
                             {
-                                this.props.latestPublicationsList.length > 0 &&
-                                <Tab label={txt.myPublications.title} value="myPublications"
-                                    className="publicationTabs">
-                                    <div style={{padding: '12px 24px'}}>
-                                        <PublicationsList
-                                            publicationsList={this.props.latestPublicationsList}
-                                            showDefaultActions/>
-                                        <div className="columns">
-                                            <div className="column is-hidden-mobile"/>
-                                            <div className="column is-narrow">
-                                                <RaisedButton
-                                                    secondary
-                                                    label={`${txt.myPublications.viewAllButtonLabel} (${this.props.totalPublicationsCount})`}
-                                                    onTouchTap={this._viewYourResearch}/>
-                                            </div>
-                                        </div>
+                                this.props.showLatestPublicationsTab &&
+                                <Tab label={txt.myLatestPublications.title} value="myPublications" className="publicationTabs">
+                                    <div className="publicationTabContent">
+                                        <MyLatestPublications/>
                                     </div>
                                 </Tab>
                             }
                             {
-                                <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications"
-                                    className="publicationTabs">
-                                    <MyTrendingPublications/>
+                                this.props.showTrendingPublicationsTab &&
+                                <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications" className="publicationTabs">
+                                    <div className="publicationTabContent">
+                                        <MyTrendingPublications/>
+                                    </div>
                                 </Tab>
                             }
                         </Tabs>

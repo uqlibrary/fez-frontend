@@ -19,7 +19,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with customised loca
             fullWidth={true}
             label="ENG: No"
             labelPosition="after"
-            onTouchTap={[Function]}
+            onClick={[Function]}
             primary={false}
             secondary={false}
           />
@@ -34,7 +34,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with customised loca
             keyboardFocused={true}
             label="ENG: Yes"
             labelPosition="after"
-            onTouchTap={[Function]}
+            onClick={[Function]}
             primary={false}
             secondary={true}
           />
@@ -76,7 +76,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes 1`] = `
             keyboardFocused={true}
             label="Yes"
             labelPosition="after"
-            onTouchTap={[Function]}
+            onClick={[Function]}
             primary={false}
             secondary={true}
           />
@@ -117,7 +117,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no buttons 
             fullWidth={true}
             label="No"
             labelPosition="after"
-            onTouchTap={[Function]}
+            onClick={[Function]}
             primary={false}
             secondary={false}
           />
@@ -132,7 +132,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no buttons 
             keyboardFocused={true}
             label="Yes"
             labelPosition="after"
-            onTouchTap={[Function]}
+            onClick={[Function]}
             primary={false}
             secondary={true}
           />

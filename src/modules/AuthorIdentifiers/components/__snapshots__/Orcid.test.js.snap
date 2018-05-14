@@ -56,7 +56,7 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
           fullWidth={true}
           label="Link your existing ORCID iD"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={true}
         />
@@ -91,7 +91,7 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
           fullWidth={true}
           label="Create a new ORCID iD"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={true}
         />
@@ -157,7 +157,7 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
           fullWidth={true}
           label="Link your existing ORCID iD"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={true}
         />
@@ -192,7 +192,7 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
           fullWidth={true}
           label="Create a new ORCID iD"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={true}
         />
@@ -249,7 +249,7 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
           fullWidth={true}
           label="Link your existing ORCID iD"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={true}
         />
@@ -284,7 +284,7 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
           fullWidth={true}
           label="Create a new ORCID iD"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onClick={[Function]}
           primary={false}
           secondary={true}
         />

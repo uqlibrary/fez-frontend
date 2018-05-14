@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -10,7 +10,7 @@ import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {validation, routes} from 'config';
 import {locale} from 'locale';
 
-export default class NewRecord extends React.Component {
+export default class NewRecord extends PureComponent {
     static propTypes = {
         actions: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,

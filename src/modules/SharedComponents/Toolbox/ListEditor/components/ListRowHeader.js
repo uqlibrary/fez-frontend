@@ -51,7 +51,7 @@ export default class ListRowHeader extends Component {
                 <div className="column is-narrow buttons datalist-buttons">
                     <IconButton
                         tooltip={deleteAll}
-                        onTouchTap={this.showConfirmation}
+                        onClick={this.showConfirmation}
                         disabled={this.props.disabled}>
                         <FontIcon className="material-icons">delete_forever</FontIcon>
                     </IconButton>

@@ -553,7 +553,7 @@ exports[`Component PublicationForm should render component initialised with just
         fullWidth={true}
         label="Abandon and search again"
         labelPosition="after"
-        onTouchTap={[MockFunction]}
+        onClick={[MockFunction]}
         primary={false}
         secondary={false}
       />
@@ -1140,7 +1140,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
         fullWidth={true}
         label="Abandon and search again"
         labelPosition="after"
-        onTouchTap={[MockFunction]}
+        onClick={[MockFunction]}
         primary={false}
         secondary={false}
       />
@@ -1738,7 +1738,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
         fullWidth={true}
         label="Abandon and search again"
         labelPosition="after"
-        onTouchTap={[MockFunction]}
+        onClick={[MockFunction]}
         primary={false}
         secondary={false}
       />
@@ -2337,7 +2337,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
         fullWidth={true}
         label="Abandon and search again"
         labelPosition="after"
-        onTouchTap={[MockFunction]}
+        onClick={[MockFunction]}
         primary={false}
         secondary={false}
       />
@@ -2935,7 +2935,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
         fullWidth={true}
         label="Abandon and search again"
         labelPosition="after"
-        onTouchTap={[MockFunction]}
+        onClick={[MockFunction]}
         primary={false}
         secondary={false}
       />
@@ -3517,7 +3517,7 @@ exports[`Component PublicationForm should render component with all fields disab
         fullWidth={true}
         label="Abandon and search again"
         labelPosition="after"
-        onTouchTap={[MockFunction]}
+        onClick={[MockFunction]}
         primary={false}
         secondary={false}
       />

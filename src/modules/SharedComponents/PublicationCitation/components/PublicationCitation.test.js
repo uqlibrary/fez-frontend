@@ -60,15 +60,6 @@ describe('PublicationCitation ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should check if props changed', () => {
-        const wrapper = setup({});
-        let shouldUpdate = wrapper.instance().shouldComponentUpdate({publication: {...mockRecordToFix, "sources": [{source: "espace", id: "UQ:224457"}]}});
-        expect(shouldUpdate).toBeTruthy();
-
-        shouldUpdate = wrapper.instance().shouldComponentUpdate({publication: {...mockRecordToFix}});
-        expect(shouldUpdate).toBeFalsy();
-    });
-
     it('should handle view record link', () => {
         const wrapper = setup({});
         wrapper.instance().viewRecord();

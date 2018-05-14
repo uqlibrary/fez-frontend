@@ -51,7 +51,7 @@ exports[`Component OfflineSnackbar renders back online snackbar 1`] = `
         />
       </div>
     }
-    onActionTouchTap={[Function]}
+    onActionClick={[Function]}
     onRequestClose={[Function]}
     open={true}
   />
@@ -86,7 +86,7 @@ exports[`Component OfflineSnackbar renders hidden (open: false) snackbar 1`] = `
         />
       </div>
     }
-    onActionTouchTap={[Function]}
+    onActionClick={[Function]}
     onRequestClose={[Function]}
     open={false}
   />
@@ -121,7 +121,7 @@ exports[`Component OfflineSnackbar renders offline snackbar 1`] = `
         />
       </div>
     }
-    onActionTouchTap={[Function]}
+    onActionClick={[Function]}
     onRequestClose={[Function]}
     open={true}
   />

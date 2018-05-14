@@ -5,8 +5,8 @@ import * as actions from 'actions';
 
 const mapStateToProps = (state) => {
     return {
-        ...state.get('accountReducer'),
         ...state.get('myTrendingPublicationsReducer'),
+        accountAuthorDetailsLoading: state.get('accountReducer').accountAuthorDetailsLoading
     };
 };
 

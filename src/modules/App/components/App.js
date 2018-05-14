@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
 import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
@@ -20,7 +20,7 @@ import * as pages from './pages';
 import IconButton from 'material-ui/IconButton';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
-export default class App extends React.PureComponent {
+export default class App extends PureComponent {
     static propTypes = {
         account: PropTypes.object,
         author: PropTypes.object,
@@ -61,14 +61,6 @@ export default class App extends React.PureComponent {
         this.props.actions.loadCurrentAccount();
         this.handleResize(this.state.mediaQuery);
         this.state.mediaQuery.addListener(this.handleResize);
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return this.props.accountLoading !== nextProps.accountLoading
-            || this.props.accountAuthorLoading !== nextProps.accountAuthorLoading
-            || this.props.location !== nextProps.location
-            || this.props.history !== nextState.history
-            || this.state !== nextState;
     }
 
     componentWillUnmount() {
@@ -176,7 +168,7 @@ export default class App extends React.PureComponent {
                     iconStyleLeft={{marginTop: 0}}
                     title={locale.global.title}
                     titleStyle={titleStyle}
-                    onLeftIconButtonTouchTap={this.toggleDrawer}
+                    onLeftIconButtonClick={this.toggleDrawer}
                     iconElementLeft={
                         <IconButton
                             tooltip={locale.global.mainNavButton.tooltip}

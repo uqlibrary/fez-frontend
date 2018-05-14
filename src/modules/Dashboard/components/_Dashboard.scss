@@ -140,6 +140,10 @@
   }
 }
 
+.publicationTabContent {
+  padding: 12px 24px;
+}
+
 // Mobile
 @include mobile {
   .possiblePublicationLure {

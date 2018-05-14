@@ -13,7 +13,7 @@ export default function StandardPage({title, className, children}) {
 }
 
 StandardPage.propTypes = {
-    title: PropTypes.string,
+    title: PropTypes.any,
     className: PropTypes.string,
     children: PropTypes.any
 };

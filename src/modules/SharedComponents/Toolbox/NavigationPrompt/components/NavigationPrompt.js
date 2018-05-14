@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {withRouter} from 'react-router-dom';
 
@@ -8,7 +8,7 @@ import {withRouter} from 'react-router-dom';
  *
  * https://gist.github.com/bummzack/a586533607ece482475e0c211790dd50
  */
-export class NavigationPrompt extends React.Component {
+export class NavigationPrompt extends PureComponent {
     static propTypes = {
         when: PropTypes.bool.isRequired,
         children: PropTypes.func.isRequired,

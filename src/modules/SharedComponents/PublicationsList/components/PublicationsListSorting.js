@@ -117,9 +117,10 @@ export default class PublicationsListSorting extends PureComponent {
         const txt = locale.components.sorting;
         return (
             <div className="publicationsListSorting columns is-gapless is-mobile">
-                <div className="column is-6-mobile">
+                <div className="column">
                     <SelectField
                         id="sortBy"
+                        fullWidth
                         maxHeight={250}
                         onChange={this.sortByChanged}
                         value={this.state.sortBy}
@@ -132,8 +133,8 @@ export default class PublicationsListSorting extends PureComponent {
                         }
                     </SelectField>
                 </div>
-                <div className="column is-narrow is-spacer" />
-                <div className="column">
+                <div className="column is-narrow is-spacer is-hidden-mobile" />
+                <div className="column is-hidden-mobile">
                     <SelectField
                         id="sortOrder"
                         maxHeight={250}

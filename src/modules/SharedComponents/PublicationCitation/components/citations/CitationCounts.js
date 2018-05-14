@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'locale';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import * as Partials from './partials';
 
-export default class CitationCounts extends React.PureComponent {
+export default class CitationCounts extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
     };
@@ -64,9 +64,9 @@ export default class CitationCounts extends React.PureComponent {
                             title={this.getTitle(txt.google.title)}
                         />
                     }
+                    <OpenAccessIcon {...(this.props.publication.calculateOpenAccess ? this.props.publication.calculateOpenAccess() : {})} />
                 </div>
                 <div className="column is-narrow">
-                    <OpenAccessIcon {...(this.props.publication.calculateOpenAccess ? this.props.publication.calculateOpenAccess() : {})} />
                     {
                         !!publication.rek_pid && (counts.wos || counts.scopus) &&
                         <ExternalLink href={`https://app.library.uq.edu.au/#/authors/view/${publication.rek_pid}`} title={publication.rek_title}>

@@ -5,7 +5,7 @@ exports[`AuthorItem renders  should be disabled 1`] = `
   className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
 >
   <div
-    className="authorButton"
+    className="author-button"
   >
     <FlatButton
       disabled={true}
@@ -24,11 +24,11 @@ exports[`AuthorItem renders  should be disabled 1`] = `
       }
       labelPosition="after"
       labelStyle={Object {}}
+      onClick={[Function]}
       onKeyboardFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onTouchStart={[Function]}
-      onTouchTap={[Function]}
       primary={false}
       secondary={false}
     />
@@ -50,7 +50,7 @@ exports[`AuthorItem renders  should be linked 1`] = `
   className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
 >
   <div
-    className="authorButton"
+    className="author-button"
   >
     <FlatButton
       disabled={true}
@@ -94,7 +94,7 @@ exports[`AuthorItem renders  should be linked and disabled 1`] = `
   className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
 >
   <div
-    className="authorButton"
+    className="author-button"
   >
     <FlatButton
       disabled={true}
@@ -113,11 +113,11 @@ exports[`AuthorItem renders  should be linked and disabled 1`] = `
       }
       labelPosition="after"
       labelStyle={Object {}}
+      onClick={[Function]}
       onKeyboardFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onTouchStart={[Function]}
-      onTouchTap={[Function]}
       primary={false}
       secondary={false}
     />
@@ -139,7 +139,7 @@ exports[`AuthorItem renders  should be selected 1`] = `
   className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
 >
   <div
-    className="authorButton"
+    className="author-button"
   >
     <FlatButton
       disabled={false}
@@ -183,7 +183,7 @@ exports[`AuthorItem renders  should be selected and disabled 1`] = `
   className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
 >
   <div
-    className="authorButton"
+    className="author-button"
   >
     <FlatButton
       disabled={true}
@@ -227,7 +227,7 @@ exports[`AuthorItem renders  should be unselected and able to select author 1`] 
   className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
 >
   <div
-    className="authorButton"
+    className="author-button"
   >
     <FlatButton
       disabled={false}
@@ -246,11 +246,11 @@ exports[`AuthorItem renders  should be unselected and able to select author 1`] 
       }
       labelPosition="after"
       labelStyle={Object {}}
+      onClick={[Function]}
       onKeyboardFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onTouchStart={[Function]}
-      onTouchTap={[Function]}
       primary={false}
       secondary={false}
     />
