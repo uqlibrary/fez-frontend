@@ -163,9 +163,9 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
         ...(account ? [
             {
                 path: pathConfig.index,
-                component: components.Dashboard,
+                component: components.Index,
                 exact: true,
-                pageTitle: locale.pages.dashboard.title
+                pageTitle: locale.pages.index.title
             },
             {
                 path: pathConfig.dashboard,
