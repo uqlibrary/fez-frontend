@@ -12,6 +12,7 @@ export default class PublicationsListSorting extends PureComponent {
         pageSize: PropTypes.number,
         onPageSizeChanged: PropTypes.func,
         onSortByChanged: PropTypes.func,
+        onExportPublicationsChanged: PropTypes.func,
         pagingData: PropTypes.shape({
             from: PropTypes.number,
             to: PropTypes.number,
@@ -56,7 +57,7 @@ export default class PublicationsListSorting extends PureComponent {
         this.props.onSortByChanged(this.state.sortBy, value);
     }
 
-    sortByChanged = (event, index, value) => {
+    sortByChanged =  (event, index, value) => {
         this.setState({
             sortBy: value
         });
@@ -121,7 +122,7 @@ export default class PublicationsListSorting extends PureComponent {
                 </div>
                 <div className="column is- is-narrow is-spacer is-hidden-mobile" />
                 <ExportPublications
-                    publicationsList={this.props.publicationsList}
+                    onChange={this.props.onExportPublicationsChanged}
                     disabled={this.props.disabled}/>
             </div>
 

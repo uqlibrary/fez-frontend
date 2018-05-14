@@ -2,6 +2,7 @@ import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
 import * as routes from 'repositories/routes';
 import {transformTrendingPublicationsMetricsData} from './academicDataTransformers';
+import {promptForDownload} from './publicationDataTransformers';
 
 /**
  * Get latest publications
@@ -99,26 +100,32 @@ export function searchTrendingPublications() {
  * @param {string} format
  * @returns {action}
  */
-export function exportPublications({page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
+export function exportAuthorPublications({exportFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
     return dispatch => {
-        dispatch({type: actions.AUTHOR_PUBLICATIONS_EXPORT_LOADING});
+        dispatch({type: actions.PUBLICATIONS_EXPORT_LOADING});
 
-        return get(routes.CURRENT_USER_RECORDS_API({
-            page: page,
-            pageSize: pageSize,
-            sortBy: sortBy,
-            sortDirection: sortDirection,
-            facets: activeFacets
-        }))
+        return get(
+            routes.CURRENT_USER_RECORDS_API({
+                exportFormat: exportFormat,
+                page: page,
+                pageSize: pageSize,
+                sortBy: sortBy,
+                sortDirection: sortDirection,
+                facets: activeFacets
+            }), {
+                responseType: 'arraybuffer'
+            })
             .then(response => {
                 dispatch({
-                    type: actions.AUTHOR_PUBLICATIONS_EXPORT_LOADED,
+                    type: actions.PUBLICATIONS_EXPORT_LOADED,
                     payload: response
                 });
+
+                promptForDownload(exportFormat, response);
             })
             .catch(error => {
                 dispatch({
-                    type: actions.AUTHOR_PUBLICATIONS_EXPORT_FAILED,
+                    type: actions.PUBLICATIONS_EXPORT_FAILED,
                     payload: error.message
                 });
             });

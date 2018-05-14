@@ -733,8 +733,7 @@ export default {
         export: {
             label: 'Export results',
             format: [
-                {value: 'xls', label: 'Excel File'},
-                {value: 'csv', label: 'CVS File'},
+                {value: 'excel', label: 'Excel File'},
                 {value: 'endnote', label: 'Endnote File'}
             ]
         }
