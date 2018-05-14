@@ -131,7 +131,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
                   className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
                 >
                   <div
-                    className="authorButton"
+                    className="author-button"
                   >
                     <FlatButton
                       disabled={false}
@@ -409,7 +409,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
                   className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
                 >
                   <div
-                    className="authorButton"
+                    className="author-button"
                   >
                     <FlatButton
                       disabled={false}
@@ -785,7 +785,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 2`] = `
                   className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
                 >
                   <div
-                    className="authorButton"
+                    className="author-button"
                   >
                     <FlatButton
                       disabled={false}
@@ -1063,7 +1063,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 2`] = `
                   className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
                 >
                   <div
-                    className="authorButton"
+                    className="author-button"
                   >
                     <FlatButton
                       disabled={false}
