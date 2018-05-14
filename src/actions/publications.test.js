@@ -4,7 +4,7 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as publicationsActions from './publications';
 import * as mockData from 'mock/data';
-import {exportSearchToExcel} from "../mock/data/testing/searchRecords";
+import {exportSearchToExcel as exportSearchToExcelResponse} from "../mock/data/testing/searchRecords";
 
 describe('Publications actions', () => {
     // extend expect to check actions
@@ -202,10 +202,14 @@ describe('Publications actions', () => {
 
     describe('exportAuthorPublications()', () => {
 
-        // mock promptForDownload
-        const reference = require('./publicationDataTransformers');
+        const {promptForDownload} = require('./publicationDataTransformers');
+        beforeEach(() => {
+            promptForDownload.mockClear();
+        });
+
+        const exportFormat = 'excel';
         const testRequest = {
-            exportFormat: 'excel',
+            ...exportFormat,
             userName: 'uqresearcher',
             page: 1,
             pageSize: 20,
@@ -217,11 +221,11 @@ describe('Publications actions', () => {
         it('dispatches expected actions on successful search export', async () => {
 
             // mock promptForDownload
-            reference.promptForDownload.mockImplementation(() => {});
+            promptForDownload.mockImplementation(() => exportFormat);
 
             mockApi
                 .onGet(repositories.routes.CURRENT_USER_RECORDS_API(testRequest).apiUrl)
-                .reply(200, exportSearchToExcel);
+                .reply(200, exportSearchToExcelResponse);
 
             const expectedActions = [
                 actions.PUBLICATIONS_EXPORT_LOADING,
@@ -235,13 +239,13 @@ describe('Publications actions', () => {
         it('dispatches expected actions on failed search export', async () => {
 
             // mock promptForDownload
-            reference.promptForDownload.mockImplementation(() => {
+            promptForDownload.mockImplementation(() => {
                 throw 'Error';
             });
 
             mockApi
                 .onGet(repositories.routes.CURRENT_USER_RECORDS_API({...testRequest, exportFormat:'unknown'}).apiUrl)
-                .reply(200, exportSearchToExcel);
+                .reply(200, exportSearchToExcelResponse);
 
             const expectedActions = [
                 actions.PUBLICATIONS_EXPORT_LOADING,

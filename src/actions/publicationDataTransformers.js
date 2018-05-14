@@ -7,7 +7,7 @@ import fileDownload from 'js-file-download';
  *
  * @type {{"application/vnd.ms-excel": string, "application/vnd.endnote": string}}
  */
-const formatToFilInfoMap = {
+export const formatToFileInfoMap = {
     'excel': {
         'mimeType': 'application/vnd.ms-excel',
         'filename': 'excel.xls'
@@ -25,11 +25,11 @@ const formatToFilInfoMap = {
  * @returns void
  */
 export function promptForDownload(format, response) {
-    if (!(format in formatToFilInfoMap)) {
+    if (!(format in formatToFileInfoMap)) {
         throw `Export format ${format} is not supported.`;
     }
 
-    const fileInfo = formatToFilInfoMap[format];
+    const fileInfo = formatToFileInfoMap[format];
     fileDownload(response, fileInfo.filename, fileInfo.mimeType);
 }
 
