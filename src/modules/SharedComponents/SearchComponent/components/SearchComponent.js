@@ -8,6 +8,7 @@ import SearchIcon from 'material-ui/svg-icons/action/search';
 import {locale} from 'locale';
 import {routes} from 'config';
 
+
 export default class SearchComponent extends PureComponent {
     static propTypes = {
         searchParams: PropTypes.object,
@@ -67,10 +68,10 @@ export default class SearchComponent extends PureComponent {
                     !this.state.showAdvancedSearch &&
                     <div className="columns is-gapless">
                         <div className="column search-field">
-                            <div className="columns is-gapless search-field">
+                            <div className="columns is-gapless search-field is-mobile">
                                 {
                                     this.props.showPrefixIcon &&
-                                    <div className="column is-narrow search-icon-prefix">
+                                    <div className="column is-narrow search-icon-prefix is-hidden-mobile">
                                         <SearchIcon/>
                                     </div>
                                 }
@@ -86,6 +87,7 @@ export default class SearchComponent extends PureComponent {
                                         underlineStyle={this.props.applyInverseStyle && {display: 'none'}}
                                     />
                                 </div>
+                                <div className="is-hidden-tablet mobileSpacer" />
                             </div>
                         </div>
                         {

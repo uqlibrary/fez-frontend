@@ -172,7 +172,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         className="columns is-gapless appbar-right-columns"
       >
         <div
-          className="column is-hidden-mobile search-column"
+          className="column search-column"
         >
           <withRouter(Connect(SearchComponent))
             applyInverseStyle={true}
@@ -649,7 +649,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         className="columns is-gapless appbar-right-columns"
       >
         <div
-          className="column is-hidden-mobile search-column"
+          className="column search-column"
         >
           <withRouter(Connect(SearchComponent))
             applyInverseStyle={true}
@@ -1007,7 +1007,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         className="columns is-gapless appbar-right-columns"
       >
         <div
-          className="column is-hidden-mobile search-column"
+          className="column search-column"
         >
           <withRouter(Connect(SearchComponent))
             applyInverseStyle={true}
@@ -1337,7 +1337,7 @@ exports[`Application component should render app for account with fez author wit
         className="columns is-gapless appbar-right-columns"
       >
         <div
-          className="column is-hidden-mobile search-column"
+          className="column search-column"
         >
           <withRouter(Connect(SearchComponent))
             applyInverseStyle={true}
@@ -1798,7 +1798,7 @@ exports[`Application component should render app for account with fez author wit
         className="columns is-gapless appbar-right-columns"
       >
         <div
-          className="column is-hidden-mobile search-column"
+          className="column search-column"
         >
           <withRouter(Connect(SearchComponent))
             applyInverseStyle={true}
@@ -2277,7 +2277,7 @@ exports[`Application component should render app for account with fez author wit
         className="columns is-gapless appbar-right-columns"
       >
         <div
-          className="column is-hidden-mobile search-column"
+          className="column search-column"
         >
           <withRouter(Connect(SearchComponent))
             applyInverseStyle={true}
@@ -2671,7 +2671,7 @@ exports[`Application component should render application with routing for the us
         className="columns is-gapless appbar-right-columns"
       >
         <div
-          className="column is-hidden-mobile search-column"
+          className="column search-column"
         >
           <withRouter(Connect(SearchComponent))
             applyInverseStyle={true}
@@ -2868,7 +2868,7 @@ exports[`Application component should render for anon user 1`] = `
         className="columns is-gapless appbar-right-columns"
       >
         <div
-          className="column is-hidden-mobile search-column"
+          className="column search-column"
         >
           <withRouter(Connect(SearchComponent))
             applyInverseStyle={true}
@@ -3103,7 +3103,7 @@ exports[`Application component should render thesis submission for HDR without m
         className="columns is-gapless appbar-right-columns"
       >
         <div
-          className="column is-hidden-mobile search-column"
+          className="column search-column"
         >
           <withRouter(Connect(SearchComponent))
             applyInverseStyle={true}

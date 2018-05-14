@@ -109,6 +109,9 @@ button[type=button] {
   // spaces the right hand AppBar panel and main menu button correctly
   >div:nth-child(3), .main-menu-button {
     margin-top: 12px !important;
+    @include desktop {
+      margin-top: 6px !important;
+    }
   }
   h1 {
     height: 75px !important;
@@ -119,9 +122,11 @@ button[type=button] {
   }
   .appbar-right-columns {
     @include tablet {
+      margin-top: 0 !important;
       width: 350px !important;
     }
     @include desktop {
+      margin-top: 6px !important;
       width: 500px !important;
     }
   }
