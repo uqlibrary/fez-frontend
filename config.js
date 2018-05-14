@@ -31,7 +31,7 @@ const deployment = {
         api: 'https://api.library.uq.edu.au/v1/',
         gtm: 'GTM-T4NPC25',
         title: 'UQ eSpace',
-        titleSuffix: 'BETA',
+        titleSuffix: '',
         environment: 'production',
         basePath: '',
         publicPath: '/',
