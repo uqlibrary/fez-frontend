@@ -77,6 +77,10 @@ export default class MyRecords extends PureComponent {
         );
     }
 
+    exportPublicationsChanged = (exportFormat) => {
+        this.props.actions.exportAuthorPublications({exportFormat, ...this.state});
+    }
+
     pageChanged = (page) => {
         this.setState(
             {
@@ -161,6 +165,7 @@ export default class MyRecords extends PureComponent {
                                     publicationsList={this.props.publicationsList}
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
+                                    onExportPublicationsChanged={this.exportPublicationsChanged}
                                     disabled={this.props.loadingPublicationsList} />
                                 <PublicationsListPaging
                                     loading={this.props.loadingPublicationsList}
