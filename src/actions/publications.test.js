@@ -1,7 +1,10 @@
+jest.mock('./publicationDataTransformers');
+
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as publicationsActions from './publications';
 import * as mockData from 'mock/data';
+import {exportSearchToExcel} from "../mock/data/testing/searchRecords";
 
 describe('Publications actions', () => {
     // extend expect to check actions
@@ -193,6 +196,88 @@ describe('Publications actions', () => {
             ];
 
             await mockActionsStore.dispatch(publicationsActions.searchTrendingPublications());
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('exportAuthorPublications()', () => {
+
+        // mock promptForDownload
+        const reference = require('./publicationDataTransformers');
+        const testRequest = {
+            exportFormat: 'excel',
+            userName: 'uqresearcher',
+            page: 1,
+            pageSize: 20,
+            sortBy: 'published_date',
+            sortDirection: 'desc',
+            facets: {},
+        };
+
+        it('dispatches expected actions on successful search export', async () => {
+
+            // mock promptForDownload
+            reference.promptForDownload.mockImplementation(() => {});
+
+            mockApi
+                .onGet(repositories.routes.CURRENT_USER_RECORDS_API(testRequest).apiUrl)
+                .reply(200, exportSearchToExcel);
+
+            const expectedActions = [
+                actions.PUBLICATIONS_EXPORT_LOADING,
+                actions.PUBLICATIONS_EXPORT_LOADED
+            ];
+
+            await mockActionsStore.dispatch(publicationsActions.exportAuthorPublications(testRequest));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on failed search export', async () => {
+
+            // mock promptForDownload
+            reference.promptForDownload.mockImplementation(() => {
+                throw 'Error';
+            });
+
+            mockApi
+                .onGet(repositories.routes.CURRENT_USER_RECORDS_API({...testRequest, exportFormat:'unknown'}).apiUrl)
+                .reply(200, exportSearchToExcel);
+
+            const expectedActions = [
+                actions.PUBLICATIONS_EXPORT_LOADING,
+                actions.PUBLICATIONS_EXPORT_FAILED
+            ];
+
+            await mockActionsStore.dispatch(publicationsActions.exportAuthorPublications(testRequest));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions for anon user', async () => {
+            mockApi
+                .onAny()
+                .reply(403, {});
+
+            const expectedActions = [
+                actions.PUBLICATIONS_EXPORT_LOADING,
+                actions.CURRENT_ACCOUNT_ANONYMOUS,
+                actions.PUBLICATIONS_EXPORT_FAILED
+            ];
+
+            await mockActionsStore.dispatch(publicationsActions.exportAuthorPublications(testRequest));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions if API fails', async () => {
+            mockApi
+                .onAny()
+                .reply(500, {});
+
+            const expectedActions = [
+                actions.PUBLICATIONS_EXPORT_LOADING,
+                actions.PUBLICATIONS_EXPORT_FAILED
+            ];
+
+            await mockActionsStore.dispatch(publicationsActions.exportAuthorPublications(testRequest));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });

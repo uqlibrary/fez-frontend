@@ -26,7 +26,7 @@ const formatToFilInfoMap = {
  */
 export function promptForDownload(format, response) {
     if (!(format in formatToFilInfoMap)) {
-        return;
+        throw `Export format ${format} is not supported.`;
     }
 
     const fileInfo = formatToFilInfoMap[format];

@@ -104,7 +104,7 @@ export default class PublicationsListSorting extends PureComponent {
                         }
                     </SelectField>
                 </div>
-                <div className="column is- is-narrow is-spacer is-hidden-mobile" />
+                <div className="column is-narrow is-spacer is-hidden-mobile" />
                 <div className="column is-hidden-mobile">
                     <SelectField
                         id="pageSize"
@@ -120,7 +120,7 @@ export default class PublicationsListSorting extends PureComponent {
                         <MenuItem value={1000} primaryText={1000}/>
                     </SelectField>
                 </div>
-                <div className="column is- is-narrow is-spacer is-hidden-mobile" />
+                <div className="column is-narrow is-spacer is-hidden-mobile" />
                 <ExportPublications
                     onChange={this.props.onExportPublicationsChanged}
                     disabled={this.props.disabled}/>

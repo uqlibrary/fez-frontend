@@ -113,15 +113,16 @@ export function exportAuthorPublications({exportFormat = '', page = 1, pageSize 
                 sortDirection: sortDirection,
                 facets: activeFacets
             }), {
+                // blob type doesn't work
                 responseType: 'arraybuffer'
             })
             .then(response => {
+                promptForDownload(exportFormat, response);
+
                 dispatch({
                     type: actions.PUBLICATIONS_EXPORT_LOADED,
                     payload: response
                 });
-
-                promptForDownload(exportFormat, response);
             })
             .catch(error => {
                 dispatch({

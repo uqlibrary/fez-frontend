@@ -49,6 +49,7 @@
     "redux-mock-store": "^1.5.1",
     "sass-loader": "^7.0.0",
     "sinon": "5.0.2",
+    "string-to-arraybuffer": "^1.0.0",
     "strip-loader": "^0.1.2",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
@@ -107,6 +108,7 @@
     "test": "NODE_ENV=test jest",
     "test:watch": "npm run test -- --watch",
     "test:update": "npm run test -- --updateSnapshot",
+    "test-unit": "node $NODE_DEBUG_OPTION ./node_modules/lab/bin/lab ./test/unit --pattern \"^[^_]\"",
     "eslint": "eslint 'src/**/*.js' --quiet"
   },
   "engines": {

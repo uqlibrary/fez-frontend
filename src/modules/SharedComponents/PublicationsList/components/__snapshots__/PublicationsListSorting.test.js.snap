@@ -368,5 +368,11 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
       />
     </SelectField>
   </div>
+  <div
+    className="column is-narrow is-spacer is-hidden-mobile"
+  />
+  <ExportPublications
+    disabled={false}
+  />
 </div>
 `;

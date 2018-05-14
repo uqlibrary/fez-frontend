@@ -162,7 +162,6 @@ export default class MyRecords extends PureComponent {
                                     sortDirection={this.state.sortDirection}
                                     pageSize={this.state.pageSize}
                                     pagingData={pagingData}
-                                    publicationsList={this.props.publicationsList}
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
                                     onExportPublicationsChanged={this.exportPublicationsChanged}
