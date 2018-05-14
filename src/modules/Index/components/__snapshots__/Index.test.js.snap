@@ -30,19 +30,7 @@ exports[`Index page should render placeholders 1`] = `
     <div
       className="column is-4"
     >
-      <StandardCard
-        className=""
-        title="What is eSpace?"
-      >
-        <p>
-          UQ eSpace is the single authoritative source for the research outputs and research data of the staff and students of the University of Queensland and is the archival home of UQ Higher Degree by Research digital theses. UQ eSpace raises the visibility and accessibility of UQ publications to the wider world and provides data for mandatory Government reporting requirements... 
-          <a
-            href="#"
-          >
-            read more
-          </a>
-        </p>
-      </StandardCard>
+      <WhatIsEspace />
       <StandardCard
         className=""
         title="Latest news"
