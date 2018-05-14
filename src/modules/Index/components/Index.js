@@ -2,10 +2,11 @@ import React, {PureComponent} from 'react';
 
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import WhatIsEspace from './WhatIsEspace/WhatIsEspace';
+import {default as locale} from 'locale/pages';
 
 class Index extends PureComponent {
     render() {
+        const whatIsEspaceLocale = locale.pages.index.whatIsEspace;
         return (
             <StandardPage className="page-index">
                 <StandardCard title={'eSpace search'}>
@@ -22,8 +23,17 @@ class Index extends PureComponent {
                         </StandardCard>
                     </div>
                     <div className="column is-4">
-                        <WhatIsEspace />
-                        <StandardCard title={'Latest news'}>
+                        {
+                            whatIsEspaceLocale.text &&
+                            <StandardCard title={whatIsEspaceLocale.title} className="primaryHeader">
+                                {whatIsEspaceLocale.text}
+                                {
+                                    whatIsEspaceLocale.readMoreLink && whatIsEspaceLocale.readMoreTitle &&
+                                    <a href={whatIsEspaceLocale.readMoreLink}>{whatIsEspaceLocale.readMoreTitle}</a>
+                                }
+                            </StandardCard>
+                        }
+                        <StandardCard title={'Latest news'} className="primaryHeader">
                             <p>
                                 <b>21 May 2018</b> Launch of new eSpace application. Sed ornare
                                 suscipit lobortis. Suspendisse scelerisque
