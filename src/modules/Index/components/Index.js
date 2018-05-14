@@ -2,11 +2,11 @@ import React, {PureComponent} from 'react';
 
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {default as locale} from 'locale/pages';
+import {default as pagesLocale} from 'locale/pages';
 
 class Index extends PureComponent {
     render() {
-        const whatIsEspaceLocale = locale.pages.index.whatIsEspace;
+        const whatIsEspaceLocale = pagesLocale.pages.index.whatIsEspace;
         return (
             <StandardPage className="page-index">
                 <StandardCard title={'eSpace search'}>
