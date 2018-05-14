@@ -14,4 +14,9 @@ describe('Index page', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render What is eSpace? as expected', () => {
+        const wrapper = setup({}).find('.whatIsEspace').dive();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 });

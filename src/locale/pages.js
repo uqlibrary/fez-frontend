@@ -25,7 +25,8 @@ export default {
             whatIsEspace: {
                 title: 'What is eSpace?',
                 text: 'UQ eSpace is the single authoritative source for the research outputs and research data of the staff and students of the University of Queensland and is the archival home of UQ Higher Degree by Research digital theses.',
-                readMoreTitle: '..read more',
+                readMoreLabel: '..read more',
+                readMoreTitle: 'Click to read more about UQ eSpace',
                 readMoreLink: 'http://www.google.com'
             }
         },

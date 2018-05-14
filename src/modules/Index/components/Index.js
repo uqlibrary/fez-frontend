@@ -25,11 +25,16 @@ class Index extends PureComponent {
                     <div className="column is-4">
                         {
                             whatIsEspaceLocale.text &&
-                            <StandardCard title={whatIsEspaceLocale.title} className="primaryHeader">
+                            <StandardCard title={whatIsEspaceLocale.title} className="whatIsEspace primaryHeader">
                                 {whatIsEspaceLocale.text}
                                 {
-                                    whatIsEspaceLocale.readMoreLink && whatIsEspaceLocale.readMoreTitle &&
-                                    <a href={whatIsEspaceLocale.readMoreLink}>{whatIsEspaceLocale.readMoreTitle}</a>
+                                    whatIsEspaceLocale.readMoreLabel && whatIsEspaceLocale.readMoreTitle &&
+                                    <a
+                                        href={whatIsEspaceLocale.readMoreLink}
+                                        title={whatIsEspaceLocale.readMoreTitle}
+                                    >
+                                        {whatIsEspaceLocale.readMoreLabel}
+                                    </a>
                                 }
                             </StandardCard>
                         }

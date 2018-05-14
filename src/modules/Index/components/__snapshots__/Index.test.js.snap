@@ -1,5 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Index page should render What is eSpace? as expected 1`] = `
+<Card
+  className="whatIsEspace primaryHeader standard-card"
+  expandable={false}
+  expanded={null}
+  initiallyExpanded={false}
+>
+  <CardHeader
+    avatar={null}
+    className="card-header"
+  >
+    <div
+      className="columns is-gapless is-mobile"
+    >
+      <div
+        className="column"
+      >
+        <h2
+          className="cardTitle"
+        >
+          What is eSpace?
+        </h2>
+      </div>
+    </div>
+  </CardHeader>
+  <CardText
+    className="body-1"
+  >
+    <div>
+      UQ eSpace is the single authoritative source for the research outputs and research data of the staff and students of the University of Queensland and is the archival home of UQ Higher Degree by Research digital theses.
+      <a
+        href="http://www.google.com"
+        title="Click to read more about UQ eSpace"
+      >
+        ..read more
+      </a>
+    </div>
+  </CardText>
+</Card>
+`;
+
 exports[`Index page should render placeholders 1`] = `
 <StandardPage
   className="page-index"
@@ -31,12 +72,13 @@ exports[`Index page should render placeholders 1`] = `
       className="column is-4"
     >
       <StandardCard
-        className="primaryHeader"
+        className="whatIsEspace primaryHeader"
         title="What is eSpace?"
       >
         UQ eSpace is the single authoritative source for the research outputs and research data of the staff and students of the University of Queensland and is the archival home of UQ Higher Degree by Research digital theses.
         <a
           href="http://www.google.com"
+          title="Click to read more about UQ eSpace"
         >
           ..read more
         </a>
