@@ -8,7 +8,7 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
     className="columns is-gapless is-mobile"
   >
     <div
-      className="column"
+      className="column citationColumn"
     >
       <h3
         className="publicationTitle"
@@ -891,7 +891,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
     className="columns is-gapless is-mobile"
   >
     <div
-      className="column"
+      className="column citationColumn"
     >
       <h3
         className="publicationTitle"
@@ -1734,7 +1734,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
     className="columns is-gapless is-mobile"
   >
     <div
-      className="column"
+      className="column citationColumn"
     >
       <h3
         className="publicationTitle"
@@ -2550,7 +2550,7 @@ exports[`PublicationCitation  should render component with publication from mult
     className="columns is-gapless is-mobile"
   >
     <div
-      className="column"
+      className="column citationColumn"
     >
       <h3
         className="publicationTitle"
@@ -3394,7 +3394,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
     className="columns is-gapless is-mobile"
   >
     <div
-      className="column"
+      className="column citationColumn"
     >
       <JournalArticleCitation
         publication={
@@ -4227,7 +4227,7 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
     className="columns is-gapless is-mobile"
   >
     <div
-      className="column"
+      className="column citationColumn"
     >
       <h3
         className="publicationTitle"
