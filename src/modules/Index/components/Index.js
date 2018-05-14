@@ -1,7 +1,10 @@
 import React, {PureComponent} from 'react';
 
+import {locale} from 'locale';
+import {Tabs, Tab} from 'material-ui/Tabs';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
+import {TopCitedPublications} from 'modules/TopCitedPublications';
 
 class Index extends PureComponent {
     render() {
@@ -14,10 +17,23 @@ class Index extends PureComponent {
                 </StandardCard>
                 <div className="columns">
                     <div className="column">
-                        <StandardCard title={'Most cited publications/Trending publications'}>
-                            <p>
-                                publications list...
-                            </p>
+                        <StandardCard className="card-paddingless">
+                            <Tabs className="publicationTabs" inkBarStyle={{height: '4px', marginTop: '-4px'}}>
+                                {
+                                    <Tab label={locale.pages.index.topCitedPublications.title} value="topCitedPublications" className="publicationTabs">
+                                        <div className="publicationTabContent">
+                                            <TopCitedPublications/>
+                                        </div>
+                                    </Tab>
+                                }
+                                {
+                                    <Tab label={locale.pages.index.trendingPublications.title} value="trendingPublications" className="publicationTabs">
+                                        <div className="publicationTabContent">
+                                            <TopCitedPublications/>
+                                        </div>
+                                    </Tab>
+                                }
+                            </Tabs>
                         </StandardCard>
                     </div>
                     <div className="column is-4">

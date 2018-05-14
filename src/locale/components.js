@@ -114,6 +114,14 @@ export default {
             loading: 'Loading your latest publications...',
             viewAllButtonLabel: 'View all'
         },
+        topCitedPublications: {
+            loading: 'Loading top cited publications...',
+            showAllButtonLabel: 'Show all'
+        },
+        mostPopularPublications: {
+            loading: 'Loading most popular publications...',
+            showAllButtonLabel: 'Show all'
+        },
         keywordsForm: {
             field: {
                 form: {

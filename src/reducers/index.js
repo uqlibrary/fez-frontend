@@ -12,3 +12,4 @@ export searchKeysReducer from './searchKeys';
 export controlledVocabulariesReducer from './controlledVocabularies';
 export myTrendingPublicationsReducer from './myTrendingPublications';
 export myLatestPublicationsReducer from './myLatestPublications';
+export topCitedPublicationsReducer from './topCitedPublications';

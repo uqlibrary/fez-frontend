@@ -19,12 +19,42 @@ exports[`Index page should render placeholders 1`] = `
       className="column"
     >
       <StandardCard
-        className=""
-        title="Most cited publications/Trending publications"
+        className="card-paddingless"
       >
-        <p>
-          publications list...
-        </p>
+        <Tabs
+          className="publicationTabs"
+          initialSelectedIndex={0}
+          inkBarStyle={
+            Object {
+              "height": "4px",
+              "marginTop": "-4px",
+            }
+          }
+          onChange={[Function]}
+        >
+          <Tab
+            className="publicationTabs"
+            label="Most cited publications"
+            value="topCitedPublications"
+          >
+            <div
+              className="publicationTabContent"
+            >
+              <withRouter(Connect(TopCitedPublications)) />
+            </div>
+          </Tab>
+          <Tab
+            className="publicationTabs"
+            label="Trending publications"
+            value="trendingPublications"
+          >
+            <div
+              className="publicationTabContent"
+            >
+              <withRouter(Connect(TopCitedPublications)) />
+            </div>
+          </Tab>
+        </Tabs>
       </StandardCard>
     </div>
     <div

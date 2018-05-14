@@ -21,7 +21,13 @@ help: {
 export default {
     pages: {
         index: {
-            title: 'eSpace'
+            title: 'eSpace',
+            topCitedPublications: {
+                title: 'Most cited publications',
+            },
+            trendingPublications: {
+                title: 'Trending publications'
+            },
         },
         contact: {
             title: 'Contact UQ eSpace',
