@@ -31,20 +31,32 @@ export function searchLatestPublications() {
  * Get top cited publications
  * @returns {action}
  */
-export function searchTopCitedPublications() {
+export function searchTopCitedPublications({page = 1, pageSize = 20, source = 'altmetric', sortBy = 'altmetric_score', sortDirection = 'Desc'}) {
     return dispatch => {
         dispatch({type: actions.TOP_CITED_PUBLICATIONS_LOADING});
         return get(routes.TRENDING_PUBLICATIONS_API({
-            page: 1,
-            pageSize: 5,
-            sortBy: 'citation_count',
-            sortDirection: 'Desc'
+            page: page,
+            pageSize: pageSize,
+            sortBy: sortBy,
+            sortDirection: sortDirection
         }))
             .then(response => {
-                dispatch({
-                    type: actions.TOP_CITED_PUBLICATIONS_LOADED,
-                    payload: response
-                });
+                if (response.data.length > 0) {
+                    const transformedTopCitedPublications = transformTrendingPublicationsMetricsData(response);
+                    transformedTopCitedPublications.map(({key, values}) => {
+                        if (key === source) {
+                            dispatch({
+                                type: `${actions.TOP_CITED_PUBLICATIONS_LOADED}@${key}`,
+                                payload: {data: values},
+                            });
+                        }
+                    });
+                } else {
+                    dispatch({
+                        type: actions.TOP_CITED_PUBLICATIONS_LOADED,
+                        payload: response
+                    });
+                }
             })
             .catch(error => {
                 dispatch({

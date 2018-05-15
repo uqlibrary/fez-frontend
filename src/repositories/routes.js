@@ -88,8 +88,6 @@ export const HIDE_POSSIBLE_RECORD_API = () => ({apiUrl: 'records/search', option
 
 export const CURRENT_USER_RECORDS_API = (values) => ({apiUrl: 'records/search', options: {params: {rule: 'mine', ...getStandardSearchParams(values)}}});
 export const ACADEMIC_PUBLICATIONS_STATS_API = (values) => ({apiUrl: 'records/search', options: {params: {rule: 'mine', 'filters[stats_only]': true, ...getStandardSearchParams(values)}}});
-// TODO: replace the api url when the back end has developed the api
-export const TOP_CITED_PUBLICATIONS_API = (values) => ({apiUrl: 'records/search', options: {params: {rule: 'trending', ...getStandardSearchParams(values)}}});
 export const TRENDING_PUBLICATIONS_API = (values) => ({apiUrl: 'records/search', options: {params: {rule: 'trending', ...getStandardSearchParams(values)}}});
 
 export const SEARCH_INTERNAL_RECORDS_API = (values) => (

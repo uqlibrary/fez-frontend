@@ -34,8 +34,8 @@ exports[`Index page should render placeholders 1`] = `
         >
           <Tab
             className="publicationTabs"
-            label="Most cited publications"
-            value="topCitedPublications"
+            label="Trending publications"
+            value="trendingPublications"
           >
             <div
               className="publicationTabContent"
@@ -45,13 +45,28 @@ exports[`Index page should render placeholders 1`] = `
           </Tab>
           <Tab
             className="publicationTabs"
-            label="Trending publications"
-            value="trendingPublications"
+            label="Hot papers on Scopus"
+            value="topScopusCitedPublications"
           >
             <div
               className="publicationTabContent"
             >
-              <withRouter(Connect(TopCitedPublications)) />
+              <withRouter(Connect(TopCitedPublications))
+                source="scopus"
+              />
+            </div>
+          </Tab>
+          <Tab
+            className="publicationTabs"
+            label="Hot papers on Web of science"
+            value="topThomsonCitedPublications"
+          >
+            <div
+              className="publicationTabContent"
+            >
+              <withRouter(Connect(TopCitedPublications))
+                source="thomson"
+              />
             </div>
           </Tab>
         </Tabs>

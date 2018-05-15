@@ -14,6 +14,24 @@ const handlers = {
         };
     },
 
+    [`${actions.TOP_CITED_PUBLICATIONS_LOADED}@`]: (state, action) => {
+        const source = actions.getActionSuffix(action.type);
+
+        const topCitedPublicationsList = [
+            ...state.topCitedPublicationsList,
+            {
+                key: source,
+                values: action.payload.data
+            }
+        ];
+
+        return {
+            ...state,
+            topCitedPublicationsList,
+            loadingTopCitedPublications: false
+        };
+    },
+
     [actions.TOP_CITED_PUBLICATIONS_LOADED]: (state, action) => {
         return {
             ...state,
@@ -32,7 +50,7 @@ const handlers = {
 };
 
 export default function topCitedPublicationsReducer(state = initialState, action) {
-    const handler = handlers[action.type];
+    const handler = action.type.indexOf('@') >= 0 ? handlers[actions.getAction(action.type)] : handlers[action.type];
     if (!handler) {
         return state;
     }

@@ -20,16 +20,23 @@ class Index extends PureComponent {
                         <StandardCard className="card-paddingless">
                             <Tabs className="publicationTabs" inkBarStyle={{height: '4px', marginTop: '-4px'}}>
                                 {
-                                    <Tab label={locale.pages.index.topCitedPublications.title} value="topCitedPublications" className="publicationTabs">
+                                    <Tab label={locale.components.topCitedPublications.altmetric.title} value="trendingPublications" className="publicationTabs">
                                         <div className="publicationTabContent">
                                             <TopCitedPublications/>
                                         </div>
                                     </Tab>
                                 }
                                 {
-                                    <Tab label={locale.pages.index.trendingPublications.title} value="trendingPublications" className="publicationTabs">
+                                    <Tab label={locale.components.topCitedPublications.scopus.title} value="topScopusCitedPublications" className="publicationTabs">
                                         <div className="publicationTabContent">
-                                            <TopCitedPublications/>
+                                            <TopCitedPublications source={'scopus'}/>
+                                        </div>
+                                    </Tab>
+                                }
+                                {
+                                    <Tab label={locale.components.topCitedPublications.thomson.title} value="topThomsonCitedPublications" className="publicationTabs">
+                                        <div className="publicationTabContent">
+                                            <TopCitedPublications source={'thomson'}/>
                                         </div>
                                     </Tab>
                                 }
