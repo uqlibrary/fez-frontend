@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {locale} from 'locale';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
-import {ExportPublications} from '../../ExportPublications';
+import {ExportPublications} from 'modules/SharedComponents/ExportPublications';
 
 export default class PublicationsListSorting extends PureComponent {
     static propTypes = {
@@ -20,8 +20,6 @@ export default class PublicationsListSorting extends PureComponent {
             current_page: PropTypes.number
         }),
         disabled: PropTypes.bool,
-        publicationsList: PropTypes.array,
-        exportPublicationsFormat: PropTypes.func,
         onExportPublications: PropTypes.func,
     };
 

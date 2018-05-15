@@ -19,6 +19,7 @@ function setup(testProps, isShallow = true) {
         accountLoading: false,
         publicationsListPagingData: {},
         loadingPublicationsList: false,
+        exportPublicationsLoading: false,
         publicationsList: [],
         publicationsListFacets: {},
         ...testProps
@@ -34,6 +35,11 @@ describe('MyRecords test', () => {
 
     it('renders loading screen while loading publications ', () => {
         const wrapper = setup({ loadingPublicationsList: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('renders loading screen while export publications loading', () => {
+        const wrapper = setup({ exportPublicationsLoading: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

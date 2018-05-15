@@ -4,6 +4,7 @@ import fileDownload from 'js-file-download';
  * File type to name map
  *
  * Note: unfortunately content-disposition info doesn't seem to come through even after whitelisting it on CORS
+ * Also, it only works with array buffer response type, which doesn't include any headers
  *
  * @type {{"application/vnd.ms-excel": string, "application/vnd.endnote": string}}
  */
