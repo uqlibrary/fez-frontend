@@ -1,13 +1,14 @@
 jest.mock('js-file-download');
 
 import * as transformers from './publicationDataTransformers';
+import fileDownload from 'js-file-download';
+
+beforeEach(() => {
+    fileDownload.mockClear();
+});
 
 describe('Publication data transformers ', () => {
     describe('promptForDownload test', () => {
-        const fileDownload = require('js-file-download');
-        beforeEach(() => {
-            fileDownload.mockClear();
-        });
         // mock fileDownload
         fileDownload.mockImplementation((data, filename, mimeType) => [data, filename, mimeType]);
 

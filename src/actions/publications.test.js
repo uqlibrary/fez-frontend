@@ -5,6 +5,11 @@ import * as repositories from 'repositories';
 import * as publicationsActions from './publications';
 import * as mockData from 'mock/data';
 import {exportSearchToExcel as exportSearchToExcelResponse} from "../mock/data/testing/searchRecords";
+import {promptForDownload} from './publicationDataTransformers';
+
+beforeEach(() => {
+    promptForDownload.mockClear();
+});
 
 describe('Publications actions', () => {
     // extend expect to check actions
@@ -201,12 +206,6 @@ describe('Publications actions', () => {
     });
 
     describe('exportAuthorPublications()', () => {
-
-        const {promptForDownload} = require('./publicationDataTransformers');
-        beforeEach(() => {
-            promptForDownload.mockClear();
-        });
-
         const exportFormat = 'excel';
         const testRequest = {
             ...exportFormat,
