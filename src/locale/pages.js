@@ -205,7 +205,7 @@ export default {
             ),
             loadingMessage: 'Searching for your publications...',
             loadingPagingMessage: 'Retrieving your publications...',
-            exportingPublicationsMessage: 'Exporting your publications...',
+            exportPublicationsLoadingMessage: 'Exporting your publications...',
             noResultsFound: {
                 title: 'No publications found',
                 text: (

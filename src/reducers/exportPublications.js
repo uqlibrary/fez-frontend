@@ -1,7 +1,7 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    exportingPublications: false,
+    exportPublicationsLoading: false,
     exportPublicationsFormat: null,
 };
 
@@ -10,14 +10,14 @@ const handlers = {
     [actions.EXPORT_PUBLICATIONS_LOADING]: (state) => {
         return {
             ...state,
-            exportingPublications: true,
+            exportPublicationsLoading: true,
         };
     },
 
     [actions.EXPORT_PUBLICATIONS_LOADED]: (state, action) => {
         return {
             ...state,
-            exportingPublications: false,
+            exportPublicationsLoading: false,
             exportPublicationsFormat: action.payload,
         };
     },
@@ -25,7 +25,7 @@ const handlers = {
     [actions.EXPORT_PUBLICATIONS_FAILED]: (state) => {
         return {
             ...state,
-            exportingPublications: false
+            exportPublicationsLoading: false
         };
     },
 };

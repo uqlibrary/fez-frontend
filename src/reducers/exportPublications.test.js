@@ -3,14 +3,14 @@ import exportPublicationsReducer from './exportPublications';
 import {formatToFileInfoMap} from "../actions/publicationDataTransformers";
 
 export const initialState = {
-    exportingPublications: false,
+    exportPublicationsLoading: false,
     exportPublicationsFormat: null,
 };
 
 describe('export publications reducer', () => {
     it('returns the correct state while publications are being exported', () => {
         const test = exportPublicationsReducer(initialState, {type: actions.EXPORT_PUBLICATIONS_LOADING});
-        expect(test.exportingPublications).toEqual(true);
+        expect(test.exportPublicationsLoading).toEqual(true);
     });
 
     it('returns the correct state when publications have been exported', () => {
@@ -20,13 +20,13 @@ describe('export publications reducer', () => {
             payload: format
         });
 
-        expect(test.exportingPublications).toEqual(false);
+        expect(test.exportPublicationsLoading).toEqual(false);
         expect(test.exportPublicationsFormat).toEqual(format);
     });
 
     it('returns the correct state when exporting publications fails to load data', () => {
         const test = exportPublicationsReducer(initialState, {type: actions.EXPORT_PUBLICATIONS_FAILED});
-        expect(test.exportingPublications).toEqual(false);
+        expect(test.exportPublicationsLoading).toEqual(false);
     });
 });
 

@@ -15,7 +15,7 @@ export default class MyRecords extends PureComponent {
         publicationsListFacets: PropTypes.object,
         loadingPublicationsList: PropTypes.bool,
         publicationsListPagingData: PropTypes.object,
-        exportingPublications: PropTypes.bool,
+        exportPublicationsLoading: PropTypes.bool,
 
         accountLoading: PropTypes.bool,
 
@@ -162,27 +162,27 @@ export default class MyRecords extends PureComponent {
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
                                     onExportPublications={this.props.actions.exportAuthorPublications}
-                                    disabled={this.props.loadingPublicationsList || this.props.exportingPublications} />
+                                    disabled={this.props.loadingPublicationsList || this.props.exportPublicationsLoading} />
                                 <PublicationsListPaging
-                                    loading={this.props.loadingPublicationsList || this.props.exportingPublications}
+                                    loading={this.props.loadingPublicationsList || this.props.exportPublicationsLoading}
                                     pagingData={pagingData}
                                     onPageChanged={this.pageChanged}
-                                    disabled={this.props.loadingPublicationsList || this.props.exportingPublications} />
+                                    disabled={this.props.loadingPublicationsList || this.props.exportPublicationsLoading} />
                                 {
-                                    (this.props.loadingPublicationsList || this.props.exportingPublications) &&
-                                    <div className="is-centered"><InlineLoader message={this.props.loadingPublicationsList ? txt.loadingPagingMessage : txt.exportingPublicationsMessage}/></div>
+                                    (this.props.loadingPublicationsList || this.props.exportPublicationsLoading) &&
+                                    <div className="is-centered"><InlineLoader message={this.props.loadingPublicationsList ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
                                 }
                                 {
-                                    !this.props.exportingPublications && !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length > 0 &&
+                                    !this.props.exportPublicationsLoading && !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length > 0 &&
                                     <PublicationsList
                                         publicationsList={this.props.publicationsList}
                                         showDefaultActions />
                                 }
                                 <PublicationsListPaging
-                                    loading={this.props.loadingPublicationsList || this.props.exportingPublications}
+                                    loading={this.props.loadingPublicationsList || this.props.exportPublicationsLoading}
                                     pagingData={pagingData}
                                     onPageChanged={this.pageChanged}
-                                    disabled={this.props.loadingPublicationsList || this.props.exportingPublications} />
+                                    disabled={this.props.loadingPublicationsList || this.props.exportPublicationsLoading} />
                             </StandardCard>
                         </div>
                     }
@@ -198,7 +198,7 @@ export default class MyRecords extends PureComponent {
                                     facetsData={this.props.publicationsListFacets}
                                     onFacetsChanged={this.facetsChanged}
                                     activeFacets={this.state.activeFacets}
-                                    disabled={this.props.loadingPublicationsList || this.props.exportingPublications}
+                                    disabled={this.props.loadingPublicationsList || this.props.exportPublicationsLoading}
                                     excludeFacetsList={txt.facetsFilter.excludeFacetsList}
                                     renameFacetsList={txt.facetsFilter.renameFacetsList}
                                     showOpenAccessFilter />
