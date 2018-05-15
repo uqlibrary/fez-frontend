@@ -1035,6 +1035,105 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
 </div>
 `;
 
+exports[`AuthorLinking should render authors correctly 1`] = `
+<div>
+  <div
+    className="author-link-list"
+  >
+    <Infinite
+      className="author-link-infinite-scroll"
+      containerHeight={200}
+      displayBottomUpwards={false}
+      elementHeight={73}
+      handleScroll={[Function]}
+      infiniteLoadBeginEdgeOffset={50}
+      isInfiniteLoading={false}
+      loadingSpinnerDelegate={<div />}
+      onInfiniteLoad={[Function]}
+      styles={Object {}}
+      timeScrollStateLastsForAfterUserScrolls={150}
+      useWindowAsScrollContainer={false}
+    >
+      <div
+        className="columns is-multiline is-gapless is-marginless"
+        key="0"
+      >
+        <AuthorItem
+          author={
+            Object {
+              "rek_author": "J Smith",
+              "rek_author_id": 30445289,
+              "rek_author_order": 1,
+              "rek_author_pid": "UQ:795480",
+              "rek_author_xsdmf_id": null,
+            }
+          }
+          disabled={false}
+          index={0}
+          key="0"
+          linked={true}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
+          onAuthorSelected={[Function]}
+          selected={null}
+          type="author"
+        />
+        <AuthorItem
+          author={
+            Object {
+              "rek_author": "A Smith",
+              "rek_author_id": 30445290,
+              "rek_author_order": 2,
+              "rek_author_pid": "UQ:795480",
+              "rek_author_xsdmf_id": null,
+            }
+          }
+          disabled={false}
+          index={1}
+          key="1"
+          linked={false}
+          locale={
+            Object {
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed [type]",
+            }
+          }
+          onAuthorSelected={[Function]}
+          selected={null}
+          type="author"
+        />
+      </div>
+    </Infinite>
+  </div>
+</div>
+`;
+
 exports[`ContributorLinking should be disabled 1`] = `
 <div>
   <div
