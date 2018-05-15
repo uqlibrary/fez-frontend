@@ -373,6 +373,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
   />
   <ExportPublications
     disabled={false}
+    onChange={[Function]}
   />
 </div>
 `;

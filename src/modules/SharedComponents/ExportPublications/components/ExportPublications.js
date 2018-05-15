@@ -6,31 +6,12 @@ import MenuItem from 'material-ui/MenuItem';
 
 export default class ExportPublications extends PureComponent {
     static propTypes = {
+        format: PropTypes.string,
         disabled: PropTypes.bool,
         onChange: PropTypes.func,
-        format: PropTypes.string,
-        actions: PropTypes.object,
     };
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            format: props.format || null,
-        };
-    }
-
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            format: nextProps.format,
-        });
-    }
-
     formatChanged =  (event, index, value) => {
-        this.setState({
-            format: value
-        });
-
         this.props.onChange(value);
     }
 

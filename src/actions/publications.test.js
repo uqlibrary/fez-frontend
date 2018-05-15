@@ -228,8 +228,8 @@ describe('Publications actions', () => {
                 .reply(200, exportSearchToExcelResponse);
 
             const expectedActions = [
-                actions.PUBLICATIONS_EXPORT_LOADING,
-                actions.PUBLICATIONS_EXPORT_LOADED
+                actions.EXPORT_PUBLICATIONS_LOADING,
+                actions.EXPORT_PUBLICATIONS_LOADED
             ];
 
             await mockActionsStore.dispatch(publicationsActions.exportAuthorPublications(testRequest));
@@ -248,8 +248,8 @@ describe('Publications actions', () => {
                 .reply(200, exportSearchToExcelResponse);
 
             const expectedActions = [
-                actions.PUBLICATIONS_EXPORT_LOADING,
-                actions.PUBLICATIONS_EXPORT_FAILED
+                actions.EXPORT_PUBLICATIONS_LOADING,
+                actions.EXPORT_PUBLICATIONS_FAILED
             ];
 
             await mockActionsStore.dispatch(publicationsActions.exportAuthorPublications(testRequest));
@@ -262,9 +262,9 @@ describe('Publications actions', () => {
                 .reply(403, {});
 
             const expectedActions = [
-                actions.PUBLICATIONS_EXPORT_LOADING,
+                actions.EXPORT_PUBLICATIONS_LOADING,
                 actions.CURRENT_ACCOUNT_ANONYMOUS,
-                actions.PUBLICATIONS_EXPORT_FAILED
+                actions.EXPORT_PUBLICATIONS_FAILED
             ];
 
             await mockActionsStore.dispatch(publicationsActions.exportAuthorPublications(testRequest));
@@ -277,8 +277,8 @@ describe('Publications actions', () => {
                 .reply(500, {});
 
             const expectedActions = [
-                actions.PUBLICATIONS_EXPORT_LOADING,
-                actions.PUBLICATIONS_EXPORT_FAILED
+                actions.EXPORT_PUBLICATIONS_LOADING,
+                actions.EXPORT_PUBLICATIONS_FAILED
             ];
 
             await mockActionsStore.dispatch(publicationsActions.exportAuthorPublications(testRequest));

@@ -102,7 +102,7 @@ export function searchTrendingPublications() {
  */
 export function exportAuthorPublications({exportFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
     return dispatch => {
-        dispatch({type: actions.PUBLICATIONS_EXPORT_LOADING});
+        dispatch({type: actions.EXPORT_PUBLICATIONS_LOADING});
 
         return get(
             routes.CURRENT_USER_RECORDS_API({
@@ -120,13 +120,13 @@ export function exportAuthorPublications({exportFormat = '', page = 1, pageSize 
                 promptForDownload(exportFormat, response);
 
                 dispatch({
-                    type: actions.PUBLICATIONS_EXPORT_LOADED,
-                    payload: response
+                    type: actions.EXPORT_PUBLICATIONS_LOADED,
+                    payload: exportFormat
                 });
             })
             .catch(error => {
                 dispatch({
-                    type: actions.PUBLICATIONS_EXPORT_FAILED,
+                    type: actions.EXPORT_PUBLICATIONS_FAILED,
                     payload: error.message
                 });
             });
