@@ -2,7 +2,9 @@ import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
 import * as routes from 'repositories/routes';
 import Raven from 'raven-js';
-import {sessionApi} from 'config';
+import {sessionApi, api} from 'config';
+import Cookies from 'js-cookie';
+import {SESSION_COOKIE_NAME, TOKEN_NAME} from 'config/general';
 
 /**
  * Loads the user's account and author details into the application
@@ -76,6 +78,18 @@ export function logout() {
 
 export function checkSession() {
     return () => {
-        return sessionApi.get(routes.CURRENT_ACCOUNT_API().apiUrl);
+        return sessionApi.get(routes.CURRENT_ACCOUNT_API().apiUrl)
+            .then(() => true)
+            .catch(error => {
+                if (
+                    error.response.status === 403 &&
+                    sessionApi.defaults.headers.common[TOKEN_NAME] !== Cookies.get(SESSION_COOKIE_NAME)
+                ) {
+                    api.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
+                    return true;
+                }
+
+                return false;
+            });
     };
 }
