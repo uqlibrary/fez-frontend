@@ -2,7 +2,6 @@ import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     exportPublicationsLoading: false,
-    exportPublicationsFormat: null,
 };
 
 const handlers = {
@@ -14,11 +13,10 @@ const handlers = {
         };
     },
 
-    [actions.EXPORT_PUBLICATIONS_LOADED]: (state, action) => {
+    [actions.EXPORT_PUBLICATIONS_LOADED]: (state) => {
         return {
             ...state,
             exportPublicationsLoading: false,
-            exportPublicationsFormat: action.payload,
         };
     },
 

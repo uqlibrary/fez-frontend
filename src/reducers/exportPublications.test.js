@@ -4,7 +4,6 @@ import {formatToFileInfoMap} from "../actions/publicationDataTransformers";
 
 export const initialState = {
     exportPublicationsLoading: false,
-    exportPublicationsFormat: null,
 };
 
 describe('export publications reducer', () => {
@@ -21,7 +20,6 @@ describe('export publications reducer', () => {
         });
 
         expect(test.exportPublicationsLoading).toEqual(false);
-        expect(test.exportPublicationsFormat).toEqual(format);
     });
 
     it('returns the correct state when exporting publications fails to load data', () => {
