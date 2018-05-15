@@ -43,11 +43,9 @@ export default class ThesisSubmission extends Component {
     }
 
     deposit = () => {
-        if (this.props.actions.checkSession()) {
-            this.openDepositConfirmation();
-        } else {
-            this.openSessionExpiredConfirmation();
-        }
+        this.props.actions.checkSession()
+            .then(() => this.openDepositConfirmation())
+            .catch(() => this.openSessionExpiredConfirmation());
     }
 
     cancelSubmit = () => {
