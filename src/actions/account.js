@@ -83,7 +83,7 @@ export function checkSession() {
             .catch(error => {
                 if (
                     error.response.status === 403 &&
-                    sessionApi.defaults.headers.common[TOKEN_NAME] !== Cookies.get(SESSION_COOKIE_NAME)
+                    api.defaults.headers.common[TOKEN_NAME] !== Cookies.get(SESSION_COOKIE_NAME)
                 ) {
                     api.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
                     return true;
