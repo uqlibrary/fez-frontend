@@ -6,16 +6,11 @@ exports[`Component WhatIsEspace should render component 1`] = `
   title="What is eSpace?"
 >
   UQ eSpace is the single authoritative source for the research outputs and research data of the staff and students of the University of Queensland and is the archival home of UQ Higher Degree by Research digital theses.
-  <ExternalLink
-    aria-label="Click to read more about UQ eSpace"
-    className=""
-    href="/contact"
-    openInNewIcon={false}
-    rel="noopener noreferrer"
-    target="_self"
-    title="Click to read more about UQ eSpace"
+  <Link
+    replace={false}
+    to="/contact"
   >
     ..read more
-  </ExternalLink>
+  </Link>
 </StandardCard>
 `;
