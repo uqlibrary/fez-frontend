@@ -2,6 +2,9 @@
 
 .main-drawer {
   position: absolute;
+  .main-menu {
+    flex-grow: 1;
+  }
   .main-menu:focus {
     outline: none;
   }
@@ -32,6 +35,8 @@
   }
   .side-drawer {
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
     .logo-wrapper {
       height: 75px;
       padding: 10px;
@@ -56,9 +61,8 @@
     }
   }
   .mainMenuFooter {
-    position: fixed;
-    bottom: 12px;
-    left: 12px;
+    padding-left: 12px;
+    padding-bottom: 12px;
     font-size: $text-body-xsmall;
     color: lighten($secondary-color, 20%);
   }
