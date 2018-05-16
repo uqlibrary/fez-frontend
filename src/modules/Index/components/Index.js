@@ -2,11 +2,11 @@ import React, {PureComponent} from 'react';
 
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {default as pagesLocale} from 'locale/pages';
+import {locale} from 'locale';
 
 class Index extends PureComponent {
     render() {
-        const whatIsEspaceLocale = pagesLocale.pages.index.whatIsEspace;
+        const {whatIsEspace} = locale.pages.index;
         return (
             <StandardPage className="page-index">
                 <StandardCard title={'eSpace search'}>
@@ -24,16 +24,16 @@ class Index extends PureComponent {
                     </div>
                     <div className="column is-4">
                         {
-                            whatIsEspaceLocale.text &&
-                            <StandardCard title={whatIsEspaceLocale.title} className="whatIsEspace primaryHeader">
-                                {whatIsEspaceLocale.text}
+                            whatIsEspace.text &&
+                            <StandardCard title={whatIsEspace.title} className="whatIsEspace primaryHeader">
+                                {whatIsEspace.text}
                                 {
-                                    whatIsEspaceLocale.readMoreLabel && whatIsEspaceLocale.readMoreTitle &&
+                                    whatIsEspace.readMoreLabel && whatIsEspace.readMoreTitle &&
                                     <a
-                                        href={whatIsEspaceLocale.readMoreLink}
-                                        title={whatIsEspaceLocale.readMoreTitle}
+                                        href={whatIsEspace.readMoreLink}
+                                        title={whatIsEspace.readMoreTitle}
                                     >
-                                        {whatIsEspaceLocale.readMoreLabel}
+                                        {whatIsEspace.readMoreLabel}
                                     </a>
                                 }
                             </StandardCard>
