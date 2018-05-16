@@ -69,29 +69,35 @@ export default class TopCitedPublications extends PureComponent {
                 </div>
                 {
                     publications.length > 0 &&
-                    <div className="topCitedPubsSection">
+                    <div className="trendingPubsSection">
                         <h2 className="trendingPubsSource">
                             <div className={`fez-icon ${source} xxlarge`}/>
                             {txt[source].heading}
                         </h2>
-                        <div className="is-hidden-mobile subTitle">{txt[source].subHeading}</div>
-                        {
-                            source === 'altmetric' &&
-                            <div className="column">
-                                <SelectField
-                                    id="filterBy"
-                                    fullWidth
-                                    maxHeight={250}
-                                    onChange={this.intervalChanged}
-                                    value={this.state.interval}>
-                                    {
-                                        txt[source].intervals.map((item, index) => (
-                                            <MenuItem key={index} value={item.value} primaryText={item.label}/>
-                                        ))
-                                    }
-                                </SelectField>
+
+                        <div className="columns is-hidden-mobile subTitle">
+                            <div className={'column is-narrow'}>
+                                {txt[source].subHeading}
                             </div>
-                        }
+                            {
+                                source === 'altmetric' &&
+                                <div className={'column'}>
+                                    <SelectField
+                                        className={'filterByInterval'}
+                                        id="filterByInterval"
+                                        autoWidth
+                                        maxHeight={250}
+                                        onChange={this.intervalChanged}
+                                        value={this.state.interval}>
+                                        {
+                                            txt[source].intervals.map((item, index) => (
+                                                <MenuItem key={index} value={item.value} primaryText={item.label}/>
+                                            ))
+                                        }
+                                    </SelectField>
+                                </div>
+                            }
+                        </div>
                         <PublicationsList
                             publicationsList={publications[0].values}
                             showMetrics

@@ -1,0 +1,13 @@
+@import '../../../sass/variables';
+
+.topCitedPubs {
+  .subTitle {
+    height: 40px;
+  }
+  .filterByInterval {
+    font-size: $text-body-normal !important;
+    width: 110px !important;
+    top: -15px;
+    left: -20px;
+  }
+}
