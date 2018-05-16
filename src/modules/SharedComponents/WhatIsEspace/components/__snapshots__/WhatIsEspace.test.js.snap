@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component WhatIsEspace should render component 1`] = `
+<StandardCard
+  className="whatIsEspace primaryHeader"
+  title="What is eSpace?"
+>
+  UQ eSpace is the single authoritative source for the research outputs and research data of the staff and students of the University of Queensland and is the archival home of UQ Higher Degree by Research digital theses.
+  <ExternalLink
+    aria-label="Click to read more about UQ eSpace"
+    className=""
+    href="http://www.google.com"
+    openInNewIcon={true}
+    rel="noopener noreferrer"
+    target="_blank"
+    title="Click to read more about UQ eSpace"
+  >
+    ..read more
+  </ExternalLink>
+</StandardCard>
+`;

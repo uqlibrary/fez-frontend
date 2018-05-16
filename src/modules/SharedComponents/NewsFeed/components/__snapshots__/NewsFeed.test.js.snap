@@ -6,7 +6,7 @@ exports[`Component NewsFeed should not render anything while loading 1`] = `""`;
 
 exports[`Component NewsFeed should render news feed 1`] = `
 <StandardCard
-  className="newsFeed with-theme-header"
+  className="newsFeed primaryHeader"
   title="Latest news"
 >
   <div
