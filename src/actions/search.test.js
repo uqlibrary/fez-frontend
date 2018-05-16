@@ -195,7 +195,7 @@ describe('Search action creators', () => {
 
     it('should dispatch series of search actions for eSpace only search', async () => {
         const searchParams = {title: 'abc'};
-        const params = {searchParams: searchParams, sortBy: 'score'};
+        const params = {searchQueryParams: searchParams, sortBy: 'score2'};
         mockApi
             .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl,
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).options)
@@ -207,7 +207,7 @@ describe('Search action creators', () => {
             actions.SEARCH_LOADED
         ];
 
-        await mockActionsStore.dispatch(searchActions.searchEspacePublications(searchParams));
+        await mockActionsStore.dispatch(searchActions.searchEspacePublications(params));
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 

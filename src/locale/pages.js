@@ -405,7 +405,22 @@ export default {
         },
         searchRecords: {
             title: 'eSpace search',
-            loadingMessage: 'Searching for records...'
+            loadingMessage: 'Searching for publications...',
+            recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
+            loadingPagingMessage: 'Searching for publications...',
+            noResultsFound: {
+                title: 'No publications found',
+                text: (
+                    <div>
+                        We were unable to find any results.
+                    </div>
+                ),
+            },
+            facetsFilter: {
+                title: 'Refine results',
+                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
+                renameFacetsList: {'Display type': 'Publication type'}
+            }
         },
         masquerade: {
             title: 'Masquerade',

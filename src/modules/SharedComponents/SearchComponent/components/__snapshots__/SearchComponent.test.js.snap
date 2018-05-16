@@ -1,34 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchComponent should render advanced search 1`] = `
-<div
-  className="search-component "
->
-  <div
-    className="columns"
-  >
-    <div
-      className="column"
-    >
-      Advanced search component goes here
-    </div>
-    <div
-      className="column is-narrow"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={false}
-        label="Simple search"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={false}
-        secondary={true}
-      />
-    </div>
-  </div>
-</div>
-`;
-
 exports[`SearchComponent should render default view 1`] = `
 <div
   className="search-component "
@@ -111,26 +82,13 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
       className="column is-narrow"
     >
       <RaisedButton
-        disabled={false}
+        disabled={true}
         fullWidth={false}
         label="Search"
         labelPosition="after"
         onClick={[Function]}
         primary={false}
         secondary={true}
-      />
-    </div>
-    <div
-      className="column is-narrow"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={false}
-        label="Advanced search"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={false}
-        secondary={false}
       />
     </div>
   </div>
@@ -230,19 +188,6 @@ exports[`SearchComponent should set search value from prop 1`] = `
         onClick={[Function]}
         primary={false}
         secondary={true}
-      />
-    </div>
-    <div
-      className="column is-narrow"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={false}
-        label="Advanced search"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={false}
-        secondary={false}
       />
     </div>
   </div>

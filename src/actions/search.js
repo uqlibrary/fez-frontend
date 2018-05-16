@@ -105,6 +105,15 @@ export function loadSearchKeyList(searchKey, searchQuery) {
     };
 }
 
+
+// searchEspacePublications - call eSpace internal search api
+// searchParameters are
+// {
+// title: '',
+// ...any other search parameters for advanced search...,
+// page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc',
+// activeFacets = {filters: {}, ranges: {}}
+// }
 export function searchEspacePublications(searchParams) {
     return dispatch => {
         dispatch({
@@ -112,18 +121,13 @@ export function searchEspacePublications(searchParams) {
             payload: searchParams
         });
 
-        dispatch({type: actions.SEARCH_LOADING, payload: ''});
+        dispatch({type: actions.SEARCH_LOADING, payload: {}});
 
-        return get(routes.SEARCH_INTERNAL_RECORDS_API({
-            searchParams: searchParams,
-            sortBy: 'score' // TODO: paging/sorting/sortDirection/page/facets/etc
-        }))
+        return get(routes.SEARCH_INTERNAL_RECORDS_API({...searchParams, facets: !!searchParams.activeFacets ? searchParams.activeFacets : {}}))
             .then(response => {
                 dispatch({
                     type: actions.SEARCH_LOADED,
-                    payload: {
-                        data: response.data
-                    }
+                    payload: response
                 });
             })
             .catch(error => {

@@ -10,8 +10,9 @@ const initialSearchSources = {
 
 const initialState = {
     publicationsList: [],
+    publicationsListPagingData: {},
+    publicationsListFacets: {},
     loadingSearch: false,
-    searchParams: {},
     ...initialSearchSources
 };
 
@@ -137,7 +138,7 @@ const handlers = {
     [actions.SET_SEARCH_QUERY]: (state, action) => {
         return {
             ...state,
-            searchParams: {
+            searchQuery: {
                 ...action.payload
             }
         };
@@ -147,10 +148,11 @@ const handlers = {
         const rawSearchQuery = action.payload;
         return {
             ...state,
-            rawSearchQuery: rawSearchQuery,
-            loadingSearch: true,
             publicationsList: [],
-            ...initialSearchSources
+            publicationsListPagingData: {},
+            publicationsListFacets: {},
+            rawSearchQuery: rawSearchQuery,
+            loadingSearch: true
         };
     },
 
@@ -158,18 +160,26 @@ const handlers = {
         return {
             ...state,
             loadingSearch: false,
-            publicationsList: action.payload.data
+            publicationsList: action.payload.data && action.payload.data.length > 0 && action.payload.data[0].currentSource
                 ? deduplicateResults(action.payload.data)
-                : []
+                : action.payload.data,
+            publicationsListPagingData: {
+                total: action.payload.total,
+                current_page: action.payload.current_page,
+                from: action.payload.from,
+                to: action.payload.to,
+                per_page: action.payload.per_page
+            },
+            publicationsListFacets: action.payload.hasOwnProperty('filters') && action.payload.filters.hasOwnProperty('facets') && action.payload.filters.facets
+                ? action.payload.filters.facets
+                : {},
         };
     },
 
     [actions.SEARCH_FAILED]: (state) => {
         return {
             ...state,
-            loadingSearch: false,
-            publicationsList: [],
-            ...initialSearchSources
+            ...initialState
         };
     },
 

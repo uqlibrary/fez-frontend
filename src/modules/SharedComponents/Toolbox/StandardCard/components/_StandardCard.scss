@@ -1,0 +1,30 @@
+
+// Optional primary theme header
+.standard-card {
+  &.primaryHeader {
+    .card-header {
+      background-color: $theme-color;
+      h2 {
+        color: $text-color-reverse;
+        font-weight: $text-weight-light;
+        margin-bottom: 12px;
+      }
+    }
+    .body-1 {
+      padding-top: 24px !important;
+    }
+  }
+  &.secondaryHeader {
+    .card-header {
+      background-color: $accent-color;
+      h2 {
+        color: $text-color-reverse;
+        font-weight: $text-weight-light;
+        margin-bottom: 12px;
+      }
+    }
+    .body-1 {
+      padding-top: 24px !important;
+    }
+  }
+}

@@ -382,6 +382,6 @@ describe('searchRecords reducer', () => {
     it('should set search query in state', () => {
         const testValue = 'i feel lucky';
         const countState = searchRecordsReducer(initialState, {payload: {title: testValue}, type: actions.SET_SEARCH_QUERY});
-        expect(countState.searchParams.title).toEqual(testValue);
+        expect(countState.searchQuery).toEqual({title: testValue});
     });
 });

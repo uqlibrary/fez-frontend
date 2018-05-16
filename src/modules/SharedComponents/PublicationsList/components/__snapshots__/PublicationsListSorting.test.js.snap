@@ -11,13 +11,13 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
   className="publicationsListSorting columns is-gapless is-mobile"
 >
   <div
-    className="column is-6-mobile"
+    className="column"
   >
     <SelectField
       autoWidth={false}
       disabled={false}
       floatingLabelText="Sort results by"
-      fullWidth={false}
+      fullWidth={true}
       id="sortBy"
       maxHeight={250}
       multiple={false}
@@ -203,10 +203,10 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
     </SelectField>
   </div>
   <div
-    className="column is-narrow is-spacer"
+    className="column is-narrow is-spacer is-hidden-mobile"
   />
   <div
-    className="column"
+    className="column is-hidden-mobile"
   >
     <SelectField
       autoWidth={false}

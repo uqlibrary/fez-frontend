@@ -47,6 +47,8 @@ export const getStandardSearchParams = ({page = 1, pageSize = 20, sortBy = 'publ
  * @returns {object} query string attribute based on input
  */
 export const getSearchType = (searchQuery) => {
+    if (!searchQuery) return {};
+
     if (validation.isValidDOIValue(searchQuery)) {
         return {doi: searchQuery.trim()};
     }
@@ -90,19 +92,21 @@ export const HIDE_POSSIBLE_RECORD_API = () => ({apiUrl: 'records/search', option
 export const CURRENT_USER_RECORDS_API = (values) => ({apiUrl: 'records/search', options: {params: {rule: 'mine', ...getStandardSearchParams(values)}}});
 export const ACADEMIC_PUBLICATIONS_STATS_API = (values) => ({apiUrl: 'records/search', options: {params: {rule: 'mine', 'filters[stats_only]': true, ...getStandardSearchParams(values)}}});
 
-export const SEARCH_INTERNAL_RECORDS_API = (values) => (
-    // values = {searchQuery (text value - title search, doi or pubmed id), searchParams = {} (advanced search parameters)
+export const SEARCH_INTERNAL_RECORDS_API = (values) => {
+    // values = {searchQuery (text value - title search, doi or pubmed id)
+    // searchQueryParams = {} (search parameters, eg title, author etc)
     // page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}
-    {
+    return {
         apiUrl: 'records/search',
         options: {
             params: {
-                ...(!!values.searchQuery ? getSearchType(values.searchQuery) : values.searchParams),
-                ...getStandardSearchParams(values)
+                ...getSearchType(values.searchQuery),
+                ...getStandardSearchParams(values),
+                ...values.searchQueryParams
             }
         }
-    }
-);
+    };
+};
 
 export const SEARCH_EXTERNAL_RECORDS_API = ({source = 'wos', searchQuery = ''}) => (
     {apiUrl: 'external/records/search', options: {params: {source: source, ...getSearchType(searchQuery)}}}
