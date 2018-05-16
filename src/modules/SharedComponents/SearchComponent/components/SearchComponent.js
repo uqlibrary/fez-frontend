@@ -46,7 +46,8 @@ export default class SearchComponent extends PureComponent {
                 page: 1,
                 pageSize: 20,
                 sortBy: locale.components.sorting.sortBy[0].value,
-                sortDirection: locale.components.sorting.sortDirection[0]
+                sortDirection: locale.components.sorting.sortDirection[0],
+                activeFacets: {filters: {}, ranges: {}}
             };
 
             this.props.actions.searchEspacePublications({searchQueryParams: {title: this.state.searchText}, ...defaultQueryParams});

@@ -187,8 +187,8 @@ export default class App extends PureComponent {
                     }
                     iconElementRight={
                         <div className="columns is-gapless appbar-right-columns">
-                            <div className="column search-column">
-                                <SearchComponent applyInverseStyle showPrefixIcon />
+                            <div className="column search-column is-hidden-mobile">
+                                <SearchComponent applyInverseStyle showPrefixIcon showSearchButton />
                             </div>
                             <div className="column is-narrow auth-button-column">
                                 <AuthButton
