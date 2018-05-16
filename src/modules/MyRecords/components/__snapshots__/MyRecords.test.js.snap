@@ -48,7 +48,7 @@ exports[`MyRecords test renders active filters 1`] = `
       </StandardCard>
     </div>
     <div
-      className="column is-3 is-hidden-mobile"
+      className="column is-hidden-mobile"
     >
       <StandardRighthandCard
         title="Refine results"
@@ -279,7 +279,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
       </StandardCard>
     </div>
     <div
-      className="column is-3 is-hidden-mobile"
+      className="column is-hidden-mobile"
     >
       <StandardRighthandCard
         title="Refine results"

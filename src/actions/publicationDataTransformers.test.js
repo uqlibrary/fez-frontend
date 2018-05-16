@@ -1,24 +1,21 @@
-jest.mock('js-file-download');
+jest.mock('file-saver', ()=>({saveAs: jest.fn((data, filename) => [data, filename])}));
 
 import * as transformers from './publicationDataTransformers';
-import fileDownload from 'js-file-download';
+import FileSaver from 'file-saver';
 
 beforeEach(() => {
-    fileDownload.mockClear();
+    FileSaver.saveAs.mockClear();
 });
 
 describe('Publication data transformers ', () => {
     describe('promptForDownload test', () => {
-        // mock fileDownload
-        fileDownload.mockImplementation((data, filename, mimeType) => [data, filename, mimeType]);
-
         it('should trigger a file download', () => {
             for (const format in transformers.formatToFileInfoMap) {
                 const fileInfo = transformers.formatToFileInfoMap[format];
-                const expected = ['data', fileInfo.filename, fileInfo.mimeType];
+                const expected = ['data', fileInfo.filename];
 
                 transformers.promptForDownload(format, 'data');
-                expect(fileDownload).toHaveBeenCalledWith(...expected);
+                expect(FileSaver.saveAs).toHaveBeenCalledWith(...expected);
             }
         });
 

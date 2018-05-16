@@ -1,10 +1,9 @@
-import fileDownload from 'js-file-download';
+import FileSaver from 'file-saver';
 
 /**
  * File type to name map
  *
  * Note: unfortunately content-disposition info doesn't seem to come through even after whitelisting it on CORS
- * Also, it only works with array buffer response type, which doesn't include any headers
  *
  * @type {{"application/vnd.ms-excel": string, "application/vnd.endnote": string}}
  */
@@ -31,6 +30,6 @@ export function promptForDownload(format, response) {
     }
 
     const fileInfo = formatToFileInfoMap[format];
-    fileDownload(response, fileInfo.filename, fileInfo.mimeType);
+    FileSaver.saveAs(response, fileInfo.filename);
 }
 

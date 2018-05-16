@@ -371,9 +371,13 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
   <div
     className="column is-narrow is-spacer is-hidden-mobile"
   />
-  <ExportPublications
-    disabled={false}
-    onChange={[Function]}
-  />
+  <div
+    className="column is-hidden-mobile"
+  >
+    <ExportPublications
+      disabled={false}
+      onChange={[Function]}
+    />
+  </div>
 </div>
 `;
