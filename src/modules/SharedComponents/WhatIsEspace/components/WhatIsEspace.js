@@ -10,7 +10,8 @@ export default class WhatIsEspace extends PureComponent {
         return (
             <StandardCard title={txt.title} className="whatIsEspace primaryHeader">
                 {txt.text}
-                <ExternalLink href={txt.readMoreLink} title={txt.readMoreTitle} aria-label={txt.readMoreTitle}>
+                <ExternalLink href={txt.readMoreLink} title={txt.readMoreTitle} aria-label={txt.readMoreTitle}
+                    target={'_self'} openInNewIcon={false}>
                     {txt.readMoreLabel}
                 </ExternalLink>
             </StandardCard>

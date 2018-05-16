@@ -9,10 +9,10 @@ exports[`Component WhatIsEspace should render component 1`] = `
   <ExternalLink
     aria-label="Click to read more about UQ eSpace"
     className=""
-    href="http://www.google.com"
-    openInNewIcon={true}
+    href="/contact"
+    openInNewIcon={false}
     rel="noopener noreferrer"
-    target="_blank"
+    target="_self"
     title="Click to read more about UQ eSpace"
   >
     ..read more
