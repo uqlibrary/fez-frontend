@@ -111,10 +111,11 @@ export default class PublicationsListSorting extends PureComponent {
                         disabled={this.props.disabled}
                         onChange={this.pageSizeChanged}
                         floatingLabelText={txt.pageSize}>
-                        <MenuItem value={20} primaryText={20} />
-                        <MenuItem value={50} primaryText={50}/>
-                        <MenuItem value={100} primaryText={100}/>
-                        <MenuItem value={1000} primaryText={1000}/>
+                        {
+                            txt.recordsPerPage.map(number => {
+                                return (<MenuItem key={`records-per-page-${number}`} value={number} primaryText={number} />);
+                            })
+                        }
                     </SelectField>
                 </div>
             </div>

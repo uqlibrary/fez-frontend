@@ -294,6 +294,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="records-per-page-20"
         primaryText={20}
         targetOrigin={
           Object {
@@ -315,6 +316,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="records-per-page-50"
         primaryText={50}
         targetOrigin={
           Object {
@@ -336,6 +338,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="records-per-page-100"
         primaryText={100}
         targetOrigin={
           Object {
@@ -357,14 +360,15 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
-        primaryText={1000}
+        key="records-per-page-500"
+        primaryText={500}
         targetOrigin={
           Object {
             "horizontal": "left",
             "vertical": "top",
           }
         }
-        value={1000}
+        value={500}
       />
     </SelectField>
   </div>
