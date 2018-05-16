@@ -61,6 +61,7 @@ export default class TopCitedPublications extends PureComponent {
         }
 
         const publications = this.props.topCitedPublicationsList.filter(item => item.key === source);
+        const isAltmetric = source === 'altmetric';
 
         return (
             <div className="topCitedPubs">
@@ -80,7 +81,7 @@ export default class TopCitedPublications extends PureComponent {
                                 {txt[source].subHeading}
                             </div>
                             {
-                                source === 'altmetric' &&
+                                isAltmetric &&
                                 <div className={'column'}>
                                     <SelectField
                                         className={'filterByInterval'}
@@ -98,10 +99,15 @@ export default class TopCitedPublications extends PureComponent {
                                 </div>
                             }
                         </div>
-                        <PublicationsList
-                            publicationsList={publications[0].values}
-                            showMetrics
-                        />
+                        {
+                            <PublicationsList
+                                publicationsList={publications[0].values}
+                                showMetrics
+                                showSourceCountIcon={isAltmetric}
+                                hideCountDiff={isAltmetric}
+                                hideCitationContent
+                            />
+                        }
                     </div>
                 }
             </div>

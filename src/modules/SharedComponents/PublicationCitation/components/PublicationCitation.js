@@ -45,14 +45,20 @@ export default class PublicationCitation extends PureComponent {
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
         hideTitle: PropTypes.bool,
-        showMetrics: PropTypes.bool
+        hideCitationContent: PropTypes.bool,
+        showMetrics: PropTypes.bool,
+        showSourceCountIcon: PropTypes.bool,
+        hideCountDiff: PropTypes.bool
     };
 
     static defaultProps = {
         showDefaultActions: false,
         showSources: false,
+        showSourceCountIcon: false,
         className: '',
-        hideTitle: false
+        hideTitle: false,
+        hideCitationContent: false,
+        hideCountDiff: false
     };
 
     constructor(props) {
@@ -168,7 +174,7 @@ export default class PublicationCitation extends PureComponent {
                             </h3>
                         }
 
-                        {this.renderCitation(this.props.publication.rek_display_type)}
+                        {!this.props.hideCitationContent && this.renderCitation(this.props.publication.rek_display_type)}
 
                         <CitationCounts publication={this.props.publication} />
 
@@ -185,12 +191,22 @@ export default class PublicationCitation extends PureComponent {
                                 aria-label={txt.linkWillOpenInNewWindow.replace('[destination]', txt.myTrendingPublications.sourceTitles[recordValue.source])}
                                 openInNewIcon={false}
                             >
-                                {recordValue.count}
+                                {
+                                    this.props.showSourceCountIcon &&
+                                    <div className={'count-icon-container'}>
+                                        <div className={`fez-icon ${recordValue.source} xxxlarge`} />
+                                        <div className={'count'}>{recordValue.count}</div>
+                                    </div>
+                                }
+                                {!this.props.showSourceCountIcon && recordValue.count}
                             </ExternalLink>
-                            <span
-                                className="trendingPubsDifference"
-                                title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}>+{Math.round(recordValue.difference)}
-                            </span>
+                            {
+                                !this.props.hideCountDiff &&
+                                <span
+                                    className="trendingPubsDifference"
+                                    title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}>+{Math.round(recordValue.difference)}
+                                </span>
+                            }
                         </div>
                     }
                 </div>
