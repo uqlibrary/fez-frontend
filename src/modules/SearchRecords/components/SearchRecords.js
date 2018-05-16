@@ -52,6 +52,12 @@ class SearchRecords extends PureComponent {
         };
     }
 
+    componentWillReceiveProps(newProps) {
+        this.setState({
+            ...newProps.searchQuery
+        });
+    }
+
     pageSizeChanged = (pageSize) => {
         this.setState(
             {
