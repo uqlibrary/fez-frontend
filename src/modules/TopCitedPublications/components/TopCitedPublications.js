@@ -76,7 +76,7 @@ export default class TopCitedPublications extends PureComponent {
                             {txt[source].heading}
                         </h2>
 
-                        <div className="columns is-hidden-mobile subTitle">
+                        <div className="columns is-gapless is-hidden-mobile subTitle">
                             <div className={'column is-narrow'}>
                                 {txt[source].subHeading}
                             </div>
