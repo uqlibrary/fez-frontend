@@ -728,7 +728,8 @@ export default {
             sortDirection: [
                 'Desc',
                 'Asc'
-            ]
+            ],
+            recordsPerPage: [20, 50, 100, 500]
         },
         newsFeed: {
             title: 'Latest news'

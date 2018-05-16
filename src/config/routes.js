@@ -330,11 +330,11 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.dataset.mine,
                 ...locale.menu.myDatasets
             },
+            */
             {
                 linkTo: pathConfig.dataset.add,
                 ...locale.menu.addDataset
             },
-            */
             {
                 linkTo: pathConfig.authorStatistics.url(account.id),
                 ...locale.menu.authorStatistics
