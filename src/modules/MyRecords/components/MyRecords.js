@@ -192,7 +192,7 @@ export default class MyRecords extends PureComponent {
                         || (this.state.activeFacets && this.state.activeFacets.filters && Object.keys(this.state.activeFacets.filters).length > 0)
                         || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)
                         || (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
-                        <div className="column is-3 is-hidden-mobile">
+                        <div className="column is-hidden-mobile">
                             <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                 <FacetsFilter
                                     facetsData={this.props.publicationsListFacets}
