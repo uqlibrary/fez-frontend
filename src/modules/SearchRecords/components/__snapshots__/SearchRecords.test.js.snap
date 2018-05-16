@@ -3,7 +3,7 @@
 exports[`SearchRecords page should render placeholders 1`] = `
 <StandardPage
   className="page-search-records"
-  title="Search results"
+  title="eSpace search"
 >
   <StandardCard
     className=""
@@ -14,37 +14,6 @@ exports[`SearchRecords page should render placeholders 1`] = `
   </StandardCard>
   <div
     className="columns"
-  >
-    <div
-      className="column"
-    >
-      <StandardCard
-        className=""
-      >
-        <p>
-          Paging, sorting...
-        </p>
-      </StandardCard>
-      <StandardCard
-        className=""
-      >
-        <p>
-          Search results publications list...
-        </p>
-      </StandardCard>
-    </div>
-    <div
-      className="column is-4"
-    >
-      <StandardCard
-        className=""
-        title="Refine"
-      >
-        <p>
-          Filter results...
-        </p>
-      </StandardCard>
-    </div>
-  </div>
+  />
 </StandardPage>
 `;

@@ -18,7 +18,7 @@ import {locale} from 'locale';
 
 class SearchRecords extends PureComponent {
     static propTypes = {
-        searchParams: PropTypes.object,
+        searchQuery: PropTypes.object,
         publicationsList: PropTypes.array,
         publicationsListFacets: PropTypes.object,
         publicationsListPagingData: PropTypes.object,
@@ -46,8 +46,9 @@ class SearchRecords extends PureComponent {
         this.state = {
             // check if search has results
             // facets filtering might return no results, but facets should still be visible
-            hasResults: !props.loadingSearch && props.publicationsList.length > 0,
-            ...this.initState
+            // hasResults: !props.loadingSearch && props.publicationsList.length > 0,
+            ...this.initState,
+            ...this.props.searchQuery
         };
     }
 
@@ -91,13 +92,13 @@ class SearchRecords extends PureComponent {
     }
 
     updateSearch = () => {
-        this.props.actions.searchEspacePublications({...this.state, searchParams: this.props.searchParams});
+        this.props.actions.searchEspacePublications({...this.props.searchQuery, ...this.state});
     }
 
     render() {
         const txt = locale.pages.searchRecords;
         const pagingData = this.props.publicationsListPagingData;
-        const hasSearchParams = this.props.searchParams.constructor === Object && Object.keys(this.props.searchParams).length > 0;
+        const hasSearchParams = !!this.props.searchQuery && this.props.searchQuery.constructor === Object && Object.keys(this.props.searchQuery).length > 0;
 
         return (
             <StandardPage className="page-search-records" title={txt.title}>
@@ -106,7 +107,7 @@ class SearchRecords extends PureComponent {
                 </StandardCard>
                 {
                     // first time loading my publications - account hasn't been loaded or any my publications haven't been loaded
-                    this.props.loadingSearch &&
+                    !hasSearchParams && this.props.loadingSearch &&
                     <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
                 }
                 <div className="columns">
@@ -121,8 +122,7 @@ class SearchRecords extends PureComponent {
                     }
                     {
                         // results to display or loading if user is filtering/paging
-                        // this.state.hasResults && (this.props.loadingSearch ||
-                        this.props.publicationsList.length > 0 &&
+                        ((hasSearchParams && this.props.loadingSearch) || (!!this.props.publicationsList && this.props.publicationsList.length > 0)) &&
                         <div className="column">
                             <StandardCard>
                                 {

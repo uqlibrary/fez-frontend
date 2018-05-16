@@ -6,7 +6,8 @@ import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state) => {
     return {
-        searchParams: state && state.get('searchRecordsReducer') && state.get('searchRecordsReducer').searchParams || {}
+        searchQueryParams: state && state.get('searchRecordsReducer') && state.get('searchRecordsReducer').searchQuery
+            && state.get('searchRecordsReducer').searchQuery.searchQueryParams || {}
     };
 };
 

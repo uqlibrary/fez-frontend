@@ -13,7 +13,6 @@ const initialState = {
     publicationsListPagingData: {},
     publicationsListFacets: {},
     loadingSearch: false,
-    searchParams: {},
     ...initialSearchSources
 };
 
@@ -139,7 +138,7 @@ const handlers = {
     [actions.SET_SEARCH_QUERY]: (state, action) => {
         return {
             ...state,
-            searchParams: {
+            searchQuery: {
                 ...action.payload
             }
         };

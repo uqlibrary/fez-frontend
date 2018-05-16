@@ -2,7 +2,7 @@ import SearchComponent from './SearchComponent';
 
 function setup(testProps, isShallow = true){
     const props = {
-        searchParams: {},
+        searchQueryParams: {},
         applyInverseStyle: false,
         showAdvancedSearchButton: false,
         history: {
@@ -33,25 +33,25 @@ describe('SearchComponent', () => {
     });
 
     it('should set search value from prop', () => {
-        const wrapper = setup({showAdvancedSearchButton: true, searchParams: {title: 'i feel lucky'}});
+        const wrapper = setup({showAdvancedSearchButton: true, searchQueryParams: {title: 'i feel lucky'}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should set state when receiving new props', () => {
         // componentWillReceiveProps
         const wrapper = setup({showAdvancedSearchButton: true});
-        wrapper.instance().componentWillReceiveProps({searchParams: {title: 'i feel lucky'}});
+        wrapper.instance().componentWillReceiveProps({searchQueryParams: {title: 'i feel lucky'}});
         wrapper.update();
         expect(wrapper.state().searchText).toEqual('i feel lucky');
     });
 
-    it('should render advanced search', () => {
-        const wrapper = setup({showAdvancedSearchButton: true});
-        wrapper.instance().toggleAdvancedSearch();
-        wrapper.update();
-        expect(wrapper.state().showAdvancedSearch).toEqual(true);
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+    // it('should render advanced search', () => {
+    //     const wrapper = setup({showAdvancedSearchButton: true});
+    //     wrapper.instance().toggleAdvancedSearch();
+    //     wrapper.update();
+    //     expect(wrapper.state().showAdvancedSearch).toEqual(true);
+    //     expect(toJson(wrapper)).toMatchSnapshot();
+    // });
 
     it('should update internal text field state', () => {
         const wrapper = setup({});

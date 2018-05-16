@@ -10,7 +10,7 @@ import {routes} from 'config';
 
 export default class SearchComponent extends PureComponent {
     static propTypes = {
-        searchParams: PropTypes.object,
+        searchQueryParams: PropTypes.object,
         applyInverseStyle: PropTypes.bool,
         showAdvancedSearchButton: PropTypes.bool,
         actions: PropTypes.object,
@@ -20,25 +20,33 @@ export default class SearchComponent extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            searchText: props.searchParams && props.searchParams.title || '',
+            searchText: props.searchQueryParams && props.searchQueryParams.title || '',
             showAdvancedSearch: false
         };
+        this.MIN_SEARCH_TEXT_LENGTH = 10;
     }
 
     componentWillReceiveProps(nextProps) {
-        if (!!nextProps.searchParams && nextProps.searchParams.title !== this.state.searchText) {
+        if (!!nextProps.searchQueryParams && nextProps.searchQueryParams.title !== this.state.searchText) {
             this.setState({
-                searchText: nextProps.searchParams.title || ''
+                searchText: nextProps.searchQueryParams.title || ''
             });
         }
     }
 
     handleSearch = (event) => {
-        if(event && event.key && (event.key !== 'Enter' || this.state.searchText.length === 0)) return;
+        if(event && event.key && (event.key !== 'Enter' || this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH)) return;
 
-        if (this.props.actions && this.props.actions.searchEspacePublications && this.state.searchText.length > 0) {
+        if (this.props.actions && this.props.actions.searchEspacePublications && this.state.searchText.trim().length >= this.MIN_SEARCH_TEXT_LENGTH) {
             // start search
-            this.props.actions.searchEspacePublications({title: this.state.searchText});
+            const defaultQueryParams = {
+                page: 1,
+                pageSize: 20,
+                sortBy: locale.components.sorting.sortBy[0].value,
+                sortDirection: locale.components.sorting.sortDirection[0]
+            };
+
+            this.props.actions.searchEspacePublications({searchQueryParams: {title: this.state.searchText}, ...defaultQueryParams});
             // navigate to search results page
             this.props.history.push(routes.pathConfig.records.search);
         }
@@ -58,7 +66,6 @@ export default class SearchComponent extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent;
-
         return (
             <div className={`search-component ${this.props.applyInverseStyle ? 'inverse' : ''}`}>
                 {
@@ -82,6 +89,7 @@ export default class SearchComponent extends PureComponent {
                                 <IconButton
                                     tooltipPosition="bottom-left"
                                     onClick={this.handleSearch}
+                                    disabled={this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH}
                                     hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}}
                                     className="search-button"
                                     tooltip={txt.searchButtonHint}>
@@ -94,11 +102,12 @@ export default class SearchComponent extends PureComponent {
                             <div className="column is-narrow">
                                 <RaisedButton
                                     label={txt.searchButtonText}
+                                    disabled={this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH}
                                     onClick={this.handleSearch}/>
                             </div>
                         }
                         {
-                            this.props.showAdvancedSearchButton &&
+                            this.props.showAdvancedSearchButton && false &&
                             <div className="column is-narrow">
                                 <RaisedButton
                                     label={txt.advancedSearchButtonText}
