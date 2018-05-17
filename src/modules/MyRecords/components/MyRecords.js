@@ -15,7 +15,7 @@ export default class MyRecords extends PureComponent {
         publicationsListFacets: PropTypes.object,
         loadingPublicationsList: PropTypes.bool,
         publicationsListPagingData: PropTypes.object,
-
+        initialFacets: PropTypes.object,
         accountLoading: PropTypes.bool,
 
         location: PropTypes.object.isRequired,
@@ -33,7 +33,8 @@ export default class MyRecords extends PureComponent {
             sortDirection: locale.components.sorting.sortDirection[0],
             activeFacets: {
                 filters: {},
-                ranges: {}
+                ranges: {},
+                ...props.initialFacets
             }
         };
 
@@ -109,6 +110,8 @@ export default class MyRecords extends PureComponent {
             search: `?ts=${Date.now()}`,
             state: {...this.state}
         });
+
+        console.log(this.state);
         this.props.actions.searchAuthorPublications({...this.state});
     };
 

@@ -25,7 +25,7 @@ export const pathConfig = {
         }
     },
     dataset: {
-        mine: `${fullPath}/my_research_data_claimed.php`,
+        mine: '/data-collections/mine',
         add: `${fullPath}/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315`,
     },
     collection: {
@@ -180,6 +180,13 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 component: components.MyRecords,
                 access: [roles.researcher, roles.admin],
                 exact: true,
+                pageTitle: locale.pages.myResearch.pageTitle // TODO: locale should be created for my data collections
+            },
+            {
+                path: pathConfig.dataset.mine,
+                component: components.MyDataCollections,
+                access: [roles.researcher, roles.admin],
+                exact: true,
                 pageTitle: locale.pages.myResearch.pageTitle
             },
             {
@@ -331,12 +338,10 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.records.add.find,
                 ...locale.menu.addMissingRecord
             },
-            /*
             {
                 linkTo: pathConfig.dataset.mine,
                 ...locale.menu.myDatasets
             },
-            */
             {
                 linkTo: pathConfig.dataset.add,
                 ...locale.menu.addDataset
