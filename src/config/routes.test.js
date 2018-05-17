@@ -6,7 +6,8 @@ import {locale} from 'locale';
 describe('Routes method', () => {
     it('should return a list of menus for anon user', () => {
         const testRoutes = routes.getMenuConfig(null);
-        expect(testRoutes.length).toEqual(4);
+        // expect(testRoutes.length).toEqual(4);
+        expect(testRoutes.length).toEqual(3);
     });
 
     it('should return a list of menus for researcher', () => {
@@ -16,7 +17,8 @@ describe('Routes method', () => {
 
     it('should return a list of menus for a user with dashboard enabled only (eg HDR student without ORCID)', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqresearcher, true);
-        expect(testRoutes.length).toEqual(6);
+        // expect(testRoutes.length).toEqual(6);
+        expect(testRoutes.length).toEqual(5);
     });
 
     it('should return a list of menus for user who can masquerade', () => {
@@ -26,7 +28,8 @@ describe('Routes method', () => {
 
     it('should return a list of routes for anon user', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: null});
-        expect(testRoutes.length).toEqual(6);
+        // expect(testRoutes.length).toEqual(6);
+        expect(testRoutes.length).toEqual(5);
     });
 
     it('should return a list of routes for researcher', () => {
@@ -41,7 +44,8 @@ describe('Routes method', () => {
 
     it('should return a list of routes for hdr student without ORCID', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.s2222222, forceOrcidRegistration: true, isHdrStudent: true});
-        expect(testRoutes.length).toEqual(6);
+        // expect(testRoutes.length).toEqual(6);
+        expect(testRoutes.length).toEqual(5);
     });
 
     it('should return a list of routes for hdr student with ORCID', () => {
