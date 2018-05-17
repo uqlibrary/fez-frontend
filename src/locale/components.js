@@ -728,7 +728,24 @@ export default {
             sortDirection: [
                 'Desc',
                 'Asc'
-            ]
+            ],
+            recordsPerPage: [20, 50, 100, 500]
         },
+        newsFeed: {
+            title: 'Latest news'
+        },
+        searchComponent: {
+            searchBoxPlaceholder: 'Search eSpace',
+            searchButtonHint: 'Search eSpace',
+            advancedSearchButtonText: 'Advanced search',
+            searchButtonText: 'Search'
+        },
+        whatIsEspace: {
+            title: 'What is eSpace?',
+            text: 'UQ eSpace is the single authoritative source for the research outputs and research data of the staff and students of the University of Queensland and is the archival home of UQ Higher Degree by Research digital theses.',
+            readMoreLabel: '..read more',
+            readMoreTitle: 'Click to read more about UQ eSpace',
+            readMoreLink: '/contact'
+        }
     }
 };

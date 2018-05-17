@@ -20,7 +20,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -121,6 +121,12 @@ exports[`Application component should render alert if user is not fez author 1`]
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
+        },
+        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -143,6 +149,7 @@ exports[`Application component should render alert if user is not fez author 1`]
     className="AppBar align-center"
     iconElementLeft={
       <IconButton
+        className="main-menu-button"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -162,24 +169,33 @@ exports[`Application component should render alert if user is not fez author 1`]
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns is-gapless appbar-right-columns"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
+        <div
+          className="column search-column is-hidden-mobile"
+        >
+          <withRouter(Connect(SearchComponent))
+            applyInverseStyle={true}
+            showPrefixIcon={true}
+            showSearchButton={true}
+          />
+        </div>
+        <div
+          className="column is-narrow auth-button-column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
             }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -238,6 +254,12 @@ exports[`Application component should render alert if user is not fez author 1`]
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
           "primaryText": "Author statistics",
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
         },
         Object {
           "divider": true,
@@ -301,6 +323,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -428,7 +451,14 @@ exports[`Application component should render alert if user is not fez author 1`]
         path="/author-identifiers/google-scholar/link"
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_13"
+        pageTitle="eSpace search"
+        path="/records/search"
+      />
+      <Route
+        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -436,12 +466,12 @@ exports[`Application component should render alert if user is not fez author 1`]
       <Route
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_15"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_15"
+        key="route_16"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -472,7 +502,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -573,6 +603,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
+        },
+        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -595,6 +631,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     className="AppBar align-center"
     iconElementLeft={
       <IconButton
+        className="main-menu-button"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -614,24 +651,33 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns is-gapless appbar-right-columns"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
+        <div
+          className="column search-column is-hidden-mobile"
+        >
+          <withRouter(Connect(SearchComponent))
+            applyInverseStyle={true}
+            showPrefixIcon={true}
+            showSearchButton={true}
+          />
+        </div>
+        <div
+          className="column is-narrow auth-button-column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
             }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -692,6 +738,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "Author statistics",
         },
         Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
+        },
+        Object {
           "divider": true,
           "path": "/234234234242",
         },
@@ -737,6 +789,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -864,7 +917,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         path="/author-identifiers/google-scholar/link"
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_13"
+        pageTitle="eSpace search"
+        path="/records/search"
+      />
+      <Route
+        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -872,12 +932,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       <Route
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_15"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_15"
+        key="route_16"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -928,6 +988,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     className="AppBar align-center"
     iconElementLeft={
       <IconButton
+        className="main-menu-button"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -947,24 +1008,33 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns is-gapless appbar-right-columns"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
+        <div
+          className="column search-column is-hidden-mobile"
+        >
+          <withRouter(Connect(SearchComponent))
+            applyInverseStyle={true}
+            showPrefixIcon={true}
+            showSearchButton={true}
+          />
+        </div>
+        <div
+          className="column is-narrow auth-button-column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
             }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -1107,7 +1177,7 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -1208,6 +1278,12 @@ exports[`Application component should render app for account with fez author wit
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
+        },
+        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -1230,6 +1306,7 @@ exports[`Application component should render app for account with fez author wit
     className="AppBar align-center"
     iconElementLeft={
       <IconButton
+        className="main-menu-button"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -1249,24 +1326,33 @@ exports[`Application component should render app for account with fez author wit
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns is-gapless appbar-right-columns"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
+        <div
+          className="column search-column is-hidden-mobile"
+        >
+          <withRouter(Connect(SearchComponent))
+            applyInverseStyle={true}
+            showPrefixIcon={true}
+            showSearchButton={true}
+          />
+        </div>
+        <div
+          className="column is-narrow auth-button-column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
             }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -1327,6 +1413,12 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Author statistics",
         },
         Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
+        },
+        Object {
           "divider": true,
           "path": "/234234234242",
         },
@@ -1372,6 +1464,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -1499,7 +1592,14 @@ exports[`Application component should render app for account with fez author wit
         path="/author-identifiers/google-scholar/link"
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_13"
+        pageTitle="eSpace search"
+        path="/records/search"
+      />
+      <Route
+        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -1507,12 +1607,12 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_15"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_15"
+        key="route_16"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -1543,7 +1643,7 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -1644,6 +1744,12 @@ exports[`Application component should render app for account with fez author wit
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
+        },
+        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -1666,6 +1772,7 @@ exports[`Application component should render app for account with fez author wit
     className="AppBar align-center"
     iconElementLeft={
       <IconButton
+        className="main-menu-button"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -1685,24 +1792,33 @@ exports[`Application component should render app for account with fez author wit
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns is-gapless appbar-right-columns"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
+        <div
+          className="column search-column is-hidden-mobile"
+        >
+          <withRouter(Connect(SearchComponent))
+            applyInverseStyle={true}
+            showPrefixIcon={true}
+            showSearchButton={true}
+          />
+        </div>
+        <div
+          className="column is-narrow auth-button-column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
             }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -1761,6 +1877,12 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
           "primaryText": "Author statistics",
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
         },
         Object {
           "divider": true,
@@ -1826,6 +1948,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -1953,7 +2076,14 @@ exports[`Application component should render app for account with fez author wit
         path="/author-identifiers/google-scholar/link"
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_13"
+        pageTitle="eSpace search"
+        path="/records/search"
+      />
+      <Route
+        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -1961,12 +2091,12 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_15"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_15"
+        key="route_16"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -1997,7 +2127,7 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -2098,6 +2228,12 @@ exports[`Application component should render app for account with fez author wit
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
+        },
+        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -2120,6 +2256,7 @@ exports[`Application component should render app for account with fez author wit
     className="AppBar align-center"
     iconElementLeft={
       <IconButton
+        className="main-menu-button"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -2139,24 +2276,27 @@ exports[`Application component should render app for account with fez author wit
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns is-gapless appbar-right-columns"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
-            }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
+        <div
+          className="column search-column is-hidden-mobile"
         />
+        <div
+          className="column is-narrow auth-button-column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -2197,6 +2337,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -2324,7 +2465,14 @@ exports[`Application component should render app for account with fez author wit
         path="/author-identifiers/google-scholar/link"
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_13"
+        pageTitle="eSpace search"
+        path="/records/search"
+      />
+      <Route
+        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -2332,12 +2480,12 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_15"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_15"
+        key="route_16"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2368,7 +2516,7 @@ exports[`Application component should render application with routing for the us
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -2469,6 +2617,12 @@ exports[`Application component should render application with routing for the us
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
+        },
+        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -2491,6 +2645,7 @@ exports[`Application component should render application with routing for the us
     className="AppBar align-center"
     iconElementLeft={
       <IconButton
+        className="main-menu-button"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -2510,24 +2665,33 @@ exports[`Application component should render application with routing for the us
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns is-gapless appbar-right-columns"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
+        <div
+          className="column search-column is-hidden-mobile"
+        >
+          <withRouter(Connect(SearchComponent))
+            applyInverseStyle={true}
+            showPrefixIcon={true}
+            showSearchButton={true}
+          />
+        </div>
+        <div
+          className="column is-narrow auth-button-column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
             }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
-        />
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -2586,6 +2750,12 @@ exports[`Application component should render application with routing for the us
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
           "primaryText": "Author statistics",
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
         },
         Object {
           "divider": true,
@@ -2649,10 +2819,16 @@ exports[`Application component should render for anon user 1`] = `
           "regExPath": "/records/(UQ:[a-z0-9]+)",
         },
         Object {
+          "component": [Function],
           "exact": true,
-          "pageTitle": "Contact UQ eSpace",
+          "pageTitle": "eSpace",
           "path": "/",
-          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/dashboard",
         },
         Object {
           "pageTitle": "Page not found",
@@ -2665,6 +2841,7 @@ exports[`Application component should render for anon user 1`] = `
     className="AppBar align-center"
     iconElementLeft={
       <IconButton
+        className="main-menu-button"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -2684,24 +2861,27 @@ exports[`Application component should render for anon user 1`] = `
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns is-gapless appbar-right-columns"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
-            }
-          }
-          isAuthorizedUser={false}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText=""
+        <div
+          className="column search-column is-hidden-mobile"
         />
+        <div
+          className="column is-narrow auth-button-column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
+            isAuthorizedUser={false}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText=""
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -2794,14 +2974,21 @@ exports[`Application component should render for anon user 1`] = `
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
+        component={[Function]}
         exact={true}
         key="route_2"
-        pageTitle="Contact UQ eSpace"
+        pageTitle="eSpace"
         path="/"
-        render={[Function]}
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_3"
+        pageTitle="eSpace"
+        path="/dashboard"
+      />
+      <Route
+        key="route_4"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2865,6 +3052,7 @@ exports[`Application component should render thesis submission for HDR without m
     className="AppBar align-center"
     iconElementLeft={
       <IconButton
+        className="main-menu-button"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -2884,24 +3072,27 @@ exports[`Application component should render thesis submission for HDR without m
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns is-gapless appbar-right-columns"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
-            }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
+        <div
+          className="column search-column is-hidden-mobile"
         />
+        <div
+          className="column is-narrow auth-button-column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={

@@ -26,6 +26,10 @@ export default {
             primaryText: 'Masquerade',
             secondaryText: 'as another user'
         },
+        search: {
+            primaryText: 'Search eSpace',
+            secondaryText: ''
+        },
         browse: {
             primaryText: 'Browse eSpace',
             secondaryText: ''
@@ -39,6 +43,13 @@ export default {
         },
         help: {
             primaryText: 'Help'
+        }
+    },
+    footer: {
+        cricos: {
+            prefix: 'CRICOS Provider No: ',
+            number: '00025B',
+            link: 'http://www.uq.edu.au/about/cricos-link'
         }
     }
 };

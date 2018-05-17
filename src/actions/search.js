@@ -87,7 +87,7 @@ export function searchPublications(searchQuery) {
 }
 
 /**
- * Get a list of valus based on search key and value, eg for autosuggest controls
+ * Get a list of values based on search key and value, eg for auto suggest controls
  * @param string - search key, eg 'series'
  * @param string - search query, eg 'conference'
  * @returns {action}
@@ -104,3 +104,38 @@ export function loadSearchKeyList(searchKey, searchQuery) {
             });
     };
 }
+
+
+// searchEspacePublications - call eSpace internal search api
+// searchParameters are
+// {
+// title: '',
+// ...any other search parameters for advanced search...,
+// page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc',
+// activeFacets = {filters: {}, ranges: {}}
+// }
+export function searchEspacePublications(searchParams) {
+    return dispatch => {
+        dispatch({
+            type: actions.SET_SEARCH_QUERY,
+            payload: searchParams
+        });
+
+        dispatch({type: actions.SEARCH_LOADING, payload: {}});
+
+        return get(routes.SEARCH_INTERNAL_RECORDS_API({...searchParams, facets: !!searchParams.activeFacets ? searchParams.activeFacets : {}}))
+            .then(response => {
+                dispatch({
+                    type: actions.SEARCH_LOADED,
+                    payload: response
+                });
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.SEARCH_FAILED,
+                    payload: error.message
+                });
+            });
+    };
+}
+
