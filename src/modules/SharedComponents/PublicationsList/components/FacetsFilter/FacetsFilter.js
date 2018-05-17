@@ -116,7 +116,6 @@ export default class FacetsFilter extends PureComponent {
     };
 
     getNestedListItems = (facetCategory) => {
-        console.log(this.state);
         return facetCategory.facets.map((item, index) => {
             const isActive = this.state.activeFacets.filters.hasOwnProperty(facetCategory.facetTitle) &&
                 (
@@ -124,7 +123,6 @@ export default class FacetsFilter extends PureComponent {
                         ? this.state.activeFacets.filters[facetCategory.facetTitle] === item.key
                         : parseInt(this.state.activeFacets.filters[facetCategory.facetTitle], 10) === item.key
                 );
-            console.log(isActive);
             return (
                 <ListItem
                     key={index}
