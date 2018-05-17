@@ -17,7 +17,7 @@ export default {
             primaryText: 'Claim possible publications'
         },
         addMissingRecord: {
-            primaryText: 'Add a missing record'
+            primaryText: 'Add a missing publication'
         },
         addDataset: {
             primaryText: 'Add a missing data collection'
