@@ -287,7 +287,7 @@ export default {
             }
         },
         addRecord: {
-            title: 'Add a missing record to eSpace',
+            title: 'Add a missing publication to eSpace',
             stepper: [
                 {label: 'Search for your publication'},
                 {label: 'Search results'},
