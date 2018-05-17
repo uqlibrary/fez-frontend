@@ -466,7 +466,7 @@ describe('Search record results', () => {
         const wrapper = setup({
             publicationsList: publicationsList
         });
-        expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual([]);
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should not return unclaimablePublicationsList (no pid)', () => {
