@@ -6,7 +6,7 @@ import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state) => {
     return {
-        ...state.get('topCitedPublicationsReducer'),
+        ...state.get('topCitedPublicationsReducer')
     };
 };
 

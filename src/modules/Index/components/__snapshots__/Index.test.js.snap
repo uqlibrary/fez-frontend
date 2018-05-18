@@ -35,12 +35,12 @@ exports[`Index page should render placeholders 1`] = `
           <Tab
             className="publicationTabs"
             label="Trending publications"
-            value="trendingPublications"
+            value="topAltmetricCitedPublications"
           >
             <div
               className="publicationTabContent"
             >
-              <withRouter(Connect(TopCitedPublications)) />
+              <withRouter(Connect(TopAltemtricCitedPublications)) />
             </div>
           </Tab>
           <Tab

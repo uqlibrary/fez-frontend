@@ -2,28 +2,24 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {trendingPublicationsConfig} from 'config';
 import {locale} from 'locale';
+import SelectField from 'material-ui/SelectField';
+import MenuItem from 'material-ui/MenuItem';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
 import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
 
-export default class TopCitedPublications extends PureComponent {
+export default class TopAltemtricCitedPublications extends PureComponent {
     static propTypes = {
-        topCitedPublicationsList: PropTypes.object,
-        loadingTopCitedPublications: PropTypes.object,
         source: PropTypes.string,
+        topCitedPublicationsList: PropTypes.array,
+        loadingTopCitedPublications: PropTypes.bool,
         actions: PropTypes.object.isRequired
     };
 
     static defaultProps = {
-        source: 'scopus',
-        topCitedPublicationsList: {
-            scopus: [],
-            thomson: []
-        },
-        loadingTopCitedPublications: {
-            scopus: false,
-            thomson: false
-        }
+        source: 'altmetric',
+        topCitedPublicationsList: [],
+        loadingTopCitedPublications: false
     };
 
     constructor(props) {
@@ -32,6 +28,7 @@ export default class TopCitedPublications extends PureComponent {
         this.state = {
             page: 1,
             pageSize: 20,
+            interval: '1m',
             source: props.source,
             sortBy: trendingPublicationsConfig.source[props.source].sortBy,
             sortDirection: trendingPublicationsConfig.source[props.source].sortDirection
@@ -39,16 +36,27 @@ export default class TopCitedPublications extends PureComponent {
     }
 
     componentDidMount() {
-        if (!this.props.loadingTopCitedPublications[this.props.source]) {
-            this.props.actions.searchTopCitedPublications({...this.state});
+        if (!this.props.loadingTopCitedPublications) {
+            this.fetchData();
         }
+    }
+
+    intervalChanged =  (event, index, value) => {
+        this.setState({
+            interval: value
+        });
+        this.fetchData();
+    }
+
+    fetchData = () => {
+        this.props.actions.searchTopAltmetricCitedPublications(this.state.interval);
     }
 
     render() {
         const {source} = this.props;
         const txt = locale.components.topCitedPublications;
 
-        if (this.props.loadingTopCitedPublications[source]) {
+        if (this.props.loadingTopCitedPublications) {
             return (
                 <div className="isLoading is-centered">
                     <InlineLoader message={txt[source].loading}/>
@@ -56,7 +64,7 @@ export default class TopCitedPublications extends PureComponent {
             );
         }
 
-        const publications = this.props.topCitedPublicationsList[source];
+        const publications = this.props.topCitedPublicationsList;
 
         return (
             <div className="topCitedPubs">
@@ -64,7 +72,7 @@ export default class TopCitedPublications extends PureComponent {
                     <HelpIcon {...locale.components.trendingPublicationHelp}/>
                 </div>
                 {
-                    publications && publications.length > 0 &&
+                    publications.length > 0 &&
                     <div className="trendingPubsSection">
                         <h2 className="trendingPubsSource">
                             <div className={`fez-icon ${source} xxlarge`}/>
@@ -75,12 +83,28 @@ export default class TopCitedPublications extends PureComponent {
                             <div className={'column is-narrow'}>
                                 {txt[source].subHeading}
                             </div>
+                            <div className={'column'}>
+                                <SelectField
+                                    className={'filterByInterval'}
+                                    id="filterByInterval"
+                                    autoWidth
+                                    maxHeight={250}
+                                    onChange={this.intervalChanged}
+                                    value={this.state.interval}>
+                                    {
+                                        txt[source].intervals.map((item, index) => (
+                                            <MenuItem key={index} value={item.value} primaryText={item.label}/>
+                                        ))
+                                    }
+                                </SelectField>
+                            </div>
                         </div>
                         <PublicationsList
                             publicationsList={publications}
                             showMetrics
-                            hideCitationContent
-                        />
+                            showSourceCountIcon
+                            hideCountDiff
+                            hideCitationContent/>
                     </div>
                 }
             </div>

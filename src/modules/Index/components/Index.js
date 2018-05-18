@@ -5,6 +5,7 @@ import {Tabs, Tab} from 'material-ui/Tabs';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {TopCitedPublications} from 'modules/TopCitedPublications';
+import {TopAltmetricCitedPublications} from 'modules/TopAltmetricCitedPublications';
 
 class Index extends PureComponent {
     render() {
@@ -20,9 +21,9 @@ class Index extends PureComponent {
                         <StandardCard className="card-paddingless">
                             <Tabs className="publicationTabs" inkBarStyle={{height: '4px', marginTop: '-4px'}}>
                                 {
-                                    <Tab label={locale.components.topCitedPublications.altmetric.title} value="trendingPublications" className="publicationTabs">
+                                    <Tab label={locale.components.topCitedPublications.altmetric.title} value="topAltmetricCitedPublications" className="publicationTabs">
                                         <div className="publicationTabContent">
-                                            <TopCitedPublications/>
+                                            <TopAltmetricCitedPublications/>
                                         </div>
                                     </Tab>
                                 }
