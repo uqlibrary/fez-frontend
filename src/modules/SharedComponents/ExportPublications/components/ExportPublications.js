@@ -24,6 +24,7 @@ export default class ExportPublications extends PureComponent {
                 onChange={this.formatChanged}
                 disabled={this.props.disabled}
                 value={this.props.format}
+                fullWidth
                 floatingLabelText={txt.label}>
                 {
                     txt.format.map((item, index) => {
