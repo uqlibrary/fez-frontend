@@ -18,6 +18,7 @@ export default class MyRecords extends PureComponent {
         initialFacets: PropTypes.object,
         accountLoading: PropTypes.bool,
         localePages: PropTypes.object,
+        thisUrl: PropTypes.string,
 
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
@@ -57,7 +58,7 @@ export default class MyRecords extends PureComponent {
         // handle browser back button - set state from location/dispatch action for this state
         if (this.props.location !== newProps.location
             && newProps.history.action === 'POP'
-            && newProps.location.pathname === routes.pathConfig.records.mine) {
+            && newProps.location.pathname === this.props.thisUrl) {
             this.setState({...(!!newProps.location.state ? newProps.location.state : this.initState)}, () => {
                 // only will be called when user clicks back on my records page
                 this.props.actions.searchAuthorPublications({...this.state});
@@ -107,7 +108,7 @@ export default class MyRecords extends PureComponent {
 
     pushPageHistory = () => {
         this.props.history.push({
-            pathname: `${routes.pathConfig.records.mine}`,
+            pathname: `${this.props.thisUrl}`,
             search: `?ts=${Date.now()}`,
             state: {...this.state}
         });

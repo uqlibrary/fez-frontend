@@ -10,7 +10,7 @@ function setup(testProps, isShallow = true) {
             setFixRecord: jest.fn(),
         },
         location: {
-            pathname: routes.pathConfig.records.mine,
+            pathname: routes.pathConfig.dataset.mine,
             state: null
         },
         history: {
@@ -134,11 +134,11 @@ describe('myDatasets test', () => {
 
     it('gets publications when user clicks back and state is set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}});
+        const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}, thisUrl: routes.pathConfig.dataset.mine});
 
         wrapper.instance().componentWillReceiveProps({
             history: {action: 'POP'},
-            location: {pathname: routes.pathConfig.records.mine, state: {page: 2, hasPublications: true}}
+            location: {pathname: routes.pathConfig.dataset.mine, state: {page: 2, hasPublications: true}}
         });
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().hasPublications).toEqual(true);
@@ -148,8 +148,8 @@ describe('myDatasets test', () => {
 
     it('gets publications when user clicks back and state is not set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}});
-        wrapper.instance().componentWillReceiveProps({history: { action: 'POP'}, location: {pathname: routes.pathConfig.records.mine, state: null}});
+        const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}, thisUrl: routes.pathConfig.dataset.mine});
+        wrapper.instance().componentWillReceiveProps({history: { action: 'POP'}, location: {pathname: routes.pathConfig.dataset.mine, state: null}});
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().page).toEqual(1);
     });
@@ -158,7 +158,7 @@ describe('myDatasets test', () => {
         const testAction = jest.fn();
         const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}});
 
-        wrapper.instance().componentWillReceiveProps({history: { action: 'PUSH'}, location: {pathname: routes.pathConfig.records.mine}});
+        wrapper.instance().componentWillReceiveProps({history: { action: 'PUSH'}, location: {pathname: routes.pathConfig.dataset.mine}});
         expect(testAction).not.toHaveBeenCalled();
     });
 

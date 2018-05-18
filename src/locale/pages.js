@@ -255,8 +255,7 @@ export default {
                 //     text: 'Help about ....',
                 //     buttonLabel: 'Ok'
                 // },
-                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published', 'Display type'],
-                renameFacetsList: {'Display type': 'Publication type'}
+                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published', 'Display type']
             }
         },
         claimPublications: {

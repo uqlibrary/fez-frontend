@@ -4,6 +4,7 @@ import MyRecords from '../components/MyRecords';
 import {bindActionCreators} from 'redux';
 import {withRouter} from 'react-router-dom';
 import * as actions from 'actions';
+import {routes} from 'config';
 
 const mapStateToProps = (state) => {
     return {
@@ -12,7 +13,8 @@ const mapStateToProps = (state) => {
         initialFacets: {
             filters: { 'Display type': 371}
         },
-        localePages: locale.pages.myDatasets
+        localePages: locale.pages.myDatasets,
+        thisUrl: routes.pathConfig.dataset.mine,
     };
 };
 

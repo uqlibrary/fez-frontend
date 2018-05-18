@@ -66,11 +66,7 @@ exports[`myDatasets test renders active filters 1`] = `
           }
           facetsData={Object {}}
           onFacetsChanged={[Function]}
-          renameFacetsList={
-            Object {
-              "Display type": "Publication type",
-            }
-          }
+          renameFacetsList={Object {}}
           showOpenAccessFilter={true}
         />
       </StandardRighthandCard>
@@ -336,11 +332,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
             }
           }
           onFacetsChanged={[Function]}
-          renameFacetsList={
-            Object {
-              "Display type": "Publication type",
-            }
-          }
+          renameFacetsList={Object {}}
           showOpenAccessFilter={true}
         />
       </StandardRighthandCard>

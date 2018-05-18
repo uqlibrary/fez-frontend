@@ -134,7 +134,7 @@ describe('MyRecords test', () => {
 
     it('gets publications when user clicks back and state is set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}});
+        const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}, thisUrl: routes.pathConfig.records.mine});
 
         wrapper.instance().componentWillReceiveProps({
             history: {action: 'POP'},
@@ -148,7 +148,7 @@ describe('MyRecords test', () => {
 
     it('gets publications when user clicks back and state is not set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}});
+        const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}, thisUrl: routes.pathConfig.records.mine});
         wrapper.instance().componentWillReceiveProps({history: { action: 'POP'}, location: {pathname: routes.pathConfig.records.mine, state: null}});
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().page).toEqual(1);
