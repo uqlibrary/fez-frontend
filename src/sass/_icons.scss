@@ -97,3 +97,11 @@
     display: none !important;
   }
 }
+input[type="search"] {
+  -webkit-appearance: textfield !important;
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    background-image: url(../../src/images/baseline-close-24px.svg);
+    background-size: cover;
+  }
+}
