@@ -4,6 +4,7 @@ import TextField from 'material-ui/TextField';
 import IconButton from 'material-ui/IconButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import SearchIcon from 'material-ui/svg-icons/action/search';
+import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 
 import {locale} from 'locale';
 import {routes} from 'config';
@@ -16,6 +17,7 @@ export default class SearchComponent extends PureComponent {
         showAdvancedSearchButton: PropTypes.bool,
         showSearchButton: PropTypes.bool,
         showPrefixIcon: PropTypes.bool,
+        showMobileSearch: PropTypes.bool,
         actions: PropTypes.object,
         history: PropTypes.object.isRequired
     };
@@ -24,7 +26,8 @@ export default class SearchComponent extends PureComponent {
         super(props);
         this.state = {
             searchText: props.searchQueryParams && props.searchQueryParams.title || '',
-            showAdvancedSearch: false
+            showAdvancedSearch: false,
+            showMobile: false
         };
         this.MIN_SEARCH_TEXT_LENGTH = 10;
     }
@@ -56,6 +59,16 @@ export default class SearchComponent extends PureComponent {
         }
     }
 
+    toggleMobile = (event) => {
+        event.preventDefault();
+        if (!this.state.showMobile) {
+            this.setState({showMobile: true});
+        } else {
+            this.setState({showMobile: false});
+        }
+        console.log('Mobile: ', this.state.showMobile);
+    };
+
     searchTextChanged = (event, value) => {
         this.setState({
             searchText: value
@@ -75,12 +88,23 @@ export default class SearchComponent extends PureComponent {
                 {
                     !this.state.showAdvancedSearch &&
                     <div className="columns is-gapless">
-                        <div className="column search-field">
+                        <div className={`column search-field is-gapless ${this.state.showMobile ? 'showMobile' : 'hideMobile'}`}>
                             <div className="columns is-gapless search-field is-mobile">
                                 {
                                     this.props.showPrefixIcon &&
                                     <div className="column is-narrow search-icon-prefix is-hidden-mobile">
                                         <SearchIcon/>
+                                    </div>
+                                }
+                                {
+                                    this.props.showMobileSearch &&
+                                    <div className="column is-narrow search-icon-prefix is-hidden-tablet">
+                                        <IconButton
+                                            onClick={this.toggleMobile}
+                                            className="mobileBackArrow"
+                                        >
+                                            <ArrowBack/>
+                                        </IconButton>
                                     </div>
                                 }
                                 <div className="column">
@@ -98,6 +122,19 @@ export default class SearchComponent extends PureComponent {
                                 <div className="is-hidden-tablet mobileSpacer" />
                             </div>
                         </div>
+                        {
+                            this.props.showMobileSearch &&
+                            <div className="column is-narrow is-hidden-tablet">
+                                <IconButton
+                                    onClick={this.toggleMobile}
+                                    tooltipPosition="bottom-left"
+                                    className="search-button"
+                                    hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}}
+                                >
+                                    <SearchIcon/>
+                                </IconButton>
+                            </div>
+                        }
                         {
                             this.props.showSearchButton &&
                             <div className="column is-narrow search-button-wrapper">
@@ -119,7 +156,9 @@ export default class SearchComponent extends PureComponent {
                                     label={txt.searchButtonText}
                                     secondary
                                     disabled={this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH}
-                                    onClick={this.handleSearch}/>
+                                    onClick={this.handleSearch}
+                                    fullWidth
+                                />
                             </div>
                         }
                         {

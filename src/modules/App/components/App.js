@@ -186,12 +186,12 @@ export default class App extends PureComponent {
                         </IconButton>
                     }
                     iconElementRight={
-                        <div className="columns is-gapless appbar-right-columns">
-                            <div className="column search-column is-hidden-mobile">
+                        <div className="columns is-gapless appbar-right-columns is-mobile">
+                            <div className="column search-column">
                                 {
                                     // TODO: Show search box for public users when public search is enabled
                                     isAuthorizedUser && !isThesisSubmissionPage &&
-                                    <SearchComponent applyInverseStyle showPrefixIcon showSearchButton/>
+                                    <SearchComponent applyInverseStyle showPrefixIcon showMobileSearch />
                                 }
                             </div>
                             <div className="column is-narrow auth-button-column">

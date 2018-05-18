@@ -8,7 +8,7 @@ exports[`SearchComponent should render default view 1`] = `
     className="columns is-gapless"
   >
     <div
-      className="column search-field"
+      className="column search-field is-gapless hideMobile"
     >
       <div
         className="columns is-gapless search-field is-mobile"
@@ -49,7 +49,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
     className="columns is-gapless"
   >
     <div
-      className="column search-field"
+      className="column search-field is-gapless hideMobile"
     >
       <div
         className="columns is-gapless search-field is-mobile"
@@ -83,7 +83,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
     >
       <RaisedButton
         disabled={true}
-        fullWidth={false}
+        fullWidth={true}
         label="Search"
         labelPosition="after"
         onClick={[Function]}
@@ -103,7 +103,7 @@ exports[`SearchComponent should render inverse colour-themed view 1`] = `
     className="columns is-gapless"
   >
     <div
-      className="column search-field"
+      className="column search-field is-gapless hideMobile"
     >
       <div
         className="columns is-gapless search-field is-mobile"
@@ -148,7 +148,7 @@ exports[`SearchComponent should set search value from prop 1`] = `
     className="columns is-gapless"
   >
     <div
-      className="column search-field"
+      className="column search-field is-gapless hideMobile"
     >
       <div
         className="columns is-gapless search-field is-mobile"
@@ -182,7 +182,7 @@ exports[`SearchComponent should set search value from prop 1`] = `
     >
       <RaisedButton
         disabled={false}
-        fullWidth={false}
+        fullWidth={true}
         label="Search"
         labelPosition="after"
         onClick={[Function]}

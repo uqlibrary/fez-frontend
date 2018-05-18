@@ -3,13 +3,11 @@
 .search-component {
   .search-icon-prefix {
     svg {
-      margin: 12px 12px -6px 0;
+      margin: 12px 12px -6px 12px;
       fill: lighten($secondary-color, 25%) !important;
     }
   }
-  .search-field {
-    padding: 0 12px;
-  }
+
   .search-button-wrapper {
     margin-left: 6px;
   }
@@ -19,15 +17,24 @@
     -webkit-appearance: textfield !important;
     &::-webkit-search-cancel-button {
       -webkit-appearance: none;
-      height: 24px;
-      width: 24px;
+      height: 32px;
+      width: 32px;
       background-image: url('/public/images/baseline-close-24px.svg');
-      opacity: 0.5;
+      background-size: cover;
+      opacity: 0.3;
+      &:hover, &:focus {
+        opacity: 0.6;
+      }
     }
   }
 
 
   &.inverse {
+    .search-button-wrapper {
+      @include mobile {
+        display: none;
+      }
+    }
     .search-field {
       background-color: $text-color-reverse;
       @include mobile {
@@ -37,16 +44,49 @@
         top: 0;
         left: 0;
         z-index: 200;
-        & input {
-          margin-top: 12px !important;
-          font-size: 40px !important;
+        &> div > div:nth-child(1) {
+          height: 75px !important;
+          & > div:nth-child(1) { // Search input label
+            bottom: 0px !important;
+            font-size: 32px !important;
+            line-height: 75px !important;
+            font-weight: $text-weight-light !important;
+          }
+        }
+        & input { // Search input field
+          margin-top: 0px !important;
+          font-size: 32px !important;
           line-height: 75px !important;
           font-weight: $text-weight-light !important;
+          color: lighten($text-color, 20%) !important;
+        }
+        &.showMobile {
+          display: inherit;
+        }
+        &.hideMobile {
+          display: none;
         }
       }
     }
+    .mobileBackArrow {
+      @include mobile {
+        width: 70px !important;
+        height: 70px !important;
+        margin-top: 4px !important;
+        svg {
+          fill: lighten($secondary-color, 40%) !important;
+          margin-top: -8px !important;
+          margin-left: 6px !important;
+          width: 32px !important;
+          height: 32px !important;
+        }
+      }
+    }
+
     .mobileSpacer {
-      width: 24px !important;
+      @include mobile {
+        width: 24px !important;
+      }
     }
     .search-button {
       color: $text-color-reverse;
@@ -54,7 +94,7 @@
         fill: $text-color-reverse !important;
       }
     }
-    button.search-button:focus {
+    button.search-button:fo cus {
       color: $theme-color-dark;
       svg {
         fill: $theme-color-dark;

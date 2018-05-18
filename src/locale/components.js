@@ -738,7 +738,7 @@ export default {
             searchBoxPlaceholder: 'Search eSpace',
             searchButtonHint: 'Search eSpace',
             advancedSearchButtonText: 'Advanced search',
-            searchButtonText: 'Search'
+            searchButtonText: 'Search',
         },
         whatIsEspace: {
             title: 'What is eSpace?',
