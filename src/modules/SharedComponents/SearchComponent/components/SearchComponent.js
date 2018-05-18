@@ -17,7 +17,7 @@ export default class SearchComponent extends PureComponent {
         showAdvancedSearchButton: PropTypes.bool,
         showSearchButton: PropTypes.bool,
         showPrefixIcon: PropTypes.bool,
-        showMobileSearch: PropTypes.bool,
+        showMobileSearchButton: PropTypes.bool,
         actions: PropTypes.object,
         history: PropTypes.object.isRequired
     };
@@ -97,7 +97,7 @@ export default class SearchComponent extends PureComponent {
                                     </div>
                                 }
                                 {
-                                    this.props.showMobileSearch &&
+                                    this.props.showMobileSearchButton &&
                                     <div className="column is-narrow search-icon-prefix is-hidden-tablet">
                                         <IconButton
                                             onClick={this.toggleMobile}
@@ -121,20 +121,22 @@ export default class SearchComponent extends PureComponent {
                             </div>
                         </div>
                         {
-                            this.props.showMobileSearch &&
+                            this.props.showMobileSearchButton &&
                             <div className="column is-narrow is-hidden-tablet">
                                 <IconButton
                                     onClick={this.toggleMobile}
                                     tooltipPosition="bottom-left"
                                     className="search-button"
-                                    hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}} >
+                                    hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}}
+                                    tooltip={txt.mobileSearchButtonHint}
+                                >
                                     <SearchIcon/>
                                 </IconButton>
                             </div>
                         }
                         {
                             this.props.showSearchButton &&
-                            <div className="column is-narrow mobile-search-button-wrapper">
+                            <div className="column is-narrow icon-search-button-wrapper">
                                 <IconButton
                                     tooltipPosition="bottom-left"
                                     onClick={this.handleSearch}
@@ -156,7 +158,7 @@ export default class SearchComponent extends PureComponent {
                                 fullWidth />
                         </div>
                         {
-                            this.props.showAdvancedSearchButton && false &&
+                            this.props.showAdvancedSearchButton &&
                             <div className="column is-narrow">
                                 <RaisedButton
                                     label={txt.advancedSearchButtonText}
@@ -173,8 +175,7 @@ export default class SearchComponent extends PureComponent {
                         </div>
                         <div className="column is-narrow">
                             <RaisedButton
-                                label={'Simple search'}
-                                secondary
+                                label={txt.simpleSearchToggle}
                                 onClick={this.toggleAdvancedSearch}/>
                         </div>
                     </div>

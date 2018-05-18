@@ -736,9 +736,11 @@ export default {
         },
         searchComponent: {
             searchBoxPlaceholder: 'Search eSpace',
+            mobileSearchButtonHint: 'Search eSpace',
             searchButtonHint: 'Search eSpace',
             advancedSearchButtonText: 'Advanced search',
             searchButtonText: 'Search',
+            simpleSearchToggle: 'Simple search',
         },
         whatIsEspace: {
             title: 'What is eSpace?',

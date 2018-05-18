@@ -104,6 +104,19 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
         secondary={true}
       />
     </div>
+    <div
+      className="column is-narrow"
+    >
+      <RaisedButton
+        disabled={false}
+        fullWidth={false}
+        label="Advanced search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
   </div>
 </div>
 `;
@@ -214,6 +227,19 @@ exports[`SearchComponent should set search value from prop 1`] = `
         onClick={[Function]}
         primary={false}
         secondary={true}
+      />
+    </div>
+    <div
+      className="column is-narrow"
+    >
+      <RaisedButton
+        disabled={false}
+        fullWidth={false}
+        label="Advanced search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
       />
     </div>
   </div>

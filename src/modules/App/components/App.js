@@ -190,7 +190,7 @@ export default class App extends PureComponent {
                             <div className="column search-column">
                                 {
                                     !isThesisSubmissionPage &&
-                                    <SearchComponent applyInverseStyle showPrefixIcon showMobileSearch />
+                                    <SearchComponent applyInverseStyle showPrefixIcon showMobileSearchButton />
                                 }
                             </div>
                             <div className="column is-narrow auth-button-column">

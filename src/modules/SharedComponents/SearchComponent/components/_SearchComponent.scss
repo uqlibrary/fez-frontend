@@ -1,13 +1,6 @@
 @import '../../../../sass/variables';
 
 .search-component {
-  .search-icon-prefix {
-    svg {
-      margin: 12px 12px -6px 12px;
-      fill: lighten($secondary-color, 25%) !important;
-    }
-  }
-
   // Override search box X
   input[type="search"]::-webkit-search-cancel-button {
       height: 24px;
@@ -22,15 +15,30 @@
       margin-left: 12px !important;
     }
   }
+  .search-icon-prefix {
+    svg {
+      margin: 12px 12px -6px 12px;
+      fill: lighten($secondary-color, 25%) !important;
+    }
+  }
 
   &.inverse {
     // Override search box X size
     input[type="search"]::-webkit-search-cancel-button {
+      margin-right: 12px;
+      @include mobile {
         height: 32px;
         width: 32px;
+      }
         opacity: 0.3;
       &:hover, &:focus {
         opacity: 0.6;
+      }
+    }
+
+    .icon-search-button-wrapper {
+      @include mobile {
+        display: none;
       }
     }
     .search-button-wrapper {
@@ -83,7 +91,6 @@
         }
       }
     }
-
     .mobileSpacer {
       @include mobile {
         width: 24px !important;
@@ -94,14 +101,13 @@
       svg {
         fill: $text-color-reverse !important;
       }
-    }
-    button.search-button:fo cus {
-      color: $theme-color-dark;
-      svg {
-        fill: $theme-color-dark;
+      &:focus {
         color: $theme-color-dark;
+        svg {
+          fill: $theme-color-dark;
+          color: $theme-color-dark;
+        }
       }
-
     }
   }
 }
