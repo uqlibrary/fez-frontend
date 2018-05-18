@@ -54,19 +54,19 @@ export default class SearchComponent extends PureComponent {
             };
 
             this.props.actions.searchEspacePublications({searchQueryParams: {title: this.state.searchText}, ...defaultQueryParams});
+            // Hide the mobile search bar on a search
+            this.setState({showMobile: false});
             // navigate to search results page
             this.props.history.push(routes.pathConfig.records.search);
         }
     }
 
-    toggleMobile = (event) => {
-        event.preventDefault();
+    toggleMobile = () => {
         if (!this.state.showMobile) {
             this.setState({showMobile: true});
         } else {
             this.setState({showMobile: false});
         }
-        console.log('Mobile: ', this.state.showMobile);
     };
 
     searchTextChanged = (event, value) => {
