@@ -47,8 +47,6 @@ export default class SearchComponent extends PureComponent {
             // Snackbar to give feedback when input is too short when pressing enter
             this.setState({snackbarOpen: true});
             return;
-        } else {
-            this.setState({snackbarOpen: false});
         }
 
         if(event && event.key && (event.key !== 'Enter' || this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH)) return;
@@ -86,7 +84,8 @@ export default class SearchComponent extends PureComponent {
 
     searchTextChanged = (event, value) => {
         this.setState({
-            searchText: value
+            searchText: value,
+            snackbarOpen: false
         });
     }
 
