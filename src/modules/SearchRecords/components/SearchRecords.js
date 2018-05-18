@@ -6,6 +6,7 @@ import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {StandardRighthandCard} from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import {SearchComponent} from 'modules/SharedComponents/SearchComponent';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
+import {routes} from 'config';
 import param from 'can-param';
 import deparam from 'can-deparam';
 
@@ -70,6 +71,16 @@ class SearchRecords extends PureComponent {
         this.setState({
             ...newProps.searchQuery
         });
+
+        // handle browser back button - set state from location/dispatch action for this state
+        if (this.props.location !== newProps.location
+            && newProps.history.action === 'POP'
+            && newProps.location.pathname === routes.pathConfig.records.search) {
+            this.setState({...(!!newProps.location.state ? newProps.location.state : this.state)}, () => {
+                // only will be called when user clicks back on search records page
+                this.props.actions.searchEspacePublications({...this.state});
+            });
+        }
     }
 
     /**
@@ -139,8 +150,9 @@ class SearchRecords extends PureComponent {
 
     updateHistoryAndSearch = () => {
         this.props.history.push({
-            pathname: this.props.location.pathname,
-            search: param(this.state)
+            pathname: `${routes.pathConfig.records.search}`,
+            search: param(this.state),
+            state: {...this.state}
         });
         this.updateSearch();
     }
