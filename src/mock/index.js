@@ -108,6 +108,8 @@ mock
     .reply(200, mockData.authorsSearch)
     .onGet(routes.GET_PUBLICATION_TYPES_API().apiUrl)
     .reply(200, mockData.recordsTypeList)
+    .onGet(routes.GET_NEWS_API().apiUrl)
+    .reply(200, mockData.newsFeed)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
     .reply(config => {
         if (config.url.indexOf('UQ:164935') >= 0) {

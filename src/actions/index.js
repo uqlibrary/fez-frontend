@@ -9,3 +9,4 @@ export * from './claimPublications';
 export * from './fixRecord';
 export * from './viewRecord';
 export * from './controlledVocabularies';
+export * from './newsFeed';

@@ -1624,7 +1624,7 @@ export const internalTitleSearchList = {
             "fez_record_search_key_notes": null,
             "fez_record_search_key_date_recorded": null,
             "fez_record_search_key_license": null,
-            "currentSource": "espace",
+            
             "fez_record_search_key_supervisor": [],
             "fez_record_search_key_native_script_conference_name": null,
             "rek_description": null,
@@ -3653,7 +3653,157 @@ export const internalTitleSearchList = {
                 "rek_volume_number": "337"
             }
         }],
-    "filters": {"facets": null}
+    "filters": {
+        "facets": {
+            "Scopus document type": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 0,
+                "buckets": [{"key": "ar", "doc_count": 35}, {"key": "re", "doc_count": 4}, {
+                    "key": "ed",
+                    "doc_count": 1
+                }, {"key": "ip", "doc_count": 1}]
+            },
+            "Display type": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 0,
+                "buckets": [{"key": 179, "doc_count": 55}, {"key": 130, "doc_count": 13}]
+            },
+            "Keywords": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 436,
+                "buckets": [{"key": "Cell Biology", "doc_count": 19}, {
+                    "key": "Biochemistry & Molecular Biology",
+                    "doc_count": 11
+                }, {"key": "CELL BIOLOGY", "doc_count": 8}, {
+                    "key": "3t3-l1 Adipocytes",
+                    "doc_count": 7
+                }, {"key": "Plasma-membrane", "doc_count": 7}]
+            },
+            "Scopus document type (lookup)": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 0,
+                "buckets": []
+            },
+            "Subject (lookup)": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 66,
+                "buckets": [{"key": "C1", "doc_count": 19}, {
+                    "key": "1300 Biochemistry, Genetics and Molecular Biology",
+                    "doc_count": 9
+                }, {"key": "270104 Membrane Biology", "doc_count": 8}, {
+                    "key": "780105 Biological sciences",
+                    "doc_count": 8
+                }, {"key": "2700 Medicine", "doc_count": 7}]
+            },
+            "Collection (lookup)": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 61,
+                "buckets": [{
+                    "key": "Institute for Molecular Bioscience - Publications",
+                    "doc_count": 31
+                }, {
+                    "key": "Queensland Brain Institute Publications",
+                    "doc_count": 18
+                }, {
+                    "key": "ResearcherID Downloads - Archived",
+                    "doc_count": 17
+                }, {
+                    "key": "Excellence in Research Australia (ERA) - Collection",
+                    "doc_count": 12
+                }, {"key": "Australian Institute for Bioengineering and Nanotechnology Publications", "doc_count": 8}]
+            },
+            "Year published": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 45,
+                "buckets": [{"key": "1994", "doc_count": 5}, {"key": "2012", "doc_count": 5}, {
+                    "key": "2013",
+                    "doc_count": 5
+                }, {"key": "1998", "doc_count": 4}, {"key": "2000", "doc_count": 4}]
+            },
+            "Author (lookup)": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 185,
+                "buckets": [{"key": "Martin, Sally", "doc_count": 68}, {
+                    "key": "Parton, Robert G.",
+                    "doc_count": 22
+                }, {"key": "Meunier, Frederic A.", "doc_count": 13}, {
+                    "key": "Andreas Papadopulos",
+                    "doc_count": 9
+                }, {"key": "Rachel Sarah Gormal", "doc_count": 8}]
+            },
+            "Subject": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 66,
+                "buckets": [{"key": 450009, "doc_count": 19}, {"key": 453239, "doc_count": 9}, {
+                    "key": 270104,
+                    "doc_count": 8
+                }, {"key": 450774, "doc_count": 8}, {"key": 453253, "doc_count": 7}]
+            },
+            "Journal name": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 44,
+                "buckets": [{
+                    "key": "Journal of Biological Chemistry",
+                    "doc_count": 5
+                }, {"key": "Molecular Biology of The Cell", "doc_count": 5}, {
+                    "key": "Molecular Biology of the Cell",
+                    "doc_count": 5
+                }, {"key": "Biochemical Journal", "doc_count": 4}, {"key": "Journal of Cell Biology", "doc_count": 4}]
+            },
+            "Collection": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 61,
+                "buckets": [{"key": "UQ:3858", "doc_count": 31}, {
+                    "key": "UQ:23912",
+                    "doc_count": 18
+                }, {"key": "UQ:682195", "doc_count": 17}, {"key": "UQ:152266", "doc_count": 12}, {
+                    "key": "UQ:3860",
+                    "doc_count": 8
+                }]
+            },
+            "Author": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 185,
+                "buckets": [{"key": 745, "doc_count": 68}, {"key": 824, "doc_count": 22}, {
+                    "key": 2746,
+                    "doc_count": 13
+                }, {"key": 89985, "doc_count": 9}, {"key": 10992, "doc_count": 8}]
+            },
+            "Genre": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 5,
+                "buckets": [{
+                    "key": "Article (original research)",
+                    "doc_count": 49
+                }, {
+                    "key": "Molecular Biology of the Cell",
+                    "doc_count": 5
+                }, {
+                    "key": "Review of research - research literature review (NOT book review",
+                    "doc_count": 4
+                }, {
+                    "key": "Biochemical Society Transactions",
+                    "doc_count": 1
+                }, {"key": "Chemistry and Physics of Lipids", "doc_count": 1}]
+            },
+            "Subtype": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 2,
+                "buckets": [{"key": "Article (original research)", "doc_count": 50}, {
+                    "key": "Published abstract",
+                    "doc_count": 9
+                }, {
+                    "key": "Critical review of research, literature review, critical commentary",
+                    "doc_count": 3
+                }, {"key": "Fully published paper", "doc_count": 2}, {"key": "Editorial", "doc_count": 1}]
+            },
+            "Display type (lookup)": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 0,
+                "buckets": [{"key": "Journal Article", "doc_count": 55}, {"key": "Conference Paper", "doc_count": 13}]
+            }
+        }
+    }
 };
 
 export const recordsTypeList = {

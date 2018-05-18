@@ -17,7 +17,7 @@ export default {
             primaryText: 'Claim possible publications'
         },
         addMissingRecord: {
-            primaryText: 'Add a missing record'
+            primaryText: 'Add a missing publication'
         },
         addDataset: {
             primaryText: 'Add a missing data collection'
@@ -25,6 +25,10 @@ export default {
         masquerade: {
             primaryText: 'Masquerade',
             secondaryText: 'as another user'
+        },
+        search: {
+            primaryText: 'Search eSpace',
+            secondaryText: ''
         },
         browse: {
             primaryText: 'Browse eSpace',
@@ -39,6 +43,13 @@ export default {
         },
         help: {
             primaryText: 'Help'
+        }
+    },
+    footer: {
+        cricos: {
+            prefix: 'CRICOS Provider No: ',
+            number: '00025B',
+            link: 'http://www.uq.edu.au/about/cricos-link'
         }
     }
 };

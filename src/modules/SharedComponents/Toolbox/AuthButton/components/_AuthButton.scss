@@ -1,23 +1,20 @@
 @import '../../../../../sass/variables';
 
 .auth-button-wrapper {
-  padding: 0px 10px 0 0;
-  margin-top: -10px;
-}
-
-.log-in-button, .log-out-button {
-  color: $text-color-reverse;
-  text-align: center;
-  svg {
-    fill: $text-color-reverse !important;
+  min-width: 32px;
+  .log-in-button, .log-out-button {
+    color: $text-color-reverse;
+    text-align: center;
+    svg {
+      fill: $text-color-reverse !important;
+    }
   }
-}
 
-button.log-in-button:focus {
-  //background-color: #FFF !important;
-  color: $theme-color-dark;
-  svg {
-    fill: $theme-color-dark;
+  button.log-in-button:focus {
     color: $theme-color-dark;
+    svg {
+      fill: $theme-color-dark;
+      color: $theme-color-dark;
+    }
   }
 }

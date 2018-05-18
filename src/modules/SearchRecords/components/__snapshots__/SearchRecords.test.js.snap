@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchRecords page should render placeholders 1`] = `
+<StandardPage
+  className="page-search-records"
+  title="eSpace search"
+>
+  <StandardCard
+    className=""
+  >
+    <withRouter(Connect(SearchComponent))
+      showAdvancedSearchButton={true}
+    />
+  </StandardCard>
+  <div
+    className="columns"
+  />
+</StandardPage>
+`;

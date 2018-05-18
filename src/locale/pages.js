@@ -20,6 +20,9 @@ help: {
 
 export default {
     pages: {
+        index: {
+            title: 'eSpace'
+        },
         contact: {
             title: 'Contact UQ eSpace',
             children: (
@@ -285,7 +288,7 @@ export default {
             }
         },
         addRecord: {
-            title: 'Add a missing record to eSpace',
+            title: 'Add a missing publication to eSpace',
             stepper: [
                 {label: 'Search for your publication'},
                 {label: 'Search results'},
@@ -400,6 +403,25 @@ export default {
         },
         viewRecord: {
             loadingMessage: 'Loading record...'
+        },
+        searchRecords: {
+            title: 'eSpace search',
+            loadingMessage: 'Searching for publications...',
+            recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
+            loadingPagingMessage: 'Searching for publications...',
+            noResultsFound: {
+                title: 'No publications found',
+                text: (
+                    <div>
+                        We were unable to find any results.
+                    </div>
+                ),
+            },
+            facetsFilter: {
+                title: 'Refine results',
+                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
+                renameFacetsList: {'Display type': 'Publication type'}
+            }
         },
         masquerade: {
             title: 'Masquerade',
