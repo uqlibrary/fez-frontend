@@ -50,6 +50,11 @@ exports[`SearchComponent should render default view 1`] = `
       />
     </div>
   </div>
+  <Snackbar
+    autoHideDuration={5000}
+    message="Your search query is too short - minimum of 10 characters required"
+    open={false}
+  />
 </div>
 `;
 
@@ -117,6 +122,11 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
       />
     </div>
   </div>
+  <Snackbar
+    autoHideDuration={5000}
+    message="Your search query is too short - minimum of 10 characters required"
+    open={false}
+  />
 </div>
 `;
 
@@ -175,6 +185,11 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
       />
     </div>
   </div>
+  <Snackbar
+    autoHideDuration={5000}
+    message="Your search query is too short - minimum of 10 characters required"
+    open={false}
+  />
 </div>
 `;
 
@@ -242,5 +257,10 @@ exports[`SearchComponent should set search value from prop 1`] = `
       />
     </div>
   </div>
+  <Snackbar
+    autoHideDuration={5000}
+    message="Your search query is too short - minimum of 10 characters required"
+    open={false}
+  />
 </div>
 `;

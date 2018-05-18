@@ -5,6 +5,7 @@ import IconButton from 'material-ui/IconButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import SearchIcon from 'material-ui/svg-icons/action/search';
 import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
+import Snackbar from 'material-ui/Snackbar';
 
 import {locale} from 'locale';
 import {routes} from 'config';
@@ -27,7 +28,8 @@ export default class SearchComponent extends PureComponent {
         this.state = {
             searchText: props.searchQueryParams && props.searchQueryParams.title || '',
             showAdvancedSearch: false,
-            showMobile: false
+            showMobile: false,
+            snackbarOpen: false
         };
         this.MIN_SEARCH_TEXT_LENGTH = 10;
     }
@@ -41,6 +43,14 @@ export default class SearchComponent extends PureComponent {
     }
 
     handleSearch = (event) => {
+        if(event && event.key && event.key === 'Enter' && this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH) {
+            // Snackbar to give feedback when input is too short when pressing enter
+            this.setState({snackbarOpen: true});
+            return;
+        } else {
+            this.setState({snackbarOpen: false});
+        }
+
         if(event && event.key && (event.key !== 'Enter' || this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH)) return;
 
         if (this.props.actions && this.props.actions.searchEspacePublications && this.state.searchText.trim().length >= this.MIN_SEARCH_TEXT_LENGTH) {
@@ -65,7 +75,8 @@ export default class SearchComponent extends PureComponent {
 
     toggleMobile = () => {
         this.setState({
-            showMobile: !this.state.showMobile
+            showMobile: !this.state.showMobile,
+            snackbarOpen: false
         }, () => {
             if(this.state.showMobile) {
                 document.getElementById('searchField').focus();
@@ -185,6 +196,11 @@ export default class SearchComponent extends PureComponent {
                         </div>
                     </div>
                 }
+                <Snackbar
+                    open={this.state.snackbarOpen}
+                    autoHideDuration={5000}
+                    message={txt.inputTooShort.replace('[NoOfChars]', this.MIN_SEARCH_TEXT_LENGTH)}
+                />
             </div>
         );
     }
