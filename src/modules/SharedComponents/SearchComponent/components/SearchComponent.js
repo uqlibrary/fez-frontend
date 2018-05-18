@@ -4,6 +4,7 @@ import TextField from 'material-ui/TextField';
 import IconButton from 'material-ui/IconButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import SearchIcon from 'material-ui/svg-icons/action/search';
+import param from 'can-param';
 
 import {locale} from 'locale';
 import {routes} from 'config';
@@ -50,9 +51,13 @@ export default class SearchComponent extends PureComponent {
                 activeFacets: {filters: {}, ranges: {}}
             };
 
-            this.props.actions.searchEspacePublications({searchQueryParams: {title: this.state.searchText}, ...defaultQueryParams});
+            const searchQuery = {...defaultQueryParams, searchQueryParams: {title: this.state.searchText}};
+            this.props.actions.searchEspacePublications(searchQuery);
             // navigate to search results page
-            this.props.history.push(routes.pathConfig.records.search);
+            this.props.history.push({
+                pathname: routes.pathConfig.records.search,
+                search: param(searchQuery)
+            });
         }
     }
 
