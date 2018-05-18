@@ -180,14 +180,14 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 component: components.MyRecords,
                 access: [roles.researcher, roles.admin],
                 exact: true,
-                pageTitle: locale.pages.myResearch.pageTitle // TODO: locale should be created for my data collections
+                pageTitle: locale.pages.myResearch.pageTitle
             },
             {
                 path: pathConfig.dataset.mine,
                 component: components.MyDataCollections,
                 access: [roles.researcher, roles.admin],
                 exact: true,
-                pageTitle: locale.pages.myResearch.pageTitle
+                pageTitle: locale.pages.myDatasets.pageTitle
             },
             {
                 path: pathConfig.records.possible,

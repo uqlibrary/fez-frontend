@@ -17,6 +17,7 @@ export default class MyRecords extends PureComponent {
         publicationsListPagingData: PropTypes.object,
         initialFacets: PropTypes.object,
         accountLoading: PropTypes.bool,
+        localePages: PropTypes.object,
 
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
@@ -122,7 +123,7 @@ export default class MyRecords extends PureComponent {
     render() {
         if (this.props.accountLoading) return null;
 
-        const txt = locale.pages.myResearch;
+        const txt = this.props.localePages;
         const pagingData = this.props.publicationsListPagingData;
         return (
             <StandardPage title={txt.pageTitle}>

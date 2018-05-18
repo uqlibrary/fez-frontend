@@ -1,4 +1,5 @@
 import {connect} from 'react-redux';
+import {locale} from 'locale';
 import MyRecords from '../components/MyRecords';
 import {bindActionCreators} from 'redux';
 import {withRouter} from 'react-router-dom';
@@ -10,7 +11,8 @@ const mapStateToProps = (state) => {
         ...state.get('publicationsReducer'),
         initialFacets: {
             filters: { 'Display type': 371}
-        }
+        },
+        localePages: locale.pages.myDatasets
     };
 };
 

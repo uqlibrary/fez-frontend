@@ -1,4 +1,5 @@
 import {connect} from 'react-redux';
+import {locale} from 'locale';
 import MyRecords from '../components/MyRecords';
 import {bindActionCreators} from 'redux';
 import {withRouter} from 'react-router-dom';
@@ -7,7 +8,8 @@ import * as actions from 'actions';
 const mapStateToProps = (state) => {
     return {
         accountLoading: state.get('accountReducer').accountLoading,
-        ...state.get('publicationsReducer')
+        ...state.get('publicationsReducer'),
+        localePages: locale.pages.myResearch
     };
 };
 
