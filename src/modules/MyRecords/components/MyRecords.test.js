@@ -1,6 +1,7 @@
 import MyRecords from './MyRecords';
 import {myRecordsList} from 'mock/data';
 import {routes} from 'config';
+import {locale} from 'locale';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -21,6 +22,7 @@ function setup(testProps, isShallow = true) {
         loadingPublicationsList: false,
         publicationsList: [],
         publicationsListFacets: {},
+        localePages: locale.pages.myResearch,
         ...testProps
     };
     return getElement(MyRecords, props, isShallow);
@@ -63,13 +65,13 @@ describe('MyRecords test', () => {
             publicationsListPagingData: {"total": 147, "per_page": 20, "current_page": 1, "from": 1,"to": 20},
             publicationsListFacets: {
                 "Display type": {
-                "doc_count_error_upper_bound": 0,
-                "sum_other_doc_count": 3,
-                "buckets": [{"key": 179, "doc_count": 95}, {"key": 130, "doc_count": 34}, {
-                    "key": 177,
-                    "doc_count": 2
-                }, {"key": 183, "doc_count": 2}, {"key": 174, "doc_count": 1}]
-            },
+                    "doc_count_error_upper_bound": 0,
+                    "sum_other_doc_count": 3,
+                    "buckets": [{"key": 179, "doc_count": 95}, {"key": 130, "doc_count": 34}, {
+                        "key": 177,
+                        "doc_count": 2
+                    }, {"key": 183, "doc_count": 2}, {"key": 174, "doc_count": 1}]
+                },
                 "Keywords": {
                     "doc_count_error_upper_bound": 0,
                     "sum_other_doc_count": 641,

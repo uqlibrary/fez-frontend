@@ -50,6 +50,16 @@ exports[`Application component should render alert if user is not fez author 1`]
           ],
           "component": [Function],
           "exact": true,
+          "pageTitle": "My research data",
+          "path": "/data-collections/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
           "pageTitle": "Claim possible publications",
           "path": "/records/possible",
         },
@@ -248,8 +258,12 @@ exports[`Application component should render alert if user is not fez author 1`]
           "primaryText": "Add a missing record",
         },
         Object {
+          "linkTo": "/data-collections/mine",
+          "primaryText": "My research data",
+        },
+        Object {
           "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
-          "primaryText": "Add a missing data collection",
+          "primaryText": "Add a missing dataset",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
@@ -361,6 +375,19 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_5"
+        pageTitle="My research data"
+        path="/data-collections/mine"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_6"
         pageTitle="Claim possible publications"
         path="/records/possible"
       />
@@ -373,7 +400,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
-        key="route_6"
+        key="route_7"
         pageTitle="Claim a publication"
         path="/records/claim"
       />
@@ -386,7 +413,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
-        key="route_7"
+        key="route_8"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -399,7 +426,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           ]
         }
         exact={true}
-        key="route_8"
+        key="route_9"
         pageTitle="Add a missing record to eSpace"
         path="/records/add/find"
         render={[Function]}
@@ -412,7 +439,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           ]
         }
         exact={true}
-        key="route_9"
+        key="route_10"
         pageTitle="Add a missing record to eSpace"
         path="/records/add/results"
         render={[Function]}
@@ -425,7 +452,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_11"
         pageTitle="Add a missing record to eSpace"
         path="/records/add/new"
         render={[Function]}
@@ -433,7 +460,7 @@ exports[`Application component should render alert if user is not fez author 1`]
       <Route
         component={[Function]}
         exact={true}
-        key="route_11"
+        key="route_12"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -446,19 +473,19 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
-        key="route_12"
+        key="route_13"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_14"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_14"
+        key="route_15"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -466,12 +493,12 @@ exports[`Application component should render alert if user is not fez author 1`]
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_16"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_16"
+        key="route_17"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -524,6 +551,16 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "exact": true,
           "pageTitle": "My research",
           "path": "/records/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research data",
+          "path": "/data-collections/mine",
         },
         Object {
           "access": Array [
@@ -730,8 +767,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "Add a missing record",
         },
         Object {
+          "linkTo": "/data-collections/mine",
+          "primaryText": "My research data",
+        },
+        Object {
           "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
-          "primaryText": "Add a missing data collection",
+          "primaryText": "Add a missing dataset",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
@@ -827,6 +868,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_5"
+        pageTitle="My research data"
+        path="/data-collections/mine"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_6"
         pageTitle="Claim possible publications"
         path="/records/possible"
       />
@@ -839,7 +893,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
-        key="route_6"
+        key="route_7"
         pageTitle="Claim a publication"
         path="/records/claim"
       />
@@ -852,7 +906,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
-        key="route_7"
+        key="route_8"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -865,7 +919,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ]
         }
         exact={true}
-        key="route_8"
+        key="route_9"
         pageTitle="Add a missing record to eSpace"
         path="/records/add/find"
         render={[Function]}
@@ -878,7 +932,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ]
         }
         exact={true}
-        key="route_9"
+        key="route_10"
         pageTitle="Add a missing record to eSpace"
         path="/records/add/results"
         render={[Function]}
@@ -891,7 +945,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_11"
         pageTitle="Add a missing record to eSpace"
         path="/records/add/new"
         render={[Function]}
@@ -899,7 +953,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       <Route
         component={[Function]}
         exact={true}
-        key="route_11"
+        key="route_12"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -912,19 +966,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
-        key="route_12"
+        key="route_13"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_14"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_14"
+        key="route_15"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -932,12 +986,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_16"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_16"
+        key="route_17"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -1207,6 +1261,16 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
+          "pageTitle": "My research data",
+          "path": "/data-collections/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
           "pageTitle": "Claim possible publications",
           "path": "/records/possible",
         },
@@ -1405,8 +1469,12 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Add a missing record",
         },
         Object {
+          "linkTo": "/data-collections/mine",
+          "primaryText": "My research data",
+        },
+        Object {
           "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
-          "primaryText": "Add a missing data collection",
+          "primaryText": "Add a missing dataset",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
@@ -1502,6 +1570,19 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_5"
+        pageTitle="My research data"
+        path="/data-collections/mine"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_6"
         pageTitle="Claim possible publications"
         path="/records/possible"
       />
@@ -1514,7 +1595,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_6"
+        key="route_7"
         pageTitle="Claim a publication"
         path="/records/claim"
       />
@@ -1527,7 +1608,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_7"
+        key="route_8"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -1540,7 +1621,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_8"
+        key="route_9"
         pageTitle="Add a missing record to eSpace"
         path="/records/add/find"
         render={[Function]}
@@ -1553,7 +1634,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_9"
+        key="route_10"
         pageTitle="Add a missing record to eSpace"
         path="/records/add/results"
         render={[Function]}
@@ -1566,7 +1647,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_11"
         pageTitle="Add a missing record to eSpace"
         path="/records/add/new"
         render={[Function]}
@@ -1574,7 +1655,7 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_11"
+        key="route_12"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -1587,19 +1668,19 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_12"
+        key="route_13"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_14"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_14"
+        key="route_15"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -1607,12 +1688,12 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_16"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_16"
+        key="route_17"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -1665,6 +1746,16 @@ exports[`Application component should render app for account with fez author wit
           "exact": true,
           "pageTitle": "My research",
           "path": "/records/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research data",
+          "path": "/data-collections/mine",
         },
         Object {
           "access": Array [
@@ -1871,8 +1962,12 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Add a missing record",
         },
         Object {
+          "linkTo": "/data-collections/mine",
+          "primaryText": "My research data",
+        },
+        Object {
           "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
-          "primaryText": "Add a missing data collection",
+          "primaryText": "Add a missing dataset",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
@@ -1986,6 +2081,19 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_5"
+        pageTitle="My research data"
+        path="/data-collections/mine"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_6"
         pageTitle="Claim possible publications"
         path="/records/possible"
       />
@@ -1998,7 +2106,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_6"
+        key="route_7"
         pageTitle="Claim a publication"
         path="/records/claim"
       />
@@ -2011,7 +2119,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_7"
+        key="route_8"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -2024,7 +2132,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_8"
+        key="route_9"
         pageTitle="Add a missing record to eSpace"
         path="/records/add/find"
         render={[Function]}
@@ -2037,7 +2145,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_9"
+        key="route_10"
         pageTitle="Add a missing record to eSpace"
         path="/records/add/results"
         render={[Function]}
@@ -2050,7 +2158,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_11"
         pageTitle="Add a missing record to eSpace"
         path="/records/add/new"
         render={[Function]}
@@ -2058,7 +2166,7 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_11"
+        key="route_12"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -2071,19 +2179,19 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_12"
+        key="route_13"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_14"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_14"
+        key="route_15"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -2091,12 +2199,12 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_16"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_16"
+        key="route_17"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2149,6 +2257,16 @@ exports[`Application component should render app for account with fez author wit
           "exact": true,
           "pageTitle": "My research",
           "path": "/records/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research data",
+          "path": "/data-collections/mine",
         },
         Object {
           "access": Array [
@@ -2375,6 +2493,19 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_5"
+        pageTitle="My research data"
+        path="/data-collections/mine"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_6"
         pageTitle="Claim possible publications"
         path="/records/possible"
       />
@@ -2387,7 +2518,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_6"
+        key="route_7"
         pageTitle="Claim a publication"
         path="/records/claim"
       />
@@ -2400,7 +2531,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_7"
+        key="route_8"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -2413,7 +2544,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_8"
+        key="route_9"
         pageTitle="Add a missing record to eSpace"
         path="/records/add/find"
         render={[Function]}
@@ -2426,7 +2557,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_9"
+        key="route_10"
         pageTitle="Add a missing record to eSpace"
         path="/records/add/results"
         render={[Function]}
@@ -2439,7 +2570,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_11"
         pageTitle="Add a missing record to eSpace"
         path="/records/add/new"
         render={[Function]}
@@ -2447,7 +2578,7 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_11"
+        key="route_12"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -2460,19 +2591,19 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_12"
+        key="route_13"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_14"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_14"
+        key="route_15"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -2480,12 +2611,12 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_16"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_16"
+        key="route_17"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2538,6 +2669,16 @@ exports[`Application component should render application with routing for the us
           "exact": true,
           "pageTitle": "My research",
           "path": "/records/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research data",
+          "path": "/data-collections/mine",
         },
         Object {
           "access": Array [
@@ -2744,8 +2885,12 @@ exports[`Application component should render application with routing for the us
           "primaryText": "Add a missing record",
         },
         Object {
+          "linkTo": "/data-collections/mine",
+          "primaryText": "My research data",
+        },
+        Object {
           "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
-          "primaryText": "Add a missing data collection",
+          "primaryText": "Add a missing dataset",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
