@@ -6,6 +6,8 @@ import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {StandardRighthandCard} from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import {SearchComponent} from 'modules/SharedComponents/SearchComponent';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
+import param from 'can-param';
+import deparam from 'can-deparam';
 
 import {
     PublicationsList,
@@ -43,6 +45,11 @@ class SearchRecords extends PureComponent {
             }
         };
 
+        if (!!props.location && props.location.search.indexOf('?') >= 0) {
+            const providedSearchQuery = this.parseSearchQueryStringFromUrl(props.location.search.substr(1));
+            this.initState = {...this.initState, ...providedSearchQuery};
+        }
+
         this.state = {
             // check if search has results
             // facets filtering might return no results, but facets should still be visible
@@ -52,10 +59,43 @@ class SearchRecords extends PureComponent {
         };
     }
 
+    componentDidMount() {
+        const {searchQueryParams} = this.state;
+        if (!!searchQueryParams) {
+            this.updateSearch();
+        }
+    }
+
     componentWillReceiveProps(newProps) {
         this.setState({
             ...newProps.searchQuery
         });
+    }
+
+    /**
+     * Parse provided query string and return active filters, facets etc
+     * @returns object
+     */
+    parseSearchQueryStringFromUrl = (searchQuery) => {
+        const providedSearchQuery = deparam(searchQuery);
+
+        if (providedSearchQuery.hasOwnProperty('activeFacets')) {
+            if (!providedSearchQuery.activeFacets.hasOwnProperty('filters')) {
+                providedSearchQuery.activeFacets.filters = {};
+            }
+
+            if (!providedSearchQuery.activeFacets.hasOwnProperty('ranges')) {
+                providedSearchQuery.activeFacets.ranges = {};
+            }
+
+            if (providedSearchQuery.activeFacets.hasOwnProperty('showOpenAccessOnly')) {
+                providedSearchQuery.activeFacets.showOpenAccessOnly = (providedSearchQuery.activeFacets.showOpenAccessOnly === 'true');
+            }
+        }
+
+        providedSearchQuery.pageSize = parseInt(providedSearchQuery.pageSize, 10);
+
+        return providedSearchQuery;
     }
 
     pageSizeChanged = (pageSize) => {
@@ -64,7 +104,7 @@ class SearchRecords extends PureComponent {
                 pageSize: pageSize,
                 page: 1
             },
-            this.updateSearch
+            this.updateHistoryAndSearch
         );
     }
 
@@ -73,7 +113,7 @@ class SearchRecords extends PureComponent {
             {
                 page: page
             },
-            this.updateSearch
+            this.updateHistoryAndSearch
         );
     }
 
@@ -83,7 +123,7 @@ class SearchRecords extends PureComponent {
                 sortBy: sortBy,
                 sortDirection: sortDirection
             },
-            this.updateSearch
+            this.updateHistoryAndSearch
         );
     }
 
@@ -93,13 +133,21 @@ class SearchRecords extends PureComponent {
                 activeFacets: activeFacets,
                 page: 1
             },
-            this.updateSearch
+            this.updateHistoryAndSearch
         );
+    };
+
+    updateHistoryAndSearch = () => {
+        this.props.history.push({
+            pathname: this.props.location.pathname,
+            search: param(this.state)
+        });
+        this.updateSearch();
     }
 
     updateSearch = () => {
         this.props.actions.searchEspacePublications({...this.props.searchQuery, ...this.state});
-    }
+    };
 
     render() {
         const txt = locale.pages.searchRecords;

@@ -62,6 +62,8 @@
     "axios-cache-adapter": "^2.0.0",
     "babel-loader": "^7.1.4",
     "bulma": "0.7.1",
+    "can-deparam": "^1.1.1",
+    "can-param": "^1.0.4",
     "connected-react-router": "^4.3.0",
     "dompurify": "^1.0.4",
     "highcharts": "^6.0.2",
