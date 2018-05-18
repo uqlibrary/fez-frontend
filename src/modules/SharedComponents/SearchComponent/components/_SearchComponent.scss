@@ -19,7 +19,7 @@
       -webkit-appearance: none;
       height: 24px;
       width: 24px;
-      background-image: url('/public/images/baseline-close-24px.svg');
+      background-image: url(/src/images/baseline-close-24px.svg);
       background-size: cover;
       opacity: 0.3;
       &:hover, &:focus {
@@ -30,20 +30,10 @@
 
 
   &.inverse {
-    // Override search box X
-    input[type="search"] {
-      -webkit-appearance: textfield !important;
-      &::-webkit-search-cancel-button {
-        -webkit-appearance: none;
+    // Override search box X size
+    input[type="search"]::-webkit-search-cancel-button {
         height: 32px;
         width: 32px;
-        background-image: url('/public/images/baseline-close-24px.svg');
-        background-size: cover;
-        opacity: 0.3;
-        &:hover, &:focus {
-          opacity: 0.6;
-        }
-      }
     }
     .search-button-wrapper {
       @include mobile {
