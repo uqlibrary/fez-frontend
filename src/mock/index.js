@@ -68,7 +68,22 @@ mock
         if (config.params.rule === 'mine' && !!config.params['filters[stats_only]']) {
             return [200, mockData.currentAuthorStats];
         }
-        // CURRENT_USER_RECORDS_API
+        // CURRENT_USER_RECORDS_API - myDataset
+        else if (config.params.rule === 'mine' && config.params['filters[facets][Display+type]'] === 371) {
+            const totalRecords = mockData.MyDatasetList.data.length;
+            const fromRecord = 5 * (config.params.page - 1);
+            const toRecord = 5 * (config.params.page);
+                return [
+                    200,
+                    // {total: 0, data: []}
+                    {
+                        ...mockData.MyDatasetList,
+                        current_page: config.params.page,
+                        data: mockData.MyDatasetList.data.slice(fromRecord, totalRecords > toRecord ? toRecord : totalRecords)
+                    }
+                ];
+        }
+        // CURRENT_USER_RECORDS_API - myResearch
         else if (config.params.rule === 'mine') {
             const totalRecords = mockData.myRecordsList.data.length;
             const fromRecord = 5 * (config.params.page - 1);
@@ -76,7 +91,11 @@ mock
             return [
                 200,
                 // {total: 0, data: []}
-                {...mockData.myRecordsList, current_page: config.params.page, data: mockData.myRecordsList.data.slice(fromRecord, totalRecords > toRecord ? toRecord : totalRecords)}
+                {
+                    ...mockData.myRecordsList,
+                    current_page: config.params.page,
+                    data: mockData.myRecordsList.data.slice(fromRecord, totalRecords > toRecord ? toRecord : totalRecords)
+                }
             ];
         }
         // POSSIBLE_RECORDS_API
