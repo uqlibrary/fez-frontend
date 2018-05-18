@@ -42,13 +42,23 @@ html, body {
   }
 }
 
-.card-header{
+.card-header {
   padding: 0 0 0 24px !important;
   white-space: normal !important;
 }
 
 .standard-card {
   margin-bottom: 24px !important;
+
+  &.with-theme-header {
+    .card-header {
+      padding: 0 0 16px 24px !important;
+      background-color: $theme-color-lighter;
+      h2 {
+        color: $text-color-reverse;
+      }
+    }
+  }
 }
 
 // The container which houses content

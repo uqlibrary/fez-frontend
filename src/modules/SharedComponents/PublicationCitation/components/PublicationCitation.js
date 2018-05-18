@@ -166,7 +166,7 @@ export default class PublicationCitation extends PureComponent {
         return (
             <div className={`publicationCitation ${this.props.className}`}>
                 <div className="columns is-gapless is-mobile">
-                    <div className="column">
+                    <div className="column citationColumn">
                         {
                             !this.props.hideTitle &&
                             <h3 className="publicationTitle">

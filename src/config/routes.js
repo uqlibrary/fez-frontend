@@ -104,12 +104,13 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             pageTitle: locale.pages.viewRecord.title,
             regExPath: pathConfig.records.view(`(${pidRegExp})`)
         },
-        {
-            path: pathConfig.records.search,
-            component: components.SearchRecords,
-            exact: true,
-            pageTitle: locale.pages.searchRecords.title
-        },
+        // TODO: enable search route for public users
+        // {
+        //     path: pathConfig.records.search,
+        //     component: components.SearchRecords,
+        //     exact: true,
+        //     pageTitle: locale.pages.searchRecords.title
+        // },
         ...(!account
             ? [
                 {
@@ -240,6 +241,13 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 exact: true,
                 pageTitle: locale.pages.googleScholarLink.title
             },
+            // TODO: remove search route for auth only when public search is enabled
+            {
+                path: pathConfig.records.search,
+                component: components.SearchRecords,
+                exact: true,
+                pageTitle: locale.pages.searchRecords.title
+            }
         ] : []),
         ...(account && account.canMasquerade ? [
             {
@@ -265,11 +273,12 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
 
 export const getMenuConfig = (account, disabled) => {
     const publicPages = [
-        {
-            linkTo: pathConfig.records.search,
-            ...locale.menu.search,
-            public: true
-        },
+        // TODO: enable when search is public
+        // {
+        //     linkTo: pathConfig.records.search,
+        //     ...locale.menu.search,
+        //     public: true
+        // },
         {
             linkTo: pathConfig.help,
             ...locale.menu.help,
@@ -327,14 +336,20 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.dataset.mine,
                 ...locale.menu.myDatasets
             },
+            */
             {
                 linkTo: pathConfig.dataset.add,
                 ...locale.menu.addDataset
             },
-            */
             {
                 linkTo: pathConfig.authorStatistics.url(account.id),
                 ...locale.menu.authorStatistics
+            },
+            // TODO: remove when public search is enabled
+            {
+                linkTo: pathConfig.records.search,
+                ...locale.menu.search,
+                public: true
             },
             {
                 divider: true,

@@ -6,7 +6,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;
   word-break: break-word;
-  width: 100%;
+  width: 100% !important;
 
   &:first-child {
     padding-top: 24px;
@@ -30,6 +30,10 @@
     .publicationSource {
       margin-right: 6px;
     }
+  }
+  .citationColumn {
+    width: 100%;
+    overflow: hidden;
   }
 
   .citationContent {
