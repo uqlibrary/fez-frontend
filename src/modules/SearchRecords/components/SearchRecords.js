@@ -109,7 +109,7 @@ class SearchRecords extends PureComponent {
         return (
             <StandardPage className="page-search-records" title={txt.title}>
                 <StandardCard>
-                    <SearchComponent showAdvancedSearchButton />
+                    <SearchComponent />
                 </StandardCard>
                 {
                     // first time loading my publications - account hasn't been loaded or any my publications haven't been loaded
