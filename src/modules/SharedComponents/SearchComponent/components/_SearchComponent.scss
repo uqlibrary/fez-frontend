@@ -21,8 +21,15 @@
       fill: lighten($secondary-color, 25%) !important;
     }
   }
+  .advancedButton {
+    margin-left: 6px !important;
+    @include mobile {
+      margin-top: 6px !important;
+      margin-left: 0 !important;
+    }
+  }
 
-  &.inverse {
+  &.header {
     // Override search box X size
     input[type="search"]::-webkit-search-cancel-button {
       margin-right: 12px;
@@ -108,6 +115,9 @@
           color: $theme-color-dark;
         }
       }
+    }
+    .advancedButton {
+      display:none !important;
     }
   }
 }

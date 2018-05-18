@@ -28,7 +28,6 @@ exports[`SearchComponent should render default view 1`] = `
             rows={1}
             type="search"
             underlineShow={true}
-            underlineStyle={false}
             value=""
           />
         </div>
@@ -82,7 +81,6 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
             rows={1}
             type="search"
             underlineShow={true}
-            underlineStyle={false}
             value=""
           />
         </div>
@@ -108,8 +106,9 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
       className="column is-narrow"
     >
       <RaisedButton
+        className="advancedButton"
         disabled={false}
-        fullWidth={false}
+        fullWidth={true}
         label="Advanced search"
         labelPosition="after"
         onClick={[Function]}
@@ -121,9 +120,9 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
 </div>
 `;
 
-exports[`SearchComponent should render inverse colour-themed view 1`] = `
+exports[`SearchComponent should render with a class "header" for use in AppBar 1`] = `
 <div
-  className="search-component inverse"
+  className="search-component header"
 >
   <div
     className="columns is-gapless"
@@ -207,7 +206,6 @@ exports[`SearchComponent should set search value from prop 1`] = `
             rows={1}
             type="search"
             underlineShow={true}
-            underlineStyle={false}
             value="i feel lucky"
           />
         </div>
@@ -233,8 +231,9 @@ exports[`SearchComponent should set search value from prop 1`] = `
       className="column is-narrow"
     >
       <RaisedButton
+        className="advancedButton"
         disabled={false}
-        fullWidth={false}
+        fullWidth={true}
         label="Advanced search"
         labelPosition="after"
         onClick={[Function]}

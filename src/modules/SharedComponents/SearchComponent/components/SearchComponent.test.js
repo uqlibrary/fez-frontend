@@ -22,8 +22,8 @@ describe('SearchComponent', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render inverse colour-themed view', () => {
-        const wrapper = setup({applyInverseStyle: true});
+    it('should render with a class "header" for use in AppBar', () => {
+        const wrapper = setup({inHeader: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

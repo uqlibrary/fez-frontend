@@ -13,7 +13,7 @@ import {routes} from 'config';
 export default class SearchComponent extends PureComponent {
     static propTypes = {
         searchQueryParams: PropTypes.object,
-        applyInverseStyle: PropTypes.bool,
+        inHeader: PropTypes.bool,
         showAdvancedSearchButton: PropTypes.bool,
         showSearchButton: PropTypes.bool,
         showPrefixIcon: PropTypes.bool,
@@ -62,11 +62,9 @@ export default class SearchComponent extends PureComponent {
     }
 
     toggleMobile = () => {
-        if (!this.state.showMobile) {
-            this.setState({showMobile: true});
-        } else {
-            this.setState({showMobile: false});
-        }
+        this.setState({
+            showMobile: !this.state.showMobile
+        });
     };
 
     searchTextChanged = (event, value) => {
@@ -84,7 +82,7 @@ export default class SearchComponent extends PureComponent {
     render() {
         const txt = locale.components.searchComponent;
         return (
-            <div className={`search-component ${this.props.applyInverseStyle ? 'inverse' : ''}`}>
+            <div className={`search-component ${this.props.inHeader ? 'header' : ''}`}>
                 {
                     !this.state.showAdvancedSearch &&
                     <div className="columns is-gapless">
@@ -115,7 +113,7 @@ export default class SearchComponent extends PureComponent {
                                         onChange={this.searchTextChanged}
                                         onKeyPress={this.handleSearch}
                                         value={this.state.searchText}
-                                        underlineStyle={this.props.applyInverseStyle && {display: 'none'}} />
+                                        underlineStyle={this.props.inHeader && {display: 'none'}} />
                                 </div>
                                 <div className="is-hidden-tablet mobileSpacer" />
                             </div>
@@ -162,7 +160,10 @@ export default class SearchComponent extends PureComponent {
                             <div className="column is-narrow">
                                 <RaisedButton
                                     label={txt.advancedSearchButtonText}
-                                    onClick={this.toggleAdvancedSearch} />
+                                    onClick={this.toggleAdvancedSearch}
+                                    className="advancedButton"
+                                    fullWidth
+                                />
                             </div>
                         }
                     </div>

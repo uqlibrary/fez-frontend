@@ -175,7 +175,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           className="column search-column"
         >
           <withRouter(Connect(SearchComponent))
-            applyInverseStyle={true}
+            inHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
@@ -657,7 +657,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           className="column search-column"
         >
           <withRouter(Connect(SearchComponent))
-            applyInverseStyle={true}
+            inHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
@@ -1014,7 +1014,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           className="column search-column"
         >
           <withRouter(Connect(SearchComponent))
-            applyInverseStyle={true}
+            inHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
@@ -1332,7 +1332,7 @@ exports[`Application component should render app for account with fez author wit
           className="column search-column"
         >
           <withRouter(Connect(SearchComponent))
-            applyInverseStyle={true}
+            inHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
@@ -1798,7 +1798,7 @@ exports[`Application component should render app for account with fez author wit
           className="column search-column"
         >
           <withRouter(Connect(SearchComponent))
-            applyInverseStyle={true}
+            inHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
@@ -2671,7 +2671,7 @@ exports[`Application component should render application with routing for the us
           className="column search-column"
         >
           <withRouter(Connect(SearchComponent))
-            applyInverseStyle={true}
+            inHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
@@ -2867,7 +2867,7 @@ exports[`Application component should render for anon user 1`] = `
           className="column search-column"
         >
           <withRouter(Connect(SearchComponent))
-            applyInverseStyle={true}
+            inHeader={true}
             showMobileSearchButton={true}
             showPrefixIcon={true}
           />
