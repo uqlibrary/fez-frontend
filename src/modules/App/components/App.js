@@ -189,8 +189,7 @@ export default class App extends PureComponent {
                         <div className="columns is-gapless appbar-right-columns is-mobile">
                             <div className="column search-column">
                                 {
-                                    // TODO: Show search box for public users when public search is enabled
-                                    isAuthorizedUser && !isThesisSubmissionPage &&
+                                    !isThesisSubmissionPage &&
                                     <SearchComponent applyInverseStyle showPrefixIcon showMobileSearch />
                                 }
                             </div>

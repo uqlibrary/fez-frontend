@@ -2865,7 +2865,13 @@ exports[`Application component should render for anon user 1`] = `
       >
         <div
           className="column search-column"
-        />
+        >
+          <withRouter(Connect(SearchComponent))
+            applyInverseStyle={true}
+            showMobileSearch={true}
+            showPrefixIcon={true}
+          />
+        </div>
         <div
           className="column is-narrow auth-button-column"
         >
