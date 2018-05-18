@@ -56,6 +56,8 @@ export default class SearchComponent extends PureComponent {
             this.props.actions.searchEspacePublications({searchQueryParams: {title: this.state.searchText}, ...defaultQueryParams});
             // Hide the mobile search bar on a search
             this.setState({showMobile: false});
+            // Blur the input so the keyboard goes away
+            event && event.target && event.target.blur();
             // navigate to search results page
             this.props.history.push(routes.pathConfig.records.search);
         }
@@ -82,7 +84,7 @@ export default class SearchComponent extends PureComponent {
     render() {
         const txt = locale.components.searchComponent;
         return (
-            <div className={`search-component ${this.props.inHeader ? 'header' : ''}`}>
+            <div className={`search-component ${this.props.inHeader && 'header'}`}>
                 {
                     !this.state.showAdvancedSearch &&
                     <div className="columns is-gapless">

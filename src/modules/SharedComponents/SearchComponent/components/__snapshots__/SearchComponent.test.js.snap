@@ -2,7 +2,7 @@
 
 exports[`SearchComponent should render default view 1`] = `
 <div
-  className="search-component "
+  className="search-component undefined"
 >
   <div
     className="columns is-gapless"
@@ -55,7 +55,7 @@ exports[`SearchComponent should render default view 1`] = `
 
 exports[`SearchComponent should render default view with advanced search 1`] = `
 <div
-  className="search-component "
+  className="search-component undefined"
 >
   <div
     className="columns is-gapless"
@@ -180,7 +180,7 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
 
 exports[`SearchComponent should set search value from prop 1`] = `
 <div
-  className="search-component "
+  className="search-component undefined"
 >
   <div
     className="columns is-gapless"
