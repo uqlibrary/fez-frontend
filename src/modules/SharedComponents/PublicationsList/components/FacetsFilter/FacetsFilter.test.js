@@ -595,4 +595,37 @@ describe('FacetsFilter ', () => {
         expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}});
     });
 
+    it('should return false if facet is not in activeFacets', () => {
+        const activeFacets = {
+            filters: {},
+            ranges: {}
+        };
+
+        const wrapper = setup({});
+        expect(wrapper.instance().isFacetFilterActive(activeFacets, 'Display type', 134)).toBeFalsy();
+    });
+
+    it('should return true if Display type is set in activeFacets as an integer value', () => {
+        const activeFacets = {
+            filters: {
+                'Display type': 134
+            },
+            ranges: {}
+        };
+
+        const wrapper = setup({});
+        expect(wrapper.instance().isFacetFilterActive(activeFacets, 'Display type', 134)).toBeTruthy();
+    });
+
+    it('should return true if Display type is set in activeFacets as a string value', () => {
+        const activeFacets = {
+            filters: {
+                'Display type': '134'
+            },
+            ranges: {}
+        };
+
+        const wrapper = setup({});
+        expect(wrapper.instance().isFacetFilterActive(activeFacets, 'Display type', 134)).toBeTruthy();
+    });
 });
