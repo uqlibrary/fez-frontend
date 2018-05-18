@@ -101,8 +101,7 @@ export default class SearchComponent extends PureComponent {
                                     <div className="column is-narrow search-icon-prefix is-hidden-tablet">
                                         <IconButton
                                             onClick={this.toggleMobile}
-                                            className="mobileBackArrow"
-                                        >
+                                            className="mobileBackArrow" >
                                             <ArrowBack/>
                                         </IconButton>
                                     </div>
@@ -116,8 +115,7 @@ export default class SearchComponent extends PureComponent {
                                         onChange={this.searchTextChanged}
                                         onKeyPress={this.handleSearch}
                                         value={this.state.searchText}
-                                        underlineStyle={this.props.applyInverseStyle && {display: 'none'}}
-                                    />
+                                        underlineStyle={this.props.applyInverseStyle && {display: 'none'}} />
                                 </div>
                                 <div className="is-hidden-tablet mobileSpacer" />
                             </div>
@@ -129,44 +127,40 @@ export default class SearchComponent extends PureComponent {
                                     onClick={this.toggleMobile}
                                     tooltipPosition="bottom-left"
                                     className="search-button"
-                                    hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}}
-                                >
+                                    hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}} >
                                     <SearchIcon/>
                                 </IconButton>
                             </div>
                         }
                         {
                             this.props.showSearchButton &&
-                            <div className="column is-narrow search-button-wrapper">
+                            <div className="column is-narrow mobile-search-button-wrapper">
                                 <IconButton
                                     tooltipPosition="bottom-left"
                                     onClick={this.handleSearch}
                                     disabled={this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH}
                                     hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}}
+                                    style={{marginLeft: 12}}
                                     className="search-button"
                                     tooltip={txt.searchButtonHint}>
                                     <SearchIcon/>
                                 </IconButton>
                             </div>
                         }
-                        {
-                            this.props.showAdvancedSearchButton &&
-                            <div className="column is-narrow">
-                                <RaisedButton
-                                    label={txt.searchButtonText}
-                                    secondary
-                                    disabled={this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH}
-                                    onClick={this.handleSearch}
-                                    fullWidth
-                                />
-                            </div>
-                        }
+                        <div className="column is-narrow search-button-wrapper">
+                            <RaisedButton
+                                label={txt.searchButtonText}
+                                secondary
+                                disabled={this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH}
+                                onClick={this.handleSearch}
+                                fullWidth />
+                        </div>
                         {
                             this.props.showAdvancedSearchButton && false &&
                             <div className="column is-narrow">
                                 <RaisedButton
                                     label={txt.advancedSearchButtonText}
-                                    onClick={this.toggleAdvancedSearch}/>
+                                    onClick={this.toggleAdvancedSearch} />
                             </div>
                         }
                     </div>

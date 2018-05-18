@@ -37,6 +37,19 @@ exports[`SearchComponent should render default view 1`] = `
         />
       </div>
     </div>
+    <div
+      className="column is-narrow search-button-wrapper"
+    >
+      <RaisedButton
+        disabled={true}
+        fullWidth={true}
+        label="Search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={true}
+      />
+    </div>
   </div>
 </div>
 `;
@@ -79,7 +92,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
       </div>
     </div>
     <div
-      className="column is-narrow"
+      className="column is-narrow search-button-wrapper"
     >
       <RaisedButton
         disabled={true}
@@ -136,6 +149,19 @@ exports[`SearchComponent should render inverse colour-themed view 1`] = `
         />
       </div>
     </div>
+    <div
+      className="column is-narrow search-button-wrapper"
+    >
+      <RaisedButton
+        disabled={true}
+        fullWidth={true}
+        label="Search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={true}
+      />
+    </div>
   </div>
 </div>
 `;
@@ -178,7 +204,7 @@ exports[`SearchComponent should set search value from prop 1`] = `
       </div>
     </div>
     <div
-      className="column is-narrow"
+      className="column is-narrow search-button-wrapper"
     >
       <RaisedButton
         disabled={false}

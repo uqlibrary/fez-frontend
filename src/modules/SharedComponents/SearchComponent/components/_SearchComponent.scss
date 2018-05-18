@@ -8,21 +8,18 @@
     }
   }
 
-  .search-button-wrapper {
-    margin-left: 6px;
-  }
-
   // Override search box X
-  input[type="search"] {
-    -webkit-appearance: textfield !important;
-    &::-webkit-search-cancel-button {
-      -webkit-appearance: none;
+  input[type="search"]::-webkit-search-cancel-button {
       height: 24px;
       width: 24px;
       opacity: 0.3;
       &:hover, &:focus {
         opacity: 0.6;
-      }
+     }
+  }
+  .search-button-wrapper {
+    @include tablet {
+      margin-left: 12px !important;
     }
   }
 
@@ -31,11 +28,13 @@
     input[type="search"]::-webkit-search-cancel-button {
         height: 32px;
         width: 32px;
+        opacity: 0.3;
+      &:hover, &:focus {
+        opacity: 0.6;
+      }
     }
     .search-button-wrapper {
-      @include mobile {
         display: none;
-      }
     }
     .search-field {
       background-color: $text-color-reverse;
