@@ -66,6 +66,10 @@ export default class SearchComponent extends PureComponent {
     toggleMobile = () => {
         this.setState({
             showMobile: !this.state.showMobile
+        }, () => {
+            if(this.state.showMobile) {
+                document.getElementById('searchField').focus();
+            }
         });
     };
 

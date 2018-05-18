@@ -736,7 +736,6 @@ export default {
         },
         searchComponent: {
             searchBoxPlaceholder: 'Search eSpace',
-            mobileSearchButtonHint: 'Search eSpace',
             searchButtonHint: 'Search eSpace',
             advancedSearchButtonText: 'Advanced search',
             searchButtonText: 'Search',
