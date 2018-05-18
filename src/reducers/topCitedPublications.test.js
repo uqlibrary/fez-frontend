@@ -41,6 +41,6 @@ describe('Top cited publications reducer', () => {
         const source = 'source';
         const test = topCitedPublicationsReducer(initialState, {type: `${actions.TOP_CITED_PUBLICATIONS_FAILED}@${source}`, source: source});
         expect(test.topCitedPublicationsList[source]).toEqual([]);
-        expect(test.loadingTopCitedPublications[source]).toBeFalsy();
+        expect(test.loadingTopCitedPublications[source]).toBeTruthy();
     });
 });

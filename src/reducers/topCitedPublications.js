@@ -29,7 +29,7 @@ const handlers = {
     },
 
     [`${actions.TOP_CITED_PUBLICATIONS_FAILED}@`]: (state, action) => {
-        state.loadingTopCitedPublications[action.source] = false;
+        state.loadingTopCitedPublications[action.source] = true;
         return {
             ...state
         };

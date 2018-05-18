@@ -35,6 +35,6 @@ describe('Top altmetric cited publications reducer', () => {
     it('returns the correct state when top altmetric cited publications fail to load', () => {
         const test = topAltmetricCitedPublicationsReducer(initialState, {type: actions.TOP_ALTMETRIC_CITED_PUBLICATIONS_FAILED});
         expect(test.topCitedPublicationsList).toEqual([]);
-        expect(test.loadingTopCitedPublications).toBeFalsy();
+        expect(test.loadingTopCitedPublications).toBeTruthy();
     });
 });

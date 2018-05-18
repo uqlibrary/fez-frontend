@@ -22,7 +22,7 @@ const handlers = {
     },
 
     [actions.TOP_ALTMETRIC_CITED_PUBLICATIONS_FAILED]: (state) => {
-        state.loadingTopCitedPublications = false;
+        state.loadingTopCitedPublications = true;
         return {
             ...state
         };
