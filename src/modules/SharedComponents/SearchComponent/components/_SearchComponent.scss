@@ -64,14 +64,14 @@
           height: 75px !important;
           & > div:nth-child(1) { // Search input label
             bottom: 0px !important;
-            font-size: 32px !important;
+            font-size: 24px !important;
             line-height: 75px !important;
             font-weight: $text-weight-light !important;
           }
         }
         & input { // Search input field
           margin-top: 0px !important;
-          font-size: 32px !important;
+          font-size: 24px !important;
           line-height: 75px !important;
           font-weight: $text-weight-light !important;
           color: lighten($text-color, 20%) !important;

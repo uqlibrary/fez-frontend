@@ -125,10 +125,8 @@ export default class SearchComponent extends PureComponent {
                             <div className="column is-narrow is-hidden-tablet">
                                 <IconButton
                                     onClick={this.toggleMobile}
-                                    tooltipPosition="bottom-left"
                                     className="search-button"
                                     hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}}
-                                    tooltip={txt.mobileSearchButtonHint}
                                 >
                                     <SearchIcon/>
                                 </IconButton>
