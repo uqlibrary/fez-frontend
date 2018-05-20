@@ -43,14 +43,10 @@ export default class SearchComponent extends PureComponent {
     }
 
     handleSearch = (event) => {
-        if(event && event.key && event.key === 'Enter' && this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH) {
-            // Snackbar to give feedback when input is too short when pressing enter
-            this.setState({snackbarOpen: true});
-            return;
-        }
+        // Stop submission unless enter was pressed
+        if(event && event.key && (event.key !== 'Enter')) return;
 
-        if(event && event.key && (event.key !== 'Enter' || this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH)) return;
-
+        // If all is OK, submit the search
         if (this.props.actions && this.props.actions.searchEspacePublications && this.state.searchText.trim().length >= this.MIN_SEARCH_TEXT_LENGTH) {
             // start search
             const defaultQueryParams = {
@@ -64,10 +60,16 @@ export default class SearchComponent extends PureComponent {
             this.props.actions.searchEspacePublications({searchQueryParams: {title: this.state.searchText}, ...defaultQueryParams});
             // Hide the mobile search bar on a search
             this.setState({showMobile: false});
-            // Blur the input so the keyboard goes away
+            // Blur the input so the mobile keyboard is deactivated
             event && event.target && event.target.blur();
             // navigate to search results page
             this.props.history.push(routes.pathConfig.records.search);
+        }
+
+        // Snackbar to give feedback when input is too short when pressing enter
+        if(event && event.key && event.key === 'Enter' && this.props.inHeader && this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH) {
+            this.setState({snackbarOpen: true});
+            return;
         }
     }
 
@@ -129,7 +131,13 @@ export default class SearchComponent extends PureComponent {
                                         onChange={this.searchTextChanged}
                                         onKeyPress={this.handleSearch}
                                         value={this.state.searchText}
-                                        underlineStyle={this.props.inHeader && {display: 'none'}} />
+                                        underlineStyle={this.props.inHeader && {display: 'none'}}
+                                        errorText={!this.props.inHeader
+                                            && (this.state.searchText.trim().length > 0)
+                                            && (this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH)
+                                            ? locale.validationErrors.minLength.replace('[min]', this.MIN_SEARCH_TEXT_LENGTH)
+                                            : false}
+                                    />
                                 </div>
                                 <div className="is-hidden-tablet mobileSpacer" />
                             </div>

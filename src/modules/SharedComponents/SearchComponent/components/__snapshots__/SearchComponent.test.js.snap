@@ -18,6 +18,7 @@ exports[`SearchComponent should render default view 1`] = `
         >
           <TextField
             disabled={false}
+            errorText={false}
             floatingLabelFixed={false}
             fullWidth={true}
             hintText="Search eSpace"
@@ -76,6 +77,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
         >
           <TextField
             disabled={false}
+            errorText={false}
             floatingLabelFixed={false}
             fullWidth={true}
             hintText="Search eSpace"
@@ -148,6 +150,7 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
         >
           <TextField
             disabled={false}
+            errorText={false}
             floatingLabelFixed={false}
             fullWidth={true}
             hintText="Search eSpace"
@@ -211,6 +214,7 @@ exports[`SearchComponent should set search value from prop 1`] = `
         >
           <TextField
             disabled={false}
+            errorText={false}
             floatingLabelFixed={false}
             fullWidth={true}
             hintText="Search eSpace"
