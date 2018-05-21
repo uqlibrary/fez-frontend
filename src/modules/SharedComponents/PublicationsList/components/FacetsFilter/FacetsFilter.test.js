@@ -8,6 +8,7 @@ function setup(testProps, isShallow = true) {
         excludeFacetsList: [] || testProps.excludeFacetsList,
         onFacetsChanged: jest.fn() || testProps.onFacetsChanged,
         showOpenAccessFilter: false,
+        location: {} || testProps.location,
         ...testProps
     };
     return getElement(FacetsFilter, props, isShallow);

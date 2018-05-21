@@ -54,7 +54,7 @@ describe('myDatasets test', () => {
     it('renders list of publications no facets', () => {
         const wrapper = setup({
             publicationsList: [1, 2, 3], // myRecordsList.data,
-            publicationsListPagingData: {"total": 147, "per_page": 20, "current_page": 1, "from": 1,"to": 20}
+            publicationsListPagingData: {"total": 2, "per_page": 20, "current_page": 1, "from": 1,"to": 2},
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -62,7 +62,7 @@ describe('myDatasets test', () => {
     it('renders list of publications with facets', () => {
         const wrapper = setup({
             publicationsList: [1, 2, 3], // myRecordsList.data,
-            publicationsListPagingData: {"total": 147, "per_page": 20, "current_page": 1, "from": 1,"to": 20},
+            publicationsListPagingData: {"total": 2, "per_page": 20, "current_page": 1, "from": 1,"to": 2},
             publicationsListFacets: {
                 "Display type": {
                     "doc_count_error_upper_bound": 0,
@@ -89,7 +89,7 @@ describe('myDatasets test', () => {
     });
 
     it('renders active filters', () => {
-        const wrapper = setup({location: {state: {activeFacets: {filters: {}, ranges: {Year: {from: 2000, to: 2010}}}}}});
+        const wrapper = setup({state: {activeFacets: {filters: {}, ranges: {Year: {from: 2000, to: 2010}}}}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

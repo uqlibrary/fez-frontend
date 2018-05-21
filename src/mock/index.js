@@ -71,8 +71,8 @@ mock
         // CURRENT_USER_RECORDS_API - myDataset
         else if (config.params.rule === 'mine' && config.params['filters[facets][Display+type]'] === 371) {
             const totalRecords = mockData.MyDatasetList.data.length;
-            const fromRecord = 5 * (config.params.page - 1);
-            const toRecord = 5 * (config.params.page);
+            const fromRecord = 1;
+            const toRecord = 2;
                 return [
                     200,
                     // {total: 0, data: []}

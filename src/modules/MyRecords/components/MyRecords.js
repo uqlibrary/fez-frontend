@@ -8,8 +8,7 @@ import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 
 import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
 import {locale} from 'locale';
-import {routes} from 'config';
-import {general} from 'config';
+import {routes, general} from 'config';
 
 export default class MyRecords extends PureComponent {
     static propTypes = {
@@ -100,25 +99,22 @@ export default class MyRecords extends PureComponent {
     }
 
     facetsChanged = (activeFacets) => {
-        console.log('activeFacets');
-        console.log(activeFacets);
         if (this.props.location.pathname === routes.pathConfig.dataset.mine) {
-            // this is a 'my research data' page
+            // this is a 'my research data' page - we dont want the presence of 'Display type' to decide 'facet changed'
             const displayType = 'Display type';
-            const localfilters = Object.assign({}, activeFacets);
-            if (Object.keys(localfilters).length > 0 &&
-                localfilters.hasOwnProperty(displayType) &&
-                localfilters[displayType] === general.PUBLICATION_TYPE_DATA_COLLECTION) {
-                const index = localfilters.indexOf(displayType);
+            const localFacets = Object.assign({}, activeFacets);
+            if (Object.keys(localFacets).length > 0 &&
+                localFacets.hasOwnProperty(displayType) &&
+                localFacets[displayType] === general.PUBLICATION_TYPE_DATA_COLLECTION) {
+                const index = localFacets.indexOf(displayType);
                 if (index >= 0) {
-                    localfilters.splice(index);
+                    localFacets.splice(index);
                 }
-                // return true is any other filters in array
             }
 
             this.setState(
                 {
-                    activeFacets: localfilters,
+                    activeFacets: localFacets,
                     page: 1
                 }, this.pushPageHistory
             );
@@ -139,8 +135,6 @@ export default class MyRecords extends PureComponent {
             search: `?ts=${Date.now()}`,
             state: {...this.state}
         });
-
-        console.log(this.state);
         this.props.actions.searchAuthorPublications({...this.state});
     };
 
@@ -230,9 +224,9 @@ export default class MyRecords extends PureComponent {
                                     activeFacets={this.state.activeFacets}
                                     disabled={this.props.loadingPublicationsList}
                                     excludeFacetsList={txt.facetsFilter.excludeFacetsList}
+                                    location={this.props.location}
                                     renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                    showOpenAccessFilter
-                                    location={this.props.location}/>
+                                    showOpenAccessFilter/>
                             </StandardRighthandCard>
                         </div>
                     }
