@@ -97,7 +97,6 @@ describe('MyRecords test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-
     it('state is updated by sub components', () => {
         const testAction = jest.fn();
         const wrapper = setup({actions: {searchAuthorPublications: testAction}});

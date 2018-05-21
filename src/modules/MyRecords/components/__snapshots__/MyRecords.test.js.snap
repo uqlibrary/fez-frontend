@@ -48,7 +48,7 @@ exports[`MyRecords test renders active filters 1`] = `
       </StandardCard>
     </div>
     <div
-      className="column is-hidden-mobile"
+      className="column is-3 is-hidden-mobile"
     >
       <StandardRighthandCard
         title="Refine results"
@@ -121,6 +121,12 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
           .
         </span>
         <PublicationsListSorting
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
           disabled={false}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
@@ -218,6 +224,12 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
           .
         </span>
         <PublicationsListSorting
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
           disabled={false}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
@@ -279,7 +291,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
       </StandardCard>
     </div>
     <div
-      className="column is-hidden-mobile"
+      className="column is-3 is-hidden-mobile"
     >
       <StandardRighthandCard
         title="Refine results"
@@ -470,6 +482,12 @@ exports[`MyRecords test renders loading screen while loading publications while 
           .
         </span>
         <PublicationsListSorting
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
           disabled={true}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}

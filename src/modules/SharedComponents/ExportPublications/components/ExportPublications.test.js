@@ -1,5 +1,5 @@
 import ExportPublications from './ExportPublications';
-import {formatToFileInfoMap} from "../../../../actions/publicationDataTransformers";
+import {formatToFilenameMap} from "../../../../actions/publicationDataTransformers";
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -17,14 +17,14 @@ describe('Export Publications renders', () => {
     });
 
     it('component with rendered field selected', () => {
-        const expected = Object.keys(formatToFileInfoMap)[0];
+        const expected = Object.keys(formatToFilenameMap)[0];
         const wrapper = setup({format: expected});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('SelectField').props().value).toEqual(expected);
     });
 
     it('component with field selected', () => {
-        const expected = Object.keys(formatToFileInfoMap)[0];
+        const expected = Object.keys(formatToFilenameMap)[0];
         const mockOnChange = jest.fn();
         const wrapper = setup({onChange: mockOnChange});
         expect(toJson(wrapper)).toMatchSnapshot();

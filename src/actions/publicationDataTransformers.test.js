@@ -10,9 +10,8 @@ beforeEach(() => {
 describe('Publication data transformers ', () => {
     describe('promptForDownload test', () => {
         it('should trigger a file download', () => {
-            for (const format in transformers.formatToFileInfoMap) {
-                const fileInfo = transformers.formatToFileInfoMap[format];
-                const expected = ['data', fileInfo.filename];
+            for (const format in transformers.formatToFilenameMap) {
+                const expected = ['data', transformers.formatToFilenameMap[format]];
 
                 transformers.promptForDownload(format, 'data');
                 expect(FileSaver.saveAs).toHaveBeenCalledWith(...expected);

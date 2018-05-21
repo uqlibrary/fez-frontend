@@ -5,7 +5,7 @@ import * as repositories from 'repositories';
 import * as publicationsActions from './publications';
 import * as mockData from 'mock/data';
 import {exportSearchToExcel as exportSearchToExcelResponse} from "../mock/data/testing/searchRecords";
-import {formatToFileInfoMap, promptForDownload} from './publicationDataTransformers';
+import {formatToFilenameMap, promptForDownload} from './publicationDataTransformers';
 
 beforeEach(() => {
     promptForDownload.mockClear();
@@ -206,7 +206,7 @@ describe('Publications actions', () => {
     });
 
     describe('exportAuthorPublications()', () => {
-        const exportFormat = Object.keys(formatToFileInfoMap)[0];
+        const exportFormat = Object.keys(formatToFilenameMap)[0];
         const testRequest = {
             ...exportFormat,
             userName: 'uqresearcher',

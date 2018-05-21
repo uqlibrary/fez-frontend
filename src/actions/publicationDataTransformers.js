@@ -7,15 +7,9 @@ import FileSaver from 'file-saver';
  *
  * @type {{"application/vnd.ms-excel": string, "application/vnd.endnote": string}}
  */
-export const formatToFileInfoMap = {
-    'excel': {
-        'mimeType': 'application/vnd.ms-excel',
-        'filename': 'excel.xls'
-    },
-    'endnote': {
-        'mimeType': 'application/vnd.endnote',
-        'filename': 'endnote.enw'
-    }
+export const formatToFilenameMap = {
+    'excel': 'excel.xls',
+    'endnote': 'endnote.enw'
 };
 
 /**
@@ -25,11 +19,10 @@ export const formatToFileInfoMap = {
  * @returns void
  */
 export function promptForDownload(format, response) {
-    if (!(format in formatToFileInfoMap)) {
+    if (!(format in formatToFilenameMap)) {
         throw `Export format ${format} is not supported.`;
     }
 
-    const fileInfo = formatToFileInfoMap[format];
-    FileSaver.saveAs(response, fileInfo.filename);
+    FileSaver.saveAs(response, formatToFilenameMap[format]);
 }
 
