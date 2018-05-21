@@ -74,7 +74,7 @@ class SearchRecords extends PureComponent {
             newProps.history.action === 'POP' &&
             newProps.location.pathname === routes.pathConfig.records.search
         ) {
-            this.setState({...(!!newProps.location.state ? newProps.location.state : this.state )}, () => {
+            this.setState({...(!!newProps.location.state ? newProps.location.state : this.state)}, () => {
                 // only will be called when user clicks back on search records page
                 this.props.actions.searchEspacePublications({...this.state});
             });
@@ -174,7 +174,7 @@ class SearchRecords extends PureComponent {
                     <SearchComponent showAdvancedSearchButton/>
                 </StandardCard>
                 {
-                    // first time loading my publications - account hasn't been loaded or any my publications haven't been loaded
+                    // first time loading search results
                     !hasSearchParams && this.props.loadingSearch &&
                     <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
                 }
@@ -190,7 +190,10 @@ class SearchRecords extends PureComponent {
                     }
                     {
                         // results to display or loading if user is filtering/paging
-                        ((hasSearchParams && this.props.loadingSearch) || (!!this.props.publicationsList && this.props.publicationsList.length > 0)) &&
+                        (
+                            (hasSearchParams && this.props.loadingSearch) ||
+                            (!!this.props.publicationsList && this.props.publicationsList.length > 0)
+                        ) &&
                         <div className="column">
                             <StandardCard>
                                 {

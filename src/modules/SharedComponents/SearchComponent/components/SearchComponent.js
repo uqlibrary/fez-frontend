@@ -56,7 +56,8 @@ export default class SearchComponent extends PureComponent {
             // navigate to search results page
             this.props.history.push({
                 pathname: routes.pathConfig.records.search,
-                search: param(searchQuery)
+                search: param(searchQuery),
+                state: {...searchQuery}
             });
         }
     }
