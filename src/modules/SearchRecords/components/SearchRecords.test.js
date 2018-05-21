@@ -38,6 +38,70 @@ describe('SearchRecords page', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should show available filters or selected filters if publicationsListFacets returned (even if there are no results)', () => {
+        const wrapper = setup({
+            publicationsListFacets: {
+                'Some facet': 1,
+                'Another facet': 2
+            },
+            searchQuery: {
+                title: 'this is test'
+            },
+            publicationsList: []
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should show available filters or selected filters if activeFacets OA selected (even if there are no results)', () => {
+        const wrapper = setup({
+            searchQuery: {
+                title: 'this is test',
+                activeFacets: {
+                    showOpenAccessOnly: true
+                }
+            },
+            publicationsList: []
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should show available filters or selected filters if activeFacets filter selected (even if there are no results)', () => {
+        const wrapper = setup({
+            searchQuery: {
+                title: 'this is test',
+                activeFacets: {
+                    filters: {
+                        'Display type': 179
+                    }
+                }
+            },
+            publicationsList: []
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should show available filters or selected filters if activeFacets range selected (even if there are no results)', () => {
+        const wrapper = setup({
+            searchQuery: {
+                title: 'this is test',
+                activeFacets: {
+                    ranges: {
+                        'Year published': {
+                            from: 2015,
+                            to: 2018
+                        }
+                    }
+                },
+            },
+            publicationsList: []
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should call updateSearch() method if query search parameters with searchQueryParams key found', () => {
         const testAction = jest.fn();
         const wrapper = setup({
