@@ -85,7 +85,17 @@ describe('SearchComponent', () => {
         expect(testMethod).toHaveBeenCalled();
         expect(testHistoryPushMehtod).toHaveBeenCalledWith({
             pathname: '/records/search',
-            search: 'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Btitle%5D=i+feel+lucky'
+            search: 'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Btitle%5D=i+feel+lucky',
+            state: {
+                activeFacets: {filters: {}, ranges: {}},
+                page: 1,
+                pageSize: 20,
+                searchQueryParams: {
+                    title: 'i feel lucky',
+                },
+                sortBy: 'published_date',
+                sortDirection: 'Desc'
+            }
         });
     });
 });
