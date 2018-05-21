@@ -95,7 +95,7 @@ export default class SearchComponent extends PureComponent {
             snackbarOpen: false
         }, () => {
             if(this.state.showMobile) {
-                document.getElementById('searchField').focus();
+                document.getElementById('searchField') && document.getElementById('searchField').focus();
             }
         });
     };
@@ -157,7 +157,7 @@ export default class SearchComponent extends PureComponent {
                                         onChange={this.searchTextChanged}
                                         onKeyPress={this.handleSearch}
                                         value={this.state.searchText}
-                                        underlineStyle={this.props.inHeader && {display: 'none'}}
+                                        underlineStyle={this.props.inHeader ? {display: 'none'} : {}}
                                         errorText={this.validationError()}
                                     />
                                 </div>

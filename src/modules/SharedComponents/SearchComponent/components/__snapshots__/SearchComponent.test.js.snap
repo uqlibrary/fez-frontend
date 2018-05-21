@@ -29,6 +29,7 @@ exports[`SearchComponent should render default view 1`] = `
             rows={1}
             type="search"
             underlineShow={true}
+            underlineStyle={Object {}}
             value=""
           />
         </div>
@@ -88,6 +89,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
             rows={1}
             type="search"
             underlineShow={true}
+            underlineStyle={Object {}}
             value=""
           />
         </div>
@@ -121,6 +123,167 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
         onClick={[Function]}
         primary={false}
         secondary={false}
+      />
+    </div>
+  </div>
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</div>
+`;
+
+exports[`SearchComponent should render show mobile button 1`] = `
+<div
+  className="search-component undefined undefined"
+>
+  <div
+    className="columns is-gapless"
+  >
+    <div
+      className="column search-field is-gapless hideMobile"
+    >
+      <div
+        className="columns is-gapless search-field is-mobile"
+      >
+        <div
+          className="column is-narrow search-icon-prefix is-hidden-tablet"
+        >
+          <IconButton
+            className="mobileBackArrow"
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onClick={[Function]}
+            tooltipPosition="bottom-center"
+            touch={false}
+          >
+            <NavigationArrowBack />
+          </IconButton>
+        </div>
+        <div
+          className="column"
+        >
+          <TextField
+            disabled={false}
+            errorText={false}
+            floatingLabelFixed={false}
+            floatingLabelText="Search eSpace"
+            fullWidth={true}
+            id="searchField"
+            multiLine={false}
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            rows={1}
+            type="search"
+            underlineShow={true}
+            underlineStyle={Object {}}
+            value=""
+          />
+        </div>
+        <div
+          className="is-hidden-tablet mobileSpacer"
+        />
+      </div>
+    </div>
+    <div
+      className="column is-narrow is-hidden-tablet"
+    >
+      <IconButton
+        className="search-button"
+        disableTouchRipple={false}
+        disabled={false}
+        hoveredStyle={
+          Object {
+            "backgroundColor": "rgba(0,0,0,0.3)",
+            "borderRadius": "50%",
+          }
+        }
+        iconStyle={Object {}}
+        onClick={[Function]}
+        tooltipPosition="bottom-center"
+        touch={false}
+      >
+        <ActionSearch />
+      </IconButton>
+    </div>
+    <div
+      className="column is-narrow search-button-wrapper"
+    >
+      <RaisedButton
+        disabled={true}
+        fullWidth={true}
+        label="Search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={true}
+      />
+    </div>
+  </div>
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</div>
+`;
+
+exports[`SearchComponent should render show prefix icon in the search box 1`] = `
+<div
+  className="search-component undefined undefined"
+>
+  <div
+    className="columns is-gapless"
+  >
+    <div
+      className="column search-field is-gapless hideMobile"
+    >
+      <div
+        className="columns is-gapless search-field is-mobile"
+      >
+        <div
+          className="column is-narrow search-icon-prefix is-hidden-mobile"
+        >
+          <ActionSearch />
+        </div>
+        <div
+          className="column"
+        >
+          <TextField
+            disabled={false}
+            errorText={false}
+            floatingLabelFixed={false}
+            floatingLabelText="Search eSpace"
+            fullWidth={true}
+            id="searchField"
+            multiLine={false}
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            rows={1}
+            type="search"
+            underlineShow={true}
+            underlineStyle={Object {}}
+            value=""
+          />
+        </div>
+        <div
+          className="is-hidden-tablet mobileSpacer"
+        />
+      </div>
+    </div>
+    <div
+      className="column is-narrow search-button-wrapper"
+    >
+      <RaisedButton
+        disabled={true}
+        fullWidth={true}
+        label="Search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={true}
       />
     </div>
   </div>
@@ -225,6 +388,7 @@ exports[`SearchComponent should set search value from prop 1`] = `
             rows={1}
             type="search"
             underlineShow={true}
+            underlineStyle={Object {}}
             value="i feel lucky"
           />
         </div>

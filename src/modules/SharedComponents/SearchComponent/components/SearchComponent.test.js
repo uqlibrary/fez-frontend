@@ -22,6 +22,16 @@ describe('SearchComponent', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render show mobile button', () => {
+        const wrapper = setup({showMobileSearchButton: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render show prefix icon in the search box', () => {
+        const wrapper = setup({showPrefixIcon: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render with a class "header" for use in AppBar', () => {
         const wrapper = setup({inHeader: true});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -44,14 +54,6 @@ describe('SearchComponent', () => {
         wrapper.update();
         expect(wrapper.state().searchText).toEqual('i feel lucky');
     });
-
-    // it('should render advanced search', () => {
-    //     const wrapper = setup({showAdvancedSearchButton: true});
-    //     wrapper.instance().toggleAdvancedSearch();
-    //     wrapper.update();
-    //     expect(wrapper.state().showAdvancedSearch).toEqual(true);
-    //     expect(toJson(wrapper)).toMatchSnapshot();
-    // });
 
     it('should update internal text field state', () => {
         const wrapper = setup({});
@@ -83,4 +85,81 @@ describe('SearchComponent', () => {
 
         expect(testMethod).toHaveBeenCalled();
     });
+
+    it('should toggle advanced search', () => {
+        const wrapper = setup({showAdvancedSearch: false});
+        wrapper.update();
+        expect(wrapper.state().showAdvancedSearch).toBe(false);
+        wrapper.instance().toggleAdvancedSearch();
+        wrapper.update();
+        expect(wrapper.state().showAdvancedSearch).toBe(true);
+    });
+
+    it('should toggle mobile search', () => {
+        const wrapper = setup({showMobile: false});
+        wrapper.instance().toggleMobile();
+        expect(wrapper.state().showMobile).toBe(true);
+    });
+
+
+    it('should show a snackbar error for input being too short', () => {
+        const testMethod = jest.fn();
+        const wrapper = setup({actions: {searchEspacePublications: testMethod}});
+        wrapper.setProps({inHeader: true});
+        wrapper.setState({searchText: 'too short'});
+        wrapper.instance().MIN_SEARCH_TEXT_LENGTH = 100;
+        wrapper.update();
+        wrapper.instance().handleSearch({key: 'Enter'});
+        expect(wrapper.state().snackbarMessage).toEqual('Must be at least 100 characters');
+        expect(wrapper.state().snackbarOpen).toBe(true);
+        expect(testMethod).not.toHaveBeenCalled();
+    });
+
+    it('should show a snackbar error for input being too long', () => {
+        const testMethod = jest.fn();
+        const wrapper = setup({actions: {searchEspacePublications: testMethod}});
+        wrapper.setProps({inHeader: true});
+        wrapper.setState({searchText: 'this is way too long'});
+        wrapper.instance().MAX_SEARCH_TEXT_LENGTH = 5;
+        wrapper.instance().MIN_SEARCH_TEXT_LENGTH = 1;
+        wrapper.update();
+        wrapper.instance().handleSearch({key: 'Enter'});
+        expect(wrapper.state().snackbarMessage).toEqual('Must be 5 characters or less');
+        expect(wrapper.state().snackbarOpen).toBe(true);
+        expect(testMethod).not.toHaveBeenCalled();
+    });
+
+    it('validationError() should return a message for being too long', () => {
+        const testMethod = jest.fn();
+        const wrapper = setup({actions: {searchEspacePublications: testMethod}});
+        wrapper.setProps({inHeader: false});
+        wrapper.setState({searchText: 'this is way too long'});
+        wrapper.instance().MAX_SEARCH_TEXT_LENGTH = 5;
+        wrapper.instance().MIN_SEARCH_TEXT_LENGTH = 1;
+        wrapper.update();
+        expect(wrapper.instance().validationError()).toEqual('Must be 5 characters or less');
+    });
+
+    it('validationError() should return a message for being too short', () => {
+        const testMethod = jest.fn();
+        const wrapper = setup({actions: {searchEspacePublications: testMethod}});
+        wrapper.setProps({inHeader: false});
+        wrapper.setState({searchText: 'too short'});
+        wrapper.instance().MAX_SEARCH_TEXT_LENGTH = 500;
+        wrapper.instance().MIN_SEARCH_TEXT_LENGTH = 100;
+        wrapper.update();
+        expect(wrapper.instance().validationError()).toEqual('Must be at least 100 characters');
+    });
+
+    it('validationError() should return false for being fine', () => {
+        const testMethod = jest.fn();
+        const wrapper = setup({actions: {searchEspacePublications: testMethod}});
+        wrapper.setProps({inHeader: false});
+        wrapper.setState({searchText: 'this is fine'});
+        wrapper.instance().MAX_SEARCH_TEXT_LENGTH = 500;
+        wrapper.instance().MIN_SEARCH_TEXT_LENGTH = 1;
+        wrapper.update();
+        expect(wrapper.instance().validationError()).toEqual(false);
+    });
+
 });
