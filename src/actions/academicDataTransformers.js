@@ -1,4 +1,4 @@
-import {locale} from 'locale';
+import {trendingPublicationsConfig} from 'config';
 
 /**
  * Returns the data for graph - count of unique publication types
@@ -115,28 +115,35 @@ export function getPublicationsStats(years, data) {
     };
 }
 
-export const transformTrendingPublicationsMetricsData = ({data, filters: {metrics}}) => {
-    if (!!metrics) {
-        const metricsOrder = Object.keys(metrics).length > 1
-            ? Object.keys(metrics).sort((metric1, metric2) => {
-                return locale.components.myTrendingPublications.metrics[metric1].order - locale.components.myTrendingPublications.metrics[metric2].order;
-            })
-            : Object.keys(metrics);
+function getData(object, path) {
+    return path.split('.').reduce((o, k) => {
+        return o && o[k];
+    }, object);
+}
 
-        return metricsOrder
-            .filter(metric => Object.keys(metrics).indexOf(metric) > -1)
-            .map(key => {
-                const values = metrics[key].map(metricItem => {
-                    const publication = data.filter(publication => publication.rek_pid === metricItem.rek_pid)[0];
-                    const metricData = {source: key, ...metricItem};
-                    return {
-                        ...publication,
-                        metricData
-                    };
-                });
-                return {key, values};
-            });
-    } else {
-        return data;
-    }
+export const transformTrendingPublicationsMetricsData = ({data}) => {
+    const sources = trendingPublicationsConfig.sources;
+
+    return Object.entries(sources).map(([key, config]) => {
+        const values = data.map(publication => {
+            const count = getData(publication, config.metricDataPath.count);
+            if (count) {
+                const metricData = {
+                    source: key,
+                    count: count,
+                    difference: getData(publication, config.metricDataPath.difference),
+                    citation_url: getData(publication, config.metricDataPath.citation_url)
+                };
+
+                return {
+                    ...publication,
+                    metricData
+                };
+            } else {
+                return null;
+            }
+        }).filter(value => value);
+
+        return {key, values};
+    });
 };

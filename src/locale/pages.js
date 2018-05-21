@@ -208,6 +208,7 @@ export default {
             ),
             loadingMessage: 'Searching for your publications...',
             loadingPagingMessage: 'Retrieving your publications...',
+            exportPublicationsLoadingMessage: 'Exporting your publications...',
             noResultsFound: {
                 title: 'No publications found',
                 text: (
@@ -287,7 +288,7 @@ export default {
             }
         },
         addRecord: {
-            title: 'Add a missing record to eSpace',
+            title: 'Add a missing publication to eSpace',
             stepper: [
                 {label: 'Search for your publication'},
                 {label: 'Search results'},

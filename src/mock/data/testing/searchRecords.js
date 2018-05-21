@@ -1,3 +1,5 @@
+import stringToArrayBuffer from 'string-to-arraybuffer';
+
 export const espaceList = [
     {
         "currentSource": "espace",
@@ -448,3 +450,169 @@ export const expectedListCrafted = [
         fez_record_search_key_scopus_id: {rek_scopus_id: '2.s2.2323232323'}
     },
 ];
+
+export const exportSearchToExcel = stringToArrayBuffer(`
+<table border="1">
+ <tr>
+ <td bgcolor="#CCCCCC"><b>PID</b></td>
+ <td bgcolor="#CCCCCC"><b>Title</b></td>
+ <td bgcolor="#CCCCCC"><b>Type</b></td>
+ <td bgcolor="#CCCCCC"><b>Details</b></td>
+ <td bgcolor="#CCCCCC"><b>WoS citations</b></td>
+ <td bgcolor="#CCCCCC"><b>Scopus citations</b></td>
+ <td bgcolor="#CCCCCC"><b>Altmetric Score</b></td>
+ <td bgcolor="#CCCCCC"><b>ERA 2010 Journal ranking</b></td>
+ <td bgcolor="#CCCCCC"><b>ERA 2012 Journal listed</b></td>
+ <td bgcolor="#CCCCCC"><b>HERDC code</b></td>
+ <td bgcolor="#CCCCCC"><b>HERDC status</b></td>
+ <td bgcolor="#CCCCCC"><b>HERDC affiliation</b></td>
+ <td bgcolor="#CCCCCC"><b>Created Date</b></td>
+ <td bgcolor="#CCCCCC"><b>Updated Date</b></td>
+ <td bgcolor="#CCCCCC"><b>ANDS Collection Type</b></td>
+ <td bgcolor="#CCCCCC"><b>Geographic Area</b></td>
+ <td bgcolor="#CCCCCC"><b>Author Role</b></td>
+ <td bgcolor="#CCCCCC"><b>Contact Details Email</b></td>
+ <td bgcolor="#CCCCCC"><b>Acknowledgements</b></td>
+ <td bgcolor="#CCCCCC"><b>Genre</b></td>
+ <td bgcolor="#CCCCCC"><b>Original Format</b></td>
+ <td bgcolor="#CCCCCC"><b>Source</b></td>
+ <td bgcolor="#CCCCCC"><b>Length</b></td>
+ <td bgcolor="#CCCCCC"><b>Author</b></td>
+ <td bgcolor="#CCCCCC"><b>Formatted Title</b></td>
+ <td bgcolor="#CCCCCC"><b>Project Name</b></td>
+ <td bgcolor="#CCCCCC"><b>Project Description</b></td>
+ <td bgcolor="#CCCCCC"><b>Journal Name</b></td>
+ <td bgcolor="#CCCCCC"><b>ISSN</b></td>
+ <td bgcolor="#CCCCCC"><b>ISBN</b></td>
+ <td bgcolor="#CCCCCC"><b>Org Unit Name</b></td>
+ <td bgcolor="#CCCCCC"><b>Org Name</b></td>
+ <td bgcolor="#CCCCCC"><b>DOI</b></td>
+ <td bgcolor="#CCCCCC"><b>Related Publications</b></td>
+ <td bgcolor="#CCCCCC"><b>Date</b></td>
+ <td bgcolor="#CCCCCC"><b>Date Recorded</b></td>
+ <td bgcolor="#CCCCCC"><b>Location</b></td>
+ <td bgcolor="#CCCCCC"><b>Rights</b></td>
+ <td bgcolor="#CCCCCC"><b>Date Available</b></td>
+ <td bgcolor="#CCCCCC"><b>Subtype</b></td>
+ <td bgcolor="#CCCCCC"><b>Genre Type</b></td>
+ <td bgcolor="#CCCCCC"><b>OA Status</b></td>
+ <td bgcolor="#CCCCCC"><b>Series</b></td>
+ <td bgcolor="#CCCCCC"><b>Report Number</b></td>
+ <td bgcolor="#CCCCCC"><b>Volume Number</b></td>
+ <td bgcolor="#CCCCCC"><b>Issue Number</b></td>
+ <td bgcolor="#CCCCCC"><b>Start Page</b></td>
+ <td bgcolor="#CCCCCC"><b>End Page</b></td>
+ <td bgcolor="#CCCCCC"><b>Supervisor</b></td>
+ <td bgcolor="#CCCCCC"><b>Contributor</b></td>
+ <td bgcolor="#CCCCCC"><b>Place of Publication
+ <td bgcolor="#CCCCCC"><b>Access Conditions</b></td>
+ <td bgcolor="#CCCCCC"><b>License</b></td>
+ <td bgcolor="#CCCCCC"><b>Publisher</b></td>
+ <td bgcolor="#CCCCCC"><b>Total Pages</b></td>
+ <td bgcolor="#CCCCCC"><b>Language</b></td>
+ <td bgcolor="#CCCCCC"><b>Keywords</b></td>
+ <td bgcolor="#CCCCCC"><b>Additional Notes</b></td>
+ </tr>
+ <tr>
+ <td>UQ:3f697a3</td>
+ <td>qweqwe</td>
+ <td></td>
+ <td>1qweqe and qwe qweqwe. Edited by qweqwe qwe: qwe, 2323.</td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td>N</td>
+ <td>AX</td>
+ <td>Provisional Code</td>
+ <td></td>
+ <td>2018-04-24T03:45:56Z</td>
+ <td>2018-04-24T03:45:57Z</td>
+ <td></td>
+ <td>
+ </td>
+ <td>
+ </td>
+ <td>
+ </td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td>
+ 1qweqe|
+ qwe|
+ </td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td>
+ </td>
+ <td>
+ </td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td>2323-12-12T00:00:00Z</td>
+ <td></td>
+ <td>
+ </td>
+ <td></td>
+ <td></td>
+ <td>Textbook</td>
+ <td></td>
+ <td>Not yet assessed</td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td>
+ </td>
+ <td>
+ qweqwe|
+ </td>
+ <td>qwe</td>
+ <td></td>
+ <td></td>
+ <td>qwe</td>
+ <td></td>
+ <td>
+ </td>
+ <td>
+ </td>
+ <td></td>
+ </tr>
+ </table>
+`);
+
+export const exportSearchToEndnote = stringToArrayBuffer(`
+%0 Book
+%A 1qweqe
+%A qwe
+%E 
+%C qwe
+%D 2323-12-12T00:00:00Z
+%I qwe
+%M UQ:3f697a3
+%T qweqwe
+%X 
+%U http://fez-staging.library.uq.edu.au/view/UQ:3f697a3
+%~ UQ Library API
+%0 Book
+%A 1qweqe
+%A qwe
+%C qwe
+%D 2323-12-12T00:00:00Z
+%B test
+%M UQ:3f697a3
+%T qweqwe
+%X 
+%9 
+%U http://fez-staging.library.uq.edu.au/view/UQ:3f697a3
+%~ UQ Library API
+`);

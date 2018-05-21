@@ -734,6 +734,13 @@ export default {
         newsFeed: {
             title: 'Latest news'
         },
+        export: {
+            label: 'Export results',
+            format: [
+                {value: 'excel', label: 'Excel File'},
+                {value: 'endnote', label: 'Endnote File'}
+            ]
+        },
         searchComponent: {
             searchBoxPlaceholder: 'Search eSpace',
             searchButtonHint: 'Search eSpace',
@@ -742,8 +749,22 @@ export default {
         },
         whatIsEspace: {
             title: 'What is eSpace?',
-            text: 'UQ eSpace is the single authoritative source for the research outputs and research data of the staff and students of the University of Queensland and is the archival home of UQ Higher Degree by Research digital theses.',
-            readMoreLabel: '..read more',
+            text: (<div>
+                UQ eSpace is the institutional repository of The University of Queensland. It holds open access publications, research datasets and digitised materials and is the authoritative source for the University’s:
+                <ul>
+                    <li>Research outputs</li>
+                    <li>Research data and metadata</li>
+                    <li>Higher Degree by Research theses</li>
+                </ul>
+
+                The system increases the visibility and accessibility of the University’s research and provides data to:
+                <ul>
+                    <li>UQ Researchers to enhance publication profiles</li>
+                    <li>UQ Academic Portal, UQ DataHub and other internal systems</li>
+                    <li>Australian Government to meet mandatory reporting requirements including Excellence in Research for Australia (ERA)</li>
+                </ul>
+            </div>),
+            readMoreLabel: 'Read more about eSpace',
             readMoreTitle: 'Click to read more about UQ eSpace',
             readMoreLink: '/contact'
         }
