@@ -103,7 +103,7 @@ describe('SearchRecords page', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('gets publications when user clicks back and state is set', () => {
+    it('should get publications when user clicks back and state is set', () => {
         const testAction = jest.fn();
         const wrapper = setup({actions: {searchEspacePublications: testAction}});
 
@@ -115,7 +115,7 @@ describe('SearchRecords page', () => {
         expect(wrapper.state().page).toEqual(2);
     });
 
-    it('gets publications when user clicks back and state is not set', () => {
+    it('should get publications when user clicks back and state is not set', () => {
         const testAction = jest.fn();
         const wrapper = setup({actions: {searchEspacePublications: testAction}});
         wrapper.instance().componentWillReceiveProps({history: {action: 'POP'}, location: {pathname: routes.pathConfig.records.search, state: null}});
@@ -123,12 +123,94 @@ describe('SearchRecords page', () => {
         expect(wrapper.state().page).toEqual(1);
     });
 
-    it('doesn\'t retrieve data from history if user navigates to next page', () => {
+    it('should not retrieve data from history if user navigates to next page', () => {
         const testAction = jest.fn();
         const wrapper = setup({actions: {searchEspacePublications: testAction}});
 
         wrapper.instance().componentWillReceiveProps({history: {action: 'PUSH'}, location: {pathname: routes.pathConfig.records.search}});
         expect(testAction).not.toHaveBeenCalled();
+    });
+
+    it('should set state and update history and search records when page size changed', () => {
+        const testAction = jest.fn();
+        const testPushFn = jest.fn();
+
+        const wrapper = setup({
+            actions: {
+                searchEspacePublications: testAction
+            },
+            history: {
+                push: testPushFn
+            }
+        });
+
+        wrapper.instance().pageSizeChanged(30);
+        wrapper.update();
+        expect(wrapper.instance().state.pageSize).toEqual(30);
+        expect(wrapper.instance().state.page).toEqual(1);
+        expect(testAction).toHaveBeenCalled();
+        expect(testPushFn).toHaveBeenCalled();
+    });
+
+    it('should set state and update history and search records when page is changed', () => {
+        const testAction = jest.fn();
+        const testPushFn = jest.fn();
+
+        const wrapper = setup({
+            actions: {
+                searchEspacePublications: testAction
+            },
+            history: {
+                push: testPushFn
+            }
+        });
+
+        wrapper.instance().pageChanged(2);
+        wrapper.update();
+        expect(wrapper.instance().state.page).toEqual(2);
+        expect(testAction).toHaveBeenCalled();
+        expect(testPushFn).toHaveBeenCalled();
+    });
+
+    it('should set state and update history and search records when sort by dropdown is changed', () => {
+        const testAction = jest.fn();
+        const testPushFn = jest.fn();
+
+        const wrapper = setup({
+            actions: {
+                searchEspacePublications: testAction
+            },
+            history: {
+                push: testPushFn
+            }
+        });
+
+        wrapper.instance().sortByChanged('publication_date', 'Asc');
+        wrapper.update();
+        expect(wrapper.instance().state.sortBy).toEqual('publication_date');
+        expect(wrapper.instance().state.sortDirection).toEqual('Asc');
+        expect(testAction).toHaveBeenCalled();
+        expect(testPushFn).toHaveBeenCalled();
+    });
+
+    it('should set state and update history and search records when facet is changed', () => {
+        const testAction = jest.fn();
+        const testPushFn = jest.fn();
+
+        const wrapper = setup({
+            actions: {
+                searchEspacePublications: testAction
+            },
+            history: {
+                push: testPushFn
+            }
+        });
+
+        wrapper.instance().facetsChanged({filters: {}, ranges: {'Publication year': {from: 2015, to: 2018}}});
+        wrapper.update();
+        expect(wrapper.instance().state.activeFacets).toEqual({filters: {}, ranges: {'Publication year': {from: 2015, to: 2018}}});
+        expect(testAction).toHaveBeenCalled();
+        expect(testPushFn).toHaveBeenCalled();
     });
 
     it('should call updateSearch() method if query search parameters with searchQueryParams key found', () => {
