@@ -38,6 +38,11 @@ export const generateCancelToken = () => {
 api.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
 api.isCancel = axios.isCancel; // needed for cancelling requests and the instance created does not have this method
 
+// allow us to safely force a given SESSION_COOKIE_NAME during development
+if (process.env.NODE_ENV === 'development' && !!process.env.SESSION_COOKIE_NAME) {
+    api.defaults.headers.common[TOKEN_NAME] = process.env.SESSION_COOKIE_NAME;
+}
+
 let isGet = null;
 api.interceptors.request.use(request => {
     isGet = request.method === 'get';

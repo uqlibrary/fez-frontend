@@ -29,10 +29,8 @@ export default class TopAltemtricCitedPublications extends PureComponent {
             page: 1,
             pageSize: 20,
             interval: '1m',
-            source: props.source,
-            sortBy: trendingPublicationsConfig.source[props.source].sortBy,
-            sortDirection: trendingPublicationsConfig.source[props.source].sortDirection
-        };
+            source: props.source
+        }
     }
 
     componentDidMount() {

@@ -761,6 +761,17 @@ export default {
         newsFeed: {
             title: 'Latest news'
         },
+        export: {
+            label: 'Export results',
+            format: [
+                {value: 'excel', label: 'Excel File'},
+                {value: 'endnote', label: 'Endnote File'}
+            ],
+            filename: {
+                prefix: 'espace_export',
+                dateFormat: 'YYYYMMDDHHmmss'
+            },
+        },
         searchComponent: {
             searchBoxPlaceholder: 'Search eSpace',
             searchButtonHint: 'Search eSpace',

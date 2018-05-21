@@ -32,9 +32,7 @@ export default class TopCitedPublications extends PureComponent {
         this.state = {
             page: 1,
             pageSize: 20,
-            source: props.source,
-            sortBy: trendingPublicationsConfig.source[props.source].sortBy,
-            sortDirection: trendingPublicationsConfig.source[props.source].sortDirection
+            source: props.source
         };
     }
 
