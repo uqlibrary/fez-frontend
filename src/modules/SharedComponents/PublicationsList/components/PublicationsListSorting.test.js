@@ -1,4 +1,4 @@
-import {formatToFilenameMap} from "../../../../actions/publicationDataTransformers";
+import {exportFormatToExtensionMap} from "../../../../actions/publicationDataTransformers";
 
 jest.dontMock('./PublicationsListSorting');
 
@@ -88,7 +88,7 @@ describe('PublicationsListSorting renders ', () => {
     });
 
     it('component with non-empty paging data, onExportPublications called', () => {
-        const expected = Object.keys(formatToFilenameMap)[0];
+        const expected = Object.keys(exportFormatToExtensionMap)[0];
         const testFunction = jest.fn();
         const wrapper = setup({onExportPublications: testFunction});
         wrapper.instance().exportPublicationsFormatChanged(expected);
