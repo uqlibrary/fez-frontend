@@ -740,7 +740,7 @@ export default {
             advancedSearchButtonText: 'Advanced search',
             searchButtonText: 'Search',
             simpleSearchToggle: 'Simple search',
-            inputTooShort: 'Your search query is too short - minimum of [NoOfChars] characters required'
+
         },
         whatIsEspace: {
             title: 'What is eSpace?',

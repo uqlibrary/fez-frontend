@@ -19,6 +19,7 @@ export default class SearchComponent extends PureComponent {
         showSearchButton: PropTypes.bool,
         showPrefixIcon: PropTypes.bool,
         showMobileSearchButton: PropTypes.bool,
+        className: PropTypes.string,
         actions: PropTypes.object,
         history: PropTypes.object.isRequired
     };
@@ -29,9 +30,11 @@ export default class SearchComponent extends PureComponent {
             searchText: props.searchQueryParams && props.searchQueryParams.title || '',
             showAdvancedSearch: false,
             showMobile: false,
-            snackbarOpen: false
+            snackbarOpen: false,
+            snackbarMessage: ''
         };
-        this.MIN_SEARCH_TEXT_LENGTH = 10;
+        this.MIN_SEARCH_TEXT_LENGTH = 1;
+        this.MAX_SEARCH_TEXT_LENGTH = 500;
     }
 
     componentWillReceiveProps(nextProps) {
@@ -47,7 +50,11 @@ export default class SearchComponent extends PureComponent {
         if(event && event.key && (event.key !== 'Enter')) return;
 
         // If all is OK, submit the search
-        if (this.props.actions && this.props.actions.searchEspacePublications && this.state.searchText.trim().length >= this.MIN_SEARCH_TEXT_LENGTH) {
+        if (this.props.actions
+            && this.props.actions.searchEspacePublications
+            && this.state.searchText.trim().length >= this.MIN_SEARCH_TEXT_LENGTH
+            && this.state.searchText.trim().length <= this.MAX_SEARCH_TEXT_LENGTH
+        ) {
             // start search
             const defaultQueryParams = {
                 page: 1,
@@ -58,7 +65,7 @@ export default class SearchComponent extends PureComponent {
             };
 
             this.props.actions.searchEspacePublications({searchQueryParams: {title: this.state.searchText}, ...defaultQueryParams});
-            // Hide the mobile search bar on a search
+            // Hide the mobile search bar after performing a search
             this.setState({showMobile: false});
             // Blur the input so the mobile keyboard is deactivated
             event && event.target && event.target.blur();
@@ -66,12 +73,21 @@ export default class SearchComponent extends PureComponent {
             this.props.history.push(routes.pathConfig.records.search);
         }
 
-        // Snackbar to give feedback when input is too short when pressing enter
-        if(event && event.key && event.key === 'Enter' && this.props.inHeader && this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH) {
-            this.setState({snackbarOpen: true});
-            return;
+        // Snackbar to give feedback when input is too short or long in the header search when pressing enter
+        if(event && event.key && event.key === 'Enter' && this.props.inHeader) {
+            if (this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH) {
+                this.setState({
+                    snackbarMessage: locale.validationErrors.minLength.replace('[min]', this.MIN_SEARCH_TEXT_LENGTH),
+                    snackbarOpen: true
+                });
+            } else if (this.state.searchText.trim().length > this.MAX_SEARCH_TEXT_LENGTH) {
+                this.setState({
+                    snackbarMessage: locale.validationErrors.maxLength.replace('[max]', this.MAX_SEARCH_TEXT_LENGTH),
+                    snackbarOpen: true
+                });
+            }
         }
-    }
+    };
 
     toggleMobile = () => {
         this.setState({
@@ -89,18 +105,28 @@ export default class SearchComponent extends PureComponent {
             searchText: value,
             snackbarOpen: false
         });
-    }
+    };
 
     toggleAdvancedSearch = () => {
         this.setState({
             showAdvancedSearch: !this.state.showAdvancedSearch
         });
-    }
+    };
+
+    validationError = () => {
+        if(!this.props.inHeader && this.state.searchText.trim().length >= 1 && this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH) {
+            return locale.validationErrors.minLength.replace('[min]', this.MIN_SEARCH_TEXT_LENGTH);
+        } else if (!this.props.inHeader && this.state.searchText.trim().length > this.MAX_SEARCH_TEXT_LENGTH) {
+            return locale.validationErrors.maxLength.replace('[max]', this.MAX_SEARCH_TEXT_LENGTH);
+        } else {
+            return false;
+        }
+    };
 
     render() {
         const txt = locale.components.searchComponent;
         return (
-            <div className={`search-component ${this.props.inHeader && 'header'}`}>
+            <div className={`search-component ${this.props.inHeader && 'header'} ${this.props.className}`}>
                 {
                     !this.state.showAdvancedSearch &&
                     <div className="columns is-gapless">
@@ -127,16 +153,12 @@ export default class SearchComponent extends PureComponent {
                                         type="search"
                                         id="searchField"
                                         fullWidth
-                                        hintText={txt.searchBoxPlaceholder}
+                                        floatingLabelText={!this.props.inHeader && txt.searchBoxPlaceholder}
                                         onChange={this.searchTextChanged}
                                         onKeyPress={this.handleSearch}
                                         value={this.state.searchText}
                                         underlineStyle={this.props.inHeader && {display: 'none'}}
-                                        errorText={!this.props.inHeader
-                                            && (this.state.searchText.trim().length > 0)
-                                            && (this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH)
-                                            ? locale.validationErrors.minLength.replace('[min]', this.MIN_SEARCH_TEXT_LENGTH)
-                                            : false}
+                                        errorText={this.validationError()}
                                     />
                                 </div>
                                 <div className="is-hidden-tablet mobileSpacer" />
@@ -160,9 +182,7 @@ export default class SearchComponent extends PureComponent {
                                 <IconButton
                                     tooltipPosition="bottom-left"
                                     onClick={this.handleSearch}
-                                    disabled={this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH}
-                                    hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}}
-                                    style={{marginLeft: 12}}
+                                    disabled={!!this.validationError}
                                     className="search-button"
                                     tooltip={txt.searchButtonHint}>
                                     <SearchIcon/>
@@ -173,7 +193,7 @@ export default class SearchComponent extends PureComponent {
                             <RaisedButton
                                 label={txt.searchButtonText}
                                 secondary
-                                disabled={this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH}
+                                disabled={this.state.searchText.trim().length === 0 || !!this.validationError()}
                                 onClick={this.handleSearch}
                                 fullWidth />
                         </div>
@@ -206,7 +226,7 @@ export default class SearchComponent extends PureComponent {
                 <Snackbar
                     open={this.state.snackbarOpen}
                     autoHideDuration={5000}
-                    message={txt.inputTooShort.replace('[NoOfChars]', this.MIN_SEARCH_TEXT_LENGTH)}
+                    message={this.state.snackbarMessage}
                 />
             </div>
         );
