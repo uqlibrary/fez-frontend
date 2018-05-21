@@ -68,17 +68,19 @@ class SearchRecords extends PureComponent {
     }
 
     componentWillReceiveProps(newProps) {
-        this.setState({
-            ...newProps.searchQuery
-        });
-
         // handle browser back button - set state from location/dispatch action for this state
-        if (this.props.location !== newProps.location
-            && newProps.history.action === 'POP'
-            && newProps.location.pathname === routes.pathConfig.records.search) {
-            this.setState({...(!!newProps.location.state ? newProps.location.state : this.state)}, () => {
+        if (
+            this.props.location !== newProps.location &&
+            newProps.history.action === 'POP' &&
+            newProps.location.pathname === routes.pathConfig.records.search
+        ) {
+            this.setState({...(!!newProps.location.state ? newProps.location.state : this.state )}, () => {
                 // only will be called when user clicks back on search records page
                 this.props.actions.searchEspacePublications({...this.state});
+            });
+        } else {
+            this.setState({
+                ...newProps.searchQuery
             });
         }
     }
