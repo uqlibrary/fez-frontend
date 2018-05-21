@@ -27,10 +27,11 @@ export const getFacetsParams = (facets) => {
     return facetsParam;
 };
 
-export const getStandardSearchParams = ({page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}) => {
+export const getStandardSearchParams = ({exportFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}) => {
     const unknownAuthors = withUnknownAuthors >= 0 ? {with_unknown_authors: withUnknownAuthors} : {};
 
     return {
+        export_to: exportFormat,
         page: page,
         per_page: pageSize,
         sort: sortBy,

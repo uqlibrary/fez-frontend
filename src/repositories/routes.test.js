@@ -118,6 +118,7 @@ describe('Backend routes method', () => {
                     apiUrl: 'records/search',
                     options: {
                         params: {
+                            export_to: '',
                             order_by: 'desc',
                             page: 1,
                             per_page: 20,
@@ -133,6 +134,7 @@ describe('Backend routes method', () => {
                     apiUrl: 'records/search',
                     options: {
                         params: {
+                            export_to: '',
                             order_by: 'asc',
                             page: 2,
                             per_page: 30,
@@ -158,6 +160,7 @@ describe('Backend routes method', () => {
                     apiUrl: 'records/search',
                     options: {
                         params: {
+                            export_to: '',
                             order_by: 'desc',
                             page: 1,
                             per_page: 20,
@@ -173,6 +176,7 @@ describe('Backend routes method', () => {
                     apiUrl: 'records/search',
                     options: {
                         params: {
+                            export_to: '',
                             order_by: 'asc',
                             page: 2,
                             per_page: 30,
@@ -195,6 +199,7 @@ describe('Backend routes method', () => {
             {
                 values: {},
                 expected: {
+                    export_to: '',
                     order_by: 'desc',
                     page: 1,
                     per_page: 20,
@@ -204,6 +209,7 @@ describe('Backend routes method', () => {
             {
                 values: {page: 2, pageSize: 30, sortBy: 'score', sortDirection:'asc', facets : { filters: {one: 'one facet'}}},
                 expected: {
+                    export_to: '',
                     order_by: 'asc',
                     page: 2,
                     per_page: 30,
@@ -214,6 +220,7 @@ describe('Backend routes method', () => {
             {
                 values: {page: 2, pageSize: 30, sortBy: 'score', sortDirection:'asc', facets : { showOpenAccessOnly: true, filters: {one: 'one facet'}}},
                 expected: {
+                    export_to: '',
                     order_by: 'asc',
                     page: 2,
                     per_page: 30,

@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Export Publications renders component with all fields enabled 1`] = `
+<SelectField
+  autoWidth={false}
+  disabled={false}
+  floatingLabelText="Export results"
+  fullWidth={true}
+  id="exportPublicationsFormat"
+  maxHeight={250}
+  multiple={false}
+  onChange={[Function]}
+>
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="0"
+    primaryText="Excel File"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value="excel"
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="1"
+    primaryText="Endnote File"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value="endnote"
+  />
+</SelectField>
+`;
+
+exports[`Export Publications renders component with field selected 1`] = `
+<SelectField
+  autoWidth={false}
+  disabled={false}
+  floatingLabelText="Export results"
+  fullWidth={true}
+  id="exportPublicationsFormat"
+  maxHeight={250}
+  multiple={false}
+  onChange={[Function]}
+>
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="0"
+    primaryText="Excel File"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value="excel"
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="1"
+    primaryText="Endnote File"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value="endnote"
+  />
+</SelectField>
+`;
+
+exports[`Export Publications renders component with rendered field selected 1`] = `
+<SelectField
+  autoWidth={false}
+  disabled={false}
+  floatingLabelText="Export results"
+  fullWidth={true}
+  id="exportPublicationsFormat"
+  maxHeight={250}
+  multiple={false}
+  onChange={[Function]}
+  value="excel"
+>
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="0"
+    primaryText="Excel File"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value="excel"
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="1"
+    primaryText="Endnote File"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value="endnote"
+  />
+</SelectField>
+`;

@@ -158,6 +158,7 @@ module.exports = {
             'process.env.TITLE_SUFFIX': JSON.stringify('LOCAL'),
             'process.env.ENABLE_LOG': JSON.stringify(!!process.env.CI_BRANCH && process.env.NODE_ENV !== 'test'),
             'process.env.BRANCH': JSON.stringify('development'),
+            'process.env.SESSION_COOKIE_NAME': JSON.stringify(process.env.SESSION_COOKIE_NAME),
         })
     ],
     resolve: {
