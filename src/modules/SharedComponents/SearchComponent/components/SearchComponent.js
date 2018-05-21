@@ -155,6 +155,7 @@ export default class SearchComponent extends PureComponent {
                                         fullWidth
                                         floatingLabelText={!this.props.inHeader && txt.searchBoxPlaceholder}
                                         hintText={this.props.inHeader && txt.searchBoxPlaceholder}
+                                        aria-label={txt.ariaInputLabel}
                                         onChange={this.searchTextChanged}
                                         onKeyPress={this.handleSearch}
                                         value={this.state.searchText}
@@ -170,6 +171,7 @@ export default class SearchComponent extends PureComponent {
                             <div className="column is-narrow is-hidden-tablet">
                                 <IconButton
                                     onClick={this.toggleMobile}
+                                    aria-label={txt.mobileSearchButtonAriaLabel}
                                     className="search-button"
                                     hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}}
                                 >
@@ -185,7 +187,8 @@ export default class SearchComponent extends PureComponent {
                                     onClick={this.handleSearch}
                                     disabled={!!this.validationError}
                                     className="search-button"
-                                    tooltip={txt.searchButtonHint}>
+                                    tooltip={txt.searchButtonHint}
+                                    aria-label={txt.searchButtonAriaLabel}>
                                     <SearchIcon/>
                                 </IconButton>
                             </div>
@@ -193,6 +196,7 @@ export default class SearchComponent extends PureComponent {
                         <div className="column is-narrow search-button-wrapper">
                             <RaisedButton
                                 label={txt.searchButtonText}
+                                aria-label={txt.searchButtonAriaLabel}
                                 secondary
                                 disabled={this.state.searchText.trim().length === 0 || !!this.validationError()}
                                 onClick={this.handleSearch}
@@ -203,6 +207,7 @@ export default class SearchComponent extends PureComponent {
                             <div className="column is-narrow">
                                 <RaisedButton
                                     label={txt.advancedSearchButtonText}
+                                    aria-label={txt.advancedSearchButtonAriaLabel}
                                     onClick={this.toggleAdvancedSearch}
                                     className="advancedButton"
                                     fullWidth
