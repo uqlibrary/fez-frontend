@@ -154,6 +154,7 @@ export default class SearchComponent extends PureComponent {
                                         id="searchField"
                                         fullWidth
                                         floatingLabelText={!this.props.inHeader && txt.searchBoxPlaceholder}
+                                        hintText={this.props.inHeader && txt.searchBoxPlaceholder}
                                         onChange={this.searchTextChanged}
                                         onKeyPress={this.handleSearch}
                                         value={this.state.searchText}

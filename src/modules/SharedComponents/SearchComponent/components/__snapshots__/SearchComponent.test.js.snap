@@ -317,6 +317,7 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
             floatingLabelFixed={false}
             floatingLabelText={false}
             fullWidth={true}
+            hintText="Search eSpace"
             id="searchField"
             multiLine={false}
             onChange={[Function]}
