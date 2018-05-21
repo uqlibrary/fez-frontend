@@ -756,7 +756,7 @@ export default {
             text: (<span>
                 The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility and accessibility of UQ’s scholarly research by enhancing discovery of UQ research via search engines such as Google and Trove...
             </span>),
-            readMoreLabel: 'read more',
+            readMoreLabel: ' read more',
             readMoreTitle: 'Click to read more about UQ eSpace',
             readMoreLink: '/contact'
         }
