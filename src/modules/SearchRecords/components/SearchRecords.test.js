@@ -2,6 +2,8 @@ import SearchRecords from './SearchRecords';
 
 function setup(testProps, isShallow = true) {
     const props = {
+        publicationsList: [],
+        loadingSearch: false,
         ...testProps
     };
     return getElement(SearchRecords, props, isShallow);
@@ -11,6 +13,28 @@ describe('SearchRecords page', () => {
 
     it('should render placeholders', () => {
         const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render loading screen while loading search results', () => {
+        const wrapper = setup({loadingSearch: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render loading screen while loading publications while filtering', () => {
+        const wrapper = setup({publicationsList: [1, 2, 2]});
+        wrapper.setProps({loadingSearch: true});
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render no results', () => {
+        const wrapper = setup({
+            publicationsList: [],
+            searchQuery: {
+                title: 'this is test'
+            }
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -90,6 +114,4 @@ describe('SearchRecords page', () => {
             }
         });
     });
-
-
 });

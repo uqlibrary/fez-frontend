@@ -1,5 +1,125 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`SearchRecords page should render loading screen while loading publications while filtering 1`] = `
+<StandardPage
+  className="page-search-records"
+  title="eSpace search"
+>
+  <StandardCard
+    className=""
+  >
+    <withRouter(Connect(SearchComponent))
+      showAdvancedSearchButton={true}
+    />
+  </StandardCard>
+  <div
+    className="is-centered"
+  >
+    <InlineLoader
+      message="Searching for publications..."
+    />
+  </div>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+      >
+        <PublicationsListSorting
+          disabled={true}
+          onPageSizeChanged={[Function]}
+          onSortByChanged={[Function]}
+          pageSize={20}
+          sortBy="published_date"
+          sortDirection="Desc"
+        />
+        <PublicationsListPaging
+          disabled={true}
+          loading={true}
+          onPageChanged={[Function]}
+        />
+        <div
+          className="is-centered"
+        >
+          <InlineLoader
+            message="Searching for publications..."
+          />
+        </div>
+        <PublicationsListPaging
+          disabled={true}
+          loading={true}
+          onPageChanged={[Function]}
+        />
+      </StandardCard>
+    </div>
+  </div>
+</StandardPage>
+`;
+
+exports[`SearchRecords page should render loading screen while loading search results 1`] = `
+<StandardPage
+  className="page-search-records"
+  title="eSpace search"
+>
+  <StandardCard
+    className=""
+  >
+    <withRouter(Connect(SearchComponent))
+      showAdvancedSearchButton={true}
+    />
+  </StandardCard>
+  <div
+    className="is-centered"
+  >
+    <InlineLoader
+      message="Searching for publications..."
+    />
+  </div>
+  <div
+    className="columns"
+  />
+</StandardPage>
+`;
+
+exports[`SearchRecords page should render no results 1`] = `
+<StandardPage
+  className="page-search-records"
+  title="eSpace search"
+>
+  <StandardCard
+    className=""
+  >
+    <withRouter(Connect(SearchComponent))
+      showAdvancedSearchButton={true}
+    />
+  </StandardCard>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+        text={
+          <div>
+            We were unable to find any results.
+          </div>
+        }
+        title="No publications found"
+      >
+        <div>
+          We were unable to find any results.
+        </div>
+      </StandardCard>
+    </div>
+  </div>
+</StandardPage>
+`;
+
 exports[`SearchRecords page should render placeholders 1`] = `
 <StandardPage
   className="page-search-records"
