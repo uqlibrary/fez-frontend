@@ -289,4 +289,30 @@ describe('SearchRecords page', () => {
             }
         });
     });
+
+    it('should correctly parse search query string from location search (published year)', () => {
+        const wrapper = setup({});
+
+        const result = wrapper.instance().parseSearchQueryStringFromUrl('page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data');
+
+        expect(result).toEqual({
+            page: '1',
+            pageSize: 20,
+            sortBy: 'published_date',
+            sortDirection: 'Desc',
+            searchQueryParams: {
+                title: 'some test data'
+            },
+            activeFacets: {
+                filters: {},
+                ranges: {
+                    'Year published': {
+                        from: '2008',
+                        to: '2023'
+                    }
+                },
+                showOpenAccessOnly: false
+            }
+        });
+    });
 });
