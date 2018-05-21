@@ -1,4 +1,5 @@
 import SearchRecords from './SearchRecords';
+import {routes} from 'config';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -100,6 +101,34 @@ describe('SearchRecords page', () => {
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('gets publications when user clicks back and state is set', () => {
+        const testAction = jest.fn();
+        const wrapper = setup({actions: {searchEspacePublications: testAction}});
+
+        wrapper.instance().componentWillReceiveProps({
+            history: {action: 'POP'},
+            location: {pathname: routes.pathConfig.records.search, state: {page: 2}}
+        });
+        expect(testAction).toHaveBeenCalled();
+        expect(wrapper.state().page).toEqual(2);
+    });
+
+    it('gets publications when user clicks back and state is not set', () => {
+        const testAction = jest.fn();
+        const wrapper = setup({actions: {searchEspacePublications: testAction}});
+        wrapper.instance().componentWillReceiveProps({history: {action: 'POP'}, location: {pathname: routes.pathConfig.records.search, state: null}});
+        expect(testAction).toHaveBeenCalled();
+        expect(wrapper.state().page).toEqual(1);
+    });
+
+    it('doesn\'t retrieve data from history if user navigates to next page', () => {
+        const testAction = jest.fn();
+        const wrapper = setup({actions: {searchEspacePublications: testAction}});
+
+        wrapper.instance().componentWillReceiveProps({history: {action: 'PUSH'}, location: {pathname: routes.pathConfig.records.search}});
+        expect(testAction).not.toHaveBeenCalled();
     });
 
     it('should call updateSearch() method if query search parameters with searchQueryParams key found', () => {
