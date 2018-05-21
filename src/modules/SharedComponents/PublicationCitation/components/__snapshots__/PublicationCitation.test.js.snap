@@ -16,7 +16,7 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
         <Link
           onClick={[Function]}
           replace={false}
-          to="/records/UQ:41878"
+          to="/view/UQ:41878"
         >
           Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
         </Link>
@@ -899,7 +899,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
         <Link
           onClick={[Function]}
           replace={false}
-          to="/records/UQ:41878"
+          to="/view/UQ:41878"
         >
           Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
         </Link>
@@ -1742,7 +1742,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
         <Link
           onClick={[Function]}
           replace={false}
-          to="/records/UQ:41878"
+          to="/view/UQ:41878"
         >
           Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
         </Link>
@@ -2558,7 +2558,7 @@ exports[`PublicationCitation  should render component with publication from mult
         <Link
           onClick={[Function]}
           replace={false}
-          to="/records/UQ:41878"
+          to="/view/UQ:41878"
         >
           Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
         </Link>
@@ -4235,7 +4235,7 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
         <Link
           onClick={[Function]}
           replace={false}
-          to="/records/UQ:41878"
+          to="/view/UQ:41878"
         >
           Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
         </Link>

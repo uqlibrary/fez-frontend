@@ -1730,10 +1730,10 @@ exports[`Available Versions Component  should render component 1`] = `
                             >
                               <Link
                                 replace={false}
-                                to="/records/UQ:313292"
+                                to="/view/UQ:313292"
                               >
                                 <a
-                                  href="/records/UQ:313292"
+                                  href="/view/UQ:313292"
                                   onClick={[Function]}
                                 >
                                   Toxicity characterization of urban stormwater with bioanalytical tools
