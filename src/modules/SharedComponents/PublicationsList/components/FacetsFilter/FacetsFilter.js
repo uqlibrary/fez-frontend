@@ -7,6 +7,8 @@ import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
 import {publicationTypes} from 'config';
 import {locale} from 'locale';
+import {general} from 'config';
+import {routes} from 'config';
 import DateRange from './DateRange';
 import OpenAccessFilter from './OpenAccessFilter';
 
@@ -18,7 +20,8 @@ export default class FacetsFilter extends PureComponent {
         excludeFacetsList: PropTypes.array,
         renameFacetsList: PropTypes.object,
         disabled: PropTypes.bool,
-        showOpenAccessFilter: PropTypes.bool
+        showOpenAccessFilter: PropTypes.bool,
+        location: PropTypes.object
     };
 
     static defaultProps = {
@@ -105,14 +108,26 @@ export default class FacetsFilter extends PureComponent {
     };
 
     _handleResetClick = () => {
-        this.setState({
-            activeFacets: {
-                filters: {},
-                ranges: {}
-            }
-        }, () => {
-            this.props.onFacetsChanged(this.state.activeFacets);
-        });
+        if (this.props.location.pathname === routes.pathConfig.dataset.mine) {
+            // wipe the facets, except for the hidden display type
+            this.setState({
+                activeFacets: {
+                    filters: {'Display type': general.PUBLICATION_TYPE_DATA_COLLECTION},
+                    ranges: {}
+                }
+            }, () => {
+                this.props.onFacetsChanged(this.state.activeFacets);
+            });
+        } else {
+            this.setState({
+                activeFacets: {
+                    filters: {},
+                    ranges: {}
+                }
+            }, () => {
+                this.props.onFacetsChanged(this.state.activeFacets);
+            });
+        }
     };
 
     getNestedListItems = (facetCategory) => {
@@ -136,7 +151,7 @@ export default class FacetsFilter extends PureComponent {
             const rawFacet = rawFacets[key];
             const rawFacetLookup = rawFacets[`${key} (lookup)`];
 
-            // ignore facet if it has no data or is in exlude list
+            // ignore facet if it has no data or is in exclude list
             if (key.indexOf('(lookup)') >= 0
                 || excludeFacetsList && excludeFacetsList.indexOf(key) >= 0
                 || (rawFacet.buckets && rawFacet.buckets.length === 0)) return;
@@ -170,10 +185,34 @@ export default class FacetsFilter extends PureComponent {
         return facetsToDisplay;
     };
 
+    // We want to ignore the page-level filters (in this case 'Display type = 371')
+    // while we check the client-filters (anything they have clicked on the page).
+    // We may need to manage client-filters and page-filters separately at some point
+    areClientFiltersAvailable() {
+        if (this.props.location.pathname === routes.pathConfig.dataset.mine) {
+            // on the 'My Dataset' page, we must remove the `display type` from the filters before we check it
+            const localFilters = Object.assign({}, this.state.activeFacets.filters);
+            if (Object.keys(localFilters).length > 0 &&
+                localFilters.hasOwnProperty('Display type') &&
+                localFilters['Display type'] === general.PUBLICATION_TYPE_DATA_COLLECTION) {
+                delete localFilters['Display type'];
+
+                // return true if there is any other filters in array
+                return Object.keys(localFilters).length > 0;
+            } else {
+                // this shouldnt be reachable - if its a dataset page it should always be PUBLICATION_TYPE_DATA_COLLECTION type
+                return Object.keys(this.state.activeFacets.filters).length > 0;
+            }
+        } else {
+            return Object.keys(this.state.activeFacets.filters).length > 0;
+        }
+    }
+
     render() {
         const {yearPublishedCategory, yearPublishedFacet, resetButtonText} = locale.components.facetsFilter;
         const facetsToDisplay = this.getFacetsToDisplay(this.props.facetsData, this.props.excludeFacetsList, this.props.renameFacetsList);
-        const hasActiveFilters = (Object.keys(this.state.activeFacets.filters).length > 0
+        const hasActiveFilters =
+            (this.areClientFiltersAvailable()
             || Object.keys(this.state.activeFacets.ranges).length > 0
             || !!this.state.activeFacets.showOpenAccessOnly);
         if (facetsToDisplay.length === 0 && !hasActiveFilters) return (<span className="facetsFilter empty" />);

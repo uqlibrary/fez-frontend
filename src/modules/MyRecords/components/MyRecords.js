@@ -9,6 +9,8 @@ import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
 import {locale} from 'locale';
 import {routes} from 'config';
+import {general} from 'config';
+
 export default class MyRecords extends PureComponent {
     static propTypes = {
         publicationsList: PropTypes.array,
@@ -98,12 +100,37 @@ export default class MyRecords extends PureComponent {
     }
 
     facetsChanged = (activeFacets) => {
-        this.setState(
-            {
-                activeFacets: activeFacets,
-                page: 1
-            }, this.pushPageHistory
-        );
+        console.log('activeFacets');
+        console.log(activeFacets);
+        if (this.props.location.pathname === routes.pathConfig.dataset.mine) {
+            // this is a 'my research data' page
+            const displayType = 'Display type';
+            const localfilters = Object.assign({}, activeFacets);
+            if (Object.keys(localfilters).length > 0 &&
+                localfilters.hasOwnProperty(displayType) &&
+                localfilters[displayType] === general.PUBLICATION_TYPE_DATA_COLLECTION) {
+                const index = localfilters.indexOf(displayType);
+                if (index >= 0) {
+                    localfilters.splice(index);
+                }
+                // return true is any other filters in array
+            }
+
+            this.setState(
+                {
+                    activeFacets: localfilters,
+                    page: 1
+                }, this.pushPageHistory
+            );
+        } else {
+            // this is a 'my research' page
+            this.setState(
+                {
+                    activeFacets: activeFacets,
+                    page: 1
+                }, this.pushPageHistory
+            );
+        }
     }
 
     pushPageHistory = () => {
@@ -204,7 +231,8 @@ export default class MyRecords extends PureComponent {
                                     disabled={this.props.loadingPublicationsList}
                                     excludeFacetsList={txt.facetsFilter.excludeFacetsList}
                                     renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                    showOpenAccessFilter />
+                                    showOpenAccessFilter
+                                    location={this.props.location}/>
                             </StandardRighthandCard>
                         </div>
                     }
