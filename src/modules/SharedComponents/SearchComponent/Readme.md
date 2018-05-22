@@ -4,7 +4,7 @@ Prototype component to publically search eSpace
 
 ## Props
 - `searchQueryParams: PropTypes.object` - Parameters for the search query
-- `applyInverseStyle: PropTypes.bool` - Apply styles for header
+- `inHeader: PropTypes.bool` - Apply styles/behaviour for header placement
 - `showAdvancedSearchButton: PropTypes.bool` - Show button to switch to advanced
 - `showSearchButton: PropTypes.bool` - Show a search button in header
 - `showPrefixIcon: PropTypes.bool` - Show the magnify glass icon before input
@@ -21,7 +21,7 @@ const App = () => (
   <div>
   
     <SearchComponent 
-        applyInverseStyle
+        inHeader
         showAdvancedSearchButton
         showSearchButton
         showPrefixIcon

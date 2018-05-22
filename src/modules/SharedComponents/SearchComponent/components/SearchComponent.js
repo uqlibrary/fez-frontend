@@ -6,9 +6,9 @@ import RaisedButton from 'material-ui/RaisedButton';
 import SearchIcon from 'material-ui/svg-icons/action/search';
 import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 import Snackbar from 'material-ui/Snackbar';
-
-import {locale} from 'locale';
+import {MIN_PUBLIC_SEARCH_TEXT_LENGTH, MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
 import {routes} from 'config';
+import {locale} from 'locale';
 
 
 export default class SearchComponent extends PureComponent {
@@ -33,8 +33,6 @@ export default class SearchComponent extends PureComponent {
             snackbarOpen: false,
             snackbarMessage: ''
         };
-        this.MIN_SEARCH_TEXT_LENGTH = 1;
-        this.MAX_SEARCH_TEXT_LENGTH = 500;
     }
 
     componentWillReceiveProps(nextProps) {
@@ -52,8 +50,8 @@ export default class SearchComponent extends PureComponent {
         // If all is OK, submit the search
         if (this.props.actions
             && this.props.actions.searchEspacePublications
-            && this.state.searchText.trim().length >= this.MIN_SEARCH_TEXT_LENGTH
-            && this.state.searchText.trim().length <= this.MAX_SEARCH_TEXT_LENGTH
+            && this.state.searchText.trim().length >= MIN_PUBLIC_SEARCH_TEXT_LENGTH
+            && this.state.searchText.trim().length <= MAX_PUBLIC_SEARCH_TEXT_LENGTH
         ) {
             // start search
             const defaultQueryParams = {
@@ -75,14 +73,14 @@ export default class SearchComponent extends PureComponent {
 
         // Snackbar to give feedback when input is too short or long in the header search when pressing enter
         if(event && event.key && event.key === 'Enter' && this.props.inHeader) {
-            if (this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH) {
+            if (this.state.searchText.trim().length < MIN_PUBLIC_SEARCH_TEXT_LENGTH) {
                 this.setState({
-                    snackbarMessage: locale.validationErrors.minLength.replace('[min]', this.MIN_SEARCH_TEXT_LENGTH),
+                    snackbarMessage: locale.validationErrors.minLength.replace('[min]', MIN_PUBLIC_SEARCH_TEXT_LENGTH),
                     snackbarOpen: true
                 });
-            } else if (this.state.searchText.trim().length > this.MAX_SEARCH_TEXT_LENGTH) {
+            } else if (this.state.searchText.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
                 this.setState({
-                    snackbarMessage: locale.validationErrors.maxLength.replace('[max]', this.MAX_SEARCH_TEXT_LENGTH),
+                    snackbarMessage: locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH),
                     snackbarOpen: true
                 });
             }
@@ -114,10 +112,10 @@ export default class SearchComponent extends PureComponent {
     };
 
     validationError = () => {
-        if(!this.props.inHeader && this.state.searchText.trim().length >= 1 && this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH) {
-            return locale.validationErrors.minLength.replace('[min]', this.MIN_SEARCH_TEXT_LENGTH);
-        } else if (!this.props.inHeader && this.state.searchText.trim().length > this.MAX_SEARCH_TEXT_LENGTH) {
-            return locale.validationErrors.maxLength.replace('[max]', this.MAX_SEARCH_TEXT_LENGTH);
+        if(!this.props.inHeader && this.state.searchText.trim().length >= 1 && this.state.searchText.trim().length < MIN_PUBLIC_SEARCH_TEXT_LENGTH) {
+            return locale.validationErrors.minLength.replace('[min]', MIN_PUBLIC_SEARCH_TEXT_LENGTH);
+        } else if (!this.props.inHeader && this.state.searchText.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
+            return locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH);
         } else {
             return false;
         }
