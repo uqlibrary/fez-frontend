@@ -28,76 +28,34 @@ export function searchLatestPublications() {
     };
 }
 
-function getTrendingPublications(page = 1, pageSize = 20, sortBy = 'altmetric_score', sortDirection = 'Desc', interval = '1m') {
-    return get(routes.TRENDING_PUBLICATIONS_API({
-        page: page,
-        pageSize: pageSize,
-        sortBy: sortBy,
-        sortDirection: sortDirection,
-        interval: interval
-    }));
-}
-
-export function searchTopAltmetricCitedPublications(interval = '1m', source = 'altmetric', page = 1, pageSize = 20, sortBy = 'altmetric_score', sortDirection = 'Desc') {
-    return dispatch => {
-        dispatch({type: actions.TOP_ALTMETRIC_CITED_PUBLICATIONS_LOADING});
-        return getTrendingPublications(page, pageSize, sortBy, sortDirection, interval)
-            .then(response => {
-                let result = response.data;
-                if (response.data.length > 0) {
-                    const transformedTopCitedPublications = transformTrendingPublicationsMetricsData(response);
-                    for (const data of transformedTopCitedPublications) {
-                        if (data.key === source) {
-                            result = data.values;
-                            break;
-                        }
-                    }
-                }
-
-                dispatch({
-                    type: actions.TOP_ALTMETRIC_CITED_PUBLICATIONS_LOADED,
-                    payload: {data: result}
-                });
-            })
-            .catch(error => {
-                dispatch({
-                    type: actions.TOP_ALTMETRIC_CITED_PUBLICATIONS_FAILED,
-                    payload: error.message
-                });
-            });
-    };
-}
-
 /**
  * Get top cited publications
  * @returns {action}
  */
-export function searchTopCitedPublications({page = 1, pageSize = 20, source = 'scopus', sortBy = 'scopus_citation_count', sortDirection = 'Desc'}) {
+export function searchTopCitedPublications() {
     return dispatch => {
-        dispatch({type: `${actions.TOP_CITED_PUBLICATIONS_LOADING}@${source}`, source: source});
-        return getTrendingPublications(page, pageSize, sortBy, sortDirection)
+        dispatch({type: actions.TOP_CITED_PUBLICATIONS_LOADING});
+        return get(routes.TRENDING_PUBLICATIONS_API())
             .then(response => {
-                let result = response.data;
                 if (response.data.length > 0) {
                     const transformedTopCitedPublications = transformTrendingPublicationsMetricsData(response);
-                    for (const data of transformedTopCitedPublications) {
-                        if (data.key === source) {
-                            result = data.values;
-                            break;
-                        }
-                    }
-                }
 
-                dispatch({
-                    type: `${actions.TOP_CITED_PUBLICATIONS_LOADED}@${source}`,
-                    source: source,
-                    payload: {data: result},
-                });
+                    transformedTopCitedPublications.map(({key, values}) => {
+                        dispatch({
+                            type: `${actions.TOP_CITED_PUBLICATIONS_LOADED}@${key}`,
+                            payload: {data: values},
+                        });
+                    });
+                } else {
+                    dispatch({
+                        type: actions.TOP_CITED_PUBLICATIONS_LOADED,
+                        payload: response,
+                    });
+                }
             })
             .catch(error => {
                 dispatch({
-                    type: `${actions.TOP_CITED_PUBLICATIONS_FAILED}@${source}`,
-                    source: source,
+                    type: actions.TOP_CITED_PUBLICATIONS_FAILED,
                     payload: error.message
                 });
             });

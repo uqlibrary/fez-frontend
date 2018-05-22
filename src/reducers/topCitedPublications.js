@@ -1,43 +1,56 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    topCitedPublicationsList: {
-        scopus: [],
-        thomson: []
-    },
-    loadingTopCitedPublications: {
-        scopus: false,
-        thomson: false
-    }
+    topCitedPublicationsList: [],
+    loadingTopCitedPublications: false
 };
 
 const handlers = {
-    [`${actions.TOP_CITED_PUBLICATIONS_LOADING}@`]: (state, action) => {
-        state.topCitedPublicationsList[action.source] = [];
-        state.loadingTopCitedPublications[action.source] = true;
+    [actions.TOP_CITED_PUBLICATIONS_LOADING]: (state) => {
         return {
-            ...state
+            ...state,
+            topCitedPublicationsList: [],
+            loadingTopCitedPublications: true
         };
     },
 
     [`${actions.TOP_CITED_PUBLICATIONS_LOADED}@`]: (state, action) => {
-        state.topCitedPublicationsList[action.source] = action.payload.data;
-        state.loadingTopCitedPublications[action.source] = false;
+        const source = actions.getActionSuffix(action.type);
+
+        const topCitedPublicationsList = [
+            ...state.topCitedPublicationsList,
+            {
+                key: source,
+                values: action.payload.data
+            }
+        ];
+
         return {
-            ...state
+            ...state,
+            topCitedPublicationsList,
+            loadingTopCitedPublications: false
         };
     },
 
-    [`${actions.TOP_CITED_PUBLICATIONS_FAILED}@`]: (state, action) => {
-        state.loadingTopCitedPublications[action.source] = true;
+    [actions.TOP_CITED_PUBLICATIONS_LOADED]: (state, action) => {
         return {
-            ...state
+            ...state,
+            trendingPublicationsList: action.payload.data,
+            loadingTopCitedPublications: false
+        };
+    },
+
+    [actions.TOP_CITED_PUBLICATIONS_FAILED]: (state) => {
+        return {
+            ...state,
+            trendingPublicationsList: [],
+            loadingTopCitedPublications: true
         };
     }
 };
 
 export default function topCitedPublicationsReducer(state = initialState, action) {
-    const handler = handlers[actions.getAction(action.type)];
+    const handler = action.type.indexOf('@') >= 0 ? handlers[actions.getAction(action.type)] : handlers[action.type];
     if (!handler) {
         return state;
     }

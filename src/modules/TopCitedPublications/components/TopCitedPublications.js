@@ -1,87 +1,79 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {trendingPublicationsConfig} from 'config';
 import {locale} from 'locale';
+import {Tabs, Tab} from 'material-ui/Tabs';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
 import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
 
 export default class TopCitedPublications extends PureComponent {
     static propTypes = {
-        topCitedPublicationsList: PropTypes.object,
-        loadingTopCitedPublications: PropTypes.object,
-        source: PropTypes.string,
-        actions: PropTypes.object.isRequired
+        topCitedPublicationsList: PropTypes.array,
+        loadingTopCitedPublications: PropTypes.bool,
+        actions: PropTypes.object.isRequired,
+        showSourceCountIcon: PropTypes.bool
     };
 
     static defaultProps = {
-        source: 'scopus',
-        topCitedPublicationsList: {
-            scopus: [],
-            thomson: []
-        },
-        loadingTopCitedPublications: {
-            scopus: false,
-            thomson: false
-        }
+        topCitedPublicationsList: [],
+        loadingTopCitedPublications: false
     };
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            page: 1,
-            pageSize: 20,
-            source: props.source
-        };
-    }
-
     componentDidMount() {
-        if (!this.props.loadingTopCitedPublications[this.props.source]) {
-            this.props.actions.searchTopCitedPublications({...this.state});
+        if (!this.props.loadingTopCitedPublications) {
+            this.props.actions.searchTopCitedPublications();
         }
     }
 
     render() {
-        const {source} = this.props;
         const txt = locale.components.topCitedPublications;
 
-        if (this.props.loadingTopCitedPublications[source]) {
+        if (this.props.loadingTopCitedPublications) {
             return (
                 <div className="isLoading is-centered">
-                    <InlineLoader message={txt[source].loading}/>
+                    <InlineLoader message={txt.loading}/>
                 </div>
             );
         }
 
-        const publications = this.props.topCitedPublicationsList[source];
-
         return (
-            <div className="topCitedPubs">
-                <div className="is-pulled-right">
-                    <HelpIcon {...locale.components.trendingPublicationHelp}/>
-                </div>
+            <StandardCard className="card-paddingless">
                 {
-                    publications && publications.length > 0 &&
-                    <div className="trendingPubsSection">
-                        <h2 className="trendingPubsSource">
-                            <div className={`fez-icon ${source} xxlarge`}/>
-                            {txt[source].heading}
-                        </h2>
-
-                        <div className="columns is-gapless is-hidden-mobile subTitle">
-                            <div className={'column is-narrow'}>
-                                {txt[source].subHeading}
-                            </div>
-                        </div>
-                        <PublicationsList
-                            publicationsList={publications}
-                            showMetrics
-                            hideCitationContent
-                        />
-                    </div>
+                    this.props.topCitedPublicationsList.length > 0 &&
+                        <Tabs className="publicationTabs" inkBarStyle={{height: '4px', marginTop: '-4px'}}>
+                            {
+                                this.props.topCitedPublicationsList.sort((source1, source2) => (
+                                    txt[source1.key].order - txt[source2.key].order
+                                )).map(({key, values}, metricIndex) => (
+                                    <Tab key={key} label={txt[key].title} value={`${key}TopCitedPublications`} className="publicationTabs">
+                                        <div className="publicationTabContent">
+                                            <div className="topCitedPubs">
+                                                <div className="is-pulled-right">
+                                                    <HelpIcon {...locale.components.trendingPublicationHelp}/>
+                                                </div>
+                                                <div key={'metrics_' + metricIndex} className="trendingPubsSection">
+                                                    <h2 className="trendingPubsSource">
+                                                        <div className={`fez-icon ${key} xxlarge`}/>
+                                                        {txt[key].heading}
+                                                    </h2>
+                                                    <div className="is-hidden-mobile subTitle">{txt[key].subHeading}</div>
+                                                    <PublicationsList
+                                                        publicationsList={values}
+                                                        showMetrics
+                                                        showSourceCountIcon={key === 'altmetric'}
+                                                        hideCountDiff={key === 'altmetric'}
+                                                        hideCitationContent
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Tab>
+                                ))
+                            }
+                        </Tabs>
                 }
-            </div>
+            </StandardCard>
         );
     }
 }

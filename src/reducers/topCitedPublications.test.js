@@ -1,46 +1,42 @@
 import * as actions from '../actions/actionTypes';
 import topCitedPublicationsReducer from './topCitedPublications';
-import {trendingPublications} from 'mock/data/testing/trendingPublications';
 
 const initialState = {
-    topCitedPublicationsList: {},
-    loadingTopCitedPublications: {},
+    topCitedPublicationsList: [],
+    loadingTopCitedPublications: false,
 };
 
 describe('Top cited publications reducer', () => {
     it('returns the correct state while top cited publications are loading', () => {
-        const source = 'source';
-        const test = topCitedPublicationsReducer(initialState, {type: `${actions.TOP_CITED_PUBLICATIONS_LOADING}@${source}`, source: source});
-        expect(test.topCitedPublicationsList[source]).toEqual([]);
-        expect(test.loadingTopCitedPublications[source]).toBeTruthy();
+        const test = topCitedPublicationsReducer(initialState, {type: actions.TOP_CITED_PUBLICATIONS_LOADING});
+        expect(test.topCitedPublicationsList).toEqual([]);
+        expect(test.loadingTopCitedPublications).toBeTruthy();
     });
 
     it('returns the correct state when top cited publications are loaded', () => {
-        const source = 'source';
+        const source = 'altmetric';
+        const data = [{rek_pid: 'UQ:1'}];
         const test = topCitedPublicationsReducer(initialState, {
             type: `${actions.TOP_CITED_PUBLICATIONS_LOADED}@${source}`,
-            source: source,
-            payload: trendingPublications
+            payload: {data: data}
         });
-        expect(test.topCitedPublicationsList[source]).toEqual(trendingPublications.data);
-        expect(test.loadingTopCitedPublications[source]).toBeFalsy();
+        expect(test.topCitedPublicationsList).toEqual([{key: source, values: data}]);
+        expect(test.loadingTopCitedPublications).toBeFalsy();
     });
 
     it('returns the correct state when top cited publications are loaded but 0 publications found', () => {
-        const source = 'source';
+        const source = 'altmetric';
         const test = topCitedPublicationsReducer(initialState, {
-            type: `${actions.TOP_CITED_PUBLICATIONS_LOADED}@${source}`,
-            source: source,
+            type: actions.TOP_CITED_PUBLICATIONS_LOADED,
             payload: {total: 0, data: []}
         });
-        expect(test.topCitedPublicationsList[source].length).toEqual(0);
-        expect(test.loadingTopCitedPublications[source]).toBeFalsy();
+        expect(test.topCitedPublicationsList).toEqual([]);
+        expect(test.loadingTopCitedPublications).toBeFalsy();
     });
 
     it('returns the correct state when top cited publications fail to load', () => {
-        const source = 'source';
-        const test = topCitedPublicationsReducer(initialState, {type: `${actions.TOP_CITED_PUBLICATIONS_FAILED}@${source}`, source: source});
-        expect(test.topCitedPublicationsList[source]).toEqual([]);
-        expect(test.loadingTopCitedPublications[source]).toBeTruthy();
+        const test = topCitedPublicationsReducer(initialState, {type: actions.TOP_CITED_PUBLICATIONS_FAILED});
+        expect(test.topCitedPublicationsList).toEqual([]);
+        expect(test.loadingTopCitedPublications).toBeTruthy();
     });
 });

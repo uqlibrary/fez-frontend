@@ -97,7 +97,7 @@ export default {
                 <div>
                     <h3>WOS and Scopus</h3>
                     <p>
-                        The large number is the total citation count and the + (plus) value indicates how much the citation count has increased in the last month.
+                        The large number is the total citation count and the + (plus) value indicates how much the citation count has increased in the last three months.
                     </p>
                     <h3>Altmetric score (social media activity)</h3>
                     <p>
@@ -115,30 +115,24 @@ export default {
             viewAllButtonLabel: 'View all'
         },
         topCitedPublications: {
+            loading: 'Loading trending publications...',
             altmetric: {
                 title: 'Trending publications',
-                loading: 'Loading trending publications...',
                 heading: 'Altmetric score',
-                subHeading: 'Show trending publications for the past',
-                intervals: [
-                    {value: '1w', label: '1 week'},
-                    {value: '1m', label: '1 month'},
-                    {value: '3m', label: '3 months'},
-                    {value: '6m', label: '6 months'},
-                    {value: '1y', label: '1 year'}
-                ]
+                subHeading: 'The +plus score indicates recent increase in social media activity',
+                order: 0
             },
             scopus: {
                 title: 'Hot papers on Scopus',
-                loading: 'Loading hot papers on scopus...',
                 heading: 'Scopus citation count',
-                subHeading: 'The +plus score indicates the increase in citations over the last month',
+                subHeading: 'The +plus score indicates the increase in citations over the three months',
+                order: 1
             },
             thomson: {
                 title: 'Hot papers on Web of science',
-                loading: 'Loading hot papers on web of science...',
                 heading: 'Web of Science citation count',
-                subHeading: 'The +plus score indicates the increase in citations over the last month',
+                subHeading: 'The +plus score indicates the increase in citations over the three months',
+                order: 2
             }
         },
         keywordsForm: {

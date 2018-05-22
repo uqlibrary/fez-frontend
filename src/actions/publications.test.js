@@ -206,20 +206,19 @@ describe('Publications actions', () => {
     });
 
     describe('searchTopCitedPublications()', () => {
-
-        const apiParams = {page: 1, pageSize: 20, source: 'scopus', sortBy: 'scopus_citation_count', sortDirection: 'desc'};
-
         it('dispatches expected actions on successful request', async () => {
             mockApi
-                .onGet(repositories.routes.TRENDING_PUBLICATIONS_API(apiParams).apiUrl)
+                .onGet(repositories.routes.TRENDING_PUBLICATIONS_API().apiUrl)
                 .reply(200, mockData.trendingPublications);
 
             const expectedActions = [
-                `${actions.TOP_CITED_PUBLICATIONS_LOADING}@scopus`,
+                actions.TOP_CITED_PUBLICATIONS_LOADING,
                 `${actions.TOP_CITED_PUBLICATIONS_LOADED}@scopus`,
+                `${actions.TOP_CITED_PUBLICATIONS_LOADED}@thomson`,
+                `${actions.TOP_CITED_PUBLICATIONS_LOADED}@altmetric`,
             ];
 
-            await mockActionsStore.dispatch(publicationsActions.searchTopCitedPublications(apiParams));
+            await mockActionsStore.dispatch(publicationsActions.searchTopCitedPublications());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
@@ -229,11 +228,11 @@ describe('Publications actions', () => {
                 .reply(500, {});
 
             const expectedActions = [
-                `${actions.TOP_CITED_PUBLICATIONS_LOADING}@scopus`,
-                `${actions.TOP_CITED_PUBLICATIONS_FAILED}@scopus`,
+                actions.TOP_CITED_PUBLICATIONS_LOADING,
+                actions.TOP_CITED_PUBLICATIONS_FAILED,
             ];
 
-            await mockActionsStore.dispatch(publicationsActions.searchTopCitedPublications(apiParams));
+            await mockActionsStore.dispatch(publicationsActions.searchTopCitedPublications());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
@@ -243,64 +242,11 @@ describe('Publications actions', () => {
                 .reply(200, {total: 0, data: [], filters: []});
 
             const expectedActions = [
-                `${actions.TOP_CITED_PUBLICATIONS_LOADING}@scopus`,
-                `${actions.TOP_CITED_PUBLICATIONS_LOADED}@scopus`,
+                actions.TOP_CITED_PUBLICATIONS_LOADING,
+                actions.TOP_CITED_PUBLICATIONS_LOADED,
             ];
 
-            await mockActionsStore.dispatch(publicationsActions.searchTopCitedPublications(apiParams));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        });
-    });
-
-    describe('searchTopAltmetricCitedPublications()', () => {
-
-        const apiParams = {
-            page         : 1,
-            pageSize     : 20,
-            source       : 'altmetric',
-            sortBy       : 'altmetric_score',
-            sortDirection: 'desc'
-        };
-
-        it('dispatches expected actions on successful request', async () => {
-            mockApi
-                .onGet(repositories.routes.TRENDING_PUBLICATIONS_API(apiParams).apiUrl)
-                .reply(200, mockData.trendingPublications);
-
-            const expectedActions = [
-                actions.TOP_ALTMETRIC_CITED_PUBLICATIONS_LOADING,
-                actions.TOP_ALTMETRIC_CITED_PUBLICATIONS_LOADED,
-            ];
-
-            await mockActionsStore.dispatch(publicationsActions.searchTopAltmetricCitedPublications(apiParams));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        });
-
-        it('dispatches expected actions if api fails', async () => {
-            mockApi
-                .onAny()
-                .reply(500, {});
-
-            const expectedActions = [
-                actions.TOP_ALTMETRIC_CITED_PUBLICATIONS_LOADING,
-                actions.TOP_ALTMETRIC_CITED_PUBLICATIONS_FAILED,
-            ];
-
-            await mockActionsStore.dispatch(publicationsActions.searchTopAltmetricCitedPublications(apiParams));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        });
-
-        it('dispatches expected actions if api return 0 publications', async () => {
-            mockApi
-                .onAny()
-                .reply(200, {total: 0, data: [], filters: []});
-
-            const expectedActions = [
-                actions.TOP_ALTMETRIC_CITED_PUBLICATIONS_LOADING,
-                actions.TOP_ALTMETRIC_CITED_PUBLICATIONS_LOADED,
-            ];
-
-            await mockActionsStore.dispatch(publicationsActions.searchTopAltmetricCitedPublications(apiParams));
+            await mockActionsStore.dispatch(publicationsActions.searchTopCitedPublications());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
