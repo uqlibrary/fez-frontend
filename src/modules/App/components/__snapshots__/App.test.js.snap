@@ -946,7 +946,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         exact={true}
         key="route_11"
-        pageTitle="Add a missing record to eSpace"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/new"
         render={[Function]}
       />

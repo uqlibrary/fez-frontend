@@ -68,7 +68,12 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
           .
         </span>
         <PublicationsListSorting
-          disabled={false}
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}
@@ -85,8 +90,6 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
           sortDirection="Desc"
         />
         <PublicationsListPaging
-          disabled={false}
-          loading={false}
           onPageChanged={[Function]}
           pagingData={
             Object {
@@ -113,8 +116,6 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
           subsetCustomActions={Array []}
         />
         <PublicationsListPaging
-          disabled={false}
-          loading={false}
           onPageChanged={[Function]}
           pagingData={
             Object {
@@ -159,7 +160,12 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
           .
         </span>
         <PublicationsListSorting
-          disabled={false}
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}
@@ -176,8 +182,6 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
           sortDirection="Desc"
         />
         <PublicationsListPaging
-          disabled={false}
-          loading={false}
           onPageChanged={[Function]}
           pagingData={
             Object {
@@ -204,8 +208,6 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
           subsetCustomActions={Array []}
         />
         <PublicationsListPaging
-          disabled={false}
-          loading={false}
           onPageChanged={[Function]}
           pagingData={
             Object {
@@ -232,7 +234,6 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
               "ranges": Object {},
             }
           }
-          disabled={false}
           excludeFacetsList={
             Array [
               "Scopus document type",
@@ -357,6 +358,12 @@ exports[`myDatasets test renders loading screen while loading publications while
           .
         </span>
         <PublicationsListSorting
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
           disabled={true}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
