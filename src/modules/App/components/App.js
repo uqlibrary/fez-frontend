@@ -212,8 +212,9 @@ export default class App extends PureComponent {
                         drawerOpen={this.state.docked || this.state.menuDrawerOpen}
                         docked={this.state.docked}
                         history={this.props.history}
-                        logoImage={locale.global.logo}
-                        logoText={locale.global.title}
+                        logoImage={locale.global.logo.image}
+                        logoText={locale.global.logo.label}
+                        logoLink={locale.global.logo.link}
                         onToggleDrawer={this.toggleDrawer}
                         isMobile={this.state.isMobile}
                         locale={{

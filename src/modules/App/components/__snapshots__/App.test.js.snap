@@ -227,7 +227,8 @@ exports[`Application component should render alert if user is not fez author 1`]
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -709,7 +710,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -1066,7 +1068,8 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -1384,7 +1387,8 @@ exports[`Application component should render app for account with fez author wit
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -1850,7 +1854,8 @@ exports[`Application component should render app for account with fez author wit
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -2723,7 +2728,8 @@ exports[`Application component should render application with routing for the us
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -2913,7 +2919,8 @@ exports[`Application component should render for anon user 1`] = `
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -3004,7 +3011,13 @@ exports[`Application component should render loading screen while account is loa
   className="layout-fill"
 >
   <AppLoader
-    logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
+    logoImage={
+      Object {
+        "image": "https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg",
+        "label": "University of Queensland",
+        "link": "http://www.uq.edu.au",
+      }
+    }
     logoText="UQ eSpace "
     progressColor="#FFF"
     title="UQ eSpace "
