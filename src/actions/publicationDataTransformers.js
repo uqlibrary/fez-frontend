@@ -1,4 +1,15 @@
 import FileSaver from 'file-saver';
+import locale from '../locale/components';
+import moment from 'moment';
+
+/**
+ * Return a export filename ie. espace_export_<datetime>.xlsx
+ *
+ * @param format
+ * @return {string}
+ */
+export const getExportFileName = (extension) =>
+    `${locale.components.export.filename.prefix}_${moment().clone().format(locale.components.export.filename.dateFormat)}.${extension}`;
 
 /**
  * File type to name map
@@ -7,9 +18,9 @@ import FileSaver from 'file-saver';
  *
  * @type {{"application/vnd.ms-excel": string, "application/vnd.endnote": string}}
  */
-export const formatToFilenameMap = {
-    'excel': 'excel.xls',
-    'endnote': 'endnote.enw'
+export const exportFormatToExtensionMap = {
+    'excel': 'xlsx',
+    'endnote': 'enw'
 };
 
 /**
@@ -19,10 +30,10 @@ export const formatToFilenameMap = {
  * @returns void
  */
 export function promptForDownload(format, response) {
-    if (!(format in formatToFilenameMap)) {
+    if (!(format in exportFormatToExtensionMap)) {
         throw `Export format ${format} is not supported.`;
     }
 
-    FileSaver.saveAs(response, formatToFilenameMap[format]);
+    FileSaver.saveAs(response, getExportFileName(exportFormatToExtensionMap[format]));
 }
 
