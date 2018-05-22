@@ -37,40 +37,6 @@ exports[`myDatasets test renders active filters 1`] = `
         </div>
       </StandardCard>
     </div>
-    <div
-      className="column is-3 is-hidden-mobile"
-    >
-      <StandardRighthandCard
-        title="Refine results"
-      >
-        <FacetsFilter
-          activeFacets={
-            Object {
-              "filters": Object {},
-              "ranges": Object {
-                "Year": Object {
-                  "from": 2000,
-                  "to": 2010,
-                },
-              },
-            }
-          }
-          disabled={false}
-          excludeFacetsList={
-            Array [
-              "Scopus document type",
-              "Subtype",
-              "Year published",
-              "Display type",
-            ]
-          }
-          facetsData={Object {}}
-          onFacetsChanged={[Function]}
-          renameFacetsList={Object {}}
-          showOpenAccessFilter={true}
-        />
-      </StandardRighthandCard>
-    </div>
   </div>
 </StandardPage>
 `;
@@ -90,7 +56,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
         className=""
       >
         <span>
-          Displaying records 1 to 20 of 147 total records. 
+          Displaying records 1 to 2 of 2 total records. 
         </span>
         <span>
           Add to this list by 
@@ -111,8 +77,8 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
               "current_page": 1,
               "from": 1,
               "per_page": 20,
-              "to": 20,
-              "total": 147,
+              "to": 2,
+              "total": 2,
             }
           }
           sortBy="published_date"
@@ -127,8 +93,8 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
               "current_page": 1,
               "from": 1,
               "per_page": 20,
-              "to": 20,
-              "total": 147,
+              "to": 2,
+              "total": 2,
             }
           }
         />
@@ -155,8 +121,8 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
               "current_page": 1,
               "from": 1,
               "per_page": 20,
-              "to": 20,
-              "total": 147,
+              "to": 2,
+              "total": 2,
             }
           }
         />
@@ -181,7 +147,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
         className=""
       >
         <span>
-          Displaying records 1 to 20 of 147 total records. 
+          Displaying records 1 to 2 of 2 total records. 
         </span>
         <span>
           Add to this list by 
@@ -202,8 +168,8 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
               "current_page": 1,
               "from": 1,
               "per_page": 20,
-              "to": 20,
-              "total": 147,
+              "to": 2,
+              "total": 2,
             }
           }
           sortBy="published_date"
@@ -218,8 +184,8 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
               "current_page": 1,
               "from": 1,
               "per_page": 20,
-              "to": 20,
-              "total": 147,
+              "to": 2,
+              "total": 2,
             }
           }
         />
@@ -246,8 +212,8 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
               "current_page": 1,
               "from": 1,
               "per_page": 20,
-              "to": 20,
-              "total": 147,
+              "to": 2,
+              "total": 2,
             }
           }
         />
@@ -329,6 +295,12 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                 "doc_count_error_upper_bound": 0,
                 "sum_other_doc_count": 641,
               },
+            }
+          }
+          location={
+            Object {
+              "pathname": "/data-collections/mine",
+              "state": null,
             }
           }
           onFacetsChanged={[Function]}

@@ -5,10 +5,8 @@ import FlatButton from 'material-ui/RaisedButton';
 import {List, ListItem} from 'material-ui/List';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
-import {publicationTypes} from 'config';
+import {publicationTypes, general, routes} from 'config';
 import {locale} from 'locale';
-import {general} from 'config';
-import {routes} from 'config';
 import DateRange from './DateRange';
 import OpenAccessFilter from './OpenAccessFilter';
 
@@ -185,25 +183,23 @@ export default class FacetsFilter extends PureComponent {
         return facetsToDisplay;
     };
 
-    // We want to ignore the page-level filters (in this case 'Display type = 371')
-    // while we check the client-filters (anything they have clicked on the page).
-    // We may need to manage client-filters and page-filters separately at some point
+    // My Dataset pages ('Display type = 371') do not display publication types in the filter.
+    // Remove the 'Display type' filter (locally), then see if there are still any filters.
     areClientFiltersAvailable() {
-        if (this.props.location.pathname === routes.pathConfig.dataset.mine) {
-            // on the 'My Dataset' page, we must remove the `display type` from the filters before we check it
-            const localFilters = Object.assign({}, this.state.activeFacets.filters);
-            if (Object.keys(localFilters).length > 0 &&
-                localFilters.hasOwnProperty('Display type') &&
-                localFilters['Display type'] === general.PUBLICATION_TYPE_DATA_COLLECTION) {
-                delete localFilters['Display type'];
+        if (this.props.location.pathname !== routes.pathConfig.dataset.mine) {
+            return Object.keys(this.state.activeFacets.filters).length > 0;
+        }
 
-                // return true if there is any other filters in array
-                return Object.keys(localFilters).length > 0;
-            } else {
-                // this shouldnt be reachable - if its a dataset page it should always be PUBLICATION_TYPE_DATA_COLLECTION type
-                return Object.keys(this.state.activeFacets.filters).length > 0;
-            }
+        const localFilters = Object.assign({}, this.state.activeFacets.filters);
+        if (Object.keys(localFilters).length > 0 &&
+            localFilters.hasOwnProperty('Display type') &&
+            localFilters['Display type'] === general.PUBLICATION_TYPE_DATA_COLLECTION) {
+            delete localFilters['Display type'];
+
+            // return true if there is any other filters in array
+            return Object.keys(localFilters).length > 0;
         } else {
+            // this shouldnt be reachable - if its a dataset page it should always have at least one filter
             return Object.keys(this.state.activeFacets.filters).length > 0;
         }
     }

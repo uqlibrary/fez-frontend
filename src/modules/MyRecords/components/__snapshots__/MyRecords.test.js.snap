@@ -74,6 +74,21 @@ exports[`MyRecords test renders active filters 1`] = `
             ]
           }
           facetsData={Object {}}
+          location={
+            Object {
+              "state": Object {
+                "activeFacets": Object {
+                  "filters": Object {},
+                  "ranges": Object {
+                    "Year": Object {
+                      "from": 2000,
+                      "to": 2010,
+                    },
+                  },
+                },
+              },
+            }
+          }
           onFacetsChanged={[Function]}
           renameFacetsList={
             Object {
@@ -353,6 +368,12 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                 "doc_count_error_upper_bound": 0,
                 "sum_other_doc_count": 641,
               },
+            }
+          }
+          location={
+            Object {
+              "pathname": "/records/mine",
+              "state": null,
             }
           }
           onFacetsChanged={[Function]}

@@ -100,18 +100,7 @@ export default class MyRecords extends PureComponent {
 
     facetsChanged = (activeFacets) => {
         if (this.props.location.pathname === routes.pathConfig.dataset.mine) {
-            // this is a 'my research data' page - we dont want the presence of 'Display type' to decide 'facet changed'
-            const displayType = 'Display type';
-            const localFacets = Object.assign({}, activeFacets);
-            if (Object.keys(localFacets).length > 0 &&
-                localFacets.hasOwnProperty(displayType) &&
-                localFacets[displayType] === general.PUBLICATION_TYPE_DATA_COLLECTION) {
-                const index = localFacets.indexOf(displayType);
-                if (index >= 0) {
-                    localFacets.splice(index);
-                }
-            }
-
+            const localFacets = this.getMyDatasetFacets(activeFacets);
             this.setState(
                 {
                     activeFacets: localFacets,
@@ -127,6 +116,23 @@ export default class MyRecords extends PureComponent {
                 }, this.pushPageHistory
             );
         }
+    }
+
+    hasDisplayableFilters = (activeFacets) => {
+        const localFacets = this.getMyDatasetFacets(activeFacets);
+        return localFacets.filters && Object.keys(localFacets.filters).length > 0;
+    }
+
+    getMyDatasetFacets = (activeFacets) => {
+        // on a 'my research data' page, we dont want the presence of 'Display type' to decide 'facet changed'
+        const displayType = 'Display type';
+        const localFacets = Object.assign({}, activeFacets);
+        if (Object.keys(localFacets).length > 0 &&
+            localFacets.hasOwnProperty(displayType) &&
+            localFacets[displayType] === general.PUBLICATION_TYPE_DATA_COLLECTION) {
+            delete localFacets[displayType];
+        }
+        return localFacets;
     }
 
     pushPageHistory = () => {
@@ -147,6 +153,7 @@ export default class MyRecords extends PureComponent {
 
         const txt = this.props.localePages;
         const pagingData = this.props.publicationsListPagingData;
+
         return (
             <StandardPage title={txt.pageTitle}>
                 {
@@ -213,7 +220,7 @@ export default class MyRecords extends PureComponent {
                     {
                         // show available filters or selected filters (even if there are no results)
                         ((this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
-                        || (this.state.activeFacets && this.state.activeFacets.filters && Object.keys(this.state.activeFacets.filters).length > 0)
+                        || (this.state.activeFacets && this.hasDisplayableFilters(this.state.activeFacets.filters))
                         || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)
                         || (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
                         <div className="column is-3 is-hidden-mobile">
