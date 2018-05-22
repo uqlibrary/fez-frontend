@@ -117,21 +117,21 @@ export default {
         topCitedPublications: {
             loading: 'Loading trending publications...',
             altmetric: {
-                title: 'Trending publications',
+                title: (<span>Trending publications</span>),
                 mobileTitle: 'Trending',
                 heading: 'Altmetric score',
                 subHeading: 'The +plus score indicates recent increase in social media activity',
                 order: 0
             },
             scopus: {
-                title: 'Hot papers on Scopus',
+                title: (<span>Hot&nbsp;papers&nbsp;on Scopus</span>),
                 mobileTitle: 'Scopus',
                 heading: 'Scopus citation count',
                 subHeading: 'The +plus score indicates the increase in citations over the three months',
                 order: 1
             },
             thomson: {
-                title: 'Hot papers on Web of science',
+                title: (<span>Hot&nbsp;papers&nbsp;on Web&nbsp;of&nbsp;science</span>),
                 mobileTitle: 'WOS',
                 heading: 'Web of Science citation count',
                 subHeading: 'The +plus score indicates the increase in citations over the three months',

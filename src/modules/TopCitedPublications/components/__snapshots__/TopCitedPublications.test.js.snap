@@ -28,7 +28,11 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
     <Tab
       className="publicationTab"
       key="altmetric"
-      label="Trending publications"
+      label={
+        <span>
+          Trending publications
+        </span>
+      }
       value="altmetricTopCitedPublications"
     >
       <div
@@ -897,7 +901,11 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
     <Tab
       className="publicationTab"
       key="scopus"
-      label="Hot papers on Scopus"
+      label={
+        <span>
+          Hot papers on Scopus
+        </span>
+      }
       value="scopusTopCitedPublications"
     >
       <div
@@ -1766,7 +1774,11 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
     <Tab
       className="publicationTab"
       key="thomson"
-      label="Hot papers on Web of science"
+      label={
+        <span>
+          Hot papers on Web of science
+        </span>
+      }
       value="thomsonTopCitedPublications"
     >
       <div
