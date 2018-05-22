@@ -343,82 +343,55 @@ describe('Academic data transformers ', () => {
                     {
                         rek_pid: 'UQ:111111',
                         rek_title: 'Test record 1',
-                        rek_date: '2016-01-01T00:00:00Z'
+                        rek_date: '2016-01-01T00:00:00Z',
+                        fez_record_search_key_doi: {
+                            fez_altmetric: {
+                                as_score: 3,
+                                as_3m: 3,
+                                as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
+                            }
+                        }
                     },
                     {
                         rek_pid: 'UQ:222222',
                         rek_title: 'Test record 2',
-                        rek_date: '2017-01-01T00:00:00Z'
+                        rek_date: '2017-01-01T00:00:00Z',
+                        fez_record_search_key_doi: {
+                            fez_altmetric: {
+                                as_score: 10,
+                                as_3m: 4,
+                                as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
+                            }
+                        },
+                        fez_record_search_key_isi_loc: {
+                            fez_thomson_citations: {
+                                tc_count: 6,
+                                tc_3m: 4,
+                                tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                            }
+                        }
                     },
                     {
                         rek_pid: 'UQ:333333',
                         rek_title: 'Test record 3',
-                        rek_date: '2018-01-01T00:00:00Z'
+                        rek_date: '2018-01-01T00:00:00Z',
+                        fez_record_search_key_isi_loc: {
+                            fez_thomson_citations: {
+                                tc_count: 15,
+                                tc_3m: 8,
+                                tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                            }
+                        },
+                        fez_record_search_key_scopus_id: {
+                            fez_scopus_citations: {
+                                sc_count: 23,
+                                sc_3m: 45,
+                                sc_citation_url: 'http://www.scopus.com/details.php?citation_id=23432423'
+                            }
+                        }
                     }
                 ];
-                const metrics = {
-                    altmetric: [
-                        {
-                            "rek_pid": "UQ:111111",
-                            "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                            "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                            "id": 3638458,
-                            "count": "3",
-                            "difference": "3",
-                            "created": 1424092210,
-                            "last_checked": 1517253819,
-                            "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458"
-                        },
-                        {
-                            "rek_pid": "UQ:222222",
-                            "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                            "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                            "id": 3638458,
-                            "count": "10",
-                            "difference": "4",
-                            "created": 1424092210,
-                            "last_checked": 1517253819,
-                            "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458"
-                        }
-                    ],
-                    thomson: [
-                        {
-                            "rek_pid": "UQ:222222",
-                            "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                            "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                            "id": 3638458,
-                            "count": "6",
-                            "difference": "4",
-                            "created": 1424092210,
-                            "last_checked": 1517253819,
-                            "citation_url": "http://www.wos.com?citation_id=123242"
-                        },
-                        {
-                            "rek_pid": "UQ:333333",
-                            "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                            "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                            "id": 3638458,
-                            "count": "15",
-                            "difference": "8",
-                            "created": 1424092210,
-                            "last_checked": 1517253819,
-                            "citation_url": "http://www.wos.com?details.php?citation_id=548872"
-                        }
-                    ],
-                    scopus: [
-                        {
-                            "rek_pid": "UQ:333333",
-                            "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                            "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                            "id": 3638458,
-                            "count": "23",
-                            "difference": "45",
-                            "created": 1424092210,
-                            "last_checked": 1517253819,
-                            "citation_url": "http://www.scopus.com/details.php?citation_id=23432423"
-                        }
-                    ]
-                };
+
                 const expectedMetrics = [
                     {
                         key: 'scopus',
@@ -427,15 +400,23 @@ describe('Academic data transformers ', () => {
                                 rek_pid: 'UQ:333333',
                                 rek_title: 'Test record 3',
                                 rek_date: '2018-01-01T00:00:00Z',
+                                fez_record_search_key_isi_loc: {
+                                    fez_thomson_citations: {
+                                        tc_count: 15,
+                                        tc_3m: 8,
+                                        tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                                    }
+                                },
+                                fez_record_search_key_scopus_id: {
+                                    fez_scopus_citations: {
+                                        sc_count: 23,
+                                        sc_3m: 45,
+                                        sc_citation_url: 'http://www.scopus.com/details.php?citation_id=23432423'
+                                    }
+                                },
                                 metricData: {
-                                    "rek_pid": "UQ:333333",
-                                    "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                                    "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                                    "id": 3638458,
-                                    "count": "23",
-                                    "difference": "45",
-                                    "created": 1424092210,
-                                    "last_checked": 1517253819,
+                                    "count": 23,
+                                    "difference": 45,
                                     "citation_url": "http://www.scopus.com/details.php?citation_id=23432423",
                                     "source": "scopus"
                                 }
@@ -450,15 +431,23 @@ describe('Academic data transformers ', () => {
                                 rek_pid: 'UQ:222222',
                                 rek_title: 'Test record 2',
                                 rek_date: '2017-01-01T00:00:00Z',
+                                fez_record_search_key_doi: {
+                                    fez_altmetric: {
+                                        as_score: 10,
+                                        as_3m: 4,
+                                        as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
+                                    }
+                                },
+                                fez_record_search_key_isi_loc: {
+                                    fez_thomson_citations: {
+                                        tc_count: 6,
+                                        tc_3m: 4,
+                                        tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                                    }
+                                },
                                 metricData: {
-                                    "rek_pid": "UQ:222222",
-                                    "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                                    "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                                    "id": 3638458,
-                                    "count": "6",
-                                    "difference": "4",
-                                    "created": 1424092210,
-                                    "last_checked": 1517253819,
+                                    "count": 6,
+                                    "difference": 4,
                                     "citation_url": "http://www.wos.com?citation_id=123242",
                                     "source": "thomson"
                                 }
@@ -467,16 +456,24 @@ describe('Academic data transformers ', () => {
                                 rek_pid: 'UQ:333333',
                                 rek_title: 'Test record 3',
                                 rek_date: '2018-01-01T00:00:00Z',
+                                fez_record_search_key_isi_loc: {
+                                    fez_thomson_citations: {
+                                        tc_count: 15,
+                                        tc_3m: 8,
+                                        tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                                    }
+                                },
+                                fez_record_search_key_scopus_id: {
+                                    fez_scopus_citations: {
+                                        sc_count: 23,
+                                        sc_3m: 45,
+                                        sc_citation_url: 'http://www.scopus.com/details.php?citation_id=23432423'
+                                    }
+                                },
                                 metricData: {
-                                    "rek_pid": "UQ:333333",
-                                    "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                                    "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                                    "id": 3638458,
-                                    "count": "15",
-                                    "difference": "8",
-                                    "created": 1424092210,
-                                    "last_checked": 1517253819,
-                                    "citation_url": "http://www.wos.com?details.php?citation_id=548872",
+                                    "count": 15,
+                                    "difference": 8,
+                                    "citation_url": "http://www.wos.com?citation_id=123242",
                                     "source": "thomson"
                                 }
                             }
@@ -489,15 +486,16 @@ describe('Academic data transformers ', () => {
                                 rek_pid: 'UQ:111111',
                                 rek_title: 'Test record 1',
                                 rek_date: '2016-01-01T00:00:00Z',
+                                fez_record_search_key_doi: {
+                                    fez_altmetric: {
+                                        as_score: 3,
+                                        as_3m: 3,
+                                        as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
+                                    }
+                                },
                                 metricData: {
-                                    "rek_pid": "UQ:111111",
-                                    "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                                    "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                                    "id": 3638458,
-                                    "count": "3",
-                                    "difference": "3",
-                                    "created": 1424092210,
-                                    "last_checked": 1517253819,
+                                    "count": 3,
+                                    "difference": 3,
                                     "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
                                     "source": "altmetric"
                                 }
@@ -506,15 +504,23 @@ describe('Academic data transformers ', () => {
                                 rek_pid: 'UQ:222222',
                                 rek_title: 'Test record 2',
                                 rek_date: '2017-01-01T00:00:00Z',
+                                fez_record_search_key_doi: {
+                                    fez_altmetric: {
+                                        as_score: 10,
+                                        as_3m: 4,
+                                        as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
+                                    }
+                                },
+                                fez_record_search_key_isi_loc: {
+                                    fez_thomson_citations: {
+                                        tc_count: 6,
+                                        tc_3m: 4,
+                                        tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                                    }
+                                },
                                 metricData: {
-                                    "rek_pid": "UQ:222222",
-                                    "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                                    "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                                    "id": 3638458,
-                                    "count": "10",
-                                    "difference": "4",
-                                    "created": 1424092210,
-                                    "last_checked": 1517253819,
+                                    "count": 10,
+                                    "difference": 4,
                                     "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
                                     "source": "altmetric"
                                 }
@@ -523,7 +529,7 @@ describe('Academic data transformers ', () => {
                     }
                 ];
 
-                const result = transformers.transformTrendingPublicationsMetricsData({data, filters: {metrics}});
+                const result = transformers.transformTrendingPublicationsMetricsData({data});
                 expect(result).toEqual(expectedMetrics);
             });
 
@@ -532,41 +538,33 @@ describe('Academic data transformers ', () => {
                     {
                         rek_pid: 'UQ:222222',
                         rek_title: 'Test record 2',
-                        rek_date: '2017-01-01T00:00:00Z'
+                        rek_date: '2017-01-01T00:00:00Z',
+                        fez_record_search_key_isi_loc: {
+                            fez_thomson_citations: {
+                                tc_count: 6,
+                                tc_3m: 4,
+                                tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                            }
+                        }
                     },
                     {
                         rek_pid: 'UQ:333333',
                         rek_title: 'Test record 3',
-                        rek_date: '2018-01-01T00:00:00Z'
+                        rek_date: '2018-01-01T00:00:00Z',
+                        fez_record_search_key_isi_loc: {
+                            fez_thomson_citations: {
+                                tc_count: 15,
+                                tc_3m: 8,
+                                tc_citation_url: 'http://www.wos.com?details.php?citation_id=548872'
+                            }
+                        }
                     }
                 ];
-                const metrics = {
-                    thomson: [
-                        {
-                            "rek_pid": "UQ:222222",
-                            "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                            "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                            "id": 3638458,
-                            "count": "6",
-                            "difference": "4",
-                            "created": 1424092210,
-                            "last_checked": 1517253819,
-                            "citation_url": "http://www.wos.com?citation_id=123242"
-                        },
-                        {
-                            "rek_pid": "UQ:333333",
-                            "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                            "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                            "id": 3638458,
-                            "count": "15",
-                            "difference": "8",
-                            "created": 1424092210,
-                            "last_checked": 1517253819,
-                            "citation_url": "http://www.wos.com?details.php?citation_id=548872"
-                        }
-                    ]
-                };
                 const expectedMetrics = [
+                    {
+                        key: 'scopus',
+                        values: []
+                    },
                     {
                         key: 'thomson',
                         values: [
@@ -574,15 +572,16 @@ describe('Academic data transformers ', () => {
                                 rek_pid: 'UQ:222222',
                                 rek_title: 'Test record 2',
                                 rek_date: '2017-01-01T00:00:00Z',
+                                fez_record_search_key_isi_loc: {
+                                    fez_thomson_citations: {
+                                        tc_count: 6,
+                                        tc_3m: 4,
+                                        tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                                    }
+                                },
                                 metricData: {
-                                    "rek_pid": "UQ:222222",
-                                    "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                                    "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                                    "id": 3638458,
-                                    "count": "6",
-                                    "difference": "4",
-                                    "created": 1424092210,
-                                    "last_checked": 1517253819,
+                                    "count": 6,
+                                    "difference": 4,
                                     "citation_url": "http://www.wos.com?citation_id=123242",
                                     "source": "thomson"
                                 }
@@ -591,24 +590,29 @@ describe('Academic data transformers ', () => {
                                 rek_pid: 'UQ:333333',
                                 rek_title: 'Test record 3',
                                 rek_date: '2018-01-01T00:00:00Z',
+                                fez_record_search_key_isi_loc: {
+                                    fez_thomson_citations: {
+                                        tc_count: 15,
+                                        tc_3m: 8,
+                                        tc_citation_url: 'http://www.wos.com?details.php?citation_id=548872'
+                                    }
+                                },
                                 metricData: {
-                                    "rek_pid": "UQ:333333",
-                                    "rek_title": "Evaluation of candidate stromal epithelial cross-talk genes identifies association between risk of serous ovarian cancer and TERT, a cancer susceptibility \"Hot-Spot\"",
-                                    "authors": "Johnatty, Sharon E.;Beesley, Jonathan;Chen, Xiaoqing...",
-                                    "id": 3638458,
-                                    "count": "15",
-                                    "difference": "8",
-                                    "created": 1424092210,
-                                    "last_checked": 1517253819,
+                                    "count": 15,
+                                    "difference": 8,
                                     "citation_url": "http://www.wos.com?details.php?citation_id=548872",
                                     "source": "thomson"
                                 }
                             }
                         ]
-                    }
+                    },
+                    {
+                        key: 'altmetric',
+                        values: []
+                    },
                 ];
 
-                const result = transformers.transformTrendingPublicationsMetricsData({data, filters: {metrics}});
+                const result = transformers.transformTrendingPublicationsMetricsData({data});
                 expect(result).toEqual(expectedMetrics);
             });
         });

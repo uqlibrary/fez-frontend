@@ -107,20 +107,14 @@ mock
         else if (config.params.rule === 'lookup') {
             return [200, mockData.searchKeyList[config.params.search_key]];
         }
-        // ACADEMIC_STATS_PUBLICATIONS_TRENDING_API
-        else if (config.params.rule === 'trending') {
-            return [
-                200,
-                // {total: 0, data: [], filters: []}
-                mockData.trendingPublications
-            ];
-        }
         // SEARCH_INTERNAL_RECORDS_API
         else if (config.params.id || config.params.doi || config.params.title) {
             return [200, mockData.internalTitleSearchList];
         }
         return [404, ['Request not found']];
     })
+    .onGet(routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API().apiUrl)
+    .reply(200, mockData.trendingPublications)
     .onGet(routes.GET_ACML_QUICK_TEMPLATES_API().apiUrl)
     .reply(200, mockData.quickTemplates)
     .onGet(routes.AUTHORS_SEARCH_API({query: '.*'}).apiUrl)

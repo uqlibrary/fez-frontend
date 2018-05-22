@@ -90,7 +90,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/find",
           "render": [Function],
         },
@@ -100,7 +100,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/results",
           "render": [Function],
         },
@@ -110,7 +110,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/new",
           "render": [Function],
         },
@@ -255,7 +255,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         },
         Object {
           "linkTo": "/records/add/find",
-          "primaryText": "Add a missing record",
+          "primaryText": "Add a missing publication",
         },
         Object {
           "linkTo": "/data-collections/mine",
@@ -427,7 +427,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         exact={true}
         key="route_9"
-        pageTitle="Add a missing record to eSpace"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/find"
         render={[Function]}
       />
@@ -440,7 +440,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         exact={true}
         key="route_10"
-        pageTitle="Add a missing record to eSpace"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/results"
         render={[Function]}
       />
@@ -453,7 +453,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         exact={true}
         key="route_11"
-        pageTitle="Add a missing record to eSpace"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/new"
         render={[Function]}
       />
@@ -599,7 +599,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/find",
           "render": [Function],
         },
@@ -609,7 +609,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/results",
           "render": [Function],
         },
@@ -619,7 +619,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/new",
           "render": [Function],
         },
@@ -764,7 +764,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         },
         Object {
           "linkTo": "/records/add/find",
-          "primaryText": "Add a missing record",
+          "primaryText": "Add a missing publication",
         },
         Object {
           "linkTo": "/data-collections/mine",
@@ -920,7 +920,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         exact={true}
         key="route_9"
-        pageTitle="Add a missing record to eSpace"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/find"
         render={[Function]}
       />
@@ -933,7 +933,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         exact={true}
         key="route_10"
-        pageTitle="Add a missing record to eSpace"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/results"
         render={[Function]}
       />
@@ -1301,7 +1301,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/find",
           "render": [Function],
         },
@@ -1311,7 +1311,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/results",
           "render": [Function],
         },
@@ -1321,7 +1321,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/new",
           "render": [Function],
         },
@@ -1466,7 +1466,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/records/add/find",
-          "primaryText": "Add a missing record",
+          "primaryText": "Add a missing publication",
         },
         Object {
           "linkTo": "/data-collections/mine",
@@ -1622,7 +1622,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_9"
-        pageTitle="Add a missing record to eSpace"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/find"
         render={[Function]}
       />
@@ -1635,7 +1635,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_10"
-        pageTitle="Add a missing record to eSpace"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/results"
         render={[Function]}
       />
@@ -1648,7 +1648,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_11"
-        pageTitle="Add a missing record to eSpace"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/new"
         render={[Function]}
       />
@@ -1794,7 +1794,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/find",
           "render": [Function],
         },
@@ -1804,7 +1804,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/results",
           "render": [Function],
         },
@@ -1814,7 +1814,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/new",
           "render": [Function],
         },
@@ -1959,7 +1959,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/records/add/find",
-          "primaryText": "Add a missing record",
+          "primaryText": "Add a missing publication",
         },
         Object {
           "linkTo": "/data-collections/mine",
@@ -2133,7 +2133,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_9"
-        pageTitle="Add a missing record to eSpace"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/find"
         render={[Function]}
       />
@@ -2146,7 +2146,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_10"
-        pageTitle="Add a missing record to eSpace"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/results"
         render={[Function]}
       />
@@ -2159,7 +2159,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_11"
-        pageTitle="Add a missing record to eSpace"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/new"
         render={[Function]}
       />
@@ -2305,7 +2305,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/find",
           "render": [Function],
         },
@@ -2315,7 +2315,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/results",
           "render": [Function],
         },
@@ -2325,7 +2325,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/new",
           "render": [Function],
         },
@@ -2545,7 +2545,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_9"
-        pageTitle="Add a missing record to eSpace"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/find"
         render={[Function]}
       />
@@ -2558,7 +2558,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_10"
-        pageTitle="Add a missing record to eSpace"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/results"
         render={[Function]}
       />
@@ -2571,7 +2571,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_11"
-        pageTitle="Add a missing record to eSpace"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/new"
         render={[Function]}
       />
@@ -2717,7 +2717,7 @@ exports[`Application component should render application with routing for the us
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/find",
           "render": [Function],
         },
@@ -2727,7 +2727,7 @@ exports[`Application component should render application with routing for the us
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/results",
           "render": [Function],
         },
@@ -2737,7 +2737,7 @@ exports[`Application component should render application with routing for the us
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/new",
           "render": [Function],
         },
@@ -2882,7 +2882,7 @@ exports[`Application component should render application with routing for the us
         },
         Object {
           "linkTo": "/records/add/find",
-          "primaryText": "Add a missing record",
+          "primaryText": "Add a missing publication",
         },
         Object {
           "linkTo": "/data-collections/mine",

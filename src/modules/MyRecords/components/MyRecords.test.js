@@ -20,6 +20,7 @@ function setup(testProps, isShallow = true) {
         accountLoading: false,
         publicationsListPagingData: {},
         loadingPublicationsList: false,
+        exportPublicationsLoading: false,
         publicationsList: [],
         publicationsListFacets: {},
         localePages: locale.pages.myResearch,
@@ -36,6 +37,11 @@ describe('MyRecords test', () => {
 
     it('renders loading screen while loading publications ', () => {
         const wrapper = setup({ loadingPublicationsList: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('renders loading screen while export publications loading', () => {
+        const wrapper = setup({ exportPublicationsLoading: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -92,7 +98,6 @@ describe('MyRecords test', () => {
         const wrapper = setup({location: {state: {activeFacets: {filters: {}, ranges: {Year: {from: 2000, to: 2010}}}}}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-
 
     it('state is updated by sub components', () => {
         const testAction = jest.fn();
