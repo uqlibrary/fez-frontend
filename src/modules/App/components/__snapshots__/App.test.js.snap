@@ -3011,14 +3011,8 @@ exports[`Application component should render loading screen while account is loa
   className="layout-fill"
 >
   <AppLoader
-    logoImage={
-      Object {
-        "image": "https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg",
-        "label": "University of Queensland",
-        "link": "http://www.uq.edu.au",
-      }
-    }
-    logoText="UQ eSpace "
+    logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
+    logoText="University of Queensland"
     progressColor="#FFF"
     title="UQ eSpace "
   />

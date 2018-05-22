@@ -107,8 +107,8 @@ export default class App extends PureComponent {
                 <div className="layout-fill">
                     <AppLoader
                         title={locale.global.title}
-                        logoImage={locale.global.logo}
-                        logoText={locale.global.title}/>
+                        logoImage={locale.global.logo.image}
+                        logoText={locale.global.logo.label}/>
                 </div>
             );
         }
