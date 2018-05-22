@@ -26,7 +26,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
     onChange={[Function]}
   >
     <Tab
-      className="publicationTabs"
+      className="publicationTab"
       key="altmetric"
       label="Trending publications"
       value="altmetricTopCitedPublications"
@@ -895,7 +895,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
       </div>
     </Tab>
     <Tab
-      className="publicationTabs"
+      className="publicationTab"
       key="scopus"
       label="Hot papers on Scopus"
       value="scopusTopCitedPublications"
@@ -1764,7 +1764,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
       </div>
     </Tab>
     <Tab
-      className="publicationTabs"
+      className="publicationTab"
       key="thomson"
       label="Hot papers on Web of science"
       value="thomsonTopCitedPublications"

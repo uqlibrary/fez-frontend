@@ -1,5 +1,10 @@
 @import '../../../sass/variables';
 
+
+button.publicationTab {
+  white-space: normal !important;
+}
+
 .topCitedPubs {
   .subTitle {
     height: 40px;
