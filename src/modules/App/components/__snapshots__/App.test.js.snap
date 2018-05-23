@@ -127,7 +127,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
-          "path": "/records/search",
+          "path": undefined,
         },
         Object {
           "pageTitle": "Contact UQ eSpace",
@@ -452,7 +452,6 @@ exports[`Application component should render alert if user is not fez author 1`]
         exact={true}
         key="route_13"
         pageTitle="eSpace search"
-        path="/records/search"
       />
       <Route
         key="route_14"
@@ -606,7 +605,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
-          "path": "/records/search",
+          "path": undefined,
         },
         Object {
           "pageTitle": "Contact UQ eSpace",
@@ -915,7 +914,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         exact={true}
         key="route_13"
         pageTitle="eSpace search"
-        path="/records/search"
       />
       <Route
         key="route_14"
@@ -1273,7 +1271,7 @@ exports[`Application component should render app for account with fez author wit
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
-          "path": "/records/search",
+          "path": undefined,
         },
         Object {
           "pageTitle": "Contact UQ eSpace",
@@ -1582,7 +1580,6 @@ exports[`Application component should render app for account with fez author wit
         exact={true}
         key="route_13"
         pageTitle="eSpace search"
-        path="/records/search"
       />
       <Route
         key="route_14"
@@ -1736,7 +1733,7 @@ exports[`Application component should render app for account with fez author wit
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
-          "path": "/records/search",
+          "path": undefined,
         },
         Object {
           "pageTitle": "Contact UQ eSpace",
@@ -2063,7 +2060,6 @@ exports[`Application component should render app for account with fez author wit
         exact={true}
         key="route_13"
         pageTitle="eSpace search"
-        path="/records/search"
       />
       <Route
         key="route_14"
@@ -2217,7 +2213,7 @@ exports[`Application component should render app for account with fez author wit
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
-          "path": "/records/search",
+          "path": undefined,
         },
         Object {
           "pageTitle": "Contact UQ eSpace",
@@ -2460,7 +2456,6 @@ exports[`Application component should render app for account with fez author wit
         exact={true}
         key="route_13"
         pageTitle="eSpace search"
-        path="/records/search"
       />
       <Route
         key="route_14"
@@ -2614,7 +2609,7 @@ exports[`Application component should render application with routing for the us
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
-          "path": "/records/search",
+          "path": undefined,
         },
         Object {
           "pageTitle": "Contact UQ eSpace",

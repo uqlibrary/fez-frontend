@@ -14,7 +14,6 @@ export const pathConfig = {
     records: {
         mine: '/records/mine',
         possible: '/records/possible',
-        search: '/records/search',
         claim: '/records/claim',
         view: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/records/${pid}`),
         fix: (pid) => (`/records/${pid}/fix`),
@@ -58,7 +57,8 @@ export const pathConfig = {
         proceedingsTitle: (proceedingsTitle) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_2]=${proceedingsTitle}`),
     },
     admin: {
-        masquerade: '/admin/masquerade'
+        masquerade: '/admin/masquerade',
+        search: '/records/search'
     },
     authorIdentifiers: {
         orcid: {
