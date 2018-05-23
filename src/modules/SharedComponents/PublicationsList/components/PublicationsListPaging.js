@@ -44,9 +44,6 @@ export default class PublicationsListPaging extends Component {
         const pageBracket = 5;
         const renderedPages = Array(totalPages).fill()
             .map((page, index) => {
-                // console.log('page ', this.state.current_page);
-                // console.log('index ', index);
-                // console.log('total ', totalPages);
                 if(((index + 1) < (this.state.current_page + pageBracket))
                     && ((index + 1) > (this.state.current_page - pageBracket))
                 ) {
