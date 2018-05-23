@@ -34,7 +34,7 @@ describe('Routes method', () => {
 
     it('should return a list of routes for researcher', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.uqresearcher});
-        expect(testRoutes.length).toEqual(17);
+        expect(testRoutes.length).toEqual(16);
     });
 
     it('should return a list of routes for user who can masquerade', () => {
@@ -50,7 +50,7 @@ describe('Routes method', () => {
 
     it('should return a list of routes for hdr student with ORCID', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.s2222222, forceOrcidRegistration: false, isHdrStudent: true});
-        expect(testRoutes.length).toEqual(17);
+        expect(testRoutes.length).toEqual(16);
     });
 
     it('should render auth required page', () => {

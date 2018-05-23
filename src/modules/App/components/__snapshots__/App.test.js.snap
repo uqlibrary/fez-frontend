@@ -121,15 +121,6 @@ exports[`Application component should render alert if user is not fez author 1`]
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
-          "access": Array [
-            "admin",
-          ],
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "eSpace search",
-          "path": undefined,
-        },
-        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -443,18 +434,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         path="/author-identifiers/google-scholar/link"
       />
       <Route
-        access={
-          Array [
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
         key="route_13"
-        pageTitle="eSpace search"
-      />
-      <Route
-        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -462,12 +442,12 @@ exports[`Application component should render alert if user is not fez author 1`]
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -597,15 +577,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "exact": true,
           "pageTitle": "Google Scholar identifier",
           "path": "/author-identifiers/google-scholar/link",
-        },
-        Object {
-          "access": Array [
-            "admin",
-          ],
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "eSpace search",
-          "path": undefined,
         },
         Object {
           "pageTitle": "Contact UQ eSpace",
@@ -905,18 +876,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         path="/author-identifiers/google-scholar/link"
       />
       <Route
-        access={
-          Array [
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
         key="route_13"
-        pageTitle="eSpace search"
-      />
-      <Route
-        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -924,12 +884,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -1265,15 +1225,6 @@ exports[`Application component should render app for account with fez author wit
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
-          "access": Array [
-            "admin",
-          ],
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "eSpace search",
-          "path": undefined,
-        },
-        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -1571,18 +1522,7 @@ exports[`Application component should render app for account with fez author wit
         path="/author-identifiers/google-scholar/link"
       />
       <Route
-        access={
-          Array [
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
         key="route_13"
-        pageTitle="eSpace search"
-      />
-      <Route
-        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -1590,12 +1530,12 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -1725,15 +1665,6 @@ exports[`Application component should render app for account with fez author wit
           "exact": true,
           "pageTitle": "Google Scholar identifier",
           "path": "/author-identifiers/google-scholar/link",
-        },
-        Object {
-          "access": Array [
-            "admin",
-          ],
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "eSpace search",
-          "path": undefined,
         },
         Object {
           "pageTitle": "Contact UQ eSpace",
@@ -2051,18 +1982,7 @@ exports[`Application component should render app for account with fez author wit
         path="/author-identifiers/google-scholar/link"
       />
       <Route
-        access={
-          Array [
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
         key="route_13"
-        pageTitle="eSpace search"
-      />
-      <Route
-        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -2070,12 +1990,12 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2205,15 +2125,6 @@ exports[`Application component should render app for account with fez author wit
           "exact": true,
           "pageTitle": "Google Scholar identifier",
           "path": "/author-identifiers/google-scholar/link",
-        },
-        Object {
-          "access": Array [
-            "admin",
-          ],
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "eSpace search",
-          "path": undefined,
         },
         Object {
           "pageTitle": "Contact UQ eSpace",
@@ -2447,18 +2358,7 @@ exports[`Application component should render app for account with fez author wit
         path="/author-identifiers/google-scholar/link"
       />
       <Route
-        access={
-          Array [
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
         key="route_13"
-        pageTitle="eSpace search"
-      />
-      <Route
-        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -2466,12 +2366,12 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2601,15 +2501,6 @@ exports[`Application component should render application with routing for the us
           "exact": true,
           "pageTitle": "Google Scholar identifier",
           "path": "/author-identifiers/google-scholar/link",
-        },
-        Object {
-          "access": Array [
-            "admin",
-          ],
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "eSpace search",
-          "path": undefined,
         },
         Object {
           "pageTitle": "Contact UQ eSpace",

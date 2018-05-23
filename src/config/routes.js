@@ -15,6 +15,7 @@ export const pathConfig = {
         mine: '/records/mine',
         possible: '/records/possible',
         claim: '/records/claim',
+        search: '/records/search',
         view: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/records/${pid}`),
         fix: (pid) => (`/records/${pid}/fix`),
         add: {
@@ -57,8 +58,7 @@ export const pathConfig = {
         proceedingsTitle: (proceedingsTitle) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_2]=${proceedingsTitle}`),
     },
     admin: {
-        masquerade: '/admin/masquerade',
-        search: '/records/search'
+        masquerade: '/admin/masquerade'
     },
     authorIdentifiers: {
         orcid: {
@@ -240,7 +240,9 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 access: [roles.researcher, roles.admin],
                 exact: true,
                 pageTitle: locale.pages.googleScholarLink.title
-            },
+            }
+        ] : []),
+        ...(account && account.canMasquerade ? [
             // TODO: remove search route for auth only when public search is enabled
             {
                 path: pathConfig.records.search,
@@ -248,9 +250,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 access: [roles.admin],
                 exact: true,
                 pageTitle: locale.pages.searchRecords.title
-            }
-        ] : []),
-        ...(account && account.canMasquerade ? [
+            },
             {
                 path: pathConfig.admin.masquerade,
                 component: components.Masquerade,
