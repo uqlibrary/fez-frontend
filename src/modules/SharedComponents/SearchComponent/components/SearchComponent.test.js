@@ -44,14 +44,14 @@ describe('SearchComponent', () => {
     });
 
     it('should set search value from prop', () => {
-        const wrapper = setup({showAdvancedSearchButton: true, searchQueryParams: {title: 'i feel lucky'}});
+        const wrapper = setup({showAdvancedSearchButton: true, searchQueryParams: {all: 'i feel lucky'}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should set state when receiving new props', () => {
         // componentWillReceiveProps
         const wrapper = setup({showAdvancedSearchButton: true});
-        wrapper.instance().componentWillReceiveProps({searchQueryParams: {title: 'i feel lucky'}});
+        wrapper.instance().componentWillReceiveProps({searchQueryParams: {all: 'i feel lucky'}});
         wrapper.update();
         expect(wrapper.state().searchText).toEqual('i feel lucky');
     });

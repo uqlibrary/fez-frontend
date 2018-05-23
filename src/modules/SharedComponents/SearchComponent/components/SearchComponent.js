@@ -27,7 +27,7 @@ export default class SearchComponent extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            searchText: props.searchQueryParams && props.searchQueryParams.title || '',
+            searchText: props.searchQueryParams && props.searchQueryParams.all || '',
             showAdvancedSearch: false,
             showMobile: false,
             snackbarOpen: false,
@@ -36,9 +36,9 @@ export default class SearchComponent extends PureComponent {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (!!nextProps.searchQueryParams && nextProps.searchQueryParams.title !== this.state.searchText) {
+        if (!!nextProps.searchQueryParams && nextProps.searchQueryParams.all !== this.state.searchText) {
             this.setState({
-                searchText: nextProps.searchQueryParams.title || ''
+                searchText: nextProps.searchQueryParams.all || ''
             });
         }
     }
@@ -62,7 +62,7 @@ export default class SearchComponent extends PureComponent {
                 activeFacets: {filters: {}, ranges: {}}
             };
 
-            this.props.actions.searchEspacePublications({searchQueryParams: {title: this.state.searchText}, ...defaultQueryParams});
+            this.props.actions.searchEspacePublications({searchQueryParams: {all: this.state.searchText}, ...defaultQueryParams});
             // Hide the mobile search bar after performing a search
             this.setState({showMobile: false});
             // Blur the input so the mobile keyboard is deactivated

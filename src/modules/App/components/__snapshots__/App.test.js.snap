@@ -173,13 +173,7 @@ exports[`Application component should render alert if user is not fez author 1`]
       >
         <div
           className="column search-column"
-        >
-          <withRouter(Connect(SearchComponent))
-            inHeader={true}
-            showMobileSearchButton={true}
-            showPrefixIcon={true}
-          />
-        </div>
+        />
         <div
           className="column is-narrow auth-button-column"
         >
@@ -656,13 +650,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       >
         <div
           className="column search-column"
-        >
-          <withRouter(Connect(SearchComponent))
-            inHeader={true}
-            showMobileSearchButton={true}
-            showPrefixIcon={true}
-          />
-        </div>
+        />
         <div
           className="column is-narrow auth-button-column"
         >
@@ -1014,13 +1002,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       >
         <div
           className="column search-column"
-        >
-          <withRouter(Connect(SearchComponent))
-            inHeader={true}
-            showMobileSearchButton={true}
-            showPrefixIcon={true}
-          />
-        </div>
+        />
         <div
           className="column is-narrow auth-button-column"
         >
@@ -1333,13 +1315,7 @@ exports[`Application component should render app for account with fez author wit
       >
         <div
           className="column search-column"
-        >
-          <withRouter(Connect(SearchComponent))
-            inHeader={true}
-            showMobileSearchButton={true}
-            showPrefixIcon={true}
-          />
-        </div>
+        />
         <div
           className="column is-narrow auth-button-column"
         >
@@ -1800,13 +1776,7 @@ exports[`Application component should render app for account with fez author wit
       >
         <div
           className="column search-column"
-        >
-          <withRouter(Connect(SearchComponent))
-            inHeader={true}
-            showMobileSearchButton={true}
-            showPrefixIcon={true}
-          />
-        </div>
+        />
         <div
           className="column is-narrow auth-button-column"
         >
@@ -2674,13 +2644,7 @@ exports[`Application component should render application with routing for the us
       >
         <div
           className="column search-column"
-        >
-          <withRouter(Connect(SearchComponent))
-            inHeader={true}
-            showMobileSearchButton={true}
-            showPrefixIcon={true}
-          />
-        </div>
+        />
         <div
           className="column is-narrow auth-button-column"
         >

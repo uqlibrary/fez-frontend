@@ -114,6 +114,7 @@ export default class App extends PureComponent {
         }
 
         const isAuthorizedUser = !this.props.accountLoading && this.props.account !== null;
+        const isAdmin = this.props.account && this.props.account.canMasquerade;
         const isAuthorLoading = this.props.accountLoading || this.props.accountAuthorLoading;
         const isOrcidRequired = this.props.author && !this.props.author.aut_orcid_id
             && this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
@@ -189,7 +190,7 @@ export default class App extends PureComponent {
                         <div className="columns is-gapless appbar-right-columns is-mobile">
                             <div className="column search-column">
                                 {
-                                    !isThesisSubmissionPage && isAuthorizedUser &&
+                                    !isThesisSubmissionPage && isAuthorizedUser && isAdmin &&
                                     <SearchComponent inHeader showPrefixIcon showMobileSearchButton />
                                 }
                             </div>

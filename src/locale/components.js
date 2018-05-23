@@ -729,7 +729,7 @@ export default {
                 'Desc',
                 'Asc'
             ],
-            recordsPerPage: [20, 50, 100, 500]
+            recordsPerPage: [20, 50, 100]
         },
         newsFeed: {
             title: 'Latest news'
