@@ -5,7 +5,7 @@ import FlatButton from 'material-ui/RaisedButton';
 import {List, ListItem} from 'material-ui/List';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
-import {publicationTypes, general, routes} from 'config';
+import {publicationTypes, general} from 'config';
 import {locale} from 'locale';
 import DateRange from './DateRange';
 import OpenAccessFilter from './OpenAccessFilter';
@@ -19,7 +19,7 @@ export default class FacetsFilter extends PureComponent {
         renameFacetsList: PropTypes.object,
         disabled: PropTypes.bool,
         showOpenAccessFilter: PropTypes.bool,
-        location: PropTypes.object
+        isMyDataSetPage: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -106,26 +106,19 @@ export default class FacetsFilter extends PureComponent {
     };
 
     _handleResetClick = () => {
-        if (this.props.location.pathname === routes.pathConfig.dataset.mine) {
+        let filters = {};
+        if (this.props.isMyDataSetPage) {
             // wipe the facets, except for the hidden display type
-            this.setState({
-                activeFacets: {
-                    filters: {'Display type': general.PUBLICATION_TYPE_DATA_COLLECTION},
-                    ranges: {}
-                }
-            }, () => {
-                this.props.onFacetsChanged(this.state.activeFacets);
-            });
-        } else {
-            this.setState({
-                activeFacets: {
-                    filters: {},
-                    ranges: {}
-                }
-            }, () => {
-                this.props.onFacetsChanged(this.state.activeFacets);
-            });
+            filters = {'Display type': general.PUBLICATION_TYPE_DATA_COLLECTION};
         }
+        this.setState({
+            activeFacets: {
+                filters: filters,
+                ranges: {}
+            }
+        }, () => {
+            this.props.onFacetsChanged(this.state.activeFacets);
+        });
     };
 
     getNestedListItems = (facetCategory) => {
@@ -186,7 +179,7 @@ export default class FacetsFilter extends PureComponent {
     // My Dataset pages ('Display type = 371') do not display publication types in the filter.
     // Remove the 'Display type' filter (locally), then see if there are still any filters.
     areClientFiltersAvailable() {
-        if (this.props.location.pathname !== routes.pathConfig.dataset.mine) {
+        if (!this.props.isMyDataSetPage) {
             return Object.keys(this.state.activeFacets.filters).length > 0;
         }
 
@@ -207,8 +200,7 @@ export default class FacetsFilter extends PureComponent {
     render() {
         const {yearPublishedCategory, yearPublishedFacet, resetButtonText} = locale.components.facetsFilter;
         const facetsToDisplay = this.getFacetsToDisplay(this.props.facetsData, this.props.excludeFacetsList, this.props.renameFacetsList);
-        const hasActiveFilters =
-            (this.areClientFiltersAvailable()
+        const hasActiveFilters = (this.areClientFiltersAvailable()
             || Object.keys(this.state.activeFacets.ranges).length > 0
             || !!this.state.activeFacets.showOpenAccessOnly);
         if (facetsToDisplay.length === 0 && !hasActiveFilters) return (<span className="facetsFilter empty" />);

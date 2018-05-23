@@ -102,15 +102,14 @@ export default class MyRecords extends PureComponent {
 
     facetsChanged = (activeFacets) => {
         if (this.props.location.pathname === routes.pathConfig.dataset.mine) {
-            const localFacets = this.getMyDatasetFacets(activeFacets);
+            // this is a 'my research dataset' page
             this.setState(
                 {
-                    activeFacets: localFacets,
+                    activeFacets: this.getMyDatasetFacets(activeFacets),
                     page: 1
                 }, this.pushPageHistory
             );
         } else {
-            // this is a 'my research' page
             this.setState(
                 {
                     activeFacets: activeFacets,
@@ -224,7 +223,7 @@ export default class MyRecords extends PureComponent {
                     {
                         // show available filters or selected filters (even if there are no results)
                         ((this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
-                        || (this.state.activeFacets && this.hasDisplayableFilters(this.state.activeFacets.filters))
+                        || (this.state.activeFacets && this.hasDisplayableFilters(this.state.activeFacets))
                         || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)
                         || (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
                         <div className="column is-3 is-hidden-mobile">
@@ -235,7 +234,7 @@ export default class MyRecords extends PureComponent {
                                     activeFacets={this.state.activeFacets}
                                     disabled={this.props.loadingPublicationsList || this.props.exportPublicationsLoading}
                                     excludeFacetsList={txt.facetsFilter.excludeFacetsList}
-                                    location={this.props.location}
+                                    isMyDataSetPage={this.props.location.pathname === routes.pathConfig.dataset.mine}
                                     renameFacetsList={txt.facetsFilter.renameFacetsList}
                                     showOpenAccessFilter/>
                             </StandardRighthandCard>

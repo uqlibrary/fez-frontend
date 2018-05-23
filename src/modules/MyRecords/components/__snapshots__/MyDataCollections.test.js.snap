@@ -298,12 +298,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
               },
             }
           }
-          location={
-            Object {
-              "pathname": "/data-collections/mine",
-              "state": null,
-            }
-          }
+          isMyDataSetPage={true}
           onFacetsChanged={[Function]}
           renameFacetsList={Object {}}
           showOpenAccessFilter={true}
