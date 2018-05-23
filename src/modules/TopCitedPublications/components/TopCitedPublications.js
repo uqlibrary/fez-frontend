@@ -8,6 +8,10 @@ import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
 import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
 
 export default class TopCitedPublications extends PureComponent {
+    static contextTypes = {
+        isMobile: PropTypes.bool
+    };
+
     static propTypes = {
         topCitedPublicationsList: PropTypes.array,
         loadingTopCitedPublications: PropTypes.bool,
@@ -46,7 +50,11 @@ export default class TopCitedPublications extends PureComponent {
                                 this.props.topCitedPublicationsList.sort((source1, source2) => (
                                     txt[source1.key].order - txt[source2.key].order
                                 )).map(({key, values}, metricIndex) => (
-                                    <Tab key={key} label={txt[key].title} value={`${key}TopCitedPublications`} className="publicationTabs">
+                                    <Tab key={key}
+                                        label={this.context.isMobile ? txt[key].mobileTitle : txt[key].title}
+                                        value={`${key}TopCitedPublications`}
+                                        className="publicationTab"
+                                    >
                                         <div className="publicationTabContent">
                                             <div className="topCitedPubs">
                                                 <div className="is-pulled-right">
