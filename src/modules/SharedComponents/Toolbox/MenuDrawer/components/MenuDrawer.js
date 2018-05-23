@@ -14,6 +14,7 @@ export default class MenuDrawer extends Component {
         menuItems: PropTypes.array.isRequired,
         logoImage: PropTypes.string,
         logoText: PropTypes.string,
+        logoLink: PropTypes.string,
         drawerOpen: PropTypes.bool,
         docked: PropTypes.bool,
         onToggleDrawer: PropTypes.func,
@@ -76,7 +77,7 @@ export default class MenuDrawer extends Component {
     render() {
         const txt = menuLocale.footer;
         const {menuItems, onToggleDrawer, drawerOpen, docked, logoImage,
-            logoText, locale } = this.props;
+            logoText, logoLink, locale } = this.props;
 
         if (drawerOpen && !docked) {
             // set focus on menu on mobile view if menu is opened
@@ -95,7 +96,15 @@ export default class MenuDrawer extends Component {
                         <div className="logo-wrapper">
                             <div className="columns is-gapless is-mobile">
                                 <div className="column is-centered">
-                                    {logoImage && <img src={logoImage} alt={logoText}/>}
+                                    {logoImage && logoLink && logoText &&
+                                        <ExternalLink
+                                            href={logoLink}
+                                            title={logoText}
+                                            openInNewIcon={false}
+                                        >
+                                            <img src={logoImage} alt={logoText}/>
+                                        </ExternalLink>
+                                    }
                                 </div>
                                 <div className="column is-narrow is-hidden-tablet menuCloseButton">
                                     <IconButton onClick={onToggleDrawer} aria-label={locale.closeMenuLabel}>

@@ -90,7 +90,7 @@ describe('PublicationsListSorting renders ', () => {
     it('component with non-empty paging data, onExportPublications called', () => {
         const expected = Object.keys(exportFormatToExtensionMap)[0];
         const testFunction = jest.fn();
-        const wrapper = setup({onExportPublications: testFunction});
+        const wrapper = setup({onExportPublications: testFunction, location: {state: {activeFacets: {filters: {}, ranges: {}}}}});
         wrapper.instance().exportPublicationsFormatChanged(expected);
         expect(wrapper.state().exportPublicationsFormat).toEqual(expected);
         expect(testFunction).toHaveBeenCalledWith({exportFormat: expected, ...wrapper.instance().state, activeFacets: wrapper.instance().props.activeFacets});
