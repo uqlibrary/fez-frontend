@@ -245,6 +245,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             {
                 path: pathConfig.records.search,
                 component: components.SearchRecords,
+                access: [roles.admin],
                 exact: true,
                 pageTitle: locale.pages.searchRecords.title
             }
@@ -345,18 +346,17 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.authorStatistics.url(account.id),
                 ...locale.menu.authorStatistics
             },
-            // TODO: remove when public search is enabled
-            {
-                linkTo: pathConfig.records.search,
-                ...locale.menu.search,
-                public: true
-            },
             {
                 divider: true,
                 path: '/234234234242'
             }
         ] : []),
         ...(account && account.canMasquerade ? [
+            // TODO: remove when public search is enabled
+            {
+                linkTo: pathConfig.records.search,
+                ...locale.menu.search
+            },
             {
                 linkTo: pathConfig.admin.masquerade,
                 ...locale.menu.masquerade,
