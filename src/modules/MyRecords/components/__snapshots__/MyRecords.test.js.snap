@@ -122,6 +122,12 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
         </span>
         <PublicationsListSorting
           disabled={false}
+          location={
+            Object {
+              "pathname": "/records/mine",
+              "state": null,
+            }
+          }
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}
@@ -219,6 +225,12 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
         </span>
         <PublicationsListSorting
           disabled={false}
+          location={
+            Object {
+              "pathname": "/records/mine",
+              "state": null,
+            }
+          }
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}
@@ -369,6 +381,57 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
 </StandardPage>
 `;
 
+exports[`MyRecords test renders loading screen while export publications loading 1`] = `
+<StandardPage
+  className=""
+  title="My research"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+        text={
+          <div>
+            We were unable to find any results. You may be able to 
+            <a
+              href="/records/possible"
+            >
+              claim publications we think may be yours
+            </a>
+             or 
+            <a
+              href="/records/add/find"
+            >
+              add a missing publication
+            </a>
+          </div>
+        }
+        title="No publications found"
+      >
+        <div>
+          We were unable to find any results. You may be able to 
+          <a
+            href="/records/possible"
+          >
+            claim publications we think may be yours
+          </a>
+           or 
+          <a
+            href="/records/add/find"
+          >
+            add a missing publication
+          </a>
+        </div>
+      </StandardCard>
+    </div>
+  </div>
+</StandardPage>
+`;
+
 exports[`MyRecords test renders loading screen while loading account data 1`] = `""`;
 
 exports[`MyRecords test renders loading screen while loading publications  1`] = `
@@ -420,6 +483,12 @@ exports[`MyRecords test renders loading screen while loading publications while 
         </span>
         <PublicationsListSorting
           disabled={true}
+          location={
+            Object {
+              "pathname": "/records/mine",
+              "state": null,
+            }
+          }
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}

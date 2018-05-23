@@ -20,7 +20,11 @@ help: {
 export default {
     global: {
         title: `UQ eSpace ${process.env.TITLE_SUFFIX || ''}`,
-        logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
+        logo: {
+            image: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
+            label: 'University of Queensland',
+            link: 'http://www.uq.edu.au'
+        },
         loading: 'Loading...',
         loadingUserAccount: 'Loading user account...',
         mainNavButton: {

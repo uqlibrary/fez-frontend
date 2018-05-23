@@ -348,29 +348,18 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         }
         value={100}
       />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="records-per-page-500"
-        primaryText={500}
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={500}
-      />
     </SelectField>
+  </div>
+  <div
+    className="column is-narrow is-spacer is-hidden-mobile is-hidden-tablet-only"
+  />
+  <div
+    className="column is-hidden-mobile is-hidden-tablet-only"
+  >
+    <ExportPublications
+      disabled={false}
+      onChange={[Function]}
+    />
   </div>
 </div>
 `;

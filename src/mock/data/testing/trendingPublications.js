@@ -145,7 +145,44 @@ export const trendingPublications = {
                 "rek_doi_id": 1519269,
                 "rek_doi_pid": "UQ:330391",
                 "rek_doi_xsdmf_id": null,
-                "rek_doi": "10.4049/jimmunol.1490012"
+                "rek_doi": "10.4049/jimmunol.1490012",
+                "fez_altmetric": {
+                    "as_id": 7912,
+                    "as_amid": 101417,
+                    "as_doi": "10.1038/nature05874",
+                    "as_score": 5,
+                    "as_created": "1393319416",
+                    "as_last_checked": "1525691899",
+                    "as_1d": 0,
+                    "as_2d": 0,
+                    "as_3d": 0,
+                    "as_4d": 0,
+                    "as_5d": 0,
+                    "as_6d": 0,
+                    "as_1w": 0,
+                    "as_1m": 0,
+                    "as_3m": 3,
+                    "as_6m": 5.7,
+                    "as_1y": 5.7,
+                    "as_total_posts_count": 61,
+                    "as_facebook_posts_count": 1,
+                    "as_policy_posts_count": 1,
+                    "as_blogs_posts_count": 28,
+                    "as_googleplus_posts_count": 0,
+                    "as_news_posts_count": 3,
+                    "as_reddit_posts_count": 0,
+                    "as_twitter_posts_count": 7,
+                    "as_syllabi_posts_count": 0,
+                    "as_video_posts_count": 1,
+                    "as_weibo_posts_count": 0,
+                    "as_qa_posts_count": 0,
+                    "as_f1000_posts_count": 3,
+                    "as_wikipedia_posts_count": 15,
+                    "as_pinterest_posts_count": 1,
+                    "as_linkedin_posts_count": 0,
+                    "as_peer_reviews_posts_count": 0,
+                    "as_citation_url": "http://www.altmetric.com/details.php?citation_id=101417"
+                }
             },
             "fez_record_search_key_end_page": {
                 "rek_end_page_id": 5496808,
@@ -478,7 +515,25 @@ export const trendingPublications = {
                 "rek_scopus_id_id": 2395638,
                 "rek_scopus_id_pid": "UQ:330391",
                 "rek_scopus_id_xsdmf_id": null,
-                "rek_scopus_id": "2-s2.0-84899524861"
+                "rek_scopus_id": "2-s2.0-84899524861",
+                "fez_scopus_citations": {
+                    "sc_eid": "2-s2.0-84899524861",
+                    "sc_created": "1526521574",
+                    "sc_last_checked": "1526521574",
+                    "sc_count": 13,
+                    "sc_1d": 0,
+                    "sc_2d": 0,
+                    "sc_3d": 0,
+                    "sc_4d": 0,
+                    "sc_5d": 0,
+                    "sc_6d": 0,
+                    "sc_1w": 0,
+                    "sc_1m": 0,
+                    "sc_3m": 1,
+                    "sc_6m": 0,
+                    "sc_1y": 147,
+                    "sc_citation_url": "http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&src=s&sot=cite&sdt=a&cite=2-s2.0-84899524861"
+                }
             },
             "fez_record_search_key_start_page": {
                 "rek_start_page_id": 5567023,
@@ -889,7 +944,25 @@ export const trendingPublications = {
                 "rek_isi_loc_id": 3986104,
                 "rek_isi_loc_pid": "UQ:103860",
                 "rek_isi_loc_xsdmf_id": null,
-                "rek_isi_loc": "000240470000014"
+                "rek_isi_loc": "000240470000014",
+                "fez_thomson_citations": {
+                    "tc_isi_loc": "000247207500034",
+                    "tc_created": "1526523797",
+                    "tc_last_checked": "1526523797",
+                    "tc_count": 83,
+                    "tc_1d": 0,
+                    "tc_2d": 0,
+                    "tc_3d": 0,
+                    "tc_4d": 0,
+                    "tc_5d": 0,
+                    "tc_6d": 0,
+                    "tc_1w": 0,
+                    "tc_1m": 13,
+                    "tc_3m": 2,
+                    "tc_6m": 44,
+                    "tc_1y": 259,
+                    "tc_citation_url": "http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&SrcAuth=uqueensland&KeyUT=000247207500034"
+                }
             },
             "fez_record_search_key_ismemberof": [
                 {
@@ -1246,44 +1319,5 @@ export const trendingPublications = {
             "rek_pubmed_doc_type_lookup": null
         }
     ],
-    "filters": {
-        "metrics": {
-            "altmetric": [
-                {
-                    "id": "11745",
-                    "count": "5",
-                    "difference": "3",
-                    "created": "1400561980",
-                    "last_checked": "1502572907",
-                    "citation_url": "http:\/\/www.altmetric.com\/details.php?citation_id=2291601",
-                    "rek_pid": "UQ:330391",
-                    "rek_title": "Development and implementation of papillomavirus prophylactic vaccines",
-                    "authors": "Frazer, Ian H."
-                }],
-            "thomson": [
-                {
-                    "id": "21547647",
-                    "count": "83",
-                    "difference": "2",
-                    "created": "1502576871",
-                    "last_checked": "1502576871",
-                    "citation_url": "http:\/\/ezproxy.library.uq.edu.au\/login?url=http:\/\/gateway.isiknowledge.com\/gateway\/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=000240470000014&SrcAuth=uqueensland",
-                    "rek_pid": "UQ:103860",
-                    "rek_title": "Prophylactic HPV vaccines: Underlying mechanisms",
-                    "authors": "Stanley, Margaret;Lowy, Douglas R.;Frazer, Ian"
-                }],
-            "scopus": [
-                {
-                    "id": "15727272",
-                    "count": "13",
-                    "difference": "1",
-                    "created": "1502566706",
-                    "last_checked": "1502566706",
-                    "citation_url": "http:\/\/ezproxy.library.uq.edu.au\/login?url=http:\/\/www.scopus.com\/results\/citedbyresults.url?sort=plf-f&cite=2-s2.0-84899524861&src=s&sot=cite&sdt=a",
-                    "rek_pid": "UQ:330391",
-                    "rek_title": "Development and implementation of papillomavirus prophylactic vaccines",
-                    "authors": "Frazer, Ian H."
-                }]
-        }
-    }
+    "filters": []
 };

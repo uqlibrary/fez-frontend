@@ -2,6 +2,7 @@ import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
 import * as routes from 'repositories/routes';
 import {transformTrendingPublicationsMetricsData} from './academicDataTransformers';
+import {promptForDownload} from './publicationDataTransformers';
 
 /**
  * Get latest publications
@@ -87,6 +88,44 @@ export function searchTrendingPublications() {
             .catch(error => {
                 dispatch({
                     type: actions.TRENDING_PUBLICATIONS_FAILED,
+                    payload: error.message
+                });
+            });
+    };
+}
+
+/**
+ * Export publications list
+ * @param {array} publication list
+ * @param {string} format
+ * @returns {action}
+ */
+export function exportAuthorPublications({exportFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
+    return dispatch => {
+        dispatch({type: actions.EXPORT_PUBLICATIONS_LOADING});
+
+        return get(
+            routes.CURRENT_USER_RECORDS_API({
+                exportFormat: exportFormat,
+                page: page,
+                pageSize: pageSize,
+                sortBy: sortBy,
+                sortDirection: sortDirection,
+                facets: activeFacets
+            }), {
+                responseType: 'blob'
+            })
+            .then(response => {
+                promptForDownload(exportFormat, response);
+
+                dispatch({
+                    type: actions.EXPORT_PUBLICATIONS_LOADED,
+                    payload: exportFormat
+                });
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.EXPORT_PUBLICATIONS_FAILED,
                     payload: error.message
                 });
             });

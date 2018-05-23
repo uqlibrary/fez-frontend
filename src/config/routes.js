@@ -14,8 +14,8 @@ export const pathConfig = {
     records: {
         mine: '/records/mine',
         possible: '/records/possible',
-        search: '/records/search',
         claim: '/records/claim',
+        search: '/records/search',
         view: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/records/${pid}`),
         fix: (pid) => (`/records/${pid}/fix`),
         add: {
@@ -240,16 +240,17 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 access: [roles.researcher, roles.admin],
                 exact: true,
                 pageTitle: locale.pages.googleScholarLink.title
-            },
+            }
+        ] : []),
+        ...(account && account.canMasquerade ? [
             // TODO: remove search route for auth only when public search is enabled
             {
                 path: pathConfig.records.search,
                 component: components.SearchRecords,
+                access: [roles.admin],
                 exact: true,
                 pageTitle: locale.pages.searchRecords.title
-            }
-        ] : []),
-        ...(account && account.canMasquerade ? [
+            },
             {
                 path: pathConfig.admin.masquerade,
                 component: components.Masquerade,
@@ -345,18 +346,17 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.authorStatistics.url(account.id),
                 ...locale.menu.authorStatistics
             },
-            // TODO: remove when public search is enabled
-            {
-                linkTo: pathConfig.records.search,
-                ...locale.menu.search,
-                public: true
-            },
             {
                 divider: true,
                 path: '/234234234242'
             }
         ] : []),
         ...(account && account.canMasquerade ? [
+            // TODO: remove when public search is enabled
+            {
+                linkTo: pathConfig.records.search,
+                ...locale.menu.search
+            },
             {
                 linkTo: pathConfig.admin.masquerade,
                 ...locale.menu.masquerade,

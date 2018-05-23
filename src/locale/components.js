@@ -729,35 +729,40 @@ export default {
                 'Desc',
                 'Asc'
             ],
-            recordsPerPage: [20, 50, 100, 500]
+            recordsPerPage: [20, 50, 100]
         },
         newsFeed: {
             title: 'Latest news'
         },
+        export: {
+            label: 'Export results',
+            format: [
+                {value: 'excel', label: 'Excel File'},
+                {value: 'endnote', label: 'Endnote File'}
+            ],
+            filename: {
+                prefix: 'espace_export',
+                dateFormat: 'YYYYMMDDHHmmss'
+            },
+        },
         searchComponent: {
             searchBoxPlaceholder: 'Search eSpace',
+            ariaInputLabel: 'Enter your search query to search eSpace and then press Enter',
             searchButtonHint: 'Search eSpace',
+            mobileSearchButtonAriaLabel: 'Click to search eSpace',
             advancedSearchButtonText: 'Advanced search',
-            searchButtonText: 'Search'
+            advancedSearchButtonAriaLabel: 'Click to switch to Advanced search',
+            searchButtonText: 'Search',
+            searchButtonAriaLabel: 'Click to search eSpace',
+            simpleSearchToggle: 'Simple search',
+
         },
         whatIsEspace: {
             title: 'What is eSpace?',
-            text: (<div>
-                UQ eSpace is the institutional repository of The University of Queensland. It holds open access publications, research datasets and digitised materials and is the authoritative source for the University’s:
-                <ul>
-                    <li>Research outputs</li>
-                    <li>Research data and metadata</li>
-                    <li>Higher Degree by Research theses</li>
-                </ul>
-
-                The system increases the visibility and accessibility of the University’s research and provides data to:
-                <ul>
-                    <li>UQ Researchers to enhance publication profiles</li>
-                    <li>UQ Academic Portal, UQ DataHub and other internal systems</li>
-                    <li>Australian Government to meet mandatory reporting requirements including Excellence in Research for Australia (ERA)</li>
-                </ul>
-            </div>),
-            readMoreLabel: 'Read more about eSpace',
+            text: (<span>
+                The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility and accessibility of UQ’s scholarly research by enhancing discovery of UQ research via search engines such as Google and Trove...
+            </span>),
+            readMoreLabel: ' read more',
             readMoreTitle: 'Click to read more about UQ eSpace',
             readMoreLink: '/contact'
         }
