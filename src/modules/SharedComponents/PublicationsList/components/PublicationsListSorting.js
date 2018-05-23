@@ -10,7 +10,7 @@ export default class PublicationsListSorting extends PureComponent {
         sortBy: PropTypes.string,
         sortDirection: PropTypes.string,
         pageSize: PropTypes.number,
-        activeFacets: PropTypes.object,
+        location: PropTypes.object,
         onPageSizeChanged: PropTypes.func,
         onSortByChanged: PropTypes.func,
         pagingData: PropTypes.shape({
@@ -71,7 +71,7 @@ export default class PublicationsListSorting extends PureComponent {
         this.setState({
             exportPublicationsFormat: value
         });
-        this.props.onExportPublications({exportFormat: value, ...this.state, activeFacets: this.props.activeFacets});
+        this.props.onExportPublications({exportFormat: value, ...this.props.location.state, ...this.state});
     }
 
     render() {
