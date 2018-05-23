@@ -44,10 +44,12 @@ export default class PublicationsListPaging extends Component {
         const pageBracket = 5;
         const renderedPages = Array(totalPages).fill()
             .map((page, index) => {
-                console.log('page ', this.state.current_page);
-                console.log('index ', index);
-                console.log('total ', totalPages);
-                if(((index + 1) < (this.state.current_page + pageBracket))) {
+                // console.log('page ', this.state.current_page);
+                // console.log('index ', index);
+                // console.log('total ', totalPages);
+                if(((index + 1) < (this.state.current_page + pageBracket))
+                    && ((index + 1) > (this.state.current_page - pageBracket))
+                ) {
                     return (
                         <FlatButton
                             key={index}
@@ -62,7 +64,6 @@ export default class PublicationsListPaging extends Component {
                     return null;
                 }
             });
-        console.log('current page: ', this.state.current_page);
         return (
             <div>
                 {
@@ -83,7 +84,9 @@ export default class PublicationsListPaging extends Component {
                                 </div>
                         }
                         <div className="publicationsListPagingItems column is-hidden-mobile has-text-centered">
+                            {(this.state.current_page - pageBracket >= 1) && '...'}
                             {renderedPages}
+                            {(this.state.current_page + pageBracket < totalPages) && '...'}
                         </div>
                         <div className="column is-hidden-tablet-only is-hidden-desktop has-text-centered">
                             <FlatButton className="pagingTotals"
