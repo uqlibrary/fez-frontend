@@ -222,10 +222,10 @@ export default class MyRecords extends PureComponent {
                     }
                     {
                         // show available filters or selected filters (even if there are no results)
-                        ((this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
-                        || (this.state.activeFacets && this.hasDisplayableFilters(this.state.activeFacets))
-                        || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)
-                        || (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
+                        (this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0) &&
+                        ((this.state.activeFacets && this.hasDisplayableFilters(this.state.activeFacets))
+                            || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)
+                            || (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
                         <div className="column is-3 is-hidden-mobile">
                             <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                 <FacetsFilter
