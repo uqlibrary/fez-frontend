@@ -119,21 +119,21 @@ export default class MyRecords extends PureComponent {
         }
     }
 
-    hasDisplayableFilters = (activeFacets) => {
-        const localFacets = this.getMyDatasetFacets(activeFacets);
-        return localFacets.filters && Object.keys(localFacets.filters).length > 0;
+    hasDisplayableFilters = (activeFilters) => {
+        const localFilters = this.getMyDatasetFacets(activeFilters);
+        return localFilters.filters && Object.keys(localFilters).length > 0;
     }
 
-    getMyDatasetFacets = (activeFacets) => {
+    getMyDatasetFacets = (activeFilters) => {
         // on a 'my research data' page, we dont want the presence of 'Display type' to decide 'facet changed'
         const displayType = 'Display type';
-        const localFacets = Object.assign({}, activeFacets);
-        if (Object.keys(localFacets).length > 0 &&
-            localFacets.hasOwnProperty(displayType) &&
-            localFacets[displayType] === general.PUBLICATION_TYPE_DATA_COLLECTION) {
-            delete localFacets[displayType];
+        const localFilters = Object.assign({}, activeFilters);
+        if (Object.keys(localFilters).length > 0 &&
+            localFilters.hasOwnProperty(displayType) &&
+            localFilters[displayType] === general.PUBLICATION_TYPE_DATA_COLLECTION) {
+            delete localFilters[displayType];
         }
-        return localFacets;
+        return localFilters;
     }
 
     pushPageHistory = () => {
@@ -222,10 +222,10 @@ export default class MyRecords extends PureComponent {
                     }
                     {
                         // show available filters or selected filters (even if there are no results)
-                        (this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0) &&
-                        ((this.state.activeFacets && this.hasDisplayableFilters(this.state.activeFacets))
-                            || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)
-                            || (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
+                        ((this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
+                        || (this.state.activeFacets && this.hasDisplayableFilters(this.state.activeFacets.filters))
+                        || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)
+                        || (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
                         <div className="column is-3 is-hidden-mobile">
                             <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                 <FacetsFilter
