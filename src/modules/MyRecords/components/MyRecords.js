@@ -8,7 +8,8 @@ import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 
 import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
 import {locale} from 'locale';
-import {routes} from 'config';
+import {routes, general} from 'config';
+
 export default class MyRecords extends PureComponent {
     static propTypes = {
         publicationsList: PropTypes.array,
@@ -17,7 +18,10 @@ export default class MyRecords extends PureComponent {
         publicationsListPagingData: PropTypes.object,
         exportPublicationsLoading: PropTypes.bool,
 
+        initialFacets: PropTypes.object,
         accountLoading: PropTypes.bool,
+        localePages: PropTypes.object,
+        thisUrl: PropTypes.string,
 
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
@@ -34,7 +38,8 @@ export default class MyRecords extends PureComponent {
             sortDirection: locale.components.sorting.sortDirection[0],
             activeFacets: {
                 filters: {},
-                ranges: {}
+                ranges: {},
+                ...props.initialFacets
             }
         };
 
@@ -56,7 +61,7 @@ export default class MyRecords extends PureComponent {
         // handle browser back button - set state from location/dispatch action for this state
         if (this.props.location !== newProps.location
             && newProps.history.action === 'POP'
-            && newProps.location.pathname === routes.pathConfig.records.mine) {
+            && newProps.location.pathname === this.props.thisUrl) {
             this.setState({...(!!newProps.location.state ? newProps.location.state : this.initState)}, () => {
                 // only will be called when user clicks back on my records page
                 this.props.actions.searchAuthorPublications({...this.state});
@@ -96,17 +101,44 @@ export default class MyRecords extends PureComponent {
     }
 
     facetsChanged = (activeFacets) => {
-        this.setState(
-            {
-                activeFacets: activeFacets,
-                page: 1
-            }, this.pushPageHistory
-        );
+        if (this.props.location.pathname === routes.pathConfig.dataset.mine) {
+            // this is a 'my research dataset' page
+            this.setState(
+                {
+                    activeFacets: this.getMyDatasetFacets(activeFacets),
+                    page: 1
+                }, this.pushPageHistory
+            );
+        } else {
+            this.setState(
+                {
+                    activeFacets: activeFacets,
+                    page: 1
+                }, this.pushPageHistory
+            );
+        }
+    }
+
+    hasDisplayableFilters = (activeFilters) => {
+        const localFilters = this.getMyDatasetFacets(activeFilters);
+        return localFilters.filters && Object.keys(localFilters).length > 0;
+    }
+
+    getMyDatasetFacets = (activeFilters) => {
+        // on a 'my research data' page, we dont want the presence of 'Display type' to decide 'facet changed'
+        const displayType = 'Display type';
+        const localFilters = Object.assign({}, activeFilters);
+        if (Object.keys(localFilters).length > 0 &&
+            localFilters.hasOwnProperty(displayType) &&
+            localFilters[displayType] === general.PUBLICATION_TYPE_DATA_COLLECTION) {
+            delete localFilters[displayType];
+        }
+        return localFilters;
     }
 
     pushPageHistory = () => {
         this.props.history.push({
-            pathname: `${routes.pathConfig.records.mine}`,
+            pathname: `${this.props.thisUrl}`,
             search: `?ts=${Date.now()}`,
             state: {...this.state}
         });
@@ -119,7 +151,8 @@ export default class MyRecords extends PureComponent {
     }
     render() {
         if (this.props.accountLoading) return null;
-        const txt = locale.pages.myResearch;
+
+        const txt = this.props.localePages;
         const pagingData = this.props.publicationsListPagingData;
         const isLoadingOrExporting = this.props.loadingPublicationsList || this.props.exportPublicationsLoading;
 
@@ -191,7 +224,7 @@ export default class MyRecords extends PureComponent {
                     {
                         // show available filters or selected filters (even if there are no results)
                         ((this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
-                        || (this.state.activeFacets && this.state.activeFacets.filters && Object.keys(this.state.activeFacets.filters).length > 0)
+                        || (this.state.activeFacets && this.hasDisplayableFilters(this.state.activeFacets.filters))
                         || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)
                         || (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
                         <div className="column is-3 is-hidden-mobile">
@@ -202,8 +235,9 @@ export default class MyRecords extends PureComponent {
                                     activeFacets={this.state.activeFacets}
                                     disabled={isLoadingOrExporting}
                                     excludeFacetsList={txt.facetsFilter.excludeFacetsList}
+                                    isMyDataSetPage={this.props.location.pathname === routes.pathConfig.dataset.mine}
                                     renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                    showOpenAccessFilter />
+                                    showOpenAccessFilter/>
                             </StandardRighthandCard>
                         </div>
                     }

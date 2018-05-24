@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MyRecords test renders active filters 1`] = `
+exports[`myDatasets test renders active filters 1`] = `
 <StandardPage
   className=""
-  title="My research"
+  title="My research data"
 >
   <div
     className="columns"
@@ -17,82 +17,36 @@ exports[`MyRecords test renders active filters 1`] = `
           <div>
             We were unable to find any results. You may be able to 
             <a
-              href="/records/possible"
+              href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+              target="_blank"
             >
-              claim publications we think may be yours
+              add a missing dataset
             </a>
-             or 
-            <a
-              href="/records/add/find"
-            >
-              add a missing publication
-            </a>
+            .
           </div>
         }
-        title="No publications found"
+        title="No datasets found"
       >
         <div>
           We were unable to find any results. You may be able to 
           <a
-            href="/records/possible"
+            href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+            target="_blank"
           >
-            claim publications we think may be yours
+            add a missing dataset
           </a>
-           or 
-          <a
-            href="/records/add/find"
-          >
-            add a missing publication
-          </a>
+          .
         </div>
       </StandardCard>
     </div>
-    <div
-      className="column is-3 is-hidden-mobile"
-    >
-      <StandardRighthandCard
-        title="Refine results"
-      >
-        <FacetsFilter
-          activeFacets={
-            Object {
-              "filters": Object {},
-              "ranges": Object {
-                "Year": Object {
-                  "from": 2000,
-                  "to": 2010,
-                },
-              },
-            }
-          }
-          disabled={false}
-          excludeFacetsList={
-            Array [
-              "Scopus document type",
-              "Subtype",
-              "Year published",
-            ]
-          }
-          facetsData={Object {}}
-          isMyDataSetPage={false}
-          onFacetsChanged={[Function]}
-          renameFacetsList={
-            Object {
-              "Display type": "Publication type",
-            }
-          }
-          showOpenAccessFilter={true}
-        />
-      </StandardRighthandCard>
-    </div>
   </div>
 </StandardPage>
 `;
 
-exports[`MyRecords test renders list of publications no facets 1`] = `
+exports[`myDatasets test renders list of publications no facets 1`] = `
 <StandardPage
   className=""
-  title="My research"
+  title="My research data"
 >
   <div
     className="columns"
@@ -104,28 +58,22 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
         className=""
       >
         <span>
-          Displaying records 1 to 20 of 147 total records. 
+          Displaying records 1 to 2 of 2 total records. 
         </span>
         <span>
           Add to this list by 
           <a
-            href="/records/possible"
+            href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+            target="_blank"
           >
-            claiming a publication
-          </a>
-           or 
-          <a
-            href="/records/add/find"
-          >
-            adding a missing publication
+            adding a missing dataset
           </a>
           .
         </span>
         <PublicationsListSorting
-          disabled={false}
           location={
             Object {
-              "pathname": "/records/mine",
+              "pathname": "/data-collections/mine",
               "state": null,
             }
           }
@@ -137,24 +85,22 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
               "current_page": 1,
               "from": 1,
               "per_page": 20,
-              "to": 20,
-              "total": 147,
+              "to": 2,
+              "total": 2,
             }
           }
           sortBy="published_date"
           sortDirection="Desc"
         />
         <PublicationsListPaging
-          disabled={false}
-          loading={false}
           onPageChanged={[Function]}
           pagingData={
             Object {
               "current_page": 1,
               "from": 1,
               "per_page": 20,
-              "to": 20,
-              "total": 147,
+              "to": 2,
+              "total": 2,
             }
           }
         />
@@ -173,16 +119,14 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
           subsetCustomActions={Array []}
         />
         <PublicationsListPaging
-          disabled={false}
-          loading={false}
           onPageChanged={[Function]}
           pagingData={
             Object {
               "current_page": 1,
               "from": 1,
               "per_page": 20,
-              "to": 20,
-              "total": 147,
+              "to": 2,
+              "total": 2,
             }
           }
         />
@@ -192,10 +136,10 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
 </StandardPage>
 `;
 
-exports[`MyRecords test renders list of publications with facets 1`] = `
+exports[`myDatasets test renders list of publications with facets 1`] = `
 <StandardPage
   className=""
-  title="My research"
+  title="My research data"
 >
   <div
     className="columns"
@@ -207,28 +151,22 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
         className=""
       >
         <span>
-          Displaying records 1 to 20 of 147 total records. 
+          Displaying records 1 to 2 of 2 total records. 
         </span>
         <span>
           Add to this list by 
           <a
-            href="/records/possible"
+            href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+            target="_blank"
           >
-            claiming a publication
-          </a>
-           or 
-          <a
-            href="/records/add/find"
-          >
-            adding a missing publication
+            adding a missing dataset
           </a>
           .
         </span>
         <PublicationsListSorting
-          disabled={false}
           location={
             Object {
-              "pathname": "/records/mine",
+              "pathname": "/data-collections/mine",
               "state": null,
             }
           }
@@ -240,24 +178,22 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
               "current_page": 1,
               "from": 1,
               "per_page": 20,
-              "to": 20,
-              "total": 147,
+              "to": 2,
+              "total": 2,
             }
           }
           sortBy="published_date"
           sortDirection="Desc"
         />
         <PublicationsListPaging
-          disabled={false}
-          loading={false}
           onPageChanged={[Function]}
           pagingData={
             Object {
               "current_page": 1,
               "from": 1,
               "per_page": 20,
-              "to": 20,
-              "total": 147,
+              "to": 2,
+              "total": 2,
             }
           }
         />
@@ -276,16 +212,14 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
           subsetCustomActions={Array []}
         />
         <PublicationsListPaging
-          disabled={false}
-          loading={false}
           onPageChanged={[Function]}
           pagingData={
             Object {
               "current_page": 1,
               "from": 1,
               "per_page": 20,
-              "to": 20,
-              "total": 147,
+              "to": 2,
+              "total": 2,
             }
           }
         />
@@ -304,12 +238,12 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
               "ranges": Object {},
             }
           }
-          disabled={false}
           excludeFacetsList={
             Array [
               "Scopus document type",
               "Subtype",
               "Year published",
+              "Display type",
             ]
           }
           facetsData={
@@ -368,13 +302,9 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
               },
             }
           }
-          isMyDataSetPage={false}
+          isMyDataSetPage={true}
           onFacetsChanged={[Function]}
-          renameFacetsList={
-            Object {
-              "Display type": "Publication type",
-            }
-          }
+          renameFacetsList={Object {}}
           showOpenAccessFilter={true}
         />
       </StandardRighthandCard>
@@ -383,69 +313,18 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
 </StandardPage>
 `;
 
-exports[`MyRecords test renders loading screen while export publications loading 1`] = `
+exports[`myDatasets test renders loading screen while loading account data 1`] = `""`;
+
+exports[`myDatasets test renders loading screen while loading publications  1`] = `
 <StandardPage
   className=""
-  title="My research"
->
-  <div
-    className="columns"
-  >
-    <div
-      className="column"
-    >
-      <StandardCard
-        className=""
-        text={
-          <div>
-            We were unable to find any results. You may be able to 
-            <a
-              href="/records/possible"
-            >
-              claim publications we think may be yours
-            </a>
-             or 
-            <a
-              href="/records/add/find"
-            >
-              add a missing publication
-            </a>
-          </div>
-        }
-        title="No publications found"
-      >
-        <div>
-          We were unable to find any results. You may be able to 
-          <a
-            href="/records/possible"
-          >
-            claim publications we think may be yours
-          </a>
-           or 
-          <a
-            href="/records/add/find"
-          >
-            add a missing publication
-          </a>
-        </div>
-      </StandardCard>
-    </div>
-  </div>
-</StandardPage>
-`;
-
-exports[`MyRecords test renders loading screen while loading account data 1`] = `""`;
-
-exports[`MyRecords test renders loading screen while loading publications  1`] = `
-<StandardPage
-  className=""
-  title="My research"
+  title="My research data"
 >
   <div
     className="is-centered"
   >
     <InlineLoader
-      message="Searching for your publications..."
+      message="Searching for your datasets..."
     />
   </div>
   <div
@@ -454,10 +333,10 @@ exports[`MyRecords test renders loading screen while loading publications  1`] =
 </StandardPage>
 `;
 
-exports[`MyRecords test renders loading screen while loading publications while filtering 1`] = `
+exports[`myDatasets test renders loading screen while loading publications while filtering 1`] = `
 <StandardPage
   className=""
-  title="My research"
+  title="My research data"
 >
   <div
     className="columns"
@@ -471,15 +350,10 @@ exports[`MyRecords test renders loading screen while loading publications while 
         <span>
           Add to this list by 
           <a
-            href="/records/possible"
+            href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+            target="_blank"
           >
-            claiming a publication
-          </a>
-           or 
-          <a
-            href="/records/add/find"
-          >
-            adding a missing publication
+            adding a missing dataset
           </a>
           .
         </span>
@@ -487,7 +361,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
           disabled={true}
           location={
             Object {
-              "pathname": "/records/mine",
+              "pathname": "/data-collections/mine",
               "state": null,
             }
           }
@@ -508,7 +382,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
           className="is-centered"
         >
           <InlineLoader
-            message="Retrieving your publications..."
+            message="Retrieving your datasets..."
           />
         </div>
         <PublicationsListPaging
@@ -523,10 +397,10 @@ exports[`MyRecords test renders loading screen while loading publications while 
 </StandardPage>
 `;
 
-exports[`MyRecords test renders no results 1`] = `
+exports[`myDatasets test renders no results 1`] = `
 <StandardPage
   className=""
-  title="My research"
+  title="My research data"
 >
   <div
     className="columns"
@@ -540,33 +414,25 @@ exports[`MyRecords test renders no results 1`] = `
           <div>
             We were unable to find any results. You may be able to 
             <a
-              href="/records/possible"
+              href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+              target="_blank"
             >
-              claim publications we think may be yours
+              add a missing dataset
             </a>
-             or 
-            <a
-              href="/records/add/find"
-            >
-              add a missing publication
-            </a>
+            .
           </div>
         }
-        title="No publications found"
+        title="No datasets found"
       >
         <div>
           We were unable to find any results. You may be able to 
           <a
-            href="/records/possible"
+            href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+            target="_blank"
           >
-            claim publications we think may be yours
+            add a missing dataset
           </a>
-           or 
-          <a
-            href="/records/add/find"
-          >
-            add a missing publication
-          </a>
+          .
         </div>
       </StandardCard>
     </div>
