@@ -711,7 +711,8 @@ export default {
             pageOf: 'Page [currentPage] of [totalPages]',
             totalRecords: '([total] records)',
             pagingBracket: 3,
-            pageButtonAriaLabel: 'Click to select page [pageNumber] of [totalPages] result pages'
+            pageButtonAriaLabel: 'Click to select page [pageNumber] of [totalPages] result pages',
+            firstLastSeparator: '...'
         },
         sorting: {
             pageSize: 'Records per page',

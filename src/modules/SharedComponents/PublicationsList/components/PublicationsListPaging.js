@@ -94,9 +94,9 @@ export default class PublicationsListPaging extends Component {
                         }
                         <div className="publicationsListPagingItems column is-hidden-mobile has-text-centered">
                             {(currentPage - (txt.pagingBracket + 1) >= 1) && this.renderButton(1)}
-                            {(currentPage - (txt.pagingBracket + 2) >= 1) && '...'}
+                            {(currentPage - (txt.pagingBracket + 2) >= 1) && txt.firstLastSeparator}
                             {this.renderPageButtons()}
-                            {(currentPage + (txt.pagingBracket + 2) <= totalPages) && '...'}
+                            {(currentPage + (txt.pagingBracket + 2) <= totalPages) && txt.firstLastSeparator}
                             {(currentPage + (txt.pagingBracket + 1) <= totalPages) && this.renderButton(totalPages)}
                         </div>
                         <div className="column is-hidden-tablet-only is-hidden-desktop has-text-centered">
@@ -112,9 +112,9 @@ export default class PublicationsListPaging extends Component {
                                 <FlatButton
                                     className="pagingNext"
                                     onClick={() => {
-                                        this.pageChanged(this.state.current_page + 1);
+                                        this.pageChanged(currentPage + 1);
                                     }}
-                                    disabled={this.props.disabled || this.state.current_page === totalPages}
+                                    disabled={this.props.disabled || currentPage === totalPages}
                                     label={txt.nextPage}
                                     labelPosition="before"
                                     icon={<NavigationChevronRight/>}/>
