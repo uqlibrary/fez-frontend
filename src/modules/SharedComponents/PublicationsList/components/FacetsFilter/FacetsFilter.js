@@ -5,7 +5,7 @@ import FlatButton from 'material-ui/RaisedButton';
 import {List, ListItem} from 'material-ui/List';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
-import {publicationTypes} from 'config';
+import {publicationTypes, general} from 'config';
 import {locale} from 'locale';
 import DateRange from './DateRange';
 import OpenAccessFilter from './OpenAccessFilter';
@@ -18,7 +18,8 @@ export default class FacetsFilter extends PureComponent {
         excludeFacetsList: PropTypes.array,
         renameFacetsList: PropTypes.object,
         disabled: PropTypes.bool,
-        showOpenAccessFilter: PropTypes.bool
+        showOpenAccessFilter: PropTypes.bool,
+        isMyDataSetPage: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -105,9 +106,14 @@ export default class FacetsFilter extends PureComponent {
     };
 
     _handleResetClick = () => {
+        let filters = {};
+        if (this.props.isMyDataSetPage) {
+            // wipe the facets, except for the hidden display type
+            filters = {'Display type': general.PUBLICATION_TYPE_DATA_COLLECTION};
+        }
         this.setState({
             activeFacets: {
-                filters: {},
+                filters: filters,
                 ranges: {}
             }
         }, () => {
@@ -144,7 +150,7 @@ export default class FacetsFilter extends PureComponent {
             const rawFacet = rawFacets[key];
             const rawFacetLookup = rawFacets[`${key} (lookup)`];
 
-            // ignore facet if it has no data or is in exlude list
+            // ignore facet if it has no data or is in exclude list
             if (key.indexOf('(lookup)') >= 0
                 || excludeFacetsList && excludeFacetsList.indexOf(key) >= 0
                 || (rawFacet.buckets && rawFacet.buckets.length === 0)) return;
@@ -178,10 +184,31 @@ export default class FacetsFilter extends PureComponent {
         return facetsToDisplay;
     };
 
+    // My Dataset pages ('Display type = 371') do not display publication types in the filter.
+    // Remove the 'Display type' filter (locally), then see if there are still any filters.
+    areClientFiltersAvailable() {
+        if (!this.props.isMyDataSetPage) {
+            return Object.keys(this.state.activeFacets.filters).length > 0;
+        }
+
+        const localFilters = Object.assign({}, this.state.activeFacets.filters);
+        if (Object.keys(localFilters).length > 0 &&
+            localFilters.hasOwnProperty('Display type') &&
+            localFilters['Display type'] === general.PUBLICATION_TYPE_DATA_COLLECTION) {
+            delete localFilters['Display type'];
+
+            // return true if there is any other filters in array
+            return Object.keys(localFilters).length > 0;
+        } else {
+            // this shouldnt be reachable - if its a dataset page it should always have at least one filter
+            return Object.keys(this.state.activeFacets.filters).length > 0;
+        }
+    }
+
     render() {
         const {yearPublishedCategory, yearPublishedFacet, resetButtonText} = locale.components.facetsFilter;
         const facetsToDisplay = this.getFacetsToDisplay(this.props.facetsData, this.props.excludeFacetsList, this.props.renameFacetsList);
-        const hasActiveFilters = (Object.keys(this.state.activeFacets.filters).length > 0
+        const hasActiveFilters = (this.areClientFiltersAvailable()
             || Object.keys(this.state.activeFacets.ranges).length > 0
             || !!this.state.activeFacets.showOpenAccessOnly);
         if (facetsToDisplay.length === 0 && !hasActiveFilters) return (<span className="facetsFilter empty" />);
