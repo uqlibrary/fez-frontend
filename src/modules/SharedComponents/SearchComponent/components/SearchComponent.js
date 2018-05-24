@@ -4,6 +4,8 @@ import TextField from 'material-ui/TextField';
 import IconButton from 'material-ui/IconButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import SearchIcon from 'material-ui/svg-icons/action/search';
+import param from 'can-param';
+
 import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 import Snackbar from 'material-ui/Snackbar';
 import {MIN_PUBLIC_SEARCH_TEXT_LENGTH, MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
@@ -36,7 +38,8 @@ export default class SearchComponent extends PureComponent {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (!!nextProps.searchQueryParams && nextProps.searchQueryParams.all !== this.state.searchText) {
+        if (!!nextProps.searchQueryParams && !!nextProps.searchQueryParams.all
+            && nextProps.searchQueryParams.all !== this.state.searchText) {
             this.setState({
                 searchText: nextProps.searchQueryParams.all || ''
             });
@@ -62,13 +65,20 @@ export default class SearchComponent extends PureComponent {
                 activeFacets: {filters: {}, ranges: {}}
             };
 
-            this.props.actions.searchEspacePublications({searchQueryParams: {all: this.state.searchText}, ...defaultQueryParams});
+            const searchQuery = {searchQueryParams: {all: this.state.searchText}, ...defaultQueryParams};
+            this.props.actions.searchEspacePublications(searchQuery);
+
             // Hide the mobile search bar after performing a search
             this.setState({showMobile: false});
             // Blur the input so the mobile keyboard is deactivated
             event && event.target && event.target.blur();
+
             // navigate to search results page
-            this.props.history.push(routes.pathConfig.records.search);
+            this.props.history.push({
+                pathname: routes.pathConfig.records.search,
+                search: param(searchQuery),
+                state: {...searchQuery}
+            });
         }
 
         // Snackbar to give feedback when input is too short or long in the header search when pressing enter

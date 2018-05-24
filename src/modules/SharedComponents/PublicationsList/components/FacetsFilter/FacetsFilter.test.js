@@ -547,6 +547,14 @@ describe('FacetsFilter ', () => {
         expect(JSON.stringify(wrapper.instance().getNestedListItems(facetsCategory))).toBe(JSON.stringify(result));
     });
 
+    it('getNestedListItems returns list of facets correctly for categories where item.key is expected to be an integer but supplied in the string form', () => {
+        const facetsCategory = {"facetTitle":"Display type","facets":[{"title":"Journal Article","key":179,"count":110},{"title":"Conference Paper","key":130,"count":32},{"title":"Book","key":174,"count":3},{"title":"Book Chapter","key":177,"count":1},{"title":"Generic Document","key":202,"count":1}]};
+        const result = [{"key":"0","ref":null,"props":{"className":"facetsLink active ","primaryText":"Journal Article (110)","disabled":false,"leftIcon":{"key":null,"ref":null,"props":{},"_owner":null,"_store":{}},"autoGenerateNestedIndicator":true,"containerElement":"span","disableKeyboardFocus":false,"initiallyOpen":false,"insetChildren":false,"nestedItems":[],"nestedLevel":0,"open":null,"primaryTogglesNestedList":false,"secondaryTextLines":1},"_owner":null,"_store":{}},{"key":"1","ref":null,"props":{"className":"facetsLink ","primaryText":"Conference Paper (32)","disabled":false,"leftIcon":null,"autoGenerateNestedIndicator":true,"containerElement":"span","disableKeyboardFocus":false,"initiallyOpen":false,"insetChildren":false,"nestedItems":[],"nestedLevel":0,"open":null,"primaryTogglesNestedList":false,"secondaryTextLines":1},"_owner":null,"_store":{}},{"key":"2","ref":null,"props":{"className":"facetsLink ","primaryText":"Book (3)","disabled":false,"leftIcon":null,"autoGenerateNestedIndicator":true,"containerElement":"span","disableKeyboardFocus":false,"initiallyOpen":false,"insetChildren":false,"nestedItems":[],"nestedLevel":0,"open":null,"primaryTogglesNestedList":false,"secondaryTextLines":1},"_owner":null,"_store":{}},{"key":"3","ref":null,"props":{"className":"facetsLink ","primaryText":"Book Chapter (1)","disabled":false,"leftIcon":null,"autoGenerateNestedIndicator":true,"containerElement":"span","disableKeyboardFocus":false,"initiallyOpen":false,"insetChildren":false,"nestedItems":[],"nestedLevel":0,"open":null,"primaryTogglesNestedList":false,"secondaryTextLines":1},"_owner":null,"_store":{}},{"key":"4","ref":null,"props":{"className":"facetsLink ","primaryText":"Generic Document (1)","disabled":false,"leftIcon":null,"autoGenerateNestedIndicator":true,"containerElement":"span","disableKeyboardFocus":false,"initiallyOpen":false,"insetChildren":false,"nestedItems":[],"nestedLevel":0,"open":null,"primaryTogglesNestedList":false,"secondaryTextLines":1},"_owner":null,"_store":{}}];
+
+        const wrapper = setup({activeFacets: {filters: {"Display type": "179"}, ranges: {}}});
+        expect(JSON.stringify(wrapper.instance().getNestedListItems(facetsCategory))).toBe(JSON.stringify(result));
+    });
+
     it('_handleResetClick returns empty state for activeFacets', () => {
         const wrapper = setup({});
         wrapper.setState({activeFacets:{ranges: {"Year published": {from: 2010, to: 2015}}, filters: {"Keywords":"Cells"}}});
@@ -587,4 +595,37 @@ describe('FacetsFilter ', () => {
         expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}});
     });
 
+    it('should return false if facet is not in activeFacets', () => {
+        const activeFacets = {
+            filters: {},
+            ranges: {}
+        };
+
+        const wrapper = setup({});
+        expect(wrapper.instance().isFacetFilterActive(activeFacets, 'Display type', 134)).toBeFalsy();
+    });
+
+    it('should return true if Display type is set in activeFacets as an integer value', () => {
+        const activeFacets = {
+            filters: {
+                'Display type': 134
+            },
+            ranges: {}
+        };
+
+        const wrapper = setup({});
+        expect(wrapper.instance().isFacetFilterActive(activeFacets, 'Display type', 134)).toBeTruthy();
+    });
+
+    it('should return true if Display type is set in activeFacets as a string value', () => {
+        const activeFacets = {
+            filters: {
+                'Display type': '134'
+            },
+            ranges: {}
+        };
+
+        const wrapper = setup({});
+        expect(wrapper.instance().isFacetFilterActive(activeFacets, 'Display type', 134)).toBeTruthy();
+    });
 });
