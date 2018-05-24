@@ -222,6 +222,35 @@ export default {
                 renameFacetsList: {'Display type': 'Publication type'}
             }
         },
+        myDatasets: {
+            pageTitle: 'My research data',
+            recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
+            text: (
+                <span>
+                    Add to this list by <a href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315">adding a missing dataset</a>.
+                </span>
+            ),
+            loadingMessage: 'Searching for your datasets...',
+            loadingPagingMessage: 'Retrieving your datasets...',
+            noResultsFound: {
+                title: 'No datasets found',
+                text: (
+                    <div>
+                        We were unable to find any results. You may be able to <a href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315">add a missing dataset</a>.
+                    </div>
+                ),
+            },
+            // this.renderLink(routes.pathConfig.dataset.add, data)
+            facetsFilter: {
+                title: 'Refine results',
+                // help: {
+                //     title: 'Refining your results',
+                //     text: 'Help about ....',
+                //     buttonLabel: 'Ok'
+                // },
+                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published', 'Display type']
+            }
+        },
         claimPublications: {
             title: 'Claim possible publications',
             loadingMessage: 'Searching for possibly your publications...',
