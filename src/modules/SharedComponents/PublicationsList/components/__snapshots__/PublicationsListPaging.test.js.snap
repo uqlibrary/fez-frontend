@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`PublicationsListPaging renders  component renders as empty due to currentpage set outside range 1`] = `
+<span
+  className="publicationsListControls empty"
+/>
+`;
+
 exports[`PublicationsListPaging renders  component with ellipsis paging results 1`] = `
 <div>
   <div
