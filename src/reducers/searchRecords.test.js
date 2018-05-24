@@ -27,7 +27,7 @@ describe('searchRecords reducer', () => {
         wosList = records.wosList;
     });
 
-    it('should return deduplicated list of publications', () => {
+    it('should return de-duplicated list of publications', () => {
 
         const result = deduplicateResults([...espaceList, ...scopusList, ...wosList]);
 
@@ -197,7 +197,7 @@ describe('searchRecords reducer', () => {
         expect(espaceDuplicatesByWOS.map(item => item.rek_pid)).toEqual([8]);
     });
 
-    it('should deduplicates from other sources but keep from espace', () => {
+    it('should deduplicate from other sources but keep from espace', () => {
         /*
          * Below espace list has:
          *  -   2 espace records with same wos id with 1 duplicate wos id from wosList
@@ -377,5 +377,11 @@ describe('searchRecords reducer', () => {
             const {inputList, idSearchKey, expectedDuplicates} = testCase;
             expect(getEspaceDuplicatePublicationsByIdExceptLastItem(inputList, idSearchKey)).toEqual(expectedDuplicates);
         });
+    });
+
+    it('should set search query in state', () => {
+        const testValue = 'i feel lucky';
+        const countState = searchRecordsReducer(initialState, {payload: {title: testValue}, type: actions.SET_SEARCH_QUERY});
+        expect(countState.searchQuery).toEqual({title: testValue});
     });
 });

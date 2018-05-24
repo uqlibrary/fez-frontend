@@ -1,0 +1,434 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`myDatasets test renders active filters 1`] = `
+<StandardPage
+  className=""
+  title="My research data"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+        text={
+          <div>
+            We were unable to find any results. You may be able to 
+            <a
+              href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+            >
+              add a missing dataset
+            </a>
+            .
+          </div>
+        }
+        title="No datasets found"
+      >
+        <div>
+          We were unable to find any results. You may be able to 
+          <a
+            href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+          >
+            add a missing dataset
+          </a>
+          .
+        </div>
+      </StandardCard>
+    </div>
+  </div>
+</StandardPage>
+`;
+
+exports[`myDatasets test renders list of publications no facets 1`] = `
+<StandardPage
+  className=""
+  title="My research data"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+      >
+        <span>
+          Displaying records 1 to 2 of 2 total records. 
+        </span>
+        <span>
+          Add to this list by 
+          <a
+            href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+          >
+            adding a missing dataset
+          </a>
+          .
+        </span>
+        <PublicationsListSorting
+          location={
+            Object {
+              "pathname": "/data-collections/mine",
+              "state": null,
+            }
+          }
+          onPageSizeChanged={[Function]}
+          onSortByChanged={[Function]}
+          pageSize={20}
+          pagingData={
+            Object {
+              "current_page": 1,
+              "from": 1,
+              "per_page": 20,
+              "to": 2,
+              "total": 2,
+            }
+          }
+          sortBy="published_date"
+          sortDirection="Desc"
+        />
+        <PublicationsListPaging
+          onPageChanged={[Function]}
+          pagingData={
+            Object {
+              "current_page": 1,
+              "from": 1,
+              "per_page": 20,
+              "to": 2,
+              "total": 2,
+            }
+          }
+        />
+        <PublicationsList
+          publicationsList={
+            Array [
+              1,
+              2,
+              3,
+            ]
+          }
+          publicationsListSubset={Array []}
+          showDefaultActions={true}
+          showMetrics={false}
+          showSources={false}
+          subsetCustomActions={Array []}
+        />
+        <PublicationsListPaging
+          onPageChanged={[Function]}
+          pagingData={
+            Object {
+              "current_page": 1,
+              "from": 1,
+              "per_page": 20,
+              "to": 2,
+              "total": 2,
+            }
+          }
+        />
+      </StandardCard>
+    </div>
+  </div>
+</StandardPage>
+`;
+
+exports[`myDatasets test renders list of publications with facets 1`] = `
+<StandardPage
+  className=""
+  title="My research data"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+      >
+        <span>
+          Displaying records 1 to 2 of 2 total records. 
+        </span>
+        <span>
+          Add to this list by 
+          <a
+            href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+          >
+            adding a missing dataset
+          </a>
+          .
+        </span>
+        <PublicationsListSorting
+          location={
+            Object {
+              "pathname": "/data-collections/mine",
+              "state": null,
+            }
+          }
+          onPageSizeChanged={[Function]}
+          onSortByChanged={[Function]}
+          pageSize={20}
+          pagingData={
+            Object {
+              "current_page": 1,
+              "from": 1,
+              "per_page": 20,
+              "to": 2,
+              "total": 2,
+            }
+          }
+          sortBy="published_date"
+          sortDirection="Desc"
+        />
+        <PublicationsListPaging
+          onPageChanged={[Function]}
+          pagingData={
+            Object {
+              "current_page": 1,
+              "from": 1,
+              "per_page": 20,
+              "to": 2,
+              "total": 2,
+            }
+          }
+        />
+        <PublicationsList
+          publicationsList={
+            Array [
+              1,
+              2,
+              3,
+            ]
+          }
+          publicationsListSubset={Array []}
+          showDefaultActions={true}
+          showMetrics={false}
+          showSources={false}
+          subsetCustomActions={Array []}
+        />
+        <PublicationsListPaging
+          onPageChanged={[Function]}
+          pagingData={
+            Object {
+              "current_page": 1,
+              "from": 1,
+              "per_page": 20,
+              "to": 2,
+              "total": 2,
+            }
+          }
+        />
+      </StandardCard>
+    </div>
+    <div
+      className="column is-3 is-hidden-mobile"
+    >
+      <StandardRighthandCard
+        title="Refine results"
+      >
+        <FacetsFilter
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          excludeFacetsList={
+            Array [
+              "Scopus document type",
+              "Subtype",
+              "Year published",
+              "Display type",
+            ]
+          }
+          facetsData={
+            Object {
+              "Display type": Object {
+                "buckets": Array [
+                  Object {
+                    "doc_count": 95,
+                    "key": 179,
+                  },
+                  Object {
+                    "doc_count": 34,
+                    "key": 130,
+                  },
+                  Object {
+                    "doc_count": 2,
+                    "key": 177,
+                  },
+                  Object {
+                    "doc_count": 2,
+                    "key": 183,
+                  },
+                  Object {
+                    "doc_count": 1,
+                    "key": 174,
+                  },
+                ],
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 3,
+              },
+              "Keywords": Object {
+                "buckets": Array [
+                  Object {
+                    "doc_count": 15,
+                    "key": "Brca1",
+                  },
+                  Object {
+                    "doc_count": 15,
+                    "key": "Oncology",
+                  },
+                  Object {
+                    "doc_count": 13,
+                    "key": "Breast cancer",
+                  },
+                  Object {
+                    "doc_count": 12,
+                    "key": "Genetics & Heredity",
+                  },
+                  Object {
+                    "doc_count": 10,
+                    "key": "Biochemistry & Molecular Biology",
+                  },
+                ],
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 641,
+              },
+            }
+          }
+          isMyDataSetPage={true}
+          onFacetsChanged={[Function]}
+          renameFacetsList={Object {}}
+          showOpenAccessFilter={true}
+        />
+      </StandardRighthandCard>
+    </div>
+  </div>
+</StandardPage>
+`;
+
+exports[`myDatasets test renders loading screen while loading account data 1`] = `""`;
+
+exports[`myDatasets test renders loading screen while loading publications  1`] = `
+<StandardPage
+  className=""
+  title="My research data"
+>
+  <div
+    className="is-centered"
+  >
+    <InlineLoader
+      message="Searching for your datasets..."
+    />
+  </div>
+  <div
+    className="columns"
+  />
+</StandardPage>
+`;
+
+exports[`myDatasets test renders loading screen while loading publications while filtering 1`] = `
+<StandardPage
+  className=""
+  title="My research data"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+      >
+        <span>
+          Add to this list by 
+          <a
+            href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+          >
+            adding a missing dataset
+          </a>
+          .
+        </span>
+        <PublicationsListSorting
+          disabled={true}
+          location={
+            Object {
+              "pathname": "/data-collections/mine",
+              "state": null,
+            }
+          }
+          onPageSizeChanged={[Function]}
+          onSortByChanged={[Function]}
+          pageSize={20}
+          pagingData={Object {}}
+          sortBy="published_date"
+          sortDirection="Desc"
+        />
+        <PublicationsListPaging
+          disabled={true}
+          loading={true}
+          onPageChanged={[Function]}
+          pagingData={Object {}}
+        />
+        <div
+          className="is-centered"
+        >
+          <InlineLoader
+            message="Retrieving your datasets..."
+          />
+        </div>
+        <PublicationsListPaging
+          disabled={true}
+          loading={true}
+          onPageChanged={[Function]}
+          pagingData={Object {}}
+        />
+      </StandardCard>
+    </div>
+  </div>
+</StandardPage>
+`;
+
+exports[`myDatasets test renders no results 1`] = `
+<StandardPage
+  className=""
+  title="My research data"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+        text={
+          <div>
+            We were unable to find any results. You may be able to 
+            <a
+              href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+            >
+              add a missing dataset
+            </a>
+            .
+          </div>
+        }
+        title="No datasets found"
+      >
+        <div>
+          We were unable to find any results. You may be able to 
+          <a
+            href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+          >
+            add a missing dataset
+          </a>
+          .
+        </div>
+      </StandardCard>
+    </div>
+  </div>
+</StandardPage>
+`;

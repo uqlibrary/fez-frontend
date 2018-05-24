@@ -1,13 +1,19 @@
 import {connect} from 'react-redux';
+import {locale} from 'locale';
 import MyRecords from '../components/MyRecords';
 import {bindActionCreators} from 'redux';
 import {withRouter} from 'react-router-dom';
 import * as actions from 'actions';
+import {routes} from 'config';
 
 const mapStateToProps = (state) => {
     return {
         accountLoading: state.get('accountReducer').accountLoading,
-        ...state.get('publicationsReducer')
+        ...state.get('publicationsReducer'),
+        ...state.get('exportPublicationsReducer'),
+        ...state.get('publicationsReducer'),
+        localePages: locale.pages.myResearch,
+        thisUrl: routes.pathConfig.records.mine,
     };
 };
 

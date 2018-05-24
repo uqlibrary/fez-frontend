@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import {locale} from 'locale';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
+import {ExportPublications} from 'modules/SharedComponents/ExportPublications';
 
 export default class PublicationsListSorting extends PureComponent {
     static propTypes = {
         sortBy: PropTypes.string,
         sortDirection: PropTypes.string,
         pageSize: PropTypes.number,
+        location: PropTypes.object,
         onPageSizeChanged: PropTypes.func,
         onSortByChanged: PropTypes.func,
         pagingData: PropTypes.shape({
@@ -18,7 +20,8 @@ export default class PublicationsListSorting extends PureComponent {
             per_page: PropTypes.number,
             current_page: PropTypes.number
         }),
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        onExportPublications: PropTypes.func,
     };
 
     constructor(props) {
@@ -27,7 +30,7 @@ export default class PublicationsListSorting extends PureComponent {
         this.state = {
             sortBy: props.sortBy || locale.components.sorting.sortBy[0].value,
             sortDirection: props.sortDirection || locale.components.sorting.sortDirection[0],
-            pageSize: props.pageSize || props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20
+            pageSize: props.pageSize || props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20,
         };
     }
 
@@ -36,34 +39,46 @@ export default class PublicationsListSorting extends PureComponent {
             sortBy: nextProps.sortBy,
             sortDirection: nextProps.sortDirection,
             pageSize: nextProps.pageSize,
-            ...nextProps.pagingData
+            ...nextProps.pagingData,
         });
     }
 
     pageSizeChanged = (event, index, value) => {
         this.setState({
-            pageSize: value
+            pageSize: value,
+            exportPublicationsFormat: null
         });
         this.props.onPageSizeChanged(value);
     }
 
     orderDirectionsChanged = (event, index, value) => {
         this.setState({
-            sortDirection: value
+            sortDirection: value,
+            exportPublicationsFormat: null
         });
         this.props.onSortByChanged(this.state.sortBy, value);
     }
 
-    sortByChanged =  (event, index, value) => {
+    sortByChanged = (event, index, value) => {
         this.setState({
-            sortBy: value
+            sortBy: value,
+            exportPublicationsFormat: null
         });
         this.props.onSortByChanged(value, this.state.sortDirection);
     }
 
+    exportPublicationsFormatChanged = (value) => {
+        this.setState({
+            exportPublicationsFormat: value
+        });
+        this.props.onExportPublications({exportFormat: value, ...this.props.location.state, ...this.state});
+    }
+
     render() {
         if (!this.props.pagingData || this.props.pagingData.total === 0) {
-            return (<span className="publicationsListSorting empty"/>);
+            return (
+                <span className="publicationsListSorting empty"/>
+            );
         }
         const txt = locale.components.sorting;
         return (
@@ -79,12 +94,14 @@ export default class PublicationsListSorting extends PureComponent {
                         floatingLabelText={txt.sortLabel}>
                         {
                             txt.sortBy.map((item, index) => {
-                                return (<MenuItem key={index} value={item.value} primaryText={item.label}/>);
+                                return (
+                                    <MenuItem key={index} value={item.value} primaryText={item.label}/>
+                                );
                             })
                         }
                     </SelectField>
                 </div>
-                <div className="column is-narrow is-spacer is-hidden-mobile" />
+                <div className="column is-narrow is-spacer is-hidden-mobile"/>
                 <div className="column is-hidden-mobile">
                     <SelectField
                         id="sortOrder"
@@ -96,12 +113,14 @@ export default class PublicationsListSorting extends PureComponent {
                         floatingLabelText={txt.sortDirectionLabel}>
                         {
                             txt.sortDirection.map((item, index) => {
-                                return (<MenuItem key={index} value={item} primaryText={item}/>);
+                                return (
+                                    <MenuItem key={index} value={item} primaryText={item}/>
+                                );
                             })
                         }
                     </SelectField>
                 </div>
-                <div className="column is-narrow is-spacer is-hidden-mobile" />
+                <div className="column is-narrow is-spacer is-hidden-mobile"/>
                 <div className="column is-hidden-mobile">
                     <SelectField
                         id="pageSize"
@@ -111,11 +130,19 @@ export default class PublicationsListSorting extends PureComponent {
                         disabled={this.props.disabled}
                         onChange={this.pageSizeChanged}
                         floatingLabelText={txt.pageSize}>
-                        <MenuItem value={20} primaryText={20} />
-                        <MenuItem value={50} primaryText={50}/>
-                        <MenuItem value={100} primaryText={100}/>
-                        <MenuItem value={1000} primaryText={1000}/>
+                        {
+                            txt.recordsPerPage.map(number => {
+                                return (<MenuItem key={`records-per-page-${number}`} value={number} primaryText={number} />);
+                            })
+                        }
                     </SelectField>
+                </div>
+                <div className="column is-narrow is-spacer is-hidden-mobile is-hidden-tablet-only"/>
+                <div className="column is-hidden-mobile is-hidden-tablet-only">
+                    <ExportPublications
+                        format={this.state.exportPublicationsFormat}
+                        onChange={this.exportPublicationsFormatChanged}
+                        disabled={this.props.disabled}/>
                 </div>
             </div>
 

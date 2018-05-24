@@ -728,7 +728,43 @@ export default {
             sortDirection: [
                 'Desc',
                 'Asc'
-            ]
+            ],
+            recordsPerPage: [20, 50, 100]
         },
+        newsFeed: {
+            title: 'Latest news'
+        },
+        export: {
+            label: 'Export results',
+            format: [
+                {value: 'excel', label: 'Excel File'},
+                {value: 'endnote', label: 'Endnote File'}
+            ],
+            filename: {
+                prefix: 'espace_export',
+                dateFormat: 'YYYYMMDDHHmmss'
+            },
+        },
+        searchComponent: {
+            searchBoxPlaceholder: 'Search eSpace',
+            ariaInputLabel: 'Enter your search query to search eSpace and then press Enter',
+            searchButtonHint: 'Search eSpace',
+            mobileSearchButtonAriaLabel: 'Click to search eSpace',
+            advancedSearchButtonText: 'Advanced search',
+            advancedSearchButtonAriaLabel: 'Click to switch to Advanced search',
+            searchButtonText: 'Search',
+            searchButtonAriaLabel: 'Click to search eSpace',
+            simpleSearchToggle: 'Simple search',
+
+        },
+        whatIsEspace: {
+            title: 'What is eSpace?',
+            text: (<span>
+                The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility and accessibility of UQ’s scholarly research by enhancing discovery of UQ research via search engines such as Google and Trove...
+            </span>),
+            readMoreLabel: ' read more',
+            readMoreTitle: 'Click to read more about UQ eSpace',
+            readMoreLink: '/contact'
+        }
     }
 };

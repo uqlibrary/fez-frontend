@@ -18,7 +18,7 @@ UQ's branding for Fez is UQ eSpace.
 ## Technology
 - Code: `React (~0.16), Javascript (ES2015 - Babel), Immutable, SASS`
 - State: `Redux, ReduxForm`
-- Design: `Google Material Design - Material UI`
+- Design: `Google Material Design` - [Material UI](https://v0.material-ui.com/#/components/app-bar)
 - Build and dev tools: `Webpack`
 - Unit tests: `Jest`
 - E2E tests: TBA
@@ -29,8 +29,10 @@ This project is using `npm` for dependency management.  Make sure `npm` is insta
 - `npm install`
 - `npm run start` - The website is now running on `http://localhost:3000/` on dev api (requires additional setup of uqlibrary/api project)
 - `npm run start:mock` - The website is now running on `http://localhost:3000/` on mock data
+- `npm run start:url` - The website is now running on `http://dev-espace.library.uq.edu.au:3000` using staging as a backend (add `dev-espace.library.uq.edu.au` to your /etc/hosts)
 - for Hot Reloading to work in IntelliJ products, turn "safe write" off in the settings
-- `npm run start:build` will run production build version on `http://dev-espace.library.uq.edu.au:9000/` and `http://localhost:9000` (add `dev-espace.library.uq.edu.au` to your /etc/hosts)
+- to specify a session token use SESSION_COOKIE_NAME env var .ie SESSION_COOKIE_NAME='mysessiontoken' npm run start:url
+- `npm run start:build` will run production build version on `http://dev-espace.library.uq.edu.au:9000/` and `http://localhost:9000`
 - `npm run start:build:e2e` will run production build version on `http://localhost:9000` with mock data (async loading is not working since chuncks are not saved, navigate directly to required routes)
 
 Mock data is provided for all pages and actions under `src/mock/`.

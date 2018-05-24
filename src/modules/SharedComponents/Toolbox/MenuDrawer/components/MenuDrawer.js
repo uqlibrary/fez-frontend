@@ -6,12 +6,15 @@ import Drawer from 'material-ui/Drawer';
 import IconButton from 'material-ui/IconButton';
 import HardwareKeyboardArrowLeft from 'material-ui/svg-icons/hardware/keyboard-arrow-left';
 import RaisedButton from 'material-ui/RaisedButton';
+import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
+import {default as menuLocale} from 'locale/menu';
 
 export default class MenuDrawer extends Component {
     static propTypes = {
         menuItems: PropTypes.array.isRequired,
         logoImage: PropTypes.string,
         logoText: PropTypes.string,
+        logoLink: PropTypes.string,
         drawerOpen: PropTypes.bool,
         docked: PropTypes.bool,
         onToggleDrawer: PropTypes.func,
@@ -72,8 +75,9 @@ export default class MenuDrawer extends Component {
         )))
 
     render() {
+        const txt = menuLocale.footer;
         const {menuItems, onToggleDrawer, drawerOpen, docked, logoImage,
-            logoText, locale } = this.props;
+            logoText, logoLink, locale } = this.props;
 
         if (drawerOpen && !docked) {
             // set focus on menu on mobile view if menu is opened
@@ -92,7 +96,15 @@ export default class MenuDrawer extends Component {
                         <div className="logo-wrapper">
                             <div className="columns is-gapless is-mobile">
                                 <div className="column is-centered">
-                                    {logoImage && <img src={logoImage} alt={logoText}/>}
+                                    {logoImage && logoLink && logoText &&
+                                        <ExternalLink
+                                            href={logoLink}
+                                            title={logoText}
+                                            openInNewIcon={false}
+                                        >
+                                            <img src={logoImage} alt={logoText}/>
+                                        </ExternalLink>
+                                    }
                                 </div>
                                 <div className="column is-narrow is-hidden-tablet menuCloseButton">
                                     <IconButton onClick={onToggleDrawer} aria-label={locale.closeMenuLabel}>
@@ -123,6 +135,9 @@ export default class MenuDrawer extends Component {
                             }
                         </List>
                         <div id="afterMenuDrawer" tabIndex={-1}/>
+                        <div className="mainMenuFooter">
+                            {txt.cricos.prefix}<ExternalLink href={txt.cricos.link} title={txt.cricos.prefix} openInNewIcon={false} >{txt.cricos.number}</ExternalLink>
+                        </div>
                     </div>
                 }
             </Drawer>

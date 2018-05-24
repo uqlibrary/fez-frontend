@@ -20,7 +20,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -42,6 +42,16 @@ exports[`Application component should render alert if user is not fez author 1`]
           "exact": true,
           "pageTitle": "My research",
           "path": "/records/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research data",
+          "path": "/data-collections/mine",
         },
         Object {
           "access": Array [
@@ -80,7 +90,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/find",
           "render": [Function],
         },
@@ -90,7 +100,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/results",
           "render": [Function],
         },
@@ -100,7 +110,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/new",
           "render": [Function],
         },
@@ -143,6 +153,7 @@ exports[`Application component should render alert if user is not fez author 1`]
     className="AppBar align-center"
     iconElementLeft={
       <IconButton
+        className="main-menu-button"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -162,24 +173,27 @@ exports[`Application component should render alert if user is not fez author 1`]
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns is-gapless appbar-right-columns is-mobile"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
-            }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
+        <div
+          className="column search-column"
         />
+        <div
+          className="column is-narrow auth-button-column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -211,7 +225,8 @@ exports[`Application component should render alert if user is not fez author 1`]
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -229,7 +244,15 @@ exports[`Application component should render alert if user is not fez author 1`]
         },
         Object {
           "linkTo": "/records/add/find",
-          "primaryText": "Add a missing record",
+          "primaryText": "Add a missing publication",
+        },
+        Object {
+          "linkTo": "/data-collections/mine",
+          "primaryText": "My research data",
+        },
+        Object {
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "primaryText": "Add a missing dataset",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
@@ -297,6 +320,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -334,6 +358,19 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_5"
+        pageTitle="My research data"
+        path="/data-collections/mine"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_6"
         pageTitle="Claim possible publications"
         path="/records/possible"
       />
@@ -346,7 +383,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
-        key="route_6"
+        key="route_7"
         pageTitle="Claim a publication"
         path="/records/claim"
       />
@@ -359,7 +396,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
-        key="route_7"
+        key="route_8"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -372,8 +409,8 @@ exports[`Application component should render alert if user is not fez author 1`]
           ]
         }
         exact={true}
-        key="route_8"
-        pageTitle="Add a missing record to eSpace"
+        key="route_9"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/find"
         render={[Function]}
       />
@@ -385,8 +422,8 @@ exports[`Application component should render alert if user is not fez author 1`]
           ]
         }
         exact={true}
-        key="route_9"
-        pageTitle="Add a missing record to eSpace"
+        key="route_10"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/results"
         render={[Function]}
       />
@@ -398,15 +435,15 @@ exports[`Application component should render alert if user is not fez author 1`]
           ]
         }
         exact={true}
-        key="route_10"
-        pageTitle="Add a missing record to eSpace"
+        key="route_11"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/new"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_11"
+        key="route_12"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -419,12 +456,12 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
-        key="route_12"
+        key="route_13"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
-        key="route_13"
+        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -432,12 +469,12 @@ exports[`Application component should render alert if user is not fez author 1`]
       <Route
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_15"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_15"
+        key="route_16"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -468,7 +505,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -490,6 +527,16 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "exact": true,
           "pageTitle": "My research",
           "path": "/records/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research data",
+          "path": "/data-collections/mine",
         },
         Object {
           "access": Array [
@@ -528,7 +575,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/find",
           "render": [Function],
         },
@@ -538,7 +585,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/results",
           "render": [Function],
         },
@@ -548,7 +595,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/new",
           "render": [Function],
         },
@@ -591,6 +638,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     className="AppBar align-center"
     iconElementLeft={
       <IconButton
+        className="main-menu-button"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -610,24 +658,27 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns is-gapless appbar-right-columns is-mobile"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
-            }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
+        <div
+          className="column search-column"
         />
+        <div
+          className="column is-narrow auth-button-column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -659,7 +710,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -677,7 +729,15 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         },
         Object {
           "linkTo": "/records/add/find",
-          "primaryText": "Add a missing record",
+          "primaryText": "Add a missing publication",
+        },
+        Object {
+          "linkTo": "/data-collections/mine",
+          "primaryText": "My research data",
+        },
+        Object {
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "primaryText": "Add a missing dataset",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
@@ -729,6 +789,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -766,6 +827,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_5"
+        pageTitle="My research data"
+        path="/data-collections/mine"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_6"
         pageTitle="Claim possible publications"
         path="/records/possible"
       />
@@ -778,7 +852,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
-        key="route_6"
+        key="route_7"
         pageTitle="Claim a publication"
         path="/records/claim"
       />
@@ -791,7 +865,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
-        key="route_7"
+        key="route_8"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -804,8 +878,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ]
         }
         exact={true}
-        key="route_8"
-        pageTitle="Add a missing record to eSpace"
+        key="route_9"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/find"
         render={[Function]}
       />
@@ -817,8 +891,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ]
         }
         exact={true}
-        key="route_9"
-        pageTitle="Add a missing record to eSpace"
+        key="route_10"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/results"
         render={[Function]}
       />
@@ -830,15 +904,15 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ]
         }
         exact={true}
-        key="route_10"
-        pageTitle="Add a missing record to eSpace"
+        key="route_11"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/new"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_11"
+        key="route_12"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -851,12 +925,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
-        key="route_12"
+        key="route_13"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
-        key="route_13"
+        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -864,12 +938,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       <Route
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_15"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_15"
+        key="route_16"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -920,6 +994,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     className="AppBar align-center"
     iconElementLeft={
       <IconButton
+        className="main-menu-button"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -939,24 +1014,27 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns is-gapless appbar-right-columns is-mobile"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
-            }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
+        <div
+          className="column search-column"
         />
+        <div
+          className="column is-narrow auth-button-column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -988,7 +1066,8 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -1099,7 +1178,7 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -1121,6 +1200,16 @@ exports[`Application component should render app for account with fez author wit
           "exact": true,
           "pageTitle": "My research",
           "path": "/records/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research data",
+          "path": "/data-collections/mine",
         },
         Object {
           "access": Array [
@@ -1159,7 +1248,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/find",
           "render": [Function],
         },
@@ -1169,7 +1258,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/results",
           "render": [Function],
         },
@@ -1179,7 +1268,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/new",
           "render": [Function],
         },
@@ -1222,6 +1311,7 @@ exports[`Application component should render app for account with fez author wit
     className="AppBar align-center"
     iconElementLeft={
       <IconButton
+        className="main-menu-button"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -1241,24 +1331,27 @@ exports[`Application component should render app for account with fez author wit
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns is-gapless appbar-right-columns is-mobile"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
-            }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
+        <div
+          className="column search-column"
         />
+        <div
+          className="column is-narrow auth-button-column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -1290,7 +1383,8 @@ exports[`Application component should render app for account with fez author wit
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -1308,7 +1402,15 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/records/add/find",
-          "primaryText": "Add a missing record",
+          "primaryText": "Add a missing publication",
+        },
+        Object {
+          "linkTo": "/data-collections/mine",
+          "primaryText": "My research data",
+        },
+        Object {
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "primaryText": "Add a missing dataset",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
@@ -1360,6 +1462,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -1397,6 +1500,19 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_5"
+        pageTitle="My research data"
+        path="/data-collections/mine"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_6"
         pageTitle="Claim possible publications"
         path="/records/possible"
       />
@@ -1409,7 +1525,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_6"
+        key="route_7"
         pageTitle="Claim a publication"
         path="/records/claim"
       />
@@ -1422,7 +1538,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_7"
+        key="route_8"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -1435,8 +1551,8 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_8"
-        pageTitle="Add a missing record to eSpace"
+        key="route_9"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/find"
         render={[Function]}
       />
@@ -1448,8 +1564,8 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_9"
-        pageTitle="Add a missing record to eSpace"
+        key="route_10"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/results"
         render={[Function]}
       />
@@ -1461,15 +1577,15 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_10"
-        pageTitle="Add a missing record to eSpace"
+        key="route_11"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/new"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_11"
+        key="route_12"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -1482,12 +1598,12 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_12"
+        key="route_13"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
-        key="route_13"
+        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -1495,12 +1611,12 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_15"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_15"
+        key="route_16"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -1531,7 +1647,7 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -1553,6 +1669,16 @@ exports[`Application component should render app for account with fez author wit
           "exact": true,
           "pageTitle": "My research",
           "path": "/records/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research data",
+          "path": "/data-collections/mine",
         },
         Object {
           "access": Array [
@@ -1591,7 +1717,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/find",
           "render": [Function],
         },
@@ -1601,7 +1727,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/results",
           "render": [Function],
         },
@@ -1611,7 +1737,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/new",
           "render": [Function],
         },
@@ -1654,6 +1780,7 @@ exports[`Application component should render app for account with fez author wit
     className="AppBar align-center"
     iconElementLeft={
       <IconButton
+        className="main-menu-button"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -1673,24 +1800,27 @@ exports[`Application component should render app for account with fez author wit
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns is-gapless appbar-right-columns is-mobile"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
-            }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
+        <div
+          className="column search-column"
         />
+        <div
+          className="column is-narrow auth-button-column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -1722,7 +1852,8 @@ exports[`Application component should render app for account with fez author wit
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -1740,7 +1871,15 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/records/add/find",
-          "primaryText": "Add a missing record",
+          "primaryText": "Add a missing publication",
+        },
+        Object {
+          "linkTo": "/data-collections/mine",
+          "primaryText": "My research data",
+        },
+        Object {
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "primaryText": "Add a missing dataset",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
@@ -1810,6 +1949,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -1847,6 +1987,19 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_5"
+        pageTitle="My research data"
+        path="/data-collections/mine"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_6"
         pageTitle="Claim possible publications"
         path="/records/possible"
       />
@@ -1859,7 +2012,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_6"
+        key="route_7"
         pageTitle="Claim a publication"
         path="/records/claim"
       />
@@ -1872,7 +2025,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_7"
+        key="route_8"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -1885,8 +2038,8 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_8"
-        pageTitle="Add a missing record to eSpace"
+        key="route_9"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/find"
         render={[Function]}
       />
@@ -1898,8 +2051,8 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_9"
-        pageTitle="Add a missing record to eSpace"
+        key="route_10"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/results"
         render={[Function]}
       />
@@ -1911,15 +2064,15 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_10"
-        pageTitle="Add a missing record to eSpace"
+        key="route_11"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/new"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_11"
+        key="route_12"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -1932,12 +2085,12 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_12"
+        key="route_13"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
-        key="route_13"
+        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -1945,12 +2098,12 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_15"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_15"
+        key="route_16"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -1981,7 +2134,7 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -2003,6 +2156,16 @@ exports[`Application component should render app for account with fez author wit
           "exact": true,
           "pageTitle": "My research",
           "path": "/records/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research data",
+          "path": "/data-collections/mine",
         },
         Object {
           "access": Array [
@@ -2041,7 +2204,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/find",
           "render": [Function],
         },
@@ -2051,7 +2214,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/results",
           "render": [Function],
         },
@@ -2061,7 +2224,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/new",
           "render": [Function],
         },
@@ -2104,6 +2267,7 @@ exports[`Application component should render app for account with fez author wit
     className="AppBar align-center"
     iconElementLeft={
       <IconButton
+        className="main-menu-button"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -2123,24 +2287,27 @@ exports[`Application component should render app for account with fez author wit
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns is-gapless appbar-right-columns is-mobile"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
-            }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
+        <div
+          className="column search-column"
         />
+        <div
+          className="column is-narrow auth-button-column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -2181,6 +2348,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_2"
+        pageTitle="eSpace"
         path="/"
       />
       <Route
@@ -2218,6 +2386,19 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_5"
+        pageTitle="My research data"
+        path="/data-collections/mine"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_6"
         pageTitle="Claim possible publications"
         path="/records/possible"
       />
@@ -2230,7 +2411,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_6"
+        key="route_7"
         pageTitle="Claim a publication"
         path="/records/claim"
       />
@@ -2243,7 +2424,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_7"
+        key="route_8"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -2256,8 +2437,8 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_8"
-        pageTitle="Add a missing record to eSpace"
+        key="route_9"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/find"
         render={[Function]}
       />
@@ -2269,8 +2450,8 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_9"
-        pageTitle="Add a missing record to eSpace"
+        key="route_10"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/results"
         render={[Function]}
       />
@@ -2282,15 +2463,15 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_10"
-        pageTitle="Add a missing record to eSpace"
+        key="route_11"
+        pageTitle="Add a missing publication to eSpace"
         path="/records/add/new"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_11"
+        key="route_12"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -2303,12 +2484,12 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_12"
+        key="route_13"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
-        key="route_13"
+        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -2316,12 +2497,12 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_15"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_15"
+        key="route_16"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2352,7 +2533,7 @@ exports[`Application component should render application with routing for the us
         Object {
           "component": [Function],
           "exact": true,
-          "pageTitle": undefined,
+          "pageTitle": "eSpace",
           "path": "/",
         },
         Object {
@@ -2374,6 +2555,16 @@ exports[`Application component should render application with routing for the us
           "exact": true,
           "pageTitle": "My research",
           "path": "/records/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research data",
+          "path": "/data-collections/mine",
         },
         Object {
           "access": Array [
@@ -2412,7 +2603,7 @@ exports[`Application component should render application with routing for the us
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/find",
           "render": [Function],
         },
@@ -2422,7 +2613,7 @@ exports[`Application component should render application with routing for the us
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/results",
           "render": [Function],
         },
@@ -2432,7 +2623,7 @@ exports[`Application component should render application with routing for the us
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a missing record to eSpace",
+          "pageTitle": "Add a missing publication to eSpace",
           "path": "/records/add/new",
           "render": [Function],
         },
@@ -2475,6 +2666,7 @@ exports[`Application component should render application with routing for the us
     className="AppBar align-center"
     iconElementLeft={
       <IconButton
+        className="main-menu-button"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -2494,24 +2686,27 @@ exports[`Application component should render application with routing for the us
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns is-gapless appbar-right-columns is-mobile"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
-            }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
+        <div
+          className="column search-column"
         />
+        <div
+          className="column is-narrow auth-button-column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -2543,7 +2738,8 @@ exports[`Application component should render application with routing for the us
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -2561,7 +2757,15 @@ exports[`Application component should render application with routing for the us
         },
         Object {
           "linkTo": "/records/add/find",
-          "primaryText": "Add a missing record",
+          "primaryText": "Add a missing publication",
+        },
+        Object {
+          "linkTo": "/data-collections/mine",
+          "primaryText": "My research data",
+        },
+        Object {
+          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "primaryText": "Add a missing dataset",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
@@ -2629,10 +2833,16 @@ exports[`Application component should render for anon user 1`] = `
           "regExPath": "/records/(UQ:[a-z0-9]+)",
         },
         Object {
+          "component": [Function],
           "exact": true,
-          "pageTitle": "Contact UQ eSpace",
+          "pageTitle": "eSpace",
           "path": "/",
-          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/dashboard",
         },
         Object {
           "pageTitle": "Page not found",
@@ -2645,6 +2855,7 @@ exports[`Application component should render for anon user 1`] = `
     className="AppBar align-center"
     iconElementLeft={
       <IconButton
+        className="main-menu-button"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -2664,24 +2875,27 @@ exports[`Application component should render for anon user 1`] = `
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns is-gapless appbar-right-columns is-mobile"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
-            }
-          }
-          isAuthorizedUser={false}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText=""
+        <div
+          className="column search-column"
         />
+        <div
+          className="column is-narrow auth-button-column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
+            isAuthorizedUser={false}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText=""
+          />
+        </div>
       </div>
     }
     iconStyleLeft={
@@ -2713,7 +2927,8 @@ exports[`Application component should render for anon user 1`] = `
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -2774,14 +2989,21 @@ exports[`Application component should render for anon user 1`] = `
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
+        component={[Function]}
         exact={true}
         key="route_2"
-        pageTitle="Contact UQ eSpace"
+        pageTitle="eSpace"
         path="/"
-        render={[Function]}
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_3"
+        pageTitle="eSpace"
+        path="/dashboard"
+      />
+      <Route
+        key="route_4"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2798,7 +3020,7 @@ exports[`Application component should render loading screen while account is loa
 >
   <AppLoader
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoText="University of Queensland"
     progressColor="#FFF"
     title="UQ eSpace "
   />
@@ -2845,6 +3067,7 @@ exports[`Application component should render thesis submission for HDR without m
     className="AppBar align-center"
     iconElementLeft={
       <IconButton
+        className="main-menu-button"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -2864,24 +3087,27 @@ exports[`Application component should render thesis submission for HDR without m
     }
     iconElementRight={
       <div
-        style={
-          Object {
-            "marginTop": "-10px",
-          }
-        }
+        className="columns is-gapless appbar-right-columns is-mobile"
       >
-        <AuthButton
-          hoveredStyle={
-            Object {
-              "backgroundColor": "rgba(0,0,0,0.3)",
-              "borderRadius": "50%",
-            }
-          }
-          isAuthorizedUser={true}
-          onClick={[Function]}
-          signInTooltipText="Log in"
-          signOutTooltipText="Log out - undefined"
+        <div
+          className="column search-column"
         />
+        <div
+          className="column is-narrow auth-button-column"
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
       </div>
     }
     iconStyleLeft={

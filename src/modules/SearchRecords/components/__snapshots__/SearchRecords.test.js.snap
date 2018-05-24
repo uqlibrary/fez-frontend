@@ -1,0 +1,417 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchRecords page should render loading screen while loading publications while filtering 1`] = `
+<StandardPage
+  className="page-search-records"
+  title="eSpace search"
+>
+  <StandardCard
+    className="search-component"
+  >
+    <withRouter(Connect(SearchComponent))
+      className="search-body"
+    />
+  </StandardCard>
+  <div
+    className="is-centered"
+  >
+    <InlineLoader
+      message="Searching for publications..."
+    />
+  </div>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+      >
+        <PublicationsListSorting
+          disabled={true}
+          onPageSizeChanged={[Function]}
+          onSortByChanged={[Function]}
+          pageSize={20}
+          sortBy="published_date"
+          sortDirection="Desc"
+        />
+        <PublicationsListPaging
+          disabled={true}
+          loading={true}
+          onPageChanged={[Function]}
+        />
+        <div
+          className="is-centered"
+        >
+          <InlineLoader
+            message="Searching for publications..."
+          />
+        </div>
+        <PublicationsListPaging
+          disabled={true}
+          loading={true}
+          onPageChanged={[Function]}
+        />
+      </StandardCard>
+    </div>
+  </div>
+</StandardPage>
+`;
+
+exports[`SearchRecords page should render loading screen while loading search results 1`] = `
+<StandardPage
+  className="page-search-records"
+  title="eSpace search"
+>
+  <StandardCard
+    className="search-component"
+  >
+    <withRouter(Connect(SearchComponent))
+      className="search-body"
+    />
+  </StandardCard>
+  <div
+    className="is-centered"
+  >
+    <InlineLoader
+      message="Searching for publications..."
+    />
+  </div>
+  <div
+    className="columns"
+  />
+</StandardPage>
+`;
+
+exports[`SearchRecords page should render no results 1`] = `
+<StandardPage
+  className="page-search-records"
+  title="eSpace search"
+>
+  <StandardCard
+    className="search-component"
+  >
+    <withRouter(Connect(SearchComponent))
+      className="search-body"
+    />
+  </StandardCard>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+        text={
+          <div>
+            We were unable to find any results.
+          </div>
+        }
+        title="No publications found"
+      >
+        <div>
+          We were unable to find any results.
+        </div>
+      </StandardCard>
+    </div>
+  </div>
+</StandardPage>
+`;
+
+exports[`SearchRecords page should render placeholders 1`] = `
+<StandardPage
+  className="page-search-records"
+  title="eSpace search"
+>
+  <StandardCard
+    className="search-component"
+  >
+    <withRouter(Connect(SearchComponent))
+      className="search-body"
+    />
+  </StandardCard>
+  <div
+    className="columns"
+  />
+</StandardPage>
+`;
+
+exports[`SearchRecords page should show available filters or selected filters if activeFacets OA selected (even if there are no results) 1`] = `
+<StandardPage
+  className="page-search-records"
+  title="eSpace search"
+>
+  <StandardCard
+    className="search-component"
+  >
+    <withRouter(Connect(SearchComponent))
+      className="search-body"
+    />
+  </StandardCard>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+        text={
+          <div>
+            We were unable to find any results.
+          </div>
+        }
+        title="No publications found"
+      >
+        <div>
+          We were unable to find any results.
+        </div>
+      </StandardCard>
+    </div>
+    <div
+      className="column is-3 is-hidden-mobile"
+    >
+      <StandardRighthandCard
+        title="Refine results"
+      >
+        <FacetsFilter
+          activeFacets={
+            Object {
+              "showOpenAccessOnly": true,
+            }
+          }
+          disabled={false}
+          excludeFacetsList={
+            Array [
+              "Scopus document type",
+              "Subtype",
+              "Year published",
+            ]
+          }
+          onFacetsChanged={[Function]}
+          renameFacetsList={
+            Object {
+              "Display type": "Publication type",
+            }
+          }
+          showOpenAccessFilter={true}
+        />
+      </StandardRighthandCard>
+    </div>
+  </div>
+</StandardPage>
+`;
+
+exports[`SearchRecords page should show available filters or selected filters if activeFacets filter selected (even if there are no results) 1`] = `
+<StandardPage
+  className="page-search-records"
+  title="eSpace search"
+>
+  <StandardCard
+    className="search-component"
+  >
+    <withRouter(Connect(SearchComponent))
+      className="search-body"
+    />
+  </StandardCard>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+        text={
+          <div>
+            We were unable to find any results.
+          </div>
+        }
+        title="No publications found"
+      >
+        <div>
+          We were unable to find any results.
+        </div>
+      </StandardCard>
+    </div>
+    <div
+      className="column is-3 is-hidden-mobile"
+    >
+      <StandardRighthandCard
+        title="Refine results"
+      >
+        <FacetsFilter
+          activeFacets={
+            Object {
+              "filters": Object {
+                "Display type": 179,
+              },
+            }
+          }
+          disabled={false}
+          excludeFacetsList={
+            Array [
+              "Scopus document type",
+              "Subtype",
+              "Year published",
+            ]
+          }
+          onFacetsChanged={[Function]}
+          renameFacetsList={
+            Object {
+              "Display type": "Publication type",
+            }
+          }
+          showOpenAccessFilter={true}
+        />
+      </StandardRighthandCard>
+    </div>
+  </div>
+</StandardPage>
+`;
+
+exports[`SearchRecords page should show available filters or selected filters if activeFacets range selected (even if there are no results) 1`] = `
+<StandardPage
+  className="page-search-records"
+  title="eSpace search"
+>
+  <StandardCard
+    className="search-component"
+  >
+    <withRouter(Connect(SearchComponent))
+      className="search-body"
+    />
+  </StandardCard>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+        text={
+          <div>
+            We were unable to find any results.
+          </div>
+        }
+        title="No publications found"
+      >
+        <div>
+          We were unable to find any results.
+        </div>
+      </StandardCard>
+    </div>
+    <div
+      className="column is-3 is-hidden-mobile"
+    >
+      <StandardRighthandCard
+        title="Refine results"
+      >
+        <FacetsFilter
+          activeFacets={
+            Object {
+              "ranges": Object {
+                "Year published": Object {
+                  "from": 2015,
+                  "to": 2018,
+                },
+              },
+            }
+          }
+          disabled={false}
+          excludeFacetsList={
+            Array [
+              "Scopus document type",
+              "Subtype",
+              "Year published",
+            ]
+          }
+          onFacetsChanged={[Function]}
+          renameFacetsList={
+            Object {
+              "Display type": "Publication type",
+            }
+          }
+          showOpenAccessFilter={true}
+        />
+      </StandardRighthandCard>
+    </div>
+  </div>
+</StandardPage>
+`;
+
+exports[`SearchRecords page should show available filters or selected filters if publicationsListFacets returned (even if there are no results) 1`] = `
+<StandardPage
+  className="page-search-records"
+  title="eSpace search"
+>
+  <StandardCard
+    className="search-component"
+  >
+    <withRouter(Connect(SearchComponent))
+      className="search-body"
+    />
+  </StandardCard>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+        text={
+          <div>
+            We were unable to find any results.
+          </div>
+        }
+        title="No publications found"
+      >
+        <div>
+          We were unable to find any results.
+        </div>
+      </StandardCard>
+    </div>
+    <div
+      className="column is-3 is-hidden-mobile"
+    >
+      <StandardRighthandCard
+        title="Refine results"
+      >
+        <FacetsFilter
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          disabled={false}
+          excludeFacetsList={
+            Array [
+              "Scopus document type",
+              "Subtype",
+              "Year published",
+            ]
+          }
+          facetsData={
+            Object {
+              "Another facet": 2,
+              "Some facet": 1,
+            }
+          }
+          onFacetsChanged={[Function]}
+          renameFacetsList={
+            Object {
+              "Display type": "Publication type",
+            }
+          }
+          showOpenAccessFilter={true}
+        />
+      </StandardRighthandCard>
+    </div>
+  </div>
+</StandardPage>
+`;

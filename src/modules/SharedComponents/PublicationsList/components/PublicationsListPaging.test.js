@@ -123,6 +123,32 @@ describe('PublicationsListPaging renders ', () => {
         expect(previousPage.length).toBe(1);
     });
 
+    it('component with ellipsis paging results', () => {
+        const data = {
+            from: 501,
+            to: 520,
+            total: 1000,
+            per_page: 20,
+            current_page: 10
+        };
+        const wrapper = setup({pagingData: data});
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        const pages = wrapper.find('.publicationsListPaging .page');
+        expect(pages.length).toBe(9);
+
+        const selectedPage = wrapper.find('.publicationsListPaging .page.selectedPage');
+        expect(selectedPage.length).toBe(1);
+        expect(selectedPage.props().label).toBe(10);
+
+        const nextPage = wrapper.find('.pagingNext');
+        expect(nextPage.length).toBe(1);
+
+        const previousPage = wrapper.find('.pagingPrevious');
+        expect(previousPage.length).toBe(1);
+    });
+
+
     it('component with all fields disabled', () => {
         const data = {
             from: 1,

@@ -4,7 +4,7 @@ import {default as formLocale} from 'locale/publicationForm';
 const fullPath = process.env.BRANCH === 'production' ? 'https://espace.library.uq.edu.au' : 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 
-export const pathConfig =  {
+export const pathConfig = {
     index: '/',
     dashboard: '/dashboard',
     browse: '/browse',
@@ -15,6 +15,7 @@ export const pathConfig =  {
         mine: '/records/mine',
         possible: '/records/possible',
         claim: '/records/claim',
+        search: '/records/search',
         view: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/records/${pid}`),
         fix: (pid) => (`/records/${pid}/fix`),
         add: {
@@ -24,7 +25,7 @@ export const pathConfig =  {
         }
     },
     dataset: {
-        mine: `${fullPath}/my_research_data_claimed.php`,
+        mine: '/data-collections/mine',
         add: `${fullPath}/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315`,
     },
     collection: {
@@ -78,7 +79,7 @@ export const pathConfig =  {
 };
 
 // a duplicate list of routes for
-const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new',
+const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new', '/records/search',
     '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
     '/admin/masquerade', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
 
@@ -103,31 +104,49 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             pageTitle: locale.pages.viewRecord.title,
             regExPath: pathConfig.records.view(`(${pidRegExp})`)
         },
+        // TODO: enable search route for public users
+        // {
+        //     path: pathConfig.records.search,
+        //     component: components.SearchRecords,
+        //     exact: true,
+        //     pageTitle: locale.pages.searchRecords.title
+        // },
         ...(!account
-            ? [{
-                path: pathConfig.index,
-                render: () => components.StandardPage({...locale.pages.contact}),
-                exact: true,
-                pageTitle: locale.pages.contact.title
-            }] : [])
+            ? [
+                {
+                    path: pathConfig.index,
+                    component: components.Index,
+                    exact: true,
+                    pageTitle: locale.pages.index.title
+                },
+                {
+                    path: pathConfig.dashboard,
+                    component: components.Index,
+                    exact: true,
+                    pageTitle: locale.pages.index.title
+                }]
+            : [])
     ];
-
-    const thesisSubmissionPages = (account ? [
-        {
-            path: pathConfig.hdrSubmission,
-            render: isHdrStudent
-                ? () => components.ThesisSubmission({isHdrThesis: true})
-                : () => components.StandardPage({...locale.pages.thesisSubmissionDenied}),
-            pageTitle: formLocale.thesisSubmission.hdrTitle
-        },
-        {
-            path: pathConfig.sbsSubmission,
-            render: isHdrStudent
-                ? () => components.ThesisSubmission({isHdrThesis: false})
-                : () => components.StandardPage({...locale.pages.thesisSubmissionDenied}),
-            pageTitle: formLocale.thesisSubmission.sbsTitle
-        },
-    ] : []);
+    const thesisSubmissionPages = [
+        ...(account
+            ? [
+                {
+                    path: pathConfig.hdrSubmission,
+                    render: isHdrStudent
+                        ? () => components.ThesisSubmission({isHdrThesis: true})
+                        : () => components.StandardPage({...locale.pages.thesisSubmissionDenied}),
+                    pageTitle: formLocale.thesisSubmission.hdrTitle
+                },
+                {
+                    path: pathConfig.sbsSubmission,
+                    render: isHdrStudent
+                        ? () => components.ThesisSubmission({isHdrThesis: false})
+                        : () => components.StandardPage({...locale.pages.thesisSubmissionDenied}),
+                    pageTitle: formLocale.thesisSubmission.sbsTitle
+                }
+            ]
+            : [])
+    ];
 
     if (forceOrcidRegistration) {
         return [
@@ -145,9 +164,9 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
         ...(account ? [
             {
                 path: pathConfig.index,
-                component: components.Dashboard,
+                component: components.Index,
                 exact: true,
-                pageTitle: locale.pages.dashboard.title
+                pageTitle: locale.pages.index.title
             },
             {
                 path: pathConfig.dashboard,
@@ -162,6 +181,13 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 access: [roles.researcher, roles.admin],
                 exact: true,
                 pageTitle: locale.pages.myResearch.pageTitle
+            },
+            {
+                path: pathConfig.dataset.mine,
+                component: components.MyDataCollections,
+                access: [roles.researcher, roles.admin],
+                exact: true,
+                pageTitle: locale.pages.myDatasets.pageTitle
             },
             {
                 path: pathConfig.records.possible,
@@ -194,7 +220,10 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             },
             {
                 path: pathConfig.records.add.results,
-                render: (props) => components.AddMissingRecord({...props, addRecordStep: components.RecordsSearchResults}),
+                render: (props) => components.AddMissingRecord({
+                    ...props,
+                    addRecordStep: components.RecordsSearchResults
+                }),
                 access: [roles.researcher, roles.admin],
                 exact: true,
                 pageTitle: locale.pages.addRecord.title
@@ -218,9 +247,17 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 access: [roles.researcher, roles.admin],
                 exact: true,
                 pageTitle: locale.pages.googleScholarLink.title
-            },
+            }
         ] : []),
         ...(account && account.canMasquerade ? [
+            // TODO: remove search route for auth only when public search is enabled
+            {
+                path: pathConfig.records.search,
+                component: components.SearchRecords,
+                access: [roles.admin],
+                exact: true,
+                pageTitle: locale.pages.searchRecords.title
+            },
             {
                 path: pathConfig.admin.masquerade,
                 component: components.Masquerade,
@@ -244,6 +281,12 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
 
 export const getMenuConfig = (account, disabled) => {
     const publicPages = [
+        // TODO: enable when search is public
+        // {
+        //     linkTo: pathConfig.records.search,
+        //     ...locale.menu.search,
+        //     public: true
+        // },
         {
             linkTo: pathConfig.help,
             ...locale.menu.help,
@@ -296,7 +339,6 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.records.add.find,
                 ...locale.menu.addMissingRecord
             },
-            /*
             {
                 linkTo: pathConfig.dataset.mine,
                 ...locale.menu.myDatasets
@@ -305,7 +347,6 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.dataset.add,
                 ...locale.menu.addDataset
             },
-            */
             {
                 linkTo: pathConfig.authorStatistics.url(account.id),
                 ...locale.menu.authorStatistics
@@ -316,6 +357,11 @@ export const getMenuConfig = (account, disabled) => {
             }
         ] : []),
         ...(account && account.canMasquerade ? [
+            // TODO: remove when public search is enabled
+            {
+                linkTo: pathConfig.records.search,
+                ...locale.menu.search
+            },
             {
                 linkTo: pathConfig.admin.masquerade,
                 ...locale.menu.masquerade,

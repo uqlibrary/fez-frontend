@@ -6,6 +6,8 @@ import {locale} from 'locale';
 
 // application components
 import AppBar from 'material-ui/AppBar';
+import IconButton from 'material-ui/IconButton';
+
 import {AppLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {MenuDrawer} from 'modules/SharedComponents/Toolbox/MenuDrawer';
@@ -15,9 +17,9 @@ import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import AppAlertContainer from '../containers/AppAlert';
 import {Meta} from 'modules/SharedComponents/Meta';
 import {OfflineSnackbar} from 'modules/SharedComponents/OfflineSnackbar';
+import {SearchComponent} from 'modules/SharedComponents/SearchComponent';
 
 import * as pages from './pages';
-import IconButton from 'material-ui/IconButton';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
 export default class App extends PureComponent {
@@ -52,7 +54,11 @@ export default class App extends PureComponent {
                 style: !this.state.isMobile ? {width: '100%'} : {},
                 autoWidth: !this.state.isMobile,
                 fullWidth: this.state.isMobile,
-                menuItemStyle: this.state.isMobile ? {whiteSpace: 'normal', lineHeight: '18px', paddingBottom: '8px'} : {},
+                menuItemStyle: this.state.isMobile ? {
+                    whiteSpace: 'normal',
+                    lineHeight: '18px',
+                    paddingBottom: '8px'
+                } : {},
             }
         };
     }
@@ -101,13 +107,14 @@ export default class App extends PureComponent {
                 <div className="layout-fill">
                     <AppLoader
                         title={locale.global.title}
-                        logoImage={locale.global.logo}
-                        logoText={locale.global.title}/>
+                        logoImage={locale.global.logo.image}
+                        logoText={locale.global.logo.label}/>
                 </div>
             );
         }
 
         const isAuthorizedUser = !this.props.accountLoading && this.props.account !== null;
+        const isAdmin = this.props.account && this.props.account.canMasquerade;
         const isAuthorLoading = this.props.accountLoading || this.props.accountAuthorLoading;
         const isOrcidRequired = this.props.author && !this.props.author.aut_orcid_id
             && this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
@@ -129,7 +136,7 @@ export default class App extends PureComponent {
         }
 
         let userStatusAlert = null;
-        if(!this.props.accountLoading && !this.props.account) {
+        if (!this.props.accountLoading && !this.props.account) {
             // user is not logged in
             userStatusAlert = {
                 ...locale.global.loginAlert,
@@ -160,7 +167,7 @@ export default class App extends PureComponent {
         });
         return (
             <div className="layout-fill align-stretch">
-                <Meta routesConfig={routesConfig} />
+                <Meta routesConfig={routesConfig}/>
                 <AppBar
                     className="AppBar align-center"
                     showMenuIconButton={showMenu && !this.state.docked}
@@ -174,18 +181,27 @@ export default class App extends PureComponent {
                             tooltip={locale.global.mainNavButton.tooltip}
                             tooltipPosition="bottom-right"
                             hoveredStyle={appBarButtonStyles}
-                            tabIndex={(this.state.docked || !this.state.menuDrawerOpen) ? 1 : -1} >
-                            <NavigationMenu />
+                            tabIndex={(this.state.docked || !this.state.menuDrawerOpen) ? 1 : -1}
+                            className="main-menu-button">
+                            <NavigationMenu/>
                         </IconButton>
                     }
                     iconElementRight={
-                        <div style={{marginTop: '-10px'}}>
-                            <AuthButton
-                                isAuthorizedUser={isAuthorizedUser}
-                                hoveredStyle={appBarButtonStyles}
-                                onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
-                                signInTooltipText={locale.global.authentication.signInText}
-                                signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''} />
+                        <div className="columns is-gapless appbar-right-columns is-mobile">
+                            <div className="column search-column">
+                                {
+                                    !isThesisSubmissionPage && isAuthorizedUser && isAdmin &&
+                                    <SearchComponent inHeader showPrefixIcon showMobileSearchButton />
+                                }
+                            </div>
+                            <div className="column is-narrow auth-button-column">
+                                <AuthButton
+                                    isAuthorizedUser={isAuthorizedUser}
+                                    hoveredStyle={appBarButtonStyles}
+                                    onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
+                                    signInTooltipText={locale.global.authentication.signInText}
+                                    signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''}/>
+                            </div>
                         </div>
                     }
                 />
@@ -196,8 +212,9 @@ export default class App extends PureComponent {
                         drawerOpen={this.state.docked || this.state.menuDrawerOpen}
                         docked={this.state.docked}
                         history={this.props.history}
-                        logoImage={locale.global.logo}
-                        logoText={locale.global.title}
+                        logoImage={locale.global.logo.image}
+                        logoText={locale.global.logo.label}
+                        logoLink={locale.global.logo.link}
                         onToggleDrawer={this.toggleDrawer}
                         isMobile={this.state.isMobile}
                         locale={{
@@ -215,7 +232,7 @@ export default class App extends PureComponent {
                             </div>
                         </div>
                     }
-                    <AppAlertContainer />
+                    <AppAlertContainer/>
                     {
                         isAuthorLoading &&
                         <div className="isLoading is-centered">
@@ -235,7 +252,7 @@ export default class App extends PureComponent {
                     }
                 </div>
                 <HelpDrawer/>
-                <OfflineSnackbar />
+                <OfflineSnackbar/>
             </div>
         );
     }

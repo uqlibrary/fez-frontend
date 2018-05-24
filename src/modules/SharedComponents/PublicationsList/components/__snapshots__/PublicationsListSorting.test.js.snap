@@ -294,6 +294,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="records-per-page-20"
         primaryText={20}
         targetOrigin={
           Object {
@@ -315,6 +316,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="records-per-page-50"
         primaryText={50}
         targetOrigin={
           Object {
@@ -336,6 +338,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="records-per-page-100"
         primaryText={100}
         targetOrigin={
           Object {
@@ -345,28 +348,18 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         }
         value={100}
       />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        primaryText={1000}
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={1000}
-      />
     </SelectField>
+  </div>
+  <div
+    className="column is-narrow is-spacer is-hidden-mobile is-hidden-tablet-only"
+  />
+  <div
+    className="column is-hidden-mobile is-hidden-tablet-only"
+  >
+    <ExportPublications
+      disabled={false}
+      onChange={[Function]}
+    />
   </div>
 </div>
 `;

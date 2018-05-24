@@ -42,6 +42,27 @@ describe('Form reducer plugin', () => {
             })
         });
 
+        const expectedState = Map({
+            "values": Map({
+                "rek_title": "ABC"
+            }),
+            "registeredFields":
+                Map({
+                    "rek_title": Map({"name": "rek_title"})
+                }),
+                "fields": Map({
+                    "rek_title": Map({
+                        "touched": true,
+                        "visited": true
+                    })
+                }),
+                "initial":
+                Map({
+                    "rek_title": "Initial value",
+                    "currentAuthor": [{"authorId": 123, "nameAsPublished": "Test user"}]
+                })
+        });
+
         let nextState = plugins.resetValue(state, {type: 'SOME_OTHER_TYPE'});
         expect(nextState).toEqual(state);
 
@@ -70,6 +91,7 @@ describe('Form reducer plugin', () => {
             }
         };
         nextState = plugins.resetValue(nextState, action);
+        expect(nextState).toEqual(expectedState);
 
         expect(nextState.get('values').has(action.payload.name.split('.').shift())).toBeFalsy();
         expect(nextState.get('registeredFields').has(action.payload.name)).toBeFalsy();

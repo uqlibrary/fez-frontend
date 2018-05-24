@@ -27,10 +27,11 @@ export const getFacetsParams = (facets) => {
     return facetsParam;
 };
 
-export const getStandardSearchParams = ({page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}) => {
+export const getStandardSearchParams = ({exportFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}) => {
     const unknownAuthors = withUnknownAuthors >= 0 ? {with_unknown_authors: withUnknownAuthors} : {};
 
     return {
+        export_to: exportFormat,
         page: page,
         per_page: pageSize,
         sort: sortBy,
@@ -47,6 +48,8 @@ export const getStandardSearchParams = ({page = 1, pageSize = 20, sortBy = 'publ
  * @returns {object} query string attribute based on input
  */
 export const getSearchType = (searchQuery) => {
+    if (!searchQuery) return {};
+
     if (validation.isValidDOIValue(searchQuery)) {
         return {doi: searchQuery.trim()};
     }
@@ -67,10 +70,11 @@ export const AUTHOR_ORCID_DETAILS_API = ({userId, params}) => ({apiUrl: `orcid/$
 
 // academic stats apis
 export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({userId}) => ({apiUrl: `academic/${userId}/hindex`});
-export const ACADEMIC_STATS_PUBLICATIONS_TRENDING_API = () => ({apiUrl: 'records/search', options: {params: {rule: 'trending'}}});
+export const ACADEMIC_STATS_PUBLICATIONS_TRENDING_API = () => ({apiUrl: 'records/trending', options: {params: {filter: 'author'}}});
 
 // lookup apis
 export const GET_ACML_QUICK_TEMPLATES_API = () => ({apiUrl: 'acml/quick-templates'});
+export const GET_NEWS_API = () => ({apiUrl: 'fez-news'});
 export const VOCABULARIES_API  = ({id}) => ({apiUrl: `vocabularies/${id}`});
 export const GET_PUBLICATION_TYPES_API = () => ({apiUrl: 'records/types'});
 
@@ -89,10 +93,21 @@ export const HIDE_POSSIBLE_RECORD_API = () => ({apiUrl: 'records/search', option
 export const CURRENT_USER_RECORDS_API = (values) => ({apiUrl: 'records/search', options: {params: {rule: 'mine', ...getStandardSearchParams(values)}}});
 export const ACADEMIC_PUBLICATIONS_STATS_API = (values) => ({apiUrl: 'records/search', options: {params: {rule: 'mine', 'filters[stats_only]': true, ...getStandardSearchParams(values)}}});
 
-export const SEARCH_INTERNAL_RECORDS_API = (values) => (
-    // values = {searchQuery, page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}
-    {apiUrl: 'records/search', options: {params: {...getSearchType(values.searchQuery), ...getStandardSearchParams(values)}}}
-);
+export const SEARCH_INTERNAL_RECORDS_API = (values) => {
+    // values = {searchQuery (text value - title search, doi or pubmed id)
+    // searchQueryParams = {} (search parameters, eg title, author etc)
+    // page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}
+    return {
+        apiUrl: 'records/search',
+        options: {
+            params: {
+                ...getSearchType(values.searchQuery),
+                ...getStandardSearchParams(values),
+                ...values.searchQueryParams
+            }
+        }
+    };
+};
 
 export const SEARCH_EXTERNAL_RECORDS_API = ({source = 'wos', searchQuery = ''}) => (
     {apiUrl: 'external/records/search', options: {params: {source: source, ...getSearchType(searchQuery)}}}

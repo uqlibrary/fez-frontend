@@ -8,15 +8,20 @@ import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 
 import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
 import {locale} from 'locale';
-import {routes} from 'config';
+import {routes, general} from 'config';
+
 export default class MyRecords extends PureComponent {
     static propTypes = {
         publicationsList: PropTypes.array,
         publicationsListFacets: PropTypes.object,
         loadingPublicationsList: PropTypes.bool,
         publicationsListPagingData: PropTypes.object,
+        exportPublicationsLoading: PropTypes.bool,
 
+        initialFacets: PropTypes.object,
         accountLoading: PropTypes.bool,
+        localePages: PropTypes.object,
+        thisUrl: PropTypes.string,
 
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
@@ -33,7 +38,8 @@ export default class MyRecords extends PureComponent {
             sortDirection: locale.components.sorting.sortDirection[0],
             activeFacets: {
                 filters: {},
-                ranges: {}
+                ranges: {},
+                ...props.initialFacets
             }
         };
 
@@ -55,7 +61,7 @@ export default class MyRecords extends PureComponent {
         // handle browser back button - set state from location/dispatch action for this state
         if (this.props.location !== newProps.location
             && newProps.history.action === 'POP'
-            && newProps.location.pathname === routes.pathConfig.records.mine) {
+            && newProps.location.pathname === this.props.thisUrl) {
             this.setState({...(!!newProps.location.state ? newProps.location.state : this.initState)}, () => {
                 // only will be called when user clicks back on my records page
                 this.props.actions.searchAuthorPublications({...this.state});
@@ -95,17 +101,44 @@ export default class MyRecords extends PureComponent {
     }
 
     facetsChanged = (activeFacets) => {
-        this.setState(
-            {
-                activeFacets: activeFacets,
-                page: 1
-            }, this.pushPageHistory
-        );
+        if (this.props.location.pathname === routes.pathConfig.dataset.mine) {
+            // this is a 'my research dataset' page
+            this.setState(
+                {
+                    activeFacets: this.getMyDatasetFacets(activeFacets),
+                    page: 1
+                }, this.pushPageHistory
+            );
+        } else {
+            this.setState(
+                {
+                    activeFacets: activeFacets,
+                    page: 1
+                }, this.pushPageHistory
+            );
+        }
+    }
+
+    hasDisplayableFilters = (activeFilters) => {
+        const localFilters = this.getMyDatasetFacets(activeFilters);
+        return localFilters.filters && Object.keys(localFilters).length > 0;
+    }
+
+    getMyDatasetFacets = (activeFilters) => {
+        // on a 'my research data' page, we dont want the presence of 'Display type' to decide 'facet changed'
+        const displayType = 'Display type';
+        const localFilters = Object.assign({}, activeFilters);
+        if (Object.keys(localFilters).length > 0 &&
+            localFilters.hasOwnProperty(displayType) &&
+            localFilters[displayType] === general.PUBLICATION_TYPE_DATA_COLLECTION) {
+            delete localFilters[displayType];
+        }
+        return localFilters;
     }
 
     pushPageHistory = () => {
         this.props.history.push({
-            pathname: `${routes.pathConfig.records.mine}`,
+            pathname: `${this.props.thisUrl}`,
             search: `?ts=${Date.now()}`,
             state: {...this.state}
         });
@@ -119,8 +152,9 @@ export default class MyRecords extends PureComponent {
     render() {
         if (this.props.accountLoading) return null;
 
-        const txt = locale.pages.myResearch;
+        const txt = this.props.localePages;
         const pagingData = this.props.publicationsListPagingData;
+
         return (
             <StandardPage title={txt.pageTitle}>
                 {
@@ -158,36 +192,38 @@ export default class MyRecords extends PureComponent {
                                     sortDirection={this.state.sortDirection}
                                     pageSize={this.state.pageSize}
                                     pagingData={pagingData}
+                                    location={this.props.location}
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
-                                    disabled={this.props.loadingPublicationsList} />
+                                    onExportPublications={this.props.actions.exportAuthorPublications}
+                                    disabled={this.props.loadingPublicationsList || this.props.exportPublicationsLoading} />
                                 <PublicationsListPaging
-                                    loading={this.props.loadingPublicationsList}
+                                    loading={this.props.loadingPublicationsList || this.props.exportPublicationsLoading}
                                     pagingData={pagingData}
                                     onPageChanged={this.pageChanged}
-                                    disabled={this.props.loadingPublicationsList} />
+                                    disabled={this.props.loadingPublicationsList || this.props.exportPublicationsLoading} />
                                 {
-                                    this.props.loadingPublicationsList &&
-                                    <div className="is-centered"><InlineLoader message={txt.loadingPagingMessage}/></div>
+                                    (this.props.loadingPublicationsList || this.props.exportPublicationsLoading) &&
+                                    <div className="is-centered"><InlineLoader message={this.props.loadingPublicationsList ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
                                 }
                                 {
-                                    !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length > 0 &&
+                                    !this.props.exportPublicationsLoading && !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length > 0 &&
                                     <PublicationsList
                                         publicationsList={this.props.publicationsList}
                                         showDefaultActions />
                                 }
                                 <PublicationsListPaging
-                                    loading={this.props.loadingPublicationsList}
+                                    loading={this.props.loadingPublicationsList || this.props.exportPublicationsLoading}
                                     pagingData={pagingData}
                                     onPageChanged={this.pageChanged}
-                                    disabled={this.props.loadingPublicationsList} />
+                                    disabled={this.props.loadingPublicationsList || this.props.exportPublicationsLoading} />
                             </StandardCard>
                         </div>
                     }
                     {
                         // show available filters or selected filters (even if there are no results)
                         ((this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
-                        || (this.state.activeFacets && this.state.activeFacets.filters && Object.keys(this.state.activeFacets.filters).length > 0)
+                        || (this.state.activeFacets && this.hasDisplayableFilters(this.state.activeFacets.filters))
                         || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)
                         || (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
                         <div className="column is-3 is-hidden-mobile">
@@ -196,10 +232,11 @@ export default class MyRecords extends PureComponent {
                                     facetsData={this.props.publicationsListFacets}
                                     onFacetsChanged={this.facetsChanged}
                                     activeFacets={this.state.activeFacets}
-                                    disabled={this.props.loadingPublicationsList}
+                                    disabled={this.props.loadingPublicationsList || this.props.exportPublicationsLoading}
                                     excludeFacetsList={txt.facetsFilter.excludeFacetsList}
+                                    isMyDataSetPage={this.props.location.pathname === routes.pathConfig.dataset.mine}
                                     renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                    showOpenAccessFilter />
+                                    showOpenAccessFilter/>
                             </StandardRighthandCard>
                         </div>
                     }
