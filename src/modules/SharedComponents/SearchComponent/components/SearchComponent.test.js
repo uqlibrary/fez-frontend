@@ -88,13 +88,13 @@ describe('SearchComponent', () => {
         expect(testMethod).toHaveBeenCalled();
         expect(testHistoryPushMehtod).toHaveBeenCalledWith({
             pathname: '/records/search',
-            search: 'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Btitle%5D=i+feel+lucky',
+            search: 'searchQueryParams%5Ball%5D=i+feel+lucky&page=1&pageSize=20&sortBy=published_date&sortDirection=Desc',
             state: {
                 activeFacets: {filters: {}, ranges: {}},
                 page: 1,
                 pageSize: 20,
                 searchQueryParams: {
-                    title: 'i feel lucky',
+                    all: 'i feel lucky',
                 },
                 sortBy: 'published_date',
                 sortDirection: 'Desc'

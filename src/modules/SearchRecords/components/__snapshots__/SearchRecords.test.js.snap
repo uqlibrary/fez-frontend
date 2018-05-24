@@ -6,10 +6,10 @@ exports[`SearchRecords page should render loading screen while loading publicati
   title="eSpace search"
 >
   <StandardCard
-    className=""
+    className="search-component"
   >
     <withRouter(Connect(SearchComponent))
-      showAdvancedSearchButton={true}
+      className="search-body"
     />
   </StandardCard>
   <div
@@ -65,10 +65,10 @@ exports[`SearchRecords page should render loading screen while loading search re
   title="eSpace search"
 >
   <StandardCard
-    className=""
+    className="search-component"
   >
     <withRouter(Connect(SearchComponent))
-      showAdvancedSearchButton={true}
+      className="search-body"
     />
   </StandardCard>
   <div
@@ -90,10 +90,10 @@ exports[`SearchRecords page should render no results 1`] = `
   title="eSpace search"
 >
   <StandardCard
-    className=""
+    className="search-component"
   >
     <withRouter(Connect(SearchComponent))
-      showAdvancedSearchButton={true}
+      className="search-body"
     />
   </StandardCard>
   <div
@@ -144,10 +144,10 @@ exports[`SearchRecords page should show available filters or selected filters if
   title="eSpace search"
 >
   <StandardCard
-    className=""
+    className="search-component"
   >
     <withRouter(Connect(SearchComponent))
-      showAdvancedSearchButton={true}
+      className="search-body"
     />
   </StandardCard>
   <div
@@ -210,10 +210,10 @@ exports[`SearchRecords page should show available filters or selected filters if
   title="eSpace search"
 >
   <StandardCard
-    className=""
+    className="search-component"
   >
     <withRouter(Connect(SearchComponent))
-      showAdvancedSearchButton={true}
+      className="search-body"
     />
   </StandardCard>
   <div
@@ -278,10 +278,10 @@ exports[`SearchRecords page should show available filters or selected filters if
   title="eSpace search"
 >
   <StandardCard
-    className=""
+    className="search-component"
   >
     <withRouter(Connect(SearchComponent))
-      showAdvancedSearchButton={true}
+      className="search-body"
     />
   </StandardCard>
   <div
@@ -349,10 +349,10 @@ exports[`SearchRecords page should show available filters or selected filters if
   title="eSpace search"
 >
   <StandardCard
-    className=""
+    className="search-component"
   >
     <withRouter(Connect(SearchComponent))
-      showAdvancedSearchButton={true}
+      className="search-body"
     />
   </StandardCard>
   <div
