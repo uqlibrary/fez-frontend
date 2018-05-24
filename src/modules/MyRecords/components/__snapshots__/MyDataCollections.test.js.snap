@@ -17,7 +17,7 @@ exports[`myDatasets test renders active filters 1`] = `
           <div>
             We were unable to find any results. You may be able to 
             <a
-              href="/dataset/add"
+              href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
             >
               add a missing dataset
             </a>
@@ -29,7 +29,7 @@ exports[`myDatasets test renders active filters 1`] = `
         <div>
           We were unable to find any results. You may be able to 
           <a
-            href="/dataset/add"
+            href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
           >
             add a missing dataset
           </a>
@@ -61,7 +61,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
         <span>
           Add to this list by 
           <a
-            href="/dataset/add"
+            href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
           >
             adding a missing dataset
           </a>
@@ -153,7 +153,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
         <span>
           Add to this list by 
           <a
-            href="/dataset/add"
+            href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
           >
             adding a missing dataset
           </a>
@@ -346,7 +346,7 @@ exports[`myDatasets test renders loading screen while loading publications while
         <span>
           Add to this list by 
           <a
-            href="/dataset/add"
+            href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
           >
             adding a missing dataset
           </a>
@@ -409,7 +409,7 @@ exports[`myDatasets test renders no results 1`] = `
           <div>
             We were unable to find any results. You may be able to 
             <a
-              href="/dataset/add"
+              href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
             >
               add a missing dataset
             </a>
@@ -421,7 +421,7 @@ exports[`myDatasets test renders no results 1`] = `
         <div>
           We were unable to find any results. You may be able to 
           <a
-            href="/dataset/add"
+            href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
           >
             add a missing dataset
           </a>
