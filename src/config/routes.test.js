@@ -12,7 +12,7 @@ describe('Routes method', () => {
 
     it('should return a list of menus for researcher', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqresearcher);
-        expect(testRoutes.length).toEqual(12);
+        expect(testRoutes.length).toEqual(11);
     });
 
     it('should return a list of menus for a user with dashboard enabled only (eg HDR student without ORCID)', () => {
@@ -34,7 +34,7 @@ describe('Routes method', () => {
 
     it('should return a list of routes for researcher', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.uqresearcher});
-        expect(testRoutes.length).toEqual(18);
+        expect(testRoutes.length).toEqual(17);
     });
 
     it('should return a list of routes for user who can masquerade', () => {
@@ -50,7 +50,7 @@ describe('Routes method', () => {
 
     it('should return a list of routes for hdr student with ORCID', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.s2222222, forceOrcidRegistration: false, isHdrStudent: true});
-        expect(testRoutes.length).toEqual(18);
+        expect(testRoutes.length).toEqual(17);
     });
 
     it('should render auth required page', () => {

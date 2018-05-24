@@ -68,10 +68,10 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
           .
         </span>
         <PublicationsListSorting
-          activeFacets={
+          location={
             Object {
-              "filters": Object {},
-              "ranges": Object {},
+              "pathname": "/data-collections/mine",
+              "state": null,
             }
           }
           onPageSizeChanged={[Function]}
@@ -160,10 +160,10 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
           .
         </span>
         <PublicationsListSorting
-          activeFacets={
+          location={
             Object {
-              "filters": Object {},
-              "ranges": Object {},
+              "pathname": "/data-collections/mine",
+              "state": null,
             }
           }
           onPageSizeChanged={[Function]}
@@ -353,13 +353,13 @@ exports[`myDatasets test renders loading screen while loading publications while
           .
         </span>
         <PublicationsListSorting
-          activeFacets={
+          disabled={true}
+          location={
             Object {
-              "filters": Object {},
-              "ranges": Object {},
+              "pathname": "/data-collections/mine",
+              "state": null,
             }
           }
-          disabled={true}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}
