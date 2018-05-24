@@ -109,7 +109,7 @@ class SearchRecords extends PureComponent {
         providedSearchQuery.pageSize = parseInt(providedSearchQuery.pageSize, 10);
 
         return providedSearchQuery;
-    }
+    };
 
     pageSizeChanged = (pageSize) => {
         this.setState(
@@ -119,7 +119,7 @@ class SearchRecords extends PureComponent {
             },
             this.updateHistoryAndSearch
         );
-    }
+    };
 
     pageChanged = (page) => {
         this.setState(
@@ -128,7 +128,7 @@ class SearchRecords extends PureComponent {
             },
             this.updateHistoryAndSearch
         );
-    }
+    };
 
     sortByChanged = (sortBy, sortDirection) => {
         this.setState(
@@ -138,7 +138,7 @@ class SearchRecords extends PureComponent {
             },
             this.updateHistoryAndSearch
         );
-    }
+    };
 
     facetsChanged = (activeFacets) => {
         this.setState(
@@ -157,7 +157,7 @@ class SearchRecords extends PureComponent {
             state: {...this.state}
         });
         this.updateSearch();
-    }
+    };
 
     updateSearch = () => {
         this.props.actions.searchEspacePublications({...this.props.searchQuery, ...this.state});
