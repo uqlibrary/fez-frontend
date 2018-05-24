@@ -2,6 +2,7 @@ import {locale} from 'locale';
 import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
 import * as routes from 'repositories/routes';
+import {exportPublications} from './exportPublications';
 
 function getSearch(source, searchQuery) {
     if (source === locale.global.sources.espace.id) {
@@ -105,15 +106,19 @@ export function loadSearchKeyList(searchKey, searchQuery) {
     };
 }
 
-
-// searchEspacePublications - call eSpace internal search api
-// searchParameters are
-// {
-// title: '',
-// ...any other search parameters for advanced search...,
-// page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc',
-// activeFacets = {filters: {}, ranges: {}}
-// }
+/**
+ * searchEspacePublications - call eSpace internal search api
+ * searchParameters are
+ * {
+ *  title: '',
+ *  ...any other search parameters for advanced search...,
+ *  page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc',
+ *  activeFacets = {filters: {}, ranges: {}}
+ * }
+ *
+ * @param searchParams
+ * @return {function(*): Promise<any>}
+ */
 export function searchEspacePublications(searchParams) {
     return dispatch => {
         dispatch({
@@ -137,5 +142,19 @@ export function searchEspacePublications(searchParams) {
                 });
             });
     };
+}
+
+/**
+ * Export publications list
+ *
+ * @param {array} publication list
+ * @param {string} format
+ * @returns {action}
+ */
+export function exportEspacePublications(searchParams) {
+    return exportPublications({
+        exportFormat: searchParams.exportFormat,
+        requestParams: routes.SEARCH_INTERNAL_RECORDS_API({...searchParams, facets: !!searchParams.activeFacets ? searchParams.activeFacets : {}}),
+    });
 }
 

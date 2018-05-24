@@ -1,14 +1,13 @@
-jest.mock('./publicationDataTransformers');
+jest.mock('./exportPublications');
 
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as publicationsActions from './publications';
 import * as mockData from 'mock/data';
-import {exportSearchToExcel as exportSearchToExcelResponse} from "../mock/data/testing/searchRecords";
-import {exportFormatToExtensionMap, promptForDownload} from './publicationDataTransformers';
+import {exportPublications} from './exportPublications'
 
 beforeEach(() => {
-    promptForDownload.mockClear();
+    exportPublications.mockClear();
 });
 
 describe('Publications actions', () => {
@@ -206,82 +205,20 @@ describe('Publications actions', () => {
     });
 
     describe('exportAuthorPublications()', () => {
-        const exportFormat = Object.keys(exportFormatToExtensionMap)[0];
-        const testRequest = {
-            ...exportFormat,
-            userName: 'uqresearcher',
-            page: 1,
-            pageSize: 20,
-            sortBy: 'published_date',
-            sortDirection: 'desc',
-            facets: {},
-        };
+        it('calls exportPublications with expected params', async () => {
 
-        it('dispatches expected actions on successful search export', async () => {
+            const exportFormat = 'excel';
+            const testRequest = {
+                exportFormat,
+                page: 1,
+                pageSize: 20,
+                sortBy: 'published_date',
+                sortDirection: 'Desc',
+                activeFacets: {filters: {}, ranges: {}}
+            };
 
-            // mock promptForDownload
-            promptForDownload.mockImplementation(() => exportFormat);
-
-            mockApi
-                .onGet(repositories.routes.CURRENT_USER_RECORDS_API(testRequest).apiUrl)
-                .reply(200, exportSearchToExcelResponse);
-
-            const expectedActions = [
-                actions.EXPORT_PUBLICATIONS_LOADING,
-                actions.EXPORT_PUBLICATIONS_LOADED
-            ];
-
-            await mockActionsStore.dispatch(publicationsActions.exportAuthorPublications(testRequest));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        });
-
-        it('dispatches expected actions on failed search export', async () => {
-
-            // mock promptForDownload
-            promptForDownload.mockImplementation(() => {
-                throw 'Error';
-            });
-
-            mockApi
-                .onGet(repositories.routes.CURRENT_USER_RECORDS_API({...testRequest, exportFormat:'unknown'}).apiUrl)
-                .reply(200, exportSearchToExcelResponse);
-
-            const expectedActions = [
-                actions.EXPORT_PUBLICATIONS_LOADING,
-                actions.EXPORT_PUBLICATIONS_FAILED
-            ];
-
-            await mockActionsStore.dispatch(publicationsActions.exportAuthorPublications(testRequest));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        });
-
-        it('dispatches expected actions for anon user', async () => {
-            mockApi
-                .onAny()
-                .reply(403, {});
-
-            const expectedActions = [
-                actions.EXPORT_PUBLICATIONS_LOADING,
-                actions.CURRENT_ACCOUNT_ANONYMOUS,
-                actions.EXPORT_PUBLICATIONS_FAILED
-            ];
-
-            await mockActionsStore.dispatch(publicationsActions.exportAuthorPublications(testRequest));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        });
-
-        it('dispatches expected actions if API fails', async () => {
-            mockApi
-                .onAny()
-                .reply(500, {});
-
-            const expectedActions = [
-                actions.EXPORT_PUBLICATIONS_LOADING,
-                actions.EXPORT_PUBLICATIONS_FAILED
-            ];
-
-            await mockActionsStore.dispatch(publicationsActions.exportAuthorPublications(testRequest));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            publicationsActions.exportAuthorPublications({exportFormat, requestParams: testRequest});
+            expect(exportPublications).toHaveBeenCalledWith({exportFormat, requestParams: repositories.routes.CURRENT_USER_RECORDS_API(testRequest)});
         });
     });
 });

@@ -119,9 +119,10 @@ export default class MyRecords extends PureComponent {
     }
     render() {
         if (this.props.accountLoading) return null;
-
         const txt = locale.pages.myResearch;
         const pagingData = this.props.publicationsListPagingData;
+        const isLoadingOrExporting = this.props.loadingPublicationsList || this.props.exportPublicationsLoading;
+
         return (
             <StandardPage title={txt.pageTitle}>
                 {
@@ -163,14 +164,14 @@ export default class MyRecords extends PureComponent {
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
                                     onExportPublications={this.props.actions.exportAuthorPublications}
-                                    disabled={this.props.loadingPublicationsList || this.props.exportPublicationsLoading} />
+                                    disabled={isLoadingOrExporting} />
                                 <PublicationsListPaging
-                                    loading={this.props.loadingPublicationsList || this.props.exportPublicationsLoading}
+                                    loading={isLoadingOrExporting}
                                     pagingData={pagingData}
                                     onPageChanged={this.pageChanged}
-                                    disabled={this.props.loadingPublicationsList || this.props.exportPublicationsLoading} />
+                                    disabled={isLoadingOrExporting} />
                                 {
-                                    (this.props.loadingPublicationsList || this.props.exportPublicationsLoading) &&
+                                    (isLoadingOrExporting) &&
                                     <div className="is-centered"><InlineLoader message={this.props.loadingPublicationsList ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
                                 }
                                 {
@@ -180,10 +181,10 @@ export default class MyRecords extends PureComponent {
                                         showDefaultActions />
                                 }
                                 <PublicationsListPaging
-                                    loading={this.props.loadingPublicationsList || this.props.exportPublicationsLoading}
+                                    loading={isLoadingOrExporting}
                                     pagingData={pagingData}
                                     onPageChanged={this.pageChanged}
-                                    disabled={this.props.loadingPublicationsList || this.props.exportPublicationsLoading} />
+                                    disabled={isLoadingOrExporting} />
                             </StandardCard>
                         </div>
                     }
@@ -199,7 +200,7 @@ export default class MyRecords extends PureComponent {
                                     facetsData={this.props.publicationsListFacets}
                                     onFacetsChanged={this.facetsChanged}
                                     activeFacets={this.state.activeFacets}
-                                    disabled={this.props.loadingPublicationsList || this.props.exportPublicationsLoading}
+                                    disabled={isLoadingOrExporting}
                                     excludeFacetsList={txt.facetsFilter.excludeFacetsList}
                                     renameFacetsList={txt.facetsFilter.renameFacetsList}
                                     showOpenAccessFilter />
