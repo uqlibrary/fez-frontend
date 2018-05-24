@@ -274,6 +274,14 @@ export const thesisSubmissionSubtypes = [
     'Professional Doctorate'
 ];
 
+/**
+ * File type to name map
+ */
+export const exportFormatToExtension = {
+    'excel': 'xlsx',
+    'endnote': 'enw'
+};
+
 export const OrgUnitsVocabId = 453703;
 export const FieldOfResearchVocabId = 451780;
 
