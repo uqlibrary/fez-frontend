@@ -1,14 +1,15 @@
 import ViewRecord from './ViewRecord';
 import {mockRecordToFix} from 'mock/data/testing/records';
-
+import * as mockData from 'mock/data';
 function setup(testProps, isShallow = true){
     const props = {
-        ...testProps,
         match: testProps.match || { params: {pid: 'UQ:12344'}},
         actions: testProps.actions || {
             loadRecordToView: jest.fn(),
             clearRecordToView: jest.fn()
-        }
+        },
+        account: mockData.accounts.uqresearcher,
+        ...testProps,
     };
     return getElement(ViewRecord, props, isShallow);
 }

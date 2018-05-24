@@ -1,10 +1,12 @@
 import * as records from 'mock/data/testing/records';
 import AdditionalInformation from "./AdditionalInformation";
+import * as mockData from 'mock/data';
 
 function setup(testProps, isShallow = true){
     const props = {
+        publication: records.journalArticle,
+        account: mockData.accounts.uqresearcher,
         ...testProps,
-        publication: testProps.publication || records.journalArticle
     };
     return getElement(AdditionalInformation, props, isShallow);
 }
@@ -89,7 +91,7 @@ describe('Additional Information Component ', () => {
     });
 
     it('should render component with newspaper', () => {
-        const wrapper = setup({publication: records.newspaper});
+        const wrapper = setup({publication: records.newspaperArticle});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
