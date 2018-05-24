@@ -53,7 +53,7 @@ export default class FacetsFilter extends PureComponent {
             showOpenAccessOnly: !!this.state.activeFacets.showOpenAccessOnly
         };
 
-        if (activeFacets.filters.hasOwnProperty(category) && activeFacets.filters[category] === facet) {
+        if (this.isFacetFilterActive(activeFacets, category, facet)) {
             delete activeFacets.filters[category];
         } else {
             activeFacets.filters[category] = facet;
@@ -115,9 +115,17 @@ export default class FacetsFilter extends PureComponent {
         });
     };
 
+    isFacetFilterActive = (activeFacets, category, value) => {
+        return activeFacets.filters.hasOwnProperty(category) &&
+        isNaN(activeFacets.filters[category])
+            ? activeFacets.filters[category] === value
+            : parseInt(activeFacets.filters[category], 10) === value;
+    };
+
     getNestedListItems = (facetCategory) => {
         return facetCategory.facets.map((item, index) => {
-            const isActive = this.state.activeFacets.filters.hasOwnProperty(facetCategory.facetTitle) && this.state.activeFacets.filters[facetCategory.facetTitle] === item.key;
+            const isActive = this.isFacetFilterActive(this.state.activeFacets, facetCategory.facetTitle, item.key);
+
             return (
                 <ListItem
                     key={index}
