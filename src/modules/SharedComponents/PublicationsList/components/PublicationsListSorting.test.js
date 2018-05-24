@@ -1,10 +1,9 @@
-import {formatToExtensionMap} from "../../../../actions/exportPublicationsDataTransformers";
-
 jest.dontMock('./PublicationsListSorting');
 
 import toJson from 'enzyme-to-json';
 import React from 'react';
 import PublicationsListSorting from './PublicationsListSorting';
+import {formatToExtensionMap} from "../../../../actions/exportPublicationsDataTransformers";
 
 function setup(testProps, isShallow = true) {
     const props = {

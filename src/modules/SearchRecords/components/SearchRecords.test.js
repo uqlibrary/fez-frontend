@@ -1,5 +1,6 @@
 import SearchRecords from './SearchRecords';
 import {routes} from 'config';
+import {formatToExtensionMap} from '../../../actions/exportPublicationsDataTransformers'
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -320,5 +321,19 @@ describe('SearchRecords page', () => {
     it('renders loading screen while export publications loading', () => {
         const wrapper = setup({ exportPublicationsLoading: true });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should call exportFormatChanged when export format dropdown is changed', () => {
+        const exportFormat = Object.keys(formatToExtensionMap)[0];
+        const testAction = jest.fn();
+        const wrapper = setup({
+            actions: {
+                exportEspacePublications: testAction
+            }
+        });
+
+        wrapper.instance().exportFormatChanged({exportFormat});
+        wrapper.update();
+        expect(testAction).toHaveBeenCalledWith({exportFormat});
     });
 });

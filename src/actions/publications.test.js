@@ -5,6 +5,7 @@ import * as repositories from 'repositories';
 import * as publicationsActions from './publications';
 import * as mockData from 'mock/data';
 import {exportPublications} from './exportPublications'
+import {formatToExtensionMap} from './exportPublicationsDataTransformers'
 
 beforeEach(() => {
     exportPublications.mockClear();
@@ -207,7 +208,7 @@ describe('Publications actions', () => {
     describe('exportAuthorPublications()', () => {
         it('calls exportPublications with expected params', async () => {
 
-            const exportFormat = 'excel';
+            const exportFormat = Object.keys(formatToExtensionMap)[0];
             const testRequest = {
                 exportFormat,
                 page: 1,
