@@ -122,13 +122,13 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
           .
         </span>
         <PublicationsListSorting
-          activeFacets={
+          disabled={false}
+          location={
             Object {
-              "filters": Object {},
-              "ranges": Object {},
+              "pathname": "/records/mine",
+              "state": null,
             }
           }
-          disabled={false}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}
@@ -225,13 +225,13 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
           .
         </span>
         <PublicationsListSorting
-          activeFacets={
+          disabled={false}
+          location={
             Object {
-              "filters": Object {},
-              "ranges": Object {},
+              "pathname": "/records/mine",
+              "state": null,
             }
           }
-          disabled={false}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}
@@ -484,13 +484,13 @@ exports[`MyRecords test renders loading screen while loading publications while 
           .
         </span>
         <PublicationsListSorting
-          activeFacets={
+          disabled={true}
+          location={
             Object {
-              "filters": Object {},
-              "ranges": Object {},
+              "pathname": "/records/mine",
+              "state": null,
             }
           }
-          disabled={true}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}
