@@ -28,26 +28,24 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
     <div
       className="publicationsListPagingItems column is-hidden-mobile has-text-centered"
     >
-      <span>
-        <FlatButton
-          aria-label="Click to select page 1 of 50 result pages"
-          className="page"
-          disabled={false}
-          fullWidth={false}
-          key="1"
-          label={1}
-          labelPosition="after"
-          labelStyle={Object {}}
-          onClick={[Function]}
-          onKeyboardFocus={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onTouchStart={[Function]}
-          primary={false}
-          secondary={false}
-        />
-        ...
-      </span>
+      <FlatButton
+        aria-label="Click to select page 1 of 50 result pages"
+        className="page"
+        disabled={false}
+        fullWidth={false}
+        key="1"
+        label={1}
+        labelPosition="after"
+        labelStyle={Object {}}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+      />
+      ...
       <FlatButton
         aria-label="Click to select page 7 of 50 result pages"
         className="page"
@@ -167,26 +165,24 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         primary={false}
         secondary={false}
       />
-      <span>
-        ...
-        <FlatButton
-          aria-label="Click to select page 50 of 50 result pages"
-          className="page"
-          disabled={false}
-          fullWidth={false}
-          key="50"
-          label={50}
-          labelPosition="after"
-          labelStyle={Object {}}
-          onClick={[Function]}
-          onKeyboardFocus={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onTouchStart={[Function]}
-          primary={false}
-          secondary={false}
-        />
-      </span>
+      ...
+      <FlatButton
+        aria-label="Click to select page 50 of 50 result pages"
+        className="page"
+        disabled={false}
+        fullWidth={false}
+        key="50"
+        label={50}
+        labelPosition="after"
+        labelStyle={Object {}}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+      />
     </div>
     <div
       className="column is-hidden-tablet-only is-hidden-desktop has-text-centered"
