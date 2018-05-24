@@ -729,7 +729,7 @@ export default {
                 'Desc',
                 'Asc'
             ],
-            recordsPerPage: [20, 50, 100, 500]
+            recordsPerPage: [20, 50, 100]
         },
         newsFeed: {
             title: 'Latest news'
@@ -747,9 +747,15 @@ export default {
         },
         searchComponent: {
             searchBoxPlaceholder: 'Search eSpace',
+            ariaInputLabel: 'Enter your search query to search eSpace and then press Enter',
             searchButtonHint: 'Search eSpace',
+            mobileSearchButtonAriaLabel: 'Click to search eSpace',
             advancedSearchButtonText: 'Advanced search',
-            searchButtonText: 'Search'
+            advancedSearchButtonAriaLabel: 'Click to switch to Advanced search',
+            searchButtonText: 'Search',
+            searchButtonAriaLabel: 'Click to search eSpace',
+            simpleSearchToggle: 'Simple search',
+
         },
         whatIsEspace: {
             title: 'What is eSpace?',

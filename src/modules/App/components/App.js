@@ -107,13 +107,14 @@ export default class App extends PureComponent {
                 <div className="layout-fill">
                     <AppLoader
                         title={locale.global.title}
-                        logoImage={locale.global.logo}
-                        logoText={locale.global.title}/>
+                        logoImage={locale.global.logo.image}
+                        logoText={locale.global.logo.label}/>
                 </div>
             );
         }
 
         const isAuthorizedUser = !this.props.accountLoading && this.props.account !== null;
+        const isAdmin = this.props.account && this.props.account.canMasquerade;
         const isAuthorLoading = this.props.accountLoading || this.props.accountAuthorLoading;
         const isOrcidRequired = this.props.author && !this.props.author.aut_orcid_id
             && this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
@@ -186,12 +187,11 @@ export default class App extends PureComponent {
                         </IconButton>
                     }
                     iconElementRight={
-                        <div className="columns is-gapless appbar-right-columns">
-                            <div className="column search-column is-hidden-mobile">
+                        <div className="columns is-gapless appbar-right-columns is-mobile">
+                            <div className="column search-column">
                                 {
-                                    // TODO: Show search box for public users when public search is enabled
-                                    isAuthorizedUser && !isThesisSubmissionPage &&
-                                    <SearchComponent applyInverseStyle showPrefixIcon showSearchButton/>
+                                    !isThesisSubmissionPage && isAuthorizedUser && isAdmin &&
+                                    <SearchComponent inHeader showPrefixIcon showMobileSearchButton />
                                 }
                             </div>
                             <div className="column is-narrow auth-button-column">
@@ -212,8 +212,9 @@ export default class App extends PureComponent {
                         drawerOpen={this.state.docked || this.state.menuDrawerOpen}
                         docked={this.state.docked}
                         history={this.props.history}
-                        logoImage={locale.global.logo}
-                        logoText={locale.global.title}
+                        logoImage={locale.global.logo.image}
+                        logoText={locale.global.logo.label}
+                        logoLink={locale.global.logo.link}
                         onToggleDrawer={this.toggleDrawer}
                         isMobile={this.state.isMobile}
                         locale={{
