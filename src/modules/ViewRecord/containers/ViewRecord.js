@@ -6,8 +6,7 @@ import * as actions from 'actions';
 
 const mapStateToProps = (state) => {
     return {
-        ...state.get('viewRecordReducer'),
-        ...state.get('accountReducer')
+        ...state.get('viewRecordReducer')
     };
 };
 

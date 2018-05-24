@@ -13,8 +13,7 @@ import JournalName from './partials/JournalName';
 
 export default class AdditionalInformation extends Component {
     static propTypes = {
-        publication: PropTypes.object.isRequired,
-        account: PropTypes.object
+        publication: PropTypes.object.isRequired
     };
 
     constructor(props) {
@@ -39,13 +38,7 @@ export default class AdditionalInformation extends Component {
                         <li key={`${subkey}-${index}`}>
                             {(() => {
                                 const data = this.getData(item, subkey);
-                                if (
-                                    getLink &&
-                                    (
-                                        // if user is not logged in and link is other than search then show it otherwise hide
-                                        !!this.props.account || getLink(item[subkey]).indexOf('search_keys') === -1
-                                    )
-                                ) {
+                                if (getLink) {
                                     return this.renderLink(getLink(item[subkey]), data);
                                 } else {
                                     return data;
@@ -154,25 +147,13 @@ export default class AdditionalInformation extends Component {
 
     renderContributors = (publication) => {
         return (
-            <EditorsCitationView
-                key="additional-information-editors"
-                showLink
-                prefix={' '}
-                suffix={''}
-                publication={publication}
-                initialNumberOfEditors={publication.fez_record_search_key_contributor.length}
-            />
+            <EditorsCitationView key="additional-information-editors" publication={publication} prefix={' '} suffix={''} initialNumberOfEditors={publication.fez_record_search_key_contributor.length} showLink />
         );
     }
 
     renderAuthors = (publication) => {
         return (
-            <AuthorsCitationView
-                key="additional-information-authors"
-                showLink
-                publication={publication}
-                initialNumberOfAuthors={publication.fez_record_search_key_author.length}
-            />
+            <AuthorsCitationView key="additional-information-authors" publication={publication} initialNumberOfAuthors={publication.fez_record_search_key_author.length} showLink />
         );
     }
 
@@ -205,9 +186,7 @@ export default class AdditionalInformation extends Component {
     // get lookup data if it exsts, except rek_issn_lookup as it returns sherpa romeo color
     getData = (object, subkey) => {
         const lookupSuffix = '_lookup';
-        return (subkey === 'rek_oa_status' || object[subkey + lookupSuffix] && subkey !== 'rek_issn')
-            ? object[subkey + lookupSuffix]
-            : object[subkey];
+        return (subkey === 'rek_oa_status' || object[subkey + lookupSuffix] && subkey !== 'rek_issn') ? object[subkey + lookupSuffix] : object[subkey];
     }
 
     getAbstract = (publication) => {

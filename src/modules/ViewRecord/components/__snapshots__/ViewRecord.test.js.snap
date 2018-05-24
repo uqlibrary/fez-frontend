@@ -31,30 +31,6 @@ exports[`Component ViewRecord  should not render components for empty record 1`]
     title="Related publications and datasets"
   />
   <AdditionalInformation
-    account={
-      Object {
-        "barcode": "240675201000000",
-        "blocked": false,
-        "canMasquerade": false,
-        "class": Array [
-          "Campus-MATERHOSP",
-        ],
-        "classes": Array [],
-        "expiryDate": "31-12-19",
-        "firstName": "J",
-        "groups": Array [
-          "CN=Sci Faculty",
-        ],
-        "hasSession": true,
-        "homeLib": "St Lucia",
-        "id": "uqresearcher",
-        "lastName": "Researcher",
-        "mail": "j.Researcher@uq.edu.au",
-        "name": "J Researcher",
-        "tokenBased": false,
-        "type": 3,
-      }
-    }
     publication={Object {}}
   />
   <GrantInformation
@@ -1702,30 +1678,6 @@ exports[`Component ViewRecord  should render record view 1`] = `
     title="Related publications and datasets"
   />
   <AdditionalInformation
-    account={
-      Object {
-        "barcode": "240675201000000",
-        "blocked": false,
-        "canMasquerade": false,
-        "class": Array [
-          "Campus-MATERHOSP",
-        ],
-        "classes": Array [],
-        "expiryDate": "31-12-19",
-        "firstName": "J",
-        "groups": Array [
-          "CN=Sci Faculty",
-        ],
-        "hasSession": true,
-        "homeLib": "St Lucia",
-        "id": "uqresearcher",
-        "lastName": "Researcher",
-        "mail": "j.Researcher@uq.edu.au",
-        "name": "J Researcher",
-        "tokenBased": false,
-        "type": 3,
-      }
-    }
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -4911,30 +4863,6 @@ exports[`Component ViewRecord  should render record view without a title 1`] = `
     title="Related publications and datasets"
   />
   <AdditionalInformation
-    account={
-      Object {
-        "barcode": "240675201000000",
-        "blocked": false,
-        "canMasquerade": false,
-        "class": Array [
-          "Campus-MATERHOSP",
-        ],
-        "classes": Array [],
-        "expiryDate": "31-12-19",
-        "firstName": "J",
-        "groups": Array [
-          "CN=Sci Faculty",
-        ],
-        "hasSession": true,
-        "homeLib": "St Lucia",
-        "id": "uqresearcher",
-        "lastName": "Researcher",
-        "mail": "j.Researcher@uq.edu.au",
-        "name": "J Researcher",
-        "tokenBased": false,
-        "type": 3,
-      }
-    }
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,

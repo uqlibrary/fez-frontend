@@ -23,8 +23,7 @@ export default class ViewRecord extends PureComponent {
         recordToViewError: PropTypes.string,
         match: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
-        hideCulturalSensitivityStatement: PropTypes.bool,
-        account: PropTypes.object
+        hideCulturalSensitivityStatement: PropTypes.bool
     };
 
     componentDidMount() {
@@ -81,7 +80,7 @@ export default class ViewRecord extends PureComponent {
 
                 <RelatedPublications publication={recordToView} />
 
-                <AdditionalInformation publication={recordToView} account={this.props.account}/>
+                <AdditionalInformation publication={recordToView} />
 
                 <GrantInformation publication={recordToView} />
 
