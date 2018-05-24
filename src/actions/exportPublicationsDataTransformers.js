@@ -1,18 +1,7 @@
 import FileSaver from 'file-saver';
 import locale from '../locale/components';
 import moment from 'moment';
-
-/**
- * File type to name map
- *
- * Note: unfortunately content-disposition info doesn't seem to come through even after whitelisting it on CORS
- *
- * @type {{"application/vnd.ms-excel": string, "application/vnd.endnote": string}}
- */
-export const formatToExtensionMap = {
-    'excel': 'xlsx',
-    'endnote': 'enw'
-};
+import {exportFormatToExtension} from '../config/general';
 
 export const getExceptionMessage = (format) => `Export format ${format} is not supported.`;
 
@@ -32,10 +21,10 @@ export const getFileName = (extension) =>
  * @returns void
  */
 export function promptForDownload(format, response) {
-    if (!(format in formatToExtensionMap)) {
+    if (!(format in exportFormatToExtension)) {
         throw getExceptionMessage(format);
     }
 
-    FileSaver.saveAs(response, getFileName(formatToExtensionMap[format]));
+    FileSaver.saveAs(response, getFileName(exportFormatToExtension[format]));
 }
 

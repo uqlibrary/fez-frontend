@@ -1,5 +1,5 @@
 import ExportPublications from './ExportPublications';
-import {formatToExtensionMap} from "../../../../actions/exportPublicationsDataTransformers";
+import {exportFormatToExtension} from '../../../../config/general';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -17,14 +17,14 @@ describe('Export Publications renders', () => {
     });
 
     it('component with rendered field selected', () => {
-        const expected = Object.keys(formatToExtensionMap)[0];
+        const expected = Object.keys(exportFormatToExtension)[0];
         const wrapper = setup({format: expected});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('SelectField').props().value).toEqual(expected);
     });
 
     it('component with field selected', () => {
-        const expected = Object.keys(formatToExtensionMap)[0];
+        const expected = Object.keys(exportFormatToExtension)[0];
         const mockOnChange = jest.fn();
         const wrapper = setup({onChange: mockOnChange});
         expect(toJson(wrapper)).toMatchSnapshot();

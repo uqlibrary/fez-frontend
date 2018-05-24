@@ -4,7 +4,8 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as exportPublicationsActions from './exportPublications';
 import {exportSearchToExcel as exportSearchToExcelResponse} from "../mock/data/testing/searchRecords";
-import {formatToExtensionMap, promptForDownload} from './exportPublicationsDataTransformers';
+import {promptForDownload} from './exportPublicationsDataTransformers';
+import {exportFormatToExtension} from '../config/general';
 
 beforeEach(() => {
     promptForDownload.mockClear();
@@ -24,7 +25,7 @@ describe('Export publications actions', () => {
     });
 
     describe('exportPublications()', () => {
-        const exportFormat = Object.keys(formatToExtensionMap)[0];
+        const exportFormat = Object.keys(exportFormatToExtension)[0];
         const requestParams = repositories.routes.CURRENT_USER_RECORDS_API({
             apiUrl: 'records/search',
             userName: 'uqresearcher',
