@@ -167,11 +167,10 @@ class SearchRecords extends PureComponent {
         const txt = locale.pages.searchRecords;
         const pagingData = this.props.publicationsListPagingData;
         const hasSearchParams = !!this.props.searchQuery && this.props.searchQuery.constructor === Object && Object.keys(this.props.searchQuery).length > 0;
-
         return (
             <StandardPage className="page-search-records" title={txt.title}>
-                <StandardCard>
-                    <SearchComponent showAdvancedSearchButton/>
+                <StandardCard className="search-component">
+                    <SearchComponent className="search-body" />
                 </StandardCard>
                 {
                     // first time loading search results

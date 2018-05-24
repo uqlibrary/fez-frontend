@@ -6,17 +6,22 @@ import RaisedButton from 'material-ui/RaisedButton';
 import SearchIcon from 'material-ui/svg-icons/action/search';
 import param from 'can-param';
 
-import {locale} from 'locale';
+import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
+import Snackbar from 'material-ui/Snackbar';
+import {MIN_PUBLIC_SEARCH_TEXT_LENGTH, MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
 import {routes} from 'config';
+import {locale} from 'locale';
 
 
 export default class SearchComponent extends PureComponent {
     static propTypes = {
         searchQueryParams: PropTypes.object,
-        applyInverseStyle: PropTypes.bool,
+        inHeader: PropTypes.bool,
         showAdvancedSearchButton: PropTypes.bool,
         showSearchButton: PropTypes.bool,
         showPrefixIcon: PropTypes.bool,
+        showMobileSearchButton: PropTypes.bool,
+        className: PropTypes.string,
         actions: PropTypes.object,
         history: PropTypes.object.isRequired
     };
@@ -24,24 +29,33 @@ export default class SearchComponent extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            searchText: props.searchQueryParams && props.searchQueryParams.title || '',
-            showAdvancedSearch: false
+            searchText: props.searchQueryParams && props.searchQueryParams.all || '',
+            showAdvancedSearch: false,
+            showMobile: false,
+            snackbarOpen: false,
+            snackbarMessage: ''
         };
-        this.MIN_SEARCH_TEXT_LENGTH = 10;
     }
 
     componentWillReceiveProps(nextProps) {
-        if (!!nextProps.searchQueryParams && nextProps.searchQueryParams.title !== this.state.searchText) {
+        if (!!nextProps.searchQueryParams && !!nextProps.searchQueryParams.all
+            && nextProps.searchQueryParams.all !== this.state.searchText) {
             this.setState({
-                searchText: nextProps.searchQueryParams.title || ''
+                searchText: nextProps.searchQueryParams.all || ''
             });
         }
     }
 
     handleSearch = (event) => {
-        if(event && event.key && (event.key !== 'Enter' || this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH)) return;
+        // Stop submission unless enter was pressed
+        if(event && event.key && (event.key !== 'Enter')) return;
 
-        if (this.props.actions && this.props.actions.searchEspacePublications && this.state.searchText.trim().length >= this.MIN_SEARCH_TEXT_LENGTH) {
+        // If all is OK, submit the search
+        if (this.props.actions
+            && this.props.actions.searchEspacePublications
+            && this.state.searchText.trim().length >= MIN_PUBLIC_SEARCH_TEXT_LENGTH
+            && this.state.searchText.trim().length <= MAX_PUBLIC_SEARCH_TEXT_LENGTH
+        ) {
             // start search
             const defaultQueryParams = {
                 page: 1,
@@ -51,8 +65,14 @@ export default class SearchComponent extends PureComponent {
                 activeFacets: {filters: {}, ranges: {}}
             };
 
-            const searchQuery = {...defaultQueryParams, searchQueryParams: {title: this.state.searchText}};
+            const searchQuery = {searchQueryParams: {all: this.state.searchText}, ...defaultQueryParams};
             this.props.actions.searchEspacePublications(searchQuery);
+
+            // Hide the mobile search bar after performing a search
+            this.setState({showMobile: false});
+            // Blur the input so the mobile keyboard is deactivated
+            event && event.target && event.target.blur();
+
             // navigate to search results page
             this.props.history.push({
                 pathname: routes.pathConfig.records.search,
@@ -60,28 +80,65 @@ export default class SearchComponent extends PureComponent {
                 state: {...searchQuery}
             });
         }
-    }
+
+        // Snackbar to give feedback when input is too short or long in the header search when pressing enter
+        if(event && event.key && event.key === 'Enter' && this.props.inHeader) {
+            if (this.state.searchText.trim().length < MIN_PUBLIC_SEARCH_TEXT_LENGTH) {
+                this.setState({
+                    snackbarMessage: locale.validationErrors.minLength.replace('[min]', MIN_PUBLIC_SEARCH_TEXT_LENGTH),
+                    snackbarOpen: true
+                });
+            } else if (this.state.searchText.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
+                this.setState({
+                    snackbarMessage: locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH),
+                    snackbarOpen: true
+                });
+            }
+        }
+    };
+
+    toggleMobile = () => {
+        this.setState({
+            showMobile: !this.state.showMobile,
+            snackbarOpen: false
+        }, () => {
+            if(this.state.showMobile) {
+                document.getElementById('searchField') && document.getElementById('searchField').focus();
+            }
+        });
+    };
 
     searchTextChanged = (event, value) => {
         this.setState({
-            searchText: value
+            searchText: value,
+            snackbarOpen: false
         });
-    }
+    };
 
     toggleAdvancedSearch = () => {
         this.setState({
             showAdvancedSearch: !this.state.showAdvancedSearch
         });
-    }
+    };
+
+    validationError = () => {
+        if(!this.props.inHeader && this.state.searchText.trim().length >= 1 && this.state.searchText.trim().length < MIN_PUBLIC_SEARCH_TEXT_LENGTH) {
+            return locale.validationErrors.minLength.replace('[min]', MIN_PUBLIC_SEARCH_TEXT_LENGTH);
+        } else if (!this.props.inHeader && this.state.searchText.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
+            return locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH);
+        } else {
+            return false;
+        }
+    };
 
     render() {
         const txt = locale.components.searchComponent;
         return (
-            <div className={`search-component ${this.props.applyInverseStyle ? 'inverse' : ''}`}>
+            <div className={`search-component ${this.props.inHeader && 'header'} ${this.props.className}`}>
                 {
                     !this.state.showAdvancedSearch &&
                     <div className="columns is-gapless">
-                        <div className="column search-field">
+                        <div className={`column search-field is-gapless ${this.state.showMobile ? 'showMobile' : 'hideMobile'}`}>
                             <div className="columns is-gapless search-field is-mobile">
                                 {
                                     this.props.showPrefixIcon &&
@@ -89,51 +146,80 @@ export default class SearchComponent extends PureComponent {
                                         <SearchIcon/>
                                     </div>
                                 }
+                                {
+                                    this.props.showMobileSearchButton &&
+                                    <div className="column is-narrow search-icon-prefix is-hidden-tablet">
+                                        <IconButton
+                                            onClick={this.toggleMobile}
+                                            className="mobileBackArrow" >
+                                            <ArrowBack/>
+                                        </IconButton>
+                                    </div>
+                                }
                                 <div className="column">
                                     <TextField
                                         type="search"
                                         id="searchField"
                                         fullWidth
-                                        hintText={txt.searchBoxPlaceholder}
+                                        floatingLabelText={!this.props.inHeader && txt.searchBoxPlaceholder}
+                                        hintText={this.props.inHeader && txt.searchBoxPlaceholder}
+                                        aria-label={txt.ariaInputLabel}
                                         onChange={this.searchTextChanged}
                                         onKeyPress={this.handleSearch}
                                         value={this.state.searchText}
-                                        underlineStyle={this.props.applyInverseStyle && {display: 'none'}}
+                                        underlineStyle={this.props.inHeader ? {display: 'none'} : {}}
+                                        errorText={this.validationError()}
                                     />
                                 </div>
                                 <div className="is-hidden-tablet mobileSpacer" />
                             </div>
                         </div>
                         {
-                            this.props.showSearchButton &&
-                            <div className="column is-narrow search-button-wrapper">
+                            this.props.showMobileSearchButton &&
+                            <div className="column is-narrow is-hidden-tablet">
                                 <IconButton
-                                    tooltipPosition="bottom-left"
-                                    onClick={this.handleSearch}
-                                    disabled={this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH}
-                                    hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}}
+                                    onClick={this.toggleMobile}
+                                    aria-label={txt.mobileSearchButtonAriaLabel}
                                     className="search-button"
-                                    tooltip={txt.searchButtonHint}>
+                                    hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}}
+                                >
                                     <SearchIcon/>
                                 </IconButton>
                             </div>
                         }
                         {
+                            this.props.showSearchButton &&
+                            <div className="column is-narrow icon-search-button-wrapper">
+                                <IconButton
+                                    tooltipPosition="bottom-left"
+                                    onClick={this.handleSearch}
+                                    disabled={!!this.validationError}
+                                    className="search-button"
+                                    tooltip={txt.searchButtonHint}
+                                    aria-label={txt.searchButtonAriaLabel}>
+                                    <SearchIcon/>
+                                </IconButton>
+                            </div>
+                        }
+                        <div className="column is-narrow search-button-wrapper">
+                            <RaisedButton
+                                label={txt.searchButtonText}
+                                aria-label={txt.searchButtonAriaLabel}
+                                secondary
+                                disabled={this.state.searchText.trim().length === 0 || !!this.validationError()}
+                                onClick={this.handleSearch}
+                                fullWidth />
+                        </div>
+                        {
                             this.props.showAdvancedSearchButton &&
                             <div className="column is-narrow">
                                 <RaisedButton
-                                    label={txt.searchButtonText}
-                                    secondary
-                                    disabled={this.state.searchText.trim().length < this.MIN_SEARCH_TEXT_LENGTH}
-                                    onClick={this.handleSearch}/>
-                            </div>
-                        }
-                        {
-                            this.props.showAdvancedSearchButton && false &&
-                            <div className="column is-narrow">
-                                <RaisedButton
                                     label={txt.advancedSearchButtonText}
-                                    onClick={this.toggleAdvancedSearch}/>
+                                    aria-label={txt.advancedSearchButtonAriaLabel}
+                                    onClick={this.toggleAdvancedSearch}
+                                    className="advancedButton"
+                                    fullWidth
+                                />
                             </div>
                         }
                     </div>
@@ -146,12 +232,16 @@ export default class SearchComponent extends PureComponent {
                         </div>
                         <div className="column is-narrow">
                             <RaisedButton
-                                label={'Simple search'}
-                                secondary
+                                label={txt.simpleSearchToggle}
                                 onClick={this.toggleAdvancedSearch}/>
                         </div>
                     </div>
                 }
+                <Snackbar
+                    open={this.state.snackbarOpen}
+                    autoHideDuration={5000}
+                    message={this.state.snackbarMessage}
+                />
             </div>
         );
     }

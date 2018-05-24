@@ -126,10 +126,10 @@ exports[`SearchRecords page should render placeholders 1`] = `
   title="eSpace search"
 >
   <StandardCard
-    className=""
+    className="search-component"
   >
     <withRouter(Connect(SearchComponent))
-      showAdvancedSearchButton={true}
+      className="search-body"
     />
   </StandardCard>
   <div

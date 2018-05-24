@@ -41,20 +41,26 @@ export default class PublicationsListPaging extends Component {
         const txt = locale.components.paging;
         const totalPages = this.state.total && this.state.per_page ? Math.ceil(this.state.total / this.state.per_page) : 0;
         if (totalPages === 0) return (<span className="publicationsListControls empty"/>);
+        const pageBracket = 5;
         const renderedPages = Array(totalPages).fill()
             .map((page, index) => {
-                return (
-                    <FlatButton
-                        key={index}
-                        onClick={() => {
-                            this.pageChanged(index + 1);
-                        }}
-                        disabled={this.props.disabled || (index + 1) === this.state.current_page}
-                        className={'page' + ((index + 1) === this.state.current_page ? ' selectedPage' : '')}
-                        label={index + 1}/>
-                );
+                if(((index + 1) < (this.state.current_page + pageBracket))
+                    && ((index + 1) > (this.state.current_page - pageBracket))
+                ) {
+                    return (
+                        <FlatButton
+                            key={index}
+                            onClick={() => {
+                                this.pageChanged(index + 1);
+                            }}
+                            disabled={this.props.disabled || (index + 1) === this.state.current_page}
+                            className={'page' + ((index + 1) === this.state.current_page ? ' selectedPage' : '')}
+                            label={index + 1}/>
+                    );
+                } else {
+                    return null;
+                }
             });
-
         return (
             <div>
                 {
@@ -75,7 +81,9 @@ export default class PublicationsListPaging extends Component {
                                 </div>
                         }
                         <div className="publicationsListPagingItems column is-hidden-mobile has-text-centered">
+                            {(this.state.current_page - pageBracket >= 1) && '...'}
                             {renderedPages}
+                            {(this.state.current_page + pageBracket < totalPages) && '...'}
                         </div>
                         <div className="column is-hidden-tablet-only is-hidden-desktop has-text-centered">
                             <FlatButton className="pagingTotals"

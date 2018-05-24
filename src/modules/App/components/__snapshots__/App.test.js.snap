@@ -121,12 +121,6 @@ exports[`Application component should render alert if user is not fez author 1`]
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "eSpace search",
-          "path": "/records/search",
-        },
-        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -169,17 +163,11 @@ exports[`Application component should render alert if user is not fez author 1`]
     }
     iconElementRight={
       <div
-        className="columns is-gapless appbar-right-columns"
+        className="columns is-gapless appbar-right-columns is-mobile"
       >
         <div
-          className="column search-column is-hidden-mobile"
-        >
-          <withRouter(Connect(SearchComponent))
-            applyInverseStyle={true}
-            showPrefixIcon={true}
-            showSearchButton={true}
-          />
-        </div>
+          className="column search-column"
+        />
         <div
           className="column is-narrow auth-button-column"
         >
@@ -227,7 +215,8 @@ exports[`Application component should render alert if user is not fez author 1`]
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -254,12 +243,6 @@ exports[`Application component should render alert if user is not fez author 1`]
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
           "primaryText": "Author statistics",
-        },
-        Object {
-          "linkTo": "/records/search",
-          "primaryText": "Search eSpace",
-          "public": true,
-          "secondaryText": "",
         },
         Object {
           "divider": true,
@@ -451,14 +434,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         path="/author-identifiers/google-scholar/link"
       />
       <Route
-        component={[Function]}
-        exact={true}
         key="route_13"
-        pageTitle="eSpace search"
-        path="/records/search"
-      />
-      <Route
-        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -466,12 +442,12 @@ exports[`Application component should render alert if user is not fez author 1`]
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -603,12 +579,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "eSpace search",
-          "path": "/records/search",
-        },
-        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -651,17 +621,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     }
     iconElementRight={
       <div
-        className="columns is-gapless appbar-right-columns"
+        className="columns is-gapless appbar-right-columns is-mobile"
       >
         <div
-          className="column search-column is-hidden-mobile"
-        >
-          <withRouter(Connect(SearchComponent))
-            applyInverseStyle={true}
-            showPrefixIcon={true}
-            showSearchButton={true}
-          />
-        </div>
+          className="column search-column"
+        />
         <div
           className="column is-narrow auth-button-column"
         >
@@ -709,7 +673,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -736,12 +701,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
           "primaryText": "Author statistics",
-        },
-        Object {
-          "linkTo": "/records/search",
-          "primaryText": "Search eSpace",
-          "public": true,
-          "secondaryText": "",
         },
         Object {
           "divider": true,
@@ -917,14 +876,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         path="/author-identifiers/google-scholar/link"
       />
       <Route
-        component={[Function]}
-        exact={true}
         key="route_13"
-        pageTitle="eSpace search"
-        path="/records/search"
-      />
-      <Route
-        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -932,12 +884,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -1008,17 +960,11 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     }
     iconElementRight={
       <div
-        className="columns is-gapless appbar-right-columns"
+        className="columns is-gapless appbar-right-columns is-mobile"
       >
         <div
-          className="column search-column is-hidden-mobile"
-        >
-          <withRouter(Connect(SearchComponent))
-            applyInverseStyle={true}
-            showPrefixIcon={true}
-            showSearchButton={true}
-          />
-        </div>
+          className="column search-column"
+        />
         <div
           className="column is-narrow auth-button-column"
         >
@@ -1066,7 +1012,8 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -1278,12 +1225,6 @@ exports[`Application component should render app for account with fez author wit
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "eSpace search",
-          "path": "/records/search",
-        },
-        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -1326,17 +1267,11 @@ exports[`Application component should render app for account with fez author wit
     }
     iconElementRight={
       <div
-        className="columns is-gapless appbar-right-columns"
+        className="columns is-gapless appbar-right-columns is-mobile"
       >
         <div
-          className="column search-column is-hidden-mobile"
-        >
-          <withRouter(Connect(SearchComponent))
-            applyInverseStyle={true}
-            showPrefixIcon={true}
-            showSearchButton={true}
-          />
-        </div>
+          className="column search-column"
+        />
         <div
           className="column is-narrow auth-button-column"
         >
@@ -1384,7 +1319,8 @@ exports[`Application component should render app for account with fez author wit
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -1411,12 +1347,6 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
           "primaryText": "Author statistics",
-        },
-        Object {
-          "linkTo": "/records/search",
-          "primaryText": "Search eSpace",
-          "public": true,
-          "secondaryText": "",
         },
         Object {
           "divider": true,
@@ -1592,14 +1522,7 @@ exports[`Application component should render app for account with fez author wit
         path="/author-identifiers/google-scholar/link"
       />
       <Route
-        component={[Function]}
-        exact={true}
         key="route_13"
-        pageTitle="eSpace search"
-        path="/records/search"
-      />
-      <Route
-        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -1607,12 +1530,12 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -1744,12 +1667,6 @@ exports[`Application component should render app for account with fez author wit
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "eSpace search",
-          "path": "/records/search",
-        },
-        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -1792,17 +1709,11 @@ exports[`Application component should render app for account with fez author wit
     }
     iconElementRight={
       <div
-        className="columns is-gapless appbar-right-columns"
+        className="columns is-gapless appbar-right-columns is-mobile"
       >
         <div
-          className="column search-column is-hidden-mobile"
-        >
-          <withRouter(Connect(SearchComponent))
-            applyInverseStyle={true}
-            showPrefixIcon={true}
-            showSearchButton={true}
-          />
-        </div>
+          className="column search-column"
+        />
         <div
           className="column is-narrow auth-button-column"
         >
@@ -1850,7 +1761,8 @@ exports[`Application component should render app for account with fez author wit
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -1877,12 +1789,6 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
           "primaryText": "Author statistics",
-        },
-        Object {
-          "linkTo": "/records/search",
-          "primaryText": "Search eSpace",
-          "public": true,
-          "secondaryText": "",
         },
         Object {
           "divider": true,
@@ -2076,14 +1982,7 @@ exports[`Application component should render app for account with fez author wit
         path="/author-identifiers/google-scholar/link"
       />
       <Route
-        component={[Function]}
-        exact={true}
         key="route_13"
-        pageTitle="eSpace search"
-        path="/records/search"
-      />
-      <Route
-        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -2091,12 +1990,12 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2228,12 +2127,6 @@ exports[`Application component should render app for account with fez author wit
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "eSpace search",
-          "path": "/records/search",
-        },
-        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -2276,10 +2169,10 @@ exports[`Application component should render app for account with fez author wit
     }
     iconElementRight={
       <div
-        className="columns is-gapless appbar-right-columns"
+        className="columns is-gapless appbar-right-columns is-mobile"
       >
         <div
-          className="column search-column is-hidden-mobile"
+          className="column search-column"
         />
         <div
           className="column is-narrow auth-button-column"
@@ -2465,14 +2358,7 @@ exports[`Application component should render app for account with fez author wit
         path="/author-identifiers/google-scholar/link"
       />
       <Route
-        component={[Function]}
-        exact={true}
         key="route_13"
-        pageTitle="eSpace search"
-        path="/records/search"
-      />
-      <Route
-        key="route_14"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -2480,12 +2366,12 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_14"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
-        key="route_16"
+        key="route_15"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2617,12 +2503,6 @@ exports[`Application component should render application with routing for the us
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "eSpace search",
-          "path": "/records/search",
-        },
-        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -2665,17 +2545,11 @@ exports[`Application component should render application with routing for the us
     }
     iconElementRight={
       <div
-        className="columns is-gapless appbar-right-columns"
+        className="columns is-gapless appbar-right-columns is-mobile"
       >
         <div
-          className="column search-column is-hidden-mobile"
-        >
-          <withRouter(Connect(SearchComponent))
-            applyInverseStyle={true}
-            showPrefixIcon={true}
-            showSearchButton={true}
-          />
-        </div>
+          className="column search-column"
+        />
         <div
           className="column is-narrow auth-button-column"
         >
@@ -2723,7 +2597,8 @@ exports[`Application component should render application with routing for the us
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -2750,12 +2625,6 @@ exports[`Application component should render application with routing for the us
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
           "primaryText": "Author statistics",
-        },
-        Object {
-          "linkTo": "/records/search",
-          "primaryText": "Search eSpace",
-          "public": true,
-          "secondaryText": "",
         },
         Object {
           "divider": true,
@@ -2861,10 +2730,10 @@ exports[`Application component should render for anon user 1`] = `
     }
     iconElementRight={
       <div
-        className="columns is-gapless appbar-right-columns"
+        className="columns is-gapless appbar-right-columns is-mobile"
       >
         <div
-          className="column search-column is-hidden-mobile"
+          className="column search-column"
         />
         <div
           className="column is-narrow auth-button-column"
@@ -2913,7 +2782,8 @@ exports[`Application component should render for anon user 1`] = `
       }
     }
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
     menuItems={
       Array [
         Object {
@@ -3005,7 +2875,7 @@ exports[`Application component should render loading screen while account is loa
 >
   <AppLoader
     logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-    logoText="UQ eSpace "
+    logoText="University of Queensland"
     progressColor="#FFF"
     title="UQ eSpace "
   />
@@ -3072,10 +2942,10 @@ exports[`Application component should render thesis submission for HDR without m
     }
     iconElementRight={
       <div
-        className="columns is-gapless appbar-right-columns"
+        className="columns is-gapless appbar-right-columns is-mobile"
       >
         <div
-          className="column search-column is-hidden-mobile"
+          className="column search-column"
         />
         <div
           className="column is-narrow auth-button-column"
