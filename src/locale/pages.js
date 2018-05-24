@@ -222,6 +222,35 @@ export default {
                 renameFacetsList: {'Display type': 'Publication type'}
             }
         },
+        myDatasets: {
+            pageTitle: 'My research data',
+            recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
+            text: (
+                <span>
+                    Add to this list by <a href="/dataset/add">adding a missing dataset</a>.
+                </span>
+            ),
+            loadingMessage: 'Searching for your datasets...',
+            loadingPagingMessage: 'Retrieving your datasets...',
+            noResultsFound: {
+                title: 'No datasets found',
+                text: (
+                    <div>
+                        We were unable to find any results. You may be able to <a href="/dataset/add">add a missing dataset</a>.
+                    </div>
+                ),
+            },
+            // this.renderLink(routes.pathConfig.dataset.add, data)
+            facetsFilter: {
+                title: 'Refine results',
+                // help: {
+                //     title: 'Refining your results',
+                //     text: 'Help about ....',
+                //     buttonLabel: 'Ok'
+                // },
+                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published', 'Display type']
+            }
+        },
         claimPublications: {
             title: 'Claim possible publications',
             loadingMessage: 'Searching for possibly your publications...',

@@ -8,7 +8,7 @@ export default {
             primaryText: 'My research'
         },
         myDatasets: {
-            primaryText: 'My research data collections'
+            primaryText: 'My research data'
         },
         authorStatistics: {
             primaryText: 'Author statistics'
@@ -20,7 +20,7 @@ export default {
             primaryText: 'Add a missing publication'
         },
         addDataset: {
-            primaryText: 'Add a missing data collection'
+            primaryText: 'Add a missing dataset'
         },
         masquerade: {
             primaryText: 'Masquerade',
