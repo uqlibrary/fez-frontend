@@ -81,6 +81,9 @@
     .alertIcon .material-icons  {
       color: $text-color-reverse !important;
     }
+    a {
+      color: $text-color-reverse !important;
+    }
     .alertSpinner svg circle {
       stroke: $text-color-reverse !important;
     }
