@@ -1,5 +1,7 @@
 import React from 'react';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {pathConfig} from 'config/routes';
+
 /*
 
 NOTE:
@@ -227,7 +229,7 @@ export default {
             recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             text: (
                 <span>
-                    Add to this list by <a href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315">adding a missing dataset</a>.
+                    Add to this list by <a href={`${pathConfig.dataset.add}`} target="_blank">adding a missing dataset</a>.
                 </span>
             ),
             loadingMessage: 'Searching for your datasets...',
@@ -236,7 +238,7 @@ export default {
                 title: 'No datasets found',
                 text: (
                     <div>
-                        We were unable to find any results. You may be able to <a href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315">add a missing dataset</a>.
+                        We were unable to find any results. You may be able to <a href={`${pathConfig.dataset.add}`} target="_blank">add a missing dataset</a>.
                     </div>
                 ),
             },
