@@ -36,7 +36,8 @@ export default class SearchComponent extends PureComponent {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (!!nextProps.searchQueryParams && nextProps.searchQueryParams.all !== this.state.searchText) {
+        if (!!nextProps.searchQueryParams && !!nextProps.searchQueryParams.all
+            && nextProps.searchQueryParams.all !== this.state.searchText) {
             this.setState({
                 searchText: nextProps.searchQueryParams.all || ''
             });
