@@ -29065,7 +29065,7 @@ exports[`Additional Information Component  should render component with thesis 1
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_70]=School of Natural and Rural Systems"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Natural+and+Rural+Systems"
           >
             School of Natural and Rural Systems
           </a>
@@ -29986,7 +29986,7 @@ exports[`Additional Information Component  should render component with working 
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_70]=School of Economics"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Economics"
           >
             School of Economics
           </a>
@@ -30491,7 +30491,7 @@ exports[`Additional Information Component  should render oa status value link in
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_70]=School of Natural and Rural Systems"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Natural+and+Rural+Systems"
           >
             School of Natural and Rural Systems
           </a>

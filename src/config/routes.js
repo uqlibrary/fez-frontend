@@ -57,7 +57,8 @@ export const pathConfig = {
                 searchQueryParams: {
                     all: keyword
                 }
-            })),
+            })
+        ),
         institutionalStatus: (institutionalStatusId) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_23]=${institutionalStatusId}`),
         openAccessStatus: (openAccessStatusId) => (
             getSearchUrl({
@@ -69,7 +70,8 @@ export const pathConfig = {
                     ranges: {},
                     showOpenAccessOnly: openAccessIds.indexOf(openAccessStatusId) >= 0
                 }
-            })),
+            })
+        ),
         journalName: (journalName) => (
             getSearchUrl({
                 searchQueryParams: {
@@ -80,13 +82,15 @@ export const pathConfig = {
                         'Journal name': journalName
                     }
                 }
-            })),
+            })
+        ),
         publisher: (publisher) => (
             getSearchUrl({
                 searchQueryParams: {
                     all: publisher
                 }
-            })),
+            })
+        ),
         license: (license) => (
             getSearchUrl({
                 searchQueryParams: {
@@ -96,7 +100,13 @@ export const pathConfig = {
         ),
         accessCondition: (accessCondition) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_95]=${accessCondition}`),
         collectionType: (collectionType) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_92]=${collectionType}`),
-        orgUnitName: (orgUnitName) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_70]=${orgUnitName}`),
+        orgUnitName: (orgUnitName) => (
+            getSearchUrl({
+                searchQueryParams: {
+                    all: orgUnitName
+                }
+            })
+        ),
         series: (series) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_33]=${series}`),
         bookTitle: (bookTitle) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_37]=${bookTitle}`),
         jobNumber: (jobNumber) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_151]=${jobNumber}`),
@@ -105,7 +115,8 @@ export const pathConfig = {
                 searchQueryParams: {
                     all: conferenceName
                 }
-            })),
+            })
+        ),
         proceedingsTitle: (proceedingsTitle) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_2]=${proceedingsTitle}`),
     },
     admin: {
