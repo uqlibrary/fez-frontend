@@ -1,5 +1,7 @@
 import React from 'react';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {pathConfig} from 'config/routes';
+
 /*
 
 NOTE:
@@ -222,6 +224,35 @@ export default {
                 renameFacetsList: {'Display type': 'Publication type'}
             }
         },
+        myDatasets: {
+            pageTitle: 'My research data',
+            recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
+            text: (
+                <span>
+                    Add to this list by <a href={`${pathConfig.dataset.add}`} target="_blank">adding a missing dataset</a>.
+                </span>
+            ),
+            loadingMessage: 'Searching for your datasets...',
+            loadingPagingMessage: 'Retrieving your datasets...',
+            noResultsFound: {
+                title: 'No datasets found',
+                text: (
+                    <div>
+                        We were unable to find any results. You may be able to <a href={`${pathConfig.dataset.add}`} target="_blank">add a missing dataset</a>.
+                    </div>
+                ),
+            },
+            // this.renderLink(routes.pathConfig.dataset.add, data)
+            facetsFilter: {
+                title: 'Refine results',
+                // help: {
+                //     title: 'Refining your results',
+                //     text: 'Help about ....',
+                //     buttonLabel: 'Ok'
+                // },
+                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published', 'Display type']
+            }
+        },
         claimPublications: {
             title: 'Claim possible publications',
             loadingMessage: 'Searching for possibly your publications...',
@@ -401,6 +432,7 @@ export default {
             loadingMessage: 'Searching for publications...',
             recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             loadingPagingMessage: 'Searching for publications...',
+            exportPublicationsLoadingMessage: 'Exporting search results...',
             noResultsFound: {
                 title: 'No publications found',
                 text: (

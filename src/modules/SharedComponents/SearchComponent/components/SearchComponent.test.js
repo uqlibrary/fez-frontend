@@ -78,13 +78,28 @@ describe('SearchComponent', () => {
 
     it('should submit search if search text is not null and ENTER is pressed', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({actions: {searchEspacePublications: testMethod}});
+        const testHistoryPushMehtod = jest.fn();
+        const wrapper = setup({actions: {searchEspacePublications: testMethod}, history: {push: testHistoryPushMehtod}});
 
         wrapper.state().searchText = 'i feel lucky';
         wrapper.instance().handleSearch({key: 'Enter'});
         wrapper.update();
 
         expect(testMethod).toHaveBeenCalled();
+        expect(testHistoryPushMehtod).toHaveBeenCalledWith({
+            pathname: '/records/search',
+            search: 'searchQueryParams%5Ball%5D=i+feel+lucky&page=1&pageSize=20&sortBy=published_date&sortDirection=Desc',
+            state: {
+                activeFacets: {filters: {}, ranges: {}},
+                page: 1,
+                pageSize: 20,
+                searchQueryParams: {
+                    all: 'i feel lucky',
+                },
+                sortBy: 'published_date',
+                sortDirection: 'Desc'
+            }
+        });
     });
 
     it('should toggle advanced search', () => {
