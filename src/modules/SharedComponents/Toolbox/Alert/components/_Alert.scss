@@ -103,6 +103,9 @@
     .alertIcon .material-icons  {
       color: $text-color-reverse !important;
     }
+    a {
+      color: $text-color-reverse !important;
+    }
     .alertSpinner svg circle {
       stroke: $text-color-reverse !important;
     }
@@ -121,6 +124,9 @@
     }
     .alertIcon .material-icons  {
       color: rgba($text-color-reverse, 0.9) !important;
+    }
+    a {
+      color: $text-color-reverse !important;
     }
     .alertSpinner svg circle {
       stroke: rgba($text-color-reverse, 0.75) !important;
