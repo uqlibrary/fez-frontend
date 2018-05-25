@@ -2482,7 +2482,7 @@ exports[`Additional Information Component  should render component with audio do
                                         data={
                                           <span>
                                             <a
-                                              href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_112]=453611"
+                                              href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution+noncommercial+no+derivatives"
                                             >
                                               Creative Commons Attribution noncommercial no derivatives
                                             </a>
@@ -2604,7 +2604,7 @@ exports[`Additional Information Component  should render component with audio do
                                               >
                                                 <span>
                                                   <a
-                                                    href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_112]=453611"
+                                                    href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution+noncommercial+no+derivatives"
                                                   >
                                                     Creative Commons Attribution noncommercial no derivatives
                                                   </a>
@@ -9843,7 +9843,7 @@ exports[`Additional Information Component  should render component with data col
         data={
           <span>
             <a
-              href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_112]=453701"
+              href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=453701"
             >
               453701
             </a>
@@ -11534,7 +11534,7 @@ exports[`Additional Information Component  should render component with data col
         data={
           <span>
             <a
-              href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_112]=453608"
+              href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution+(only)"
             >
               Creative Commons Attribution (only)
             </a>

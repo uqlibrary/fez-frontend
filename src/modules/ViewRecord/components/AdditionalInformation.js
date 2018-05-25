@@ -116,7 +116,7 @@ export default class AdditionalInformation extends Component {
     }
 
     renderLicense = (cvoId, lookup) => {
-        const licenseLookup = this.renderLink(routes.pathConfig.list.license(cvoId), lookup);
+        const licenseLookup = this.renderLink(routes.pathConfig.list.license(lookup), lookup);
         const licenseLink =  viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
         const uqLicenseLinkText = licenseLink && licenseLink.className.indexOf('uq') === 0 ? locale.viewRecord.sections.additionalInformation.licenseLinkText : null;
 
@@ -124,16 +124,14 @@ export default class AdditionalInformation extends Component {
             <span>
                 {licenseLookup}
                 {
-                    licenseLink && !uqLicenseLinkText &&
-                     <div>
-                         <ExternalLink href={licenseLink.url} openInNewIcon={false}>
-                             <div className={`fez-icon license ${licenseLink.className}`} />
-                         </ExternalLink>
-                     </div>
-                }
-                {
-                    licenseLink && uqLicenseLinkText &&
-                    <div><ExternalLink href={licenseLink.url}>{uqLicenseLinkText}</ExternalLink></div>
+                    licenseLink &&
+                    <div>
+                        <ExternalLink href={licenseLink.url} openInNewIcon={!!uqLicenseLinkText}>
+                            {
+                                uqLicenseLinkText || <div className={`fez-icon license ${licenseLink.className}`} />
+                            }
+                        </ExternalLink>
+                    </div>
                 }
             </span>
         );

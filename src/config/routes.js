@@ -87,7 +87,13 @@ export const pathConfig = {
                     all: publisher
                 }
             })),
-        license: (license) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_112]=${license}`),
+        license: (license) => (
+            getSearchUrl({
+                searchQueryParams: {
+                    all: license
+                }
+            })
+        ),
         accessCondition: (accessCondition) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_95]=${accessCondition}`),
         collectionType: (collectionType) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_92]=${collectionType}`),
         orgUnitName: (orgUnitName) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_70]=${orgUnitName}`),
