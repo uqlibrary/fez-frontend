@@ -432,6 +432,7 @@ export default {
             loadingMessage: 'Searching for publications...',
             recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             loadingPagingMessage: 'Searching for publications...',
+            exportPublicationsLoadingMessage: 'Exporting search results...',
             noResultsFound: {
                 title: 'No publications found',
                 text: (

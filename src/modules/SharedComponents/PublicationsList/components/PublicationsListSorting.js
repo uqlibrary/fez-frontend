@@ -71,7 +71,7 @@ export default class PublicationsListSorting extends PureComponent {
         this.setState({
             exportPublicationsFormat: value
         });
-        this.props.onExportPublications({exportFormat: value, ...this.props.location.state, ...this.state});
+        this.props.onExportPublications({exportFormat: value, ...!!this.props.location ? this.props.location.state : {}, ...this.state});
     }
 
     render() {

@@ -1,10 +1,9 @@
-import {exportFormatToExtensionMap} from "../../../../actions/publicationDataTransformers";
-
 jest.dontMock('./PublicationsListSorting');
 
 import toJson from 'enzyme-to-json';
 import React from 'react';
 import PublicationsListSorting from './PublicationsListSorting';
+import {exportFormatToExtension} from '../../../../config/general';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -88,7 +87,7 @@ describe('PublicationsListSorting renders ', () => {
     });
 
     it('component with non-empty paging data, onExportPublications called', () => {
-        const expected = Object.keys(exportFormatToExtensionMap)[0];
+        const expected = Object.keys(exportFormatToExtension)[0];
         const testFunction = jest.fn();
         const wrapper = setup({onExportPublications: testFunction, location: {state: {activeFacets: {filters: {}, ranges: {}}}}});
         wrapper.instance().exportPublicationsFormatChanged(expected);
