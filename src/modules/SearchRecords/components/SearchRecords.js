@@ -107,7 +107,8 @@ class SearchRecords extends PureComponent {
             }
         }
 
-        providedSearchQuery.pageSize = parseInt(providedSearchQuery.pageSize, 10);
+        const pageSize = parseInt(providedSearchQuery.pageSize, 10);
+        providedSearchQuery.pageSize = locale.components.sorting.recordsPerPage.indexOf(pageSize) < 0 ? 20 : pageSize;
 
         return providedSearchQuery;
     };
