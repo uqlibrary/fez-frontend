@@ -43,7 +43,6 @@ export const PUBLICATION_TYPE_VIDEO_DOCUMENT = 310;
 export const PUBLICATION_TYPE_WORKING_PAPER = 183;
 export const PUBLICATION_TYPE_REFERENCE_ENTRY = 272;
 
-export const MIN_PUBLIC_SEARCH_TEXT_LENGTH = 0;
 export const MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
 
 export const publicationTypes = (components) => [
