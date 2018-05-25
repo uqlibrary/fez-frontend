@@ -83,7 +83,8 @@ export default class SearchComponent extends PureComponent {
 
         // Snackbar to give feedback when input is too short or long in the header search when pressing enter
         if(event && event.key && event.key === 'Enter' && this.props.inHeader) {
-            if (this.state.searchText.trim().length < MIN_PUBLIC_SEARCH_TEXT_LENGTH) {
+            if (this.state.searchText.trim().length < MIN_PUBLIC_SEARCH_TEXT_LENGTH
+            && this.state.searchText.trim().length > 0) {
                 this.setState({
                     snackbarMessage: locale.validationErrors.minLength.replace('[min]', MIN_PUBLIC_SEARCH_TEXT_LENGTH),
                     snackbarOpen: true
