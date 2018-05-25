@@ -254,9 +254,9 @@ describe('Publications actions', () => {
     describe('exportAuthorPublications()', () => {
         it('calls exportPublications with expected params', async () => {
 
-            const exportFormat = Object.keys(exportFormatToExtension)[0];
+            const exportPublicationsFormat = Object.keys(exportFormatToExtension)[0];
             const testRequest = {
-                exportFormat,
+                exportPublicationsFormat,
                 page: 1,
                 pageSize: 20,
                 sortBy: 'published_date',
@@ -264,8 +264,8 @@ describe('Publications actions', () => {
                 activeFacets: {filters: {}, ranges: {}}
             };
 
-            publicationsActions.exportAuthorPublications({exportFormat, requestParams: testRequest});
-            expect(exportPublications).toHaveBeenCalledWith({exportFormat, requestParams: repositories.routes.CURRENT_USER_RECORDS_API(testRequest)});
+            publicationsActions.exportAuthorPublications(testRequest);
+            expect(exportPublications).toHaveBeenCalledWith(repositories.routes.CURRENT_USER_RECORDS_API(testRequest));
         });
     });
 });

@@ -240,9 +240,9 @@ describe('Search action creators', () => {
     describe('exportSearchPublications()', () => {
         it('calls exportPublications with expected params', async () => {
 
-            const exportFormat = Object.keys(exportFormatToExtension)[0];
+            const exportPublicationsFormat = Object.keys(exportFormatToExtension)[0];
             const testRequest = {
-                exportFormat,
+                exportPublicationsFormat,
                 page: 1,
                 pageSize: 20,
                 sortBy: 'published_date',
@@ -250,8 +250,8 @@ describe('Search action creators', () => {
                 activeFacets: {filters: {}, ranges: {}}
             };
 
-            searchActions.exportEspacePublications({exportFormat, requestParams: testRequest});
-            expect(exportPublications).toHaveBeenCalledWith({exportFormat, requestParams: repositories.routes.SEARCH_INTERNAL_RECORDS_API(testRequest)});
+            searchActions.exportEspacePublications(testRequest);
+            expect(exportPublications).toHaveBeenCalledWith(repositories.routes.SEARCH_INTERNAL_RECORDS_API(testRequest));
         });
     });
 });

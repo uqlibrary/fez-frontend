@@ -738,7 +738,10 @@ export default {
             maxPagesToShow: 5,
             pageSize: 'Records per page',
             pageOf: 'Page [currentPage] of [totalPages]',
-            totalRecords: '([total] records)'
+            totalRecords: '([total] records)',
+            pagingBracket: 3,
+            pageButtonAriaLabel: 'Click to select page [pageNumber] of [totalPages] result pages',
+            firstLastSeparator: '...'
         },
         sorting: {
             pageSize: 'Records per page',
