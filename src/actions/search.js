@@ -126,7 +126,7 @@ export function searchEspacePublications(searchParams) {
             payload: searchParams
         });
 
-        dispatch({type: actions.SEARCH_LOADING, payload: {}});
+        dispatch({type: actions.SEARCH_LOADING, payload: ''});
 
         return get(routes.SEARCH_INTERNAL_RECORDS_API({...searchParams, facets: searchParams.activeFacets || {}}))
             .then(response => {
