@@ -1757,7 +1757,7 @@ exports[`Additional Information Component  should render component with audio do
                                       <ViewRecordTableRow
                                         data={
                                           <a
-                                            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Centre for Subtropical Design, Queensland University of Technology"
+                                            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology"
                                           >
                                             Centre for Subtropical Design, Queensland University of Technology
                                           </a>
@@ -1864,7 +1864,7 @@ exports[`Additional Information Component  should render component with audio do
                                                 }
                                               >
                                                 <a
-                                                  href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Centre for Subtropical Design, Queensland University of Technology"
+                                                  href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology"
                                                 >
                                                   Centre for Subtropical Design, Queensland University of Technology
                                                 </a>
@@ -3436,7 +3436,7 @@ exports[`Additional Information Component  should render component with book 1`]
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Psychology Press"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Psychology+Press"
           >
             Psychology Press
           </a>
@@ -4304,7 +4304,7 @@ exports[`Additional Information Component  should render component with book cha
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Springer New York"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Springer+New+York"
           >
             Springer New York
           </a>
@@ -5679,7 +5679,7 @@ exports[`Additional Information Component  should render component with conferen
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_36]=Australasian Professional Society on Alcohol and other Drugs Conference 2014"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Australasian+Professional+Society+on+Alcohol+and+other+Drugs+Conference+2014"
           >
             Australasian Professional Society on Alcohol and other Drugs Conference 2014
           </a>
@@ -6398,7 +6398,7 @@ exports[`Additional Information Component  should render component with conferen
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Wiley-Blackwell Publishing"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Wiley-Blackwell+Publishing"
           >
             Wiley-Blackwell Publishing
           </a>
@@ -6938,7 +6938,7 @@ exports[`Additional Information Component  should render component with conferen
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_36]=International Meeting on Measurements and Hydraulics of Sewers IMMHS'08, Summer School GEMCEA/LCPC"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=International+Meeting+on+Measurements+and+Hydraulics+of+Sewers+IMMHS'08%2C+Summer+School+GEMCEA%2FLCPC"
           >
             International Meeting on Measurements and Hydraulics of Sewers IMMHS'08, Summer School GEMCEA/LCPC
           </a>
@@ -6980,7 +6980,7 @@ exports[`Additional Information Component  should render component with conferen
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Department of Civil Engineering at The University of Queensland"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Department+of+Civil+Engineering+at+The+University+of+Queensland"
           >
             Department of Civil Engineering at The University of Queensland
           </a>
@@ -8088,7 +8088,7 @@ exports[`Additional Information Component  should render component with creative
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=School of Architecture, The University of Queensland"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Architecture%2C+The+University+of+Queensland"
           >
             School of Architecture, The University of Queensland
           </a>
@@ -10111,7 +10111,7 @@ exports[`Additional Information Component  should render component with data col
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Cold Spring Harbor Laboratory Press"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Cold+Spring+Harbor+Laboratory+Press"
           >
             Cold Spring Harbor Laboratory Press
           </a>
@@ -11729,7 +11729,7 @@ exports[`Additional Information Component  should render component with data col
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Pangaea"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pangaea"
           >
             Pangaea
           </a>
@@ -12905,7 +12905,7 @@ exports[`Additional Information Component  should render component with digilib 
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=The University of Queensland Library"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=The+University+of+Queensland+Library"
           >
             The University of Queensland Library
           </a>
@@ -14942,7 +14942,7 @@ exports[`Additional Information Component  should render component with journal 
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Betriebswirtschaftlicher Verlag T. Gabler"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Betriebswirtschaftlicher+Verlag+T.+Gabler"
           >
             Betriebswirtschaftlicher Verlag T. Gabler
           </a>
@@ -21147,7 +21147,7 @@ exports[`Additional Information Component  should render component with journal 
                                                 >
                                                   <span>
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_34]=Journal of Cell Science"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BJournal+name%5D=Journal+of+Cell+Science&searchQueryParams%5Ball%5D=Journal+of+Cell+Science"
                                                     >
                                                       <span>
                                                         Journal of Cell Science
@@ -22476,7 +22476,7 @@ exports[`Additional Information Component  should render component with journal 
                                       <ViewRecordTableRow
                                         data={
                                           <a
-                                            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Company of Biologists"
+                                            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Company+of+Biologists"
                                           >
                                             Company of Biologists
                                           </a>
@@ -22583,7 +22583,7 @@ exports[`Additional Information Component  should render component with journal 
                                                 }
                                               >
                                                 <a
-                                                  href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Company of Biologists"
+                                                  href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Company+of+Biologists"
                                                 >
                                                   Company of Biologists
                                                 </a>
@@ -26478,7 +26478,7 @@ exports[`Additional Information Component  should render component with newspape
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Company of Biologists"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Company+of+Biologists"
           >
             Company of Biologists
           </a>
@@ -26857,7 +26857,7 @@ exports[`Additional Information Component  should render component with patent 1
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=GC Corporation"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=GC+Corporation"
           >
             GC Corporation
           </a>
@@ -27895,7 +27895,7 @@ exports[`Additional Information Component  should render component with referenc
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Routledge"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Routledge"
           >
             Routledge
           </a>
@@ -28685,7 +28685,7 @@ exports[`Additional Information Component  should render component with research
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=UQ"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=UQ"
           >
             UQ
           </a>
@@ -30036,7 +30036,7 @@ exports[`Additional Information Component  should render component with working 
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=School of Economics"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Economics"
           >
             School of Economics
           </a>
