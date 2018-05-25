@@ -219,7 +219,7 @@ describe('Publications actions', () => {
             };
 
             publicationsActions.exportAuthorPublications(testRequest);
-            expect(exportPublications).toHaveBeenCalledWith(repositories.routes.CURRENT_USER_RECORDS_API(testRequest));
+            expect(exportPublications).toHaveBeenCalledWith(repositories.routes.CURRENT_USER_RECORDS_API(testRequest, 'export'));
         });
     });
 });

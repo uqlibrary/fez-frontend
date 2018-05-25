@@ -12,6 +12,7 @@ const mapStateToProps = (state) => {
         ...state.get('publicationsReducer'),
         ...state.get('exportPublicationsReducer'),
         ...state.get('publicationsReducer'),
+        ...state.get('accountReducer'),
         localePages: locale.pages.myResearch,
         thisUrl: routes.pathConfig.records.mine,
     };

@@ -251,7 +251,7 @@ describe('Search action creators', () => {
             };
 
             searchActions.exportEspacePublications(testRequest);
-            expect(exportPublications).toHaveBeenCalledWith(repositories.routes.SEARCH_INTERNAL_RECORDS_API(testRequest));
+            expect(exportPublications).toHaveBeenCalledWith(repositories.routes.SEARCH_INTERNAL_RECORDS_API(testRequest, 'export'));
         });
     });
 });

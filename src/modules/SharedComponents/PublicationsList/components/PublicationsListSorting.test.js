@@ -14,6 +14,8 @@ function setup(testProps, isShallow = true) {
             per_page: 20,
             current_page: 1
         },
+        account: {},
+        location: {},
         disabled: false,
         activeFacets: {filters: {}, ranges: {}},
         onPageSizeChanged: jest.fn(),
@@ -49,8 +51,17 @@ describe('PublicationsListSorting renders ', () => {
         expect(wrapper.find('.publicationsListSorting.empty').length).toBe(0);
         const pages = wrapper.find('SelectField');
         expect(pages.length).toBe(3);
+        expect(wrapper.find('ExportPublications').length).toBe(1);
     });
 
+    it('component with non-empty paging data with export dropdown hidden', () => {
+        const wrapper = setup({account: null});
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('.publicationsListSorting.empty').length).toBe(0);
+        const pages = wrapper.find('SelectField');
+        expect(pages.length).toBe(3);
+        expect(wrapper.find('ExportPublications').length).toBe(0);
+    });
 
     it('component with all fields disabled', () => {
         const wrapper = setup({disabled: true});
