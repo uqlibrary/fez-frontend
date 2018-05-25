@@ -5,7 +5,9 @@ function setup(testProps, isShallow = true) {
     const props = {
         publicationsList: [],
         loadingSearch: false,
-        ...testProps
+        exportPublicationsLoading: false,
+        actions: {exportEspacePublications: ()=>{}},
+        ...testProps,
     };
     return getElement(SearchRecords, props, isShallow);
 }
@@ -314,5 +316,10 @@ describe('SearchRecords page', () => {
                 showOpenAccessOnly: false
             }
         });
+    });
+
+    it('renders loading screen while export publications loading', () => {
+        const wrapper = setup({ exportPublicationsLoading: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

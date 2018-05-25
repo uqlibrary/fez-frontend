@@ -1,5 +1,7 @@
 import React from 'react';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {pathConfig} from 'config/routes';
+
 /*
 
 NOTE:
@@ -195,7 +197,7 @@ export default {
             recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             text: (
                 <span>
-                    Add to this list by <a href="/records/possible">claiming a publication</a> or <a href="/records/add/find">adding a missing publication</a>.
+                    Add to this list by <a href={`${pathConfig.records.possible}`}>claiming a publication</a> or <a href={`${pathConfig.records.add.find}`}>adding a missing publication</a>.
                 </span>
             ),
             loadingMessage: 'Searching for your publications...',
@@ -205,8 +207,8 @@ export default {
                 title: 'No publications found',
                 text: (
                     <div>
-                        We were unable to find any results. You may be able to <a href="/records/possible">claim
-                        publications we think may be yours</a> or <a href="/records/add/find">add a
+                        We were unable to find any results. You may be able to <a href={`${pathConfig.records.possible}`}>claim
+                        publications we think may be yours</a> or <a href={`${pathConfig.records.add.find}`}>add a
                         missing publication</a>
                     </div>
                 ),
@@ -220,6 +222,35 @@ export default {
                 // },
                 excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
                 renameFacetsList: {'Display type': 'Publication type'}
+            }
+        },
+        myDatasets: {
+            pageTitle: 'My research data',
+            recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
+            text: (
+                <span>
+                    Add to this list by <a href={`${pathConfig.dataset.add}`} target="_blank">adding a missing dataset</a>.
+                </span>
+            ),
+            loadingMessage: 'Searching for your datasets...',
+            loadingPagingMessage: 'Retrieving your datasets...',
+            noResultsFound: {
+                title: 'No datasets found',
+                text: (
+                    <div>
+                        We were unable to find any results. You may be able to <a href={`${pathConfig.dataset.add}`} target="_blank">add a missing dataset</a>.
+                    </div>
+                ),
+            },
+            // this.renderLink(routes.pathConfig.dataset.add, data)
+            facetsFilter: {
+                title: 'Refine results',
+                // help: {
+                //     title: 'Refining your results',
+                //     text: 'Help about ....',
+                //     buttonLabel: 'Ok'
+                // },
+                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published', 'Display type']
             }
         },
         claimPublications: {
@@ -401,6 +432,7 @@ export default {
             loadingMessage: 'Searching for publications...',
             recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             loadingPagingMessage: 'Searching for publications...',
+            exportPublicationsLoadingMessage: 'Exporting search results...',
             noResultsFound: {
                 title: 'No publications found',
                 text: (

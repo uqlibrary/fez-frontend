@@ -25,6 +25,7 @@ class SearchRecords extends PureComponent {
         publicationsList: PropTypes.array,
         publicationsListFacets: PropTypes.object,
         publicationsListPagingData: PropTypes.object,
+        exportPublicationsLoading: PropTypes.bool,
         loadingSearch: PropTypes.bool,
 
         location: PropTypes.object.isRequired,
@@ -166,9 +167,10 @@ class SearchRecords extends PureComponent {
     render() {
         const txt = locale.pages.searchRecords;
         const pagingData = this.props.publicationsListPagingData;
+        const isLoadingOrExporting = this.props.loadingSearch || this.props.exportPublicationsLoading;
         const hasSearchParams = !!this.props.searchQuery && this.props.searchQuery.constructor === Object && Object.keys(this.props.searchQuery).length > 0;
         return (
-            <StandardPage className="page-search-records" title={txt.title}>
+            <StandardPage className="page-search-records">
                 <StandardCard className="search-component">
                     <SearchComponent className="search-body" />
                 </StandardCard>
@@ -196,59 +198,60 @@ class SearchRecords extends PureComponent {
                         <div className="column">
                             <StandardCard>
                                 {
-                                    pagingData && pagingData.to && pagingData.from && pagingData.total &&
-                                    <span>
-                                        {txt.recordCount
-                                            .replace('[recordsTotal]', pagingData.total)
-                                            .replace('[recordsFrom]', pagingData.from)
-                                            .replace('[recordsTo]', pagingData.to)}
-                                    </span>
+                                    pagingData && pagingData.to && pagingData.from && pagingData.total ?
+                                        <span>
+                                            {txt.recordCount
+                                                .replace('[recordsTotal]', pagingData.total)
+                                                .replace('[recordsFrom]', pagingData.from)
+                                                .replace('[recordsTo]', pagingData.to)}
+                                        </span>
+                                        :
+                                        <span>{txt.loadingPagingMessage}</span>
                                 }
                                 <PublicationsListSorting
                                     sortBy={this.state.sortBy}
                                     sortDirection={this.state.sortDirection}
                                     pageSize={this.state.pageSize}
                                     pagingData={pagingData}
+                                    location={this.props.location}
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
-                                    disabled={this.props.loadingSearch} />
+                                    onExportPublications={this.props.actions.exportEspacePublications}
+                                    disabled={isLoadingOrExporting} />
                                 <PublicationsListPaging
-                                    loading={this.props.loadingSearch}
+                                    loading={isLoadingOrExporting}
                                     pagingData={pagingData}
                                     onPageChanged={this.pageChanged}
-                                    disabled={this.props.loadingSearch} />
+                                    disabled={isLoadingOrExporting} />
                                 {
-                                    this.props.loadingSearch &&
-                                    <div className="is-centered"><InlineLoader message={txt.loadingPagingMessage}/></div>
+                                    (isLoadingOrExporting) &&
+                                    <div className="is-centered"><InlineLoader message={this.props.loadingSearch ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
                                 }
                                 {
-                                    !this.props.loadingSearch && this.props.publicationsList && this.props.publicationsList.length > 0 &&
+                                    !isLoadingOrExporting && this.props.publicationsList && this.props.publicationsList.length > 0 &&
                                     <PublicationsList publicationsList={this.props.publicationsList} />
                                 }
                                 <PublicationsListPaging
-                                    loading={this.props.loadingSearch}
+                                    loading={isLoadingOrExporting}
                                     pagingData={pagingData}
                                     onPageChanged={this.pageChanged}
-                                    disabled={this.props.loadingSearch} />
+                                    disabled={isLoadingOrExporting} />
                             </StandardCard>
                         </div>
                     }
                     {
-                        // show available filters or selected filters (even if there are no results)
-                        ((this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
-                            || (this.state.activeFacets && this.state.activeFacets.filters && Object.keys(this.state.activeFacets.filters).length > 0)
-                            || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)
-                            || (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
+                        this.props.publicationsListFacets
+                        && Object.keys(this.props.publicationsListFacets).length !== 0 &&
                         <div className="column is-3 is-hidden-mobile">
                             <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                 <FacetsFilter
                                     facetsData={this.props.publicationsListFacets}
                                     onFacetsChanged={this.facetsChanged}
                                     activeFacets={this.state.activeFacets}
-                                    disabled={this.props.loadingSearch}
+                                    disabled={isLoadingOrExporting}
                                     excludeFacetsList={txt.facetsFilter.excludeFacetsList}
                                     renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                    showOpenAccessFilter />
+                                    showOpenAccessFilter/>
                             </StandardRighthandCard>
                         </div>
                     }

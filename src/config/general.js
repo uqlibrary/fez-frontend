@@ -43,7 +43,6 @@ export const PUBLICATION_TYPE_VIDEO_DOCUMENT = 310;
 export const PUBLICATION_TYPE_WORKING_PAPER = 183;
 export const PUBLICATION_TYPE_REFERENCE_ENTRY = 272;
 
-export const MIN_PUBLIC_SEARCH_TEXT_LENGTH = 1;
 export const MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
 
 export const publicationTypes = (components) => [
@@ -273,6 +272,14 @@ export const thesisSubmissionSubtypes = [
     'PhD Thesis',
     'Professional Doctorate'
 ];
+
+/**
+ * File type to name map
+ */
+export const exportFormatToExtension = {
+    'excel': 'xlsx',
+    'endnote': 'enw'
+};
 
 export const OrgUnitsVocabId = 453703;
 export const FieldOfResearchVocabId = 451780;
