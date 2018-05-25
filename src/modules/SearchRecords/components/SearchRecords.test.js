@@ -1,11 +1,13 @@
 import SearchRecords from './SearchRecords';
 import {routes} from 'config';
+import {exportFormatToExtension} from '../../../config/general';
 
 function setup(testProps, isShallow = true) {
     const props = {
         publicationsList: [],
         loadingSearch: false,
-        ...testProps
+        exportPublicationsLoading: false,
+        ...testProps,
     };
     return getElement(SearchRecords, props, isShallow);
 }
@@ -314,5 +316,24 @@ describe('SearchRecords page', () => {
                 showOpenAccessOnly: false
             }
         });
+    });
+
+    it('renders loading screen while export publications loading', () => {
+        const wrapper = setup({ exportPublicationsLoading: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should call exportFormatChanged when export format dropdown is changed', () => {
+        const exportFormat = Object.keys(exportFormatToExtension)[0];
+        const testAction = jest.fn();
+        const wrapper = setup({
+            actions: {
+                exportEspacePublications: testAction
+            }
+        });
+
+        wrapper.instance().exportFormatChanged({exportFormat});
+        wrapper.update();
+        expect(testAction).toHaveBeenCalledWith({exportFormat});
     });
 });
