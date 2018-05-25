@@ -31,7 +31,8 @@ class SearchRecords extends PureComponent {
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object,
-        account: PropTypes.object.isRequired,
+        account: PropTypes.object,
+        author: PropTypes.object,
     };
 
     constructor(props) {

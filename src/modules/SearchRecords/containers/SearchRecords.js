@@ -8,7 +8,8 @@ const mapStateToProps = (state) => {
     return {
         ...state.get('searchRecordsReducer'),
         ...state.get('exportPublicationsReducer'),
-        ...state.get('accountReducer')
+        ...state.get('accountReducer'),
+        ...state.get('authorReducer'),
     };
 };
 

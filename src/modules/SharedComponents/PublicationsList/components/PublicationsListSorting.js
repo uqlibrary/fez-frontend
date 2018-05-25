@@ -24,6 +24,7 @@ export default class PublicationsListSorting extends PureComponent {
 
         location: PropTypes.object.isRequired,
         account: PropTypes.object,
+        author: PropTypes.object,
     };
 
     constructor(props) {
@@ -83,7 +84,7 @@ export default class PublicationsListSorting extends PureComponent {
             );
         }
         const txt = locale.components.sorting;
-        const canUseExport = this.props.account ? true : false;
+        const canUseExport = !!this.props.account.canMasquerade || this.props.author;
         return (
             <div className="publicationsListSorting columns is-gapless is-mobile">
                 <div className="column">

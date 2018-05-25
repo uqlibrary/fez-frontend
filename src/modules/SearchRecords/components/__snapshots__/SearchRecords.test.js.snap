@@ -18,6 +18,24 @@ exports[`SearchRecords page renders loading screen while export publications loa
 </StandardPage>
 `;
 
+exports[`SearchRecords page should render loading screen while export publications loading 1`] = `
+<StandardPage
+  className="page-search-records"
+  title="eSpace search"
+>
+  <StandardCard
+    className="search-component"
+  >
+    <withRouter(Connect(SearchComponent))
+      className="search-body"
+    />
+  </StandardCard>
+  <div
+    className="columns"
+  />
+</StandardPage>
+`;
+
 exports[`SearchRecords page should render loading screen while loading publications while filtering 1`] = `
 <StandardPage
   className="page-search-records"
