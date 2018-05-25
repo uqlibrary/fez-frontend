@@ -30525,7 +30525,7 @@ exports[`Additional Information Component  should render oa status value link in
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[UQ_54]=453695"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5BshowOpenAccessOnly%5D=true&searchQueryParams%5Ball%5D="
           >
             File (Author Post-print)
           </a>

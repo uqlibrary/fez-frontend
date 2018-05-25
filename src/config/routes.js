@@ -2,14 +2,17 @@ import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
 import param from 'can-param';
 import {defaultSearchParams} from 'config/general';
+import {openAccessIds} from 'config/openAccess';
 
 const fullPath = process.env.BRANCH === 'production' ? 'https://espace.library.uq.edu.au' : 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 
-const defaultSearchQueryParams = (searchParams) => ({
-    ...defaultSearchParams,
-    ...searchParams
-});
+const getSearchUrl = (params) => (
+    `${fullPath}/records/search?${param({
+        ...defaultSearchParams,
+        ...params
+    })}`
+);
 
 export const pathConfig = {
     index: '/',
@@ -49,11 +52,41 @@ export const pathConfig = {
         authorId: (authorId) => (`${fullPath}/list/author_id/${authorId}`),
         subject: (subjectId) => (`${fullPath}/list/subject/${subjectId}`),
         herdcStatus: (herdcStatusId) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_22]=${herdcStatusId}`),
-        keyword: (keyword) => (`${fullPath}/records/search?${param(defaultSearchQueryParams({searchQueryParams: {all: keyword}}))}`),
+        keyword: (keyword) => (
+            getSearchUrl({
+                searchQueryParams: {
+                    all: keyword
+                }
+            })),
         institutionalStatus: (institutionalStatusId) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_23]=${institutionalStatusId}`),
-        openAccessStatus: (openAccessStatusId) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_54]=${openAccessStatusId}`),
-        journalName: (journalName) => (`${fullPath}/records/search?${param(defaultSearchQueryParams({searchQueryParams: {all: journalName}, activeFacets: {filters: {'Journal name': journalName}}}))}`),
-        publisher: (publisher) => (`${fullPath}/records/search?${param(defaultSearchQueryParams({searchQueryParams: {all: publisher}}))}`),
+        openAccessStatus: (openAccessStatusId) => (
+            getSearchUrl({
+                searchQueryParams: {
+                    all: ''
+                },
+                activeFacets: {
+                    filters: {},
+                    ranges: {},
+                    showOpenAccessOnly: openAccessIds.indexOf(openAccessStatusId) >= 0
+                }
+            })),
+        journalName: (journalName) => (
+            getSearchUrl({
+                searchQueryParams: {
+                    all: journalName
+                },
+                activeFacets: {
+                    filters: {
+                        'Journal name': journalName
+                    }
+                }
+            })),
+        publisher: (publisher) => (
+            getSearchUrl({
+                searchQueryParams: {
+                    all: publisher
+                }
+            })),
         license: (license) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_112]=${license}`),
         accessCondition: (accessCondition) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_95]=${accessCondition}`),
         collectionType: (collectionType) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_92]=${collectionType}`),
@@ -61,7 +94,12 @@ export const pathConfig = {
         series: (series) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_33]=${series}`),
         bookTitle: (bookTitle) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_37]=${bookTitle}`),
         jobNumber: (jobNumber) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_151]=${jobNumber}`),
-        conferenceName: (conferenceName) => (`${fullPath}/records/search?${param(defaultSearchQueryParams({searchQueryParams: {all: conferenceName}}))}`),
+        conferenceName: (conferenceName) => (
+            getSearchUrl({
+                searchQueryParams: {
+                    all: conferenceName
+                }
+            })),
         proceedingsTitle: (proceedingsTitle) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_2]=${proceedingsTitle}`),
     },
     admin: {
