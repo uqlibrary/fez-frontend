@@ -25,6 +25,7 @@ class SearchRecords extends PureComponent {
         publicationsList: PropTypes.array,
         publicationsListFacets: PropTypes.object,
         publicationsListPagingData: PropTypes.object,
+        exportPublicationsLoading: PropTypes.bool,
         loadingSearch: PropTypes.bool,
 
         location: PropTypes.object.isRequired,
@@ -140,6 +141,10 @@ class SearchRecords extends PureComponent {
         );
     };
 
+    exportFormatChanged = (values) => {
+        this.props.actions.exportEspacePublications({...values, ...this.props.searchQuery});
+    }
+
     facetsChanged = (activeFacets) => {
         this.setState(
             {
@@ -166,6 +171,7 @@ class SearchRecords extends PureComponent {
     render() {
         const txt = locale.pages.searchRecords;
         const pagingData = this.props.publicationsListPagingData;
+        const isLoadingOrExporting = this.props.loadingSearch || this.props.exportPublicationsLoading;
         const hasSearchParams = !!this.props.searchQuery && this.props.searchQuery.constructor === Object && Object.keys(this.props.searchQuery).length > 0;
         return (
             <StandardPage className="page-search-records" title={txt.title}>
@@ -211,25 +217,26 @@ class SearchRecords extends PureComponent {
                                     pagingData={pagingData}
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
-                                    disabled={this.props.loadingSearch} />
+                                    onExportPublications={this.exportFormatChanged}
+                                    disabled={isLoadingOrExporting} />
                                 <PublicationsListPaging
-                                    loading={this.props.loadingSearch}
+                                    loading={isLoadingOrExporting}
                                     pagingData={pagingData}
                                     onPageChanged={this.pageChanged}
-                                    disabled={this.props.loadingSearch} />
+                                    disabled={isLoadingOrExporting} />
                                 {
-                                    this.props.loadingSearch &&
-                                    <div className="is-centered"><InlineLoader message={txt.loadingPagingMessage}/></div>
+                                    (isLoadingOrExporting) &&
+                                    <div className="is-centered"><InlineLoader message={this.props.loadingSearch ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
                                 }
                                 {
-                                    !this.props.loadingSearch && this.props.publicationsList && this.props.publicationsList.length > 0 &&
+                                    !isLoadingOrExporting && this.props.publicationsList && this.props.publicationsList.length > 0 &&
                                     <PublicationsList publicationsList={this.props.publicationsList} />
                                 }
                                 <PublicationsListPaging
-                                    loading={this.props.loadingSearch}
+                                    loading={isLoadingOrExporting}
                                     pagingData={pagingData}
                                     onPageChanged={this.pageChanged}
-                                    disabled={this.props.loadingSearch} />
+                                    disabled={isLoadingOrExporting} />
                             </StandardCard>
                         </div>
                     }
@@ -245,7 +252,7 @@ class SearchRecords extends PureComponent {
                                     facetsData={this.props.publicationsListFacets}
                                     onFacetsChanged={this.facetsChanged}
                                     activeFacets={this.state.activeFacets}
-                                    disabled={this.props.loadingSearch}
+                                    disabled={isLoadingOrExporting}
                                     excludeFacetsList={txt.facetsFilter.excludeFacetsList}
                                     renameFacetsList={txt.facetsFilter.renameFacetsList}
                                     showOpenAccessFilter />
