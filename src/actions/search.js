@@ -158,3 +158,10 @@ export function exportEspacePublications(searchParams) {
     });
 }
 
+export function clearSearchQuery() {
+    return dispatch => {
+        dispatch({
+            type: actions.CLEAR_SEARCH_QUERY
+        });
+    };
+}

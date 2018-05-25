@@ -86,6 +86,10 @@ class SearchRecords extends PureComponent {
         }
     }
 
+    componentWillUnmount() {
+        this.props.actions.clearSearchQuery();
+    }
+
     /**
      * Parse provided query string and return active filters, facets etc
      * @returns object

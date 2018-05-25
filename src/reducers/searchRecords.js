@@ -144,6 +144,13 @@ const handlers = {
         };
     },
 
+    [actions.CLEAR_SEARCH_QUERY]: (state) => {
+        return {
+            ...state,
+            searchQuery: {}
+        };
+    },
+
     [actions.SEARCH_LOADING]: (state, action) => {
         const rawSearchQuery = action.payload;
         return {

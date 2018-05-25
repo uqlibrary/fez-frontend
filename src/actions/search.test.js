@@ -237,6 +237,15 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
+    it('should dispatch series of actions on clearing search', () => {
+        const expectedActions = [
+            actions.CLEAR_SEARCH_QUERY
+        ];
+
+        mockActionsStore.dispatch(searchActions.clearSearchQuery());
+        expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
+    });
+
     describe('exportSearchPublications()', () => {
         it('calls exportPublications with expected params', async () => {
 
