@@ -9,7 +9,7 @@ button.publicationTab {
   padding-top: 0 !important;
 }
 
-.topCitedPubs {
+.topCitedPublications {
   .subTitle {
     height: 40px;
   }
@@ -18,5 +18,11 @@ button.publicationTab {
   }
   .trendingPubsSection .publicationCitation {
     min-height: 65px;
+  }
+  .card-header {
+    display: none;
+  }
+  .body-1 {
+    padding: 0 !important;
   }
 }

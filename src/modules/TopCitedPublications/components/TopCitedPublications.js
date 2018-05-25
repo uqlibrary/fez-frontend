@@ -42,7 +42,13 @@ export default class TopCitedPublications extends PureComponent {
         }
 
         return (
-            <StandardCard className="card-paddingless">
+            <StandardCard className={'topCitedPublications'}>
+                {
+                    this.props.topCitedPublicationsList.length === 0 &&
+                    <p>
+                        {txt.notAvailableMessage}
+                    </p>
+                }
                 {
                     this.props.topCitedPublicationsList.length > 0 &&
                         <Tabs className="publicationTabs" inkBarStyle={{height: '4px', marginTop: '-4px'}}>
@@ -56,7 +62,7 @@ export default class TopCitedPublications extends PureComponent {
                                         className="publicationTab"
                                     >
                                         <div className="publicationTabContent">
-                                            <div className="topCitedPubs">
+                                            <div>
                                                 <div className="is-pulled-right">
                                                     <HelpIcon {...locale.components.trendingPublicationHelp}/>
                                                 </div>

@@ -12,7 +12,7 @@ exports[`Component TopCitedPublications should render loading indicator 1`] = `
 
 exports[`Component TopCitedPublications should render top cited publications 1`] = `
 <StandardCard
-  className="card-paddingless"
+  className="topCitedPublications"
 >
   <Tabs
     className="publicationTabs"
@@ -38,9 +38,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
       <div
         className="publicationTabContent"
       >
-        <div
-          className="topCitedPubs"
-        >
+        <div>
           <div
             className="is-pulled-right"
           >
@@ -911,9 +909,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
       <div
         className="publicationTabContent"
       >
-        <div
-          className="topCitedPubs"
-        >
+        <div>
           <div
             className="is-pulled-right"
           >
@@ -1784,9 +1780,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
       <div
         className="publicationTabContent"
       >
-        <div
-          className="topCitedPubs"
-        >
+        <div>
           <div
             className="is-pulled-right"
           >
@@ -2726,5 +2720,15 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
       </div>
     </Tab>
   </Tabs>
+</StandardCard>
+`;
+
+exports[`Component TopCitedPublications should render top cited publications module with not available message 1`] = `
+<StandardCard
+  className="topCitedPublications"
+>
+  <p>
+    Trending publications are temporarily unavailable
+  </p>
 </StandardCard>
 `;
