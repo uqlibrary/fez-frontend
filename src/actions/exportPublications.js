@@ -10,17 +10,17 @@ import {promptForDownload} from './exportPublicationsDataTransformers';
  * @param dispatch
  * @return {*}
  */
-export function exportPublications({exportFormat, requestParams}) {
+export function exportPublications(requestParams) {
     return dispatch => {
         dispatch({type: actions.EXPORT_PUBLICATIONS_LOADING});
 
         return get(requestParams, {responseType: 'blob'})
             .then(response => {
-                promptForDownload(exportFormat, response);
+                promptForDownload(requestParams.options.params.export_to, response);
 
                 dispatch({
                     type: actions.EXPORT_PUBLICATIONS_LOADED,
-                    payload: exportFormat
+                    payload: requestParams.options.params.export_to
                 });
             })
             .catch(error => {

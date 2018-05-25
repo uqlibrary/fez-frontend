@@ -100,16 +100,13 @@ export function searchTrendingPublications() {
  * @param {string} format
  * @returns {action}
  */
-export function exportAuthorPublications({exportFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
-    return exportPublications({
-        exportFormat,
-        requestParams: routes.CURRENT_USER_RECORDS_API({
-            exportFormat: exportFormat,
-            page: page,
-            pageSize: pageSize,
-            sortBy: sortBy,
-            sortDirection: sortDirection,
-            facets: activeFacets
-        })
-    });
+export function exportAuthorPublications({exportPublicationsFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
+    return exportPublications(routes.CURRENT_USER_RECORDS_API({
+        exportPublicationsFormat: exportPublicationsFormat,
+        page: page,
+        pageSize: pageSize,
+        sortBy: sortBy,
+        sortDirection: sortDirection,
+        facets: activeFacets
+    }));
 }
