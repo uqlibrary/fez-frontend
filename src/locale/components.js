@@ -116,7 +116,11 @@ export default {
         },
         topCitedPublications: {
             loading: 'Loading trending publications...',
-            notAvailableMessage: 'Trending publications are temporarily unavailable',
+            notAvailableAlert: {
+                type: 'error',
+                title: 'There has been an error',
+                message: 'Trending publications are temporarily unavailable'
+            },
             altmetric: {
                 title: (<span>Trending publications</span>),
                 mobileTitle: 'Trending',

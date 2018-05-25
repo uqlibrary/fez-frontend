@@ -26,7 +26,10 @@ describe('Component TopCitedPublications', () => {
 
     it('should render top cited publications module with not available message', () => {
         const testFn = jest.fn();
-        const wrapper = setup({topCitedPublicationsList: [], actions: {searchTopCitedPublications: testFn}});
+        const wrapper = setup({
+            topCitedPublicationsList: [],
+            loadingTopCitedPublications: false,
+            actions: {searchTopCitedPublications: testFn}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

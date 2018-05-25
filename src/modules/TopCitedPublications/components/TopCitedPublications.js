@@ -6,6 +6,7 @@ import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
 import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
+import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 
 export default class TopCitedPublications extends PureComponent {
     static contextTypes = {
@@ -42,15 +43,9 @@ export default class TopCitedPublications extends PureComponent {
         }
 
         return (
-            <StandardCard className={'topCitedPublications'}>
-                {
-                    this.props.topCitedPublicationsList.length === 0 &&
-                    <p>
-                        {txt.notAvailableMessage}
-                    </p>
-                }
-                {
-                    this.props.topCitedPublicationsList.length > 0 &&
+            <div className={'topCitedPublications'}>
+                {!this.props.loadingTopCitedPublications && this.props.topCitedPublicationsList.length > 0 ?
+                    <StandardCard>
                         <Tabs className="publicationTabs" inkBarStyle={{height: '4px', marginTop: '-4px'}}>
                             {
                                 this.props.topCitedPublicationsList.sort((source1, source2) => (
@@ -86,8 +81,11 @@ export default class TopCitedPublications extends PureComponent {
                                 ))
                             }
                         </Tabs>
+                    </StandardCard>
+                    :
+                    <Alert {...txt.notAvailableAlert} />
                 }
-            </StandardCard>
+            </div>
         );
     }
 }
