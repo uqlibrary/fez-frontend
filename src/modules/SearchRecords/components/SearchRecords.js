@@ -141,10 +141,6 @@ class SearchRecords extends PureComponent {
         );
     };
 
-    exportFormatChanged = (values) => {
-        this.props.actions.exportEspacePublications({...values, ...this.props.searchQuery});
-    }
-
     facetsChanged = (activeFacets) => {
         this.setState(
             {
@@ -215,9 +211,10 @@ class SearchRecords extends PureComponent {
                                     sortDirection={this.state.sortDirection}
                                     pageSize={this.state.pageSize}
                                     pagingData={pagingData}
+                                    location={this.props.location}
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
-                                    onExportPublications={this.exportFormatChanged}
+                                    onExportPublications={this.props.actions.exportEspacePublications}
                                     disabled={isLoadingOrExporting} />
                                 <PublicationsListPaging
                                     loading={isLoadingOrExporting}

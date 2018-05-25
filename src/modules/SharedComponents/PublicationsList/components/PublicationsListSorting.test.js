@@ -92,6 +92,6 @@ describe('PublicationsListSorting renders ', () => {
         const wrapper = setup({onExportPublications: testFunction, location: {state: {activeFacets: {filters: {}, ranges: {}}}}});
         wrapper.instance().exportPublicationsFormatChanged(expected);
         expect(wrapper.state().exportPublicationsFormat).toEqual(expected);
-        expect(testFunction).toHaveBeenCalledWith({exportFormat: expected, ...wrapper.instance().state, activeFacets: wrapper.instance().props.activeFacets});
+        expect(testFunction).toHaveBeenCalledWith({exportPublicationsFormat: expected, ...wrapper.instance().state, activeFacets: wrapper.instance().props.activeFacets});
     });
 });
