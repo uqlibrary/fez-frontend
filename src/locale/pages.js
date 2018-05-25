@@ -197,7 +197,7 @@ export default {
             recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             text: (
                 <span>
-                    Add to this list by <a href="/records/possible">claiming a publication</a> or <a href="/records/add/find">adding a missing publication</a>.
+                    Add to this list by <a href={`${pathConfig.records.possible}`}>claiming a publication</a> or <a href={`${pathConfig.records.add.find}`}>adding a missing publication</a>.
                 </span>
             ),
             loadingMessage: 'Searching for your publications...',
@@ -207,8 +207,8 @@ export default {
                 title: 'No publications found',
                 text: (
                     <div>
-                        We were unable to find any results. You may be able to <a href="/records/possible">claim
-                        publications we think may be yours</a> or <a href="/records/add/find">add a
+                        We were unable to find any results. You may be able to <a href={`${pathConfig.records.possible}`}>claim
+                        publications we think may be yours</a> or <a href={`${pathConfig.records.add.find}`}>add a
                         missing publication</a>
                     </div>
                 ),
