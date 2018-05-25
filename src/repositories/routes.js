@@ -27,11 +27,11 @@ export const getFacetsParams = (facets) => {
     return facetsParam;
 };
 
-export const getStandardSearchParams = ({exportFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}) => {
+export const getStandardSearchParams = ({exportPublicationsFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}) => {
     const unknownAuthors = withUnknownAuthors >= 0 ? {with_unknown_authors: withUnknownAuthors} : {};
 
     return {
-        export_to: exportFormat,
+        export_to: exportPublicationsFormat,
         page: page,
         per_page: pageSize,
         sort: sortBy,
@@ -92,6 +92,7 @@ export const HIDE_POSSIBLE_RECORD_API = () => ({apiUrl: 'records/search', option
 
 export const CURRENT_USER_RECORDS_API = (values) => ({apiUrl: 'records/search', options: {params: {rule: 'mine', ...getStandardSearchParams(values)}}});
 export const ACADEMIC_PUBLICATIONS_STATS_API = (values) => ({apiUrl: 'records/search', options: {params: {rule: 'mine', 'filters[stats_only]': true, ...getStandardSearchParams(values)}}});
+export const TRENDING_PUBLICATIONS_API = () => ({apiUrl: 'records/trending'});
 
 export const SEARCH_INTERNAL_RECORDS_API = (values) => {
     // values = {searchQuery (text value - title search, doi or pubmed id)

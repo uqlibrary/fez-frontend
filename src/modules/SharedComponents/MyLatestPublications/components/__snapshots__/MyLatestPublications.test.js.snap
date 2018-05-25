@@ -5,6 +5,8 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
   className="latestPubs"
 >
   <PublicationsList
+    hideCitationContent={false}
+    hideCountDiff={false}
     publicationsList={
       Array [
         Object {
@@ -3476,6 +3478,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
     publicationsListSubset={Array []}
     showDefaultActions={true}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
     subsetCustomActions={Array []}
   />

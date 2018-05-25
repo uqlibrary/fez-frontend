@@ -151,11 +151,16 @@ export function searchEspacePublications(searchParams) {
  * @param {string} format
  * @returns {action}
  */
-export function exportEspacePublications(searchParams) {
-    return exportPublications({
-        exportFormat: searchParams.exportFormat,
-        requestParams: routes.SEARCH_INTERNAL_RECORDS_API({...searchParams, facets: !!searchParams.activeFacets ? searchParams.activeFacets : {}}),
-    });
+export function exportEspacePublications({exportPublicationsFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}, searchQueryParams = {}}) {
+    return exportPublications(routes.SEARCH_INTERNAL_RECORDS_API({
+        exportPublicationsFormat: exportPublicationsFormat,
+        page: page,
+        pageSize: pageSize,
+        sortBy: sortBy,
+        sortDirection: sortDirection,
+        facets: activeFacets,
+        searchQueryParams: searchQueryParams
+    }));
 }
 
 export function clearSearchQuery() {

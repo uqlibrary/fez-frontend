@@ -114,6 +114,7 @@ mock
         return [404, ['Request not found']];
     })
     .onGet(routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API().apiUrl)
+    // .reply(500, {})
     .reply(200, mockData.trendingPublications)
     .onGet(routes.GET_ACML_QUICK_TEMPLATES_API().apiUrl)
     .reply(200, mockData.quickTemplates)

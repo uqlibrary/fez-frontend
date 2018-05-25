@@ -89,30 +89,59 @@ export default {
                     subtitle: 'The +plus score indicates the increase in citations over the last month',
                     order: 0
                 }
-            },
-            help: {
-                title: 'About these metrics',
-                text: (
-                    <div>
-                        <h3>WOS and Scopus</h3>
-                        <p>
-                            The large number is the total citation count and the + (plus) value indicates how much the citation count has increased in the last month.
-                        </p>
-                        <h3>Altmetric score (social media activity)</h3>
-                        <p>
-                            The Altmetric score measures social media activity. The + (plus) value shows the increase in social media activity over time.
-                        </p>
-                        <p>
-                            You can click on the number as a link to see who is citing each publication, or in the
-                            case of Altmetric who is referencing the publication in social media and news outlets.
-                        </p>
-                    </div>),
-                buttonLabel: 'OK'
-            },
+            }
+        },
+        trendingPublicationHelp: {
+            title: 'About these metrics',
+            text: (
+                <div>
+                    <h3>WOS and Scopus</h3>
+                    <p>
+                        The large number is the total citation count and the + (plus) value indicates how much the citation count has increased in the last three months.
+                    </p>
+                    <h3>Altmetric score (social media activity)</h3>
+                    <p>
+                        The Altmetric score measures social media activity. The + (plus) value shows the increase in social media activity over time.
+                    </p>
+                    <p>
+                        You can click on the number as a link to see who is citing each publication, or in the
+                        case of Altmetric who is referencing the publication in social media and news outlets.
+                    </p>
+                </div>),
+            buttonLabel: 'OK'
         },
         myLatestPublications: {
             loading: 'Loading your latest publications...',
             viewAllButtonLabel: 'View all'
+        },
+        topCitedPublications: {
+            loading: 'Loading trending publications...',
+            notAvailableAlert: {
+                type: 'error',
+                title: 'There has been an error',
+                message: 'Trending publications are temporarily unavailable'
+            },
+            altmetric: {
+                title: (<span>Trending publications</span>),
+                mobileTitle: 'Trending',
+                heading: 'Altmetric score',
+                subHeading: 'The +plus score indicates recent increase in social media activity',
+                order: 0
+            },
+            scopus: {
+                title: (<span>Hot&nbsp;papers&nbsp;on Scopus</span>),
+                mobileTitle: 'Scopus',
+                heading: 'Scopus citation count',
+                subHeading: 'The +plus score indicates the increase in citations over the three months',
+                order: 1
+            },
+            thomson: {
+                title: (<span>Hot&nbsp;papers&nbsp;on Web&nbsp;of&nbsp;science</span>),
+                mobileTitle: 'WOS',
+                heading: 'Web of Science citation count',
+                subHeading: 'The +plus score indicates the increase in citations over the three months',
+                order: 2
+            }
         },
         keywordsForm: {
             field: {
