@@ -37,6 +37,6 @@ describe('Top cited publications reducer', () => {
     it('returns the correct state when top cited publications fail to load', () => {
         const test = topCitedPublicationsReducer(initialState, {type: actions.TOP_CITED_PUBLICATIONS_FAILED});
         expect(test.topCitedPublicationsList).toEqual([]);
-        expect(test.loadingTopCitedPublications).toBeTruthy();
+        expect(test.loadingTopCitedPublications).toBeFalsy();
     });
 });

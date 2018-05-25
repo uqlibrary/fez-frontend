@@ -44,7 +44,7 @@ const handlers = {
         return {
             ...state,
             trendingPublicationsList: [],
-            loadingTopCitedPublications: true
+            loadingTopCitedPublications: false
         };
     }
 };
