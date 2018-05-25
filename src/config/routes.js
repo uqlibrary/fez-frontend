@@ -1,8 +1,17 @@
 import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
+import param from 'can-param';
+import {defaultSearchParams} from 'config/general';
 
 const fullPath = process.env.BRANCH === 'production' ? 'https://espace.library.uq.edu.au' : 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
+
+const defaultSearchQueryParams = (searchQueryParams) => ({
+    ...defaultSearchParams,
+    searchQueryParams: {
+        all: searchQueryParams
+    }
+});
 
 export const pathConfig = {
     index: '/',
@@ -42,7 +51,7 @@ export const pathConfig = {
         authorId: (authorId) => (`${fullPath}/list/author_id/${authorId}`),
         subject: (subjectId) => (`${fullPath}/list/subject/${subjectId}`),
         herdcStatus: (herdcStatusId) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_22]=${herdcStatusId}`),
-        keyword: (keyword) => (`${fullPath}/list/?cat=quick_filter&search_keys[0]=${keyword}`),
+        keyword: (keyword) => (`${fullPath}/records/search?${param(defaultSearchQueryParams(keyword))}`),
         institutionalStatus: (institutionalStatusId) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_23]=${institutionalStatusId}`),
         openAccessStatus: (openAccessStatusId) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_54]=${openAccessStatusId}`),
         journalName: (journalName) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_34]=${journalName}`),

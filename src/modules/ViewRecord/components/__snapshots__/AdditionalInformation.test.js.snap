@@ -4873,42 +4873,42 @@ exports[`Additional Information Component  should render component with book cha
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Breast cancer"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
               >
                 Breast cancer
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=EMT"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=EMT"
               >
                 EMT
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Epithelial cell differentiation"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Epithelial+cell+differentiation"
               >
                 Epithelial cell differentiation
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Epithelial-stromal interactions"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Epithelial-stromal+interactions"
               >
                 Epithelial-stromal interactions
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hormonal regulation"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hormonal+regulation"
               >
                 Hormonal regulation
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Signalling pathways"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signalling+pathways"
               >
                 Signalling pathways
               </a>
@@ -7501,84 +7501,84 @@ exports[`Additional Information Component  should render component with conferen
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Sewers"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sewers"
               >
                 Sewers
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Measurements"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Measurements"
               >
                 Measurements
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hydraulics"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hydraulics"
               >
                 Hydraulics
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Open channel flows"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Open+channel+flows"
               >
                 Open channel flows
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Sediments"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sediments"
               >
                 Sediments
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Turbidity"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Turbidity"
               >
                 Turbidity
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hydrodynamics"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hydrodynamics"
               >
                 Hydrodynamics
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Sedimentation"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sedimentation"
               >
                 Sedimentation
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=design"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=design"
               >
                 design
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=operation"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=operation"
               >
                 operation
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=rehabilitation"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=rehabilitation"
               >
                 rehabilitation
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=urban environment"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=urban+environment"
               >
                 urban environment
               </a>
@@ -8152,7 +8152,7 @@ exports[`Additional Information Component  should render component with creative
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Original Creative Works - Design/Architectural work"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Original+Creative+Works+-+Design%2FArchitectural+work"
               >
                 Original Creative Works - Design/Architectural work
               </a>
@@ -10007,35 +10007,35 @@ exports[`Additional Information Component  should render component with data col
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Isolates"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Isolates"
               >
                 Isolates
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Single cells"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Single+cells"
               >
                 Single cells
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Metagenomic data"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Metagenomic+data"
               >
                 Metagenomic data
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Genome quality"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Genome+quality"
               >
                 Genome quality
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=CheckM"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=CheckM"
               >
                 CheckM
               </a>
@@ -11647,28 +11647,28 @@ exports[`Additional Information Component  should render component with data col
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Habitat Mapping"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Habitat+Mapping"
               >
                 Habitat Mapping
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Remote Sensing"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Remote+Sensing"
               >
                 Remote Sensing
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Kubulau"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Kubulau"
               >
                 Kubulau
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Environmental Management"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Environmental+Management"
               >
                 Environmental Management
               </a>
@@ -12781,35 +12781,35 @@ exports[`Additional Information Component  should render component with design d
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Architecture"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Architecture"
               >
                 Architecture
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Landscape design"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Landscape+design"
               >
                 Landscape design
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Restoration"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Restoration"
               >
                 Restoration
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Interior and Environmental Design"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Interior+and+Environmental+Design"
               >
                 Interior and Environmental Design
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Original Creative Works - Design/Architectural work"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Original+Creative+Works+-+Design%2FArchitectural+work"
               >
                 Original Creative Works - Design/Architectural work
               </a>
@@ -13361,56 +13361,56 @@ exports[`Additional Information Component  should render component with generic 
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Partial Differential Equations (PDEs)"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Partial+Differential+Equations+(PDEs)"
               >
                 Partial Differential Equations (PDEs)
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Parabolic"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Parabolic"
               >
                 Parabolic
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hyperbolic"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hyperbolic"
               >
                 Hyperbolic
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Finite difference"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Finite+difference"
               >
                 Finite difference
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Spectral method"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Spectral+method"
               >
                 Spectral method
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Finite element method"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Finite+element+method"
               >
                 Finite element method
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Iterative methods"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Iterative+methods"
               >
                 Iterative methods
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Nonlinear Partial Differential Equations"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Nonlinear+Partial+Differential+Equations"
               >
                 Nonlinear Partial Differential Equations
               </a>
@@ -14981,14 +14981,14 @@ exports[`Additional Information Component  should render component with journal 
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Knowledge"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Knowledge"
               >
                 Knowledge
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Multinational corporations"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Multinational+corporations"
               >
                 Multinational corporations
               </a>
@@ -22720,49 +22720,49 @@ exports[`Additional Information Component  should render component with journal 
                                           <ul>
                                             <li>
                                               <a
-                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Akt"
+                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Akt"
                                               >
                                                 Akt
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Breast cancer"
+                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
                                               >
                                                 Breast cancer
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Ca2+"
+                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Ca2%2B"
                                               >
                                                 Ca2+
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hypoxia"
+                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hypoxia"
                                               >
                                                 Hypoxia
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=PTEN"
+                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=PTEN"
                                               >
                                                 PTEN
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Signal transduction"
+                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signal+transduction"
                                               >
                                                 Signal transduction
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=TRPC1"
+                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=TRPC1"
                                               >
                                                 TRPC1
                                               </a>
@@ -22877,7 +22877,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-0"
                                                   >
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Akt"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Akt"
                                                     >
                                                       Akt
                                                     </a>
@@ -22886,7 +22886,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-1"
                                                   >
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Breast cancer"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
                                                     >
                                                       Breast cancer
                                                     </a>
@@ -22895,7 +22895,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-2"
                                                   >
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Ca2+"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Ca2%2B"
                                                     >
                                                       Ca2+
                                                     </a>
@@ -22904,7 +22904,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-3"
                                                   >
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hypoxia"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hypoxia"
                                                     >
                                                       Hypoxia
                                                     </a>
@@ -22913,7 +22913,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-4"
                                                   >
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=PTEN"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=PTEN"
                                                     >
                                                       PTEN
                                                     </a>
@@ -22922,7 +22922,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-5"
                                                   >
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Signal transduction"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signal+transduction"
                                                     >
                                                       Signal transduction
                                                     </a>
@@ -22931,7 +22931,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-6"
                                                   >
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=TRPC1"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=TRPC1"
                                                     >
                                                       TRPC1
                                                     </a>
@@ -24136,35 +24136,35 @@ exports[`Additional Information Component  should render component with manuscri
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hayes, Edward Leo, 1889-1967 -- Archives"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hayes%2C+Edward+Leo%2C+1889-1967+--+Archives"
               >
                 Hayes, Edward Leo, 1889-1967 -- Archives
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hayes, Edward Leo, 1889-1967 -- Manuscripts"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hayes%2C+Edward+Leo%2C+1889-1967+--+Manuscripts"
               >
                 Hayes, Edward Leo, 1889-1967 -- Manuscripts
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Astley, Thea, 1925-2004 -- Correspondence"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Astley%2C+Thea%2C+1925-2004+--+Correspondence"
               >
                 Astley, Thea, 1925-2004 -- Correspondence
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Grano, Paul, 1894-1975 -- Correspondence"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Grano%2C+Paul%2C+1894-1975+--+Correspondence"
               >
                 Grano, Paul, 1894-1975 -- Correspondence
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Authors, Australian -- 20th century"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Authors%2C+Australian+--+20th+century"
               >
                 Authors, Australian -- 20th century
               </a>
@@ -26502,49 +26502,49 @@ exports[`Additional Information Component  should render component with newspape
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Akt"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Akt"
               >
                 Akt
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Breast cancer"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
               >
                 Breast cancer
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Ca2+"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Ca2%2B"
               >
                 Ca2+
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hypoxia"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hypoxia"
               >
                 Hypoxia
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=PTEN"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=PTEN"
               >
                 PTEN
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Signal transduction"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signal+transduction"
               >
                 Signal transduction
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=TRPC1"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=TRPC1"
               >
                 TRPC1
               </a>
@@ -26970,77 +26970,77 @@ exports[`Additional Information Component  should render component with preprint
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Algorithmic complexity"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Algorithmic+complexity"
               >
                 Algorithmic complexity
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=cross-entropy"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=cross-entropy"
               >
                 cross-entropy
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=GI/G/1 queue"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=GI%2FG%2F1+queue"
               >
                 GI/G/1 queue
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=importance sampling"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=importance+sampling"
               >
                 importance sampling
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=maximum likelihood"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=maximum+likelihood"
               >
                 maximum likelihood
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Pareto distribution"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pareto+distribution"
               >
                 Pareto distribution
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Pollaczek-Khintchine formula"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pollaczek-Khintchine+formula"
               >
                 Pollaczek-Khintchine formula
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=random walk"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=random+walk"
               >
                 random walk
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=rare event"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=rare+event"
               >
                 rare event
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=subexponential distribution"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=subexponential+distribution"
               >
                 subexponential distribution
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Weibull distribution"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Weibull+distribution"
               >
                 Weibull distribution
               </a>
@@ -27459,77 +27459,77 @@ exports[`Additional Information Component  should render component with preprint
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Algorithmic complexity"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Algorithmic+complexity"
               >
                 Algorithmic complexity
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=cross-entropy"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=cross-entropy"
               >
                 cross-entropy
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=GI/G/1 queue"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=GI%2FG%2F1+queue"
               >
                 GI/G/1 queue
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=importance sampling"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=importance+sampling"
               >
                 importance sampling
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=maximum likelihood"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=maximum+likelihood"
               >
                 maximum likelihood
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Pareto distribution"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pareto+distribution"
               >
                 Pareto distribution
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Pollaczek-Khintchine formula"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pollaczek-Khintchine+formula"
               >
                 Pollaczek-Khintchine formula
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=random walk"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=random+walk"
               >
                 random walk
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=rare event"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=rare+event"
               >
                 rare event
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=subexponential distribution"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=subexponential+distribution"
               >
                 subexponential distribution
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Weibull distribution"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Weibull+distribution"
               >
                 Weibull distribution
               </a>
@@ -28284,21 +28284,21 @@ exports[`Additional Information Component  should render component with referenc
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Japanese culture"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Japanese+culture"
               >
                 Japanese culture
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Popular culture - Japan - Encyclopedias"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Popular+culture+-+Japan+-+Encyclopedias"
               >
                 Popular culture - Japan - Encyclopedias
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Japan - Civilization - 1945- - Encyclopedia"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Japan+-+Civilization+-+1945-+-+Encyclopedia"
               >
                 Japan - Civilization - 1945- - Encyclopedia
               </a>
@@ -29138,7 +29138,7 @@ exports[`Additional Information Component  should render component with thesis 1
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Sustainable development; graziers; farmers; agriculture; land management; business"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business"
               >
                 Sustainable development; graziers; farmers; agriculture; land management; business
               </a>
@@ -30097,28 +30097,28 @@ exports[`Additional Information Component  should render component with working 
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=European Union"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=European+Union"
               >
                 European Union
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Education"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Education"
               >
                 Education
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Employment"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Employment"
               >
                 Employment
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Social inclusion"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Social+inclusion"
               >
                 Social inclusion
               </a>
@@ -30570,7 +30570,7 @@ exports[`Additional Information Component  should render oa status value link in
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Sustainable development; graziers; farmers; agriculture; land management; business"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business"
               >
                 Sustainable development; graziers; farmers; agriculture; land management; business
               </a>
