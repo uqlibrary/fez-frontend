@@ -127,7 +127,7 @@ export const HIDE_POSSIBLE_RECORD_API = () => (
 ); // (POST: with data: [\'pid\' => \'UQ:1\', \'type\' => \'H\'])`);
 
 export const CURRENT_USER_RECORDS_API = (values, route = 'search') => (
-    {apiUrl: 'records/' + route, options: {params: {rule: 'mine', ...getStandardSearchParams(values)}}}
+    {apiUrl: `records/${route}`, options: {params: {rule: 'mine', ...getStandardSearchParams(values)}}}
 );
 export const ACADEMIC_PUBLICATIONS_STATS_API = (values) => (
     {apiUrl: 'records/search', options: {params: {rule: 'mine', 'filters[stats_only]': true, ...getStandardSearchParams(values)}}}
@@ -139,7 +139,7 @@ export const SEARCH_INTERNAL_RECORDS_API = (values, route = 'search') => {
     // searchQueryParams = {} (search parameters, eg title, author etc)
     // page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}
     return {
-        apiUrl: 'records/' + route,
+        apiUrl: `records/${route}`,
         options: {
             params: {
                 ...getSearchType(values.searchQuery),
