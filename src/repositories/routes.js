@@ -132,6 +132,7 @@ export const CURRENT_USER_RECORDS_API = (values, route = 'search') => (
 export const ACADEMIC_PUBLICATIONS_STATS_API = (values) => (
     {apiUrl: 'records/search', options: {params: {rule: 'mine', 'filters[stats_only]': true, ...getStandardSearchParams(values)}}}
 );
+export const TRENDING_PUBLICATIONS_API = () => ({apiUrl: 'records/trending'});
 
 export const SEARCH_INTERNAL_RECORDS_API = (values, route = 'search') => {
     // values = {searchQuery (text value - title search, doi or pubmed id)

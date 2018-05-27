@@ -172,7 +172,7 @@ class SearchRecords extends PureComponent {
         const isLoadingOrExporting = this.props.loadingSearch || this.props.exportPublicationsLoading;
         const hasSearchParams = !!this.props.searchQuery && this.props.searchQuery.constructor === Object && Object.keys(this.props.searchQuery).length > 0;
         return (
-            <StandardPage className="page-search-records" title={txt.title}>
+            <StandardPage className="page-search-records">
                 <StandardCard className="search-component">
                     <SearchComponent className="search-body" />
                 </StandardCard>
@@ -200,13 +200,15 @@ class SearchRecords extends PureComponent {
                         <div className="column">
                             <StandardCard>
                                 {
-                                    pagingData && pagingData.to && pagingData.from && pagingData.total &&
-                                    <span>
-                                        {txt.recordCount
-                                            .replace('[recordsTotal]', pagingData.total)
-                                            .replace('[recordsFrom]', pagingData.from)
-                                            .replace('[recordsTo]', pagingData.to)}
-                                    </span>
+                                    pagingData && pagingData.to && pagingData.from && pagingData.total ?
+                                        <span>
+                                            {txt.recordCount
+                                                .replace('[recordsTotal]', pagingData.total)
+                                                .replace('[recordsFrom]', pagingData.from)
+                                                .replace('[recordsTo]', pagingData.to)}
+                                        </span>
+                                        :
+                                        <span>{txt.loadingPagingMessage}</span>
                                 }
                                 <PublicationsListSorting
                                     sortBy={this.state.sortBy}
@@ -241,11 +243,8 @@ class SearchRecords extends PureComponent {
                         </div>
                     }
                     {
-                        // show available filters or selected filters (even if there are no results)
-                        ((this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
-                            || (this.state.activeFacets && this.state.activeFacets.filters && Object.keys(this.state.activeFacets.filters).length > 0)
-                            || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)
-                            || (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
+                        this.props.publicationsListFacets
+                        && Object.keys(this.props.publicationsListFacets).length !== 0 &&
                         <div className="column is-3 is-hidden-mobile">
                             <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                 <FacetsFilter
@@ -255,7 +254,7 @@ class SearchRecords extends PureComponent {
                                     disabled={isLoadingOrExporting}
                                     excludeFacetsList={txt.facetsFilter.excludeFacetsList}
                                     renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                    showOpenAccessFilter />
+                                    showOpenAccessFilter/>
                             </StandardRighthandCard>
                         </div>
                     }

@@ -105,6 +105,8 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
           }
         />
         <PublicationsList
+          hideCitationContent={false}
+          hideCountDiff={false}
           publicationsList={
             Array [
               1,
@@ -115,6 +117,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
           publicationsListSubset={Array []}
           showDefaultActions={true}
           showMetrics={false}
+          showSourceCountIcon={false}
           showSources={false}
           subsetCustomActions={Array []}
         />
@@ -198,6 +201,8 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
           }
         />
         <PublicationsList
+          hideCitationContent={false}
+          hideCountDiff={false}
           publicationsList={
             Array [
               1,
@@ -208,6 +213,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
           publicationsListSubset={Array []}
           showDefaultActions={true}
           showMetrics={false}
+          showSourceCountIcon={false}
           showSources={false}
           subsetCustomActions={Array []}
         />

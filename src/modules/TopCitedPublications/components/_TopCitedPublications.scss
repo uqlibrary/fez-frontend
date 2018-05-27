@@ -1,0 +1,31 @@
+@import '../../../sass/variables';
+
+
+button.publicationTab {
+  white-space: normal !important;
+}
+
+.publicationCitation:first-child {
+  padding-top: 0 !important;
+}
+
+.topCitedPublications {
+  .subTitle {
+    height: 40px;
+  }
+  .publicationCitation .count-icon-container .count {
+    font-size: $text-body-large;
+  }
+  .trendingPubsSection .publicationCitation {
+    min-height: 65px;
+  }
+  .card-header {
+    display: none;
+  }
+  .body-1 {
+    padding: 0 !important;
+  }
+  .alertWrapper {
+    margin-top: 0 !important;
+  }
+}

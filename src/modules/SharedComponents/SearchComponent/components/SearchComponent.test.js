@@ -117,25 +117,9 @@ describe('SearchComponent', () => {
         expect(wrapper.state().showMobile).toBe(true);
     });
 
-
-    it('should show a snackbar error for input being too short', () => {
-        const testMethod = jest.fn();
-        constants.MIN_PUBLIC_SEARCH_TEXT_LENGTH = 100;
-        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 1000;
-        const wrapper = setup({actions: {searchEspacePublications: testMethod}});
-        wrapper.setProps({inHeader: true});
-        wrapper.setState({searchText: 'too short'});
-        wrapper.update();
-        wrapper.instance().handleSearch({key: 'Enter'});
-        expect(wrapper.state().snackbarMessage).toEqual('Must be at least 100 characters');
-        expect(wrapper.state().snackbarOpen).toBe(true);
-        expect(testMethod).not.toHaveBeenCalled();
-    });
-
     it('should show a snackbar error for input being too long', () => {
         const testMethod = jest.fn();
         constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
-        constants.MIN_PUBLIC_SEARCH_TEXT_LENGTH = 1;
         const wrapper = setup({actions: {searchEspacePublications: testMethod}});
         wrapper.setProps({inHeader: true});
         wrapper.setState({searchText: 'this is way too long'});
@@ -149,7 +133,6 @@ describe('SearchComponent', () => {
     it('validationError() should return a message for being too long', () => {
         const testMethod = jest.fn();
         constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
-        constants.MIN_PUBLIC_SEARCH_TEXT_LENGTH = 1;
         const wrapper = setup({actions: {searchEspacePublications: testMethod}});
         wrapper.setProps({inHeader: false});
         wrapper.setState({searchText: 'this is way too long'});
@@ -157,21 +140,9 @@ describe('SearchComponent', () => {
         expect(wrapper.instance().validationError()).toEqual('Must be 5 characters or less');
     });
 
-    it('validationError() should return a message for being too short', () => {
-        const testMethod = jest.fn();
-        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
-        constants.MIN_PUBLIC_SEARCH_TEXT_LENGTH = 100;
-        const wrapper = setup({actions: {searchEspacePublications: testMethod}});
-        wrapper.setProps({inHeader: false});
-        wrapper.setState({searchText: 'too short'});
-        wrapper.update();
-        expect(wrapper.instance().validationError()).toEqual('Must be at least 100 characters');
-    });
-
     it('validationError() should return false for being fine', () => {
         const testMethod = jest.fn();
         constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
-        constants.MIN_PUBLIC_SEARCH_TEXT_LENGTH = 1;
         const wrapper = setup({actions: {searchEspacePublications: testMethod}});
         wrapper.setProps({inHeader: false});
         wrapper.setState({searchText: 'this is fine'});
