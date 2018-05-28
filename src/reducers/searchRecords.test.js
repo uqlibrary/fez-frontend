@@ -13,6 +13,7 @@ const initialState = {
     rawSearchQuery: 'This is a test',
     publicationsList: [],
     searchLoading: false,
+    searchLoadingError: false,
     ...initialSearchSources
 };
 
@@ -384,4 +385,9 @@ describe('searchRecords reducer', () => {
         const countState = searchRecordsReducer(initialState, {payload: {title: testValue}, type: actions.SET_SEARCH_QUERY});
         expect(countState.searchQuery).toEqual({title: testValue});
     });
+
+    it('should set search loading error in state', () => {
+        const searchState = searchRecordsReducer(initialState, {type: actions.SEARCH_FAILED});
+        expect(searchState.searchLoadingError).toBeTruthy();
+    })
 });
