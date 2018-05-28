@@ -2134,7 +2134,7 @@ exports[`Additional Information Component  should render component with audio do
                                       <ViewRecordTableRow
                                         data={
                                           <a
-                                            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=undefined"
+                                            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=undefined"
                                           />
                                         }
                                         heading="Series"
@@ -2239,7 +2239,7 @@ exports[`Additional Information Component  should render component with audio do
                                                 }
                                               >
                                                 <a
-                                                  href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=undefined"
+                                                  href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=undefined"
                                                 />
                                               </td>
                                             </TableRowColumn>
@@ -3465,7 +3465,7 @@ exports[`Additional Information Component  should render component with book 1`]
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=Clinical Psychology: A Modular Course"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Clinical+Psychology%3A+A+Modular+Course"
           >
             Clinical Psychology: A Modular Course
           </a>
@@ -4342,7 +4342,7 @@ exports[`Additional Information Component  should render component with book cha
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=Advances in Experimental Medicine and Biology"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Advances+in+Experimental+Medicine+and+Biology"
           >
             Advances in Experimental Medicine and Biology
           </a>
@@ -24092,7 +24092,7 @@ exports[`Additional Information Component  should render component with manuscri
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=Father Edward Leo Hayes Collection, UQFL2"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Father+Edward+Leo+Hayes+Collection%2C+UQFL2"
           >
             Father Edward Leo Hayes Collection, UQFL2
           </a>
@@ -29534,7 +29534,7 @@ exports[`Additional Information Component  should render component with video do
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=SEG Special Publication Video Series"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=SEG+Special+Publication+Video+Series"
           >
             SEG Special Publication Video Series
           </a>
@@ -30007,7 +30007,7 @@ exports[`Additional Information Component  should render component with working 
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=Working papers on Social Economics, Policy and Development"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Working+papers+on+Social+Economics%2C+Policy+and+Development"
           >
             Working papers on Social Economics, Policy and Development
           </a>

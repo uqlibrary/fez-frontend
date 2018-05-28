@@ -107,7 +107,13 @@ export const pathConfig = {
                 }
             })
         ),
-        series: (series) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_33]=${series}`),
+        series: (series) => (
+            getSearchUrl({
+                searchQueryParams: {
+                    all: series
+                }
+            })
+        ),
         bookTitle: (bookTitle) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_37]=${bookTitle}`),
         jobNumber: (jobNumber) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_151]=${jobNumber}`),
         conferenceName: (conferenceName) => (
