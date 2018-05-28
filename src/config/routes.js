@@ -82,7 +82,7 @@ export const pathConfig = {
         bookTitle: (bookTitle) => getSearchUrl({searchQuery: bookTitle}),
         jobNumber: (jobNumber) => getSearchUrl({searchQuery: jobNumber}),
         conferenceName: (conferenceName) => getSearchUrl({searchQuery: conferenceName}),
-        proceedingsTitle: (proceedingsTitle) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_2]=${proceedingsTitle}`),
+        proceedingsTitle: (proceedingsTitle) => getSearchUrl({searchQuery: proceedingsTitle}),
     },
     admin: {
         masquerade: '/admin/masquerade'
