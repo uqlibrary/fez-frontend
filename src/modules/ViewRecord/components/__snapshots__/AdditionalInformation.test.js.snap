@@ -4288,7 +4288,7 @@ exports[`Additional Information Component  should render component with book cha
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_37]=Non-coding RNA and the Reproductive System"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Non-coding+RNA+and+the+Reproductive+System"
           >
             Non-coding RNA and the Reproductive System
           </a>
@@ -4804,11 +4804,6 @@ exports[`Additional Information Component  should render component with book cha
         data="886"
         heading="Volume"
         key="additional-info-Volume"
-      />
-      <ViewRecordTableRow
-        data="7"
-        heading="Chapter number"
-        key="additional-info-Chapter number"
       />
       <ViewRecordTableRow
         data="7"

@@ -114,7 +114,13 @@ export const pathConfig = {
                 }
             })
         ),
-        bookTitle: (bookTitle) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_37]=${bookTitle}`),
+        bookTitle: (bookTitle) => (
+            getSearchUrl({
+                searchQueryParams: {
+                    all: bookTitle
+                }
+            })
+        ),
         jobNumber: (jobNumber) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_151]=${jobNumber}`),
         conferenceName: (conferenceName) => (
             getSearchUrl({
