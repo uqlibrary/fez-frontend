@@ -121,7 +121,13 @@ export const pathConfig = {
                 }
             })
         ),
-        jobNumber: (jobNumber) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_151]=${jobNumber}`),
+        jobNumber: (jobNumber) => (
+            getSearchUrl({
+                searchQueryParams: {
+                    all: jobNumber
+                }
+            })
+        ),
         conferenceName: (conferenceName) => (
             getSearchUrl({
                 searchQueryParams: {

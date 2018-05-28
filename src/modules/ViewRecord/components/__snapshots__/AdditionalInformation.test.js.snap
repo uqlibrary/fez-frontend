@@ -12817,7 +12817,7 @@ exports[`Additional Information Component  should render component with design d
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_151]=UQFL158, job no. 1006-2"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=UQFL158%2C+job+no.+1006-2"
           >
             UQFL158, job no. 1006-2
           </a>
