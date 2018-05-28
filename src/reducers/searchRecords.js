@@ -12,7 +12,7 @@ const initialState = {
     publicationsList: [],
     publicationsListPagingData: {},
     publicationsListFacets: {},
-    loadingSearch: false,
+    searchLoading: false,
     ...initialSearchSources
 };
 
@@ -151,14 +151,14 @@ const handlers = {
             publicationsList: [],
             publicationsListPagingData: {},
             rawSearchQuery: rawSearchQuery,
-            loadingSearch: true
+            searchLoading: true
         };
     },
 
     [actions.SEARCH_LOADED]: (state, action) => {
         return {
             ...state,
-            loadingSearch: false,
+            searchLoading: false,
             publicationsList: action.payload.data && action.payload.data.length > 0 && action.payload.data[0].currentSource
                 ? deduplicateResults(action.payload.data)
                 : action.payload.data,
@@ -217,7 +217,7 @@ const handlers = {
 
         return {
             ...state,
-            loadingSearch: true,
+            searchLoading: true,
             publicationsList:
                 deduplicateResults([
                     ...state.publicationsList,

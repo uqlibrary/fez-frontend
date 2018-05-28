@@ -4,7 +4,7 @@ import {routes} from 'config';
 function setup(testProps, isShallow = true) {
     const props = {
         publicationsList: [],
-        loadingSearch: false,
+        searchLoading: false,
         exportPublicationsLoading: false,
         actions: {exportEspacePublications: ()=>{}},
         ...testProps,
@@ -20,13 +20,13 @@ describe('SearchRecords page', () => {
     });
 
     it('should render loading screen while loading search results', () => {
-        const wrapper = setup({loadingSearch: true});
+        const wrapper = setup({searchLoading: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render loading screen while loading publications while filtering', () => {
         const wrapper = setup({publicationsList: [1, 2, 2]});
-        wrapper.setProps({loadingSearch: true});
+        wrapper.setProps({searchLoading: true});
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
     });

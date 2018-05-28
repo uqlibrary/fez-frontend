@@ -26,7 +26,7 @@ class SearchRecords extends PureComponent {
         publicationsListFacets: PropTypes.object,
         publicationsListPagingData: PropTypes.object,
         exportPublicationsLoading: PropTypes.bool,
-        loadingSearch: PropTypes.bool,
+        searchLoading: PropTypes.bool,
 
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
@@ -55,7 +55,7 @@ class SearchRecords extends PureComponent {
         this.state = {
             // check if search has results
             // facets filtering might return no results, but facets should still be visible
-            // hasResults: !props.loadingSearch && props.publicationsList.length > 0,
+            // hasResults: !props.searchLoading && props.publicationsList.length > 0,
             ...this.initState,
             ...this.props.searchQuery
         };
@@ -168,7 +168,7 @@ class SearchRecords extends PureComponent {
     render() {
         const txt = locale.pages.searchRecords;
         const pagingData = this.props.publicationsListPagingData;
-        const isLoadingOrExporting = this.props.loadingSearch || this.props.exportPublicationsLoading;
+        const isLoadingOrExporting = this.props.searchLoading || this.props.exportPublicationsLoading;
         const hasSearchParams = !!this.props.searchQuery && this.props.searchQuery.constructor === Object && Object.keys(this.props.searchQuery).length > 0;
         return (
             <StandardPage className="page-search-records">
@@ -177,13 +177,13 @@ class SearchRecords extends PureComponent {
                 </StandardCard>
                 {
                     // first time loading search results
-                    !hasSearchParams && this.props.loadingSearch &&
+                    !hasSearchParams && this.props.searchLoading &&
                     <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
                 }
                 <div className="columns">
                     {
                         // no results to display
-                        hasSearchParams && !this.props.loadingSearch && this.props.publicationsList.length === 0 &&
+                        hasSearchParams && !this.props.searchLoading && this.props.publicationsList.length === 0 &&
                         <div className="column">
                             <StandardCard {...txt.noResultsFound}>
                                 {txt.noResultsFound.text}
@@ -193,7 +193,7 @@ class SearchRecords extends PureComponent {
                     {
                         // results to display or loading if user is filtering/paging
                         (
-                            (hasSearchParams && this.props.loadingSearch) ||
+                            (hasSearchParams && this.props.searchLoading) ||
                             (!!this.props.publicationsList && this.props.publicationsList.length > 0)
                         ) &&
                         <div className="column">
@@ -226,7 +226,7 @@ class SearchRecords extends PureComponent {
                                     disabled={isLoadingOrExporting} />
                                 {
                                     (isLoadingOrExporting) &&
-                                    <div className="is-centered"><InlineLoader message={this.props.loadingSearch ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
+                                    <div className="is-centered"><InlineLoader message={this.props.searchLoading ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
                                 }
                                 {
                                     !isLoadingOrExporting && this.props.publicationsList && this.props.publicationsList.length > 0 &&
