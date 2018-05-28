@@ -2134,7 +2134,7 @@ exports[`Additional Information Component  should render component with audio do
                                       <ViewRecordTableRow
                                         data={
                                           <a
-                                            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=undefined"
+                                            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D="
                                           />
                                         }
                                         heading="Series"
@@ -2239,7 +2239,7 @@ exports[`Additional Information Component  should render component with audio do
                                                 }
                                               >
                                                 <a
-                                                  href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=undefined"
+                                                  href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D="
                                                 />
                                               </td>
                                             </TableRowColumn>

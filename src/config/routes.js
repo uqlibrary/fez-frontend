@@ -7,10 +7,16 @@ import {openAccessIds} from 'config/openAccess';
 const fullPath = process.env.BRANCH === 'production' ? 'https://espace.library.uq.edu.au' : 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 
-const getSearchUrl = (params) => (
+const getSearchUrl = ({searchQuery, activeFacets = {}}) => (
     `${fullPath}/records/search?${param({
         ...defaultSearchParams,
-        ...params
+        searchQueryParams: {
+            all: !!searchQuery && searchQuery || ''
+        },
+        activeFacets: {
+            ...defaultSearchParams.activeFacets,
+            ...activeFacets
+        }
     })}`
 );
 
@@ -52,89 +58,30 @@ export const pathConfig = {
         authorId: (authorId) => (`${fullPath}/list/author_id/${authorId}`),
         subject: (subjectId) => (`${fullPath}/list/subject/${subjectId}`),
         herdcStatus: (herdcStatusId) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_22]=${herdcStatusId}`),
-        keyword: (keyword) => (
-            getSearchUrl({
-                searchQueryParams: {
-                    all: keyword
-                }
-            })
-        ),
+        keyword: (keyword) => getSearchUrl({searchQuery: keyword}),
         institutionalStatus: (institutionalStatusId) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_23]=${institutionalStatusId}`),
-        openAccessStatus: (openAccessStatusId) => (
-            getSearchUrl({
-                searchQueryParams: {
-                    all: ''
-                },
-                activeFacets: {
-                    filters: {},
-                    ranges: {},
-                    showOpenAccessOnly: openAccessIds.indexOf(openAccessStatusId) >= 0
+        openAccessStatus: (openAccessStatusId) => getSearchUrl({
+            activeFacets: {
+                showOpenAccessOnly: openAccessIds.indexOf(openAccessStatusId) >= 0
+            }
+        }),
+        journalName: (journalName) => getSearchUrl({
+            searchQuery: journalName,
+            activeFacets: {
+                filters: {
+                    'Journal name': journalName
                 }
-            })
-        ),
-        journalName: (journalName) => (
-            getSearchUrl({
-                searchQueryParams: {
-                    all: journalName
-                },
-                activeFacets: {
-                    filters: {
-                        'Journal name': journalName
-                    }
-                }
-            })
-        ),
-        publisher: (publisher) => (
-            getSearchUrl({
-                searchQueryParams: {
-                    all: publisher
-                }
-            })
-        ),
-        license: (license) => (
-            getSearchUrl({
-                searchQueryParams: {
-                    all: license
-                }
-            })
-        ),
+            }
+        }),
+        publisher: (publisher) => getSearchUrl({searchQuery: publisher}),
+        license: (license) => getSearchUrl({searchQuery: license}),
         accessCondition: (accessCondition) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_95]=${accessCondition}`),
         collectionType: (collectionType) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_92]=${collectionType}`),
-        orgUnitName: (orgUnitName) => (
-            getSearchUrl({
-                searchQueryParams: {
-                    all: orgUnitName
-                }
-            })
-        ),
-        series: (series) => (
-            getSearchUrl({
-                searchQueryParams: {
-                    all: series
-                }
-            })
-        ),
-        bookTitle: (bookTitle) => (
-            getSearchUrl({
-                searchQueryParams: {
-                    all: bookTitle
-                }
-            })
-        ),
-        jobNumber: (jobNumber) => (
-            getSearchUrl({
-                searchQueryParams: {
-                    all: jobNumber
-                }
-            })
-        ),
-        conferenceName: (conferenceName) => (
-            getSearchUrl({
-                searchQueryParams: {
-                    all: conferenceName
-                }
-            })
-        ),
+        orgUnitName: (orgUnitName) => getSearchUrl({searchQuery: orgUnitName}),
+        series: (series) => getSearchUrl({searchQuery: series}),
+        bookTitle: (bookTitle) => getSearchUrl({searchQuery: bookTitle}),
+        jobNumber: (jobNumber) => getSearchUrl({searchQuery: jobNumber}),
+        conferenceName: (conferenceName) => getSearchUrl({searchQuery: conferenceName}),
         proceedingsTitle: (proceedingsTitle) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_2]=${proceedingsTitle}`),
     },
     admin: {
