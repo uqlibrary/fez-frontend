@@ -59,7 +59,7 @@ export const pathConfig = {
         subject: (subjectId) => (`${fullPath}/list/subject/${subjectId}`),
         herdcStatus: (herdcStatus) => getSearchUrl({searchQuery: herdcStatus}),
         keyword: (keyword) => getSearchUrl({searchQuery: keyword}),
-        institutionalStatus: (institutionalStatusId) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_23]=${institutionalStatusId}`),
+        institutionalStatus: (institutionalStatus) => getSearchUrl({searchQuery: institutionalStatus}),
         openAccessStatus: (openAccessStatusId) => getSearchUrl({
             activeFacets: {
                 showOpenAccessOnly: openAccessIds.indexOf(openAccessStatusId) >= 0
