@@ -116,6 +116,20 @@
       color: $accent-color !important;
     }
   }
+
+  .count-icon-container {
+    height: 0;
+    .fez-icon {
+      position: relative;
+      top: -30px;
+    }
+    .count {
+      font-size: $title-medium;
+      position: relative;
+      top: -80px;
+      text-align: center;
+    }
+  }
 }
 
 // Mobile

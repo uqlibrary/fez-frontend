@@ -150,7 +150,6 @@ const handlers = {
             ...state,
             publicationsList: [],
             publicationsListPagingData: {},
-            publicationsListFacets: {},
             rawSearchQuery: rawSearchQuery,
             loadingSearch: true
         };

@@ -2,7 +2,7 @@ import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
 import * as routes from 'repositories/routes';
 import {transformTrendingPublicationsMetricsData} from './academicDataTransformers';
-import {promptForDownload} from './publicationDataTransformers';
+import {exportPublications} from './exportPublications';
 
 /**
  * Get latest publications
@@ -22,6 +22,40 @@ export function searchLatestPublications() {
             .catch(error => {
                 dispatch({
                     type: actions.LATEST_PUBLICATIONS_FAILED,
+                    payload: error.message
+                });
+            });
+    };
+}
+
+/**
+ * Get top cited publications
+ * @returns {action}
+ */
+export function searchTopCitedPublications() {
+    return dispatch => {
+        dispatch({type: actions.TOP_CITED_PUBLICATIONS_LOADING});
+        return get(routes.TRENDING_PUBLICATIONS_API())
+            .then(response => {
+                if (response.data.length > 0) {
+                    const transformedTopCitedPublications = transformTrendingPublicationsMetricsData(response);
+
+                    transformedTopCitedPublications.map(({key, values}) => {
+                        dispatch({
+                            type: `${actions.TOP_CITED_PUBLICATIONS_LOADED}@${key}`,
+                            payload: {data: values},
+                        });
+                    });
+                } else {
+                    dispatch({
+                        type: actions.TOP_CITED_PUBLICATIONS_LOADED,
+                        payload: response,
+                    });
+                }
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.TOP_CITED_PUBLICATIONS_FAILED,
                     payload: error.message
                 });
             });
@@ -100,34 +134,13 @@ export function searchTrendingPublications() {
  * @param {string} format
  * @returns {action}
  */
-export function exportAuthorPublications({exportFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
-    return dispatch => {
-        dispatch({type: actions.EXPORT_PUBLICATIONS_LOADING});
-
-        return get(
-            routes.CURRENT_USER_RECORDS_API({
-                exportFormat: exportFormat,
-                page: page,
-                pageSize: pageSize,
-                sortBy: sortBy,
-                sortDirection: sortDirection,
-                facets: activeFacets
-            }), {
-                responseType: 'blob'
-            })
-            .then(response => {
-                promptForDownload(exportFormat, response);
-
-                dispatch({
-                    type: actions.EXPORT_PUBLICATIONS_LOADED,
-                    payload: exportFormat
-                });
-            })
-            .catch(error => {
-                dispatch({
-                    type: actions.EXPORT_PUBLICATIONS_FAILED,
-                    payload: error.message
-                });
-            });
-    };
+export function exportAuthorPublications({exportPublicationsFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
+    return exportPublications(routes.CURRENT_USER_RECORDS_API({
+        exportPublicationsFormat: exportPublicationsFormat,
+        page: page,
+        pageSize: pageSize,
+        sortBy: sortBy,
+        sortDirection: sortDirection,
+        facets: activeFacets
+    }));
 }
