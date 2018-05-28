@@ -57,7 +57,7 @@ export const pathConfig = {
         author: (author) => (`${fullPath}/list/author/${author}`),
         authorId: (authorId) => (`${fullPath}/list/author_id/${authorId}`),
         subject: (subjectId) => (`${fullPath}/list/subject/${subjectId}`),
-        herdcStatus: (herdcStatusId) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_22]=${herdcStatusId}`),
+        herdcStatus: (herdcStatus) => getSearchUrl({searchQuery: herdcStatus}),
         keyword: (keyword) => getSearchUrl({searchQuery: keyword}),
         institutionalStatus: (institutionalStatusId) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_23]=${institutionalStatusId}`),
         openAccessStatus: (openAccessStatusId) => getSearchUrl({

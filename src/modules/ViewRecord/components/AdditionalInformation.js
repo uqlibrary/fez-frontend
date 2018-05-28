@@ -86,7 +86,7 @@ export default class AdditionalInformation extends Component {
             case 'rek_publisher': return this.renderLink(routes.pathConfig.list.publisher(data), data);
             case 'rek_oa_status': return !!data ? this.renderLink(routes.pathConfig.list.openAccessStatus(object[subkey]), data) : '';
             case 'rek_herdc_code': return this.renderLink(routes.pathConfig.list.subject(object[subkey]), data);
-            case 'rek_herdc_status': return this.renderLink(routes.pathConfig.list.herdcStatus(object[subkey]), data);
+            case 'rek_herdc_status': return this.renderLink(routes.pathConfig.list.herdcStatus(object[`${subkey}_lookup`]), data);
             case 'rek_ands_collection_type': return this.renderLink(routes.pathConfig.list.collectionType(object[subkey]), data);
             case 'rek_access_conditions': return this.renderLink(routes.pathConfig.list.accessCondition(object[subkey]), data);
             case 'rek_series': return this.renderLink(routes.pathConfig.list.series(object[subkey]), object[subkey]);
