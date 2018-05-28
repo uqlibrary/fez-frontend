@@ -389,5 +389,10 @@ describe('searchRecords reducer', () => {
     it('should set search loading error in state', () => {
         const searchState = searchRecordsReducer(initialState, {type: actions.SEARCH_FAILED});
         expect(searchState.searchLoadingError).toBeTruthy();
-    })
+    });
+
+    it('should reset search loading error in state', () => {
+        const searchState = searchRecordsReducer({...initialState, searchLoadingError: true}, {payload: {title: 'test search reset error'}, type: actions.SET_SEARCH_QUERY});
+        expect(searchState.searchLoadingError).toBeFalsy();
+    });
 });

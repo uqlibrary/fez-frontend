@@ -139,6 +139,7 @@ const handlers = {
     [actions.SET_SEARCH_QUERY]: (state, action) => {
         return {
             ...state,
+            searchLoadingError: false,
             searchQuery: {
                 ...action.payload
             }
@@ -152,7 +153,8 @@ const handlers = {
             publicationsList: [],
             publicationsListPagingData: {},
             rawSearchQuery: rawSearchQuery,
-            searchLoading: true
+            searchLoading: true,
+            searchLoadingError: false
         };
     },
 
@@ -160,6 +162,7 @@ const handlers = {
         return {
             ...state,
             searchLoading: false,
+            searchLoadingError: false,
             publicationsList: action.payload.data && action.payload.data.length > 0 && action.payload.data[0].currentSource
                 ? deduplicateResults(action.payload.data)
                 : action.payload.data,
