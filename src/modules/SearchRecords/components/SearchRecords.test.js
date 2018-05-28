@@ -348,4 +348,9 @@ describe('SearchRecords page', () => {
         const wrapper = setup({ exportPublicationsLoading: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('renders error alert if error occurs during search', () => {
+        const wrapper = setup({searchLoadingError: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

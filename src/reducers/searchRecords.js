@@ -13,6 +13,7 @@ const initialState = {
     publicationsListPagingData: {},
     publicationsListFacets: {},
     searchLoading: false,
+    searchLoadingError: false,
     ...initialSearchSources
 };
 
@@ -178,7 +179,8 @@ const handlers = {
     [actions.SEARCH_FAILED]: (state) => {
         return {
             ...state,
-            ...initialState
+            ...initialState,
+            searchLoadingError: true
         };
     },
 
