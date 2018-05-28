@@ -351,6 +351,9 @@ exports[`PublicationsListSorting renders  component with export dropdown for adm
     </SelectField>
   </div>
   <div
+    className="column is-narrow is-spacer is-hidden-mobile is-hidden-tablet-only"
+  />
+  <div
     className="column is-hidden-mobile is-hidden-tablet-only"
   >
     <ExportPublications
@@ -705,6 +708,9 @@ exports[`PublicationsListSorting renders  component with export dropdown for aut
       />
     </SelectField>
   </div>
+  <div
+    className="column is-narrow is-spacer is-hidden-mobile is-hidden-tablet-only"
+  />
   <div
     className="column is-hidden-mobile is-hidden-tablet-only"
   >
@@ -1407,6 +1413,9 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
       />
     </SelectField>
   </div>
+  <div
+    className="column is-narrow is-spacer is-hidden-mobile is-hidden-tablet-only"
+  />
   <div
     className="column is-hidden-mobile is-hidden-tablet-only"
   >

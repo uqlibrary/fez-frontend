@@ -142,8 +142,11 @@ export default class PublicationsListSorting extends PureComponent {
                     </SelectField>
                 </div>
                 {
-                    (canUseExport) &&
-                    <div className="column is-narrow is-spacer is-hidden-mobile is-hidden-tablet-only"/> &&
+                    canUseExport &&
+                    <div className="column is-narrow is-spacer is-hidden-mobile is-hidden-tablet-only"/>
+                }
+                {
+                    canUseExport &&
                     <div className="column is-hidden-mobile is-hidden-tablet-only">
                         <ExportPublications
                             format={this.state.exportPublicationsFormat}
