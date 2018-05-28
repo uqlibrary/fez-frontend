@@ -449,7 +449,7 @@ export default {
             errorAlert: {
                 type: 'error_outline',
                 title: 'Error',
-                message: 'Error has occurred during search. Please contact eSpace administrators or try again later.'
+                message: (message) => message
             },
         },
         masquerade: {

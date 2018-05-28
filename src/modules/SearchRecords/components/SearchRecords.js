@@ -172,6 +172,7 @@ class SearchRecords extends PureComponent {
         const pagingData = this.props.publicationsListPagingData;
         const isLoadingOrExporting = this.props.searchLoading || this.props.exportPublicationsLoading;
         const hasSearchParams = !!this.props.searchQuery && this.props.searchQuery.constructor === Object && Object.keys(this.props.searchQuery).length > 0;
+        const alertProps = this.props.searchLoadingError && {...txt.errorAlert, message: txt.errorAlert.message(locale.global.errorMessages.generic)};
         return (
             <StandardPage className="page-search-records">
                 <StandardCard className="search-component">
@@ -184,7 +185,7 @@ class SearchRecords extends PureComponent {
                 }
                 {
                     this.props.searchLoadingError &&
-                    <Alert {...txt.errorAlert} />
+                    <Alert {...alertProps} />
                 }
                 {
                     !this.props.searchLoadingError &&

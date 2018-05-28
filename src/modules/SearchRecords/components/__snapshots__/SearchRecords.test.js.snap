@@ -14,7 +14,7 @@ exports[`SearchRecords page renders error alert if error occurs during search 1`
   <Alert
     allowDismiss={false}
     dismissTitle="Click to dismiss this alert"
-    message="Error has occurred during search. Please contact eSpace administrators or try again later."
+    message="Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later."
     showLoader={false}
     title="Error"
     type="error_outline"
