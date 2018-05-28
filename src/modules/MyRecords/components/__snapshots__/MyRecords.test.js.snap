@@ -123,12 +123,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
         </span>
         <PublicationsListSorting
           disabled={false}
-          location={
-            Object {
-              "pathname": "/records/mine",
-              "state": null,
-            }
-          }
+          onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}
@@ -229,12 +224,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
         </span>
         <PublicationsListSorting
           disabled={false}
-          location={
-            Object {
-              "pathname": "/records/mine",
-              "state": null,
-            }
-          }
+          onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}
@@ -420,12 +410,7 @@ exports[`MyRecords test renders loading screen while export publications loading
         </span>
         <PublicationsListSorting
           disabled={true}
-          location={
-            Object {
-              "pathname": "/records/mine",
-              "state": null,
-            }
-          }
+          onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}
@@ -509,12 +494,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
         </span>
         <PublicationsListSorting
           disabled={true}
-          location={
-            Object {
-              "pathname": "/records/mine",
-              "state": null,
-            }
-          }
+          onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}

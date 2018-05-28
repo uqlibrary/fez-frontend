@@ -22,7 +22,6 @@ export default class PublicationsListSorting extends PureComponent {
         disabled: PropTypes.bool,
         onExportPublications: PropTypes.func,
 
-        location: PropTypes.object.isRequired,
         account: PropTypes.object,
         author: PropTypes.object,
     };
@@ -74,7 +73,7 @@ export default class PublicationsListSorting extends PureComponent {
         this.setState({
             exportPublicationsFormat: value
         });
-        this.props.onExportPublications({...this.state, ...this.props.location.state || {}, exportPublicationsFormat: value});
+        this.props.onExportPublications({exportPublicationsFormat: value});
     }
 
     render() {
