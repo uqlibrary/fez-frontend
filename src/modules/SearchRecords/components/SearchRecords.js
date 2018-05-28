@@ -227,7 +227,7 @@ class SearchRecords extends PureComponent {
                                     onPageChanged={this.pageChanged}
                                     disabled={isLoadingOrExporting} />
                                 {
-                                    (isLoadingOrExporting) &&
+                                    isLoadingOrExporting &&
                                     <div className="is-centered"><InlineLoader message={this.props.loadingSearch ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
                                 }
                                 {

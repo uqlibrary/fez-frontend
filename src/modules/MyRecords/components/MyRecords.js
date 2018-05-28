@@ -208,7 +208,7 @@ export default class MyRecords extends PureComponent {
                                     onPageChanged={this.pageChanged}
                                     disabled={isLoadingOrExporting} />
                                 {
-                                    (isLoadingOrExporting) &&
+                                    isLoadingOrExporting &&
                                     <div className="is-centered"><InlineLoader message={this.props.loadingPublicationsList ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
                                 }
                                 {

@@ -30,7 +30,45 @@ exports[`SearchRecords page should render loading screen while export publicatio
   </StandardCard>
   <div
     className="columns"
-  />
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+      >
+        <span>
+          Searching for publications...
+        </span>
+        <PublicationsListSorting
+          disabled={true}
+          onExportPublications={[Function]}
+          onPageSizeChanged={[Function]}
+          onSortByChanged={[Function]}
+          pageSize={20}
+          sortBy="published_date"
+          sortDirection="Desc"
+        />
+        <PublicationsListPaging
+          disabled={true}
+          loading={true}
+          onPageChanged={[Function]}
+        />
+        <div
+          className="is-centered"
+        >
+          <InlineLoader
+            message="Exporting search results..."
+          />
+        </div>
+        <PublicationsListPaging
+          disabled={true}
+          loading={true}
+          onPageChanged={[Function]}
+        />
+      </StandardCard>
+    </div>
+  </div>
 </StandardPage>
 `;
 

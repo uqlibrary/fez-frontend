@@ -24,15 +24,15 @@ describe('SearchRecords page', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render loading screen while export publications loading', () => {
-        const wrapper = setup({ exportPublicationsLoading: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
     it('should render loading screen while loading publications while filtering', () => {
         const wrapper = setup({publicationsList: [1, 2, 2]});
         wrapper.setProps({loadingSearch: true});
         wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render loading screen while export publications loading', () => {
+        const wrapper = setup({publicationsList: [1, 2, 2], exportPublicationsLoading: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -324,7 +324,7 @@ describe('SearchRecords page', () => {
     });
 
     it('renders loading screen while export publications loading', () => {
-        const wrapper = setup({ exportPublicationsLoading: true });
+        const wrapper = setup({exportPublicationsLoading: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
