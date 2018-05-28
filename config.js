@@ -5,6 +5,7 @@ const deployment = {
         api: 'https://api.library.uq.edu.au/staging/',
         gtm: 'GTM-K597ZS',
         title: 'UQ eSpace (DEVELOPMENT)',
+        short_name: 'eSpace',
         titleSuffix: 'Development',
         environment: 'development',
         basePath: 'espace/', // updated in webpack
@@ -18,6 +19,7 @@ const deployment = {
         api: 'https://api.library.uq.edu.au/staging/',
         gtm: 'GTM-K597ZS',
         title: 'UQ eSpace (STAGING)',
+        short_name: 'eSpace',
         titleSuffix: 'Staging',
         environment: 'staging',
         basePath: '',
@@ -31,6 +33,7 @@ const deployment = {
         api: 'https://api.library.uq.edu.au/v1/',
         gtm: 'GTM-T4NPC25',
         title: 'UQ eSpace',
+        short_name: 'eSpace',
         titleSuffix: '',
         environment: 'production',
         basePath: '',

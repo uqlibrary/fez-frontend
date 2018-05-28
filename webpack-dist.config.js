@@ -56,7 +56,21 @@ module.exports = {
             logo: './public/images/logo.png',
             prefix: 'mobile-icons/',
             background: '#49075E',
-            title: config.title
+            theme_color: '#49075E',
+            title: config.title,
+            short_name: config.short_name,
+            icons: {
+                android: true,
+                appleIcon: true,
+                appleStartup: true,
+                coast: false,
+                favicons: true,
+                firefox: true,
+                opengraph: false,
+                twitter: false,
+                yandex: false,
+                windows: false
+            }
         }),
         new HtmlWebpackPlugin({
             favicon: resolve(__dirname, './public', 'favicon.ico'),
