@@ -8,25 +8,21 @@ const propTypes = {
     text: PropTypes.any.isRequired,
     buttonLabel: PropTypes.string,
     tooltip: PropTypes.string,
-    tooltipIconColor: PropTypes.string,
     onClick: PropTypes.func,
-    style: PropTypes.object
 };
 
 const defaultProps = {
-    style: {},
-    tooltip: 'Click for more information',
-    tooltipIconColor: '#CCCCCC'
+    tooltip: 'Click for more information'
 };
 
-const HelpIcon = ({title, text, buttonLabel, tooltip, tooltipIconColor, onClick, style}) => {
+const HelpIcon = ({title, text, buttonLabel, tooltip, onClick}) => {
     const setDrawerContent = () => {
         onClick(title, text, buttonLabel);
     };
 
     return (
-        <IconButton tooltip={tooltip} tooltipPosition="bottom-left" onClick={setDrawerContent} style={style}>
-            <FontIcon className="material-icons helpIcon" color={tooltipIconColor}>help_outline</FontIcon>
+        <IconButton tooltip={tooltip} tooltipPosition="bottom-left" onClick={setDrawerContent}>
+            <FontIcon className="material-icons helpIcon">help_outline</FontIcon>
         </IconButton>
     );
 };
