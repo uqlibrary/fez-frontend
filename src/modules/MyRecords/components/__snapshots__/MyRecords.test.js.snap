@@ -402,38 +402,56 @@ exports[`MyRecords test renders loading screen while export publications loading
     >
       <StandardCard
         className=""
-        text={
-          <div>
-            We were unable to find any results. You may be able to 
-            <a
-              href="/records/possible"
-            >
-              claim publications we think may be yours
-            </a>
-             or 
-            <a
-              href="/records/add/find"
-            >
-              add a missing publication
-            </a>
-          </div>
-        }
-        title="No publications found"
       >
-        <div>
-          We were unable to find any results. You may be able to 
+        <span>
+          Add to this list by 
           <a
             href="/records/possible"
           >
-            claim publications we think may be yours
+            claiming a publication
           </a>
            or 
           <a
             href="/records/add/find"
           >
-            add a missing publication
+            adding a missing publication
           </a>
+          .
+        </span>
+        <PublicationsListSorting
+          disabled={true}
+          location={
+            Object {
+              "pathname": "/records/mine",
+              "state": null,
+            }
+          }
+          onPageSizeChanged={[Function]}
+          onSortByChanged={[Function]}
+          pageSize={20}
+          pagingData={Object {}}
+          sortBy="published_date"
+          sortDirection="Desc"
+        />
+        <PublicationsListPaging
+          disabled={true}
+          loading={true}
+          onPageChanged={[Function]}
+          pagingData={Object {}}
+        />
+        <div
+          className="is-centered"
+        >
+          <InlineLoader
+            message="Exporting your publications..."
+          />
         </div>
+        <PublicationsListPaging
+          disabled={true}
+          loading={true}
+          onPageChanged={[Function]}
+          pagingData={Object {}}
+        />
       </StandardCard>
     </div>
   </div>
