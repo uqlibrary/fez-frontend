@@ -31,6 +31,11 @@ describe('SearchRecords page', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render loading screen while export publications loading', () => {
+        const wrapper = setup({publicationsList: [1, 2, 2], exportPublicationsLoading: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render no results', () => {
         const wrapper = setup({
             publicationsList: [],
@@ -319,7 +324,7 @@ describe('SearchRecords page', () => {
     });
 
     it('renders loading screen while export publications loading', () => {
-        const wrapper = setup({ exportPublicationsLoading: true });
+        const wrapper = setup({exportPublicationsLoading: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

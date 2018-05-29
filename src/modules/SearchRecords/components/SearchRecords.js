@@ -30,7 +30,9 @@ class SearchRecords extends PureComponent {
 
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
-        actions: PropTypes.object
+        actions: PropTypes.object,
+        account: PropTypes.object,
+        author: PropTypes.object,
     };
 
     constructor(props) {
@@ -214,6 +216,7 @@ class SearchRecords extends PureComponent {
                                     pageSize={this.state.pageSize}
                                     pagingData={pagingData}
                                     location={this.props.location}
+                                    account={this.props.account}
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
                                     onExportPublications={this.props.actions.exportEspacePublications}
@@ -224,7 +227,7 @@ class SearchRecords extends PureComponent {
                                     onPageChanged={this.pageChanged}
                                     disabled={isLoadingOrExporting} />
                                 {
-                                    (isLoadingOrExporting) &&
+                                    isLoadingOrExporting &&
                                     <div className="is-centered"><InlineLoader message={this.props.loadingSearch ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
                                 }
                                 {

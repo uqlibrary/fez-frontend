@@ -177,11 +177,11 @@ export default class App extends PureComponent {
                     titleStyle={titleStyle}
                     onLeftIconButtonClick={this.toggleDrawer}
                     iconElementLeft={
+                        this.state.docked || !this.state.menuDrawerOpen &&
                         <IconButton
                             tooltip={locale.global.mainNavButton.tooltip}
                             tooltipPosition="bottom-right"
                             hoveredStyle={appBarButtonStyles}
-                            tabIndex={(this.state.docked || !this.state.menuDrawerOpen) ? 1 : -1}
                             className="main-menu-button">
                             <NavigationMenu/>
                         </IconButton>
