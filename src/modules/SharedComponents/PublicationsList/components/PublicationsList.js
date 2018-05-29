@@ -1,7 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
-import {locale} from 'locale';
 
 export default class PublicationsList extends PureComponent {
     static propTypes = {
@@ -14,8 +13,7 @@ export default class PublicationsList extends PureComponent {
         showMetrics: PropTypes.bool,
         showSourceCountIcon: PropTypes.bool,
         hideCitationContent: PropTypes.bool,
-        hideCountDiff: PropTypes.bool,
-        missingText: PropTypes.string
+        hideCountDiff: PropTypes.bool
     };
 
     static defaultProps = {
@@ -26,8 +24,7 @@ export default class PublicationsList extends PureComponent {
         showSourceCountIcon: false,
         showMetrics: false,
         hideCitationContent: false,
-        hideCountDiff: false,
-        missingText: locale.components.publicationCitation.missing
+        hideCountDiff: false
     };
 
     constructor(props) {
@@ -54,15 +51,6 @@ export default class PublicationsList extends PureComponent {
         const publications = this.props.publicationsList.map((publication, index) => {
             return this.renderPublicationCitation(index, publication);
         });
-
-
-        if (publications.length < 1) {
-            return (
-                <div>
-                    {this.props.missingText}
-                </div>
-            );
-        }
 
         return (
             <div className="publicationsList">

@@ -67,14 +67,21 @@ export default class TopCitedPublications extends PureComponent {
                                                         {txt[key].heading}
                                                     </h2>
                                                     <div className="is-hidden-mobile subTitle">{txt[key].subHeading}</div>
-                                                    <PublicationsList
-                                                        publicationsList={values}
-                                                        showMetrics
-                                                        showSourceCountIcon={key === 'altmetric'}
-                                                        hideCountDiff={key === 'altmetric'}
-                                                        hideCitationContent
-                                                        missingText={txt.missing}
-                                                    />
+                                                    {values && values.length >= 1 &&
+                                                        <PublicationsList
+                                                            publicationsList={values}
+                                                            showMetrics
+                                                            showSourceCountIcon={key === 'altmetric'}
+                                                            hideCountDiff={key === 'altmetric'}
+                                                            hideCitationContent
+                                                        />
+                                                    }
+
+                                                    {(!values || values.length < 1) &&
+                                                        <div>
+                                                            {txt.noResultsFound.text}
+                                                        </div>
+                                                    }
                                                 </div>
                                             </div>
                                         </div>
