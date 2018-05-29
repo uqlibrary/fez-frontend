@@ -327,4 +327,41 @@ describe('SearchRecords page', () => {
         const wrapper = setup({exportPublicationsLoading: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should handle export publications correctly', () => {
+        const testExportAction = jest.fn();
+        const searchQuery = {
+            page: '1',
+            pageSize: 20,
+            sortBy: 'published_date',
+            sortDirection: 'Desc',
+            searchQueryParams: {
+                title: 'some test data'
+            },
+            activeFacets: {
+                filters: {},
+                ranges: {
+                    'Year published': {
+                        from: '2008',
+                        to: '2023'
+                    }
+                },
+                showOpenAccessOnly: false
+            }
+        };
+
+        const wrapper = setup({
+            actions: {
+                exportEspacePublications: testExportAction,
+                searchEspacePublications: jest.fn()
+            },
+            searchQuery
+        });
+
+        wrapper.instance().handleExportPublications({exportPublicationsFormat: 'excel'});
+        expect(testExportAction).toHaveBeenCalledWith({
+            ...searchQuery,
+            exportPublicationsFormat: 'excel'
+        });
+    });
 });
