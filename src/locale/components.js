@@ -69,7 +69,8 @@ export default {
                     thomson: 'Web of science',
                     altmetric: 'Altmetric'
                 }
-            }
+            },
+            missing: 'No publications found.'
         },
         myTrendingPublications: {
             loading: 'Loading your trending publications...',
@@ -141,7 +142,8 @@ export default {
                 heading: 'Web of Science citation count',
                 subHeading: 'The +plus score indicates the increase in citations over the three months',
                 order: 2
-            }
+            },
+            missing: 'No trending results found.'
         },
         keywordsForm: {
             field: {
