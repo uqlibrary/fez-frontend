@@ -241,6 +241,7 @@ export default class MyRecords extends PureComponent {
                                     excludeFacetsList={txt.facetsFilter.excludeFacetsList}
                                     isMyDataSetPage={this.props.location.pathname === routes.pathConfig.dataset.mine}
                                     renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                    lookupFacetsList={txt.facetsFilter.lookupFacetsList}
                                     showOpenAccessFilter/>
                             </StandardRighthandCard>
                         </div>

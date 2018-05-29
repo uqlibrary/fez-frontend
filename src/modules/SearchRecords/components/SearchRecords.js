@@ -254,6 +254,7 @@ class SearchRecords extends PureComponent {
                                     disabled={isLoadingOrExporting}
                                     excludeFacetsList={txt.facetsFilter.excludeFacetsList}
                                     renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                    lookupFacetsList={txt.facetsFilter.lookupFacetsList}
                                     showOpenAccessFilter/>
                             </StandardRighthandCard>
                         </div>

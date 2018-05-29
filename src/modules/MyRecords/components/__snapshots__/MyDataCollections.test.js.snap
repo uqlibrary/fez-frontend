@@ -309,6 +309,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
             }
           }
           isMyDataSetPage={true}
+          lookupFacetsList={Object {}}
           onFacetsChanged={[Function]}
           renameFacetsList={Object {}}
           showOpenAccessFilter={true}

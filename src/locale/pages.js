@@ -221,7 +221,12 @@ export default {
                 //     buttonLabel: 'Ok'
                 // },
                 excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
-                renameFacetsList: {'Display type': 'Publication type'}
+                renameFacetsList: {'Display type': 'Publication type'},
+                lookupFacetsList: {
+                    'Author': 'Author (lookup)',
+                    'Collection': 'Collection (lookup)',
+                    'Subject': 'Subject (lookup)'
+                }
             }
         },
         myDatasets: {
@@ -307,7 +312,12 @@ export default {
                 //     buttonLabel: 'Ok'
                 // },
                 excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
-                renameFacetsList: {'Display type': 'Publication type'}
+                renameFacetsList: {'Display type': 'Publication type'},
+                lookupFacetsList: {
+                    'Author': 'Author (lookup)',
+                    'Collection': 'Collection (lookup)',
+                    'Subject': 'Subject (lookup)'
+                }
             }
         },
         addRecord: {
@@ -444,7 +454,12 @@ export default {
             facetsFilter: {
                 title: 'Refine results',
                 excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
-                renameFacetsList: {'Display type': 'Publication type'}
+                renameFacetsList: {'Display type': 'Publication type'},
+                lookupFacetsList: {
+                    'Author': 'Author (lookup)',
+                    'Collection': 'Collection (lookup)',
+                    'Subject': 'Subject (lookup)'
+                }
             }
         },
         masquerade: {
