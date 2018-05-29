@@ -51,6 +51,7 @@ export default class TopCitedPublications extends PureComponent {
                                 this.props.topCitedPublicationsList.sort((source1, source2) => (
                                     txt[source1.key].order - txt[source2.key].order
                                 )).map(({key, values}, metricIndex) => (
+                                    values && values.length >= 1 &&
                                     <Tab key={key}
                                         label={this.context.isMobile ? txt[key].mobileTitle : txt[key].title}
                                         value={`${key}TopCitedPublications`}
@@ -66,25 +67,14 @@ export default class TopCitedPublications extends PureComponent {
                                                         <div className={`fez-icon ${key} xxlarge`}/>
                                                         {txt[key].heading}
                                                     </h2>
-                                                    {values && values.length >= 1 &&
-                                                    <div
-                                                        className="is-hidden-mobile subTitle">{txt[key].subHeading}</div>
-                                                    }
-                                                    {values && values.length >= 1 &&
-                                                        <PublicationsList
-                                                            publicationsList={values}
-                                                            showMetrics
-                                                            showSourceCountIcon={key === 'altmetric'}
-                                                            hideCountDiff={key === 'altmetric'}
-                                                            hideCitationContent
-                                                        />
-                                                    }
-
-                                                    {(!values || values.length < 1) &&
-                                                        <div>
-                                                            <p>{txt.noResultsFound.text}</p>
-                                                        </div>
-                                                    }
+                                                    <div className="is-hidden-mobile subTitle">{txt[key].subHeading}</div>
+                                                    <PublicationsList
+                                                        publicationsList={values}
+                                                        showMetrics
+                                                        showSourceCountIcon={key === 'altmetric'}
+                                                        hideCountDiff={key === 'altmetric'}
+                                                        hideCitationContent
+                                                    />
                                                 </div>
                                             </div>
                                         </div>

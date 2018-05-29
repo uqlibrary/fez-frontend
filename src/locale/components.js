@@ -141,10 +141,7 @@ export default {
                 heading: 'Web of Science citation count',
                 subHeading: 'The +plus score indicates the increase in citations over the three months',
                 order: 2
-            },
-            noResultsFound: {
-                text: 'No trending results found.'
-            },
+            }
         },
         keywordsForm: {
             field: {
