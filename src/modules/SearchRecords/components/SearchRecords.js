@@ -112,6 +112,16 @@ class SearchRecords extends PureComponent {
         const pageSize = parseInt(providedSearchQuery.pageSize, 10);
         providedSearchQuery.pageSize = locale.components.sorting.recordsPerPage.indexOf(pageSize) < 0 ? 20 : pageSize;
 
+        providedSearchQuery.sortDirection = locale.components.sorting.sortDirection.indexOf(providedSearchQuery.sortDirection) < 0
+            ? locale.components.sorting.sortDirection[0]
+            : providedSearchQuery.sortDirection;
+
+        providedSearchQuery.sortBy = locale.components.sorting.sortBy
+            .map(sortBy => sortBy.value)
+            .indexOf(providedSearchQuery.sortBy) < 0
+            ? locale.components.sorting.sortBy[0].value
+            : providedSearchQuery.sortBy;
+
         return providedSearchQuery;
     };
 
