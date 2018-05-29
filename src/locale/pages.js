@@ -242,7 +242,6 @@ export default {
                     </div>
                 ),
             },
-            // this.renderLink(routes.pathConfig.dataset.add, data)
             facetsFilter: {
                 title: 'Refine results',
                 // help: {

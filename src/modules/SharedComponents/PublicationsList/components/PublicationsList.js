@@ -15,8 +15,7 @@ export default class PublicationsList extends PureComponent {
         showSourceCountIcon: PropTypes.bool,
         hideCitationContent: PropTypes.bool,
         hideCountDiff: PropTypes.bool,
-        hideZeroDifferences: PropTypes.bool, // if there are zero differences in the trending count, hide citation
-        missingText: PropTypes.string // text to display if no publications are found
+        missingText: PropTypes.string
     };
 
     static defaultProps = {
@@ -28,7 +27,6 @@ export default class PublicationsList extends PureComponent {
         showMetrics: false,
         hideCitationContent: false,
         hideCountDiff: false,
-        hideZeroDifferences: false,
         missingText: locale.components.publicationCitation.missing
     };
 
@@ -36,38 +34,40 @@ export default class PublicationsList extends PureComponent {
         super(props);
     }
 
+    renderPublicationCitation(index, publication) {
+        return (
+            <PublicationCitation
+                key={index + 1}
+                publication={publication}
+                customActions={!publication.rek_pid || this.props.publicationsListSubset.indexOf(publication.rek_pid) === -1 ? this.props.customActions : this.props.subsetCustomActions}
+                showSources={this.props.showSources}
+                showDefaultActions={this.props.showDefaultActions}
+                showMetrics={this.props.showMetrics}
+                hideCitationContent={this.props.hideCitationContent}
+                showSourceCountIcon={this.props.showSourceCountIcon}
+                hideCountDiff={this.props.hideCountDiff}
+            />
+        );
+    }
+
     render() {
-        const publications = [];
-        this.props.publicationsList.map((publication, index) => {
-            if (!this.props.hideZeroDifferences || publication.metricData.difference > 0) {
-                publications.push(
-                    <PublicationCitation
-                        key={index + 1}
-                        publication={publication}
-                        customActions={!publication.rek_pid || this.props.publicationsListSubset.indexOf(publication.rek_pid) === -1 ? this.props.customActions : this.props.subsetCustomActions}
-                        showSources={this.props.showSources}
-                        showDefaultActions={this.props.showDefaultActions}
-                        showMetrics={this.props.showMetrics}
-                        hideCitationContent={this.props.hideCitationContent}
-                        showSourceCountIcon={this.props.showSourceCountIcon}
-                        hideCountDiff={this.props.hideCountDiff}
-                    />
-                );
-            }
+        const publications = this.props.publicationsList.map((publication, index) => {
+            return this.renderPublicationCitation(index, publication);
         });
 
-        if (publications.length > 0) {
-            return (
-                <div className="publicationsList">
-                    {publications}
-                </div>
-            );
-        } else {
+
+        if (publications.length < 1) {
             return (
                 <div>
                     {this.props.missingText}
                 </div>
             );
         }
+
+        return (
+            <div className="publicationsList">
+                {publications}
+            </div>
+        );
     }
 }
