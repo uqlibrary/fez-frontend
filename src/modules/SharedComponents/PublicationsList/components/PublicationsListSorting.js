@@ -10,7 +10,6 @@ export default class PublicationsListSorting extends PureComponent {
         sortBy: PropTypes.string,
         sortDirection: PropTypes.string,
         pageSize: PropTypes.number,
-        location: PropTypes.object.isRequired,
         onPageSizeChanged: PropTypes.func,
         onSortByChanged: PropTypes.func,
         pagingData: PropTypes.shape({
@@ -22,6 +21,9 @@ export default class PublicationsListSorting extends PureComponent {
         }),
         disabled: PropTypes.bool,
         onExportPublications: PropTypes.func,
+
+        account: PropTypes.object,
+        author: PropTypes.object,
     };
 
     constructor(props) {
@@ -71,7 +73,7 @@ export default class PublicationsListSorting extends PureComponent {
         this.setState({
             exportPublicationsFormat: value
         });
-        this.props.onExportPublications({...this.state, ...this.props.location.state || {}, exportPublicationsFormat: value});
+        this.props.onExportPublications({exportPublicationsFormat: value});
     }
 
     render() {
@@ -81,6 +83,7 @@ export default class PublicationsListSorting extends PureComponent {
             );
         }
         const txt = locale.components.sorting;
+        const canUseExport = !!this.props.account.canMasquerade || this.props.author;
         return (
             <div className="publicationsListSorting columns is-gapless is-mobile">
                 <div className="column">
@@ -137,13 +140,19 @@ export default class PublicationsListSorting extends PureComponent {
                         }
                     </SelectField>
                 </div>
-                <div className="column is-narrow is-spacer is-hidden-mobile is-hidden-tablet-only"/>
-                <div className="column is-hidden-mobile is-hidden-tablet-only">
-                    <ExportPublications
-                        format={this.state.exportPublicationsFormat}
-                        onChange={this.exportPublicationsFormatChanged}
-                        disabled={this.props.disabled}/>
-                </div>
+                {
+                    canUseExport &&
+                    <div className="column is-narrow is-spacer is-hidden-mobile is-hidden-tablet-only"/>
+                }
+                {
+                    canUseExport &&
+                    <div className="column is-hidden-mobile is-hidden-tablet-only">
+                        <ExportPublications
+                            format={this.state.exportPublicationsFormat}
+                            onChange={this.exportPublicationsFormatChanged}
+                            disabled={this.props.disabled}/>
+                    </div>
+                }
             </div>
 
         );

@@ -5044,7 +5044,7 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
       />
     </div>
     <div
-      className="column is-narrow"
+      className="column is-narrow trendingCount"
     >
       <ExternalLink
         aria-label="Full citation in Altmetric will open in a new window"

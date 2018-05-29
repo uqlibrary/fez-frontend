@@ -12,6 +12,8 @@ const mapStateToProps = (state) => {
         ...state.get('publicationsReducer'),
         ...state.get('exportPublicationsReducer'),
         ...state.get('publicationsReducer'),
+        ...state.get('accountReducer'),
+        ...state.get('authorReducer'),
         localePages: locale.pages.myResearch,
         thisUrl: routes.pathConfig.records.mine,
     };

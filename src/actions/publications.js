@@ -29,6 +29,40 @@ export function searchLatestPublications() {
 }
 
 /**
+ * Get top cited publications
+ * @returns {action}
+ */
+export function searchTopCitedPublications() {
+    return dispatch => {
+        dispatch({type: actions.TOP_CITED_PUBLICATIONS_LOADING});
+        return get(routes.TRENDING_PUBLICATIONS_API())
+            .then(response => {
+                if (response.data.length > 0) {
+                    const transformedTopCitedPublications = transformTrendingPublicationsMetricsData(response);
+
+                    transformedTopCitedPublications.map(({key, values}) => {
+                        dispatch({
+                            type: `${actions.TOP_CITED_PUBLICATIONS_LOADED}@${key}`,
+                            payload: {data: values},
+                        });
+                    });
+                } else {
+                    dispatch({
+                        type: actions.TOP_CITED_PUBLICATIONS_LOADED,
+                        payload: response,
+                    });
+                }
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.TOP_CITED_PUBLICATIONS_FAILED,
+                    payload: error.message
+                });
+            });
+    };
+}
+
+/**
  * Get author's publications
  * @param {string} author user name
  * @returns {action}
@@ -101,12 +135,15 @@ export function searchTrendingPublications() {
  * @returns {action}
  */
 export function exportAuthorPublications({exportPublicationsFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
-    return exportPublications(routes.CURRENT_USER_RECORDS_API({
-        exportPublicationsFormat: exportPublicationsFormat,
-        page: page,
-        pageSize: pageSize,
-        sortBy: sortBy,
-        sortDirection: sortDirection,
-        facets: activeFacets
-    }));
+    return exportPublications(routes.CURRENT_USER_RECORDS_API(
+        {
+            exportPublicationsFormat: exportPublicationsFormat,
+            page: page,
+            pageSize: pageSize,
+            sortBy: sortBy,
+            sortDirection: sortDirection,
+            facets: activeFacets
+        },
+        'export'
+    ));
 }

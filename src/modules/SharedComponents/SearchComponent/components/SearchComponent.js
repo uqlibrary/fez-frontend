@@ -197,7 +197,7 @@ export default class SearchComponent extends PureComponent {
                                 label={txt.searchButtonText}
                                 aria-label={txt.searchButtonAriaLabel}
                                 secondary
-                                disabled={this.state.searchText.trim().length === 0 || !!this.validationError()}
+                                disabled={!!this.validationError()}
                                 onClick={this.handleSearch}
                                 fullWidth />
                         </div>

@@ -106,8 +106,21 @@ button[type=button] {
   position: fixed !important;
   top: 0px;
   left: 0px;
+  .siteTitle {
+    h1 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0px !important;
+      padding-top: 0px !important;
+      letter-spacing: 0px !important;
+      font-size: $text-body-xlarge !important;
+      font-weight: $text-weight-normal !important;
+      color: $text-color-reverse
+    }
+  }
   // spaces the right hand AppBar panel and main menu button correctly
-  >div:nth-child(3) {
+  > div:nth-child(3) {
     margin-top: 12px !important;
     @include desktop {
       margin-top: 6px !important;
@@ -134,27 +147,29 @@ button[type=button] {
     }
   }
 }
+
 #contentContainer:focus {
   outline: none;
 }
 
 // Class to space elements against scroll bars
-.scrollbar-spacer{
+.scrollbar-spacer {
   width: 6px;
   @include mobile {
     width: 6px !important;
   }
 }
-.scrollbar-spacer-infinite{
-    width: 20px !important;
+
+.scrollbar-spacer-infinite {
+  width: 20px !important;
   @include mobile {
     width: 6px;
   }
 }
 
 // Styles to restyle the react-tooltip component
-.reactTooltip{
-margin-top: 6px !important;
+.reactTooltip {
+  margin-top: 6px !important;
   padding: 6px 10px !important;
   font-size: $text-body-xsmall !important;
   background: lighten($text-color, 20%) !important;

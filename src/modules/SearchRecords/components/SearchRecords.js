@@ -32,7 +32,8 @@ class SearchRecords extends PureComponent {
 
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
-        actions: PropTypes.object
+        actions: PropTypes.object,
+        account: PropTypes.object,
     };
 
     constructor(props) {
@@ -177,6 +178,10 @@ class SearchRecords extends PureComponent {
         this.props.actions.searchEspacePublications({...this.props.searchQuery, ...this.state});
     };
 
+    handleExportPublications = (exportFormat) => {
+        this.props.actions.exportEspacePublications({...exportFormat, ...this.state});
+    };
+
     render() {
         const txt = locale.pages.searchRecords;
         const pagingData = this.props.publicationsListPagingData;
@@ -235,10 +240,10 @@ class SearchRecords extends PureComponent {
                                         sortDirection={this.state.sortDirection}
                                         pageSize={this.state.pageSize}
                                         pagingData={pagingData}
-                                        location={this.props.location}
+                                        account={this.props.account}
                                         onSortByChanged={this.sortByChanged}
                                         onPageSizeChanged={this.pageSizeChanged}
-                                        onExportPublications={this.props.actions.exportEspacePublications}
+                                        onExportPublications={this.handleExportPublications}
                                         disabled={isLoadingOrExporting} />
                                     <PublicationsListPaging
                                         loading={isLoadingOrExporting}
@@ -246,7 +251,7 @@ class SearchRecords extends PureComponent {
                                         onPageChanged={this.pageChanged}
                                         disabled={isLoadingOrExporting} />
                                     {
-                                        (isLoadingOrExporting) &&
+                                        isLoadingOrExporting &&
                                         <div className="is-centered"><InlineLoader message={this.props.searchLoading ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
                                     }
                                     {
@@ -279,7 +284,6 @@ class SearchRecords extends PureComponent {
                         }
                     </div>
                 }
-
             </StandardPage>
         );
     }

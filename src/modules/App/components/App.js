@@ -173,15 +173,15 @@ export default class App extends PureComponent {
                     showMenuIconButton={showMenu && !this.state.docked}
                     style={{height: 75}}
                     iconStyleLeft={{marginTop: 0}}
-                    title={locale.global.title}
+                    title={locale.global.appTitle}
                     titleStyle={titleStyle}
                     onLeftIconButtonClick={this.toggleDrawer}
                     iconElementLeft={
+                        this.state.docked || !this.state.menuDrawerOpen &&
                         <IconButton
                             tooltip={locale.global.mainNavButton.tooltip}
                             tooltipPosition="bottom-right"
                             hoveredStyle={appBarButtonStyles}
-                            tabIndex={(this.state.docked || !this.state.menuDrawerOpen) ? 1 : -1}
                             className="main-menu-button">
                             <NavigationMenu/>
                         </IconButton>

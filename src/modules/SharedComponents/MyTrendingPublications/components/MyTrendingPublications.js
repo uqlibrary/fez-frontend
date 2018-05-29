@@ -39,7 +39,7 @@ export default class MyTrendingPublications extends PureComponent {
         return (
             <div  className="trendingPubs">
                 <div className="is-pulled-right">
-                    <HelpIcon {...txt.help}/>
+                    <HelpIcon {...locale.components.trendingPublicationHelp}/>
                 </div>
                 {
                     this.props.trendingPublicationsList.map(({key, values}, metricIndex) => (

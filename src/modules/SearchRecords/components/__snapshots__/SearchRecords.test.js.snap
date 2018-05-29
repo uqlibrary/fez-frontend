@@ -39,6 +39,61 @@ exports[`SearchRecords page renders loading screen while export publications loa
 </StandardPage>
 `;
 
+exports[`SearchRecords page should render loading screen while export publications loading 1`] = `
+<StandardPage
+  className="page-search-records"
+>
+  <StandardCard
+    className="search-component"
+  >
+    <withRouter(Connect(SearchComponent))
+      className="search-body"
+    />
+  </StandardCard>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+      >
+        <span>
+          Searching for publications...
+        </span>
+        <PublicationsListSorting
+          disabled={true}
+          onExportPublications={[Function]}
+          onPageSizeChanged={[Function]}
+          onSortByChanged={[Function]}
+          pageSize={20}
+          sortBy="published_date"
+          sortDirection="Desc"
+        />
+        <PublicationsListPaging
+          disabled={true}
+          loading={true}
+          onPageChanged={[Function]}
+        />
+        <div
+          className="is-centered"
+        >
+          <InlineLoader
+            message="Exporting search results..."
+          />
+        </div>
+        <PublicationsListPaging
+          disabled={true}
+          loading={true}
+          onPageChanged={[Function]}
+        />
+      </StandardCard>
+    </div>
+  </div>
+</StandardPage>
+`;
+
 exports[`SearchRecords page should render loading screen while loading publications while filtering 1`] = `
 <StandardPage
   className="page-search-records"

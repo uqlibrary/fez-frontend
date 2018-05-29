@@ -25,7 +25,9 @@ export default class MyRecords extends PureComponent {
 
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
-        actions: PropTypes.object
+        actions: PropTypes.object,
+        account: PropTypes.object,
+        author: PropTypes.object
     };
 
     constructor(props) {
@@ -149,6 +151,11 @@ export default class MyRecords extends PureComponent {
         this.props.history.push(routes.pathConfig.records.fix(item.rek_pid));
         this.props.actions.setFixRecord(item);
     }
+
+    handleExportPublications = (exportFormat) => {
+        this.props.actions.exportAuthorPublications({...exportFormat, ...this.state});
+    }
+
     render() {
         if (this.props.accountLoading) return null;
 
@@ -193,10 +200,11 @@ export default class MyRecords extends PureComponent {
                                     sortDirection={this.state.sortDirection}
                                     pageSize={this.state.pageSize}
                                     pagingData={pagingData}
-                                    location={this.props.location}
+                                    account={this.props.account}
+                                    author={this.props.author}
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
-                                    onExportPublications={this.props.actions.exportAuthorPublications}
+                                    onExportPublications={this.handleExportPublications}
                                     disabled={isLoadingOrExporting} />
                                 <PublicationsListPaging
                                     loading={isLoadingOrExporting}
@@ -204,7 +212,7 @@ export default class MyRecords extends PureComponent {
                                     onPageChanged={this.pageChanged}
                                     disabled={isLoadingOrExporting} />
                                 {
-                                    (isLoadingOrExporting) &&
+                                    isLoadingOrExporting &&
                                     <div className="is-centered"><InlineLoader message={this.props.loadingPublicationsList ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
                                 }
                                 {

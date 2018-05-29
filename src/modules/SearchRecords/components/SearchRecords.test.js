@@ -31,6 +31,11 @@ describe('SearchRecords page', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render loading screen while export publications loading', () => {
+        const wrapper = setup({publicationsList: [1, 2, 2], exportPublicationsLoading: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render no results', () => {
         const wrapper = setup({
             publicationsList: [],
@@ -397,12 +402,49 @@ describe('SearchRecords page', () => {
     });
 
     it('renders loading screen while export publications loading', () => {
-        const wrapper = setup({ exportPublicationsLoading: true });
+        const wrapper = setup({exportPublicationsLoading: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders error alert if error occurs during search', () => {
         const wrapper = setup({searchLoadingError: true});
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should handle export publications correctly', () => {
+        const testExportAction = jest.fn();
+        const searchQuery = {
+            page: '1',
+            pageSize: 20,
+            sortBy: 'published_date',
+            sortDirection: 'Desc',
+            searchQueryParams: {
+                title: 'some test data'
+            },
+            activeFacets: {
+                filters: {},
+                ranges: {
+                    'Year published': {
+                        from: '2008',
+                        to: '2023'
+                    }
+                },
+                showOpenAccessOnly: false
+            }
+        };
+
+        const wrapper = setup({
+            actions: {
+                exportEspacePublications: testExportAction,
+                searchEspacePublications: jest.fn()
+            },
+            searchQuery
+        });
+
+        wrapper.instance().handleExportPublications({exportPublicationsFormat: 'excel'});
+        expect(testExportAction).toHaveBeenCalledWith({
+            ...searchQuery,
+            exportPublicationsFormat: 'excel'
+        });
     });
 });
