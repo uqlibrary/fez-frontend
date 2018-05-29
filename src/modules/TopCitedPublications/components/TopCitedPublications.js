@@ -66,7 +66,10 @@ export default class TopCitedPublications extends PureComponent {
                                                         <div className={`fez-icon ${key} xxlarge`}/>
                                                         {txt[key].heading}
                                                     </h2>
-                                                    <div className="is-hidden-mobile subTitle">{txt[key].subHeading}</div>
+                                                    {values && values.length >= 1 &&
+                                                    <div
+                                                        className="is-hidden-mobile subTitle">{txt[key].subHeading}</div>
+                                                    }
                                                     {values && values.length >= 1 &&
                                                         <PublicationsList
                                                             publicationsList={values}
@@ -79,7 +82,7 @@ export default class TopCitedPublications extends PureComponent {
 
                                                     {(!values || values.length < 1) &&
                                                         <div>
-                                                            {txt.noResultsFound.text}
+                                                            <p>{txt.noResultsFound.text}</p>
                                                         </div>
                                                     }
                                                 </div>
