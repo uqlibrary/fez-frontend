@@ -4,6 +4,9 @@ import TextField from 'material-ui/TextField';
 import IconButton from 'material-ui/IconButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import SearchIcon from 'material-ui/svg-icons/action/search';
+import KeyboardArrowUp from 'material-ui/svg-icons/hardware/keyboard-arrow-up';
+import KeyboardArrowDown from 'material-ui/svg-icons/hardware/keyboard-arrow-down';
+import CircularProgress from 'material-ui/CircularProgress';
 import param from 'can-param';
 
 import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
@@ -17,6 +20,7 @@ export default class SearchComponent extends PureComponent {
     static propTypes = {
         searchQueryParams: PropTypes.object,
         inHeader: PropTypes.bool,
+        isLoading: PropTypes.bool,
         showAdvancedSearchButton: PropTypes.bool,
         showAdvancedSearch: PropTypes.bool,
         showSearchButton: PropTypes.bool,
@@ -34,7 +38,10 @@ export default class SearchComponent extends PureComponent {
             showAdvancedSearch: props.showAdvancedSearch || false,
             showMobile: false,
             snackbarOpen: false,
-            snackbarMessage: ''
+            snackbarMessage: '',
+            advancedSearch: {
+                minimised: false,
+            }
         };
     }
 
@@ -65,6 +72,10 @@ export default class SearchComponent extends PureComponent {
         if (this.props.actions
             && this.props.actions.searchEspacePublications
             && this.state.searchText.trim().length <= MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
+            // If advanced search is maximised, then minimise it
+            if(!this.state.advancedSearch.minimised && this.state.showAdvancedSearch) {
+                this.toggleAdvancedSearchMinimise();
+            }
             // start search
             const defaultQueryParams = {
                 page: 1,
@@ -98,6 +109,14 @@ export default class SearchComponent extends PureComponent {
         }, () => {
             if(this.state.showMobile) {
                 document.getElementById('searchField') && document.getElementById('searchField').focus();
+            }
+        });
+    };
+
+    toggleAdvancedSearchMinimise = () => {
+        this.setState({
+            advancedSearch: {
+                minimised: !this.state.advancedSearch.minimised
             }
         });
     };
@@ -218,16 +237,66 @@ export default class SearchComponent extends PureComponent {
                 }
                 {
                     this.state.showAdvancedSearch && this.props.showAdvancedSearchButton &&
-                    <div className="columns">
-                        <div className="column">
-                            Advanced here.
+                        <div className="advancedSearch">
+                            <div className="columns is-gapless is-mobile" style={{marginBottom: '-12px'}}>
+                                <div className="column">
+                                    <h2>Advanced search</h2>
+                                </div>
+                                {
+                                    this.props.isLoading &&
+                                    <div className="column is-narrow">
+                                        <CircularProgress size={32} thickness={4} className="loadingProgress" />
+                                    </div>
+                                }
+                                <div className="column is-narrow">
+                                    <IconButton onClick={this.toggleAdvancedSearchMinimise}>
+                                        {
+                                            !this.state.advancedSearch.minimised
+                                                ? <KeyboardArrowUp/>
+                                                : <KeyboardArrowDown/>
+                                        }
+                                    </IconButton>
+                                </div>
+                            </div>
+                            {
+                                !this.state.advancedSearch.minimised &&
+                                <div className="columns">
+                                    <div className="column fields">
+                                        <TextField
+                                            type="search"
+                                            id="searchField"
+                                            style={{marginTop: '-24px'}}
+                                            fullWidth
+                                            floatingLabelText={!this.props.inHeader && txt.searchBoxPlaceholder}
+                                            hintText={this.props.inHeader && txt.searchBoxPlaceholder}
+                                            aria-label={txt.ariaInputLabel}
+                                            onChange={this.searchTextChanged}
+                                            onKeyPress={this.handleSearch}
+                                            value={this.state.searchText}
+                                            underlineStyle={this.props.inHeader ? {display: 'none'} : {}}
+                                            errorText={this.validationError()}
+                                        />
+                                    </div>
+                                    <div className="column is-narrow">
+                                        <div className="columns">
+                                            <div className="column">
+                                                <RaisedButton
+                                                    label={txt.searchButtonText}
+                                                    aria-label={txt.searchButtonAriaLabel}
+                                                    secondary
+                                                    disabled={!!this.validationError()}
+                                                    onClick={this.handleSearch}/>
+                                            </div>
+                                            <div className="column">
+                                                <RaisedButton
+                                                    label={txt.simpleSearchToggle}
+                                                    onClick={this.toggleAdvancedSearch}/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
                         </div>
-                        <div className="column is-narrow">
-                            <RaisedButton
-                                label={txt.simpleSearchToggle}
-                                onClick={this.toggleAdvancedSearch}/>
-                        </div>
-                    </div>
                 }
                 <Snackbar
                     open={this.state.snackbarOpen}
