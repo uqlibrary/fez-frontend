@@ -1,6 +1,7 @@
 import React from 'react';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {pathConfig} from 'config/routes';
+import locale from 'locale/components';
 
 /*
 
@@ -213,21 +214,7 @@ export default {
                     </div>
                 ),
             },
-            facetsFilter: {
-                title: 'Refine results',
-                // help: {
-                //     title: 'Refining your results',
-                //     text: 'Help about ....',
-                //     buttonLabel: 'Ok'
-                // },
-                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
-                renameFacetsList: {'Display type': 'Publication type'},
-                lookupFacetsList: {
-                    'Author': 'Author (lookup)',
-                    'Collection': 'Collection (lookup)',
-                    'Subject': 'Subject (lookup)'
-                }
-            }
+            facetsFilter: {...locale.components.facetsFilter}
         },
         myDatasets: {
             pageTitle: 'My research data',
@@ -249,13 +236,9 @@ export default {
             },
             // this.renderLink(routes.pathConfig.dataset.add, data)
             facetsFilter: {
-                title: 'Refine results',
-                // help: {
-                //     title: 'Refining your results',
-                //     text: 'Help about ....',
-                //     buttonLabel: 'Ok'
-                // },
-                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published', 'Display type']
+                ...locale.components.facetsFilter,
+                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published', 'Display type'],
+                renameFacetsList: {}
             }
         },
         claimPublications: {
@@ -304,21 +287,7 @@ export default {
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             },
-            facetsFilter: {
-                title: 'Refine results',
-                // help: {
-                //     title: 'Refining your results',
-                //     text: 'Help about ....',
-                //     buttonLabel: 'Ok'
-                // },
-                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
-                renameFacetsList: {'Display type': 'Publication type'},
-                lookupFacetsList: {
-                    'Author': 'Author (lookup)',
-                    'Collection': 'Collection (lookup)',
-                    'Subject': 'Subject (lookup)'
-                }
-            }
+            facetsFilter: {...locale.components.facetsFilter}
         },
         addRecord: {
             title: 'Add a missing publication to eSpace',
@@ -451,16 +420,7 @@ export default {
                     </div>
                 ),
             },
-            facetsFilter: {
-                title: 'Refine results',
-                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
-                renameFacetsList: {'Display type': 'Publication type'},
-                lookupFacetsList: {
-                    'Author': 'Author (lookup)',
-                    'Collection': 'Collection (lookup)',
-                    'Subject': 'Subject (lookup)'
-                }
-            },
+            facetsFilter: {...locale.components.facetsFilter},
             errorAlert: {
                 type: 'error_outline',
                 title: 'Error',
