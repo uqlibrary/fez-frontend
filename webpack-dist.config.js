@@ -60,7 +60,7 @@ module.exports = {
             template: resolve(__dirname, './public', 'index.html'),
         }),
         new WebpackPwaManifest({
-            name: 'UQ eSpace',
+            name: config.title,
             short_name: 'eSpace',
             description: 'The University of Queensland`s institutional repository.',
             background_color: '#49075E',
@@ -71,6 +71,7 @@ module.exports = {
                 {
                     src: resolve(__dirname, './public/images', 'logo.png'),
                     sizes: [96, 128, 192, 256, 384, 512],
+                    destination: 'icons',
                     ios: true
                 }
             ]
