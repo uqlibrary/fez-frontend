@@ -211,7 +211,8 @@ export default class PossiblyMyRecords extends PureComponent {
                                     activeFacets={this.state.activeFacets}
                                     disabled={this.props.loadingPossiblePublicationsList}
                                     excludeFacetsList={txt.facetsFilter.excludeFacetsList}
-                                    renameFacetsList={txt.facetsFilter.renameFacetsList} />
+                                    renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                    lookupFacetsList={txt.facetsFilter.lookupFacetsList} />
                             </StandardRighthandCard>
                         </div>
                     }

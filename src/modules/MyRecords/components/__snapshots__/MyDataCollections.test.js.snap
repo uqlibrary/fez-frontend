@@ -71,6 +71,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
           .
         </span>
         <PublicationsListSorting
+          canUseExport={true}
           onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
@@ -162,6 +163,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
           .
         </span>
         <PublicationsListSorting
+          canUseExport={true}
           onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
@@ -299,6 +301,13 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
             }
           }
           isMyDataSetPage={true}
+          lookupFacetsList={
+            Object {
+              "Author": "Author (lookup)",
+              "Collection": "Collection (lookup)",
+              "Subject": "Subject (lookup)",
+            }
+          }
           onFacetsChanged={[Function]}
           renameFacetsList={Object {}}
           showOpenAccessFilter={true}
@@ -354,6 +363,7 @@ exports[`myDatasets test renders loading screen while loading publications while
           .
         </span>
         <PublicationsListSorting
+          canUseExport={true}
           disabled={true}
           onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
