@@ -169,7 +169,7 @@ describe('Component FileUploadDropzone', () => {
             fileUploadLimit: 4,
             filesInQueue: [file_a.name, file_b.name],
             onDrop: onDropTestFn,
-            fileNameRestrictions: /^(?=^\S*$)(?=^[^\.]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_))[a-z][a-z\d\-_\.]+/
+            fileNameRestrictions: /^(?=^\S*$)(?=^[^\.\,]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_))[a-z][a-z\d\-_\.]+/
         });
 
         const expectedFiles = [file_c, file_f].map(file => ({fileData: file, name: file.name, size: file.size}));
@@ -191,28 +191,29 @@ describe('Component FileUploadDropzone', () => {
 
     it('should set all correct error messages for filenames with comma', async () => {
         const file_g = getMockFile('g.txt');
-        const file_h = getMockFile('h,txt');
-        const file_i = getMockFile('i,am.txt');
+        const file_a = getMockFile('i,am.txt');
+        const file_h = getMockFile('excel,txt');
+        const file_i = getMockFile('excel,xls.txt');
         const onDropTestFn = jest.fn();
 
         const wrapper = setup({
             fileUploadLimit: 4,
             filesInQueue: [],
             onDrop: onDropTestFn,
-            fileNameRestrictions: /^(?=^\S*$)(?=^[^\.]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_))[a-z][a-z\d\-_\.]+/
+            fileNameRestrictions: /^(?=^\S*$)(?=^[^\.\,]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_))[a-z][a-z\d\-_\.]+/
         });
 
         const expectedFiles = [file_g].map(file => ({fileData: file, name: file.name, size: file.size}));
         const expectedError = {
             tooBigFiles: [],
             notFiles: [],
-            invalidFileNames: ['h,txt', 'i,am.txt'],
+            invalidFileNames: ['i,am.txt', 'excel,txt', 'excel,xls.txt'],
             duplicateFiles: [],
             tooManyFiles: []
         };
 
-        const accepted = [file_g, file_h, file_i];
-        wrapper.instance().removeDroppedFolders = jest.fn((accepted, {}) => new Promise(resolve => resolve([file_g, file_h, file_i])));
+        const accepted = [file_g, file_a, file_h, file_i];
+        wrapper.instance().removeDroppedFolders = jest.fn((accepted, {}) => new Promise(resolve => resolve([file_g, file_a, file_h, file_i])));
 
         await wrapper.instance()._onDrop(accepted, []);
         // wrapper.update();
