@@ -14,8 +14,7 @@ function setup(testProps, isShallow = true) {
             per_page: 20,
             current_page: 1
         },
-        account: {canMasquerade: true},
-        author: {},
+        canUseExport: false,
         location: {},
         disabled: false,
         activeFacets: {filters: {}, ranges: {}},
@@ -52,23 +51,16 @@ describe('PublicationsListSorting renders ', () => {
         expect(wrapper.find('.publicationsListSorting.empty').length).toBe(0);
         const pages = wrapper.find('SelectField');
         expect(pages.length).toBe(3);
-        expect(wrapper.find('ExportPublications').length).toBe(1);
     });
 
-    it('component with export dropdown for admin', () => {
-        const wrapper = setup({author: null});
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('ExportPublications').length).toBe(1);
-    });
-
-    it('component with export dropdown for author', () => {
-        const wrapper = setup({account: {canMasquerade: false}});
+    it('component with export dropdown for admin or author', () => {
+        const wrapper = setup({canUseExport: true});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('ExportPublications').length).toBe(1);
     });
 
     it('component with export dropdown hidden', () => {
-        const wrapper = setup({account: {canMasquerade: false}, author: null});
+        const wrapper = setup({canUseExport: false});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('ExportPublications').length).toBe(0);
     });

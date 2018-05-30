@@ -122,6 +122,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
           .
         </span>
         <PublicationsListSorting
+          canUseExport={true}
           disabled={false}
           onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
@@ -223,6 +224,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
           .
         </span>
         <PublicationsListSorting
+          canUseExport={true}
           disabled={false}
           onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
@@ -409,6 +411,7 @@ exports[`MyRecords test renders loading screen while export publications loading
           .
         </span>
         <PublicationsListSorting
+          canUseExport={true}
           disabled={true}
           onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
@@ -493,6 +496,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
           .
         </span>
         <PublicationsListSorting
+          canUseExport={true}
           disabled={true}
           onExportPublications={[Function]}
           onPageSizeChanged={[Function]}

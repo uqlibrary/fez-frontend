@@ -27,13 +27,13 @@ class SearchRecords extends PureComponent {
         publicationsListFacets: PropTypes.object,
         publicationsListPagingData: PropTypes.object,
         exportPublicationsLoading: PropTypes.bool,
+        canUseExport: PropTypes.bool,
         searchLoading: PropTypes.bool,
         searchLoadingError: PropTypes.bool,
 
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object,
-        account: PropTypes.object,
     };
 
     constructor(props) {
@@ -240,7 +240,7 @@ class SearchRecords extends PureComponent {
                                         sortDirection={this.state.sortDirection}
                                         pageSize={this.state.pageSize}
                                         pagingData={pagingData}
-                                        account={this.props.account}
+                                        canUseExport={this.props.canUseExport}
                                         onSortByChanged={this.sortByChanged}
                                         onPageSizeChanged={this.pageSizeChanged}
                                         onExportPublications={this.handleExportPublications}
