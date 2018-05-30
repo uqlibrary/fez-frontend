@@ -18,6 +18,7 @@ export default class SearchComponent extends PureComponent {
         searchQueryParams: PropTypes.object,
         inHeader: PropTypes.bool,
         showAdvancedSearchButton: PropTypes.bool,
+        showAdvancedSearch: PropTypes.bool,
         showSearchButton: PropTypes.bool,
         showPrefixIcon: PropTypes.bool,
         showMobileSearchButton: PropTypes.bool,
@@ -30,7 +31,7 @@ export default class SearchComponent extends PureComponent {
         super(props);
         this.state = {
             searchText: props.searchQueryParams && props.searchQueryParams.all || '',
-            showAdvancedSearch: false,
+            showAdvancedSearch: props.showAdvancedSearch || false,
             showMobile: false,
             snackbarOpen: false,
             snackbarMessage: ''
@@ -219,7 +220,7 @@ export default class SearchComponent extends PureComponent {
                     this.state.showAdvancedSearch && this.props.showAdvancedSearchButton &&
                     <div className="columns">
                         <div className="column">
-                        Advanced search component goes here
+                            Advanced here.
                         </div>
                         <div className="column is-narrow">
                             <RaisedButton

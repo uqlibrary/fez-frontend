@@ -191,7 +191,7 @@ class SearchRecords extends PureComponent {
         return (
             <StandardPage className="page-search-records">
                 <StandardCard className="search-component">
-                    <SearchComponent className="search-body" />
+                    <SearchComponent className="search-body" showAdvancedSearchButton />
                 </StandardCard>
                 {
                     // first time loading search results
