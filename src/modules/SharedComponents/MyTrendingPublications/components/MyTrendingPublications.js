@@ -43,6 +43,7 @@ export default class MyTrendingPublications extends PureComponent {
                 </div>
                 {
                     this.props.trendingPublicationsList.map(({key, values}, metricIndex) => (
+                        values.length > 0 &&
                         <div key={'metrics_' + metricIndex} className="trendingPubsSection">
                             <h2 className="trendingPubsSource">
                                 <div className={`fez-icon ${key} xxlarge`}/>
