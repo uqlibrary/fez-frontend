@@ -395,6 +395,13 @@ exports[`SearchRecords page should show available filters or selected filters if
               "Some facet": 1,
             }
           }
+          lookupFacetsList={
+            Object {
+              "Author": "Author (lookup)",
+              "Collection": "Collection (lookup)",
+              "Subject": "Subject (lookup)",
+            }
+          }
           onFacetsChanged={[Function]}
           renameFacetsList={
             Object {

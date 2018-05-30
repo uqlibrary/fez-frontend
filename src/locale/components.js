@@ -3,6 +3,7 @@ import React from 'react';
 export default {
     components: {
         facetsFilter: {
+            title: 'Refine results',
             resetButtonText: 'Reset',
             yearPublishedCategory: 'Year published',
             yearPublishedFacet: {
@@ -14,7 +15,19 @@ export default {
             openAccessFilter: {
                 displayTitle: 'Open access status',
                 activeFilter: 'Show only open access records'
-            }
+            },
+            excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
+            renameFacetsList: {'Display type': 'Publication type'},
+            lookupFacetsList: {
+                'Author': 'Author (lookup)',
+                'Collection': 'Collection (lookup)',
+                'Subject': 'Subject (lookup)'
+            },
+            // help: {
+            //     title: 'Refining your results',
+            //     text: 'Help about ....',
+            //     buttonLabel: 'Ok'
+            // },
         },
         publicationStats: {
             publicationStatsTitle1: 'eSpace publications indexed in:',
