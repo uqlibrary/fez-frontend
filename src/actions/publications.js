@@ -2,7 +2,6 @@ import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
 import * as routes from 'repositories/routes';
 import {transformTrendingPublicationsMetricsData} from './academicDataTransformers';
-import {transformTopCitedPublicationsMetricsData} from './academicDataTransformers';
 import {exportPublications} from './exportPublications';
 
 /**
@@ -39,7 +38,7 @@ export function searchTopCitedPublications() {
         return get(routes.TRENDING_PUBLICATIONS_API())
             .then(response => {
                 if (response.data.length > 0) {
-                    const transformedTopCitedPublications = transformTopCitedPublicationsMetricsData(response);
+                    const transformedTopCitedPublications = transformTrendingPublicationsMetricsData(response);
 
                     transformedTopCitedPublications.map(({key, values}) => {
                         dispatch({

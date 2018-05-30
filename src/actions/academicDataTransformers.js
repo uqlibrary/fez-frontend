@@ -127,39 +127,12 @@ export const transformTrendingPublicationsMetricsData = ({data}) => {
     return Object.entries(sources).map(([key, config]) => {
         const values = data.map(publication => {
             const count = getData(publication, config.metricDataPath.count);
-            if (count) {
-                const metricData = {
-                    source: key,
-                    count: count,
-                    difference: getData(publication, config.metricDataPath.difference),
-                    citation_url: getData(publication, config.metricDataPath.citation_url)
-                };
-
-                return {
-                    ...publication,
-                    metricData
-                };
-            } else {
-                return null;
-            }
-        }).filter(value => value);
-
-        return {key, values};
-    });
-};
-
-export const transformTopCitedPublicationsMetricsData = ({data}) => {
-    const sources = trendingPublicationsConfig.sources;
-
-    return Object.entries(sources).map(([key, config]) => {
-        const values = data.map(publication => {
-            const count = getData(publication, config.metricDataPath.count);
             const difference = getData(publication, config.metricDataPath.difference);
             if (count && difference) {
                 const metricData = {
                     source: key,
                     count: count,
-                    difference: difference,
+                    difference: getData(publication, config.metricDataPath.difference),
                     citation_url: getData(publication, config.metricDataPath.citation_url)
                 };
 
