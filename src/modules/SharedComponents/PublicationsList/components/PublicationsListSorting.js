@@ -83,7 +83,7 @@ export default class PublicationsListSorting extends PureComponent {
             );
         }
         const txt = locale.components.sorting;
-        const canUseExport = !!this.props.account.canMasquerade || this.props.author;
+        const canUseExport = (this.props.account && this.props.account.canMasquerade) || this.props.author;
         return (
             <div className="publicationsListSorting columns is-gapless is-mobile">
                 <div className="column">
