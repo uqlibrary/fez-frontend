@@ -930,11 +930,6 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                         }
                       }
                     >
-                      <EventListener
-                        onResize={[Function]}
-                        onScroll={[Function]}
-                        target="window"
-                      />
                       <RenderToLayer
                         componentClickAway={[Function]}
                         open={false}
@@ -2370,11 +2365,6 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                         }
                       }
                     >
-                      <EventListener
-                        onResize={[Function]}
-                        onScroll={[Function]}
-                        target="window"
-                      />
                       <RenderToLayer
                         componentClickAway={[Function]}
                         open={false}

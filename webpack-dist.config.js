@@ -3,7 +3,7 @@
 const {resolve} = require('path');
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const WebpackPwaManifest = require("webpack-pwa-manifest");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
@@ -13,7 +13,6 @@ const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const WebpackStrip = require('strip-loader');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
 
 // get branch name for current build, if running build locally CI_BRANCH is not set (it's set in codeship)
 const branch = process && process.env && process.env.CI_BRANCH ? process.env.CI_BRANCH : 'development';
@@ -52,26 +51,6 @@ module.exports = {
         host: '0.0.0.0'
     },
     plugins: [
-        new FaviconsWebpackPlugin({
-            logo: './public/images/logo.png',
-            prefix: 'mobile-icons/',
-            background: '#49075E',
-            theme_color: '#49075E',
-            title: config.title,
-            short_name: config.short_name,
-            icons: {
-                android: true,
-                appleIcon: true,
-                appleStartup: true,
-                coast: false,
-                favicons: true,
-                firefox: true,
-                opengraph: false,
-                twitter: false,
-                yandex: false,
-                windows: false
-            }
-        }),
         new HtmlWebpackPlugin({
             favicon: resolve(__dirname, './public', 'favicon.ico'),
             filename: 'index.html',
@@ -79,6 +58,23 @@ module.exports = {
             gtm: config.gtm,
             inject: true,
             template: resolve(__dirname, './public', 'index.html'),
+        }),
+        new WebpackPwaManifest({
+            name: config.title,
+            short_name: 'eSpace',
+            description: 'The University of Queensland`s institutional repository.',
+            background_color: '#49075E',
+            theme_color: '#49075E',
+            inject: true,
+            ios: true,
+            icons: [
+                {
+                    src: resolve(__dirname, './public/images', 'logo.png'),
+                    sizes: [96, 128, 192, 256, 384, 512],
+                    destination: 'icons',
+                    ios: true
+                }
+            ]
         }),
         new ProgressBarPlugin({
             format: `  building webpack... [:bar] ${chalk.green.bold(':percent')} (It took :elapsed seconds to build)\n`,

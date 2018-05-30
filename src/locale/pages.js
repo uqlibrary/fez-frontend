@@ -444,7 +444,12 @@ export default {
                 title: 'Refine results',
                 excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
                 renameFacetsList: {'Display type': 'Publication type'}
-            }
+            },
+            errorAlert: {
+                type: 'error_outline',
+                title: 'Error',
+                message: (message) => message
+            },
         },
         masquerade: {
             title: 'Masquerade',
