@@ -25,9 +25,7 @@ export default class MyRecords extends PureComponent {
 
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
-        actions: PropTypes.object,
-        account: PropTypes.object,
-        author: PropTypes.object
+        actions: PropTypes.object
     };
 
     constructor(props) {
@@ -200,8 +198,7 @@ export default class MyRecords extends PureComponent {
                                     sortDirection={this.state.sortDirection}
                                     pageSize={this.state.pageSize}
                                     pagingData={pagingData}
-                                    account={this.props.account}
-                                    author={this.props.author}
+                                    canUseExport
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
                                     onExportPublications={this.handleExportPublications}

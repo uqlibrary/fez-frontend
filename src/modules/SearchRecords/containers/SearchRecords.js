@@ -8,8 +8,7 @@ const mapStateToProps = (state) => {
     return {
         ...state.get('searchRecordsReducer'),
         ...state.get('exportPublicationsReducer'),
-        ...state.get('accountReducer'),
-        ...state.get('authorReducer'),
+        canUseExport: !!state.get('accountReducer').account.canMasquerade || !!state.get('accountReducer').author,
     };
 };
 
