@@ -151,6 +151,11 @@ export default class MyRecords extends PureComponent {
         this.props.history.push(routes.pathConfig.records.fix(item.rek_pid));
         this.props.actions.setFixRecord(item);
     }
+
+    handleExportPublications = (exportFormat) => {
+        this.props.actions.exportAuthorPublications({...exportFormat, ...this.state});
+    }
+
     render() {
         if (this.props.accountLoading) return null;
 
@@ -195,12 +200,11 @@ export default class MyRecords extends PureComponent {
                                     sortDirection={this.state.sortDirection}
                                     pageSize={this.state.pageSize}
                                     pagingData={pagingData}
-                                    location={this.props.location}
                                     account={this.props.account}
                                     author={this.props.author}
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
-                                    onExportPublications={this.props.actions.exportAuthorPublications}
+                                    onExportPublications={this.handleExportPublications}
                                     disabled={isLoadingOrExporting} />
                                 <PublicationsListPaging
                                     loading={isLoadingOrExporting}

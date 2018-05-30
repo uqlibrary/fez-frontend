@@ -29,7 +29,7 @@ function setup(testProps, isShallow = true) {
 }
 
 beforeAll(() => {
-    
+
 });
 
 describe('PublicationsListSorting renders ', () => {
@@ -110,9 +110,9 @@ describe('PublicationsListSorting renders ', () => {
     it('component with non-empty paging data, onExportPublications called', () => {
         const expected = Object.keys(exportFormatToExtension)[0];
         const testFunction = jest.fn();
-        const wrapper = setup({onExportPublications: testFunction, location: {state: {activeFacets: {filters: {}, ranges: {}}}}});
+        const wrapper = setup({onExportPublications: testFunction});
         wrapper.instance().exportPublicationsFormatChanged(expected);
         expect(wrapper.state().exportPublicationsFormat).toEqual(expected);
-        expect(testFunction).toHaveBeenCalledWith({exportPublicationsFormat: expected, ...wrapper.instance().state, activeFacets: wrapper.instance().props.activeFacets});
+        expect(testFunction).toHaveBeenCalledWith({exportPublicationsFormat: expected});
     });
 });

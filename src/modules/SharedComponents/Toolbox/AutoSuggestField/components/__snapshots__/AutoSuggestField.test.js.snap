@@ -1660,11 +1660,6 @@ exports[`AutoSuggestField component should render autosuggest field and call act
                   }
                 }
               >
-                <EventListener
-                  onResize={[Function]}
-                  onScroll={[Function]}
-                  target="window"
-                />
                 <RenderToLayer
                   componentClickAway={[Function]}
                   open={false}
@@ -3286,11 +3281,6 @@ exports[`AutoSuggestField component should render with className set 1`] = `
                   }
                 }
               >
-                <EventListener
-                  onResize={[Function]}
-                  onScroll={[Function]}
-                  target="window"
-                />
                 <RenderToLayer
                   componentClickAway={[Function]}
                   open={false}
@@ -4914,11 +4904,6 @@ exports[`AutoSuggestField component should render with disabled flag set to true
                   }
                 }
               >
-                <EventListener
-                  onResize={[Function]}
-                  onScroll={[Function]}
-                  target="window"
-                />
                 <RenderToLayer
                   componentClickAway={[Function]}
                   open={false}

@@ -460,7 +460,12 @@ export default {
                     'Collection': 'Collection (lookup)',
                     'Subject': 'Subject (lookup)'
                 }
-            }
+            },
+            errorAlert: {
+                type: 'error_outline',
+                title: 'Error',
+                message: (message) => message
+            },
         },
         masquerade: {
             title: 'Masquerade',
