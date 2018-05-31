@@ -58,7 +58,7 @@ export class FileUploader extends PureComponent {
             fileUploadLimit: config.DEFAULT_FILE_UPLOAD_LIMIT,
             maxFileSize: config.DEFAULT_MAX_FILE_SIZE,
             fileSizeUnit: config.SIZE_UNIT_G,
-            fileNameRestrictions: /^(?=^\S*$)(?=^[^\.]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_))[a-z][a-z\d\-_\.]+/
+            fileNameRestrictions: /^(?=^\S*$)(?=^[a-z\d\-_]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_|\d))[a-z\d\-_\.]+/
         },
         requireOpenAccessStatus: false
     };

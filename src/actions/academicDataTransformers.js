@@ -127,7 +127,8 @@ export const transformTrendingPublicationsMetricsData = ({data}) => {
     return Object.entries(sources).map(([key, config]) => {
         const values = data.map(publication => {
             const count = getData(publication, config.metricDataPath.count);
-            if (count) {
+            const difference = getData(publication, config.metricDataPath.difference);
+            if (count && difference) {
                 const metricData = {
                     source: key,
                     count: count,

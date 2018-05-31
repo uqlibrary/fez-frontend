@@ -1,7 +1,8 @@
 @import '../../../../sass/variables';
 
 .publicationCitation {
-  margin-bottom: 12px;
+  margin-bottom: 12px !important;
+  padding-bottom: 12px !important;
   padding: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -99,10 +100,6 @@
         font-weight: $text-weight-bold;
       }
     }
-  }
-
-  .publicationActions {
-    margin: 12px 0 !important;
   }
 
   a.citationCountLink {

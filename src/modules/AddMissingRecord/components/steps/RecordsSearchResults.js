@@ -26,7 +26,7 @@ import {locale} from 'locale';
 export default class RecordsSearchResults extends PureComponent {
     static propTypes = {
         publicationsList: PropTypes.array,
-        loadingSearch: PropTypes.bool,
+        searchLoading: PropTypes.bool,
         loadingPublicationSources: PropTypes.object,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object,
@@ -126,7 +126,7 @@ export default class RecordsSearchResults extends PureComponent {
                 {/* Search results */}
                 <div className="column">
                     {
-                        this.props.loadingSearch &&
+                        this.props.searchLoading &&
                         <div className="is-centered"><InlineLoader message={searchResultsTxt.loadingMessage}/></div>
                     }
                     {
@@ -151,14 +151,14 @@ export default class RecordsSearchResults extends PureComponent {
                         </StandardCard>
                     }
                     {
-                        !this.props.loadingSearch && this.props.publicationsList.length === 0 &&
+                        !this.props.searchLoading && this.props.publicationsList.length === 0 &&
                         <StandardCard {...searchResultsTxt.noResultsFound}>
                             {searchResultsTxt.noResultsFound.text}
                         </StandardCard>
                     }
 
                     {
-                        !this.props.loadingSearch &&
+                        !this.props.searchLoading &&
                         <div className="columns action-buttons">
                             <div className="column is-hidden-mobile"/>
                             <div className="column is-narrow-desktop">

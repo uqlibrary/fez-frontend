@@ -31,21 +31,25 @@ export default class PublicationsList extends PureComponent {
         super(props);
     }
 
+    renderPublicationCitation(index, publication) {
+        return (
+            <PublicationCitation
+                key={index + 1}
+                publication={publication}
+                customActions={!publication.rek_pid || this.props.publicationsListSubset.indexOf(publication.rek_pid) === -1 ? this.props.customActions : this.props.subsetCustomActions}
+                showSources={this.props.showSources}
+                showDefaultActions={this.props.showDefaultActions}
+                showMetrics={this.props.showMetrics}
+                hideCitationContent={this.props.hideCitationContent}
+                showSourceCountIcon={this.props.showSourceCountIcon}
+                hideCountDiff={this.props.hideCountDiff}
+            />
+        );
+    }
+
     render() {
         const publications = this.props.publicationsList.map((publication, index) => {
-            return (
-                <PublicationCitation
-                    key={index + 1}
-                    publication={publication}
-                    customActions={!publication.rek_pid || this.props.publicationsListSubset.indexOf(publication.rek_pid) === -1 ? this.props.customActions : this.props.subsetCustomActions}
-                    showSources={this.props.showSources}
-                    showDefaultActions={this.props.showDefaultActions}
-                    showMetrics={this.props.showMetrics}
-                    hideCitationContent={this.props.hideCitationContent}
-                    showSourceCountIcon={this.props.showSourceCountIcon}
-                    hideCountDiff={this.props.hideCountDiff}
-                />
-            );
+            return this.renderPublicationCitation(index, publication);
         });
 
         return (
