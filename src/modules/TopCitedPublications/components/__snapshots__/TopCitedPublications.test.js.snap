@@ -88,7 +88,8 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
               </div>
               <PublicationsList
                 hideCitationContent={true}
-                hideCountDiff={true}
+                hideCountDiff={false}
+                hideCountTotal={true}
                 publicationsList={
                   Array [
                     Object {
@@ -891,7 +892,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
                 publicationsListSubset={Array []}
                 showDefaultActions={false}
                 showMetrics={true}
-                showSourceCountIcon={true}
+                showSourceCountIcon={false}
                 showSources={false}
                 subsetCustomActions={Array []}
               />
@@ -960,6 +961,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
               <PublicationsList
                 hideCitationContent={true}
                 hideCountDiff={false}
+                hideCountTotal={true}
                 publicationsList={
                   Array [
                     Object {
@@ -1831,6 +1833,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
               <PublicationsList
                 hideCitationContent={true}
                 hideCountDiff={false}
+                hideCountTotal={true}
                 publicationsList={
                   Array [
                     Object {

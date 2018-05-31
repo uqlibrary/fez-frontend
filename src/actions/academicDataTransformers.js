@@ -145,6 +145,14 @@ export const transformTrendingPublicationsMetricsData = ({data}) => {
             }
         }).filter(value => value);
 
-        return {key, values};
+        const sortedTopTwenty = values
+            .sort((publication1, publication2) => {
+                const difference2 = getData(publication2, config.metricDataPath.difference);
+                const difference1 = getData(publication1, config.metricDataPath.difference);
+                return difference2 - difference1;
+            })
+            .slice(0, 20);
+
+        return {key, values: sortedTopTwenty};
     });
 };
