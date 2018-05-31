@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import IconButton from 'material-ui/IconButton';
 import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 import SearchIcon from 'material-ui/svg-icons/action/search';
 import KeyboardArrowUp from 'material-ui/svg-icons/hardware/keyboard-arrow-up';
 import KeyboardArrowDown from 'material-ui/svg-icons/hardware/keyboard-arrow-down';
 import CircularProgress from 'material-ui/CircularProgress';
+import AdvancedSearchRow from './AdvancedSearchRow';
+import Checkbox from 'material-ui/Checkbox';
 import param from 'can-param';
 
 import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
@@ -34,13 +37,21 @@ export default class SearchComponent extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            searchText: props.searchQueryParams && props.searchQueryParams.all || '',
-            showAdvancedSearch: props.showAdvancedSearch || false,
+            searchText: this.props.searchQueryParams && this.props.searchQueryParams.all || '',
+            showAdvancedSearch: this.props.showAdvancedSearch || false,
             showMobile: false,
             snackbarOpen: false,
             snackbarMessage: '',
             advancedSearch: {
                 minimised: false,
+                openAccess: false,
+                fieldRows: [
+                    {
+                        fieldIndex: 0,
+                        searchField: 0,
+                        value: this.props.searchQueryParams && this.props.searchQueryParams.all || ''
+                    }
+                ]
             }
         };
     }
@@ -49,6 +60,7 @@ export default class SearchComponent extends PureComponent {
         if (!!nextProps.searchQueryParams && !!nextProps.searchQueryParams.all
             && nextProps.searchQueryParams.all !== this.state.searchText) {
             this.setState({
+                ...this.state,
                 searchText: nextProps.searchQueryParams.all || ''
             });
         }
@@ -62,6 +74,7 @@ export default class SearchComponent extends PureComponent {
         if (this.props.inHeader
             && this.state.searchText.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
             this.setState({
+                ...this.state,
                 snackbarMessage: locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH),
                 snackbarOpen: true
             });
@@ -89,7 +102,10 @@ export default class SearchComponent extends PureComponent {
             this.props.actions.searchEspacePublications(searchQuery);
 
             // Hide the mobile search bar after performing a search
-            this.setState({showMobile: false});
+            this.setState({
+                ...this.state,
+                showMobile: false
+            });
             // Blur the input so the mobile keyboard is deactivated
             event && event.target && event.target.blur();
 
@@ -104,6 +120,7 @@ export default class SearchComponent extends PureComponent {
 
     toggleMobile = () => {
         this.setState({
+            ...this.state,
             showMobile: !this.state.showMobile,
             snackbarOpen: false
         }, () => {
@@ -116,6 +133,7 @@ export default class SearchComponent extends PureComponent {
     toggleAdvancedSearchMinimise = () => {
         this.setState({
             advancedSearch: {
+                ...this.state.advancedSearch,
                 minimised: !this.state.advancedSearch.minimised
             }
         });
@@ -123,6 +141,7 @@ export default class SearchComponent extends PureComponent {
 
     searchTextChanged = (event, value) => {
         this.setState({
+            ...this.state,
             searchText: value,
             snackbarOpen: false
         });
@@ -130,6 +149,7 @@ export default class SearchComponent extends PureComponent {
 
     toggleAdvancedSearch = () => {
         this.setState({
+            ...this.state,
             showAdvancedSearch: !this.state.showAdvancedSearch
         });
     };
@@ -141,6 +161,47 @@ export default class SearchComponent extends PureComponent {
             return false;
         }
     };
+
+    addAdvancedField = () => {
+        const nextIndex = this.state.advancedSearch.fieldRows.length + 1;
+        this.setState({
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                fieldRows: [
+                    ...this.state.advancedSearch.fieldRows,
+                    {
+                        fieldIndex: nextIndex,
+                        searchField: 0,
+                        value: ''
+                    }
+                ]
+            }
+        });
+    }
+
+    resetAdvancedFields = () => {
+        this.setState({
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                fieldRows: [
+                    {
+                        fieldIndex: 1,
+                        searchField: 1,
+                        value: this.props.searchQueryParams && this.props.searchQueryParams.all || ''
+                    }
+                ]
+            }
+        });
+    }
+
+    openAccessToggle = () => {
+        this.setState({
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                openAccess: !this.state.advancedSearch.openAccess
+            }
+        });
+    }
 
     render() {
         const txt = locale.components.searchComponent;
@@ -216,7 +277,7 @@ export default class SearchComponent extends PureComponent {
                             <RaisedButton
                                 label={txt.searchButtonText}
                                 aria-label={txt.searchButtonAriaLabel}
-                                secondary
+                                primary
                                 disabled={!!this.validationError()}
                                 onClick={this.handleSearch}
                                 fullWidth />
@@ -241,6 +302,7 @@ export default class SearchComponent extends PureComponent {
                             <div className="columns is-gapless is-mobile" style={{marginBottom: '-12px'}}>
                                 <div className="column">
                                     <h2>Advanced search</h2>
+                                    {JSON.stringify(this.state.advancedSearch)}
                                 </div>
                                 {
                                     this.props.isLoading &&
@@ -249,7 +311,8 @@ export default class SearchComponent extends PureComponent {
                                     </div>
                                 }
                                 <div className="column is-narrow">
-                                    <IconButton onClick={this.toggleAdvancedSearchMinimise}>
+                                    <IconButton onClick={this.toggleAdvancedSearchMinimise}
+                                        tooltip={this.state.advancedSearch.minimised ? 'Show advanced search' : 'Hide advanced search'}>
                                         {
                                             !this.state.advancedSearch.minimised
                                                 ? <KeyboardArrowUp/>
@@ -260,41 +323,62 @@ export default class SearchComponent extends PureComponent {
                             </div>
                             {
                                 !this.state.advancedSearch.minimised &&
-                                <div className="columns">
-                                    <div className="column fields">
-                                        <TextField
-                                            type="search"
-                                            id="searchField"
-                                            style={{marginTop: '-24px'}}
-                                            fullWidth
-                                            floatingLabelText={!this.props.inHeader && txt.searchBoxPlaceholder}
-                                            hintText={this.props.inHeader && txt.searchBoxPlaceholder}
-                                            aria-label={txt.ariaInputLabel}
-                                            onChange={this.searchTextChanged}
-                                            onKeyPress={this.handleSearch}
-                                            value={this.state.searchText}
-                                            underlineStyle={this.props.inHeader ? {display: 'none'} : {}}
-                                            errorText={this.validationError()}
-                                        />
-                                    </div>
-                                    <div className="column is-narrow">
+                                    <div>
                                         <div className="columns">
-                                            <div className="column">
+                                            <div className="column fields">
+                                                {
+                                                    this.state.advancedSearch.fieldRows.map((item, index) => (
+                                                        <AdvancedSearchRow
+                                                            key={index}
+                                                            fieldIndex={item.fieldIndex}
+                                                            searchField={item.searchField}
+                                                            initialValue={item.value}
+                                                        />
+                                                    ))
+                                                }
+                                            </div>
+                                            <div className="column is-3">
+                                                <Checkbox
+                                                    label="Open access/Full text"
+                                                    checked={this.state.advancedSearch.openAccess}
+                                                    onCheck={this.openAccessToggle}
+                                                    style={{marginTop: 12, paddingBottom: 2, borderBottom: '1px solid rgba(0, 0, 0, 0.12)'}}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="columns is-gapless">
+                                            <div className="column is-narrow">
+                                                <RaisedButton
+                                                    label="Add another field"
+                                                    secondary
+                                                    onClick={this.addAdvancedField}
+                                                />
+                                            </div>
+                                            <div className="column is-narrow">
+                                                <RaisedButton
+                                                    label="Reset fields"
+                                                    style={{marginLeft: 6}}
+                                                    onClick={this.resetAdvancedFields}
+                                                />
+                                            </div>
+                                            <div className="column is-narrow">
+                                                <FlatButton
+                                                    label="Simple Search"
+                                                    style={{marginLeft: 6}}
+                                                    onClick={this.toggleAdvancedSearch}
+                                                />
+                                            </div>
+                                            <div className="column" />
+                                            <div className="column is-3">
                                                 <RaisedButton
                                                     label={txt.searchButtonText}
                                                     aria-label={txt.searchButtonAriaLabel}
-                                                    secondary
-                                                    disabled={!!this.validationError()}
-                                                    onClick={this.handleSearch}/>
-                                            </div>
-                                            <div className="column">
-                                                <RaisedButton
-                                                    label={txt.simpleSearchToggle}
-                                                    onClick={this.toggleAdvancedSearch}/>
+                                                    primary
+                                                    fullWidth
+                                                />
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                             }
                         </div>
                 }

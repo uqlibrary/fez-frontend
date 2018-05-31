@@ -800,7 +800,18 @@ export default {
             searchButtonText: 'Search',
             searchButtonAriaLabel: 'Click to search eSpace',
             simpleSearchToggle: 'Simple search',
-
+            advancedSearch: {
+                fieldTypes: [{
+                    title: 'Any field',
+                    combiner: 'contains',
+                    type: 'TextField'
+                },
+                {
+                    title: 'Title',
+                    combiner: 'contains',
+                    type: 'TextField'
+                }]
+            }
         },
         whatIsEspace: {
             title: 'What is eSpace?',

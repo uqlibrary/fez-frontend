@@ -122,4 +122,24 @@
     }
   }
 }
+.advancedSearchField {
+  margin-bottom: -12px !important;
+  .combiner span {
+    padding: 0 12px !important;
+    line-height: 50px !important;
+    font-style: italic;
+    color: lighten($secondary-color, 33%);
+  }
+  // Override search box X
+  input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+  }
+  .deleteFieldButton {
+    margin-top: 6px !important;
+    opacity: 0.33;
+    &:hover {
+      opacity: 0.66;
+    }
+  }
+}
 

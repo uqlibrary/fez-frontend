@@ -124,6 +124,8 @@ export default class App extends PureComponent {
             (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
         const isThesisSubmissionPage = this.props.location.pathname === routes.pathConfig.hdrSubmission ||
             this.props.location.pathname === routes.pathConfig.sbsSubmission;
+        const isSearchPage = this.props.location.pathname === routes.pathConfig.records.search ||
+            this.props.location.pathname === routes.pathConfig.records.search;
 
         const showMenu = !isThesisSubmissionPage;
         const titleStyle = showMenu && this.state.docked ? {paddingLeft: 320} : {};
@@ -192,7 +194,7 @@ export default class App extends PureComponent {
                         <div className="columns is-gapless appbar-right-columns is-mobile">
                             <div className="column search-column">
                                 {
-                                    !isThesisSubmissionPage && isAuthorizedUser && isAdmin &&
+                                    !isThesisSubmissionPage && isAuthorizedUser && isAdmin && !isSearchPage &&
                                     <SearchComponent inHeader showPrefixIcon showMobileSearchButton />
                                 }
                             </div>
