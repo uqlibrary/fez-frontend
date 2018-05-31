@@ -54,8 +54,14 @@ export const pathConfig = {
     },
     // TODO: update links when we have list pages
     list: {
-        author: (author) => (`${fullPath}/list/author/${author}`),
-        authorId: (authorId) => (`${fullPath}/list/author_id/${authorId}`),
+        author: (author) => getSearchUrl({searchQuery: author}),
+        authorId: (authorId) => getSearchUrl({
+            activeFacets: {
+                filters: {
+                    'Author': authorId
+                }
+            }
+        }),
         subject: (subjectId) => (`${fullPath}/list/subject/${subjectId}`),
         herdcStatus: (herdcStatus) => getSearchUrl({searchQuery: herdcStatus}),
         keyword: (keyword) => getSearchUrl({searchQuery: keyword}),

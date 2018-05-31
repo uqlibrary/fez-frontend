@@ -1536,7 +1536,7 @@ exports[`Additional Information Component  should render component with audio do
                                                   >
                                                     <a
                                                       className="authorNameLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author/Shutter, Leigh"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Shutter%2C+Leigh"
                                                       key="citationAuthor_1"
                                                     >
                                                       <CitationView
@@ -1556,7 +1556,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     </a>
                                                     <a
                                                       className="authorNameLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author/Arthurs, Andy"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Arthurs%2C+Andy"
                                                       key="citationAuthor_2"
                                                     >
                                                       <CitationView
@@ -1576,7 +1576,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/486"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=486&searchQueryParams%5Ball%5D="
                                                       key="citationAuthor_3"
                                                     >
                                                       <CitationView
@@ -1596,7 +1596,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     </a>
                                                     <a
                                                       className="authorNameLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author/McColl, Mary Rose"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=McColl%2C+Mary+Rose"
                                                       key="citationAuthor_4"
                                                     >
                                                       <CitationView
@@ -1615,7 +1615,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/146"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=146&searchQueryParams%5Ball%5D="
                                                       key="citationAuthor_5"
                                                     >
                                                       <CitationView
@@ -18608,7 +18608,7 @@ exports[`Additional Information Component  should render component with journal 
                                                   >
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/88893"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=88893&searchQueryParams%5Ball%5D="
                                                       key="citationAuthor_1"
                                                     >
                                                       <CitationView
@@ -18628,7 +18628,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorNameLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author/Milevskiy, Michael J. G."
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Milevskiy%2C+Michael+J.+G."
                                                       key="citationAuthor_2"
                                                     >
                                                       <CitationView
@@ -18648,7 +18648,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/1706239"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1706239&searchQueryParams%5Ball%5D="
                                                       key="citationAuthor_3"
                                                     >
                                                       <CitationView
@@ -18668,7 +18668,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/97626"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=97626&searchQueryParams%5Ball%5D="
                                                       key="citationAuthor_4"
                                                     >
                                                       <CitationView
@@ -18688,7 +18688,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/95450"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=95450&searchQueryParams%5Ball%5D="
                                                       key="citationAuthor_5"
                                                     >
                                                       <CitationView
@@ -18708,7 +18708,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/1671"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1671&searchQueryParams%5Ball%5D="
                                                       key="citationAuthor_6"
                                                     >
                                                       <CitationView
@@ -18728,7 +18728,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorNameLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author/Thompson, Erik W."
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Thompson%2C+Erik+W."
                                                       key="citationAuthor_7"
                                                     >
                                                       <CitationView
@@ -18748,7 +18748,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/973"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=973&searchQueryParams%5Ball%5D="
                                                       key="citationAuthor_8"
                                                     >
                                                       <CitationView
@@ -18767,7 +18767,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/972"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=972&searchQueryParams%5Ball%5D="
                                                       key="citationAuthor_9"
                                                     >
                                                       <CitationView
