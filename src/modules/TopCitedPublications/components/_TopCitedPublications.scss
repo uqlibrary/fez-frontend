@@ -9,18 +9,17 @@ button.publicationTab {
   padding-top: 0 !important;
 }
 
-// Rainbow count difference values
-.publicationsList {
-  @for $i from 1 through 20 {
-    div.publicationCitation:nth-of-type(#{$i}) {
-      span.trendingPubsDifference {
-        color: darken(adjust-hue(red, ($i/20)*70), 10%) !important;
+.topCitedPublications {
+  // Rainbow count difference values
+  .publicationsList {
+    @for $i from 1 through 20 {
+      div.publicationCitation:nth-of-type(#{$i}) {
+        span.trendingPubsDifference {
+          color: darken(adjust-hue(red, ($i/20)*70), 10%) !important;
+        }
       }
     }
   }
-}
-
-.topCitedPublications {
   .subTitle {
     height: 40px;
   }
@@ -38,5 +37,9 @@ button.publicationTab {
   }
   .alertWrapper {
     margin-top: 0 !important;
+  }
+  h3.publicationTitle {
+    font-size: $text-body-xlarge !important;
+    line-height: $text-line-height-large !important;
   }
 }
