@@ -5058,7 +5058,7 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
         23
         <span
           className="trendingPubsDifference"
-          title="Difference in social media activities for the past one year"
+          title="Difference in social media activities"
         >
           +
           5
