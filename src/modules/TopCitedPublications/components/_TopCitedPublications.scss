@@ -14,7 +14,7 @@ button.publicationTab {
   @for $i from 1 through 20 {
     div.publicationCitation:nth-of-type(#{$i}) {
       span.trendingPubsDifference {
-        color: darken(adjust-hue(red, ($i/20)*100), 10%) !important;
+        color: darken(adjust-hue(red, ($i/20)*70), 10%) !important;
       }
     }
   }

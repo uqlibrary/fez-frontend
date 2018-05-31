@@ -73,9 +73,9 @@ export default {
             ],
             myTrendingPublications: {
                 trendDifferenceShares: {
-                    scopus: 'Difference in shares since last month',
-                    thomson: 'Difference in shares since last month',
-                    altmetric: 'Difference in social media activities for the past one year'
+                    scopus: 'Difference in citations',
+                    thomson: 'Difference in citations',
+                    altmetric: 'Difference in social media activities'
                 },
                 sourceTitles: {
                     scopus: 'Scopus',
