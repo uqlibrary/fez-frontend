@@ -19,28 +19,22 @@
   .publicationList {
     margin-top: 0 !important;
   }
-  .publicationCitation {
-    padding-bottom: 12px !important;
-    .trendingPubsCount {
-      text-align: right;
-      margin-left: 24px !important;
-      font-size: $title-large;
-      line-height: $title-large;
-    }
-    a.trendingPubsCount:hover {
-      text-decoration: none;
-    }
-    .trendingPubsDifference {
-      color: $secondary-color;
-      font-size: $title-small;
-      line-height: $title-small;
-      vertical-align: top;
-    }
+  .trendingPubsCount {
+    text-align: right;
+    margin-left: 24px !important;
+    font-size: $title-large;
+    line-height: $title-large;
+  }
+  a.trendingPubsCount:hover {
+    text-decoration: none;
+  }
+  .trendingPubsDifference {
+    color: $secondary-color;
+    font-size: $title-small;
+    line-height: $title-small;
+    vertical-align: top;
   }
 }
-
-
-
 
 // Mobile
 @include mobile {
@@ -53,11 +47,10 @@
         margin-right: 4px !important;
       }
     }
-    .publicationCitation {
-      div.columns > div.column:nth-child(2) {
-        padding-top: 6px !important;
-      }
+    .trendingCount {
+      margin-top: 12px !important;
       .trendingPubsCount {
+        padding-top: 12px !important;
         margin-left: 6px !important;
         font-size: $title-medium !important;
       }

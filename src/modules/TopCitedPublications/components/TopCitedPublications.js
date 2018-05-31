@@ -51,6 +51,7 @@ export default class TopCitedPublications extends PureComponent {
                                 this.props.topCitedPublicationsList.sort((source1, source2) => (
                                     txt[source1.key].order - txt[source2.key].order
                                 )).map(({key, values}, metricIndex) => (
+                                    values && values.length >= 1 &&
                                     <Tab key={key}
                                         label={this.context.isMobile ? txt[key].mobileTitle : txt[key].title}
                                         value={`${key}TopCitedPublications`}

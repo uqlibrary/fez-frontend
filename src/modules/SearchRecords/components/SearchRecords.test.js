@@ -4,7 +4,7 @@ import {routes} from 'config';
 function setup(testProps, isShallow = true) {
     const props = {
         publicationsList: [],
-        loadingSearch: false,
+        searchLoading: false,
         exportPublicationsLoading: false,
         actions: {exportEspacePublications: ()=>{}},
         ...testProps,
@@ -20,14 +20,19 @@ describe('SearchRecords page', () => {
     });
 
     it('should render loading screen while loading search results', () => {
-        const wrapper = setup({loadingSearch: true});
+        const wrapper = setup({searchLoading: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render loading screen while loading publications while filtering', () => {
         const wrapper = setup({publicationsList: [1, 2, 2]});
-        wrapper.setProps({loadingSearch: true});
+        wrapper.setProps({searchLoading: true});
         wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render loading screen while export publications loading', () => {
+        const wrapper = setup({publicationsList: [1, 2, 2], exportPublicationsLoading: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -318,8 +323,128 @@ describe('SearchRecords page', () => {
         });
     });
 
+    it('should correctly parse search query string from location search and reset pageSize if not in valid values (20, 50, 100)', () => {
+        const wrapper = setup({});
+
+        const result = wrapper.instance().parseSearchQueryStringFromUrl('page=1&pageSize=2000&sortBy=published_date&sortDirection=Desc&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data');
+
+        expect(result).toEqual({
+            page: '1',
+            pageSize: 20,
+            sortBy: 'published_date',
+            sortDirection: 'Desc',
+            searchQueryParams: {
+                title: 'some test data'
+            },
+            activeFacets: {
+                filters: {},
+                ranges: {
+                    'Year published': {
+                        from: '2008',
+                        to: '2023'
+                    }
+                },
+                showOpenAccessOnly: false
+            }
+        });
+    });
+
+    it('should correctly parse search query string from location search and reset sortDirection if not in valid values (Desc, Asc)', () => {
+        const wrapper = setup({});
+
+        const result = wrapper.instance().parseSearchQueryStringFromUrl('page=1&pageSize=20&sortBy=published_date&sortDirection=esc&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data');
+
+        expect(result).toEqual({
+            page: '1',
+            pageSize: 20,
+            sortBy: 'published_date',
+            sortDirection: 'Desc',
+            searchQueryParams: {
+                title: 'some test data'
+            },
+            activeFacets: {
+                filters: {},
+                ranges: {
+                    'Year published': {
+                        from: '2008',
+                        to: '2023'
+                    }
+                },
+                showOpenAccessOnly: false
+            }
+        });
+    });
+
+    it('should correctly parse search query string from location search and reset sortBy if not in valid values', () => {
+        const wrapper = setup({});
+
+        const result = wrapper.instance().parseSearchQueryStringFromUrl('page=1&pageSize=100&sortBy=publication_date&sortDirection=Asc&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data');
+
+        expect(result).toEqual({
+            page: '1',
+            pageSize: 100,
+            sortBy: 'published_date',
+            sortDirection: 'Asc',
+            searchQueryParams: {
+                title: 'some test data'
+            },
+            activeFacets: {
+                filters: {},
+                ranges: {
+                    'Year published': {
+                        from: '2008',
+                        to: '2023'
+                    }
+                },
+                showOpenAccessOnly: false
+            }
+        });
+    });
+
     it('renders loading screen while export publications loading', () => {
-        const wrapper = setup({ exportPublicationsLoading: true });
+        const wrapper = setup({exportPublicationsLoading: true});
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('renders error alert if error occurs during search', () => {
+        const wrapper = setup({searchLoadingError: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should handle export publications correctly', () => {
+        const testExportAction = jest.fn();
+        const searchQuery = {
+            page: '1',
+            pageSize: 20,
+            sortBy: 'published_date',
+            sortDirection: 'Desc',
+            searchQueryParams: {
+                title: 'some test data'
+            },
+            activeFacets: {
+                filters: {},
+                ranges: {
+                    'Year published': {
+                        from: '2008',
+                        to: '2023'
+                    }
+                },
+                showOpenAccessOnly: false
+            }
+        };
+
+        const wrapper = setup({
+            actions: {
+                exportEspacePublications: testExportAction,
+                searchEspacePublications: jest.fn()
+            },
+            searchQuery
+        });
+
+        wrapper.instance().handleExportPublications({exportPublicationsFormat: 'excel'});
+        expect(testExportAction).toHaveBeenCalledWith({
+            ...searchQuery,
+            exportPublicationsFormat: 'excel'
+        });
     });
 });

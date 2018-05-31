@@ -5,9 +5,11 @@ import * as actions from 'actions';
 import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state) => {
+    const {account, author} = state.get('accountReducer');
     return {
         ...state.get('searchRecordsReducer'),
-        ...state.get('exportPublicationsReducer')
+        ...state.get('exportPublicationsReducer'),
+        canUseExport: (!!account && account.canMasquerade) || !!author,
     };
 };
 

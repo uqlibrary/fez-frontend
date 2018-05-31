@@ -183,7 +183,7 @@ export default class PublicationCitation extends PureComponent {
                     </div>
                     {
                         this.props.showMetrics &&
-                        <div className="column is-narrow">
+                        <div className="column is-narrow trendingCount">
                             <ExternalLink
                                 className="trendingPubsCount"
                                 href={recordValue.citation_url}
