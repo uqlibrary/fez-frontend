@@ -5056,14 +5056,14 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
         title="Full citation in Altmetric will open in a new window"
       >
         23
+        <span
+          className="trendingPubsDifference"
+          title="Difference in social media activities for the past one year"
+        >
+          +
+          5
+        </span>
       </ExternalLink>
-      <span
-        className="trendingPubsDifference"
-        title="Difference in social media activities for the past one year"
-      >
-        +
-        5
-      </span>
     </div>
   </div>
 </div>

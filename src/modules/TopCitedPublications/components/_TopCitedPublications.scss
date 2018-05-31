@@ -9,6 +9,17 @@ button.publicationTab {
   padding-top: 0 !important;
 }
 
+// Rainbow count difference values
+.publicationsList {
+  @for $i from 1 through 20 {
+    div.publicationCitation:nth-of-type(#{$i}) {
+      span.trendingPubsDifference {
+        color: darken(adjust-hue(red, ($i/20)*100), 10%) !important;
+      }
+    }
+  }
+}
+
 .topCitedPublications {
   .subTitle {
     height: 40px;

@@ -87,7 +87,8 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
                 The +plus score indicates recent increase in social media activity
               </div>
               <PublicationsList
-                hideCountDiff={true}
+                hideCountDiff={false}
+                hideCountTotal={true}
                 publicationsList={
                   Array [
                     Object {
@@ -890,7 +891,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
                 publicationsListSubset={Array []}
                 showDefaultActions={false}
                 showMetrics={true}
-                showSourceCountIcon={true}
+                showSourceCountIcon={false}
                 showSources={false}
                 subsetCustomActions={Array []}
               />
@@ -958,6 +959,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
               </div>
               <PublicationsList
                 hideCountDiff={false}
+                hideCountTotal={true}
                 publicationsList={
                   Array [
                     Object {
@@ -1828,6 +1830,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
               </div>
               <PublicationsList
                 hideCountDiff={false}
+                hideCountTotal={true}
                 publicationsList={
                   Array [
                     Object {
