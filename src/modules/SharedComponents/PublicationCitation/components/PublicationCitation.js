@@ -90,13 +90,9 @@ export default class PublicationCitation extends PureComponent {
         }
     };
 
-    viewRecord = () => {
-        this.props.actions.setRecordToView(this.props.publication);
-    }
-
     renderTitle = () => {
         return this.props.publication.rek_pid
-            ? (<Link to={routes.pathConfig.records.view(this.props.publication.rek_pid)} onClick={this.viewRecord}>{ReactHtmlParser(this.props.publication.rek_title)}</Link>)
+            ? (<Link to={routes.pathConfig.records.view(this.props.publication.rek_pid)}>{ReactHtmlParser(this.props.publication.rek_title)}</Link>)
             : (ReactHtmlParser(this.props.publication.rek_title));
     }
 

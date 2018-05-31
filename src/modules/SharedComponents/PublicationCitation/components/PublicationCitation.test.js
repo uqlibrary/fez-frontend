@@ -60,12 +60,6 @@ describe('PublicationCitation ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should handle view record link', () => {
-        const wrapper = setup({});
-        wrapper.instance().viewRecord();
-        expect(wrapper.instance().props.actions.setRecordToView).toHaveBeenCalled();
-    });
-
     it('should handle default actions', () => {
         const wrapper = setup({showDefaultActions: true});
         wrapper.instance()._handleDefaultActions('fixRecord');

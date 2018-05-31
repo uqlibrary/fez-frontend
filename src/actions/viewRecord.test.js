@@ -86,18 +86,6 @@ describe('View record actions', () => {
     });
 
     describe('setting/clearing record to view action', () => {
-        it('dispatches expected actions when setting a loaded record to view', async () => {
-            const expectedActions = [
-                actions.VIEW_RECORD_SET
-            ];
-            try {
-                await mockActionsStore.dispatch(viewRecordActions.setRecordToView(mockData.record));
-                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            } catch (e) {
-                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            }
-        });
-
         it('dispatches expected actions when clearing a loaded record to view', async () => {
             const expectedActions = [
                 actions.VIEW_RECORD_CLEAR

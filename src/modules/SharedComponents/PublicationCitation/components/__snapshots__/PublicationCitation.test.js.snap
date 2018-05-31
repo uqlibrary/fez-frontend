@@ -14,7 +14,6 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
         className="publicationTitle"
       >
         <Link
-          onClick={[Function]}
           replace={false}
           to="/records/UQ:41878"
         >
@@ -897,7 +896,6 @@ exports[`PublicationCitation  should render component with default actions 1`] =
         className="publicationTitle"
       >
         <Link
-          onClick={[Function]}
           replace={false}
           to="/records/UQ:41878"
         >
@@ -1740,7 +1738,6 @@ exports[`PublicationCitation  should render component with default item 1`] = `
         className="publicationTitle"
       >
         <Link
-          onClick={[Function]}
           replace={false}
           to="/records/UQ:41878"
         >
@@ -2556,7 +2553,6 @@ exports[`PublicationCitation  should render component with publication from mult
         className="publicationTitle"
       >
         <Link
-          onClick={[Function]}
           replace={false}
           to="/records/UQ:41878"
         >
@@ -4233,7 +4229,6 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
         className="publicationTitle"
       >
         <Link
-          onClick={[Function]}
           replace={false}
           to="/records/UQ:41878"
         >
