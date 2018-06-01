@@ -24,6 +24,21 @@ describe('PublicationCitation ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render component with default list hiding the difference count', () => {
+        const wrapper = setup({hideCountDiff: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with default list hiding the total count', () => {
+        const wrapper = setup({hideCountTotal: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with default list hiding the citation content', () => {
+        const wrapper = setup({hideCitationContent: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render component with default actions', () => {
         const wrapper = setup({showDefaultActions: true});
         expect(toJson(wrapper)).toMatchSnapshot();
