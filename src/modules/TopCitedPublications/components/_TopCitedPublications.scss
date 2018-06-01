@@ -16,6 +16,9 @@ button.publicationTab {
       div.publicationCitation:nth-of-type(#{$i}) {
         span.trendingPubsDifference {
           color: darken(adjust-hue(red, ($i/20)*70), 10%) !important;
+          @include mobile {
+            font-size: $text-body-xlarge !important;
+          }
         }
       }
     }
@@ -40,6 +43,8 @@ button.publicationTab {
   }
   h3.publicationTitle {
     font-size: $text-body-xlarge !important;
-    line-height: $text-line-height-large !important;
+    @include mobile {
+      font-size: $text-body-large !important;
+    }
   }
 }
