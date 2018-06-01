@@ -27,7 +27,7 @@ export default class TopCitedPublications extends PureComponent {
 
     componentDidMount() {
         if (!this.props.loadingTopCitedPublications) {
-            this.props.actions.searchTopCitedPublications();
+            this.props.actions.searchTopCitedPublications(locale.components.topCitedPublications.recordsPerSource);
         }
     }
 

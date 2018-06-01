@@ -81,7 +81,8 @@ export default {
                     scopus: 'Scopus',
                     thomson: 'Web of science',
                     altmetric: 'Altmetric'
-                }
+                },
+                recordsPerSource: 5
             }
         },
         myTrendingPublications: {
@@ -154,7 +155,8 @@ export default {
                 heading: 'Web of Science citation count',
                 subHeading: 'The +plus score indicates the increase in citations over the three months',
                 order: 2
-            }
+            },
+            recordsPerSource: 20
         },
         keywordsForm: {
             field: {
