@@ -10,10 +10,10 @@ export function loadNewsFeed() {
     return dispatch => {
         dispatch({type: actions.NEWS_LOADING});
         return get(routes.GET_NEWS_API())
-            .then(newsData => {
+            .then(response => {
                 dispatch({
                     type: actions.NEWS_LOADED,
-                    payload: newsData
+                    payload: response.data
                 });
             })
             .catch(error => {
