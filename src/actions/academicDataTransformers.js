@@ -121,10 +121,10 @@ function getData(object, path) {
     }, object);
 }
 
-export const transformTrendingPublicationsMetricsData = ({data}) => {
+export const transformTrendingPublicationsMetricsData = ({data}, recordsToDisplayPerSource) => {
     const sources = trendingPublicationsConfig.sources;
 
-    return Object.entries(sources).map(([key, config]) => {
+    const trendingPublications = Object.entries(sources).map(([key, config]) => {
         const values = data.map(publication => {
             const count = getData(publication, config.metricDataPath.count);
             const difference = getData(publication, config.metricDataPath.difference);
@@ -145,6 +145,18 @@ export const transformTrendingPublicationsMetricsData = ({data}) => {
             }
         }).filter(value => value);
 
-        return {key, values};
+        // Sort top publications for each source in descening order and return asking number of records
+        const recordsToDisplay = values
+            .sort((publication1, publication2) => {
+                const difference1 = getData(publication1, config.metricDataPath.difference);
+                const difference2 = getData(publication2, config.metricDataPath.difference);
+                return difference2 - difference1;
+            })
+            .slice(0, recordsToDisplayPerSource);
+
+        return {key, values: recordsToDisplay};
     });
+
+    // filter out sources which doesn't have trending publications
+    return trendingPublications.filter(trendingPublicationsPerSource => trendingPublicationsPerSource.values.length > 0);
 };

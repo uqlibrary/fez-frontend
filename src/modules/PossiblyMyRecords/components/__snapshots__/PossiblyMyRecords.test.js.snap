@@ -162,7 +162,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                 },
               ]
             }
-            hideCitationContent={false}
             hideCountDiff={false}
             publicationsList={
               Array [

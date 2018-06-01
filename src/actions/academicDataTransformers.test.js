@@ -338,284 +338,275 @@ describe('Academic data transformers ', () => {
     });
 
     describe('transformTrendingPublicationsMetricsData', () => {
-            it('should transform trending publications response in correct order if more than one metrics data returned from api', () => {
-                const data = [
-                    {
-                        rek_pid: 'UQ:111111',
-                        rek_title: 'Test record 1',
-                        rek_date: '2016-01-01T00:00:00Z',
-                        fez_record_search_key_doi: {
-                            fez_altmetric: {
-                                as_score: 3,
-                                as_3m: 3,
-                                as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
-                            }
+        it('should transform trending publications response in correct order if more than one metrics data returned from api', () => {
+            const data = [
+                {
+                    rek_pid: 'UQ:111111',
+                    rek_title: 'Test record 1',
+                    rek_date: '2016-01-01T00:00:00Z',
+                    fez_record_search_key_doi: {
+                        fez_altmetric: {
+                            as_score: 3,
+                            as_3m: 3,
+                            as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
+                        }
+                    }
+                },
+                {
+                    rek_pid: 'UQ:222222',
+                    rek_title: 'Test record 2',
+                    rek_date: '2017-01-01T00:00:00Z',
+                    fez_record_search_key_doi: {
+                        fez_altmetric: {
+                            as_score: 10,
+                            as_3m: 4,
+                            as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
                         }
                     },
-                    {
-                        rek_pid: 'UQ:222222',
-                        rek_title: 'Test record 2',
-                        rek_date: '2017-01-01T00:00:00Z',
-                        fez_record_search_key_doi: {
-                            fez_altmetric: {
-                                as_score: 10,
-                                as_3m: 4,
-                                as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
+                    fez_record_search_key_isi_loc: {
+                        fez_thomson_citations: {
+                            tc_count: 6,
+                            tc_3m: 4,
+                            tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                        }
+                    }
+                },
+                {
+                    rek_pid: 'UQ:333333',
+                    rek_title: 'Test record 3',
+                    rek_date: '2018-01-01T00:00:00Z',
+                    fez_record_search_key_isi_loc: {
+                        fez_thomson_citations: {
+                            tc_count: 15,
+                            tc_3m: 8,
+                            tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                        }
+                    },
+                    fez_record_search_key_scopus_id: {
+                        fez_scopus_citations: {
+                            sc_count: 23,
+                            sc_3m: 45,
+                            sc_citation_url: 'http://www.scopus.com/details.php?citation_id=23432423'
+                        }
+                    }
+                }
+            ];
+
+            const expectedMetrics = [
+                {
+                    key: 'scopus',
+                    values: [
+                        {
+                            rek_pid: 'UQ:333333',
+                            rek_title: 'Test record 3',
+                            rek_date: '2018-01-01T00:00:00Z',
+                            fez_record_search_key_isi_loc: {
+                                fez_thomson_citations: {
+                                    tc_count: 15,
+                                    tc_3m: 8,
+                                    tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                                }
+                            },
+                            fez_record_search_key_scopus_id: {
+                                fez_scopus_citations: {
+                                    sc_count: 23,
+                                    sc_3m: 45,
+                                    sc_citation_url: 'http://www.scopus.com/details.php?citation_id=23432423'
+                                }
+                            },
+                            metricData: {
+                                count: 23,
+                                difference: 45,
+                                citation_url: "http://www.scopus.com/details.php?citation_id=23432423",
+                                source: "scopus"
+                            }
+                        }
+                    ]
+                },
+                {
+                    key: 'thomson',
+                    values: [
+                        {
+                            rek_pid: 'UQ:333333',
+                            rek_title: 'Test record 3',
+                            rek_date: '2018-01-01T00:00:00Z',
+                            fez_record_search_key_isi_loc: {
+                                fez_thomson_citations: {
+                                    tc_count: 15,
+                                    tc_3m: 8,
+                                    tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                                }
+                            },
+                            fez_record_search_key_scopus_id: {
+                                fez_scopus_citations: {
+                                    sc_count: 23,
+                                    sc_3m: 45,
+                                    sc_citation_url: 'http://www.scopus.com/details.php?citation_id=23432423'
+                                }
+                            },
+                            metricData: {
+                                "count": 15,
+                                "difference": 8,
+                                "citation_url": "http://www.wos.com?citation_id=123242",
+                                "source": "thomson"
                             }
                         },
-                        fez_record_search_key_isi_loc: {
-                            fez_thomson_citations: {
-                                tc_count: 6,
-                                tc_3m: 4,
-                                tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                        {
+                            rek_pid: 'UQ:222222',
+                            rek_title: 'Test record 2',
+                            rek_date: '2017-01-01T00:00:00Z',
+                            fez_record_search_key_doi: {
+                                fez_altmetric: {
+                                    as_score: 10,
+                                    as_3m: 4,
+                                    as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
+                                }
+                            },
+                            fez_record_search_key_isi_loc: {
+                                fez_thomson_citations: {
+                                    tc_count: 6,
+                                    tc_3m: 4,
+                                    tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                                }
+                            },
+                            metricData: {
+                                "count": 6,
+                                "difference": 4,
+                                "citation_url": "http://www.wos.com?citation_id=123242",
+                                "source": "thomson"
                             }
                         }
-                    },
-                    {
-                        rek_pid: 'UQ:333333',
-                        rek_title: 'Test record 3',
-                        rek_date: '2018-01-01T00:00:00Z',
-                        fez_record_search_key_isi_loc: {
-                            fez_thomson_citations: {
-                                tc_count: 15,
-                                tc_3m: 8,
-                                tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                    ]
+                },
+                {
+                    key: 'altmetric',
+                    values: [
+                        {
+                            rek_pid: 'UQ:222222',
+                            rek_title: 'Test record 2',
+                            rek_date: '2017-01-01T00:00:00Z',
+                            fez_record_search_key_doi: {
+                                fez_altmetric: {
+                                    as_score: 10,
+                                    as_3m: 4,
+                                    as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
+                                }
+                            },
+                            fez_record_search_key_isi_loc: {
+                                fez_thomson_citations: {
+                                    tc_count: 6,
+                                    tc_3m: 4,
+                                    tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                                }
+                            },
+                            metricData: {
+                                "count": 10,
+                                "difference": 4,
+                                "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
+                                "source": "altmetric"
                             }
                         },
-                        fez_record_search_key_scopus_id: {
-                            fez_scopus_citations: {
-                                sc_count: 23,
-                                sc_3m: 45,
-                                sc_citation_url: 'http://www.scopus.com/details.php?citation_id=23432423'
-                            }
-                        }
-                    }
-                ];
-
-                const expectedMetrics = [
-                    {
-                        key: 'scopus',
-                        values: [
-                            {
-                                rek_pid: 'UQ:333333',
-                                rek_title: 'Test record 3',
-                                rek_date: '2018-01-01T00:00:00Z',
-                                fez_record_search_key_isi_loc: {
-                                    fez_thomson_citations: {
-                                        tc_count: 15,
-                                        tc_3m: 8,
-                                        tc_citation_url: 'http://www.wos.com?citation_id=123242'
-                                    }
-                                },
-                                fez_record_search_key_scopus_id: {
-                                    fez_scopus_citations: {
-                                        sc_count: 23,
-                                        sc_3m: 45,
-                                        sc_citation_url: 'http://www.scopus.com/details.php?citation_id=23432423'
-                                    }
-                                },
-                                metricData: {
-                                    "count": 23,
-                                    "difference": 45,
-                                    "citation_url": "http://www.scopus.com/details.php?citation_id=23432423",
-                                    "source": "scopus"
-                                }
-                            }
-
-                        ]
-                    },
-                    {
-                        key: 'thomson',
-                        values: [
-                            {
-                                rek_pid: 'UQ:222222',
-                                rek_title: 'Test record 2',
-                                rek_date: '2017-01-01T00:00:00Z',
-                                fez_record_search_key_doi: {
-                                    fez_altmetric: {
-                                        as_score: 10,
-                                        as_3m: 4,
-                                        as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
-                                    }
-                                },
-                                fez_record_search_key_isi_loc: {
-                                    fez_thomson_citations: {
-                                        tc_count: 6,
-                                        tc_3m: 4,
-                                        tc_citation_url: 'http://www.wos.com?citation_id=123242'
-                                    }
-                                },
-                                metricData: {
-                                    "count": 6,
-                                    "difference": 4,
-                                    "citation_url": "http://www.wos.com?citation_id=123242",
-                                    "source": "thomson"
+                        {
+                            rek_pid: 'UQ:111111',
+                            rek_title: 'Test record 1',
+                            rek_date: '2016-01-01T00:00:00Z',
+                            fez_record_search_key_doi: {
+                                fez_altmetric: {
+                                    as_score: 3,
+                                    as_3m: 3,
+                                    as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
                                 }
                             },
-                            {
-                                rek_pid: 'UQ:333333',
-                                rek_title: 'Test record 3',
-                                rek_date: '2018-01-01T00:00:00Z',
-                                fez_record_search_key_isi_loc: {
-                                    fez_thomson_citations: {
-                                        tc_count: 15,
-                                        tc_3m: 8,
-                                        tc_citation_url: 'http://www.wos.com?citation_id=123242'
-                                    }
-                                },
-                                fez_record_search_key_scopus_id: {
-                                    fez_scopus_citations: {
-                                        sc_count: 23,
-                                        sc_3m: 45,
-                                        sc_citation_url: 'http://www.scopus.com/details.php?citation_id=23432423'
-                                    }
-                                },
-                                metricData: {
-                                    "count": 15,
-                                    "difference": 8,
-                                    "citation_url": "http://www.wos.com?citation_id=123242",
-                                    "source": "thomson"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        key: 'altmetric',
-                        values: [
-                            {
-                                rek_pid: 'UQ:111111',
-                                rek_title: 'Test record 1',
-                                rek_date: '2016-01-01T00:00:00Z',
-                                fez_record_search_key_doi: {
-                                    fez_altmetric: {
-                                        as_score: 3,
-                                        as_3m: 3,
-                                        as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
-                                    }
-                                },
-                                metricData: {
-                                    "count": 3,
-                                    "difference": 3,
-                                    "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
-                                    "source": "altmetric"
-                                }
-                            },
-                            {
-                                rek_pid: 'UQ:222222',
-                                rek_title: 'Test record 2',
-                                rek_date: '2017-01-01T00:00:00Z',
-                                fez_record_search_key_doi: {
-                                    fez_altmetric: {
-                                        as_score: 10,
-                                        as_3m: 4,
-                                        as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
-                                    }
-                                },
-                                fez_record_search_key_isi_loc: {
-                                    fez_thomson_citations: {
-                                        tc_count: 6,
-                                        tc_3m: 4,
-                                        tc_citation_url: 'http://www.wos.com?citation_id=123242'
-                                    }
-                                },
-                                metricData: {
-                                    "count": 10,
-                                    "difference": 4,
-                                    "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
-                                    "source": "altmetric"
-                                }
-                            }
-                        ]
-                    }
-                ];
-
-                const result = transformers.transformTrendingPublicationsMetricsData({data});
-                expect(result).toEqual(expectedMetrics);
-            });
-
-            it('should transform trending publications response correctly if only one metric data returned from api', () => {
-                const data = [
-                    {
-                        rek_pid: 'UQ:222222',
-                        rek_title: 'Test record 2',
-                        rek_date: '2017-01-01T00:00:00Z',
-                        fez_record_search_key_isi_loc: {
-                            fez_thomson_citations: {
-                                tc_count: 6,
-                                tc_3m: 4,
-                                tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                            metricData: {
+                                "count": 3,
+                                "difference": 3,
+                                "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
+                                "source": "altmetric"
                             }
                         }
-                    },
-                    {
-                        rek_pid: 'UQ:333333',
-                        rek_title: 'Test record 3',
-                        rek_date: '2018-01-01T00:00:00Z',
-                        fez_record_search_key_isi_loc: {
-                            fez_thomson_citations: {
-                                tc_count: 15,
-                                tc_3m: 8,
-                                tc_citation_url: 'http://www.wos.com?details.php?citation_id=548872'
-                            }
-                        }
-                    }
-                ];
-                const expectedMetrics = [
-                    {
-                        key: 'scopus',
-                        values: []
-                    },
-                    {
-                        key: 'thomson',
-                        values: [
-                            {
-                                rek_pid: 'UQ:222222',
-                                rek_title: 'Test record 2',
-                                rek_date: '2017-01-01T00:00:00Z',
-                                fez_record_search_key_isi_loc: {
-                                    fez_thomson_citations: {
-                                        tc_count: 6,
-                                        tc_3m: 4,
-                                        tc_citation_url: 'http://www.wos.com?citation_id=123242'
-                                    }
-                                },
-                                metricData: {
-                                    "count": 6,
-                                    "difference": 4,
-                                    "citation_url": "http://www.wos.com?citation_id=123242",
-                                    "source": "thomson"
-                                }
-                            },
-                            {
-                                rek_pid: 'UQ:333333',
-                                rek_title: 'Test record 3',
-                                rek_date: '2018-01-01T00:00:00Z',
-                                fez_record_search_key_isi_loc: {
-                                    fez_thomson_citations: {
-                                        tc_count: 15,
-                                        tc_3m: 8,
-                                        tc_citation_url: 'http://www.wos.com?details.php?citation_id=548872'
-                                    }
-                                },
-                                metricData: {
-                                    "count": 15,
-                                    "difference": 8,
-                                    "citation_url": "http://www.wos.com?details.php?citation_id=548872",
-                                    "source": "thomson"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        key: 'altmetric',
-                        values: []
-                    },
-                ];
+                    ]
+                }
+            ];
 
-                const result = transformers.transformTrendingPublicationsMetricsData({data});
-                expect(result).toEqual(expectedMetrics);
-            });
+            const result = transformers.transformTrendingPublicationsMetricsData({data});
+            expect(result).toEqual(expectedMetrics);
         });
+
+        it('should transform trending publications response correctly if only one metric data returned from api', () => {
+            const data = [
+                {
+                    rek_pid: 'UQ:222222',
+                    rek_title: 'Test record 2',
+                    rek_date: '2017-01-01T00:00:00Z',
+                    fez_record_search_key_isi_loc: {
+                        fez_thomson_citations: {
+                            tc_count: 6,
+                            tc_3m: 4,
+                            tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                        }
+                    }
+                },
+                {
+                    rek_pid: 'UQ:333333',
+                    rek_title: 'Test record 3',
+                    rek_date: '2018-01-01T00:00:00Z',
+                    fez_record_search_key_isi_loc: {
+                        fez_thomson_citations: {
+                            tc_count: 15,
+                            tc_3m: 8,
+                            tc_citation_url: 'http://www.wos.com?details.php?citation_id=548872'
+                        }
+                    }
+                }
+            ];
+            const expectedMetrics = [
+                {
+                    key: 'thomson',
+                    values: [
+                        {
+                            rek_pid: 'UQ:333333',
+                            rek_title: 'Test record 3',
+                            rek_date: '2018-01-01T00:00:00Z',
+                            fez_record_search_key_isi_loc: {
+                                fez_thomson_citations: {
+                                    tc_count: 15,
+                                    tc_3m: 8,
+                                    tc_citation_url: 'http://www.wos.com?details.php?citation_id=548872'
+                                }
+                            },
+                            metricData: {
+                                "count": 15,
+                                "difference": 8,
+                                "citation_url": "http://www.wos.com?details.php?citation_id=548872",
+                                "source": "thomson"
+                            }
+                        },
+                        {
+                            rek_pid: 'UQ:222222',
+                            rek_title: 'Test record 2',
+                            rek_date: '2017-01-01T00:00:00Z',
+                            fez_record_search_key_isi_loc: {
+                                fez_thomson_citations: {
+                                    tc_count: 6,
+                                    tc_3m: 4,
+                                    tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                                }
+                            },
+                            metricData: {
+                                "count": 6,
+                                "difference": 4,
+                                "citation_url": "http://www.wos.com?citation_id=123242",
+                                "source": "thomson"
+                            }
+                        }
+                    ]
+                }
+            ];
+
+            const result = transformers.transformTrendingPublicationsMetricsData({data});
+            expect(result).toEqual(expectedMetrics);
+        });
+    });
 
     it('should getPublicationsStats when data is provided', () => {
         const years = ['1999', '2001', '2004', '2005', '2007', '2009', '2010', '2014'];
@@ -646,7 +637,7 @@ describe('Academic data transformers ', () => {
         expect(result).toEqual(expected);
     });
 
-    describe('transformMissingTrendingPublicationsMetricsData', () => {
+    describe('transformTrendingPublicationsMetricsData', () => {
         it ('should get a zero result on altmetric if altmetric has no trending data', () => {
             const data = [
                 {
@@ -703,64 +694,38 @@ describe('Academic data transformers ', () => {
 
             const expectedMetrics = [
                 {
-                    key: 'scopus',
+                    key: "scopus",
                     values: [
                         {
-                            rek_pid: 'UQ:333333',
-                            rek_title: 'Test record 3',
-                            rek_date: '2018-01-01T00:00:00Z',
                             fez_record_search_key_isi_loc: {
                                 fez_thomson_citations: {
-                                    tc_count: 15,
                                     tc_3m: 8,
-                                    tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                                    tc_citation_url: "http://www.wos.com?citation_id=123242",
+                                    tc_count: 15
                                 }
                             },
                             fez_record_search_key_scopus_id: {
                                 fez_scopus_citations: {
-                                    sc_count: 23,
                                     sc_3m: 45,
-                                    sc_citation_url: 'http://www.scopus.com/details.php?citation_id=23432423'
+                                    sc_citation_url: "http://www.scopus.com/details.php?citation_id=23432423",
+                                    sc_count: 23
                                 }
                             },
                             metricData: {
-                                "count": 23,
-                                "difference": 45,
-                                "citation_url": "http://www.scopus.com/details.php?citation_id=23432423",
-                                "source": "scopus"
+                                citation_url: "http://www.scopus.com/details.php?citation_id=23432423",
+                                count: 23,
+                                difference: 45,
+                                source: "scopus"
+                            },
+                            rek_date: "2018-01-01T00:00:00Z",
+                            rek_pid: "UQ:333333",
+                            rek_title: "Test record 3"
                             }
-                        }
-
-                    ]
+                        ]
                 },
                 {
                     key: 'thomson',
                     values: [
-                        {
-                            rek_pid: 'UQ:222222',
-                            rek_title: 'Test record 2',
-                            rek_date: '2017-01-01T00:00:00Z',
-                            fez_record_search_key_doi: {
-                                fez_altmetric: {
-                                    as_score: 10,
-                                    as_3m: 0,
-                                    as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
-                                }
-                            },
-                            fez_record_search_key_isi_loc: {
-                                fez_thomson_citations: {
-                                    tc_count: 6,
-                                    tc_3m: 4,
-                                    tc_citation_url: 'http://www.wos.com?citation_id=123242'
-                                }
-                            },
-                            metricData: {
-                                "count": 6,
-                                "difference": 4,
-                                "citation_url": "http://www.wos.com?citation_id=123242",
-                                "source": "thomson"
-                            }
-                        },
                         {
                             rek_pid: 'UQ:333333',
                             rek_title: 'Test record 3',
@@ -785,12 +750,33 @@ describe('Academic data transformers ', () => {
                                 "citation_url": "http://www.wos.com?citation_id=123242",
                                 "source": "thomson"
                             }
+                        },
+                        {
+                            rek_pid: 'UQ:222222',
+                            rek_title: 'Test record 2',
+                            rek_date: '2017-01-01T00:00:00Z',
+                            fez_record_search_key_doi: {
+                                fez_altmetric: {
+                                    as_score: 10,
+                                    as_3m: 0,
+                                    as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
+                                }
+                            },
+                            fez_record_search_key_isi_loc: {
+                                fez_thomson_citations: {
+                                    tc_count: 6,
+                                    tc_3m: 4,
+                                    tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                                }
+                            },
+                            metricData: {
+                                "count": 6,
+                                "difference": 4,
+                                "citation_url": "http://www.wos.com?citation_id=123242",
+                                "source": "thomson"
+                            }
                         }
                     ]
-                },
-                {
-                    key: 'altmetric',
-                    values: []
                 }
             ];
 
@@ -799,7 +785,7 @@ describe('Academic data transformers ', () => {
 
         });
 
-        it ('should get a zero result on wos if wos has no trending data', () => {
+        it('should get a zero result on wos if wos has no trending data', () => {
             const data = [
                 {
                     rek_pid: 'UQ:111111',
@@ -855,61 +841,38 @@ describe('Academic data transformers ', () => {
 
             const expectedMetrics = [
                 {
-                    key: 'scopus',
+                    key: "scopus",
                     values: [
                         {
-                            rek_pid: 'UQ:333333',
-                            rek_title: 'Test record 3',
-                            rek_date: '2018-01-01T00:00:00Z',
                             fez_record_search_key_isi_loc: {
                                 fez_thomson_citations: {
-                                    tc_count: 15,
                                     tc_3m: 0,
-                                    tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                                    tc_citation_url: "http://www.wos.com?citation_id=123242",
+                                    tc_count: 15
                                 }
                             },
                             fez_record_search_key_scopus_id: {
                                 fez_scopus_citations: {
-                                    sc_count: 23,
                                     sc_3m: 45,
-                                    sc_citation_url: 'http://www.scopus.com/details.php?citation_id=23432423'
+                                    sc_citation_url: "http://www.scopus.com/details.php?citation_id=23432423",
+                                    sc_count: 23
                                 }
                             },
                             metricData: {
-                                "count": 23,
-                                "difference": 45,
-                                "citation_url": "http://www.scopus.com/details.php?citation_id=23432423",
-                                "source": "scopus"
-                            }
+                                citation_url: "http://www.scopus.com/details.php?citation_id=23432423",
+                                count: 23,
+                                difference: 45,
+                                source: "scopus"
+                            },
+                            rek_date: "2018-01-01T00:00:00Z",
+                            rek_pid: "UQ:333333",
+                            rek_title: "Test record 3"
                         }
-
                     ]
-                },
-                {
-                    key: 'thomson',
-                    values: []
                 },
                 {
                     key: 'altmetric',
                     values: [
-                        {
-                            rek_pid: 'UQ:111111',
-                            rek_title: 'Test record 1',
-                            rek_date: '2016-01-01T00:00:00Z',
-                            fez_record_search_key_doi: {
-                                fez_altmetric: {
-                                    as_score: 3,
-                                    as_3m: 3,
-                                    as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
-                                }
-                            },
-                            metricData: {
-                                "count": 3,
-                                "difference": 3,
-                                "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
-                                "source": "altmetric"
-                            }
-                        },
                         {
                             rek_pid: 'UQ:222222',
                             rek_title: 'Test record 2',
@@ -934,6 +897,24 @@ describe('Academic data transformers ', () => {
                                 "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
                                 "source": "altmetric"
                             }
+                        },
+                        {
+                            rek_pid: 'UQ:111111',
+                            rek_title: 'Test record 1',
+                            rek_date: '2016-01-01T00:00:00Z',
+                            fez_record_search_key_doi: {
+                                fez_altmetric: {
+                                    as_score: 3,
+                                    as_3m: 3,
+                                    as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
+                                }
+                            },
+                            metricData: {
+                                "count": 3,
+                                "difference": 3,
+                                "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
+                                "source": "altmetric"
+                            }
                         }
                     ]
                 }
@@ -944,7 +925,7 @@ describe('Academic data transformers ', () => {
 
         });
 
-        it ('should get a zero result on scopus if scopus has no trending data', () => {
+        it('should get a zero result on scopus if scopus has no trending data', () => {
             const data = [
                 {
                     rek_pid: 'UQ:111111',
@@ -1000,38 +981,8 @@ describe('Academic data transformers ', () => {
 
             const expectedMetrics = [
                 {
-                    key: 'scopus',
-                    values: [
-                    ]
-                },
-                {
                     key: 'thomson',
                     values: [
-                        {
-                            rek_pid: 'UQ:222222',
-                            rek_title: 'Test record 2',
-                            rek_date: '2017-01-01T00:00:00Z',
-                            fez_record_search_key_doi: {
-                                fez_altmetric: {
-                                    as_score: 10,
-                                    as_3m: 4,
-                                    as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
-                                }
-                            },
-                            fez_record_search_key_isi_loc: {
-                                fez_thomson_citations: {
-                                    tc_count: 6,
-                                    tc_3m: 4,
-                                    tc_citation_url: 'http://www.wos.com?citation_id=123242'
-                                }
-                            },
-                            metricData: {
-                                "count": 6,
-                                "difference": 4,
-                                "citation_url": "http://www.wos.com?citation_id=123242",
-                                "source": "thomson"
-                            }
-                        },
                         {
                             rek_pid: 'UQ:333333',
                             rek_title: 'Test record 3',
@@ -1056,30 +1007,37 @@ describe('Academic data transformers ', () => {
                                 "citation_url": "http://www.wos.com?citation_id=123242",
                                 "source": "thomson"
                             }
+                        },
+                        {
+                            rek_pid: 'UQ:222222',
+                            rek_title: 'Test record 2',
+                            rek_date: '2017-01-01T00:00:00Z',
+                            fez_record_search_key_doi: {
+                                fez_altmetric: {
+                                    as_score: 10,
+                                    as_3m: 4,
+                                    as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
+                                }
+                            },
+                            fez_record_search_key_isi_loc: {
+                                fez_thomson_citations: {
+                                    tc_count: 6,
+                                    tc_3m: 4,
+                                    tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                                }
+                            },
+                            metricData: {
+                                "count": 6,
+                                "difference": 4,
+                                "citation_url": "http://www.wos.com?citation_id=123242",
+                                "source": "thomson"
+                            }
                         }
                     ]
                 },
                 {
                     key: 'altmetric',
                     values: [
-                        {
-                            rek_pid: 'UQ:111111',
-                            rek_title: 'Test record 1',
-                            rek_date: '2016-01-01T00:00:00Z',
-                            fez_record_search_key_doi: {
-                                fez_altmetric: {
-                                    as_score: 3,
-                                    as_3m: 3,
-                                    as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
-                                }
-                            },
-                            metricData: {
-                                "count": 3,
-                                "difference": 3,
-                                "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
-                                "source": "altmetric"
-                            }
-                        },
                         {
                             rek_pid: 'UQ:222222',
                             rek_title: 'Test record 2',
@@ -1101,6 +1059,24 @@ describe('Academic data transformers ', () => {
                             metricData: {
                                 "count": 10,
                                 "difference": 4,
+                                "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
+                                "source": "altmetric"
+                            }
+                        },
+                        {
+                            rek_pid: 'UQ:111111',
+                            rek_title: 'Test record 1',
+                            rek_date: '2016-01-01T00:00:00Z',
+                            fez_record_search_key_doi: {
+                                fez_altmetric: {
+                                    as_score: 3,
+                                    as_3m: 3,
+                                    as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458'
+                                }
+                            },
+                            metricData: {
+                                "count": 3,
+                                "difference": 3,
                                 "citation_url": "http://www.altmetric.com/details.php?citation_id=3638458",
                                 "source": "altmetric"
                             }

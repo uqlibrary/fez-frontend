@@ -32,14 +32,14 @@ export function searchLatestPublications() {
  * Get top cited publications
  * @returns {action}
  */
-export function searchTopCitedPublications() {
+export function searchTopCitedPublications(recordsPerSource = 20) {
     return dispatch => {
         dispatch({type: actions.TOP_CITED_PUBLICATIONS_LOADING});
         return get(routes.TRENDING_PUBLICATIONS_API())
             .then(response => {
-                if (response.data.length > 0) {
-                    const transformedTopCitedPublications = transformTrendingPublicationsMetricsData(response);
-
+                const transformedTopCitedPublications = !!response.data && response.data.length > 0 &&
+                    transformTrendingPublicationsMetricsData(response, recordsPerSource);
+                if (transformedTopCitedPublications.length > 0) {
                     transformedTopCitedPublications.map(({key, values}) => {
                         dispatch({
                             type: `${actions.TOP_CITED_PUBLICATIONS_LOADED}@${key}`,
@@ -98,14 +98,14 @@ export function searchAuthorPublications({page = 1, pageSize = 20, sortBy = 'pub
  * @param {string} author user name
  * @returns {action}
  */
-export function searchTrendingPublications() {
+export function searchTrendingPublications(recordsPerSource = 5) {
     return dispatch => {
         dispatch({type: actions.TRENDING_PUBLICATIONS_LOADING});
         return get(routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API())
             .then(response => {
-                if (response.data.length > 0) {
-                    const transformedTrendingPublications = transformTrendingPublicationsMetricsData(response);
-
+                const transformedTrendingPublications = !!response.data && response.data.length > 0 &&
+                    transformTrendingPublicationsMetricsData(response, recordsPerSource);
+                if (transformedTrendingPublications.length > 0) {
                     transformedTrendingPublications.map(({key, values}) => {
                         dispatch({
                             type: `${actions.TRENDING_PUBLICATIONS_LOADED}@${key}`,
