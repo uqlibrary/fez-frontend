@@ -47,7 +47,8 @@ export default class PublicationCitation extends PureComponent {
         hideTitle: PropTypes.bool,
         showMetrics: PropTypes.bool,
         showSourceCountIcon: PropTypes.bool,
-        hideCountDiff: PropTypes.bool
+        hideCountDiff: PropTypes.bool,
+        hideCountTotal: PropTypes.bool
     };
 
     static defaultProps = {
@@ -56,7 +57,8 @@ export default class PublicationCitation extends PureComponent {
         showSourceCountIcon: false,
         className: '',
         hideTitle: false,
-        hideCountDiff: false
+        hideCountDiff: false,
+        hideCountTotal: false
     };
 
     constructor(props) {
@@ -196,15 +198,15 @@ export default class PublicationCitation extends PureComponent {
                                         <div className={'count'}>{recordValue.count}</div>
                                     </div>
                                 }
-                                {!this.props.showSourceCountIcon && recordValue.count}
+                                {!this.props.showSourceCountIcon && !this.props.hideCountTotal && recordValue.count}
+                                {
+                                    !this.props.hideCountDiff &&
+                                    <span
+                                        className="trendingPubsDifference"
+                                        title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}>+{Math.round(recordValue.difference)}
+                                    </span>
+                                }
                             </ExternalLink>
-                            {
-                                !this.props.hideCountDiff &&
-                                <span
-                                    className="trendingPubsDifference"
-                                    title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}>+{Math.round(recordValue.difference)}
-                                </span>
-                            }
                         </div>
                     }
                 </div>

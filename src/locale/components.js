@@ -73,9 +73,9 @@ export default {
             ],
             myTrendingPublications: {
                 trendDifferenceShares: {
-                    scopus: 'Difference in shares since last month',
-                    thomson: 'Difference in shares since last month',
-                    altmetric: 'Difference in social media activities for the past one year'
+                    scopus: 'Difference in citations',
+                    thomson: 'Difference in citations',
+                    altmetric: 'Difference in social media activities'
                 },
                 sourceTitles: {
                     scopus: 'Scopus',
@@ -120,6 +120,11 @@ export default {
                     <p>
                         You can click on the number as a link to see who is citing each publication, or in the
                         case of Altmetric who is referencing the publication in social media and news outlets.
+                    </p>
+                    <p>For more information visit :
+                        <a href="https://www.altmetric.com/about-altmetrics/what-are-altmetrics/" target="_blank" rel="noopener noreferrer">
+                            https://www.altmetric.com/about-altmetrics/what-are-altmetrics/
+                        </a>
                     </p>
                 </div>),
             buttonLabel: 'OK'

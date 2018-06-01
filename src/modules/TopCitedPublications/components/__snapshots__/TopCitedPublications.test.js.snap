@@ -64,6 +64,16 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
                     <p>
                       You can click on the number as a link to see who is citing each publication, or in the case of Altmetric who is referencing the publication in social media and news outlets.
                     </p>
+                    <p>
+                      For more information visit :
+                      <a
+                        href="https://www.altmetric.com/about-altmetrics/what-are-altmetrics/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        https://www.altmetric.com/about-altmetrics/what-are-altmetrics/
+                      </a>
+                    </p>
                   </div>
                 }
                 title="About these metrics"
@@ -87,7 +97,8 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
                 The +plus score indicates recent increase in social media activity
               </div>
               <PublicationsList
-                hideCountDiff={true}
+                hideCountDiff={false}
+                hideCountTotal={true}
                 publicationsList={
                   Array [
                     Object {
@@ -890,7 +901,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
                 publicationsListSubset={Array []}
                 showDefaultActions={false}
                 showMetrics={true}
-                showSourceCountIcon={true}
+                showSourceCountIcon={false}
                 showSources={false}
                 subsetCustomActions={Array []}
               />
@@ -934,6 +945,16 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
                     <p>
                       You can click on the number as a link to see who is citing each publication, or in the case of Altmetric who is referencing the publication in social media and news outlets.
                     </p>
+                    <p>
+                      For more information visit :
+                      <a
+                        href="https://www.altmetric.com/about-altmetrics/what-are-altmetrics/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        https://www.altmetric.com/about-altmetrics/what-are-altmetrics/
+                      </a>
+                    </p>
                   </div>
                 }
                 title="About these metrics"
@@ -958,6 +979,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
               </div>
               <PublicationsList
                 hideCountDiff={false}
+                hideCountTotal={true}
                 publicationsList={
                   Array [
                     Object {
@@ -1804,6 +1826,16 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
                     <p>
                       You can click on the number as a link to see who is citing each publication, or in the case of Altmetric who is referencing the publication in social media and news outlets.
                     </p>
+                    <p>
+                      For more information visit :
+                      <a
+                        href="https://www.altmetric.com/about-altmetrics/what-are-altmetrics/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        https://www.altmetric.com/about-altmetrics/what-are-altmetrics/
+                      </a>
+                    </p>
                   </div>
                 }
                 title="About these metrics"
@@ -1828,6 +1860,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
               </div>
               <PublicationsList
                 hideCountDiff={false}
+                hideCountTotal={true}
                 publicationsList={
                   Array [
                     Object {
