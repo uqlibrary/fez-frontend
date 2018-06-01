@@ -101,7 +101,6 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
           }
         />
         <PublicationsList
-          hideCitationContent={false}
           hideCountDiff={false}
           publicationsList={
             Array [
@@ -193,7 +192,6 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
           }
         />
         <PublicationsList
-          hideCitationContent={false}
           hideCountDiff={false}
           publicationsList={
             Array [

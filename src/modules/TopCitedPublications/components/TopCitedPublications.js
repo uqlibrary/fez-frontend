@@ -73,7 +73,6 @@ export default class TopCitedPublications extends PureComponent {
                                                         showMetrics
                                                         showSourceCountIcon={key === 'altmetric'}
                                                         hideCountDiff={key === 'altmetric'}
-                                                        hideCitationContent
                                                     />
                                                 </div>
                                             </div>

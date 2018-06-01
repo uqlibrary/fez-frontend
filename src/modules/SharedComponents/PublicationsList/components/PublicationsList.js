@@ -12,7 +12,6 @@ export default class PublicationsList extends PureComponent {
         showSources: PropTypes.bool,
         showMetrics: PropTypes.bool,
         showSourceCountIcon: PropTypes.bool,
-        hideCitationContent: PropTypes.bool,
         hideCountDiff: PropTypes.bool
     };
 
@@ -23,7 +22,6 @@ export default class PublicationsList extends PureComponent {
         showDefaultActions: false,
         showSourceCountIcon: false,
         showMetrics: false,
-        hideCitationContent: false,
         hideCountDiff: false
     };
 
@@ -40,7 +38,6 @@ export default class PublicationsList extends PureComponent {
                 showSources={this.props.showSources}
                 showDefaultActions={this.props.showDefaultActions}
                 showMetrics={this.props.showMetrics}
-                hideCitationContent={this.props.hideCitationContent}
                 showSourceCountIcon={this.props.showSourceCountIcon}
                 hideCountDiff={this.props.hideCountDiff}
             />

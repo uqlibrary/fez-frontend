@@ -87,7 +87,6 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
                 The +plus score indicates recent increase in social media activity
               </div>
               <PublicationsList
-                hideCitationContent={true}
                 hideCountDiff={true}
                 publicationsList={
                   Array [
@@ -958,7 +957,6 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
                 The +plus score indicates the increase in citations over the three months
               </div>
               <PublicationsList
-                hideCitationContent={true}
                 hideCountDiff={false}
                 publicationsList={
                   Array [
@@ -1829,7 +1827,6 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
                 The +plus score indicates the increase in citations over the three months
               </div>
               <PublicationsList
-                hideCitationContent={true}
                 hideCountDiff={false}
                 publicationsList={
                   Array [

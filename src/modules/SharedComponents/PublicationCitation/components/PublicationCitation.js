@@ -45,7 +45,6 @@ export default class PublicationCitation extends PureComponent {
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
         hideTitle: PropTypes.bool,
-        hideCitationContent: PropTypes.bool,
         showMetrics: PropTypes.bool,
         showSourceCountIcon: PropTypes.bool,
         hideCountDiff: PropTypes.bool
@@ -57,7 +56,6 @@ export default class PublicationCitation extends PureComponent {
         showSourceCountIcon: false,
         className: '',
         hideTitle: false,
-        hideCitationContent: false,
         hideCountDiff: false
     };
 
@@ -174,7 +172,7 @@ export default class PublicationCitation extends PureComponent {
                             </h3>
                         }
 
-                        {!this.props.hideCitationContent && this.renderCitation(this.props.publication.rek_display_type)}
+                        {this.renderCitation(this.props.publication.rek_display_type)}
 
                         <CitationCounts publication={this.props.publication} />
 

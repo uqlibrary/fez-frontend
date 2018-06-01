@@ -59,7 +59,6 @@ exports[`Component MyTrendingPublications should render trending publications 1`
       The +plus score indicates the increase in citations over the last month
     </div>
     <PublicationsList
-      hideCitationContent={false}
       hideCountDiff={false}
       publicationsList={
         Array [
@@ -886,7 +885,6 @@ exports[`Component MyTrendingPublications should render trending publications 1`
       The +plus score indicates the increase in citations over the last month
     </div>
     <PublicationsList
-      hideCitationContent={false}
       hideCountDiff={false}
       publicationsList={
         Array [
@@ -1794,7 +1792,6 @@ exports[`Component MyTrendingPublications should render trending publications 1`
       The +plus score indicates recent increase in social media activity
     </div>
     <PublicationsList
-      hideCitationContent={false}
       hideCountDiff={false}
       publicationsList={
         Array [
