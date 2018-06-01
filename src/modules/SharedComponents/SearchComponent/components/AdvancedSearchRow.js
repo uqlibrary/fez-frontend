@@ -13,44 +13,51 @@ export default class AdvancedSearchRow extends PureComponent {
         searchQueryParams: PropTypes.string,
         fieldIndex: PropTypes.number,
         searchField: PropTypes.number,
-        initialValue: PropTypes.any
+        value: PropTypes.any,
+        updateValueFunc: PropTypes.func,
+        deleteFunc: PropTypes.func
     };
 
     constructor(props) {
         super(props);
         this.state = {
-            initialValue: this.props.initialValue || '',
-            searchField: this.props.searchField || 0,
+            value: props.value || '',
+            searchField: props.searchField || 0,
         };
     }
 
     componentWillReceiveProps(nextProps) {
-        if(this.props.initialValue !== this.state.initialValue) {
+        if(this.state.value !== nextProps.value
+            || this.state.searchField !== nextProps.searchField) {
             this.setState({
-                ...this.state,
-                initialValue: this.props.initialValue || ''
+                value: nextProps.value,
+                searchField: nextProps.searchField
             });
         }
-        if (!!nextProps.initialValue && nextProps.initialValue !== this.state.initialValue) {
-            this.setState({
-                ...this.state,
-                initialValue: nextProps.initialValue || ''
-            });
+    }
+
+    componentDidUpdate(previousProps, previousState) {
+        if (previousState !== this.state) {
+            this.props.updateValueFunc(this.props.fieldIndex, this.state);
         }
     }
 
     textChanged = (event, value) => {
         this.setState({
             ...this.state,
-            initialValue: value,
+            value: value,
         });
     };
 
-    searchFieldChanged = (event, index, value) => {
+    searchFieldChanged = (event, value) => {
         this.setState({
             ...this.state,
             searchField: value,
         });
+    };
+
+    deleteRow = () => {
+        this.props.deleteFunc(this.props.fieldIndex);
     };
 
     render() {
@@ -70,23 +77,27 @@ export default class AdvancedSearchRow extends PureComponent {
                     </SelectField>
                 </div>
                 <div className="column is-narrow combiner">
-                    <span>contains</span>
+                    <span>{txt.fieldTypes[this.state.searchField].combiner}</span>
                 </div>
                 <div className="column">
                     <TextField
                         type="search"
+                        name={`textSearchField${this.props.fieldIndex}`}
                         id="searchField"
                         fullWidth
-                        hintText="Hint"
+                        hintText={txt.fieldTypes[this.state.searchField].hint}
                         aria-label="Aria"
-                        value={this.state.initialValue}
+                        value={this.state.value}
                         onChange={this.textChanged}
                     />
                 </div>
                 {
                     this.props.fieldIndex !== 0 &&
                     <div className="column is-narrow">
-                        <IconButton className="deleteFieldButton">
+                        <IconButton
+                            className="deleteFieldButton"
+                            onClick={this.deleteRow}
+                        >
                             <Close/>
                         </IconButton>
                     </div>

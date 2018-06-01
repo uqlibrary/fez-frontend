@@ -1,6 +1,20 @@
 @import '../../../../sass/variables';
 
 .search-component {
+  .searchQueryCaption {
+    margin-top: 24px;
+    font-size: $text-body-small !important;
+    .and, .combiner {
+      font-style: italic !important;
+      opacity: 0.66 !important;
+    }
+    .title.lowercase {
+      text-transform: lowercase !important;
+    }
+    .value {
+      font-weight: $text-weight-bold !important;
+    }
+  }
   // Override search box X
   input[type="search"]::-webkit-search-cancel-button {
       height: 24px;
@@ -28,7 +42,6 @@
       margin-left: 0 !important;
     }
   }
-
   &.header {
     // Override search box X size
     input[type="search"]::-webkit-search-cancel-button {

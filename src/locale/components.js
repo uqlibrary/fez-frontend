@@ -801,16 +801,41 @@ export default {
             searchButtonAriaLabel: 'Click to search eSpace',
             simpleSearchToggle: 'Simple search',
             advancedSearch: {
+                title: 'Advanced search',
+                tooltip: {
+                    show: 'Show advanced search',
+                    hide: 'Hide advanced search'
+                },
                 fieldTypes: [{
                     title: 'Any field',
+                    searchQueryParameter: 'all',
                     combiner: 'contains',
-                    type: 'TextField'
+                    type: 'TextField',
+                    hint: 'Add some text to search all fields with'
                 },
                 {
                     title: 'Title',
+                    searchQueryParameter: 'rek_title',
                     combiner: 'contains',
-                    type: 'TextField'
-                }]
+                    type: 'TextField',
+                    hint: 'Add a title to search'
+                }],
+                openAccess: {
+                    title: 'Open access / Full text',
+                    searchQueryParameter: 'rek_openaccess'
+                },
+                addField: {
+                    title: 'Add another field',
+                    aria: 'Click to add another advanced search field'
+                },
+                reset: {
+                    title: 'Reset',
+                    aria: 'Click to reset the advanced search'
+                },
+                simpleSearch: {
+                    title: 'Simple search',
+                    aria: 'Click to return to the simple search'
+                }
             }
         },
         whatIsEspace: {
