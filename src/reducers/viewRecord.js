@@ -33,15 +33,6 @@ const handlers = {
         }
     ),
 
-    [actions.VIEW_RECORD_SET]: (state, action) => (
-        {
-            ...initialState,
-            loadingRecordToView: false,
-            recordToView: action.payload,
-            hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement
-        }
-    ),
-
     [actions.VIEW_RECORD_CLEAR]: (state) => (
         {
             ...initialState,
