@@ -5,7 +5,6 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
   className="latestPubs"
 >
   <PublicationsList
-    hideCitationContent={false}
     hideCountDiff={false}
     publicationsList={
       Array [
