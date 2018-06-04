@@ -2553,7 +2553,6 @@ exports[`PublicationCitation  should render component with default list hiding t
         className="publicationTitle"
       >
         <Link
-          onClick={[Function]}
           replace={false}
           to="/records/UQ:41878"
         >
@@ -3369,7 +3368,6 @@ exports[`PublicationCitation  should render component with default list hiding t
         className="publicationTitle"
       >
         <Link
-          onClick={[Function]}
           replace={false}
           to="/records/UQ:41878"
         >
