@@ -47,8 +47,8 @@ export default class SearchComponent extends PureComponent {
                 openAccess: false,
                 fieldRows: [
                     {
-                        searchField: 0,
-                        value: this.props.searchQueryParams && this.props.searchQueryParams.all || ''
+                        searchField: 1,
+                        value: this.props.searchQueryParams && this.props.searchQueryParams.all || '',
                     }
                 ]
             }
@@ -153,8 +153,8 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
-    validationError = () => {
-        if (!this.props.inHeader && this.state.searchText.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
+    searchTextValidation = (value = this.state.searchText) => {
+        if (!this.props.inHeader && value.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
             return locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH);
         } else {
             return false;
@@ -163,29 +163,28 @@ export default class SearchComponent extends PureComponent {
 
     addAdvancedField = () => {
         const thisIndex = this.state.advancedSearch.fieldRows.length - 1;
-        const nextIndex = thisIndex + 1;
         if(this.state.advancedSearch.fieldRows[thisIndex].value) {
+            const newArray = [
+                ...this.state.advancedSearch.fieldRows,
+                {
+                    searchField: 0,
+                    value: '',
+                }
+            ];
             this.setState({
                 advancedSearch: {
                     ...this.state.advancedSearch,
-                    fieldRows: [
-                        ...this.state.advancedSearch.fieldRows,
-                        {
-                            fieldIndex: nextIndex,
-                            searchField: 0,
-                            value: ''
-                        }
-                    ]
+                    fieldRows: newArray
                 }
             });
-        } else {
-            console.log('Cant add a new field when previous is empty');
         }
     };
 
     deleteAdvancedField = (index) => {
-        const newArray = [...this.state.advancedSearch.fieldRows.slice(0, index), ...this.state.advancedSearch.fieldRows.slice(index + 1)];
-        console.log('this is the new array after deleting', newArray);
+        const newArray = [
+            ...this.state.advancedSearch.fieldRows.slice(0, index),
+            ...this.state.advancedSearch.fieldRows.slice(index + 1)
+        ];
         this.setState({
             advancedSearch: {
                 ...this.state.advancedSearch,
@@ -194,12 +193,15 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
-    advancedRowUpdate = (index, {value, searchField}) => {
-        // update text
-        const newArray = [...this.state.advancedSearch.fieldRows.slice(0, index), {
-            searchField,
-            value,
-        }, ...this.state.advancedSearch.fieldRows.slice(index + 1)];
+    updateAdvancedField = (index, {value, searchField}) => {
+        const newArray = [
+            ...this.state.advancedSearch.fieldRows.slice(0, index),
+            {
+                searchField,
+                value,
+            },
+            ...this.state.advancedSearch.fieldRows.slice(index + 1)
+        ];
         this.setState({
             advancedSearch: {
                 ...this.state.advancedSearch,
@@ -215,6 +217,7 @@ export default class SearchComponent extends PureComponent {
                 openAccess: false,
                 fieldRows: [
                     {
+                        fieldIndex: 0,
                         searchField: 0,
                         value: ''
                     }
@@ -223,7 +226,7 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
-    openAccessToggle = () => {
+    toggleOpenAccess = () => {
         this.setState({
             advancedSearch: {
                 ...this.state.advancedSearch,
@@ -232,27 +235,34 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
-    advancedSearchCaption = () => {
-        const fields = this.state.advancedSearch.fieldRows;
-        const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
-        const searchFields = fields.map((item, index) => (
-            <span key={index}>
-                {index > 0 && <span className="and">  {item.value && 'and'}</span>}
-                <span className={`title ${index > 0 && ' lowercase'}`}> {item.value && txt[item.searchField].title}</span>
-                <span className="combiner"> {item.value && txt[item.searchField].combiner}</span>
-                <span className="value"> {item.value}</span>
-            </span>
-        ));
-        const openAccess = this.state.advancedSearch.openAccess
-            ? <span> and is <span className="value">open access/ full text.</span></span>
-            : '.';
-        return <div>{searchFields}{openAccess}</div>;
+    usedFieldsArray = () => {
+        const newArray = [0];
+        this.state.advancedSearch.fieldRows.some((obj) => {
+            newArray.push(obj.searchField);
+        });
+        return newArray.sort();
     };
 
     render() {
         const txt = locale.components.searchComponent;
         const canAddAnotherField = this.state.advancedSearch.fieldRows[this.state.advancedSearch.fieldRows.length - 1]
-            && this.state.advancedSearch.fieldRows[this.state.advancedSearch.fieldRows.length - 1].value;
+            && this.state.advancedSearch.fieldRows[this.state.advancedSearch.fieldRows.length - 1].value
+            && this.usedFieldsArray().length < txt.advancedSearch.fieldTypes.length;
+        const advancedSearchCaption = () => {
+            const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
+            const searchFields = this.state.advancedSearch.fieldRows.map((item, index) => (
+                <span key={index}>
+                    {index > 0 && <span className="and">  {item.value && 'and'}</span>}
+                    <span className={`title ${index > 0 && ' lowercase'}`}> {item.value && txt[item.searchField].title}</span>
+                    <span className="combiner"> {item.value && txt[item.searchField].combiner}</span>
+                    <span className="value"> {item.value}</span>
+                </span>
+            ));
+            const openAccess = this.state.advancedSearch.openAccess
+                ? <span> and is <span className="value">open access/ full text.</span></span>
+                : '.';
+            return <div>{searchFields}{openAccess}</div>;
+        };
         return (
             <div className={`search-component ${this.props.inHeader && 'header'} ${this.props.className}`}>
                 {
@@ -288,7 +298,7 @@ export default class SearchComponent extends PureComponent {
                                         onKeyPress={this.handleSearch}
                                         value={this.state.searchText}
                                         underlineStyle={this.props.inHeader ? {display: 'none'} : {}}
-                                        errorText={this.validationError()}
+                                        errorText={this.searchTextValidation(this.state.searchText)}
                                     />
                                 </div>
                                 <div className="is-hidden-tablet mobileSpacer" />
@@ -313,7 +323,7 @@ export default class SearchComponent extends PureComponent {
                                 <IconButton
                                     tooltipPosition="bottom-left"
                                     onClick={this.handleSearch}
-                                    disabled={!!this.validationError}
+                                    disabled={!!this.searchTextValidation(this.state.searchText)}
                                     className="search-button"
                                     tooltip={txt.searchButtonHint}
                                     aria-label={txt.searchButtonAriaLabel}>
@@ -326,7 +336,7 @@ export default class SearchComponent extends PureComponent {
                                 label={txt.searchButtonText}
                                 aria-label={txt.searchButtonAriaLabel}
                                 primary
-                                disabled={!!this.validationError()}
+                                disabled={!!this.searchTextValidation(this.state.searchText)}
                                 onClick={this.handleSearch}
                                 fullWidth />
                         </div>
@@ -344,6 +354,7 @@ export default class SearchComponent extends PureComponent {
                         }
                     </div>
                 }
+                {/* ADVANCED SEARCH */}
                 {
                     this.state.showAdvancedSearch && this.props.showAdvancedSearchButton &&
                         <div className="advancedSearch">
@@ -379,11 +390,13 @@ export default class SearchComponent extends PureComponent {
                                                     this.state.advancedSearch.fieldRows.map((item, index) => (
                                                         <AdvancedSearchRow
                                                             key={index}
-                                                            updateValueFunc={this.advancedRowUpdate}
+                                                            updateValueFunc={this.updateAdvancedField}
                                                             deleteFunc={this.deleteAdvancedField}
                                                             fieldIndex={index}
                                                             searchField={item.searchField}
                                                             value={item.value}
+                                                            errorText={this.searchTextValidation.bind()}
+                                                            disabledFields={this.usedFieldsArray()}
                                                         />
                                                     ))
                                                 }
@@ -392,7 +405,7 @@ export default class SearchComponent extends PureComponent {
                                                 <Checkbox
                                                     label={txt.advancedSearch.openAccess.title}
                                                     checked={this.state.advancedSearch.openAccess}
-                                                    onCheck={this.openAccessToggle}
+                                                    onCheck={this.toggleOpenAccess}
                                                     style={{marginTop: 12, paddingBottom: 2, borderBottom: '1px solid rgba(0, 0, 0, 0.12)'}}
                                                 />
                                             </div>
@@ -436,7 +449,7 @@ export default class SearchComponent extends PureComponent {
                                     </div>
                             }
                             <div className="searchQueryCaption">
-                                {this.advancedSearchCaption()}
+                                {advancedSearchCaption()}
                             </div>
                         </div>
                 }

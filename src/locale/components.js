@@ -806,20 +806,27 @@ export default {
                     show: 'Show advanced search',
                     hide: 'Hide advanced search'
                 },
-                fieldTypes: [{
-                    title: 'Any field',
-                    searchQueryParameter: 'all',
-                    combiner: 'contains',
-                    type: 'TextField',
-                    hint: 'Add some text to search all fields with'
-                },
-                {
-                    title: 'Title',
-                    searchQueryParameter: 'rek_title',
-                    combiner: 'contains',
-                    type: 'TextField',
-                    hint: 'Add a title to search'
-                }],
+                fieldTypes: [
+                    {
+                        title: 'Select a field',
+                        combiner: null,
+                        hint: 'Select a field to search on'
+                    },
+                    {
+                        title: 'Any field',
+                        searchQueryParameter: 'all',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add some text to search all fields with'
+                    },
+                    {
+                        title: 'Title',
+                        searchQueryParameter: 'rek_title',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a title to search'
+                    }
+                ],
                 openAccess: {
                     title: 'Open access / Full text',
                     searchQueryParameter: 'rek_openaccess'

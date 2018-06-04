@@ -15,7 +15,9 @@ export default class AdvancedSearchRow extends PureComponent {
         searchField: PropTypes.number,
         value: PropTypes.any,
         updateValueFunc: PropTypes.func,
-        deleteFunc: PropTypes.func
+        deleteFunc: PropTypes.func,
+        errorText: PropTypes.func,
+        disabledFields: PropTypes.array
     };
 
     constructor(props) {
@@ -31,7 +33,7 @@ export default class AdvancedSearchRow extends PureComponent {
             || this.state.searchField !== nextProps.searchField) {
             this.setState({
                 value: nextProps.value,
-                searchField: nextProps.searchField
+                searchField: nextProps.searchField,
             });
         }
     }
@@ -71,14 +73,23 @@ export default class AdvancedSearchRow extends PureComponent {
                         fullWidth>
                         {
                             txt.fieldTypes.map((item, index) => (
-                                <MenuItem key={index} value={index} primaryText={txt.fieldTypes[index].title}/>
+                                <MenuItem
+                                    key={index}
+                                    value={index}
+                                    primaryText={txt.fieldTypes[index].title}
+                                    disabled={index === 0 || this.props.disabledFields.indexOf(index) > -1}
+                                />
                             ))
                         }
                     </SelectField>
                 </div>
-                <div className="column is-narrow combiner">
-                    <span>{txt.fieldTypes[this.state.searchField].combiner}</span>
-                </div>
+                {
+                    txt.fieldTypes[this.state.searchField].combiner ?
+                        <div className="column is-narrow combiner">
+                            <span>{txt.fieldTypes[this.state.searchField].combiner}</span>
+                        </div>
+                        : <div className="column is-narrow" style={{width: 12}} />
+                }
                 <div className="column">
                     <TextField
                         type="search"
@@ -89,6 +100,8 @@ export default class AdvancedSearchRow extends PureComponent {
                         aria-label="Aria"
                         value={this.state.value}
                         onChange={this.textChanged}
+                        errorText={this.props.errorText(this.state.value)}
+                        disabled={this.state.searchField === 0}
                     />
                 </div>
                 {

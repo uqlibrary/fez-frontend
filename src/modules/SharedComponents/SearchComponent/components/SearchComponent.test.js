@@ -119,10 +119,9 @@ describe('SearchComponent', () => {
 
     it('should show a snackbar error for input being too long', () => {
         const testMethod = jest.fn();
-        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
-        const wrapper = setup({actions: {searchEspacePublications: testMethod}});
-        wrapper.setProps({inHeader: true});
+        const wrapper = setup({actions: {searchEspacePublications: testMethod}, inHeader: true});
         wrapper.setState({searchText: 'this is way too long'});
+        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
         wrapper.update();
         wrapper.instance().handleSearch({key: 'Enter'});
         expect(wrapper.state().snackbarMessage).toEqual('Must be 5 characters or less');
@@ -130,24 +129,20 @@ describe('SearchComponent', () => {
         expect(testMethod).not.toHaveBeenCalled();
     });
 
-    it('validationError() should return a message for being too long', () => {
-        const testMethod = jest.fn();
-        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
-        const wrapper = setup({actions: {searchEspacePublications: testMethod}});
-        wrapper.setProps({inHeader: false});
+    it('searchTextValidation() should return a message for being too long', () => {
+        const wrapper = setup({inHeader: false});
         wrapper.setState({searchText: 'this is way too long'});
+        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
         wrapper.update();
-        expect(wrapper.instance().validationError()).toEqual('Must be 5 characters or less');
+        expect(wrapper.instance().searchTextValidation(wrapper.state.searchText)).toEqual('Must be 5 characters or less');
     });
 
-    it('validationError() should return false for being fine', () => {
-        const testMethod = jest.fn();
-        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
-        const wrapper = setup({actions: {searchEspacePublications: testMethod}});
-        wrapper.setProps({inHeader: false});
+    it('searchTextValidation() should return false for being fine', () => {
+        const wrapper = setup({inHeader: false});
+        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 20;
         wrapper.setState({searchText: 'this is fine'});
         wrapper.update();
-        expect(wrapper.instance().validationError()).toEqual(false);
+        expect(wrapper.instance().searchTextValidation(wrapper.state.searchText)).toEqual(false);
     });
 
 });

@@ -1,9 +1,18 @@
 @import '../../../../sass/variables';
 
 .search-component {
+  .conjunction span {
+    font-style: italic !important;
+    opacity: 0.66 !important;
+    padding: 0 12px 0 0 !important;
+    line-height: 50px !important;
+    color: lighten($secondary-color, 20%);
+  }
   .searchQueryCaption {
     margin-top: 24px;
     font-size: $text-body-small !important;
+    word-break: break-all;
+    hyphens: auto !important;
     .and, .combiner {
       font-style: italic !important;
       opacity: 0.66 !important;
