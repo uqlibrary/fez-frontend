@@ -1,10 +1,9 @@
-import {exportFormatToExtensionMap} from "../../../../actions/publicationDataTransformers";
-
 jest.dontMock('./PublicationsListSorting');
 
 import toJson from 'enzyme-to-json';
 import React from 'react';
 import PublicationsListSorting from './PublicationsListSorting';
+import {exportFormatToExtension} from '../../../../config/general';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -15,6 +14,8 @@ function setup(testProps, isShallow = true) {
             per_page: 20,
             current_page: 1
         },
+        canUseExport: false,
+        location: {},
         disabled: false,
         activeFacets: {filters: {}, ranges: {}},
         onPageSizeChanged: jest.fn(),
@@ -27,7 +28,7 @@ function setup(testProps, isShallow = true) {
 }
 
 beforeAll(() => {
-    
+
 });
 
 describe('PublicationsListSorting renders ', () => {
@@ -52,6 +53,17 @@ describe('PublicationsListSorting renders ', () => {
         expect(pages.length).toBe(3);
     });
 
+    it('component with export dropdown for admin or author', () => {
+        const wrapper = setup({canUseExport: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('ExportPublications').length).toBe(1);
+    });
+
+    it('component with export dropdown hidden', () => {
+        const wrapper = setup({canUseExport: false});
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('ExportPublications').length).toBe(0);
+    });
 
     it('component with all fields disabled', () => {
         const wrapper = setup({disabled: true});
@@ -88,11 +100,11 @@ describe('PublicationsListSorting renders ', () => {
     });
 
     it('component with non-empty paging data, onExportPublications called', () => {
-        const expected = Object.keys(exportFormatToExtensionMap)[0];
+        const expected = Object.keys(exportFormatToExtension)[0];
         const testFunction = jest.fn();
-        const wrapper = setup({onExportPublications: testFunction, location: {state: {activeFacets: {filters: {}, ranges: {}}}}});
+        const wrapper = setup({onExportPublications: testFunction});
         wrapper.instance().exportPublicationsFormatChanged(expected);
         expect(wrapper.state().exportPublicationsFormat).toEqual(expected);
-        expect(testFunction).toHaveBeenCalledWith({exportFormat: expected, ...wrapper.instance().state, activeFacets: wrapper.instance().props.activeFacets});
+        expect(testFunction).toHaveBeenCalledWith({exportPublicationsFormat: expected});
     });
 });

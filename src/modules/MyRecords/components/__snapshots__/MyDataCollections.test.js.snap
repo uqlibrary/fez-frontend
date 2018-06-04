@@ -18,6 +18,7 @@ exports[`myDatasets test renders active filters 1`] = `
             We were unable to find any results. You may be able to 
             <a
               href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+              target="_blank"
             >
               add a missing dataset
             </a>
@@ -30,6 +31,7 @@ exports[`myDatasets test renders active filters 1`] = `
           We were unable to find any results. You may be able to 
           <a
             href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+            target="_blank"
           >
             add a missing dataset
           </a>
@@ -62,18 +64,15 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
           Add to this list by 
           <a
             href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+            target="_blank"
           >
             adding a missing dataset
           </a>
           .
         </span>
         <PublicationsListSorting
-          location={
-            Object {
-              "pathname": "/data-collections/mine",
-              "state": null,
-            }
-          }
+          canUseExport={true}
+          onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}
@@ -102,6 +101,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
           }
         />
         <PublicationsList
+          hideCountDiff={false}
           publicationsList={
             Array [
               1,
@@ -112,6 +112,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
           publicationsListSubset={Array []}
           showDefaultActions={true}
           showMetrics={false}
+          showSourceCountIcon={false}
           showSources={false}
           subsetCustomActions={Array []}
         />
@@ -154,18 +155,15 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
           Add to this list by 
           <a
             href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+            target="_blank"
           >
             adding a missing dataset
           </a>
           .
         </span>
         <PublicationsListSorting
-          location={
-            Object {
-              "pathname": "/data-collections/mine",
-              "state": null,
-            }
-          }
+          canUseExport={true}
+          onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}
@@ -194,6 +192,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
           }
         />
         <PublicationsList
+          hideCountDiff={false}
           publicationsList={
             Array [
               1,
@@ -204,6 +203,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
           publicationsListSubset={Array []}
           showDefaultActions={true}
           showMetrics={false}
+          showSourceCountIcon={false}
           showSources={false}
           subsetCustomActions={Array []}
         />
@@ -299,6 +299,13 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
             }
           }
           isMyDataSetPage={true}
+          lookupFacetsList={
+            Object {
+              "Author": "Author (lookup)",
+              "Collection": "Collection (lookup)",
+              "Subject": "Subject (lookup)",
+            }
+          }
           onFacetsChanged={[Function]}
           renameFacetsList={Object {}}
           showOpenAccessFilter={true}
@@ -347,19 +354,16 @@ exports[`myDatasets test renders loading screen while loading publications while
           Add to this list by 
           <a
             href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+            target="_blank"
           >
             adding a missing dataset
           </a>
           .
         </span>
         <PublicationsListSorting
+          canUseExport={true}
           disabled={true}
-          location={
-            Object {
-              "pathname": "/data-collections/mine",
-              "state": null,
-            }
-          }
+          onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}
@@ -410,6 +414,7 @@ exports[`myDatasets test renders no results 1`] = `
             We were unable to find any results. You may be able to 
             <a
               href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+              target="_blank"
             >
               add a missing dataset
             </a>
@@ -422,6 +427,7 @@ exports[`myDatasets test renders no results 1`] = `
           We were unable to find any results. You may be able to 
           <a
             href="https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315"
+            target="_blank"
           >
             add a missing dataset
           </a>

@@ -20,6 +20,6 @@ export const trendingPublicationsConfig = {
                 difference: 'fez_record_search_key_doi.fez_altmetric.as_3m',
                 citation_url: 'fez_record_search_key_doi.fez_altmetric.as_citation_url'
             }
-        },
+        }
     }
 };

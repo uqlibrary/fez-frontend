@@ -44,7 +44,7 @@ exports[`SearchComponent should render default view 1`] = `
     >
       <RaisedButton
         aria-label="Click to search eSpace"
-        disabled={true}
+        disabled={false}
         fullWidth={true}
         label="Search"
         labelPosition="after"
@@ -106,7 +106,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
     >
       <RaisedButton
         aria-label="Click to search eSpace"
-        disabled={true}
+        disabled={false}
         fullWidth={true}
         label="Search"
         labelPosition="after"
@@ -220,7 +220,7 @@ exports[`SearchComponent should render show mobile button 1`] = `
     >
       <RaisedButton
         aria-label="Click to search eSpace"
-        disabled={true}
+        disabled={false}
         fullWidth={true}
         label="Search"
         labelPosition="after"
@@ -287,7 +287,7 @@ exports[`SearchComponent should render show prefix icon in the search box 1`] = 
     >
       <RaisedButton
         aria-label="Click to search eSpace"
-        disabled={true}
+        disabled={false}
         fullWidth={true}
         label="Search"
         labelPosition="after"
@@ -354,7 +354,7 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
     >
       <RaisedButton
         aria-label="Click to search eSpace"
-        disabled={true}
+        disabled={false}
         fullWidth={true}
         label="Search"
         labelPosition="after"

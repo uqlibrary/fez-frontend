@@ -4815,11 +4815,6 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                               }
                             }
                           >
-                            <EventListener
-                              onResize={[Function]}
-                              onScroll={[Function]}
-                              target="window"
-                            />
                             <RenderToLayer
                               componentClickAway={[Function]}
                               open={false}

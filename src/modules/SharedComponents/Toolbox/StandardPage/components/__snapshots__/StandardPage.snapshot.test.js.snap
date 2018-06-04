@@ -14,3 +14,13 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with tit
   />
 </div>
 `;
+
+exports[`Snapshot tests for StandardPage component renders StandardPage without a title 1`] = `
+<div
+  className=""
+>
+  <div
+    className="layout-card"
+  />
+</div>
+`;

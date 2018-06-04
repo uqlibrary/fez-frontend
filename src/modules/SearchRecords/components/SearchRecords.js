@@ -6,6 +6,7 @@ import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {StandardRighthandCard} from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import {SearchComponent} from 'modules/SharedComponents/SearchComponent';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {routes} from 'config';
 import param from 'can-param';
 import deparam from 'can-deparam';
@@ -25,11 +26,14 @@ class SearchRecords extends PureComponent {
         publicationsList: PropTypes.array,
         publicationsListFacets: PropTypes.object,
         publicationsListPagingData: PropTypes.object,
-        loadingSearch: PropTypes.bool,
+        exportPublicationsLoading: PropTypes.bool,
+        canUseExport: PropTypes.bool,
+        searchLoading: PropTypes.bool,
+        searchLoadingError: PropTypes.bool,
 
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
-        actions: PropTypes.object
+        actions: PropTypes.object,
     };
 
     constructor(props) {
@@ -54,7 +58,7 @@ class SearchRecords extends PureComponent {
         this.state = {
             // check if search has results
             // facets filtering might return no results, but facets should still be visible
-            // hasResults: !props.loadingSearch && props.publicationsList.length > 0,
+            // hasResults: !props.searchLoading && props.publicationsList.length > 0,
             ...this.initState,
             ...this.props.searchQuery
         };
@@ -106,7 +110,18 @@ class SearchRecords extends PureComponent {
             }
         }
 
-        providedSearchQuery.pageSize = parseInt(providedSearchQuery.pageSize, 10);
+        const pageSize = parseInt(providedSearchQuery.pageSize, 10);
+        providedSearchQuery.pageSize = locale.components.sorting.recordsPerPage.indexOf(pageSize) < 0 ? 20 : pageSize;
+
+        providedSearchQuery.sortDirection = locale.components.sorting.sortDirection.indexOf(providedSearchQuery.sortDirection) < 0
+            ? locale.components.sorting.sortDirection[0]
+            : providedSearchQuery.sortDirection;
+
+        providedSearchQuery.sortBy = locale.components.sorting.sortBy
+            .map(sortBy => sortBy.value)
+            .indexOf(providedSearchQuery.sortBy) < 0
+            ? locale.components.sorting.sortBy[0].value
+            : providedSearchQuery.sortBy;
 
         return providedSearchQuery;
     };
@@ -163,97 +178,113 @@ class SearchRecords extends PureComponent {
         this.props.actions.searchEspacePublications({...this.props.searchQuery, ...this.state});
     };
 
+    handleExportPublications = (exportFormat) => {
+        this.props.actions.exportEspacePublications({...exportFormat, ...this.state});
+    };
+
     render() {
         const txt = locale.pages.searchRecords;
         const pagingData = this.props.publicationsListPagingData;
+        const isLoadingOrExporting = this.props.searchLoading || this.props.exportPublicationsLoading;
         const hasSearchParams = !!this.props.searchQuery && this.props.searchQuery.constructor === Object && Object.keys(this.props.searchQuery).length > 0;
+        const alertProps = this.props.searchLoadingError && {...txt.errorAlert, message: txt.errorAlert.message(locale.global.errorMessages.generic)};
         return (
-            <StandardPage className="page-search-records" title={txt.title}>
+            <StandardPage className="page-search-records">
                 <StandardCard className="search-component">
                     <SearchComponent className="search-body" />
                 </StandardCard>
                 {
                     // first time loading search results
-                    !hasSearchParams && this.props.loadingSearch &&
+                    !hasSearchParams && this.props.searchLoading &&
                     <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
                 }
-                <div className="columns">
-                    {
-                        // no results to display
-                        hasSearchParams && !this.props.loadingSearch && this.props.publicationsList.length === 0 &&
-                        <div className="column">
-                            <StandardCard {...txt.noResultsFound}>
-                                {txt.noResultsFound.text}
-                            </StandardCard>
-                        </div>
-                    }
-                    {
-                        // results to display or loading if user is filtering/paging
-                        (
-                            (hasSearchParams && this.props.loadingSearch) ||
-                            (!!this.props.publicationsList && this.props.publicationsList.length > 0)
-                        ) &&
-                        <div className="column">
-                            <StandardCard>
-                                {
-                                    pagingData && pagingData.to && pagingData.from && pagingData.total &&
-                                    <span>
-                                        {txt.recordCount
-                                            .replace('[recordsTotal]', pagingData.total)
-                                            .replace('[recordsFrom]', pagingData.from)
-                                            .replace('[recordsTo]', pagingData.to)}
-                                    </span>
-                                }
-                                <PublicationsListSorting
-                                    sortBy={this.state.sortBy}
-                                    sortDirection={this.state.sortDirection}
-                                    pageSize={this.state.pageSize}
-                                    pagingData={pagingData}
-                                    onSortByChanged={this.sortByChanged}
-                                    onPageSizeChanged={this.pageSizeChanged}
-                                    disabled={this.props.loadingSearch} />
-                                <PublicationsListPaging
-                                    loading={this.props.loadingSearch}
-                                    pagingData={pagingData}
-                                    onPageChanged={this.pageChanged}
-                                    disabled={this.props.loadingSearch} />
-                                {
-                                    this.props.loadingSearch &&
-                                    <div className="is-centered"><InlineLoader message={txt.loadingPagingMessage}/></div>
-                                }
-                                {
-                                    !this.props.loadingSearch && this.props.publicationsList && this.props.publicationsList.length > 0 &&
-                                    <PublicationsList publicationsList={this.props.publicationsList} />
-                                }
-                                <PublicationsListPaging
-                                    loading={this.props.loadingSearch}
-                                    pagingData={pagingData}
-                                    onPageChanged={this.pageChanged}
-                                    disabled={this.props.loadingSearch} />
-                            </StandardCard>
-                        </div>
-                    }
-                    {
-                        // show available filters or selected filters (even if there are no results)
-                        ((this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
-                            || (this.state.activeFacets && this.state.activeFacets.filters && Object.keys(this.state.activeFacets.filters).length > 0)
-                            || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)
-                            || (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
-                        <div className="column is-3 is-hidden-mobile">
-                            <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
-                                <FacetsFilter
-                                    facetsData={this.props.publicationsListFacets}
-                                    onFacetsChanged={this.facetsChanged}
-                                    activeFacets={this.state.activeFacets}
-                                    disabled={this.props.loadingSearch}
-                                    excludeFacetsList={txt.facetsFilter.excludeFacetsList}
-                                    renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                    showOpenAccessFilter />
-                            </StandardRighthandCard>
-                        </div>
-                    }
-                </div>
-
+                {
+                    this.props.searchLoadingError &&
+                    <Alert {...alertProps} />
+                }
+                {
+                    !this.props.searchLoadingError &&
+                    <div className="columns">
+                        {
+                            // no results to display
+                            hasSearchParams &&
+                            !this.props.searchLoading &&
+                            this.props.publicationsList.length === 0 &&
+                            <div className="column">
+                                <StandardCard {...txt.noResultsFound}>
+                                    {txt.noResultsFound.text}
+                                </StandardCard>
+                            </div>
+                        }
+                        {
+                            // results to display or loading if user is filtering/paging
+                            (
+                                (hasSearchParams && this.props.searchLoading) ||
+                                (!!this.props.publicationsList && this.props.publicationsList.length > 0)
+                            ) &&
+                            <div className="column">
+                                <StandardCard>
+                                    {
+                                        pagingData && pagingData.to && pagingData.from && pagingData.total ?
+                                            <span>
+                                                {txt.recordCount
+                                                    .replace('[recordsTotal]', pagingData.total)
+                                                    .replace('[recordsFrom]', pagingData.from)
+                                                    .replace('[recordsTo]', pagingData.to)}
+                                            </span>
+                                            :
+                                            <span>{txt.loadingPagingMessage}</span>
+                                    }
+                                    <PublicationsListSorting
+                                        sortBy={this.state.sortBy}
+                                        sortDirection={this.state.sortDirection}
+                                        pageSize={this.state.pageSize}
+                                        pagingData={pagingData}
+                                        canUseExport={this.props.canUseExport}
+                                        onSortByChanged={this.sortByChanged}
+                                        onPageSizeChanged={this.pageSizeChanged}
+                                        onExportPublications={this.handleExportPublications}
+                                        disabled={isLoadingOrExporting} />
+                                    <PublicationsListPaging
+                                        loading={isLoadingOrExporting}
+                                        pagingData={pagingData}
+                                        onPageChanged={this.pageChanged}
+                                        disabled={isLoadingOrExporting} />
+                                    {
+                                        isLoadingOrExporting &&
+                                        <div className="is-centered"><InlineLoader message={this.props.searchLoading ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
+                                    }
+                                    {
+                                        !isLoadingOrExporting && this.props.publicationsList && this.props.publicationsList.length > 0 &&
+                                        <PublicationsList publicationsList={this.props.publicationsList} />
+                                    }
+                                    <PublicationsListPaging
+                                        loading={isLoadingOrExporting}
+                                        pagingData={pagingData}
+                                        onPageChanged={this.pageChanged}
+                                        disabled={isLoadingOrExporting} />
+                                </StandardCard>
+                            </div>
+                        }
+                        {
+                            this.props.publicationsListFacets
+                            && Object.keys(this.props.publicationsListFacets).length !== 0 &&
+                            <div className="column is-3 is-hidden-mobile">
+                                <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
+                                    <FacetsFilter
+                                        facetsData={this.props.publicationsListFacets}
+                                        onFacetsChanged={this.facetsChanged}
+                                        activeFacets={this.state.activeFacets}
+                                        disabled={isLoadingOrExporting}
+                                        excludeFacetsList={txt.facetsFilter.excludeFacetsList}
+                                        renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                        lookupFacetsList={txt.facetsFilter.lookupFacetsList}
+                                        showOpenAccessFilter/>
+                                </StandardRighthandCard>
+                            </div>
+                        }
+                    </div>
+                }
             </StandardPage>
         );
     }

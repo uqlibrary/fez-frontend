@@ -1,7 +1,15 @@
+jest.mock('./exportPublications');
+
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as searchActions from './search';
 import * as mockData from "../mock/data";
+import {exportPublications} from "./exportPublications";
+import {exportFormatToExtension} from '../config/general';
+
+beforeEach(() => {
+    exportPublications.mockClear();
+});
 
 describe('Search action creators', () => {
     const testTitleSearchParam = 'global';
@@ -227,5 +235,23 @@ describe('Search action creators', () => {
 
         await mockActionsStore.dispatch(searchActions.searchEspacePublications(searchParams));
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
+    });
+
+    describe('exportSearchPublications()', () => {
+        it('calls exportPublications with expected params', async () => {
+
+            const exportPublicationsFormat = Object.keys(exportFormatToExtension)[0];
+            const testRequest = {
+                exportPublicationsFormat,
+                page: 1,
+                pageSize: 20,
+                sortBy: 'published_date',
+                sortDirection: 'Desc',
+                activeFacets: {filters: {}, ranges: {}}
+            };
+
+            searchActions.exportEspacePublications(testRequest);
+            expect(exportPublications).toHaveBeenCalledWith(repositories.routes.SEARCH_INTERNAL_RECORDS_API(testRequest, 'export'));
+        });
     });
 });

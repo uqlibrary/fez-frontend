@@ -11,8 +11,9 @@ const mapStateToProps = (state) => {
     return {
         accountLoading: state.get('accountReducer').accountLoading,
         ...state.get('publicationsReducer'),
+        ...state.get('exportPublicationsReducer'),
         initialFacets: {
-            filters: { 'Display type': general.PUBLICATION_TYPE_DATA_COLLECTION}
+            filters: {'Display type': general.PUBLICATION_TYPE_DATA_COLLECTION}
         },
         localePages: locale.pages.myDatasets,
         thisUrl: routes.pathConfig.dataset.mine,
