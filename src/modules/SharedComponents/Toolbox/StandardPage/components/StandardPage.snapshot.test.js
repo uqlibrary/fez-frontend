@@ -16,4 +16,10 @@ describe('Snapshot tests for StandardPage component', () => {
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
+
+    it('renders StandardPage without a title', () => {
+        const wrapper = setup();
+        const tree = toJson(wrapper);
+        expect(tree).toMatchSnapshot();
+    });
 });
