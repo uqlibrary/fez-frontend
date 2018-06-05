@@ -17,6 +17,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const MyTrendingPublicationsContainer = connect(mapStateToProps, mapDispatchToProps)(MyLatestPublications);
+const MyLatestPublicationsContainer = connect(mapStateToProps, mapDispatchToProps)(MyLatestPublications);
 
-export default withRouter(MyTrendingPublicationsContainer);
+export default withRouter(MyLatestPublicationsContainer);
