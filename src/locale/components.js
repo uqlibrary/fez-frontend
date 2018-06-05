@@ -3,6 +3,7 @@ import React from 'react';
 export default {
     components: {
         facetsFilter: {
+            title: 'Refine results',
             resetButtonText: 'Reset',
             yearPublishedCategory: 'Year published',
             yearPublishedFacet: {
@@ -14,7 +15,19 @@ export default {
             openAccessFilter: {
                 displayTitle: 'Open access status',
                 activeFilter: 'Show only open access records'
-            }
+            },
+            excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
+            renameFacetsList: {'Display type': 'Publication type'},
+            lookupFacetsList: {
+                'Author': 'Author (lookup)',
+                'Collection': 'Collection (lookup)',
+                'Subject': 'Subject (lookup)'
+            },
+            // help: {
+            //     title: 'Refining your results',
+            //     text: 'Help about ....',
+            //     buttonLabel: 'Ok'
+            // },
         },
         publicationStats: {
             publicationStatsTitle1: 'eSpace publications indexed in:',
@@ -60,15 +73,16 @@ export default {
             ],
             myTrendingPublications: {
                 trendDifferenceShares: {
-                    scopus: 'Difference in shares since last month',
-                    thomson: 'Difference in shares since last month',
-                    altmetric: 'Difference in social media activities for the past one year'
+                    scopus: 'Difference in citations',
+                    thomson: 'Difference in citations',
+                    altmetric: 'Difference in social media activities'
                 },
                 sourceTitles: {
                     scopus: 'Scopus',
                     thomson: 'Web of science',
                     altmetric: 'Altmetric'
-                }
+                },
+                recordsPerSource: 5
             }
         },
         myTrendingPublications: {
@@ -107,6 +121,11 @@ export default {
                         You can click on the number as a link to see who is citing each publication, or in the
                         case of Altmetric who is referencing the publication in social media and news outlets.
                     </p>
+                    <p>For more information visit :
+                        <a href="https://www.altmetric.com/about-altmetrics/what-are-altmetrics/" target="_blank" rel="noopener noreferrer">
+                            https://www.altmetric.com/about-altmetrics/what-are-altmetrics/
+                        </a>
+                    </p>
                 </div>),
             buttonLabel: 'OK'
         },
@@ -141,7 +160,8 @@ export default {
                 heading: 'Web of Science citation count',
                 subHeading: 'The +plus score indicates the increase in citations over the three months',
                 order: 2
-            }
+            },
+            recordsPerSource: 20
         },
         keywordsForm: {
             field: {

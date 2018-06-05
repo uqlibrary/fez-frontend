@@ -21,7 +21,7 @@ export default class MyTrendingPublications extends PureComponent {
 
     componentDidMount() {
         if (!this.props.accountAuthorDetailsLoading) {
-            this.props.actions.searchTrendingPublications();
+            this.props.actions.searchTrendingPublications(locale.components.myTrendingPublications.recordsPerSource);
         }
     }
 

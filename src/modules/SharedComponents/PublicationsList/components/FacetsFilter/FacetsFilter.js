@@ -17,6 +17,7 @@ export default class FacetsFilter extends PureComponent {
         activeFacets: PropTypes.object,
         excludeFacetsList: PropTypes.array,
         renameFacetsList: PropTypes.object,
+        lookupFacetsList: PropTypes.object,
         disabled: PropTypes.bool,
         showOpenAccessFilter: PropTypes.bool,
         isMyDataSetPage: PropTypes.bool,
@@ -25,6 +26,7 @@ export default class FacetsFilter extends PureComponent {
     static defaultProps = {
         excludeFacetsList: [],
         renameFacetsList: {},
+        lookupFacetsList: {},
         showOpenAccessFilter: false
     };
 
@@ -144,7 +146,7 @@ export default class FacetsFilter extends PureComponent {
         });
     };
 
-    getFacetsToDisplay = (rawFacets, excludeFacetsList, renameFacetsList) => {
+    getFacetsToDisplay = (rawFacets, excludeFacetsList, renameFacetsList, lookupFacetsList) => {
         const facetsToDisplay = [];
         Object.keys(rawFacets).forEach((key) => {
             const rawFacet = rawFacets[key];
@@ -158,7 +160,7 @@ export default class FacetsFilter extends PureComponent {
             // construct facet object to display, if facet has a lookup - get display name from lookup, if facet key has a rename record, then use that
             const facetToDisplay = {
                 title: renameFacetsList[key] || key,
-                facetTitle: key,
+                facetTitle: lookupFacetsList[key] || key,
                 facets: rawFacet.buckets.map((item, index) => {
                     if (key === 'Display type') {
                         const publicationTypeIndex = publicationTypes().findIndex((publicationType) => {
@@ -170,9 +172,10 @@ export default class FacetsFilter extends PureComponent {
                             count: item.doc_count
                         };
                     } else {
+                        const facetValue = rawFacetLookup && rawFacetLookup.buckets.length > index ? rawFacetLookup.buckets[index].key : item.key;
                         return {
-                            title: rawFacetLookup && rawFacetLookup.buckets.length > index ? rawFacetLookup.buckets[index].key : item.key,
-                            key: item.key,
+                            title: facetValue,
+                            key: lookupFacetsList[key] ? facetValue : item.key,
                             count: item.doc_count
                         };
                     }
@@ -207,7 +210,7 @@ export default class FacetsFilter extends PureComponent {
 
     render() {
         const {yearPublishedCategory, yearPublishedFacet, resetButtonText} = locale.components.facetsFilter;
-        const facetsToDisplay = this.getFacetsToDisplay(this.props.facetsData, this.props.excludeFacetsList, this.props.renameFacetsList);
+        const facetsToDisplay = this.getFacetsToDisplay(this.props.facetsData, this.props.excludeFacetsList, this.props.renameFacetsList, this.props.lookupFacetsList);
         const hasActiveFilters = (this.areClientFiltersAvailable()
             || Object.keys(this.state.activeFacets.ranges).length > 0
             || !!this.state.activeFacets.showOpenAccessOnly);

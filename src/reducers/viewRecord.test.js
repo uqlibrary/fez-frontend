@@ -46,11 +46,6 @@ describe('viewRecord reducer', () => {
         expect(test.recordToViewError).toEqual(errorMsg);
     });
 
-    it('should set a record to view', () => {
-        const test = viewRecordReducer(initialState, {type: actions.VIEW_RECORD_SET, payload: mockRecord});
-        expect(test.recordToView).toEqual(mockRecord);
-    });
-
     it('should clear a record to view', () => {
         const test = viewRecordReducer(initialState, {type: actions.VIEW_RECORD_CLEAR});
         expect(test).toEqual(initialState);

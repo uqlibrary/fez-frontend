@@ -27,7 +27,7 @@ export default class TopCitedPublications extends PureComponent {
 
     componentDidMount() {
         if (!this.props.loadingTopCitedPublications) {
-            this.props.actions.searchTopCitedPublications();
+            this.props.actions.searchTopCitedPublications(locale.components.topCitedPublications.recordsPerSource);
         }
     }
 
@@ -51,6 +51,7 @@ export default class TopCitedPublications extends PureComponent {
                                 this.props.topCitedPublicationsList.sort((source1, source2) => (
                                     txt[source1.key].order - txt[source2.key].order
                                 )).map(({key, values}, metricIndex) => (
+                                    values && values.length >= 1 &&
                                     <Tab key={key}
                                         label={this.context.isMobile ? txt[key].mobileTitle : txt[key].title}
                                         value={`${key}TopCitedPublications`}
@@ -70,9 +71,7 @@ export default class TopCitedPublications extends PureComponent {
                                                     <PublicationsList
                                                         publicationsList={values}
                                                         showMetrics
-                                                        showSourceCountIcon={key === 'altmetric'}
-                                                        hideCountDiff={key === 'altmetric'}
-                                                        hideCitationContent
+                                                        hideCountTotal
                                                     />
                                                 </div>
                                             </div>

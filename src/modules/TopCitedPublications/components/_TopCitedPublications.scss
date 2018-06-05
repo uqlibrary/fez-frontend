@@ -10,6 +10,19 @@ button.publicationTab {
 }
 
 .topCitedPublications {
+  // Rainbow count difference values
+  .publicationsList {
+    @for $i from 1 through 20 {
+      div.publicationCitation:nth-of-type(#{$i}) {
+        span.trendingPubsDifference {
+          color: darken(adjust-hue(red, ($i/20)*70), 10%) !important;
+          @include mobile {
+            font-size: $text-body-xlarge !important;
+          }
+        }
+      }
+    }
+  }
   .subTitle {
     height: 40px;
   }
@@ -27,5 +40,11 @@ button.publicationTab {
   }
   .alertWrapper {
     margin-top: 0 !important;
+  }
+  h3.publicationTitle {
+    font-size: $text-body-xlarge !important;
+    @include mobile {
+      font-size: $text-body-large !important;
+    }
   }
 }
