@@ -18,7 +18,8 @@ const DashboardResearcherIds = ({values, authenticated, history}) => {
             publons: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier',
             scopus: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier',
             researcher: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier',
-            google_scholar: routes.pathConfig.authorIdentifiers.googleScholar.link,
+            google_scholar: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier',
+            // google_scholar: routes.pathConfig.authorIdentifiers.googleScholar.link,
             orcid: routes.pathConfig.authorIdentifiers.orcid.link
         }
     };
