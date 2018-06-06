@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
@@ -6,60 +6,45 @@ import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
 import Close from 'material-ui/svg-icons/navigation/close';
 import {locale} from 'locale';
+import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
 
 
-export default class AdvancedSearchRow extends PureComponent {
+export default class AdvancedSearchRow extends Component {
     static propTypes = {
-        searchQueryParams: PropTypes.string,
-        fieldIndex: PropTypes.number,
-        searchField: PropTypes.number,
-        value: PropTypes.any,
-        updateValueFunc: PropTypes.func,
-        deleteFunc: PropTypes.func,
-        errorText: PropTypes.func,
-        disabledFields: PropTypes.array
+        rowIndex: PropTypes.number,
+        searchRow: PropTypes.object,
+        disabledFields: PropTypes.array,
+        onSearchRowChange: PropTypes.func,
+        onSearchRowDelete: PropTypes.func,
     };
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: props.value || '',
-            searchField: props.searchField || 0,
-        };
+    shouldComponentUpdate(nextProps) {
+        if (
+            this.props.searchRow.searchField !== nextProps.searchRow.searchField ||
+            this.props.searchRow.value !== nextProps.searchRow.value
+        ) return true;
+
+        return false;
     }
 
-    componentWillReceiveProps(nextProps) {
-        if(this.state.value !== nextProps.value
-            || this.state.searchField !== nextProps.searchField) {
-            this.setState({
-                value: nextProps.value,
-                searchField: nextProps.searchField,
-            });
-        }
-    }
-
-    componentDidUpdate(previousProps, previousState) {
-        if (previousState !== this.state) {
-            this.props.updateValueFunc(this.props.fieldIndex, this.state);
-        }
-    }
-
-    textChanged = (event, value) => {
-        this.setState({
-            ...this.state,
-            value: value,
-        });
+    handleTextChange = (event, value) => {
+        this.props.onSearchRowChange(this.props.rowIndex, {...this.props.searchRow, value});
     };
 
-    searchFieldChanged = (event, value) => {
-        this.setState({
-            ...this.state,
-            searchField: value,
-        });
+    handleSearchFieldChange = (event, index, searchField) => {
+        this.props.onSearchRowChange(this.props.rowIndex, {...this.props.searchRow, searchField});
     };
 
     deleteRow = () => {
-        this.props.deleteFunc(this.props.fieldIndex);
+        this.props.onSearchRowDelete(this.props.rowIndex);
+    };
+
+    searchTextValidationMessage = (value) => {
+        if (value.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
+            return locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH);
+        }
+
+        return null;
     };
 
     render() {
@@ -68,44 +53,44 @@ export default class AdvancedSearchRow extends PureComponent {
             <div className="columns is-gapless is-mobile advancedSearchField">
                 <div className="column is-3">
                     <SelectField
-                        value={this.state.searchField}
-                        onChange={this.searchFieldChanged}
+                        value={this.props.searchRow.searchField}
+                        onChange={this.handleSearchFieldChange}
                         fullWidth>
                         {
-                            txt.fieldTypes.map((item, index) => (
+                            Object.keys(txt.fieldTypes).map((item, index) => (
                                 <MenuItem
-                                    key={index}
-                                    value={index}
-                                    primaryText={txt.fieldTypes[index].title}
-                                    disabled={index === 0 || this.props.disabledFields.indexOf(index) > -1}
+                                    key={item}
+                                    value={item}
+                                    primaryText={txt.fieldTypes[item].title}
+                                    disabled={index === 0 || this.props.disabledFields.indexOf(item) > -1}
                                 />
                             ))
                         }
                     </SelectField>
                 </div>
                 {
-                    txt.fieldTypes[this.state.searchField].combiner ?
+                    txt.fieldTypes[this.props.searchRow.searchField].combiner ?
                         <div className="column is-narrow combiner">
-                            <span>{txt.fieldTypes[this.state.searchField].combiner}</span>
+                            <span>{txt.fieldTypes[this.props.searchRow.searchField].combiner}</span>
                         </div>
                         : <div className="column is-narrow" style={{width: 12}} />
                 }
                 <div className="column">
                     <TextField
                         type="search"
-                        name={`textSearchField${this.props.fieldIndex}`}
+                        name={`textSearchField${this.props.rowIndex}`}
                         id="searchField"
                         fullWidth
-                        hintText={txt.fieldTypes[this.state.searchField].hint}
+                        hintText={txt.fieldTypes[this.props.searchRow.searchField].hint}
                         aria-label="Aria"
-                        value={this.state.value}
-                        onChange={this.textChanged}
-                        errorText={this.props.errorText(this.state.value)}
-                        disabled={this.state.searchField === 0}
+                        value={this.props.searchRow.value}
+                        onChange={this.handleTextChange}
+                        errorText={this.searchTextValidationMessage(this.props.searchRow.value)}
+                        disabled={this.props.searchRow.searchField === 0}
                     />
                 </div>
                 {
-                    this.props.fieldIndex !== 0 &&
+                    this.props.rowIndex !== 0 &&
                     <div className="column is-narrow">
                         <IconButton
                             className="deleteFieldButton"

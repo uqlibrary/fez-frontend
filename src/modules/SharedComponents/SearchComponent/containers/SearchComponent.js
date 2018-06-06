@@ -5,9 +5,16 @@ import * as actions from 'actions';
 import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state) => {
+    const isAdvancedSearch = !!state.get('searchRecordsReducer').searchQuery &&
+        !!state.get('searchRecordsReducer').searchQuery.searchMode &&
+        state.get('searchRecordsReducer').searchQuery.searchMode === 'advanced';
+
     return {
         searchQueryParams: state && state.get('searchRecordsReducer') && state.get('searchRecordsReducer').searchQuery
-            && state.get('searchRecordsReducer').searchQuery.searchQueryParams || {}
+            && state.get('searchRecordsReducer').searchQuery.searchQueryParams || {},
+        isAdvancedSearch: isAdvancedSearch,
+        isAdvancedSearchMinimised: isAdvancedSearch,
+        isOpenAccessInAdvancedMode: isAdvancedSearch && !!state.get('searchRecordsReducer').searchQuery.activeFacets.showOpenAccessOnly,
     };
 };
 

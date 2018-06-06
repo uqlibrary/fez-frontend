@@ -809,31 +809,30 @@ export default {
             simpleSearchToggle: 'Simple search',
             advancedSearch: {
                 title: 'Advanced search',
+                mode: 'advanced',
                 tooltip: {
                     show: 'Show advanced search',
                     hide: 'Hide advanced search'
                 },
-                fieldTypes: [
-                    {
+                fieldTypes: {
+                    0: {
                         title: 'Select a field',
                         combiner: null,
                         hint: 'Select a field to search on'
                     },
-                    {
+                    'all': {
                         title: 'Any field',
-                        searchQueryParameter: 'all',
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add some text to search all fields with'
                     },
-                    {
+                    'rek_title': {
                         title: 'Title',
-                        searchQueryParameter: 'rek_title',
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a title to search'
                     }
-                ],
+                },
                 openAccess: {
                     title: 'Open access / Full text',
                     searchQueryParameter: 'rek_openaccess'
