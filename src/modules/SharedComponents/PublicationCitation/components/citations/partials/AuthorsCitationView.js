@@ -128,10 +128,8 @@ export default class AuthorsCitationView extends PureComponent {
                 }
                 {
                     hasMoreAuthors &&
-                    <span>
-                        &nbsp;
-                        <a href="#"
-                            className="citationShowMoreAuthors"
+                    <span>&nbsp;
+                        <a className="citationShowMoreAuthors"
                             onClick={this._toggleShowMore}
                             onKeyPress={this._toggleShowMore}
                             title={toggleShowMoreLink
