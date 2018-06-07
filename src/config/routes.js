@@ -303,7 +303,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
     ];
 };
 
-export const getMenuConfig = (account, disabled) => {
+export const getMenuConfig = (account, disabled, isViewPage = false) => {
     const homePage = [
         {
             linkTo: pathConfig.index,
@@ -327,11 +327,13 @@ export const getMenuConfig = (account, disabled) => {
             ...locale.menu.contact,
             public: true
         },
-        {
-            linkTo: pathConfig.legacyEspace,
-            ...locale.menu.legacyEspace,
-            public: true
-        }
+        ...(!account && isViewPage ? [] : [
+            {
+                linkTo: pathConfig.legacyEspace,
+                ...locale.menu.legacyEspace,
+                public: true
+            }
+        ])
     ];
 
     if (disabled) {

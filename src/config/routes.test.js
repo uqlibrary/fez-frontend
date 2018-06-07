@@ -88,5 +88,20 @@ describe('Routes method', () => {
         expect(testComponent).toHaveBeenCalledWith(locale.pages.notFound);
     });
 
+    it('should not return Switch to old interface menu item for public view page', () => {
+        const testMenuItems = routes.getMenuConfig(null, false, true);
+        expect(testMenuItems.length).toEqual(4);
+
+        const contactMenuItem = testMenuItems.pop();
+        expect(contactMenuItem.primaryText).toEqual('Contact');
+    });
+
+    it('should return Switch to old interface menu item for logged in user on view page', () => {
+        const testMenuItems = routes.getMenuConfig(accounts.uqresearcher, false, true);
+        expect(testMenuItems.length).toEqual(13);
+
+        const legacyEspaceMenuItem = testMenuItems.pop();
+        expect(legacyEspaceMenuItem.primaryText).toEqual('Switch to old interface');
+    });
 });
 
