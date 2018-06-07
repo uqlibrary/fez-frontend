@@ -164,6 +164,7 @@ export default class App extends PureComponent {
             forceOrcidRegistration: isOrcidRequired && isHdrStudent,
             isHdrStudent: isHdrStudent
         });
+        console.log(menuItems);
         return (
             <div className="layout-fill align-stretch">
                 <Meta routesConfig={routesConfig}/>
@@ -172,7 +173,7 @@ export default class App extends PureComponent {
                     showMenuIconButton={showMenu && !this.state.docked}
                     style={{height: 75}}
                     iconStyleLeft={{marginTop: 0}}
-                    title={locale.global.appTitle}
+                    title={locale.global.title}
                     titleStyle={titleStyle}
                     onLeftIconButtonClick={this.toggleDrawer}
                     iconElementLeft={
