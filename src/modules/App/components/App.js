@@ -118,7 +118,8 @@ export default class App extends PureComponent {
         const isOrcidRequired = this.props.author && !this.props.author.aut_orcid_id
             && this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
         const isHdrStudent = this.props.author && this.props.author.aut_student_username;
-        const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent);
+        const isViewPage = (new RegExp(routes.pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname));
+        const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent, isViewPage);
         const isPublicPage = menuItems.filter((menuItem) =>
             (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
         const isThesisSubmissionPage = this.props.location.pathname === routes.pathConfig.hdrSubmission ||
@@ -135,7 +136,7 @@ export default class App extends PureComponent {
         }
 
         let userStatusAlert = null;
-        if (!this.props.accountLoading && !this.props.account) {
+        if (!this.props.accountLoading && !this.props.account && !isPublicPage) {
             // user is not logged in
             userStatusAlert = {
                 ...locale.global.loginAlert,
@@ -164,6 +165,7 @@ export default class App extends PureComponent {
             forceOrcidRegistration: isOrcidRequired && isHdrStudent,
             isHdrStudent: isHdrStudent
         });
+        console.log(menuItems);
         return (
             <div className="layout-fill align-stretch">
                 <Meta routesConfig={routesConfig}/>
@@ -172,7 +174,7 @@ export default class App extends PureComponent {
                     showMenuIconButton={showMenu && !this.state.docked}
                     style={{height: 75}}
                     iconStyleLeft={{marginTop: 0}}
-                    title={locale.global.appTitle}
+                    title={locale.global.title}
                     titleStyle={titleStyle}
                     onLeftIconButtonClick={this.toggleDrawer}
                     iconElementLeft={

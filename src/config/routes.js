@@ -126,6 +126,12 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
     const pid = `:pid(${pidRegExp})`;
     const publicPages = [
         {
+            path: pathConfig.index,
+            component: components.Index,
+            exact: true,
+            pageTitle: locale.pages.index.title
+        },
+        {
             path: pathConfig.contact,
             render: () => components.StandardPage({...locale.pages.contact}),
             pageTitle: locale.pages.contact.title
@@ -145,12 +151,6 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
         },
         ...(!account
             ? [
-                {
-                    path: pathConfig.index,
-                    component: components.Index,
-                    exact: true,
-                    pageTitle: locale.pages.index.title
-                },
                 {
                     path: pathConfig.dashboard,
                     component: components.Index,
@@ -303,7 +303,14 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
     ];
 };
 
-export const getMenuConfig = (account, disabled) => {
+export const getMenuConfig = (account, disabled, isViewPage = false) => {
+    const homePage = [
+        {
+            linkTo: pathConfig.index,
+            ...locale.menu.index,
+            public: true
+        },
+    ];
     const publicPages = [
         {
             linkTo: pathConfig.records.search,
@@ -320,11 +327,13 @@ export const getMenuConfig = (account, disabled) => {
             ...locale.menu.contact,
             public: true
         },
-        {
-            linkTo: pathConfig.legacyEspace,
-            ...locale.menu.legacyEspace,
-            public: true
-        }
+        ...(!account && isViewPage ? [] : [
+            {
+                linkTo: pathConfig.legacyEspace,
+                ...locale.menu.legacyEspace,
+                public: true
+            }
+        ])
     ];
 
     if (disabled) {
@@ -344,6 +353,7 @@ export const getMenuConfig = (account, disabled) => {
     }
 
     return [
+        ...homePage,
         ...(account ? [
             {
                 linkTo: pathConfig.dashboard,

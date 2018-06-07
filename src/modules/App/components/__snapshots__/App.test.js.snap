@@ -131,6 +131,12 @@ exports[`Application component should render alert if user is not fez author 1`]
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/",
+        },
+        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -219,16 +225,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         "height": 75,
       }
     }
-    title={
-      <a
-        className="siteTitle"
-        href="/"
-      >
-        <h1>
-          UQ eSpace 
-        </h1>
-      </a>
-    }
+    title="UQ eSpace "
     titleStyle={Object {}}
     zDepth={1}
   />
@@ -249,6 +246,11 @@ exports[`Application component should render alert if user is not fez author 1`]
     logoText="University of Queensland"
     menuItems={
       Array [
+        Object {
+          "linkTo": "/",
+          "primaryText": "Home",
+          "public": true,
+        },
         Object {
           "linkTo": "/dashboard",
           "primaryText": "My dashboard",
@@ -487,7 +489,14 @@ exports[`Application component should render alert if user is not fez author 1`]
         path="/author-identifiers/google-scholar/link"
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_14"
+        pageTitle="eSpace"
+        path="/"
+      />
+      <Route
+        key="route_15"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -495,19 +504,19 @@ exports[`Application component should render alert if user is not fez author 1`]
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_16"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_16"
+        key="route_17"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_17"
+        key="route_18"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -649,6 +658,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/",
+        },
+        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -737,16 +752,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         "height": 75,
       }
     }
-    title={
-      <a
-        className="siteTitle"
-        href="/"
-      >
-        <h1>
-          UQ eSpace 
-        </h1>
-      </a>
-    }
+    title="UQ eSpace "
     titleStyle={Object {}}
     zDepth={1}
   />
@@ -767,6 +773,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     logoText="University of Queensland"
     menuItems={
       Array [
+        Object {
+          "linkTo": "/",
+          "primaryText": "Home",
+          "public": true,
+        },
         Object {
           "linkTo": "/dashboard",
           "primaryText": "My dashboard",
@@ -989,7 +1000,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         path="/author-identifiers/google-scholar/link"
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_14"
+        pageTitle="eSpace"
+        path="/"
+      />
+      <Route
+        key="route_15"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -997,19 +1015,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_16"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_16"
+        key="route_17"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_17"
+        key="route_18"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -1027,6 +1045,12 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
   <withRouter(Connect(Meta))
     routesConfig={
       Array [
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/",
+        },
         Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
@@ -1126,16 +1150,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         "height": 75,
       }
     }
-    title={
-      <a
-        className="siteTitle"
-        href="/"
-      >
-        <h1>
-          UQ eSpace 
-        </h1>
-      </a>
-    }
+    title="UQ eSpace "
     titleStyle={Object {}}
     zDepth={1}
   />
@@ -1214,7 +1229,14 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     <Connect(AppAlert) />
     <Switch>
       <Route
+        component={[Function]}
+        exact={true}
         key="route_0"
+        pageTitle="eSpace"
+        path="/"
+      />
+      <Route
+        key="route_1"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -1222,32 +1244,32 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       <Route
         component={[Function]}
         exact={true}
-        key="route_1"
+        key="route_2"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_2"
+        key="route_3"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_3"
+        key="route_4"
         pageTitle="Higher degree by research thesis deposit"
         path="/rhdsubmission"
         render={[Function]}
       />
       <Route
-        key="route_4"
+        key="route_5"
         pageTitle="Professional doctorate deposit"
         path="/sbslodge_new"
         render={[Function]}
       />
       <Route
         component={[Function]}
-        key="route_5"
+        key="route_6"
         pageTitle="Link ORCID ID to UQ eSpace"
       />
     </Switch>
@@ -1388,6 +1410,12 @@ exports[`Application component should render app for account with fez author wit
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/",
+        },
+        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -1476,16 +1504,7 @@ exports[`Application component should render app for account with fez author wit
         "height": 75,
       }
     }
-    title={
-      <a
-        className="siteTitle"
-        href="/"
-      >
-        <h1>
-          UQ eSpace 
-        </h1>
-      </a>
-    }
+    title="UQ eSpace "
     titleStyle={Object {}}
     zDepth={1}
   />
@@ -1506,6 +1525,11 @@ exports[`Application component should render app for account with fez author wit
     logoText="University of Queensland"
     menuItems={
       Array [
+        Object {
+          "linkTo": "/",
+          "primaryText": "Home",
+          "public": true,
+        },
         Object {
           "linkTo": "/dashboard",
           "primaryText": "My dashboard",
@@ -1728,7 +1752,14 @@ exports[`Application component should render app for account with fez author wit
         path="/author-identifiers/google-scholar/link"
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_14"
+        pageTitle="eSpace"
+        path="/"
+      />
+      <Route
+        key="route_15"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -1736,19 +1767,19 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_16"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_16"
+        key="route_17"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_17"
+        key="route_18"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -1890,6 +1921,12 @@ exports[`Application component should render app for account with fez author wit
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/",
+        },
+        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -1978,16 +2015,7 @@ exports[`Application component should render app for account with fez author wit
         "height": 75,
       }
     }
-    title={
-      <a
-        className="siteTitle"
-        href="/"
-      >
-        <h1>
-          UQ eSpace 
-        </h1>
-      </a>
-    }
+    title="UQ eSpace "
     titleStyle={Object {}}
     zDepth={1}
   />
@@ -2008,6 +2036,11 @@ exports[`Application component should render app for account with fez author wit
     logoText="University of Queensland"
     menuItems={
       Array [
+        Object {
+          "linkTo": "/",
+          "primaryText": "Home",
+          "public": true,
+        },
         Object {
           "linkTo": "/dashboard",
           "primaryText": "My dashboard",
@@ -2248,7 +2281,14 @@ exports[`Application component should render app for account with fez author wit
         path="/author-identifiers/google-scholar/link"
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_14"
+        pageTitle="eSpace"
+        path="/"
+      />
+      <Route
+        key="route_15"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -2256,19 +2296,19 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_16"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_16"
+        key="route_17"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_17"
+        key="route_18"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2410,6 +2450,12 @@ exports[`Application component should render app for account with fez author wit
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/",
+        },
+        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -2492,16 +2538,7 @@ exports[`Application component should render app for account with fez author wit
         "height": 75,
       }
     }
-    title={
-      <a
-        className="siteTitle"
-        href="/"
-      >
-        <h1>
-          UQ eSpace 
-        </h1>
-      </a>
-    }
+    title="UQ eSpace "
     titleStyle={Object {}}
     zDepth={1}
   />
@@ -2668,7 +2705,14 @@ exports[`Application component should render app for account with fez author wit
         path="/author-identifiers/google-scholar/link"
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_14"
+        pageTitle="eSpace"
+        path="/"
+      />
+      <Route
+        key="route_15"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -2676,19 +2720,19 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_16"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_16"
+        key="route_17"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_17"
+        key="route_18"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2830,6 +2874,12 @@ exports[`Application component should render application with routing for the us
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/",
+        },
+        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -2918,16 +2968,7 @@ exports[`Application component should render application with routing for the us
         "height": 75,
       }
     }
-    title={
-      <a
-        className="siteTitle"
-        href="/"
-      >
-        <h1>
-          UQ eSpace 
-        </h1>
-      </a>
-    }
+    title="UQ eSpace "
     titleStyle={Object {}}
     zDepth={1}
   />
@@ -2948,6 +2989,11 @@ exports[`Application component should render application with routing for the us
     logoText="University of Queensland"
     menuItems={
       Array [
+        Object {
+          "linkTo": "/",
+          "primaryText": "Home",
+          "public": true,
+        },
         Object {
           "linkTo": "/dashboard",
           "primaryText": "My dashboard",
@@ -3033,6 +3079,12 @@ exports[`Application component should render for anon user 1`] = `
     routesConfig={
       Array [
         Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/",
+        },
+        Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
           "render": [Function],
@@ -3049,12 +3101,6 @@ exports[`Application component should render for anon user 1`] = `
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
-        },
-        Object {
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "eSpace",
-          "path": "/",
         },
         Object {
           "component": [Function],
@@ -3133,16 +3179,7 @@ exports[`Application component should render for anon user 1`] = `
         "height": 75,
       }
     }
-    title={
-      <a
-        className="siteTitle"
-        href="/"
-      >
-        <h1>
-          UQ eSpace 
-        </h1>
-      </a>
-    }
+    title="UQ eSpace "
     titleStyle={Object {}}
     zDepth={1}
   />
@@ -3163,6 +3200,11 @@ exports[`Application component should render for anon user 1`] = `
     logoText="University of Queensland"
     menuItems={
       Array [
+        Object {
+          "linkTo": "/",
+          "primaryText": "Home",
+          "public": true,
+        },
         Object {
           "linkTo": "/records/search",
           "primaryText": "Search eSpace",
@@ -3214,7 +3256,14 @@ exports[`Application component should render for anon user 1`] = `
     <Connect(AppAlert) />
     <Switch>
       <Route
+        component={[Function]}
+        exact={true}
         key="route_0"
+        pageTitle="eSpace"
+        path="/"
+      />
+      <Route
+        key="route_1"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -3222,23 +3271,16 @@ exports[`Application component should render for anon user 1`] = `
       <Route
         component={[Function]}
         exact={true}
-        key="route_1"
+        key="route_2"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_2"
+        key="route_3"
         pageTitle="eSpace search"
         path="/records/search"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_3"
-        pageTitle="eSpace"
-        path="/"
       />
       <Route
         component={[Function]}
@@ -3279,6 +3321,12 @@ exports[`Application component should render thesis submission for HDR without m
   <withRouter(Connect(Meta))
     routesConfig={
       Array [
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/",
+        },
         Object {
           "pageTitle": "Contact UQ eSpace",
           "path": "/contact",
@@ -3372,16 +3420,7 @@ exports[`Application component should render thesis submission for HDR without m
         "height": 75,
       }
     }
-    title={
-      <a
-        className="siteTitle"
-        href="/"
-      >
-        <h1>
-          UQ eSpace 
-        </h1>
-      </a>
-    }
+    title="UQ eSpace "
     titleStyle={Object {}}
     zDepth={1}
   />
@@ -3392,7 +3431,14 @@ exports[`Application component should render thesis submission for HDR without m
     <Connect(AppAlert) />
     <Switch>
       <Route
+        component={[Function]}
+        exact={true}
         key="route_0"
+        pageTitle="eSpace"
+        path="/"
+      />
+      <Route
+        key="route_1"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -3400,32 +3446,32 @@ exports[`Application component should render thesis submission for HDR without m
       <Route
         component={[Function]}
         exact={true}
-        key="route_1"
+        key="route_2"
         path="/records/:pid(UQ:[a-z0-9]+)"
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_2"
+        key="route_3"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_3"
+        key="route_4"
         pageTitle="Higher degree by research thesis deposit"
         path="/rhdsubmission"
         render={[Function]}
       />
       <Route
-        key="route_4"
+        key="route_5"
         pageTitle="Professional doctorate deposit"
         path="/sbslodge_new"
         render={[Function]}
       />
       <Route
         component={[Function]}
-        key="route_5"
+        key="route_6"
         pageTitle="Link ORCID ID to UQ eSpace"
       />
     </Switch>
