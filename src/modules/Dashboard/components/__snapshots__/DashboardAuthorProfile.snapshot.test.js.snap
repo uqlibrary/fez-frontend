@@ -296,23 +296,23 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                   >
                     <ExternalLink
                       className="researcherIDlink"
-                      href="https://app.library.uq.edu.au/#/id"
+                      href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier"
                       openInNewIcon={false}
                       rel="noopener noreferrer"
                       target="_blank"
-                      title="You are not linked to Publons - Click to amend"
+                      title="You are not linked to Publons - Click for more information"
                     >
                       <a
                         className="researcherIDlink externalLinkfalse"
-                        href="https://app.library.uq.edu.au/#/id"
+                        href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier"
                         rel="noopener noreferrer"
                         tabIndex="0"
                         target="_blank"
-                        title="You are not linked to Publons - Click to amend"
+                        title="You are not linked to Publons - Click for more information"
                       >
                         <div
                           className="fez-icon publons dashboard"
-                          title="You are not linked to Publons - Click to amend"
+                          title="You are not linked to Publons - Click for more information"
                         />
                       </a>
                     </ExternalLink>

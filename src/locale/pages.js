@@ -154,7 +154,7 @@ export default {
                 },
                 dashboardResearcherIds: {
                     researcherIsLinked: 'Your [resource] ID is [id] - Click to review',
-                    researcherIsNotLinked: 'You are not linked to [resource] - Click to amend',
+                    researcherIsNotLinked: 'You are not linked to [resource] - Click for more information',
                     orcidUrlPrefix: process.env.ORCID_URL ? `${process.env.ORCID_URL}/` : 'https://orcid.org/',
                     orcidLinkPrefix: 'orcid.org/',
                     orcidlinkLabel: 'Click to visit your ORCId profile',
