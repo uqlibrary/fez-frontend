@@ -279,7 +279,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
     ];
 };
 
-export const getMenuConfig = (account, disabled) => {
+export const getMenuConfig = (account, disabled, isViewPage = false) => {
     const publicPages = [
         // TODO: enable when search is public
         // {
@@ -297,11 +297,13 @@ export const getMenuConfig = (account, disabled) => {
             ...locale.menu.contact,
             public: true
         },
-        {
-            linkTo: pathConfig.legacyEspace,
-            ...locale.menu.legacyEspace,
-            public: true
-        }
+        ...(!account && isViewPage ? [] : [
+            {
+                linkTo: pathConfig.legacyEspace,
+                ...locale.menu.legacyEspace,
+                public: true
+            }
+        ])
     ];
 
     if (disabled) {
