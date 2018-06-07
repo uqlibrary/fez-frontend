@@ -71,9 +71,7 @@ export function loadCurrentAccount() {
 }
 
 export function logout() {
-    if(!!Cookies.get(SESSION_COOKIE_NAME)) {
-        Cookies.remove(SESSION_COOKIE_NAME);
-    }
+    Cookies.remove(SESSION_COOKIE_NAME);
 
     return dispatch => {
         dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
