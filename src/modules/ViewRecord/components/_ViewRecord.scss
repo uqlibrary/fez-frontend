@@ -116,6 +116,9 @@
     }
     .filename {
       line-height: 48px !important;
+      &:hover {
+        cursor: pointer;
+      }
       @include desktop {
         width: 45% !important;
       }
