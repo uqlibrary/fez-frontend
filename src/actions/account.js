@@ -4,7 +4,7 @@ import * as routes from 'repositories/routes';
 import Raven from 'raven-js';
 
 import Cookies from 'js-cookie';
-import {SESSION_COOKIE_NAME} from './general';
+import {SESSION_COOKIE_NAME} from 'config/general';
 
 /**
  * Loads the user's account and author details into the application
