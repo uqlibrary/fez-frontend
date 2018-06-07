@@ -90,7 +90,7 @@ describe('Routes method', () => {
 
     it('should not return Switch to old interface menu item for public view page', () => {
         const testMenuItems = routes.getMenuConfig(null, false, true);
-        expect(testMenuItems.length).toEqual(2);
+        expect(testMenuItems.length).toEqual(3);
 
         const contactMenuItem = testMenuItems.pop();
         expect(contactMenuItem.primaryText).toEqual('Contact');
@@ -98,7 +98,7 @@ describe('Routes method', () => {
 
     it('should return Switch to old interface menu item for logged in user on view page', () => {
         const testMenuItems = routes.getMenuConfig(accounts.uqresearcher, false, true);
-        expect(testMenuItems.length).toEqual(11);
+        expect(testMenuItems.length).toEqual(12);
 
         const legacyEspaceMenuItem = testMenuItems.pop();
         expect(legacyEspaceMenuItem.primaryText).toEqual('Switch to old interface');
