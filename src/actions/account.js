@@ -3,6 +3,9 @@ import {get} from 'repositories/generic';
 import * as routes from 'repositories/routes';
 import Raven from 'raven-js';
 
+import Cookies from 'js-cookie';
+import {SESSION_COOKIE_NAME} from './general';
+
 /**
  * Loads the user's account and author details into the application
  * @returns {function(*)}
@@ -68,6 +71,10 @@ export function loadCurrentAccount() {
 }
 
 export function logout() {
+    if(!!Cookies.get(SESSION_COOKIE_NAME)) {
+        Cookies.remove(SESSION_COOKIE_NAME);
+    }
+
     return dispatch => {
         dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
     };
