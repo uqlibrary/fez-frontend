@@ -55,8 +55,9 @@ export default class GrantInformation extends Component {
             return null;
         }
 
-        const fundingText = this.props.publication.fez_record_search_key_grant_text.length === 1 &&
-                this.props.publication.fez_record_search_key_grant_text[0].rek_grant_text || null;
+        const fundingText = this.props.publication.fez_record_search_key_grant_text &&
+            this.props.publication.fez_record_search_key_grant_text.length === 1 &&
+            this.props.publication.fez_record_search_key_grant_text[0].rek_grant_text || null;
 
         return (
             <StandardCard title={locale.viewRecord.sections.grantInformation}>
