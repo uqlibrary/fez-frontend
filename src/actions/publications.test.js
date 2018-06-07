@@ -152,7 +152,7 @@ describe('Publications actions', () => {
 
             const expectedActions = [
                 actions.TRENDING_PUBLICATIONS_LOADING,
-                `${actions.TRENDING_PUBLICATIONS_LOADED}@scopus`,
+                // `${actions.TRENDING_PUBLICATIONS_LOADED}@scopus`,
                 `${actions.TRENDING_PUBLICATIONS_LOADED}@thomson`,
                 `${actions.TRENDING_PUBLICATIONS_LOADED}@altmetric`,
             ];
@@ -213,7 +213,7 @@ describe('Publications actions', () => {
 
             const expectedActions = [
                 actions.TOP_CITED_PUBLICATIONS_LOADING,
-                `${actions.TOP_CITED_PUBLICATIONS_LOADED}@scopus`,
+                // `${actions.TOP_CITED_PUBLICATIONS_LOADED}@scopus`,
                 `${actions.TOP_CITED_PUBLICATIONS_LOADED}@thomson`,
                 `${actions.TOP_CITED_PUBLICATIONS_LOADED}@altmetric`,
             ];
