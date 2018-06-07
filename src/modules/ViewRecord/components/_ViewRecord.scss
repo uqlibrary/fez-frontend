@@ -198,6 +198,12 @@
     img {
       max-width: 80vw;
       max-height: 100vh;
+      width: 200px;
+      margin: 0 auto !important;
+      display: block !important;
+    }
+    .alertWrapper {
+      margin-top: -32px !important;
     }
   }
 

@@ -2,26 +2,41 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'locale';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import RaisedButton from 'material-ui/RaisedButton';
+// import {routes} from "../../../../config";
 
 export default class MediaPreview extends PureComponent {
     static propTypes = {
         mediaUrl: PropTypes.string.isRequired,
         previewMediaUrl: PropTypes.string.isRequired,
         mimeType: PropTypes.string.isRequired,
-        onClose: PropTypes.func.isRequired
+        onClose: PropTypes.func.isRequired,
+        history: PropTypes.any
     };
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            imageError: false
+        };
+    }
 
     openFileInNewWindow = () => {
         window.open(this.props.mediaUrl);
-    }
+    };
+
+    imageError =() => {
+        this.setState({
+            imageError: true
+        });
+    };
 
     render()  {
         const {mediaUrl, previewMediaUrl, mimeType} = this.props;
         const isVideo = mimeType.indexOf('video') >= 0;
         const isImage = mimeType.indexOf('image') >= 0;
         const title = isVideo ? locale.viewRecord.sections.files.preview.videoTitle : locale.viewRecord.sections.files.preview.imageTitle;
-
         return (
             <StandardCard title={title} className={'mediaPreview'}>
                 <div className="column is-narrow buttons">
@@ -36,8 +51,17 @@ export default class MediaPreview extends PureComponent {
                     </video>
                 }
                 {
-                    isImage &&
-                    <img src={previewMediaUrl} alt={mediaUrl}/>
+                    isImage && !this.state.imageError &&
+                        <img id="previewImage" src={previewMediaUrl} alt={mediaUrl} onError={this.imageError} />
+                }
+                {
+                    isImage && this.state.imageError &&
+                    <Alert
+                        className="imageErrorAlert"
+                        {...locale.viewRecord.sections.files.preview.imageAlertError}
+                        actionButtonLabel="Download source file"
+                        action={this.openFileInNewWindow}
+                    />
                 }
             </StandardCard>
         );

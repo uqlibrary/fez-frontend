@@ -603,6 +603,8 @@ exports[`Media Preview Component  should render component with image 1`] = `
   </div>
   <img
     alt="https://test.com/test.jpg"
+    id="previewImage"
+    onError={[Function]}
     src="https://test.com/preview_test.jpg"
   />
 </StandardCard>
