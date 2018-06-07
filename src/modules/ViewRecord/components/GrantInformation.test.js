@@ -39,4 +39,10 @@ describe('Grant Information Component ', () => {
         expect(wrapper.find('TableRowColumn.header').at(1).text()).toEqual('Grant agency (Grant ID)');
         expect(wrapper.find('TableRowColumn.data').at(1).text()).toEqual('Cancer Council Queensland (1042819)');
     });
+
+    it('should not break if grant text is not in the record', () => {
+        const {fez_record_search_key_grant_text, ...journalArticleWithoutGrantText} = journalArticle;
+        const wrapper = setup({publication: journalArticleWithoutGrantText});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
