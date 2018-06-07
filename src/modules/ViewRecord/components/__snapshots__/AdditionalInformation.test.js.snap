@@ -1536,7 +1536,7 @@ exports[`Additional Information Component  should render component with audio do
                                                   >
                                                     <a
                                                       className="authorNameLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author/Shutter, Leigh"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Shutter%2C+Leigh"
                                                       key="citationAuthor_1"
                                                     >
                                                       <CitationView
@@ -1556,7 +1556,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     </a>
                                                     <a
                                                       className="authorNameLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author/Arthurs, Andy"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Arthurs%2C+Andy"
                                                       key="citationAuthor_2"
                                                     >
                                                       <CitationView
@@ -1576,7 +1576,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/486"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=486&searchQueryParams%5Ball%5D="
                                                       key="citationAuthor_3"
                                                     >
                                                       <CitationView
@@ -1596,7 +1596,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     </a>
                                                     <a
                                                       className="authorNameLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author/McColl, Mary Rose"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=McColl%2C+Mary+Rose"
                                                       key="citationAuthor_4"
                                                     >
                                                       <CitationView
@@ -1615,7 +1615,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/146"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=146&searchQueryParams%5Ball%5D="
                                                       key="citationAuthor_5"
                                                     >
                                                       <CitationView
@@ -1757,7 +1757,7 @@ exports[`Additional Information Component  should render component with audio do
                                       <ViewRecordTableRow
                                         data={
                                           <a
-                                            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Centre for Subtropical Design, Queensland University of Technology"
+                                            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology"
                                           >
                                             Centre for Subtropical Design, Queensland University of Technology
                                           </a>
@@ -1864,7 +1864,7 @@ exports[`Additional Information Component  should render component with audio do
                                                 }
                                               >
                                                 <a
-                                                  href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Centre for Subtropical Design, Queensland University of Technology"
+                                                  href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology"
                                                 >
                                                   Centre for Subtropical Design, Queensland University of Technology
                                                 </a>
@@ -2134,7 +2134,7 @@ exports[`Additional Information Component  should render component with audio do
                                       <ViewRecordTableRow
                                         data={
                                           <a
-                                            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=undefined"
+                                            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D="
                                           />
                                         }
                                         heading="Series"
@@ -2239,7 +2239,7 @@ exports[`Additional Information Component  should render component with audio do
                                                 }
                                               >
                                                 <a
-                                                  href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=undefined"
+                                                  href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D="
                                                 />
                                               </td>
                                             </TableRowColumn>
@@ -2482,7 +2482,7 @@ exports[`Additional Information Component  should render component with audio do
                                         data={
                                           <span>
                                             <a
-                                              href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_112]=453611"
+                                              href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution+noncommercial+no+derivatives"
                                             >
                                               Creative Commons Attribution noncommercial no derivatives
                                             </a>
@@ -2604,7 +2604,7 @@ exports[`Additional Information Component  should render component with audio do
                                               >
                                                 <span>
                                                   <a
-                                                    href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_112]=453611"
+                                                    href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution+noncommercial+no+derivatives"
                                                   >
                                                     Creative Commons Attribution noncommercial no derivatives
                                                   </a>
@@ -3436,7 +3436,7 @@ exports[`Additional Information Component  should render component with book 1`]
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Psychology Press"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Psychology+Press"
           >
             Psychology Press
           </a>
@@ -3465,7 +3465,7 @@ exports[`Additional Information Component  should render component with book 1`]
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=Clinical Psychology: A Modular Course"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Clinical+Psychology%3A+A+Modular+Course"
           >
             Clinical Psychology: A Modular Course
           </a>
@@ -4288,7 +4288,7 @@ exports[`Additional Information Component  should render component with book cha
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_37]=Non-coding RNA and the Reproductive System"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Non-coding+RNA+and+the+Reproductive+System"
           >
             Non-coding RNA and the Reproductive System
           </a>
@@ -4304,7 +4304,7 @@ exports[`Additional Information Component  should render component with book cha
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Springer New York"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Springer+New+York"
           >
             Springer New York
           </a>
@@ -4342,7 +4342,7 @@ exports[`Additional Information Component  should render component with book cha
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=Advances in Experimental Medicine and Biology"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Advances+in+Experimental+Medicine+and+Biology"
           >
             Advances in Experimental Medicine and Biology
           </a>
@@ -4811,11 +4811,6 @@ exports[`Additional Information Component  should render component with book cha
         key="additional-info-Chapter number"
       />
       <ViewRecordTableRow
-        data="7"
-        heading="Chapter number"
-        key="additional-info-Chapter number"
-      />
-      <ViewRecordTableRow
         data="121"
         heading="Start page"
         key="additional-info-Start page"
@@ -4873,42 +4868,42 @@ exports[`Additional Information Component  should render component with book cha
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Breast cancer"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
               >
                 Breast cancer
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=EMT"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=EMT"
               >
                 EMT
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Epithelial cell differentiation"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Epithelial+cell+differentiation"
               >
                 Epithelial cell differentiation
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Epithelial-stromal interactions"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Epithelial-stromal+interactions"
               >
                 Epithelial-stromal interactions
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hormonal regulation"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hormonal+regulation"
               >
                 Hormonal regulation
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Signalling pathways"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signalling+pathways"
               >
                 Signalling pathways
               </a>
@@ -5679,7 +5674,7 @@ exports[`Additional Information Component  should render component with conferen
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_36]=Australasian Professional Society on Alcohol and other Drugs Conference 2014"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Australasian+Professional+Society+on+Alcohol+and+other+Drugs+Conference+2014"
           >
             Australasian Professional Society on Alcohol and other Drugs Conference 2014
           </a>
@@ -6398,7 +6393,7 @@ exports[`Additional Information Component  should render component with conferen
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Wiley-Blackwell Publishing"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Wiley-Blackwell+Publishing"
           >
             Wiley-Blackwell Publishing
           </a>
@@ -6938,7 +6933,7 @@ exports[`Additional Information Component  should render component with conferen
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_36]=International Meeting on Measurements and Hydraulics of Sewers IMMHS'08, Summer School GEMCEA/LCPC"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=International+Meeting+on+Measurements+and+Hydraulics+of+Sewers+IMMHS'08%2C+Summer+School+GEMCEA%2FLCPC"
           >
             International Meeting on Measurements and Hydraulics of Sewers IMMHS'08, Summer School GEMCEA/LCPC
           </a>
@@ -6980,7 +6975,7 @@ exports[`Additional Information Component  should render component with conferen
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Department of Civil Engineering at The University of Queensland"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Department+of+Civil+Engineering+at+The+University+of+Queensland"
           >
             Department of Civil Engineering at The University of Queensland
           </a>
@@ -7501,84 +7496,84 @@ exports[`Additional Information Component  should render component with conferen
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Sewers"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sewers"
               >
                 Sewers
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Measurements"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Measurements"
               >
                 Measurements
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hydraulics"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hydraulics"
               >
                 Hydraulics
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Open channel flows"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Open+channel+flows"
               >
                 Open channel flows
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Sediments"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sediments"
               >
                 Sediments
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Turbidity"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Turbidity"
               >
                 Turbidity
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hydrodynamics"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hydrodynamics"
               >
                 Hydrodynamics
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Sedimentation"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sedimentation"
               >
                 Sedimentation
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=design"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=design"
               >
                 design
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=operation"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=operation"
               >
                 operation
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=rehabilitation"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=rehabilitation"
               >
                 rehabilitation
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=urban environment"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=urban+environment"
               >
                 urban environment
               </a>
@@ -8088,7 +8083,7 @@ exports[`Additional Information Component  should render component with creative
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=School of Architecture, The University of Queensland"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Architecture%2C+The+University+of+Queensland"
           >
             School of Architecture, The University of Queensland
           </a>
@@ -8152,7 +8147,7 @@ exports[`Additional Information Component  should render component with creative
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Original Creative Works - Design/Architectural work"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Original+Creative+Works+-+Design%2FArchitectural+work"
               >
                 Original Creative Works - Design/Architectural work
               </a>
@@ -9843,7 +9838,7 @@ exports[`Additional Information Component  should render component with data col
         data={
           <span>
             <a
-              href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_112]=453701"
+              href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=453701"
             >
               453701
             </a>
@@ -10007,35 +10002,35 @@ exports[`Additional Information Component  should render component with data col
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Isolates"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Isolates"
               >
                 Isolates
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Single cells"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Single+cells"
               >
                 Single cells
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Metagenomic data"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Metagenomic+data"
               >
                 Metagenomic data
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Genome quality"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Genome+quality"
               >
                 Genome quality
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=CheckM"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=CheckM"
               >
                 CheckM
               </a>
@@ -10111,7 +10106,7 @@ exports[`Additional Information Component  should render component with data col
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Cold Spring Harbor Laboratory Press"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Cold+Spring+Harbor+Laboratory+Press"
           >
             Cold Spring Harbor Laboratory Press
           </a>
@@ -11534,7 +11529,7 @@ exports[`Additional Information Component  should render component with data col
         data={
           <span>
             <a
-              href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_112]=453608"
+              href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution+(only)"
             >
               Creative Commons Attribution (only)
             </a>
@@ -11647,28 +11642,28 @@ exports[`Additional Information Component  should render component with data col
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Habitat Mapping"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Habitat+Mapping"
               >
                 Habitat Mapping
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Remote Sensing"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Remote+Sensing"
               >
                 Remote Sensing
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Kubulau"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Kubulau"
               >
                 Kubulau
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Environmental Management"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Environmental+Management"
               >
                 Environmental Management
               </a>
@@ -11729,7 +11724,7 @@ exports[`Additional Information Component  should render component with data col
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Pangaea"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pangaea"
           >
             Pangaea
           </a>
@@ -12781,35 +12776,35 @@ exports[`Additional Information Component  should render component with design d
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Architecture"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Architecture"
               >
                 Architecture
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Landscape design"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Landscape+design"
               >
                 Landscape design
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Restoration"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Restoration"
               >
                 Restoration
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Interior and Environmental Design"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Interior+and+Environmental+Design"
               >
                 Interior and Environmental Design
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Original Creative Works - Design/Architectural work"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Original+Creative+Works+-+Design%2FArchitectural+work"
               >
                 Original Creative Works - Design/Architectural work
               </a>
@@ -12822,7 +12817,7 @@ exports[`Additional Information Component  should render component with design d
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_151]=UQFL158, job no. 1006-2"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=UQFL158%2C+job+no.+1006-2"
           >
             UQFL158, job no. 1006-2
           </a>
@@ -12905,7 +12900,7 @@ exports[`Additional Information Component  should render component with digilib 
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=The University of Queensland Library"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=The+University+of+Queensland+Library"
           >
             The University of Queensland Library
           </a>
@@ -13361,56 +13356,56 @@ exports[`Additional Information Component  should render component with generic 
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Partial Differential Equations (PDEs)"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Partial+Differential+Equations+(PDEs)"
               >
                 Partial Differential Equations (PDEs)
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Parabolic"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Parabolic"
               >
                 Parabolic
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hyperbolic"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hyperbolic"
               >
                 Hyperbolic
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Finite difference"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Finite+difference"
               >
                 Finite difference
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Spectral method"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Spectral+method"
               >
                 Spectral method
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Finite element method"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Finite+element+method"
               >
                 Finite element method
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Iterative methods"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Iterative+methods"
               >
                 Iterative methods
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Nonlinear Partial Differential Equations"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Nonlinear+Partial+Differential+Equations"
               >
                 Nonlinear Partial Differential Equations
               </a>
@@ -14942,7 +14937,7 @@ exports[`Additional Information Component  should render component with journal 
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Betriebswirtschaftlicher Verlag T. Gabler"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Betriebswirtschaftlicher+Verlag+T.+Gabler"
           >
             Betriebswirtschaftlicher Verlag T. Gabler
           </a>
@@ -14981,14 +14976,14 @@ exports[`Additional Information Component  should render component with journal 
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Knowledge"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Knowledge"
               >
                 Knowledge
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Multinational corporations"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Multinational+corporations"
               >
                 Multinational corporations
               </a>
@@ -18613,7 +18608,7 @@ exports[`Additional Information Component  should render component with journal 
                                                   >
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/88893"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=88893&searchQueryParams%5Ball%5D="
                                                       key="citationAuthor_1"
                                                     >
                                                       <CitationView
@@ -18633,7 +18628,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorNameLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author/Milevskiy, Michael J. G."
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Milevskiy%2C+Michael+J.+G."
                                                       key="citationAuthor_2"
                                                     >
                                                       <CitationView
@@ -18653,7 +18648,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/1706239"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1706239&searchQueryParams%5Ball%5D="
                                                       key="citationAuthor_3"
                                                     >
                                                       <CitationView
@@ -18673,7 +18668,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/97626"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=97626&searchQueryParams%5Ball%5D="
                                                       key="citationAuthor_4"
                                                     >
                                                       <CitationView
@@ -18693,7 +18688,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/95450"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=95450&searchQueryParams%5Ball%5D="
                                                       key="citationAuthor_5"
                                                     >
                                                       <CitationView
@@ -18713,7 +18708,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/1671"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1671&searchQueryParams%5Ball%5D="
                                                       key="citationAuthor_6"
                                                     >
                                                       <CitationView
@@ -18733,7 +18728,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorNameLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author/Thompson, Erik W."
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Thompson%2C+Erik+W."
                                                       key="citationAuthor_7"
                                                     >
                                                       <CitationView
@@ -18753,7 +18748,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/973"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=973&searchQueryParams%5Ball%5D="
                                                       key="citationAuthor_8"
                                                     >
                                                       <CitationView
@@ -18772,7 +18767,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/list/author_id/972"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=972&searchQueryParams%5Ball%5D="
                                                       key="citationAuthor_9"
                                                     >
                                                       <CitationView
@@ -21147,7 +21142,7 @@ exports[`Additional Information Component  should render component with journal 
                                                 >
                                                   <span>
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_34]=Journal of Cell Science"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BJournal+name%5D=Journal+of+Cell+Science&searchQueryParams%5Ball%5D=Journal+of+Cell+Science"
                                                     >
                                                       <span>
                                                         Journal of Cell Science
@@ -22476,7 +22471,7 @@ exports[`Additional Information Component  should render component with journal 
                                       <ViewRecordTableRow
                                         data={
                                           <a
-                                            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Company of Biologists"
+                                            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Company+of+Biologists"
                                           >
                                             Company of Biologists
                                           </a>
@@ -22583,7 +22578,7 @@ exports[`Additional Information Component  should render component with journal 
                                                 }
                                               >
                                                 <a
-                                                  href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Company of Biologists"
+                                                  href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Company+of+Biologists"
                                                 >
                                                   Company of Biologists
                                                 </a>
@@ -22720,49 +22715,49 @@ exports[`Additional Information Component  should render component with journal 
                                           <ul>
                                             <li>
                                               <a
-                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Akt"
+                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Akt"
                                               >
                                                 Akt
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Breast cancer"
+                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
                                               >
                                                 Breast cancer
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Ca2+"
+                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Ca2%2B"
                                               >
                                                 Ca2+
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hypoxia"
+                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hypoxia"
                                               >
                                                 Hypoxia
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=PTEN"
+                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=PTEN"
                                               >
                                                 PTEN
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Signal transduction"
+                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signal+transduction"
                                               >
                                                 Signal transduction
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=TRPC1"
+                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=TRPC1"
                                               >
                                                 TRPC1
                                               </a>
@@ -22877,7 +22872,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-0"
                                                   >
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Akt"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Akt"
                                                     >
                                                       Akt
                                                     </a>
@@ -22886,7 +22881,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-1"
                                                   >
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Breast cancer"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
                                                     >
                                                       Breast cancer
                                                     </a>
@@ -22895,7 +22890,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-2"
                                                   >
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Ca2+"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Ca2%2B"
                                                     >
                                                       Ca2+
                                                     </a>
@@ -22904,7 +22899,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-3"
                                                   >
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hypoxia"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hypoxia"
                                                     >
                                                       Hypoxia
                                                     </a>
@@ -22913,7 +22908,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-4"
                                                   >
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=PTEN"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=PTEN"
                                                     >
                                                       PTEN
                                                     </a>
@@ -22922,7 +22917,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-5"
                                                   >
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Signal transduction"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signal+transduction"
                                                     >
                                                       Signal transduction
                                                     </a>
@@ -22931,7 +22926,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     key="rek_keywords-6"
                                                   >
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=TRPC1"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=TRPC1"
                                                     >
                                                       TRPC1
                                                     </a>
@@ -24092,7 +24087,7 @@ exports[`Additional Information Component  should render component with manuscri
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=Father Edward Leo Hayes Collection, UQFL2"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Father+Edward+Leo+Hayes+Collection%2C+UQFL2"
           >
             Father Edward Leo Hayes Collection, UQFL2
           </a>
@@ -24136,35 +24131,35 @@ exports[`Additional Information Component  should render component with manuscri
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hayes, Edward Leo, 1889-1967 -- Archives"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hayes%2C+Edward+Leo%2C+1889-1967+--+Archives"
               >
                 Hayes, Edward Leo, 1889-1967 -- Archives
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hayes, Edward Leo, 1889-1967 -- Manuscripts"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hayes%2C+Edward+Leo%2C+1889-1967+--+Manuscripts"
               >
                 Hayes, Edward Leo, 1889-1967 -- Manuscripts
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Astley, Thea, 1925-2004 -- Correspondence"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Astley%2C+Thea%2C+1925-2004+--+Correspondence"
               >
                 Astley, Thea, 1925-2004 -- Correspondence
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Grano, Paul, 1894-1975 -- Correspondence"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Grano%2C+Paul%2C+1894-1975+--+Correspondence"
               >
                 Grano, Paul, 1894-1975 -- Correspondence
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Authors, Australian -- 20th century"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Authors%2C+Australian+--+20th+century"
               >
                 Authors, Australian -- 20th century
               </a>
@@ -26478,7 +26473,7 @@ exports[`Additional Information Component  should render component with newspape
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Company of Biologists"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Company+of+Biologists"
           >
             Company of Biologists
           </a>
@@ -26502,49 +26497,49 @@ exports[`Additional Information Component  should render component with newspape
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Akt"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Akt"
               >
                 Akt
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Breast cancer"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
               >
                 Breast cancer
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Ca2+"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Ca2%2B"
               >
                 Ca2+
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Hypoxia"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hypoxia"
               >
                 Hypoxia
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=PTEN"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=PTEN"
               >
                 PTEN
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Signal transduction"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signal+transduction"
               >
                 Signal transduction
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=TRPC1"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=TRPC1"
               >
                 TRPC1
               </a>
@@ -26857,7 +26852,7 @@ exports[`Additional Information Component  should render component with patent 1
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=GC Corporation"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=GC+Corporation"
           >
             GC Corporation
           </a>
@@ -26970,77 +26965,77 @@ exports[`Additional Information Component  should render component with preprint
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Algorithmic complexity"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Algorithmic+complexity"
               >
                 Algorithmic complexity
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=cross-entropy"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=cross-entropy"
               >
                 cross-entropy
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=GI/G/1 queue"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=GI%2FG%2F1+queue"
               >
                 GI/G/1 queue
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=importance sampling"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=importance+sampling"
               >
                 importance sampling
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=maximum likelihood"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=maximum+likelihood"
               >
                 maximum likelihood
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Pareto distribution"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pareto+distribution"
               >
                 Pareto distribution
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Pollaczek-Khintchine formula"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pollaczek-Khintchine+formula"
               >
                 Pollaczek-Khintchine formula
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=random walk"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=random+walk"
               >
                 random walk
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=rare event"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=rare+event"
               >
                 rare event
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=subexponential distribution"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=subexponential+distribution"
               >
                 subexponential distribution
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Weibull distribution"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Weibull+distribution"
               >
                 Weibull distribution
               </a>
@@ -27459,77 +27454,77 @@ exports[`Additional Information Component  should render component with preprint
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Algorithmic complexity"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Algorithmic+complexity"
               >
                 Algorithmic complexity
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=cross-entropy"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=cross-entropy"
               >
                 cross-entropy
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=GI/G/1 queue"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=GI%2FG%2F1+queue"
               >
                 GI/G/1 queue
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=importance sampling"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=importance+sampling"
               >
                 importance sampling
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=maximum likelihood"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=maximum+likelihood"
               >
                 maximum likelihood
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Pareto distribution"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pareto+distribution"
               >
                 Pareto distribution
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Pollaczek-Khintchine formula"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pollaczek-Khintchine+formula"
               >
                 Pollaczek-Khintchine formula
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=random walk"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=random+walk"
               >
                 random walk
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=rare event"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=rare+event"
               >
                 rare event
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=subexponential distribution"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=subexponential+distribution"
               >
                 subexponential distribution
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Weibull distribution"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Weibull+distribution"
               >
                 Weibull distribution
               </a>
@@ -27547,6 +27542,1485 @@ exports[`Additional Information Component  should render component with preprint
         }
         heading="Abstract"
         key="additional-info-Abstract"
+      />
+    </TableBody>
+  </Table>
+</StandardCard>
+`;
+
+exports[`Additional Information Component  should render component with proceedings title link 1`] = `
+<StandardCard
+  className=""
+  title="Additional information"
+>
+  <Table
+    allRowsSelected={false}
+    className="additionalInformation vertical"
+    fixedFooter={true}
+    fixedHeader={true}
+    height="inherit"
+    multiSelectable={false}
+    selectable={false}
+  >
+    <TableBody
+      allRowsSelected={false}
+      deselectOnClickaway={true}
+      displayRowCheckbox={false}
+      multiSelectable={false}
+      preScanRows={true}
+      selectable={true}
+      style={Object {}}
+    >
+      <ViewRecordTableRow
+        data={
+          <AuthorsCitationView
+            className="citationAuthors"
+            idSearchKey={
+              Object {
+                "idKey": "fez_record_search_key_author_id",
+                "idOrder": "rek_author_id_order",
+                "idSubkey": "rek_author_id",
+              }
+            }
+            initialNumberOfAuthors={3}
+            publication={
+              Object {
+                "fez_datastream_info": Array [],
+                "fez_matched_journals": Array [
+                  Object {
+                    "mtj_jnl_id": 2793,
+                    "mtj_pid": "UQ:277856",
+                    "mtj_status": "M",
+                  },
+                  Object {
+                    "mtj_jnl_id": 30140,
+                    "mtj_pid": "UQ:277856",
+                    "mtj_status": "M",
+                  },
+                  Object {
+                    "mtj_jnl_id": 47489,
+                    "mtj_pid": "UQ:277856",
+                    "mtj_status": "A",
+                  },
+                  Object {
+                    "mtj_jnl_id": 100349,
+                    "mtj_pid": "UQ:277856",
+                    "mtj_status": "A",
+                  },
+                ],
+                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_assigned_group_id": Array [],
+                "fez_record_search_key_assigned_user_id": Array [],
+                "fez_record_search_key_author": Array [
+                  Object {
+                    "rek_author": "Martin, Sally",
+                    "rek_author_id": 28803863,
+                    "rek_author_order": 1,
+                    "rek_author_pid": "UQ:277856",
+                    "rek_author_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author": "Harper, Callista B.",
+                    "rek_author_id": 28803864,
+                    "rek_author_order": 2,
+                    "rek_author_pid": "UQ:277856",
+                    "rek_author_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author": "Meunier, Frederic A.",
+                    "rek_author_id": 28803865,
+                    "rek_author_order": 3,
+                    "rek_author_pid": "UQ:277856",
+                    "rek_author_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_author_affiliation_country": Array [
+                  Object {
+                    "rek_author_affiliation_country": "Australia",
+                    "rek_author_affiliation_country_id": 140994,
+                    "rek_author_affiliation_country_order": 1,
+                    "rek_author_affiliation_country_pid": "UQ:277856",
+                    "rek_author_affiliation_country_xsdmf_id": 0,
+                  },
+                  Object {
+                    "rek_author_affiliation_country": "Australia",
+                    "rek_author_affiliation_country_id": 140995,
+                    "rek_author_affiliation_country_order": 2,
+                    "rek_author_affiliation_country_pid": "UQ:277856",
+                    "rek_author_affiliation_country_xsdmf_id": 0,
+                  },
+                  Object {
+                    "rek_author_affiliation_country": "Australia",
+                    "rek_author_affiliation_country_id": 140996,
+                    "rek_author_affiliation_country_order": 3,
+                    "rek_author_affiliation_country_pid": "UQ:277856",
+                    "rek_author_affiliation_country_xsdmf_id": 0,
+                  },
+                ],
+                "fez_record_search_key_author_affiliation_full_address": Array [
+                  Object {
+                    "rek_author_affiliation_full_address": "Univ Queensland, Queensland Brain Inst, Brisbane, Qld, Australia",
+                    "rek_author_affiliation_full_address_id": 190836,
+                    "rek_author_affiliation_full_address_order": 1,
+                    "rek_author_affiliation_full_address_pid": "UQ:277856",
+                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                  },
+                  Object {
+                    "rek_author_affiliation_full_address": "Univ Queensland, Queensland Brain Inst, Brisbane, Qld, Australia",
+                    "rek_author_affiliation_full_address_id": 190837,
+                    "rek_author_affiliation_full_address_order": 2,
+                    "rek_author_affiliation_full_address_pid": "UQ:277856",
+                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                  },
+                  Object {
+                    "rek_author_affiliation_full_address": "Univ Queensland, Queensland Brain Inst, Brisbane, Qld, Australia",
+                    "rek_author_affiliation_full_address_id": 190838,
+                    "rek_author_affiliation_full_address_order": 3,
+                    "rek_author_affiliation_full_address_pid": "UQ:277856",
+                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                  },
+                ],
+                "fez_record_search_key_author_affiliation_id": Array [],
+                "fez_record_search_key_author_affiliation_name": Array [
+                  Object {
+                    "rek_author_affiliation_name": "University of Queensland",
+                    "rek_author_affiliation_name_id": 141942,
+                    "rek_author_affiliation_name_order": 1,
+                    "rek_author_affiliation_name_pid": "UQ:277856",
+                    "rek_author_affiliation_name_xsdmf_id": 0,
+                  },
+                  Object {
+                    "rek_author_affiliation_name": "University of Queensland",
+                    "rek_author_affiliation_name_id": 141943,
+                    "rek_author_affiliation_name_order": 2,
+                    "rek_author_affiliation_name_pid": "UQ:277856",
+                    "rek_author_affiliation_name_xsdmf_id": 0,
+                  },
+                  Object {
+                    "rek_author_affiliation_name": "University of Queensland",
+                    "rek_author_affiliation_name_id": 141944,
+                    "rek_author_affiliation_name_order": 3,
+                    "rek_author_affiliation_name_pid": "UQ:277856",
+                    "rek_author_affiliation_name_xsdmf_id": 0,
+                  },
+                ],
+                "fez_record_search_key_author_id": Array [
+                  Object {
+                    "rek_author_id": 745,
+                    "rek_author_id_id": 28178838,
+                    "rek_author_id_lookup": "Martin, Sally",
+                    "rek_author_id_order": 1,
+                    "rek_author_id_pid": "UQ:277856",
+                    "rek_author_id_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author_id": 80925,
+                    "rek_author_id_id": 28178839,
+                    "rek_author_id_lookup": "Harper, Callista",
+                    "rek_author_id_order": 2,
+                    "rek_author_id_pid": "UQ:277856",
+                    "rek_author_id_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author_id": 2746,
+                    "rek_author_id_id": 28178840,
+                    "rek_author_id_lookup": "Meunier, Frederic A.",
+                    "rek_author_id_order": 3,
+                    "rek_author_id_pid": "UQ:277856",
+                    "rek_author_id_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_biosis_id": null,
+                "fez_record_search_key_chapter_number": null,
+                "fez_record_search_key_conference_dates": Object {
+                  "rek_conference_dates": "8-13 July 2012",
+                  "rek_conference_dates_id": 1002197,
+                  "rek_conference_dates_pid": "UQ:277856",
+                  "rek_conference_dates_xsdmf_id": null,
+                },
+                "fez_record_search_key_conference_id": null,
+                "fez_record_search_key_conference_location": Object {
+                  "rek_conference_location": "Honolulu, Hawaii, United States",
+                  "rek_conference_location_id": 1012517,
+                  "rek_conference_location_pid": "UQ:277856",
+                  "rek_conference_location_xsdmf_id": null,
+                },
+                "fez_record_search_key_conference_name": Object {
+                  "rek_conference_name": "17th World Congress of the International-Society-on-Toxinology (IST)/Venom Week/4th International Scientific Symposium on All Things Venomous",
+                  "rek_conference_name_id": 997100,
+                  "rek_conference_name_pid": "UQ:277856",
+                  "rek_conference_name_xsdmf_id": null,
+                },
+                "fez_record_search_key_contributor": Array [],
+                "fez_record_search_key_contributor_id": Array [],
+                "fez_record_search_key_convener": null,
+                "fez_record_search_key_corresponding_country": Array [
+                  Object {
+                    "rek_corresponding_country": "Australia",
+                    "rek_corresponding_country_id": 125496,
+                    "rek_corresponding_country_order": 1,
+                    "rek_corresponding_country_pid": "UQ:277856",
+                    "rek_corresponding_country_xsdmf_id": 0,
+                  },
+                ],
+                "fez_record_search_key_corresponding_email": Array [
+                  Object {
+                    "rek_corresponding_email": "s.martin@uq.edu.au",
+                    "rek_corresponding_email_id": 26881,
+                    "rek_corresponding_email_order": 1,
+                    "rek_corresponding_email_pid": "UQ:277856",
+                    "rek_corresponding_email_xsdmf_id": 0,
+                  },
+                ],
+                "fez_record_search_key_corresponding_name": Array [],
+                "fez_record_search_key_corresponding_organisation": Array [
+                  Object {
+                    "rek_corresponding_organisation": "University of Queensland",
+                    "rek_corresponding_organisation_id": 126624,
+                    "rek_corresponding_organisation_order": 1,
+                    "rek_corresponding_organisation_pid": "UQ:277856",
+                    "rek_corresponding_organisation_xsdmf_id": 0,
+                  },
+                ],
+                "fez_record_search_key_datastream_policy": null,
+                "fez_record_search_key_date_available": Object {
+                  "rek_date_available": "2012-08-01T00:00:00Z",
+                  "rek_date_available_id": 994549,
+                  "rek_date_available_pid": "UQ:277856",
+                  "rek_date_available_xsdmf_id": null,
+                },
+                "fez_record_search_key_doi": Object {
+                  "rek_doi": "10.1016/j.toxicon.2012.04.130",
+                  "rek_doi_id": 1514306,
+                  "rek_doi_pid": "UQ:277856",
+                  "rek_doi_xsdmf_id": null,
+                },
+                "fez_record_search_key_end_page": Object {
+                  "rek_end_page": "160",
+                  "rek_end_page_id": 5490726,
+                  "rek_end_page_pid": "UQ:277856",
+                  "rek_end_page_xsdmf_id": null,
+                },
+                "fez_record_search_key_file_attachment_access_condition": Array [],
+                "fez_record_search_key_file_attachment_embargo_date": Array [],
+                "fez_record_search_key_file_attachment_name": Array [],
+                "fez_record_search_key_grant_acronym": Array [],
+                "fez_record_search_key_grant_agency": Array [],
+                "fez_record_search_key_grant_agency_id": Array [],
+                "fez_record_search_key_grant_id": Array [],
+                "fez_record_search_key_grant_text": Array [],
+                "fez_record_search_key_has_datasets": Array [],
+                "fez_record_search_key_has_derivations": Array [],
+                "fez_record_search_key_has_related_datasets": Array [],
+                "fez_record_search_key_herdc_code": Object {
+                  "rek_herdc_code": 450018,
+                  "rek_herdc_code_id": 4644563,
+                  "rek_herdc_code_lookup": "EX",
+                  "rek_herdc_code_pid": "UQ:277856",
+                  "rek_herdc_code_xsdmf_id": null,
+                },
+                "fez_record_search_key_herdc_status": Object {
+                  "rek_herdc_status": 453220,
+                  "rek_herdc_status_id": 3558387,
+                  "rek_herdc_status_lookup": "Provisional Code",
+                  "rek_herdc_status_pid": "UQ:277856",
+                  "rek_herdc_status_xsdmf_id": null,
+                },
+                "fez_record_search_key_institutional_status": Object {
+                  "rek_institutional_status": 453223,
+                  "rek_institutional_status_id": 3220326,
+                  "rek_institutional_status_lookup": "UQ",
+                  "rek_institutional_status_pid": "UQ:277856",
+                  "rek_institutional_status_xsdmf_id": null,
+                },
+                "fez_record_search_key_isbn": Array [],
+                "fez_record_search_key_isderivationof": Array [],
+                "fez_record_search_key_isi_loc": Object {
+                  "rek_isi_loc": "000305721800131",
+                  "rek_isi_loc_id": 3884228,
+                  "rek_isi_loc_pid": "UQ:277856",
+                  "rek_isi_loc_xsdmf_id": null,
+                },
+                "fez_record_search_key_ismemberof": Array [
+                  Object {
+                    "rek_ismemberof": "UQ:23912",
+                    "rek_ismemberof_id": 11486381,
+                    "rek_ismemberof_lookup": "Queensland Brain Institute Publications",
+                    "rek_ismemberof_order": 1,
+                    "rek_ismemberof_pid": "UQ:277856",
+                    "rek_ismemberof_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_issn": Array [
+                  Object {
+                    "fez_journal_issns": Array [
+                      Object {
+                        "fez_journal": Object {
+                          "jnl_created_date": "2010-11-19 00:00:00",
+                          "jnl_era_id": 14870,
+                          "jnl_era_year": 2010,
+                          "jnl_foreign_name": null,
+                          "jnl_id": 2793,
+                          "jnl_journal_name": "Toxicon",
+                          "jnl_rank": "B",
+                          "jnl_updated_date": "2010-11-19 00:00:00",
+                        },
+                        "jni_id": 4624,
+                        "jni_issn": "0041-0101",
+                        "jni_issn_order": 1,
+                        "jni_jnl_id": 2793,
+                      },
+                      Object {
+                        "fez_journal": Object {
+                          "jnl_created_date": "2011-10-28 00:00:00",
+                          "jnl_era_id": 14870,
+                          "jnl_era_year": 2012,
+                          "jnl_foreign_name": "",
+                          "jnl_id": 30140,
+                          "jnl_journal_name": "Toxicon",
+                          "jnl_rank": null,
+                          "jnl_updated_date": "2011-10-28 00:00:00",
+                        },
+                        "jni_id": 49849,
+                        "jni_issn": "0041-0101",
+                        "jni_issn_order": 1,
+                        "jni_jnl_id": 30140,
+                      },
+                      Object {
+                        "fez_journal": Object {
+                          "jnl_created_date": "2014-07-16 00:00:00",
+                          "jnl_era_id": 14870,
+                          "jnl_era_year": 2015,
+                          "jnl_foreign_name": "",
+                          "jnl_id": 47489,
+                          "jnl_journal_name": "Toxicon",
+                          "jnl_rank": null,
+                          "jnl_updated_date": "2014-07-16 00:00:00",
+                        },
+                        "jni_id": 77616,
+                        "jni_issn": "0041-0101",
+                        "jni_issn_order": 1,
+                        "jni_jnl_id": 47489,
+                      },
+                      Object {
+                        "fez_journal": Object {
+                          "jnl_created_date": "2017-09-06 00:00:00",
+                          "jnl_era_id": 14870,
+                          "jnl_era_year": 2018,
+                          "jnl_foreign_name": "",
+                          "jnl_id": 100349,
+                          "jnl_journal_name": "Toxicon",
+                          "jnl_rank": null,
+                          "jnl_updated_date": "2017-09-06 00:00:00",
+                        },
+                        "jni_id": 165246,
+                        "jni_issn": "0041-0101",
+                        "jni_issn_order": 1,
+                        "jni_jnl_id": 100349,
+                      },
+                    ],
+                    "fez_sherpa_romeo": Object {
+                      "srm_colour": "green",
+                      "srm_id": 5320,
+                      "srm_issn": "0041-0101",
+                      "srm_journal_name": "Toxicon",
+                    },
+                    "rek_issn": "0041-0101",
+                    "rek_issn_id": 5079774,
+                    "rek_issn_lookup": "green",
+                    "rek_issn_order": 1,
+                    "rek_issn_pid": "UQ:277856",
+                    "rek_issn_xsdmf_id": null,
+                  },
+                  Object {
+                    "fez_journal_issns": Array [
+                      Object {
+                        "fez_journal": Object {
+                          "jnl_created_date": "2010-11-19 00:00:00",
+                          "jnl_era_id": 14870,
+                          "jnl_era_year": 2010,
+                          "jnl_foreign_name": null,
+                          "jnl_id": 2793,
+                          "jnl_journal_name": "Toxicon",
+                          "jnl_rank": "B",
+                          "jnl_updated_date": "2010-11-19 00:00:00",
+                        },
+                        "jni_id": 4625,
+                        "jni_issn": "1879-3150",
+                        "jni_issn_order": 2,
+                        "jni_jnl_id": 2793,
+                      },
+                      Object {
+                        "fez_journal": Object {
+                          "jnl_created_date": "2011-10-28 00:00:00",
+                          "jnl_era_id": 14870,
+                          "jnl_era_year": 2012,
+                          "jnl_foreign_name": "",
+                          "jnl_id": 30140,
+                          "jnl_journal_name": "Toxicon",
+                          "jnl_rank": null,
+                          "jnl_updated_date": "2011-10-28 00:00:00",
+                        },
+                        "jni_id": 49850,
+                        "jni_issn": "1879-3150",
+                        "jni_issn_order": 2,
+                        "jni_jnl_id": 30140,
+                      },
+                      Object {
+                        "fez_journal": Object {
+                          "jnl_created_date": "2014-07-16 00:00:00",
+                          "jnl_era_id": 14870,
+                          "jnl_era_year": 2015,
+                          "jnl_foreign_name": "",
+                          "jnl_id": 47489,
+                          "jnl_journal_name": "Toxicon",
+                          "jnl_rank": null,
+                          "jnl_updated_date": "2014-07-16 00:00:00",
+                        },
+                        "jni_id": 77617,
+                        "jni_issn": "1879-3150",
+                        "jni_issn_order": 2,
+                        "jni_jnl_id": 47489,
+                      },
+                      Object {
+                        "fez_journal": Object {
+                          "jnl_created_date": "2017-09-06 00:00:00",
+                          "jnl_era_id": 14870,
+                          "jnl_era_year": 2018,
+                          "jnl_foreign_name": "",
+                          "jnl_id": 100349,
+                          "jnl_journal_name": "Toxicon",
+                          "jnl_rank": null,
+                          "jnl_updated_date": "2017-09-06 00:00:00",
+                        },
+                        "jni_id": 165247,
+                        "jni_issn": "1879-3150",
+                        "jni_issn_order": 2,
+                        "jni_jnl_id": 100349,
+                      },
+                    ],
+                    "fez_sherpa_romeo": Object {
+                      "srm_colour": "green",
+                      "srm_id": 5321,
+                      "srm_issn": "1879-3150",
+                      "srm_journal_name": "Toxicon",
+                    },
+                    "rek_issn": "1879-3150",
+                    "rek_issn_id": 5079775,
+                    "rek_issn_lookup": "green",
+                    "rek_issn_order": 2,
+                    "rek_issn_pid": "UQ:277856",
+                    "rek_issn_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_issue_number": Object {
+                  "rek_issue_number": "2",
+                  "rek_issue_number_id": 4390957,
+                  "rek_issue_number_pid": "UQ:277856",
+                  "rek_issue_number_xsdmf_id": null,
+                },
+                "fez_record_search_key_journal_name": Object {
+                  "rek_journal_name": "Toxicon",
+                  "rek_journal_name_id": 5039513,
+                  "rek_journal_name_pid": "UQ:277856",
+                  "rek_journal_name_xsdmf_id": null,
+                },
+                "fez_record_search_key_keywords": Array [
+                  Object {
+                    "rek_keywords": "Trafficking",
+                    "rek_keywords_id": 29097354,
+                    "rek_keywords_order": 1,
+                    "rek_keywords_pid": "UQ:277856",
+                    "rek_keywords_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_keywords": "Bacterial toxins",
+                    "rek_keywords_id": 29097355,
+                    "rek_keywords_order": 2,
+                    "rek_keywords_pid": "UQ:277856",
+                    "rek_keywords_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_keywords": "Neurons",
+                    "rek_keywords_id": 29097356,
+                    "rek_keywords_order": 3,
+                    "rek_keywords_pid": "UQ:277856",
+                    "rek_keywords_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_language": Array [
+                  Object {
+                    "rek_language": "eng",
+                    "rek_language_id": 5209130,
+                    "rek_language_order": 1,
+                    "rek_language_pid": "UQ:277856",
+                    "rek_language_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_language_of_journal_name": Array [],
+                "fez_record_search_key_language_of_proceedings_title": Array [],
+                "fez_record_search_key_language_of_title": Array [],
+                "fez_record_search_key_link": Array [],
+                "fez_record_search_key_link_description": Array [],
+                "fez_record_search_key_native_script_conference_name": null,
+                "fez_record_search_key_native_script_journal_name": null,
+                "fez_record_search_key_native_script_proceedings_title": null,
+                "fez_record_search_key_native_script_title": null,
+                "fez_record_search_key_notes": null,
+                "fez_record_search_key_oa_embargo_days": null,
+                "fez_record_search_key_oa_notes": null,
+                "fez_record_search_key_oa_status": Object {
+                  "rek_oa_status": 453692,
+                  "rek_oa_status_id": 425765,
+                  "rek_oa_status_lookup": "Not yet assessed",
+                  "rek_oa_status_pid": "UQ:277856",
+                  "rek_oa_status_xsdmf_id": null,
+                },
+                "fez_record_search_key_place_of_publication": Object {
+                  "rek_place_of_publication": "Kidlington, Oxford, United Kingdom",
+                  "rek_place_of_publication_id": 4155977,
+                  "rek_place_of_publication_pid": "UQ:277856",
+                  "rek_place_of_publication_xsdmf_id": null,
+                },
+                "fez_record_search_key_proceedings_title": Object {
+                  "rek_proceedings_title": "17th World Congress of the International Society on Toxinology & Venom Week 2012, 4th International Scientific Symposium on All Things Venomous, 17th World Congress of the International Society on Toxinology & Venom Week 2012, 4th International Scientific Symposium on All Things Venomous",
+                  "rek_proceedings_title_id": 902428,
+                  "rek_proceedings_title_pid": "UQ:277856",
+                  "rek_proceedings_title_xsdmf_id": null,
+                },
+                "fez_record_search_key_publisher": Object {
+                  "rek_publisher": "Pergamon",
+                  "rek_publisher_id": 4418362,
+                  "rek_publisher_pid": "UQ:277856",
+                  "rek_publisher_xsdmf_id": null,
+                },
+                "fez_record_search_key_pubmed_id": null,
+                "fez_record_search_key_refereed": Object {
+                  "rek_refereed": 1,
+                  "rek_refereed_id": 2661665,
+                  "rek_refereed_pid": "UQ:277856",
+                  "rek_refereed_xsdmf_id": null,
+                },
+                "fez_record_search_key_refereed_source": Object {
+                  "rek_refereed_source": "453635",
+                  "rek_refereed_source_id": 1165580,
+                  "rek_refereed_source_lookup": "Ulrichs",
+                  "rek_refereed_source_pid": "UQ:277856",
+                  "rek_refereed_source_xsdmf_id": null,
+                },
+                "fez_record_search_key_retracted": null,
+                "fez_record_search_key_roman_script_conference_name": null,
+                "fez_record_search_key_roman_script_journal_name": null,
+                "fez_record_search_key_roman_script_proceedings_title": null,
+                "fez_record_search_key_roman_script_title": null,
+                "fez_record_search_key_scopus_id": null,
+                "fez_record_search_key_series": null,
+                "fez_record_search_key_start_page": Object {
+                  "rek_start_page": "160",
+                  "rek_start_page_id": 5560895,
+                  "rek_start_page_pid": "UQ:277856",
+                  "rek_start_page_xsdmf_id": null,
+                },
+                "fez_record_search_key_subject": Array [],
+                "fez_record_search_key_total_chapters": null,
+                "fez_record_search_key_total_pages": Object {
+                  "rek_total_pages": "1",
+                  "rek_total_pages_id": 5467415,
+                  "rek_total_pages_pid": "UQ:277856",
+                  "rek_total_pages_xsdmf_id": null,
+                },
+                "fez_record_search_key_translated_conference_name": null,
+                "fez_record_search_key_translated_journal_name": null,
+                "fez_record_search_key_translated_proceedings_title": null,
+                "fez_record_search_key_translated_title": null,
+                "fez_record_search_key_volume_number": Object {
+                  "rek_volume_number": "60",
+                  "rek_volume_number_id": 5097264,
+                  "rek_volume_number_pid": "UQ:277856",
+                  "rek_volume_number_xsdmf_id": null,
+                },
+                "fez_record_search_key_wok_doc_types": Array [],
+                "fez_record_search_key_zoorec_id": null,
+                "rek_altmetric_id": 0,
+                "rek_altmetric_id_xsdmf_id": null,
+                "rek_altmetric_score": 0,
+                "rek_altmetric_score_xsdmf_id": null,
+                "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Martin, Sally\\" href=\\"/list/author_id/745/\\">Martin, Sally</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Harper, Callista B.\\" href=\\"/list/author_id/80925/\\">Harper, Callista B.</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Meunier, Frederic A.\\" href=\\"/list/author_id/2746/\\">Meunier, Frederic A.</a> (<span class=\\"citation_date\\">2012</span>). <a class=\\"citation_title\\" title=\\"Click to view Conference Paper: Retrograde trafficking at the presynaptic nerve terminal using bacterial toxins\\" href=\\"/view/UQ:277856\\">Retrograde trafficking at the presynaptic nerve terminal using bacterial toxins</a>. In: <span class=\\"citation_proceedings_title\\">17th World Congress of the International Society on Toxinology &amp; Venom Week 2012, 4th International Scientific Symposium on All Things Venomous, 17th World Congress of the International Society on Toxinology &amp; Venom Week 2012, 4th International Scientific Symposium on All Things Venomous</span>. <i><span class=\\"citation_conference_name\\">17th World Congress of the International-Society-on-Toxinology (IST)/Venom Week/4th International Scientific Symposium on All Things Venomous</span></i>, <span class=\\"citation_conference_location\\">Honolulu, Hawaii, United States</span>, (<span class=\\"citation_start_page\\">160</span>-<span class=\\"citation_end_page\\">160</span>). <span class=\\"citation_conference_dates\\">8-13 July 2012</span>. doi:<span class=\\"citation_doi\\">10.1016/j.toxicon.2012.04.130</span>",
+                "rek_copyright": "on",
+                "rek_copyright_xsdmf_id": 3679,
+                "rek_created_date": "2012-07-23T16:46:47Z",
+                "rek_created_date_xsdmf_id": 3677,
+                "rek_date": "2012-01-01T00:00:00Z",
+                "rek_date_xsdmf_id": 4041,
+                "rek_depositor": 8524,
+                "rek_depositor_affiliation": 1017,
+                "rek_depositor_affiliation_xsdmf_id": 11881,
+                "rek_depositor_xsdmf_id": 7578,
+                "rek_description": null,
+                "rek_description_xsdmf_id": null,
+                "rek_display_type": 130,
+                "rek_display_type_lookup": "Conference Paper",
+                "rek_display_type_xsdmf_id": 3673,
+                "rek_file_downloads": 0,
+                "rek_formatted_abstract": null,
+                "rek_formatted_abstract_xsdmf_id": null,
+                "rek_formatted_title": null,
+                "rek_formatted_title_xsdmf_id": null,
+                "rek_genre": "Conference Paper",
+                "rek_genre_type": "Toxicon",
+                "rek_genre_type_xsdmf_id": null,
+                "rek_genre_xsdmf_id": 7203,
+                "rek_herdc_notes": null,
+                "rek_herdc_notes_xsdmf_id": null,
+                "rek_object_type": 3,
+                "rek_object_type_lookup": "Record",
+                "rek_object_type_xsdmf_id": 3674,
+                "rek_pid": "UQ:277856",
+                "rek_pubmed_doc_type": null,
+                "rek_pubmed_doc_type_lookup": null,
+                "rek_pubmed_doc_type_xsdmf_id": null,
+                "rek_scopus_citation_count": null,
+                "rek_scopus_doc_type": null,
+                "rek_scopus_doc_type_lookup": null,
+                "rek_scopus_doc_type_xsdmf_id": null,
+                "rek_security_inherited": 1,
+                "rek_status": 2,
+                "rek_status_lookup": "Published",
+                "rek_status_xsdmf_id": 3680,
+                "rek_subtype": "Published abstract",
+                "rek_subtype_xsdmf_id": 12548,
+                "rek_thomson_citation_count": 0,
+                "rek_thomson_citation_count_xsdmf_id": null,
+                "rek_title": "Retrograde trafficking at the presynaptic nerve terminal using bacterial toxins",
+                "rek_title_xsdmf_id": 10605,
+                "rek_updated_date": "2017-10-16T04:33:32Z",
+                "rek_updated_date_xsdmf_id": 3678,
+                "rek_wok_doc_type": "MC",
+                "rek_wok_doc_type_lookup": null,
+                "rek_wok_doc_type_xsdmf_id": 12551,
+              }
+            }
+            searchKey={
+              Object {
+                "key": "fez_record_search_key_author",
+                "order": "rek_author_order",
+                "subkey": "rek_author",
+              }
+            }
+            showLink={true}
+            suffix=" "
+            thresholdNumberOfAuthors={3}
+          />
+        }
+        heading="Author(s)"
+        key="additional-info-Author(s)"
+      />
+      <ViewRecordTableRow
+        data={
+          Array [
+            "Retrograde trafficking at the presynaptic nerve terminal using bacterial toxins",
+          ]
+        }
+        heading="Title of paper"
+        key="additional-info-Title of paper"
+      />
+      <ViewRecordTableRow
+        data={
+          <a
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=17th+World+Congress+of+the+International-Society-on-Toxinology+(IST)%2FVenom+Week%2F4th+International+Scientific+Symposium+on+All+Things+Venomous"
+          >
+            17th World Congress of the International-Society-on-Toxinology (IST)/Venom Week/4th International Scientific Symposium on All Things Venomous
+          </a>
+        }
+        heading="Conference name"
+        key="additional-info-Conference name"
+      />
+      <ViewRecordTableRow
+        data="Honolulu, Hawaii, United States"
+        heading="Conference Location"
+        key="additional-info-Conference Location"
+      />
+      <ViewRecordTableRow
+        data="8-13 July 2012"
+        heading="Conference dates"
+        key="additional-info-Conference dates"
+      />
+      <ViewRecordTableRow
+        data={
+          <a
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=17th+World+Congress+of+the+International+Society+on+Toxinology+%26+Venom+Week+2012%2C+4th+International+Scientific+Symposium+on+All+Things+Venomous%2C+17th+World+Congress+of+the+International+Society+on+Toxinology+%26+Venom+Week+2012%2C+4th+International+Scientific+Symposium+on+All+Things+Venomous"
+          >
+            17th World Congress of the International Society on Toxinology & Venom Week 2012, 4th International Scientific Symposium on All Things Venomous, 17th World Congress of the International Society on Toxinology & Venom Week 2012, 4th International Scientific Symposium on All Things Venomous
+          </a>
+        }
+        heading="Proceedings title"
+        key="additional-info-Proceedings title"
+      />
+      <ViewRecordTableRow
+        data={
+          <JournalName
+            publication={
+              Object {
+                "fez_datastream_info": Array [],
+                "fez_matched_journals": Array [
+                  Object {
+                    "mtj_jnl_id": 2793,
+                    "mtj_pid": "UQ:277856",
+                    "mtj_status": "M",
+                  },
+                  Object {
+                    "mtj_jnl_id": 30140,
+                    "mtj_pid": "UQ:277856",
+                    "mtj_status": "M",
+                  },
+                  Object {
+                    "mtj_jnl_id": 47489,
+                    "mtj_pid": "UQ:277856",
+                    "mtj_status": "A",
+                  },
+                  Object {
+                    "mtj_jnl_id": 100349,
+                    "mtj_pid": "UQ:277856",
+                    "mtj_status": "A",
+                  },
+                ],
+                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_assigned_group_id": Array [],
+                "fez_record_search_key_assigned_user_id": Array [],
+                "fez_record_search_key_author": Array [
+                  Object {
+                    "rek_author": "Martin, Sally",
+                    "rek_author_id": 28803863,
+                    "rek_author_order": 1,
+                    "rek_author_pid": "UQ:277856",
+                    "rek_author_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author": "Harper, Callista B.",
+                    "rek_author_id": 28803864,
+                    "rek_author_order": 2,
+                    "rek_author_pid": "UQ:277856",
+                    "rek_author_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author": "Meunier, Frederic A.",
+                    "rek_author_id": 28803865,
+                    "rek_author_order": 3,
+                    "rek_author_pid": "UQ:277856",
+                    "rek_author_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_author_affiliation_country": Array [
+                  Object {
+                    "rek_author_affiliation_country": "Australia",
+                    "rek_author_affiliation_country_id": 140994,
+                    "rek_author_affiliation_country_order": 1,
+                    "rek_author_affiliation_country_pid": "UQ:277856",
+                    "rek_author_affiliation_country_xsdmf_id": 0,
+                  },
+                  Object {
+                    "rek_author_affiliation_country": "Australia",
+                    "rek_author_affiliation_country_id": 140995,
+                    "rek_author_affiliation_country_order": 2,
+                    "rek_author_affiliation_country_pid": "UQ:277856",
+                    "rek_author_affiliation_country_xsdmf_id": 0,
+                  },
+                  Object {
+                    "rek_author_affiliation_country": "Australia",
+                    "rek_author_affiliation_country_id": 140996,
+                    "rek_author_affiliation_country_order": 3,
+                    "rek_author_affiliation_country_pid": "UQ:277856",
+                    "rek_author_affiliation_country_xsdmf_id": 0,
+                  },
+                ],
+                "fez_record_search_key_author_affiliation_full_address": Array [
+                  Object {
+                    "rek_author_affiliation_full_address": "Univ Queensland, Queensland Brain Inst, Brisbane, Qld, Australia",
+                    "rek_author_affiliation_full_address_id": 190836,
+                    "rek_author_affiliation_full_address_order": 1,
+                    "rek_author_affiliation_full_address_pid": "UQ:277856",
+                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                  },
+                  Object {
+                    "rek_author_affiliation_full_address": "Univ Queensland, Queensland Brain Inst, Brisbane, Qld, Australia",
+                    "rek_author_affiliation_full_address_id": 190837,
+                    "rek_author_affiliation_full_address_order": 2,
+                    "rek_author_affiliation_full_address_pid": "UQ:277856",
+                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                  },
+                  Object {
+                    "rek_author_affiliation_full_address": "Univ Queensland, Queensland Brain Inst, Brisbane, Qld, Australia",
+                    "rek_author_affiliation_full_address_id": 190838,
+                    "rek_author_affiliation_full_address_order": 3,
+                    "rek_author_affiliation_full_address_pid": "UQ:277856",
+                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                  },
+                ],
+                "fez_record_search_key_author_affiliation_id": Array [],
+                "fez_record_search_key_author_affiliation_name": Array [
+                  Object {
+                    "rek_author_affiliation_name": "University of Queensland",
+                    "rek_author_affiliation_name_id": 141942,
+                    "rek_author_affiliation_name_order": 1,
+                    "rek_author_affiliation_name_pid": "UQ:277856",
+                    "rek_author_affiliation_name_xsdmf_id": 0,
+                  },
+                  Object {
+                    "rek_author_affiliation_name": "University of Queensland",
+                    "rek_author_affiliation_name_id": 141943,
+                    "rek_author_affiliation_name_order": 2,
+                    "rek_author_affiliation_name_pid": "UQ:277856",
+                    "rek_author_affiliation_name_xsdmf_id": 0,
+                  },
+                  Object {
+                    "rek_author_affiliation_name": "University of Queensland",
+                    "rek_author_affiliation_name_id": 141944,
+                    "rek_author_affiliation_name_order": 3,
+                    "rek_author_affiliation_name_pid": "UQ:277856",
+                    "rek_author_affiliation_name_xsdmf_id": 0,
+                  },
+                ],
+                "fez_record_search_key_author_id": Array [
+                  Object {
+                    "rek_author_id": 745,
+                    "rek_author_id_id": 28178838,
+                    "rek_author_id_lookup": "Martin, Sally",
+                    "rek_author_id_order": 1,
+                    "rek_author_id_pid": "UQ:277856",
+                    "rek_author_id_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author_id": 80925,
+                    "rek_author_id_id": 28178839,
+                    "rek_author_id_lookup": "Harper, Callista",
+                    "rek_author_id_order": 2,
+                    "rek_author_id_pid": "UQ:277856",
+                    "rek_author_id_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author_id": 2746,
+                    "rek_author_id_id": 28178840,
+                    "rek_author_id_lookup": "Meunier, Frederic A.",
+                    "rek_author_id_order": 3,
+                    "rek_author_id_pid": "UQ:277856",
+                    "rek_author_id_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_biosis_id": null,
+                "fez_record_search_key_chapter_number": null,
+                "fez_record_search_key_conference_dates": Object {
+                  "rek_conference_dates": "8-13 July 2012",
+                  "rek_conference_dates_id": 1002197,
+                  "rek_conference_dates_pid": "UQ:277856",
+                  "rek_conference_dates_xsdmf_id": null,
+                },
+                "fez_record_search_key_conference_id": null,
+                "fez_record_search_key_conference_location": Object {
+                  "rek_conference_location": "Honolulu, Hawaii, United States",
+                  "rek_conference_location_id": 1012517,
+                  "rek_conference_location_pid": "UQ:277856",
+                  "rek_conference_location_xsdmf_id": null,
+                },
+                "fez_record_search_key_conference_name": Object {
+                  "rek_conference_name": "17th World Congress of the International-Society-on-Toxinology (IST)/Venom Week/4th International Scientific Symposium on All Things Venomous",
+                  "rek_conference_name_id": 997100,
+                  "rek_conference_name_pid": "UQ:277856",
+                  "rek_conference_name_xsdmf_id": null,
+                },
+                "fez_record_search_key_contributor": Array [],
+                "fez_record_search_key_contributor_id": Array [],
+                "fez_record_search_key_convener": null,
+                "fez_record_search_key_corresponding_country": Array [
+                  Object {
+                    "rek_corresponding_country": "Australia",
+                    "rek_corresponding_country_id": 125496,
+                    "rek_corresponding_country_order": 1,
+                    "rek_corresponding_country_pid": "UQ:277856",
+                    "rek_corresponding_country_xsdmf_id": 0,
+                  },
+                ],
+                "fez_record_search_key_corresponding_email": Array [
+                  Object {
+                    "rek_corresponding_email": "s.martin@uq.edu.au",
+                    "rek_corresponding_email_id": 26881,
+                    "rek_corresponding_email_order": 1,
+                    "rek_corresponding_email_pid": "UQ:277856",
+                    "rek_corresponding_email_xsdmf_id": 0,
+                  },
+                ],
+                "fez_record_search_key_corresponding_name": Array [],
+                "fez_record_search_key_corresponding_organisation": Array [
+                  Object {
+                    "rek_corresponding_organisation": "University of Queensland",
+                    "rek_corresponding_organisation_id": 126624,
+                    "rek_corresponding_organisation_order": 1,
+                    "rek_corresponding_organisation_pid": "UQ:277856",
+                    "rek_corresponding_organisation_xsdmf_id": 0,
+                  },
+                ],
+                "fez_record_search_key_datastream_policy": null,
+                "fez_record_search_key_date_available": Object {
+                  "rek_date_available": "2012-08-01T00:00:00Z",
+                  "rek_date_available_id": 994549,
+                  "rek_date_available_pid": "UQ:277856",
+                  "rek_date_available_xsdmf_id": null,
+                },
+                "fez_record_search_key_doi": Object {
+                  "rek_doi": "10.1016/j.toxicon.2012.04.130",
+                  "rek_doi_id": 1514306,
+                  "rek_doi_pid": "UQ:277856",
+                  "rek_doi_xsdmf_id": null,
+                },
+                "fez_record_search_key_end_page": Object {
+                  "rek_end_page": "160",
+                  "rek_end_page_id": 5490726,
+                  "rek_end_page_pid": "UQ:277856",
+                  "rek_end_page_xsdmf_id": null,
+                },
+                "fez_record_search_key_file_attachment_access_condition": Array [],
+                "fez_record_search_key_file_attachment_embargo_date": Array [],
+                "fez_record_search_key_file_attachment_name": Array [],
+                "fez_record_search_key_grant_acronym": Array [],
+                "fez_record_search_key_grant_agency": Array [],
+                "fez_record_search_key_grant_agency_id": Array [],
+                "fez_record_search_key_grant_id": Array [],
+                "fez_record_search_key_grant_text": Array [],
+                "fez_record_search_key_has_datasets": Array [],
+                "fez_record_search_key_has_derivations": Array [],
+                "fez_record_search_key_has_related_datasets": Array [],
+                "fez_record_search_key_herdc_code": Object {
+                  "rek_herdc_code": 450018,
+                  "rek_herdc_code_id": 4644563,
+                  "rek_herdc_code_lookup": "EX",
+                  "rek_herdc_code_pid": "UQ:277856",
+                  "rek_herdc_code_xsdmf_id": null,
+                },
+                "fez_record_search_key_herdc_status": Object {
+                  "rek_herdc_status": 453220,
+                  "rek_herdc_status_id": 3558387,
+                  "rek_herdc_status_lookup": "Provisional Code",
+                  "rek_herdc_status_pid": "UQ:277856",
+                  "rek_herdc_status_xsdmf_id": null,
+                },
+                "fez_record_search_key_institutional_status": Object {
+                  "rek_institutional_status": 453223,
+                  "rek_institutional_status_id": 3220326,
+                  "rek_institutional_status_lookup": "UQ",
+                  "rek_institutional_status_pid": "UQ:277856",
+                  "rek_institutional_status_xsdmf_id": null,
+                },
+                "fez_record_search_key_isbn": Array [],
+                "fez_record_search_key_isderivationof": Array [],
+                "fez_record_search_key_isi_loc": Object {
+                  "rek_isi_loc": "000305721800131",
+                  "rek_isi_loc_id": 3884228,
+                  "rek_isi_loc_pid": "UQ:277856",
+                  "rek_isi_loc_xsdmf_id": null,
+                },
+                "fez_record_search_key_ismemberof": Array [
+                  Object {
+                    "rek_ismemberof": "UQ:23912",
+                    "rek_ismemberof_id": 11486381,
+                    "rek_ismemberof_lookup": "Queensland Brain Institute Publications",
+                    "rek_ismemberof_order": 1,
+                    "rek_ismemberof_pid": "UQ:277856",
+                    "rek_ismemberof_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_issn": Array [
+                  Object {
+                    "fez_journal_issns": Array [
+                      Object {
+                        "fez_journal": Object {
+                          "jnl_created_date": "2010-11-19 00:00:00",
+                          "jnl_era_id": 14870,
+                          "jnl_era_year": 2010,
+                          "jnl_foreign_name": null,
+                          "jnl_id": 2793,
+                          "jnl_journal_name": "Toxicon",
+                          "jnl_rank": "B",
+                          "jnl_updated_date": "2010-11-19 00:00:00",
+                        },
+                        "jni_id": 4624,
+                        "jni_issn": "0041-0101",
+                        "jni_issn_order": 1,
+                        "jni_jnl_id": 2793,
+                      },
+                      Object {
+                        "fez_journal": Object {
+                          "jnl_created_date": "2011-10-28 00:00:00",
+                          "jnl_era_id": 14870,
+                          "jnl_era_year": 2012,
+                          "jnl_foreign_name": "",
+                          "jnl_id": 30140,
+                          "jnl_journal_name": "Toxicon",
+                          "jnl_rank": null,
+                          "jnl_updated_date": "2011-10-28 00:00:00",
+                        },
+                        "jni_id": 49849,
+                        "jni_issn": "0041-0101",
+                        "jni_issn_order": 1,
+                        "jni_jnl_id": 30140,
+                      },
+                      Object {
+                        "fez_journal": Object {
+                          "jnl_created_date": "2014-07-16 00:00:00",
+                          "jnl_era_id": 14870,
+                          "jnl_era_year": 2015,
+                          "jnl_foreign_name": "",
+                          "jnl_id": 47489,
+                          "jnl_journal_name": "Toxicon",
+                          "jnl_rank": null,
+                          "jnl_updated_date": "2014-07-16 00:00:00",
+                        },
+                        "jni_id": 77616,
+                        "jni_issn": "0041-0101",
+                        "jni_issn_order": 1,
+                        "jni_jnl_id": 47489,
+                      },
+                      Object {
+                        "fez_journal": Object {
+                          "jnl_created_date": "2017-09-06 00:00:00",
+                          "jnl_era_id": 14870,
+                          "jnl_era_year": 2018,
+                          "jnl_foreign_name": "",
+                          "jnl_id": 100349,
+                          "jnl_journal_name": "Toxicon",
+                          "jnl_rank": null,
+                          "jnl_updated_date": "2017-09-06 00:00:00",
+                        },
+                        "jni_id": 165246,
+                        "jni_issn": "0041-0101",
+                        "jni_issn_order": 1,
+                        "jni_jnl_id": 100349,
+                      },
+                    ],
+                    "fez_sherpa_romeo": Object {
+                      "srm_colour": "green",
+                      "srm_id": 5320,
+                      "srm_issn": "0041-0101",
+                      "srm_journal_name": "Toxicon",
+                    },
+                    "rek_issn": "0041-0101",
+                    "rek_issn_id": 5079774,
+                    "rek_issn_lookup": "green",
+                    "rek_issn_order": 1,
+                    "rek_issn_pid": "UQ:277856",
+                    "rek_issn_xsdmf_id": null,
+                  },
+                  Object {
+                    "fez_journal_issns": Array [
+                      Object {
+                        "fez_journal": Object {
+                          "jnl_created_date": "2010-11-19 00:00:00",
+                          "jnl_era_id": 14870,
+                          "jnl_era_year": 2010,
+                          "jnl_foreign_name": null,
+                          "jnl_id": 2793,
+                          "jnl_journal_name": "Toxicon",
+                          "jnl_rank": "B",
+                          "jnl_updated_date": "2010-11-19 00:00:00",
+                        },
+                        "jni_id": 4625,
+                        "jni_issn": "1879-3150",
+                        "jni_issn_order": 2,
+                        "jni_jnl_id": 2793,
+                      },
+                      Object {
+                        "fez_journal": Object {
+                          "jnl_created_date": "2011-10-28 00:00:00",
+                          "jnl_era_id": 14870,
+                          "jnl_era_year": 2012,
+                          "jnl_foreign_name": "",
+                          "jnl_id": 30140,
+                          "jnl_journal_name": "Toxicon",
+                          "jnl_rank": null,
+                          "jnl_updated_date": "2011-10-28 00:00:00",
+                        },
+                        "jni_id": 49850,
+                        "jni_issn": "1879-3150",
+                        "jni_issn_order": 2,
+                        "jni_jnl_id": 30140,
+                      },
+                      Object {
+                        "fez_journal": Object {
+                          "jnl_created_date": "2014-07-16 00:00:00",
+                          "jnl_era_id": 14870,
+                          "jnl_era_year": 2015,
+                          "jnl_foreign_name": "",
+                          "jnl_id": 47489,
+                          "jnl_journal_name": "Toxicon",
+                          "jnl_rank": null,
+                          "jnl_updated_date": "2014-07-16 00:00:00",
+                        },
+                        "jni_id": 77617,
+                        "jni_issn": "1879-3150",
+                        "jni_issn_order": 2,
+                        "jni_jnl_id": 47489,
+                      },
+                      Object {
+                        "fez_journal": Object {
+                          "jnl_created_date": "2017-09-06 00:00:00",
+                          "jnl_era_id": 14870,
+                          "jnl_era_year": 2018,
+                          "jnl_foreign_name": "",
+                          "jnl_id": 100349,
+                          "jnl_journal_name": "Toxicon",
+                          "jnl_rank": null,
+                          "jnl_updated_date": "2017-09-06 00:00:00",
+                        },
+                        "jni_id": 165247,
+                        "jni_issn": "1879-3150",
+                        "jni_issn_order": 2,
+                        "jni_jnl_id": 100349,
+                      },
+                    ],
+                    "fez_sherpa_romeo": Object {
+                      "srm_colour": "green",
+                      "srm_id": 5321,
+                      "srm_issn": "1879-3150",
+                      "srm_journal_name": "Toxicon",
+                    },
+                    "rek_issn": "1879-3150",
+                    "rek_issn_id": 5079775,
+                    "rek_issn_lookup": "green",
+                    "rek_issn_order": 2,
+                    "rek_issn_pid": "UQ:277856",
+                    "rek_issn_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_issue_number": Object {
+                  "rek_issue_number": "2",
+                  "rek_issue_number_id": 4390957,
+                  "rek_issue_number_pid": "UQ:277856",
+                  "rek_issue_number_xsdmf_id": null,
+                },
+                "fez_record_search_key_journal_name": Object {
+                  "rek_journal_name": "Toxicon",
+                  "rek_journal_name_id": 5039513,
+                  "rek_journal_name_pid": "UQ:277856",
+                  "rek_journal_name_xsdmf_id": null,
+                },
+                "fez_record_search_key_keywords": Array [
+                  Object {
+                    "rek_keywords": "Trafficking",
+                    "rek_keywords_id": 29097354,
+                    "rek_keywords_order": 1,
+                    "rek_keywords_pid": "UQ:277856",
+                    "rek_keywords_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_keywords": "Bacterial toxins",
+                    "rek_keywords_id": 29097355,
+                    "rek_keywords_order": 2,
+                    "rek_keywords_pid": "UQ:277856",
+                    "rek_keywords_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_keywords": "Neurons",
+                    "rek_keywords_id": 29097356,
+                    "rek_keywords_order": 3,
+                    "rek_keywords_pid": "UQ:277856",
+                    "rek_keywords_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_language": Array [
+                  Object {
+                    "rek_language": "eng",
+                    "rek_language_id": 5209130,
+                    "rek_language_order": 1,
+                    "rek_language_pid": "UQ:277856",
+                    "rek_language_xsdmf_id": null,
+                  },
+                ],
+                "fez_record_search_key_language_of_journal_name": Array [],
+                "fez_record_search_key_language_of_proceedings_title": Array [],
+                "fez_record_search_key_language_of_title": Array [],
+                "fez_record_search_key_link": Array [],
+                "fez_record_search_key_link_description": Array [],
+                "fez_record_search_key_native_script_conference_name": null,
+                "fez_record_search_key_native_script_journal_name": null,
+                "fez_record_search_key_native_script_proceedings_title": null,
+                "fez_record_search_key_native_script_title": null,
+                "fez_record_search_key_notes": null,
+                "fez_record_search_key_oa_embargo_days": null,
+                "fez_record_search_key_oa_notes": null,
+                "fez_record_search_key_oa_status": Object {
+                  "rek_oa_status": 453692,
+                  "rek_oa_status_id": 425765,
+                  "rek_oa_status_lookup": "Not yet assessed",
+                  "rek_oa_status_pid": "UQ:277856",
+                  "rek_oa_status_xsdmf_id": null,
+                },
+                "fez_record_search_key_place_of_publication": Object {
+                  "rek_place_of_publication": "Kidlington, Oxford, United Kingdom",
+                  "rek_place_of_publication_id": 4155977,
+                  "rek_place_of_publication_pid": "UQ:277856",
+                  "rek_place_of_publication_xsdmf_id": null,
+                },
+                "fez_record_search_key_proceedings_title": Object {
+                  "rek_proceedings_title": "17th World Congress of the International Society on Toxinology & Venom Week 2012, 4th International Scientific Symposium on All Things Venomous, 17th World Congress of the International Society on Toxinology & Venom Week 2012, 4th International Scientific Symposium on All Things Venomous",
+                  "rek_proceedings_title_id": 902428,
+                  "rek_proceedings_title_pid": "UQ:277856",
+                  "rek_proceedings_title_xsdmf_id": null,
+                },
+                "fez_record_search_key_publisher": Object {
+                  "rek_publisher": "Pergamon",
+                  "rek_publisher_id": 4418362,
+                  "rek_publisher_pid": "UQ:277856",
+                  "rek_publisher_xsdmf_id": null,
+                },
+                "fez_record_search_key_pubmed_id": null,
+                "fez_record_search_key_refereed": Object {
+                  "rek_refereed": 1,
+                  "rek_refereed_id": 2661665,
+                  "rek_refereed_pid": "UQ:277856",
+                  "rek_refereed_xsdmf_id": null,
+                },
+                "fez_record_search_key_refereed_source": Object {
+                  "rek_refereed_source": "453635",
+                  "rek_refereed_source_id": 1165580,
+                  "rek_refereed_source_lookup": "Ulrichs",
+                  "rek_refereed_source_pid": "UQ:277856",
+                  "rek_refereed_source_xsdmf_id": null,
+                },
+                "fez_record_search_key_retracted": null,
+                "fez_record_search_key_roman_script_conference_name": null,
+                "fez_record_search_key_roman_script_journal_name": null,
+                "fez_record_search_key_roman_script_proceedings_title": null,
+                "fez_record_search_key_roman_script_title": null,
+                "fez_record_search_key_scopus_id": null,
+                "fez_record_search_key_series": null,
+                "fez_record_search_key_start_page": Object {
+                  "rek_start_page": "160",
+                  "rek_start_page_id": 5560895,
+                  "rek_start_page_pid": "UQ:277856",
+                  "rek_start_page_xsdmf_id": null,
+                },
+                "fez_record_search_key_subject": Array [],
+                "fez_record_search_key_total_chapters": null,
+                "fez_record_search_key_total_pages": Object {
+                  "rek_total_pages": "1",
+                  "rek_total_pages_id": 5467415,
+                  "rek_total_pages_pid": "UQ:277856",
+                  "rek_total_pages_xsdmf_id": null,
+                },
+                "fez_record_search_key_translated_conference_name": null,
+                "fez_record_search_key_translated_journal_name": null,
+                "fez_record_search_key_translated_proceedings_title": null,
+                "fez_record_search_key_translated_title": null,
+                "fez_record_search_key_volume_number": Object {
+                  "rek_volume_number": "60",
+                  "rek_volume_number_id": 5097264,
+                  "rek_volume_number_pid": "UQ:277856",
+                  "rek_volume_number_xsdmf_id": null,
+                },
+                "fez_record_search_key_wok_doc_types": Array [],
+                "fez_record_search_key_zoorec_id": null,
+                "rek_altmetric_id": 0,
+                "rek_altmetric_id_xsdmf_id": null,
+                "rek_altmetric_score": 0,
+                "rek_altmetric_score_xsdmf_id": null,
+                "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Martin, Sally\\" href=\\"/list/author_id/745/\\">Martin, Sally</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Harper, Callista B.\\" href=\\"/list/author_id/80925/\\">Harper, Callista B.</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Meunier, Frederic A.\\" href=\\"/list/author_id/2746/\\">Meunier, Frederic A.</a> (<span class=\\"citation_date\\">2012</span>). <a class=\\"citation_title\\" title=\\"Click to view Conference Paper: Retrograde trafficking at the presynaptic nerve terminal using bacterial toxins\\" href=\\"/view/UQ:277856\\">Retrograde trafficking at the presynaptic nerve terminal using bacterial toxins</a>. In: <span class=\\"citation_proceedings_title\\">17th World Congress of the International Society on Toxinology &amp; Venom Week 2012, 4th International Scientific Symposium on All Things Venomous, 17th World Congress of the International Society on Toxinology &amp; Venom Week 2012, 4th International Scientific Symposium on All Things Venomous</span>. <i><span class=\\"citation_conference_name\\">17th World Congress of the International-Society-on-Toxinology (IST)/Venom Week/4th International Scientific Symposium on All Things Venomous</span></i>, <span class=\\"citation_conference_location\\">Honolulu, Hawaii, United States</span>, (<span class=\\"citation_start_page\\">160</span>-<span class=\\"citation_end_page\\">160</span>). <span class=\\"citation_conference_dates\\">8-13 July 2012</span>. doi:<span class=\\"citation_doi\\">10.1016/j.toxicon.2012.04.130</span>",
+                "rek_copyright": "on",
+                "rek_copyright_xsdmf_id": 3679,
+                "rek_created_date": "2012-07-23T16:46:47Z",
+                "rek_created_date_xsdmf_id": 3677,
+                "rek_date": "2012-01-01T00:00:00Z",
+                "rek_date_xsdmf_id": 4041,
+                "rek_depositor": 8524,
+                "rek_depositor_affiliation": 1017,
+                "rek_depositor_affiliation_xsdmf_id": 11881,
+                "rek_depositor_xsdmf_id": 7578,
+                "rek_description": null,
+                "rek_description_xsdmf_id": null,
+                "rek_display_type": 130,
+                "rek_display_type_lookup": "Conference Paper",
+                "rek_display_type_xsdmf_id": 3673,
+                "rek_file_downloads": 0,
+                "rek_formatted_abstract": null,
+                "rek_formatted_abstract_xsdmf_id": null,
+                "rek_formatted_title": null,
+                "rek_formatted_title_xsdmf_id": null,
+                "rek_genre": "Conference Paper",
+                "rek_genre_type": "Toxicon",
+                "rek_genre_type_xsdmf_id": null,
+                "rek_genre_xsdmf_id": 7203,
+                "rek_herdc_notes": null,
+                "rek_herdc_notes_xsdmf_id": null,
+                "rek_object_type": 3,
+                "rek_object_type_lookup": "Record",
+                "rek_object_type_xsdmf_id": 3674,
+                "rek_pid": "UQ:277856",
+                "rek_pubmed_doc_type": null,
+                "rek_pubmed_doc_type_lookup": null,
+                "rek_pubmed_doc_type_xsdmf_id": null,
+                "rek_scopus_citation_count": null,
+                "rek_scopus_doc_type": null,
+                "rek_scopus_doc_type_lookup": null,
+                "rek_scopus_doc_type_xsdmf_id": null,
+                "rek_security_inherited": 1,
+                "rek_status": 2,
+                "rek_status_lookup": "Published",
+                "rek_status_xsdmf_id": 3680,
+                "rek_subtype": "Published abstract",
+                "rek_subtype_xsdmf_id": 12548,
+                "rek_thomson_citation_count": 0,
+                "rek_thomson_citation_count_xsdmf_id": null,
+                "rek_title": "Retrograde trafficking at the presynaptic nerve terminal using bacterial toxins",
+                "rek_title_xsdmf_id": 10605,
+                "rek_updated_date": "2017-10-16T04:33:32Z",
+                "rek_updated_date_xsdmf_id": 3678,
+                "rek_wok_doc_type": "MC",
+                "rek_wok_doc_type_lookup": null,
+                "rek_wok_doc_type_xsdmf_id": 12551,
+              }
+            }
+          />
+        }
+        heading="Journal name"
+        key="additional-info-Journal name"
+      />
+      <ViewRecordTableRow
+        data="Kidlington, Oxford, United Kingdom"
+        heading="Place of publication"
+        key="additional-info-Place of publication"
+      />
+      <ViewRecordTableRow
+        data={
+          <a
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pergamon"
+          >
+            Pergamon
+          </a>
+        }
+        heading="Publisher"
+        key="additional-info-Publisher"
+      />
+      <ViewRecordTableRow
+        data={
+          <DateCitationView
+            className="citationDate"
+            date="2012-01-01T00:00:00Z"
+            format="YYYY"
+            prefix=""
+            suffix=""
+          />
+        }
+        heading="Publication year"
+        key="additional-info-Publication year"
+      />
+      <ViewRecordTableRow
+        data={
+          <DateCitationView
+            className="citationDate"
+            date="2012-08-01T00:00:00Z"
+            format="YYYY"
+            prefix=""
+            suffix=""
+          />
+        }
+        heading="Year available"
+        key="additional-info-Year available"
+      />
+      <ViewRecordTableRow
+        data={
+          <DoiCitationView
+            doi="10.1016/j.toxicon.2012.04.130"
+          />
+        }
+        heading="DOI"
+        key="additional-info-DOI"
+      />
+      <ViewRecordTableRow
+        data={
+          <a
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Ball%5D="
+          >
+            Not yet assessed
+          </a>
+        }
+        heading="Open access status"
+        key="additional-info-Open access status"
+      />
+      <ViewRecordTableRow
+        data={
+          <ul>
+            <li>
+              0041-0101
+            </li>
+            <li>
+              1879-3150
+            </li>
+          </ul>
+        }
+        heading="ISSN"
+        key="additional-info-ISSN"
+      />
+      <ViewRecordTableRow
+        data="60"
+        heading="Volume"
+        key="additional-info-Volume"
+      />
+      <ViewRecordTableRow
+        data="2"
+        heading="Issue"
+        key="additional-info-Issue"
+      />
+      <ViewRecordTableRow
+        data="160"
+        heading="Start page"
+        key="additional-info-Start page"
+      />
+      <ViewRecordTableRow
+        data="160"
+        heading="End page"
+        key="additional-info-End page"
+      />
+      <ViewRecordTableRow
+        data="1"
+        heading="Total pages"
+        key="additional-info-Total pages"
+      />
+      <ViewRecordTableRow
+        data={
+          <ul>
+            <li>
+              eng
+            </li>
+          </ul>
+        }
+        heading="Language"
+        key="additional-info-Language"
+      />
+      <ViewRecordTableRow
+        data={
+          <ul>
+            <li>
+              <a
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Trafficking"
+              >
+                Trafficking
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Bacterial+toxins"
+              >
+                Bacterial toxins
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Neurons"
+              >
+                Neurons
+              </a>
+            </li>
+          </ul>
+        }
+        heading="Keyword(s)"
+        key="additional-info-Keyword(s)"
       />
     </TableBody>
   </Table>
@@ -27895,7 +29369,7 @@ exports[`Additional Information Component  should render component with referenc
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=Routledge"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Routledge"
           >
             Routledge
           </a>
@@ -28284,21 +29758,21 @@ exports[`Additional Information Component  should render component with referenc
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Japanese culture"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Japanese+culture"
               >
                 Japanese culture
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Popular culture - Japan - Encyclopedias"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Popular+culture+-+Japan+-+Encyclopedias"
               >
                 Popular culture - Japan - Encyclopedias
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Japan - Civilization - 1945- - Encyclopedia"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Japan+-+Civilization+-+1945-+-+Encyclopedia"
               >
                 Japan - Civilization - 1945- - Encyclopedia
               </a>
@@ -28685,7 +30159,7 @@ exports[`Additional Information Component  should render component with research
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=UQ"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=UQ"
           >
             UQ
           </a>
@@ -29065,7 +30539,7 @@ exports[`Additional Information Component  should render component with thesis 1
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_70]=School of Natural and Rural Systems"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Natural+and+Rural+Systems"
           >
             School of Natural and Rural Systems
           </a>
@@ -29138,7 +30612,7 @@ exports[`Additional Information Component  should render component with thesis 1
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Sustainable development; graziers; farmers; agriculture; land management; business"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business"
               >
                 Sustainable development; graziers; farmers; agriculture; land management; business
               </a>
@@ -29534,7 +31008,7 @@ exports[`Additional Information Component  should render component with video do
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=SEG Special Publication Video Series"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=SEG+Special+Publication+Video+Series"
           >
             SEG Special Publication Video Series
           </a>
@@ -29986,7 +31460,7 @@ exports[`Additional Information Component  should render component with working 
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_70]=School of Economics"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Economics"
           >
             School of Economics
           </a>
@@ -30007,7 +31481,7 @@ exports[`Additional Information Component  should render component with working 
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_33]=Working papers on Social Economics, Policy and Development"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Working+papers+on+Social+Economics%2C+Policy+and+Development"
           >
             Working papers on Social Economics, Policy and Development
           </a>
@@ -30036,7 +31510,7 @@ exports[`Additional Information Component  should render component with working 
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_29]=School of Economics"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Economics"
           >
             School of Economics
           </a>
@@ -30097,28 +31571,28 @@ exports[`Additional Information Component  should render component with working 
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=European Union"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=European+Union"
               >
                 European Union
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Education"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Education"
               >
                 Education
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Employment"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Employment"
               >
                 Employment
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Social inclusion"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Social+inclusion"
               >
                 Social inclusion
               </a>
@@ -30491,7 +31965,7 @@ exports[`Additional Information Component  should render oa status value link in
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[core_70]=School of Natural and Rural Systems"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Natural+and+Rural+Systems"
           >
             School of Natural and Rural Systems
           </a>
@@ -30525,7 +31999,7 @@ exports[`Additional Information Component  should render oa status value link in
       <ViewRecordTableRow
         data={
           <a
-            href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[UQ_54]=453695"
+            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5BshowOpenAccessOnly%5D=true&searchQueryParams%5Ball%5D="
           >
             File (Author Post-print)
           </a>
@@ -30570,7 +32044,7 @@ exports[`Additional Information Component  should render oa status value link in
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/list/?cat=quick_filter&search_keys[0]=Sustainable development; graziers; farmers; agriculture; land management; business"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business"
               >
                 Sustainable development; graziers; farmers; agriculture; land management; business
               </a>
