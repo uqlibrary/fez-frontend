@@ -1,3 +1,5 @@
+import locale from 'locale/components';
+
 const getValue = (value) => (
     typeof(value) !== 'undefined' && !!value ? value : null
 );
@@ -312,4 +314,15 @@ export const SBS_THESIS_DEFAULT_VALUES = {
     rek_display_type: PUBLICATION_TYPE_THESIS,
     rek_genre_type: 'Professional Doctorate',
     fileAccessId: 4
+};
+
+export const defaultSearchParams = {
+    page: 1,
+    pageSize: 20,
+    sortBy: locale.components.sorting.sortBy[0].value,
+    sortDirection: locale.components.sorting.sortDirection[0],
+    activeFacets: {
+        filters: {},
+        ranges: {}
+    }
 };

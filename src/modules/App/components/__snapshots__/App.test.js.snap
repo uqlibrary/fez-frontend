@@ -143,6 +143,12 @@ exports[`Application component should render alert if user is not fez author 1`]
           "regExPath": "/records/(UQ:[a-z0-9]+)",
         },
         Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
+        },
+        Object {
           "pageTitle": "Page not found",
           "render": [Function],
         },
@@ -176,7 +182,13 @@ exports[`Application component should render alert if user is not fez author 1`]
       >
         <div
           className="column search-column"
-        />
+        >
+          <withRouter(Connect(SearchComponent))
+            inHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </div>
         <div
           className="column is-narrow auth-button-column"
         >
@@ -269,6 +281,12 @@ exports[`Application component should render alert if user is not fez author 1`]
         Object {
           "divider": true,
           "path": "/234234234242",
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
         },
         Object {
           "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
@@ -482,7 +500,14 @@ exports[`Application component should render alert if user is not fez author 1`]
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_16"
+        pageTitle="eSpace search"
+        path="/records/search"
+      />
+      <Route
+        key="route_17"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -636,6 +661,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "regExPath": "/records/(UQ:[a-z0-9]+)",
         },
         Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
+        },
+        Object {
           "pageTitle": "Page not found",
           "render": [Function],
         },
@@ -669,7 +700,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       >
         <div
           className="column search-column"
-        />
+        >
+          <withRouter(Connect(SearchComponent))
+            inHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </div>
         <div
           className="column is-narrow auth-button-column"
         >
@@ -762,6 +799,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         Object {
           "divider": true,
           "path": "/234234234242",
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
         },
         Object {
           "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
@@ -959,7 +1002,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_16"
+        pageTitle="eSpace search"
+        path="/records/search"
+      />
+      <Route
+        key="route_17"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -988,6 +1038,12 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           "pageTitle": undefined,
           "path": "/records/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/records/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
         },
         Object {
           "pageTitle": "Higher degree by research thesis deposit",
@@ -1033,7 +1089,13 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       >
         <div
           className="column search-column"
-        />
+        >
+          <withRouter(Connect(SearchComponent))
+            inHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </div>
         <div
           className="column is-narrow auth-button-column"
         >
@@ -1104,6 +1166,12 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           "path": "/234234234242",
         },
         Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
+        },
+        Object {
           "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
           "primaryText": "Help",
           "public": true,
@@ -1159,20 +1227,27 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_2"
+        pageTitle="eSpace search"
+        path="/records/search"
+      />
+      <Route
+        key="route_3"
         pageTitle="Higher degree by research thesis deposit"
         path="/rhdsubmission"
         render={[Function]}
       />
       <Route
-        key="route_3"
+        key="route_4"
         pageTitle="Professional doctorate deposit"
         path="/sbslodge_new"
         render={[Function]}
       />
       <Route
         component={[Function]}
-        key="route_4"
+        key="route_5"
         pageTitle="Link ORCID ID to UQ eSpace"
       />
     </Switch>
@@ -1325,6 +1400,12 @@ exports[`Application component should render app for account with fez author wit
           "regExPath": "/records/(UQ:[a-z0-9]+)",
         },
         Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
+        },
+        Object {
           "pageTitle": "Page not found",
           "render": [Function],
         },
@@ -1358,7 +1439,13 @@ exports[`Application component should render app for account with fez author wit
       >
         <div
           className="column search-column"
-        />
+        >
+          <withRouter(Connect(SearchComponent))
+            inHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </div>
         <div
           className="column is-narrow auth-button-column"
         >
@@ -1451,6 +1538,12 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "divider": true,
           "path": "/234234234242",
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
         },
         Object {
           "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
@@ -1648,7 +1741,14 @@ exports[`Application component should render app for account with fez author wit
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_16"
+        pageTitle="eSpace search"
+        path="/records/search"
+      />
+      <Route
+        key="route_17"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -1802,6 +1902,12 @@ exports[`Application component should render app for account with fez author wit
           "regExPath": "/records/(UQ:[a-z0-9]+)",
         },
         Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
+        },
+        Object {
           "pageTitle": "Page not found",
           "render": [Function],
         },
@@ -1835,7 +1941,13 @@ exports[`Application component should render app for account with fez author wit
       >
         <div
           className="column search-column"
-        />
+        >
+          <withRouter(Connect(SearchComponent))
+            inHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </div>
         <div
           className="column is-narrow auth-button-column"
         >
@@ -1928,6 +2040,12 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "divider": true,
           "path": "/234234234242",
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
         },
         Object {
           "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
@@ -2143,7 +2261,14 @@ exports[`Application component should render app for account with fez author wit
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_16"
+        pageTitle="eSpace search"
+        path="/records/search"
+      />
+      <Route
+        key="route_17"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2295,6 +2420,12 @@ exports[`Application component should render app for account with fez author wit
           "pageTitle": undefined,
           "path": "/records/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/records/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
         },
         Object {
           "pageTitle": "Page not found",
@@ -2550,7 +2681,14 @@ exports[`Application component should render app for account with fez author wit
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_16"
+        pageTitle="eSpace search"
+        path="/records/search"
+      />
+      <Route
+        key="route_17"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2704,6 +2842,12 @@ exports[`Application component should render application with routing for the us
           "regExPath": "/records/(UQ:[a-z0-9]+)",
         },
         Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
+        },
+        Object {
           "pageTitle": "Page not found",
           "render": [Function],
         },
@@ -2737,7 +2881,13 @@ exports[`Application component should render application with routing for the us
       >
         <div
           className="column search-column"
-        />
+        >
+          <withRouter(Connect(SearchComponent))
+            inHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </div>
         <div
           className="column is-narrow auth-button-column"
         >
@@ -2832,6 +2982,12 @@ exports[`Application component should render application with routing for the us
           "path": "/234234234242",
         },
         Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
+        },
+        Object {
           "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
           "primaryText": "Help",
           "public": true,
@@ -2891,6 +3047,12 @@ exports[`Application component should render for anon user 1`] = `
         Object {
           "component": [Function],
           "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
           "pageTitle": "eSpace",
           "path": "/",
         },
@@ -2934,7 +3096,13 @@ exports[`Application component should render for anon user 1`] = `
       >
         <div
           className="column search-column"
-        />
+        >
+          <withRouter(Connect(SearchComponent))
+            inHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </div>
         <div
           className="column is-narrow auth-button-column"
         >
@@ -2996,6 +3164,12 @@ exports[`Application component should render for anon user 1`] = `
     menuItems={
       Array [
         Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
+        },
+        Object {
           "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
           "primaryText": "Help",
           "public": true,
@@ -3056,18 +3230,25 @@ exports[`Application component should render for anon user 1`] = `
         component={[Function]}
         exact={true}
         key="route_2"
-        pageTitle="eSpace"
-        path="/"
+        pageTitle="eSpace search"
+        path="/records/search"
       />
       <Route
         component={[Function]}
         exact={true}
         key="route_3"
         pageTitle="eSpace"
+        path="/"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_4"
+        pageTitle="eSpace"
         path="/dashboard"
       />
       <Route
-        key="route_4"
+        key="route_5"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -3109,6 +3290,12 @@ exports[`Application component should render thesis submission for HDR without m
           "pageTitle": undefined,
           "path": "/records/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/records/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
         },
         Object {
           "pageTitle": "Higher degree by research thesis deposit",
@@ -3218,20 +3405,27 @@ exports[`Application component should render thesis submission for HDR without m
         regExPath="/records/(UQ:[a-z0-9]+)"
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_2"
+        pageTitle="eSpace search"
+        path="/records/search"
+      />
+      <Route
+        key="route_3"
         pageTitle="Higher degree by research thesis deposit"
         path="/rhdsubmission"
         render={[Function]}
       />
       <Route
-        key="route_3"
+        key="route_4"
         pageTitle="Professional doctorate deposit"
         path="/sbslodge_new"
         render={[Function]}
       />
       <Route
         component={[Function]}
-        key="route_4"
+        key="route_5"
         pageTitle="Link ORCID ID to UQ eSpace"
       />
     </Switch>

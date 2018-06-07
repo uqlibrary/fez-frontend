@@ -15,10 +15,11 @@ const DashboardResearcherIds = ({values, authenticated, history}) => {
             orcid: 'https://orcid.org/'
         },
         notLinkedUrl: {
-            publons: 'https://app.library.uq.edu.au/#/id',
-            scopus: 'https://app.library.uq.edu.au/#/id',
-            researcher: 'https://app.library.uq.edu.au/#/id',
-            google_scholar: routes.pathConfig.authorIdentifiers.googleScholar.link,
+            publons: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier',
+            scopus: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier',
+            researcher: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier',
+            google_scholar: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier',
+            // google_scholar: routes.pathConfig.authorIdentifiers.googleScholar.link,
             orcid: routes.pathConfig.authorIdentifiers.orcid.link
         }
     };

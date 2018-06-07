@@ -131,6 +131,7 @@ mock
         }
         return [200, {data: {...mockData.record}}];
     })
+    // .reply(401, '')
     // .reply(500, ['ERROR in EXISTING_RECORD_API'])
     .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({id: '.*'}).apiUrl)))
     .reply((config) => {
