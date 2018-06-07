@@ -137,13 +137,12 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             pageTitle: locale.pages.viewRecord.title,
             regExPath: pathConfig.records.view(`(${pidRegExp})`)
         },
-        // TODO: enable search route for public users
-        // {
-        //     path: pathConfig.records.search,
-        //     component: components.SearchRecords,
-        //     exact: true,
-        //     pageTitle: locale.pages.searchRecords.title
-        // },
+        {
+            path: pathConfig.records.search,
+            component: components.SearchRecords,
+            exact: true,
+            pageTitle: locale.pages.searchRecords.title
+        },
         ...(!account
             ? [
                 {
@@ -283,14 +282,6 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             }
         ] : []),
         ...(account && account.canMasquerade ? [
-            // TODO: remove search route for auth only when public search is enabled
-            {
-                path: pathConfig.records.search,
-                component: components.SearchRecords,
-                access: [roles.admin],
-                exact: true,
-                pageTitle: locale.pages.searchRecords.title
-            },
             {
                 path: pathConfig.admin.masquerade,
                 component: components.Masquerade,
@@ -314,12 +305,11 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
 
 export const getMenuConfig = (account, disabled) => {
     const publicPages = [
-        // TODO: enable when search is public
-        // {
-        //     linkTo: pathConfig.records.search,
-        //     ...locale.menu.search,
-        //     public: true
-        // },
+        {
+            linkTo: pathConfig.records.search,
+            ...locale.menu.search,
+            public: true
+        },
         {
             linkTo: pathConfig.help,
             ...locale.menu.help,
@@ -390,11 +380,6 @@ export const getMenuConfig = (account, disabled) => {
             }
         ] : []),
         ...(account && account.canMasquerade ? [
-            // TODO: remove when public search is enabled
-            {
-                linkTo: pathConfig.records.search,
-                ...locale.menu.search
-            },
             {
                 linkTo: pathConfig.admin.masquerade,
                 ...locale.menu.masquerade,

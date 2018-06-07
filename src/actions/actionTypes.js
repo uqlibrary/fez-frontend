@@ -96,7 +96,6 @@ export const CREATE_RECORD_SUCCESS = 'CREATE_RECORD_SUCCESS';
 export const CREATE_RECORD_FAILED = 'CREATE_RECORD_FAILED';
 
 // View records
-export const VIEW_RECORD_SET = 'VIEW_RECORD_SET';
 export const VIEW_RECORD_CLEAR = 'VIEW_RECORD_CLEAR';
 
 export const VIEW_RECORD_LOADING = 'VIEW_RECORD_LOADING';
@@ -139,5 +138,5 @@ export const NEWS_LOADED = 'NEWS_LOADED';
 export const NEWS_LOAD_FAILED = 'NEWS_LOAD_FAILED';
 
 // List of all actions loading publications - for middleware
-export const loadPublicationsListActions = new RegExp(`^(${LATEST_PUBLICATIONS_LOADED}|${AUTHOR_PUBLICATIONS_LOADED}|${SEARCH_LOADED}(|@\\w+)|${POSSIBLY_YOUR_PUBLICATIONS_LOADED}|${TRENDING_PUBLICATIONS_LOADED}(@\\w+))$`);
+export const loadPublicationsListActions = new RegExp(`^(${LATEST_PUBLICATIONS_LOADED}|${AUTHOR_PUBLICATIONS_LOADED}|${SEARCH_LOADED}(|@\\w+)|${POSSIBLY_YOUR_PUBLICATIONS_LOADED}|${TRENDING_PUBLICATIONS_LOADED}(@\\w+)|${TOP_CITED_PUBLICATIONS_LOADED}(@\\w+))$`);
 export const loadPublicationActions = new RegExp(`^(${FIX_RECORD_LOADED}|${VIEW_RECORD_LOADED})$`);
