@@ -59,8 +59,7 @@ export default class MediaPreview extends PureComponent {
                     <Alert
                         className="imageErrorAlert"
                         {...locale.viewRecord.sections.files.preview.imageAlertError}
-                        actionButtonLabel="Download source file"
-                        action={this.openFileInNewWindow}
+                        action={mediaUrl && this.openFileInNewWindow}
                     />
                 }
             </StandardCard>
