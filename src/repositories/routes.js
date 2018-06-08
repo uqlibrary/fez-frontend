@@ -85,7 +85,7 @@ export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({userId}) => (
     {apiUrl: `academic/${userId}/hindex`}
 );
 export const ACADEMIC_STATS_PUBLICATIONS_TRENDING_API = () => (
-    {apiUrl: 'records/trending', options: {params: {filter: 'author'}}}
+    {apiUrl: 'records/my-trending'}
 );
 
 // lookup apis
