@@ -603,6 +603,8 @@ exports[`Media Preview Component  should render component with image 1`] = `
   </div>
   <img
     alt="https://test.com/test.jpg"
+    id="previewImage"
+    onError={[Function]}
     src="https://test.com/preview_test.jpg"
   />
 </StandardCard>
@@ -643,5 +645,46 @@ exports[`Media Preview Component  should render component with video 1`] = `
       type="video/mp4"
     />
   </video>
+</StandardCard>
+`;
+
+exports[`Media Preview Component  should show an alert if an image preview has thrown an error 1`] = `
+<StandardCard
+  className="mediaPreview"
+  title="Image preview"
+>
+  <div
+    className="column is-narrow buttons"
+  >
+    <RaisedButton
+      disabled={false}
+      fullWidth={false}
+      label="Open file in a new window"
+      labelPosition="after"
+      onClick={[Function]}
+      primary={true}
+      secondary={false}
+    />
+    <RaisedButton
+      disabled={false}
+      fullWidth={false}
+      label="Close"
+      labelPosition="after"
+      onClick={[MockFunction]}
+      primary={false}
+      secondary={false}
+    />
+  </div>
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Download source file"
+    allowDismiss={false}
+    className="imageErrorAlert"
+    dismissTitle="Click to dismiss this alert"
+    message="Source file is available for download"
+    showLoader={false}
+    title="Image preview unavailable"
+    type="warning"
+  />
 </StandardCard>
 `;
