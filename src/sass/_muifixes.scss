@@ -146,6 +146,14 @@ button[type=button] {
       width: 500px !important;
     }
   }
+  a.appTitle {
+    color: $text-color-reverse;
+    font-weight: $text-weight-normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 75px;
+  }
 }
 
 #contentContainer:focus {

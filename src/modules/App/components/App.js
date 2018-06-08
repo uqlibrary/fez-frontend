@@ -173,7 +173,7 @@ export default class App extends PureComponent {
                     showMenuIconButton={showMenu && !this.state.docked}
                     style={{height: 75}}
                     iconStyleLeft={{marginTop: 0}}
-                    title={locale.global.title}
+                    title={locale.global.appTitle}
                     titleStyle={titleStyle}
                     onLeftIconButtonClick={this.toggleDrawer}
                     iconElementLeft={
