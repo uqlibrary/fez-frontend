@@ -4,15 +4,13 @@ import {locale} from 'locale';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import RaisedButton from 'material-ui/RaisedButton';
-// import {routes} from "../../../../config";
 
 export default class MediaPreview extends PureComponent {
     static propTypes = {
         mediaUrl: PropTypes.string.isRequired,
         previewMediaUrl: PropTypes.string.isRequired,
         mimeType: PropTypes.string.isRequired,
-        onClose: PropTypes.func.isRequired,
-        history: PropTypes.any
+        onClose: PropTypes.func.isRequired
     };
 
     constructor(props) {
@@ -26,12 +24,11 @@ export default class MediaPreview extends PureComponent {
         window.open(this.props.mediaUrl);
     };
 
-    imageError =() => {
+    handleImageError =() => {
         this.setState({
             imageError: true
         });
     };
-
     render()  {
         const {mediaUrl, previewMediaUrl, mimeType} = this.props;
         const isVideo = mimeType.indexOf('video') >= 0;
@@ -52,7 +49,7 @@ export default class MediaPreview extends PureComponent {
                 }
                 {
                     isImage && !this.state.imageError &&
-                        <img id="previewImage" src={previewMediaUrl} alt={mediaUrl} onError={this.imageError} />
+                        <img id="previewImage" src={previewMediaUrl} alt={mediaUrl} onError={this.handleImageError} />
                 }
                 {
                     isImage && this.state.imageError &&
