@@ -44,9 +44,6 @@ export const pathConfig = {
         mine: '/data-collections/mine',
         add: `${fullPath}/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315`,
     },
-    collection: {
-        view: (pid) => (`${fullPath}/collection/${pid}`),
-    },
     // TODO: update how we get files after security is implemented in fez file api
     // (this is used in metadata to reflect legacy file urls for citation_pdf_url - Google Scholar)
     file: {
@@ -83,6 +80,13 @@ export const pathConfig = {
         license: (license) => getSearchUrl({searchQuery: license}),
         accessCondition: (accessCondition) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_95]=${accessCondition}`),
         collectionType: (collectionType) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_92]=${collectionType}`),
+        collection: (collectionId) => getSearchUrl({
+            activeFacets: {
+                filters: {
+                    'Collection': collectionId
+                }
+            }
+        }),
         orgUnitName: (orgUnitName) => getSearchUrl({searchQuery: orgUnitName}),
         series: (series) => getSearchUrl({searchQuery: series}),
         bookTitle: (bookTitle) => getSearchUrl({searchQuery: bookTitle}),
