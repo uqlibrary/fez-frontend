@@ -393,36 +393,36 @@ describe('Academic data transformers ', () => {
             ];
 
             const expectedMetrics = [
-                {
-                    key: 'scopus',
-                    values: [
-                        {
-                            rek_pid: 'UQ:333333',
-                            rek_title: 'Test record 3',
-                            rek_date: '2018-01-01T00:00:00Z',
-                            fez_record_search_key_isi_loc: {
-                                fez_thomson_citations: {
-                                    tc_count: 15,
-                                    tc_3m: 8,
-                                    tc_citation_url: 'http://www.wos.com?citation_id=123242'
-                                }
-                            },
-                            fez_record_search_key_scopus_id: {
-                                fez_scopus_citations: {
-                                    sc_count: 23,
-                                    sc_3m: 45,
-                                    sc_citation_url: 'http://www.scopus.com/details.php?citation_id=23432423'
-                                }
-                            },
-                            metricData: {
-                                count: 23,
-                                difference: 45,
-                                citation_url: "http://www.scopus.com/details.php?citation_id=23432423",
-                                source: "scopus"
-                            }
-                        }
-                    ]
-                },
+                // {
+                //     key: 'scopus',
+                //     values: [
+                //         {
+                //             rek_pid: 'UQ:333333',
+                //             rek_title: 'Test record 3',
+                //             rek_date: '2018-01-01T00:00:00Z',
+                //             fez_record_search_key_isi_loc: {
+                //                 fez_thomson_citations: {
+                //                     tc_count: 15,
+                //                     tc_3m: 8,
+                //                     tc_citation_url: 'http://www.wos.com?citation_id=123242'
+                //                 }
+                //             },
+                //             fez_record_search_key_scopus_id: {
+                //                 fez_scopus_citations: {
+                //                     sc_count: 23,
+                //                     sc_3m: 45,
+                //                     sc_citation_url: 'http://www.scopus.com/details.php?citation_id=23432423'
+                //                 }
+                //             },
+                //             metricData: {
+                //                 count: 23,
+                //                 difference: 45,
+                //                 citation_url: "http://www.scopus.com/details.php?citation_id=23432423",
+                //                 source: "scopus"
+                //             }
+                //         }
+                //     ]
+                // },
                 {
                     key: 'thomson',
                     values: [
@@ -693,36 +693,36 @@ describe('Academic data transformers ', () => {
             ];
 
             const expectedMetrics = [
-                {
-                    key: "scopus",
-                    values: [
-                        {
-                            fez_record_search_key_isi_loc: {
-                                fez_thomson_citations: {
-                                    tc_3m: 8,
-                                    tc_citation_url: "http://www.wos.com?citation_id=123242",
-                                    tc_count: 15
-                                }
-                            },
-                            fez_record_search_key_scopus_id: {
-                                fez_scopus_citations: {
-                                    sc_3m: 45,
-                                    sc_citation_url: "http://www.scopus.com/details.php?citation_id=23432423",
-                                    sc_count: 23
-                                }
-                            },
-                            metricData: {
-                                citation_url: "http://www.scopus.com/details.php?citation_id=23432423",
-                                count: 23,
-                                difference: 45,
-                                source: "scopus"
-                            },
-                            rek_date: "2018-01-01T00:00:00Z",
-                            rek_pid: "UQ:333333",
-                            rek_title: "Test record 3"
-                            }
-                        ]
-                },
+                // {
+                //     key: "scopus",
+                //     values: [
+                //         {
+                //             fez_record_search_key_isi_loc: {
+                //                 fez_thomson_citations: {
+                //                     tc_3m: 8,
+                //                     tc_citation_url: "http://www.wos.com?citation_id=123242",
+                //                     tc_count: 15
+                //                 }
+                //             },
+                //             fez_record_search_key_scopus_id: {
+                //                 fez_scopus_citations: {
+                //                     sc_3m: 45,
+                //                     sc_citation_url: "http://www.scopus.com/details.php?citation_id=23432423",
+                //                     sc_count: 23
+                //                 }
+                //             },
+                //             metricData: {
+                //                 citation_url: "http://www.scopus.com/details.php?citation_id=23432423",
+                //                 count: 23,
+                //                 difference: 45,
+                //                 source: "scopus"
+                //             },
+                //             rek_date: "2018-01-01T00:00:00Z",
+                //             rek_pid: "UQ:333333",
+                //             rek_title: "Test record 3"
+                //             }
+                //         ]
+                // },
                 {
                     key: 'thomson',
                     values: [
@@ -840,36 +840,36 @@ describe('Academic data transformers ', () => {
             ];
 
             const expectedMetrics = [
-                {
-                    key: "scopus",
-                    values: [
-                        {
-                            fez_record_search_key_isi_loc: {
-                                fez_thomson_citations: {
-                                    tc_3m: 0,
-                                    tc_citation_url: "http://www.wos.com?citation_id=123242",
-                                    tc_count: 15
-                                }
-                            },
-                            fez_record_search_key_scopus_id: {
-                                fez_scopus_citations: {
-                                    sc_3m: 45,
-                                    sc_citation_url: "http://www.scopus.com/details.php?citation_id=23432423",
-                                    sc_count: 23
-                                }
-                            },
-                            metricData: {
-                                citation_url: "http://www.scopus.com/details.php?citation_id=23432423",
-                                count: 23,
-                                difference: 45,
-                                source: "scopus"
-                            },
-                            rek_date: "2018-01-01T00:00:00Z",
-                            rek_pid: "UQ:333333",
-                            rek_title: "Test record 3"
-                        }
-                    ]
-                },
+                // {
+                //     key: "scopus",
+                //     values: [
+                //         {
+                //             fez_record_search_key_isi_loc: {
+                //                 fez_thomson_citations: {
+                //                     tc_3m: 0,
+                //                     tc_citation_url: "http://www.wos.com?citation_id=123242",
+                //                     tc_count: 15
+                //                 }
+                //             },
+                //             fez_record_search_key_scopus_id: {
+                //                 fez_scopus_citations: {
+                //                     sc_3m: 45,
+                //                     sc_citation_url: "http://www.scopus.com/details.php?citation_id=23432423",
+                //                     sc_count: 23
+                //                 }
+                //             },
+                //             metricData: {
+                //                 citation_url: "http://www.scopus.com/details.php?citation_id=23432423",
+                //                 count: 23,
+                //                 difference: 45,
+                //                 source: "scopus"
+                //             },
+                //             rek_date: "2018-01-01T00:00:00Z",
+                //             rek_pid: "UQ:333333",
+                //             rek_title: "Test record 3"
+                //         }
+                //     ]
+                // },
                 {
                     key: 'altmetric',
                     values: [
