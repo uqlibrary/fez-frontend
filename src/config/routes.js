@@ -32,7 +32,7 @@ export const pathConfig = {
         possible: '/records/possible',
         claim: '/records/claim',
         search: '/records/search',
-        view: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/records/${pid}`),
+        view: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/view/${pid}`),
         fix: (pid) => (`/records/${pid}/fix`),
         add: {
             find: '/records/add/find',
@@ -91,7 +91,8 @@ export const pathConfig = {
         proceedingsTitle: (proceedingsTitle) => getSearchUrl({searchQuery: proceedingsTitle}),
     },
     admin: {
-        masquerade: '/admin/masquerade'
+        masquerade: '/admin/masquerade',
+        view_old: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/records/${pid}`),
     },
     authorIdentifiers: {
         orcid: {
@@ -303,7 +304,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
     ];
 };
 
-export const getMenuConfig = (account, disabled) => {
+export const getMenuConfig = (account, disabled, isViewPage = false) => {
     const homePage = [
         {
             linkTo: pathConfig.index,
@@ -327,11 +328,13 @@ export const getMenuConfig = (account, disabled) => {
             ...locale.menu.contact,
             public: true
         },
-        {
-            linkTo: pathConfig.legacyEspace,
-            ...locale.menu.legacyEspace,
-            public: true
-        }
+        ...(!account && isViewPage ? [] : [
+            {
+                linkTo: pathConfig.legacyEspace,
+                ...locale.menu.legacyEspace,
+                public: true
+            }
+        ])
     ];
 
     if (disabled) {

@@ -145,8 +145,8 @@ exports[`Application component should render alert if user is not fez author 1`]
           "component": [Function],
           "exact": true,
           "pageTitle": undefined,
-          "path": "/records/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/records/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -505,8 +505,8 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_16"
-        path="/records/:pid(UQ:[a-z0-9]+)"
-        regExPath="/records/(UQ:[a-z0-9]+)"
+        path="/view/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
@@ -672,8 +672,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "component": [Function],
           "exact": true,
           "pageTitle": undefined,
-          "path": "/records/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/records/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -1016,8 +1016,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_16"
-        path="/records/:pid(UQ:[a-z0-9]+)"
-        regExPath="/records/(UQ:[a-z0-9]+)"
+        path="/view/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
@@ -1060,8 +1060,8 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           "component": [Function],
           "exact": true,
           "pageTitle": undefined,
-          "path": "/records/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/records/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -1245,8 +1245,8 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         component={[Function]}
         exact={true}
         key="route_2"
-        path="/records/:pid(UQ:[a-z0-9]+)"
-        regExPath="/records/(UQ:[a-z0-9]+)"
+        path="/view/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
@@ -1424,8 +1424,8 @@ exports[`Application component should render app for account with fez author wit
           "component": [Function],
           "exact": true,
           "pageTitle": undefined,
-          "path": "/records/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/records/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -1768,8 +1768,8 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_16"
-        path="/records/:pid(UQ:[a-z0-9]+)"
-        regExPath="/records/(UQ:[a-z0-9]+)"
+        path="/view/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
@@ -1935,8 +1935,8 @@ exports[`Application component should render app for account with fez author wit
           "component": [Function],
           "exact": true,
           "pageTitle": undefined,
-          "path": "/records/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/records/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -2297,8 +2297,8 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_16"
-        path="/records/:pid(UQ:[a-z0-9]+)"
-        regExPath="/records/(UQ:[a-z0-9]+)"
+        path="/view/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
@@ -2464,8 +2464,8 @@ exports[`Application component should render app for account with fez author wit
           "component": [Function],
           "exact": true,
           "pageTitle": undefined,
-          "path": "/records/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/records/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -2721,8 +2721,8 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_16"
-        path="/records/:pid(UQ:[a-z0-9]+)"
-        regExPath="/records/(UQ:[a-z0-9]+)"
+        path="/view/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
@@ -2888,8 +2888,8 @@ exports[`Application component should render application with routing for the us
           "component": [Function],
           "exact": true,
           "pageTitle": undefined,
-          "path": "/records/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/records/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -3093,8 +3093,8 @@ exports[`Application component should render for anon user 1`] = `
           "component": [Function],
           "exact": true,
           "pageTitle": undefined,
-          "path": "/records/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/records/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -3272,8 +3272,8 @@ exports[`Application component should render for anon user 1`] = `
         component={[Function]}
         exact={true}
         key="route_2"
-        path="/records/:pid(UQ:[a-z0-9]+)"
-        regExPath="/records/(UQ:[a-z0-9]+)"
+        path="/view/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
@@ -3336,8 +3336,8 @@ exports[`Application component should render thesis submission for HDR without m
           "component": [Function],
           "exact": true,
           "pageTitle": undefined,
-          "path": "/records/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/records/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -3447,8 +3447,8 @@ exports[`Application component should render thesis submission for HDR without m
         component={[Function]}
         exact={true}
         key="route_2"
-        path="/records/:pid(UQ:[a-z0-9]+)"
-        regExPath="/records/(UQ:[a-z0-9]+)"
+        path="/view/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
