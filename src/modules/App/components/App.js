@@ -121,7 +121,7 @@ export default class App extends PureComponent {
         const isViewPage = (new RegExp(routes.pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname));
         const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent, isViewPage);
         const isPublicPage = menuItems.filter((menuItem) =>
-            (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
+            ((this.props.location.pathname === menuItem.linkTo && menuItem.public) || isViewPage)).length > 0;
         const isThesisSubmissionPage = this.props.location.pathname === routes.pathConfig.hdrSubmission ||
             this.props.location.pathname === routes.pathConfig.sbsSubmission;
 
@@ -165,6 +165,7 @@ export default class App extends PureComponent {
             forceOrcidRegistration: isOrcidRequired && isHdrStudent,
             isHdrStudent: isHdrStudent
         });
+        console.log('public: ', isPublicPage);
 
         return (
             <div className="layout-fill align-stretch">
