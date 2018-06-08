@@ -58,7 +58,7 @@ exports[`Journal Name Component test  should render closed access 1`] = `
         openAccessStatusId={1234}
         showEmbargoText={false}
       >
-        <div
+        <span
           className="noOaIcon"
         />
       </OpenAccessIcon>
@@ -125,14 +125,12 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
         openAccessStatusId={453694}
         showEmbargoText={false}
       >
-        <div>
-          <span
-            aria-label="Link (no DOI) - Open access after 2019-01-01"
-            className="fez-icon openAccessEmbargoed large"
-            role="img"
-            title="Link (no DOI) - Open access after 2019-01-01"
-          />
-        </div>
+        <span
+          aria-label="Link (no DOI) - Open access after 2019-01-01"
+          className="fez-icon openAccessEmbargoed large"
+          role="img"
+          title="Link (no DOI) - Open access after 2019-01-01"
+        />
       </OpenAccessIcon>
     </Router>
   </MemoryRouter>
@@ -197,19 +195,17 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
         openAccessStatusId={453694}
         showEmbargoText={true}
       >
-        <div>
-          <span
-            className="is-hidden-mobile is-hidden-tablet-only"
-          >
-            Open access after 2019-01-01 
-          </span>
-          <span
-            aria-label="Link (no DOI) - Open access after 2019-01-01"
-            className="fez-icon openAccessEmbargoed large"
-            role="img"
-            title="Link (no DOI) - Open access after 2019-01-01"
-          />
-        </div>
+        <span
+          className="is-hidden-mobile is-hidden-tablet-only"
+        >
+          Open access after 2019-01-01 
+        </span>
+        <span
+          aria-label="Link (no DOI) - Open access after 2019-01-01"
+          className="fez-icon openAccessEmbargoed large"
+          role="img"
+          title="Link (no DOI) - Open access after 2019-01-01"
+        />
       </OpenAccessIcon>
     </Router>
   </MemoryRouter>

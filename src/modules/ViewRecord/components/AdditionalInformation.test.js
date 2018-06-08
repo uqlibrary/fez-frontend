@@ -138,4 +138,9 @@ describe('Additional Information Component ', () => {
         const wrapper = setup({publication: records.dataCollectionWithFoRCodes});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render component with proceedings title link', () => {
+        const wrapper = setup({publication: records.conferencePaperWithProceedingsTitle});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

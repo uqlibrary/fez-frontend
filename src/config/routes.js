@@ -1,8 +1,24 @@
 import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
+import param from 'can-param';
+import {defaultSearchParams} from 'config/general';
+import {openAccessIds} from 'config/openAccess';
 
 const fullPath = process.env.BRANCH === 'production' ? 'https://espace.library.uq.edu.au' : 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
+
+const getSearchUrl = ({searchQuery, activeFacets = {}}) => (
+    `${fullPath}/records/search?${param({
+        ...defaultSearchParams,
+        searchQueryParams: {
+            all: !!searchQuery && searchQuery || ''
+        },
+        activeFacets: {
+            ...defaultSearchParams.activeFacets,
+            ...activeFacets
+        }
+    })}`
+);
 
 export const pathConfig = {
     index: '/',
@@ -14,8 +30,8 @@ export const pathConfig = {
     records: {
         mine: '/records/mine',
         possible: '/records/possible',
-        search: '/records/search',
         claim: '/records/claim',
+        search: '/records/search',
         view: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/view/${pid}`),
         fix: (pid) => (`/records/${pid}/fix`),
         add: {
@@ -25,7 +41,7 @@ export const pathConfig = {
         }
     },
     dataset: {
-        mine: `${fullPath}/my_research_data_claimed.php`,
+        mine: '/data-collections/mine',
         add: `${fullPath}/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315`,
     },
     collection: {
@@ -38,24 +54,41 @@ export const pathConfig = {
     },
     // TODO: update links when we have list pages
     list: {
-        author: (author) => (`${fullPath}/list/author/${author}`),
-        authorId: (authorId) => (`${fullPath}/list/author_id/${authorId}`),
+        author: (author) => getSearchUrl({searchQuery: author}),
+        authorId: (authorId) => getSearchUrl({
+            activeFacets: {
+                filters: {
+                    'Author': authorId
+                }
+            }
+        }),
         subject: (subjectId) => (`${fullPath}/list/subject/${subjectId}`),
-        herdcStatus: (herdcStatusId) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_22]=${herdcStatusId}`),
-        keyword: (keyword) => (`${fullPath}/list/?cat=quick_filter&search_keys[0]=${keyword}`),
-        institutionalStatus: (institutionalStatusId) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_23]=${institutionalStatusId}`),
-        openAccessStatus: (openAccessStatusId) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_54]=${openAccessStatusId}`),
-        journalName: (journalName) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_34]=${journalName}`),
-        publisher: (publisher) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_29]=${publisher}`),
-        license: (license) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_112]=${license}`),
+        herdcStatus: (herdcStatus) => getSearchUrl({searchQuery: herdcStatus}),
+        keyword: (keyword) => getSearchUrl({searchQuery: keyword}),
+        institutionalStatus: (institutionalStatus) => getSearchUrl({searchQuery: institutionalStatus}),
+        openAccessStatus: (openAccessStatusId) => getSearchUrl({
+            activeFacets: {
+                showOpenAccessOnly: openAccessIds.indexOf(openAccessStatusId) >= 0
+            }
+        }),
+        journalName: (journalName) => getSearchUrl({
+            searchQuery: journalName,
+            activeFacets: {
+                filters: {
+                    'Journal name': journalName
+                }
+            }
+        }),
+        publisher: (publisher) => getSearchUrl({searchQuery: publisher}),
+        license: (license) => getSearchUrl({searchQuery: license}),
         accessCondition: (accessCondition) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_95]=${accessCondition}`),
         collectionType: (collectionType) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_92]=${collectionType}`),
-        orgUnitName: (orgUnitName) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_70]=${orgUnitName}`),
-        series: (series) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_33]=${series}`),
-        bookTitle: (bookTitle) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_37]=${bookTitle}`),
-        jobNumber: (jobNumber) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_151]=${jobNumber}`),
-        conferenceName: (conferenceName) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_36]=${conferenceName}`),
-        proceedingsTitle: (proceedingsTitle) => (`${fullPath}/list/?cat=quick_filter&search_keys[UQ_2]=${proceedingsTitle}`),
+        orgUnitName: (orgUnitName) => getSearchUrl({searchQuery: orgUnitName}),
+        series: (series) => getSearchUrl({searchQuery: series}),
+        bookTitle: (bookTitle) => getSearchUrl({searchQuery: bookTitle}),
+        jobNumber: (jobNumber) => getSearchUrl({searchQuery: jobNumber}),
+        conferenceName: (conferenceName) => getSearchUrl({searchQuery: conferenceName}),
+        proceedingsTitle: (proceedingsTitle) => getSearchUrl({searchQuery: proceedingsTitle}),
     },
     admin: {
         masquerade: '/admin/masquerade',
@@ -94,6 +127,12 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
     const pid = `:pid(${pidRegExp})`;
     const publicPages = [
         {
+            path: pathConfig.index,
+            component: components.Index,
+            exact: true,
+            pageTitle: locale.pages.index.title
+        },
+        {
             path: pathConfig.contact,
             render: () => components.StandardPage({...locale.pages.contact}),
             pageTitle: locale.pages.contact.title
@@ -105,21 +144,14 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             pageTitle: locale.pages.viewRecord.title,
             regExPath: pathConfig.records.view(`(${pidRegExp})`)
         },
-        // TODO: enable search route for public users
-        // {
-        //     path: pathConfig.records.search,
-        //     component: components.SearchRecords,
-        //     exact: true,
-        //     pageTitle: locale.pages.searchRecords.title
-        // },
+        {
+            path: pathConfig.records.search,
+            component: components.SearchRecords,
+            exact: true,
+            pageTitle: locale.pages.searchRecords.title
+        },
         ...(!account
             ? [
-                {
-                    path: pathConfig.index,
-                    component: components.Index,
-                    exact: true,
-                    pageTitle: locale.pages.index.title
-                },
                 {
                     path: pathConfig.dashboard,
                     component: components.Index,
@@ -184,6 +216,13 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 pageTitle: locale.pages.myResearch.pageTitle
             },
             {
+                path: pathConfig.dataset.mine,
+                component: components.MyDataCollections,
+                access: [roles.researcher, roles.admin],
+                exact: true,
+                pageTitle: locale.pages.myDatasets.pageTitle
+            },
+            {
                 path: pathConfig.records.possible,
                 component: components.PossiblyMyRecords,
                 access: [roles.researcher, roles.admin],
@@ -241,13 +280,6 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 access: [roles.researcher, roles.admin],
                 exact: true,
                 pageTitle: locale.pages.googleScholarLink.title
-            },
-            // TODO: remove search route for auth only when public search is enabled
-            {
-                path: pathConfig.records.search,
-                component: components.SearchRecords,
-                exact: true,
-                pageTitle: locale.pages.searchRecords.title
             }
         ] : []),
         ...(account && account.canMasquerade ? [
@@ -272,14 +304,20 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
     ];
 };
 
-export const getMenuConfig = (account, disabled) => {
+export const getMenuConfig = (account, disabled, isViewPage = false) => {
+    const homePage = [
+        {
+            linkTo: pathConfig.index,
+            ...locale.menu.index,
+            public: true
+        },
+    ];
     const publicPages = [
-        // TODO: enable when search is public
-        // {
-        //     linkTo: pathConfig.records.search,
-        //     ...locale.menu.search,
-        //     public: true
-        // },
+        {
+            linkTo: pathConfig.records.search,
+            ...locale.menu.search,
+            public: true
+        },
         {
             linkTo: pathConfig.help,
             ...locale.menu.help,
@@ -290,11 +328,13 @@ export const getMenuConfig = (account, disabled) => {
             ...locale.menu.contact,
             public: true
         },
-        {
-            linkTo: pathConfig.legacyEspace,
-            ...locale.menu.legacyEspace,
-            public: true
-        }
+        ...(!account && isViewPage ? [] : [
+            {
+                linkTo: pathConfig.legacyEspace,
+                ...locale.menu.legacyEspace,
+                public: true
+            }
+        ])
     ];
 
     if (disabled) {
@@ -314,6 +354,7 @@ export const getMenuConfig = (account, disabled) => {
     }
 
     return [
+        ...homePage,
         ...(account ? [
             {
                 linkTo: pathConfig.dashboard,
@@ -332,12 +373,10 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.records.add.find,
                 ...locale.menu.addMissingRecord
             },
-            /*
             {
                 linkTo: pathConfig.dataset.mine,
                 ...locale.menu.myDatasets
             },
-            */
             {
                 linkTo: pathConfig.dataset.add,
                 ...locale.menu.addDataset
@@ -345,12 +384,6 @@ export const getMenuConfig = (account, disabled) => {
             {
                 linkTo: pathConfig.authorStatistics.url(account.id),
                 ...locale.menu.authorStatistics
-            },
-            // TODO: remove when public search is enabled
-            {
-                linkTo: pathConfig.records.search,
-                ...locale.menu.search,
-                public: true
             },
             {
                 divider: true,

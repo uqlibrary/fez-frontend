@@ -68,7 +68,22 @@ mock
         if (config.params.rule === 'mine' && !!config.params['filters[stats_only]']) {
             return [200, mockData.currentAuthorStats];
         }
-        // CURRENT_USER_RECORDS_API
+        // CURRENT_USER_RECORDS_API - myDataset
+        else if (config.params.rule === 'mine' && config.params['filters[facets][Display+type]'] === 371) {
+            const totalRecords = mockData.MyDatasetList.data.length;
+            const fromRecord = 1;
+            const toRecord = 2;
+                return [
+                    200,
+                    // {total: 0, data: []}
+                    {
+                        ...mockData.MyDatasetList,
+                        current_page: config.params.page,
+                        data: mockData.MyDatasetList.data.slice(fromRecord, totalRecords > toRecord ? toRecord : totalRecords)
+                    }
+                ];
+        }
+        // CURRENT_USER_RECORDS_API - myResearch
         else if (config.params.rule === 'mine') {
             const totalRecords = mockData.myRecordsList.data.length;
             const fromRecord = 5 * (config.params.page - 1);
@@ -76,7 +91,11 @@ mock
             return [
                 200,
                 // {total: 0, data: []}
-                {...mockData.myRecordsList, current_page: config.params.page, data: mockData.myRecordsList.data.slice(fromRecord, totalRecords > toRecord ? toRecord : totalRecords)}
+                {
+                    ...mockData.myRecordsList,
+                    current_page: config.params.page,
+                    data: mockData.myRecordsList.data.slice(fromRecord, totalRecords > toRecord ? toRecord : totalRecords)
+                }
             ];
         }
         // POSSIBLE_RECORDS_API
@@ -95,6 +114,7 @@ mock
         return [404, ['Request not found']];
     })
     .onGet(routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API().apiUrl)
+    // .reply(500, {})
     .reply(200, mockData.trendingPublications)
     .onGet(routes.GET_ACML_QUICK_TEMPLATES_API().apiUrl)
     .reply(200, mockData.quickTemplates)
@@ -111,6 +131,7 @@ mock
         }
         return [200, {data: {...mockData.record}}];
     })
+    // .reply(401, '')
     // .reply(500, ['ERROR in EXISTING_RECORD_API'])
     .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({id: '.*'}).apiUrl)))
     .reply((config) => {

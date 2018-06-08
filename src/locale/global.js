@@ -1,4 +1,5 @@
 import {APP_URL} from 'config';
+
 /*
 
 NOTE:
@@ -20,7 +21,11 @@ help: {
 export default {
     global: {
         title: `UQ eSpace ${process.env.TITLE_SUFFIX || ''}`,
-        logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
+        logo: {
+            image: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
+            label: 'University of Queensland',
+            link: 'http://www.uq.edu.au'
+        },
         loading: 'Loading...',
         loadingUserAccount: 'Loading user account...',
         mainNavButton: {
@@ -44,7 +49,8 @@ export default {
         errorMessages: {
             generic: 'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
             notFound: 'The requested page could not be found.',
-            sessionExpired: 'Your session expired, please login to continue.'
+            sessionExpired: 'Your session expired, please login to continue.',
+            notAuthorised: 'You are not authorised to access the requested information. Please contact eSpace administrators or try again later.'
         },
         notRegisteredAuthorAlert: {
             title: 'You are not registered in UQ eSpace as an author',

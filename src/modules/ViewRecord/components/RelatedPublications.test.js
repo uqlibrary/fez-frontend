@@ -33,7 +33,6 @@ describe('Related publications Component ', () => {
             rek_has_related_datasets_lookup: " ",
             rek_has_related_datasets_order: 4
         });
-        console.log(publication.fez_record_search_key_has_related_datasets);
         const wrapper = setup({publication: publication});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.relatedPublications li').length).toEqual(2);

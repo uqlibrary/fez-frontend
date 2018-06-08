@@ -74,6 +74,14 @@ exports[`MyRecords test renders active filters 1`] = `
             ]
           }
           facetsData={Object {}}
+          isMyDataSetPage={false}
+          lookupFacetsList={
+            Object {
+              "Author": "Author (lookup)",
+              "Collection": "Collection (lookup)",
+              "Subject": "Subject (lookup)",
+            }
+          }
           onFacetsChanged={[Function]}
           renameFacetsList={
             Object {
@@ -121,13 +129,9 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
           .
         </span>
         <PublicationsListSorting
-          activeFacets={
-            Object {
-              "filters": Object {},
-              "ranges": Object {},
-            }
-          }
+          canUseExport={true}
           disabled={false}
+          onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}
@@ -158,6 +162,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
           }
         />
         <PublicationsList
+          hideCountDiff={false}
           publicationsList={
             Array [
               1,
@@ -168,6 +173,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
           publicationsListSubset={Array []}
           showDefaultActions={true}
           showMetrics={false}
+          showSourceCountIcon={false}
           showSources={false}
           subsetCustomActions={Array []}
         />
@@ -224,13 +230,9 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
           .
         </span>
         <PublicationsListSorting
-          activeFacets={
-            Object {
-              "filters": Object {},
-              "ranges": Object {},
-            }
-          }
+          canUseExport={true}
           disabled={false}
+          onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}
@@ -261,6 +263,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
           }
         />
         <PublicationsList
+          hideCountDiff={false}
           publicationsList={
             Array [
               1,
@@ -271,6 +274,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
           publicationsListSubset={Array []}
           showDefaultActions={true}
           showMetrics={false}
+          showSourceCountIcon={false}
           showSources={false}
           subsetCustomActions={Array []}
         />
@@ -367,6 +371,14 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
               },
             }
           }
+          isMyDataSetPage={false}
+          lookupFacetsList={
+            Object {
+              "Author": "Author (lookup)",
+              "Collection": "Collection (lookup)",
+              "Subject": "Subject (lookup)",
+            }
+          }
           onFacetsChanged={[Function]}
           renameFacetsList={
             Object {
@@ -394,38 +406,52 @@ exports[`MyRecords test renders loading screen while export publications loading
     >
       <StandardCard
         className=""
-        text={
-          <div>
-            We were unable to find any results. You may be able to 
-            <a
-              href="/records/possible"
-            >
-              claim publications we think may be yours
-            </a>
-             or 
-            <a
-              href="/records/add/find"
-            >
-              add a missing publication
-            </a>
-          </div>
-        }
-        title="No publications found"
       >
-        <div>
-          We were unable to find any results. You may be able to 
+        <span>
+          Add to this list by 
           <a
             href="/records/possible"
           >
-            claim publications we think may be yours
+            claiming a publication
           </a>
            or 
           <a
             href="/records/add/find"
           >
-            add a missing publication
+            adding a missing publication
           </a>
+          .
+        </span>
+        <PublicationsListSorting
+          canUseExport={true}
+          disabled={true}
+          onExportPublications={[Function]}
+          onPageSizeChanged={[Function]}
+          onSortByChanged={[Function]}
+          pageSize={20}
+          pagingData={Object {}}
+          sortBy="published_date"
+          sortDirection="Desc"
+        />
+        <PublicationsListPaging
+          disabled={true}
+          loading={true}
+          onPageChanged={[Function]}
+          pagingData={Object {}}
+        />
+        <div
+          className="is-centered"
+        >
+          <InlineLoader
+            message="Exporting your publications..."
+          />
         </div>
+        <PublicationsListPaging
+          disabled={true}
+          loading={true}
+          onPageChanged={[Function]}
+          pagingData={Object {}}
+        />
       </StandardCard>
     </div>
   </div>
@@ -482,13 +508,9 @@ exports[`MyRecords test renders loading screen while loading publications while 
           .
         </span>
         <PublicationsListSorting
-          activeFacets={
-            Object {
-              "filters": Object {},
-              "ranges": Object {},
-            }
-          }
+          canUseExport={true}
           disabled={true}
+          onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}

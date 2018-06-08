@@ -1,12 +1,19 @@
 @import '../../../../sass/variables';
 
 .publicationCitation {
-  margin-bottom: 12px;
+  margin-bottom: 12px !important;
+  padding-bottom: 12px !important;
   padding: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;
   word-break: break-word;
   width: 100% !important;
+
+  .citationShowMoreAuthors {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 
   &:first-child {
     padding-top: 24px;
@@ -101,10 +108,6 @@
     }
   }
 
-  .publicationActions {
-    margin: 12px 0 !important;
-  }
-
   a.citationCountLink {
     color: $accent-color !important;
     font-size: $text-body-small !important;
@@ -114,6 +117,20 @@
       height: 12px;
       vertical-align: top;
       color: $accent-color !important;
+    }
+  }
+
+  .count-icon-container {
+    height: 0;
+    .fez-icon {
+      position: relative;
+      top: -30px;
+    }
+    .count {
+      font-size: $title-medium;
+      position: relative;
+      top: -80px;
+      text-align: center;
     }
   }
 }

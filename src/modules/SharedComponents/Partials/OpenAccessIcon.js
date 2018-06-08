@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'locale';
 import {openAccessConfig} from 'config';
@@ -30,7 +30,7 @@ export default class OpenAccessIcon extends PureComponent {
                 .replace('[embargo_date]', this.props.embargoDate)
                 .replace('[oa_status]', openAccessConfig.labels[this.props.openAccessStatusId]);
             return (
-                <div>
+                <Fragment>
                     {
                         this.props.showEmbargoText &&
                         <span className="is-hidden-mobile is-hidden-tablet-only">
@@ -38,9 +38,9 @@ export default class OpenAccessIcon extends PureComponent {
                         </span>
                     }
                     <span className="fez-icon openAccessEmbargoed large" role="img" title={openAccessTitle} aria-label={openAccessTitle} />
-                </div>
+                </Fragment>
             );
         }
-        return (<div className="noOaIcon" />);
+        return (<span className="noOaIcon" />);
     }
 }

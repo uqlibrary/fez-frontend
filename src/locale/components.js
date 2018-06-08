@@ -3,6 +3,7 @@ import React from 'react';
 export default {
     components: {
         facetsFilter: {
+            title: 'Refine results',
             resetButtonText: 'Reset',
             yearPublishedCategory: 'Year published',
             yearPublishedFacet: {
@@ -14,7 +15,19 @@ export default {
             openAccessFilter: {
                 displayTitle: 'Open access status',
                 activeFilter: 'Show only open access records'
-            }
+            },
+            excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
+            renameFacetsList: {'Display type': 'Publication type'},
+            lookupFacetsList: {
+                'Author': 'Author (lookup)',
+                'Collection': 'Collection (lookup)',
+                'Subject': 'Subject (lookup)'
+            },
+            // help: {
+            //     title: 'Refining your results',
+            //     text: 'Help about ....',
+            //     buttonLabel: 'Ok'
+            // },
         },
         publicationStats: {
             publicationStatsTitle1: 'eSpace publications indexed in:',
@@ -60,15 +73,16 @@ export default {
             ],
             myTrendingPublications: {
                 trendDifferenceShares: {
-                    scopus: 'Difference in shares since last month',
-                    thomson: 'Difference in shares since last month',
-                    altmetric: 'Difference in social media activities for the past one year'
+                    scopus: 'Difference in citations',
+                    thomson: 'Difference in citations',
+                    altmetric: 'Difference in social media activities'
                 },
                 sourceTitles: {
                     scopus: 'Scopus',
                     thomson: 'Web of science',
                     altmetric: 'Altmetric'
-                }
+                },
+                recordsPerSource: 5
             }
         },
         myTrendingPublications: {
@@ -89,30 +103,65 @@ export default {
                     subtitle: 'The +plus score indicates the increase in citations over the last month',
                     order: 0
                 }
-            },
-            help: {
-                title: 'About these metrics',
-                text: (
-                    <div>
-                        <h3>WOS and Scopus</h3>
-                        <p>
-                            The large number is the total citation count and the + (plus) value indicates how much the citation count has increased in the last month.
-                        </p>
-                        <h3>Altmetric score (social media activity)</h3>
-                        <p>
-                            The Altmetric score measures social media activity. The + (plus) value shows the increase in social media activity over time.
-                        </p>
-                        <p>
-                            You can click on the number as a link to see who is citing each publication, or in the
-                            case of Altmetric who is referencing the publication in social media and news outlets.
-                        </p>
-                    </div>),
-                buttonLabel: 'OK'
-            },
+            }
+        },
+        trendingPublicationHelp: {
+            title: 'About these metrics',
+            text: (
+                <div>
+                    <h3>WOS and Scopus</h3>
+                    <p>
+                        The large number is the total citation count and the + (plus) value indicates how much the citation count has increased in the last three months.
+                    </p>
+                    <h3>Altmetric score (social media activity)</h3>
+                    <p>
+                        The Altmetric score measures social media activity. The + (plus) value shows the increase in social media activity over time.
+                    </p>
+                    <p>
+                        You can click on the number as a link to see who is citing each publication, or in the
+                        case of Altmetric who is referencing the publication in social media and news outlets.
+                    </p>
+                    <p>For more information visit :
+                        <a href="https://www.altmetric.com/about-altmetrics/what-are-altmetrics/" target="_blank" rel="noopener noreferrer">
+                            https://www.altmetric.com/about-altmetrics/what-are-altmetrics/
+                        </a>
+                    </p>
+                </div>),
+            buttonLabel: 'OK'
         },
         myLatestPublications: {
             loading: 'Loading your latest publications...',
             viewAllButtonLabel: 'View all'
+        },
+        topCitedPublications: {
+            loading: 'Loading trending publications...',
+            notAvailableAlert: {
+                type: 'error',
+                title: 'There has been an error',
+                message: 'Trending publications are temporarily unavailable'
+            },
+            altmetric: {
+                title: (<span>Trending publications</span>),
+                mobileTitle: 'Trending',
+                heading: 'Altmetric score',
+                subHeading: 'The +plus score indicates recent increase in social media activity',
+                order: 0
+            },
+            scopus: {
+                title: (<span>Hot&nbsp;papers&nbsp;on Scopus</span>),
+                mobileTitle: 'Scopus',
+                heading: 'Scopus citation count',
+                subHeading: 'The +plus score indicates the increase in citations over the three months',
+                order: 1
+            },
+            thomson: {
+                title: (<span>Hot&nbsp;papers&nbsp;on Web&nbsp;of&nbsp;science</span>),
+                mobileTitle: 'WOS',
+                heading: 'Web of Science citation count',
+                subHeading: 'The +plus score indicates the increase in citations over the three months',
+                order: 2
+            },
+            recordsPerSource: 20
         },
         keywordsForm: {
             field: {
@@ -709,7 +758,10 @@ export default {
             maxPagesToShow: 5,
             pageSize: 'Records per page',
             pageOf: 'Page [currentPage] of [totalPages]',
-            totalRecords: '([total] records)'
+            totalRecords: '([total] records)',
+            pagingBracket: 3,
+            pageButtonAriaLabel: 'Click to select page [pageNumber] of [totalPages] result pages',
+            firstLastSeparator: '...'
         },
         sorting: {
             pageSize: 'Records per page',
@@ -729,7 +781,7 @@ export default {
                 'Desc',
                 'Asc'
             ],
-            recordsPerPage: [20, 50, 100, 500]
+            recordsPerPage: [20, 50, 100]
         },
         newsFeed: {
             title: 'Latest news'
@@ -747,9 +799,15 @@ export default {
         },
         searchComponent: {
             searchBoxPlaceholder: 'Search eSpace',
+            ariaInputLabel: 'Enter your search query to search eSpace and then press Enter',
             searchButtonHint: 'Search eSpace',
+            mobileSearchButtonAriaLabel: 'Click to search eSpace',
             advancedSearchButtonText: 'Advanced search',
-            searchButtonText: 'Search'
+            advancedSearchButtonAriaLabel: 'Click to switch to Advanced search',
+            searchButtonText: 'Search',
+            searchButtonAriaLabel: 'Click to search eSpace',
+            simpleSearchToggle: 'Simple search',
+
         },
         whatIsEspace: {
             title: 'What is eSpace?',

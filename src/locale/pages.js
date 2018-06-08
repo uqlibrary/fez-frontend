@@ -1,5 +1,8 @@
 import React from 'react';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {pathConfig} from 'config/routes';
+import locale from 'locale/components';
+
 /*
 
 NOTE:
@@ -151,7 +154,7 @@ export default {
                 },
                 dashboardResearcherIds: {
                     researcherIsLinked: 'Your [resource] ID is [id] - Click to review',
-                    researcherIsNotLinked: 'You are not linked to [resource] - Click to amend',
+                    researcherIsNotLinked: 'You are not linked to [resource] - Click for more information',
                     orcidUrlPrefix: process.env.ORCID_URL ? `${process.env.ORCID_URL}/` : 'https://orcid.org/',
                     orcidLinkPrefix: 'orcid.org/',
                     orcidlinkLabel: 'Click to visit your ORCId profile',
@@ -195,7 +198,7 @@ export default {
             recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             text: (
                 <span>
-                    Add to this list by <a href="/records/possible">claiming a publication</a> or <a href="/records/add/find">adding a missing publication</a>.
+                    Add to this list by <a href={`${pathConfig.records.possible}`}>claiming a publication</a> or <a href={`${pathConfig.records.add.find}`}>adding a missing publication</a>.
                 </span>
             ),
             loadingMessage: 'Searching for your publications...',
@@ -205,21 +208,36 @@ export default {
                 title: 'No publications found',
                 text: (
                     <div>
-                        We were unable to find any results. You may be able to <a href="/records/possible">claim
-                        publications we think may be yours</a> or <a href="/records/add/find">add a
+                        We were unable to find any results. You may be able to <a href={`${pathConfig.records.possible}`}>claim
+                        publications we think may be yours</a> or <a href={`${pathConfig.records.add.find}`}>add a
                         missing publication</a>
                     </div>
                 ),
             },
+            facetsFilter: {...locale.components.facetsFilter}
+        },
+        myDatasets: {
+            pageTitle: 'My research data',
+            recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
+            text: (
+                <span>
+                    Add to this list by <a href={`${pathConfig.dataset.add}`} target="_blank">adding a missing dataset</a>.
+                </span>
+            ),
+            loadingMessage: 'Searching for your datasets...',
+            loadingPagingMessage: 'Retrieving your datasets...',
+            noResultsFound: {
+                title: 'No datasets found',
+                text: (
+                    <div>
+                        We were unable to find any results. You may be able to <a href={`${pathConfig.dataset.add}`} target="_blank">add a missing dataset</a>.
+                    </div>
+                ),
+            },
             facetsFilter: {
-                title: 'Refine results',
-                // help: {
-                //     title: 'Refining your results',
-                //     text: 'Help about ....',
-                //     buttonLabel: 'Ok'
-                // },
-                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
-                renameFacetsList: {'Display type': 'Publication type'}
+                ...locale.components.facetsFilter,
+                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published', 'Display type'],
+                renameFacetsList: {}
             }
         },
         claimPublications: {
@@ -268,16 +286,7 @@ export default {
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             },
-            facetsFilter: {
-                title: 'Refine results',
-                // help: {
-                //     title: 'Refining your results',
-                //     text: 'Help about ....',
-                //     buttonLabel: 'Ok'
-                // },
-                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
-                renameFacetsList: {'Display type': 'Publication type'}
-            }
+            facetsFilter: {...locale.components.facetsFilter}
         },
         addRecord: {
             title: 'Add a missing publication to eSpace',
@@ -401,6 +410,7 @@ export default {
             loadingMessage: 'Searching for publications...',
             recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             loadingPagingMessage: 'Searching for publications...',
+            exportPublicationsLoadingMessage: 'Exporting search results...',
             noResultsFound: {
                 title: 'No publications found',
                 text: (
@@ -409,11 +419,12 @@ export default {
                     </div>
                 ),
             },
-            facetsFilter: {
-                title: 'Refine results',
-                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
-                renameFacetsList: {'Display type': 'Publication type'}
-            }
+            facetsFilter: {...locale.components.facetsFilter},
+            errorAlert: {
+                type: 'error_outline',
+                title: 'Error',
+                message: (message) => message
+            },
         },
         masquerade: {
             title: 'Masquerade',

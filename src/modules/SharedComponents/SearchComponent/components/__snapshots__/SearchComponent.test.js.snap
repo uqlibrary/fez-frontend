@@ -2,13 +2,13 @@
 
 exports[`SearchComponent should render default view 1`] = `
 <div
-  className="search-component "
+  className="search-component undefined undefined"
 >
   <div
     className="columns is-gapless"
   >
     <div
-      className="column search-field"
+      className="column search-field is-gapless hideMobile"
     >
       <div
         className="columns is-gapless search-field is-mobile"
@@ -17,10 +17,12 @@ exports[`SearchComponent should render default view 1`] = `
           className="column"
         >
           <TextField
+            aria-label="Enter your search query to search eSpace and then press Enter"
             disabled={false}
+            errorText={false}
             floatingLabelFixed={false}
+            floatingLabelText="Search eSpace"
             fullWidth={true}
-            hintText="Search eSpace"
             id="searchField"
             multiLine={false}
             onChange={[Function]}
@@ -28,48 +30,7 @@ exports[`SearchComponent should render default view 1`] = `
             rows={1}
             type="search"
             underlineShow={true}
-            underlineStyle={false}
-            value=""
-          />
-        </div>
-        <div
-          className="is-hidden-tablet mobileSpacer"
-        />
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`SearchComponent should render default view with advanced search 1`] = `
-<div
-  className="search-component "
->
-  <div
-    className="columns is-gapless"
-  >
-    <div
-      className="column search-field"
-    >
-      <div
-        className="columns is-gapless search-field is-mobile"
-      >
-        <div
-          className="column"
-        >
-          <TextField
-            disabled={false}
-            floatingLabelFixed={false}
-            fullWidth={true}
-            hintText="Search eSpace"
-            id="searchField"
-            multiLine={false}
-            onChange={[Function]}
-            onKeyPress={[Function]}
-            rows={1}
-            type="search"
-            underlineShow={true}
-            underlineStyle={false}
+            underlineStyle={Object {}}
             value=""
           />
         </div>
@@ -79,11 +40,12 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
       </div>
     </div>
     <div
-      className="column is-narrow"
+      className="column is-narrow search-button-wrapper"
     >
       <RaisedButton
-        disabled={true}
-        fullWidth={false}
+        aria-label="Click to search eSpace"
+        disabled={false}
+        fullWidth={true}
         label="Search"
         labelPosition="after"
         onClick={[Function]}
@@ -92,18 +54,23 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
       />
     </div>
   </div>
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
 </div>
 `;
 
-exports[`SearchComponent should render inverse colour-themed view 1`] = `
+exports[`SearchComponent should render default view with advanced search 1`] = `
 <div
-  className="search-component inverse"
+  className="search-component undefined undefined"
 >
   <div
     className="columns is-gapless"
   >
     <div
-      className="column search-field"
+      className="column search-field is-gapless hideMobile"
     >
       <div
         className="columns is-gapless search-field is-mobile"
@@ -112,8 +79,254 @@ exports[`SearchComponent should render inverse colour-themed view 1`] = `
           className="column"
         >
           <TextField
+            aria-label="Enter your search query to search eSpace and then press Enter"
             disabled={false}
+            errorText={false}
             floatingLabelFixed={false}
+            floatingLabelText="Search eSpace"
+            fullWidth={true}
+            id="searchField"
+            multiLine={false}
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            rows={1}
+            type="search"
+            underlineShow={true}
+            underlineStyle={Object {}}
+            value=""
+          />
+        </div>
+        <div
+          className="is-hidden-tablet mobileSpacer"
+        />
+      </div>
+    </div>
+    <div
+      className="column is-narrow search-button-wrapper"
+    >
+      <RaisedButton
+        aria-label="Click to search eSpace"
+        disabled={false}
+        fullWidth={true}
+        label="Search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={true}
+      />
+    </div>
+    <div
+      className="column is-narrow"
+    >
+      <RaisedButton
+        aria-label="Click to switch to Advanced search"
+        className="advancedButton"
+        disabled={false}
+        fullWidth={true}
+        label="Advanced search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
+  </div>
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</div>
+`;
+
+exports[`SearchComponent should render show mobile button 1`] = `
+<div
+  className="search-component undefined undefined"
+>
+  <div
+    className="columns is-gapless"
+  >
+    <div
+      className="column search-field is-gapless hideMobile"
+    >
+      <div
+        className="columns is-gapless search-field is-mobile"
+      >
+        <div
+          className="column is-narrow search-icon-prefix is-hidden-tablet"
+        >
+          <IconButton
+            className="mobileBackArrow"
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onClick={[Function]}
+            tooltipPosition="bottom-center"
+            touch={false}
+          >
+            <NavigationArrowBack />
+          </IconButton>
+        </div>
+        <div
+          className="column"
+        >
+          <TextField
+            aria-label="Enter your search query to search eSpace and then press Enter"
+            disabled={false}
+            errorText={false}
+            floatingLabelFixed={false}
+            floatingLabelText="Search eSpace"
+            fullWidth={true}
+            id="searchField"
+            multiLine={false}
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            rows={1}
+            type="search"
+            underlineShow={true}
+            underlineStyle={Object {}}
+            value=""
+          />
+        </div>
+        <div
+          className="is-hidden-tablet mobileSpacer"
+        />
+      </div>
+    </div>
+    <div
+      className="column is-narrow is-hidden-tablet"
+    >
+      <IconButton
+        aria-label="Click to search eSpace"
+        className="search-button"
+        disableTouchRipple={false}
+        disabled={false}
+        hoveredStyle={
+          Object {
+            "backgroundColor": "rgba(0,0,0,0.3)",
+            "borderRadius": "50%",
+          }
+        }
+        iconStyle={Object {}}
+        onClick={[Function]}
+        tooltipPosition="bottom-center"
+        touch={false}
+      >
+        <ActionSearch />
+      </IconButton>
+    </div>
+    <div
+      className="column is-narrow search-button-wrapper"
+    >
+      <RaisedButton
+        aria-label="Click to search eSpace"
+        disabled={false}
+        fullWidth={true}
+        label="Search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={true}
+      />
+    </div>
+  </div>
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</div>
+`;
+
+exports[`SearchComponent should render show prefix icon in the search box 1`] = `
+<div
+  className="search-component undefined undefined"
+>
+  <div
+    className="columns is-gapless"
+  >
+    <div
+      className="column search-field is-gapless hideMobile"
+    >
+      <div
+        className="columns is-gapless search-field is-mobile"
+      >
+        <div
+          className="column is-narrow search-icon-prefix is-hidden-mobile"
+        >
+          <ActionSearch />
+        </div>
+        <div
+          className="column"
+        >
+          <TextField
+            aria-label="Enter your search query to search eSpace and then press Enter"
+            disabled={false}
+            errorText={false}
+            floatingLabelFixed={false}
+            floatingLabelText="Search eSpace"
+            fullWidth={true}
+            id="searchField"
+            multiLine={false}
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            rows={1}
+            type="search"
+            underlineShow={true}
+            underlineStyle={Object {}}
+            value=""
+          />
+        </div>
+        <div
+          className="is-hidden-tablet mobileSpacer"
+        />
+      </div>
+    </div>
+    <div
+      className="column is-narrow search-button-wrapper"
+    >
+      <RaisedButton
+        aria-label="Click to search eSpace"
+        disabled={false}
+        fullWidth={true}
+        label="Search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={true}
+      />
+    </div>
+  </div>
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</div>
+`;
+
+exports[`SearchComponent should render with a class "header" for use in AppBar 1`] = `
+<div
+  className="search-component header undefined"
+>
+  <div
+    className="columns is-gapless"
+  >
+    <div
+      className="column search-field is-gapless hideMobile"
+    >
+      <div
+        className="columns is-gapless search-field is-mobile"
+      >
+        <div
+          className="column"
+        >
+          <TextField
+            aria-label="Enter your search query to search eSpace and then press Enter"
+            disabled={false}
+            errorText={false}
+            floatingLabelFixed={false}
+            floatingLabelText={false}
             fullWidth={true}
             hintText="Search eSpace"
             id="searchField"
@@ -136,19 +349,38 @@ exports[`SearchComponent should render inverse colour-themed view 1`] = `
         />
       </div>
     </div>
+    <div
+      className="column is-narrow search-button-wrapper"
+    >
+      <RaisedButton
+        aria-label="Click to search eSpace"
+        disabled={false}
+        fullWidth={true}
+        label="Search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={true}
+      />
+    </div>
   </div>
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
 </div>
 `;
 
 exports[`SearchComponent should set search value from prop 1`] = `
 <div
-  className="search-component "
+  className="search-component undefined undefined"
 >
   <div
     className="columns is-gapless"
   >
     <div
-      className="column search-field"
+      className="column search-field is-gapless hideMobile"
     >
       <div
         className="columns is-gapless search-field is-mobile"
@@ -157,10 +389,12 @@ exports[`SearchComponent should set search value from prop 1`] = `
           className="column"
         >
           <TextField
+            aria-label="Enter your search query to search eSpace and then press Enter"
             disabled={false}
+            errorText={false}
             floatingLabelFixed={false}
+            floatingLabelText="Search eSpace"
             fullWidth={true}
-            hintText="Search eSpace"
             id="searchField"
             multiLine={false}
             onChange={[Function]}
@@ -168,7 +402,7 @@ exports[`SearchComponent should set search value from prop 1`] = `
             rows={1}
             type="search"
             underlineShow={true}
-            underlineStyle={false}
+            underlineStyle={Object {}}
             value="i feel lucky"
           />
         </div>
@@ -178,11 +412,12 @@ exports[`SearchComponent should set search value from prop 1`] = `
       </div>
     </div>
     <div
-      className="column is-narrow"
+      className="column is-narrow search-button-wrapper"
     >
       <RaisedButton
+        aria-label="Click to search eSpace"
         disabled={false}
-        fullWidth={false}
+        fullWidth={true}
         label="Search"
         labelPosition="after"
         onClick={[Function]}
@@ -190,6 +425,26 @@ exports[`SearchComponent should set search value from prop 1`] = `
         secondary={true}
       />
     </div>
+    <div
+      className="column is-narrow"
+    >
+      <RaisedButton
+        aria-label="Click to switch to Advanced search"
+        className="advancedButton"
+        disabled={false}
+        fullWidth={true}
+        label="Advanced search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
   </div>
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
 </div>
 `;

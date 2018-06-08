@@ -1,5 +1,237 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`PublicationsListPaging renders  component renders as empty due to currentpage set outside range 1`] = `
+<span
+  className="publicationsListControls empty"
+/>
+`;
+
+exports[`PublicationsListPaging renders  component with ellipsis paging results 1`] = `
+<div>
+  <div
+    className="publicationsListPaging is-gapless columns is-gapless is-mobile"
+  >
+    <div
+      className="column is-narrow is-pulled-left"
+    >
+      <FlatButton
+        className="pagingPrevious"
+        disabled={false}
+        fullWidth={false}
+        icon={<NavigationChevronLeft />}
+        label="Previous"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
+    <div
+      className="publicationsListPagingItems column is-hidden-mobile has-text-centered"
+    >
+      <FlatButton
+        aria-label="Click to select page 1 of 50 result pages"
+        className="page"
+        disabled={false}
+        fullWidth={false}
+        key="1"
+        label={1}
+        labelPosition="after"
+        labelStyle={Object {}}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+      />
+      ...
+      <FlatButton
+        aria-label="Click to select page 7 of 50 result pages"
+        className="page"
+        disabled={false}
+        fullWidth={false}
+        key="7"
+        label={7}
+        labelPosition="after"
+        labelStyle={Object {}}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+      />
+      <FlatButton
+        aria-label="Click to select page 8 of 50 result pages"
+        className="page"
+        disabled={false}
+        fullWidth={false}
+        key="8"
+        label={8}
+        labelPosition="after"
+        labelStyle={Object {}}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+      />
+      <FlatButton
+        aria-label="Click to select page 9 of 50 result pages"
+        className="page"
+        disabled={false}
+        fullWidth={false}
+        key="9"
+        label={9}
+        labelPosition="after"
+        labelStyle={Object {}}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+      />
+      <FlatButton
+        aria-label="Click to select page 10 of 50 result pages"
+        className="page selectedPage"
+        disabled={true}
+        fullWidth={false}
+        key="10"
+        label={10}
+        labelPosition="after"
+        labelStyle={Object {}}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+      />
+      <FlatButton
+        aria-label="Click to select page 11 of 50 result pages"
+        className="page"
+        disabled={false}
+        fullWidth={false}
+        key="11"
+        label={11}
+        labelPosition="after"
+        labelStyle={Object {}}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+      />
+      <FlatButton
+        aria-label="Click to select page 12 of 50 result pages"
+        className="page"
+        disabled={false}
+        fullWidth={false}
+        key="12"
+        label={12}
+        labelPosition="after"
+        labelStyle={Object {}}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+      />
+      <FlatButton
+        aria-label="Click to select page 13 of 50 result pages"
+        className="page"
+        disabled={false}
+        fullWidth={false}
+        key="13"
+        label={13}
+        labelPosition="after"
+        labelStyle={Object {}}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+      />
+      ...
+      <FlatButton
+        aria-label="Click to select page 50 of 50 result pages"
+        className="page"
+        disabled={false}
+        fullWidth={false}
+        key="50"
+        label={50}
+        labelPosition="after"
+        labelStyle={Object {}}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
+    <div
+      className="column is-hidden-tablet-only is-hidden-desktop has-text-centered"
+    >
+      <FlatButton
+        className="pagingTotals"
+        disabled={false}
+        fullWidth={false}
+        label="Page 10 of 50"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
+    <div
+      className="column is-narrow is-pulled-right"
+    >
+      <FlatButton
+        className="pagingNext"
+        disabled={false}
+        fullWidth={false}
+        icon={<NavigationChevronRight />}
+        label="Next"
+        labelPosition="before"
+        labelStyle={Object {}}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`PublicationsListPaging renders  component with empty paging data 1`] = `
 <span
   className="publicationsListControls empty"
@@ -35,10 +267,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
       className="publicationsListPagingItems column is-hidden-mobile has-text-centered"
     >
       <FlatButton
+        aria-label="Click to select page 1 of 3 result pages"
         className="page selectedPage"
         disabled={true}
         fullWidth={false}
-        key="0"
+        key="1"
         label={1}
         labelPosition="after"
         labelStyle={Object {}}
@@ -51,10 +284,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         secondary={false}
       />
       <FlatButton
+        aria-label="Click to select page 2 of 3 result pages"
         className="page"
         disabled={false}
         fullWidth={false}
-        key="1"
+        key="2"
         label={2}
         labelPosition="after"
         labelStyle={Object {}}
@@ -67,10 +301,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         secondary={false}
       />
       <FlatButton
+        aria-label="Click to select page 3 of 3 result pages"
         className="page"
         disabled={false}
         fullWidth={false}
-        key="2"
+        key="3"
         label={3}
         labelPosition="after"
         labelStyle={Object {}}
@@ -154,10 +389,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       className="publicationsListPagingItems column is-hidden-mobile has-text-centered"
     >
       <FlatButton
+        aria-label="Click to select page 1 of 3 result pages"
         className="page"
         disabled={false}
         fullWidth={false}
-        key="0"
+        key="1"
         label={1}
         labelPosition="after"
         labelStyle={Object {}}
@@ -170,10 +406,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         secondary={false}
       />
       <FlatButton
+        aria-label="Click to select page 2 of 3 result pages"
         className="page"
         disabled={false}
         fullWidth={false}
-        key="1"
+        key="2"
         label={2}
         labelPosition="after"
         labelStyle={Object {}}
@@ -186,10 +423,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         secondary={false}
       />
       <FlatButton
+        aria-label="Click to select page 3 of 3 result pages"
         className="page selectedPage"
         disabled={true}
         fullWidth={false}
-        key="2"
+        key="3"
         label={3}
         labelPosition="after"
         labelStyle={Object {}}
@@ -273,10 +511,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
       className="publicationsListPagingItems column is-hidden-mobile has-text-centered"
     >
       <FlatButton
+        aria-label="Click to select page 1 of 3 result pages"
         className="page"
         disabled={false}
         fullWidth={false}
-        key="0"
+        key="1"
         label={1}
         labelPosition="after"
         labelStyle={Object {}}
@@ -289,10 +528,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         secondary={false}
       />
       <FlatButton
+        aria-label="Click to select page 2 of 3 result pages"
         className="page selectedPage"
         disabled={true}
         fullWidth={false}
-        key="1"
+        key="2"
         label={2}
         labelPosition="after"
         labelStyle={Object {}}
@@ -305,10 +545,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         secondary={false}
       />
       <FlatButton
+        aria-label="Click to select page 3 of 3 result pages"
         className="page"
         disabled={false}
         fullWidth={false}
-        key="2"
+        key="3"
         label={3}
         labelPosition="after"
         labelStyle={Object {}}

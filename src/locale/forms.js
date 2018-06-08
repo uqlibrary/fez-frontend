@@ -98,7 +98,11 @@ export default {
             alreadyClaimedAlert: {
                 type: 'error',
                 title: 'Error',
-                message: 'This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at espace.admin@email.com.au'
+                message: (
+                    <span>
+                        This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at <a href="mailto:espace@library.uq.edu.au">espace@library.uq.edu.au</a>
+                    </span>
+                )
             }
         },
         unclaimPublicationForm: {
