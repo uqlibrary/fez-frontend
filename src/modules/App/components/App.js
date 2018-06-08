@@ -165,8 +165,6 @@ export default class App extends PureComponent {
             forceOrcidRegistration: isOrcidRequired && isHdrStudent,
             isHdrStudent: isHdrStudent
         });
-        console.log('public: ', isPublicPage);
-
         return (
             <div className="layout-fill align-stretch">
                 <Meta routesConfig={routesConfig}/>
