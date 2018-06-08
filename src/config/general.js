@@ -321,5 +321,8 @@ export const defaultQueryParams = {
     pageSize: 20,
     sortBy: locale.components.sorting.sortBy[0].value,
     sortDirection: locale.components.sorting.sortDirection[0],
-    activeFacets: {filters: {}, ranges: {}}
+    activeFacets: {
+        filters: {},
+        ranges: {}
+    }
 };

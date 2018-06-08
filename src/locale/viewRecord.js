@@ -581,36 +581,32 @@ export default {
                     order: 20
                 },
                 {
-                    field: 'fez_record_search_key_chapter_number',
+                    field: 'fez_record_search_key_start_page',
                     order: 21
                 },
                 {
-                    field: 'fez_record_search_key_start_page',
+                    field: 'fez_record_search_key_end_page',
                     order: 22
                 },
                 {
-                    field: 'fez_record_search_key_end_page',
+                    field: 'fez_record_search_key_total_pages',
                     order: 23
                 },
                 {
-                    field: 'fez_record_search_key_total_pages',
+                    field: 'fez_record_search_key_total_chapters',
                     order: 24
                 },
                 {
-                    field: 'fez_record_search_key_total_chapters',
+                    field: 'fez_record_search_key_language',
                     order: 25
                 },
                 {
-                    field: 'fez_record_search_key_language',
+                    field: 'fez_record_search_key_subject',
                     order: 26
                 },
                 {
-                    field: 'fez_record_search_key_subject',
-                    order: 27
-                },
-                {
                     field: 'fez_record_search_key_keywords',
-                    order: 28
+                    order: 27
                 }
             ],
             'Conference Paper': [

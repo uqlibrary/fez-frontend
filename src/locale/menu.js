@@ -1,5 +1,8 @@
 export default {
     menu: {
+        index: {
+            primaryText: 'Home',
+        },
         myDashboard: {
             primaryText: 'My dashboard',
             // secondaryText is set to user's email
