@@ -18,7 +18,7 @@ function setup(testProps, isShallow = true){
                 pageTitle: 'RHD submission page title'
             }
         ],
-        location: {pathname: '/records/UQ:1234'},
+        location: {pathname: '/view/UQ:1234'},
         ...testProps
     };
     return getElement(Meta, props, isShallow);
@@ -250,7 +250,7 @@ describe('Meta Component ', () => {
         };
         const wrapper = setup({publication});
         expect(wrapper.instance().getMetaTags(publication)).toEqual([
-            {name: 'DC.Identifier', content: 'https://fez-staging.library.uq.edu.au/records/UQ:111111'},
+            {name: 'DC.Identifier', content: 'https://fez-staging.library.uq.edu.au/view/UQ:111111'},
             {name: 'DC.Date', content: '2015-01-01'},
             {name: 'citation_date', content: '2015/01/01'}
         ]);
@@ -273,7 +273,7 @@ describe('Meta Component ', () => {
         };
         const wrapper = setup({publication});
         expect(wrapper.instance().getMetaTags(publication)).toEqual([
-            {name: 'DC.Identifier', content: 'https://fez-staging.library.uq.edu.au/records/UQ:222222'},
+            {name: 'DC.Identifier', content: 'https://fez-staging.library.uq.edu.au/view/UQ:222222'},
             {name: 'citation_pdf_url', content: 'https://espace.library.uq.edu.au/view/UQ:222222/abc.pdf'},
             {name: 'DC.Date', content: '2015-01-01'},
             {name: 'citation_date', content: '2015/01/01'},
