@@ -3044,6 +3044,11 @@ exports[`Component ContributorForm rendering display name field and identifier f
                         }
                       }
                     >
+                      <EventListener
+                        onResize={[Function]}
+                        onScroll={[Function]}
+                        target="window"
+                      />
                       <RenderToLayer
                         componentClickAway={[Function]}
                         open={false}
