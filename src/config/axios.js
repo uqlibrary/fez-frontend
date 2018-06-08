@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import {setupCache} from 'axios-cache-adapter';
-import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME} from './general';
+import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME, SESSION_USER_GROUP_COOKIE_NAME} from './general';
 import {store} from 'config/store';
 import {logout} from 'actions/account';
 import {locale} from 'locale';
@@ -37,7 +37,7 @@ export const generateCancelToken = () => {
 };
 
 // If there is a local cookie available, then set the api headers for x-uql-token
-if(!!Cookies.get(SESSION_COOKIE_NAME)) {
+if(!!Cookies.get(SESSION_COOKIE_NAME) && !!Cookies.get(SESSION_USER_GROUP_COOKIE_NAME)) {
     api.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
 }
 
