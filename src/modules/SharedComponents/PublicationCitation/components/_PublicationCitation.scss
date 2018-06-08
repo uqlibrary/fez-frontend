@@ -9,6 +9,12 @@
   word-break: break-word;
   width: 100% !important;
 
+  .citationShowMoreAuthors {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   &:first-child {
     padding-top: 24px;
   }

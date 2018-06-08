@@ -187,7 +187,7 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
   >
     <a
       className="authorIdLink"
-      href="https://fez-staging.library.uq.edu.au/list/author_id/1"
+      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1&searchQueryParams%5Ball%5D="
       key="citationAuthor_1"
     >
       <CitationView
@@ -206,7 +206,7 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
     </a>
     <a
       className="authorIdLink"
-      href="https://fez-staging.library.uq.edu.au/list/author_id/2"
+      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=2&searchQueryParams%5Ball%5D="
       key="citationAuthor_2"
     >
       <CitationView
@@ -392,7 +392,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
   >
     <a
       className="authorIdLink"
-      href="https://fez-staging.library.uq.edu.au/list/author_id/1"
+      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1&searchQueryParams%5Ball%5D="
       key="citationAuthor_1"
     >
       <CitationView
@@ -412,7 +412,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
     </a>
     <a
       className="authorIdLink"
-      href="https://fez-staging.library.uq.edu.au/list/author_id/2"
+      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=2&searchQueryParams%5Ball%5D="
       key="citationAuthor_2"
     >
       <CitationView
@@ -431,7 +431,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
     </a>
     <a
       className="authorIdLink"
-      href="https://fez-staging.library.uq.edu.au/list/author_id/3"
+      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=3&searchQueryParams%5Ball%5D="
       key="citationAuthor_3"
     >
       <CitationView
@@ -1134,7 +1134,6 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
        
       <a
         className="citationShowMoreAuthors"
-        href="#"
         onClick={[Function]}
         onKeyPress={[Function]}
         title="Click to show 2 more authors"
@@ -1423,7 +1422,6 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
        
       <a
         className="citationShowMoreAuthors"
-        href="#"
         onClick={[Function]}
         onKeyPress={[Function]}
         title="Show less authors"

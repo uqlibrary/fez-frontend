@@ -10,15 +10,15 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
   >
     <ExternalLink
       className="researcherIDlink"
-      href="https://app.library.uq.edu.au/#/id"
+      href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier"
       openInNewIcon={false}
       rel="noopener noreferrer"
       target="_blank"
-      title="You are not linked to Publons - Click to amend"
+      title="You are not linked to Publons - Click for more information"
     >
       <div
         className="fez-icon publons dashboard"
-        title="You are not linked to Publons - Click to amend"
+        title="You are not linked to Publons - Click for more information"
       />
     </ExternalLink>
   </div>

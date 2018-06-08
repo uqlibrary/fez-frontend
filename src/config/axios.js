@@ -71,6 +71,8 @@ api.interceptors.response.use(response => {
         }
     } else if (error.response && error.response.status === 404) {
         errorMessage = locale.global.errorMessages.notFound;
+    } else if (error.response && error.response.status === 401) {
+        errorMessage = locale.global.errorMessages.notAuthorised;
     }
 
     const errorDetails = {

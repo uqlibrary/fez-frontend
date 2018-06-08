@@ -13,7 +13,7 @@ exports[`Related publications Component  should not render data with empty looku
     >
       <Link
         replace={false}
-        to="/records/UQ:313292"
+        to="/view/UQ:313292"
       >
         Toxicity characterization of urban stormwater with bioanalytical tools
       </Link>
@@ -23,7 +23,7 @@ exports[`Related publications Component  should not render data with empty looku
     >
       <Link
         replace={false}
-        to="/records/UQ:313292"
+        to="/view/UQ:313292"
       >
         dataset 2
       </Link>
@@ -982,10 +982,10 @@ exports[`Related publications Component  should render component 1`] = `
                           >
                             <Link
                               replace={false}
-                              to="/records/UQ:313292"
+                              to="/view/UQ:313292"
                             >
                               <a
-                                href="/records/UQ:313292"
+                                href="/view/UQ:313292"
                                 onClick={[Function]}
                               >
                                 Toxicity characterization of urban stormwater with bioanalytical tools
@@ -997,10 +997,10 @@ exports[`Related publications Component  should render component 1`] = `
                           >
                             <Link
                               replace={false}
-                              to="/records/UQ:313292"
+                              to="/view/UQ:313292"
                             >
                               <a
-                                href="/records/UQ:313292"
+                                href="/view/UQ:313292"
                                 onClick={[Function]}
                               >
                                 dataset 2

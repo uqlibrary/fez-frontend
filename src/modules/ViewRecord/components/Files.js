@@ -88,8 +88,8 @@ export default class Files extends Component {
     }
 
     getFileOpenAccessStatus = (publication, embargoDate) => {
-        const openAccessStatusId = !!publication.fez_record_search_key_oa_status
-            && publication.fez_record_search_key_oa_status.rek_oa_status;
+        const openAccessStatusId = (!!publication.fez_record_search_key_oa_status
+            && publication.fez_record_search_key_oa_status.rek_oa_status) || null;
         if (openAccessConfig.openAccessFiles.indexOf(openAccessStatusId) < 0) {
             return {isOpenAccess: false, embargoDate: null, openAccessStatusId: openAccessStatusId};
         } else if (embargoDate && moment(embargoDate).isSameOrAfter(moment(), 'day')) {

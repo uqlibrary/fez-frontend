@@ -114,12 +114,12 @@ export default class App extends PureComponent {
         }
 
         const isAuthorizedUser = !this.props.accountLoading && this.props.account !== null;
-        const isAdmin = this.props.account && this.props.account.canMasquerade;
         const isAuthorLoading = this.props.accountLoading || this.props.accountAuthorLoading;
         const isOrcidRequired = this.props.author && !this.props.author.aut_orcid_id
             && this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
         const isHdrStudent = this.props.author && this.props.author.aut_student_username;
-        const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent);
+        const isViewPage = (new RegExp(routes.pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname));
+        const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent, isViewPage);
         const isPublicPage = menuItems.filter((menuItem) =>
             (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
         const isThesisSubmissionPage = this.props.location.pathname === routes.pathConfig.hdrSubmission ||
@@ -136,7 +136,7 @@ export default class App extends PureComponent {
         }
 
         let userStatusAlert = null;
-        if (!this.props.accountLoading && !this.props.account) {
+        if (!this.props.accountLoading && !this.props.account && !isPublicPage) {
             // user is not logged in
             userStatusAlert = {
                 ...locale.global.loginAlert,
@@ -165,6 +165,7 @@ export default class App extends PureComponent {
             forceOrcidRegistration: isOrcidRequired && isHdrStudent,
             isHdrStudent: isHdrStudent
         });
+
         return (
             <div className="layout-fill align-stretch">
                 <Meta routesConfig={routesConfig}/>
@@ -173,7 +174,7 @@ export default class App extends PureComponent {
                     showMenuIconButton={showMenu && !this.state.docked}
                     style={{height: 75}}
                     iconStyleLeft={{marginTop: 0}}
-                    title={locale.global.appTitle}
+                    title={locale.global.title}
                     titleStyle={titleStyle}
                     onLeftIconButtonClick={this.toggleDrawer}
                     iconElementLeft={
@@ -192,7 +193,7 @@ export default class App extends PureComponent {
                         <div className="columns is-gapless appbar-right-columns is-mobile">
                             <div className="column search-column">
                                 {
-                                    !isThesisSubmissionPage && isAuthorizedUser && isAdmin &&
+                                    !isThesisSubmissionPage &&
                                     <SearchComponent inHeader showPrefixIcon showMobileSearchButton />
                                 }
                             </div>
