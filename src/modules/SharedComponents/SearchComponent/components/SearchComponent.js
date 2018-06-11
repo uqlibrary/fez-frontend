@@ -46,14 +46,15 @@ export default class SearchComponent extends PureComponent {
         this.state = {
             snackbarOpen: false,
             snackbarMessage: '',
-            isAdvancedSearch: props.isAdvancedSearch
+            isAdvancedSearch: props.isAdvancedSearch,
+            isAdvancedSearchMinimised: props.isAdvancedSearchMinimised
         };
     }
 
     componentWillReceiveProps(nextProps) {
         this.setState({
             isAdvancedSearch: nextProps.isAdvancedSearch,
-            isAdvancedSearchMinimised: nextProps.isAdvancedSearch
+            isAdvancedSearchMinimised: nextProps.isAdvancedSearchMinimised
         });
     }
 
