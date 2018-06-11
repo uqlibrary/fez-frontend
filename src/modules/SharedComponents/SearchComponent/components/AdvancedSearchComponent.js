@@ -206,10 +206,10 @@ export default class AdvancedSearchComponent extends PureComponent {
                                                 <AdvancedSearchRow
                                                     key={`advanced-search-field-${item.searchField}`}
                                                     rowIndex={index}
-                                                    searchRow={item}
                                                     disabledFields={alreadyAddedFields}
                                                     onSearchRowChange={this.handleAdvancedFieldChange}
                                                     onSearchRowDelete={this.deleteAdvancedField}
+                                                    {...item}
                                                 />
                                             ))
                                         }

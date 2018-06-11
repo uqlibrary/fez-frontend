@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
@@ -9,30 +9,23 @@ import {locale} from 'locale';
 import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
 
 
-export default class AdvancedSearchRow extends Component {
+export default class AdvancedSearchRow extends PureComponent {
     static propTypes = {
         rowIndex: PropTypes.number,
         searchRow: PropTypes.object,
+        searchField: PropTypes.string,
+        value: PropTypes.string,
         disabledFields: PropTypes.array,
         onSearchRowChange: PropTypes.func,
         onSearchRowDelete: PropTypes.func,
     };
 
-    shouldComponentUpdate(nextProps) {
-        if (
-            this.props.searchRow.searchField !== nextProps.searchRow.searchField ||
-            this.props.searchRow.value !== nextProps.searchRow.value
-        ) return true;
-
-        return false;
-    }
-
     handleTextChange = (event, value) => {
-        this.props.onSearchRowChange(this.props.rowIndex, {...this.props.searchRow, value});
+        this.props.onSearchRowChange(this.props.rowIndex, {searchField: this.props.searchField, value});
     };
 
     handleSearchFieldChange = (event, index, searchField) => {
-        this.props.onSearchRowChange(this.props.rowIndex, {...this.props.searchRow, searchField});
+        this.props.onSearchRowChange(this.props.rowIndex, {searchField, value: this.props.value});
     };
 
     deleteRow = () => {
@@ -53,7 +46,7 @@ export default class AdvancedSearchRow extends Component {
             <div className="columns is-gapless is-mobile advancedSearchField">
                 <div className="column is-3">
                     <SelectField
-                        value={this.props.searchRow.searchField}
+                        value={this.props.searchField}
                         onChange={this.handleSearchFieldChange}
                         fullWidth>
                         {
@@ -69,9 +62,9 @@ export default class AdvancedSearchRow extends Component {
                     </SelectField>
                 </div>
                 {
-                    txt.fieldTypes[this.props.searchRow.searchField].combiner ?
+                    txt.fieldTypes[this.props.searchField].combiner ?
                         <div className="column is-narrow combiner">
-                            <span>{txt.fieldTypes[this.props.searchRow.searchField].combiner}</span>
+                            <span>{txt.fieldTypes[this.props.searchField].combiner}</span>
                         </div>
                         : <div className="column is-narrow" style={{width: 12}} />
                 }
@@ -81,12 +74,12 @@ export default class AdvancedSearchRow extends Component {
                         name={`textSearchField${this.props.rowIndex}`}
                         id="searchField"
                         fullWidth
-                        hintText={txt.fieldTypes[this.props.searchRow.searchField].hint}
+                        hintText={txt.fieldTypes[this.props.searchField].hint}
                         aria-label="Aria"
-                        value={this.props.searchRow.value}
+                        value={this.props.value}
                         onChange={this.handleTextChange}
-                        errorText={this.searchTextValidationMessage(this.props.searchRow.value)}
-                        disabled={this.props.searchRow.searchField === 0}
+                        errorText={this.searchTextValidationMessage(this.props.value)}
+                        disabled={this.props.searchField === 0}
                     />
                 </div>
                 {
