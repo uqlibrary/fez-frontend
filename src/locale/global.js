@@ -1,4 +1,6 @@
+import React from 'react';
 import {APP_URL} from 'config';
+import {pathConfig} from 'config/routes';
 
 /*
 
@@ -21,6 +23,13 @@ help: {
 export default {
     global: {
         title: `UQ eSpace ${process.env.TITLE_SUFFIX || ''}`,
+        appTitle: (
+            <a href={`${pathConfig.index}`}
+                className="appTitle"
+                title="Click to return to the eSpace home page">
+                UQ eSpace {process.env.TITLE_SUFFIX || ''}
+            </a>
+        ),
         logo: {
             image: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
             label: 'University of Queensland',

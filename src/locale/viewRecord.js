@@ -30,7 +30,13 @@ export default {
                     imageTitle: 'Image preview',
                     openInNewWindow: 'Open file in a new window',
                     close: 'Close',
-                    errorMessage: 'Your browser does not support the video tag.'
+                    errorMessage: 'Your browser does not support the video tag.',
+                    imageAlertError: {
+                        title: 'Image preview unavailable',
+                        message: 'Source file is available for download',
+                        actionButtonLabel: 'Download source file',
+                        type: 'warning'
+                    }
                 }
             },
             links: {

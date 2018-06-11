@@ -6,6 +6,7 @@ const getValue = (value) => (
 
 // Authentication
 export const SESSION_COOKIE_NAME = 'UQLID';
+export const SESSION_USER_GROUP_COOKIE_NAME = 'UQLID_USER_GROUP';
 export const TOKEN_NAME = 'X-Uql-Token';
 export const BASE_DN = 'ou=Staff,ou=People,o=The University of Queensland,c=AU';
 

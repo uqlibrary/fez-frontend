@@ -121,7 +121,7 @@ export default class App extends PureComponent {
         const isViewPage = (new RegExp(routes.pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname));
         const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent, isViewPage);
         const isPublicPage = menuItems.filter((menuItem) =>
-            (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
+            ((this.props.location.pathname === menuItem.linkTo && menuItem.public) || isViewPage)).length > 0;
         const isThesisSubmissionPage = this.props.location.pathname === routes.pathConfig.hdrSubmission ||
             this.props.location.pathname === routes.pathConfig.sbsSubmission;
         const isSearchPage = this.props.location.pathname === routes.pathConfig.records.search ||
@@ -167,7 +167,6 @@ export default class App extends PureComponent {
             forceOrcidRegistration: isOrcidRequired && isHdrStudent,
             isHdrStudent: isHdrStudent
         });
-
         return (
             <div className="layout-fill align-stretch">
                 <Meta routesConfig={routesConfig}/>
@@ -176,7 +175,7 @@ export default class App extends PureComponent {
                     showMenuIconButton={showMenu && !this.state.docked}
                     style={{height: 75}}
                     iconStyleLeft={{marginTop: 0}}
-                    title={locale.global.title}
+                    title={locale.global.appTitle}
                     titleStyle={titleStyle}
                     onLeftIconButtonClick={this.toggleDrawer}
                     iconElementLeft={
