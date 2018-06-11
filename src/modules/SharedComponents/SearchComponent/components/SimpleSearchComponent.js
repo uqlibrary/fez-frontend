@@ -11,7 +11,7 @@ import {locale} from 'locale';
 
 import {defaultQueryParams} from 'config/general';
 
-export default class SearchComponent extends PureComponent {
+export default class SimpleSearchComponent extends PureComponent {
     static propTypes = {
         searchQueryParams: PropTypes.object,
         isInHeader: PropTypes.bool,
@@ -24,7 +24,7 @@ export default class SearchComponent extends PureComponent {
         className: PropTypes.string,
 
         onSearch: PropTypes.func,
-        onAdvancedSearchClick: PropTypes.func,
+        onToggle: PropTypes.func,
         onInvalidSearch: PropTypes.func
     };
 
@@ -46,11 +46,18 @@ export default class SearchComponent extends PureComponent {
         }
     }
 
-    toggleMobile = () => {
+    _searchTextValidationMessage = (value) => {
+        if (value.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
+            return locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH);
+        }
+
+        return null;
+    };
+
+    handleToggleMobile = () => {
         this.setState({
             ...this.state,
-            showMobile: !this.state.showMobile,
-            snackbarOpen: false
+            showMobile: !this.state.showMobile
         }, () => {
             if(this.state.showMobile) {
                 document.getElementById('searchField') && document.getElementById('searchField').focus();
@@ -58,20 +65,17 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
-    searchTextChanged = (event, value) => {
+    handleSearchTextChange = (event, value) => {
         this.setState({
             ...this.state,
-            searchText: value,
-            snackbarOpen: false
+            searchText: value
         });
     };
 
-    searchTextValidationMessage = (value) => {
-        if (value.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
-            return locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH);
+    handleSearchModeToggle = () => {
+        if (!!this.props.onToggle) {
+            this.props.onToggle();
         }
-
-        return null;
     };
 
     handleSimpleSearch = (event) => {
@@ -115,7 +119,7 @@ export default class SearchComponent extends PureComponent {
                                 this.props.showMobileSearchButton &&
                                 <div className="column is-narrow search-icon-prefix is-hidden-tablet">
                                     <IconButton
-                                        onClick={this.toggleMobile}
+                                        onClick={this.handleToggleMobile}
                                         className="mobileBackArrow" >
                                         <ArrowBack/>
                                     </IconButton>
@@ -129,11 +133,11 @@ export default class SearchComponent extends PureComponent {
                                     floatingLabelText={!this.props.isInHeader && txt.searchBoxPlaceholder}
                                     hintText={this.props.isInHeader && txt.searchBoxPlaceholder}
                                     aria-label={txt.ariaInputLabel}
-                                    onChange={this.searchTextChanged}
+                                    onChange={this.handleSearchTextChange}
                                     onKeyPress={this.handleSimpleSearch}
                                     value={this.state.searchText}
                                     underlineStyle={this.props.isInHeader ? {display: 'none'} : {}}
-                                    errorText={this.searchTextValidationMessage(this.state.searchText)}
+                                    errorText={this._searchTextValidationMessage(this.state.searchText)}
                                 />
                             </div>
                             <div className="is-hidden-tablet mobileSpacer" />
@@ -143,7 +147,7 @@ export default class SearchComponent extends PureComponent {
                         this.props.showMobileSearchButton &&
                         <div className="column is-narrow is-hidden-tablet">
                             <IconButton
-                                onClick={this.toggleMobile}
+                                onClick={this.handleToggleMobile}
                                 aria-label={txt.mobileSearchButtonAriaLabel}
                                 className="search-button"
                                 hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}}
@@ -158,7 +162,7 @@ export default class SearchComponent extends PureComponent {
                             <IconButton
                                 tooltipPosition="bottom-left"
                                 onClick={this.handleSimpleSearch}
-                                disabled={!!this.searchTextValidationMessage(this.state.searchText)}
+                                disabled={!!this._searchTextValidationMessage(this.state.searchText)}
                                 className="search-button"
                                 tooltip={txt.searchButtonHint}
                                 aria-label={txt.searchButtonAriaLabel}>
@@ -171,7 +175,7 @@ export default class SearchComponent extends PureComponent {
                             label={txt.searchButtonText}
                             aria-label={txt.searchButtonAriaLabel}
                             primary
-                            disabled={!!this.searchTextValidationMessage(this.state.searchText)}
+                            disabled={!!this._searchTextValidationMessage(this.state.searchText)}
                             onClick={this.handleSimpleSearch}
                             fullWidth />
                     </div>
@@ -181,7 +185,7 @@ export default class SearchComponent extends PureComponent {
                             <RaisedButton
                                 label={txt.advancedSearchButtonText}
                                 aria-label={txt.advancedSearchButtonAriaLabel}
-                                onClick={this.props.onAdvancedSearchClick}
+                                onClick={this.handleSearchModeToggle}
                                 className="advancedButton"
                                 fullWidth
                             />

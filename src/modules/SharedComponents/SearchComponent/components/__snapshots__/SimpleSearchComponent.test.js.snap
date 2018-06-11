@@ -1,0 +1,352 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SimpleSearchComponent should render default view 1`] = `
+<div
+  className="search-component false undefined"
+>
+  <div
+    className="columns is-gapless"
+  >
+    <div
+      className="column search-field is-gapless hideMobile"
+    >
+      <div
+        className="columns is-gapless search-field is-mobile"
+      >
+        <div
+          className="column"
+        >
+          <TextField
+            aria-label="Enter your search query to search eSpace and then press Enter"
+            disabled={false}
+            errorText={null}
+            floatingLabelFixed={false}
+            floatingLabelText="Search eSpace"
+            fullWidth={true}
+            hintText={false}
+            id="searchField"
+            multiLine={false}
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            rows={1}
+            type="search"
+            underlineShow={true}
+            underlineStyle={Object {}}
+            value=""
+          />
+        </div>
+        <div
+          className="is-hidden-tablet mobileSpacer"
+        />
+      </div>
+    </div>
+    <div
+      className="column is-narrow search-button-wrapper"
+    >
+      <RaisedButton
+        aria-label="Click to search eSpace"
+        disabled={false}
+        fullWidth={true}
+        label="Search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={true}
+        secondary={false}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SimpleSearchComponent should render show mobile button 1`] = `
+<div
+  className="search-component false undefined"
+>
+  <div
+    className="columns is-gapless"
+  >
+    <div
+      className="column search-field is-gapless hideMobile"
+    >
+      <div
+        className="columns is-gapless search-field is-mobile"
+      >
+        <div
+          className="column is-narrow search-icon-prefix is-hidden-tablet"
+        >
+          <IconButton
+            className="mobileBackArrow"
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onClick={[Function]}
+            tooltipPosition="bottom-center"
+            touch={false}
+          >
+            <NavigationArrowBack />
+          </IconButton>
+        </div>
+        <div
+          className="column"
+        >
+          <TextField
+            aria-label="Enter your search query to search eSpace and then press Enter"
+            disabled={false}
+            errorText={null}
+            floatingLabelFixed={false}
+            floatingLabelText="Search eSpace"
+            fullWidth={true}
+            hintText={false}
+            id="searchField"
+            multiLine={false}
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            rows={1}
+            type="search"
+            underlineShow={true}
+            underlineStyle={Object {}}
+            value=""
+          />
+        </div>
+        <div
+          className="is-hidden-tablet mobileSpacer"
+        />
+      </div>
+    </div>
+    <div
+      className="column is-narrow is-hidden-tablet"
+    >
+      <IconButton
+        aria-label="Click to search eSpace"
+        className="search-button"
+        disableTouchRipple={false}
+        disabled={false}
+        hoveredStyle={
+          Object {
+            "backgroundColor": "rgba(0,0,0,0.3)",
+            "borderRadius": "50%",
+          }
+        }
+        iconStyle={Object {}}
+        onClick={[Function]}
+        tooltipPosition="bottom-center"
+        touch={false}
+      >
+        <ActionSearch />
+      </IconButton>
+    </div>
+    <div
+      className="column is-narrow search-button-wrapper"
+    >
+      <RaisedButton
+        aria-label="Click to search eSpace"
+        disabled={false}
+        fullWidth={true}
+        label="Search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={true}
+        secondary={false}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SimpleSearchComponent should render show prefix icon in the search box 1`] = `
+<div
+  className="search-component false undefined"
+>
+  <div
+    className="columns is-gapless"
+  >
+    <div
+      className="column search-field is-gapless hideMobile"
+    >
+      <div
+        className="columns is-gapless search-field is-mobile"
+      >
+        <div
+          className="column is-narrow search-icon-prefix is-hidden-mobile"
+        >
+          <ActionSearch />
+        </div>
+        <div
+          className="column"
+        >
+          <TextField
+            aria-label="Enter your search query to search eSpace and then press Enter"
+            disabled={false}
+            errorText={null}
+            floatingLabelFixed={false}
+            floatingLabelText="Search eSpace"
+            fullWidth={true}
+            hintText={false}
+            id="searchField"
+            multiLine={false}
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            rows={1}
+            type="search"
+            underlineShow={true}
+            underlineStyle={Object {}}
+            value=""
+          />
+        </div>
+        <div
+          className="is-hidden-tablet mobileSpacer"
+        />
+      </div>
+    </div>
+    <div
+      className="column is-narrow search-button-wrapper"
+    >
+      <RaisedButton
+        aria-label="Click to search eSpace"
+        disabled={false}
+        fullWidth={true}
+        label="Search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={true}
+        secondary={false}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SimpleSearchComponent should render with a class "header" for use in AppBar 1`] = `
+<div
+  className="search-component header undefined"
+>
+  <div
+    className="columns is-gapless"
+  >
+    <div
+      className="column search-field is-gapless hideMobile"
+    >
+      <div
+        className="columns is-gapless search-field is-mobile"
+      >
+        <div
+          className="column"
+        >
+          <TextField
+            aria-label="Enter your search query to search eSpace and then press Enter"
+            disabled={false}
+            errorText={null}
+            floatingLabelFixed={false}
+            floatingLabelText={false}
+            fullWidth={true}
+            hintText="Search eSpace"
+            id="searchField"
+            multiLine={false}
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            rows={1}
+            type="search"
+            underlineShow={true}
+            underlineStyle={
+              Object {
+                "display": "none",
+              }
+            }
+            value=""
+          />
+        </div>
+        <div
+          className="is-hidden-tablet mobileSpacer"
+        />
+      </div>
+    </div>
+    <div
+      className="column is-narrow search-button-wrapper"
+    >
+      <RaisedButton
+        aria-label="Click to search eSpace"
+        disabled={false}
+        fullWidth={true}
+        label="Search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={true}
+        secondary={false}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SimpleSearchComponent should set search value from prop 1`] = `
+<div
+  className="search-component false undefined"
+>
+  <div
+    className="columns is-gapless"
+  >
+    <div
+      className="column search-field is-gapless hideMobile"
+    >
+      <div
+        className="columns is-gapless search-field is-mobile"
+      >
+        <div
+          className="column"
+        >
+          <TextField
+            aria-label="Enter your search query to search eSpace and then press Enter"
+            disabled={false}
+            errorText={null}
+            floatingLabelFixed={false}
+            floatingLabelText="Search eSpace"
+            fullWidth={true}
+            hintText={false}
+            id="searchField"
+            multiLine={false}
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            rows={1}
+            type="search"
+            underlineShow={true}
+            underlineStyle={Object {}}
+            value="i feel lucky"
+          />
+        </div>
+        <div
+          className="is-hidden-tablet mobileSpacer"
+        />
+      </div>
+    </div>
+    <div
+      className="column is-narrow search-button-wrapper"
+    >
+      <RaisedButton
+        aria-label="Click to search eSpace"
+        disabled={false}
+        fullWidth={true}
+        label="Search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={true}
+        secondary={false}
+      />
+    </div>
+    <div
+      className="column is-narrow"
+    >
+      <RaisedButton
+        aria-label="Click to switch to Advanced search"
+        className="advancedButton"
+        disabled={false}
+        fullWidth={true}
+        label="Advanced search"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
+  </div>
+</div>
+`;
