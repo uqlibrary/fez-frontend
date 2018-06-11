@@ -52,7 +52,7 @@ describe('SearchComponent', () => {
         // componentWillReceiveProps
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.instance().componentWillReceiveProps({isAdvancedSearch: true});
+        wrapper.instance().componentWillReceiveProps({isAdvancedSearch: true, isAdvancedSearchMinimised: true});
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
     });

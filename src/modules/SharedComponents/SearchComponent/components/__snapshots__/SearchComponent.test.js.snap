@@ -24,6 +24,7 @@ exports[`SearchComponent should render default view 1`] = `
 exports[`SearchComponent should render default view with advanced search 1`] = `
 <React.Fragment>
   <AdvancedSearchComponent
+    isAdvancedSearchMinimised={false}
     isOpenAccessInAdvancedMode={false}
     onSearch={[Function]}
     onToggle={[Function]}
