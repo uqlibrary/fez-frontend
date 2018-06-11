@@ -910,7 +910,25 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
       >
         <div
           className="column fields"
-        />
+        >
+          <AdvancedSearchRow
+            disabledFields={
+              Array [
+                0,
+              ]
+            }
+            key="advanced-search-field-0"
+            onSearchRowChange={[Function]}
+            onSearchRowDelete={[Function]}
+            rowIndex={0}
+            searchRow={
+              Object {
+                "searchField": 0,
+                "value": "",
+              }
+            }
+          />
+        </div>
         <div
           className="column is-3"
         >
@@ -938,7 +956,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
         >
           <RaisedButton
             aria-label="Click to add another advanced search field"
-            disabled={false}
+            disabled={true}
             fullWidth={false}
             label="Add another field"
             labelPosition="after"
@@ -998,7 +1016,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
         >
           <RaisedButton
             aria-label="Click to search eSpace"
-            disabled={false}
+            disabled={true}
             fullWidth={true}
             label="Search"
             labelPosition="after"
@@ -1009,6 +1027,32 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
         </div>
       </div>
     </React.Fragment>
+    <div
+      className="searchQueryCaption"
+    >
+      <React.Fragment>
+        <span
+          key="0"
+        >
+          <span
+            className="title false"
+          >
+             
+          </span>
+          <span
+            className="combiner"
+          >
+             
+          </span>
+          <span
+            className="value"
+          >
+             
+          </span>
+        </span>
+        .
+      </React.Fragment>
+    </div>
   </div>
 </div>
 `;
@@ -1057,7 +1101,25 @@ exports[`AdvancedSearchComponent should render default view with open access che
       >
         <div
           className="column fields"
-        />
+        >
+          <AdvancedSearchRow
+            disabledFields={
+              Array [
+                0,
+              ]
+            }
+            key="advanced-search-field-0"
+            onSearchRowChange={[Function]}
+            onSearchRowDelete={[Function]}
+            rowIndex={0}
+            searchRow={
+              Object {
+                "searchField": 0,
+                "value": "",
+              }
+            }
+          />
+        </div>
         <div
           className="column is-3"
         >
@@ -1085,7 +1147,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
         >
           <RaisedButton
             aria-label="Click to add another advanced search field"
-            disabled={false}
+            disabled={true}
             fullWidth={false}
             label="Add another field"
             labelPosition="after"
@@ -1145,7 +1207,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
         >
           <RaisedButton
             aria-label="Click to search eSpace"
-            disabled={false}
+            disabled={true}
             fullWidth={true}
             label="Search"
             labelPosition="after"
@@ -1160,6 +1222,25 @@ exports[`AdvancedSearchComponent should render default view with open access che
       className="searchQueryCaption"
     >
       <React.Fragment>
+        <span
+          key="0"
+        >
+          <span
+            className="title false"
+          >
+             
+          </span>
+          <span
+            className="combiner"
+          >
+             
+          </span>
+          <span
+            className="value"
+          >
+             
+          </span>
+        </span>
         <span>
            and is 
           <span
@@ -1211,6 +1292,32 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
           <HardwareKeyboardArrowDown />
         </IconButton>
       </div>
+    </div>
+    <div
+      className="searchQueryCaption"
+    >
+      <React.Fragment>
+        <span
+          key="0"
+        >
+          <span
+            className="title false"
+          >
+             
+          </span>
+          <span
+            className="combiner"
+          >
+             
+          </span>
+          <span
+            className="value"
+          >
+             
+          </span>
+        </span>
+        .
+      </React.Fragment>
     </div>
   </div>
 </div>

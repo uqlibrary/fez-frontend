@@ -51,7 +51,7 @@ export default class AdvancedSearchComponent extends PureComponent {
     }
 
     _getFieldRowsFromSearchQuery = (searchQueryParams) => {
-        if (!searchQueryParams) {
+        if (!searchQueryParams || Object.keys(searchQueryParams).length === 0) {
             return [{
                 searchField: 0,
                 value: ''

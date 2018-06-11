@@ -235,4 +235,39 @@ describe('AdvancedSearchComponent', () => {
         wrapper.instance().handleSearchMode();
         expect(testToggleFn).toHaveBeenCalled();
     });
+
+    describe('_getFieldRowsFromSearchQuery', () => {
+        it('should get default field if search query params not set (undefined)', () => {
+            const wrapper = setup({});
+            const fieldRows = wrapper.instance()._getFieldRowsFromSearchQuery(undefined);
+
+            expect(fieldRows).toEqual([{searchField: 0, value: ''}]);
+        });
+
+        it('should get default field if search query params not set (empty object)', () => {
+            const wrapper = setup({});
+            const fieldRows = wrapper.instance()._getFieldRowsFromSearchQuery({});
+
+            expect(fieldRows).toEqual([{searchField: 0, value: ''}]);
+        });
+
+        it('should get field rows from search query params', () => {
+            const wrapper = setup({});
+            const fieldRows = wrapper.instance()._getFieldRowsFromSearchQuery({
+                all: 'test',
+                rek_title: 'some title'
+            });
+
+            expect(fieldRows).toEqual([
+                {
+                    searchField: 'all',
+                    value: 'test'
+                },
+                {
+                    searchField: 'rek_title',
+                    value: 'some title'
+                }
+            ]);
+        });
+    });
 });

@@ -101,6 +101,19 @@ describe('SimpleSearchComponent', () => {
         expect(wrapper.state().showMobile).toBe(true);
     });
 
+    it('should handle search and notify with error message for max length for search text', () => {
+        const testOnInvalidSearchFn = jest.fn();
+        const wrapper = setup({onInvalidSearch: testOnInvalidSearchFn});
+
+        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
+
+        wrapper.setState({searchText: 'this is way too long'});
+        wrapper.update();
+
+        wrapper.instance().handleSimpleSearch();
+        expect(testOnInvalidSearchFn).toHaveBeenCalledWith('Must be 5 characters or less');
+    });
+
     it('_searchTextValidationMessage() should return a message for being too long', () => {
         const wrapper = setup({});
         wrapper.setState({searchText: 'this is way too long'});
@@ -116,5 +129,4 @@ describe('SimpleSearchComponent', () => {
         wrapper.update();
         expect(wrapper.instance()._searchTextValidationMessage(wrapper.state().searchText)).toEqual(null);
     });
-
 });
