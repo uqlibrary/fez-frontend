@@ -34,24 +34,35 @@ export default class AdvancedSearchComponent extends PureComponent {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (!!nextProps.searchQueryParams) {
+        if (
+            !!nextProps.searchQueryParams ||
+            nextProps.isAdvancedSearchMinimised !== this.state.minimised ||
+            nextProps.isOpenAccessInAdvancedMode !== this.state.openAccess
+        ) {
             const fieldRows = this._getFieldRowsFromSearchQuery(nextProps.searchQueryParams);
 
             this.setState({
                 ...this.state,
                 fieldRows,
-                minimised: nextProps.isAdvancedSearchMinimised,
-                openAccess: nextProps.isOpenAccessInAdvancedMode
+                minimised: nextProps.isAdvancedSearchMinimised || false,
+                openAccess: nextProps.isOpenAccessInAdvancedMode || false
             });
         }
     }
 
-    _getFieldRowsFromSearchQuery = (searchQueryParams) => (
-        Object.keys(searchQueryParams).map(key => ({
-            searchField: key,
-            value: searchQueryParams[key]
-        }))
-    );
+    _getFieldRowsFromSearchQuery = (searchQueryParams) => {
+        if (!searchQueryParams) {
+            return [{
+                searchField: 0,
+                value: ''
+            }];
+        } else {
+            return Object.keys(searchQueryParams).map(key => ({
+                searchField: key,
+                value: searchQueryParams[key]
+            }));
+        }
+    };
 
     _getAdvancedSearchCaption = ({fieldRows, openAccess}) => {
         const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
@@ -193,7 +204,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                         {
                                             this.state.fieldRows.map((item, index) => (
                                                 <AdvancedSearchRow
-                                                    key={index}
+                                                    key={`advanced-search-field-${item.searchField}`}
                                                     rowIndex={index}
                                                     searchRow={item}
                                                     disabledFields={alreadyAddedFields}
