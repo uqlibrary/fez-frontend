@@ -195,7 +195,7 @@ export default class App extends PureComponent {
                         <div className="columns is-gapless appbar-right-columns is-mobile">
                             <div className="column search-column">
                                 {
-                                    !isThesisSubmissionPage &&
+                                    !isThesisSubmissionPage && !isSearchPage &&
                                     <SearchComponent isInHeader showPrefixIcon showMobileSearchButton />
                                 }
                             </div>

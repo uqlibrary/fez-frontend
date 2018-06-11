@@ -4,6 +4,7 @@ import * as constants from 'config/general';
 function setup(testProps, isShallow = true){
     const props = {
         searchQueryParams: {},
+        className: 'simple-search',
 
         showSearchButton: false,
         showMobileSearchButton: false,
@@ -90,7 +91,7 @@ describe('SimpleSearchComponent', () => {
     it('should toggle search mode', () => {
         const testToggleFn = jest.fn();
         const wrapper = setup({showAdvancedSearchButton: true, onToggle: testToggleFn});
-        wrapper.instance().handleSearchModeToggle();
+        wrapper.instance().handleSearchMode();
         expect(testToggleFn).toHaveBeenCalled();
     });
 

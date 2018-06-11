@@ -46,6 +46,7 @@ export default class SearchComponent extends PureComponent {
         this.state = {
             snackbarOpen: false,
             snackbarMessage: '',
+            isAdvancedSearch: props.isAdvancedSearch
         };
     }
 
@@ -68,7 +69,7 @@ export default class SearchComponent extends PureComponent {
         }
     };
 
-    toggleAdvancedSearch = () => {
+    toggleSearchMode = () => {
         this.setState({
             isAdvancedSearch: !this.state.isAdvancedSearch
         });
@@ -100,7 +101,7 @@ export default class SearchComponent extends PureComponent {
                         showMobileSearchButton={this.props.showMobileSearchButton}
                         showAdvancedSearchButton={this.props.showAdvancedSearchButton}
                         showPrefixIcon={this.props.showPrefixIcon}
-                        onAdvancedSearchClick={this.toggleAdvancedSearch}
+                        onToggle={this.toggleSearchMode}
                         onSearch={this.handleSearch}
                         onInvalidSearch={this.displaySnackbar}
                     />
@@ -112,7 +113,7 @@ export default class SearchComponent extends PureComponent {
                         searchQueryParams={this.props.searchQueryParams}
                         isOpenAccessInAdvancedMode={this.props.isOpenAccessInAdvancedMode}
                         isAdvancedSearchMinimised={this.props.isAdvancedSearchMinimised}
-                        onSimpleSearchClick={this.toggleAdvancedSearch}
+                        onToggle={this.toggleSearchMode}
                         onSearch={this.handleSearch}
                     />
                 }

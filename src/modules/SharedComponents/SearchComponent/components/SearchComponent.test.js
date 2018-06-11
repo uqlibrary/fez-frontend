@@ -4,8 +4,17 @@ import * as constants from 'config/general';
 function setup(testProps, isShallow = true){
     const props = {
         searchQueryParams: {},
-        applyInverseStyle: false,
+
+        showSearchButton: false,
+        showMobileSearchButton: false,
         showAdvancedSearchButton: false,
+        showPrefixIcon: false,
+
+        isInHeader: false,
+        isAdvancedSearch: false,
+        isAdvancedSearchMinimised: false,
+        isOpenAccessInAdvancedMode: false,
+
         history: {
             push: jest.fn()
         },
@@ -14,6 +23,7 @@ function setup(testProps, isShallow = true){
         },
         ...testProps
     };
+
     return getElement(SearchComponent, props, isShallow);
 }
 
@@ -23,57 +33,28 @@ describe('SearchComponent', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render show mobile button', () => {
-        const wrapper = setup({showMobileSearchButton: true});
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render show prefix icon in the search box', () => {
-        const wrapper = setup({showPrefixIcon: true});
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
     it('should render with a class "header" for use in AppBar', () => {
-        const wrapper = setup({inHeader: true});
+        const wrapper = setup({isInHeader: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render default view with advanced search', () => {
-        const wrapper = setup({showAdvancedSearchButton: true});
+        const wrapper = setup({isAdvancedSearch: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should set search value from prop', () => {
-        const wrapper = setup({showAdvancedSearchButton: true, searchQueryParams: {all: 'i feel lucky'}});
+    it('should render simple search even if it says is advanced, if in header', () => {
+        const wrapper = setup({isAdvancedSearch: true, isInHeader: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should set state when receiving new props', () => {
+    it('should toggle search to advanced search', () => {
         // componentWillReceiveProps
-        const wrapper = setup({showAdvancedSearchButton: true});
-        wrapper.instance().componentWillReceiveProps({searchQueryParams: {all: 'i feel lucky'}});
-        wrapper.update();
-        expect(wrapper.state().searchText).toEqual('i feel lucky');
-    });
-
-    it('should update internal text field state', () => {
         const wrapper = setup({});
-        expect(wrapper.state().searchText).toEqual('');
-
-        wrapper.instance().searchTextChanged(null, 'new search value');
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.instance().componentWillReceiveProps({isAdvancedSearch: true});
         wrapper.update();
-
-        expect(wrapper.state().searchText).toEqual('new search value');
-    });
-
-    it('should not submit search if ENTER wasn\'t pressed', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({actions: {searchEspacePublications: testMethod}});
-
-        wrapper.instance().handleSearch({key: 'a'});
-        wrapper.update();
-
-        expect(testMethod).not.toHaveBeenCalled();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should submit search if search text is not null and ENTER is pressed', () => {
@@ -81,14 +62,27 @@ describe('SearchComponent', () => {
         const testHistoryPushMehtod = jest.fn();
         const wrapper = setup({actions: {searchEspacePublications: testMethod}, history: {push: testHistoryPushMehtod}});
 
-        wrapper.state().searchText = 'i feel lucky';
-        wrapper.instance().handleSearch({key: 'Enter'});
+        const searchQuery = {
+            page: 1,
+            pageSize: 20,
+            sortBy: 'published_date',
+            sortDirection: 'Desc',
+            searchQueryParams: {
+                all: 'i feel lucky'
+            },
+            activeFacets: {
+                filters: {},
+                ranges: {}
+            }
+        };
+
+        wrapper.instance().handleSearch(searchQuery);
         wrapper.update();
 
         expect(testMethod).toHaveBeenCalled();
         expect(testHistoryPushMehtod).toHaveBeenCalledWith({
             pathname: '/records/search',
-            search: 'searchQueryParams%5Ball%5D=i+feel+lucky&page=1&pageSize=20&sortBy=published_date&sortDirection=Desc',
+            search: 'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=i+feel+lucky',
             state: {
                 activeFacets: {filters: {}, ranges: {}},
                 page: 1,
@@ -102,47 +96,32 @@ describe('SearchComponent', () => {
         });
     });
 
-    it('should toggle advanced search', () => {
-        const wrapper = setup({showAdvancedSearch: false});
+    it('should toggle to advanced search', () => {
+        const wrapper = setup({});
+
+        expect(wrapper.state().isAdvancedSearch).toBeFalsy();
+
+        wrapper.instance().toggleSearchMode();
         wrapper.update();
-        expect(wrapper.state().showAdvancedSearch).toBe(false);
-        wrapper.instance().toggleAdvancedSearch();
-        wrapper.update();
-        expect(wrapper.state().showAdvancedSearch).toBe(true);
+
+        expect(wrapper.state().isAdvancedSearch).toBeTruthy();
     });
 
-    it('should toggle mobile search', () => {
-        const wrapper = setup({showMobile: false});
-        wrapper.instance().toggleMobile();
-        expect(wrapper.state().showMobile).toBe(true);
+    it('should toggle to simple search', () => {
+        const wrapper = setup({isAdvancedSearch: true});
+
+        expect(wrapper.state().isAdvancedSearch).toBeTruthy();
+
+        wrapper.instance().toggleSearchMode();
+        wrapper.update();
+
+        expect(wrapper.state().isAdvancedSearch).toBeFalsy();
     });
 
     it('should show a snackbar error for input being too long', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({actions: {searchEspacePublications: testMethod}, inHeader: true});
-        wrapper.setState({searchText: 'this is way too long'});
-        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
-        wrapper.update();
-        wrapper.instance().handleSearch({key: 'Enter'});
+        const wrapper = setup({});
+        wrapper.instance().displaySnackbar('Must be 5 characters or less');
         expect(wrapper.state().snackbarMessage).toEqual('Must be 5 characters or less');
         expect(wrapper.state().snackbarOpen).toBe(true);
-        expect(testMethod).not.toHaveBeenCalled();
     });
-
-    it('searchTextValidation() should return a message for being too long', () => {
-        const wrapper = setup({inHeader: false});
-        wrapper.setState({searchText: 'this is way too long'});
-        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
-        wrapper.update();
-        expect(wrapper.instance().searchTextValidation(wrapper.state.searchText)).toEqual('Must be 5 characters or less');
-    });
-
-    it('searchTextValidation() should return false for being fine', () => {
-        const wrapper = setup({inHeader: false});
-        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 20;
-        wrapper.setState({searchText: 'this is fine'});
-        wrapper.update();
-        expect(wrapper.instance().searchTextValidation(wrapper.state.searchText)).toEqual(false);
-    });
-
 });

@@ -72,7 +72,7 @@ export default class SimpleSearchComponent extends PureComponent {
         });
     };
 
-    handleSearchModeToggle = () => {
+    handleSearchMode = () => {
         if (!!this.props.onToggle) {
             this.props.onToggle();
         }
@@ -185,7 +185,7 @@ export default class SimpleSearchComponent extends PureComponent {
                             <RaisedButton
                                 label={txt.advancedSearchButtonText}
                                 aria-label={txt.advancedSearchButtonAriaLabel}
-                                onClick={this.handleSearchModeToggle}
+                                onClick={this.handleSearchMode}
                                 className="advancedButton"
                                 fullWidth
                             />

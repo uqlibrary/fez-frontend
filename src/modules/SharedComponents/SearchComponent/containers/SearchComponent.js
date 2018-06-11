@@ -5,7 +5,8 @@ import * as actions from 'actions';
 import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state) => {
-    const isAdvancedSearch = !!state.get('searchRecordsReducer').searchQuery &&
+    const isAdvancedSearch = !!state.get('searchRecordsReducer') &&
+        !!state.get('searchRecordsReducer').searchQuery &&
         !!state.get('searchRecordsReducer').searchQuery.searchMode &&
         state.get('searchRecordsReducer').searchQuery.searchMode === 'advanced';
 
