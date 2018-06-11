@@ -81,4 +81,35 @@ describe('AdvancedSearchComponent', () => {
 
         expect(testMethod).toHaveBeenCalled();
     });
+
+    it('should reset state of advanced search', () => {
+        const wrapper = setup({
+            searchQueryParams: {
+                all: 'i feel lucky',
+                rek_title: 'Testing reset'
+            }
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().resetAdvancedFields();
+        wrapper.update();
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should reset state of open access checkbox', () => {
+        const wrapper = setup({
+            searchQueryParams: {
+                all: 'i feel lucky'
+            }
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().toggleOpenAccess({preventDefault: jest.fn()});
+        wrapper.update();
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
