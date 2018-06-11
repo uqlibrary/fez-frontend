@@ -32,7 +32,7 @@ export default class AdvancedSearchRow extends PureComponent {
         this.props.onSearchRowDelete(this.props.rowIndex);
     };
 
-    searchTextValidationMessage = (value) => {
+    _searchTextValidationMessage = (value) => {
         if (value.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
             return locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH);
         }
@@ -78,7 +78,7 @@ export default class AdvancedSearchRow extends PureComponent {
                         aria-label="Aria"
                         value={this.props.value}
                         onChange={this.handleTextChange}
-                        errorText={this.searchTextValidationMessage(this.props.value)}
+                        errorText={this._searchTextValidationMessage(this.props.value)}
                         disabled={this.props.searchField === 0}
                     />
                 </div>
