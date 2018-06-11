@@ -53,7 +53,7 @@ export default class AdvancedSearchComponent extends PureComponent {
     _getFieldRowsFromSearchQuery = (searchQueryParams) => {
         if (!searchQueryParams || Object.keys(searchQueryParams).length === 0) {
             return [{
-                searchField: 0,
+                searchField: '0',
                 value: ''
             }];
         } else {
@@ -82,7 +82,7 @@ export default class AdvancedSearchComponent extends PureComponent {
     };
 
     _hasAllAdvancedSearchFieldCompleted = (fieldRows) => {
-        return fieldRows.filter(item => item.searchField === 0 || item.value === '').length === 0;
+        return fieldRows.filter(item => item.searchField === '0' || item.value === '').length === 0;
     };
 
     handleAdvancedSearch = (event) => {
@@ -136,7 +136,7 @@ export default class AdvancedSearchComponent extends PureComponent {
             fieldRows: [
                 ...this.state.fieldRows,
                 {
-                    searchField: 0,
+                    searchField: '0',
                     value: '',
                 }
             ]
@@ -156,7 +156,7 @@ export default class AdvancedSearchComponent extends PureComponent {
         this.setState({
             openAccess: false,
             fieldRows: [{
-                searchField: 0,
+                searchField: '0',
                 value: ''
             }]
         });

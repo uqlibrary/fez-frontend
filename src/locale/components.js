@@ -815,7 +815,7 @@ export default {
                     hide: 'Hide advanced search'
                 },
                 fieldTypes: {
-                    0: {
+                    '0': {
                         title: 'Select a field',
                         combiner: null,
                         hint: 'Select a field to search on'

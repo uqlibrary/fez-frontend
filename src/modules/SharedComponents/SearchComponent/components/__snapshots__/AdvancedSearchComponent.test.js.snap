@@ -239,7 +239,7 @@ exports[`AdvancedSearchComponent should add one row for advanced search 2`] = `
             disabledFields={
               Array [
                 "all",
-                0,
+                "0",
               ]
             }
             key="advanced-search-field-all"
@@ -253,14 +253,14 @@ exports[`AdvancedSearchComponent should add one row for advanced search 2`] = `
             disabledFields={
               Array [
                 "all",
-                0,
+                "0",
               ]
             }
             key="advanced-search-field-0"
             onSearchRowChange={[Function]}
             onSearchRowDelete={[Function]}
             rowIndex={1}
-            searchField={0}
+            searchField="0"
             value=""
           />
         </div>
@@ -890,14 +890,14 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
           <AdvancedSearchRow
             disabledFields={
               Array [
-                0,
+                "0",
               ]
             }
             key="advanced-search-field-0"
             onSearchRowChange={[Function]}
             onSearchRowDelete={[Function]}
             rowIndex={0}
-            searchField={0}
+            searchField="0"
             value=""
           />
         </div>
@@ -1077,14 +1077,14 @@ exports[`AdvancedSearchComponent should render default view with open access che
           <AdvancedSearchRow
             disabledFields={
               Array [
-                0,
+                "0",
               ]
             }
             key="advanced-search-field-0"
             onSearchRowChange={[Function]}
             onSearchRowDelete={[Function]}
             rowIndex={0}
-            searchField={0}
+            searchField="0"
             value=""
           />
         </div>
@@ -1572,14 +1572,14 @@ exports[`AdvancedSearchComponent should reset state of advanced search 2`] = `
           <AdvancedSearchRow
             disabledFields={
               Array [
-                0,
+                "0",
               ]
             }
             key="advanced-search-field-0"
             onSearchRowChange={[Function]}
             onSearchRowDelete={[Function]}
             rowIndex={0}
-            searchField={0}
+            searchField="0"
             value=""
           />
         </div>

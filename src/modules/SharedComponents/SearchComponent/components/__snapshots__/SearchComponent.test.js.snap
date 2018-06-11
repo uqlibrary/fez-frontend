@@ -24,7 +24,6 @@ exports[`SearchComponent should render default view 1`] = `
 exports[`SearchComponent should render default view with advanced search 1`] = `
 <React.Fragment>
   <AdvancedSearchComponent
-    isAdvancedSearchMinimised={false}
     isOpenAccessInAdvancedMode={false}
     onSearch={[Function]}
     onToggle={[Function]}
@@ -80,7 +79,7 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
 </React.Fragment>
 `;
 
-exports[`SearchComponent should toggle search to advanced search 1`] = `
+exports[`SearchComponent should toggle search to minimised view of advanced search 1`] = `
 <React.Fragment>
   <SimpleSearchComponent
     isInHeader={false}
@@ -101,10 +100,10 @@ exports[`SearchComponent should toggle search to advanced search 1`] = `
 </React.Fragment>
 `;
 
-exports[`SearchComponent should toggle search to advanced search 2`] = `
+exports[`SearchComponent should toggle search to minimised view of advanced search 2`] = `
 <React.Fragment>
   <AdvancedSearchComponent
-    isAdvancedSearchMinimised={false}
+    isAdvancedSearchMinimised={true}
     isOpenAccessInAdvancedMode={false}
     onSearch={[Function]}
     onToggle={[Function]}

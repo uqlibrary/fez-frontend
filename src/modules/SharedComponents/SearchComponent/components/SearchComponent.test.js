@@ -48,7 +48,7 @@ describe('SearchComponent', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should toggle search to advanced search', () => {
+    it('should toggle search to minimised view of advanced search', () => {
         // componentWillReceiveProps
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();

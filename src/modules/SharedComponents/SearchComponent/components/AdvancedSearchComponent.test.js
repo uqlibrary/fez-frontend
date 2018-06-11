@@ -52,7 +52,7 @@ describe('AdvancedSearchComponent', () => {
         const wrapper = setup({});
         wrapper.instance().componentWillReceiveProps({isAdvancedSearchMinimised: true});
         wrapper.update();
-        expect(wrapper.state().fieldRows[0]).toEqual({searchField: 0, value: ''});
+        expect(wrapper.state().fieldRows[0]).toEqual({searchField: '0', value: ''});
         expect(wrapper.state().minimised).toBeTruthy();
         expect(wrapper.state().fieldRows.length).toEqual(1);
     });
@@ -61,7 +61,7 @@ describe('AdvancedSearchComponent', () => {
         const wrapper = setup({});
         wrapper.instance().componentWillReceiveProps({isOpenAccessInAdvancedMode: true});
         wrapper.update();
-        expect(wrapper.state().fieldRows[0]).toEqual({searchField: 0, value: ''});
+        expect(wrapper.state().fieldRows[0]).toEqual({searchField: '0', value: ''});
         expect(wrapper.state().openAccess).toBeTruthy();
         expect(wrapper.state().fieldRows.length).toEqual(1);
     });
@@ -241,14 +241,14 @@ describe('AdvancedSearchComponent', () => {
             const wrapper = setup({});
             const fieldRows = wrapper.instance()._getFieldRowsFromSearchQuery(undefined);
 
-            expect(fieldRows).toEqual([{searchField: 0, value: ''}]);
+            expect(fieldRows).toEqual([{searchField: '0', value: ''}]);
         });
 
         it('should get default field if search query params not set (empty object)', () => {
             const wrapper = setup({});
             const fieldRows = wrapper.instance()._getFieldRowsFromSearchQuery({});
 
-            expect(fieldRows).toEqual([{searchField: 0, value: ''}]);
+            expect(fieldRows).toEqual([{searchField: '0', value: ''}]);
         });
 
         it('should get field rows from search query params', () => {

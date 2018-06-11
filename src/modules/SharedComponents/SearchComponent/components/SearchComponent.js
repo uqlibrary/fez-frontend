@@ -53,6 +53,7 @@ export default class SearchComponent extends PureComponent {
     componentWillReceiveProps(nextProps) {
         this.setState({
             isAdvancedSearch: nextProps.isAdvancedSearch,
+            isAdvancedSearchMinimised: nextProps.isAdvancedSearch
         });
     }
 
@@ -71,7 +72,8 @@ export default class SearchComponent extends PureComponent {
 
     toggleSearchMode = () => {
         this.setState({
-            isAdvancedSearch: !this.state.isAdvancedSearch
+            isAdvancedSearch: !this.state.isAdvancedSearch,
+            isAdvancedSearchMinimised: false
         });
     };
 
@@ -112,7 +114,7 @@ export default class SearchComponent extends PureComponent {
                         className={this.props.className}
                         searchQueryParams={this.props.searchQueryParams}
                         isOpenAccessInAdvancedMode={this.props.isOpenAccessInAdvancedMode}
-                        isAdvancedSearchMinimised={this.props.isAdvancedSearchMinimised}
+                        isAdvancedSearchMinimised={this.state.isAdvancedSearchMinimised}
                         onToggle={this.toggleSearchMode}
                         onSearch={this.handleSearch}
                     />
