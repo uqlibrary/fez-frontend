@@ -835,7 +835,10 @@ export default {
                 },
                 openAccess: {
                     title: 'Open access / Full text',
-                    searchQueryParameter: 'rek_openaccess'
+                    searchQueryParameter: 'rek_openaccess',
+                    captionText: (
+                        <span> and is <span className="value">open access / full text.</span></span>
+                    )
                 },
                 addField: {
                     title: 'Add another field',

@@ -17,40 +17,62 @@ export default class AdvancedSearchComponent extends PureComponent {
         className: PropTypes.string,
         isOpenAccessInAdvancedMode: PropTypes.bool,
         isAdvancedSearchMinimised: PropTypes.bool,
-        onSimpleSearchClick: PropTypes.func,
-        onSearch: PropTypes.func.isRequired
+        onSearch: PropTypes.func.isRequired,
+        onToggle: PropTypes.func
     };
 
     constructor(props) {
         super(props);
 
-        const fieldRows = Object.keys(props.searchQueryParams).map(key => ({
-            searchField: key,
-            value: props.searchQueryParams[key]
-        }));
+        const fieldRows = this._getFieldRowsFromSearchQuery(props.searchQueryParams);
 
         this.state = {
             fieldRows,
-            minimised: false,
+            minimised: props.isAdvancedSearchMinimised,
             openAccess: props.isOpenAccessInAdvancedMode || false,
         };
     }
 
     componentWillReceiveProps(nextProps) {
         if (!!nextProps.searchQueryParams) {
-            const fieldRows = Object.keys(nextProps.searchQueryParams).map(key => ({
-                searchField: key,
-                value: nextProps.searchQueryParams[key]
-            }));
+            const fieldRows = this._getFieldRowsFromSearchQuery(nextProps.searchQueryParams);
 
             this.setState({
                 ...this.state,
                 fieldRows,
-                openAccess: nextProps.isOpenAccessInAdvancedMode,
-                minimised: nextProps.isAdvancedSearchMinimised
+                minimised: nextProps.isAdvancedSearchMinimised,
+                openAccess: nextProps.isOpenAccessInAdvancedMode
             });
         }
     }
+
+    _getFieldRowsFromSearchQuery = (searchQueryParams) => (
+        Object.keys(searchQueryParams).map(key => ({
+            searchField: key,
+            value: searchQueryParams[key]
+        }))
+    );
+
+    _getAdvancedSearchCaption = ({fieldRows, openAccess}) => {
+        const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
+        const searchFields = fieldRows.map((item, index) => (
+            <span key={index}>
+                {index > 0 && <span className="and">  {item.value && 'and'}</span>}
+                <span className={`title ${index > 0 && ' lowercase'}`}> {item.value && txt[item.searchField].title}</span>
+                <span className="combiner"> {item.value && txt[item.searchField].combiner}</span>
+                <span className="value"> {item.value}</span>
+            </span>
+        ));
+
+        const openAccessText = openAccess
+            ? locale.components.searchComponent.advancedSearch.openAccess.captionText
+            : searchFields.length > 0 && '.' || null;
+        return (searchFields.length > 0 || !!openAccess) && <Fragment>{searchFields}{openAccessText}</Fragment> || null;
+    };
+
+    _hasAllAdvancedSearchFieldCompleted = (fieldRows) => {
+        return fieldRows.filter(item => item.searchField === 0 || item.value === '').length === 0;
+    };
 
     handleAdvancedSearch = (event) => {
         // Stop submission unless enter was pressed
@@ -76,10 +98,26 @@ export default class AdvancedSearchComponent extends PureComponent {
         this.props.onSearch(searchQuery);
     };
 
-    toggleAdvancedSearchMinimise = () => {
+    toggleMinimisedView = () => {
         this.setState({
             minimised: !this.state.minimised
         });
+    };
+
+    handleAdvancedFieldChange = (index, searchRow) => {
+        this.setState({
+            fieldRows: [
+                ...this.state.fieldRows.slice(0, index),
+                searchRow,
+                ...this.state.fieldRows.slice(index + 1)
+            ]
+        });
+    };
+
+    handleSearchMode = () => {
+        if (!!this.props.onToggle) {
+            this.props.onToggle();
+        }
     };
 
     addAdvancedField = () => {
@@ -95,20 +133,12 @@ export default class AdvancedSearchComponent extends PureComponent {
     };
 
     deleteAdvancedField = (index) => {
-        const newArray = [
-            ...this.state.fieldRows.slice(0, index),
-            ...this.state.fieldRows.slice(index + 1)
-        ];
-        this._updateAdvancedFields(newArray);
-    };
-
-    handleAdvancedFieldChange = (index, searchRow) => {
-        const newArray = [
-            ...this.state.fieldRows.slice(0, index),
-            searchRow,
-            ...this.state.fieldRows.slice(index + 1)
-        ];
-        this._updateAdvancedFields(newArray);
+        this.setState({
+            fieldRows: [
+                ...this.state.fieldRows.slice(0, index),
+                ...this.state.fieldRows.slice(index + 1)
+            ]
+        });
     };
 
     resetAdvancedFields = () => {
@@ -128,37 +158,12 @@ export default class AdvancedSearchComponent extends PureComponent {
         });
     };
 
-    _updateAdvancedFields = (searchRows) => {
-        this.setState({
-            fieldRows: searchRows
-        });
-    };
-
-    _getAdvancedSearchCaption = () => {
-        const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
-        const searchFields = this.state.fieldRows.map((item, index) => (
-            <span key={index}>
-                {index > 0 && <span className="and">  {item.value && 'and'}</span>}
-                <span className={`title ${index > 0 && ' lowercase'}`}> {item.value && txt[item.searchField].title}</span>
-                <span className="combiner"> {item.value && txt[item.searchField].combiner}</span>
-                <span className="value"> {item.value}</span>
-            </span>
-        ));
-        const openAccess = this.state.openAccess
-            ? <span> and is <span className="value">open access/ full text.</span></span>
-            : '.';
-        return <div>{searchFields}{openAccess}</div>;
-    };
-
-    hasAllAdvancedSearchFieldCompleted = (fieldRows) => {
-        return fieldRows.filter(item => item.searchField === 0 || item.value === '').length === 0;
-    }
-
     render() {
         const txt = locale.components.searchComponent;
-        const canAddAnotherField = this.hasAllAdvancedSearchFieldCompleted(this.state.fieldRows)
+        const canAddAnotherField = this._hasAllAdvancedSearchFieldCompleted(this.state.fieldRows)
              && this.state.fieldRows.length < Object.keys(txt.advancedSearch.fieldTypes).length - 1;
         const alreadyAddedFields = this.state.fieldRows.map(item => item.searchField);
+        const searchQueryCaption = this._getAdvancedSearchCaption(this.state);
 
         return (
             <div className={`search-component ${this.props.className}`}>
@@ -168,7 +173,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                             <h2>{txt.advancedSearch.title}</h2>
                         </div>
                         <div className="column is-narrow">
-                            <IconButton onClick={this.toggleAdvancedSearchMinimise}
+                            <IconButton onClick={this.toggleMinimisedView}
                                 tooltip={this.state.minimised
                                     ? txt.advancedSearch.tooltip.show
                                     : txt.advancedSearch.tooltip.hide}>
@@ -230,7 +235,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             label={txt.advancedSearch.simpleSearch.title}
                                             aria-label={txt.advancedSearch.simpleSearch.aria}
                                             style={{marginLeft: 6}}
-                                            onClick={this.props.onSimpleSearchClick}
+                                            onClick={this.handleSearchMode}
                                         />
                                     </div>
                                     <div className="column" />
@@ -241,15 +246,18 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             primary
                                             fullWidth
                                             onClick={this.handleAdvancedSearch}
-                                            disabled={!this.hasAllAdvancedSearchFieldCompleted(this.state.fieldRows)}
+                                            disabled={!this._hasAllAdvancedSearchFieldCompleted(this.state.fieldRows)}
                                         />
                                     </div>
                                 </div>
                             </Fragment>
                     }
-                    <div className="searchQueryCaption">
-                        {this._getAdvancedSearchCaption()}
-                    </div>
+                    {
+                        !!searchQueryCaption &&
+                        <div className="searchQueryCaption">
+                            {searchQueryCaption}
+                        </div>
+                    }
                 </div>
             </div>
         );
