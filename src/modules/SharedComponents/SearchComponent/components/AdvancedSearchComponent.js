@@ -9,65 +9,47 @@ import AdvancedSearchRow from './AdvancedSearchRow';
 import Checkbox from 'material-ui/Checkbox';
 
 import {locale} from 'locale';
-import {defaultQueryParams} from 'config/general';
 
 export default class AdvancedSearchComponent extends PureComponent {
     static propTypes = {
-        searchQueryParams: PropTypes.object,
         className: PropTypes.string,
-        isOpenAccessInAdvancedMode: PropTypes.bool,
-        isAdvancedSearchMinimised: PropTypes.bool,
+
+        fieldRows: PropTypes.array,
+        isOpenAccess: PropTypes.bool,
+        isMinimised: PropTypes.bool,
+
+        // Event handlers
+        onToggleSearchMode: PropTypes.func,
+        onToggleMinimise: PropTypes.func,
+        onToggleOpenAccess: PropTypes.func,
+        onAdvancedSearchRowAdd: PropTypes.func,
+        onAdvancedSearchRowRemove: PropTypes.func,
+        onAdvancedSearchReset: PropTypes.func,
+
+        onAdvancedSearchRowChange: PropTypes.func.isRequired,
         onSearch: PropTypes.func.isRequired,
-        onToggle: PropTypes.func
     };
 
-    constructor(props) {
-        super(props);
+    static defaultProps = {
+        fieldRows: [{
+            searchField: '0',
+            value: ''
+        }],
+        isMinimised: false,
+        isOpenAccess: false,
 
-        const fieldRows = this._getFieldRowsFromSearchQuery(props.searchQueryParams);
-
-        this.state = {
-            fieldRows,
-            minimised: props.isAdvancedSearchMinimised,
-            openAccess: props.isOpenAccessInAdvancedMode || false,
-        };
-    }
-
-    componentWillReceiveProps(nextProps) {
-        if (
-            !!nextProps.searchQueryParams ||
-            nextProps.isAdvancedSearchMinimised !== this.state.minimised ||
-            nextProps.isOpenAccessInAdvancedMode !== this.state.openAccess
-        ) {
-            const fieldRows = this._getFieldRowsFromSearchQuery(nextProps.searchQueryParams);
-
-            this.setState({
-                ...this.state,
-                fieldRows,
-                minimised: nextProps.isAdvancedSearchMinimised || false,
-                openAccess: nextProps.isOpenAccessInAdvancedMode || false
-            });
-        }
-    }
-
-    _getFieldRowsFromSearchQuery = (searchQueryParams) => {
-        if (!searchQueryParams || Object.keys(searchQueryParams).length === 0) {
-            return [{
-                searchField: '0',
-                value: ''
-            }];
-        } else {
-            return Object.keys(searchQueryParams).map(key => ({
-                searchField: key,
-                value: searchQueryParams[key]
-            }));
-        }
+        onToggleSearchMode: () => {},
+        onToggleMinimise: () => {},
+        onToggleOpenAccess: () => {},
+        onAdvancedSearchRowAdd: () => {},
+        onAdvancedSearchRowRemove: () => {},
+        onAdvancedSearchReset: () => {}
     };
 
-    _getAdvancedSearchCaption = ({fieldRows, openAccess}) => {
+    _getAdvancedSearchCaption = ({fieldRows, isOpenAccess}) => {
         const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
         const searchFields = fieldRows.map((item, index) => (
-            <span key={index}>
+            <span key={item.searchField}>
                 {index > 0 && <span className="and">  {item.value && 'and'}</span>}
                 <span className={`title ${index > 0 && ' lowercase'}`}> {item.value && txt[item.searchField].title}</span>
                 <span className="combiner"> {item.value && txt[item.searchField].combiner}</span>
@@ -75,10 +57,10 @@ export default class AdvancedSearchComponent extends PureComponent {
             </span>
         ));
 
-        const openAccessText = openAccess
+        const openAccessText = isOpenAccess
             ? locale.components.searchComponent.advancedSearch.openAccess.captionText
             : searchFields.length > 0 && '.' || null;
-        return (searchFields.length > 0 || !!openAccess) && <Fragment>{searchFields}{openAccessText}</Fragment> || null;
+        return (searchFields.length > 0 || !!isOpenAccess) && <Fragment>{searchFields}{openAccessText}</Fragment> || null;
     };
 
     _hasAllAdvancedSearchFieldCompleted = (fieldRows) => {
@@ -89,92 +71,57 @@ export default class AdvancedSearchComponent extends PureComponent {
         // Stop submission unless enter was pressed
         if (event && event.key && (event.key !== 'Enter')) return;
 
-        const searchQueryParams = this.state.fieldRows
-            .reduce((searchQueries, item) => (
-                {...searchQueries, [item.searchField]: item.value}
-            ), {});
-
-        const {activeFacets} = defaultQueryParams;
-
-        const searchQuery = {
-            ...defaultQueryParams,
-            searchQueryParams,
-            searchMode: locale.components.searchComponent.advancedSearch.mode,
-            activeFacets: {
-                ...activeFacets,
-                ...(this.state.openAccess ? {showOpenAccessOnly: true} : {})
-            }
-        };
-
-        this.props.onSearch(searchQuery);
+        this.props.onSearch();
     };
 
-    toggleMinimisedView = () => {
-        this.setState({
-            minimised: !this.state.minimised
-        });
-    };
-
-    handleAdvancedFieldChange = (index, searchRow) => {
-        this.setState({
-            fieldRows: [
-                ...this.state.fieldRows.slice(0, index),
-                searchRow,
-                ...this.state.fieldRows.slice(index + 1)
-            ]
-        });
-    };
-
-    handleSearchMode = () => {
-        if (!!this.props.onToggle) {
-            this.props.onToggle();
+    toggleSearchMode = () => {
+        if (!!this.props.onToggleSearchMode) {
+            this.props.onToggleSearchMode();
         }
     };
 
-    addAdvancedField = () => {
-        this.setState({
-            fieldRows: [
-                ...this.state.fieldRows,
-                {
-                    searchField: '0',
-                    value: '',
-                }
-            ]
-        });
-    };
-
-    deleteAdvancedField = (index) => {
-        this.setState({
-            fieldRows: [
-                ...this.state.fieldRows.slice(0, index),
-                ...this.state.fieldRows.slice(index + 1)
-            ]
-        });
-    };
-
-    resetAdvancedFields = () => {
-        this.setState({
-            openAccess: false,
-            fieldRows: [{
-                searchField: '0',
-                value: ''
-            }]
-        });
+    toggleMinimise = () => {
+        if (!!this.props.onToggleMinimise) {
+            this.props.onToggleMinimise();
+        }
     };
 
     toggleOpenAccess = (event) => {
         event.preventDefault();
-        this.setState({
-            openAccess: !this.state.openAccess
-        });
+        if (!!this.props.onToggleOpenAccess) {
+            this.props.onToggleOpenAccess();
+        }
+    };
+
+    handleAdvancedSearchRowChange = (index, searchRow) => {
+        this.props.onAdvancedSearchRowChange(index, searchRow);
+    };
+
+
+    addAdvancedSearchRow = () => {
+        if (!!this.props.onAdvancedSearchRowAdd) {
+            this.props.onAdvancedSearchRowAdd();
+        }
+    };
+
+    removeAdvancedSearchRow = (index) => {
+        if (!!this.props.onAdvancedSearchRowRemove) {
+            this.props.onAdvancedSearchRowRemove(index);
+        }
+    };
+
+    resetAdvancedSearch = () => {
+        if (!!this.props.onAdvancedSearchReset) {
+            this.props.onAdvancedSearchReset();
+        }
     };
 
     render() {
         const txt = locale.components.searchComponent;
-        const canAddAnotherField = this._hasAllAdvancedSearchFieldCompleted(this.state.fieldRows)
-             && this.state.fieldRows.length < Object.keys(txt.advancedSearch.fieldTypes).length - 1;
-        const alreadyAddedFields = this.state.fieldRows.map(item => item.searchField);
-        const searchQueryCaption = this._getAdvancedSearchCaption(this.state);
+        const canAddAnotherField = this._hasAllAdvancedSearchFieldCompleted(this.props.fieldRows)
+             && this.props.fieldRows.length < Object.keys(txt.advancedSearch.fieldTypes).length - 1;
+        const alreadyAddedFields = this.props.fieldRows.map(item => item.searchField);
+        const searchQueryCaption = this._getAdvancedSearchCaption(this.props);
 
         return (
             <div className={`search-component ${this.props.className}`}>
@@ -184,12 +131,12 @@ export default class AdvancedSearchComponent extends PureComponent {
                             <h2>{txt.advancedSearch.title}</h2>
                         </div>
                         <div className="column is-narrow">
-                            <IconButton onClick={this.toggleMinimisedView}
-                                tooltip={this.state.minimised
+                            <IconButton onClick={this.toggleMinimise}
+                                tooltip={this.props.isMinimised
                                     ? txt.advancedSearch.tooltip.show
                                     : txt.advancedSearch.tooltip.hide}>
                                 {
-                                    !this.state.minimised
+                                    !this.props.isMinimised
                                         ? <KeyboardArrowUp/>
                                         : <KeyboardArrowDown/>
                                 }
@@ -197,18 +144,18 @@ export default class AdvancedSearchComponent extends PureComponent {
                         </div>
                     </div>
                     {
-                        !this.state.minimised &&
+                        !this.props.isMinimised &&
                             <Fragment>
                                 <div className="columns">
                                     <div className="column fields">
                                         {
-                                            this.state.fieldRows.map((item, index) => (
+                                            this.props.fieldRows.map((item, index) => (
                                                 <AdvancedSearchRow
                                                     key={`advanced-search-field-${item.searchField}`}
                                                     rowIndex={index}
                                                     disabledFields={alreadyAddedFields}
-                                                    onSearchRowChange={this.handleAdvancedFieldChange}
-                                                    onSearchRowDelete={this.deleteAdvancedField}
+                                                    onSearchRowChange={this.handleAdvancedSearchRowChange}
+                                                    onSearchRowDelete={this.removeAdvancedSearchRow}
                                                     {...item}
                                                 />
                                             ))
@@ -217,7 +164,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                     <div className="column is-3">
                                         <Checkbox
                                             label={txt.advancedSearch.openAccess.title}
-                                            checked={this.state.openAccess}
+                                            checked={this.props.isOpenAccess}
                                             onCheck={this.toggleOpenAccess}
                                             style={{marginTop: 12, paddingBottom: 2, borderBottom: '1px solid rgba(0, 0, 0, 0.12)'}}
                                         />
@@ -230,7 +177,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             aria-label={txt.advancedSearch.addField.aria}
                                             secondary
                                             disabled={!canAddAnotherField}
-                                            onClick={this.addAdvancedField}
+                                            onClick={this.addAdvancedSearchRow}
                                         />
                                     </div>
                                     <div className="column is-narrow">
@@ -238,7 +185,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             label={txt.advancedSearch.reset.title}
                                             aria-label={txt.advancedSearch.reset.aria}
                                             style={{marginLeft: 6}}
-                                            onClick={this.resetAdvancedFields}
+                                            onClick={this.resetAdvancedSearch}
                                         />
                                     </div>
                                     <div className="column is-narrow">
@@ -246,7 +193,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             label={txt.advancedSearch.simpleSearch.title}
                                             aria-label={txt.advancedSearch.simpleSearch.aria}
                                             style={{marginLeft: 6}}
-                                            onClick={this.handleSearchMode}
+                                            onClick={this.toggleSearchMode}
                                         />
                                     </div>
                                     <div className="column" />
@@ -257,7 +204,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             primary
                                             fullWidth
                                             onClick={this.handleAdvancedSearch}
-                                            disabled={!this._hasAllAdvancedSearchFieldCompleted(this.state.fieldRows)}
+                                            disabled={!this._hasAllAdvancedSearchFieldCompleted(this.props.fieldRows)}
                                         />
                                     </div>
                                 </div>
