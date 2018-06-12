@@ -3,7 +3,7 @@ import * as constants from 'config/general';
 
 function setup(testProps, isShallow = true){
     const props = {
-        searchQueryParams: {},
+        searchText: '',
         className: 'simple-search',
 
         showSearchButton: false,
@@ -16,6 +16,7 @@ function setup(testProps, isShallow = true){
         onSearch: jest.fn(),
         onInvalidSearch: jest.fn(),
         onToggle: jest.fn(),
+        onSearchTextChange: jest.fn(),
 
         ...testProps
     };
@@ -45,33 +46,24 @@ describe('SimpleSearchComponent', () => {
     });
 
     it('should set search value from prop', () => {
-        const wrapper = setup({showAdvancedSearchButton: true, searchQueryParams: {all: 'i feel lucky'}});
+        const wrapper = setup({showAdvancedSearchButton: true, searchText: 'i feel lucky'});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should set state when receiving new props', () => {
-        // componentWillReceiveProps
-        const wrapper = setup({showAdvancedSearchButton: true});
-        wrapper.instance().componentWillReceiveProps({searchQueryParams: {all: 'i feel lucky'}});
-        wrapper.update();
-        expect(wrapper.state().searchText).toEqual('i feel lucky');
-    });
+    it('should update search text field', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({onSearchTextChange: testFn});
 
-    it('should update internal text field state', () => {
-        const wrapper = setup({});
-        expect(wrapper.state().searchText).toEqual('');
+        wrapper.instance().handleSearchTextChange({}, 'new search value');
 
-        wrapper.instance().handleSearchTextChange(null, 'new search value');
-        wrapper.update();
-
-        expect(wrapper.state().searchText).toEqual('new search value');
+        expect(testFn).toHaveBeenCalledWith('new search value');
     });
 
     it('should not submit search if ENTER wasn\'t pressed', () => {
         const testMethod = jest.fn();
         const wrapper = setup({onSearch: testMethod});
 
-        wrapper.instance().handleSimpleSearch({key: 'a'});
+        wrapper.instance().handleSearch({key: 'a'});
         wrapper.update();
 
         expect(testMethod).not.toHaveBeenCalled();
@@ -79,10 +71,9 @@ describe('SimpleSearchComponent', () => {
 
     it('should submit search if search text is not null and ENTER is pressed', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({onSearch: testMethod});
+        const wrapper = setup({searchText: 'i feel lucky', onSearch: testMethod});
 
-        wrapper.state().searchText = 'i feel lucky';
-        wrapper.instance().handleSimpleSearch({key: 'Enter'});
+        wrapper.instance().handleSearch({key: 'Enter'});
         wrapper.update();
 
         expect(testMethod).toHaveBeenCalled();
@@ -90,7 +81,7 @@ describe('SimpleSearchComponent', () => {
 
     it('should toggle search mode', () => {
         const testToggleFn = jest.fn();
-        const wrapper = setup({showAdvancedSearchButton: true, onToggle: testToggleFn});
+        const wrapper = setup({showAdvancedSearchButton: true, onToggleSearchMode: testToggleFn});
         wrapper.instance().handleSearchMode();
         expect(testToggleFn).toHaveBeenCalled();
     });
@@ -103,14 +94,11 @@ describe('SimpleSearchComponent', () => {
 
     it('should handle search and notify with error message for max length for search text', () => {
         const testOnInvalidSearchFn = jest.fn();
-        const wrapper = setup({onInvalidSearch: testOnInvalidSearchFn});
+        const wrapper = setup({searchText: 'this is way too long', onInvalidSearch: testOnInvalidSearchFn});
 
         constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
 
-        wrapper.setState({searchText: 'this is way too long'});
-        wrapper.update();
-
-        wrapper.instance().handleSimpleSearch();
+        wrapper.instance().handleSearch();
         expect(testOnInvalidSearchFn).toHaveBeenCalledWith('Must be 5 characters or less');
     });
 

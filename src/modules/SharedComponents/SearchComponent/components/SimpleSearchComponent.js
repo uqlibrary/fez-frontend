@@ -9,41 +9,43 @@ import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
 import {locale} from 'locale';
 
-import {defaultQueryParams} from 'config/general';
-
 export default class SimpleSearchComponent extends PureComponent {
     static propTypes = {
-        searchQueryParams: PropTypes.object,
-        isInHeader: PropTypes.bool,
+        className: PropTypes.string,
 
+        searchText: PropTypes.object,
+
+        isInHeader: PropTypes.bool,
         showSearchButton: PropTypes.bool,
         showMobileSearchButton: PropTypes.bool,
         showAdvancedSearchButton: PropTypes.bool,
         showPrefixIcon: PropTypes.bool,
 
-        className: PropTypes.string,
-
         onSearch: PropTypes.func,
-        onToggle: PropTypes.func,
+        onSearchTextChange: PropTypes.func.isRequired,
+        onToggleSearchMode: PropTypes.func,
         onInvalidSearch: PropTypes.func
+    };
+
+    static defaultProps = {
+        searchText: '',
+
+        isInHeader: false,
+        showSearchButton: false,
+        showMobileSearchButton: false,
+        showAdvancedSearchButton: false,
+        showPrefixIcon: false,
+
+        onSearch: () => {},
+        onToggleSearchMode: () => {},
+        onInvalidSearch: () => {}
     };
 
     constructor(props) {
         super(props);
         this.state = {
-            searchText: this.props.searchQueryParams && this.props.searchQueryParams.all || '',
-            showMobile: false,
+            showMobile: false
         };
-    }
-
-    componentWillReceiveProps(nextProps) {
-        if (!!nextProps.searchQueryParams && !!nextProps.searchQueryParams.all
-            && nextProps.searchQueryParams.all !== this.state.searchText) {
-            this.setState({
-                ...this.state,
-                searchText: nextProps.searchQueryParams.all || ''
-            });
-        }
     }
 
     _searchTextValidationMessage = (value) => {
@@ -66,22 +68,19 @@ export default class SimpleSearchComponent extends PureComponent {
     };
 
     handleSearchTextChange = (event, value) => {
-        this.setState({
-            ...this.state,
-            searchText: value
-        });
+        this.props.onSearchTextChange(value);
     };
 
     handleSearchMode = () => {
-        if (!!this.props.onToggle) {
-            this.props.onToggle();
+        if (!!this.props.onToggleSearchMode) {
+            this.props.onToggleSearchMode();
         }
     };
 
-    handleSimpleSearch = (event) => {
+    handleSearch = (event) => {
         if (event && event.key && (event.key !== 'Enter')) return;
 
-        if (this.state.searchText.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
+        if (this.props.searchText.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
             this.props.onInvalidSearch(locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH));
             return;
         }
@@ -92,10 +91,8 @@ export default class SimpleSearchComponent extends PureComponent {
             showMobile: false
         });
 
-        const searchQuery = {searchQueryParams: {all: this.state.searchText}, ...defaultQueryParams};
-
         // Perform search
-        this.props.onSearch(searchQuery);
+        this.props.onSearch();
 
         // Blur the input so the mobile keyboard is deactivated
         event && event.target && event.target.blur();
@@ -134,10 +131,10 @@ export default class SimpleSearchComponent extends PureComponent {
                                     hintText={this.props.isInHeader && txt.searchBoxPlaceholder}
                                     aria-label={txt.ariaInputLabel}
                                     onChange={this.handleSearchTextChange}
-                                    onKeyPress={this.handleSimpleSearch}
-                                    value={this.state.searchText}
+                                    onKeyPress={this.handleSearch}
+                                    value={this.props.searchText}
                                     underlineStyle={this.props.isInHeader ? {display: 'none'} : {}}
-                                    errorText={this._searchTextValidationMessage(this.state.searchText)}
+                                    errorText={this._searchTextValidationMessage(this.props.searchText)}
                                 />
                             </div>
                             <div className="is-hidden-tablet mobileSpacer" />
@@ -161,8 +158,8 @@ export default class SimpleSearchComponent extends PureComponent {
                         <div className="column is-narrow icon-search-button-wrapper">
                             <IconButton
                                 tooltipPosition="bottom-left"
-                                onClick={this.handleSimpleSearch}
-                                disabled={!!this._searchTextValidationMessage(this.state.searchText)}
+                                onClick={this.handleSearch}
+                                disabled={!!this._searchTextValidationMessage(this.props.searchText)}
                                 className="search-button"
                                 tooltip={txt.searchButtonHint}
                                 aria-label={txt.searchButtonAriaLabel}>
@@ -175,8 +172,8 @@ export default class SimpleSearchComponent extends PureComponent {
                             label={txt.searchButtonText}
                             aria-label={txt.searchButtonAriaLabel}
                             primary
-                            disabled={!!this._searchTextValidationMessage(this.state.searchText)}
-                            onClick={this.handleSimpleSearch}
+                            disabled={!!this._searchTextValidationMessage(this.props.searchText)}
+                            onClick={this.handleSearch}
                             fullWidth />
                     </div>
                     {
