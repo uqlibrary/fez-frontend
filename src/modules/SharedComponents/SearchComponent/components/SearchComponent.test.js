@@ -1,5 +1,4 @@
 import SearchComponent from './SearchComponent';
-import * as constants from 'config/general';
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -52,12 +51,35 @@ describe('SearchComponent', () => {
         // componentWillReceiveProps
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.instance().componentWillReceiveProps({isAdvancedSearch: true, isAdvancedSearchMinimised: true});
+        wrapper.instance().componentWillReceiveProps({
+            searchQueryParams: {
+                all: 'i feel very lucky',
+            },
+            isAdvancedSearch: true,
+            isAdvancedSearchMinimised: true,
+            isOpenAccessInAdvancedMode: false
+        });
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should submit search if search text is not null and ENTER is pressed', () => {
+    it('should display simple search with query string', () => {
+        // componentWillReceiveProps
+        const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.instance().componentWillReceiveProps({
+            searchQueryParams: {
+                all: 'i feel very lucky',
+            },
+            isAdvancedSearch: false,
+            isAdvancedSearchMinimised: false,
+            isOpenAccessInAdvancedMode: false
+        });
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should submit search for given search query params', () => {
         const testMethod = jest.fn();
         const testHistoryPushMehtod = jest.fn();
         const wrapper = setup({actions: {searchEspacePublications: testMethod}, history: {push: testHistoryPushMehtod}});
@@ -96,26 +118,76 @@ describe('SearchComponent', () => {
         });
     });
 
-    it('should toggle to advanced search', () => {
-        const wrapper = setup({});
+    it('should handle advanced search', () => {
+        const testMethod = jest.fn();
+        const testHistoryPushMehtod = jest.fn();
+        const wrapper = setup({actions: {searchEspacePublications: testMethod}, history: {push: testHistoryPushMehtod}});
 
-        expect(wrapper.state().isAdvancedSearch).toBeFalsy();
+        wrapper.state().advancedSearch = {
+            fieldRows: [
+                {
+                    searchField: 'all',
+                    value: 'i feel lucky',
+                },
+                {
+                    searchField: 'rek_title',
+                    value: 'global warming'
+                }
+            ],
+            isOpenAccess: false
+        };
 
-        wrapper.instance().toggleSearchMode();
         wrapper.update();
 
-        expect(wrapper.state().isAdvancedSearch).toBeTruthy();
-    });
+        wrapper.instance().handleAdvancedSearch();
 
-    it('should toggle to simple search', () => {
-        const wrapper = setup({isAdvancedSearch: true});
+        expect(testMethod).toHaveBeenCalled();
+        expect(testHistoryPushMehtod).toHaveBeenCalledWith({
+            pathname: '/records/search',
+            search: 'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=i+feel+lucky&searchQueryParams%5Brek_title%5D=global+warming&searchMode=advanced',
+            state: {
+                activeFacets: {filters: {}, ranges: {}},
+                page: 1,
+                pageSize: 20,
+                searchMode: 'advanced',
+                searchQueryParams: {
+                    all: 'i feel lucky',
+                    rek_title: 'global warming'
+                },
+                sortBy: 'published_date',
+                sortDirection: 'Desc'
+            }
+        });
+    })
 
-        expect(wrapper.state().isAdvancedSearch).toBeTruthy();
+    it('should handle simple search', () => {
+        const testMethod = jest.fn();
+        const testHistoryPushMehtod = jest.fn();
+        const wrapper = setup({actions: {searchEspacePublications: testMethod}, history: {push: testHistoryPushMehtod}});
 
-        wrapper.instance().toggleSearchMode();
+        wrapper.state().simpleSearch = {
+            searchText: 'i feel lucky'
+        };
+
         wrapper.update();
 
-        expect(wrapper.state().isAdvancedSearch).toBeFalsy();
+        wrapper.instance().handleSimpleSearch();
+
+        expect(testMethod).toHaveBeenCalled();
+        expect(testHistoryPushMehtod).toHaveBeenCalledWith({
+            pathname: '/records/search',
+            search: 'searchQueryParams%5Ball%5D=i+feel+lucky&page=1&pageSize=20&sortBy=published_date&sortDirection=Desc',
+            state: {
+                activeFacets: {filters: {}, ranges: {}},
+                page: 1,
+                pageSize: 20,
+                searchQueryParams: {
+                    all: 'i feel lucky'
+                },
+                sortBy: 'published_date',
+                sortDirection: 'Desc'
+            }
+        });
     });
 
     it('should show a snackbar error for input being too long', () => {
@@ -123,5 +195,295 @@ describe('SearchComponent', () => {
         wrapper.instance().displaySnackbar('Must be 5 characters or less');
         expect(wrapper.state().snackbarMessage).toEqual('Must be 5 characters or less');
         expect(wrapper.state().snackbarOpen).toBe(true);
+    });
+
+    it('should toggle advanced search to minimised view', () => {
+        const wrapper = setup({isAdvancedSearch: true});
+
+        expect(wrapper.state().advancedSearch).toEqual({
+            fieldRows: [{
+                searchField: '0',
+                value: ''
+            }],
+            isOpenAccess: false,
+            isMinimised: false
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().toggleMinimise();
+        wrapper.update();
+
+        expect(wrapper.state().advancedSearch).toEqual({
+            fieldRows: [{
+                searchField: '0',
+                value: ''
+            }],
+            isOpenAccess: false,
+            isMinimised: true
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should toggle to advanced search', () => {
+        const wrapper = setup({isAdvancedSearch: false});
+
+        wrapper.instance().toggleSearchMode();
+        wrapper.update();
+
+        expect(wrapper.state().isAdvancedSearch).toBeTruthy();
+        expect(wrapper.state().advancedSearch.isMinimised).toBeFalsy();
+    });
+
+    it('should toggle open access for advanced search', () => {
+        const wrapper = setup({isAdvancedSearch: true});
+
+        expect(wrapper.state().advancedSearch).toEqual({
+            fieldRows: [{
+                searchField: '0',
+                value: ''
+            }],
+            isOpenAccess: false,
+            isMinimised: false
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().toggleOpenAccess();
+        wrapper.update();
+
+        expect(wrapper.state().advancedSearch).toEqual({
+            fieldRows: [{
+                searchField: '0',
+                value: ''
+            }],
+            isOpenAccess: true,
+            isMinimised: false
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+    });
+
+    it('should toggle to simple search', () => {
+        const wrapper = setup({isAdvancedSearch: true});
+
+        wrapper.instance().toggleSearchMode();
+        wrapper.update();
+
+        expect(wrapper.state().isAdvancedSearch).toBeFalsy();
+    });
+
+    it('should handle simple search text change', () => {
+        const wrapper = setup({});
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().handleSimpleSearchTextChange('i feel lucky');
+        wrapper.update();
+
+        expect(wrapper.state().simpleSearch.searchText).toEqual('i feel lucky');
+    });
+
+    it('should add one row for advanced search', () => {
+        const wrapper = setup({
+            searchQueryParams: {
+                all: 'i feel lucky'
+            },
+            isAdvancedSearch: true
+        });
+
+        expect(wrapper.state().advancedSearch).toEqual({
+            fieldRows: [
+                {
+                    searchField: 'all',
+                    value: 'i feel lucky'
+                }
+            ],
+            isOpenAccess: false,
+            isMinimised: false
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().addAdvancedSearchRow();
+        wrapper.update();
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        expect(wrapper.state().advancedSearch).toEqual({
+            fieldRows: [
+                {
+                    searchField: 'all',
+                    value: 'i feel lucky'
+                },
+                {
+                    searchField: '0',
+                    value: ''
+                }
+            ],
+            isOpenAccess: false,
+            isMinimised: false
+        });
+    });
+
+    it('should remove one row from advanced search', () => {
+        const wrapper = setup({
+            searchQueryParams: {
+                all: 'i feel lucky',
+                rek_title: 'remove rek title field'
+            },
+            isAdvancedSearch: true
+        });
+
+        expect(wrapper.state().advancedSearch).toEqual({
+            fieldRows: [
+                {
+                    searchField: 'all',
+                    value: 'i feel lucky'
+                },
+                {
+                    searchField: 'rek_title',
+                    value: 'remove rek title field'
+                }
+            ],
+            isOpenAccess: false,
+            isMinimised: false
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().removeAdvancedSearchRow(1);
+        wrapper.update();
+
+        expect(wrapper.state().advancedSearch).toEqual({
+            fieldRows: [
+                {
+                    searchField: 'all',
+                    value: 'i feel lucky'
+                }
+            ],
+            isOpenAccess: false,
+            isMinimised: false
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should update advanced search row on search text changed', () => {
+        const wrapper = setup({
+            searchQueryParams: {
+                all: 'i feel lucky'
+            },
+            isAdvancedSearch: true
+        });
+
+        expect(wrapper.state().advancedSearch).toEqual({
+            fieldRows: [
+                {
+                    searchField: 'all',
+                    value: 'i feel lucky'
+                }
+            ],
+            isOpenAccess: false,
+            isMinimised: false
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().handleAdvancedSearchRowChange(0, {searchField: 'all', value: 'i feel more lucky'});
+        wrapper.update();
+
+        expect(wrapper.state().advancedSearch).toEqual({
+            fieldRows: [
+                {
+                    searchField: 'all',
+                    value: 'i feel more lucky'
+                }
+            ],
+            isOpenAccess: false,
+            isMinimised: false
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should reset advanced search', () => {
+        const wrapper = setup({
+            searchQueryParams: {
+                all: 'i feel lucky',
+                rek_title: 'global warming'
+            },
+            isAdvancedSearch: true,
+            isOpenAccessInAdvancedMode: true
+        });
+
+        expect(wrapper.state().advancedSearch).toEqual({
+            fieldRows: [
+                {
+                    searchField: 'all',
+                    value: 'i feel lucky'
+                },
+                {
+                    searchField: 'rek_title',
+                    value: 'global warming'
+                }
+            ],
+            isOpenAccess: true,
+            isMinimised: false
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().resetAdvancedSearch();
+        wrapper.update();
+
+        expect(wrapper.state().advancedSearch).toEqual({
+            fieldRows: [
+                {
+                    searchField: '0',
+                    value: ''
+                }
+            ],
+            isOpenAccess: false
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    describe('_getFieldRowsFromSearchQuery', () => {
+        it('should get default field if search query params not set (undefined)', () => {
+            const wrapper = setup({});
+            const fieldRows = wrapper.instance()._getFieldRowsFromSearchQuery(undefined);
+
+            expect(fieldRows).toEqual([{searchField: '0', value: ''}]);
+        });
+
+        it('should get default field if search query params not set (empty object)', () => {
+            const wrapper = setup({});
+            const fieldRows = wrapper.instance()._getFieldRowsFromSearchQuery({});
+
+            expect(fieldRows).toEqual([{searchField: '0', value: ''}]);
+        });
+
+        it('should get field rows from search query params', () => {
+            const wrapper = setup({});
+            const fieldRows = wrapper.instance()._getFieldRowsFromSearchQuery({
+                all: 'test',
+                rek_title: 'some title'
+            });
+
+            expect(fieldRows).toEqual([
+                {
+                    searchField: 'all',
+                    value: 'test'
+                },
+                {
+                    searchField: 'rek_title',
+                    value: 'some title'
+                }
+            ]);
+        });
     });
 });

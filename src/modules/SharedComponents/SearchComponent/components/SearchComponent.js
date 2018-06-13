@@ -4,6 +4,8 @@ import param from 'can-param';
 
 import Snackbar from 'material-ui/Snackbar';
 import {routes} from 'config';
+import {defaultQueryParams} from 'config/general';
+import {locale} from 'locale';
 
 import SimpleSearchComponent from './SimpleSearchComponent';
 import AdvancedSearchComponent from './AdvancedSearchComponent';
@@ -47,16 +49,46 @@ export default class SearchComponent extends PureComponent {
             snackbarOpen: false,
             snackbarMessage: '',
             isAdvancedSearch: props.isAdvancedSearch,
-            isAdvancedSearchMinimised: props.isAdvancedSearchMinimised
+            simpleSearch: {
+                searchText: props.searchQueryParams && props.searchQueryParams.all || ''
+            },
+            advancedSearch: {
+                fieldRows: this._getFieldRowsFromSearchQuery(props.searchQueryParams),
+                isMinimised: props.isAdvancedSearchMinimised,
+                isOpenAccess: props.isOpenAccessInAdvancedMode || false,
+            }
         };
     }
 
     componentWillReceiveProps(nextProps) {
-        this.setState({
-            isAdvancedSearch: nextProps.isAdvancedSearch,
-            isAdvancedSearchMinimised: nextProps.isAdvancedSearchMinimised
-        });
+        if (!!nextProps.searchQueryParams) {
+            this.setState({
+                isAdvancedSearch: nextProps.isAdvancedSearch,
+                simpleSearch: {
+                    searchText: nextProps.searchQueryParams.all || ''
+                },
+                advancedSearch: {
+                    fieldRows: this._getFieldRowsFromSearchQuery(nextProps.searchQueryParams),
+                    isMinimised: nextProps.isAdvancedSearchMinimised || false,
+                    isOpenAccess: nextProps.isOpenAccessInAdvancedMode || false
+                }
+            });
+        }
     }
+
+    _getFieldRowsFromSearchQuery = (searchQueryParams) => {
+        if (!searchQueryParams || Object.keys(searchQueryParams).length === 0) {
+            return [{
+                searchField: '0',
+                value: ''
+            }];
+        } else {
+            return Object.keys(searchQueryParams).map(key => ({
+                searchField: key,
+                value: searchQueryParams[key]
+            }));
+        }
+    };
 
     handleSearch = (searchQuery) => {
         if (searchQuery && this.props.actions && this.props.actions.searchEspacePublications) {
@@ -74,7 +106,10 @@ export default class SearchComponent extends PureComponent {
     toggleSearchMode = () => {
         this.setState({
             isAdvancedSearch: !this.state.isAdvancedSearch,
-            isAdvancedSearchMinimised: false
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                isMinimised: false
+            }
         });
     };
 
@@ -85,10 +120,120 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
-    hideSnackbar = () => {
+    /*
+     *  ==============================
+     *  Simple search handlers
+     *  ==============================
+     */
+    handleSimpleSearchTextChange = (value) => {
         this.setState({
-            snackbarOpen: false
+            simpleSearch: {
+                searchText: value
+            }
         });
+    };
+
+    handleSimpleSearch = () => {
+        const searchQuery = {searchQueryParams: {all: this.state.simpleSearch.searchText}, ...defaultQueryParams};
+
+        // Perform search
+        this.handleSearch(searchQuery);
+    };
+
+    /*
+     *  ==============================
+     *  Advanced search handlers
+     *  ==============================
+     */
+    toggleMinimise = () => {
+        this.setState({
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                isMinimised: !this.state.advancedSearch.isMinimised
+            }
+        });
+    };
+
+    toggleOpenAccess = () => {
+        this.setState({
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                isOpenAccess: !this.state.advancedSearch.isOpenAccess
+            }
+        });
+    };
+
+    addAdvancedSearchRow = () => {
+        this.setState({
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                fieldRows: [
+                    ...this.state.advancedSearch.fieldRows,
+                    {
+                        searchField: '0',
+                        value: '',
+                    }
+                ]
+            }
+        });
+    };
+
+    removeAdvancedSearchRow = (index) => {
+        this.setState({
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                fieldRows: [
+                    ...this.state.advancedSearch.fieldRows.slice(0, index),
+                    ...this.state.advancedSearch.fieldRows.slice(index + 1)
+                ]
+            }
+        });
+    };
+
+    resetAdvancedSearch = () => {
+        this.setState({
+            advancedSearch: {
+                isOpenAccess: false,
+                fieldRows: [{
+                    searchField: '0',
+                    value: ''
+                }]
+            }
+        });
+    };
+
+    handleAdvancedSearchRowChange = (index, searchRow) => {
+        this.setState({
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                fieldRows: [
+                    ...this.state.advancedSearch.fieldRows.slice(0, index),
+                    searchRow,
+                    ...this.state.advancedSearch.fieldRows.slice(index + 1)
+                ]
+            }
+        });
+    };
+
+    handleAdvancedSearch = () => {
+        const searchQueryParams = this.state.advancedSearch.fieldRows
+            .reduce((searchQueries, item) => (
+                {...searchQueries, [item.searchField]: item.value}
+            ), {});
+
+        const {activeFacets} = defaultQueryParams;
+
+        const searchQuery = {
+            ...defaultQueryParams,
+            searchQueryParams,
+            searchMode: locale.components.searchComponent.advancedSearch.mode,
+            activeFacets: {
+                ...activeFacets,
+                ...(this.state.advancedSearch.isOpenAccess ? {showOpenAccessOnly: true} : {})
+            }
+        };
+
+        this.handleSearch(searchQuery);
     };
 
     render() {
@@ -97,27 +242,32 @@ export default class SearchComponent extends PureComponent {
                 {
                     (!this.state.isAdvancedSearch || this.props.isInHeader) &&
                     <SimpleSearchComponent
+                        {...this.state.simpleSearch}
                         className={this.props.className}
                         isInHeader={this.props.isInHeader}
-                        searchQueryParams={this.props.searchQueryParams}
                         showSearchButton={this.props.showSearchButton}
                         showMobileSearchButton={this.props.showMobileSearchButton}
                         showAdvancedSearchButton={this.props.showAdvancedSearchButton}
                         showPrefixIcon={this.props.showPrefixIcon}
-                        onToggle={this.toggleSearchMode}
-                        onSearch={this.handleSearch}
+                        onToggleSearchMode={this.toggleSearchMode}
+                        onSearchTextChange={this.handleSimpleSearchTextChange}
+                        onSearch={this.handleSimpleSearch}
                         onInvalidSearch={this.displaySnackbar}
                     />
                 }
                 {
                     (this.state.isAdvancedSearch && !this.props.isInHeader) &&
                     <AdvancedSearchComponent
+                        {...this.state.advancedSearch}
                         className={this.props.className}
-                        searchQueryParams={this.props.searchQueryParams}
-                        isOpenAccessInAdvancedMode={this.props.isOpenAccessInAdvancedMode}
-                        isAdvancedSearchMinimised={this.state.isAdvancedSearchMinimised}
-                        onToggle={this.toggleSearchMode}
-                        onSearch={this.handleSearch}
+                        onToggleSearchMode={this.toggleSearchMode}
+                        onToggleMinimise={this.toggleMinimise}
+                        onToggleOpenAccess={this.toggleOpenAccess}
+                        onAdvancedSearchRowAdd={this.addAdvancedSearchRow}
+                        onAdvancedSearchRowRemove={this.removeAdvancedSearchRow}
+                        onAdvancedSearchReset={this.resetAdvancedSearch}
+                        onAdvancedSearchRowChange={this.handleAdvancedSearchRowChange}
+                        onSearch={this.handleAdvancedSearch}
                     />
                 }
                 <Snackbar
