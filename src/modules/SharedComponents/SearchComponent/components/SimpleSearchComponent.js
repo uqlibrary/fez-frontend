@@ -13,7 +13,7 @@ export default class SimpleSearchComponent extends PureComponent {
     static propTypes = {
         className: PropTypes.string,
 
-        searchText: PropTypes.object,
+        searchText: PropTypes.string,
 
         isInHeader: PropTypes.bool,
         showSearchButton: PropTypes.bool,
