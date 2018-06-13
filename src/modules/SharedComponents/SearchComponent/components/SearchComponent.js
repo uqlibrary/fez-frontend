@@ -129,7 +129,8 @@ export default class SearchComponent extends PureComponent {
         this.setState({
             simpleSearch: {
                 searchText: value
-            }
+            },
+            snackbarOpen: false
         });
     };
 
