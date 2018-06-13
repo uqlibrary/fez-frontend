@@ -13,7 +13,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
       fullWidth={true}
       multiple={false}
       onChange={[Function]}
-      value={0}
+      value="0"
     >
       <MenuItem
         anchorOrigin={
@@ -96,7 +96,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
   >
     <TextField
       aria-label="Aria"
-      disabled={true}
+      disabled={false}
       errorText={null}
       floatingLabelFixed={false}
       fullWidth={true}

@@ -12,7 +12,6 @@ import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
 export default class AdvancedSearchRow extends PureComponent {
     static propTypes = {
         rowIndex: PropTypes.number,
-        searchRow: PropTypes.object,
         searchField: PropTypes.string,
         value: PropTypes.string,
         disabledFields: PropTypes.array,
