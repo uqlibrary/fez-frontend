@@ -348,32 +348,6 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
         </div>
       </div>
     </React.Fragment>
-    <div
-      className="searchQueryCaption"
-    >
-      <React.Fragment>
-        <span
-          key="0"
-        >
-          <span
-            className="title false"
-          >
-             
-          </span>
-          <span
-            className="combiner"
-          >
-             
-          </span>
-          <span
-            className="value"
-          >
-             
-          </span>
-        </span>
-        .
-      </React.Fragment>
-    </div>
   </div>
 </div>
 `;
@@ -539,25 +513,6 @@ exports[`AdvancedSearchComponent should render default view with open access che
       className="searchQueryCaption"
     >
       <React.Fragment>
-        <span
-          key="0"
-        >
-          <span
-            className="title false"
-          >
-             
-          </span>
-          <span
-            className="combiner"
-          >
-             
-          </span>
-          <span
-            className="value"
-          >
-             
-          </span>
-        </span>
         <span>
            and is 
           <span
@@ -609,32 +564,6 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
           <HardwareKeyboardArrowDown />
         </IconButton>
       </div>
-    </div>
-    <div
-      className="searchQueryCaption"
-    >
-      <React.Fragment>
-        <span
-          key="0"
-        >
-          <span
-            className="title false"
-          >
-             
-          </span>
-          <span
-            className="combiner"
-          >
-             
-          </span>
-          <span
-            className="value"
-          >
-             
-          </span>
-        </span>
-        .
-      </React.Fragment>
     </div>
   </div>
 </div>
@@ -797,32 +726,6 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
         </div>
       </div>
     </React.Fragment>
-    <div
-      className="searchQueryCaption"
-    >
-      <React.Fragment>
-        <span
-          key="0"
-        >
-          <span
-            className="title false"
-          >
-             
-          </span>
-          <span
-            className="combiner"
-          >
-             
-          </span>
-          <span
-            className="value"
-          >
-             
-          </span>
-        </span>
-        .
-      </React.Fragment>
-    </div>
   </div>
 </div>
 `;

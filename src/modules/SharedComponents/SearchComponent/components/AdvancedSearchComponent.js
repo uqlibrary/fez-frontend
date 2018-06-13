@@ -48,14 +48,16 @@ export default class AdvancedSearchComponent extends PureComponent {
 
     _getAdvancedSearchCaption = ({fieldRows, isOpenAccess}) => {
         const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
-        const searchFields = fieldRows.map((item, index) => (
-            <span key={item.searchField}>
-                {index > 0 && <span className="and">  {item.value && 'and'}</span>}
-                <span className={`title ${index > 0 && ' lowercase'}`}> {item.value && txt[item.searchField].title}</span>
-                <span className="combiner"> {item.value && txt[item.searchField].combiner}</span>
-                <span className="value"> {item.value}</span>
-            </span>
-        ));
+        const searchFields = fieldRows
+            .filter(item => item.searchField !== '0' && item.value !== '')
+            .map((item, index) => (
+                <span key={item.searchField}>
+                    {index > 0 && <span className="and">  {item.value && 'and'}</span>}
+                    <span className={`title ${index > 0 && ' lowercase'}`}> {item.value && txt[item.searchField].title}</span>
+                    <span className="combiner"> {item.value && txt[item.searchField].combiner}</span>
+                    <span className="value"> {item.value}</span>
+                </span>
+            ));
 
         const openAccessText = isOpenAccess
             ? locale.components.searchComponent.advancedSearch.openAccess.captionText
