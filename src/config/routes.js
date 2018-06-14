@@ -59,7 +59,13 @@ export const pathConfig = {
                 }
             }
         }),
-        subject: (subjectId) => (`${fullPath}/list/subject/${subjectId}`),
+        subject: (subjectId) => getSearchUrl({
+            activeFacets: {
+                filters: {
+                    'Subject': subjectId
+                }
+            }
+        }),
         herdcStatus: (herdcStatus) => getSearchUrl({searchQuery: herdcStatus}),
         keyword: (keyword) => getSearchUrl({searchQuery: keyword}),
         institutionalStatus: (institutionalStatus) => getSearchUrl({searchQuery: institutionalStatus}),
