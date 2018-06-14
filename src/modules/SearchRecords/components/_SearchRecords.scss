@@ -18,14 +18,3 @@
     }
   }
 }
-
-.advancedSearch {
-  .loadingProgress {
-    margin-top: 6px !important;
-    svg {
-      circle {
-        stroke: lighten($secondary-color, 50%) !important;
-      }
-    }
-  }
-}
