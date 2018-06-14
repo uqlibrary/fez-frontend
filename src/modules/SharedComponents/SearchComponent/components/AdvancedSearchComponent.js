@@ -46,7 +46,7 @@ export default class AdvancedSearchComponent extends PureComponent {
         onAdvancedSearchReset: () => {}
     };
 
-    _getAdvancedSearchCaption = ({fieldRows, isOpenAccess}) => {
+    getAdvancedSearchCaption = ({fieldRows, isOpenAccess}) => {
         const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
         const searchFields = fieldRows
             .filter(item => item.searchField !== '0' && item.value !== '')
@@ -65,54 +65,54 @@ export default class AdvancedSearchComponent extends PureComponent {
         return (searchFields.length > 0 || !!isOpenAccess) && <Fragment>{searchFields}{openAccessText}</Fragment> || null;
     };
 
-    _hasAllAdvancedSearchFieldCompleted = (fieldRows) => {
+    hasAllAdvancedSearchFieldCompleted = (fieldRows) => {
         return fieldRows.filter(item => item.searchField === '0' || item.value === '').length === 0;
     };
 
-    handleAdvancedSearch = (event) => {
+    _handleAdvancedSearch = (event) => {
         // Stop submission unless enter was pressed
         if (event && event.key && (event.key !== 'Enter')) return;
 
         this.props.onSearch();
     };
 
-    toggleSearchMode = () => {
+    _toggleSearchMode = () => {
         if (!!this.props.onToggleSearchMode) {
             this.props.onToggleSearchMode();
         }
     };
 
-    toggleMinimise = () => {
+    _toggleMinimise = () => {
         if (!!this.props.onToggleMinimise) {
             this.props.onToggleMinimise();
         }
     };
 
-    toggleOpenAccess = (event) => {
+    _toggleOpenAccess = (event) => {
         event.preventDefault();
         if (!!this.props.onToggleOpenAccess) {
             this.props.onToggleOpenAccess();
         }
     };
 
-    handleAdvancedSearchRowChange = (index, searchRow) => {
+    _handleAdvancedSearchRowChange = (index, searchRow) => {
         this.props.onAdvancedSearchRowChange(index, searchRow);
     };
 
 
-    addAdvancedSearchRow = () => {
+    _addAdvancedSearchRow = () => {
         if (!!this.props.onAdvancedSearchRowAdd) {
             this.props.onAdvancedSearchRowAdd();
         }
     };
 
-    removeAdvancedSearchRow = (index) => {
+    _removeAdvancedSearchRow = (index) => {
         if (!!this.props.onAdvancedSearchRowRemove) {
             this.props.onAdvancedSearchRowRemove(index);
         }
     };
 
-    resetAdvancedSearch = () => {
+    _resetAdvancedSearch = () => {
         if (!!this.props.onAdvancedSearchReset) {
             this.props.onAdvancedSearchReset();
         }
@@ -120,10 +120,10 @@ export default class AdvancedSearchComponent extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent;
-        const canAddAnotherField = this._hasAllAdvancedSearchFieldCompleted(this.props.fieldRows)
+        const canAddAnotherField = this.hasAllAdvancedSearchFieldCompleted(this.props.fieldRows)
              && this.props.fieldRows.length < Object.keys(txt.advancedSearch.fieldTypes).length - 1;
         const alreadyAddedFields = this.props.fieldRows.map(item => item.searchField);
-        const searchQueryCaption = this._getAdvancedSearchCaption(this.props);
+        const searchQueryCaption = this.getAdvancedSearchCaption(this.props);
 
         return (
             <div className={`search-component ${this.props.className}`}>
@@ -133,7 +133,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                             <h2>{txt.advancedSearch.title}</h2>
                         </div>
                         <div className="column is-narrow">
-                            <IconButton onClick={this.toggleMinimise}
+                            <IconButton onClick={this._toggleMinimise}
                                 tooltip={this.props.isMinimised
                                     ? txt.advancedSearch.tooltip.show
                                     : txt.advancedSearch.tooltip.hide}>
@@ -156,8 +156,8 @@ export default class AdvancedSearchComponent extends PureComponent {
                                                     key={`advanced-search-field-${item.searchField}`}
                                                     rowIndex={index}
                                                     disabledFields={alreadyAddedFields}
-                                                    onSearchRowChange={this.handleAdvancedSearchRowChange}
-                                                    onSearchRowDelete={this.removeAdvancedSearchRow}
+                                                    onSearchRowChange={this._handleAdvancedSearchRowChange}
+                                                    onSearchRowDelete={this._removeAdvancedSearchRow}
                                                     {...item}
                                                 />
                                             ))
@@ -167,7 +167,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                         <Checkbox
                                             label={txt.advancedSearch.openAccess.title}
                                             checked={this.props.isOpenAccess}
-                                            onCheck={this.toggleOpenAccess}
+                                            onCheck={this._toggleOpenAccess}
                                             style={{marginTop: 12, paddingBottom: 2, borderBottom: '1px solid rgba(0, 0, 0, 0.12)'}}
                                         />
                                     </div>
@@ -179,7 +179,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             aria-label={txt.advancedSearch.addField.aria}
                                             secondary
                                             disabled={!canAddAnotherField}
-                                            onClick={this.addAdvancedSearchRow}
+                                            onClick={this._addAdvancedSearchRow}
                                         />
                                     </div>
                                     <div className="column is-narrow">
@@ -187,7 +187,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             label={txt.advancedSearch.reset.title}
                                             aria-label={txt.advancedSearch.reset.aria}
                                             style={{marginLeft: 6}}
-                                            onClick={this.resetAdvancedSearch}
+                                            onClick={this._resetAdvancedSearch}
                                         />
                                     </div>
                                     <div className="column is-narrow">
@@ -195,7 +195,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             label={txt.advancedSearch.simpleSearch.title}
                                             aria-label={txt.advancedSearch.simpleSearch.aria}
                                             style={{marginLeft: 6}}
-                                            onClick={this.toggleSearchMode}
+                                            onClick={this._toggleSearchMode}
                                         />
                                     </div>
                                     <div className="column" />
@@ -205,8 +205,8 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             aria-label={txt.searchButtonAriaLabel}
                                             primary
                                             fullWidth
-                                            onClick={this.handleAdvancedSearch}
-                                            disabled={!this._hasAllAdvancedSearchFieldCompleted(this.props.fieldRows)}
+                                            onClick={this._handleAdvancedSearch}
+                                            disabled={!this.hasAllAdvancedSearchFieldCompleted(this.props.fieldRows)}
                                         />
                                     </div>
                                 </div>

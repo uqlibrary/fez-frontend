@@ -34,37 +34,37 @@ describe('AdvancedSearchRow', () => {
     it('should handle search field dropdown change', () => {
         const testFn = jest.fn();
         const wrapper = setup({rowIndex: 1, onSearchRowChange: testFn});
-        wrapper.instance().handleSearchFieldChange({}, 2, 'rek_title');
+        wrapper.instance()._handleSearchFieldChange({}, 2, 'rek_title');
         expect(testFn).toHaveBeenCalledWith(1, {searchField: 'rek_title', value: ''});
     });
 
     it('should handle search field text change', () => {
         const testFn = jest.fn();
         const wrapper = setup({rowIndex: 1, onSearchRowChange: testFn});
-        wrapper.instance().handleTextChange({}, 'i feel lucky');
+        wrapper.instance()._handleTextChange({}, 'i feel lucky');
         expect(testFn).toHaveBeenCalledWith(1, {searchField: '0', value: 'i feel lucky'});
     });
 
     it('should handle delete row', () => {
         const testFn = jest.fn();
         const wrapper = setup({rowIndex: 3, onSearchRowDelete: testFn});
-        wrapper.instance().deleteRow();
+        wrapper.instance()._deleteRow();
         expect(testFn).toHaveBeenCalledWith(3);
     });
 
-    it('_searchTextValidationMessage() should return a message for being too long', () => {
+    it('searchTextValidationMessage() should return a message for being too long', () => {
         const wrapper = setup({});
         wrapper.setState({searchText: 'this is way too long'});
         constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
         wrapper.update();
-        expect(wrapper.instance()._searchTextValidationMessage(wrapper.state().searchText)).toEqual('Must be 5 characters or less');
+        expect(wrapper.instance().searchTextValidationMessage(wrapper.state().searchText)).toEqual('Must be 5 characters or less');
     });
 
-    it('_searchTextValidationMessage() should return false for being fine', () => {
+    it('searchTextValidationMessage() should return false for being fine', () => {
         const wrapper = setup({});
         constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 20;
         wrapper.setState({searchText: 'this is fine'});
         wrapper.update();
-        expect(wrapper.instance()._searchTextValidationMessage(wrapper.state().searchText)).toEqual(null);
+        expect(wrapper.instance().searchTextValidationMessage(wrapper.state().searchText)).toEqual(null);
     });
 });

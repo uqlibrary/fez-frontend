@@ -19,19 +19,19 @@ export default class AdvancedSearchRow extends PureComponent {
         onSearchRowDelete: PropTypes.func,
     };
 
-    handleTextChange = (event, value) => {
+    _handleTextChange = (event, value) => {
         this.props.onSearchRowChange(this.props.rowIndex, {searchField: this.props.searchField, value});
     };
 
-    handleSearchFieldChange = (event, index, searchField) => {
+    _handleSearchFieldChange = (event, index, searchField) => {
         this.props.onSearchRowChange(this.props.rowIndex, {searchField, value: this.props.value});
     };
 
-    deleteRow = () => {
+    _deleteRow = () => {
         this.props.onSearchRowDelete(this.props.rowIndex);
     };
 
-    _searchTextValidationMessage = (value) => {
+    searchTextValidationMessage = (value) => {
         if (value.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
             return locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH);
         }
@@ -46,7 +46,7 @@ export default class AdvancedSearchRow extends PureComponent {
                 <div className="column is-3">
                     <SelectField
                         value={this.props.searchField}
-                        onChange={this.handleSearchFieldChange}
+                        onChange={this._handleSearchFieldChange}
                         fullWidth>
                         {
                             Object.keys(txt.fieldTypes).map((item, index) => (
@@ -76,8 +76,8 @@ export default class AdvancedSearchRow extends PureComponent {
                         hintText={txt.fieldTypes[this.props.searchField].hint}
                         aria-label="Aria"
                         value={this.props.value}
-                        onChange={this.handleTextChange}
-                        errorText={this._searchTextValidationMessage(this.props.value)}
+                        onChange={this._handleTextChange}
+                        errorText={this.searchTextValidationMessage(this.props.value)}
                         disabled={this.props.searchField === 0}
                     />
                 </div>
@@ -86,7 +86,7 @@ export default class AdvancedSearchRow extends PureComponent {
                     <div className="column is-narrow">
                         <IconButton
                             className="deleteFieldButton"
-                            onClick={this.deleteRow}
+                            onClick={this._deleteRow}
                         >
                             <Close/>
                         </IconButton>

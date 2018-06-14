@@ -54,7 +54,7 @@ describe('SimpleSearchComponent', () => {
         const testFn = jest.fn();
         const wrapper = setup({onSearchTextChange: testFn});
 
-        wrapper.instance().handleSearchTextChange({}, 'new search value');
+        wrapper.instance()._handleSearchTextChange({}, 'new search value');
 
         expect(testFn).toHaveBeenCalledWith('new search value');
     });
@@ -63,7 +63,7 @@ describe('SimpleSearchComponent', () => {
         const testMethod = jest.fn();
         const wrapper = setup({onSearch: testMethod});
 
-        wrapper.instance().handleSearch({key: 'a'});
+        wrapper.instance()._handleSearch({key: 'a'});
         wrapper.update();
 
         expect(testMethod).not.toHaveBeenCalled();
@@ -73,7 +73,7 @@ describe('SimpleSearchComponent', () => {
         const testMethod = jest.fn();
         const wrapper = setup({searchText: 'i feel lucky', onSearch: testMethod});
 
-        wrapper.instance().handleSearch({key: 'Enter'});
+        wrapper.instance()._handleSearch({key: 'Enter'});
         wrapper.update();
 
         expect(testMethod).toHaveBeenCalled();
@@ -82,13 +82,13 @@ describe('SimpleSearchComponent', () => {
     it('should toggle search mode', () => {
         const testToggleFn = jest.fn();
         const wrapper = setup({showAdvancedSearchButton: true, onToggleSearchMode: testToggleFn});
-        wrapper.instance().handleSearchMode();
+        wrapper.instance()._handleSearchMode();
         expect(testToggleFn).toHaveBeenCalled();
     });
 
     it('should toggle mobile search', () => {
         const wrapper = setup({});
-        wrapper.instance().handleToggleMobile();
+        wrapper.instance()._handleToggleMobile();
         expect(wrapper.state().showMobile).toBe(true);
     });
 
@@ -98,23 +98,23 @@ describe('SimpleSearchComponent', () => {
 
         constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
 
-        wrapper.instance().handleSearch();
+        wrapper.instance()._handleSearch();
         expect(testOnInvalidSearchFn).toHaveBeenCalledWith('Must be 5 characters or less');
     });
 
-    it('_searchTextValidationMessage() should return a message for being too long', () => {
+    it('searchTextValidationMessage() should return a message for being too long', () => {
         const wrapper = setup({});
         wrapper.setState({searchText: 'this is way too long'});
         constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
         wrapper.update();
-        expect(wrapper.instance()._searchTextValidationMessage(wrapper.state().searchText)).toEqual('Must be 5 characters or less');
+        expect(wrapper.instance().searchTextValidationMessage(wrapper.state().searchText)).toEqual('Must be 5 characters or less');
     });
 
-    it('_searchTextValidationMessage() should return false for being fine', () => {
+    it('searchTextValidationMessage() should return false for being fine', () => {
         const wrapper = setup({});
         constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 20;
         wrapper.setState({searchText: 'this is fine'});
         wrapper.update();
-        expect(wrapper.instance()._searchTextValidationMessage(wrapper.state().searchText)).toEqual(null);
+        expect(wrapper.instance().searchTextValidationMessage(wrapper.state().searchText)).toEqual(null);
     });
 });

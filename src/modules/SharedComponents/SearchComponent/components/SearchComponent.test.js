@@ -139,7 +139,7 @@ describe('SearchComponent', () => {
 
         wrapper.update();
 
-        wrapper.instance().handleAdvancedSearch();
+        wrapper.instance()._handleAdvancedSearch();
 
         expect(testMethod).toHaveBeenCalled();
         expect(testHistoryPushMehtod).toHaveBeenCalledWith({
@@ -171,7 +171,7 @@ describe('SearchComponent', () => {
 
         wrapper.update();
 
-        wrapper.instance().handleSimpleSearch();
+        wrapper.instance()._handleSimpleSearch();
 
         expect(testMethod).toHaveBeenCalled();
         expect(testHistoryPushMehtod).toHaveBeenCalledWith({
@@ -192,7 +192,7 @@ describe('SearchComponent', () => {
 
     it('should show a snackbar error for input being too long', () => {
         const wrapper = setup({});
-        wrapper.instance().displaySnackbar('Must be 5 characters or less');
+        wrapper.instance()._displaySnackbar('Must be 5 characters or less');
         expect(wrapper.state().snackbarMessage).toEqual('Must be 5 characters or less');
         expect(wrapper.state().snackbarOpen).toBe(true);
     });
@@ -211,7 +211,7 @@ describe('SearchComponent', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance().toggleMinimise();
+        wrapper.instance()._toggleMinimise();
         wrapper.update();
 
         expect(wrapper.state().advancedSearch).toEqual({
@@ -229,7 +229,7 @@ describe('SearchComponent', () => {
     it('should toggle to advanced search', () => {
         const wrapper = setup({isAdvancedSearch: false});
 
-        wrapper.instance().toggleSearchMode();
+        wrapper.instance()._toggleSearchMode();
         wrapper.update();
 
         expect(wrapper.state().isAdvancedSearch).toBeTruthy();
@@ -250,7 +250,7 @@ describe('SearchComponent', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance().toggleOpenAccess();
+        wrapper.instance()._toggleOpenAccess();
         wrapper.update();
 
         expect(wrapper.state().advancedSearch).toEqual({
@@ -269,7 +269,7 @@ describe('SearchComponent', () => {
     it('should toggle to simple search', () => {
         const wrapper = setup({isAdvancedSearch: true});
 
-        wrapper.instance().toggleSearchMode();
+        wrapper.instance()._toggleSearchMode();
         wrapper.update();
 
         expect(wrapper.state().isAdvancedSearch).toBeFalsy();
@@ -280,7 +280,7 @@ describe('SearchComponent', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance().handleSimpleSearchTextChange('i feel lucky');
+        wrapper.instance()._handleSimpleSearchTextChange('i feel lucky');
         wrapper.update();
 
         expect(wrapper.state().simpleSearch.searchText).toEqual('i feel lucky');
@@ -307,7 +307,7 @@ describe('SearchComponent', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance().addAdvancedSearchRow();
+        wrapper.instance()._addAdvancedSearchRow();
         wrapper.update();
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -354,7 +354,7 @@ describe('SearchComponent', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance().removeAdvancedSearchRow(1);
+        wrapper.instance()._removeAdvancedSearchRow(1);
         wrapper.update();
 
         expect(wrapper.state().advancedSearch).toEqual({
@@ -392,7 +392,7 @@ describe('SearchComponent', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance().handleAdvancedSearchRowChange(0, {searchField: 'all', value: 'i feel more lucky'});
+        wrapper.instance()._handleAdvancedSearchRowChange(0, {searchField: 'all', value: 'i feel more lucky'});
         wrapper.update();
 
         expect(wrapper.state().advancedSearch).toEqual({
@@ -436,7 +436,7 @@ describe('SearchComponent', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance().resetAdvancedSearch();
+        wrapper.instance()._resetAdvancedSearch();
         wrapper.update();
 
         expect(wrapper.state().advancedSearch).toEqual({
@@ -452,24 +452,24 @@ describe('SearchComponent', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    describe('_getFieldRowsFromSearchQuery', () => {
+    describe('getFieldRowsFromSearchQuery', () => {
         it('should get default field if search query params not set (undefined)', () => {
             const wrapper = setup({});
-            const fieldRows = wrapper.instance()._getFieldRowsFromSearchQuery(undefined);
+            const fieldRows = wrapper.instance().getFieldRowsFromSearchQuery(undefined);
 
             expect(fieldRows).toEqual([{searchField: '0', value: ''}]);
         });
 
         it('should get default field if search query params not set (empty object)', () => {
             const wrapper = setup({});
-            const fieldRows = wrapper.instance()._getFieldRowsFromSearchQuery({});
+            const fieldRows = wrapper.instance().getFieldRowsFromSearchQuery({});
 
             expect(fieldRows).toEqual([{searchField: '0', value: ''}]);
         });
 
         it('should get field rows from search query params', () => {
             const wrapper = setup({});
-            const fieldRows = wrapper.instance()._getFieldRowsFromSearchQuery({
+            const fieldRows = wrapper.instance().getFieldRowsFromSearchQuery({
                 all: 'test',
                 rek_title: 'some title'
             });

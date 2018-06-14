@@ -53,7 +53,7 @@ export default class SearchComponent extends PureComponent {
                 searchText: props.searchQueryParams && props.searchQueryParams.all || ''
             },
             advancedSearch: {
-                fieldRows: this._getFieldRowsFromSearchQuery(props.searchQueryParams),
+                fieldRows: this.getFieldRowsFromSearchQuery(props.searchQueryParams),
                 isMinimised: props.isAdvancedSearchMinimised,
                 isOpenAccess: props.isOpenAccessInAdvancedMode || false,
             }
@@ -68,7 +68,7 @@ export default class SearchComponent extends PureComponent {
                     searchText: nextProps.searchQueryParams.all || ''
                 },
                 advancedSearch: {
-                    fieldRows: this._getFieldRowsFromSearchQuery(nextProps.searchQueryParams),
+                    fieldRows: this.getFieldRowsFromSearchQuery(nextProps.searchQueryParams),
                     isMinimised: nextProps.isAdvancedSearchMinimised || false,
                     isOpenAccess: nextProps.isOpenAccessInAdvancedMode || false
                 }
@@ -76,7 +76,7 @@ export default class SearchComponent extends PureComponent {
         }
     }
 
-    _getFieldRowsFromSearchQuery = (searchQueryParams) => {
+    getFieldRowsFromSearchQuery = (searchQueryParams) => {
         if (!searchQueryParams || Object.keys(searchQueryParams).length === 0) {
             return [{
                 searchField: '0',
@@ -103,7 +103,7 @@ export default class SearchComponent extends PureComponent {
         }
     };
 
-    toggleSearchMode = () => {
+    _toggleSearchMode = () => {
         this.setState({
             isAdvancedSearch: !this.state.isAdvancedSearch,
             advancedSearch: {
@@ -113,7 +113,7 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
-    displaySnackbar = (message) => {
+    _displaySnackbar = (message) => {
         this.setState({
             snackbarMessage: message,
             snackbarOpen: true
@@ -125,7 +125,7 @@ export default class SearchComponent extends PureComponent {
      *  Simple search handlers
      *  ==============================
      */
-    handleSimpleSearchTextChange = (value) => {
+    _handleSimpleSearchTextChange = (value) => {
         this.setState({
             simpleSearch: {
                 searchText: value
@@ -134,7 +134,7 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
-    handleSimpleSearch = () => {
+    _handleSimpleSearch = () => {
         const searchQuery = {searchQueryParams: {all: this.state.simpleSearch.searchText}, ...defaultQueryParams};
 
         // Perform search
@@ -146,7 +146,7 @@ export default class SearchComponent extends PureComponent {
      *  Advanced search handlers
      *  ==============================
      */
-    toggleMinimise = () => {
+    _toggleMinimise = () => {
         this.setState({
             advancedSearch: {
                 ...this.state.advancedSearch,
@@ -155,7 +155,7 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
-    toggleOpenAccess = () => {
+    _toggleOpenAccess = () => {
         this.setState({
             advancedSearch: {
                 ...this.state.advancedSearch,
@@ -164,7 +164,7 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
-    addAdvancedSearchRow = () => {
+    _addAdvancedSearchRow = () => {
         this.setState({
             advancedSearch: {
                 ...this.state.advancedSearch,
@@ -179,7 +179,7 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
-    removeAdvancedSearchRow = (index) => {
+    _removeAdvancedSearchRow = (index) => {
         this.setState({
             advancedSearch: {
                 ...this.state.advancedSearch,
@@ -191,7 +191,7 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
-    resetAdvancedSearch = () => {
+    _resetAdvancedSearch = () => {
         this.setState({
             advancedSearch: {
                 isOpenAccess: false,
@@ -203,7 +203,7 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
-    handleAdvancedSearchRowChange = (index, searchRow) => {
+    _handleAdvancedSearchRowChange = (index, searchRow) => {
         this.setState({
             advancedSearch: {
                 ...this.state.advancedSearch,
@@ -216,7 +216,7 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
-    handleAdvancedSearch = () => {
+    _handleAdvancedSearch = () => {
         const searchQueryParams = this.state.advancedSearch.fieldRows
             .reduce((searchQueries, item) => (
                 {...searchQueries, [item.searchField]: item.value}
@@ -250,10 +250,10 @@ export default class SearchComponent extends PureComponent {
                         showMobileSearchButton={this.props.showMobileSearchButton}
                         showAdvancedSearchButton={this.props.showAdvancedSearchButton}
                         showPrefixIcon={this.props.showPrefixIcon}
-                        onToggleSearchMode={this.toggleSearchMode}
-                        onSearchTextChange={this.handleSimpleSearchTextChange}
-                        onSearch={this.handleSimpleSearch}
-                        onInvalidSearch={this.displaySnackbar}
+                        onToggleSearchMode={this._toggleSearchMode}
+                        onSearchTextChange={this._handleSimpleSearchTextChange}
+                        onSearch={this._handleSimpleSearch}
+                        onInvalidSearch={this._displaySnackbar}
                     />
                 }
                 {
@@ -261,14 +261,14 @@ export default class SearchComponent extends PureComponent {
                     <AdvancedSearchComponent
                         {...this.state.advancedSearch}
                         className={this.props.className}
-                        onToggleSearchMode={this.toggleSearchMode}
+                        onToggleSearchMode={this._toggleSearchMode}
                         onToggleMinimise={this.toggleMinimise}
-                        onToggleOpenAccess={this.toggleOpenAccess}
-                        onAdvancedSearchRowAdd={this.addAdvancedSearchRow}
-                        onAdvancedSearchRowRemove={this.removeAdvancedSearchRow}
-                        onAdvancedSearchReset={this.resetAdvancedSearch}
-                        onAdvancedSearchRowChange={this.handleAdvancedSearchRowChange}
-                        onSearch={this.handleAdvancedSearch}
+                        onToggleOpenAccess={this._toggleOpenAccess}
+                        onAdvancedSearchRowAdd={this._addAdvancedSearchRow}
+                        onAdvancedSearchRowRemove={this._removeAdvancedSearchRow}
+                        onAdvancedSearchReset={this._resetAdvancedSearch}
+                        onAdvancedSearchRowChange={this._handleAdvancedSearchRowChange}
+                        onSearch={this._handleAdvancedSearch}
                     />
                 }
                 <Snackbar

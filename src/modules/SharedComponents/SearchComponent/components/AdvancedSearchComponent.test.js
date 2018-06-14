@@ -40,7 +40,7 @@ describe('AdvancedSearchComponent', () => {
         const wrapper = setup({onToggleMinimise: testFn});
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance().toggleMinimise();
+        wrapper.instance()._toggleMinimise();
         expect(testFn).toHaveBeenCalled();
     });
 
@@ -48,7 +48,7 @@ describe('AdvancedSearchComponent', () => {
         const testFn = jest.fn();
         const wrapper = setup({onToggleOpenAccess: testFn});
 
-        wrapper.instance().toggleOpenAccess({preventDefault: jest.fn()});
+        wrapper.instance()._toggleOpenAccess({preventDefault: jest.fn()});
         expect(testFn).toHaveBeenCalled();
     });
 
@@ -56,7 +56,7 @@ describe('AdvancedSearchComponent', () => {
         const testFn = jest.fn();
         const wrapper = setup({onToggleSearchMode: testFn});
 
-        wrapper.instance().toggleSearchMode();
+        wrapper.instance()._toggleSearchMode();
         expect(testFn).toHaveBeenCalled();
     });
 
@@ -64,7 +64,7 @@ describe('AdvancedSearchComponent', () => {
         const testMethod = jest.fn();
         const wrapper = setup({onAdvancedSearchRowAdd: testMethod});
 
-        wrapper.instance().addAdvancedSearchRow();
+        wrapper.instance()._addAdvancedSearchRow();
         expect(testMethod).toHaveBeenCalled();
     });
 
@@ -72,7 +72,7 @@ describe('AdvancedSearchComponent', () => {
         const testMethod = jest.fn();
         const wrapper = setup({onAdvancedSearchRowRemove: testMethod});
 
-        wrapper.instance().removeAdvancedSearchRow();
+        wrapper.instance()._removeAdvancedSearchRow();
         expect(testMethod).toHaveBeenCalled();
     });
 
@@ -80,7 +80,7 @@ describe('AdvancedSearchComponent', () => {
         const testMethod = jest.fn();
         const wrapper = setup({onAdvancedSearchReset: testMethod});
 
-        wrapper.instance().resetAdvancedSearch();
+        wrapper.instance()._resetAdvancedSearch();
         expect(testMethod).toHaveBeenCalled();
     });
 
@@ -88,7 +88,7 @@ describe('AdvancedSearchComponent', () => {
         const testMethod = jest.fn();
         const wrapper = setup({onAdvancedSearchRowChange: testMethod});
 
-        wrapper.instance().handleAdvancedSearchRowChange(1, {searchField: 'all', value: 'test value'});
+        wrapper.instance()._handleAdvancedSearchRowChange(1, {searchField: 'all', value: 'test value'});
         expect(testMethod).toHaveBeenCalledWith(1, {searchField: 'all', value: 'test value'});
     });
 
@@ -96,7 +96,7 @@ describe('AdvancedSearchComponent', () => {
         const testMethod = jest.fn();
         const wrapper = setup({onSearch: testMethod});
 
-        wrapper.instance().handleAdvancedSearch({key: 'a'});
+        wrapper.instance()._handleAdvancedSearch({key: 'a'});
         expect(testMethod).not.toHaveBeenCalled();
     });
 
@@ -110,7 +110,7 @@ describe('AdvancedSearchComponent', () => {
             }]
         });
 
-        wrapper.instance().handleAdvancedSearch({key: 'Enter'});
+        wrapper.instance()._handleAdvancedSearch({key: 'Enter'});
         expect(testMethod).toHaveBeenCalled();
     });
 });
