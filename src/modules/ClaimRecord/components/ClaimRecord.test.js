@@ -217,6 +217,26 @@ describe('Component ClaimRecord ', () => {
         expect(goBack).toHaveBeenCalled();
     });
 
+    it('should redirect back to previous location on claim more publications', () => {
+        const testMethod = jest.fn();
+        const goBack = jest.fn();
+
+        const wrapper = setup({history: {push: testMethod, goBack: goBack}});
+
+        wrapper.instance()._claimAnother();
+        expect(goBack).toHaveBeenCalled();
+    });
+
+    it('should redirect to specified location on add another missing record', () => {
+        const testMethod = jest.fn();
+        const goBack = jest.fn();
+
+        const wrapper = setup({history: {push: testMethod, goBack: goBack}, redirectLocationAfterClaimed: '/records/add/find'});
+
+        wrapper.instance()._claimAnother();
+        expect(testMethod).toHaveBeenCalledWith('/records/add/find');
+    });
+
     it('should render navigation prompt', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();

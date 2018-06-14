@@ -24,6 +24,7 @@ export default class ClaimRecord extends PureComponent {
         disableSubmit: PropTypes.bool,
         publicationToClaimFileUploadingError: PropTypes.bool,
         publicationFailedToClaim: PropTypes.string,
+        redirectLocationAfterClaimed: PropTypes.string,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired
     };
@@ -58,6 +59,14 @@ export default class ClaimRecord extends PureComponent {
 
     _cancelClaim = () => {
         this.props.history.goBack();
+    };
+
+    _claimAnother = () => {
+        if (!!this.props.redirectLocationAfterClaimed) {
+            this.props.history.push(this.props.redirectLocationAfterClaimed);
+        } else {
+            this.props.history.goBack();
+        }
     };
 
     _setSuccessConfirmation = (ref) => {
@@ -117,7 +126,7 @@ export default class ClaimRecord extends PureComponent {
                             <ConfirmDialogBox
                                 onRef={this._setSuccessConfirmation}
                                 onAction={this._navigateToMyResearch}
-                                onCancelAction={this._cancelClaim}
+                                onCancelAction={this._claimAnother}
                                 locale={saveConfirmationLocale} />
                             <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
                             {

@@ -40,7 +40,8 @@ const mapStateToProps = (state) => {
         initialValues: {
             publication: state && state.get('claimPublicationReducer') ? state.get('claimPublicationReducer').publicationToClaim : null,
             author: state && state.get('accountReducer') ? state.get('accountReducer').author : null
-        }
+        },
+        redirectLocationAfterClaimed: state && state.get('claimPublicationReducer') ? state.get('claimPublicationReducer').redirectLocationAfterClaimed : null
     };
 };
 

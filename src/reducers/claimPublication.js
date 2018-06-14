@@ -9,7 +9,8 @@ export const initialState = {
     possiblePublicationsFacets: {},
     loadingPossiblePublicationsList: true,
     loadingPossibleCounts: true,
-    publicationsClaimedInProgress: []
+    publicationsClaimedInProgress: [],
+    redirectLocationAfterClaimed: null
 };
 
 const handlers = {
@@ -26,7 +27,8 @@ const handlers = {
         {
             ...state,
             publicationToClaimFileUploadingError: false,
-            publicationToClaim: action.payload
+            publicationToClaim: action.payload,
+            redirectLocationAfterClaimed: action.redirectPath
         }
     ),
 
