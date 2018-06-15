@@ -86,7 +86,12 @@ export const pathConfig = {
         publisher: (publisher) => getSearchUrl({searchQuery: publisher}),
         license: (license) => getSearchUrl({searchQuery: license}),
         collection: (collectionId, collection) => getSearchUrl({
-            searchQuery: collection
+            searchQuery: collection,
+            activeFacets: {
+                filters: {
+                    'Collection': collectionId
+                }
+            }
         }),
         orgUnitName: (orgUnitName) => getSearchUrl({searchQuery: orgUnitName}),
         series: (series) => getSearchUrl({searchQuery: series}),
