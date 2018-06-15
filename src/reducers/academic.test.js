@@ -6,7 +6,8 @@ export const initialState = {
     publicationsByYear: null,
     publicationTypesCount: null,
     loadingPublicationsStats: true,
-    publicationsStats: null
+    publicationsStats: null,
+    authorArticleCount: null
 };
 
 describe('academicStatsReducer', () => {
@@ -49,6 +50,21 @@ describe('academicStatsReducer', () => {
             expect(state.publicationsStats.length).toBe(5);
             expect(state).toEqual(expect.objectContaining({publicationsStats: payload}));
         });
+
+        it('current author article count loaded', () => {
+            const oldState = {...initialState};
+            const payload = {
+                articleCount: 100,
+                articleFirstYear: '1998',
+                articleLastYear: '2019'
+            };
+            const state = academicStatsReducer(oldState, {type: actions.AUTHOR_ARTICLE_COUNT_LOADED, payload: payload});
+            expect(state.authorArticleCount).toEqual({
+                articleCount: 100,
+                articleFirstYear: '1998',
+                articleLastYear: '2019'
+            });
+        })
     });
 
     it('does not find handler', () => {

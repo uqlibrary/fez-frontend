@@ -637,6 +637,28 @@ describe('Academic data transformers ', () => {
         expect(result).toEqual(expected);
     });
 
+    it('should getAuthorArticleCount correctly when data is provided', () => {
+        const total = 40;
+        const data = {
+            "min_date_year_t": {
+                "value": 21214421215,
+                "value_as_string": "1990"
+            },
+            "max_date_year_t": {
+                "value": 12245421214,
+                "value_as_string": "2015"
+            }
+        };
+        const expected = {
+            articleCount: total,
+            articleFirstYear: "1990",
+            articleLastYear: "2015"
+        }
+
+        const result = transformers.getAuthorArticleCount(total, data);
+        expect(result).toEqual(expected);
+    });
+
     describe('transformTrendingPublicationsMetricsData', () => {
         it ('should get a zero result on altmetric if altmetric has no trending data', () => {
             const data = [
@@ -1089,5 +1111,4 @@ describe('Academic data transformers ', () => {
             expect(result).toEqual(expectedMetrics);
         });
     });
-
 });

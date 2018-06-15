@@ -7,6 +7,7 @@ export function loadAuthorPublicationsStats(userName) {
     return dispatch => {
         dispatch({type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADING});
         let statsData = null;
+        let authorArticleCount = null;
         return get(routes.ACADEMIC_PUBLICATIONS_STATS_API({}))
             .then(response => {
                 let data = [];
@@ -18,12 +19,19 @@ export function loadAuthorPublicationsStats(userName) {
                     topPublicationTypes = transformer.getPublicationsPerType(data, 4);
                     years = transformer.getPublicationsPerYearCategories(data);
                     statsData = response !== null && transformer.getPublicationsStats(years, response.filters.facets);
+                    authorArticleCount = response !== null && transformer.getAuthorArticleCount(response.total, response.filters.facets);
                 }
 
                 dispatch({
                     type: actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED,
                     payload: topPublicationTypes
                 });
+
+                dispatch({
+                    type: actions.AUTHOR_ARTICLE_COUNT_LOADED,
+                    payload: authorArticleCount
+                });
+
                 dispatch({
                     type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED,
                     payload: {

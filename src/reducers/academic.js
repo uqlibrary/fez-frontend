@@ -5,7 +5,8 @@ export const initialState = {
     publicationsByYear: null,
     publicationTypesCount: null,
     loadingPublicationsStats: true,
-    publicationsStats: null
+    publicationsStats: null,
+    authorArticleCount: null
 };
 
 const handlers = {
@@ -22,6 +23,11 @@ const handlers = {
     [actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED]: (state, action) => ({
         ...state,
         publicationTypesCount: action.payload
+    }),
+
+    [actions.AUTHOR_ARTICLE_COUNT_LOADED]: (state, action) => ({
+        ...state,
+        authorArticleCount: action.payload
     }),
 
     [actions.ACADEMIC_PUBLICATIONS_STATS_FAILED]: () => ({

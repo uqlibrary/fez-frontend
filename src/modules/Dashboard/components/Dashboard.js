@@ -26,6 +26,9 @@ class Dashboard extends PureComponent {
         author: PropTypes.object,
         accountAuthorDetailsLoading: PropTypes.bool,
 
+        // author article count data
+        authorArticleCount: PropTypes.object,
+
         // graph data
         loadingPublicationsByYear: PropTypes.bool,
         publicationsByYear: PropTypes.object,
@@ -117,7 +120,12 @@ class Dashboard extends PureComponent {
                     <div className="columns is-multiline is-gapless">
                         <div className="column is-12 is-hidden-mobile">
                             <div className="is-hidden-mobile">
-                                <DashboardAuthorProfile authorDetails={this.props.authorDetails} author={this.props.author} history={this.props.history} />
+                                <DashboardAuthorProfile
+                                    authorDetails={this.props.authorDetails}
+                                    author={this.props.author}
+                                    history={this.props.history}
+                                    authorArticleCount={this.props.authorArticleCount}
+                                />
                             </div>
                         </div>
                         <div className="column is-12 possiblePublicationLure">

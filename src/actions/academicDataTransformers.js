@@ -115,6 +115,14 @@ export function getPublicationsStats(years, data) {
     };
 }
 
+export function getAuthorArticleCount(total, data) {
+    return {
+        articleCount: total,
+        articleFirstYear: !!data.min_date_year_t && data.min_date_year_t.value_as_string,
+        articleLastYear: !!data.max_date_year_t && data.max_date_year_t.value_as_string,
+    };
+}
+
 function getData(object, path) {
     return path.split('.').reduce((o, k) => {
         return o && o[k];

@@ -7,7 +7,7 @@ import DashboardArticleCount from './DashboardArticleCount';
 import DashboardResearcherIds from './DashboardResearcherIds';
 import DashboardAuthorAvatar from './DashboardAuthorAvatar';
 
-const DashboardProfile = ({authorDetails, author, history}) => {
+const DashboardProfile = ({authorDetails, authorArticleCount, author, history}) => {
     const txt = locale.pages.dashboard.header;
 
     return (
@@ -66,13 +66,13 @@ const DashboardProfile = ({authorDetails, author, history}) => {
 
                     {/* Publication count */}
                     {
-                        authorDetails.espace &&
+                        authorArticleCount &&
                         <div className="column is-narrow is-hidden-tablet-only authorCount">
                             <DashboardArticleCount
                                 {...{
-                                    articleCount: authorDetails.espace.doc_count,
-                                    articleFirstYear: authorDetails.espace.first_year,
-                                    articleLastYear: authorDetails.espace.last_year,
+                                    articleCount: authorArticleCount.articleCount,
+                                    articleFirstYear: authorArticleCount.articleFirstYear,
+                                    articleLastYear: authorArticleCount.articleLastYear,
                                 }} />
                         </div>
                     }
@@ -84,6 +84,7 @@ const DashboardProfile = ({authorDetails, author, history}) => {
 
 DashboardProfile.propTypes = {
     authorDetails: PropTypes.object,
+    authorArticleCount: PropTypes.object,
     author: PropTypes.object,
     history: PropTypes.object.isRequired
 };

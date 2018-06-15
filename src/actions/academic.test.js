@@ -17,7 +17,7 @@ describe('Academic action creators', () => {
         mockApi.reset();
     });
 
-    it('should dispatch 4 actions on successful fetch of academic stats for current author', async () => {
+    it('should dispatch 5 actions on successful fetch of academic stats for current author', async () => {
         mockApi
             .onAny()
             .reply(200, currentAuthorStats);
@@ -25,6 +25,7 @@ describe('Academic action creators', () => {
         const expectedActions = [
             actions.ACADEMIC_PUBLICATIONS_STATS_LOADING,
             actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED,
+            actions.AUTHOR_ARTICLE_COUNT_LOADED,
             actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED,
             actions.ACADEMIC_PUBLICATIONS_STATS_LOADED
         ];
@@ -33,7 +34,7 @@ describe('Academic action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch 4 actions on successful fetch of academic stats (missing facets_count) on response for current author', async () => {
+    it('should dispatch 5 actions on successful fetch of academic stats (missing facets_count) on response for current author', async () => {
         delete currentAuthorStats.facets;
 
         mockApi
@@ -43,6 +44,7 @@ describe('Academic action creators', () => {
         const expectedActions = [
             actions.ACADEMIC_PUBLICATIONS_STATS_LOADING,
             actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED,
+            actions.AUTHOR_ARTICLE_COUNT_LOADED,
             actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED,
             actions.ACADEMIC_PUBLICATIONS_STATS_LOADED
         ];
@@ -66,7 +68,7 @@ describe('Academic action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch 4 actions on successful fetch of author\'s publication stats data and successful hindex api call', async () => {
+    it('should dispatch 5 actions on successful fetch of author\'s publication stats data and successful hindex api call', async () => {
         mockApi
             .onGet(repositories.routes.ACADEMIC_PUBLICATIONS_STATS_API({userId: 'testuser'}).apiUrl)
             .reply(200, currentAuthorStats)
@@ -76,6 +78,7 @@ describe('Academic action creators', () => {
         const expectedActions = [
             actions.ACADEMIC_PUBLICATIONS_STATS_LOADING,
             actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED,
+            actions.AUTHOR_ARTICLE_COUNT_LOADED,
             actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED,
             actions.ACADEMIC_PUBLICATIONS_STATS_LOADED
         ];
@@ -84,7 +87,7 @@ describe('Academic action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch 4 actions on error with stats while fetching author\'s publication stats data but error on hindex api call', async () => {
+    it('should dispatch 5 actions on error with stats while fetching author\'s publication stats data but error on hindex api call', async () => {
         mockApi
             .onGet(repositories.routes.ACADEMIC_PUBLICATIONS_STATS_API({userId: 'testuser'}).apiUrl)
             .reply(200, currentAuthorStats)
@@ -94,6 +97,7 @@ describe('Academic action creators', () => {
         const expectedActions = [
             actions.ACADEMIC_PUBLICATIONS_STATS_LOADING,
             actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED,
+            actions.AUTHOR_ARTICLE_COUNT_LOADED,
             actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED,
             actions.ACADEMIC_PUBLICATIONS_STATS_LOADED
         ];
