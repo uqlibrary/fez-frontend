@@ -52,14 +52,23 @@ export const pathConfig = {
     // TODO: update links when we have list pages
     list: {
         author: (author) => getSearchUrl({searchQuery: author}),
-        authorId: (authorId) => getSearchUrl({
+        authorId: (authorId, author) => getSearchUrl({
+            searchQuery: author,
             activeFacets: {
                 filters: {
                     'Author': authorId
                 }
             }
         }),
-        subject: (subjectId) => (`${fullPath}/list/subject/${subjectId}`),
+        subject: (subjectId, subject) => getSearchUrl({
+            searchQuery: subject,
+            activeFacets: {
+                filters: {
+                    'Subject': subjectId,
+                    'Subject (lookup)': subject
+                }
+            }
+        }),
         herdcStatus: (herdcStatus) => getSearchUrl({searchQuery: herdcStatus}),
         keyword: (keyword) => getSearchUrl({searchQuery: keyword}),
         institutionalStatus: (institutionalStatus) => getSearchUrl({searchQuery: institutionalStatus}),
@@ -78,12 +87,12 @@ export const pathConfig = {
         }),
         publisher: (publisher) => getSearchUrl({searchQuery: publisher}),
         license: (license) => getSearchUrl({searchQuery: license}),
-        accessCondition: (accessCondition) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_95]=${accessCondition}`),
-        collectionType: (collectionType) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_92]=${collectionType}`),
-        collection: (collectionId) => getSearchUrl({
+        collection: (collectionId, collection) => getSearchUrl({
+            searchQuery: collection,
             activeFacets: {
                 filters: {
-                    'Collection': collectionId
+                    'Collection': collectionId,
+                    'Collection (lookup)': collection
                 }
             }
         }),
