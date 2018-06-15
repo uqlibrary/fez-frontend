@@ -59,7 +59,8 @@ export const pathConfig = {
                 }
             }
         }),
-        subject: (subjectId) => getSearchUrl({
+        subject: (subjectId, subject) => getSearchUrl({
+            searchQuery: subject,
             activeFacets: {
                 filters: {
                     'Subject': subjectId
@@ -84,14 +85,8 @@ export const pathConfig = {
         }),
         publisher: (publisher) => getSearchUrl({searchQuery: publisher}),
         license: (license) => getSearchUrl({searchQuery: license}),
-        accessCondition: (accessCondition) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_95]=${accessCondition}`),
-        collectionType: (collectionType) => (`${fullPath}/list/?cat=quick_filter&search_keys[core_92]=${collectionType}`),
-        collection: (collectionId) => getSearchUrl({
-            activeFacets: {
-                filters: {
-                    'Collection': collectionId
-                }
-            }
+        collection: (collectionId, collection) => getSearchUrl({
+            searchQuery: collection
         }),
         orgUnitName: (orgUnitName) => getSearchUrl({searchQuery: orgUnitName}),
         series: (series) => getSearchUrl({searchQuery: series}),

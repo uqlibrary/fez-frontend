@@ -39,7 +39,7 @@ export default class AdditionalInformation extends Component {
                             {(() => {
                                 const data = this.getData(item, subkey);
                                 if (getLink) {
-                                    return this.renderLink(getLink(item[subkey]), data);
+                                    return this.renderLink(getLink(item[subkey], data), data);
                                 } else {
                                     return data;
                                 }
@@ -87,8 +87,8 @@ export default class AdditionalInformation extends Component {
             case 'rek_oa_status': return !!data ? this.renderLink(routes.pathConfig.list.openAccessStatus(object[subkey]), data) : '';
             case 'rek_herdc_code': return this.renderLink(routes.pathConfig.list.subject(object[subkey]), data);
             case 'rek_herdc_status': return this.renderLink(routes.pathConfig.list.herdcStatus(object[`${subkey}_lookup`]), data);
-            case 'rek_ands_collection_type': return this.renderLink(routes.pathConfig.list.collectionType(object[subkey]), data);
-            case 'rek_access_conditions': return this.renderLink(routes.pathConfig.list.accessCondition(object[subkey]), data);
+            case 'rek_ands_collection_type': return data;
+            case 'rek_access_conditions': return data;
             case 'rek_series': return this.renderLink(routes.pathConfig.list.series(object[subkey]), object[subkey]);
             case 'rek_license': return this.renderLicense(object[subkey], data);
             case 'rek_org_unit_name': return this.renderLink(routes.pathConfig.list.orgUnitName(data), data);
