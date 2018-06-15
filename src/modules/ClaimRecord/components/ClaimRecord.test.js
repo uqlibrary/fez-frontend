@@ -230,8 +230,15 @@ describe('Component ClaimRecord ', () => {
     it('should redirect to specified location on add another missing record', () => {
         const testMethod = jest.fn();
         const goBack = jest.fn();
+        const clearRedirectPath = jest.fn();
 
-        const wrapper = setup({history: {push: testMethod, goBack: goBack}, redirectLocationAfterClaimed: '/records/add/find'});
+        const wrapper = setup({
+            history: {push: testMethod, goBack: goBack},
+            redirectPath: '/records/add/find',
+            actions: {
+                clearRedirectPath: clearRedirectPath
+            }
+        });
 
         wrapper.instance()._claimAnother();
         expect(testMethod).toHaveBeenCalledWith('/records/add/find');

@@ -54,20 +54,6 @@ describe('claimPublication reducer', () => {
         });
     });
 
-    it('returns the record and redirect location we are setting to claim', () => {
-        const test = claimPublicationReducer(initialState, {
-            type: actions.PUBLICATION_TO_CLAIM_SET,
-            payload: publicationData,
-            redirectPath: '/records/add/find'
-        });
-        expect(test).toEqual({
-            ...initialState,
-            publicationToClaimFileUploadingError: false,
-            publicationToClaim: publicationData,
-            redirectLocationAfterClaimed: '/records/add/find'
-        });
-    });
-
     it('clears the record we set to claim', () => {
         const test = claimPublicationReducer(initialState, {type: actions.PUBLICATION_TO_CLAIM_CLEAR});
         expect(test).toEqual({
