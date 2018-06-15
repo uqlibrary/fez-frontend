@@ -96,7 +96,7 @@ export const pathConfig = {
     },
     admin: {
         masquerade: '/admin/masquerade',
-        view_old: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/records/${pid}`),
+        legacyEspace: `${fullPath}/my_upo_tools.php`
     },
     authorIdentifiers: {
         orcid: {
@@ -109,7 +109,6 @@ export const pathConfig = {
             // unlink: '/author-identifiers/google-scholar/link'
         }
     },
-    legacyEspace: `${fullPath}/my_research_claimed.php`,
     authorStatistics: {
         url: (id) => `https://app.library.uq.edu.au/#/authors/${id}`
     },
@@ -308,7 +307,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
     ];
 };
 
-export const getMenuConfig = (account, disabled, isViewPage = false) => {
+export const getMenuConfig = (account, disabled) => {
     const homePage = [
         {
             linkTo: pathConfig.index,
@@ -331,14 +330,7 @@ export const getMenuConfig = (account, disabled, isViewPage = false) => {
             linkTo: pathConfig.contact,
             ...locale.menu.contact,
             public: true
-        },
-        ...(!account && isViewPage ? [] : [
-            {
-                linkTo: pathConfig.legacyEspace,
-                ...locale.menu.legacyEspace,
-                public: true
-            }
-        ])
+        }
     ];
 
     if (disabled) {
@@ -398,6 +390,10 @@ export const getMenuConfig = (account, disabled, isViewPage = false) => {
             {
                 linkTo: pathConfig.admin.masquerade,
                 ...locale.menu.masquerade,
+            },
+            {
+                linkTo: pathConfig.admin.legacyEspace,
+                ...locale.menu.legacyEspace
             },
             {
                 divider: true,
