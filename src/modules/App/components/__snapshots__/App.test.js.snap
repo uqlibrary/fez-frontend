@@ -310,11 +310,6 @@ exports[`Application component should render alert if user is not fez author 1`]
           "public": true,
           "secondaryText": "",
         },
-        Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
-          "primaryText": "Switch to old interface",
-          "public": true,
-        },
       ]
     }
     onToggleDrawer={[Function]}
@@ -846,11 +841,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "public": true,
           "secondaryText": "",
         },
-        Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
-          "primaryText": "Switch to old interface",
-          "public": true,
-        },
       ]
     }
     onToggleDrawer={[Function]}
@@ -1223,11 +1213,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
-        },
-        Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
-          "primaryText": "Switch to old interface",
-          "public": true,
         },
       ]
     }
@@ -1615,11 +1600,6 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
-        },
-        Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
-          "primaryText": "Switch to old interface",
-          "public": true,
         },
       ]
     }
@@ -2135,11 +2115,6 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
-        },
-        Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
-          "primaryText": "Switch to old interface",
-          "public": true,
         },
       ]
     }
@@ -3107,11 +3082,6 @@ exports[`Application component should render application with routing for the us
           "public": true,
           "secondaryText": "",
         },
-        Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
-          "primaryText": "Switch to old interface",
-          "public": true,
-        },
       ]
     }
     onToggleDrawer={[Function]}
@@ -3293,11 +3263,6 @@ exports[`Application component should render for anon user 1`] = `
           "primaryText": "Contact",
           "public": true,
           "secondaryText": "",
-        },
-        Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/my_research_claimed.php",
-          "primaryText": "Switch to old interface",
-          "public": true,
         },
       ]
     }
