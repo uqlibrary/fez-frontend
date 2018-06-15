@@ -52,7 +52,8 @@ export const pathConfig = {
     // TODO: update links when we have list pages
     list: {
         author: (author) => getSearchUrl({searchQuery: author}),
-        authorId: (authorId) => getSearchUrl({
+        authorId: (authorId, author) => getSearchUrl({
+            searchQuery: author,
             activeFacets: {
                 filters: {
                     'Author': authorId

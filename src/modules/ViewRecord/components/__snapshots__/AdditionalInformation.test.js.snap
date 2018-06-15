@@ -1576,7 +1576,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=486&searchQueryParams%5Ball%5D="
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=486&searchQueryParams%5Ball%5D=Bamford%2C+Greg"
                                                       key="citationAuthor_3"
                                                     >
                                                       <CitationView
@@ -1615,7 +1615,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=146&searchQueryParams%5Ball%5D="
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=146&searchQueryParams%5Ball%5D=Skinner%2C+Peter+R."
                                                       key="citationAuthor_5"
                                                     >
                                                       <CitationView
@@ -18584,7 +18584,7 @@ exports[`Additional Information Component  should render component with journal 
                                                   >
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=88893&searchQueryParams%5Ball%5D="
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=88893&searchQueryParams%5Ball%5D=Azimi%2C+Iman"
                                                       key="citationAuthor_1"
                                                     >
                                                       <CitationView
@@ -18624,7 +18624,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1706239&searchQueryParams%5Ball%5D="
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1706239&searchQueryParams%5Ball%5D=Kaemmerer%2C+Elke"
                                                       key="citationAuthor_3"
                                                     >
                                                       <CitationView
@@ -18644,7 +18644,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=97626&searchQueryParams%5Ball%5D="
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=97626&searchQueryParams%5Ball%5D=Turner%2C+Dane"
                                                       key="citationAuthor_4"
                                                     >
                                                       <CitationView
@@ -18664,7 +18664,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=95450&searchQueryParams%5Ball%5D="
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=95450&searchQueryParams%5Ball%5D=Yapa%2C+Kunsala+T.+D.+S."
                                                       key="citationAuthor_5"
                                                     >
                                                       <CitationView
@@ -18684,7 +18684,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1671&searchQueryParams%5Ball%5D="
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1671&searchQueryParams%5Ball%5D=Brown%2C+Melissa+A."
                                                       key="citationAuthor_6"
                                                     >
                                                       <CitationView
@@ -18724,7 +18724,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=973&searchQueryParams%5Ball%5D="
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=973&searchQueryParams%5Ball%5D=Roberts-Thomson%2C+Sarah+J."
                                                       key="citationAuthor_8"
                                                     >
                                                       <CitationView
@@ -18743,7 +18743,7 @@ exports[`Additional Information Component  should render component with journal 
                                                     </a>
                                                     <a
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=972&searchQueryParams%5Ball%5D="
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=972&searchQueryParams%5Ball%5D=Monteith%2C+Gregory+R."
                                                       key="citationAuthor_9"
                                                     >
                                                       <CitationView
