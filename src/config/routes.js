@@ -63,7 +63,8 @@ export const pathConfig = {
             searchQuery: subject,
             activeFacets: {
                 filters: {
-                    'Subject': subjectId
+                    'Subject': subjectId,
+                    'Subject (lookup)': subject
                 }
             }
         }),
@@ -89,7 +90,8 @@ export const pathConfig = {
             searchQuery: collection,
             activeFacets: {
                 filters: {
-                    'Collection': collectionId
+                    'Collection': collectionId,
+                    'Collection (lookup)': collection
                 }
             }
         }),

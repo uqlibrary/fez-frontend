@@ -2641,7 +2641,7 @@ exports[`Additional Information Component  should render component with audio do
                                           <ul>
                                             <li>
                                               <a
-                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453663&searchQueryParams%5Ball%5D=Conversation"
+                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453663&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=Conversation&searchQueryParams%5Ball%5D=Conversation"
                                               >
                                                 Conversation
                                               </a>
@@ -2756,7 +2756,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     key="rek_alternate_genre-0"
                                                   >
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453663&searchQueryParams%5Ball%5D=Conversation"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453663&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=Conversation&searchQueryParams%5Ball%5D=Conversation"
                                                     >
                                                       Conversation
                                                     </a>
@@ -2772,21 +2772,21 @@ exports[`Additional Information Component  should render component with audio do
                                           <ul>
                                             <li>
                                               <a
-                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310199&searchQueryParams%5Ball%5D=310199"
+                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310199&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310199&searchQueryParams%5Ball%5D=310199"
                                               >
                                                 310199
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450019&searchQueryParams%5Ball%5D=450019"
+                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450019&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450019&searchQueryParams%5Ball%5D=450019"
                                               >
                                                 450019
                                               </a>
                                             </li>
                                             <li>
                                               <a
-                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450776&searchQueryParams%5Ball%5D=450776"
+                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450776&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450776&searchQueryParams%5Ball%5D=450776"
                                               >
                                                 450776
                                               </a>
@@ -2901,7 +2901,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     key="rek_subject-0"
                                                   >
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310199&searchQueryParams%5Ball%5D=310199"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310199&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310199&searchQueryParams%5Ball%5D=310199"
                                                     >
                                                       310199
                                                     </a>
@@ -2910,7 +2910,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     key="rek_subject-1"
                                                   >
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450019&searchQueryParams%5Ball%5D=450019"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450019&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450019&searchQueryParams%5Ball%5D=450019"
                                                     >
                                                       450019
                                                     </a>
@@ -2919,7 +2919,7 @@ exports[`Additional Information Component  should render component with audio do
                                                     key="rek_subject-2"
                                                   >
                                                     <a
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450776&searchQueryParams%5Ball%5D=450776"
+                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450776&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450776&searchQueryParams%5Ball%5D=450776"
                                                     >
                                                       450776
                                                     </a>
@@ -4846,14 +4846,14 @@ exports[`Additional Information Component  should render component with book cha
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453239&searchQueryParams%5Ball%5D=453239"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453239&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=453239&searchQueryParams%5Ball%5D=453239"
               >
                 453239
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453253&searchQueryParams%5Ball%5D=453253"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453253&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=453253&searchQueryParams%5Ball%5D=453253"
               >
                 453253
               </a>
@@ -7460,28 +7460,28 @@ exports[`Additional Information Component  should render component with conferen
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290000&searchQueryParams%5Ball%5D=290000"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290000&searchQueryParams%5Ball%5D=290000"
               >
                 290000
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290800&searchQueryParams%5Ball%5D=290800"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290800&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290800&searchQueryParams%5Ball%5D=290800"
               >
                 290800
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290802&searchQueryParams%5Ball%5D=290802"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290802&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290802&searchQueryParams%5Ball%5D=290802"
               >
                 290802
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=291104&searchQueryParams%5Ball%5D=291104"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=291104&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=291104&searchQueryParams%5Ball%5D=291104"
               >
                 291104
               </a>
@@ -8114,14 +8114,14 @@ exports[`Additional Information Component  should render component with creative
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452674&searchQueryParams%5Ball%5D=452674"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452674&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452674&searchQueryParams%5Ball%5D=452674"
               >
                 452674
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452677&searchQueryParams%5Ball%5D=452677"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452677&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452677&searchQueryParams%5Ball%5D=452677"
               >
                 452677
               </a>
@@ -9857,14 +9857,14 @@ exports[`Additional Information Component  should render component with data col
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452086&searchQueryParams%5Ball%5D=452086"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452086&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452086&searchQueryParams%5Ball%5D=452086"
               >
                 452086
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452109&searchQueryParams%5Ball%5D=452109"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452109&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452109&searchQueryParams%5Ball%5D=452109"
               >
                 452109
               </a>
@@ -10076,7 +10076,7 @@ exports[`Additional Information Component  should render component with data col
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451600&searchQueryParams%5Ball%5D=970106+Expanding+Knowledge+in+the+Biological+Sciences"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451600&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=970106+Expanding+Knowledge+in+the+Biological+Sciences&searchQueryParams%5Ball%5D=970106+Expanding+Knowledge+in+the+Biological+Sciences"
               >
                 970106 Expanding Knowledge in the Biological Sciences
               </a>
@@ -11538,21 +11538,21 @@ exports[`Additional Information Component  should render component with data col
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452067&searchQueryParams%5Ball%5D=0602+Ecology"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452067&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0602+Ecology&searchQueryParams%5Ball%5D=0602+Ecology"
               >
                 0602 Ecology
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452018&searchQueryParams%5Ball%5D=040699+Physical+Geography+and+Environmental+Geoscience+not+elsewhere+classified"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452018&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=040699+Physical+Geography+and+Environmental+Geoscience+not+elsewhere+classified&searchQueryParams%5Ball%5D=040699+Physical+Geography+and+Environmental+Geoscience+not+elsewhere+classified"
               >
                 040699 Physical Geography and Environmental Geoscience not elsewhere classified
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452028&searchQueryParams%5Ball%5D=0502+Environmental+Science+and+Management"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452028&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0502+Environmental+Science+and+Management&searchQueryParams%5Ball%5D=0502+Environmental+Science+and+Management"
               >
                 0502 Environmental Science and Management
               </a>
@@ -12716,28 +12716,28 @@ exports[`Additional Information Component  should render component with design d
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310000&searchQueryParams%5Ball%5D=310000"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310000&searchQueryParams%5Ball%5D=310000"
               >
                 310000
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450025&searchQueryParams%5Ball%5D=450025"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450025&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450025&searchQueryParams%5Ball%5D=450025"
               >
                 450025
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452674&searchQueryParams%5Ball%5D=452674"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452674&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452674&searchQueryParams%5Ball%5D=452674"
               >
                 452674
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452675&searchQueryParams%5Ball%5D=452675"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452675&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452675&searchQueryParams%5Ball%5D=452675"
               >
                 452675
               </a>
@@ -13409,7 +13409,7 @@ exports[`Additional Information Component  should render component with generic 
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451825&searchQueryParams%5Ball%5D=451825"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451825&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=451825&searchQueryParams%5Ball%5D=451825"
               >
                 451825
               </a>
@@ -14937,7 +14937,7 @@ exports[`Additional Information Component  should render component with journal 
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452815&searchQueryParams%5Ball%5D=452815"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452815&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452815&searchQueryParams%5Ball%5D=452815"
               >
                 452815
               </a>
@@ -26862,21 +26862,21 @@ exports[`Additional Information Component  should render component with patent 1
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=270802&searchQueryParams%5Ball%5D=270802"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=270802&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=270802&searchQueryParams%5Ball%5D=270802"
               >
                 270802
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=270300&searchQueryParams%5Ball%5D=270300"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=270300&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=270300&searchQueryParams%5Ball%5D=270300"
               >
                 270300
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=320800&searchQueryParams%5Ball%5D=320800"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=320800&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=320800&searchQueryParams%5Ball%5D=320800"
               >
                 320800
               </a>
@@ -27039,21 +27039,21 @@ exports[`Additional Information Component  should render component with preprint
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=280210&searchQueryParams%5Ball%5D=280210"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=280210&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=280210&searchQueryParams%5Ball%5D=280210"
               >
                 280210
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=230203&searchQueryParams%5Ball%5D=230203"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=230203&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=230203&searchQueryParams%5Ball%5D=230203"
               >
                 230203
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=230117&searchQueryParams%5Ball%5D=230117"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=230117&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=230117&searchQueryParams%5Ball%5D=230117"
               >
                 230117
               </a>
@@ -29698,28 +29698,28 @@ exports[`Additional Information Component  should render component with referenc
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=430102&searchQueryParams%5Ball%5D=430102+History+-+Asian"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=430102&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=430102+History+-+Asian&searchQueryParams%5Ball%5D=430102+History+-+Asian"
               >
                 430102 History - Asian
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=420212&searchQueryParams%5Ball%5D=420212+Japanese"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=420212&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=420212+Japanese&searchQueryParams%5Ball%5D=420212+Japanese"
               >
                 420212 Japanese
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450647&searchQueryParams%5Ball%5D=751001+Languages+and+literature"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450647&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=751001+Languages+and+literature&searchQueryParams%5Ball%5D=751001+Languages+and+literature"
               >
                 751001 Languages and literature
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450041&searchQueryParams%5Ball%5D=M"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450041&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=M&searchQueryParams%5Ball%5D=M"
               >
                 M
               </a>
@@ -30573,7 +30573,7 @@ exports[`Additional Information Component  should render component with thesis 1
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=300000&searchQueryParams%5Ball%5D=300000"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=300000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=300000&searchQueryParams%5Ball%5D=300000"
               >
                 300000
               </a>
@@ -31023,7 +31023,7 @@ exports[`Additional Information Component  should render component with video do
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451986&searchQueryParams%5Ball%5D=451986"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451986&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=451986&searchQueryParams%5Ball%5D=451986"
               >
                 451986
               </a>
@@ -31525,14 +31525,14 @@ exports[`Additional Information Component  should render component with working 
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452775&searchQueryParams%5Ball%5D=452775"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452775&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452775&searchQueryParams%5Ball%5D=452775"
               >
                 452775
               </a>
             </li>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452784&searchQueryParams%5Ball%5D=452784"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452784&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452784&searchQueryParams%5Ball%5D=452784"
               >
                 452784
               </a>
@@ -32005,7 +32005,7 @@ exports[`Additional Information Component  should render oa status value link in
           <ul>
             <li>
               <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=300000&searchQueryParams%5Ball%5D=300000"
+                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=300000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=300000&searchQueryParams%5Ball%5D=300000"
               >
                 300000
               </a>
