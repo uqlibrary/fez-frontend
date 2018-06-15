@@ -43,10 +43,12 @@ describe('Search record results', () => {
     it('should go to claim publication form with given record', () => {
         const navigateToClaimPublication = jest.fn();
         const setClaimPublication = jest.fn();
+        const setRedirectPath = jest.fn();
         const item = {rek_pid: 'UQ:1111111'};
 
         const actions = {
-            setClaimPublication: setClaimPublication
+            setClaimPublication: setClaimPublication,
+            setRedirectPath: setRedirectPath
         };
 
         const history = {
@@ -59,7 +61,8 @@ describe('Search record results', () => {
         });
         wrapper.instance()._claimPublication(item);
 
-        expect(setClaimPublication).toHaveBeenCalledWith(item, '/records/add/find');
+        expect(setClaimPublication).toHaveBeenCalledWith(item);
+        expect(setRedirectPath).toHaveBeenCalledWith('/records/add/find');
         expect(navigateToClaimPublication).toHaveBeenCalledWith('/records/claim');
     });
 

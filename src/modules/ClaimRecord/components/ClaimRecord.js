@@ -24,7 +24,7 @@ export default class ClaimRecord extends PureComponent {
         disableSubmit: PropTypes.bool,
         publicationToClaimFileUploadingError: PropTypes.bool,
         publicationFailedToClaim: PropTypes.string,
-        redirectLocationAfterClaimed: PropTypes.string,
+        redirectPath: PropTypes.string,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired
     };
@@ -62,8 +62,9 @@ export default class ClaimRecord extends PureComponent {
     };
 
     _claimAnother = () => {
-        if (!!this.props.redirectLocationAfterClaimed) {
-            this.props.history.push(this.props.redirectLocationAfterClaimed);
+        if (!!this.props.redirectPath) {
+            this.props.history.push(this.props.redirectPath);
+            this.props.actions.clearRedirectPath();
         } else {
             this.props.history.goBack();
         }

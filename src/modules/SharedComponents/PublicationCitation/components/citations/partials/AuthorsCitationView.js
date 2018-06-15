@@ -94,7 +94,7 @@ export default class AuthorsCitationView extends PureComponent {
             );
 
             if (showLink) {
-                const href = author.id ? pathConfig.list.authorId(author.id) : pathConfig.list.author(author.value);
+                const href = author.id ? pathConfig.list.authorId(author.id, author.value) : pathConfig.list.author(author.value);
                 const className = author.id ? 'authorIdLink' : 'authorNameLink';
                 return <a className={className} href={href} key={key}>{element}</a>;
             } else {
