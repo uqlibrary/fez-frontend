@@ -113,12 +113,11 @@ export function hideRecordErrorReset() {
  * @param publication {object} - set a publication to be claimed (to display in claim publiation form)
  * @returns {action}
  */
-export function setClaimPublication(publication, redirectLocationAfterClaimed = null) {
+export function setClaimPublication(publication) {
     return dispatch => {
         dispatch({
             type: actions.PUBLICATION_TO_CLAIM_SET,
-            payload: publication,
-            redirectPath: redirectLocationAfterClaimed
+            payload: publication
         });
     };
 }
