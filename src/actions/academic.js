@@ -23,12 +23,12 @@ export function loadAuthorPublicationsStats(userName) {
                 }
 
                 dispatch({
-                    type: actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED,
+                    type: actions.ACADEMIC_PUBLICATIONS_COUNT_PER_TYPE_LOADED,
                     payload: topPublicationTypes
                 });
 
                 dispatch({
-                    type: actions.AUTHOR_ARTICLE_COUNT_LOADED,
+                    type: actions.ACADEMIC_PUBLICATIONS_COUNT_TOTAL_LOADED,
                     payload: authorArticleCount
                 });
 

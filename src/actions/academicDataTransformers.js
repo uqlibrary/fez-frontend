@@ -117,9 +117,9 @@ export function getPublicationsStats(years, data) {
 
 export function getAuthorArticleCount(total, data) {
     return {
-        articleCount: total,
-        articleFirstYear: !!data.min_date_year_t && data.min_date_year_t.value_as_string,
-        articleLastYear: !!data.max_date_year_t && data.max_date_year_t.value_as_string,
+        articleCount: !!total && total || null,
+        articleFirstYear: !!data && !!data.min_date_year_t && data.min_date_year_t.value_as_string || null,
+        articleLastYear: !!data && !!data.max_date_year_t && data.max_date_year_t.value_as_string || null,
     };
 }
 

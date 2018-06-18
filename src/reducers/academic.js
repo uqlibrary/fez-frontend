@@ -20,12 +20,12 @@ const handlers = {
         publicationsByYear: action.payload
     }),
 
-    [actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED]: (state, action) => ({
+    [actions.ACADEMIC_PUBLICATIONS_COUNT_PER_TYPE_LOADED]: (state, action) => ({
         ...state,
         publicationTypesCount: action.payload
     }),
 
-    [actions.AUTHOR_ARTICLE_COUNT_LOADED]: (state, action) => ({
+    [actions.ACADEMIC_PUBLICATIONS_COUNT_TOTAL_LOADED]: (state, action) => ({
         ...state,
         authorArticleCount: action.payload
     }),

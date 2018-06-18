@@ -24,8 +24,8 @@ describe('Academic action creators', () => {
 
         const expectedActions = [
             actions.ACADEMIC_PUBLICATIONS_STATS_LOADING,
-            actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED,
-            actions.AUTHOR_ARTICLE_COUNT_LOADED,
+            actions.ACADEMIC_PUBLICATIONS_COUNT_PER_TYPE_LOADED,
+            actions.ACADEMIC_PUBLICATIONS_COUNT_TOTAL_LOADED,
             actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED,
             actions.ACADEMIC_PUBLICATIONS_STATS_LOADED
         ];
@@ -43,8 +43,8 @@ describe('Academic action creators', () => {
 
         const expectedActions = [
             actions.ACADEMIC_PUBLICATIONS_STATS_LOADING,
-            actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED,
-            actions.AUTHOR_ARTICLE_COUNT_LOADED,
+            actions.ACADEMIC_PUBLICATIONS_COUNT_PER_TYPE_LOADED,
+            actions.ACADEMIC_PUBLICATIONS_COUNT_TOTAL_LOADED,
             actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED,
             actions.ACADEMIC_PUBLICATIONS_STATS_LOADED
         ];
@@ -77,8 +77,8 @@ describe('Academic action creators', () => {
 
         const expectedActions = [
             actions.ACADEMIC_PUBLICATIONS_STATS_LOADING,
-            actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED,
-            actions.AUTHOR_ARTICLE_COUNT_LOADED,
+            actions.ACADEMIC_PUBLICATIONS_COUNT_PER_TYPE_LOADED,
+            actions.ACADEMIC_PUBLICATIONS_COUNT_TOTAL_LOADED,
             actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED,
             actions.ACADEMIC_PUBLICATIONS_STATS_LOADED
         ];
@@ -96,8 +96,8 @@ describe('Academic action creators', () => {
 
         const expectedActions = [
             actions.ACADEMIC_PUBLICATIONS_STATS_LOADING,
-            actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED,
-            actions.AUTHOR_ARTICLE_COUNT_LOADED,
+            actions.ACADEMIC_PUBLICATIONS_COUNT_PER_TYPE_LOADED,
+            actions.ACADEMIC_PUBLICATIONS_COUNT_TOTAL_LOADED,
             actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED,
             actions.ACADEMIC_PUBLICATIONS_STATS_LOADED
         ];

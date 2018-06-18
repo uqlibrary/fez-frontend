@@ -38,7 +38,7 @@ describe('academicStatsReducer', () => {
 
         it('current author publication types count loaded', () => {
             const oldState = {...initialState};
-            const state = academicStatsReducer(oldState, {type: actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED, payload: {popular: 10, mostViewed: 5}});
+            const state = academicStatsReducer(oldState, {type: actions.ACADEMIC_PUBLICATIONS_COUNT_PER_TYPE_LOADED, payload: {popular: 10, mostViewed: 5}});
             expect(state).toEqual(expect.objectContaining({publicationTypesCount: {popular: 10, mostViewed: 5}}));
         });
 
@@ -58,7 +58,7 @@ describe('academicStatsReducer', () => {
                 articleFirstYear: '1998',
                 articleLastYear: '2019'
             };
-            const state = academicStatsReducer(oldState, {type: actions.AUTHOR_ARTICLE_COUNT_LOADED, payload: payload});
+            const state = academicStatsReducer(oldState, {type: actions.ACADEMIC_PUBLICATIONS_COUNT_TOTAL_LOADED, payload: payload});
             expect(state.authorArticleCount).toEqual({
                 articleCount: 100,
                 articleFirstYear: '1998',
