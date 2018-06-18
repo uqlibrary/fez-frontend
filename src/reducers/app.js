@@ -2,7 +2,8 @@ import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     hidePossiblyYourPublicationsLure: false,
-    appAlert: null
+    appAlert: null,
+    redirectPath: null
 };
 
 const handlers = {
@@ -19,7 +20,21 @@ const handlers = {
     [actions.APP_ALERT_HIDE]: (state) => ({
         ...state,
         appAlert: null
-    })
+    }),
+
+    [actions.SET_REDIRECT_PATH]: (state, action) => (
+        {
+            ...state,
+            redirectPath: action.payload
+        }
+    ),
+
+    [actions.CLEAR_REDIRECT_PATH]: (state) => (
+        {
+            ...state,
+            redirectPath: null
+        }
+    )
 };
 
 export default function appReducer(state = initialState, action) {

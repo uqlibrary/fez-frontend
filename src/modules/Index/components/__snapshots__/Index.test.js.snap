@@ -10,14 +10,7 @@ exports[`Index page should render placeholders 1`] = `
     <div
       className="column"
     >
-      <StandardCard
-        className=""
-        title="Most cited publications/Trending publications"
-      >
-        <p>
-          publications list...
-        </p>
-      </StandardCard>
+      <withRouter(Connect(TopCitedPublications)) />
     </div>
     <div
       className="column is-4"

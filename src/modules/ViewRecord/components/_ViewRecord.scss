@@ -116,6 +116,9 @@
     }
     .filename {
       line-height: 48px !important;
+      &:hover {
+        cursor: pointer;
+      }
       @include desktop {
         width: 45% !important;
       }
@@ -195,6 +198,12 @@
     img {
       max-width: 80vw;
       max-height: 100vh;
+      width: 200px;
+      margin: 0 auto !important;
+      display: block !important;
+    }
+    .alertWrapper {
+      margin-top: -32px !important;
     }
   }
 
@@ -288,11 +297,6 @@
 
   // Other -----------------------------------------------
 
-  .publicationCitation {
-    padding-top: 0 !important;
-    border-bottom: none !important;
-    margin-bottom: 0 !important;
-  }
   .cardTitle {
     margin-bottom: 12px !important;
   }

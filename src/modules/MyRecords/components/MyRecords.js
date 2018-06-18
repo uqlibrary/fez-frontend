@@ -149,11 +149,17 @@ export default class MyRecords extends PureComponent {
         this.props.history.push(routes.pathConfig.records.fix(item.rek_pid));
         this.props.actions.setFixRecord(item);
     }
+
+    handleExportPublications = (exportFormat) => {
+        this.props.actions.exportAuthorPublications({...exportFormat, ...this.state});
+    }
+
     render() {
         if (this.props.accountLoading) return null;
 
         const txt = this.props.localePages;
         const pagingData = this.props.publicationsListPagingData;
+        const isLoadingOrExporting = this.props.loadingPublicationsList || this.props.exportPublicationsLoading;
 
         return (
             <StandardPage title={txt.pageTitle}>
@@ -192,18 +198,18 @@ export default class MyRecords extends PureComponent {
                                     sortDirection={this.state.sortDirection}
                                     pageSize={this.state.pageSize}
                                     pagingData={pagingData}
-                                    location={this.props.location}
+                                    canUseExport
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
-                                    onExportPublications={this.props.actions.exportAuthorPublications}
-                                    disabled={this.props.loadingPublicationsList || this.props.exportPublicationsLoading} />
+                                    onExportPublications={this.handleExportPublications}
+                                    disabled={isLoadingOrExporting} />
                                 <PublicationsListPaging
-                                    loading={this.props.loadingPublicationsList || this.props.exportPublicationsLoading}
+                                    loading={isLoadingOrExporting}
                                     pagingData={pagingData}
                                     onPageChanged={this.pageChanged}
-                                    disabled={this.props.loadingPublicationsList || this.props.exportPublicationsLoading} />
+                                    disabled={isLoadingOrExporting} />
                                 {
-                                    (this.props.loadingPublicationsList || this.props.exportPublicationsLoading) &&
+                                    isLoadingOrExporting &&
                                     <div className="is-centered"><InlineLoader message={this.props.loadingPublicationsList ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
                                 }
                                 {
@@ -213,10 +219,10 @@ export default class MyRecords extends PureComponent {
                                         showDefaultActions />
                                 }
                                 <PublicationsListPaging
-                                    loading={this.props.loadingPublicationsList || this.props.exportPublicationsLoading}
+                                    loading={isLoadingOrExporting}
                                     pagingData={pagingData}
                                     onPageChanged={this.pageChanged}
-                                    disabled={this.props.loadingPublicationsList || this.props.exportPublicationsLoading} />
+                                    disabled={isLoadingOrExporting} />
                             </StandardCard>
                         </div>
                     }
@@ -232,10 +238,11 @@ export default class MyRecords extends PureComponent {
                                     facetsData={this.props.publicationsListFacets}
                                     onFacetsChanged={this.facetsChanged}
                                     activeFacets={this.state.activeFacets}
-                                    disabled={this.props.loadingPublicationsList || this.props.exportPublicationsLoading}
+                                    disabled={isLoadingOrExporting}
                                     excludeFacetsList={txt.facetsFilter.excludeFacetsList}
                                     isMyDataSetPage={this.props.location.pathname === routes.pathConfig.dataset.mine}
                                     renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                    lookupFacetsList={txt.facetsFilter.lookupFacetsList}
                                     showOpenAccessFilter/>
                             </StandardRighthandCard>
                         </div>

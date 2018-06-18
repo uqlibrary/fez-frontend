@@ -1,9 +1,12 @@
+import locale from 'locale/components';
+
 const getValue = (value) => (
     typeof(value) !== 'undefined' && !!value ? value : null
 );
 
 // Authentication
 export const SESSION_COOKIE_NAME = 'UQLID';
+export const SESSION_USER_GROUP_COOKIE_NAME = 'UQLID_USER_GROUP';
 export const TOKEN_NAME = 'X-Uql-Token';
 export const BASE_DN = 'ou=Staff,ou=People,o=The University of Queensland,c=AU';
 
@@ -43,7 +46,6 @@ export const PUBLICATION_TYPE_VIDEO_DOCUMENT = 310;
 export const PUBLICATION_TYPE_WORKING_PAPER = 183;
 export const PUBLICATION_TYPE_REFERENCE_ENTRY = 272;
 
-export const MIN_PUBLIC_SEARCH_TEXT_LENGTH = 1;
 export const MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
 
 export const publicationTypes = (components) => [
@@ -274,6 +276,14 @@ export const thesisSubmissionSubtypes = [
     'Professional Doctorate'
 ];
 
+/**
+ * File type to name map
+ */
+export const exportFormatToExtension = {
+    'excel': 'xlsx',
+    'endnote': 'enw'
+};
+
 export const OrgUnitsVocabId = 453703;
 export const FieldOfResearchVocabId = 451780;
 
@@ -305,4 +315,15 @@ export const SBS_THESIS_DEFAULT_VALUES = {
     rek_display_type: PUBLICATION_TYPE_THESIS,
     rek_genre_type: 'Professional Doctorate',
     fileAccessId: 4
+};
+
+export const defaultSearchParams = {
+    page: 1,
+    pageSize: 20,
+    sortBy: locale.components.sorting.sortBy[0].value,
+    sortDirection: locale.components.sorting.sortDirection[0],
+    activeFacets: {
+        filters: {},
+        ranges: {}
+    }
 };

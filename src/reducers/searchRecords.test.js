@@ -12,7 +12,8 @@ const initialSearchSources = {
 const initialState = {
     rawSearchQuery: 'This is a test',
     publicationsList: [],
-    loadingSearch: false,
+    searchLoading: false,
+    searchLoadingError: false,
     ...initialSearchSources
 };
 
@@ -51,7 +52,7 @@ describe('searchRecords reducer', () => {
 
     it('updates correctly when it is loading from API', () => {
         const loadingState = searchRecordsReducer(initialState, {type: actions.SEARCH_LOADING});
-        expect(loadingState.loadingSearch).toBeTruthy();
+        expect(loadingState.searchLoading).toBeTruthy();
         expect(loadingState.publicationsList).toEqual([]);
     });
 
@@ -63,7 +64,7 @@ describe('searchRecords reducer', () => {
             payload: {data: [...espaceList, ...scopusList, ...wosList]},
             type: actions.SEARCH_LOADED
         });
-        expect(loadedState.loadingSearch).toBeFalsy();
+        expect(loadedState.searchLoading).toBeFalsy();
         expect(loadedState.publicationsList).toEqual(postReducerPublicationsList);
         expect(loadedState.publicationsList.length).toEqual(6);
         expect(loadedState.rawSearchQuery).toEqual(initialState.rawSearchQuery);
@@ -77,7 +78,7 @@ describe('searchRecords reducer', () => {
             payload: {data: wosList},
             type: `${actions.SEARCH_LOADED}@wos`
         });
-        expect(wosState.loadingSearch).toBeTruthy();
+        expect(wosState.searchLoading).toBeTruthy();
         expect(wosState.publicationsList).toEqual(postReducerWOSPublicationsList);
         expect(wosState.publicationsList.length).toEqual(5);
         expect(wosState.rawSearchQuery).toEqual(initialState.rawSearchQuery);
@@ -94,7 +95,7 @@ describe('searchRecords reducer', () => {
             payload: {data: [...wosList]},
             type: `${actions.SEARCH_LOADED}@wos`
         });
-        expect(wosState2.loadingSearch).toBeTruthy();
+        expect(wosState2.searchLoading).toBeTruthy();
         expect(wosState2.publicationsList.length).toEqual(6); // adds 1 new publication after de-duplication
         expect(wosState2.publicationsList[0].currentSource).toEqual('wos');
         expect(wosState2.publicationsList[1].currentSource).toEqual('wos');
@@ -106,7 +107,7 @@ describe('searchRecords reducer', () => {
 
     it('updates correctly on general API failure', () => {
         const failedState = searchRecordsReducer(initialState, {type: actions.SEARCH_FAILED});
-        expect(failedState.loadingSearch).toBeFalsy();
+        expect(failedState.searchLoading).toBeFalsy();
         expect(failedState.publicationsList).toEqual([]);
         expect(failedState.loadingPublicationSources).toEqual(initialState.loadingPublicationSources);
     });
@@ -123,7 +124,7 @@ describe('searchRecords reducer', () => {
                 payload: [],
                 type: `${actions.SEARCH_FAILED}@scopus`
             });
-        expect(failedScopusState.loadingSearch).toBeFalsy();
+        expect(failedScopusState.searchLoading).toBeFalsy();
         expect(failedScopusState.publicationsList).toEqual([]);
         expect(failedScopusState.rawSearchQuery).toEqual(initialState.rawSearchQuery);
         expect(failedScopusState.loadingPublicationSources).toEqual(postReducerScopusPublicationsCount);
@@ -132,7 +133,7 @@ describe('searchRecords reducer', () => {
     it('updates the totalSourcesCount', () => {
         const countState = searchRecordsReducer(initialState, {payload: 5, type: actions.SEARCH_SOURCE_COUNT});
         expect(countState.loadingPublicationSources.totalSourcesCount).toEqual(5);
-        expect(countState.loadingSearch).toBeFalsy();
+        expect(countState.searchLoading).toBeFalsy();
     });
 
     it('returns the initial state when specifying an invalid handler type', () => {
@@ -383,5 +384,20 @@ describe('searchRecords reducer', () => {
         const testValue = 'i feel lucky';
         const countState = searchRecordsReducer(initialState, {payload: {title: testValue}, type: actions.SET_SEARCH_QUERY});
         expect(countState.searchQuery).toEqual({title: testValue});
+    });
+
+    it('should reset search query in state', () => {
+        const countState = searchRecordsReducer({...initialState, searchQuery: {all: 'i feel lucky'}}, {type: actions.CLEAR_SEARCH_QUERY});
+        expect(countState.searchQuery).toEqual({});
+    });
+
+    it('should set search loading error in state', () => {
+        const searchState = searchRecordsReducer(initialState, {type: actions.SEARCH_FAILED});
+        expect(searchState.searchLoadingError).toBeTruthy();
+    });
+
+    it('should reset search loading error in state', () => {
+        const searchState = searchRecordsReducer({...initialState, searchLoadingError: true}, {payload: {title: 'test search reset error'}, type: actions.SET_SEARCH_QUERY});
+        expect(searchState.searchLoadingError).toBeFalsy();
     });
 });

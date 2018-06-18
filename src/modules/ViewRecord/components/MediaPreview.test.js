@@ -38,4 +38,15 @@ describe('Media Preview Component ', () => {
         wrapper.find('RaisedButton').first().find('button').simulate('click');
         expect(open).toHaveBeenCalledTimes(1);
     });
+
+    it('should show an alert if an image preview has thrown an error', () => {
+        const wrapper = setup({mimeType: 'image/jpeg', mediaUrl: 'https://test.com/test.jpg'});
+        wrapper.setState({imageError: false});
+        wrapper.update();
+        wrapper.instance().handleImageError();
+        expect(wrapper.state().imageError).toEqual(true);
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 });

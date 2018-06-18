@@ -114,6 +114,10 @@ mock
         return [404, ['Request not found']];
     })
     .onGet(routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API().apiUrl)
+    // .reply(500, {})
+    .reply(200, mockData.trendingPublications)
+    .onGet(routes.TRENDING_PUBLICATIONS_API().apiUrl)
+    // .reply(500, {})
     .reply(200, mockData.trendingPublications)
     .onGet(routes.GET_ACML_QUICK_TEMPLATES_API().apiUrl)
     .reply(200, mockData.quickTemplates)
@@ -130,6 +134,7 @@ mock
         }
         return [200, {data: {...mockData.record}}];
     })
+    // .reply(401, '')
     // .reply(500, ['ERROR in EXISTING_RECORD_API'])
     .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({id: '.*'}).apiUrl)))
     .reply((config) => {

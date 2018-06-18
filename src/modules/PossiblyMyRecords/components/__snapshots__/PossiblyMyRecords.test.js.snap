@@ -56,6 +56,13 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
             ]
           }
           facetsData={Object {}}
+          lookupFacetsList={
+            Object {
+              "Author": "Author (lookup)",
+              "Collection": "Collection (lookup)",
+              "Subject": "Subject (lookup)",
+            }
+          }
           onFacetsChanged={[Function]}
           renameFacetsList={
             Object {
@@ -155,6 +162,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                 },
               ]
             }
+            hideCountDiff={false}
             publicationsList={
               Array [
                 1,
@@ -165,6 +173,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
             publicationsListSubset={Array []}
             showDefaultActions={false}
             showMetrics={false}
+            showSourceCountIcon={false}
             showSources={false}
             subsetCustomActions={
               Array [
@@ -254,6 +263,13 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                 "doc_count_error_upper_bound": 0,
                 "sum_other_doc_count": 641,
               },
+            }
+          }
+          lookupFacetsList={
+            Object {
+              "Author": "Author (lookup)",
+              "Collection": "Collection (lookup)",
+              "Subject": "Subject (lookup)",
             }
           }
           onFacetsChanged={[Function]}

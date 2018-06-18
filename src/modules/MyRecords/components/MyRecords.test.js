@@ -40,15 +40,15 @@ describe('MyRecords test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('renders loading screen while export publications loading', () => {
-        const wrapper = setup({ exportPublicationsLoading: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
     it('renders loading screen while loading publications while filtering', () => {
         const wrapper = setup({ publicationsList: [1, 2, 2] });
         wrapper.setProps({loadingPublicationsList: true});
         wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('renders loading screen while export publications loading', () => {
+        const wrapper = setup({ publicationsList: [1, 2, 2], exportPublicationsLoading: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
