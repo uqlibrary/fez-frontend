@@ -1,25 +1,35 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import {locale} from 'locale';
 import DashboardAuthorDetails from './DashboardAuthorDetails';
-import DashboardArticleCount from './DashboardArticleCount';
+import DashboardArticleCount from '../containers/DashboardArticleCount';
 import DashboardResearcherIds from './DashboardResearcherIds';
 import DashboardAuthorAvatar from './DashboardAuthorAvatar';
 
-const DashboardProfile = ({authorDetails, authorArticleCount, author, history}) => {
-    const txt = locale.pages.dashboard.header;
+class DashboardAuthorProfile extends PureComponent {
+    static propTypes = {
+        author: PropTypes.object,
+        authorDetails: PropTypes.object,
+        history: PropTypes.object.isRequired
+    };
 
-    return (
-        <div className="imageCover">
-            {
-                txt.help &&
-                <div className="is-pulled-right">
-                    <HelpIcon {...txt.help} />
-                </div>
-            }
-            {
-                authorDetails &&
+    render() {
+        const txt = locale.pages.dashboard.header;
+        const {author, authorDetails, history} = this.props;
+
+        if (!authorDetails) {
+            return <div />;
+        }
+
+        return (
+            <div className="imageCover">
+                {
+                    txt.help &&
+                    <div className="is-pulled-right">
+                        <HelpIcon {...txt.help} />
+                    </div>
+                }
                 <div className="columns userDetails is-gapless">
                     {/* Profile avatar */}
                     {
@@ -63,30 +73,14 @@ const DashboardProfile = ({authorDetails, authorArticleCount, author, history}) 
                             history={history}
                         />
                     </div>
-
                     {/* Publication count */}
-                    {
-                        authorArticleCount &&
-                        <div className="column is-narrow is-hidden-tablet-only authorCount">
-                            <DashboardArticleCount
-                                {...{
-                                    articleCount: authorArticleCount.articleCount,
-                                    articleFirstYear: authorArticleCount.articleFirstYear,
-                                    articleLastYear: authorArticleCount.articleLastYear,
-                                }} />
-                        </div>
-                    }
+                    <div className="column is-narrow is-hidden-tablet-only authorCount">
+                        <DashboardArticleCount />
+                    </div>
                 </div>
-            }
-        </div>
-    );
-};
+            </div>
+        );
+    }
+}
 
-DashboardProfile.propTypes = {
-    authorDetails: PropTypes.object,
-    authorArticleCount: PropTypes.object,
-    author: PropTypes.object,
-    history: PropTypes.object.isRequired
-};
-
-export default DashboardProfile;
+export default DashboardAuthorProfile;

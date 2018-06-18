@@ -3,16 +3,9 @@ jest.dontMock('./DashboardAuthorProfile');
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import * as mock from 'mock/data';
 
-const authorArticleCount = {
-    articleCount: mock.currentAuthorStats.total,
-    articleFirstYear: mock.currentAuthorStats.filters.facets.min_date_year_t.value_as_string,
-    articleLastYear: mock.currentAuthorStats.filters.facets.max_date_year_t.value_as_string
-};
-
 function setup(testProps, isShallow = true) {
     const props = {
         authorDetails: mock.authorDetails.uqresearcher,
-        authorArticleCount: null,
         author: mock.currentAuthor.uqresearcher.data,
         history: {},
         ...testProps
@@ -62,16 +55,6 @@ describe('Dashboard Author Profile test', () => {
                 ...mock.currentAuthor.uqresearcher.data,
                 aut_publons_id: '1111-2222-3333-4444'
             },
-        }, false);
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('Render the author profile with article count data', () => {
-        const wrapper = setup({
-            author: {
-                ...mock.currentAuthor.uqresearcher.data
-            },
-            authorArticleCount
         }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });

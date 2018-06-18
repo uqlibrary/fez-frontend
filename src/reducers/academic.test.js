@@ -7,7 +7,7 @@ export const initialState = {
     publicationTypesCount: null,
     loadingPublicationsStats: true,
     publicationsStats: null,
-    authorArticleCount: null
+    publicationTotalCount: null
 };
 
 describe('academicStatsReducer', () => {
@@ -59,7 +59,7 @@ describe('academicStatsReducer', () => {
                 articleLastYear: '2019'
             };
             const state = academicStatsReducer(oldState, {type: actions.ACADEMIC_PUBLICATIONS_COUNT_TOTAL_LOADED, payload: payload});
-            expect(state.authorArticleCount).toEqual({
+            expect(state.publicationTotalCount).toEqual({
                 articleCount: 100,
                 articleFirstYear: '1998',
                 articleLastYear: '2019'
