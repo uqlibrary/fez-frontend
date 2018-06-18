@@ -3043,11 +3043,6 @@ exports[`ContributorForm tests  should render display name field and identifier 
                         }
                       }
                     >
-                      <EventListener
-                        onResize={[Function]}
-                        onScroll={[Function]}
-                        target="window"
-                      />
                       <RenderToLayer
                         componentClickAway={[Function]}
                         open={false}

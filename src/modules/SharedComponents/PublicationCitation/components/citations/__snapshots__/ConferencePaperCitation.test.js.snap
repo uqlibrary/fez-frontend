@@ -1570,7 +1570,6 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
            
           <a
             className="citationShowMoreAuthors"
-            href="#"
             onClick={[Function]}
             onKeyPress={[Function]}
             title="Click to show 4 more authors"

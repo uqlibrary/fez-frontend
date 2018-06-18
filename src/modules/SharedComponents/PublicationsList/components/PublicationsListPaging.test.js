@@ -48,6 +48,18 @@ describe('PublicationsListPaging renders ', () => {
         expect(wrapper.find('.publicationsListControls.empty').length).toBe(1);
     });
 
+    it('component renders as empty due to currentpage set outside range', () => {
+        const data = {
+            from: 21,
+            to: 40,
+            total: 60,
+            per_page: 20,
+            current_page: 20
+        };
+        const wrapper = setup({pagingData: data});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('component with non-empty paging data, first page', () => {
         const data = {
             from: 1,
@@ -147,7 +159,6 @@ describe('PublicationsListPaging renders ', () => {
         const previousPage = wrapper.find('.pagingPrevious');
         expect(previousPage.length).toBe(1);
     });
-
 
     it('component with all fields disabled', () => {
         const data = {
@@ -251,4 +262,51 @@ describe('PublicationsListPaging renders ', () => {
         wrapper.instance().componentWillReceiveProps({pagingData: {}, disabled: true});
         expect(JSON.stringify(wrapper.state())).toBe(JSON.stringify(nextData));
     });
+
+    it('method to render buttons appears as expected for 50 pages on page 25', () => {
+        const data = {
+            from: 1,
+            to: 20,
+            total: 1000,
+            per_page: 20,
+            current_page: 25
+        };
+        const wrapper = setup({pagingData: data});
+        wrapper.setState({...data});
+        wrapper.update();
+        expect(wrapper.instance().renderPageButtons().length).toEqual(7);
+        expect(wrapper.find('.page').length).toEqual(9);
+    });
+
+    it('method to render buttons appears as expected for 50 pages on page 1', () => {
+        const data = {
+            from: 1,
+            to: 20,
+            total: 1000,
+            per_page: 20,
+            current_page: 1
+        };
+        const wrapper = setup({pagingData: data});
+        wrapper.setState({...data});
+        wrapper.update();
+        expect(wrapper.instance().renderPageButtons().length).toEqual(4);
+        expect(wrapper.find('.page').length).toEqual(5);
+    });
+
+    it('method to render buttons appears as expected for 50 pages on page 50', () => {
+        const data = {
+            from: 1,
+            to: 20,
+            total: 1000,
+            per_page: 20,
+            current_page: 50
+        };
+        const wrapper = setup({pagingData: data});
+        wrapper.setState({...data});
+        wrapper.update();
+        expect(wrapper.instance().renderPageButtons().length).toEqual(4);
+        expect(wrapper.find('.page').length).toEqual(5);
+    });
+
+
 });

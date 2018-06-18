@@ -7,7 +7,7 @@ function setup(testProps, isShallow = true) {
             fileUploadLimit: 5,
             maxFileSize: 1,
             fileSizeUnit: 'K',
-            fileNameRestrictions: /^(?=^\S*$)(?=^[^\.]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_))[a-z][a-z\d\-_\.]+/
+            fileNameRestrictions: /^(?=^\S*$)(?=^[a-z\d\-_]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_|\d))[a-z\d\-_\.]+/
         },
         filesInQueue: [],
         // locale: locale,

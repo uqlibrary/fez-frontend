@@ -114,7 +114,6 @@ export default class App extends PureComponent {
         }
 
         const isAuthorizedUser = !this.props.accountLoading && this.props.account !== null;
-        const isAdmin = this.props.account && this.props.account.canMasquerade;
         const isAuthorLoading = this.props.accountLoading || this.props.accountAuthorLoading;
         const isOrcidRequired = this.props.author && !this.props.author.aut_orcid_id
             && this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
@@ -136,7 +135,7 @@ export default class App extends PureComponent {
         }
 
         let userStatusAlert = null;
-        if (!this.props.accountLoading && !this.props.account) {
+        if (!this.props.accountLoading && !this.props.account && !isPublicPage) {
             // user is not logged in
             userStatusAlert = {
                 ...locale.global.loginAlert,
@@ -173,24 +172,26 @@ export default class App extends PureComponent {
                     showMenuIconButton={showMenu && !this.state.docked}
                     style={{height: 75}}
                     iconStyleLeft={{marginTop: 0}}
-                    title={locale.global.title}
+                    title={locale.global.appTitle}
                     titleStyle={titleStyle}
                     onLeftIconButtonClick={this.toggleDrawer}
                     iconElementLeft={
-                        <IconButton
-                            tooltip={locale.global.mainNavButton.tooltip}
-                            tooltipPosition="bottom-right"
-                            hoveredStyle={appBarButtonStyles}
-                            tabIndex={(this.state.docked || !this.state.menuDrawerOpen) ? 1 : -1}
-                            className="main-menu-button">
-                            <NavigationMenu/>
-                        </IconButton>
+                        this.state.docked || !this.state.menuDrawerOpen ?
+                            <IconButton
+                                tooltip={locale.global.mainNavButton.tooltip}
+                                tooltipPosition="bottom-right"
+                                hoveredStyle={appBarButtonStyles}
+                                className="main-menu-button">
+                                <NavigationMenu/>
+                            </IconButton>
+                            :
+                            <div className="menuHidden" />
                     }
                     iconElementRight={
                         <div className="columns is-gapless appbar-right-columns is-mobile">
                             <div className="column search-column">
                                 {
-                                    !isThesisSubmissionPage && isAuthorizedUser && isAdmin &&
+                                    !isThesisSubmissionPage &&
                                     <SearchComponent inHeader showPrefixIcon showMobileSearchButton />
                                 }
                             </div>

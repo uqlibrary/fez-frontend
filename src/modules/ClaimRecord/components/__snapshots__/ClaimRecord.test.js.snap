@@ -7204,7 +7204,16 @@ exports[`Component ClaimRecord  should render publication citation, error messag
     <Alert
       allowDismiss={false}
       dismissTitle="Click to dismiss this alert"
-      message="This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at espace.admin@email.com.au"
+      message={
+        <span>
+          This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at 
+          <a
+            href="mailto:espace@library.uq.edu.au"
+          >
+            espace@library.uq.edu.au
+          </a>
+        </span>
+      }
       showLoader={false}
       title="Error"
       type="error"

@@ -6,6 +6,7 @@ export * from './records';
 export * from './search';
 export * from './publications';
 export * from './claimPublications';
+export * from './exportPublications';
 export * from './fixRecord';
 export * from './viewRecord';
 export * from './controlledVocabularies';

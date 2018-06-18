@@ -479,7 +479,6 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
           >
             <a
               className="fileName"
-              href="#"
               onClick={[Function]}
               onKeyPress={[Function]}
             >
@@ -561,7 +560,6 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
           >
             <a
               className="fileName"
-              href="#"
               onClick={[Function]}
               onKeyPress={[Function]}
             >

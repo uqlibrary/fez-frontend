@@ -41,4 +41,24 @@ describe('App action creator', () => {
         await mockActionsStore.dispatch(appActions.dismissAppAlert());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
+
+    it('dispatches an action to set redirect path', () => {
+        const input = '/records/add/find';
+
+        const expectedActions = [
+            actions.SET_REDIRECT_PATH
+        ];
+
+        mockActionsStore.dispatch(appActions.setRedirectPath(input));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('dispatches an action to clear redirect path', () => {
+        const expectedActions = [
+            actions.CLEAR_REDIRECT_PATH
+        ];
+
+        mockActionsStore.dispatch(appActions.clearRedirectPath());
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
 });
