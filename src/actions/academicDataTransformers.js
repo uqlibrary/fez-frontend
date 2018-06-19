@@ -31,7 +31,8 @@ export function getPublicationsPerType(data, keepPublicationTypes) {
             .reduce((init, item) => {
                 return init + item[1];
             }, 0);
-        topCounts.push(['Other', otherCounts]);
+        const legendToDisplay = publicationTypesCount.slice(keepPublicationTypes).map(item => item[0]).join(', ');
+        topCounts.push(['Other', otherCounts, legendToDisplay]);
         return topCounts;
     }
 }
@@ -86,10 +87,11 @@ export function getPublicationsPerYearSeries(data, topPublicationTypes) {
     const series = [];
 
     // construct final data structure
-    Object.keys(fields).map(publicationType => {
+    Object.keys(fields).map((publicationType, index) => {
         series.push({
             name: publicationType,
-            data: fields[publicationType]
+            data: fields[publicationType],
+            ...(!!topPublicationTypes[index][2] && {extraInfoForLegend: topPublicationTypes[index][2]} || {})
         });
     });
 

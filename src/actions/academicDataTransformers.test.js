@@ -96,7 +96,7 @@ describe('Academic data transformers ', () => {
                 }
             ];
             const expected = [
-                ['Journal Article', 29], ['Book Chapter', 6], ['Other', 2]
+                ['Journal Article', 29], ['Book Chapter', 6], ['Other', 2, 'Conference Paper, Book']
             ];
             const result = transformers.getPublicationsPerType(data, 2);
             expect(result).toEqual(expected);
@@ -146,7 +146,7 @@ describe('Academic data transformers ', () => {
                 }
             ];
             const expected = [
-                ['Journal Article', 29], ['Book Chapter', 6], ['Book', 1], ['Other', 1]
+                ['Journal Article', 29], ['Book Chapter', 6], ['Book', 1], ['Other', 1, 'Conference Paper']
             ];
             const result = transformers.getPublicationsPerType(data, 3);
             expect(result).toEqual(expected);
