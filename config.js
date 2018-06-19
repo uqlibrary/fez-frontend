@@ -3,6 +3,8 @@ const deployment = {
     development: {
         url: (branch) => (`https://development.library.uq.edu.au/espace/${branch}`),
         api: 'https://api.library.uq.edu.au/staging/',
+        auth_login: 'https://fez-staging.library.uq.edu.au/login.php',
+        auth_logout: 'https://fez-staging.library.uq.edu.au/logout.php',
         gtm: 'GTM-K597ZS',
         title: 'UQ eSpace (DEVELOPMENT)',
         short_name: 'eSpace',
@@ -17,6 +19,8 @@ const deployment = {
     staging: {
         url: () => ('https://fez-staging.library.uq.edu.au/'),
         api: 'https://api.library.uq.edu.au/staging/',
+        auth_login: 'https://fez-staging.library.uq.edu.au/login.php',
+        auth_logout: 'https://fez-staging.library.uq.edu.au/logout.php',
         gtm: 'GTM-K597ZS',
         title: 'UQ eSpace (STAGING)',
         short_name: 'eSpace',
@@ -31,6 +35,8 @@ const deployment = {
     production: {
         url: () => ('https://espace.library.uq.edu.au/'),
         api: 'https://api.library.uq.edu.au/v1/',
+        auth_login: 'https://espace.library.uq.edu.au/login.php',
+        auth_logout: 'https://espace.library.uq.edu.au/logout.php',
         gtm: 'GTM-T4NPC25',
         title: 'UQ eSpace',
         short_name: 'eSpace',
