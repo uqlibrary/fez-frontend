@@ -31,7 +31,7 @@ if(config.environment === 'development') {
     config.basePath += branch + '/';
 }
 
-module.exports = {
+let webpackConfig = {
     devtool: 'source-map',
     // The entry file. All your app roots from here.
     entry: {
@@ -195,3 +195,21 @@ module.exports = {
         hints: 'warning'
     },
 };
+
+if (!!process.env.SENTRY_SOURCEMAP_AUTH_TOKEN) {
+    const SentryPlugin = require('webpack-sentry-plugin');
+
+    webpackConfig.plugins.push(new SentryPlugin({
+            // Sentry options are required
+            organization: 'the-university-of-queensland',
+            project: 'fez-frontend',
+            apiKey: process.env.SENTRY_SOURCEMAP_AUTH_TOKEN,
+
+            // Release version name/hash is required
+            release: process.env.GIT_SHA || 'abcdef'
+        })
+    );
+
+}
+
+module.exports = webpackConfig;
