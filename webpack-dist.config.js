@@ -87,6 +87,8 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('production'),       // always production build on CI
             'process.env.USE_MOCK': JSON.stringify(useMock),
             'process.env.API_URL': JSON.stringify(config.api),
+            'process.env.AUTH_LOGIN_URL': JSON.stringify(config.auth_login),
+            'process.env.AUTH_LOGOUT_URL': JSON.stringify(config.auth_logout),
             'process.env.APP_URL': JSON.stringify(config.url(process.env.CI_BRANCH)),
             'process.env.BRANCH': JSON.stringify(config.environment),
             'process.env.ORCID_URL': JSON.stringify(config.orcidUrl),

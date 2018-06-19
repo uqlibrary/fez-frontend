@@ -14,8 +14,8 @@ export const BASE_DN = 'ou=Staff,ou=People,o=The University of Queensland,c=AU';
 export const API_URL = getValue(process.env.API_URL) || 'https://api.library.uq.edu.au/staging/';
 export const APP_URL = getValue(process.env.APP_URL) || 'https://fez-staging.library.uq.edu.au/';
 
-export const AUTH_URL_LOGIN = 'https://auth.library.uq.edu.au/login';
-export const AUTH_URL_LOGOUT = 'https://auth.library.uq.edu.au/logout';
+export const AUTH_URL_LOGIN = getValue(process.env.AUTH_LOGIN_URL) || 'https://fez-staging.library.uq.edu.au/login.php';
+export const AUTH_URL_LOGOUT = getValue(process.env.AUTH_LOGOUT_URL) || 'https://auth.library.uq.edu.au/logout';
 
 export const ORCID_BASE_URL = getValue(process.env.ORCID_URL) || 'http://orcid.org';
 export const ORCID_CLIENT_ID = getValue(process.env.ORCID_CLIENT_ID) || '12345XYZ';

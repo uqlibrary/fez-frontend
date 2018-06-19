@@ -54,7 +54,7 @@ describe('claimPublication reducer', () => {
         });
     });
 
-    it('returns the record we are setting to claim', () => {
+    it('clears the record we set to claim', () => {
         const test = claimPublicationReducer(initialState, {type: actions.PUBLICATION_TO_CLAIM_CLEAR});
         expect(test).toEqual({
             ...initialState,
