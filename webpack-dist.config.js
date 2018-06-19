@@ -197,19 +197,19 @@ let webpackConfig = {
 };
 
 if (!!process.env.SENTRY_SOURCEMAP_AUTH_TOKEN) {
-    const SentryPlugin = require('webpack-sentry-plugin');
+    // Sentry requires these constants:
+    const SENTRY_AUTH_TOKEN = process.env.SENTRY_SOURCEMAP_AUTH_TOKEN;
+    const SENTRY_ORG = 'the-university-of-queensland';
+    const SENTRY_PROJECT = 'fez-frontend';
 
-    webpackConfig.plugins.push(new SentryPlugin({
-            // Sentry options are required
-            organization: 'the-university-of-queensland',
-            project: 'fez-frontend',
-            apiKey: process.env.SENTRY_SOURCEMAP_AUTH_TOKEN,
+    const SentryCliPlugin = require('@sentry/webpack-plugin');
 
-            // Release version name/hash is required
-            release: process.env.GIT_SHA || 'abcdef'
+    webpackConfig.plugins.push(new SentryCliPlugin({
+            release: process.env.GIT_SHA || process.env.CI_COMMIT_ID || 'missing-release',
+            include: './dist',
+            ignore: ['node_modules', 'webpack-dist.config.js']
         })
     );
-
 }
 
 module.exports = webpackConfig;
