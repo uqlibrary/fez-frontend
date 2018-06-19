@@ -41,7 +41,7 @@ exports[`SimpleSearchComponent should render default view 1`] = `
       </div>
     </div>
     <div
-      className="column is-narrow search-button-wrapper"
+      className="column is-narrow searchButtonWrapper"
     >
       <RaisedButton
         aria-label="Click to search eSpace"
@@ -72,7 +72,7 @@ exports[`SimpleSearchComponent should render show mobile button 1`] = `
         className="columns is-gapless search-field is-mobile"
       >
         <div
-          className="column is-narrow search-icon-prefix is-hidden-tablet"
+          className="column is-narrow searchIconPrefix is-hidden-tablet"
         >
           <IconButton
             className="mobileBackArrow"
@@ -118,7 +118,7 @@ exports[`SimpleSearchComponent should render show mobile button 1`] = `
     >
       <IconButton
         aria-label="Click to search eSpace"
-        className="search-button"
+        className="searchButton"
         disableTouchRipple={false}
         disabled={false}
         hoveredStyle={
@@ -136,7 +136,7 @@ exports[`SimpleSearchComponent should render show mobile button 1`] = `
       </IconButton>
     </div>
     <div
-      className="column is-narrow search-button-wrapper"
+      className="column is-narrow searchButtonWrapper"
     >
       <RaisedButton
         aria-label="Click to search eSpace"
@@ -167,7 +167,7 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
         className="columns is-gapless search-field is-mobile"
       >
         <div
-          className="column is-narrow search-icon-prefix is-hidden-mobile"
+          className="column is-narrow searchIconPrefix is-hidden-mobile"
         >
           <ActionSearch />
         </div>
@@ -199,7 +199,7 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
       </div>
     </div>
     <div
-      className="column is-narrow search-button-wrapper"
+      className="column is-narrow searchButtonWrapper"
     >
       <RaisedButton
         aria-label="Click to search eSpace"
@@ -261,7 +261,7 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
       </div>
     </div>
     <div
-      className="column is-narrow search-button-wrapper"
+      className="column is-narrow searchButtonWrapper"
     >
       <RaisedButton
         aria-label="Click to search eSpace"
@@ -319,7 +319,7 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
       </div>
     </div>
     <div
-      className="column is-narrow search-button-wrapper"
+      className="column is-narrow searchButtonWrapper"
     >
       <RaisedButton
         aria-label="Click to search eSpace"
@@ -333,7 +333,7 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
       />
     </div>
     <div
-      className="column is-narrow advanced-search-button-wrapper"
+      className="column is-narrow advancedSearchButtonWrapper"
     >
       <RaisedButton
         aria-label="Click to switch to Advanced search"

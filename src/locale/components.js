@@ -826,7 +826,7 @@ export default {
                         type: 'TextField',
                         hint: 'Add some text to search all fields with'
                     },
-                    'rek_title': {
+                    'title': {
                         title: 'Title',
                         combiner: 'contains',
                         type: 'TextField',

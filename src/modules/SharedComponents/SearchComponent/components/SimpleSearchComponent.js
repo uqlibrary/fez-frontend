@@ -108,13 +108,13 @@ export default class SimpleSearchComponent extends PureComponent {
                         <div className="columns is-gapless search-field is-mobile">
                             {
                                 this.props.showPrefixIcon &&
-                                <div className="column is-narrow search-icon-prefix is-hidden-mobile">
+                                <div className="column is-narrow searchIconPrefix is-hidden-mobile">
                                     <SearchIcon/>
                                 </div>
                             }
                             {
                                 this.props.showMobileSearchButton &&
-                                <div className="column is-narrow search-icon-prefix is-hidden-tablet">
+                                <div className="column is-narrow searchIconPrefix is-hidden-tablet">
                                     <IconButton
                                         onClick={this._handleToggleMobile}
                                         className="mobileBackArrow" >
@@ -146,7 +146,7 @@ export default class SimpleSearchComponent extends PureComponent {
                             <IconButton
                                 onClick={this._handleToggleMobile}
                                 aria-label={txt.mobileSearchButtonAriaLabel}
-                                className="search-button"
+                                className="searchButton"
                                 hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}}
                             >
                                 <SearchIcon/>
@@ -155,19 +155,19 @@ export default class SimpleSearchComponent extends PureComponent {
                     }
                     {
                         this.props.showSearchButton &&
-                        <div className="column is-narrow icon-search-button-wrapper">
+                        <div className="column is-narrow iconSearchButtonWrapper">
                             <IconButton
                                 tooltipPosition="bottom-left"
                                 onClick={this._handleSearch}
                                 disabled={!!this.searchTextValidationMessage(this.props.searchText)}
-                                className="search-button"
+                                className="searchButton"
                                 tooltip={txt.searchButtonHint}
                                 aria-label={txt.searchButtonAriaLabel}>
                                 <SearchIcon/>
                             </IconButton>
                         </div>
                     }
-                    <div className="column is-narrow search-button-wrapper">
+                    <div className="column is-narrow searchButtonWrapper">
                         <RaisedButton
                             label={txt.searchButtonText}
                             aria-label={txt.searchButtonAriaLabel}
@@ -178,7 +178,7 @@ export default class SimpleSearchComponent extends PureComponent {
                     </div>
                     {
                         this.props.showAdvancedSearchButton &&
-                        <div className="column is-narrow advanced-search-button-wrapper">
+                        <div className="column is-narrow advancedSearchButtonWrapper">
                             <RaisedButton
                                 label={txt.advancedSearchButtonText}
                                 aria-label={txt.advancedSearchButtonAriaLabel}

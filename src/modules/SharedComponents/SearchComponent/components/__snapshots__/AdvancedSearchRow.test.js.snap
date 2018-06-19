@@ -71,7 +71,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="rek_title"
+        key="title"
         primaryText="Title"
         targetOrigin={
           Object {
@@ -79,7 +79,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
             "vertical": "top",
           }
         }
-        value="rek_title"
+        value="title"
       />
     </SelectField>
   </div>
@@ -180,7 +180,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="rek_title"
+        key="title"
         primaryText="Title"
         targetOrigin={
           Object {
@@ -188,7 +188,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
             "vertical": "top",
           }
         }
-        value="rek_title"
+        value="title"
       />
     </SelectField>
   </div>
@@ -293,7 +293,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="rek_title"
+        key="title"
         primaryText="Title"
         targetOrigin={
           Object {
@@ -301,7 +301,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
             "vertical": "top",
           }
         }
-        value="rek_title"
+        value="title"
       />
     </SelectField>
   </div>
