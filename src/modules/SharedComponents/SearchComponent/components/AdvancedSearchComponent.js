@@ -99,7 +99,6 @@ export default class AdvancedSearchComponent extends PureComponent {
         this.props.onAdvancedSearchRowChange(index, searchRow);
     };
 
-
     _addAdvancedSearchRow = () => {
         if (!!this.props.onAdvancedSearchRowAdd) {
             this.props.onAdvancedSearchRowAdd();
@@ -126,7 +125,7 @@ export default class AdvancedSearchComponent extends PureComponent {
         const searchQueryCaption = this.getAdvancedSearchCaption(this.props);
 
         return (
-            <div className={`search-component ${this.props.className}`}>
+            <div className={`searchComponent ${this.props.className}`}>
                 <div className="advancedSearch">
                     <div className="columns is-gapless is-mobile" style={{marginBottom: '-12px'}}>
                         <div className="column">
@@ -148,8 +147,8 @@ export default class AdvancedSearchComponent extends PureComponent {
                     {
                         !this.props.isMinimised &&
                             <Fragment>
-                                <div className="columns">
-                                    <div className="column fields">
+                                <div className="columns is-multiline is-mobile">
+                                    <div className="column fields is-11-mobile is-11-tablet-only">
                                         {
                                             this.props.fieldRows.map((item, index) => (
                                                 <AdvancedSearchRow
@@ -163,44 +162,46 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             ))
                                         }
                                     </div>
-                                    <div className="column is-3">
+                                    <div className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox">
                                         <Checkbox
+                                            className="advancedSearchOpenAccessCheckbox"
                                             label={txt.advancedSearch.openAccess.title}
                                             checked={this.props.isOpenAccess}
                                             onCheck={this._toggleOpenAccess}
-                                            style={{marginTop: 12, paddingBottom: 2, borderBottom: '1px solid rgba(0, 0, 0, 0.12)'}}
                                         />
                                     </div>
                                 </div>
-                                <div className="columns is-gapless">
-                                    <div className="column is-narrow">
+                                <div className="columns is-gapless is-mobile is-multiline actionButtons">
+                                    <div className="column is-narrow-desktop is-narrow-tablet is-12-mobile">
                                         <RaisedButton
                                             label={txt.advancedSearch.addField.title}
                                             aria-label={txt.advancedSearch.addField.aria}
                                             secondary
                                             disabled={!canAddAnotherField}
                                             onClick={this._addAdvancedSearchRow}
+                                            fullWidth
                                         />
                                     </div>
-                                    <div className="column is-narrow">
+                                    <div className="column is-narrow-tablet is-12-mobile">
                                         <RaisedButton
                                             label={txt.advancedSearch.reset.title}
                                             aria-label={txt.advancedSearch.reset.aria}
-                                            style={{marginLeft: 6}}
                                             onClick={this._resetAdvancedSearch}
+                                            fullWidth
                                         />
                                     </div>
-                                    <div className="column is-narrow">
+                                    <div className="column is-12-mobile is-narrow-tablet">
                                         <FlatButton
                                             label={txt.advancedSearch.simpleSearch.title}
                                             aria-label={txt.advancedSearch.simpleSearch.aria}
-                                            style={{marginLeft: 6}}
                                             onClick={this._toggleSearchMode}
+                                            fullWidth
                                         />
                                     </div>
-                                    <div className="column" />
-                                    <div className="column is-3">
+                                    <div className="column is-hidden-mobile" />
+                                    <div className="column is-3-desktop is-3-tablet is-12-mobile">
                                         <RaisedButton
+                                            className="advancedSearchButton"
                                             label={txt.searchButtonText}
                                             aria-label={txt.searchButtonAriaLabel}
                                             primary

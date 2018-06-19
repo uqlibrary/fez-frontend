@@ -102,7 +102,7 @@ export default class SimpleSearchComponent extends PureComponent {
         const txt = locale.components.searchComponent;
 
         return (
-            <div className={`search-component ${this.props.isInHeader && 'header'} ${this.props.className}`}>
+            <div className={`searchComponent ${this.props.isInHeader && 'header'} ${this.props.className}`}>
                 <div className="columns is-gapless">
                     <div className={`column search-field is-gapless ${this.state.showMobile ? 'showMobile' : 'hideMobile'}`}>
                         <div className="columns is-gapless search-field is-mobile">
@@ -178,7 +178,7 @@ export default class SimpleSearchComponent extends PureComponent {
                     </div>
                     {
                         this.props.showAdvancedSearchButton &&
-                        <div className="column is-narrow">
+                        <div className="column is-narrow advanced-search-button-wrapper">
                             <RaisedButton
                                 label={txt.advancedSearchButtonText}
                                 aria-label={txt.advancedSearchButtonAriaLabel}

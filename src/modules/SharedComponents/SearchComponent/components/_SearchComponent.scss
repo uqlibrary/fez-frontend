@@ -1,19 +1,12 @@
 @import '../../../../sass/variables';
 
-.search-component {
-  .conjunction span {
-    font-style: italic !important;
-    opacity: 0.66 !important;
-    padding: 0 12px 0 0 !important;
-    line-height: 50px !important;
-    color: lighten($secondary-color, 20%);
-  }
+.searchComponent {
   .searchQueryCaption {
     margin-top: 24px;
     font-size: $text-body-small !important;
     word-break: break-all;
     hyphens: auto !important;
-    .and, .combiner {
+    .combiner {
       font-style: italic !important;
       opacity: 0.66 !important;
     }
@@ -34,9 +27,13 @@
      }
   }
   .search-button-wrapper {
+    margin-top: 28px !important;
     @include tablet {
       margin-left: 12px !important;
     }
+  }
+  .advanced-search-button-wrapper {
+    margin-top: 28px !important;
   }
   .search-icon-prefix {
     svg {
@@ -144,24 +141,103 @@
     }
   }
 }
-.advancedSearchField {
-  margin-bottom: -12px !important;
-  .combiner span {
-    padding: 0 12px !important;
-    line-height: 50px !important;
-    font-style: italic;
-    color: lighten($secondary-color, 33%);
+
+.advancedSearch {
+  .openAccessCheckbox {
+    margin-top: 12px;
+    padding-bottom: 2px;
+    @include mobile {
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+    @include tablet-only {
+      margin-top: -12px;
+      padding-bottom: 2px;
+    }
+    label {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis !important;
+    }
   }
-  // Override search box X
-  input[type="search"]::-webkit-search-cancel-button {
-    display: none;
+  .advancedSearchButton, .advancedSearchOpenAccessCheckbox {
+    @include desktop {
+      width: 100% !important;
+      min-width: 225px !important;
+    }
+    @include tablet {
+      width: 100% !important;
+    }
   }
-  .deleteFieldButton {
-    margin-top: 6px !important;
-    opacity: 0.33;
-    &:hover {
-      opacity: 0.66;
+  .actionButtons {
+    .column {
+      @include tablet {
+        margin: 3px !important;
+      }
+      @include mobile {
+        margin: 3px !important;
+      }
+    }
+  }
+  .advancedSearchRow {
+    @include desktop {
+      margin-bottom: -12px !important;
+    }
+    @include tablet {
+      margin-bottom: -12px !important;
+    }
+    .column.combiner {
+      overflow: hidden;
+      @include mobile {
+        text-align: right !important;
+        margin: 0 0 0 12px !important;
+      }
+      span {
+        line-height: 50px !important;
+        font-style: italic;
+        color: lighten($secondary-color, 33%);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        @include desktop {
+          padding: 0 12px !important;
+        }
+        @include tablet {
+          padding: 0 12px !important;
+        }
+      }
+    }
+    .column.input {
+      &>div>div:nth-of-type(1){
+        width: 100% !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+      }
+      @include mobile {
+        margin-top: -12px !important;
+      }
+    }
+    // Override search box X
+    input[type="search"]::-webkit-search-cancel-button {
+      display: none;
+    }
+
+    .spacer {
+      width: 6px !important;
+      @include mobile {
+        width: 0.1px !important;
+      }
+    }
+    .deleteFieldButton {
+      margin-top: 6px !important;
+      opacity: 0.33;
+      @include mobile {
+        margin: -12px 0 0 -8px !important;
+
+      }
+      &:hover {
+        opacity: 0.66;
+      }
     }
   }
 }
-

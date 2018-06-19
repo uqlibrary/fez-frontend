@@ -2,7 +2,7 @@
 
 exports[`AdvancedSearchComponent should render advanced search row based on props 1`] = `
 <div
-  className="search-component advanced-search"
+  className="searchComponent advanced-search"
 >
   <div
     className="advancedSearch"
@@ -40,10 +40,10 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
     </div>
     <React.Fragment>
       <div
-        className="columns"
+        className="columns is-multiline is-mobile"
       >
         <div
-          className="column fields"
+          className="column fields is-11-mobile is-11-tablet-only"
         >
           <AdvancedSearchRow
             all="i feel lucky"
@@ -59,34 +59,28 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
           />
         </div>
         <div
-          className="column is-3"
+          className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
         >
           <Checkbox
             checked={true}
+            className="advancedSearchOpenAccessCheckbox"
             disabled={false}
             label="Open access / Full text"
             labelPosition="right"
             onCheck={[Function]}
-            style={
-              Object {
-                "borderBottom": "1px solid rgba(0, 0, 0, 0.12)",
-                "marginTop": 12,
-                "paddingBottom": 2,
-              }
-            }
           />
         </div>
       </div>
       <div
-        className="columns is-gapless"
+        className="columns is-gapless is-mobile is-multiline actionButtons"
       >
         <div
-          className="column is-narrow"
+          className="column is-narrow-desktop is-narrow-tablet is-12-mobile"
         >
           <RaisedButton
             aria-label="Click to add another advanced search field"
             disabled={false}
-            fullWidth={false}
+            fullWidth={true}
             label="Add another field"
             labelPosition="after"
             onClick={[Function]}
@@ -95,31 +89,26 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
           />
         </div>
         <div
-          className="column is-narrow"
+          className="column is-narrow-tablet is-12-mobile"
         >
           <RaisedButton
             aria-label="Click to reset the advanced search"
             disabled={false}
-            fullWidth={false}
+            fullWidth={true}
             label="Reset"
             labelPosition="after"
             onClick={[Function]}
             primary={false}
             secondary={false}
-            style={
-              Object {
-                "marginLeft": 6,
-              }
-            }
           />
         </div>
         <div
-          className="column is-narrow"
+          className="column is-12-mobile is-narrow-tablet"
         >
           <FlatButton
             aria-label="Click to return to the simple search"
             disabled={false}
-            fullWidth={false}
+            fullWidth={true}
             label="Simple search"
             labelPosition="after"
             labelStyle={Object {}}
@@ -130,21 +119,17 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
             onTouchStart={[Function]}
             primary={false}
             secondary={false}
-            style={
-              Object {
-                "marginLeft": 6,
-              }
-            }
           />
         </div>
         <div
-          className="column"
+          className="column is-hidden-mobile"
         />
         <div
-          className="column is-3"
+          className="column is-3-desktop is-3-tablet is-12-mobile"
         >
           <RaisedButton
             aria-label="Click to search eSpace"
+            className="advancedSearchButton"
             disabled={false}
             fullWidth={true}
             label="Search"
@@ -193,7 +178,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
 
 exports[`AdvancedSearchComponent should render default view 1`] = `
 <div
-  className="search-component advanced-search"
+  className="searchComponent advanced-search"
 >
   <div
     className="advancedSearch"
@@ -231,10 +216,10 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
     </div>
     <React.Fragment>
       <div
-        className="columns"
+        className="columns is-multiline is-mobile"
       >
         <div
-          className="column fields"
+          className="column fields is-11-mobile is-11-tablet-only"
         >
           <AdvancedSearchRow
             disabledFields={
@@ -251,34 +236,28 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
           />
         </div>
         <div
-          className="column is-3"
+          className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
         >
           <Checkbox
             checked={false}
+            className="advancedSearchOpenAccessCheckbox"
             disabled={false}
             label="Open access / Full text"
             labelPosition="right"
             onCheck={[Function]}
-            style={
-              Object {
-                "borderBottom": "1px solid rgba(0, 0, 0, 0.12)",
-                "marginTop": 12,
-                "paddingBottom": 2,
-              }
-            }
           />
         </div>
       </div>
       <div
-        className="columns is-gapless"
+        className="columns is-gapless is-mobile is-multiline actionButtons"
       >
         <div
-          className="column is-narrow"
+          className="column is-narrow-desktop is-narrow-tablet is-12-mobile"
         >
           <RaisedButton
             aria-label="Click to add another advanced search field"
             disabled={true}
-            fullWidth={false}
+            fullWidth={true}
             label="Add another field"
             labelPosition="after"
             onClick={[Function]}
@@ -287,31 +266,26 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
           />
         </div>
         <div
-          className="column is-narrow"
+          className="column is-narrow-tablet is-12-mobile"
         >
           <RaisedButton
             aria-label="Click to reset the advanced search"
             disabled={false}
-            fullWidth={false}
+            fullWidth={true}
             label="Reset"
             labelPosition="after"
             onClick={[Function]}
             primary={false}
             secondary={false}
-            style={
-              Object {
-                "marginLeft": 6,
-              }
-            }
           />
         </div>
         <div
-          className="column is-narrow"
+          className="column is-12-mobile is-narrow-tablet"
         >
           <FlatButton
             aria-label="Click to return to the simple search"
             disabled={false}
-            fullWidth={false}
+            fullWidth={true}
             label="Simple search"
             labelPosition="after"
             labelStyle={Object {}}
@@ -322,21 +296,17 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
             onTouchStart={[Function]}
             primary={false}
             secondary={false}
-            style={
-              Object {
-                "marginLeft": 6,
-              }
-            }
           />
         </div>
         <div
-          className="column"
+          className="column is-hidden-mobile"
         />
         <div
-          className="column is-3"
+          className="column is-3-desktop is-3-tablet is-12-mobile"
         >
           <RaisedButton
             aria-label="Click to search eSpace"
+            className="advancedSearchButton"
             disabled={true}
             fullWidth={true}
             label="Search"
@@ -354,7 +324,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
 
 exports[`AdvancedSearchComponent should render default view with open access checked 1`] = `
 <div
-  className="search-component advanced-search"
+  className="searchComponent advanced-search"
 >
   <div
     className="advancedSearch"
@@ -392,10 +362,10 @@ exports[`AdvancedSearchComponent should render default view with open access che
     </div>
     <React.Fragment>
       <div
-        className="columns"
+        className="columns is-multiline is-mobile"
       >
         <div
-          className="column fields"
+          className="column fields is-11-mobile is-11-tablet-only"
         >
           <AdvancedSearchRow
             disabledFields={
@@ -412,34 +382,28 @@ exports[`AdvancedSearchComponent should render default view with open access che
           />
         </div>
         <div
-          className="column is-3"
+          className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
         >
           <Checkbox
             checked={true}
+            className="advancedSearchOpenAccessCheckbox"
             disabled={false}
             label="Open access / Full text"
             labelPosition="right"
             onCheck={[Function]}
-            style={
-              Object {
-                "borderBottom": "1px solid rgba(0, 0, 0, 0.12)",
-                "marginTop": 12,
-                "paddingBottom": 2,
-              }
-            }
           />
         </div>
       </div>
       <div
-        className="columns is-gapless"
+        className="columns is-gapless is-mobile is-multiline actionButtons"
       >
         <div
-          className="column is-narrow"
+          className="column is-narrow-desktop is-narrow-tablet is-12-mobile"
         >
           <RaisedButton
             aria-label="Click to add another advanced search field"
             disabled={true}
-            fullWidth={false}
+            fullWidth={true}
             label="Add another field"
             labelPosition="after"
             onClick={[Function]}
@@ -448,31 +412,26 @@ exports[`AdvancedSearchComponent should render default view with open access che
           />
         </div>
         <div
-          className="column is-narrow"
+          className="column is-narrow-tablet is-12-mobile"
         >
           <RaisedButton
             aria-label="Click to reset the advanced search"
             disabled={false}
-            fullWidth={false}
+            fullWidth={true}
             label="Reset"
             labelPosition="after"
             onClick={[Function]}
             primary={false}
             secondary={false}
-            style={
-              Object {
-                "marginLeft": 6,
-              }
-            }
           />
         </div>
         <div
-          className="column is-narrow"
+          className="column is-12-mobile is-narrow-tablet"
         >
           <FlatButton
             aria-label="Click to return to the simple search"
             disabled={false}
-            fullWidth={false}
+            fullWidth={true}
             label="Simple search"
             labelPosition="after"
             labelStyle={Object {}}
@@ -483,21 +442,17 @@ exports[`AdvancedSearchComponent should render default view with open access che
             onTouchStart={[Function]}
             primary={false}
             secondary={false}
-            style={
-              Object {
-                "marginLeft": 6,
-              }
-            }
           />
         </div>
         <div
-          className="column"
+          className="column is-hidden-mobile"
         />
         <div
-          className="column is-3"
+          className="column is-3-desktop is-3-tablet is-12-mobile"
         >
           <RaisedButton
             aria-label="Click to search eSpace"
+            className="advancedSearchButton"
             disabled={true}
             fullWidth={true}
             label="Search"
@@ -529,7 +484,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
 
 exports[`AdvancedSearchComponent should render minimised view 1`] = `
 <div
-  className="search-component advanced-search"
+  className="searchComponent advanced-search"
 >
   <div
     className="advancedSearch"
@@ -571,7 +526,7 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
 
 exports[`AdvancedSearchComponent should toggle minimised view for advanced search 1`] = `
 <div
-  className="search-component advanced-search"
+  className="searchComponent advanced-search"
 >
   <div
     className="advancedSearch"
@@ -609,10 +564,10 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
     </div>
     <React.Fragment>
       <div
-        className="columns"
+        className="columns is-multiline is-mobile"
       >
         <div
-          className="column fields"
+          className="column fields is-11-mobile is-11-tablet-only"
         >
           <AdvancedSearchRow
             disabledFields={
@@ -629,34 +584,28 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
           />
         </div>
         <div
-          className="column is-3"
+          className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
         >
           <Checkbox
             checked={false}
+            className="advancedSearchOpenAccessCheckbox"
             disabled={false}
             label="Open access / Full text"
             labelPosition="right"
             onCheck={[Function]}
-            style={
-              Object {
-                "borderBottom": "1px solid rgba(0, 0, 0, 0.12)",
-                "marginTop": 12,
-                "paddingBottom": 2,
-              }
-            }
           />
         </div>
       </div>
       <div
-        className="columns is-gapless"
+        className="columns is-gapless is-mobile is-multiline actionButtons"
       >
         <div
-          className="column is-narrow"
+          className="column is-narrow-desktop is-narrow-tablet is-12-mobile"
         >
           <RaisedButton
             aria-label="Click to add another advanced search field"
             disabled={true}
-            fullWidth={false}
+            fullWidth={true}
             label="Add another field"
             labelPosition="after"
             onClick={[Function]}
@@ -665,31 +614,26 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
           />
         </div>
         <div
-          className="column is-narrow"
+          className="column is-narrow-tablet is-12-mobile"
         >
           <RaisedButton
             aria-label="Click to reset the advanced search"
             disabled={false}
-            fullWidth={false}
+            fullWidth={true}
             label="Reset"
             labelPosition="after"
             onClick={[Function]}
             primary={false}
             secondary={false}
-            style={
-              Object {
-                "marginLeft": 6,
-              }
-            }
           />
         </div>
         <div
-          className="column is-narrow"
+          className="column is-12-mobile is-narrow-tablet"
         >
           <FlatButton
             aria-label="Click to return to the simple search"
             disabled={false}
-            fullWidth={false}
+            fullWidth={true}
             label="Simple search"
             labelPosition="after"
             labelStyle={Object {}}
@@ -700,21 +644,17 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
             onTouchStart={[Function]}
             primary={false}
             secondary={false}
-            style={
-              Object {
-                "marginLeft": 6,
-              }
-            }
           />
         </div>
         <div
-          className="column"
+          className="column is-hidden-mobile"
         />
         <div
-          className="column is-3"
+          className="column is-3-desktop is-3-tablet is-12-mobile"
         >
           <RaisedButton
             aria-label="Click to search eSpace"
+            className="advancedSearchButton"
             disabled={true}
             fullWidth={true}
             label="Search"

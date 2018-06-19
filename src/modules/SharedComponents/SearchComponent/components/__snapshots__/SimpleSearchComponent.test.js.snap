@@ -2,7 +2,7 @@
 
 exports[`SimpleSearchComponent should render default view 1`] = `
 <div
-  className="search-component false simple-search"
+  className="searchComponent false simple-search"
 >
   <div
     className="columns is-gapless"
@@ -60,7 +60,7 @@ exports[`SimpleSearchComponent should render default view 1`] = `
 
 exports[`SimpleSearchComponent should render show mobile button 1`] = `
 <div
-  className="search-component false simple-search"
+  className="searchComponent false simple-search"
 >
   <div
     className="columns is-gapless"
@@ -155,7 +155,7 @@ exports[`SimpleSearchComponent should render show mobile button 1`] = `
 
 exports[`SimpleSearchComponent should render show prefix icon in the search box 1`] = `
 <div
-  className="search-component false simple-search"
+  className="searchComponent false simple-search"
 >
   <div
     className="columns is-gapless"
@@ -218,7 +218,7 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
 
 exports[`SimpleSearchComponent should render with a class "header" for use in AppBar 1`] = `
 <div
-  className="search-component header simple-search"
+  className="searchComponent header simple-search"
 >
   <div
     className="columns is-gapless"
@@ -280,7 +280,7 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
 
 exports[`SimpleSearchComponent should set search value from prop 1`] = `
 <div
-  className="search-component false simple-search"
+  className="searchComponent false simple-search"
 >
   <div
     className="columns is-gapless"
@@ -333,7 +333,7 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
       />
     </div>
     <div
-      className="column is-narrow"
+      className="column is-narrow advanced-search-button-wrapper"
     >
       <RaisedButton
         aria-label="Click to switch to Advanced search"

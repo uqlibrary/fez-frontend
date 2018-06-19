@@ -262,7 +262,7 @@ export default class SearchComponent extends PureComponent {
                         {...this.state.advancedSearch}
                         className={this.props.className}
                         onToggleSearchMode={this._toggleSearchMode}
-                        onToggleMinimise={this.toggleMinimise}
+                        onToggleMinimise={this._toggleMinimise}
                         onToggleOpenAccess={this._toggleOpenAccess}
                         onAdvancedSearchRowAdd={this._addAdvancedSearchRow}
                         onAdvancedSearchRowRemove={this._removeAdvancedSearchRow}

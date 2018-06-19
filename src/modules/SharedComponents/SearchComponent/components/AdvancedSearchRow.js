@@ -42,8 +42,8 @@ export default class AdvancedSearchRow extends PureComponent {
     render() {
         const txt = locale.components.searchComponent.advancedSearch;
         return (
-            <div className="columns is-gapless is-mobile advancedSearchField">
-                <div className="column is-3">
+            <div className="columns is-gapless is-mobile is-multiline advancedSearchRow">
+                <div className="column is-3-tablet">
                     <SelectField
                         value={this.props.searchField}
                         onChange={this._handleSearchFieldChange}
@@ -65,16 +65,16 @@ export default class AdvancedSearchRow extends PureComponent {
                         <div className="column is-narrow combiner">
                             <span>{txt.fieldTypes[this.props.searchField].combiner}</span>
                         </div>
-                        : <div className="column is-narrow" style={{width: 12}} />
+                        : <div className="column is-narrow spacer" />
                 }
-                <div className="column">
+                <div className={`column input ${(this.props.rowIndex === 0) ? 'is-12-mobile' : 'is-11-mobile'}`}>
                     <TextField
                         type="search"
                         name={`textSearchField${this.props.rowIndex}`}
                         id="searchField"
                         fullWidth
                         hintText={txt.fieldTypes[this.props.searchField].hint}
-                        aria-label="Aria"
+                        aria-label={txt.fieldTypes[this.props.searchField].hint}
                         value={this.props.value}
                         onChange={this._handleTextChange}
                         errorText={this.searchTextValidationMessage(this.props.value)}
@@ -83,7 +83,7 @@ export default class AdvancedSearchRow extends PureComponent {
                 </div>
                 {
                     this.props.rowIndex !== 0 &&
-                    <div className="column is-narrow">
+                    <div className="column is-1-mobile is-narrow-tablet">
                         <IconButton
                             className="deleteFieldButton"
                             onClick={this._deleteRow}
