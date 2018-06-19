@@ -23,11 +23,11 @@ describe('Academic action creators', () => {
             .reply(200, currentAuthorStats);
 
         const expectedActions = [
-            actions.ACADEMIC_PUBLICATIONS_STATS_LOADING,
-            actions.ACADEMIC_PUBLICATIONS_COUNT_PER_TYPE_LOADED,
-            actions.ACADEMIC_PUBLICATIONS_COUNT_TOTAL_LOADED,
-            actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED,
-            actions.ACADEMIC_PUBLICATIONS_STATS_LOADED
+            actions.AUTHOR_PUBLICATIONS_STATS_LOADING,
+            actions.AUTHOR_PUBLICATIONS_COUNT_PER_TYPE_LOADED,
+            actions.AUTHOR_PUBLICATIONS_COUNT_TOTAL_LOADED,
+            actions.AUTHOR_PUBLICATIONS_BY_YEAR_LOADED,
+            actions.AUTHOR_PUBLICATIONS_STATS_LOADED
         ];
 
         await mockActionsStore.dispatch(academicActions.loadAuthorPublicationsStats('testuser'));
@@ -42,11 +42,11 @@ describe('Academic action creators', () => {
             .reply(200, currentAuthorStats);
 
         const expectedActions = [
-            actions.ACADEMIC_PUBLICATIONS_STATS_LOADING,
-            actions.ACADEMIC_PUBLICATIONS_COUNT_PER_TYPE_LOADED,
-            actions.ACADEMIC_PUBLICATIONS_COUNT_TOTAL_LOADED,
-            actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED,
-            actions.ACADEMIC_PUBLICATIONS_STATS_LOADED
+            actions.AUTHOR_PUBLICATIONS_STATS_LOADING,
+            actions.AUTHOR_PUBLICATIONS_COUNT_PER_TYPE_LOADED,
+            actions.AUTHOR_PUBLICATIONS_COUNT_TOTAL_LOADED,
+            actions.AUTHOR_PUBLICATIONS_BY_YEAR_LOADED,
+            actions.AUTHOR_PUBLICATIONS_STATS_LOADED
         ];
 
         await mockActionsStore.dispatch(academicActions.loadAuthorPublicationsStats('testuser'));
@@ -59,9 +59,9 @@ describe('Academic action creators', () => {
             .reply(403);
 
         const expectedActions = [
-            actions.ACADEMIC_PUBLICATIONS_STATS_LOADING,
+            actions.AUTHOR_PUBLICATIONS_STATS_LOADING,
             actions.CURRENT_ACCOUNT_ANONYMOUS,
-            actions.ACADEMIC_PUBLICATIONS_STATS_FAILED
+            actions.AUTHOR_PUBLICATIONS_STATS_FAILED
         ];
 
         await mockActionsStore.dispatch(academicActions.loadAuthorPublicationsStats('testuser'));
@@ -70,17 +70,17 @@ describe('Academic action creators', () => {
 
     it('should dispatch 5 actions on successful fetch of author\'s publication stats data and successful hindex api call', async () => {
         mockApi
-            .onGet(repositories.routes.ACADEMIC_PUBLICATIONS_STATS_API({userId: 'testuser'}).apiUrl)
+            .onGet(repositories.routes.AUTHOR_PUBLICATIONS_STATS_ONLY_API({userId: 'testuser'}).apiUrl)
             .reply(200, currentAuthorStats)
             .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: 'testuser'}).apiUrl)
             .reply(200, hindexResponse);
 
         const expectedActions = [
-            actions.ACADEMIC_PUBLICATIONS_STATS_LOADING,
-            actions.ACADEMIC_PUBLICATIONS_COUNT_PER_TYPE_LOADED,
-            actions.ACADEMIC_PUBLICATIONS_COUNT_TOTAL_LOADED,
-            actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED,
-            actions.ACADEMIC_PUBLICATIONS_STATS_LOADED
+            actions.AUTHOR_PUBLICATIONS_STATS_LOADING,
+            actions.AUTHOR_PUBLICATIONS_COUNT_PER_TYPE_LOADED,
+            actions.AUTHOR_PUBLICATIONS_COUNT_TOTAL_LOADED,
+            actions.AUTHOR_PUBLICATIONS_BY_YEAR_LOADED,
+            actions.AUTHOR_PUBLICATIONS_STATS_LOADED
         ];
 
         await mockActionsStore.dispatch(academicActions.loadAuthorPublicationsStats('testuser'));
@@ -89,17 +89,17 @@ describe('Academic action creators', () => {
 
     it('should dispatch 5 actions on error with stats while fetching author\'s publication stats data but error on hindex api call', async () => {
         mockApi
-            .onGet(repositories.routes.ACADEMIC_PUBLICATIONS_STATS_API({userId: 'testuser'}).apiUrl)
+            .onGet(repositories.routes.AUTHOR_PUBLICATIONS_STATS_ONLY_API({userId: 'testuser'}).apiUrl)
             .reply(200, currentAuthorStats)
             .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: 'testuser'}).apiUrl)
             .reply(500, {});
 
         const expectedActions = [
-            actions.ACADEMIC_PUBLICATIONS_STATS_LOADING,
-            actions.ACADEMIC_PUBLICATIONS_COUNT_PER_TYPE_LOADED,
-            actions.ACADEMIC_PUBLICATIONS_COUNT_TOTAL_LOADED,
-            actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED,
-            actions.ACADEMIC_PUBLICATIONS_STATS_LOADED
+            actions.AUTHOR_PUBLICATIONS_STATS_LOADING,
+            actions.AUTHOR_PUBLICATIONS_COUNT_PER_TYPE_LOADED,
+            actions.AUTHOR_PUBLICATIONS_COUNT_TOTAL_LOADED,
+            actions.AUTHOR_PUBLICATIONS_BY_YEAR_LOADED,
+            actions.AUTHOR_PUBLICATIONS_STATS_LOADED
         ];
 
         await mockActionsStore.dispatch(academicActions.loadAuthorPublicationsStats('testuser'));
@@ -108,14 +108,14 @@ describe('Academic action creators', () => {
 
     it('should dispatch 2 actions on success with empty response while fetching author\'s publication stats data but error on hindex api call', async () => {
         mockApi
-            .onGet(repositories.routes.ACADEMIC_PUBLICATIONS_STATS_API({userId: 'testuser'}).apiUrl)
+            .onGet(repositories.routes.AUTHOR_PUBLICATIONS_STATS_ONLY_API({userId: 'testuser'}).apiUrl)
             .reply(200)
             .onAny()
             .reply(500, {});
 
         const expectedActions = [
-            actions.ACADEMIC_PUBLICATIONS_STATS_LOADING,
-            actions.ACADEMIC_PUBLICATIONS_STATS_FAILED
+            actions.AUTHOR_PUBLICATIONS_STATS_LOADING,
+            actions.AUTHOR_PUBLICATIONS_STATS_FAILED
         ];
 
         await mockActionsStore.dispatch(academicActions.loadAuthorPublicationsStats('testuser'));

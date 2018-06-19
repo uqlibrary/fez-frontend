@@ -5,10 +5,10 @@ import * as routes from 'repositories/routes';
 
 export function loadAuthorPublicationsStats(userName) {
     return dispatch => {
-        dispatch({type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADING});
+        dispatch({type: actions.AUTHOR_PUBLICATIONS_STATS_LOADING});
         let statsData = null;
         let publicationTotalCount = null;
-        return get(routes.ACADEMIC_PUBLICATIONS_STATS_API({}))
+        return get(routes.AUTHOR_PUBLICATIONS_STATS_ONLY_API({}))
             .then(response => {
                 let data = [];
                 let topPublicationTypes = [];
@@ -23,17 +23,17 @@ export function loadAuthorPublicationsStats(userName) {
                 }
 
                 dispatch({
-                    type: actions.ACADEMIC_PUBLICATIONS_COUNT_PER_TYPE_LOADED,
+                    type: actions.AUTHOR_PUBLICATIONS_COUNT_PER_TYPE_LOADED,
                     payload: topPublicationTypes
                 });
 
                 dispatch({
-                    type: actions.ACADEMIC_PUBLICATIONS_COUNT_TOTAL_LOADED,
+                    type: actions.AUTHOR_PUBLICATIONS_COUNT_TOTAL_LOADED,
                     payload: publicationTotalCount
                 });
 
                 dispatch({
-                    type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED,
+                    type: actions.AUTHOR_PUBLICATIONS_BY_YEAR_LOADED,
                     payload: {
                         series: transformer.getPublicationsPerYearSeries(data, topPublicationTypes),
                         categories: years
@@ -50,19 +50,19 @@ export function loadAuthorPublicationsStats(userName) {
                     statsData.thomson_citation_count_i.hindex = response.hindex_incites;
                 }
                 dispatch({
-                    type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADED,
+                    type: actions.AUTHOR_PUBLICATIONS_STATS_LOADED,
                     payload: statsData
                 });
             })
             .catch(error => {
                 if (!statsData) {
                     dispatch({
-                        type: actions.ACADEMIC_PUBLICATIONS_STATS_FAILED,
+                        type: actions.AUTHOR_PUBLICATIONS_STATS_FAILED,
                         payload: error.message
                     });
                 } else {
                     dispatch({
-                        type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADED,
+                        type: actions.AUTHOR_PUBLICATIONS_STATS_LOADED,
                         payload: statsData
                     });
                 }
