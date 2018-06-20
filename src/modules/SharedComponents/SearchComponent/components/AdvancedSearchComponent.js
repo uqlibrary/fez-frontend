@@ -67,7 +67,7 @@ export default class AdvancedSearchComponent extends PureComponent {
         return (searchFields.length > 0 || !!isOpenAccess) && <Fragment>{searchFields}{openAccessText}</Fragment> || null;
     };
 
-    hasAllAdvancedSearchFieldsValidated = (fieldRows) => {
+    haveAllAdvancedSearchFieldsValidated = (fieldRows) => {
         const fieldTypes = locale.components.searchComponent.advancedSearch.fieldTypes;
         return fieldRows.filter(item => item.searchField === '0' || item.value === ''
             // Check if the locale specifies a minLength for this field and check it not shorter
@@ -126,7 +126,7 @@ export default class AdvancedSearchComponent extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent;
-        const canAddAnotherField = this.hasAllAdvancedSearchFieldsValidated(this.props.fieldRows)
+        const canAddAnotherField = this.haveAllAdvancedSearchFieldsValidated(this.props.fieldRows)
              && this.props.fieldRows.length < Object.keys(txt.advancedSearch.fieldTypes).length - 1;
         const alreadyAddedFields = this.props.fieldRows.map(item => item.searchField);
         const searchQueryCaption = this.getAdvancedSearchCaption(this.props);
@@ -215,7 +215,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                                 primary
                                                 fullWidth
                                                 onClick={this._handleAdvancedSearch}
-                                                disabled={!this.hasAllAdvancedSearchFieldsValidated(this.props.fieldRows)}
+                                                disabled={!this.haveAllAdvancedSearchFieldsValidated(this.props.fieldRows)}
                                             />
                                         </div>
                                     </div>
