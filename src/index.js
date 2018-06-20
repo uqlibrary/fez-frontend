@@ -9,6 +9,7 @@ import {AppContainer} from 'react-hot-loader';
 
 // Internal
 import Root from './Root';
+import AppErrorBoundary from './AppErrorBoundary';
 import rootReducer from './reducer';
 import 'sass/index.scss';
 import {store, history} from 'config/store';
@@ -20,11 +21,13 @@ if (process.env.BRANCH !== 'production' && process.env.USE_MOCK) {
 
 const render = () => {
     ReactDOM.render(
-        <AppContainer>
-            <Provider store={store}>
-                <Root history={history} />
-            </Provider>
-        </AppContainer>,
+        <AppErrorBoundary>
+            <AppContainer>
+                <Provider store={store}>
+                    <Root history={history} />
+                </Provider>
+            </AppContainer>
+        </AppErrorBoundary>,
         document.getElementById('react-root')
     );
 };
