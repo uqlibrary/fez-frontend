@@ -42,7 +42,8 @@ let webpackConfig = {
     output: {
         path: resolve(__dirname, './dist/', config.basePath),
         filename: 'frontend-js/[name]-[hash].min.js',
-        publicPath: config.publicPath
+        publicPath: config.publicPath,
+        // sourceMapFilename: '[name].js.map',
     },
     devServer: {
         contentBase: resolve(__dirname, './dist/', config.basePath),
@@ -196,18 +197,18 @@ let webpackConfig = {
     },
 };
 
+// if you need to run this locally, create .sentryclirc and add the variables from the codeship env variables
+// per https://docs.sentry.io/learn/cli/configuration/#configuration-file
+// and comment out the wrapping if
 if (!!process.env.SENTRY_SOURCEMAP_AUTH_TOKEN) {
-    // Sentry requires these constants:
-    const SENTRY_AUTH_TOKEN = process.env.SENTRY_SOURCEMAP_AUTH_TOKEN;
-    const SENTRY_ORG = 'the-university-of-queensland';
-    const SENTRY_PROJECT = 'fez-frontend';
-
     const SentryCliPlugin = require('@sentry/webpack-plugin');
 
     webpackConfig.plugins.push(new SentryCliPlugin({
             release: process.env.GIT_SHA || process.env.CI_COMMIT_ID || 'missing-release',
             include: './dist',
-            ignore: ['node_modules', 'webpack-dist.config.js']
+            ignore: ['node_modules', 'webpack-dist.config.js'],
+            dryRun: true,
+            debug: true,
         })
     );
 }
