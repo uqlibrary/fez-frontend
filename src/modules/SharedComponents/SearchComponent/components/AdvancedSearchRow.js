@@ -31,6 +31,14 @@ export default class AdvancedSearchRow extends PureComponent {
         this.props.onSearchRowDelete(this.props.rowIndex);
     };
 
+    selectFieldValidation = () => {
+        // If the input value is empty and select value = 0 then show an error
+        if (this.props.searchField === '0' && !this.props.value) {
+            return locale.validationErrors.advancedSearchSelectionRequired;
+        }
+        return null;
+    };
+
     searchTextValidationMessage = (value) => {
         if (value.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
             return locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH);
@@ -51,6 +59,7 @@ export default class AdvancedSearchRow extends PureComponent {
                     <SelectField
                         value={this.props.searchField}
                         onChange={this._handleSearchFieldChange}
+                        errorText={this.selectFieldValidation()}
                         fullWidth>
                         {
                             Object.keys(txt.fieldTypes).map((item, index) => (
@@ -82,7 +91,7 @@ export default class AdvancedSearchRow extends PureComponent {
                         value={this.props.value}
                         onChange={this._handleTextChange}
                         errorText={this.searchTextValidationMessage(this.props.value)}
-                        disabled={this.props.searchField === 0}
+                        disabled={this.props.searchField === '0'}
                     />
                 </div>
                 {

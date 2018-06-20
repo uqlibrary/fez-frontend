@@ -10,6 +10,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
     <SelectField
       autoWidth={false}
       disabled={false}
+      errorText="Please select a field to search"
       fullWidth={true}
       multiple={false}
       onChange={[Function]}
@@ -91,7 +92,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
   >
     <TextField
       aria-label="Select a field to search on"
-      disabled={false}
+      disabled={true}
       errorText={null}
       floatingLabelFixed={false}
       fullWidth={true}
@@ -119,6 +120,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
     <SelectField
       autoWidth={false}
       disabled={false}
+      errorText={null}
       fullWidth={true}
       multiple={false}
       onChange={[Function]}
@@ -232,6 +234,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
     <SelectField
       autoWidth={false}
       disabled={false}
+      errorText={null}
       fullWidth={true}
       multiple={false}
       onChange={[Function]}

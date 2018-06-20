@@ -54,7 +54,7 @@ export default class AdvancedSearchComponent extends PureComponent {
             .filter(item => item.searchField !== '0' && item.value !== '')
             .map((item, index) => (
                 <span key={item.searchField}>
-                    {index > 0 && <span className="and">  {item.value && 'and'}</span>}
+                    {index > 0 && <span className="AND">  {item.value && 'AND'}</span>}
                     <span className={`title ${index > 0 && ' lowercase'}`}> {item.value && txt[item.searchField].title}</span>
                     <span className="combiner"> {item.value && txt[item.searchField].combiner}</span>
                     <span className="value"> {item.value}</span>
