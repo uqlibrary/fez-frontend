@@ -9,12 +9,13 @@ const mapStateToProps = (state) => {
         !!state.get('searchRecordsReducer').searchQuery &&
         !!state.get('searchRecordsReducer').searchQuery.searchMode &&
         state.get('searchRecordsReducer').searchQuery.searchMode === 'advanced';
+    const isAdvancedSearchMinimised = isAdvancedSearch && !!state.get('searchRecordsReducer').publicationsList.length > 0;
 
     return {
         searchQueryParams: state && state.get('searchRecordsReducer') && state.get('searchRecordsReducer').searchQuery
             && state.get('searchRecordsReducer').searchQuery.searchQueryParams || {},
         isAdvancedSearch: isAdvancedSearch,
-        isAdvancedSearchMinimised: isAdvancedSearch,
+        isAdvancedSearchMinimised: isAdvancedSearchMinimised,
         isOpenAccessInAdvancedMode: isAdvancedSearch && !!state.get('searchRecordsReducer').searchQuery.activeFacets.showOpenAccessOnly,
     };
 };

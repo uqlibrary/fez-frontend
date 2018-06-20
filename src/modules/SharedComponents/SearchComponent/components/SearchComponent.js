@@ -23,7 +23,6 @@ export default class SearchComponent extends PureComponent {
         isAdvancedSearch: PropTypes.bool,
         isAdvancedSearchMinimised: PropTypes.bool,
         isOpenAccessInAdvancedMode: PropTypes.bool,
-        hasNoResults: PropTypes.bool,
 
         className: PropTypes.string,
         actions: PropTypes.object,
@@ -37,7 +36,6 @@ export default class SearchComponent extends PureComponent {
         showMobileSearchButton: false,
         showAdvancedSearchButton: false,
         showPrefixIcon: false,
-        hasNoResults: false,
 
         isInHeader: false,
         isAdvancedSearch: false,
@@ -56,7 +54,7 @@ export default class SearchComponent extends PureComponent {
             },
             advancedSearch: {
                 fieldRows: this.getFieldRowsFromSearchQuery(props.searchQueryParams),
-                isMinimised: this.props.hasNoResults ? false : props.isAdvancedSearchMinimised,
+                isMinimised: props.isAdvancedSearchMinimised,
                 isOpenAccess: props.isOpenAccessInAdvancedMode || false,
             }
         };
@@ -71,7 +69,7 @@ export default class SearchComponent extends PureComponent {
                 },
                 advancedSearch: {
                     fieldRows: this.getFieldRowsFromSearchQuery(nextProps.searchQueryParams),
-                    isMinimised: this.props.hasNoResults ? false : nextProps.isAdvancedSearchMinimised || false,
+                    isMinimised: nextProps.isAdvancedSearchMinimised || false,
                     isOpenAccess: nextProps.isOpenAccessInAdvancedMode || false
                 }
             });

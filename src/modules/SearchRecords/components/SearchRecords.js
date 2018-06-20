@@ -195,10 +195,7 @@ class SearchRecords extends PureComponent {
         return (
             <StandardPage className="page-search-records">
                 <StandardCard className="searchComponent">
-                    <SearchComponent className="search-body"
-                        showAdvancedSearchButton
-                        hasNoResults={!this.props.searchLoading && this.props.publicationsList.length === 0}
-                    />
+                    <SearchComponent className="search-body" showAdvancedSearchButton />
                 </StandardCard>
                 {
                     // first time loading search results
