@@ -7,6 +7,8 @@ import KeyboardArrowUp from 'material-ui/svg-icons/hardware/keyboard-arrow-up';
 import KeyboardArrowDown from 'material-ui/svg-icons/hardware/keyboard-arrow-down';
 import AdvancedSearchRow from './AdvancedSearchRow';
 import Checkbox from 'material-ui/Checkbox';
+import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
+
 
 import {locale} from 'locale';
 
@@ -65,8 +67,14 @@ export default class AdvancedSearchComponent extends PureComponent {
         return (searchFields.length > 0 || !!isOpenAccess) && <Fragment>{searchFields}{openAccessText}</Fragment> || null;
     };
 
-    hasAllAdvancedSearchFieldCompleted = (fieldRows) => {
-        return fieldRows.filter(item => item.searchField === '0' || item.value === '').length === 0;
+    hasAllAdvancedSearchFieldsValidated = (fieldRows) => {
+        const fieldTypes = locale.components.searchComponent.advancedSearch.fieldTypes;
+        return fieldRows.filter(item => item.searchField === '0' || item.value === ''
+            // Check if the locale specifies a minLength for this field and check it not shorter
+            || (!!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length)
+            // Check if this field is exceeding the maxLength
+            || (MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length)
+        ).length === 0;
     };
 
     _handleAdvancedSearch = (event) => {
@@ -119,7 +127,7 @@ export default class AdvancedSearchComponent extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent;
-        const canAddAnotherField = this.hasAllAdvancedSearchFieldCompleted(this.props.fieldRows)
+        const canAddAnotherField = this.hasAllAdvancedSearchFieldsValidated(this.props.fieldRows)
              && this.props.fieldRows.length < Object.keys(txt.advancedSearch.fieldTypes).length - 1;
         const alreadyAddedFields = this.props.fieldRows.map(item => item.searchField);
         const searchQueryCaption = this.getAdvancedSearchCaption(this.props);
@@ -207,7 +215,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             primary
                                             fullWidth
                                             onClick={this._handleAdvancedSearch}
-                                            disabled={!this.hasAllAdvancedSearchFieldCompleted(this.props.fieldRows)}
+                                            disabled={!this.hasAllAdvancedSearchFieldsValidated(this.props.fieldRows)}
                                         />
                                     </div>
                                 </div>

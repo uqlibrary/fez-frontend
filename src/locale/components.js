@@ -830,7 +830,8 @@ export default {
                         title: 'Title',
                         combiner: 'contains',
                         type: 'TextField',
-                        hint: 'Add a title to search'
+                        hint: 'Add a title to search',
+                        minLength: 10
                     }
                 },
                 openAccess: {

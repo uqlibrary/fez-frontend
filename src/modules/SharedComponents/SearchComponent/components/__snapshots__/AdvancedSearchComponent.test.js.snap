@@ -46,16 +46,17 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
           className="column fields is-11-mobile is-11-tablet-only"
         >
           <AdvancedSearchRow
-            all="i feel lucky"
             disabledFields={
               Array [
-                undefined,
+                "all",
               ]
             }
-            key="advanced-search-field-undefined"
+            key="advanced-search-field-all"
             onSearchRowChange={[Function]}
             onSearchRowDelete={[Function]}
             rowIndex={0}
+            searchField="all"
+            value="i feel lucky"
           />
         </div>
         <div
@@ -145,21 +146,26 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
       className="searchQueryCaption"
     >
       <React.Fragment>
-        <span>
+        <span
+          key="all"
+        >
           <span
             className="title false"
           >
              
+            Any field
           </span>
           <span
             className="combiner"
           >
              
+            contains
           </span>
           <span
             className="value"
           >
              
+            i feel lucky
           </span>
         </span>
         <span>

@@ -35,7 +35,11 @@ export default class AdvancedSearchRow extends PureComponent {
         if (value.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
             return locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH);
         }
-
+        // Check if the searchField has a minLength, and apply the validation
+        const txt = locale.components.searchComponent.advancedSearch;
+        if(txt.fieldTypes[this.props.searchField].minLength && value.trim().length < txt.fieldTypes[this.props.searchField].minLength) {
+            return locale.validationErrors.minLength.replace('[min]', txt.fieldTypes[this.props.searchField].minLength);
+        }
         return null;
     };
 
