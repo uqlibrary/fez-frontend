@@ -28,10 +28,6 @@ exports[`Component Sharethis should render 3rd party elements with default props
     <a
       className="a2a_button_print"
     />
-    <a
-      className="a2a_dd"
-      href="https://www.addtoany.com/share"
-    />
   </div>
 </div>
 `;

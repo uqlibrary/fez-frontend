@@ -83,7 +83,6 @@ export default class ShareThis extends PureComponent {
                     <a className="a2a_button_linkedin" />
                     <a className="a2a_button_email" />
                     <a className="a2a_button_print" />
-                    <a className="a2a_dd" href="https://www.addtoany.com/share" />
                 </div>
             </div>
         );
