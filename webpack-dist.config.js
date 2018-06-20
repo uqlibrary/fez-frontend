@@ -207,7 +207,7 @@ if (!!process.env.SENTRY_AUTH_TOKEN) {
             release: process.env.CI_COMMIT_ID,
             include: './dist',
             ignore: ['node_modules', 'webpack-dist.config.js', 'custom_modules'],
-            stripPrefix: 'espace/' + process.env.CI_BRANCH + '/frontend-js/',
+            stripPrefix: ['espace/' + process.env.CI_BRANCH + '/frontend-js/'],
             validate: true,
             debug: true
         })
