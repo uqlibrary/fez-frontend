@@ -240,8 +240,6 @@ export default class SearchComponent extends PureComponent {
     };
 
     render() {
-        console.log('No results?', this.props.hasNoResults);
-        console.log('Adv search state ', this.state.advancedSearch);
         return (
             <React.Fragment>
                 {
