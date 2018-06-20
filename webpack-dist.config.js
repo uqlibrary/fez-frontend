@@ -204,9 +204,10 @@ if (!!process.env.SENTRY_AUTH_TOKEN) {
     // per https://docs.sentry.io/learn/cli/configuration/#configuration-file
     // and comment out the wrapping
     webpackConfig.plugins.push(new SentryCliPlugin({
-            release: process.env.CI_COMMIT_ID || 'missing-release',
+            release: process.env.CI_COMMIT_ID,
             include: './dist',
-            ignore: ['node_modules', 'webpack-dist.config.js'],
+            ignore: ['node_modules', 'webpack-dist.config.js', 'custom_modules'],
+            stripPrefix: 'espace/' + process.env.CI_BRANCH + '/frontend-js/',
             validate: true,
             debug: true
         })
