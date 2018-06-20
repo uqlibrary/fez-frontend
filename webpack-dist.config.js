@@ -199,15 +199,17 @@ let webpackConfig = {
 // if you need to run this locally, create .sentryclirc and add the variables from the codeship env variables
 // per https://docs.sentry.io/learn/cli/configuration/#configuration-file
 // and comment out the wrapping if
-if (!!process.env.SENTRY_AUTH_TOKEN) {
+// if (!!process.env.SENTRY_AUTH_TOKEN) {
     const SentryCliPlugin = require('@sentry/webpack-plugin');
 
     webpackConfig.plugins.push(new SentryCliPlugin({
             release: process.env.CI_COMMIT_ID || 'missing-release',
             include: './dist',
             ignore: ['node_modules', 'webpack-dist.config.js'],
+            validate: true,
+            debug: true
         })
     );
-}
+// }
 
 module.exports = webpackConfig;
