@@ -70,7 +70,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
               checked={true}
               className="advancedSearchOpenAccessCheckbox"
               disabled={false}
-              label="Open access / Full text"
+              label="Open access/Full text"
               labelPosition="right"
               onCheck={[Function]}
             />
@@ -174,7 +174,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
             </span>
           </span>
           <span>
-             and is 
+             AND is 
             <span
               className="value"
             >
@@ -258,7 +258,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
               checked={false}
               className="advancedSearchOpenAccessCheckbox"
               disabled={false}
-              label="Open access / Full text"
+              label="Open access/Full text"
               labelPosition="right"
               onCheck={[Function]}
             />
@@ -410,7 +410,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
               checked={true}
               className="advancedSearchOpenAccessCheckbox"
               disabled={false}
-              label="Open access / Full text"
+              label="Open access/Full text"
               labelPosition="right"
               onCheck={[Function]}
             />
@@ -492,7 +492,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
       >
         <React.Fragment>
           <span>
-             and is 
+             AND is 
             <span
               className="value"
             >
@@ -623,7 +623,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
               checked={false}
               className="advancedSearchOpenAccessCheckbox"
               disabled={false}
-              label="Open access / Full text"
+              label="Open access/Full text"
               labelPosition="right"
               onCheck={[Function]}
             />

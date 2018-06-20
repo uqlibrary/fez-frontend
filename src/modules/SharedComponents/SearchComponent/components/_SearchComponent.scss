@@ -169,7 +169,7 @@
   .advancedSearchButton, .advancedSearchOpenAccessCheckbox {
     @include desktop {
       width: 100% !important;
-      min-width: 225px !important;
+      min-width: 200px !important;
     }
     @include tablet {
       width: 100% !important;

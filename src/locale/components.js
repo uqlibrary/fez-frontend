@@ -835,9 +835,9 @@ export default {
                     }
                 },
                 openAccess: {
-                    title: 'Open access / Full text',
+                    title: 'Open access/Full text',
                     captionText: (
-                        <span> and is <span className="value">open access / full text.</span></span>
+                        <span> AND is <span className="value">open access / full text.</span></span>
                     )
                 },
                 addField: {
