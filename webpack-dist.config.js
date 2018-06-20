@@ -196,12 +196,13 @@ let webpackConfig = {
     },
 };
 
-// if you need to run this locally, create .sentryclirc and add the variables from the codeship env variables
-// per https://docs.sentry.io/learn/cli/configuration/#configuration-file
-// and comment out the wrapping if
-// if (!!process.env.SENTRY_AUTH_TOKEN) {
+// this is separated out because it causes local build to fail as the env vars required by Sentry arent available
+if (!!process.env.SENTRY_AUTH_TOKEN) {
     const SentryCliPlugin = require('@sentry/webpack-plugin');
 
+    // if you need to run this locally, create .sentryclirc and add the variables from the codeship env variables
+    // per https://docs.sentry.io/learn/cli/configuration/#configuration-file
+    // and comment out the wrapping
     webpackConfig.plugins.push(new SentryCliPlugin({
             release: process.env.CI_COMMIT_ID || 'missing-release',
             include: './dist',
@@ -210,6 +211,6 @@ let webpackConfig = {
             debug: true
         })
     );
-// }
+}
 
 module.exports = webpackConfig;
