@@ -94,14 +94,16 @@ describe('AdvancedSearchComponent', () => {
 
     it('should not submit search if ENTER wasn\'t pressed', () => {
         const testMethod = jest.fn();
+        const preventDefault = jest.fn();
         const wrapper = setup({onSearch: testMethod});
 
-        wrapper.instance()._handleAdvancedSearch({key: 'a'});
+        wrapper.instance()._handleAdvancedSearch({key: 'a', preventDefault: preventDefault});
         expect(testMethod).not.toHaveBeenCalled();
     });
 
     it('should submit search if search text is not null and ENTER is pressed', () => {
         const testMethod = jest.fn();
+        const preventDefault = jest.fn();
         const wrapper = setup({
             onSearch: testMethod,
             fieldRows: [{
@@ -110,7 +112,7 @@ describe('AdvancedSearchComponent', () => {
             }]
         });
 
-        wrapper.instance()._handleAdvancedSearch({key: 'Enter'});
+        wrapper.instance()._handleAdvancedSearch({key: 'Enter', preventDefault: preventDefault});
         expect(testMethod).toHaveBeenCalled();
     });
 

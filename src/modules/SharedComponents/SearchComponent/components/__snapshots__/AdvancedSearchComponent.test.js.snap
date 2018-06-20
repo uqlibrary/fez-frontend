@@ -4,181 +4,187 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
 <div
   className="searchComponent advanced-search"
 >
-  <div
-    className="advancedSearch"
+  <form
+    id="advancedSearchForm"
+    onSubmit={[Function]}
   >
     <div
-      className="columns is-gapless is-mobile"
-      style={
-        Object {
-          "marginBottom": "-12px",
+      className="advancedSearch"
+    >
+      <div
+        className="columns is-gapless is-mobile"
+        style={
+          Object {
+            "marginBottom": "-12px",
+          }
         }
-      }
-    >
-      <div
-        className="column"
-      >
-        <h2>
-          Advanced search
-        </h2>
-      </div>
-      <div
-        className="column is-narrow"
-      >
-        <IconButton
-          disableTouchRipple={false}
-          disabled={false}
-          iconStyle={Object {}}
-          onClick={[Function]}
-          tooltip="Hide advanced search"
-          tooltipPosition="bottom-center"
-          touch={false}
-        >
-          <HardwareKeyboardArrowUp />
-        </IconButton>
-      </div>
-    </div>
-    <React.Fragment>
-      <div
-        className="columns is-multiline is-mobile"
       >
         <div
-          className="column fields is-11-mobile is-11-tablet-only"
+          className="column"
         >
-          <AdvancedSearchRow
-            disabledFields={
-              Array [
-                "all",
-              ]
-            }
-            key="advanced-search-field-all"
-            onSearchRowChange={[Function]}
-            onSearchRowDelete={[Function]}
-            rowIndex={0}
-            searchField="all"
-            value="i feel lucky"
-          />
+          <h2>
+            Advanced search
+          </h2>
         </div>
         <div
-          className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
+          className="column is-narrow"
         >
-          <Checkbox
-            checked={true}
-            className="advancedSearchOpenAccessCheckbox"
+          <IconButton
+            disableTouchRipple={false}
             disabled={false}
-            label="Open access / Full text"
-            labelPosition="right"
-            onCheck={[Function]}
-          />
+            iconStyle={Object {}}
+            onClick={[Function]}
+            tooltip="Hide advanced search"
+            tooltipPosition="bottom-center"
+            touch={false}
+          >
+            <HardwareKeyboardArrowUp />
+          </IconButton>
         </div>
       </div>
-      <div
-        className="columns is-gapless is-mobile is-multiline actionButtons"
-      >
-        <div
-          className="column is-narrow-desktop is-narrow-tablet is-12-mobile"
-        >
-          <RaisedButton
-            aria-label="Click to add another advanced search field"
-            disabled={false}
-            fullWidth={true}
-            label="Add another field"
-            labelPosition="after"
-            onClick={[Function]}
-            primary={false}
-            secondary={true}
-          />
-        </div>
-        <div
-          className="column is-narrow-tablet is-12-mobile"
-        >
-          <RaisedButton
-            aria-label="Click to reset the advanced search"
-            disabled={false}
-            fullWidth={true}
-            label="Reset"
-            labelPosition="after"
-            onClick={[Function]}
-            primary={false}
-            secondary={false}
-          />
-        </div>
-        <div
-          className="column is-12-mobile is-narrow-tablet"
-        >
-          <FlatButton
-            aria-label="Click to return to the simple search"
-            disabled={false}
-            fullWidth={true}
-            label="Simple search"
-            labelPosition="after"
-            labelStyle={Object {}}
-            onClick={[Function]}
-            onKeyboardFocus={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onTouchStart={[Function]}
-            primary={false}
-            secondary={false}
-          />
-        </div>
-        <div
-          className="column is-hidden-mobile"
-        />
-        <div
-          className="column is-3-desktop is-3-tablet is-12-mobile"
-        >
-          <RaisedButton
-            aria-label="Click to search eSpace"
-            className="advancedSearchButton"
-            disabled={false}
-            fullWidth={true}
-            label="Search"
-            labelPosition="after"
-            onClick={[Function]}
-            primary={true}
-            secondary={false}
-          />
-        </div>
-      </div>
-    </React.Fragment>
-    <div
-      className="searchQueryCaption"
-    >
       <React.Fragment>
-        <span
-          key="all"
+        <div
+          className="columns is-multiline is-mobile"
         >
-          <span
-            className="title false"
+          <div
+            className="column fields is-11-mobile is-11-tablet-only"
           >
-             
-            Any field
-          </span>
-          <span
-            className="combiner"
+            <AdvancedSearchRow
+              disabledFields={
+                Array [
+                  "all",
+                ]
+              }
+              key="advanced-search-field-all"
+              onSearchRowChange={[Function]}
+              onSearchRowDelete={[Function]}
+              rowIndex={0}
+              searchField="all"
+              value="i feel lucky"
+            />
+          </div>
+          <div
+            className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
           >
-             
-            contains
-          </span>
-          <span
-            className="value"
+            <Checkbox
+              checked={true}
+              className="advancedSearchOpenAccessCheckbox"
+              disabled={false}
+              label="Open access / Full text"
+              labelPosition="right"
+              onCheck={[Function]}
+            />
+          </div>
+        </div>
+        <div
+          className="columns is-gapless is-mobile is-multiline actionButtons"
+        >
+          <div
+            className="column is-narrow-desktop is-narrow-tablet is-12-mobile"
           >
-             
-            i feel lucky
-          </span>
-        </span>
-        <span>
-           and is 
-          <span
-            className="value"
+            <RaisedButton
+              aria-label="Click to add another advanced search field"
+              disabled={false}
+              fullWidth={true}
+              label="Add another field"
+              labelPosition="after"
+              onClick={[Function]}
+              primary={false}
+              secondary={true}
+            />
+          </div>
+          <div
+            className="column is-narrow-tablet is-12-mobile"
           >
-            open access / full text.
-          </span>
-        </span>
+            <RaisedButton
+              aria-label="Click to reset the advanced search"
+              disabled={false}
+              fullWidth={true}
+              label="Reset"
+              labelPosition="after"
+              onClick={[Function]}
+              primary={false}
+              secondary={false}
+            />
+          </div>
+          <div
+            className="column is-12-mobile is-narrow-tablet"
+          >
+            <FlatButton
+              aria-label="Click to return to the simple search"
+              disabled={false}
+              fullWidth={true}
+              label="Simple search"
+              labelPosition="after"
+              labelStyle={Object {}}
+              onClick={[Function]}
+              onKeyboardFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onTouchStart={[Function]}
+              primary={false}
+              secondary={false}
+            />
+          </div>
+          <div
+            className="column is-hidden-mobile"
+          />
+          <div
+            className="column is-3-desktop is-3-tablet is-12-mobile"
+          >
+            <RaisedButton
+              aria-label="Click to search eSpace"
+              className="advancedSearchButton"
+              disabled={false}
+              fullWidth={true}
+              label="Search"
+              labelPosition="after"
+              onClick={[Function]}
+              primary={true}
+              secondary={false}
+              type="submit"
+            />
+          </div>
+        </div>
       </React.Fragment>
+      <div
+        className="searchQueryCaption"
+      >
+        <React.Fragment>
+          <span
+            key="all"
+          >
+            <span
+              className="title false"
+            >
+               
+              Any field
+            </span>
+            <span
+              className="combiner"
+            >
+               
+              contains
+            </span>
+            <span
+              className="value"
+            >
+               
+              i feel lucky
+            </span>
+          </span>
+          <span>
+             and is 
+            <span
+              className="value"
+            >
+              open access / full text.
+            </span>
+          </span>
+        </React.Fragment>
+      </div>
     </div>
-  </div>
+  </form>
 </div>
 `;
 
@@ -186,145 +192,151 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
 <div
   className="searchComponent advanced-search"
 >
-  <div
-    className="advancedSearch"
+  <form
+    id="advancedSearchForm"
+    onSubmit={[Function]}
   >
     <div
-      className="columns is-gapless is-mobile"
-      style={
-        Object {
-          "marginBottom": "-12px",
-        }
-      }
+      className="advancedSearch"
     >
       <div
-        className="column"
+        className="columns is-gapless is-mobile"
+        style={
+          Object {
+            "marginBottom": "-12px",
+          }
+        }
       >
-        <h2>
-          Advanced search
-        </h2>
-      </div>
-      <div
-        className="column is-narrow"
-      >
-        <IconButton
-          disableTouchRipple={false}
-          disabled={false}
-          iconStyle={Object {}}
-          onClick={[Function]}
-          tooltip="Hide advanced search"
-          tooltipPosition="bottom-center"
-          touch={false}
+        <div
+          className="column"
         >
-          <HardwareKeyboardArrowUp />
-        </IconButton>
+          <h2>
+            Advanced search
+          </h2>
+        </div>
+        <div
+          className="column is-narrow"
+        >
+          <IconButton
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onClick={[Function]}
+            tooltip="Hide advanced search"
+            tooltipPosition="bottom-center"
+            touch={false}
+          >
+            <HardwareKeyboardArrowUp />
+          </IconButton>
+        </div>
       </div>
+      <React.Fragment>
+        <div
+          className="columns is-multiline is-mobile"
+        >
+          <div
+            className="column fields is-11-mobile is-11-tablet-only"
+          >
+            <AdvancedSearchRow
+              disabledFields={
+                Array [
+                  "0",
+                ]
+              }
+              key="advanced-search-field-0"
+              onSearchRowChange={[Function]}
+              onSearchRowDelete={[Function]}
+              rowIndex={0}
+              searchField="0"
+              value=""
+            />
+          </div>
+          <div
+            className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
+          >
+            <Checkbox
+              checked={false}
+              className="advancedSearchOpenAccessCheckbox"
+              disabled={false}
+              label="Open access / Full text"
+              labelPosition="right"
+              onCheck={[Function]}
+            />
+          </div>
+        </div>
+        <div
+          className="columns is-gapless is-mobile is-multiline actionButtons"
+        >
+          <div
+            className="column is-narrow-desktop is-narrow-tablet is-12-mobile"
+          >
+            <RaisedButton
+              aria-label="Click to add another advanced search field"
+              disabled={true}
+              fullWidth={true}
+              label="Add another field"
+              labelPosition="after"
+              onClick={[Function]}
+              primary={false}
+              secondary={true}
+            />
+          </div>
+          <div
+            className="column is-narrow-tablet is-12-mobile"
+          >
+            <RaisedButton
+              aria-label="Click to reset the advanced search"
+              disabled={false}
+              fullWidth={true}
+              label="Reset"
+              labelPosition="after"
+              onClick={[Function]}
+              primary={false}
+              secondary={false}
+            />
+          </div>
+          <div
+            className="column is-12-mobile is-narrow-tablet"
+          >
+            <FlatButton
+              aria-label="Click to return to the simple search"
+              disabled={false}
+              fullWidth={true}
+              label="Simple search"
+              labelPosition="after"
+              labelStyle={Object {}}
+              onClick={[Function]}
+              onKeyboardFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onTouchStart={[Function]}
+              primary={false}
+              secondary={false}
+            />
+          </div>
+          <div
+            className="column is-hidden-mobile"
+          />
+          <div
+            className="column is-3-desktop is-3-tablet is-12-mobile"
+          >
+            <RaisedButton
+              aria-label="Click to search eSpace"
+              className="advancedSearchButton"
+              disabled={true}
+              fullWidth={true}
+              label="Search"
+              labelPosition="after"
+              onClick={[Function]}
+              primary={true}
+              secondary={false}
+              type="submit"
+            />
+          </div>
+        </div>
+      </React.Fragment>
     </div>
-    <React.Fragment>
-      <div
-        className="columns is-multiline is-mobile"
-      >
-        <div
-          className="column fields is-11-mobile is-11-tablet-only"
-        >
-          <AdvancedSearchRow
-            disabledFields={
-              Array [
-                "0",
-              ]
-            }
-            key="advanced-search-field-0"
-            onSearchRowChange={[Function]}
-            onSearchRowDelete={[Function]}
-            rowIndex={0}
-            searchField="0"
-            value=""
-          />
-        </div>
-        <div
-          className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
-        >
-          <Checkbox
-            checked={false}
-            className="advancedSearchOpenAccessCheckbox"
-            disabled={false}
-            label="Open access / Full text"
-            labelPosition="right"
-            onCheck={[Function]}
-          />
-        </div>
-      </div>
-      <div
-        className="columns is-gapless is-mobile is-multiline actionButtons"
-      >
-        <div
-          className="column is-narrow-desktop is-narrow-tablet is-12-mobile"
-        >
-          <RaisedButton
-            aria-label="Click to add another advanced search field"
-            disabled={true}
-            fullWidth={true}
-            label="Add another field"
-            labelPosition="after"
-            onClick={[Function]}
-            primary={false}
-            secondary={true}
-          />
-        </div>
-        <div
-          className="column is-narrow-tablet is-12-mobile"
-        >
-          <RaisedButton
-            aria-label="Click to reset the advanced search"
-            disabled={false}
-            fullWidth={true}
-            label="Reset"
-            labelPosition="after"
-            onClick={[Function]}
-            primary={false}
-            secondary={false}
-          />
-        </div>
-        <div
-          className="column is-12-mobile is-narrow-tablet"
-        >
-          <FlatButton
-            aria-label="Click to return to the simple search"
-            disabled={false}
-            fullWidth={true}
-            label="Simple search"
-            labelPosition="after"
-            labelStyle={Object {}}
-            onClick={[Function]}
-            onKeyboardFocus={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onTouchStart={[Function]}
-            primary={false}
-            secondary={false}
-          />
-        </div>
-        <div
-          className="column is-hidden-mobile"
-        />
-        <div
-          className="column is-3-desktop is-3-tablet is-12-mobile"
-        >
-          <RaisedButton
-            aria-label="Click to search eSpace"
-            className="advancedSearchButton"
-            disabled={true}
-            fullWidth={true}
-            label="Search"
-            labelPosition="after"
-            onClick={[Function]}
-            primary={true}
-            secondary={false}
-          />
-        </div>
-      </div>
-    </React.Fragment>
-  </div>
+  </form>
 </div>
 `;
 
@@ -332,159 +344,165 @@ exports[`AdvancedSearchComponent should render default view with open access che
 <div
   className="searchComponent advanced-search"
 >
-  <div
-    className="advancedSearch"
+  <form
+    id="advancedSearchForm"
+    onSubmit={[Function]}
   >
     <div
-      className="columns is-gapless is-mobile"
-      style={
-        Object {
-          "marginBottom": "-12px",
+      className="advancedSearch"
+    >
+      <div
+        className="columns is-gapless is-mobile"
+        style={
+          Object {
+            "marginBottom": "-12px",
+          }
         }
-      }
-    >
-      <div
-        className="column"
-      >
-        <h2>
-          Advanced search
-        </h2>
-      </div>
-      <div
-        className="column is-narrow"
-      >
-        <IconButton
-          disableTouchRipple={false}
-          disabled={false}
-          iconStyle={Object {}}
-          onClick={[Function]}
-          tooltip="Hide advanced search"
-          tooltipPosition="bottom-center"
-          touch={false}
-        >
-          <HardwareKeyboardArrowUp />
-        </IconButton>
-      </div>
-    </div>
-    <React.Fragment>
-      <div
-        className="columns is-multiline is-mobile"
       >
         <div
-          className="column fields is-11-mobile is-11-tablet-only"
+          className="column"
         >
-          <AdvancedSearchRow
-            disabledFields={
-              Array [
-                "0",
-              ]
-            }
-            key="advanced-search-field-0"
-            onSearchRowChange={[Function]}
-            onSearchRowDelete={[Function]}
-            rowIndex={0}
-            searchField="0"
-            value=""
-          />
+          <h2>
+            Advanced search
+          </h2>
         </div>
         <div
-          className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
+          className="column is-narrow"
         >
-          <Checkbox
-            checked={true}
-            className="advancedSearchOpenAccessCheckbox"
+          <IconButton
+            disableTouchRipple={false}
             disabled={false}
-            label="Open access / Full text"
-            labelPosition="right"
-            onCheck={[Function]}
-          />
-        </div>
-      </div>
-      <div
-        className="columns is-gapless is-mobile is-multiline actionButtons"
-      >
-        <div
-          className="column is-narrow-desktop is-narrow-tablet is-12-mobile"
-        >
-          <RaisedButton
-            aria-label="Click to add another advanced search field"
-            disabled={true}
-            fullWidth={true}
-            label="Add another field"
-            labelPosition="after"
+            iconStyle={Object {}}
             onClick={[Function]}
-            primary={false}
-            secondary={true}
-          />
-        </div>
-        <div
-          className="column is-narrow-tablet is-12-mobile"
-        >
-          <RaisedButton
-            aria-label="Click to reset the advanced search"
-            disabled={false}
-            fullWidth={true}
-            label="Reset"
-            labelPosition="after"
-            onClick={[Function]}
-            primary={false}
-            secondary={false}
-          />
-        </div>
-        <div
-          className="column is-12-mobile is-narrow-tablet"
-        >
-          <FlatButton
-            aria-label="Click to return to the simple search"
-            disabled={false}
-            fullWidth={true}
-            label="Simple search"
-            labelPosition="after"
-            labelStyle={Object {}}
-            onClick={[Function]}
-            onKeyboardFocus={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onTouchStart={[Function]}
-            primary={false}
-            secondary={false}
-          />
-        </div>
-        <div
-          className="column is-hidden-mobile"
-        />
-        <div
-          className="column is-3-desktop is-3-tablet is-12-mobile"
-        >
-          <RaisedButton
-            aria-label="Click to search eSpace"
-            className="advancedSearchButton"
-            disabled={true}
-            fullWidth={true}
-            label="Search"
-            labelPosition="after"
-            onClick={[Function]}
-            primary={true}
-            secondary={false}
-          />
-        </div>
-      </div>
-    </React.Fragment>
-    <div
-      className="searchQueryCaption"
-    >
-      <React.Fragment>
-        <span>
-           and is 
-          <span
-            className="value"
+            tooltip="Hide advanced search"
+            tooltipPosition="bottom-center"
+            touch={false}
           >
-            open access / full text.
-          </span>
-        </span>
+            <HardwareKeyboardArrowUp />
+          </IconButton>
+        </div>
+      </div>
+      <React.Fragment>
+        <div
+          className="columns is-multiline is-mobile"
+        >
+          <div
+            className="column fields is-11-mobile is-11-tablet-only"
+          >
+            <AdvancedSearchRow
+              disabledFields={
+                Array [
+                  "0",
+                ]
+              }
+              key="advanced-search-field-0"
+              onSearchRowChange={[Function]}
+              onSearchRowDelete={[Function]}
+              rowIndex={0}
+              searchField="0"
+              value=""
+            />
+          </div>
+          <div
+            className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
+          >
+            <Checkbox
+              checked={true}
+              className="advancedSearchOpenAccessCheckbox"
+              disabled={false}
+              label="Open access / Full text"
+              labelPosition="right"
+              onCheck={[Function]}
+            />
+          </div>
+        </div>
+        <div
+          className="columns is-gapless is-mobile is-multiline actionButtons"
+        >
+          <div
+            className="column is-narrow-desktop is-narrow-tablet is-12-mobile"
+          >
+            <RaisedButton
+              aria-label="Click to add another advanced search field"
+              disabled={true}
+              fullWidth={true}
+              label="Add another field"
+              labelPosition="after"
+              onClick={[Function]}
+              primary={false}
+              secondary={true}
+            />
+          </div>
+          <div
+            className="column is-narrow-tablet is-12-mobile"
+          >
+            <RaisedButton
+              aria-label="Click to reset the advanced search"
+              disabled={false}
+              fullWidth={true}
+              label="Reset"
+              labelPosition="after"
+              onClick={[Function]}
+              primary={false}
+              secondary={false}
+            />
+          </div>
+          <div
+            className="column is-12-mobile is-narrow-tablet"
+          >
+            <FlatButton
+              aria-label="Click to return to the simple search"
+              disabled={false}
+              fullWidth={true}
+              label="Simple search"
+              labelPosition="after"
+              labelStyle={Object {}}
+              onClick={[Function]}
+              onKeyboardFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onTouchStart={[Function]}
+              primary={false}
+              secondary={false}
+            />
+          </div>
+          <div
+            className="column is-hidden-mobile"
+          />
+          <div
+            className="column is-3-desktop is-3-tablet is-12-mobile"
+          >
+            <RaisedButton
+              aria-label="Click to search eSpace"
+              className="advancedSearchButton"
+              disabled={true}
+              fullWidth={true}
+              label="Search"
+              labelPosition="after"
+              onClick={[Function]}
+              primary={true}
+              secondary={false}
+              type="submit"
+            />
+          </div>
+        </div>
       </React.Fragment>
+      <div
+        className="searchQueryCaption"
+      >
+        <React.Fragment>
+          <span>
+             and is 
+            <span
+              className="value"
+            >
+              open access / full text.
+            </span>
+          </span>
+        </React.Fragment>
+      </div>
     </div>
-  </div>
+  </form>
 </div>
 `;
 
@@ -492,41 +510,46 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
 <div
   className="searchComponent advanced-search"
 >
-  <div
-    className="advancedSearch"
+  <form
+    id="advancedSearchForm"
+    onSubmit={[Function]}
   >
     <div
-      className="columns is-gapless is-mobile"
-      style={
-        Object {
-          "marginBottom": "-12px",
-        }
-      }
+      className="advancedSearch"
     >
       <div
-        className="column"
+        className="columns is-gapless is-mobile"
+        style={
+          Object {
+            "marginBottom": "-12px",
+          }
+        }
       >
-        <h2>
-          Advanced search
-        </h2>
-      </div>
-      <div
-        className="column is-narrow"
-      >
-        <IconButton
-          disableTouchRipple={false}
-          disabled={false}
-          iconStyle={Object {}}
-          onClick={[Function]}
-          tooltip="Show advanced search"
-          tooltipPosition="bottom-center"
-          touch={false}
+        <div
+          className="column"
         >
-          <HardwareKeyboardArrowDown />
-        </IconButton>
+          <h2>
+            Advanced search
+          </h2>
+        </div>
+        <div
+          className="column is-narrow"
+        >
+          <IconButton
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onClick={[Function]}
+            tooltip="Show advanced search"
+            tooltipPosition="bottom-center"
+            touch={false}
+          >
+            <HardwareKeyboardArrowDown />
+          </IconButton>
+        </div>
       </div>
     </div>
-  </div>
+  </form>
 </div>
 `;
 
@@ -534,144 +557,150 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
 <div
   className="searchComponent advanced-search"
 >
-  <div
-    className="advancedSearch"
+  <form
+    id="advancedSearchForm"
+    onSubmit={[Function]}
   >
     <div
-      className="columns is-gapless is-mobile"
-      style={
-        Object {
-          "marginBottom": "-12px",
-        }
-      }
+      className="advancedSearch"
     >
       <div
-        className="column"
+        className="columns is-gapless is-mobile"
+        style={
+          Object {
+            "marginBottom": "-12px",
+          }
+        }
       >
-        <h2>
-          Advanced search
-        </h2>
-      </div>
-      <div
-        className="column is-narrow"
-      >
-        <IconButton
-          disableTouchRipple={false}
-          disabled={false}
-          iconStyle={Object {}}
-          onClick={[Function]}
-          tooltip="Hide advanced search"
-          tooltipPosition="bottom-center"
-          touch={false}
+        <div
+          className="column"
         >
-          <HardwareKeyboardArrowUp />
-        </IconButton>
+          <h2>
+            Advanced search
+          </h2>
+        </div>
+        <div
+          className="column is-narrow"
+        >
+          <IconButton
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onClick={[Function]}
+            tooltip="Hide advanced search"
+            tooltipPosition="bottom-center"
+            touch={false}
+          >
+            <HardwareKeyboardArrowUp />
+          </IconButton>
+        </div>
       </div>
+      <React.Fragment>
+        <div
+          className="columns is-multiline is-mobile"
+        >
+          <div
+            className="column fields is-11-mobile is-11-tablet-only"
+          >
+            <AdvancedSearchRow
+              disabledFields={
+                Array [
+                  "0",
+                ]
+              }
+              key="advanced-search-field-0"
+              onSearchRowChange={[Function]}
+              onSearchRowDelete={[Function]}
+              rowIndex={0}
+              searchField="0"
+              value=""
+            />
+          </div>
+          <div
+            className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
+          >
+            <Checkbox
+              checked={false}
+              className="advancedSearchOpenAccessCheckbox"
+              disabled={false}
+              label="Open access / Full text"
+              labelPosition="right"
+              onCheck={[Function]}
+            />
+          </div>
+        </div>
+        <div
+          className="columns is-gapless is-mobile is-multiline actionButtons"
+        >
+          <div
+            className="column is-narrow-desktop is-narrow-tablet is-12-mobile"
+          >
+            <RaisedButton
+              aria-label="Click to add another advanced search field"
+              disabled={true}
+              fullWidth={true}
+              label="Add another field"
+              labelPosition="after"
+              onClick={[Function]}
+              primary={false}
+              secondary={true}
+            />
+          </div>
+          <div
+            className="column is-narrow-tablet is-12-mobile"
+          >
+            <RaisedButton
+              aria-label="Click to reset the advanced search"
+              disabled={false}
+              fullWidth={true}
+              label="Reset"
+              labelPosition="after"
+              onClick={[Function]}
+              primary={false}
+              secondary={false}
+            />
+          </div>
+          <div
+            className="column is-12-mobile is-narrow-tablet"
+          >
+            <FlatButton
+              aria-label="Click to return to the simple search"
+              disabled={false}
+              fullWidth={true}
+              label="Simple search"
+              labelPosition="after"
+              labelStyle={Object {}}
+              onClick={[Function]}
+              onKeyboardFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onTouchStart={[Function]}
+              primary={false}
+              secondary={false}
+            />
+          </div>
+          <div
+            className="column is-hidden-mobile"
+          />
+          <div
+            className="column is-3-desktop is-3-tablet is-12-mobile"
+          >
+            <RaisedButton
+              aria-label="Click to search eSpace"
+              className="advancedSearchButton"
+              disabled={true}
+              fullWidth={true}
+              label="Search"
+              labelPosition="after"
+              onClick={[Function]}
+              primary={true}
+              secondary={false}
+              type="submit"
+            />
+          </div>
+        </div>
+      </React.Fragment>
     </div>
-    <React.Fragment>
-      <div
-        className="columns is-multiline is-mobile"
-      >
-        <div
-          className="column fields is-11-mobile is-11-tablet-only"
-        >
-          <AdvancedSearchRow
-            disabledFields={
-              Array [
-                "0",
-              ]
-            }
-            key="advanced-search-field-0"
-            onSearchRowChange={[Function]}
-            onSearchRowDelete={[Function]}
-            rowIndex={0}
-            searchField="0"
-            value=""
-          />
-        </div>
-        <div
-          className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
-        >
-          <Checkbox
-            checked={false}
-            className="advancedSearchOpenAccessCheckbox"
-            disabled={false}
-            label="Open access / Full text"
-            labelPosition="right"
-            onCheck={[Function]}
-          />
-        </div>
-      </div>
-      <div
-        className="columns is-gapless is-mobile is-multiline actionButtons"
-      >
-        <div
-          className="column is-narrow-desktop is-narrow-tablet is-12-mobile"
-        >
-          <RaisedButton
-            aria-label="Click to add another advanced search field"
-            disabled={true}
-            fullWidth={true}
-            label="Add another field"
-            labelPosition="after"
-            onClick={[Function]}
-            primary={false}
-            secondary={true}
-          />
-        </div>
-        <div
-          className="column is-narrow-tablet is-12-mobile"
-        >
-          <RaisedButton
-            aria-label="Click to reset the advanced search"
-            disabled={false}
-            fullWidth={true}
-            label="Reset"
-            labelPosition="after"
-            onClick={[Function]}
-            primary={false}
-            secondary={false}
-          />
-        </div>
-        <div
-          className="column is-12-mobile is-narrow-tablet"
-        >
-          <FlatButton
-            aria-label="Click to return to the simple search"
-            disabled={false}
-            fullWidth={true}
-            label="Simple search"
-            labelPosition="after"
-            labelStyle={Object {}}
-            onClick={[Function]}
-            onKeyboardFocus={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onTouchStart={[Function]}
-            primary={false}
-            secondary={false}
-          />
-        </div>
-        <div
-          className="column is-hidden-mobile"
-        />
-        <div
-          className="column is-3-desktop is-3-tablet is-12-mobile"
-        >
-          <RaisedButton
-            aria-label="Click to search eSpace"
-            className="advancedSearchButton"
-            disabled={true}
-            fullWidth={true}
-            label="Search"
-            labelPosition="after"
-            onClick={[Function]}
-            primary={true}
-            secondary={false}
-          />
-        </div>
-      </div>
-    </React.Fragment>
-  </div>
+  </form>
 </div>
 `;

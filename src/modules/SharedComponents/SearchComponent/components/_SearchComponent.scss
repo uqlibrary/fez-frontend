@@ -175,6 +175,14 @@
       width: 100% !important;
     }
   }
+  .advancedSearchOpenAccessCheckbox {
+    @include tablet-only {
+      margin-top: 18px !important;
+    }
+    @include mobile {
+      margin-top: 12px !important;
+    }
+  }
   .actionButtons {
     .column {
       @include tablet {
