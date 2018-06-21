@@ -838,7 +838,8 @@ export default {
                     title: 'Open access/Full text',
                     captionText: (
                         <span> AND is <span className="value">open access / full text.</span></span>
-                    )
+                    ),
+                    ariaLabel: 'Check to search for publications with are only open access / full text'
                 },
                 addField: {
                     title: 'Add another field',

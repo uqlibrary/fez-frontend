@@ -13,11 +13,6 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
     >
       <div
         className="columns is-gapless is-mobile"
-        style={
-          Object {
-            "marginBottom": "-12px",
-          }
-        }
       >
         <div
           className="column"
@@ -67,6 +62,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
             className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
           >
             <Checkbox
+              aria-label="Check to search for publications with are only open access / full text"
               checked={true}
               className="advancedSearchOpenAccessCheckbox"
               disabled={false}
@@ -201,11 +197,6 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
     >
       <div
         className="columns is-gapless is-mobile"
-        style={
-          Object {
-            "marginBottom": "-12px",
-          }
-        }
       >
         <div
           className="column"
@@ -255,6 +246,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
             className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
           >
             <Checkbox
+              aria-label="Check to search for publications with are only open access / full text"
               checked={false}
               className="advancedSearchOpenAccessCheckbox"
               disabled={false}
@@ -353,11 +345,6 @@ exports[`AdvancedSearchComponent should render default view with open access che
     >
       <div
         className="columns is-gapless is-mobile"
-        style={
-          Object {
-            "marginBottom": "-12px",
-          }
-        }
       >
         <div
           className="column"
@@ -407,6 +394,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
             className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
           >
             <Checkbox
+              aria-label="Check to search for publications with are only open access / full text"
               checked={true}
               className="advancedSearchOpenAccessCheckbox"
               disabled={false}
@@ -519,11 +507,6 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
     >
       <div
         className="columns is-gapless is-mobile"
-        style={
-          Object {
-            "marginBottom": "-12px",
-          }
-        }
       >
         <div
           className="column"
@@ -566,11 +549,6 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
     >
       <div
         className="columns is-gapless is-mobile"
-        style={
-          Object {
-            "marginBottom": "-12px",
-          }
-        }
       >
         <div
           className="column"
@@ -620,6 +598,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
             className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
           >
             <Checkbox
+              aria-label="Check to search for publications with are only open access / full text"
               checked={false}
               className="advancedSearchOpenAccessCheckbox"
               disabled={false}

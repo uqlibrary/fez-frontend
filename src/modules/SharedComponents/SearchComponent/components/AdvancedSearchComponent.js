@@ -134,7 +134,7 @@ export default class AdvancedSearchComponent extends PureComponent {
             <div className={`searchComponent ${this.props.className}`}>
                 <form id="advancedSearchForm" onSubmit={this._handleAdvancedSearch}>
                     <div className="advancedSearch">
-                        <div className="columns is-gapless is-mobile" style={{marginBottom: '-12px'}}>
+                        <div className="columns is-gapless is-mobile">
                             <div className="column">
                                 <h2>{txt.advancedSearch.title}</h2>
                             </div>
@@ -173,6 +173,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             <Checkbox
                                                 className="advancedSearchOpenAccessCheckbox"
                                                 label={txt.advancedSearch.openAccess.title}
+                                                aria-label={txt.advancedSearch.openAccess.ariaLabel}
                                                 checked={this.props.isOpenAccess}
                                                 onCheck={this._toggleOpenAccess}
                                             />

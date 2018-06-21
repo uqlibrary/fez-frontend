@@ -149,6 +149,9 @@
 }
 
 .advancedSearch {
+  >div:nth-of-type(1){
+    margin-bottom: -12px !important;
+  }
   .openAccessCheckbox {
     margin-top: 12px;
     padding-bottom: 2px;
