@@ -31,7 +31,7 @@ if(config.environment === 'development') {
     config.basePath += branch + '/';
 }
 
-module.exports = {
+const webpackConfig = {
     devtool: 'source-map',
     // The entry file. All your app roots from here.
     entry: {
@@ -42,7 +42,7 @@ module.exports = {
     output: {
         path: resolve(__dirname, './dist/', config.basePath),
         filename: 'frontend-js/[name]-[hash].min.js',
-        publicPath: config.publicPath
+        publicPath: config.publicPath,
     },
     devServer: {
         contentBase: resolve(__dirname, './dist/', config.basePath),
@@ -197,3 +197,20 @@ module.exports = {
         hints: 'warning'
     },
 };
+
+// this is separated out because it causes local build to fail as the env vars required by Sentry arent available
+if (!!process.env.SENTRY_AUTH_TOKEN) {
+    const SentryCliPlugin = require('@sentry/webpack-plugin');
+
+    // if you need to run this locally, create .sentryclirc and add the variables from the codeship env variables
+    // per https://docs.sentry.io/learn/cli/configuration/#configuration-file
+    // and comment out the if around this section
+    webpackConfig.plugins.push(new SentryCliPlugin({
+            release: process.env.CI_COMMIT_ID,
+            include: './dist',
+            ignore: ['node_modules', 'webpack-dist.config.js', 'custom_modules']
+        })
+    );
+}
+
+module.exports = webpackConfig;
