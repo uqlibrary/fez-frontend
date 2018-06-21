@@ -61,6 +61,9 @@ class AuthorsPublicationsPerYearChart extends React.Component {
                         const name = this.userOptions.name;
                         const extras = this.userOptions.extraInfoForLegend;
                         return !!extras ? `${name} (${extras})` : name;
+                    },
+                    itemStyle: {
+                        width: 200
                     }
                 },
                 series: this.props.series
