@@ -31,7 +31,7 @@ if(config.environment === 'development') {
     config.basePath += branch + '/';
 }
 
-let webpackConfig = {
+const webpackConfig = {
     devtool: 'source-map',
     // The entry file. All your app roots from here.
     entry: {
