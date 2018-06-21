@@ -103,7 +103,8 @@ export default class Files extends Component {
     }
 
     searchByKey = (list, key, value) => {
-        return list && list.filter(item=>item[key] === value)[0];
+        const filenameWithoutExtension = value.substr(0, value.indexOf('.'));
+        return list && list.filter(item=>item[key] === `${filenameWithoutExtension}.jpg`)[0];
     }
 
     isFileValid = (dataStream) => {

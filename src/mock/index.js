@@ -133,6 +133,9 @@ mock
         if (config.url.indexOf('UQ:164935') >= 0) {
             return [200, {data: {...mockData.recordWithMap}}];
         }
+        if (config.url.indexOf('UQ:107683') >= 0) {
+            return [200, {data: {...mockData.recordWithTiffAndThumbnail}}];
+        }
         return [200, {data: {...mockData.record}}];
     })
     // .reply(401, '')
