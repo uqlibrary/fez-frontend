@@ -170,7 +170,8 @@ describe('Files Component ', () => {
     });
 
     it('should correctly get dataStream item for thumbnail and preview images', () => {
-        const fileName = 'AL_LH_01.tif';
+        const thumbnailFileName = 'thumbnail_AL_LH_01.jpg';
+        const previewFileName = 'preview_AL_LH_01.jpg';
         const fez_datastream_info = [
             {
                 "dsi_pid": "UQ:107683",
@@ -252,7 +253,7 @@ describe('Files Component ', () => {
         ];
 
         const wrapper = setup({});
-        expect(wrapper.instance().searchByKey(fez_datastream_info, 'dsi_dsid', 'thumbnail_' + fileName)).toEqual({
+        expect(wrapper.instance().searchByKey(fez_datastream_info, 'dsi_dsid', thumbnailFileName)).toEqual({
             "dsi_pid": "UQ:107683",
             "dsi_dsid": "thumbnail_AL_LH_01.jpg",
             "dsi_embargo_date": null,
@@ -264,7 +265,7 @@ describe('Files Component ', () => {
             "dsi_size": 3912
         });
 
-        expect(wrapper.instance().searchByKey(fez_datastream_info, 'dsi_dsid', 'preview_' + fileName)).toEqual({
+        expect(wrapper.instance().searchByKey(fez_datastream_info, 'dsi_dsid', previewFileName)).toEqual({
             "dsi_pid": "UQ:107683",
             "dsi_dsid": "preview_AL_LH_01.jpg",
             "dsi_embargo_date": null,

@@ -103,8 +103,7 @@ export default class Files extends Component {
     }
 
     searchByKey = (list, key, value) => {
-        const filenameWithoutExtension = value.substr(0, value.indexOf('.'));
-        return list && list.filter(item=>item[key] === `${filenameWithoutExtension}.jpg`)[0];
+        return list && list.filter(item=>item[key] === value)[0];
     }
 
     isFileValid = (dataStream) => {
@@ -120,8 +119,9 @@ export default class Files extends Component {
             ? dataStreams.filter(this.isFileValid).map(dataStream => {
                 const pid = publication.rek_pid;
                 const fileName = dataStream.dsi_dsid;
-                const thumbnailDataStream = this.searchByKey(dataStreams, 'dsi_dsid', 'thumbnail_' + fileName);
-                const previewDataStream = this.searchByKey(dataStreams, 'dsi_dsid', 'preview_' + fileName);
+                const fileNameWithoutExtension = fileName.substr(0, fileName.lastIndexOf('.'));
+                const thumbnailDataStream = this.searchByKey(dataStreams, 'dsi_dsid', `thumbnail_${fileNameWithoutExtension}.jpg`);
+                const previewDataStream = this.searchByKey(dataStreams, 'dsi_dsid', `preview_${fileNameWithoutExtension}.jpg`);
                 const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
                 const thumbnailFileName = thumbnailDataStream && thumbnailDataStream.dsi_dsid;
                 const openAccessStatus = this.getFileOpenAccessStatus(publication, dataStream.dsi_embargo_date);
