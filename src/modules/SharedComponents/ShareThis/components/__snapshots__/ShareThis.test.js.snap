@@ -11,7 +11,7 @@ exports[`Component Sharethis should render 3rd party elements with default props
     className="column is-narrow a2a_kit a2a_kit_size_20 a2a_default_style"
   >
     <a
-      className="a2a_button_facebook a2a_counter"
+      className="a2a_button_facebook"
     />
     <a
       className="a2a_button_mendeley"
