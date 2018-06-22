@@ -29,7 +29,7 @@ const filterFoRmapStateToProps = (state, props) => {
         maxResults: 20,
         filter: (searchText, key) => {
             if (searchText === '') return false;
-            const testKey = new RegExp(`(?=^[\\d]{4}\\s.+).*${searchText}.*`, 'gi');
+            const testKey = new RegExp(`(?=^[\\d]{4}\\s.+).*[${searchText}].*`, 'gi');
             return testKey.test(key);
         }
     };
