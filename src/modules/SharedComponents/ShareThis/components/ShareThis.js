@@ -1,6 +1,12 @@
 import React, {PureComponent} from 'react';
+import Raven from 'raven-js';
 
 export default class ShareThis extends PureComponent {
+    constructor(props) {
+        super(props);
+        this.state = { hasError: false };
+    }
+
     componentDidMount() {
         if (!document.getElementById('shareThisScript')) {
             // add the script to the body if it hasn't already happened
@@ -12,6 +18,14 @@ export default class ShareThis extends PureComponent {
 
             this.addShareThisConfigToHead();
         }
+    }
+
+    // https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html
+    componentDidCatch(error, errorInfo) {
+        this.setState({ hasError: true });
+
+        // https://docs.sentry.io/clients/javascript/integrations/react/
+        Raven.captureException(error, { extra: errorInfo });
     }
 
     componentWillUnmount() {
@@ -73,6 +87,9 @@ export default class ShareThis extends PureComponent {
     }
 
     render() {
+        if (this.state.hasError) {
+            return '';
+        }
         return (
             <div className="shareThis columns is-gapless is-clearfix is-marginless">
                 <div className="column is-hidden-mobile" />
