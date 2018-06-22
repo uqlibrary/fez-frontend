@@ -23,6 +23,12 @@ exports[`Component Sharethis should render 3rd party elements with default props
       className="a2a_button_linkedin"
     />
     <a
+      className="a2a_button_google_plus"
+    />
+    <a
+      className="a2a_button_reddit"
+    />
+    <a
       className="a2a_button_email"
     />
     <a
