@@ -141,7 +141,7 @@ export default {
                 message: 'Trending publications are temporarily unavailable'
             },
             altmetric: {
-                title: (<span>Trending publications</span>),
+                title: (<span>Trending&nbsp;on Altmetric</span>),
                 mobileTitle: 'Trending',
                 heading: 'Altmetric score',
                 subHeading: 'The +plus score indicates recent increase in social media activity',
@@ -155,7 +155,7 @@ export default {
                 order: 1
             },
             thomson: {
-                title: (<span>Hot&nbsp;papers&nbsp;on Web&nbsp;of&nbsp;science</span>),
+                title: (<span>Trending&nbsp;on Web&nbsp;of&nbsp;science</span>),
                 mobileTitle: 'WOS',
                 heading: 'Web of Science citation count',
                 subHeading: 'The +plus score indicates the increase in citations over the three months',
