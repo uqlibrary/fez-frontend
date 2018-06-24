@@ -807,7 +807,53 @@ export default {
             searchButtonText: 'Search',
             searchButtonAriaLabel: 'Click to search eSpace',
             simpleSearchToggle: 'Simple search',
-
+            advancedSearch: {
+                title: 'Advanced search',
+                mode: 'advanced',
+                tooltip: {
+                    show: 'Show advanced search',
+                    hide: 'Hide advanced search'
+                },
+                fieldTypes: {
+                    '0': {
+                        title: 'Select a field',
+                        combiner: null,
+                        hint: 'Select a field to search on'
+                    },
+                    'all': {
+                        title: 'Any field',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add some text to search all fields with'
+                    },
+                    'title': {
+                        title: 'Title',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a title to search',
+                        minLength: 10
+                    }
+                },
+                openAccess: {
+                    title: 'Open access/Full text',
+                    captionText: (
+                        <span> AND is <span className="value">open access / full text.</span></span>
+                    ),
+                    ariaLabel: 'Check to search for publications with are only open access / full text'
+                },
+                addField: {
+                    title: 'Add another field',
+                    aria: 'Click to add another advanced search field'
+                },
+                reset: {
+                    title: 'Reset',
+                    aria: 'Click to reset the advanced search'
+                },
+                simpleSearch: {
+                    title: 'Simple search',
+                    aria: 'Click to return to the simple search'
+                }
+            }
         },
         whatIsEspace: {
             title: 'What is eSpace?',
