@@ -119,11 +119,11 @@ describe('Application component', () => {
 
     it('should render app for HDR without ORCID ID', () => {
         const wrapper = setup({
-            account: account,
+            account: accounts['s2222222'],
             author: {
                 ...author,
                 aut_org_username: null,
-                aut_student_username: 's222222',
+                aut_student_username: 's2222222',
                 aut_orcid_id: null
             }
         });
@@ -135,11 +135,11 @@ describe('Application component', () => {
             location: {
                 pathname: routes.pathConfig.hdrSubmission
             },
-            account: account,
+            account: accounts['s2222222'],
             author: {
                 ...author,
                 aut_org_username: null,
-                aut_student_username: 's222222',
+                aut_student_username: 's2222222',
                 aut_orcid_id: null
             }
         });
@@ -148,11 +148,11 @@ describe('Application component', () => {
 
     it('should render app for HDR with ORCID ID', () => {
         const wrapper = setup({
-            account: account,
+            account: accounts['s2222222'],
             author: {
                 ...author,
                 aut_org_username: null,
-                aut_student_username: 's222222',
+                aut_student_username: 's2222222',
                 aut_orcid_id: '1234-1234-1234'
             }
         });
