@@ -26,9 +26,6 @@ class Dashboard extends PureComponent {
         author: PropTypes.object,
         accountAuthorDetailsLoading: PropTypes.bool,
 
-        // author article count data
-        publicationTotalCount: PropTypes.object,
-
         // graph data
         loadingPublicationsByYear: PropTypes.bool,
         publicationsByYear: PropTypes.object,
