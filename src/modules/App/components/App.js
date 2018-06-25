@@ -88,7 +88,7 @@ export default class App extends PureComponent {
     redirectUserToLogin = (isAuthorizedUser = false, redirectToCurrentLocation = false) => () => {
         const redirectUrl = isAuthorizedUser ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
         const returnUrl = redirectToCurrentLocation || !isAuthorizedUser ? window.location.href : APP_URL;
-        window.location.assign(`${redirectUrl}?return=${window.btoa(returnUrl)}`);
+        window.location.assign(`${redirectUrl}?url=${window.btoa(returnUrl)}`);
     };
 
     redirectToOrcid = () => {
