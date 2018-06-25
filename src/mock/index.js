@@ -108,7 +108,8 @@ mock
             return [200, mockData.searchKeyList[config.params.search_key]];
         }
         // SEARCH_INTERNAL_RECORDS_API
-        else if (config.params.id || config.params.doi || config.params.title) {
+        else if (config.params.id || config.params.doi || config.params.title || config.params.all || config.params.rek_title) {
+            // return [200, mockData.internalTitleSearchListNoResults];
             return [200, mockData.internalTitleSearchList];
         }
         return [404, ['Request not found']];

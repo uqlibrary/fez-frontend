@@ -1624,7 +1624,7 @@ export const internalTitleSearchList = {
             "fez_record_search_key_notes": null,
             "fez_record_search_key_date_recorded": null,
             "fez_record_search_key_license": null,
-            
+
             "fez_record_search_key_supervisor": [],
             "fez_record_search_key_native_script_conference_name": null,
             "rek_description": null,
@@ -3804,6 +3804,16 @@ export const internalTitleSearchList = {
             }
         }
     }
+};
+
+export const internalTitleSearchListNoResults = {
+    "total": 0,
+    "per_page": 10,
+    "current_page": 1,
+    "from": 0,
+    "to": 0,
+    "data": [],
+    "filters": {}
 };
 
 export const recordsTypeList = {

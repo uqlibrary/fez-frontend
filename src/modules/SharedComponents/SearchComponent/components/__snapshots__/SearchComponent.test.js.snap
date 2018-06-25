@@ -1,450 +1,587 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchComponent should render default view 1`] = `
-<div
-  className="search-component undefined undefined"
->
-  <div
-    className="columns is-gapless"
-  >
-    <div
-      className="column search-field is-gapless hideMobile"
-    >
-      <div
-        className="columns is-gapless search-field is-mobile"
-      >
-        <div
-          className="column"
-        >
-          <TextField
-            aria-label="Enter your search query to search eSpace and then press Enter"
-            disabled={false}
-            errorText={false}
-            floatingLabelFixed={false}
-            floatingLabelText="Search eSpace"
-            fullWidth={true}
-            id="searchField"
-            multiLine={false}
-            onChange={[Function]}
-            onKeyPress={[Function]}
-            rows={1}
-            type="search"
-            underlineShow={true}
-            underlineStyle={Object {}}
-            value=""
-          />
-        </div>
-        <div
-          className="is-hidden-tablet mobileSpacer"
-        />
-      </div>
-    </div>
-    <div
-      className="column is-narrow search-button-wrapper"
-    >
-      <RaisedButton
-        aria-label="Click to search eSpace"
-        disabled={false}
-        fullWidth={true}
-        label="Search"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={false}
-        secondary={true}
-      />
-    </div>
-  </div>
+exports[`SearchComponent should add one row for advanced search 1`] = `
+<React.Fragment>
+  <AdvancedSearchComponent
+    fieldRows={
+      Array [
+        Object {
+          "searchField": "all",
+          "value": "i feel lucky",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+  />
   <Snackbar
     autoHideDuration={5000}
     message=""
     open={false}
   />
-</div>
+</React.Fragment>
+`;
+
+exports[`SearchComponent should add one row for advanced search 2`] = `
+<React.Fragment>
+  <AdvancedSearchComponent
+    fieldRows={
+      Array [
+        Object {
+          "searchField": "all",
+          "value": "i feel lucky",
+        },
+        Object {
+          "searchField": "0",
+          "value": "",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+  />
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</React.Fragment>
+`;
+
+exports[`SearchComponent should display simple search with query string 1`] = `
+<React.Fragment>
+  <SimpleSearchComponent
+    isInHeader={false}
+    onInvalidSearch={[Function]}
+    onSearch={[Function]}
+    onSearchTextChange={[Function]}
+    onToggleSearchMode={[Function]}
+    searchText=""
+    showAdvancedSearchButton={false}
+    showMobileSearchButton={false}
+    showPrefixIcon={false}
+    showSearchButton={false}
+  />
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</React.Fragment>
+`;
+
+exports[`SearchComponent should display simple search with query string 2`] = `
+<React.Fragment>
+  <SimpleSearchComponent
+    isInHeader={false}
+    onInvalidSearch={[Function]}
+    onSearch={[Function]}
+    onSearchTextChange={[Function]}
+    onToggleSearchMode={[Function]}
+    searchText="i feel very lucky"
+    showAdvancedSearchButton={false}
+    showMobileSearchButton={false}
+    showPrefixIcon={false}
+    showSearchButton={false}
+  />
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</React.Fragment>
+`;
+
+exports[`SearchComponent should handle simple search text change 1`] = `
+<React.Fragment>
+  <SimpleSearchComponent
+    isInHeader={false}
+    onInvalidSearch={[Function]}
+    onSearch={[Function]}
+    onSearchTextChange={[Function]}
+    onToggleSearchMode={[Function]}
+    searchText=""
+    showAdvancedSearchButton={false}
+    showMobileSearchButton={false}
+    showPrefixIcon={false}
+    showSearchButton={false}
+  />
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</React.Fragment>
+`;
+
+exports[`SearchComponent should remove one row from advanced search 1`] = `
+<React.Fragment>
+  <AdvancedSearchComponent
+    fieldRows={
+      Array [
+        Object {
+          "searchField": "all",
+          "value": "i feel lucky",
+        },
+        Object {
+          "searchField": "rek_title",
+          "value": "remove rek title field",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+  />
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</React.Fragment>
+`;
+
+exports[`SearchComponent should remove one row from advanced search 2`] = `
+<React.Fragment>
+  <AdvancedSearchComponent
+    fieldRows={
+      Array [
+        Object {
+          "searchField": "all",
+          "value": "i feel lucky",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+  />
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</React.Fragment>
+`;
+
+exports[`SearchComponent should render default view 1`] = `
+<React.Fragment>
+  <SimpleSearchComponent
+    isInHeader={false}
+    onInvalidSearch={[Function]}
+    onSearch={[Function]}
+    onSearchTextChange={[Function]}
+    onToggleSearchMode={[Function]}
+    searchText=""
+    showAdvancedSearchButton={false}
+    showMobileSearchButton={false}
+    showPrefixIcon={false}
+    showSearchButton={false}
+  />
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</React.Fragment>
 `;
 
 exports[`SearchComponent should render default view with advanced search 1`] = `
-<div
-  className="search-component undefined undefined"
->
-  <div
-    className="columns is-gapless"
-  >
-    <div
-      className="column search-field is-gapless hideMobile"
-    >
-      <div
-        className="columns is-gapless search-field is-mobile"
-      >
-        <div
-          className="column"
-        >
-          <TextField
-            aria-label="Enter your search query to search eSpace and then press Enter"
-            disabled={false}
-            errorText={false}
-            floatingLabelFixed={false}
-            floatingLabelText="Search eSpace"
-            fullWidth={true}
-            id="searchField"
-            multiLine={false}
-            onChange={[Function]}
-            onKeyPress={[Function]}
-            rows={1}
-            type="search"
-            underlineShow={true}
-            underlineStyle={Object {}}
-            value=""
-          />
-        </div>
-        <div
-          className="is-hidden-tablet mobileSpacer"
-        />
-      </div>
-    </div>
-    <div
-      className="column is-narrow search-button-wrapper"
-    >
-      <RaisedButton
-        aria-label="Click to search eSpace"
-        disabled={false}
-        fullWidth={true}
-        label="Search"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={false}
-        secondary={true}
-      />
-    </div>
-    <div
-      className="column is-narrow"
-    >
-      <RaisedButton
-        aria-label="Click to switch to Advanced search"
-        className="advancedButton"
-        disabled={false}
-        fullWidth={true}
-        label="Advanced search"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-  </div>
+<React.Fragment>
+  <AdvancedSearchComponent
+    fieldRows={
+      Array [
+        Object {
+          "searchField": "0",
+          "value": "",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+  />
   <Snackbar
     autoHideDuration={5000}
     message=""
     open={false}
   />
-</div>
+</React.Fragment>
 `;
 
-exports[`SearchComponent should render show mobile button 1`] = `
-<div
-  className="search-component undefined undefined"
->
-  <div
-    className="columns is-gapless"
-  >
-    <div
-      className="column search-field is-gapless hideMobile"
-    >
-      <div
-        className="columns is-gapless search-field is-mobile"
-      >
-        <div
-          className="column is-narrow search-icon-prefix is-hidden-tablet"
-        >
-          <IconButton
-            className="mobileBackArrow"
-            disableTouchRipple={false}
-            disabled={false}
-            iconStyle={Object {}}
-            onClick={[Function]}
-            tooltipPosition="bottom-center"
-            touch={false}
-          >
-            <NavigationArrowBack />
-          </IconButton>
-        </div>
-        <div
-          className="column"
-        >
-          <TextField
-            aria-label="Enter your search query to search eSpace and then press Enter"
-            disabled={false}
-            errorText={false}
-            floatingLabelFixed={false}
-            floatingLabelText="Search eSpace"
-            fullWidth={true}
-            id="searchField"
-            multiLine={false}
-            onChange={[Function]}
-            onKeyPress={[Function]}
-            rows={1}
-            type="search"
-            underlineShow={true}
-            underlineStyle={Object {}}
-            value=""
-          />
-        </div>
-        <div
-          className="is-hidden-tablet mobileSpacer"
-        />
-      </div>
-    </div>
-    <div
-      className="column is-narrow is-hidden-tablet"
-    >
-      <IconButton
-        aria-label="Click to search eSpace"
-        className="search-button"
-        disableTouchRipple={false}
-        disabled={false}
-        hoveredStyle={
-          Object {
-            "backgroundColor": "rgba(0,0,0,0.3)",
-            "borderRadius": "50%",
-          }
-        }
-        iconStyle={Object {}}
-        onClick={[Function]}
-        tooltipPosition="bottom-center"
-        touch={false}
-      >
-        <ActionSearch />
-      </IconButton>
-    </div>
-    <div
-      className="column is-narrow search-button-wrapper"
-    >
-      <RaisedButton
-        aria-label="Click to search eSpace"
-        disabled={false}
-        fullWidth={true}
-        label="Search"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={false}
-        secondary={true}
-      />
-    </div>
-  </div>
+exports[`SearchComponent should render simple search even if it says is advanced, if in header 1`] = `
+<React.Fragment>
+  <SimpleSearchComponent
+    isInHeader={true}
+    onInvalidSearch={[Function]}
+    onSearch={[Function]}
+    onSearchTextChange={[Function]}
+    onToggleSearchMode={[Function]}
+    searchText=""
+    showAdvancedSearchButton={false}
+    showMobileSearchButton={false}
+    showPrefixIcon={false}
+    showSearchButton={false}
+  />
   <Snackbar
     autoHideDuration={5000}
     message=""
     open={false}
   />
-</div>
-`;
-
-exports[`SearchComponent should render show prefix icon in the search box 1`] = `
-<div
-  className="search-component undefined undefined"
->
-  <div
-    className="columns is-gapless"
-  >
-    <div
-      className="column search-field is-gapless hideMobile"
-    >
-      <div
-        className="columns is-gapless search-field is-mobile"
-      >
-        <div
-          className="column is-narrow search-icon-prefix is-hidden-mobile"
-        >
-          <ActionSearch />
-        </div>
-        <div
-          className="column"
-        >
-          <TextField
-            aria-label="Enter your search query to search eSpace and then press Enter"
-            disabled={false}
-            errorText={false}
-            floatingLabelFixed={false}
-            floatingLabelText="Search eSpace"
-            fullWidth={true}
-            id="searchField"
-            multiLine={false}
-            onChange={[Function]}
-            onKeyPress={[Function]}
-            rows={1}
-            type="search"
-            underlineShow={true}
-            underlineStyle={Object {}}
-            value=""
-          />
-        </div>
-        <div
-          className="is-hidden-tablet mobileSpacer"
-        />
-      </div>
-    </div>
-    <div
-      className="column is-narrow search-button-wrapper"
-    >
-      <RaisedButton
-        aria-label="Click to search eSpace"
-        disabled={false}
-        fullWidth={true}
-        label="Search"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={false}
-        secondary={true}
-      />
-    </div>
-  </div>
-  <Snackbar
-    autoHideDuration={5000}
-    message=""
-    open={false}
-  />
-</div>
+</React.Fragment>
 `;
 
 exports[`SearchComponent should render with a class "header" for use in AppBar 1`] = `
-<div
-  className="search-component header undefined"
->
-  <div
-    className="columns is-gapless"
-  >
-    <div
-      className="column search-field is-gapless hideMobile"
-    >
-      <div
-        className="columns is-gapless search-field is-mobile"
-      >
-        <div
-          className="column"
-        >
-          <TextField
-            aria-label="Enter your search query to search eSpace and then press Enter"
-            disabled={false}
-            errorText={false}
-            floatingLabelFixed={false}
-            floatingLabelText={false}
-            fullWidth={true}
-            hintText="Search eSpace"
-            id="searchField"
-            multiLine={false}
-            onChange={[Function]}
-            onKeyPress={[Function]}
-            rows={1}
-            type="search"
-            underlineShow={true}
-            underlineStyle={
-              Object {
-                "display": "none",
-              }
-            }
-            value=""
-          />
-        </div>
-        <div
-          className="is-hidden-tablet mobileSpacer"
-        />
-      </div>
-    </div>
-    <div
-      className="column is-narrow search-button-wrapper"
-    >
-      <RaisedButton
-        aria-label="Click to search eSpace"
-        disabled={false}
-        fullWidth={true}
-        label="Search"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={false}
-        secondary={true}
-      />
-    </div>
-  </div>
+<React.Fragment>
+  <SimpleSearchComponent
+    isInHeader={true}
+    onInvalidSearch={[Function]}
+    onSearch={[Function]}
+    onSearchTextChange={[Function]}
+    onToggleSearchMode={[Function]}
+    searchText=""
+    showAdvancedSearchButton={false}
+    showMobileSearchButton={false}
+    showPrefixIcon={false}
+    showSearchButton={false}
+  />
   <Snackbar
     autoHideDuration={5000}
     message=""
     open={false}
   />
-</div>
+</React.Fragment>
 `;
 
-exports[`SearchComponent should set search value from prop 1`] = `
-<div
-  className="search-component undefined undefined"
->
-  <div
-    className="columns is-gapless"
-  >
-    <div
-      className="column search-field is-gapless hideMobile"
-    >
-      <div
-        className="columns is-gapless search-field is-mobile"
-      >
-        <div
-          className="column"
-        >
-          <TextField
-            aria-label="Enter your search query to search eSpace and then press Enter"
-            disabled={false}
-            errorText={false}
-            floatingLabelFixed={false}
-            floatingLabelText="Search eSpace"
-            fullWidth={true}
-            id="searchField"
-            multiLine={false}
-            onChange={[Function]}
-            onKeyPress={[Function]}
-            rows={1}
-            type="search"
-            underlineShow={true}
-            underlineStyle={Object {}}
-            value="i feel lucky"
-          />
-        </div>
-        <div
-          className="is-hidden-tablet mobileSpacer"
-        />
-      </div>
-    </div>
-    <div
-      className="column is-narrow search-button-wrapper"
-    >
-      <RaisedButton
-        aria-label="Click to search eSpace"
-        disabled={false}
-        fullWidth={true}
-        label="Search"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={false}
-        secondary={true}
-      />
-    </div>
-    <div
-      className="column is-narrow"
-    >
-      <RaisedButton
-        aria-label="Click to switch to Advanced search"
-        className="advancedButton"
-        disabled={false}
-        fullWidth={true}
-        label="Advanced search"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-  </div>
+exports[`SearchComponent should reset advanced search 1`] = `
+<React.Fragment>
+  <AdvancedSearchComponent
+    fieldRows={
+      Array [
+        Object {
+          "searchField": "all",
+          "value": "i feel lucky",
+        },
+        Object {
+          "searchField": "rek_title",
+          "value": "global warming",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={true}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+  />
   <Snackbar
     autoHideDuration={5000}
     message=""
     open={false}
   />
-</div>
+</React.Fragment>
+`;
+
+exports[`SearchComponent should reset advanced search 2`] = `
+<React.Fragment>
+  <AdvancedSearchComponent
+    fieldRows={
+      Array [
+        Object {
+          "searchField": "0",
+          "value": "",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+  />
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</React.Fragment>
+`;
+
+exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
+<React.Fragment>
+  <AdvancedSearchComponent
+    fieldRows={
+      Array [
+        Object {
+          "searchField": "0",
+          "value": "",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+  />
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</React.Fragment>
+`;
+
+exports[`SearchComponent should toggle advanced search to minimised view 2`] = `
+<React.Fragment>
+  <AdvancedSearchComponent
+    fieldRows={
+      Array [
+        Object {
+          "searchField": "0",
+          "value": "",
+        },
+      ]
+    }
+    isMinimised={true}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+  />
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</React.Fragment>
+`;
+
+exports[`SearchComponent should toggle open access for advanced search 1`] = `
+<React.Fragment>
+  <AdvancedSearchComponent
+    fieldRows={
+      Array [
+        Object {
+          "searchField": "0",
+          "value": "",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+  />
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</React.Fragment>
+`;
+
+exports[`SearchComponent should toggle open access for advanced search 2`] = `
+<React.Fragment>
+  <AdvancedSearchComponent
+    fieldRows={
+      Array [
+        Object {
+          "searchField": "0",
+          "value": "",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={true}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+  />
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</React.Fragment>
+`;
+
+exports[`SearchComponent should toggle search to minimised view of advanced search 1`] = `
+<React.Fragment>
+  <SimpleSearchComponent
+    isInHeader={false}
+    onInvalidSearch={[Function]}
+    onSearch={[Function]}
+    onSearchTextChange={[Function]}
+    onToggleSearchMode={[Function]}
+    searchText=""
+    showAdvancedSearchButton={false}
+    showMobileSearchButton={false}
+    showPrefixIcon={false}
+    showSearchButton={false}
+  />
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</React.Fragment>
+`;
+
+exports[`SearchComponent should toggle search to minimised view of advanced search 2`] = `
+<React.Fragment>
+  <AdvancedSearchComponent
+    fieldRows={
+      Array [
+        Object {
+          "searchField": "all",
+          "value": "i feel very lucky",
+        },
+      ]
+    }
+    isMinimised={true}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+  />
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</React.Fragment>
+`;
+
+exports[`SearchComponent should update advanced search row on search text changed 1`] = `
+<React.Fragment>
+  <AdvancedSearchComponent
+    fieldRows={
+      Array [
+        Object {
+          "searchField": "all",
+          "value": "i feel lucky",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+  />
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</React.Fragment>
+`;
+
+exports[`SearchComponent should update advanced search row on search text changed 2`] = `
+<React.Fragment>
+  <AdvancedSearchComponent
+    fieldRows={
+      Array [
+        Object {
+          "searchField": "all",
+          "value": "i feel more lucky",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+  />
+  <Snackbar
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</React.Fragment>
 `;

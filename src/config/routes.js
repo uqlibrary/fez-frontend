@@ -1,7 +1,7 @@
 import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
 import param from 'can-param';
-import {defaultSearchParams} from 'config/general';
+import {defaultQueryParams} from 'config/general';
 import {openAccessIds} from 'config/openAccess';
 
 const fullPath = process.env.BRANCH === 'production' ? 'https://espace.library.uq.edu.au' : 'https://fez-staging.library.uq.edu.au';
@@ -9,12 +9,12 @@ export const pidRegExp = 'UQ:[a-z0-9]+';
 
 const getSearchUrl = ({searchQuery, activeFacets = {}}) => (
     `${fullPath}/records/search?${param({
-        ...defaultSearchParams,
+        ...defaultQueryParams,
         searchQueryParams: {
             all: !!searchQuery && searchQuery || ''
         },
         activeFacets: {
-            ...defaultSearchParams.activeFacets,
+            ...defaultQueryParams.activeFacets,
             ...activeFacets
         }
     })}`
