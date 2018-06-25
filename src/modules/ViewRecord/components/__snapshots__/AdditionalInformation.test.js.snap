@@ -21123,13 +21123,13 @@ exports[`Additional Information Component  should render component with journal 
                                                       <span>
                                                         Journal of Cell Science
                                                       </span>
-                                                      <span
-                                                        className="eraYearListed"
-                                                      >
-                                                         
-                                                        (ERA 2010 Journal(s) Listed)
-                                                      </span>
                                                     </a>
+                                                    <span
+                                                      className="eraYearListed"
+                                                    >
+                                                       
+                                                      (ERA 2010 Journal(s) Listed)
+                                                    </span>
                                                     <span>
                                                        
                                                       <ExternalLink
