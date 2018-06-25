@@ -31,7 +31,8 @@ export function getPublicationsPerType(data, keepPublicationTypes) {
             .reduce((init, item) => {
                 return init + item[1];
             }, 0);
-        topCounts.push(['Other', otherCounts]);
+        const legendToDisplay = publicationTypesCount.slice(keepPublicationTypes).map(item => item[0]).join(', ');
+        topCounts.push(['Other', otherCounts, legendToDisplay]);
         return topCounts;
     }
 }
@@ -86,10 +87,11 @@ export function getPublicationsPerYearSeries(data, topPublicationTypes) {
     const series = [];
 
     // construct final data structure
-    Object.keys(fields).map(publicationType => {
+    Object.keys(fields).map((publicationType, index) => {
         series.push({
             name: publicationType,
-            data: fields[publicationType]
+            data: fields[publicationType],
+            ...(!!topPublicationTypes[index][2] && {extraInfoForLegend: topPublicationTypes[index][2]} || {})
         });
     });
 
@@ -112,6 +114,14 @@ export function getPublicationsStats(years, data) {
             ...data.stats_scopus_citation_count_i,
             years: `${years[0]} - ${years[years.length - 1]}`
         }
+    };
+}
+
+export function getAuthorArticleCount(total, data) {
+    return {
+        articleCount: !!total && total || null,
+        articleFirstYear: !!data && !!data.min_date_year_t && data.min_date_year_t.value_as_string || null,
+        articleLastYear: !!data && !!data.max_date_year_t && data.max_date_year_t.value_as_string || null,
     };
 }
 
