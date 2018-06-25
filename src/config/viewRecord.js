@@ -74,7 +74,9 @@ export const viewRecordsConfig = {
         blacklist: {
             namePrefixRegex: '^(FezACML|stream|web|thumbnail|preview|presmd)',
             descriptionKeywordsRegex: '(ERA |HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections|staffdata)'
-        }
+        },
+        thumbnailFileName: (fileName) => (`thumbnail_${fileName.substr(0, fileName.lastIndexOf('.'))}.jpg`),
+        previewFileName: (fileName) => (`preview_${fileName.substr(0, fileName.lastIndexOf('.'))}.jpg`)
     },
     metaTags: [
         {
