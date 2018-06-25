@@ -3,5 +3,33 @@
 exports[`Dashboard Article Count test Render the authors article counts as expected for a UQ researcher) 1`] = `
 <div
   className="authorCounter is-centered"
+>
+  <div>
+    <div
+      className="noOfArticles"
+    >
+      313
+    </div>
+    <div
+      className="articlesFrom"
+    >
+      eSpace articles from
+    </div>
+    <div
+      className="dateRange"
+    >
+      1970
+      <span>
+         to 
+      </span>
+      2054
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Dashboard Article Count test should not render anything if any data is missing 1`] = `
+<div
+  className="authorCounter is-centered"
 />
 `;

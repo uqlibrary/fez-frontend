@@ -81,8 +81,13 @@ export const AUTHOR_ORCID_DETAILS_API = ({userId, params}) => (
 );
 
 // academic stats apis
-export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({userId}) => ({apiUrl: `academic/${userId}/hindex`});
-export const ACADEMIC_STATS_PUBLICATIONS_TRENDING_API = () => ({apiUrl: 'records/my-trending'});
+
+export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({userId}) => (
+    {apiUrl: `academic/${userId}/hindex`}
+);
+export const AUTHOR_TRENDING_PUBLICATIONS_API = () => (
+    {apiUrl: 'records/my-trending'}
+);
 
 // lookup apis
 export const GET_ACML_QUICK_TEMPLATES_API = () => (
@@ -125,7 +130,7 @@ export const HIDE_POSSIBLE_RECORD_API = () => (
 export const CURRENT_USER_RECORDS_API = (values, route = 'search') => (
     {apiUrl: `records/${route}`, options: {params: {rule: 'mine', ...getStandardSearchParams(values)}}}
 );
-export const ACADEMIC_PUBLICATIONS_STATS_API = (values) => (
+export const AUTHOR_PUBLICATIONS_STATS_ONLY_API = (values) => (
     {apiUrl: 'records/search', options: {params: {rule: 'mine', 'filters[stats_only]': true, ...getStandardSearchParams(values)}}}
 );
 export const TRENDING_PUBLICATIONS_API = () => ({apiUrl: 'records/trending'});
