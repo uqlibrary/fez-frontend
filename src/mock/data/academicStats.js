@@ -64587,6 +64587,14 @@ export const currentAuthorStats = {
                         "doc_count": 1
                     }
                 ]
+            },
+            "max_date_year_t": {
+                "value": 2124548785451,
+                "value_as_string": "2054"
+            },
+            "min_date_year_t": {
+                "value": 2154875412542,
+                "value_as_string": "1970"
             }
         }
     }
