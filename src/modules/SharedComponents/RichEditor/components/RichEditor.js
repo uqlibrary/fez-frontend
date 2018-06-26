@@ -26,7 +26,8 @@ export default class RichEditor extends PureComponent {
                 {
                     removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor',
                     height: this.props.height,
-                    pasteFilter: 'p, b, strong, i, em, u, sup, sub, ul, ol, li, s, br'
+                    pasteFilter: 'semantic-content'
+                    // pasteFilter: 'p, b, strong, i, em, u, sup, sub, ul, ol, li, s, br'
                 },
                 this.props.value
             );
