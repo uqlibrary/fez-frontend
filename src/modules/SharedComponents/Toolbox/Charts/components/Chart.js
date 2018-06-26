@@ -37,7 +37,7 @@ class Chart extends React.Component {
     }
 
     render() {
-        if (window.matchMedia) {
+        if (window.matchMedia && !!this.chart) {
             const mediaQueryList = window.matchMedia('print');
             mediaQueryList.addListener(() => {
                 this.chart.reflow();
