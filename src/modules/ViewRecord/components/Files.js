@@ -107,22 +107,25 @@ export default class Files extends Component {
     }
 
     isFileValid = (dataStream) => {
-        return !dataStream.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
-            (!dataStream.dsi_label || !dataStream.dsi_label.match(new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi'))) &&
+        const {files: {blacklist}} = viewRecordsConfig;
+
+        return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) &&
+            (!dataStream.dsi_label || !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi'))) &&
             dataStream.dsi_state === 'A';
     }
 
     getFileData = (publication) => {
         const dataStreams = publication.fez_datastream_info;
+        const {files} = viewRecordsConfig;
 
         return !!dataStreams && dataStreams.length > 0
             ? dataStreams.filter(this.isFileValid).map(dataStream => {
                 const pid = publication.rek_pid;
                 const fileName = dataStream.dsi_dsid;
-                const thumbnailDataStream = this.searchByKey(dataStreams, 'dsi_dsid', 'thumbnail_' + fileName);
-                const previewDataStream = this.searchByKey(dataStreams, 'dsi_dsid', 'preview_' + fileName);
+                const thumbnailDataStream = this.searchByKey(dataStreams, 'dsi_dsid', files.thumbnailFileName(fileName));
+                const previewDataStream = this.searchByKey(dataStreams, 'dsi_dsid', files.previewFileName(fileName));
                 const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
-                const thumbnailFileName = thumbnailDataStream && thumbnailDataStream.dsi_dsid;
+                const thumbnailFileName = !!thumbnailDataStream && thumbnailDataStream.dsi_dsid;
                 const openAccessStatus = this.getFileOpenAccessStatus(publication, dataStream.dsi_embargo_date);
 
                 return {
@@ -131,7 +134,7 @@ export default class Files extends Component {
                     description: dataStream.dsi_label,
                     mimeType: mimeType,
                     thumbnailFileName: thumbnailFileName,
-                    previewFileName: previewDataStream && previewDataStream.dsi_dsid,
+                    previewFileName: !!previewDataStream && previewDataStream.dsi_dsid,
                     calculatedSize: this.formatBytes(dataStream.dsi_size),
                     allowDownload: openAccessStatus.isOpenAccess || !openAccessStatus.embargoDate,
                     icon: this.renderFileIcon(pid, mimeType, thumbnailFileName, openAccessStatus.isOpenAccess),
