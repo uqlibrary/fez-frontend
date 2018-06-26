@@ -26,8 +26,7 @@ export default class RichEditor extends PureComponent {
                 {
                     removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor',
                     height: this.props.height,
-                    pasteFromWord_inlineImages: false,
-                    removePlugins: 'image'
+                    allowedContent: true
                 },
                 this.props.value
             );
