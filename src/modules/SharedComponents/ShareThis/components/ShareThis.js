@@ -25,6 +25,7 @@ export default class ShareThis extends PureComponent {
         this.setState({ hasError: true });
 
         // https://docs.sentry.io/clients/javascript/integrations/react/
+        // temporary line to ensure this doesnt make it worse
         Raven.captureException(error, { extra: errorInfo });
     }
 
@@ -87,9 +88,8 @@ export default class ShareThis extends PureComponent {
     }
 
     render() {
-        if (this.state.hasError) {
-            return '';
-        }
+        if (this.state.hasError) { return '<div className="shareThis empty" />'; }
+
         return (
             <div className="shareThis columns is-gapless is-clearfix is-marginless">
                 <div className="column is-hidden-mobile" />
