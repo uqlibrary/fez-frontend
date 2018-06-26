@@ -162,6 +162,7 @@ export default class AdditionalInformation extends Component {
         }
         return (
             <PublicationMap
+                googleMapURL={process.env.GOOGLE_MAPS_URL}
                 loadingElement={<div style={{height: '100%'}}/>}
                 containerElement={<div style={{height: '400px'}}/>}
                 mapElement={<div style={{height: '100%'}}/>}

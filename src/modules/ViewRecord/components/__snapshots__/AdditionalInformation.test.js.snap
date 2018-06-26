@@ -10047,6 +10047,7 @@ exports[`Additional Information Component  should render component with data col
               />
             }
             coordinates="153.050537,-27.352253"
+            googleMapURL={undefined}
             loadingElement={
               <div
                 style={
@@ -11667,6 +11668,7 @@ exports[`Additional Information Component  should render component with data col
               />
             }
             coordinates="178.849182,-16.826275 179.129333,-16.826275 179.129333,-17.251690 178.849182,-17.251690 178.849182,-16.826275"
+            googleMapURL={undefined}
             loadingElement={
               <div
                 style={
