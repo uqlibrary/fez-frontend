@@ -88,9 +88,12 @@
         height: 24px !important;
         padding: 8px 6px 0 0 !important;
       }
-      img {
-        max-width: 24px;
-        max-height: 24px;
+      .fileThumbnail {
+        cursor: pointer;
+        img {
+          max-width: 72px;
+          max-height: 48px;
+        }
       }
     }
     .fileInfo {
