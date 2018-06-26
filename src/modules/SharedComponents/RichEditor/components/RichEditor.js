@@ -25,10 +25,8 @@ export default class RichEditor extends PureComponent {
                 ReactDOM.findDOMNode(this),
                 {
                     removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor',
-                    extraPlugins: 'clipboard,dialog,notification',
                     height: this.props.height,
                     pasteFilter: 'semantic-content'
-                    // pasteFilter: 'p, b, strong, i, em, u, sup, sub, ul, ol, li, s, br'
                 },
                 this.props.value
             );
