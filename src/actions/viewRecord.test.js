@@ -50,7 +50,7 @@ describe('View record actions', () => {
 
             await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            expect(mockActionsStore.getActions()).toContainEqual({type: actions.VIEW_RECORD_LOAD_FAILED, payload: locale.global.errorMessages.generic});
+            expect(mockActionsStore.getActions()).toContainEqual({type: actions.VIEW_RECORD_LOAD_FAILED, payload: locale.global.errorMessages[500].message});
         });
 
         it('dispatches expected actions when loading a record to view from API for anon user', async () => {
@@ -66,7 +66,7 @@ describe('View record actions', () => {
 
             await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            expect(mockActionsStore.getActions()).toContainEqual({type: actions.VIEW_RECORD_LOAD_FAILED, payload: locale.global.errorMessages.sessionExpired});
+            expect(mockActionsStore.getActions()).toContainEqual({type: actions.VIEW_RECORD_LOAD_FAILED, payload: locale.global.errorMessages[403].message});
         });
 
         it('dispatches expected actions when loading a non-exist record to view from API', async () => {
@@ -81,7 +81,7 @@ describe('View record actions', () => {
 
             await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            expect(mockActionsStore.getActions()).toContainEqual({type: actions.VIEW_RECORD_LOAD_FAILED, payload: locale.global.errorMessages.notFound});
+            expect(mockActionsStore.getActions()).toContainEqual({type: actions.VIEW_RECORD_LOAD_FAILED, payload: locale.global.errorMessages[404].message});
         });
     });
 
