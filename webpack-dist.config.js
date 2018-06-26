@@ -94,7 +94,7 @@ const webpackConfig = {
             'process.env.ORCID_URL': JSON.stringify(config.orcidUrl),
             'process.env.ORCID_CLIENT_ID': JSON.stringify(config.orcidClientId),
             'process.env.PUBLIC_PATH': JSON.stringify(config.basePath),
-            'process.env.GOOGLE_MAP_KEY': JSON.stringify(config.googleMaps),
+            'process.env.GOOGLE_MAPS_URL': JSON.stringify(config.googleMaps),
             'process.env.ENABLE_LOG': JSON.stringify(!!process.env.CI_BRANCH && process.env.NODE_ENV !== 'test'),
             'process.env.TITLE_SUFFIX': JSON.stringify(config.titleSuffix),
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
