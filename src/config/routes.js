@@ -344,6 +344,7 @@ export const getMenuConfig = (account, disabled) => {
 
     if (disabled) {
         return [
+            ...homePage,
             ...(account ? [
                 {
                     linkTo: pathConfig.dashboard,
