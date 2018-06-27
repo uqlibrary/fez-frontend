@@ -4,15 +4,13 @@ import {bindActionCreators} from 'redux';
 import {withRouter} from 'react-router-dom';
 import * as actions from 'actions';
 
-const mapStateToProps = () => {
-    return {};
-};
+const mapStateToProps = (state) => ({
+    hideViewFullStatisticsLink: state.get('accountReducer').account === null
+});
 
-function mapDispatchToProps(dispatch) {
-    return {
-        actions: bindActionCreators(actions, dispatch)
-    };
-}
+const mapDispatchToProps = (dispatch) => ({
+    actions: bindActionCreators(actions, dispatch)
+});
 
 let PublicationCitationContainer = connect(mapStateToProps, mapDispatchToProps)(PublicationCitation);
 PublicationCitationContainer = withRouter(PublicationCitationContainer);

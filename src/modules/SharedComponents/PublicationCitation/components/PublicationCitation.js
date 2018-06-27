@@ -48,7 +48,8 @@ export default class PublicationCitation extends PureComponent {
         showMetrics: PropTypes.bool,
         showSourceCountIcon: PropTypes.bool,
         hideCountDiff: PropTypes.bool,
-        hideCountTotal: PropTypes.bool
+        hideCountTotal: PropTypes.bool,
+        hideViewFullStatisticsLink: PropTypes.bool
     };
 
     static defaultProps = {
@@ -58,7 +59,8 @@ export default class PublicationCitation extends PureComponent {
         className: '',
         hideTitle: false,
         hideCountDiff: false,
-        hideCountTotal: false
+        hideCountTotal: false,
+        hideViewFullStatisticsLink: false
     };
 
     constructor(props) {
@@ -172,7 +174,7 @@ export default class PublicationCitation extends PureComponent {
 
                         {this.renderCitation(this.props.publication.rek_display_type)}
 
-                        <CitationCounts publication={this.props.publication} />
+                        <CitationCounts publication={this.props.publication} hideViewFullStatisticsLink={this.props.hideViewFullStatisticsLink}/>
 
                         {/* display publication source (eg from espace/pubmed/crossref/etc */}
                         {this.props.showSources && this.props.publication.sources && this.renderSources()}

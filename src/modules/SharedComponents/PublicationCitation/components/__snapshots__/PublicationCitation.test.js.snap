@@ -416,6 +416,7 @@ exports[`PublicationCitation  should render component with custom actions 1`] = 
         }
       />
       <CitationCounts
+        hideViewFullStatisticsLink={false}
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -1298,6 +1299,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
         }
       />
       <CitationCounts
+        hideViewFullStatisticsLink={false}
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -2140,6 +2142,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
         }
       />
       <CitationCounts
+        hideViewFullStatisticsLink={false}
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -2955,6 +2958,7 @@ exports[`PublicationCitation  should render component with default list hiding t
         }
       />
       <CitationCounts
+        hideViewFullStatisticsLink={false}
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -3770,6 +3774,7 @@ exports[`PublicationCitation  should render component with default list hiding t
         }
       />
       <CitationCounts
+        hideViewFullStatisticsLink={false}
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -4591,6 +4596,7 @@ exports[`PublicationCitation  should render component with publication from mult
         }
       />
       <CitationCounts
+        hideViewFullStatisticsLink={false}
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -4994,7 +5000,7 @@ exports[`PublicationCitation  should render component with publication from mult
       <div
         className="publicationSources"
       >
-        Found in: 
+        Found in:
         <ExternalLink
           aria-label="Link to eSpace will open in a new window."
           className="publicationSource"
@@ -5424,6 +5430,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
         }
       />
       <CitationCounts
+        hideViewFullStatisticsLink={false}
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -5827,7 +5834,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
       <div
         className="publicationSources"
       >
-        Found in: 
+        Found in:
         <ExternalLink
           aria-label="Link to eSpace will open in a new window."
           className="publicationSource"
@@ -6267,6 +6274,7 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
         }
       />
       <CitationCounts
+        hideViewFullStatisticsLink={false}
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
