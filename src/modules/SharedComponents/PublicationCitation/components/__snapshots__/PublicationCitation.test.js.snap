@@ -5000,7 +5000,7 @@ exports[`PublicationCitation  should render component with publication from mult
       <div
         className="publicationSources"
       >
-        Found in:
+        Found in: 
         <ExternalLink
           aria-label="Link to eSpace will open in a new window."
           className="publicationSource"
@@ -5834,7 +5834,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
       <div
         className="publicationSources"
       >
-        Found in:
+        Found in: 
         <ExternalLink
           aria-label="Link to eSpace will open in a new window."
           className="publicationSource"
