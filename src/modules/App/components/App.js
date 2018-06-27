@@ -100,6 +100,13 @@ export default class App extends PureComponent {
         }
     };
 
+    isPublicPage = (menuItems) => (
+        menuItems
+            .filter(menuItem => this.props.location.pathname === menuItem.linkTo && menuItem.public)
+            .length > 0
+        || (new RegExp(routes.pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname))
+    );
+
     render() {
         // display loader while user account is loading
         if (this.props.accountLoading) {
@@ -122,8 +129,7 @@ export default class App extends PureComponent {
             && this.props.account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
 
         const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent);
-        const isPublicPage = menuItems.filter((menuItem) =>
-            (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
+        const isPublicPage = this.isPublicPage(menuItems);
         const isThesisSubmissionPage = this.props.location.pathname === routes.pathConfig.hdrSubmission ||
             this.props.location.pathname === routes.pathConfig.sbsSubmission;
         const isSearchPage = this.props.location.pathname === routes.pathConfig.records.search ||
