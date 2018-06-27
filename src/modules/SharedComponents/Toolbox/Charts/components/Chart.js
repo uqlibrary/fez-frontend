@@ -13,6 +13,7 @@ class Chart extends React.Component {
     constructor(props) {
         super(props);
         this.chart = null;
+        this.printMedia = window.matchMedia && window.matchMedia('print') || null;
     }
 
     componentDidMount() {
@@ -21,6 +22,8 @@ class Chart extends React.Component {
                 findDOMNode(this.refs.chart),
                 this.props.chartOptions
             );
+
+            !!this.printMedia && this.printMedia.addListener(this.reflowChart);
         }
     }
 
@@ -33,16 +36,13 @@ class Chart extends React.Component {
     componentWillUnmount() {
         if (this.chart) {
             this.chart.destroy();
+            !!this.printMedia && this.printMedia.removeListener(this.reflowChart);
         }
     }
 
+    reflowChart = () => this.chart.reflow();
+
     render() {
-        if (window.matchMedia) {
-            const mediaQueryList = window.matchMedia('print');
-            mediaQueryList.addListener(() => {
-                this.chart.reflow();
-            });
-        }
         return (
             <div className={this.props.className} ref="chart" />
         );
