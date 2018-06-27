@@ -215,4 +215,39 @@ describe('Application component', () => {
         }, false);
         expect(testMethod).toHaveBeenCalledWith();
     });
+
+    it('should return true if user is on public page', () => {
+        const menuItems = routes.getMenuConfig(true, false);
+
+        const getWrapper = (pathname) => (setup({
+            location: {pathname}
+        }));
+
+        const pathExpectations = [
+            {
+                pathname: '/contact',
+                public: true
+            },
+            {
+                pathname: '/dashboard',
+                public: false
+            },
+            {
+                pathname: '/view/UQ:123432',
+                public: true
+            },
+            {
+                pathname: '/',
+                public: true
+            },
+            {
+                pathname: '/data-collections/mine',
+                public: false
+            }
+        ];
+
+        pathExpectations.map(path => {
+            expect(getWrapper(path.pathname).instance().isPublicPage(menuItems)).toEqual(path.public)
+        });
+    })
 });

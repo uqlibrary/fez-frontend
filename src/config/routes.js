@@ -23,7 +23,6 @@ const getSearchUrl = ({searchQuery, activeFacets = {}}) => (
 export const pathConfig = {
     index: '/',
     dashboard: '/dashboard',
-    browse: '/browse',
     contact: '/contact',
     hdrSubmission: '/rhdsubmission',
     sbsSubmission: '/sbslodge_new',
