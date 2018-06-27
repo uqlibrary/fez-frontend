@@ -226,28 +226,28 @@ describe('Application component', () => {
         const pathExpectations = [
             {
                 pathname: '/contact',
-                public: true
+                isPublic: true
             },
             {
                 pathname: '/dashboard',
-                public: false
+                isPublic: false
             },
             {
                 pathname: '/view/UQ:123432',
-                public: true
+                isPublic: true
             },
             {
                 pathname: '/',
-                public: true
+                isPublic: true
             },
             {
                 pathname: '/data-collections/mine',
-                public: false
+                isPublic: false
             }
         ];
 
         pathExpectations.map(path => {
-            expect(getWrapper(path.pathname).instance().isPublicPage(menuItems)).toEqual(path.public)
+            expect(getWrapper(path.pathname).instance().isPublicPage(menuItems)).toEqual(path.isPublic)
         });
     })
 });
