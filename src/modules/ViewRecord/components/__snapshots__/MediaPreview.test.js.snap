@@ -198,7 +198,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                             <RaisedButton
                               disabled={false}
                               fullWidth={false}
-                              label="Download original file"
+                              label="Download file"
                               labelPosition="after"
                               onClick={[Function]}
                               primary={true}
@@ -355,7 +355,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                                                 }
                                               }
                                             >
-                                              Download original file
+                                              Download file
                                             </span>
                                           </div>
                                         </div>
@@ -550,7 +550,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                             <RaisedButton
                               disabled={false}
                               fullWidth={true}
-                              label="Download original file"
+                              label="Download file"
                               labelPosition="after"
                               onClick={[Function]}
                               primary={true}
@@ -707,7 +707,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                                                 }
                                               }
                                             >
-                                              Download original file
+                                              Download file
                                             </span>
                                           </div>
                                         </div>
@@ -924,7 +924,7 @@ exports[`Media Preview Component  should render component 1`] = `
       <RaisedButton
         disabled={false}
         fullWidth={false}
-        label="Download original file"
+        label="Download file"
         labelPosition="after"
         onClick={[Function]}
         primary={true}
@@ -954,7 +954,7 @@ exports[`Media Preview Component  should render component 1`] = `
       <RaisedButton
         disabled={false}
         fullWidth={true}
-        label="Download original file"
+        label="Download file"
         labelPosition="after"
         onClick={[Function]}
         primary={true}
@@ -995,7 +995,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
       <RaisedButton
         disabled={false}
         fullWidth={false}
-        label="Download original file"
+        label="Download file"
         labelPosition="after"
         onClick={[Function]}
         primary={true}
@@ -1030,7 +1030,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
       <RaisedButton
         disabled={false}
         fullWidth={true}
-        label="Download original file"
+        label="Download file"
         labelPosition="after"
         onClick={[Function]}
         primary={true}
@@ -1071,7 +1071,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
       <RaisedButton
         disabled={false}
         fullWidth={false}
-        label="Download original file"
+        label="Download file"
         labelPosition="after"
         onClick={[Function]}
         primary={true}
@@ -1109,7 +1109,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
       <RaisedButton
         disabled={false}
         fullWidth={true}
-        label="Download original file"
+        label="Download file"
         labelPosition="after"
         onClick={[Function]}
         primary={true}

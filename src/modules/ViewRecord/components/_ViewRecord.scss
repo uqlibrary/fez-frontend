@@ -204,7 +204,7 @@
       top: -46px;
       text-align: right;
       .download {
-        button span:after {
+        button > div > div > span:after {
           margin-left: 6px;
           font-family: 'Material Icons';
           content: '\E89E';
