@@ -12,7 +12,7 @@ import AdditionalInformation from './AdditionalInformation';
 import GrantInformation from './GrantInformation';
 import RelatedPublications from './RelatedPublications';
 import Links from './Links';
-import {ShareThis} from 'modules/SharedComponents/ShareThis';
+import {ShareThisErrorBoundary} from 'modules/SharedComponents/ShareThis';
 import AvailableVersions from './AvailableVersions';
 import ReactHtmlParser from 'react-html-parser';
 
@@ -69,7 +69,7 @@ export default class ViewRecord extends PureComponent {
             <StandardPage className="viewRecord" title={ReactHtmlParser(recordToView.rek_title)}>
                 <PublicationCitation publication={recordToView} hideTitle />
 
-                <ShareThis />
+                <ShareThisErrorBoundary />
 
                 <Files
                     publication={recordToView}

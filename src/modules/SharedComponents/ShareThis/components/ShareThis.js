@@ -1,13 +1,7 @@
 import React, {PureComponent} from 'react';
-import Raven from 'raven-js';
 import locale from 'locale/components';
 
 export default class ShareThis extends PureComponent {
-    constructor(props) {
-        super(props);
-        this.state = { hasError: false };
-    }
-
     componentDidMount() {
         if (!document.getElementById('shareThisScript')) {
             // add the script to the body if it hasn't already happened
@@ -19,15 +13,6 @@ export default class ShareThis extends PureComponent {
 
             this.addShareThisConfigToHead();
         }
-    }
-
-    // https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html
-    componentDidCatch(error, errorInfo) {
-        this.setState({ hasError: true });
-
-        // https://docs.sentry.io/clients/javascript/integrations/react/
-        // temporary line to ensure this doesnt make it worse
-        Raven.captureException(error, { extra: errorInfo });
     }
 
     componentWillUnmount() {
@@ -90,8 +75,6 @@ export default class ShareThis extends PureComponent {
 
     render() {
         const {shareThis} = locale.components;
-
-        if (this.state.hasError) return (<div className="shareThis empty" />);
 
         return (
             <div className="shareThis columns is-gapless is-clearfix is-marginless">
