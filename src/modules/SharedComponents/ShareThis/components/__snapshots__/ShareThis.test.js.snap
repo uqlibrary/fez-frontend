@@ -11,26 +11,36 @@ exports[`Component Sharethis should render 3rd party elements with default props
     className="column is-narrow a2a_kit a2a_kit_size_20 a2a_default_style"
   >
     <a
-      className="a2a_button_facebook a2a_counter"
+      className="a2a_button_facebook"
+      title="Share this link via Facebook"
     />
     <a
       className="a2a_button_mendeley"
+      title="Share this link via Mendeley"
     />
     <a
       className="a2a_button_twitter"
+      title="Share this link via Twitter"
     />
     <a
       className="a2a_button_linkedin"
+      title="Share this link via LinkedIn"
+    />
+    <a
+      className="a2a_button_google_plus"
+      title="Share this link via Google+"
+    />
+    <a
+      className="a2a_button_reddit"
+      title="Share this link via Reddit"
     />
     <a
       className="a2a_button_email"
+      title="Share this link via Email"
     />
     <a
       className="a2a_button_print"
-    />
-    <a
-      className="a2a_dd"
-      href="https://www.addtoany.com/share"
+      title="Print this record"
     />
   </div>
 </div>
