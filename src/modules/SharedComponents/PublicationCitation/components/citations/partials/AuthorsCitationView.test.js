@@ -35,7 +35,7 @@ function setup({publication, prefix, suffix, className, initialNumberOfAuthors =
 }
 
 beforeAll(() => {
-    
+
 });
 
 describe('AuthorsCitationView test ', () => {
@@ -120,6 +120,28 @@ describe('AuthorsCitationView test ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render component with 2 authors for publication view page if author ids not supplied', () => {
+        const testObject = {
+            "fez_record_search_key_author": [
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Pedroso, Marcelo Monteiro",
+                    "rek_author_order": 1
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Smith, J",
+                    "rek_author_order": 2
+                }
+            ]
+        };
+        const wrapper = setup({ publication: testObject, showLink: true });
+        expect(wrapper.find('CitationView').get(0).props.suffix).toEqual('');
+        expect(wrapper.find('CitationView').get(1).props.prefix).toEqual(', ');
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 
     it('should render component with 3 authors for publication view page', () => {
         const testObject = {
