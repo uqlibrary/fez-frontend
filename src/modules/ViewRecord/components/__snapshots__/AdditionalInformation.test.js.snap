@@ -1534,105 +1534,140 @@ exports[`Additional Information Component  should render component with audio do
                                                   <span
                                                     className="citationAuthors"
                                                   >
-                                                    <a
+                                                    <Link
                                                       className="authorNameLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Shutter%2C+Leigh"
                                                       key="citationAuthor_1"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Shutter%2C+Leigh"
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_1"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Shutter, Leigh"
+                                                      <a
+                                                        className="authorNameLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Shutter%2C+Leigh"
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_1"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Shutter, Leigh"
                                                         >
-                                                          Shutter, Leigh
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Shutter, Leigh
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorNameLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Arthurs%2C+Andy"
                                                       key="citationAuthor_2"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Arthurs%2C+Andy"
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_2"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Arthurs, Andy"
+                                                      <a
+                                                        className="authorNameLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Arthurs%2C+Andy"
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_2"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Arthurs, Andy"
                                                         >
-                                                          Arthurs, Andy
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Arthurs, Andy
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=486&searchQueryParams%5Ball%5D=Bamford%2C+Greg"
                                                       key="citationAuthor_3"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=486&searchQueryParams%5Ball%5D=Bamford%2C+Greg"
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_3"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Bamford, Greg"
+                                                      <a
+                                                        className="authorIdLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=486&searchQueryParams%5Ball%5D=Bamford%2C+Greg"
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_3"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Bamford, Greg"
                                                         >
-                                                          Bamford, Greg
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Bamford, Greg
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorNameLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=McColl%2C+Mary+Rose"
                                                       key="citationAuthor_4"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=McColl%2C+Mary+Rose"
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_4"
-                                                        prefix=""
-                                                        suffix=""
-                                                        value="McColl, Mary Rose"
+                                                      <a
+                                                        className="authorNameLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=McColl%2C+Mary+Rose"
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_4"
+                                                          prefix=""
+                                                          suffix=""
+                                                          value="McColl, Mary Rose"
                                                         >
-                                                          McColl, Mary Rose
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            McColl, Mary Rose
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=146&searchQueryParams%5Ball%5D=Skinner%2C+Peter+R."
                                                       key="citationAuthor_5"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=146&searchQueryParams%5Ball%5D=Skinner%2C+Peter+R."
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_5"
-                                                        prefix=", "
-                                                        suffix=""
-                                                        value="Skinner, Peter R."
+                                                      <a
+                                                        className="authorIdLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=146&searchQueryParams%5Ball%5D=Skinner%2C+Peter+R."
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_5"
+                                                          prefix=", "
+                                                          suffix=""
+                                                          value="Skinner, Peter R."
                                                         >
-                                                          , 
-                                                          Skinner, Peter R.
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            , 
+                                                            Skinner, Peter R.
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
                                                      
                                                   </span>
                                                 </AuthorsCitationView>
@@ -1756,11 +1791,12 @@ exports[`Additional Information Component  should render component with audio do
                                       </ViewRecordTableRow>
                                       <ViewRecordTableRow
                                         data={
-                                          <a
-                                            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology"
+                                          <Link
+                                            replace={false}
+                                            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology"
                                           >
                                             Centre for Subtropical Design, Queensland University of Technology
-                                          </a>
+                                          </Link>
                                         }
                                         heading="Publisher"
                                         key=".$additional-info-Publisher"
@@ -1863,11 +1899,17 @@ exports[`Additional Information Component  should render component with audio do
                                                   }
                                                 }
                                               >
-                                                <a
-                                                  href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology"
+                                                <Link
+                                                  replace={false}
+                                                  to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology"
                                                 >
-                                                  Centre for Subtropical Design, Queensland University of Technology
-                                                </a>
+                                                  <a
+                                                    href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology"
+                                                    onClick={[Function]}
+                                                  >
+                                                    Centre for Subtropical Design, Queensland University of Technology
+                                                  </a>
+                                                </Link>
                                               </td>
                                             </TableRowColumn>
                                           </tr>
@@ -2133,8 +2175,9 @@ exports[`Additional Information Component  should render component with audio do
                                       </ViewRecordTableRow>
                                       <ViewRecordTableRow
                                         data={
-                                          <a
-                                            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D="
+                                          <Link
+                                            replace={false}
+                                            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D="
                                           />
                                         }
                                         heading="Series"
@@ -2238,9 +2281,15 @@ exports[`Additional Information Component  should render component with audio do
                                                   }
                                                 }
                                               >
-                                                <a
-                                                  href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D="
-                                                />
+                                                <Link
+                                                  replace={false}
+                                                  to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D="
+                                                >
+                                                  <a
+                                                    href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D="
+                                                    onClick={[Function]}
+                                                  />
+                                                </Link>
                                               </td>
                                             </TableRowColumn>
                                           </tr>
@@ -2481,11 +2530,12 @@ exports[`Additional Information Component  should render component with audio do
                                       <ViewRecordTableRow
                                         data={
                                           <span>
-                                            <a
-                                              href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution+noncommercial+no+derivatives"
+                                            <Link
+                                              replace={false}
+                                              to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution+noncommercial+no+derivatives"
                                             >
                                               Creative Commons Attribution noncommercial no derivatives
-                                            </a>
+                                            </Link>
                                             <div>
                                               <ExternalLink
                                                 className=""
@@ -2603,11 +2653,17 @@ exports[`Additional Information Component  should render component with audio do
                                                 }
                                               >
                                                 <span>
-                                                  <a
-                                                    href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution+noncommercial+no+derivatives"
+                                                  <Link
+                                                    replace={false}
+                                                    to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution+noncommercial+no+derivatives"
                                                   >
-                                                    Creative Commons Attribution noncommercial no derivatives
-                                                  </a>
+                                                    <a
+                                                      href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution+noncommercial+no+derivatives"
+                                                      onClick={[Function]}
+                                                    >
+                                                      Creative Commons Attribution noncommercial no derivatives
+                                                    </a>
+                                                  </Link>
                                                   <div>
                                                     <ExternalLink
                                                       className=""
@@ -2640,11 +2696,12 @@ exports[`Additional Information Component  should render component with audio do
                                         data={
                                           <ul>
                                             <li>
-                                              <a
-                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453663&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=Conversation&searchQueryParams%5Ball%5D=Conversation"
+                                              <Link
+                                                replace={false}
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453663&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=Conversation&searchQueryParams%5Ball%5D=Conversation"
                                               >
                                                 Conversation
-                                              </a>
+                                              </Link>
                                             </li>
                                           </ul>
                                         }
@@ -2755,11 +2812,17 @@ exports[`Additional Information Component  should render component with audio do
                                                   <li
                                                     key="rek_alternate_genre-0"
                                                   >
-                                                    <a
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453663&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=Conversation&searchQueryParams%5Ball%5D=Conversation"
+                                                    <Link
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453663&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=Conversation&searchQueryParams%5Ball%5D=Conversation"
                                                     >
-                                                      Conversation
-                                                    </a>
+                                                      <a
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453663&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=Conversation&searchQueryParams%5Ball%5D=Conversation"
+                                                        onClick={[Function]}
+                                                      >
+                                                        Conversation
+                                                      </a>
+                                                    </Link>
                                                   </li>
                                                 </ul>
                                               </td>
@@ -2771,25 +2834,28 @@ exports[`Additional Information Component  should render component with audio do
                                         data={
                                           <ul>
                                             <li>
-                                              <a
-                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310199&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310199&searchQueryParams%5Ball%5D=310199"
+                                              <Link
+                                                replace={false}
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310199&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310199&searchQueryParams%5Ball%5D=310199"
                                               >
                                                 310199
-                                              </a>
+                                              </Link>
                                             </li>
                                             <li>
-                                              <a
-                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450019&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450019&searchQueryParams%5Ball%5D=450019"
+                                              <Link
+                                                replace={false}
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450019&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450019&searchQueryParams%5Ball%5D=450019"
                                               >
                                                 450019
-                                              </a>
+                                              </Link>
                                             </li>
                                             <li>
-                                              <a
-                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450776&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450776&searchQueryParams%5Ball%5D=450776"
+                                              <Link
+                                                replace={false}
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450776&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450776&searchQueryParams%5Ball%5D=450776"
                                               >
                                                 450776
-                                              </a>
+                                              </Link>
                                             </li>
                                           </ul>
                                         }
@@ -2900,29 +2966,47 @@ exports[`Additional Information Component  should render component with audio do
                                                   <li
                                                     key="rek_subject-0"
                                                   >
-                                                    <a
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310199&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310199&searchQueryParams%5Ball%5D=310199"
+                                                    <Link
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310199&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310199&searchQueryParams%5Ball%5D=310199"
                                                     >
-                                                      310199
-                                                    </a>
+                                                      <a
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310199&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310199&searchQueryParams%5Ball%5D=310199"
+                                                        onClick={[Function]}
+                                                      >
+                                                        310199
+                                                      </a>
+                                                    </Link>
                                                   </li>
                                                   <li
                                                     key="rek_subject-1"
                                                   >
-                                                    <a
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450019&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450019&searchQueryParams%5Ball%5D=450019"
+                                                    <Link
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450019&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450019&searchQueryParams%5Ball%5D=450019"
                                                     >
-                                                      450019
-                                                    </a>
+                                                      <a
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450019&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450019&searchQueryParams%5Ball%5D=450019"
+                                                        onClick={[Function]}
+                                                      >
+                                                        450019
+                                                      </a>
+                                                    </Link>
                                                   </li>
                                                   <li
                                                     key="rek_subject-2"
                                                   >
-                                                    <a
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450776&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450776&searchQueryParams%5Ball%5D=450776"
+                                                    <Link
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450776&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450776&searchQueryParams%5Ball%5D=450776"
                                                     >
-                                                      450776
-                                                    </a>
+                                                      <a
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450776&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450776&searchQueryParams%5Ball%5D=450776"
+                                                        onClick={[Function]}
+                                                      >
+                                                        450776
+                                                      </a>
+                                                    </Link>
                                                   </li>
                                                 </ul>
                                               </td>
@@ -3435,11 +3519,12 @@ exports[`Additional Information Component  should render component with book 1`]
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Psychology+Press"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Psychology+Press"
           >
             Psychology Press
-          </a>
+          </Link>
         }
         heading="Publisher"
         key="additional-info-Publisher"
@@ -3464,11 +3549,12 @@ exports[`Additional Information Component  should render component with book 1`]
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Clinical+Psychology%3A+A+Modular+Course"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Clinical+Psychology%3A+A+Modular+Course"
           >
             Clinical Psychology: A Modular Course
-          </a>
+          </Link>
         }
         heading="Series"
         key="additional-info-Series"
@@ -4287,11 +4373,12 @@ exports[`Additional Information Component  should render component with book cha
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Non-coding+RNA+and+the+Reproductive+System"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Non-coding+RNA+and+the+Reproductive+System"
           >
             Non-coding RNA and the Reproductive System
-          </a>
+          </Link>
         }
         heading="Title of book"
         key="additional-info-Title of book"
@@ -4303,11 +4390,12 @@ exports[`Additional Information Component  should render component with book cha
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Springer+New+York"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Springer+New+York"
           >
             Springer New York
-          </a>
+          </Link>
         }
         heading="Publisher"
         key="additional-info-Publisher"
@@ -4341,11 +4429,12 @@ exports[`Additional Information Component  should render component with book cha
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Advances+in+Experimental+Medicine+and+Biology"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Advances+in+Experimental+Medicine+and+Biology"
           >
             Advances in Experimental Medicine and Biology
-          </a>
+          </Link>
         }
         heading="Series"
         key="additional-info-Series"
@@ -4845,18 +4934,20 @@ exports[`Additional Information Component  should render component with book cha
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453239&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=453239&searchQueryParams%5Ball%5D=453239"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453239&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=453239&searchQueryParams%5Ball%5D=453239"
               >
                 453239
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453253&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=453253&searchQueryParams%5Ball%5D=453253"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453253&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=453253&searchQueryParams%5Ball%5D=453253"
               >
                 453253
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -4867,46 +4958,52 @@ exports[`Additional Information Component  should render component with book cha
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
               >
                 Breast cancer
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=EMT"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=EMT"
               >
                 EMT
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Epithelial+cell+differentiation"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Epithelial+cell+differentiation"
               >
                 Epithelial cell differentiation
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Epithelial-stromal+interactions"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Epithelial-stromal+interactions"
               >
                 Epithelial-stromal interactions
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hormonal+regulation"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hormonal+regulation"
               >
                 Hormonal regulation
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signalling+pathways"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signalling+pathways"
               >
                 Signalling pathways
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -5673,11 +5770,12 @@ exports[`Additional Information Component  should render component with conferen
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Australasian+Professional+Society+on+Alcohol+and+other+Drugs+Conference+2014"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Australasian+Professional+Society+on+Alcohol+and+other+Drugs+Conference+2014"
           >
             Australasian Professional Society on Alcohol and other Drugs Conference 2014
-          </a>
+          </Link>
         }
         heading="Conference name"
         key="additional-info-Conference name"
@@ -6392,11 +6490,12 @@ exports[`Additional Information Component  should render component with conferen
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Wiley-Blackwell+Publishing"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Wiley-Blackwell+Publishing"
           >
             Wiley-Blackwell Publishing
-          </a>
+          </Link>
         }
         heading="Publisher"
         key="additional-info-Publisher"
@@ -6932,11 +7031,12 @@ exports[`Additional Information Component  should render component with conferen
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=International+Meeting+on+Measurements+and+Hydraulics+of+Sewers+IMMHS'08%2C+Summer+School+GEMCEA%2FLCPC"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=International+Meeting+on+Measurements+and+Hydraulics+of+Sewers+IMMHS'08%2C+Summer+School+GEMCEA%2FLCPC"
           >
             International Meeting on Measurements and Hydraulics of Sewers IMMHS'08, Summer School GEMCEA/LCPC
-          </a>
+          </Link>
         }
         heading="Conference name"
         key="additional-info-Conference name"
@@ -6974,11 +7074,12 @@ exports[`Additional Information Component  should render component with conferen
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Department+of+Civil+Engineering+at+The+University+of+Queensland"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Department+of+Civil+Engineering+at+The+University+of+Queensland"
           >
             Department of Civil Engineering at The University of Queensland
-          </a>
+          </Link>
         }
         heading="Publisher"
         key="additional-info-Publisher"
@@ -7459,32 +7560,36 @@ exports[`Additional Information Component  should render component with conferen
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290000&searchQueryParams%5Ball%5D=290000"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290000&searchQueryParams%5Ball%5D=290000"
               >
                 290000
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290800&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290800&searchQueryParams%5Ball%5D=290800"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290800&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290800&searchQueryParams%5Ball%5D=290800"
               >
                 290800
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290802&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290802&searchQueryParams%5Ball%5D=290802"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290802&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290802&searchQueryParams%5Ball%5D=290802"
               >
                 290802
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=291104&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=291104&searchQueryParams%5Ball%5D=291104"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=291104&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=291104&searchQueryParams%5Ball%5D=291104"
               >
                 291104
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -7495,88 +7600,100 @@ exports[`Additional Information Component  should render component with conferen
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sewers"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sewers"
               >
                 Sewers
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Measurements"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Measurements"
               >
                 Measurements
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hydraulics"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hydraulics"
               >
                 Hydraulics
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Open+channel+flows"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Open+channel+flows"
               >
                 Open channel flows
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sediments"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sediments"
               >
                 Sediments
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Turbidity"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Turbidity"
               >
                 Turbidity
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hydrodynamics"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hydrodynamics"
               >
                 Hydrodynamics
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sedimentation"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sedimentation"
               >
                 Sedimentation
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=design"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=design"
               >
                 design
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=operation"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=operation"
               >
                 operation
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=rehabilitation"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=rehabilitation"
               >
                 rehabilitation
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=urban+environment"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=urban+environment"
               >
                 urban environment
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -8082,11 +8199,12 @@ exports[`Additional Information Component  should render component with creative
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Architecture%2C+The+University+of+Queensland"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Architecture%2C+The+University+of+Queensland"
           >
             School of Architecture, The University of Queensland
-          </a>
+          </Link>
         }
         heading="Publisher"
         key="additional-info-Publisher"
@@ -8113,18 +8231,20 @@ exports[`Additional Information Component  should render component with creative
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452674&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452674&searchQueryParams%5Ball%5D=452674"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452674&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452674&searchQueryParams%5Ball%5D=452674"
               >
                 452674
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452677&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452677&searchQueryParams%5Ball%5D=452677"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452677&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452677&searchQueryParams%5Ball%5D=452677"
               >
                 452677
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -8146,11 +8266,12 @@ exports[`Additional Information Component  should render component with creative
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Original+Creative+Works+-+Design%2FArchitectural+work"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Original+Creative+Works+-+Design%2FArchitectural+work"
               >
                 Original Creative Works - Design/Architectural work
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -9831,11 +9952,12 @@ exports[`Additional Information Component  should render component with data col
       <ViewRecordTableRow
         data={
           <span>
-            <a
-              href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=453701"
+            <Link
+              replace={false}
+              to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=453701"
             >
               453701
-            </a>
+            </Link>
             <div>
               <ExternalLink
                 className=""
@@ -9856,18 +9978,20 @@ exports[`Additional Information Component  should render component with data col
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452086&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452086&searchQueryParams%5Ball%5D=452086"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452086&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452086&searchQueryParams%5Ball%5D=452086"
               >
                 452086
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452109&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452109&searchQueryParams%5Ball%5D=452109"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452109&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452109&searchQueryParams%5Ball%5D=452109"
               >
                 452109
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -9995,39 +10119,44 @@ exports[`Additional Information Component  should render component with data col
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Isolates"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Isolates"
               >
                 Isolates
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Single+cells"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Single+cells"
               >
                 Single cells
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Metagenomic+data"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Metagenomic+data"
               >
                 Metagenomic data
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Genome+quality"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Genome+quality"
               >
                 Genome quality
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=CheckM"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=CheckM"
               >
                 CheckM
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -10075,11 +10204,12 @@ exports[`Additional Information Component  should render component with data col
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451600&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=970106+Expanding+Knowledge+in+the+Biological+Sciences&searchQueryParams%5Ball%5D=970106+Expanding+Knowledge+in+the+Biological+Sciences"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451600&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=970106+Expanding+Knowledge+in+the+Biological+Sciences&searchQueryParams%5Ball%5D=970106+Expanding+Knowledge+in+the+Biological+Sciences"
               >
                 970106 Expanding Knowledge in the Biological Sciences
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -10093,11 +10223,12 @@ exports[`Additional Information Component  should render component with data col
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Cold+Spring+Harbor+Laboratory+Press"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Cold+Spring+Harbor+Laboratory+Press"
           >
             Cold Spring Harbor Laboratory Press
-          </a>
+          </Link>
         }
         heading="Publisher"
         key="additional-info-Publisher"
@@ -11510,11 +11641,12 @@ exports[`Additional Information Component  should render component with data col
       <ViewRecordTableRow
         data={
           <span>
-            <a
-              href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution+(only)"
+            <Link
+              replace={false}
+              to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution+(only)"
             >
               Creative Commons Attribution (only)
-            </a>
+            </Link>
             <div>
               <ExternalLink
                 className=""
@@ -11537,25 +11669,28 @@ exports[`Additional Information Component  should render component with data col
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452067&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0602+Ecology&searchQueryParams%5Ball%5D=0602+Ecology"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452067&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0602+Ecology&searchQueryParams%5Ball%5D=0602+Ecology"
               >
                 0602 Ecology
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452018&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=040699+Physical+Geography+and+Environmental+Geoscience+not+elsewhere+classified&searchQueryParams%5Ball%5D=040699+Physical+Geography+and+Environmental+Geoscience+not+elsewhere+classified"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452018&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=040699+Physical+Geography+and+Environmental+Geoscience+not+elsewhere+classified&searchQueryParams%5Ball%5D=040699+Physical+Geography+and+Environmental+Geoscience+not+elsewhere+classified"
               >
                 040699 Physical Geography and Environmental Geoscience not elsewhere classified
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452028&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0502+Environmental+Science+and+Management&searchQueryParams%5Ball%5D=0502+Environmental+Science+and+Management"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452028&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0502+Environmental+Science+and+Management&searchQueryParams%5Ball%5D=0502+Environmental+Science+and+Management"
               >
                 0502 Environmental Science and Management
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -11623,32 +11758,36 @@ exports[`Additional Information Component  should render component with data col
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Habitat+Mapping"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Habitat+Mapping"
               >
                 Habitat Mapping
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Remote+Sensing"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Remote+Sensing"
               >
                 Remote Sensing
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Kubulau"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Kubulau"
               >
                 Kubulau
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Environmental+Management"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Environmental+Management"
               >
                 Environmental Management
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -11699,11 +11838,12 @@ exports[`Additional Information Component  should render component with data col
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pangaea"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pangaea"
           >
             Pangaea
-          </a>
+          </Link>
         }
         heading="Publisher"
         key="additional-info-Publisher"
@@ -12715,32 +12855,36 @@ exports[`Additional Information Component  should render component with design d
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310000&searchQueryParams%5Ball%5D=310000"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310000&searchQueryParams%5Ball%5D=310000"
               >
                 310000
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450025&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450025&searchQueryParams%5Ball%5D=450025"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450025&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450025&searchQueryParams%5Ball%5D=450025"
               >
                 450025
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452674&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452674&searchQueryParams%5Ball%5D=452674"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452674&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452674&searchQueryParams%5Ball%5D=452674"
               >
                 452674
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452675&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452675&searchQueryParams%5Ball%5D=452675"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452675&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452675&searchQueryParams%5Ball%5D=452675"
               >
                 452675
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -12751,39 +12895,44 @@ exports[`Additional Information Component  should render component with design d
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Architecture"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Architecture"
               >
                 Architecture
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Landscape+design"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Landscape+design"
               >
                 Landscape design
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Restoration"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Restoration"
               >
                 Restoration
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Interior+and+Environmental+Design"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Interior+and+Environmental+Design"
               >
                 Interior and Environmental Design
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Original+Creative+Works+-+Design%2FArchitectural+work"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Original+Creative+Works+-+Design%2FArchitectural+work"
               >
                 Original Creative Works - Design/Architectural work
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -12792,11 +12941,12 @@ exports[`Additional Information Component  should render component with design d
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=UQFL158%2C+job+no.+1006-2"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=UQFL158%2C+job+no.+1006-2"
           >
             UQFL158, job no. 1006-2
-          </a>
+          </Link>
         }
         heading="Job number"
         key="additional-info-Job number"
@@ -12875,11 +13025,12 @@ exports[`Additional Information Component  should render component with digilib 
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=The+University+of+Queensland+Library"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=The+University+of+Queensland+Library"
           >
             The University of Queensland Library
-          </a>
+          </Link>
         }
         heading="Publisher"
         key="additional-info-Publisher"
@@ -13331,60 +13482,68 @@ exports[`Additional Information Component  should render component with generic 
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Partial+Differential+Equations+(PDEs)"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Partial+Differential+Equations+(PDEs)"
               >
                 Partial Differential Equations (PDEs)
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Parabolic"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Parabolic"
               >
                 Parabolic
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hyperbolic"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hyperbolic"
               >
                 Hyperbolic
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Finite+difference"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Finite+difference"
               >
                 Finite difference
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Spectral+method"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Spectral+method"
               >
                 Spectral method
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Finite+element+method"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Finite+element+method"
               >
                 Finite element method
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Iterative+methods"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Iterative+methods"
               >
                 Iterative methods
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Nonlinear+Partial+Differential+Equations"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Nonlinear+Partial+Differential+Equations"
               >
                 Nonlinear Partial Differential Equations
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -13408,11 +13567,12 @@ exports[`Additional Information Component  should render component with generic 
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451825&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=451825&searchQueryParams%5Ball%5D=451825"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451825&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=451825&searchQueryParams%5Ball%5D=451825"
               >
                 451825
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -14912,11 +15072,12 @@ exports[`Additional Information Component  should render component with journal 
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Betriebswirtschaftlicher+Verlag+T.+Gabler"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Betriebswirtschaftlicher+Verlag+T.+Gabler"
           >
             Betriebswirtschaftlicher Verlag T. Gabler
-          </a>
+          </Link>
         }
         heading="Publisher"
         key="additional-info-Publisher"
@@ -14936,11 +15097,12 @@ exports[`Additional Information Component  should render component with journal 
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452815&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452815&searchQueryParams%5Ball%5D=452815"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452815&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452815&searchQueryParams%5Ball%5D=452815"
               >
                 452815
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -14951,18 +15113,20 @@ exports[`Additional Information Component  should render component with journal 
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Knowledge"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Knowledge"
               >
                 Knowledge
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Multinational+corporations"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Multinational+corporations"
               >
                 Multinational corporations
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -18582,185 +18746,248 @@ exports[`Additional Information Component  should render component with journal 
                                                   <span
                                                     className="citationAuthors"
                                                   >
-                                                    <a
+                                                    <Link
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=88893&searchQueryParams%5Ball%5D=Azimi%2C+Iman"
                                                       key="citationAuthor_1"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=88893&searchQueryParams%5Ball%5D=Azimi%2C+Iman"
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_1"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Azimi, Iman"
+                                                      <a
+                                                        className="authorIdLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=88893&searchQueryParams%5Ball%5D=Azimi%2C+Iman"
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_1"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Azimi, Iman"
                                                         >
-                                                          Azimi, Iman
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Azimi, Iman
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorNameLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Milevskiy%2C+Michael+J.+G."
                                                       key="citationAuthor_2"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Milevskiy%2C+Michael+J.+G."
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_2"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Milevskiy, Michael J. G."
+                                                      <a
+                                                        className="authorNameLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Milevskiy%2C+Michael+J.+G."
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_2"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Milevskiy, Michael J. G."
                                                         >
-                                                          Milevskiy, Michael J. G.
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Milevskiy, Michael J. G.
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1706239&searchQueryParams%5Ball%5D=Kaemmerer%2C+Elke"
                                                       key="citationAuthor_3"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1706239&searchQueryParams%5Ball%5D=Kaemmerer%2C+Elke"
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_3"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Kaemmerer, Elke"
+                                                      <a
+                                                        className="authorIdLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1706239&searchQueryParams%5Ball%5D=Kaemmerer%2C+Elke"
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_3"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Kaemmerer, Elke"
                                                         >
-                                                          Kaemmerer, Elke
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Kaemmerer, Elke
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=97626&searchQueryParams%5Ball%5D=Turner%2C+Dane"
                                                       key="citationAuthor_4"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=97626&searchQueryParams%5Ball%5D=Turner%2C+Dane"
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_4"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Turner, Dane"
+                                                      <a
+                                                        className="authorIdLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=97626&searchQueryParams%5Ball%5D=Turner%2C+Dane"
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_4"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Turner, Dane"
                                                         >
-                                                          Turner, Dane
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Turner, Dane
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=95450&searchQueryParams%5Ball%5D=Yapa%2C+Kunsala+T.+D.+S."
                                                       key="citationAuthor_5"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=95450&searchQueryParams%5Ball%5D=Yapa%2C+Kunsala+T.+D.+S."
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_5"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Yapa, Kunsala T. D. S."
+                                                      <a
+                                                        className="authorIdLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=95450&searchQueryParams%5Ball%5D=Yapa%2C+Kunsala+T.+D.+S."
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_5"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Yapa, Kunsala T. D. S."
                                                         >
-                                                          Yapa, Kunsala T. D. S.
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Yapa, Kunsala T. D. S.
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1671&searchQueryParams%5Ball%5D=Brown%2C+Melissa+A."
                                                       key="citationAuthor_6"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1671&searchQueryParams%5Ball%5D=Brown%2C+Melissa+A."
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_6"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Brown, Melissa A."
+                                                      <a
+                                                        className="authorIdLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1671&searchQueryParams%5Ball%5D=Brown%2C+Melissa+A."
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_6"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Brown, Melissa A."
                                                         >
-                                                          Brown, Melissa A.
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Brown, Melissa A.
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorNameLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Thompson%2C+Erik+W."
                                                       key="citationAuthor_7"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Thompson%2C+Erik+W."
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_7"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Thompson, Erik W."
+                                                      <a
+                                                        className="authorNameLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Thompson%2C+Erik+W."
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_7"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Thompson, Erik W."
                                                         >
-                                                          Thompson, Erik W.
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Thompson, Erik W.
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=973&searchQueryParams%5Ball%5D=Roberts-Thomson%2C+Sarah+J."
                                                       key="citationAuthor_8"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=973&searchQueryParams%5Ball%5D=Roberts-Thomson%2C+Sarah+J."
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_8"
-                                                        prefix=""
-                                                        suffix=""
-                                                        value="Roberts-Thomson, Sarah J."
+                                                      <a
+                                                        className="authorIdLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=973&searchQueryParams%5Ball%5D=Roberts-Thomson%2C+Sarah+J."
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_8"
+                                                          prefix=""
+                                                          suffix=""
+                                                          value="Roberts-Thomson, Sarah J."
                                                         >
-                                                          Roberts-Thomson, Sarah J.
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Roberts-Thomson, Sarah J.
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorIdLink"
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=972&searchQueryParams%5Ball%5D=Monteith%2C+Gregory+R."
                                                       key="citationAuthor_9"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=972&searchQueryParams%5Ball%5D=Monteith%2C+Gregory+R."
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_9"
-                                                        prefix=", "
-                                                        suffix=""
-                                                        value="Monteith, Gregory R."
+                                                      <a
+                                                        className="authorIdLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=972&searchQueryParams%5Ball%5D=Monteith%2C+Gregory+R."
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_9"
+                                                          prefix=", "
+                                                          suffix=""
+                                                          value="Monteith, Gregory R."
                                                         >
-                                                          , 
-                                                          Monteith, Gregory R.
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            , 
+                                                            Monteith, Gregory R.
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
                                                      
                                                   </span>
                                                 </AuthorsCitationView>
@@ -21117,13 +21344,19 @@ exports[`Additional Information Component  should render component with journal 
                                                   }
                                                 >
                                                   <span>
-                                                    <a
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BJournal+name%5D=Journal+of+Cell+Science&searchQueryParams%5Ball%5D=Journal+of+Cell+Science"
+                                                    <Link
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BJournal+name%5D=Journal+of+Cell+Science&searchQueryParams%5Ball%5D=Journal+of+Cell+Science"
                                                     >
-                                                      <span>
-                                                        Journal of Cell Science
-                                                      </span>
-                                                    </a>
+                                                      <a
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BJournal+name%5D=Journal+of+Cell+Science&searchQueryParams%5Ball%5D=Journal+of+Cell+Science"
+                                                        onClick={[Function]}
+                                                      >
+                                                        <span>
+                                                          Journal of Cell Science
+                                                        </span>
+                                                      </a>
+                                                    </Link>
                                                     <span
                                                       className="eraYearListed"
                                                     >
@@ -22446,11 +22679,12 @@ exports[`Additional Information Component  should render component with journal 
                                       </ViewRecordTableRow>
                                       <ViewRecordTableRow
                                         data={
-                                          <a
-                                            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Company+of+Biologists"
+                                          <Link
+                                            replace={false}
+                                            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Company+of+Biologists"
                                           >
                                             Company of Biologists
-                                          </a>
+                                          </Link>
                                         }
                                         heading="Publisher"
                                         key=".$additional-info-Publisher"
@@ -22553,11 +22787,17 @@ exports[`Additional Information Component  should render component with journal 
                                                   }
                                                 }
                                               >
-                                                <a
-                                                  href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Company+of+Biologists"
+                                                <Link
+                                                  replace={false}
+                                                  to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Company+of+Biologists"
                                                 >
-                                                  Company of Biologists
-                                                </a>
+                                                  <a
+                                                    href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Company+of+Biologists"
+                                                    onClick={[Function]}
+                                                  >
+                                                    Company of Biologists
+                                                  </a>
+                                                </Link>
                                               </td>
                                             </TableRowColumn>
                                           </tr>
@@ -22690,53 +22930,60 @@ exports[`Additional Information Component  should render component with journal 
                                         data={
                                           <ul>
                                             <li>
-                                              <a
-                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Akt"
+                                              <Link
+                                                replace={false}
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Akt"
                                               >
                                                 Akt
-                                              </a>
+                                              </Link>
                                             </li>
                                             <li>
-                                              <a
-                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
+                                              <Link
+                                                replace={false}
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
                                               >
                                                 Breast cancer
-                                              </a>
+                                              </Link>
                                             </li>
                                             <li>
-                                              <a
-                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Ca2%2B"
+                                              <Link
+                                                replace={false}
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Ca2%2B"
                                               >
                                                 Ca2+
-                                              </a>
+                                              </Link>
                                             </li>
                                             <li>
-                                              <a
-                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hypoxia"
+                                              <Link
+                                                replace={false}
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hypoxia"
                                               >
                                                 Hypoxia
-                                              </a>
+                                              </Link>
                                             </li>
                                             <li>
-                                              <a
-                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=PTEN"
+                                              <Link
+                                                replace={false}
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=PTEN"
                                               >
                                                 PTEN
-                                              </a>
+                                              </Link>
                                             </li>
                                             <li>
-                                              <a
-                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signal+transduction"
+                                              <Link
+                                                replace={false}
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signal+transduction"
                                               >
                                                 Signal transduction
-                                              </a>
+                                              </Link>
                                             </li>
                                             <li>
-                                              <a
-                                                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=TRPC1"
+                                              <Link
+                                                replace={false}
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=TRPC1"
                                               >
                                                 TRPC1
-                                              </a>
+                                              </Link>
                                             </li>
                                           </ul>
                                         }
@@ -22847,65 +23094,107 @@ exports[`Additional Information Component  should render component with journal 
                                                   <li
                                                     key="rek_keywords-0"
                                                   >
-                                                    <a
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Akt"
+                                                    <Link
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Akt"
                                                     >
-                                                      Akt
-                                                    </a>
+                                                      <a
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Akt"
+                                                        onClick={[Function]}
+                                                      >
+                                                        Akt
+                                                      </a>
+                                                    </Link>
                                                   </li>
                                                   <li
                                                     key="rek_keywords-1"
                                                   >
-                                                    <a
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
+                                                    <Link
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
                                                     >
-                                                      Breast cancer
-                                                    </a>
+                                                      <a
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
+                                                        onClick={[Function]}
+                                                      >
+                                                        Breast cancer
+                                                      </a>
+                                                    </Link>
                                                   </li>
                                                   <li
                                                     key="rek_keywords-2"
                                                   >
-                                                    <a
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Ca2%2B"
+                                                    <Link
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Ca2%2B"
                                                     >
-                                                      Ca2+
-                                                    </a>
+                                                      <a
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Ca2%2B"
+                                                        onClick={[Function]}
+                                                      >
+                                                        Ca2+
+                                                      </a>
+                                                    </Link>
                                                   </li>
                                                   <li
                                                     key="rek_keywords-3"
                                                   >
-                                                    <a
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hypoxia"
+                                                    <Link
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hypoxia"
                                                     >
-                                                      Hypoxia
-                                                    </a>
+                                                      <a
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hypoxia"
+                                                        onClick={[Function]}
+                                                      >
+                                                        Hypoxia
+                                                      </a>
+                                                    </Link>
                                                   </li>
                                                   <li
                                                     key="rek_keywords-4"
                                                   >
-                                                    <a
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=PTEN"
+                                                    <Link
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=PTEN"
                                                     >
-                                                      PTEN
-                                                    </a>
+                                                      <a
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=PTEN"
+                                                        onClick={[Function]}
+                                                      >
+                                                        PTEN
+                                                      </a>
+                                                    </Link>
                                                   </li>
                                                   <li
                                                     key="rek_keywords-5"
                                                   >
-                                                    <a
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signal+transduction"
+                                                    <Link
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signal+transduction"
                                                     >
-                                                      Signal transduction
-                                                    </a>
+                                                      <a
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signal+transduction"
+                                                        onClick={[Function]}
+                                                      >
+                                                        Signal transduction
+                                                      </a>
+                                                    </Link>
                                                   </li>
                                                   <li
                                                     key="rek_keywords-6"
                                                   >
-                                                    <a
-                                                      href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=TRPC1"
+                                                    <Link
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=TRPC1"
                                                     >
-                                                      TRPC1
-                                                    </a>
+                                                      <a
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=TRPC1"
+                                                        onClick={[Function]}
+                                                      >
+                                                        TRPC1
+                                                      </a>
+                                                    </Link>
                                                   </li>
                                                 </ul>
                                               </td>
@@ -24062,11 +24351,12 @@ exports[`Additional Information Component  should render component with manuscri
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Father+Edward+Leo+Hayes+Collection%2C+UQFL2"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Father+Edward+Leo+Hayes+Collection%2C+UQFL2"
           >
             Father Edward Leo Hayes Collection, UQFL2
-          </a>
+          </Link>
         }
         heading="Series"
         key="additional-info-Series"
@@ -24106,39 +24396,44 @@ exports[`Additional Information Component  should render component with manuscri
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hayes%2C+Edward+Leo%2C+1889-1967+--+Archives"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hayes%2C+Edward+Leo%2C+1889-1967+--+Archives"
               >
                 Hayes, Edward Leo, 1889-1967 -- Archives
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hayes%2C+Edward+Leo%2C+1889-1967+--+Manuscripts"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hayes%2C+Edward+Leo%2C+1889-1967+--+Manuscripts"
               >
                 Hayes, Edward Leo, 1889-1967 -- Manuscripts
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Astley%2C+Thea%2C+1925-2004+--+Correspondence"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Astley%2C+Thea%2C+1925-2004+--+Correspondence"
               >
                 Astley, Thea, 1925-2004 -- Correspondence
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Grano%2C+Paul%2C+1894-1975+--+Correspondence"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Grano%2C+Paul%2C+1894-1975+--+Correspondence"
               >
                 Grano, Paul, 1894-1975 -- Correspondence
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Authors%2C+Australian+--+20th+century"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Authors%2C+Australian+--+20th+century"
               >
                 Authors, Australian -- 20th century
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -26448,11 +26743,12 @@ exports[`Additional Information Component  should render component with newspape
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Company+of+Biologists"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Company+of+Biologists"
           >
             Company of Biologists
-          </a>
+          </Link>
         }
         heading="Publisher"
         key="additional-info-Publisher"
@@ -26472,53 +26768,60 @@ exports[`Additional Information Component  should render component with newspape
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Akt"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Akt"
               >
                 Akt
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
               >
                 Breast cancer
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Ca2%2B"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Ca2%2B"
               >
                 Ca2+
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hypoxia"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hypoxia"
               >
                 Hypoxia
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=PTEN"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=PTEN"
               >
                 PTEN
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signal+transduction"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signal+transduction"
               >
                 Signal transduction
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=TRPC1"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=TRPC1"
               >
                 TRPC1
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -26827,11 +27130,12 @@ exports[`Additional Information Component  should render component with patent 1
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=GC+Corporation"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=GC+Corporation"
           >
             GC Corporation
-          </a>
+          </Link>
         }
         heading="Patent owner"
         key="additional-info-Patent owner"
@@ -26861,25 +27165,28 @@ exports[`Additional Information Component  should render component with patent 1
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=270802&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=270802&searchQueryParams%5Ball%5D=270802"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=270802&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=270802&searchQueryParams%5Ball%5D=270802"
               >
                 270802
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=270300&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=270300&searchQueryParams%5Ball%5D=270300"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=270300&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=270300&searchQueryParams%5Ball%5D=270300"
               >
                 270300
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=320800&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=320800&searchQueryParams%5Ball%5D=320800"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=320800&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=320800&searchQueryParams%5Ball%5D=320800"
               >
                 320800
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -26940,81 +27247,92 @@ exports[`Additional Information Component  should render component with preprint
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Algorithmic+complexity"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Algorithmic+complexity"
               >
                 Algorithmic complexity
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=cross-entropy"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=cross-entropy"
               >
                 cross-entropy
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=GI%2FG%2F1+queue"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=GI%2FG%2F1+queue"
               >
                 GI/G/1 queue
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=importance+sampling"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=importance+sampling"
               >
                 importance sampling
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=maximum+likelihood"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=maximum+likelihood"
               >
                 maximum likelihood
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pareto+distribution"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pareto+distribution"
               >
                 Pareto distribution
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pollaczek-Khintchine+formula"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pollaczek-Khintchine+formula"
               >
                 Pollaczek-Khintchine formula
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=random+walk"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=random+walk"
               >
                 random walk
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=rare+event"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=rare+event"
               >
                 rare event
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=subexponential+distribution"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=subexponential+distribution"
               >
                 subexponential distribution
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Weibull+distribution"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Weibull+distribution"
               >
                 Weibull distribution
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -27038,25 +27356,28 @@ exports[`Additional Information Component  should render component with preprint
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=280210&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=280210&searchQueryParams%5Ball%5D=280210"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=280210&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=280210&searchQueryParams%5Ball%5D=280210"
               >
                 280210
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=230203&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=230203&searchQueryParams%5Ball%5D=230203"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=230203&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=230203&searchQueryParams%5Ball%5D=230203"
               >
                 230203
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=230117&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=230117&searchQueryParams%5Ball%5D=230117"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=230117&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=230117&searchQueryParams%5Ball%5D=230117"
               >
                 230117
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -27429,81 +27750,92 @@ exports[`Additional Information Component  should render component with preprint
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Algorithmic+complexity"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Algorithmic+complexity"
               >
                 Algorithmic complexity
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=cross-entropy"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=cross-entropy"
               >
                 cross-entropy
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=GI%2FG%2F1+queue"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=GI%2FG%2F1+queue"
               >
                 GI/G/1 queue
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=importance+sampling"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=importance+sampling"
               >
                 importance sampling
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=maximum+likelihood"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=maximum+likelihood"
               >
                 maximum likelihood
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pareto+distribution"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pareto+distribution"
               >
                 Pareto distribution
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pollaczek-Khintchine+formula"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pollaczek-Khintchine+formula"
               >
                 Pollaczek-Khintchine formula
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=random+walk"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=random+walk"
               >
                 random walk
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=rare+event"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=rare+event"
               >
                 rare event
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=subexponential+distribution"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=subexponential+distribution"
               >
                 subexponential distribution
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Weibull+distribution"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Weibull+distribution"
               >
                 Weibull distribution
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -28202,11 +28534,12 @@ exports[`Additional Information Component  should render component with proceedi
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=17th+World+Congress+of+the+International-Society-on-Toxinology+(IST)%2FVenom+Week%2F4th+International+Scientific+Symposium+on+All+Things+Venomous"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=17th+World+Congress+of+the+International-Society-on-Toxinology+(IST)%2FVenom+Week%2F4th+International+Scientific+Symposium+on+All+Things+Venomous"
           >
             17th World Congress of the International-Society-on-Toxinology (IST)/Venom Week/4th International Scientific Symposium on All Things Venomous
-          </a>
+          </Link>
         }
         heading="Conference name"
         key="additional-info-Conference name"
@@ -28223,11 +28556,12 @@ exports[`Additional Information Component  should render component with proceedi
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=17th+World+Congress+of+the+International+Society+on+Toxinology+%26+Venom+Week+2012%2C+4th+International+Scientific+Symposium+on+All+Things+Venomous%2C+17th+World+Congress+of+the+International+Society+on+Toxinology+%26+Venom+Week+2012%2C+4th+International+Scientific+Symposium+on+All+Things+Venomous"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=17th+World+Congress+of+the+International+Society+on+Toxinology+%26+Venom+Week+2012%2C+4th+International+Scientific+Symposium+on+All+Things+Venomous%2C+17th+World+Congress+of+the+International+Society+on+Toxinology+%26+Venom+Week+2012%2C+4th+International+Scientific+Symposium+on+All+Things+Venomous"
           >
             17th World Congress of the International Society on Toxinology & Venom Week 2012, 4th International Scientific Symposium on All Things Venomous, 17th World Congress of the International Society on Toxinology & Venom Week 2012, 4th International Scientific Symposium on All Things Venomous
-          </a>
+          </Link>
         }
         heading="Proceedings title"
         key="additional-info-Proceedings title"
@@ -28864,11 +29198,12 @@ exports[`Additional Information Component  should render component with proceedi
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pergamon"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pergamon"
           >
             Pergamon
-          </a>
+          </Link>
         }
         heading="Publisher"
         key="additional-info-Publisher"
@@ -28910,11 +29245,12 @@ exports[`Additional Information Component  should render component with proceedi
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Ball%5D="
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Ball%5D="
           >
             Not yet assessed
-          </a>
+          </Link>
         }
         heading="Open access status"
         key="additional-info-Open access status"
@@ -28973,25 +29309,28 @@ exports[`Additional Information Component  should render component with proceedi
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Trafficking"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Trafficking"
               >
                 Trafficking
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Bacterial+toxins"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Bacterial+toxins"
               >
                 Bacterial toxins
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Neurons"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Neurons"
               >
                 Neurons
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -29344,11 +29683,12 @@ exports[`Additional Information Component  should render component with referenc
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Routledge"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Routledge"
           >
             Routledge
-          </a>
+          </Link>
         }
         heading="Publisher"
         key="additional-info-Publisher"
@@ -29697,32 +30037,36 @@ exports[`Additional Information Component  should render component with referenc
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=430102&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=430102+History+-+Asian&searchQueryParams%5Ball%5D=430102+History+-+Asian"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=430102&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=430102+History+-+Asian&searchQueryParams%5Ball%5D=430102+History+-+Asian"
               >
                 430102 History - Asian
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=420212&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=420212+Japanese&searchQueryParams%5Ball%5D=420212+Japanese"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=420212&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=420212+Japanese&searchQueryParams%5Ball%5D=420212+Japanese"
               >
                 420212 Japanese
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450647&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=751001+Languages+and+literature&searchQueryParams%5Ball%5D=751001+Languages+and+literature"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450647&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=751001+Languages+and+literature&searchQueryParams%5Ball%5D=751001+Languages+and+literature"
               >
                 751001 Languages and literature
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450041&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=M&searchQueryParams%5Ball%5D=M"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450041&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=M&searchQueryParams%5Ball%5D=M"
               >
                 M
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -29733,25 +30077,28 @@ exports[`Additional Information Component  should render component with referenc
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Japanese+culture"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Japanese+culture"
               >
                 Japanese culture
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Popular+culture+-+Japan+-+Encyclopedias"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Popular+culture+-+Japan+-+Encyclopedias"
               >
                 Popular culture - Japan - Encyclopedias
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Japan+-+Civilization+-+1945-+-+Encyclopedia"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Japan+-+Civilization+-+1945-+-+Encyclopedia"
               >
                 Japan - Civilization - 1945- - Encyclopedia
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -30134,11 +30481,12 @@ exports[`Additional Information Component  should render component with research
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=UQ"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=UQ"
           >
             UQ
-          </a>
+          </Link>
         }
         heading="Publisher"
         key="additional-info-Publisher"
@@ -30514,11 +30862,12 @@ exports[`Additional Information Component  should render component with thesis 1
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Natural+and+Rural+Systems"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Natural+and+Rural+Systems"
           >
             School of Natural and Rural Systems
-          </a>
+          </Link>
         }
         heading="School, Centre or Institute"
         key="additional-info-School, Centre or Institute"
@@ -30572,11 +30921,12 @@ exports[`Additional Information Component  should render component with thesis 1
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=300000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=300000&searchQueryParams%5Ball%5D=300000"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=300000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=300000&searchQueryParams%5Ball%5D=300000"
               >
                 300000
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -30587,11 +30937,12 @@ exports[`Additional Information Component  should render component with thesis 1
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business"
               >
                 Sustainable development; graziers; farmers; agriculture; land management; business
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -30983,11 +31334,12 @@ exports[`Additional Information Component  should render component with video do
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=SEG+Special+Publication+Video+Series"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=SEG+Special+Publication+Video+Series"
           >
             SEG Special Publication Video Series
-          </a>
+          </Link>
         }
         heading="Series"
         key="additional-info-Series"
@@ -31022,11 +31374,12 @@ exports[`Additional Information Component  should render component with video do
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451986&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=451986&searchQueryParams%5Ball%5D=451986"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451986&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=451986&searchQueryParams%5Ball%5D=451986"
               >
                 451986
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -31435,11 +31788,12 @@ exports[`Additional Information Component  should render component with working 
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Economics"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Economics"
           >
             School of Economics
-          </a>
+          </Link>
         }
         heading="School, Department or Centre"
         key="additional-info-School, Department or Centre"
@@ -31456,11 +31810,12 @@ exports[`Additional Information Component  should render component with working 
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Working+papers+on+Social+Economics%2C+Policy+and+Development"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Working+papers+on+Social+Economics%2C+Policy+and+Development"
           >
             Working papers on Social Economics, Policy and Development
-          </a>
+          </Link>
         }
         heading="Series"
         key="additional-info-Series"
@@ -31485,11 +31840,12 @@ exports[`Additional Information Component  should render component with working 
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Economics"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Economics"
           >
             School of Economics
-          </a>
+          </Link>
         }
         heading="Publisher"
         key="additional-info-Publisher"
@@ -31524,18 +31880,20 @@ exports[`Additional Information Component  should render component with working 
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452775&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452775&searchQueryParams%5Ball%5D=452775"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452775&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452775&searchQueryParams%5Ball%5D=452775"
               >
                 452775
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452784&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452784&searchQueryParams%5Ball%5D=452784"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452784&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452784&searchQueryParams%5Ball%5D=452784"
               >
                 452784
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -31546,32 +31904,36 @@ exports[`Additional Information Component  should render component with working 
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=European+Union"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=European+Union"
               >
                 European Union
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Education"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Education"
               >
                 Education
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Employment"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Employment"
               >
                 Employment
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Social+inclusion"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Social+inclusion"
               >
                 Social inclusion
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -31940,11 +32302,12 @@ exports[`Additional Information Component  should render oa status value link in
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Natural+and+Rural+Systems"
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Natural+and+Rural+Systems"
           >
             School of Natural and Rural Systems
-          </a>
+          </Link>
         }
         heading="School, Centre or Institute"
         key="additional-info-School, Centre or Institute"
@@ -31974,11 +32337,12 @@ exports[`Additional Information Component  should render oa status value link in
       />
       <ViewRecordTableRow
         data={
-          <a
-            href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5BshowOpenAccessOnly%5D=true&searchQueryParams%5Ball%5D="
+          <Link
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5BshowOpenAccessOnly%5D=true&searchQueryParams%5Ball%5D="
           >
             File (Author Post-print)
-          </a>
+          </Link>
         }
         heading="Open access status"
         key="additional-info-Open access status"
@@ -32004,11 +32368,12 @@ exports[`Additional Information Component  should render oa status value link in
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=300000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=300000&searchQueryParams%5Ball%5D=300000"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=300000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=300000&searchQueryParams%5Ball%5D=300000"
               >
                 300000
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -32019,11 +32384,12 @@ exports[`Additional Information Component  should render oa status value link in
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business"
               >
                 Sustainable development; graziers; farmers; agriculture; land management; business
-              </a>
+              </Link>
             </li>
           </ul>
         }

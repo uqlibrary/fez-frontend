@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import CitationView from './CitationView';
 import {locale} from 'locale';
 import {pathConfig} from 'config/routes';
+import {Link} from 'react-router-dom';
 
 export default class AuthorsCitationView extends PureComponent {
     static propTypes = {
@@ -45,6 +46,9 @@ export default class AuthorsCitationView extends PureComponent {
         const authorsCount = publicationAuthors && Array.isArray(publicationAuthors)
             ? publicationAuthors.length : 0;
 
+        console.log('authorsCount: ', authorsCount);
+        console.log('initialNumberOfAuthors: ', initialNumberOfAuthors);
+        console.log('thresholdNumberOfAuthors: ', thresholdNumberOfAuthors);
         this.state = {
             hasMoreAuthors: authorsCount > (initialNumberOfAuthors + thresholdNumberOfAuthors),
             toggleShowMoreLink: authorsCount > (initialNumberOfAuthors + thresholdNumberOfAuthors),
@@ -98,7 +102,7 @@ export default class AuthorsCitationView extends PureComponent {
             if (showLink) {
                 const href = author.id ? pathConfig.list.authorId(author.id, author.value) : pathConfig.list.author(author.value);
                 const className = author.id ? 'authorIdLink' : 'authorNameLink';
-                return <a className={className} href={href} key={key}>{element}</a>;
+                return <Link className={className} to={href} key={key}>{element}</Link>;
             } else {
                 return element;
             }

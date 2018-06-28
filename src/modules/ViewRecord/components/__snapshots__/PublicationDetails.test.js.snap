@@ -37,25 +37,28 @@ exports[`Publication Details Component  should render component 1`] = `
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BCollection%5D=UQ%3A3825&activeFacets%5Bfilters%5D%5BCollection+(lookup)%5D=School+of+Chemistry+and+Molecular+Biosciences&searchQueryParams%5Ball%5D=School+of+Chemistry+and+Molecular+Biosciences"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BCollection%5D=UQ%3A3825&activeFacets%5Bfilters%5D%5BCollection+(lookup)%5D=School+of+Chemistry+and+Molecular+Biosciences&searchQueryParams%5Ball%5D=School+of+Chemistry+and+Molecular+Biosciences"
               >
                 School of Chemistry and Molecular Biosciences
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BCollection%5D=UQ%3A218311&activeFacets%5Bfilters%5D%5BCollection+(lookup)%5D=HERDC+Pre-Audit&searchQueryParams%5Ball%5D=HERDC+Pre-Audit"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BCollection%5D=UQ%3A218311&activeFacets%5Bfilters%5D%5BCollection+(lookup)%5D=HERDC+Pre-Audit&searchQueryParams%5Ball%5D=HERDC+Pre-Audit"
               >
                 HERDC Pre-Audit
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BCollection%5D=UQ%3A171723&activeFacets%5Bfilters%5D%5BCollection+(lookup)%5D=UQ+Centre+for+Clinical+Research+Publications&searchQueryParams%5Ball%5D=UQ+Centre+for+Clinical+Research+Publications"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BCollection%5D=UQ%3A171723&activeFacets%5Bfilters%5D%5BCollection+(lookup)%5D=UQ+Centre+for+Clinical+Research+Publications&searchQueryParams%5Ball%5D=UQ+Centre+for+Clinical+Research+Publications"
               >
                 UQ Centre for Clinical Research Publications
-              </a>
+              </Link>
             </li>
           </ul>
         }
@@ -129,25 +132,28 @@ exports[`Publication Details Component  should render with publication without s
         data={
           <ul>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BCollection%5D=UQ%3A3825&activeFacets%5Bfilters%5D%5BCollection+(lookup)%5D=School+of+Chemistry+and+Molecular+Biosciences&searchQueryParams%5Ball%5D=School+of+Chemistry+and+Molecular+Biosciences"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BCollection%5D=UQ%3A3825&activeFacets%5Bfilters%5D%5BCollection+(lookup)%5D=School+of+Chemistry+and+Molecular+Biosciences&searchQueryParams%5Ball%5D=School+of+Chemistry+and+Molecular+Biosciences"
               >
                 School of Chemistry and Molecular Biosciences
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BCollection%5D=UQ%3A218311&activeFacets%5Bfilters%5D%5BCollection+(lookup)%5D=HERDC+Pre-Audit&searchQueryParams%5Ball%5D=HERDC+Pre-Audit"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BCollection%5D=UQ%3A218311&activeFacets%5Bfilters%5D%5BCollection+(lookup)%5D=HERDC+Pre-Audit&searchQueryParams%5Ball%5D=HERDC+Pre-Audit"
               >
                 HERDC Pre-Audit
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://fez-staging.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BCollection%5D=UQ%3A171723&activeFacets%5Bfilters%5D%5BCollection+(lookup)%5D=UQ+Centre+for+Clinical+Research+Publications&searchQueryParams%5Ball%5D=UQ+Centre+for+Clinical+Research+Publications"
+              <Link
+                replace={false}
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BCollection%5D=UQ%3A171723&activeFacets%5Bfilters%5D%5BCollection+(lookup)%5D=UQ+Centre+for+Clinical+Research+Publications&searchQueryParams%5Ball%5D=UQ+Centre+for+Clinical+Research+Publications"
               >
                 UQ Centre for Clinical Research Publications
-              </a>
+              </Link>
             </li>
           </ul>
         }
