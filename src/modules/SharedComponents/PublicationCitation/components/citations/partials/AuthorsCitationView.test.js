@@ -1,7 +1,6 @@
 import AuthorsCitationView from './AuthorsCitationView';
 
 function setup(testProps, isShallow = false) {
-    console.log(testProps);
     const props = {
         publication: testProps.publication || {}, // : PropTypes.object.isRequired,
         prefix: testProps.prefix,
