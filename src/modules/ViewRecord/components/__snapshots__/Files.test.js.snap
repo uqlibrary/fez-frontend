@@ -78,7 +78,7 @@ exports[`Files Component  should not render cultural message 1`] = `
             hoverable={false}
           >
             <Thumbnail
-              mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/image.jpg"
+              mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
               mimeType="image/jpeg"
               onClick={[Function]}
               previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
@@ -97,7 +97,7 @@ exports[`Files Component  should not render cultural message 1`] = `
               fileName="image.jpg"
               icon={
                 <Thumbnail
-                  mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/image.jpg"
+                  mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
                   mimeType="image/jpeg"
                   onClick={[Function]}
                   previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
@@ -105,6 +105,7 @@ exports[`Files Component  should not render cultural message 1`] = `
                   thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
                 />
               }
+              mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
               mimeType="image/jpeg"
               onFileSelect={[Function]}
               openAccessStatus={
@@ -115,7 +116,7 @@ exports[`Files Component  should not render cultural message 1`] = `
                 }
               }
               pid="UQ:676287"
-              previewFileName="preview_image.jpg"
+              previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
               thumbnailFileName="thumbnail_image.jpg"
             />
           </TableRowColumn>
@@ -225,7 +226,7 @@ exports[`Files Component  should render component 1`] = `
             hoverable={false}
           >
             <Thumbnail
-              mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/image.jpg"
+              mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
               mimeType="image/jpeg"
               onClick={[Function]}
               previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
@@ -244,7 +245,7 @@ exports[`Files Component  should render component 1`] = `
               fileName="image.jpg"
               icon={
                 <Thumbnail
-                  mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/image.jpg"
+                  mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
                   mimeType="image/jpeg"
                   onClick={[Function]}
                   previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
@@ -252,6 +253,7 @@ exports[`Files Component  should render component 1`] = `
                   thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
                 />
               }
+              mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
               mimeType="image/jpeg"
               onFileSelect={[Function]}
               openAccessStatus={
@@ -262,7 +264,7 @@ exports[`Files Component  should render component 1`] = `
                 }
               }
               pid="UQ:676287"
-              previewFileName="preview_image.jpg"
+              previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
               thumbnailFileName="thumbnail_image.jpg"
             />
           </TableRowColumn>
@@ -380,7 +382,7 @@ exports[`Files Component  should render cultural message 1`] = `
             hoverable={false}
           >
             <Thumbnail
-              mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/image.jpg"
+              mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
               mimeType="image/jpeg"
               onClick={[Function]}
               previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
@@ -399,7 +401,7 @@ exports[`Files Component  should render cultural message 1`] = `
               fileName="image.jpg"
               icon={
                 <Thumbnail
-                  mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/image.jpg"
+                  mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
                   mimeType="image/jpeg"
                   onClick={[Function]}
                   previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
@@ -407,6 +409,7 @@ exports[`Files Component  should render cultural message 1`] = `
                   thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
                 />
               }
+              mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
               mimeType="image/jpeg"
               onFileSelect={[Function]}
               openAccessStatus={
@@ -417,7 +420,7 @@ exports[`Files Component  should render cultural message 1`] = `
                 }
               }
               pid="UQ:676287"
-              previewFileName="preview_image.jpg"
+              previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
               thumbnailFileName="thumbnail_image.jpg"
             />
           </TableRowColumn>
