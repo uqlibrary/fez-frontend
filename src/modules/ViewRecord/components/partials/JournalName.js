@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {locale} from 'locale';
 import {pathConfig} from 'config/routes';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
+import {Link} from 'react-router-dom';
 
 export default class JournalName extends PureComponent {
     static propTypes = {
@@ -58,9 +59,9 @@ export default class JournalName extends PureComponent {
         const eraJournalListedText = eraYears && eraYears.length > 0 ? locale.viewRecord.linkTexts.eraJournalListed.replace('[year]', eraYears.join(', ')) : '';
         return (
             <React.Fragment>
-                <a href={pathConfig.list.journalName(journalName)}>
+                <Link to={pathConfig.list.journalName(journalName)}>
                     <span>{journalName}</span>
-                </a>
+                </Link>
                 {
                     eraJournalListedText &&
                     <span className={'eraYearListed'}> {eraJournalListedText}</span>

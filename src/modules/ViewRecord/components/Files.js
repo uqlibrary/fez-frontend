@@ -134,7 +134,7 @@ export default class Files extends Component {
                     description: dataStream.dsi_label,
                     mimeType: mimeType,
                     thumbnailFileName: thumbnailFileName,
-                    previewFileName: !!previewDataStream && previewDataStream.dsi_dsid,
+                    previewFileName: !!previewDataStream && previewDataStream.dsi_dsid || '',
                     calculatedSize: this.formatBytes(dataStream.dsi_size),
                     allowDownload: openAccessStatus.isOpenAccess || !openAccessStatus.embargoDate,
                     icon: this.renderFileIcon(pid, mimeType, thumbnailFileName, openAccessStatus.isOpenAccess),
