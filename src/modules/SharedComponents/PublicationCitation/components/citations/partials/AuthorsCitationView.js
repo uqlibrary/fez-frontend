@@ -68,10 +68,12 @@ export default class AuthorsCitationView extends PureComponent {
 
         if (showLink) {
             const authorIds = publication && publication[idKey] && [...publication[idKey]];
-            for (const authorId of authorIds) {
-                if (authorId[idOrder] === order) {
-                    id = authorId[idSubkey];
-                    break;
+            if (!!authorIds) {
+                for (const authorId of authorIds) {
+                    if (authorId[idOrder] === order) {
+                        id = authorId[idSubkey];
+                        break;
+                    }
                 }
             }
         }
