@@ -1534,105 +1534,140 @@ exports[`Additional Information Component  should render component with audio do
                                                   <span
                                                     className="citationAuthors"
                                                   >
-                                                    <a
+                                                    <Link
                                                       className="authorNameLink"
-                                                      href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Shutter%2C+Leigh"
                                                       key="citationAuthor_1"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Shutter%2C+Leigh"
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_1"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Shutter, Leigh"
+                                                      <a
+                                                        className="authorNameLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Shutter%2C+Leigh"
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_1"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Shutter, Leigh"
                                                         >
-                                                          Shutter, Leigh
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Shutter, Leigh
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorNameLink"
-                                                      href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Arthurs%2C+Andy"
                                                       key="citationAuthor_2"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Arthurs%2C+Andy"
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_2"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Arthurs, Andy"
+                                                      <a
+                                                        className="authorNameLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Arthurs%2C+Andy"
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_2"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Arthurs, Andy"
                                                         >
-                                                          Arthurs, Andy
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Arthurs, Andy
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorIdLink"
-                                                      href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=486&searchQueryParams%5Ball%5D=Bamford%2C+Greg"
                                                       key="citationAuthor_3"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=486&searchQueryParams%5Ball%5D=Bamford%2C+Greg"
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_3"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Bamford, Greg"
+                                                      <a
+                                                        className="authorIdLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=486&searchQueryParams%5Ball%5D=Bamford%2C+Greg"
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_3"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Bamford, Greg"
                                                         >
-                                                          Bamford, Greg
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Bamford, Greg
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorNameLink"
-                                                      href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=McColl%2C+Mary+Rose"
                                                       key="citationAuthor_4"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=McColl%2C+Mary+Rose"
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_4"
-                                                        prefix=""
-                                                        suffix=""
-                                                        value="McColl, Mary Rose"
+                                                      <a
+                                                        className="authorNameLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=McColl%2C+Mary+Rose"
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_4"
+                                                          prefix=""
+                                                          suffix=""
+                                                          value="McColl, Mary Rose"
                                                         >
-                                                          McColl, Mary Rose
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            McColl, Mary Rose
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorIdLink"
-                                                      href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=146&searchQueryParams%5Ball%5D=Skinner%2C+Peter+R."
                                                       key="citationAuthor_5"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=146&searchQueryParams%5Ball%5D=Skinner%2C+Peter+R."
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_5"
-                                                        prefix=", "
-                                                        suffix=""
-                                                        value="Skinner, Peter R."
+                                                      <a
+                                                        className="authorIdLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=146&searchQueryParams%5Ball%5D=Skinner%2C+Peter+R."
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_5"
+                                                          prefix=", "
+                                                          suffix=""
+                                                          value="Skinner, Peter R."
                                                         >
-                                                          , 
-                                                          Skinner, Peter R.
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            , 
+                                                            Skinner, Peter R.
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
                                                      
                                                   </span>
                                                 </AuthorsCitationView>
@@ -18711,185 +18746,248 @@ exports[`Additional Information Component  should render component with journal 
                                                   <span
                                                     className="citationAuthors"
                                                   >
-                                                    <a
+                                                    <Link
                                                       className="authorIdLink"
-                                                      href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=88893&searchQueryParams%5Ball%5D=Azimi%2C+Iman"
                                                       key="citationAuthor_1"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=88893&searchQueryParams%5Ball%5D=Azimi%2C+Iman"
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_1"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Azimi, Iman"
+                                                      <a
+                                                        className="authorIdLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=88893&searchQueryParams%5Ball%5D=Azimi%2C+Iman"
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_1"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Azimi, Iman"
                                                         >
-                                                          Azimi, Iman
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Azimi, Iman
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorNameLink"
-                                                      href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Milevskiy%2C+Michael+J.+G."
                                                       key="citationAuthor_2"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Milevskiy%2C+Michael+J.+G."
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_2"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Milevskiy, Michael J. G."
+                                                      <a
+                                                        className="authorNameLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Milevskiy%2C+Michael+J.+G."
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_2"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Milevskiy, Michael J. G."
                                                         >
-                                                          Milevskiy, Michael J. G.
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Milevskiy, Michael J. G.
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorIdLink"
-                                                      href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1706239&searchQueryParams%5Ball%5D=Kaemmerer%2C+Elke"
                                                       key="citationAuthor_3"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1706239&searchQueryParams%5Ball%5D=Kaemmerer%2C+Elke"
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_3"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Kaemmerer, Elke"
+                                                      <a
+                                                        className="authorIdLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1706239&searchQueryParams%5Ball%5D=Kaemmerer%2C+Elke"
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_3"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Kaemmerer, Elke"
                                                         >
-                                                          Kaemmerer, Elke
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Kaemmerer, Elke
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorIdLink"
-                                                      href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=97626&searchQueryParams%5Ball%5D=Turner%2C+Dane"
                                                       key="citationAuthor_4"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=97626&searchQueryParams%5Ball%5D=Turner%2C+Dane"
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_4"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Turner, Dane"
+                                                      <a
+                                                        className="authorIdLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=97626&searchQueryParams%5Ball%5D=Turner%2C+Dane"
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_4"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Turner, Dane"
                                                         >
-                                                          Turner, Dane
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Turner, Dane
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorIdLink"
-                                                      href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=95450&searchQueryParams%5Ball%5D=Yapa%2C+Kunsala+T.+D.+S."
                                                       key="citationAuthor_5"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=95450&searchQueryParams%5Ball%5D=Yapa%2C+Kunsala+T.+D.+S."
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_5"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Yapa, Kunsala T. D. S."
+                                                      <a
+                                                        className="authorIdLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=95450&searchQueryParams%5Ball%5D=Yapa%2C+Kunsala+T.+D.+S."
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_5"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Yapa, Kunsala T. D. S."
                                                         >
-                                                          Yapa, Kunsala T. D. S.
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Yapa, Kunsala T. D. S.
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorIdLink"
-                                                      href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1671&searchQueryParams%5Ball%5D=Brown%2C+Melissa+A."
                                                       key="citationAuthor_6"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1671&searchQueryParams%5Ball%5D=Brown%2C+Melissa+A."
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_6"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Brown, Melissa A."
+                                                      <a
+                                                        className="authorIdLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1671&searchQueryParams%5Ball%5D=Brown%2C+Melissa+A."
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_6"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Brown, Melissa A."
                                                         >
-                                                          Brown, Melissa A.
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Brown, Melissa A.
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorNameLink"
-                                                      href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Thompson%2C+Erik+W."
                                                       key="citationAuthor_7"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Thompson%2C+Erik+W."
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_7"
-                                                        prefix=""
-                                                        suffix=", "
-                                                        value="Thompson, Erik W."
+                                                      <a
+                                                        className="authorNameLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Thompson%2C+Erik+W."
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_7"
+                                                          prefix=""
+                                                          suffix=", "
+                                                          value="Thompson, Erik W."
                                                         >
-                                                          Thompson, Erik W.
-                                                          , 
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Thompson, Erik W.
+                                                            , 
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorIdLink"
-                                                      href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=973&searchQueryParams%5Ball%5D=Roberts-Thomson%2C+Sarah+J."
                                                       key="citationAuthor_8"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=973&searchQueryParams%5Ball%5D=Roberts-Thomson%2C+Sarah+J."
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_8"
-                                                        prefix=""
-                                                        suffix=""
-                                                        value="Roberts-Thomson, Sarah J."
+                                                      <a
+                                                        className="authorIdLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=973&searchQueryParams%5Ball%5D=Roberts-Thomson%2C+Sarah+J."
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_8"
+                                                          prefix=""
+                                                          suffix=""
+                                                          value="Roberts-Thomson, Sarah J."
                                                         >
-                                                          Roberts-Thomson, Sarah J.
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
-                                                    <a
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            Roberts-Thomson, Sarah J.
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
+                                                    <Link
                                                       className="authorIdLink"
-                                                      href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=972&searchQueryParams%5Ball%5D=Monteith%2C+Gregory+R."
                                                       key="citationAuthor_9"
+                                                      replace={false}
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=972&searchQueryParams%5Ball%5D=Monteith%2C+Gregory+R."
                                                     >
-                                                      <CitationView
-                                                        className="citationAuthor"
-                                                        key="citationAuthor_9"
-                                                        prefix=", "
-                                                        suffix=""
-                                                        value="Monteith, Gregory R."
+                                                      <a
+                                                        className="authorIdLink"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=972&searchQueryParams%5Ball%5D=Monteith%2C+Gregory+R."
+                                                        onClick={[Function]}
                                                       >
-                                                        <span
+                                                        <CitationView
                                                           className="citationAuthor"
+                                                          key="citationAuthor_9"
+                                                          prefix=", "
+                                                          suffix=""
+                                                          value="Monteith, Gregory R."
                                                         >
-                                                          , 
-                                                          Monteith, Gregory R.
-                                                        </span>
-                                                      </CitationView>
-                                                    </a>
+                                                          <span
+                                                            className="citationAuthor"
+                                                          >
+                                                            , 
+                                                            Monteith, Gregory R.
+                                                          </span>
+                                                        </CitationView>
+                                                      </a>
+                                                    </Link>
                                                      
                                                   </span>
                                                 </AuthorsCitationView>
