@@ -46,9 +46,6 @@ export default class AuthorsCitationView extends PureComponent {
         const authorsCount = publicationAuthors && Array.isArray(publicationAuthors)
             ? publicationAuthors.length : 0;
 
-        console.log('authorsCount: ', authorsCount);
-        console.log('initialNumberOfAuthors: ', initialNumberOfAuthors);
-        console.log('thresholdNumberOfAuthors: ', thresholdNumberOfAuthors);
         this.state = {
             hasMoreAuthors: authorsCount > (initialNumberOfAuthors + thresholdNumberOfAuthors),
             toggleShowMoreLink: authorsCount > (initialNumberOfAuthors + thresholdNumberOfAuthors),
