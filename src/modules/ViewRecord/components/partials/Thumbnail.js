@@ -17,7 +17,6 @@ class Thumbnail extends PureComponent {
     };
 
     imageError = (e) => {
-        console.log('image error');
         e.target.src = '/public/images/nothumbnail.svg';
     };
 
