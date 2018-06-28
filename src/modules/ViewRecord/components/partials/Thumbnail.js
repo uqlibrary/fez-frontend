@@ -14,7 +14,12 @@ class Thumbnail extends PureComponent {
     showPreview = (mediaUrl, previewMediaUrl, mimeType) => (e) => {
         e.preventDefault();
         this.props.onClick(mediaUrl, previewMediaUrl, mimeType);
-    }
+    };
+
+    imageError = (e) => {
+        console.log('image error');
+        e.target.src = '/public/images/nothumbnail.svg';
+    };
 
     render() {
         const {mediaUrl, thumbnailMediaUrl, previewMediaUrl, thumbnailFileName, mimeType} = this.props;
@@ -23,7 +28,7 @@ class Thumbnail extends PureComponent {
                 onClick={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
                 onKeyPress={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
                 className={'fileThumbnail'}>
-                <img src={thumbnailMediaUrl} alt={thumbnailFileName}/>
+                <img src={thumbnailMediaUrl} alt={thumbnailFileName} onError={this.imageError}/>
             </a>
         );
     }

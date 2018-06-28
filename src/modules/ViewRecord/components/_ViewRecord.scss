@@ -24,10 +24,10 @@
     }
     .data {
       tr {
-        height: 38px !important;
+        height: 72px !important;
       }
       td {
-        height: 38px !important;
+        height: 72px !important;
         line-height: 24px !important;
         padding: 0 6px !important;
       }
@@ -92,7 +92,7 @@
         cursor: pointer;
         img {
           max-width: 72px;
-          max-height: 48px;
+          max-height: 72px;
         }
       }
     }
@@ -133,6 +133,7 @@
       }
     }
     .description {
+      white-space: normal !important;
       @include desktop {
         width: 25% !important;
       }

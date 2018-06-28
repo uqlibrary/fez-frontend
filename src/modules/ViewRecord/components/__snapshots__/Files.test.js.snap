@@ -690,6 +690,7 @@ ShallowWrapper {
     "props": Object {
       "children": <img
         alt="thumbnail_test.jpg"
+        onError={[Function]}
         src="https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
       />,
       "className": "fileThumbnail",
@@ -703,6 +704,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "alt": "thumbnail_test.jpg",
+        "onError": [Function],
         "src": "https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg",
       },
       "ref": null,
@@ -719,6 +721,7 @@ ShallowWrapper {
       "props": Object {
         "children": <img
           alt="thumbnail_test.jpg"
+          onError={[Function]}
           src="https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
         />,
         "className": "fileThumbnail",
@@ -732,6 +735,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "alt": "thumbnail_test.jpg",
+          "onError": [Function],
           "src": "https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg",
         },
         "ref": null,

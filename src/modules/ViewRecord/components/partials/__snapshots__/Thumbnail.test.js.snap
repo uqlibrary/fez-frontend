@@ -8,6 +8,7 @@ exports[`Thumbnail Component  should render component and display thumbnail 1`] 
 >
   <img
     alt="thumbnail.jpg"
+    onError={[Function]}
     src="/test/thumbnail/mediaUrl"
   />
 </a>
@@ -80,6 +81,7 @@ exports[`Thumbnail Component  should run onClick function on click 1`] = `
         >
           <img
             alt="thumbnail.jpg"
+            onError={[Function]}
             src="/test/thumbnail/mediaUrl"
           />
         </a>
@@ -156,6 +158,7 @@ exports[`Thumbnail Component  should run onFileSelect function on key press 1`] 
         >
           <img
             alt="thumbnail.jpg"
+            onError={[Function]}
             src="/test/thumbnail/mediaUrl"
           />
         </a>
