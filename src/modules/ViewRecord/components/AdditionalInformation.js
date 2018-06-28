@@ -28,6 +28,8 @@ export default class AdditionalInformation extends Component {
     }
 
     renderLink = (link, value) => {
+        console.log('link ', link);
+        console.log('value ', value);
         return <Link to={link}>{value}</Link>;
     }
 
