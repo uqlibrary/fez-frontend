@@ -23,7 +23,6 @@ const getSearchUrl = ({searchQuery, activeFacets = {}}) => (
 export const pathConfig = {
     index: '/',
     dashboard: '/dashboard',
-    browse: '/browse',
     contact: '/contact',
     hdrSubmission: '/rhdsubmission',
     sbsSubmission: '/sbslodge_new',
@@ -344,6 +343,7 @@ export const getMenuConfig = (account, disabled) => {
 
     if (disabled) {
         return [
+            ...homePage,
             ...(account ? [
                 {
                     linkTo: pathConfig.dashboard,
