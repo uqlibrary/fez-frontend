@@ -28,8 +28,6 @@ export default class AdditionalInformation extends Component {
     }
 
     renderLink = (link, value) => {
-        console.log('link ', link);
-        console.log('value ', value);
         return <Link to={link}>{value}</Link>;
     }
 
@@ -198,7 +196,7 @@ export default class AdditionalInformation extends Component {
     // TODO: display original contact email for admin users
     renderContactEmail = () => {
         return (
-            <Link to={`mailto:${viewRecordsConfig.genericDataEmail}`}>{viewRecordsConfig.genericDataEmail}</Link>
+            <a href={`mailto:${viewRecordsConfig.genericDataEmail}`}>{viewRecordsConfig.genericDataEmail}</a>
         );
     }
 

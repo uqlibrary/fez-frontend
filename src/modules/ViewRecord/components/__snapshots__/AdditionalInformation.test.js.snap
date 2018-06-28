@@ -9086,12 +9086,11 @@ exports[`Additional Information Component  should render component with data col
       />
       <ViewRecordTableRow
         data={
-          <Link
-            replace={false}
-            to="mailto:data@library.uq.edu.au"
+          <a
+            href="mailto:data@library.uq.edu.au"
           >
             data@library.uq.edu.au
-          </Link>
+          </a>
         }
         heading="Contact email"
         key="additional-info-Contact email"
@@ -11041,12 +11040,11 @@ exports[`Additional Information Component  should render component with data col
       />
       <ViewRecordTableRow
         data={
-          <Link
-            replace={false}
-            to="mailto:data@library.uq.edu.au"
+          <a
+            href="mailto:data@library.uq.edu.au"
           >
             data@library.uq.edu.au
-          </Link>
+          </a>
         }
         heading="Contact email"
         key="additional-info-Contact email"
