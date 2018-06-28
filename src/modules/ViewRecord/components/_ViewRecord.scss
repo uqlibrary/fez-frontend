@@ -92,8 +92,14 @@
       .fileThumbnail {
         cursor: pointer;
         img {
-          max-width: 150px;
-          max-height: 100px;
+          @include tablet {
+            max-width: 150px;
+            max-height: 100px;
+          }
+          @include mobile {
+            max-width: 50px;
+            max-height: 50px;
+          }
         }
       }
     }
@@ -116,8 +122,14 @@
     }
     // columns widths
     .filetype {
-      width: 150px !important;
-      height: 100px !important;
+      @include tablet {
+        width: 150px !important;
+        height: 100px !important;
+      }
+      @include mobile {
+        width: 50px !important;
+        height: 50px !important;
+      }
     }
     .filename {
       line-height: 48px !important;
