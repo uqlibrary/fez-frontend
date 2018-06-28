@@ -136,6 +136,9 @@ mock
         if (config.url.indexOf('UQ:107683') >= 0) {
             return [200, {data: {...mockData.recordWithTiffAndThumbnail}}];
         }
+        if (config.url.indexOf('UQ:290371') >= 0) {
+            return [200, {data: {...mockData.recordWithoutAuthorIds}}];
+        }
         return [200, {data: {...mockData.record}}];
     })
     // .reply(401, '')
