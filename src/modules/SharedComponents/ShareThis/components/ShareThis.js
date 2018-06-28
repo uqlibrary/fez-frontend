@@ -88,7 +88,7 @@ export default class ShareThis extends PureComponent {
     }
 
     render() {
-        if (this.state.hasError) { return '<div className="shareThis empty" />'; }
+        if (this.state.hasError) return (<div className="shareThis empty" />);
 
         return (
             <div className="shareThis columns is-gapless is-clearfix is-marginless">
