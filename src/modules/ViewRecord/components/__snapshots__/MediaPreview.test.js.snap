@@ -374,6 +374,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                               fullWidth={false}
                               label="Close"
                               labelPosition="after"
+                              onClick={[MockFunction]}
                               primary={false}
                               secondary={false}
                             >
@@ -414,7 +415,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                                     focusRippleColor="rgba(0, 0, 0, 0.87)"
                                     focusRippleOpacity={0.1}
                                     onBlur={[Function]}
-                                    onClick={[Function]}
+                                    onClick={[MockFunction]}
                                     onFocus={[Function]}
                                     onKeyDown={[Function]}
                                     onKeyUp={[Function]}
@@ -725,6 +726,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                               fullWidth={true}
                               label="Close"
                               labelPosition="after"
+                              onClick={[MockFunction]}
                               primary={false}
                               secondary={false}
                             >
@@ -765,7 +767,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                                     focusRippleColor="rgba(0, 0, 0, 0.87)"
                                     focusRippleOpacity={0.1}
                                     onBlur={[Function]}
-                                    onClick={[Function]}
+                                    onClick={[MockFunction]}
                                     onFocus={[Function]}
                                     onKeyDown={[Function]}
                                     onKeyUp={[Function]}
@@ -938,6 +940,7 @@ exports[`Media Preview Component  should render component 1`] = `
           fullWidth={false}
           label="Close"
           labelPosition="after"
+          onClick={[MockFunction]}
           primary={false}
           secondary={false}
         />
@@ -969,6 +972,7 @@ exports[`Media Preview Component  should render component 1`] = `
           fullWidth={true}
           label="Close"
           labelPosition="after"
+          onClick={[MockFunction]}
           primary={false}
           secondary={false}
         />
@@ -1011,6 +1015,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
           fullWidth={false}
           label="Close"
           labelPosition="after"
+          onClick={[MockFunction]}
           primary={false}
           secondary={false}
         />
@@ -1047,6 +1052,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
           fullWidth={true}
           label="Close"
           labelPosition="after"
+          onClick={[MockFunction]}
           primary={false}
           secondary={false}
         />
@@ -1089,6 +1095,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
           fullWidth={false}
           label="Close"
           labelPosition="after"
+          onClick={[MockFunction]}
           primary={false}
           secondary={false}
         />
@@ -1128,6 +1135,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
           fullWidth={true}
           label="Close"
           labelPosition="after"
+          onClick={[MockFunction]}
           primary={false}
           secondary={false}
         />

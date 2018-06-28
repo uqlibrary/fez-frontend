@@ -17,14 +17,14 @@ export default class MediaPreview extends PureComponent {
     };
 
     getMediaPreviewButtons = () => (fullWidth = false) => {
-        const {openInNewWindow, close, onClose} = locale.viewRecord.sections.files.preview;
+        const {openInNewWindow, close} = locale.viewRecord.sections.files.preview;
         return (
             <Fragment>
                 <div className={`column ${fullWidth ? 'is-12' : 'is-narrow'} download`}>
                     <RaisedButton label={openInNewWindow} onClick={this.openFileInNewWindow} primary fullWidth={fullWidth} />
                 </div>
                 <div className={`column ${fullWidth ? 'is-12' : 'is-narrow'}`}>
-                    <RaisedButton label={close} onClick={onClose} fullWidth={fullWidth} />
+                    <RaisedButton label={close} onClick={this.props.onClose} fullWidth={fullWidth} />
                 </div>
             </Fragment>
         );
