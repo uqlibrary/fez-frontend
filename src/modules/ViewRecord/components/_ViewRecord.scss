@@ -24,11 +24,11 @@
     }
     .data {
       tr {
-        height: 72px !important;
+        //height: 100px !important;
       }
       td {
-        height: 72px !important;
-        line-height: 24px !important;
+        //height: 100px !important;
+        line-height: 16px !important;
         padding: 0 6px !important;
       }
 
@@ -81,6 +81,7 @@
 
   // Files
   .files {
+    margin-bottom: 3px !important;
     .fileIcon {
       svg {
         fill: lighten($secondary-color, 33%) !important;
@@ -91,8 +92,8 @@
       .fileThumbnail {
         cursor: pointer;
         img {
-          max-width: 96px;
-          max-height: 72px;
+          max-width: 150px;
+          max-height: 100px;
         }
       }
     }
@@ -115,7 +116,8 @@
     }
     // columns widths
     .filetype {
-      width: 96px !important;
+      width: 150px !important;
+      height: 100px !important;
     }
     .filename {
       line-height: 48px !important;
@@ -201,6 +203,13 @@
       position: relative;
       top: -46px;
       text-align: right;
+      .download {
+        button span:after {
+          margin-left: 6px;
+          font-family: 'Material Icons';
+          content: '\E89E';
+        }
+      }
       @include tablet {
         margin-bottom: -24px !important;
       }

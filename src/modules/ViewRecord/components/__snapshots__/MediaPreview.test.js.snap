@@ -193,12 +193,12 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                             className="column"
                           />
                           <div
-                            className="column is-narrow"
+                            className="column is-narrow download"
                           >
                             <RaisedButton
                               disabled={false}
                               fullWidth={false}
-                              label="Open file in a new window"
+                              label="Download original file"
                               labelPosition="after"
                               onClick={[Function]}
                               primary={true}
@@ -355,7 +355,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                                                 }
                                               }
                                             >
-                                              Open file in a new window
+                                              Download original file
                                             </span>
                                           </div>
                                         </div>
@@ -545,12 +545,12 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                           className="columns is-gapless buttons is-hidden-tablet is-clearfix"
                         >
                           <div
-                            className="column is-12"
+                            className="column is-12 download"
                           >
                             <RaisedButton
                               disabled={false}
                               fullWidth={true}
-                              label="Open file in a new window"
+                              label="Download original file"
                               labelPosition="after"
                               onClick={[Function]}
                               primary={true}
@@ -707,7 +707,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                                                 }
                                               }
                                             >
-                                              Open file in a new window
+                                              Download original file
                                             </span>
                                           </div>
                                         </div>
@@ -919,12 +919,12 @@ exports[`Media Preview Component  should render component 1`] = `
       className="column"
     />
     <div
-      className="column is-narrow"
+      className="column is-narrow download"
     >
       <RaisedButton
         disabled={false}
         fullWidth={false}
-        label="Open file in a new window"
+        label="Download original file"
         labelPosition="after"
         onClick={[Function]}
         primary={true}
@@ -949,12 +949,12 @@ exports[`Media Preview Component  should render component 1`] = `
     className="columns is-gapless buttons is-hidden-tablet is-clearfix"
   >
     <div
-      className="column is-12"
+      className="column is-12 download"
     >
       <RaisedButton
         disabled={false}
         fullWidth={true}
-        label="Open file in a new window"
+        label="Download original file"
         labelPosition="after"
         onClick={[Function]}
         primary={true}
@@ -990,12 +990,12 @@ exports[`Media Preview Component  should render component with image 1`] = `
       className="column"
     />
     <div
-      className="column is-narrow"
+      className="column is-narrow download"
     >
       <RaisedButton
         disabled={false}
         fullWidth={false}
-        label="Open file in a new window"
+        label="Download original file"
         labelPosition="after"
         onClick={[Function]}
         primary={true}
@@ -1025,12 +1025,12 @@ exports[`Media Preview Component  should render component with image 1`] = `
     className="columns is-gapless buttons is-hidden-tablet is-clearfix"
   >
     <div
-      className="column is-12"
+      className="column is-12 download"
     >
       <RaisedButton
         disabled={false}
         fullWidth={true}
-        label="Open file in a new window"
+        label="Download original file"
         labelPosition="after"
         onClick={[Function]}
         primary={true}
@@ -1066,12 +1066,12 @@ exports[`Media Preview Component  should render component with video 1`] = `
       className="column"
     />
     <div
-      className="column is-narrow"
+      className="column is-narrow download"
     >
       <RaisedButton
         disabled={false}
         fullWidth={false}
-        label="Open file in a new window"
+        label="Download original file"
         labelPosition="after"
         onClick={[Function]}
         primary={true}
@@ -1104,12 +1104,12 @@ exports[`Media Preview Component  should render component with video 1`] = `
     className="columns is-gapless buttons is-hidden-tablet is-clearfix"
   >
     <div
-      className="column is-12"
+      className="column is-12 download"
     >
       <RaisedButton
         disabled={false}
         fullWidth={true}
-        label="Open file in a new window"
+        label="Download original file"
         labelPosition="after"
         onClick={[Function]}
         primary={true}

@@ -26,7 +26,7 @@ export default class MediaPreview extends PureComponent {
             <StandardCard title={title} className={'mediaPreview'}>
                 <div className="columns is-gapless buttons is-hidden-mobile is-clearfix">
                     <div className="column" />
-                    <div className="column is-narrow">
+                    <div className="column is-narrow download">
                         <RaisedButton label={openInNewWindow} onClick={this.openFileInNewWindow} primary />
                     </div>
                     <div className="column is-narrow">
@@ -45,7 +45,7 @@ export default class MediaPreview extends PureComponent {
                         <img id="previewImage" src={previewMediaUrl} alt={mediaUrl} />
                 }
                 <div className="columns is-gapless buttons is-hidden-tablet is-clearfix">
-                    <div className="column is-12">
+                    <div className="column is-12 download">
                         <RaisedButton label={openInNewWindow} fullWidth onClick={this.openFileInNewWindow} primary />
                     </div>
                     <div className="column is-12">
