@@ -21,13 +21,13 @@ describe('Media Preview Component ', () => {
     it('should render component with image', () => {
         const wrapper = setup({mimeType: 'image/jpeg'});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('RaisedButton').length).toEqual(2);
+        expect(wrapper.find('RaisedButton').length).toEqual(4);
     });
 
     it('should render component with video', () => {
         const wrapper = setup({mimeType: 'video/mp4'});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('RaisedButton').length).toEqual(2);
+        expect(wrapper.find('RaisedButton').length).toEqual(4);
     });
 
     it('should call open new window on touch tap', () => {
