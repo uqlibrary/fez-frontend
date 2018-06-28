@@ -16,6 +16,7 @@ exports[`AuthorsPublicationsPerYearChart  should render empty chart component 1`
         "legend": Object {
           "align": "right",
           "floating": true,
+          "labelFormatter": [Function],
           "layout": "vertical",
           "shadow": false,
           "verticalAlign": "top",

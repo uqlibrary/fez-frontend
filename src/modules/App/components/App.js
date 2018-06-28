@@ -88,7 +88,7 @@ export default class App extends PureComponent {
     redirectUserToLogin = (isAuthorizedUser = false, redirectToCurrentLocation = false) => () => {
         const redirectUrl = isAuthorizedUser ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
         const returnUrl = redirectToCurrentLocation || !isAuthorizedUser ? window.location.href : APP_URL;
-        window.location.assign(`${redirectUrl}?return=${window.btoa(returnUrl)}`);
+        window.location.assign(`${redirectUrl}?url=${window.btoa(returnUrl)}`);
     };
 
     redirectToOrcid = () => {
@@ -99,6 +99,13 @@ export default class App extends PureComponent {
             this.props.history.push(routes.pathConfig.authorIdentifiers.orcid.link);
         }
     };
+
+    isPublicPage = (menuItems) => (
+        menuItems
+            .filter(menuItem => this.props.location.pathname === menuItem.linkTo && menuItem.public)
+            .length > 0
+        || (new RegExp(routes.pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname))
+    );
 
     render() {
         // display loader while user account is loading
@@ -117,12 +124,16 @@ export default class App extends PureComponent {
         const isAuthorLoading = this.props.accountLoading || this.props.accountAuthorLoading;
         const isOrcidRequired = this.props.author && !this.props.author.aut_orcid_id
             && this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
-        const isHdrStudent = this.props.author && this.props.author.aut_student_username;
+        const isHdrStudent = !isAuthorLoading && !!this.props.account && !!this.props.author
+            && this.props.account.class.indexOf('IS_CURRENT') >= 0
+            && this.props.account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
+
         const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent);
-        const isPublicPage = menuItems.filter((menuItem) =>
-            (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
+        const isPublicPage = this.isPublicPage(menuItems);
         const isThesisSubmissionPage = this.props.location.pathname === routes.pathConfig.hdrSubmission ||
             this.props.location.pathname === routes.pathConfig.sbsSubmission;
+        const isSearchPage = this.props.location.pathname === routes.pathConfig.records.search ||
+            this.props.location.pathname === routes.pathConfig.records.search;
 
         const showMenu = !isThesisSubmissionPage;
         const titleStyle = showMenu && this.state.docked ? {paddingLeft: 320} : {};
@@ -191,8 +202,8 @@ export default class App extends PureComponent {
                         <div className="columns is-gapless appbar-right-columns is-mobile">
                             <div className="column search-column">
                                 {
-                                    !isThesisSubmissionPage &&
-                                    <SearchComponent inHeader showPrefixIcon showMobileSearchButton />
+                                    !isThesisSubmissionPage && !isSearchPage &&
+                                    <SearchComponent isInHeader showPrefixIcon showMobileSearchButton />
                                 }
                             </div>
                             <div className="column is-narrow auth-button-column">

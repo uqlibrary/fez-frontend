@@ -96,7 +96,7 @@ describe('Academic data transformers ', () => {
                 }
             ];
             const expected = [
-                ['Journal Article', 29], ['Book Chapter', 6], ['Other', 2]
+                ['Journal Article', 29], ['Book Chapter', 6], ['Other', 2, 'Conference Paper, Book']
             ];
             const result = transformers.getPublicationsPerType(data, 2);
             expect(result).toEqual(expected);
@@ -146,7 +146,7 @@ describe('Academic data transformers ', () => {
                 }
             ];
             const expected = [
-                ['Journal Article', 29], ['Book Chapter', 6], ['Book', 1], ['Other', 1]
+                ['Journal Article', 29], ['Book Chapter', 6], ['Book', 1], ['Other', 1, 'Conference Paper']
             ];
             const result = transformers.getPublicationsPerType(data, 3);
             expect(result).toEqual(expected);
@@ -637,6 +637,77 @@ describe('Academic data transformers ', () => {
         expect(result).toEqual(expected);
     });
 
+    describe('getAuthorArticleCount', () => {
+        it('should transform correctly when data is provided', () => {
+            const total = 40;
+            const data = {
+                "min_date_year_t": {
+                    "value": 21214421215,
+                    "value_as_string": "1990"
+                },
+                "max_date_year_t": {
+                    "value": 12245421214,
+                    "value_as_string": "2015"
+                }
+            };
+            const expected = {
+                articleCount: total,
+                articleFirstYear: "1990",
+                articleLastYear: "2015"
+            }
+
+            const result = transformers.getAuthorArticleCount(total, data);
+            expect(result).toEqual(expected);
+        });
+
+        it('should transform correctly when data is null', () => {
+            const total = 5;
+            const data = null;
+
+            const expected = {
+                articleCount: total,
+                articleFirstYear: null,
+                articleLastYear: null
+            };
+
+            const result = transformers.getAuthorArticleCount(total, data);
+            expect(result).toEqual(expected);
+        });
+
+        it('should transform correctly when year data is null', () => {
+            const total = 10;
+            const data = {
+                "min_date_year_t": null,
+                "max_date_year_t": {
+                    "value": 4548745412,
+                    "value_as_string": "2015"
+                }
+            };
+            const expected = {
+                articleCount: total,
+                articleFirstYear: null,
+                articleLastYear: '2015'
+            };
+            const result = transformers.getAuthorArticleCount(total, data);
+            expect(result).toEqual(expected);
+        });
+
+        it('should transform correctly when total and data is null', () => {
+            const total = null;
+            const data = {
+                "min_date_year_t": null,
+                "max_date_year_t": null,
+            };
+            const expected = {
+                articleCount: total,
+                articleFirstYear: null,
+                articleLastYear: null
+            };
+            const result = transformers.getAuthorArticleCount(total, data);
+            expect(result).toEqual(expected);
+        })
+    });
+
     describe('transformTrendingPublicationsMetricsData', () => {
         it ('should get a zero result on altmetric if altmetric has no trending data', () => {
             const data = [
@@ -1089,5 +1160,4 @@ describe('Academic data transformers ', () => {
             expect(result).toEqual(expectedMetrics);
         });
     });
-
 });

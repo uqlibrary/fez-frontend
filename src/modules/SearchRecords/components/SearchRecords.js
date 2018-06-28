@@ -194,8 +194,8 @@ class SearchRecords extends PureComponent {
         const alertProps = this.props.searchLoadingError && {...txt.errorAlert, message: txt.errorAlert.message(locale.global.errorMessages.generic)};
         return (
             <StandardPage className="page-search-records">
-                <StandardCard className="search-component">
-                    <SearchComponent className="search-body" />
+                <StandardCard className="searchComponent">
+                    <SearchComponent className="search-body" showAdvancedSearchButton />
                 </StandardCard>
                 {
                     // first time loading search results

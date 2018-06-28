@@ -141,7 +141,7 @@ export default {
                 message: 'Trending publications are temporarily unavailable'
             },
             altmetric: {
-                title: (<span>Trending publications</span>),
+                title: (<span>Trending&nbsp;on Altmetric</span>),
                 mobileTitle: 'Trending',
                 heading: 'Altmetric score',
                 subHeading: 'The +plus score indicates recent increase in social media activity',
@@ -155,7 +155,7 @@ export default {
                 order: 1
             },
             thomson: {
-                title: (<span>Hot&nbsp;papers&nbsp;on Web&nbsp;of&nbsp;science</span>),
+                title: (<span>Trending&nbsp;on Web&nbsp;of&nbsp;science</span>),
                 mobileTitle: 'WOS',
                 heading: 'Web of Science citation count',
                 subHeading: 'The +plus score indicates the increase in citations over the three months',
@@ -807,7 +807,53 @@ export default {
             searchButtonText: 'Search',
             searchButtonAriaLabel: 'Click to search eSpace',
             simpleSearchToggle: 'Simple search',
-
+            advancedSearch: {
+                title: 'Advanced search',
+                mode: 'advanced',
+                tooltip: {
+                    show: 'Show advanced search',
+                    hide: 'Hide advanced search'
+                },
+                fieldTypes: {
+                    '0': {
+                        title: 'Select a field',
+                        combiner: null,
+                        hint: 'Select a field to search on'
+                    },
+                    'all': {
+                        title: 'Any field',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add some text to search all fields with'
+                    },
+                    'title': {
+                        title: 'Title',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a title to search',
+                        minLength: 10
+                    }
+                },
+                openAccess: {
+                    title: 'Open access/Full text',
+                    captionText: (
+                        <span> AND is <span className="value">open access / full text.</span></span>
+                    ),
+                    ariaLabel: 'Check to search for publications with are only open access / full text'
+                },
+                addField: {
+                    title: 'Add another field',
+                    aria: 'Click to add another advanced search field'
+                },
+                reset: {
+                    title: 'Reset',
+                    aria: 'Click to reset the advanced search'
+                },
+                simpleSearch: {
+                    title: 'Simple search',
+                    aria: 'Click to return to the simple search'
+                }
+            }
         },
         whatIsEspace: {
             title: 'What is eSpace?',
@@ -817,6 +863,16 @@ export default {
             readMoreLabel: ' read more',
             readMoreTitle: 'Click to read more about UQ eSpace',
             readMoreLink: '/contact'
+        },
+        shareThis: {
+            facebook: {linkTitle: 'Share this link via Facebook'},
+            mendeley: {linkTitle: 'Share this link via Mendeley'},
+            twitter: {linkTitle: 'Share this link via Twitter'},
+            linkedin: {linkTitle: 'Share this link via LinkedIn'},
+            googleplus: {linkTitle: 'Share this link via Google+'},
+            reddit: {linkTitle: 'Share this link via Reddit'},
+            email: {linkTitle: 'Share this link via Email'},
+            print: {linkTitle: 'Print this record'},
         }
     }
 };
