@@ -57,13 +57,15 @@ export default class JournalName extends PureComponent {
         const eraYears = this.getERAYears(issns);
         const eraJournalListedText = eraYears && eraYears.length > 0 ? locale.viewRecord.linkTexts.eraJournalListed.replace('[year]', eraYears.join(', ')) : '';
         return (
-            <a href={pathConfig.list.journalName(journalName)}>
-                <span>{journalName}</span>
+            <React.Fragment>
+                <a href={pathConfig.list.journalName(journalName)}>
+                    <span>{journalName}</span>
+                </a>
                 {
                     eraJournalListedText &&
                     <span className={'eraYearListed'}> {eraJournalListedText}</span>
                 }
-            </a>
+            </React.Fragment>
         );
     }
 

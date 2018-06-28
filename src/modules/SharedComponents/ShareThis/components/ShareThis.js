@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import Raven from 'raven-js';
+import locale from 'locale/components';
 
 export default class ShareThis extends PureComponent {
     constructor(props) {
@@ -88,20 +89,22 @@ export default class ShareThis extends PureComponent {
     }
 
     render() {
+        const {shareThis} = locale.components;
+
         if (this.state.hasError) return (<div className="shareThis empty" />);
 
         return (
             <div className="shareThis columns is-gapless is-clearfix is-marginless">
                 <div className="column is-hidden-mobile" />
                 <div className="column is-narrow a2a_kit a2a_kit_size_20 a2a_default_style">
-                    <a className="a2a_button_facebook" />
-                    <a className="a2a_button_mendeley" />
-                    <a className="a2a_button_twitter" />
-                    <a className="a2a_button_linkedin" />
-                    <a className="a2a_button_google_plus" />
-                    <a className="a2a_button_reddit" />
-                    <a className="a2a_button_email" />
-                    <a className="a2a_button_print" />
+                    <a className="a2a_button_facebook" title={shareThis.facebook.linkTitle} />
+                    <a className="a2a_button_mendeley" title={shareThis.mendeley.linkTitle} />
+                    <a className="a2a_button_twitter" title={shareThis.twitter.linkTitle} />
+                    <a className="a2a_button_linkedin" title={shareThis.linkedin.linkTitle} />
+                    <a className="a2a_button_google_plus" title={shareThis.googleplus.linkTitle} />
+                    <a className="a2a_button_reddit" title={shareThis.reddit.linkTitle} />
+                    <a className="a2a_button_email" title={shareThis.email.linkTitle} />
+                    <a className="a2a_button_print" title={shareThis.print.linkTitle} />
                 </div>
             </div>
         );

@@ -33,10 +33,6 @@ export default {
             primaryText: 'Search eSpace',
             secondaryText: ''
         },
-        browse: {
-            primaryText: 'Browse eSpace',
-            secondaryText: ''
-        },
         contact: {
             primaryText: 'Contact',
             secondaryText: ''

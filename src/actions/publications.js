@@ -101,7 +101,7 @@ export function searchAuthorPublications({page = 1, pageSize = 20, sortBy = 'pub
 export function searchTrendingPublications(recordsPerSource = 5) {
     return dispatch => {
         dispatch({type: actions.TRENDING_PUBLICATIONS_LOADING});
-        return get(routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API())
+        return get(routes.AUTHOR_TRENDING_PUBLICATIONS_API())
             .then(response => {
                 const transformedTrendingPublications = !!response.data && response.data.length > 0 &&
                     transformTrendingPublicationsMetricsData(response, recordsPerSource);

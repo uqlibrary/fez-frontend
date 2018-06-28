@@ -147,7 +147,7 @@ describe('Publications actions', () => {
 
         it('dispatches expected actions on successful request', async () => {
             mockApi
-                .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API().apiUrl)
+                .onGet(repositories.routes.AUTHOR_TRENDING_PUBLICATIONS_API().apiUrl)
                 .reply(200, mockData.trendingPublications);
 
             const expectedActions = [

@@ -3,10 +3,16 @@ jest.dontMock('./Dashboard');
 import Dashboard from './Dashboard';
 import * as mock from 'mock/data';
 
+const publicationTotalCount = {
+    articleCount: mock.currentAuthorStats.total,
+    articleFirstYear: mock.currentAuthorStats.filters.facets.min_date_year_t.value_as_string,
+    articleLastYear: mock.currentAuthorStats.filters.facets.max_date_year_t.value_as_string
+};
 function setup(testProps, isShallow = true) {
     const props = {
         account: mock.accounts.uqresearcher,
         accountAuthorDetailsLoading: false,
+        publicationTotalCount: null,
         loadingPublicationsByYear: false,
         hidePossiblyYourPublicationsLure: false,
         loadingPublicationsStats: false,
@@ -29,13 +35,14 @@ describe('Dashboard test', () => {
     });
 
     it('renders dashboard header only', () => {
-        const wrapper = setup({authorDetails: mock.authorDetails.uqresearcher});
+        const wrapper = setup({authorDetails: mock.authorDetails.uqresearcher, publicationTotalCount: publicationTotalCount});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders possibly your publications lure but not the add a record lure', () => {
         const wrapper = setup({
             authorDetails: mock.authorDetails.uqresearcher,
+            publicationTotalCount: publicationTotalCount,
             possiblyYourPublicationsCount: 5,
             hidePossiblyYourPublicationsLure: false,
             possiblyYourPublicationsCountLoading: false
@@ -124,4 +131,6 @@ describe('Dashboard test', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+
 });

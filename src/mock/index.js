@@ -64,7 +64,7 @@ mock
         else if (config.params.source === 'pubmed' && config.params.id) return [200, mockData.externalPubMedSearchResultsList];
     })
     .onGet(routes.CURRENT_USER_RECORDS_API({}).apiUrl).reply(config => {
-        // ACADEMIC_PUBLICATIONS_STATS_API
+        // AUTHOR_PUBLICATIONS_STATS_ONLY_API
         if (config.params.rule === 'mine' && !!config.params['filters[stats_only]']) {
             return [200, mockData.currentAuthorStats];
         }
@@ -114,7 +114,7 @@ mock
         }
         return [404, ['Request not found']];
     })
-    .onGet(routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API().apiUrl)
+    .onGet(routes.AUTHOR_TRENDING_PUBLICATIONS_API().apiUrl)
     // .reply(500, {})
     .reply(200, mockData.trendingPublications)
     .onGet(routes.TRENDING_PUBLICATIONS_API().apiUrl)
@@ -132,6 +132,9 @@ mock
     .reply(config => {
         if (config.url.indexOf('UQ:164935') >= 0) {
             return [200, {data: {...mockData.recordWithMap}}];
+        }
+        if (config.url.indexOf('UQ:107683') >= 0) {
+            return [200, {data: {...mockData.recordWithTiffAndThumbnail}}];
         }
         return [200, {data: {...mockData.record}}];
     })
