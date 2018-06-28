@@ -1,20 +1,42 @@
+jest.dontMock('./AuthorsCitationView');
 
+import { shallow, mount } from 'enzyme';
+import toJson from 'enzyme-to-json';
+import React from 'react';
 import AuthorsCitationView from './AuthorsCitationView';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import PropTypes from 'prop-types';
 
-function setup(testProps, isShallow = true) {
+import Immutable from 'immutable';
+
+function setup({publication, prefix, suffix, className, initialNumberOfAuthors = 10, thresholdNumberOfAuthors = 3, showLink = false, isShallow = false}) {
     const props = {
-        ...testProps,
-        publication: testProps.publication || {},
-        prefix: testProps.prefix,
-        suffix: testProps.suffix,
-        className: testProps.className || '',
-        initialNumberOfAuthors: testProps.initialNumberOfAuthors || 10,
-        thresholdNumberOfAuthors: testProps.thresholdNumberOfAuthors || 3,
-        showLink: testProps.showLink || false
+        publication: publication || {}, // : PropTypes.object.isRequired,
+        prefix: prefix,
+        suffix: suffix,
+        className: className || '',
+        initialNumberOfAuthors: initialNumberOfAuthors,
+        thresholdNumberOfAuthors: thresholdNumberOfAuthors,
+        showLink: showLink
     };
-    return getElement(AuthorsCitationView, props, isShallow);
+
+    if(isShallow) {
+        return shallow(<AuthorsCitationView {...props} />);
+    }
+
+    return mount(<AuthorsCitationView {...props} />, {
+        context: {
+            muiTheme: getMuiTheme()
+        },
+        childContextTypes: {
+            muiTheme: PropTypes.object.isRequired
+        }
+    });
 }
 
+beforeAll(() => {
+
+});
 
 describe('AuthorsCitationView test ', () => {
     it('should render component with no authors', () => {
@@ -89,6 +111,29 @@ describe('AuthorsCitationView test ', () => {
                     "rek_author_id_id": null,
                     "rek_author_id": 2,
                     "rek_author_id_order": 2
+                }
+            ]
+        };
+        const wrapper = setup({ publication: testObject, showLink: true });
+        expect(wrapper.find('CitationView').get(0).props.suffix).toEqual('');
+        expect(wrapper.find('CitationView').get(1).props.prefix).toEqual(', ');
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with 2 authors for publication view page if author ids not supplied', () => {
+        const testObject = {
+            "fez_record_search_key_author": [
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Pedroso, Marcelo Monteiro",
+                    "rek_author_order": 1
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Smith, J",
+                    "rek_author_order": 2
                 }
             ]
         };
@@ -199,7 +244,7 @@ describe('AuthorsCitationView test ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it.skip('should render component with 10 authors and show more link', () => {
+    it('should render component with 10 authors and show more link', () => {
         const testObject = {
             "fez_record_search_key_author": [
                 {
@@ -278,11 +323,10 @@ describe('AuthorsCitationView test ', () => {
         };
         const wrapper = setup({ publication: testObject, prefix: 'Authored by: ', suffix: ' people.', thresholdNumberOfAuthors: 0});
         expect(toJson(wrapper)).toMatchSnapshot();
-
         expect(wrapper.state().hasMoreAuthors).toEqual(true);
         expect(wrapper.state().toggleShowMoreLink).toEqual(true);
         expect(wrapper.state().authors.length).toEqual(12);
-        expect(wrapper.find('.citationAuthor').length).toEqual(12);
+        expect(wrapper.find('span.citationAuthor').length).toEqual(10);
         expect(wrapper.find('.citationShowMoreAuthors').length).toEqual(1);
         expect(wrapper.find('.citationShowMoreAuthors').text()).toEqual('Show 2 more...');
 
@@ -360,12 +404,12 @@ describe('AuthorsCitationView test ', () => {
                 }
             ]
         };
-        const wrapper = setup({publication: testObject, prefix: 'Authored by: ', suffix: ' people.',});
+        const wrapper = setup({ publication: testObject, prefix: 'Authored by: ', suffix: ' people.',});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().hasMoreAuthors).toEqual(false);
         expect(wrapper.state().toggleShowMoreLink).toEqual(false);
         expect(wrapper.state().authors.length).toEqual(10);
-        expect(wrapper.find('.citationAuthor').length).toEqual(10);
+        expect(wrapper.find('span.citationAuthor').length).toEqual(10);
         expect(wrapper.find('.citationShowMoreAuthors').length).toEqual(0);
     });
 
@@ -434,12 +478,12 @@ describe('AuthorsCitationView test ', () => {
                 }
             ]
         };
-        const wrapper = setup({publication: testObject, prefix: 'Authored by: ', suffix: ' people.', initialNumberOfAuthors: 8, thresholdNumberOfAuthors: 2});
+        const wrapper = setup({ publication: testObject, prefix: 'Authored by: ', suffix: ' people.', initialNumberOfAuthors: 8, thresholdNumberOfAuthors: 2});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().hasMoreAuthors).toEqual(false);
         expect(wrapper.state().toggleShowMoreLink).toEqual(false);
         expect(wrapper.state().authors.length).toEqual(10);
-        expect(wrapper.find('.citationAuthor').length).toEqual(10);
+        expect(wrapper.find('span.citationAuthor').length).toEqual(10);
         expect(wrapper.find('.citationShowMoreAuthors').length).toEqual(0);
     });
 

@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {routes} from 'config';
 import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
 import AudioPlayer from './AudioPlayer';
 
@@ -9,8 +8,9 @@ export default class FileName extends PureComponent {
         pid: PropTypes.string.isRequired,
         fileName: PropTypes.string.isRequired,
         mimeType: PropTypes.string.isRequired,
+        mediaUrl: PropTypes.string.isRequired,
+        previewMediaUrl: PropTypes.string.isRequired,
         onFileSelect: PropTypes.func.isRequired,
-        previewFileName: PropTypes.string,
         allowDownload: PropTypes.bool
     };
 
@@ -30,19 +30,13 @@ export default class FileName extends PureComponent {
         return (this.isImage(mimeType) || this.isVideo(mimeType));
     }
 
-    getUrl = (pid, fileName) => {
-        return fileName && routes.pathConfig.file.url(pid, fileName);
-    }
-
     showPreview = (mediaUrl, previewMediaUrl, mimeType) => (e) => {
         e.preventDefault();
         this.props.onFileSelect(mediaUrl, previewMediaUrl, mimeType);
     }
 
     render() {
-        const {pid, fileName, allowDownload, mimeType, previewFileName} = this.props;
-        const mediaUrl = this.getUrl(pid, fileName);
-        const previewMediaUrl = this.getUrl(pid, previewFileName || fileName);
+        const {pid, fileName, allowDownload, mimeType, mediaUrl, previewMediaUrl} = this.props;
 
         return (
             <div className="columns is-gapless is-mobile fileDetails">

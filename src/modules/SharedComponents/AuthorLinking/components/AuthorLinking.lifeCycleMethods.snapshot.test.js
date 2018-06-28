@@ -1,32 +1,16 @@
-jest.dontMock('./AuthorLinking');
-// jest.mock('draft-js/lib/generateRandomKey', () => () => '123');
-
-import { mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import AuthorLinking from './AuthorLinking';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
 
+function setup(testProps, isShallow = true) {
+    const props = {
+        ...testProps
+    };
 
-const searchKey = {value: 'rek_author_id', order: 'rek_author_id_order', type: 'author'};
-
-function setup(props) {
-    return mount(<AuthorLinking {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+    return getElement(AuthorLinking, props, isShallow);
 }
 
-beforeAll(() => {
-
-});
-
 describe('AuthorLinking', () => {
+    const searchKey = {value: 'rek_author_id', order: 'rek_author_id_order', type: 'author'};
+
     it('should call componentDidMount life cycle method', () => {
         const props = {
             searchKey: searchKey,
@@ -45,7 +29,7 @@ describe('AuthorLinking', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it('should call componentDidMount life cycle method', () => {
+    it('should call componentDidMount life cycle method with authorList only', () => {
         const props = {
             searchKey: searchKey,
             authorList: [
@@ -77,5 +61,22 @@ describe('AuthorLinking', () => {
 
         wrapper.instance()._acceptAuthorLinkingTermsAndConditions();
         expect(onChange).toHaveBeenCalled();
+    });
+
+    it('should render component if authorList has more authors than linkedAuthorIdList', () => {
+        const props = {
+            searchKey: searchKey,
+            authorList: [
+                {rek_author_id: null, rek_author_pid: "UQ:111111", rek_author: "Overgaard, Nana H.", rek_author_order: 1},
+                {rek_author_id: null, rek_author_pid: "UQ:111111", rek_author: "Cruz, Jazmina L.", rek_author_order: 2}
+            ],
+            linkedAuthorIdList: [
+                {rek_author_id_id: null, rek_author_id_pid: "UQ:111111", rek_author_id: 0, rek_author_id_order: 1}
+            ]
+        };
+
+        const wrapper = setup(props);
+        const tree = toJson(wrapper);
+        expect(tree).toMatchSnapshot();
     });
 });

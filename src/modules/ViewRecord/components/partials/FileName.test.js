@@ -1,14 +1,17 @@
 import {journalArticle} from 'mock/data/testing/records';
-import FileName from "./FileName";
+import FileName from './FileName';
 
 function setup(testProps, isShallow = true){
+    const {previewFileName, ...rest} = testProps;
     const props = {
-        ...testProps,
-        pid: testProps.pid || journalArticle.rek_pid,
-        fileName: testProps.fileName || journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
-        mimeType: testProps.mimeType || 'application/pdf',
-        thumbnailFileName: testProps.thumbnailFileName,
-        onFileSelect: testProps.onFileSelect || jest.fn()
+        pid: journalArticle.rek_pid,
+        fileName: journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
+        mimeType: 'application/pdf',
+        mediaUrl: !!testProps.fileName && `https://espace.library.uq.edu.au/view/UQ:676287/${testProps.fileName}` || '',
+        previewMediaUrl: !!previewFileName && `https://espace.library.uq.edu.au/view/UQ:676287/${previewFileName}` || '',
+        onFileSelect: jest.fn(),
+        allowDownload: false,
+        ...rest
     };
     return getElement(FileName, props, isShallow);
 }
@@ -23,14 +26,14 @@ describe('File Name Component ', () => {
     });
 
     it('should display file name link', () => {
-        const wrapper = setup({allowDownload: true, thumbnailFileName: 'test.jpg'}, false);
+        const wrapper = setup({allowDownload: true, fileName: 'test.jpg', previewFileName: 'preview_test.jpg'}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('FileName').length).toEqual(1);
         expect(wrapper.find('FileName a').length).toEqual(1);
     });
 
     it('should render audio player', () => {
-        const wrapper = setup({allowDownload: true, mimeType: 'audio/mp3'}, false);
+        const wrapper = setup({allowDownload: true, mimeType: 'audio/mp3', fileName: 'test.mp3'}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('FileName audio').length).toEqual(1);
     });
@@ -46,7 +49,13 @@ describe('File Name Component ', () => {
 
     it('should run onFileSelect function on click', () => {
         const onFileSelect = jest.fn();
-        const wrapper = setup({allowDownload: true, thumbnailFileName: 'test.jpg', mimeType: 'image/jpeg', onFileSelect: onFileSelect}, false);
+        const wrapper = setup({
+            allowDownload: true,
+            mimeType: 'image/jpeg',
+            fileName: 'test.jpg',
+            previewFileName: 'preview_test.jpg',
+            onFileSelect: onFileSelect
+        }, false);
         const element = wrapper.find('FileName a');
         expect(toJson(wrapper)).toMatchSnapshot();
         element.simulate('click');
@@ -55,7 +64,13 @@ describe('File Name Component ', () => {
 
     it('should run onFileSelect function on key press', () => {
         const onFileSelect = jest.fn();
-        const wrapper = setup({allowDownload: true, thumbnailFileName: 'test.jpg', mimeType: 'image/jpeg', onFileSelect: onFileSelect}, false);
+        const wrapper = setup({
+            allowDownload: true,
+            fileName: 'test.jpg',
+            previewFileName: 'preview_test.jpg',
+            mimeType: 'image/jpeg',
+            onFileSelect: onFileSelect
+        }, false);
         const element = wrapper.find('FileName a');
         expect(toJson(wrapper)).toMatchSnapshot();
         element.simulate('keyPress');

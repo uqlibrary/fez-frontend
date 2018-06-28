@@ -16,6 +16,7 @@ import {openAccessConfig, viewRecordsConfig, routes} from 'config';
 import MediaPreview from './MediaPreview';
 import FileName from './partials/FileName';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
+import Thumbnail from './partials/Thumbnail';
 
 export default class Files extends Component {
     static propTypes = {
@@ -35,9 +36,19 @@ export default class Files extends Component {
         };
     }
 
-    renderFileIcon = (pid, mimeType, thumbnailFileName, allowDownload) => {
+    renderFileIcon = (pid, mimeType, fileName, thumbnailFileName, previewFileName, allowDownload, downloadableFileName = null) => {
         if (allowDownload && thumbnailFileName) {
-            return <img src={this.getUrl(pid, thumbnailFileName)} alt={thumbnailFileName}/>;
+            const thumbnailProps = {
+                mimeType,
+                mediaUrl: this.getUrl(pid, downloadableFileName || fileName),
+                previewMediaUrl: this.getUrl(pid, previewFileName || fileName),
+                thumbnailMediaUrl: this.getUrl(pid, thumbnailFileName),
+                thumbnailFileName,
+                onClick: this.showPreview
+            };
+            return (
+                <Thumbnail {...thumbnailProps} />
+            );
         } else if (mimeType.indexOf('audio') >= 0) {
             return <AvVolumeUp />;
         } else if (mimeType.indexOf('pdf') >= 0) {
@@ -124,8 +135,11 @@ export default class Files extends Component {
                 const fileName = dataStream.dsi_dsid;
                 const thumbnailDataStream = this.searchByKey(dataStreams, 'dsi_dsid', files.thumbnailFileName(fileName));
                 const previewDataStream = this.searchByKey(dataStreams, 'dsi_dsid', files.previewFileName(fileName));
+                const downloadableDataStream = this.searchByKey(dataStreams, 'dsi_dsid', files.webFileName(fileName));
                 const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
                 const thumbnailFileName = !!thumbnailDataStream && thumbnailDataStream.dsi_dsid;
+                const previewFileName = !!previewDataStream && previewDataStream.dsi_dsid;
+                const downloadableFileName = !!downloadableDataStream && downloadableDataStream.dsi_dsid;
                 const openAccessStatus = this.getFileOpenAccessStatus(publication, dataStream.dsi_embargo_date);
 
                 return {
@@ -134,11 +148,12 @@ export default class Files extends Component {
                     description: dataStream.dsi_label,
                     mimeType: mimeType,
                     thumbnailFileName: thumbnailFileName,
-                    previewFileName: !!previewDataStream && previewDataStream.dsi_dsid || '',
                     calculatedSize: this.formatBytes(dataStream.dsi_size),
                     allowDownload: openAccessStatus.isOpenAccess || !openAccessStatus.embargoDate,
-                    icon: this.renderFileIcon(pid, mimeType, thumbnailFileName, openAccessStatus.isOpenAccess),
-                    openAccessStatus: openAccessStatus
+                    icon: this.renderFileIcon(pid, mimeType, fileName, thumbnailFileName, previewFileName, openAccessStatus.isOpenAccess, downloadableFileName),
+                    openAccessStatus: openAccessStatus,
+                    previewMediaUrl: this.getUrl(pid, previewFileName || fileName),
+                    mediaUrl: this.getUrl(pid, downloadableFileName || fileName)
                 };
             })
             : [];
