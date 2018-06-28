@@ -16,7 +16,7 @@ describe('Routes method', () => {
 
     it('should return a list of menus for a user with dashboard enabled only (eg HDR student without ORCID)', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqresearcher, true);
-        expect(testRoutes.length).toEqual(5);
+        expect(testRoutes.length).toEqual(6);
     });
 
     it('should return a list of menus for user who can masquerade', () => {
