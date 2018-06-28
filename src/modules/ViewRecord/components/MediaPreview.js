@@ -24,9 +24,14 @@ export default class MediaPreview extends PureComponent {
         const title = isVideo ? videoTitle : imageTitle;
         return (
             <StandardCard title={title} className={'mediaPreview'}>
-                <div className="column is-narrow buttons">
-                    <RaisedButton label={openInNewWindow} onClick={this.openFileInNewWindow} primary />
-                    <RaisedButton label={close} onClick={this.props.onClose}/>
+                <div className="columns is-gapless buttons is-hidden-mobile is-clearfix">
+                    <div className="column" />
+                    <div className="column is-narrow">
+                        <RaisedButton label={openInNewWindow} onClick={this.openFileInNewWindow} primary />
+                    </div>
+                    <div className="column is-narrow">
+                        <RaisedButton label={close} onClick={this.props.onClose}/>
+                    </div>
                 </div>
                 {
                     isVideo &&
@@ -39,6 +44,14 @@ export default class MediaPreview extends PureComponent {
                     isImage &&
                         <img id="previewImage" src={previewMediaUrl} alt={mediaUrl} />
                 }
+                <div className="columns is-gapless buttons is-hidden-tablet is-clearfix">
+                    <div className="column is-12">
+                        <RaisedButton label={openInNewWindow} fullWidth onClick={this.openFileInNewWindow} primary />
+                    </div>
+                    <div className="column is-12">
+                        <RaisedButton label={close} fullWidth onClick={this.props.onClose}/>
+                    </div>
+                </div>
             </StandardCard>
         );
     }

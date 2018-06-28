@@ -91,7 +91,7 @@
       .fileThumbnail {
         cursor: pointer;
         img {
-          max-width: 72px;
+          max-width: 96px;
           max-height: 72px;
         }
       }
@@ -115,7 +115,7 @@
     }
     // columns widths
     .filetype {
-      width: 72px !important;
+      width: 96px !important;
     }
     .filename {
       line-height: 48px !important;
@@ -194,10 +194,20 @@
     }
   }
   .mediaPreview {
+    #previewImage {
+      max-width: 100%;
+    }
     .buttons {
       position: relative;
       top: -46px;
       text-align: right;
+      @include tablet {
+        margin-bottom: -24px !important;
+      }
+      @include mobile {
+        margin-top: 64px !important;
+        margin-bottom: -38px !important;
+      }
     }
     img {
       max-width: 100vw;
