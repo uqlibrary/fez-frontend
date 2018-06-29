@@ -28,7 +28,7 @@ export default {
                 preview: {
                     videoTitle: 'Video preview',
                     imageTitle: 'Image preview',
-                    openInNewWindow: 'Download file',
+                    openInNewWindow: 'Open file in a new window',
                     close: 'Close',
                     errorMessage: 'Your browser does not support the video tag.'
                 }

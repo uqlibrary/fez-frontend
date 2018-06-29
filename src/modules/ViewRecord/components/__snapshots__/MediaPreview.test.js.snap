@@ -198,7 +198,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                             <RaisedButton
                               disabled={false}
                               fullWidth={false}
-                              label="Download file"
+                              label="Open file in a new window"
                               labelPosition="after"
                               onClick={[Function]}
                               primary={true}
@@ -355,7 +355,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                                                 }
                                               }
                                             >
-                                              Download file
+                                              Open file in a new window
                                             </span>
                                           </div>
                                         </div>
@@ -550,7 +550,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                             <RaisedButton
                               disabled={false}
                               fullWidth={true}
-                              label="Download file"
+                              label="Open file in a new window"
                               labelPosition="after"
                               onClick={[Function]}
                               primary={true}
@@ -707,7 +707,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                                                 }
                                               }
                                             >
-                                              Download file
+                                              Open file in a new window
                                             </span>
                                           </div>
                                         </div>
@@ -918,62 +918,66 @@ exports[`Media Preview Component  should render component 1`] = `
     <div
       className="column"
     />
-    <div
-      className="column is-narrow download"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={false}
-        label="Download file"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={true}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="column is-narrow"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={false}
-        label="Close"
-        labelPosition="after"
-        onClick={[MockFunction]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
+    <React.Fragment>
+      <div
+        className="column is-narrow download"
+      >
+        <RaisedButton
+          disabled={false}
+          fullWidth={false}
+          label="Open file in a new window"
+          labelPosition="after"
+          onClick={[Function]}
+          primary={true}
+          secondary={false}
+        />
+      </div>
+      <div
+        className="column is-narrow"
+      >
+        <RaisedButton
+          disabled={false}
+          fullWidth={false}
+          label="Close"
+          labelPosition="after"
+          onClick={[MockFunction]}
+          primary={false}
+          secondary={false}
+        />
+      </div>
+    </React.Fragment>
   </div>
   <div
     className="columns is-gapless buttons is-hidden-tablet is-clearfix"
   >
-    <div
-      className="column is-12 download"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={true}
-        label="Download file"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={true}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="column is-12"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={true}
-        label="Close"
-        labelPosition="after"
-        onClick={[MockFunction]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
+    <React.Fragment>
+      <div
+        className="column is-12 download"
+      >
+        <RaisedButton
+          disabled={false}
+          fullWidth={true}
+          label="Open file in a new window"
+          labelPosition="after"
+          onClick={[Function]}
+          primary={true}
+          secondary={false}
+        />
+      </div>
+      <div
+        className="column is-12"
+      >
+        <RaisedButton
+          disabled={false}
+          fullWidth={true}
+          label="Close"
+          labelPosition="after"
+          onClick={[MockFunction]}
+          primary={false}
+          secondary={false}
+        />
+      </div>
+    </React.Fragment>
   </div>
 </StandardCard>
 `;
@@ -989,32 +993,34 @@ exports[`Media Preview Component  should render component with image 1`] = `
     <div
       className="column"
     />
-    <div
-      className="column is-narrow download"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={false}
-        label="Download file"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={true}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="column is-narrow"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={false}
-        label="Close"
-        labelPosition="after"
-        onClick={[MockFunction]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
+    <React.Fragment>
+      <div
+        className="column is-narrow download"
+      >
+        <RaisedButton
+          disabled={false}
+          fullWidth={false}
+          label="Open file in a new window"
+          labelPosition="after"
+          onClick={[Function]}
+          primary={true}
+          secondary={false}
+        />
+      </div>
+      <div
+        className="column is-narrow"
+      >
+        <RaisedButton
+          disabled={false}
+          fullWidth={false}
+          label="Close"
+          labelPosition="after"
+          onClick={[MockFunction]}
+          primary={false}
+          secondary={false}
+        />
+      </div>
+    </React.Fragment>
   </div>
   <img
     alt="https://test.com/test.jpg"
@@ -1024,32 +1030,34 @@ exports[`Media Preview Component  should render component with image 1`] = `
   <div
     className="columns is-gapless buttons is-hidden-tablet is-clearfix"
   >
-    <div
-      className="column is-12 download"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={true}
-        label="Download file"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={true}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="column is-12"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={true}
-        label="Close"
-        labelPosition="after"
-        onClick={[MockFunction]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
+    <React.Fragment>
+      <div
+        className="column is-12 download"
+      >
+        <RaisedButton
+          disabled={false}
+          fullWidth={true}
+          label="Open file in a new window"
+          labelPosition="after"
+          onClick={[Function]}
+          primary={true}
+          secondary={false}
+        />
+      </div>
+      <div
+        className="column is-12"
+      >
+        <RaisedButton
+          disabled={false}
+          fullWidth={true}
+          label="Close"
+          labelPosition="after"
+          onClick={[MockFunction]}
+          primary={false}
+          secondary={false}
+        />
+      </div>
+    </React.Fragment>
   </div>
 </StandardCard>
 `;
@@ -1065,32 +1073,34 @@ exports[`Media Preview Component  should render component with video 1`] = `
     <div
       className="column"
     />
-    <div
-      className="column is-narrow download"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={false}
-        label="Download file"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={true}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="column is-narrow"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={false}
-        label="Close"
-        labelPosition="after"
-        onClick={[MockFunction]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
+    <React.Fragment>
+      <div
+        className="column is-narrow download"
+      >
+        <RaisedButton
+          disabled={false}
+          fullWidth={false}
+          label="Open file in a new window"
+          labelPosition="after"
+          onClick={[Function]}
+          primary={true}
+          secondary={false}
+        />
+      </div>
+      <div
+        className="column is-narrow"
+      >
+        <RaisedButton
+          disabled={false}
+          fullWidth={false}
+          label="Close"
+          labelPosition="after"
+          onClick={[MockFunction]}
+          primary={false}
+          secondary={false}
+        />
+      </div>
+    </React.Fragment>
   </div>
   <video
     controls={true}
@@ -1103,32 +1113,34 @@ exports[`Media Preview Component  should render component with video 1`] = `
   <div
     className="columns is-gapless buttons is-hidden-tablet is-clearfix"
   >
-    <div
-      className="column is-12 download"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={true}
-        label="Download file"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={true}
-        secondary={false}
-      />
-    </div>
-    <div
-      className="column is-12"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={true}
-        label="Close"
-        labelPosition="after"
-        onClick={[MockFunction]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
+    <React.Fragment>
+      <div
+        className="column is-12 download"
+      >
+        <RaisedButton
+          disabled={false}
+          fullWidth={true}
+          label="Open file in a new window"
+          labelPosition="after"
+          onClick={[Function]}
+          primary={true}
+          secondary={false}
+        />
+      </div>
+      <div
+        className="column is-12"
+      >
+        <RaisedButton
+          disabled={false}
+          fullWidth={true}
+          label="Close"
+          labelPosition="after"
+          onClick={[MockFunction]}
+          primary={false}
+          secondary={false}
+        />
+      </div>
+    </React.Fragment>
   </div>
 </StandardCard>
 `;
