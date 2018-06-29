@@ -1,1 +1,1 @@
-export {default as ShareThis} from './components/ShareThis';
+export {default as ShareThisErrorBoundary} from './components/ShareThisErrorBoundary';
