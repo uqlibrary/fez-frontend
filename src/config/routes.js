@@ -8,7 +8,7 @@ const fullPath = process.env.BRANCH === 'production' ? 'https://espace.library.u
 export const pidRegExp = 'UQ:[a-z0-9]+';
 
 const getSearchUrl = ({searchQuery, activeFacets = {}}) => (
-    `${fullPath}/records/search?${param({
+    `/records/search?${param({
         ...defaultQueryParams,
         searchQueryParams: {
             all: !!searchQuery && searchQuery || ''
