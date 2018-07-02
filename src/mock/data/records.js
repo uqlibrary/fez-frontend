@@ -4141,7 +4141,12 @@ export const record = {
     "fez_record_search_key_corresponding_name": [],
     "fez_record_search_key_corresponding_organisation": [],
     "fez_record_search_key_datastream_policy": null,
-    "fez_record_search_key_date_available": null,
+    "fez_record_search_key_date_available": {
+        "rek_date_available_id": 958216,
+        "rek_date_available_pid": "UQ:162060",
+        "rek_date_available_xsdmf_id": 12163,
+        "rek_date_available": "2008-01-01T00:00:00Z"
+    },
     "fez_record_search_key_doi": {
         "rek_doi_id": 1482945,
         "rek_doi_pid": "UQ:396321",
@@ -4664,7 +4669,7 @@ export const record = {
     "fez_record_search_key_native_script_title": null,
     "fez_record_search_key_notes": null,
     "fez_record_search_key_oa_embargo_days": {
-        rek_oa_embargo_days: 10000
+        "rek_oa_embargo_days": 10000
     },
     "fez_record_search_key_pubmed_central_id": {
         "rek_pubmed_central_id": "PMC12345678"
@@ -4816,7 +4821,7 @@ export const record = {
         "rek_volume_number_xsdmf_id": 6379,
         "rek_volume_number": "25"
     },
-    "rek_display_type_lookup": "Data Collection",
+    "rek_display_type_lookup": "Design",
     "fez_record_search_key_link": [
         {
             "rek_link_id": 3240198,

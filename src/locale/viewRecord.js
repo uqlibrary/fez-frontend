@@ -223,9 +223,8 @@ export default {
             },
             'Department Technical Report': {},
             'Design': {
-                rek_date: 'Year available',
                 rek_description: 'Project description',
-                fez_record_search_key_date_available: 'Date of completion',
+                fez_record_search_key_date_available: 'Year available',
                 fez_record_search_key_author: 'Designer(s)',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
                 fez_record_search_key_contributor: 'Consultant(s)'

@@ -12274,8 +12274,8 @@ exports[`Additional Information Component  should render component with design d
             suffix=""
           />
         }
-        heading="Date of completion"
-        key="additional-info-Date of completion"
+        heading="Year available"
+        key="additional-info-Year available"
       />
       <ViewRecordTableRow
         data="Riga, Latvia"
@@ -12292,13 +12292,13 @@ exports[`Additional Information Component  should render component with design d
           <DateCitationView
             className="citationDate"
             date="2017-10-31T13:53:23Z"
-            format="YYYY"
+            format="YYYY-MM-DD"
             prefix=""
             suffix=""
           />
         }
-        heading="Year available"
-        key="additional-info-Year available"
+        heading="Publication date"
+        key="additional-info-Publication date"
       />
       <ViewRecordTableRow
         data={
