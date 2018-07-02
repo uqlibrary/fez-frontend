@@ -69,8 +69,7 @@ export const viewRecordsConfig = {
         'Book': 'YYYY',
         'Book Chapter': 'YYYY',
         'Conference Paper': 'YYYY',
-        'Data Collection': 'YYYY',
-        'Design': 'YYYY'
+        'Data Collection': 'YYYY'
     },
     files: {
         blacklist: {
