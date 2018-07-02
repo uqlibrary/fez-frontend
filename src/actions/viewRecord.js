@@ -30,20 +30,6 @@ export function loadRecordToView(pid) {
 }
 
 /**
- * Set record to be viewed
- * @param {object}
- * @returns {action}
- */
-export function setRecordToView(record) {
-    return dispatch => {
-        dispatch({
-            type: actions.VIEW_RECORD_SET,
-            payload: record
-        });
-    };
-}
-
-/**
  * Clear record to be viewed
  * @returns {action}
  */

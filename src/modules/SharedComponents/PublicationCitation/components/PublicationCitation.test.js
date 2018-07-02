@@ -24,6 +24,16 @@ describe('PublicationCitation ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render component with default list hiding the difference count', () => {
+        const wrapper = setup({hideCountDiff: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with default list hiding the total count', () => {
+        const wrapper = setup({hideCountTotal: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render component with default actions', () => {
         const wrapper = setup({showDefaultActions: true});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -58,12 +68,6 @@ describe('PublicationCitation ', () => {
         const publicationWithSources = {...mockRecordToFix, "sources": [{source: "espace", id: "UQ:224457"}]};
         const wrapper = setup({publication: publicationWithSources, showSources: true, hideTitle: true});
         expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should handle view record link', () => {
-        const wrapper = setup({});
-        wrapper.instance().viewRecord();
-        expect(wrapper.instance().props.actions.setRecordToView).toHaveBeenCalled();
     });
 
     it('should handle default actions', () => {

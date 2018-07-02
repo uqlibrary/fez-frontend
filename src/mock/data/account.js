@@ -60,8 +60,8 @@ export const accounts = {
     },
     // rhd student
     s2222222: {
-        "id": "s1111111",
-        "class": ["hass"],
+        "id": "s2222222",
+        "class": ["IS_UQ_STUDENT_PLACEMENT", "IS_CURRENT"],
         "type": 22,
         "homeLib": "St Lucia",
         "firstName": "J",

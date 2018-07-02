@@ -1,77 +1,98 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import TextField from 'material-ui/TextField';
-import IconButton from 'material-ui/IconButton';
-import RaisedButton from 'material-ui/RaisedButton';
-import SearchIcon from 'material-ui/svg-icons/action/search';
 import param from 'can-param';
 
-import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 import Snackbar from 'material-ui/Snackbar';
-import {MIN_PUBLIC_SEARCH_TEXT_LENGTH, MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
 import {routes} from 'config';
+import {defaultQueryParams} from 'config/general';
 import {locale} from 'locale';
 
+import SimpleSearchComponent from './SimpleSearchComponent';
+import AdvancedSearchComponent from './AdvancedSearchComponent';
 
 export default class SearchComponent extends PureComponent {
     static propTypes = {
         searchQueryParams: PropTypes.object,
-        inHeader: PropTypes.bool,
-        showAdvancedSearchButton: PropTypes.bool,
+
         showSearchButton: PropTypes.bool,
-        showPrefixIcon: PropTypes.bool,
         showMobileSearchButton: PropTypes.bool,
+        showAdvancedSearchButton: PropTypes.bool,
+        showPrefixIcon: PropTypes.bool,
+
+        isInHeader: PropTypes.bool,
+        isAdvancedSearch: PropTypes.bool,
+        isAdvancedSearchMinimised: PropTypes.bool,
+        isOpenAccessInAdvancedMode: PropTypes.bool,
+
         className: PropTypes.string,
         actions: PropTypes.object,
-        history: PropTypes.object.isRequired
+        history: PropTypes.object.isRequired,
+    };
+
+    static defaultProps = {
+        searchQueryParams: {},
+
+        showSearchButton: false,
+        showMobileSearchButton: false,
+        showAdvancedSearchButton: false,
+        showPrefixIcon: false,
+
+        isInHeader: false,
+        isAdvancedSearch: false,
+        isAdvancedSearchMinimised: false,
+        isOpenAccessInAdvancedMode: false
     };
 
     constructor(props) {
         super(props);
         this.state = {
-            searchText: props.searchQueryParams && props.searchQueryParams.all || '',
-            showAdvancedSearch: false,
-            showMobile: false,
             snackbarOpen: false,
-            snackbarMessage: ''
+            snackbarMessage: '',
+            isAdvancedSearch: props.isAdvancedSearch,
+            simpleSearch: {
+                searchText: props.searchQueryParams && props.searchQueryParams.all || ''
+            },
+            advancedSearch: {
+                fieldRows: this.getFieldRowsFromSearchQuery(props.searchQueryParams),
+                isMinimised: props.isAdvancedSearchMinimised,
+                isOpenAccess: props.isOpenAccessInAdvancedMode || false,
+            }
         };
     }
 
     componentWillReceiveProps(nextProps) {
-        if (!!nextProps.searchQueryParams && !!nextProps.searchQueryParams.all
-            && nextProps.searchQueryParams.all !== this.state.searchText) {
+        if (!!nextProps.searchQueryParams) {
             this.setState({
-                searchText: nextProps.searchQueryParams.all || ''
+                isAdvancedSearch: nextProps.isAdvancedSearch,
+                simpleSearch: {
+                    searchText: nextProps.searchQueryParams.all || ''
+                },
+                advancedSearch: {
+                    fieldRows: this.getFieldRowsFromSearchQuery(nextProps.searchQueryParams),
+                    isMinimised: nextProps.isAdvancedSearchMinimised || false,
+                    isOpenAccess: nextProps.isOpenAccessInAdvancedMode || false
+                }
             });
         }
     }
 
-    handleSearch = (event) => {
-        // Stop submission unless enter was pressed
-        if(event && event.key && (event.key !== 'Enter')) return;
+    getFieldRowsFromSearchQuery = (searchQueryParams) => {
+        if (!searchQueryParams || Object.keys(searchQueryParams).length === 0) {
+            return [{
+                searchField: '0',
+                value: ''
+            }];
+        } else {
+            return Object.keys(searchQueryParams).map(key => ({
+                searchField: key,
+                value: searchQueryParams[key]
+            }));
+        }
+    };
 
-        // If all is OK, submit the search
-        if (this.props.actions
-            && this.props.actions.searchEspacePublications
-            && this.state.searchText.trim().length >= MIN_PUBLIC_SEARCH_TEXT_LENGTH
-            && this.state.searchText.trim().length <= MAX_PUBLIC_SEARCH_TEXT_LENGTH
-        ) {
-            // start search
-            const defaultQueryParams = {
-                page: 1,
-                pageSize: 20,
-                sortBy: locale.components.sorting.sortBy[0].value,
-                sortDirection: locale.components.sorting.sortDirection[0],
-                activeFacets: {filters: {}, ranges: {}}
-            };
-
-            const searchQuery = {searchQueryParams: {all: this.state.searchText}, ...defaultQueryParams};
+    handleSearch = (searchQuery) => {
+        if (searchQuery && this.props.actions && this.props.actions.searchEspacePublications) {
             this.props.actions.searchEspacePublications(searchQuery);
-
-            // Hide the mobile search bar after performing a search
-            this.setState({showMobile: false});
-            // Blur the input so the mobile keyboard is deactivated
-            event && event.target && event.target.blur();
 
             // navigate to search results page
             this.props.history.push({
@@ -80,169 +101,182 @@ export default class SearchComponent extends PureComponent {
                 state: {...searchQuery}
             });
         }
-
-        // Snackbar to give feedback when input is too short or long in the header search when pressing enter
-        if(event && event.key && event.key === 'Enter' && this.props.inHeader) {
-            if (this.state.searchText.trim().length < MIN_PUBLIC_SEARCH_TEXT_LENGTH) {
-                this.setState({
-                    snackbarMessage: locale.validationErrors.minLength.replace('[min]', MIN_PUBLIC_SEARCH_TEXT_LENGTH),
-                    snackbarOpen: true
-                });
-            } else if (this.state.searchText.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
-                this.setState({
-                    snackbarMessage: locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH),
-                    snackbarOpen: true
-                });
-            }
-        }
     };
 
-    toggleMobile = () => {
+    _toggleSearchMode = () => {
         this.setState({
-            showMobile: !this.state.showMobile,
-            snackbarOpen: false
-        }, () => {
-            if(this.state.showMobile) {
-                document.getElementById('searchField') && document.getElementById('searchField').focus();
+            isAdvancedSearch: !this.state.isAdvancedSearch,
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                isMinimised: false
             }
         });
     };
 
-    searchTextChanged = (event, value) => {
+    _displaySnackbar = (message) => {
         this.setState({
-            searchText: value,
+            snackbarMessage: message,
+            snackbarOpen: true
+        });
+    };
+
+    /*
+     *  ==============================
+     *  Simple search handlers
+     *  ==============================
+     */
+    _handleSimpleSearchTextChange = (value) => {
+        this.setState({
+            simpleSearch: {
+                searchText: value
+            },
             snackbarOpen: false
         });
     };
 
-    toggleAdvancedSearch = () => {
+    _handleSimpleSearch = () => {
+        const searchQuery = {searchQueryParams: {all: this.state.simpleSearch.searchText}, ...defaultQueryParams};
+
+        // Perform search
+        this.handleSearch(searchQuery);
+    };
+
+    /*
+     *  ==============================
+     *  Advanced search handlers
+     *  ==============================
+     */
+    _toggleMinimise = () => {
         this.setState({
-            showAdvancedSearch: !this.state.showAdvancedSearch
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                isMinimised: !this.state.advancedSearch.isMinimised
+            }
         });
     };
 
-    validationError = () => {
-        if(!this.props.inHeader && this.state.searchText.trim().length >= 1 && this.state.searchText.trim().length < MIN_PUBLIC_SEARCH_TEXT_LENGTH) {
-            return locale.validationErrors.minLength.replace('[min]', MIN_PUBLIC_SEARCH_TEXT_LENGTH);
-        } else if (!this.props.inHeader && this.state.searchText.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
-            return locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH);
-        } else {
-            return false;
-        }
+    _toggleOpenAccess = () => {
+        this.setState({
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                isOpenAccess: !this.state.advancedSearch.isOpenAccess
+            }
+        });
+    };
+
+    _addAdvancedSearchRow = () => {
+        this.setState({
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                fieldRows: [
+                    ...this.state.advancedSearch.fieldRows,
+                    {
+                        searchField: '0',
+                        value: '',
+                    }
+                ]
+            }
+        });
+    };
+
+    _removeAdvancedSearchRow = (index) => {
+        this.setState({
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                fieldRows: [
+                    ...this.state.advancedSearch.fieldRows.slice(0, index),
+                    ...this.state.advancedSearch.fieldRows.slice(index + 1)
+                ]
+            }
+        });
+    };
+
+    _resetAdvancedSearch = () => {
+        this.setState({
+            advancedSearch: {
+                isOpenAccess: false,
+                fieldRows: [{
+                    searchField: '0',
+                    value: ''
+                }]
+            }
+        });
+    };
+
+    _handleAdvancedSearchRowChange = (index, searchRow) => {
+        this.setState({
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                fieldRows: [
+                    ...this.state.advancedSearch.fieldRows.slice(0, index),
+                    searchRow,
+                    ...this.state.advancedSearch.fieldRows.slice(index + 1)
+                ]
+            }
+        });
+    };
+
+    _handleAdvancedSearch = () => {
+        const searchQueryParams = this.state.advancedSearch.fieldRows
+            .reduce((searchQueries, item) => (
+                {...searchQueries, [item.searchField]: item.value}
+            ), {});
+
+        const {activeFacets} = defaultQueryParams;
+
+        const searchQuery = {
+            ...defaultQueryParams,
+            searchQueryParams,
+            searchMode: locale.components.searchComponent.advancedSearch.mode,
+            activeFacets: {
+                ...activeFacets,
+                ...(this.state.advancedSearch.isOpenAccess ? {showOpenAccessOnly: true} : {})
+            }
+        };
+
+        this.handleSearch(searchQuery);
     };
 
     render() {
-        const txt = locale.components.searchComponent;
         return (
-            <div className={`search-component ${this.props.inHeader && 'header'} ${this.props.className}`}>
+            <React.Fragment>
                 {
-                    !this.state.showAdvancedSearch &&
-                    <div className="columns is-gapless">
-                        <div className={`column search-field is-gapless ${this.state.showMobile ? 'showMobile' : 'hideMobile'}`}>
-                            <div className="columns is-gapless search-field is-mobile">
-                                {
-                                    this.props.showPrefixIcon &&
-                                    <div className="column is-narrow search-icon-prefix is-hidden-mobile">
-                                        <SearchIcon/>
-                                    </div>
-                                }
-                                {
-                                    this.props.showMobileSearchButton &&
-                                    <div className="column is-narrow search-icon-prefix is-hidden-tablet">
-                                        <IconButton
-                                            onClick={this.toggleMobile}
-                                            className="mobileBackArrow" >
-                                            <ArrowBack/>
-                                        </IconButton>
-                                    </div>
-                                }
-                                <div className="column">
-                                    <TextField
-                                        type="search"
-                                        id="searchField"
-                                        fullWidth
-                                        floatingLabelText={!this.props.inHeader && txt.searchBoxPlaceholder}
-                                        hintText={this.props.inHeader && txt.searchBoxPlaceholder}
-                                        aria-label={txt.ariaInputLabel}
-                                        onChange={this.searchTextChanged}
-                                        onKeyPress={this.handleSearch}
-                                        value={this.state.searchText}
-                                        underlineStyle={this.props.inHeader ? {display: 'none'} : {}}
-                                        errorText={this.validationError()}
-                                    />
-                                </div>
-                                <div className="is-hidden-tablet mobileSpacer" />
-                            </div>
-                        </div>
-                        {
-                            this.props.showMobileSearchButton &&
-                            <div className="column is-narrow is-hidden-tablet">
-                                <IconButton
-                                    onClick={this.toggleMobile}
-                                    aria-label={txt.mobileSearchButtonAriaLabel}
-                                    className="search-button"
-                                    hoveredStyle={{backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'}}
-                                >
-                                    <SearchIcon/>
-                                </IconButton>
-                            </div>
-                        }
-                        {
-                            this.props.showSearchButton &&
-                            <div className="column is-narrow icon-search-button-wrapper">
-                                <IconButton
-                                    tooltipPosition="bottom-left"
-                                    onClick={this.handleSearch}
-                                    disabled={!!this.validationError}
-                                    className="search-button"
-                                    tooltip={txt.searchButtonHint}
-                                    aria-label={txt.searchButtonAriaLabel}>
-                                    <SearchIcon/>
-                                </IconButton>
-                            </div>
-                        }
-                        <div className="column is-narrow search-button-wrapper">
-                            <RaisedButton
-                                label={txt.searchButtonText}
-                                aria-label={txt.searchButtonAriaLabel}
-                                secondary
-                                disabled={this.state.searchText.trim().length === 0 || !!this.validationError()}
-                                onClick={this.handleSearch}
-                                fullWidth />
-                        </div>
-                        {
-                            this.props.showAdvancedSearchButton &&
-                            <div className="column is-narrow">
-                                <RaisedButton
-                                    label={txt.advancedSearchButtonText}
-                                    aria-label={txt.advancedSearchButtonAriaLabel}
-                                    onClick={this.toggleAdvancedSearch}
-                                    className="advancedButton"
-                                    fullWidth
-                                />
-                            </div>
-                        }
-                    </div>
+                    (!this.state.isAdvancedSearch || this.props.isInHeader) &&
+                    <SimpleSearchComponent
+                        {...this.state.simpleSearch}
+                        className={this.props.className}
+                        isInHeader={this.props.isInHeader}
+                        showSearchButton={this.props.showSearchButton}
+                        showMobileSearchButton={this.props.showMobileSearchButton}
+                        showAdvancedSearchButton={this.props.showAdvancedSearchButton}
+                        showPrefixIcon={this.props.showPrefixIcon}
+                        onToggleSearchMode={this._toggleSearchMode}
+                        onSearchTextChange={this._handleSimpleSearchTextChange}
+                        onSearch={this._handleSimpleSearch}
+                        onInvalidSearch={this._displaySnackbar}
+                    />
                 }
                 {
-                    this.state.showAdvancedSearch && this.props.showAdvancedSearchButton &&
-                    <div className="columns">
-                        <div className="column">
-                        Advanced search component goes here
-                        </div>
-                        <div className="column is-narrow">
-                            <RaisedButton
-                                label={txt.simpleSearchToggle}
-                                onClick={this.toggleAdvancedSearch}/>
-                        </div>
-                    </div>
+                    (this.state.isAdvancedSearch && !this.props.isInHeader) &&
+                    <AdvancedSearchComponent
+                        {...this.state.advancedSearch}
+                        className={this.props.className}
+                        onToggleSearchMode={this._toggleSearchMode}
+                        onToggleMinimise={this._toggleMinimise}
+                        onToggleOpenAccess={this._toggleOpenAccess}
+                        onAdvancedSearchRowAdd={this._addAdvancedSearchRow}
+                        onAdvancedSearchRowRemove={this._removeAdvancedSearchRow}
+                        onAdvancedSearchReset={this._resetAdvancedSearch}
+                        onAdvancedSearchRowChange={this._handleAdvancedSearchRowChange}
+                        onSearch={this._handleAdvancedSearch}
+                    />
                 }
                 <Snackbar
                     open={this.state.snackbarOpen}
                     autoHideDuration={5000}
                     message={this.state.snackbarMessage}
                 />
-            </div>
+            </React.Fragment>
         );
     }
 }

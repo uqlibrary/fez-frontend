@@ -1,6 +1,22 @@
 @import '../../../../sass/variables';
 
-.search-component {
+.searchComponent {
+  .searchQueryCaption {
+    margin-top: 24px;
+    font-size: $text-body-small !important;
+    word-break: break-all;
+    hyphens: auto !important;
+    .combiner {
+      font-style: italic !important;
+      opacity: 0.66 !important;
+    }
+    .title.lowercase {
+      text-transform: lowercase !important;
+    }
+    .value {
+      font-weight: $text-weight-bold !important;
+    }
+  }
   // Override search box X
   input[type="search"]::-webkit-search-cancel-button {
       height: 24px;
@@ -10,12 +26,22 @@
         opacity: 0.6;
      }
   }
-  .search-button-wrapper {
+  .searchButtonWrapper {
+    margin-top: 28px !important;
+    @include mobile {
+      margin-top: 6px !important;
+    }
     @include tablet {
       margin-left: 12px !important;
     }
   }
-  .search-icon-prefix {
+  .advancedSearchButtonWrapper {
+    margin-top: 28px !important;
+    @include mobile {
+      margin-top: 6px !important;
+    }
+  }
+  .searchIconPrefix {
     svg {
       margin: 12px 12px -6px 12px;
       fill: lighten($secondary-color, 25%) !important;
@@ -28,7 +54,6 @@
       margin-left: 0 !important;
     }
   }
-
   &.header {
     // Override search box X size
     input[type="search"]::-webkit-search-cancel-button {
@@ -43,12 +68,12 @@
       }
     }
 
-    .icon-search-button-wrapper {
+    .iconSearchButtonWrapper {
       @include mobile {
         display: none;
       }
     }
-    .search-button-wrapper {
+    .searchButtonWrapper {
         display: none;
     }
     .search-field {
@@ -103,7 +128,7 @@
         width: 24px !important;
       }
     }
-    .search-button {
+    .searchButton {
       margin-left: 12px;
       color: $text-color-reverse;
       svg {
@@ -123,3 +148,113 @@
   }
 }
 
+.advancedSearch {
+  >div:nth-of-type(1){
+    margin-bottom: -12px !important;
+  }
+  .openAccessCheckbox {
+    margin-top: 12px;
+    padding-bottom: 2px;
+    @include mobile {
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+    @include tablet-only {
+      margin-top: -12px;
+      padding-bottom: 2px;
+    }
+    label {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis !important;
+    }
+  }
+  .advancedSearchButton, .advancedSearchOpenAccessCheckbox {
+    @include desktop {
+      width: 100% !important;
+      min-width: 200px !important;
+    }
+    @include tablet {
+      width: 100% !important;
+    }
+  }
+  .advancedSearchOpenAccessCheckbox {
+    @include tablet-only {
+      margin-top: 18px !important;
+    }
+    @include mobile {
+      margin-top: 12px !important;
+    }
+  }
+  .actionButtons {
+    .column {
+      @include tablet {
+        margin: 3px !important;
+      }
+      @include mobile {
+        margin: 3px !important;
+      }
+    }
+  }
+  .advancedSearchRow {
+    @include desktop {
+      margin-bottom: -12px !important;
+    }
+    @include tablet {
+      margin-bottom: -12px !important;
+    }
+    .column.combiner {
+      overflow: hidden;
+      @include mobile {
+        text-align: right !important;
+        margin: 0 0 0 12px !important;
+      }
+      span {
+        line-height: 50px !important;
+        font-style: italic;
+        color: lighten($secondary-color, 33%);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        @include desktop {
+          padding: 0 12px !important;
+        }
+        @include tablet {
+          padding: 0 12px !important;
+        }
+      }
+    }
+    .column.input {
+      &>div>div:nth-of-type(1){
+        width: 100% !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+      }
+      @include mobile {
+        margin-top: -12px !important;
+      }
+    }
+    // Override search box X
+    input[type="search"]::-webkit-search-cancel-button {
+      display: none;
+    }
+
+    .spacer {
+      width: 6px !important;
+      @include mobile {
+        width: 0.1px !important;
+      }
+    }
+    .deleteFieldButton {
+      margin-top: 6px !important;
+      opacity: 0.33;
+      @include mobile {
+        margin: -12px 0 0 -8px !important;
+
+      }
+      &:hover {
+        opacity: 0.66;
+      }
+    }
+  }
+}

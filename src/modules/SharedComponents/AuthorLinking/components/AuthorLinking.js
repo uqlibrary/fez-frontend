@@ -79,6 +79,7 @@ export default class AuthorLinking extends PureComponent {
         const authors = authorList.map((author, index) => {
             const linked = (
                 linkedAuthorIdList.length > 0 &&
+                !!linkedAuthorIdList[index] &&
                 linkedAuthorIdList[index][this.props.searchKey.value] !== null &&
                 linkedAuthorIdList[index][this.props.searchKey.value] !== 0
             );

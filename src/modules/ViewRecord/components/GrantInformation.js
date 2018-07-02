@@ -19,11 +19,11 @@ export default class GrantInformation extends Component {
             <TableRow className="row" key={order}>
                 <TableRowColumn className="header is-hidden-mobile">
                     <b>{txt.fez_record_search_key_grant_agency}</b>
-                    {grantId && grantId.rek_grant_id.trim().length > 0 && ` (${txt.fez_record_search_key_grant_id})`}
+                    {grantId && !!grantId.rek_grant_id && grantId.rek_grant_id.trim().length > 0 && ` (${txt.fez_record_search_key_grant_id})`}
                 </TableRowColumn>
                 <TableRowColumn className="data">
                     <b>{grantAgency.rek_grant_agency}</b>
-                    {grantId && grantId.rek_grant_id.trim().length > 0 && ` (${grantId.rek_grant_id})`}
+                    {grantId && !!grantId.rek_grant_id && grantId.rek_grant_id.trim().length > 0 && ` (${grantId.rek_grant_id})`}
                     <span className="grantText">{grantText && grantText.rek_grant_text}</span>
                 </TableRowColumn>
             </TableRow>
@@ -55,8 +55,9 @@ export default class GrantInformation extends Component {
             return null;
         }
 
-        const fundingText = this.props.publication.fez_record_search_key_grant_text.length === 1 &&
-                this.props.publication.fez_record_search_key_grant_text[0].rek_grant_text || null;
+        const fundingText = this.props.publication.fez_record_search_key_grant_text &&
+            this.props.publication.fez_record_search_key_grant_text.length === 1 &&
+            this.props.publication.fez_record_search_key_grant_text[0].rek_grant_text || null;
 
         return (
             <StandardCard title={locale.viewRecord.sections.grantInformation}>

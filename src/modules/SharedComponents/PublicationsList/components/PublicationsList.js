@@ -10,7 +10,10 @@ export default class PublicationsList extends PureComponent {
         customActions: PropTypes.array,
         showDefaultActions: PropTypes.bool,
         showSources: PropTypes.bool,
-        showMetrics: PropTypes.bool
+        showMetrics: PropTypes.bool,
+        showSourceCountIcon: PropTypes.bool,
+        hideCountDiff: PropTypes.bool,
+        hideCountTotal: PropTypes.bool
     };
 
     static defaultProps = {
@@ -18,25 +21,34 @@ export default class PublicationsList extends PureComponent {
         subsetCustomActions: [],
         showSources: false,
         showDefaultActions: false,
-        showMetrics: false
+        showSourceCountIcon: false,
+        showMetrics: false,
+        hideCountDiff: false
     };
 
     constructor(props) {
         super(props);
     }
 
+    renderPublicationCitation(index, publication) {
+        return (
+            <PublicationCitation
+                key={index + 1}
+                publication={publication}
+                customActions={!publication.rek_pid || this.props.publicationsListSubset.indexOf(publication.rek_pid) === -1 ? this.props.customActions : this.props.subsetCustomActions}
+                showSources={this.props.showSources}
+                showDefaultActions={this.props.showDefaultActions}
+                showMetrics={this.props.showMetrics}
+                showSourceCountIcon={this.props.showSourceCountIcon}
+                hideCountDiff={this.props.hideCountDiff}
+                hideCountTotal={this.props.hideCountTotal}
+            />
+        );
+    }
+
     render() {
         const publications = this.props.publicationsList.map((publication, index) => {
-            return (
-                <PublicationCitation
-                    key={index + 1}
-                    publication={publication}
-                    customActions={!publication.rek_pid || this.props.publicationsListSubset.indexOf(publication.rek_pid) === -1 ? this.props.customActions : this.props.subsetCustomActions}
-                    showSources={this.props.showSources}
-                    showDefaultActions={this.props.showDefaultActions}
-                    showMetrics={this.props.showMetrics}
-                />
-            );
+            return this.renderPublicationCitation(index, publication);
         });
 
         return (

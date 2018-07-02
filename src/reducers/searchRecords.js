@@ -12,7 +12,8 @@ const initialState = {
     publicationsList: [],
     publicationsListPagingData: {},
     publicationsListFacets: {},
-    loadingSearch: false,
+    searchLoading: false,
+    searchLoadingError: false,
     ...initialSearchSources
 };
 
@@ -138,9 +139,17 @@ const handlers = {
     [actions.SET_SEARCH_QUERY]: (state, action) => {
         return {
             ...state,
+            searchLoadingError: false,
             searchQuery: {
                 ...action.payload
             }
+        };
+    },
+
+    [actions.CLEAR_SEARCH_QUERY]: (state) => {
+        return {
+            ...state,
+            searchQuery: {}
         };
     },
 
@@ -150,16 +159,17 @@ const handlers = {
             ...state,
             publicationsList: [],
             publicationsListPagingData: {},
-            publicationsListFacets: {},
             rawSearchQuery: rawSearchQuery,
-            loadingSearch: true
+            searchLoading: true,
+            searchLoadingError: false
         };
     },
 
     [actions.SEARCH_LOADED]: (state, action) => {
         return {
             ...state,
-            loadingSearch: false,
+            searchLoading: false,
+            searchLoadingError: false,
             publicationsList: action.payload.data && action.payload.data.length > 0 && action.payload.data[0].currentSource
                 ? deduplicateResults(action.payload.data)
                 : action.payload.data,
@@ -179,7 +189,8 @@ const handlers = {
     [actions.SEARCH_FAILED]: (state) => {
         return {
             ...state,
-            ...initialState
+            ...initialState,
+            searchLoadingError: true
         };
     },
 
@@ -218,7 +229,7 @@ const handlers = {
 
         return {
             ...state,
-            loadingSearch: true,
+            searchLoading: true,
             publicationsList:
                 deduplicateResults([
                     ...state.publicationsList,

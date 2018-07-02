@@ -13,7 +13,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
       <div
         className="is-hidden-mobile"
       >
-        <DashboardProfile
+        <DashboardAuthorProfile
           authorDetails={
             Object {
               "espace": Object {
@@ -122,7 +122,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
       <div
         className="is-hidden-mobile"
       >
-        <DashboardProfile
+        <DashboardAuthorProfile
           authorDetails={
             Object {
               "espace": Object {
@@ -220,7 +220,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
       <div
         className="is-hidden-mobile"
       >
-        <DashboardProfile
+        <DashboardAuthorProfile
           authorDetails={
             Object {
               "espace": Object {
@@ -610,7 +610,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
       <div
         className="is-hidden-mobile"
       >
-        <DashboardProfile
+        <DashboardAuthorProfile
           authorDetails={
             Object {
               "espace": Object {
@@ -708,7 +708,7 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
       <div
         className="is-hidden-mobile"
       >
-        <DashboardProfile
+        <DashboardAuthorProfile
           authorDetails={
             Object {
               "espace": Object {
@@ -768,7 +768,7 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
       <div
         className="is-hidden-mobile"
       >
-        <DashboardProfile
+        <DashboardAuthorProfile
           authorDetails={
             Object {
               "espace": Object {
@@ -839,7 +839,7 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
       <div
         className="is-hidden-mobile"
       >
-        <DashboardProfile
+        <DashboardAuthorProfile
           authorDetails={
             Object {
               "espace": Object {
@@ -899,7 +899,7 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
       <div
         className="is-hidden-mobile"
       >
-        <DashboardProfile
+        <DashboardAuthorProfile
           authorDetails={
             Object {
               "espace": Object {
@@ -976,7 +976,7 @@ exports[`Dashboard test renders dashboard header only 1`] = `
       <div
         className="is-hidden-mobile"
       >
-        <DashboardProfile
+        <DashboardAuthorProfile
           authorDetails={
             Object {
               "espace": Object {
@@ -1047,7 +1047,7 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
       <div
         className="is-hidden-mobile"
       >
-        <DashboardProfile
+        <DashboardAuthorProfile
           authorDetails={
             Object {
               "espace": Object {
