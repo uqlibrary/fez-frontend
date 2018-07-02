@@ -1,9 +1,12 @@
+import locale from 'locale/components';
+
 const getValue = (value) => (
     typeof(value) !== 'undefined' && !!value ? value : null
 );
 
 // Authentication
 export const SESSION_COOKIE_NAME = 'UQLID';
+export const SESSION_USER_GROUP_COOKIE_NAME = 'UQLID_USER_GROUP';
 export const TOKEN_NAME = 'X-Uql-Token';
 export const BASE_DN = 'ou=Staff,ou=People,o=The University of Queensland,c=AU';
 
@@ -11,8 +14,8 @@ export const BASE_DN = 'ou=Staff,ou=People,o=The University of Queensland,c=AU';
 export const API_URL = getValue(process.env.API_URL) || 'https://api.library.uq.edu.au/staging/';
 export const APP_URL = getValue(process.env.APP_URL) || 'https://fez-staging.library.uq.edu.au/';
 
-export const AUTH_URL_LOGIN = 'https://auth.library.uq.edu.au/login';
-export const AUTH_URL_LOGOUT = 'https://auth.library.uq.edu.au/logout';
+export const AUTH_URL_LOGIN = getValue(process.env.AUTH_LOGIN_URL) || 'https://fez-staging.library.uq.edu.au/login.php';
+export const AUTH_URL_LOGOUT = getValue(process.env.AUTH_LOGOUT_URL) || 'https://auth.library.uq.edu.au/logout';
 
 export const ORCID_BASE_URL = getValue(process.env.ORCID_URL) || 'http://orcid.org';
 export const ORCID_CLIENT_ID = getValue(process.env.ORCID_CLIENT_ID) || '12345XYZ';
@@ -43,7 +46,6 @@ export const PUBLICATION_TYPE_VIDEO_DOCUMENT = 310;
 export const PUBLICATION_TYPE_WORKING_PAPER = 183;
 export const PUBLICATION_TYPE_REFERENCE_ENTRY = 272;
 
-export const MIN_PUBLIC_SEARCH_TEXT_LENGTH = 1;
 export const MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
 
 export const publicationTypes = (components) => [
@@ -313,4 +315,15 @@ export const SBS_THESIS_DEFAULT_VALUES = {
     rek_display_type: PUBLICATION_TYPE_THESIS,
     rek_genre_type: 'Professional Doctorate',
     fileAccessId: 4
+};
+
+export const defaultQueryParams = {
+    page: 1,
+    pageSize: 20,
+    sortBy: locale.components.sorting.sortBy[0].value,
+    sortDirection: locale.components.sorting.sortDirection[0],
+    activeFacets: {
+        filters: {},
+        ranges: {}
+    }
 };

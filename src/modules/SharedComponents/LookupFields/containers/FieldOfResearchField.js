@@ -3,6 +3,10 @@ import {FieldOfResearchVocabId} from 'config/general';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
 
+export const escapeRegExp = (text) => {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+};
+
 const mapStateToProps = (state, props) => {
     return {
         category: FieldOfResearchVocabId,
@@ -29,7 +33,7 @@ const filterFoRmapStateToProps = (state, props) => {
         maxResults: 20,
         filter: (searchText, key) => {
             if (searchText === '') return false;
-            const testKey = new RegExp(`(?=^[\\d]{4}\\s.+).*${searchText}.*`, 'gi');
+            const testKey = new RegExp(`(?=^[\\d]{4}\\s.+).*${escapeRegExp(searchText)}.*`, 'gi');
             return testKey.test(key);
         }
     };

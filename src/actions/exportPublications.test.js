@@ -25,8 +25,9 @@ describe('Export publications actions', () => {
     });
 
     describe('exportPublications()', () => {
-        const exportFormat = Object.keys(exportFormatToExtension)[0];
+        const exportPublicationsFormat = Object.keys(exportFormatToExtension)[0];
         const requestParams = repositories.routes.CURRENT_USER_RECORDS_API({
+            exportPublicationsFormat: exportPublicationsFormat,
             apiUrl: 'records/search',
             userName: 'uqresearcher',
             page: 1,
@@ -38,7 +39,7 @@ describe('Export publications actions', () => {
 
         it('dispatches expected actions on successful search export', async () => {
             // mock promptForDownload
-            promptForDownload.mockImplementation(() => exportFormat);
+            promptForDownload.mockImplementation(() => exportPublicationsFormat);
 
             mockApi
                 .onGet(requestParams.apiUrl)
@@ -49,7 +50,7 @@ describe('Export publications actions', () => {
                 actions.EXPORT_PUBLICATIONS_LOADED
             ];
 
-            await mockActionsStore.dispatch(exportPublicationsActions.exportPublications({exportFormat, requestParams}));
+            await mockActionsStore.dispatch(exportPublicationsActions.exportPublications(requestParams));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
@@ -69,7 +70,7 @@ describe('Export publications actions', () => {
                 actions.EXPORT_PUBLICATIONS_FAILED
             ];
 
-            await mockActionsStore.dispatch(exportPublicationsActions.exportPublications({exportFormat, requestParams}));
+            await mockActionsStore.dispatch(exportPublicationsActions.exportPublications(requestParams));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
@@ -84,7 +85,7 @@ describe('Export publications actions', () => {
                 actions.EXPORT_PUBLICATIONS_FAILED
             ];
 
-            await mockActionsStore.dispatch(exportPublicationsActions.exportPublications({exportFormat, requestParams}));
+            await mockActionsStore.dispatch(exportPublicationsActions.exportPublications(requestParams));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
@@ -98,7 +99,7 @@ describe('Export publications actions', () => {
                 actions.EXPORT_PUBLICATIONS_FAILED
             ];
 
-            await mockActionsStore.dispatch(exportPublicationsActions.exportPublications({exportFormat, requestParams}));
+            await mockActionsStore.dispatch(exportPublicationsActions.exportPublications(requestParams));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });

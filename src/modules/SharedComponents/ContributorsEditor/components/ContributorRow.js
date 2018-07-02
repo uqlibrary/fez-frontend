@@ -85,7 +85,7 @@ export default class ContributorRow extends PureComponent {
             ordinalData[this.props.index] : (this.props.index + 1)) + ' ' + this.props.locale.suffix;
         const ariaLabel = this.props.locale.selectHint && this.props.locale.selectHint.indexOf('[name]') > -1 ? this.props.locale.selectHint.replace('[name]', this.props.contributor.nameAsPublished) : null;
         return (
-            <div id={this.props.index} className={`contributorsRow datalist datalist-row ${this.props.contributor.selected ? 'selected' : ''}` }>
+            <div key={this.props.index} id={this.props.index} className={`contributorsRow datalist datalist-row ${this.props.contributor.selected ? 'selected' : ''}` }>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._deleteRecord}

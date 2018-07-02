@@ -1,6 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CitationCounts renders  component with a mock record metrics 1`] = `
+exports[`CitationCounts should not render View full statistics link on public pages for anonymous user 1`] = `
+<div
+  className="citationCounts columns is-gapless is-marginless is-multiline"
+>
+  <div
+    className="column is-narrow-tablet is-12-mobile citationIcons"
+  >
+    <CitationCountView
+      count={1}
+      link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+      source="wos"
+      title="Full citation in Web of science will open in a new window"
+    />
+    <CitationCountView
+      count={1}
+      link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+      source="scopus"
+      title="Full citation in Scopus will open in a new window"
+    />
+    <CitationCountView
+      count={1}
+      link="http://www.altmetric.com/details.php?citation_id=12345"
+      source="altmetric"
+      title="Full citation in Altmetric will open in a new window"
+    />
+    <CitationCountView
+      count={1}
+      link="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
+      source="google"
+      title="Full citation in Google scholar will open in a new window"
+    />
+    <OpenAccessIcon
+      embargoDate={null}
+      isOpenAccess={false}
+      showEmbargoText={false}
+    />
+  </div>
+  <div
+    className="column is-narrow"
+  />
+  <div
+    className="column is-hidden-mobile"
+  />
+</div>
+`;
+
+exports[`CitationCounts should render component with a mock record metrics 1`] = `
 <div
   className="citationCounts columns is-gapless is-marginless is-multiline"
 >
@@ -34,7 +80,7 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
 </div>
 `;
 
-exports[`CitationCounts renders  component with all metrics 1`] = `
+exports[`CitationCounts should render component with all metrics 1`] = `
 <div
   className="citationCounts columns is-gapless is-marginless is-multiline"
 >
@@ -91,7 +137,7 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
 </div>
 `;
 
-exports[`CitationCounts renders  component with no metrics 1`] = `
+exports[`CitationCounts should render component with no metrics 1`] = `
 <div
   className="citationCounts columns is-gapless is-marginless is-multiline"
 >

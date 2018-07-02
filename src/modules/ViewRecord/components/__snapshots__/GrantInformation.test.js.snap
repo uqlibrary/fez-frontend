@@ -1,5 +1,244 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Grant Information Component  should not break if grant text is not in the record 1`] = `
+<StandardCard
+  className=""
+  title="Grant information"
+>
+  <Table
+    allRowsSelected={false}
+    className="grantInformation vertical"
+    fixedFooter={true}
+    fixedHeader={true}
+    height="inherit"
+    multiSelectable={false}
+    selectable={false}
+  >
+    <TableBody
+      allRowsSelected={false}
+      deselectOnClickaway={true}
+      displayRowCheckbox={false}
+      multiSelectable={false}
+      preScanRows={true}
+      selectable={true}
+      style={Object {}}
+    >
+      <TableRow
+        className="row"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        key="1"
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="header is-hidden-mobile"
+          hoverable={false}
+        >
+          <b>
+            Grant agency
+          </b>
+        </TableRowColumn>
+        <TableRowColumn
+          className="data"
+          hoverable={false}
+        >
+          <b>
+            National Health and Medical Research Council
+          </b>
+          <span
+            className="grantText"
+          />
+        </TableRowColumn>
+      </TableRow>
+      <TableRow
+        className="row"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        key="2"
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="header is-hidden-mobile"
+          hoverable={false}
+        >
+          <b>
+            Grant agency
+          </b>
+           (Grant ID)
+        </TableRowColumn>
+        <TableRowColumn
+          className="data"
+          hoverable={false}
+        >
+          <b>
+            Cancer Council Queensland
+          </b>
+           (1042819)
+          <span
+            className="grantText"
+          />
+        </TableRowColumn>
+      </TableRow>
+      <TableRow
+        className="row"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        key="3"
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="header is-hidden-mobile"
+          hoverable={false}
+        >
+          <b>
+            Grant agency
+          </b>
+           (Grant ID)
+        </TableRowColumn>
+        <TableRowColumn
+          className="data"
+          hoverable={false}
+        >
+          <b>
+            National Breast Cancer Foundation
+          </b>
+           (CG-12-07 | CG-10-04)
+          <span
+            className="grantText"
+          />
+        </TableRowColumn>
+      </TableRow>
+    </TableBody>
+  </Table>
+</StandardCard>
+`;
+
+exports[`Grant Information Component  should not break if rek_grant_id is not in the search key 1`] = `
+<StandardCard
+  className=""
+  title="Grant information"
+>
+  <p
+    className="singleGrantText"
+  >
+    We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
+  </p>
+  <Table
+    allRowsSelected={false}
+    className="grantInformation vertical"
+    fixedFooter={true}
+    fixedHeader={true}
+    height="inherit"
+    multiSelectable={false}
+    selectable={false}
+  >
+    <TableBody
+      allRowsSelected={false}
+      deselectOnClickaway={true}
+      displayRowCheckbox={false}
+      multiSelectable={false}
+      preScanRows={true}
+      selectable={true}
+      style={Object {}}
+    >
+      <TableRow
+        className="row"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        key="1"
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="header is-hidden-mobile"
+          hoverable={false}
+        >
+          <b>
+            Grant agency
+          </b>
+        </TableRowColumn>
+        <TableRowColumn
+          className="data"
+          hoverable={false}
+        >
+          <b>
+            National Health and Medical Research Council
+          </b>
+          <span
+            className="grantText"
+          />
+        </TableRowColumn>
+      </TableRow>
+      <TableRow
+        className="row"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        key="2"
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="header is-hidden-mobile"
+          hoverable={false}
+        >
+          <b>
+            Grant agency
+          </b>
+        </TableRowColumn>
+        <TableRowColumn
+          className="data"
+          hoverable={false}
+        >
+          <b>
+            Cancer Council Queensland
+          </b>
+          <span
+            className="grantText"
+          />
+        </TableRowColumn>
+      </TableRow>
+      <TableRow
+        className="row"
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        key="3"
+        selectable={true}
+        striped={false}
+      >
+        <TableRowColumn
+          className="header is-hidden-mobile"
+          hoverable={false}
+        >
+          <b>
+            Grant agency
+          </b>
+        </TableRowColumn>
+        <TableRowColumn
+          className="data"
+          hoverable={false}
+        >
+          <b>
+            National Breast Cancer Foundation
+          </b>
+          <span
+            className="grantText"
+          />
+        </TableRowColumn>
+      </TableRow>
+    </TableBody>
+  </Table>
+</StandardCard>
+`;
+
 exports[`Grant Information Component  should not render component with empty publication 1`] = `""`;
 
 exports[`Grant Information Component  should render component 1`] = `
