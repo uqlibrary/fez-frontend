@@ -12408,8 +12408,8 @@ exports[`Additional Information Component  should render component with design d
             suffix=""
           />
         }
-        heading="Publication date"
-        key="additional-info-Publication date"
+        heading="Date"
+        key="additional-info-Date"
       />
       <ViewRecordTableRow
         data={
