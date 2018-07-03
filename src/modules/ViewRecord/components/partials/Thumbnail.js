@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
+import BrokenImage from 'material-ui/svg-icons/image/broken-image';
 
 class Thumbnail extends PureComponent {
     static propTypes = {
@@ -11,23 +12,37 @@ class Thumbnail extends PureComponent {
         onClick: PropTypes.func
     };
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            thumbnailError: false
+        };
+    }
+
     showPreview = (mediaUrl, previewMediaUrl, mimeType) => (e) => {
         e.preventDefault();
         this.props.onClick(mediaUrl, previewMediaUrl, mimeType);
     };
 
-    imageError = (e) => {
-        e.target.src = '/public/images/nothumbnail.svg';
+    imageError = () => {
+        this.setState({
+            thumbnailError: true
+        });
     };
 
     render() {
+        console.log(this.state);
         const {mediaUrl, thumbnailMediaUrl, previewMediaUrl, thumbnailFileName, mimeType} = this.props;
         return (
             <a
                 onClick={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
                 onKeyPress={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
                 className={'fileThumbnail'}>
-                <img src={thumbnailMediaUrl} alt={thumbnailFileName} onError={this.imageError}/>
+                {
+                    !this.state.thumbnailError ?
+                        <img src={thumbnailMediaUrl} alt={thumbnailFileName} onError={this.imageError}/>
+                        : <BrokenImage />
+                }
             </a>
         );
     }

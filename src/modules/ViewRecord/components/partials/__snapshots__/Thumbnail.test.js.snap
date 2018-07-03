@@ -167,3 +167,13 @@ exports[`Thumbnail Component  should run onFileSelect function on key press 1`] 
   </MemoryRouter>
 </Provider>
 `;
+
+exports[`Thumbnail Component  should show a broken thumbnail icon when the thumbnail wont load. 1`] = `
+<a
+  className="fileThumbnail"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+>
+  <ImageBrokenImage />
+</a>
+`;
