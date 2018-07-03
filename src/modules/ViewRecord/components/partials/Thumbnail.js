@@ -31,7 +31,6 @@ class Thumbnail extends PureComponent {
     };
 
     render() {
-        console.log(this.state);
         const {mediaUrl, thumbnailMediaUrl, previewMediaUrl, thumbnailFileName, mimeType} = this.props;
         return (
             <a

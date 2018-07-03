@@ -81,6 +81,9 @@
 
   // Files
   .files {
+    td {
+      border: 1px solid red !important;
+    }
     margin-bottom: 3px !important;
     .fileIcon {
       svg {
@@ -104,6 +107,7 @@
       }
     }
     .fileInfo {
+      border: 1px solid green!important;
       overflow: hidden !important;
       text-overflow: ellipsis !important;
       overflow-wrap: break-word !important;
@@ -122,11 +126,13 @@
     }
     // columns widths
     .filetype {
+      overflow: visible !important;
+      white-space: nowrap !important;
       @include tablet {
         max-width: 150px !important;
-        width: 32px;
+        width: 50px !important;
         max-height: 100px !important;
-        height: 32px;
+        height: 50px !important;
       }
       @include mobile {
         width: 50px !important;
@@ -139,10 +145,10 @@
         cursor: pointer;
       }
       @include desktop {
-        width: 45% !important;
+        width: 50% !important;
       }
       @include tablet-only {
-        width: 48% !important;
+        width: 50% !important;
       }
       @include mobile {
         width: 100% !important;
@@ -154,7 +160,7 @@
         width: 25% !important;
       }
       @include tablet-only {
-        width: 52% !important;
+        width: 33% !important;
       }
     }
     .oa {
