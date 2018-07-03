@@ -4,7 +4,7 @@ import param from 'can-param';
 import {defaultQueryParams} from 'config/general';
 import {openAccessIds} from 'config/openAccess';
 
-const fullPath = process.env.BRANCH === 'production' ? 'https://espace.library.uq.edu.au' : 'https://fez-staging.library.uq.edu.au';
+const fullPath = process.env.FULL_PATH && process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 
 const getSearchUrl = ({searchQuery, activeFacets = {}}) => (
@@ -46,7 +46,7 @@ export const pathConfig = {
     // TODO: update how we get files after security is implemented in fez file api
     // (this is used in metadata to reflect legacy file urls for citation_pdf_url - Google Scholar)
     file: {
-        url: (pid, fileName) => (`https://espace.library.uq.edu.au/view/${pid}/${fileName}`)
+        url: (pid, fileName) => (`${fullPath}/view/${pid}/${fileName}`)
     },
     // TODO: update links when we have list pages
     list: {

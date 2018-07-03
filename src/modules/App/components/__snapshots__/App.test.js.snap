@@ -282,7 +282,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           "primaryText": "My research data",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing dataset",
         },
         Object {
@@ -813,7 +813,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "My research data",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing dataset",
         },
         Object {
@@ -1578,7 +1578,7 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "My research data",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing dataset",
         },
         Object {
@@ -2093,7 +2093,7 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "My research data",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing dataset",
         },
         Object {
@@ -3059,7 +3059,7 @@ exports[`Application component should render application with routing for the us
           "primaryText": "My research data",
         },
         Object {
-          "linkTo": "https://fez-staging.library.uq.edu.au/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
+          "linkTo": "http://localhost/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315",
           "primaryText": "Add a missing dataset",
         },
         Object {
