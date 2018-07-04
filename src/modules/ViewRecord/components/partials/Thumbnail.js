@@ -40,7 +40,7 @@ class Thumbnail extends PureComponent {
                 {
                     !this.state.thumbnailError ?
                         <div className="thumbnail" style={{backgroundImage: `url(${thumbnailMediaUrl})`}} >
-                            <img src={thumbnailMediaUrl} alt={thumbnailFileName} onError={this.imageError} style={{opacity: 0}}/>
+                            <img src={thumbnailMediaUrl} alt={thumbnailFileName} onError={this.imageError}/>
                         </div>
                         : <BrokenImage />
                 }

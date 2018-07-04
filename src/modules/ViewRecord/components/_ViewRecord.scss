@@ -244,6 +244,9 @@
         height: 32px !important;
         overflow: hidden;
         background-size: cover;
+        img {
+          opacity: 0;
+        }
         &:hover {
           overflow: visible;
           width: 150px !important;
@@ -253,7 +256,7 @@
           box-shadow: 0 0 12px rgba(255,255,255,0.75);
           background-image: none !important;
           img {
-            opacity: 1;
+            opacity: 1 !important;
             max-width: 150px;
             max-height: 100px;
           }

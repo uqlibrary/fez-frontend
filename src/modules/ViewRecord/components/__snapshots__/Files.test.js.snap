@@ -583,11 +583,6 @@ ShallowWrapper {
           alt="thumbnail_test.jpg"
           onError={[Function]}
           src="https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
-          style={
-            Object {
-              "opacity": 0,
-            }
-          }
         />
       </div>,
       "className": "fileThumbnail",
@@ -604,11 +599,6 @@ ShallowWrapper {
           alt="thumbnail_test.jpg"
           onError={[Function]}
           src="https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
-          style={
-            Object {
-              "opacity": 0,
-            }
-          }
         />,
         "className": "thumbnail",
         "style": Object {
@@ -624,9 +614,6 @@ ShallowWrapper {
           "alt": "thumbnail_test.jpg",
           "onError": [Function],
           "src": "https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg",
-          "style": Object {
-            "opacity": 0,
-          },
         },
         "ref": null,
         "rendered": null,
@@ -654,11 +641,6 @@ ShallowWrapper {
             alt="thumbnail_test.jpg"
             onError={[Function]}
             src="https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
-            style={
-              Object {
-                "opacity": 0,
-              }
-            }
           />
         </div>,
         "className": "fileThumbnail",
@@ -675,11 +657,6 @@ ShallowWrapper {
             alt="thumbnail_test.jpg"
             onError={[Function]}
             src="https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
-            style={
-              Object {
-                "opacity": 0,
-              }
-            }
           />,
           "className": "thumbnail",
           "style": Object {
@@ -695,9 +672,6 @@ ShallowWrapper {
             "alt": "thumbnail_test.jpg",
             "onError": [Function],
             "src": "https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg",
-            "style": Object {
-              "opacity": 0,
-            },
           },
           "ref": null,
           "rendered": null,
