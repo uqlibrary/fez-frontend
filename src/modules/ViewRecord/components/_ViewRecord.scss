@@ -258,9 +258,9 @@
           background-image: none !important;
           img {
             opacity: 1 !important;
-            max-width: 150px;
-            max-height: 100px;
-            box-shadow: 5px 5px 10px white !important;
+            max-width: 150px !important;
+            max-height: 100px !important;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.75) !important;
           }
         }
       }
