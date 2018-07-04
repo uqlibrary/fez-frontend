@@ -9,15 +9,15 @@ import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 
 export default class TopCitedPublications extends PureComponent {
-    static contextTypes = {
-        isMobile: PropTypes.bool
-    };
-
     static propTypes = {
         topCitedPublicationsList: PropTypes.array,
         loadingTopCitedPublications: PropTypes.bool,
         actions: PropTypes.object.isRequired,
         showSourceCountIcon: PropTypes.bool
+    };
+
+    static contextTypes = {
+        isMobile: PropTypes.bool
     };
 
     static defaultProps = {

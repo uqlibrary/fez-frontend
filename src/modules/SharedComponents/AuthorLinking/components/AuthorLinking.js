@@ -5,10 +5,6 @@ import AuthorItem from './AuthorItem';
 import Infinite from 'react-infinite';
 
 export default class AuthorLinking extends PureComponent {
-    static contextTypes = {
-        isMobile: PropTypes.bool
-    };
-
     static propTypes = {
         searchKey: PropTypes.object.isRequired,
         authorList: PropTypes.array,
@@ -18,6 +14,10 @@ export default class AuthorLinking extends PureComponent {
         onChange: PropTypes.func,
         disabled: PropTypes.bool,
         className: PropTypes.string
+    };
+
+    static contextTypes = {
+        isMobile: PropTypes.bool
     };
 
     static defaultProps = {
