@@ -77,7 +77,7 @@ to keep initial load to a minimum following optimisation has been added to the p
    - publicationForm.js locale is loaded only when PublicationForm component is loaded
    - other locale files are not too big, all bundled into one for now
 - webpack plugins:
-   
+
   - uglify/tree shake:
 
 ```
@@ -93,21 +93,21 @@ new webpack.DefinePlugin({
   ...
   })
 ```
- 
+
   - remove momentjs locale:
 
-```  
+```
 new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
-```  
+```
 
 #### Optimisation Guidelines
 
 - do not use functional components
 - try to simplify props
-- component should extend React.PureComponent if props are simple 
+- component should extend React.PureComponent if props are simple
 - component should extend React.Component, shouldComponentUpdate() should be implemented if props have objects
 - import explicit and specific components (do not import all):
-   - *DO NOT* `import {Button} from 'material-ui';` 
+   - *DO NOT* `import {Button} from 'material-ui';`
    - *DO* `import {Button} from 'material-ui/Button';`
 - any set of components which is not required in the initial load, eg PublicationForm, FixForm, ClaimForm etc, should lazy loaded using `<Async>`
 ```
@@ -115,7 +115,7 @@ const PublicationsList = (componentProps) => (<Async load={import('modules/Share
 ...
 <PublicationsList {...props} />
 ```
-- make sure to check BundleAnalyzerPlugin output locally by running `npm run build` or `npm run analyse`: 
+- make sure to check BundleAnalyzerPlugin output locally by running `npm run build` or `npm run analyse`:
   - main-###.js file should not exceed 1Mb
   - main-###.js should not include any non-essential libraries
 
@@ -160,10 +160,10 @@ in as that user. Usernames can be found in the `src/mock/data/accounts.js` file.
 - user with expired token: http://localhost:3000/?user=uqexpired
 
 ## Deployment
-Application deployment is 100% automated using Codeship, and is hosted in S3. 
+Application deployment is 100% automated using Codeship, and is hosted in S3.
 All deployment configuration (S3 bucket access keys, post deployment cache invalidation configuration) is stored within Codeship.
 Deployment pipelines are setup for branches: "master", "staging, "production" and any branch starting with "feature-".
-
+- Master branch is always deployed to staging/production
 - Deployments to production are hosted on https://espace.library.uq.edu.au/
 - Deployments to staging are hosted on https://fez-staging.library.uq.edu.au/
 - All other branches are deployed on https://development.library.uq.edu/espace/`branchName`/.
