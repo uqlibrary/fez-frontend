@@ -44,7 +44,7 @@
     "jsdom-global": "^3.0.2",
     "node-sass": "4.9.0",
     "postcss-loader": "^2.1.4",
-    "preloader-html-webpack-plugin": "github:uqlibrary/preloader-html-webpack-plugin#0.0.4",
+    "preloader-html-webpack-plugin": "github:uqlibrary/preloader-html-webpack-plugin#0.0.5",
     "progress-bar-webpack-plugin": "^1.11.0",
     "react-test-renderer": "16.3.2",
     "redux-mock-store": "^1.5.1",
