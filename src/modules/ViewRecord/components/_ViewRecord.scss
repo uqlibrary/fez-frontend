@@ -244,6 +244,10 @@
         height: 32px !important;
         overflow: hidden;
         background-size: cover;
+        transition: width .3s ease-in-out !important;
+        -webkit-transition: width .3s ease-in-out !important;
+        transition: height .3s ease-in-out !important;
+        -webkit-transition: height .3s ease-in-out !important;
         img {
           opacity: 0;
         }
@@ -253,7 +257,7 @@
           height: 100px !important;
           z-index: 999 !important;
           position: relative !important;
-          box-shadow: 0 0 12px rgba(255,255,255,0.75);
+          box-shadow: 0 0 12px white !important;
           background-image: none !important;
           img {
             opacity: 1 !important;
