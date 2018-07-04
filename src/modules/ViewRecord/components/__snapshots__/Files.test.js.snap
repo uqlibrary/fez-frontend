@@ -8,144 +8,105 @@ exports[`Files Component  should not render cultural message 1`] = `
     className=""
     title="Files"
   >
-    <Table
-      allRowsSelected={false}
-      className="files horizontal"
-      fixedFooter={true}
-      fixedHeader={true}
-      height="inherit"
-      multiSelectable={false}
-      selectable={false}
+    <div
+      className="files"
     >
-      <TableHeader
-        adjustForCheckbox={false}
-        className="header"
-        displaySelectAll={false}
-        enableSelectAll={true}
-        selectAllSelected={false}
+      <div
+        className="header columns is-gapless is-vcentered"
       >
-        <TableRow
-          displayBorder={true}
-          hoverable={false}
-          hovered={false}
-          selectable={true}
-          striped={false}
+        <div
+          className="column filetype is-2 is-vcentered"
+        />
+        <div
+          className="column filename is-3 is-vcentered"
         >
-          <TableHeaderColumn
-            className="filetype"
-          />
-          <TableHeaderColumn
-            className="filename"
-          >
-            File name
-          </TableHeaderColumn>
-          <TableHeaderColumn
-            className="description is-hidden-mobile"
-          >
-            Description
-          </TableHeaderColumn>
-          <TableHeaderColumn
-            className="align-right is-hidden-mobile is-hidden-tablet-only size"
-          >
-            Size
-          </TableHeaderColumn>
-          <TableHeaderColumn
-            className="oa align-right"
-          />
-        </TableRow>
-      </TableHeader>
-      <TableBody
-        allRowsSelected={false}
-        className="data"
-        deselectOnClickaway={true}
-        displayRowCheckbox={false}
-        multiSelectable={false}
-        preScanRows={true}
-        selectable={true}
-        style={Object {}}
+          File name
+        </div>
+        <div
+          className="column description is-hidden-mobile is-vcentered"
+        >
+          Description
+        </div>
+        <div
+          className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered"
+        >
+          Size
+        </div>
+        <div
+          className="column oa align-right is-2 is-vcentered"
+        />
+      </div>
+      <div
+        className="data columns is-gapless is-vcentered"
+        key="file-0"
       >
-        <TableRow
-          className="file"
-          displayBorder={true}
-          hoverable={false}
-          hovered={false}
-          key="file-0"
-          selectable={true}
-          striped={false}
+        <div
+          className="column filetype fileIcon is-2 is-vcentered is-centered"
         >
-          <TableRowColumn
-            className="filetype fileIcon"
-            hoverable={false}
-          >
-            <Thumbnail
-              mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
-              mimeType="image/jpeg"
-              onClick={[Function]}
-              previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
-              thumbnailFileName="thumbnail_image.jpg"
-              thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
-            />
-          </TableRowColumn>
-          <TableRowColumn
-            className="filename"
-            hoverable={false}
-          >
-            <FileName
-              allowDownload={true}
-              calculatedSize="95.49 KB"
-              description="testing image description"
-              fileName="image.jpg"
-              icon={
-                <Thumbnail
-                  mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
-                  mimeType="image/jpeg"
-                  onClick={[Function]}
-                  previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
-                  thumbnailFileName="thumbnail_image.jpg"
-                  thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
-                />
+          <Thumbnail
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+          />
+        </div>
+        <div
+          className="column filename is-3 is-vcentered"
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <Thumbnail
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+              />
+            }
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453695,
               }
-              mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
-              mimeType="image/jpeg"
-              onFileSelect={[Function]}
-              openAccessStatus={
-                Object {
-                  "embargoDate": null,
-                  "isOpenAccess": true,
-                  "openAccessStatusId": 453695,
-                }
-              }
-              pid="UQ:676287"
-              previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
-              thumbnailFileName="thumbnail_image.jpg"
-            />
-          </TableRowColumn>
-          <TableRowColumn
-            className="is-hidden-mobile description"
-            hoverable={false}
-          >
-            testing image description
-          </TableRowColumn>
-          <TableRowColumn
-            className="align-right is-hidden-mobile is-hidden-tablet-only size"
-            hoverable={false}
-          >
-            95.49 KB
-          </TableRowColumn>
-          <TableRowColumn
-            className="oa align-right"
-            hoverable={false}
-          >
-            <OpenAccessIcon
-              embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
-              showEmbargoText={false}
-            />
-          </TableRowColumn>
-        </TableRow>
-      </TableBody>
-    </Table>
+            }
+            pid="UQ:676287"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+          />
+        </div>
+        <div
+          className="column description is-hidden-mobile is-vcentered"
+        >
+          testing image description
+        </div>
+        <div
+          className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered"
+        >
+          95.49 KB
+        </div>
+        <div
+          className="column oa align-right is-2 is-vcentered"
+        >
+          <OpenAccessIcon
+            embargoDate={null}
+            isOpenAccess={true}
+            openAccessStatusId={453695}
+            showEmbargoText={false}
+          />
+        </div>
+      </div>
+    </div>
   </StandardCard>
 </section>
 `;
@@ -156,144 +117,105 @@ exports[`Files Component  should render component 1`] = `
     className=""
     title="Files"
   >
-    <Table
-      allRowsSelected={false}
-      className="files horizontal"
-      fixedFooter={true}
-      fixedHeader={true}
-      height="inherit"
-      multiSelectable={false}
-      selectable={false}
+    <div
+      className="files"
     >
-      <TableHeader
-        adjustForCheckbox={false}
-        className="header"
-        displaySelectAll={false}
-        enableSelectAll={true}
-        selectAllSelected={false}
+      <div
+        className="header columns is-gapless is-vcentered"
       >
-        <TableRow
-          displayBorder={true}
-          hoverable={false}
-          hovered={false}
-          selectable={true}
-          striped={false}
+        <div
+          className="column filetype is-2 is-vcentered"
+        />
+        <div
+          className="column filename is-3 is-vcentered"
         >
-          <TableHeaderColumn
-            className="filetype"
-          />
-          <TableHeaderColumn
-            className="filename"
-          >
-            File name
-          </TableHeaderColumn>
-          <TableHeaderColumn
-            className="description is-hidden-mobile"
-          >
-            Description
-          </TableHeaderColumn>
-          <TableHeaderColumn
-            className="align-right is-hidden-mobile is-hidden-tablet-only size"
-          >
-            Size
-          </TableHeaderColumn>
-          <TableHeaderColumn
-            className="oa align-right"
-          />
-        </TableRow>
-      </TableHeader>
-      <TableBody
-        allRowsSelected={false}
-        className="data"
-        deselectOnClickaway={true}
-        displayRowCheckbox={false}
-        multiSelectable={false}
-        preScanRows={true}
-        selectable={true}
-        style={Object {}}
+          File name
+        </div>
+        <div
+          className="column description is-hidden-mobile is-vcentered"
+        >
+          Description
+        </div>
+        <div
+          className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered"
+        >
+          Size
+        </div>
+        <div
+          className="column oa align-right is-2 is-vcentered"
+        />
+      </div>
+      <div
+        className="data columns is-gapless is-vcentered"
+        key="file-0"
       >
-        <TableRow
-          className="file"
-          displayBorder={true}
-          hoverable={false}
-          hovered={false}
-          key="file-0"
-          selectable={true}
-          striped={false}
+        <div
+          className="column filetype fileIcon is-2 is-vcentered is-centered"
         >
-          <TableRowColumn
-            className="filetype fileIcon"
-            hoverable={false}
-          >
-            <Thumbnail
-              mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
-              mimeType="image/jpeg"
-              onClick={[Function]}
-              previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
-              thumbnailFileName="thumbnail_image.jpg"
-              thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
-            />
-          </TableRowColumn>
-          <TableRowColumn
-            className="filename"
-            hoverable={false}
-          >
-            <FileName
-              allowDownload={true}
-              calculatedSize="95.49 KB"
-              description="testing image description"
-              fileName="image.jpg"
-              icon={
-                <Thumbnail
-                  mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
-                  mimeType="image/jpeg"
-                  onClick={[Function]}
-                  previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
-                  thumbnailFileName="thumbnail_image.jpg"
-                  thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
-                />
+          <Thumbnail
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+          />
+        </div>
+        <div
+          className="column filename is-3 is-vcentered"
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <Thumbnail
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+              />
+            }
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453695,
               }
-              mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
-              mimeType="image/jpeg"
-              onFileSelect={[Function]}
-              openAccessStatus={
-                Object {
-                  "embargoDate": null,
-                  "isOpenAccess": true,
-                  "openAccessStatusId": 453695,
-                }
-              }
-              pid="UQ:676287"
-              previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
-              thumbnailFileName="thumbnail_image.jpg"
-            />
-          </TableRowColumn>
-          <TableRowColumn
-            className="is-hidden-mobile description"
-            hoverable={false}
-          >
-            testing image description
-          </TableRowColumn>
-          <TableRowColumn
-            className="align-right is-hidden-mobile is-hidden-tablet-only size"
-            hoverable={false}
-          >
-            95.49 KB
-          </TableRowColumn>
-          <TableRowColumn
-            className="oa align-right"
-            hoverable={false}
-          >
-            <OpenAccessIcon
-              embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
-              showEmbargoText={false}
-            />
-          </TableRowColumn>
-        </TableRow>
-      </TableBody>
-    </Table>
+            }
+            pid="UQ:676287"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+          />
+        </div>
+        <div
+          className="column description is-hidden-mobile is-vcentered"
+        >
+          testing image description
+        </div>
+        <div
+          className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered"
+        >
+          95.49 KB
+        </div>
+        <div
+          className="column oa align-right is-2 is-vcentered"
+        >
+          <OpenAccessIcon
+            embargoDate={null}
+            isOpenAccess={true}
+            openAccessStatusId={453695}
+            showEmbargoText={false}
+          />
+        </div>
+      </div>
+    </div>
   </StandardCard>
 </section>
 `;
@@ -312,144 +234,105 @@ exports[`Files Component  should render cultural message 1`] = `
       showLoader={false}
       type="info"
     />
-    <Table
-      allRowsSelected={false}
-      className="files horizontal"
-      fixedFooter={true}
-      fixedHeader={true}
-      height="inherit"
-      multiSelectable={false}
-      selectable={false}
+    <div
+      className="files"
     >
-      <TableHeader
-        adjustForCheckbox={false}
-        className="header"
-        displaySelectAll={false}
-        enableSelectAll={true}
-        selectAllSelected={false}
+      <div
+        className="header columns is-gapless is-vcentered"
       >
-        <TableRow
-          displayBorder={true}
-          hoverable={false}
-          hovered={false}
-          selectable={true}
-          striped={false}
+        <div
+          className="column filetype is-2 is-vcentered"
+        />
+        <div
+          className="column filename is-3 is-vcentered"
         >
-          <TableHeaderColumn
-            className="filetype"
-          />
-          <TableHeaderColumn
-            className="filename"
-          >
-            File name
-          </TableHeaderColumn>
-          <TableHeaderColumn
-            className="description is-hidden-mobile"
-          >
-            Description
-          </TableHeaderColumn>
-          <TableHeaderColumn
-            className="align-right is-hidden-mobile is-hidden-tablet-only size"
-          >
-            Size
-          </TableHeaderColumn>
-          <TableHeaderColumn
-            className="oa align-right"
-          />
-        </TableRow>
-      </TableHeader>
-      <TableBody
-        allRowsSelected={false}
-        className="data"
-        deselectOnClickaway={true}
-        displayRowCheckbox={false}
-        multiSelectable={false}
-        preScanRows={true}
-        selectable={true}
-        style={Object {}}
+          File name
+        </div>
+        <div
+          className="column description is-hidden-mobile is-vcentered"
+        >
+          Description
+        </div>
+        <div
+          className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered"
+        >
+          Size
+        </div>
+        <div
+          className="column oa align-right is-2 is-vcentered"
+        />
+      </div>
+      <div
+        className="data columns is-gapless is-vcentered"
+        key="file-0"
       >
-        <TableRow
-          className="file"
-          displayBorder={true}
-          hoverable={false}
-          hovered={false}
-          key="file-0"
-          selectable={true}
-          striped={false}
+        <div
+          className="column filetype fileIcon is-2 is-vcentered is-centered"
         >
-          <TableRowColumn
-            className="filetype fileIcon"
-            hoverable={false}
-          >
-            <Thumbnail
-              mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
-              mimeType="image/jpeg"
-              onClick={[Function]}
-              previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
-              thumbnailFileName="thumbnail_image.jpg"
-              thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
-            />
-          </TableRowColumn>
-          <TableRowColumn
-            className="filename"
-            hoverable={false}
-          >
-            <FileName
-              allowDownload={true}
-              calculatedSize="95.49 KB"
-              description="testing image description"
-              fileName="image.jpg"
-              icon={
-                <Thumbnail
-                  mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
-                  mimeType="image/jpeg"
-                  onClick={[Function]}
-                  previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
-                  thumbnailFileName="thumbnail_image.jpg"
-                  thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
-                />
+          <Thumbnail
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+          />
+        </div>
+        <div
+          className="column filename is-3 is-vcentered"
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <Thumbnail
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+              />
+            }
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453695,
               }
-              mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
-              mimeType="image/jpeg"
-              onFileSelect={[Function]}
-              openAccessStatus={
-                Object {
-                  "embargoDate": null,
-                  "isOpenAccess": true,
-                  "openAccessStatusId": 453695,
-                }
-              }
-              pid="UQ:676287"
-              previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
-              thumbnailFileName="thumbnail_image.jpg"
-            />
-          </TableRowColumn>
-          <TableRowColumn
-            className="is-hidden-mobile description"
-            hoverable={false}
-          >
-            testing image description
-          </TableRowColumn>
-          <TableRowColumn
-            className="align-right is-hidden-mobile is-hidden-tablet-only size"
-            hoverable={false}
-          >
-            95.49 KB
-          </TableRowColumn>
-          <TableRowColumn
-            className="oa align-right"
-            hoverable={false}
-          >
-            <OpenAccessIcon
-              embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
-              showEmbargoText={false}
-            />
-          </TableRowColumn>
-        </TableRow>
-      </TableBody>
-    </Table>
+            }
+            pid="UQ:676287"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+          />
+        </div>
+        <div
+          className="column description is-hidden-mobile is-vcentered"
+        >
+          testing image description
+        </div>
+        <div
+          className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered"
+        >
+          95.49 KB
+        </div>
+        <div
+          className="column oa align-right is-2 is-vcentered"
+        >
+          <OpenAccessIcon
+            embargoDate={null}
+            isOpenAccess={true}
+            openAccessStatusId={453695}
+            showEmbargoText={false}
+          />
+        </div>
+      </div>
+    </div>
   </StandardCard>
 </section>
 `;

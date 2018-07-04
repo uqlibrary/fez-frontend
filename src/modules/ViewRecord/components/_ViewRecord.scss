@@ -80,17 +80,159 @@
   // Components ------------------------------------------------
 
   // Files
+  //.files {
+  //  td {
+  //    border: 1px solid red !important;
+  //  }
+  //  margin-bottom: 3px !important;
+  //  .fileIcon {
+  //    svg {
+  //      fill: lighten($secondary-color, 33%) !important;
+  //      width: 32px !important;
+  //      height: 32px !important;
+  //      padding: 8px 6px 0 0 !important;
+  //    }
+  //    .fileThumbnail {
+  //      cursor: pointer;
+  //      img {
+  //        @include tablet {
+  //          max-width: 150px;
+  //          max-height: 100px;
+  //        }
+  //        @include mobile {
+  //          max-width: 50px;
+  //          max-height: 50px;
+  //        }
+  //      }
+  //    }
+  //  }
+  //  .fileInfo {
+  //    border: 1px solid green!important;
+  //    overflow: hidden !important;
+  //    text-overflow: ellipsis !important;
+  //    overflow-wrap: break-word !important;
+  //    word-break: break-all !important;
+  //    white-space: nowrap !important;
+  //    display: flex;
+  //    align-items: center;
+  //    width: 100%;
+  //    a {
+  //      overflow: hidden !important;
+  //      text-overflow: ellipsis !important;
+  //      overflow-wrap: break-word !important;
+  //      word-break: break-all !important;
+  //      white-space: nowrap !important;
+  //    }
+  //  }
+  //  // columns widths
+  //  .filetype {
+  //    overflow: auto !important;
+  //    white-space: nowrap !important;
+  //    @include tablet {
+  //      width: 150px;
+  //      height: 100px;
+  //    }
+  //    @include mobile {
+  //      width: 50px !important;
+  //      height: 50px !important;
+  //    }
+  //  }
+  //  .filename {
+  //    line-height: 48px !important;
+  //    &:hover {
+  //      cursor: pointer;
+  //    }
+  //    @include tablet {
+  //     width: 50% !important;
+  //    }
+  //    @include mobile {
+  //      width: 100% !important;
+  //    }
+  //  }
+  //  .description {
+  //    white-space: normal !important;
+  //    @include tablet {
+  //      width: 50% !important;
+  //    }
+  //  }
+  //  .oa {
+  //    text-align: right !important;
+  //    @include tablet {
+  //      width: 200px !important;
+  //    }
+  //    @include mobile {
+  //      width: 24px !important;
+  //    }
+  //  }
+  //  .size {
+  //    text-align: right !important;
+  //    width: 10% !important;
+  //  }
+  //  .fileDetails {
+  //    width: 100%;
+  //    overflow: hidden !important;
+  //    text-overflow: ellipsis !important;
+  //    overflow-wrap: break-word !important;
+  //    word-break: break-all !important;
+  //    white-space: nowrap !important;
+  //    .fileIcon {
+  //      img, svg {
+  //        color: lighten($secondary-color, 25%) !important;
+  //        margin: auto 6px !important;
+  //      }
+  //    }
+  //    .fileInfo {
+  //      .fileName {
+  //      }
+  //    }
+  //    .audioWrapper {
+  //      overflow: hidden;
+  //      .audioButton {
+  //        transform: scale(0.75);
+  //        svg {
+  //          //width: 12px !important;
+  //          //height: 12px !important;
+  //          fill: $secondary-color !important;
+  //        }
+  //      }
+  //      .audioPlayer {
+  //        margin-top: 8px;
+  //        width: 100px;
+  //        overflow: hidden;
+  //
+  //      }
+  //    }
+  //  }
+  //}
+
+  // File
   .files {
-    td {
-      border: 1px solid red !important;
+    //.column {
+    //  border: 1px dashed red !important;
+    //}
+    > .columns {
+      margin-bottom: 3px !important;
+      padding-bottom: 3px !important;
+      border-bottom: 1px solid rgba($secondary-color,0.2) !important;
     }
-    margin-bottom: 3px !important;
+
+    .header {
+      margin-bottom: 6px !important;
+      border-bottom: 1px solid rgba($secondary-color,0.2);
+      .column {
+        height: $text-line-height-normal !important;
+        line-height: $text-line-height-normal !important;
+        color: rgba($secondary-color,0.66) !important;
+        font-weight: $text-weight-normal !important;
+        font-size: $text-body-small !important;
+      }
+    }
     .fileIcon {
       svg {
-        fill: lighten($secondary-color, 33%) !important;
+        fill: rgba($secondary-color,0.33) !important;
         width: 32px !important;
         height: 32px !important;
-        padding: 8px 6px 0 0 !important;
+        padding-right: 6px !important;
       }
       .fileThumbnail {
         cursor: pointer;
@@ -103,114 +245,6 @@
             max-width: 50px;
             max-height: 50px;
           }
-        }
-      }
-    }
-    .fileInfo {
-      border: 1px solid green!important;
-      overflow: hidden !important;
-      text-overflow: ellipsis !important;
-      overflow-wrap: break-word !important;
-      word-break: break-all !important;
-      white-space: nowrap !important;
-      display: flex;
-      align-items: center;
-      width: 100%;
-      a {
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        overflow-wrap: break-word !important;
-        word-break: break-all !important;
-        white-space: nowrap !important;
-      }
-    }
-    // columns widths
-    .filetype {
-      overflow: visible !important;
-      white-space: nowrap !important;
-      @include tablet {
-        max-width: 150px !important;
-        width: 50px !important;
-        max-height: 100px !important;
-        height: 50px !important;
-      }
-      @include mobile {
-        width: 50px !important;
-        height: 50px !important;
-      }
-    }
-    .filename {
-      line-height: 48px !important;
-      &:hover {
-        cursor: pointer;
-      }
-      @include desktop {
-        width: 50% !important;
-      }
-      @include tablet-only {
-        width: 50% !important;
-      }
-      @include mobile {
-        width: 100% !important;
-      }
-    }
-    .description {
-      white-space: normal !important;
-      @include desktop {
-        width: 25% !important;
-      }
-      @include tablet-only {
-        width: 33% !important;
-      }
-    }
-    .oa {
-      text-align: right !important;
-      @include desktop {
-        width: 20% !important;
-      }
-      @include tablet-only {
-        width: 24px !important;
-      }
-      @include mobile {
-        width: 24px !important;
-      }
-    }
-    .size {
-      text-align: right !important;
-      width: 10% !important;
-    }
-    .fileDetails {
-      width: 100%;
-      overflow: hidden !important;
-      text-overflow: ellipsis !important;
-      overflow-wrap: break-word !important;
-      word-break: break-all !important;
-      white-space: nowrap !important;
-      .fileIcon {
-        img, svg {
-          color: lighten($secondary-color, 25%) !important;
-          margin: auto 6px !important;
-        }
-      }
-      .fileInfo {
-        .fileName {
-        }
-      }
-      .audioWrapper {
-        overflow: hidden;
-        .audioButton {
-          transform: scale(0.75);
-          svg {
-            //width: 12px !important;
-            //height: 12px !important;
-            fill: $secondary-color !important;
-          }
-        }
-        .audioPlayer {
-          margin-top: 8px;
-          width: 100px;
-          overflow: hidden;
-
         }
       }
     }
