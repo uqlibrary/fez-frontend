@@ -6,24 +6,11 @@ exports[`Thumbnail Component  should render component and display thumbnail 1`] 
   onClick={[Function]}
   onKeyPress={[Function]}
 >
-  <img
-    alt="thumbnail.jpg"
-    onError={[Function]}
-    src="/test/thumbnail/mediaUrl"
-    style={
-      Object {
-        "display": "none",
-      }
-    }
-  />
   <div
     className="thumbnail"
     style={
       Object {
         "backgroundImage": "url(/test/thumbnail/mediaUrl)",
-        "backgroundSize": "cover",
-        "height": 32,
-        "width": 32,
       }
     }
   >
@@ -106,24 +93,11 @@ exports[`Thumbnail Component  should run onClick function on click 1`] = `
           onClick={[Function]}
           onKeyPress={[Function]}
         >
-          <img
-            alt="thumbnail.jpg"
-            onError={[Function]}
-            src="/test/thumbnail/mediaUrl"
-            style={
-              Object {
-                "display": "none",
-              }
-            }
-          />
           <div
             className="thumbnail"
             style={
               Object {
                 "backgroundImage": "url(/test/thumbnail/mediaUrl)",
-                "backgroundSize": "cover",
-                "height": 32,
-                "width": 32,
               }
             }
           >
@@ -210,24 +184,11 @@ exports[`Thumbnail Component  should run onFileSelect function on key press 1`] 
           onClick={[Function]}
           onKeyPress={[Function]}
         >
-          <img
-            alt="thumbnail.jpg"
-            onError={[Function]}
-            src="/test/thumbnail/mediaUrl"
-            style={
-              Object {
-                "display": "none",
-              }
-            }
-          />
           <div
             className="thumbnail"
             style={
               Object {
                 "backgroundImage": "url(/test/thumbnail/mediaUrl)",
-                "backgroundSize": "cover",
-                "height": 32,
-                "width": 32,
               }
             }
           >
@@ -255,16 +216,6 @@ exports[`Thumbnail Component  should show a broken thumbnail icon when the thumb
   onClick={[Function]}
   onKeyPress={[Function]}
 >
-  <img
-    alt="thumbnail.jpg"
-    onError={[Function]}
-    src="/test/thumbnail/mediaUrl"
-    style={
-      Object {
-        "display": "none",
-      }
-    }
-  />
   <ImageBrokenImage />
 </a>
 `;

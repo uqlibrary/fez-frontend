@@ -240,24 +240,17 @@
         }
       }
       .thumbnail {
-        -webkit-transition: all 1s ease-in-out;
-        -moz-transition: all 1s ease-in-out;
-        -o-transition: all 1s ease-in-out;
-        transition: all 1s ease-in-out;
         width: 32px !important;
         height: 32px !important;
         overflow: hidden;
         background-size: cover;
         &:hover {
           overflow: visible;
-          width: auto !important;
+          width: 150px !important;
           height: auto !important;
           z-index: 999 !important;
           position: relative !important;
-          -webkit-transition: all 1s ease-in-out;
-          -moz-transition: all 1s ease-in-out;
-          -o-transition: all 1s ease-in-out;
-          transition: all 1s ease-in-out;
+          box-shadow: 0 0 12px rgba(255,255,255,0.75);
           img {
             opacity: 1;
           }
