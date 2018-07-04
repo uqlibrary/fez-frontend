@@ -54,11 +54,12 @@ exports[`File Name Component  should display file name link 1`] = `
     >
       <FileName
         allowDownload={true}
-        fileName="UQ676287_OA.pdf"
+        fileName="test.jpg"
+        mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
         mimeType="application/pdf"
         onFileSelect={[MockFunction]}
         pid="UQ:676287"
-        thumbnailFileName="test.jpg"
+        previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_test.jpg"
       >
         <div
           className="columns is-gapless is-mobile fileDetails"
@@ -68,21 +69,21 @@ exports[`File Name Component  should display file name link 1`] = `
           >
             <ExternalLink
               className="fileName"
-              href="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
+              href="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="UQ676287_OA.pdf"
+              title="test.jpg"
             >
               <a
                 className="fileName externalLink showIcon"
-                href="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
+                href="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
                 rel="noopener noreferrer"
                 tabIndex="0"
                 target="_blank"
-                title="UQ676287_OA.pdf"
+                title="test.jpg"
               >
-                UQ676287_OA.pdf
+                test.jpg
               </a>
             </ExternalLink>
           </div>
@@ -147,10 +148,12 @@ exports[`File Name Component  should render audio player 1`] = `
     >
       <FileName
         allowDownload={true}
-        fileName="UQ676287_OA.pdf"
+        fileName="test.mp3"
+        mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/test.mp3"
         mimeType="audio/mp3"
         onFileSelect={[MockFunction]}
         pid="UQ:676287"
+        previewMediaUrl=""
       >
         <div
           className="columns is-gapless is-mobile fileDetails"
@@ -160,21 +163,21 @@ exports[`File Name Component  should render audio player 1`] = `
           >
             <ExternalLink
               className="fileName"
-              href="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
+              href="https://espace.library.uq.edu.au/view/UQ:676287/test.mp3"
               openInNewIcon={true}
               rel="noopener noreferrer"
               target="_blank"
-              title="UQ676287_OA.pdf"
+              title="test.mp3"
             >
               <a
                 className="fileName externalLink showIcon"
-                href="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
+                href="https://espace.library.uq.edu.au/view/UQ:676287/test.mp3"
                 rel="noopener noreferrer"
                 tabIndex="0"
                 target="_blank"
-                title="UQ676287_OA.pdf"
+                title="test.mp3"
               >
-                UQ676287_OA.pdf
+                test.mp3
               </a>
             </ExternalLink>
           </div>
@@ -182,19 +185,19 @@ exports[`File Name Component  should render audio player 1`] = `
             className="column is-narrow audioWrapper is-hidden-mobile"
           >
             <AudioPlayer
-              fileName="UQ676287_OA.pdf"
+              fileName="test.mp3"
               mimeType="audio/mp3"
               pid="UQ:676287"
             >
               <div>
                 <audio>
                   <source
-                    src="https://espace.library.uq.edu.au/view/UQ:676287/UQ676287_OA.pdf"
+                    src="https://espace.library.uq.edu.au/view/UQ:676287/test.mp3"
                     type="audio/mp3"
                   />
                 </audio>
                 <IconButton
-                  aria-label="Click to play audio file UQ676287_OA.pdf"
+                  aria-label="Click to play audio file test.mp3"
                   className="audioButton play"
                   disableTouchRipple={false}
                   disabled={false}
@@ -204,7 +207,7 @@ exports[`File Name Component  should render audio player 1`] = `
                   touch={true}
                 >
                   <EnhancedButton
-                    aria-label="Click to play audio file UQ676287_OA.pdf"
+                    aria-label="Click to play audio file test.mp3"
                     centerRipple={true}
                     className="audioButton play"
                     containerElement="button"
@@ -235,7 +238,7 @@ exports[`File Name Component  should render audio player 1`] = `
                     type="button"
                   >
                     <button
-                      aria-label="Click to play audio file UQ676287_OA.pdf"
+                      aria-label="Click to play audio file test.mp3"
                       className="audioButton play"
                       disabled={false}
                       onBlur={[Function]}
@@ -391,10 +394,13 @@ exports[`File Name Component  should render component and display file name only
       }
     >
       <FileName
+        allowDownload={false}
         fileName="UQ676287_OA.pdf"
+        mediaUrl=""
         mimeType="application/pdf"
         onFileSelect={[MockFunction]}
         pid="UQ:676287"
+        previewMediaUrl=""
       >
         <div
           className="columns is-gapless is-mobile fileDetails"
@@ -465,11 +471,12 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
     >
       <FileName
         allowDownload={true}
-        fileName="UQ676287_OA.pdf"
+        fileName="test.jpg"
+        mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
         mimeType="image/jpeg"
         onFileSelect={[MockFunction]}
         pid="UQ:676287"
-        thumbnailFileName="test.jpg"
+        previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_test.jpg"
       >
         <div
           className="columns is-gapless is-mobile fileDetails"
@@ -482,7 +489,7 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
               onClick={[Function]}
               onKeyPress={[Function]}
             >
-              UQ676287_OA.pdf
+              test.jpg
             </a>
           </div>
         </div>
@@ -546,11 +553,12 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
     >
       <FileName
         allowDownload={true}
-        fileName="UQ676287_OA.pdf"
+        fileName="test.jpg"
+        mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
         mimeType="image/jpeg"
         onFileSelect={[MockFunction]}
         pid="UQ:676287"
-        thumbnailFileName="test.jpg"
+        previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_test.jpg"
       >
         <div
           className="columns is-gapless is-mobile fileDetails"
@@ -563,7 +571,7 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
               onClick={[Function]}
               onKeyPress={[Function]}
             >
-              UQ676287_OA.pdf
+              test.jpg
             </a>
           </div>
         </div>

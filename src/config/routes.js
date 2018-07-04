@@ -8,7 +8,7 @@ const fullPath = process.env.BRANCH === 'production' ? 'https://espace.library.u
 export const pidRegExp = 'UQ:[a-z0-9]+';
 
 const getSearchUrl = ({searchQuery, activeFacets = {}}) => (
-    `${fullPath}/records/search?${param({
+    `/records/search?${param({
         ...defaultQueryParams,
         searchQueryParams: {
             all: !!searchQuery && searchQuery || ''
@@ -23,7 +23,6 @@ const getSearchUrl = ({searchQuery, activeFacets = {}}) => (
 export const pathConfig = {
     index: '/',
     dashboard: '/dashboard',
-    browse: '/browse',
     contact: '/contact',
     hdrSubmission: '/rhdsubmission',
     sbsSubmission: '/sbslodge_new',
@@ -344,6 +343,7 @@ export const getMenuConfig = (account, disabled) => {
 
     if (disabled) {
         return [
+            ...homePage,
             ...(account ? [
                 {
                     linkTo: pathConfig.dashboard,

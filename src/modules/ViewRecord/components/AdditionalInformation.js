@@ -10,6 +10,7 @@ import ReactHtmlParser from 'react-html-parser';
 import ViewRecordTableRow from './ViewRecordTableRow';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
+import {Link} from 'react-router-dom';
 
 export default class AdditionalInformation extends Component {
     static propTypes = {
@@ -27,7 +28,7 @@ export default class AdditionalInformation extends Component {
     }
 
     renderLink = (link, value) => {
-        return <a href={link}>{value}</a>;
+        return <Link to={link}>{value}</Link>;
     }
 
     renderList = (list, subkey, getLink) => {
@@ -162,7 +163,7 @@ export default class AdditionalInformation extends Component {
         }
         return (
             <PublicationMap
-                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                googleMapURL={process.env.GOOGLE_MAPS_URL}
                 loadingElement={<div style={{height: '100%'}}/>}
                 containerElement={<div style={{height: '400px'}}/>}
                 mapElement={<div style={{height: '100%'}}/>}

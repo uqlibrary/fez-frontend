@@ -21,7 +21,7 @@ const PublicationMap = withScriptjs(withGoogleMap((props) => {
     const minLatPoint = geoCoords.reduce((min, point) => point.lat < min ? point.lat : min, geoCoords[0].lat);
     const maxLatPoint = geoCoords.reduce((max, point) => point.lat > max ? point.lat : max, geoCoords[0].lat);
     const defaultCenter = {lng: (maxLngPoint + minLngPoint) / 2, lat: (minLatPoint + maxLatPoint) / 2};
-    const pointZoom = 15;
+    const pointZoom = 7;
     const polygonZoom = 13;
 
     const bounds = new window.google.maps.LatLngBounds();
@@ -32,7 +32,7 @@ const PublicationMap = withScriptjs(withGoogleMap((props) => {
     return (
         <GoogleMap
             defaultZoom={geoCoords.length === 1 ? pointZoom : polygonZoom}
-            googleMapURL={`https://maps.googleapis.com/maps/api/js?${!!process.env.GOOGLE_MAP_KEY ? process.env.GOOGLE_MAP_KEY : ''}v=3.exp&libraries=geometry,drawing,places`}
+            googleMapURL={process.env.GOOGLE_MAPS_URL}
             defaultCenter={defaultCenter}
             ref={(map) => {map && bounds && geoCoords.length > 1 && map.fitBounds(bounds);}}>
             {

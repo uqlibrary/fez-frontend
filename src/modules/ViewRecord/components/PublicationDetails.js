@@ -5,6 +5,7 @@ import {pathConfig} from 'config/routes';
 import {Table, TableBody} from 'material-ui/Table';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import ViewRecordTableRow from './ViewRecordTableRow';
+import {Link} from 'react-router-dom';
 
 export default class PublicationDetails extends PureComponent {
     static propTypes = {
@@ -36,7 +37,7 @@ export default class PublicationDetails extends PureComponent {
                                         this.props.publication.fez_record_search_key_ismemberof.map((collection, index)=>(
                                             collection.rek_ismemberof && collection.rek_ismemberof_lookup &&
                                             <li key={`collection-${index}`}>
-                                                <a href={pathConfig.list.collection(collection.rek_ismemberof, collection.rek_ismemberof_lookup)}>{collection.rek_ismemberof_lookup}</a>
+                                                <Link to={pathConfig.list.collection(collection.rek_ismemberof, collection.rek_ismemberof_lookup)}>{collection.rek_ismemberof_lookup}</Link>
                                             </li>
                                         ))
                                     }

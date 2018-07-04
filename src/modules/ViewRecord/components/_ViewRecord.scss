@@ -24,11 +24,11 @@
     }
     .data {
       tr {
-        height: 38px !important;
+        //height: 100px !important;
       }
       td {
-        height: 38px !important;
-        line-height: 24px !important;
+        //height: 100px !important;
+        line-height: 16px !important;
         padding: 0 6px !important;
       }
 
@@ -81,16 +81,26 @@
 
   // Files
   .files {
+    margin-bottom: 3px !important;
     .fileIcon {
       svg {
         fill: lighten($secondary-color, 33%) !important;
-        width: 24px !important;
-        height: 24px !important;
+        width: 32px !important;
+        height: 32px !important;
         padding: 8px 6px 0 0 !important;
       }
-      img {
-        max-width: 24px;
-        max-height: 24px;
+      .fileThumbnail {
+        cursor: pointer;
+        img {
+          @include tablet {
+            max-width: 150px;
+            max-height: 100px;
+          }
+          @include mobile {
+            max-width: 50px;
+            max-height: 50px;
+          }
+        }
       }
     }
     .fileInfo {
@@ -112,7 +122,14 @@
     }
     // columns widths
     .filetype {
-      width: 24px !important;
+      @include tablet {
+        width: 150px !important;
+        height: 100px !important;
+      }
+      @include mobile {
+        width: 50px !important;
+        height: 50px !important;
+      }
     }
     .filename {
       line-height: 48px !important;
@@ -130,6 +147,7 @@
       }
     }
     .description {
+      white-space: normal !important;
       @include desktop {
         width: 25% !important;
       }
@@ -190,15 +208,31 @@
     }
   }
   .mediaPreview {
+    #previewImage {
+      max-width: 100%;
+    }
     .buttons {
       position: relative;
       top: -46px;
       text-align: right;
+      .download {
+        button > div > div > span:after {
+          margin-left: 6px;
+          font-family: 'Material Icons';
+          content: '\E89E';
+        }
+      }
+      @include tablet {
+        margin-bottom: -24px !important;
+      }
+      @include mobile {
+        margin-top: 64px !important;
+        margin-bottom: -38px !important;
+      }
     }
     img {
-      max-width: 80vw;
+      max-width: 100vw;
       max-height: 100vh;
-      width: 200px;
       margin: 0 auto !important;
       display: block !important;
     }
