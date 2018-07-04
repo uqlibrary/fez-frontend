@@ -244,7 +244,12 @@
         -moz-transition: all 1s ease-in-out;
         -o-transition: all 1s ease-in-out;
         transition: all 1s ease-in-out;
+        width: 32px !important;
+        height: 32px !important;
+        overflow: hidden;
+        background-size: cover;
         &:hover {
+          overflow: visible;
           width: auto !important;
           height: auto !important;
           z-index: 999 !important;
