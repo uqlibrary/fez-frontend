@@ -587,11 +587,23 @@ ShallowWrapper {
           style={
             Object {
               "backgroundImage": "url(https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg)",
+              "backgroundSize": "cover",
               "height": 32,
               "width": 32,
             }
           }
-        />,
+        >
+          <img
+            alt="thumbnail_test.jpg"
+            onError={[Function]}
+            src="https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
+            style={
+              Object {
+                "opacity": 0,
+              }
+            }
+          />
+        </div>,
       ],
       "className": "fileThumbnail",
       "onClick": [Function],
@@ -620,15 +632,41 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": <img
+            alt="thumbnail_test.jpg"
+            onError={[Function]}
+            src="https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
+            style={
+              Object {
+                "opacity": 0,
+              }
+            }
+          />,
           "className": "thumbnail",
           "style": Object {
             "backgroundImage": "url(https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg)",
+            "backgroundSize": "cover",
             "height": 32,
             "width": 32,
           },
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "thumbnail_test.jpg",
+            "onError": [Function],
+            "src": "https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg",
+            "style": Object {
+              "opacity": 0,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
         "type": "div",
       },
     ],
@@ -656,11 +694,23 @@ ShallowWrapper {
             style={
               Object {
                 "backgroundImage": "url(https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg)",
+                "backgroundSize": "cover",
                 "height": 32,
                 "width": 32,
               }
             }
-          />,
+          >
+            <img
+              alt="thumbnail_test.jpg"
+              onError={[Function]}
+              src="https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
+              style={
+                Object {
+                  "opacity": 0,
+                }
+              }
+            />
+          </div>,
         ],
         "className": "fileThumbnail",
         "onClick": [Function],
@@ -689,15 +739,41 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": <img
+              alt="thumbnail_test.jpg"
+              onError={[Function]}
+              src="https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
+              style={
+                Object {
+                  "opacity": 0,
+                }
+              }
+            />,
             "className": "thumbnail",
             "style": Object {
               "backgroundImage": "url(https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg)",
+              "backgroundSize": "cover",
               "height": 32,
               "width": 32,
             },
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "thumbnail_test.jpg",
+              "onError": [Function],
+              "src": "https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg",
+              "style": Object {
+                "opacity": 0,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
           "type": "div",
         },
       ],

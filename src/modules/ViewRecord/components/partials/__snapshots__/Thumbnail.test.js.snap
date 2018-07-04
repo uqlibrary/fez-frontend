@@ -21,11 +21,23 @@ exports[`Thumbnail Component  should render component and display thumbnail 1`] 
     style={
       Object {
         "backgroundImage": "url(/test/thumbnail/mediaUrl)",
+        "backgroundSize": "cover",
         "height": 32,
         "width": 32,
       }
     }
-  />
+  >
+    <img
+      alt="thumbnail.jpg"
+      onError={[Function]}
+      src="/test/thumbnail/mediaUrl"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }
+    />
+  </div>
 </a>
 `;
 
@@ -109,11 +121,23 @@ exports[`Thumbnail Component  should run onClick function on click 1`] = `
             style={
               Object {
                 "backgroundImage": "url(/test/thumbnail/mediaUrl)",
+                "backgroundSize": "cover",
                 "height": 32,
                 "width": 32,
               }
             }
-          />
+          >
+            <img
+              alt="thumbnail.jpg"
+              onError={[Function]}
+              src="/test/thumbnail/mediaUrl"
+              style={
+                Object {
+                  "opacity": 0,
+                }
+              }
+            />
+          </div>
         </a>
       </Thumbnail>
     </Router>
@@ -201,11 +225,23 @@ exports[`Thumbnail Component  should run onFileSelect function on key press 1`] 
             style={
               Object {
                 "backgroundImage": "url(/test/thumbnail/mediaUrl)",
+                "backgroundSize": "cover",
                 "height": 32,
                 "width": 32,
               }
             }
-          />
+          >
+            <img
+              alt="thumbnail.jpg"
+              onError={[Function]}
+              src="/test/thumbnail/mediaUrl"
+              style={
+                Object {
+                  "opacity": 0,
+                }
+              }
+            />
+          </div>
         </a>
       </Thumbnail>
     </Router>
