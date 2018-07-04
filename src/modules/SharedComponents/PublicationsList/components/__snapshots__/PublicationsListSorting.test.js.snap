@@ -191,7 +191,7 @@ exports[`PublicationsListSorting renders  component with export dropdown for adm
         focusState="none"
         insetChildren={false}
         key="7"
-        primaryText="Thompson citation count"
+        primaryText="Web of Science citation count"
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -549,7 +549,7 @@ exports[`PublicationsListSorting renders  component with export dropdown hidden 
         focusState="none"
         insetChildren={false}
         key="7"
-        primaryText="Thompson citation count"
+        primaryText="Web of Science citation count"
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -896,7 +896,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         focusState="none"
         insetChildren={false}
         key="7"
-        primaryText="Thompson citation count"
+        primaryText="Web of Science citation count"
         targetOrigin={
           Object {
             "horizontal": "left",
