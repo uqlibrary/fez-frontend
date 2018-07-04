@@ -247,12 +247,15 @@
         &:hover {
           overflow: visible;
           width: 150px !important;
-          height: auto !important;
+          height: 100px !important;
           z-index: 999 !important;
           position: relative !important;
           box-shadow: 0 0 12px rgba(255,255,255,0.75);
+          background-image: none !important;
           img {
             opacity: 1;
+            max-width: 150px;
+            max-height: 100px;
           }
         }
       }
