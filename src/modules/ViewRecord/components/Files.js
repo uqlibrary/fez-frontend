@@ -171,10 +171,10 @@ export default class Files extends Component {
                             message={publication.fez_record_search_key_advisory_statement.rek_advisory_statement || locale.viewRecord.sections.files.culturalSensitivityStatement}
                             dismissAction={this.props.setHideCulturalSensitivityStatement}/>
                     }
-                    <div className="files">
-                        <div className="header columns is-gapless is-vcentered">
+                    <div className="files" ref="files">
+                        <div className="header columns is-gapless is-vcentered is-mobile">
                             <div className="column filetype is-2 is-vcentered" />
-                            <div className="column filename is-3 is-vcentered">
+                            <div className="column filename is-3-desktop is-4-tablet is-vcentered">
                                 {locale.viewRecord.sections.files.fileName}
                             </div>
                             <div className="column description is-hidden-mobile is-vcentered">
@@ -183,15 +183,15 @@ export default class Files extends Component {
                             <div className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered">
                                 {locale.viewRecord.sections.files.size}
                             </div>
-                            <div className="column oa align-right is-2 is-vcentered" />
+                            <div className="column oa align-right is-2 is-vcentered is-hidden-mobile" />
                         </div>
                         {
                             fileData.map((item, index) => (
-                                <div className="data columns is-gapless is-vcentered" key={`file-${index}`}>
-                                    <div className="column filetype fileIcon is-2 is-vcentered is-centered">
+                                <div className="data columns is-gapless is-vcentered is-mobile" key={`file-${index}`}>
+                                    <div className="column filetype fileIcon is-2 is-vcentered">
                                         {item.icon}
                                     </div>
-                                    <div className="column filename is-3 is-vcentered">
+                                    <div className="column filename is-3-desktop is-4-tablet is-vcentered">
                                         <FileName
                                             {...item}
                                             onFileSelect={this.showPreview}
@@ -203,7 +203,7 @@ export default class Files extends Component {
                                     <div className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered">
                                         {item.calculatedSize}
                                     </div>
-                                    <div className="column oa align-right is-2 is-vcentered">
+                                    <div className="column oa is-2 is-hidden-mobile is-vcentered">
                                         <OpenAccessIcon {...item.openAccessStatus} />
                                     </div>
                                 </div>

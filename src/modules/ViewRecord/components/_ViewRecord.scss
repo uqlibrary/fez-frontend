@@ -227,6 +227,25 @@
         font-size: $text-body-small !important;
       }
     }
+    .data {
+      .filename {
+        padding-right: 6px;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        overflow-wrap: break-word !important;
+        word-break: break-all !important;
+        white-space: nowrap !important;
+      }
+      .column {
+        font-size: 13px !important;
+      }
+      .oa {
+        text-align: right !important;
+      }
+      .audioButton {
+        margin: -6px !important;
+      }
+    }
     .fileIcon {
       svg {
         fill: rgba($secondary-color,0.33) !important;

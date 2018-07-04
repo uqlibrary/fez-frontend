@@ -12,13 +12,13 @@ exports[`Files Component  should not render cultural message 1`] = `
       className="files"
     >
       <div
-        className="header columns is-gapless is-vcentered"
+        className="header columns is-gapless is-vcentered is-mobile"
       >
         <div
           className="column filetype is-2 is-vcentered"
         />
         <div
-          className="column filename is-3 is-vcentered"
+          className="column filename is-3-desktop is-4-tablet is-vcentered"
         >
           File name
         </div>
@@ -33,15 +33,15 @@ exports[`Files Component  should not render cultural message 1`] = `
           Size
         </div>
         <div
-          className="column oa align-right is-2 is-vcentered"
+          className="column oa align-right is-2 is-vcentered is-hidden-mobile"
         />
       </div>
       <div
-        className="data columns is-gapless is-vcentered"
+        className="data columns is-gapless is-vcentered is-mobile"
         key="file-0"
       >
         <div
-          className="column filetype fileIcon is-2 is-vcentered is-centered"
+          className="column filetype fileIcon is-2 is-vcentered"
         >
           <Thumbnail
             mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
@@ -53,7 +53,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           />
         </div>
         <div
-          className="column filename is-3 is-vcentered"
+          className="column filename is-3-desktop is-4-tablet is-vcentered"
         >
           <FileName
             allowDownload={true}
@@ -96,7 +96,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           95.49 KB
         </div>
         <div
-          className="column oa align-right is-2 is-vcentered"
+          className="column oa is-2 is-hidden-mobile is-vcentered"
         >
           <OpenAccessIcon
             embargoDate={null}
@@ -121,13 +121,13 @@ exports[`Files Component  should render component 1`] = `
       className="files"
     >
       <div
-        className="header columns is-gapless is-vcentered"
+        className="header columns is-gapless is-vcentered is-mobile"
       >
         <div
           className="column filetype is-2 is-vcentered"
         />
         <div
-          className="column filename is-3 is-vcentered"
+          className="column filename is-3-desktop is-4-tablet is-vcentered"
         >
           File name
         </div>
@@ -142,15 +142,15 @@ exports[`Files Component  should render component 1`] = `
           Size
         </div>
         <div
-          className="column oa align-right is-2 is-vcentered"
+          className="column oa align-right is-2 is-vcentered is-hidden-mobile"
         />
       </div>
       <div
-        className="data columns is-gapless is-vcentered"
+        className="data columns is-gapless is-vcentered is-mobile"
         key="file-0"
       >
         <div
-          className="column filetype fileIcon is-2 is-vcentered is-centered"
+          className="column filetype fileIcon is-2 is-vcentered"
         >
           <Thumbnail
             mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
@@ -162,7 +162,7 @@ exports[`Files Component  should render component 1`] = `
           />
         </div>
         <div
-          className="column filename is-3 is-vcentered"
+          className="column filename is-3-desktop is-4-tablet is-vcentered"
         >
           <FileName
             allowDownload={true}
@@ -205,7 +205,7 @@ exports[`Files Component  should render component 1`] = `
           95.49 KB
         </div>
         <div
-          className="column oa align-right is-2 is-vcentered"
+          className="column oa is-2 is-hidden-mobile is-vcentered"
         >
           <OpenAccessIcon
             embargoDate={null}
@@ -238,13 +238,13 @@ exports[`Files Component  should render cultural message 1`] = `
       className="files"
     >
       <div
-        className="header columns is-gapless is-vcentered"
+        className="header columns is-gapless is-vcentered is-mobile"
       >
         <div
           className="column filetype is-2 is-vcentered"
         />
         <div
-          className="column filename is-3 is-vcentered"
+          className="column filename is-3-desktop is-4-tablet is-vcentered"
         >
           File name
         </div>
@@ -259,15 +259,15 @@ exports[`Files Component  should render cultural message 1`] = `
           Size
         </div>
         <div
-          className="column oa align-right is-2 is-vcentered"
+          className="column oa align-right is-2 is-vcentered is-hidden-mobile"
         />
       </div>
       <div
-        className="data columns is-gapless is-vcentered"
+        className="data columns is-gapless is-vcentered is-mobile"
         key="file-0"
       >
         <div
-          className="column filetype fileIcon is-2 is-vcentered is-centered"
+          className="column filetype fileIcon is-2 is-vcentered"
         >
           <Thumbnail
             mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
@@ -279,7 +279,7 @@ exports[`Files Component  should render cultural message 1`] = `
           />
         </div>
         <div
-          className="column filename is-3 is-vcentered"
+          className="column filename is-3-desktop is-4-tablet is-vcentered"
         >
           <FileName
             allowDownload={true}
@@ -322,7 +322,7 @@ exports[`Files Component  should render cultural message 1`] = `
           95.49 KB
         </div>
         <div
-          className="column oa align-right is-2 is-vcentered"
+          className="column oa is-2 is-hidden-mobile is-vcentered"
         >
           <OpenAccessIcon
             embargoDate={null}
