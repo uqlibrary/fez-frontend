@@ -31,15 +31,17 @@ class Thumbnail extends PureComponent {
     };
 
     render() {
-        const {mediaUrl, thumbnailMediaUrl, previewMediaUrl, thumbnailFileName, mimeType} = this.props;
+        const {mediaUrl, thumbnailMediaUrl, thumbnailFileName, previewMediaUrl, mimeType} = this.props;
         return (
             <a
                 onClick={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
                 onKeyPress={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
-                className={'fileThumbnail'}>
+                className={'fileThumbnail'} >
+                <img src={thumbnailMediaUrl} alt={thumbnailFileName} onError={this.imageError} style={{display: 'none'}} />
                 {
                     !this.state.thumbnailError ?
-                        <img src={thumbnailMediaUrl} alt={thumbnailFileName} onError={this.imageError}/>
+                        <div className="thumbnail" style={{width: 32, height: 32, backgroundImage: `url(${thumbnailMediaUrl})`}} />
+                        // <img src={thumbnailMediaUrl} alt={thumbnailFileName} onError={this.imageError}/>
                         : <BrokenImage />
                 }
             </a>

@@ -235,6 +235,9 @@
         overflow-wrap: break-word !important;
         word-break: break-all !important;
         white-space: nowrap !important;
+        &:hover {
+          cursor: pointer;
+        }
       }
       .column {
         font-size: 13px !important;
