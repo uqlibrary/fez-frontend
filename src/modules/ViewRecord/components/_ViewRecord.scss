@@ -240,11 +240,22 @@
         }
       }
       .thumbnail {
+        -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
         &:hover {
           width: auto !important;
           height: auto !important;
           z-index: 999 !important;
-          position: absolute !important;
+          position: relative !important;
+          -webkit-transition: all 1s ease-in-out;
+          -moz-transition: all 1s ease-in-out;
+          -o-transition: all 1s ease-in-out;
+          transition: all 1s ease-in-out;
+          img {
+            opacity: 1;
+          }
         }
       }
       .column {
@@ -258,6 +269,8 @@
       }
     }
     .fileIcon {
+      width: 42px;
+      height: 32px;
       svg {
         fill: rgba($secondary-color,0.33) !important;
         width: 32px !important;

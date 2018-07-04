@@ -15,7 +15,7 @@ exports[`Files Component  should not render cultural message 1`] = `
         className="header columns is-gapless is-vcentered is-mobile"
       >
         <div
-          className="column filetype is-2 is-vcentered"
+          className="column filetype fileIcon is-narrow is-vcentered"
         />
         <div
           className="column filename is-3-desktop is-4-tablet is-vcentered"
@@ -41,7 +41,7 @@ exports[`Files Component  should not render cultural message 1`] = `
         key="file-0"
       >
         <div
-          className="column filetype fileIcon is-2 is-vcentered"
+          className="column filetype fileIcon is-narrow is-vcentered"
         >
           <Thumbnail
             mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
@@ -124,7 +124,7 @@ exports[`Files Component  should render component 1`] = `
         className="header columns is-gapless is-vcentered is-mobile"
       >
         <div
-          className="column filetype is-2 is-vcentered"
+          className="column filetype fileIcon is-narrow is-vcentered"
         />
         <div
           className="column filename is-3-desktop is-4-tablet is-vcentered"
@@ -150,7 +150,7 @@ exports[`Files Component  should render component 1`] = `
         key="file-0"
       >
         <div
-          className="column filetype fileIcon is-2 is-vcentered"
+          className="column filetype fileIcon is-narrow is-vcentered"
         >
           <Thumbnail
             mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
@@ -241,7 +241,7 @@ exports[`Files Component  should render cultural message 1`] = `
         className="header columns is-gapless is-vcentered is-mobile"
       >
         <div
-          className="column filetype is-2 is-vcentered"
+          className="column filetype fileIcon is-narrow is-vcentered"
         />
         <div
           className="column filename is-3-desktop is-4-tablet is-vcentered"
@@ -267,7 +267,7 @@ exports[`Files Component  should render cultural message 1`] = `
         key="file-0"
       >
         <div
-          className="column filetype fileIcon is-2 is-vcentered"
+          className="column filetype fileIcon is-narrow is-vcentered"
         >
           <Thumbnail
             mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"

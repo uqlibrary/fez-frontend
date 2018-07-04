@@ -173,7 +173,7 @@ export default class Files extends Component {
                     }
                     <div className="files" ref="files">
                         <div className="header columns is-gapless is-vcentered is-mobile">
-                            <div className="column filetype is-2 is-vcentered" />
+                            <div className="column filetype fileIcon is-narrow is-vcentered" />
                             <div className="column filename is-3-desktop is-4-tablet is-vcentered">
                                 {locale.viewRecord.sections.files.fileName}
                             </div>
@@ -188,7 +188,7 @@ export default class Files extends Component {
                         {
                             fileData.map((item, index) => (
                                 <div className="data columns is-gapless is-vcentered is-mobile" key={`file-${index}`}>
-                                    <div className="column filetype fileIcon is-2 is-vcentered">
+                                    <div className="column filetype fileIcon is-narrow is-vcentered">
                                         {item.icon}
                                     </div>
                                     <div className="column filename is-3-desktop is-4-tablet is-vcentered">
