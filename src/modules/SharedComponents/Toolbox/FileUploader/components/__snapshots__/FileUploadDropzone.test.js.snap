@@ -73,6 +73,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                 disableClick={false}
                 disablePreview={true}
                 disabled={false}
+                inputProps={Object {}}
                 maxSize={1000}
                 minSize={0}
                 multiple={true}
@@ -96,6 +97,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                   style={
                     Object {
                       "padding": "0px",
+                      "position": "relative",
                     }
                   }
                 >
@@ -145,7 +147,13 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                     onChange={[Function]}
                     style={
                       Object {
-                        "display": "none",
+                        "bottom": 0,
+                        "left": 0,
+                        "opacity": 0.00001,
+                        "pointerEvents": "none",
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
                       }
                     }
                     type="file"
@@ -175,6 +183,7 @@ exports[`Component FileUploadDropzone should render component with default props
         disableClick={false}
         disablePreview={true}
         disabled={false}
+        inputProps={Object {}}
         maxSize={1000}
         minSize={0}
         multiple={true}
@@ -269,6 +278,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                 disableClick={true}
                 disablePreview={true}
                 disabled={true}
+                inputProps={Object {}}
                 maxSize={1000}
                 minSize={0}
                 multiple={true}
@@ -292,6 +302,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                   style={
                     Object {
                       "padding": "0px",
+                      "position": "relative",
                     }
                   }
                 >
@@ -341,7 +352,13 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                     onChange={[Function]}
                     style={
                       Object {
-                        "display": "none",
+                        "bottom": 0,
+                        "left": 0,
+                        "opacity": 0.00001,
+                        "pointerEvents": "none",
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
                       }
                     }
                     type="file"
