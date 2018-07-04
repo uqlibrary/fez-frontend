@@ -242,7 +242,7 @@
       .thumbnail {
         width: 32px !important;
         height: 32px !important;
-        overflow: hidden;
+        overflow: visible;
         background-size: cover;
         transition: width .3s ease-in-out !important;
         -webkit-transition: width .3s ease-in-out !important;
