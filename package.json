@@ -106,7 +106,6 @@
     "start:mock": "cross-env USE_MOCK=true webpack-dev-server",
     "start:url": "cross-env URL=dev-espace.library.uq.edu.au webpack-dev-server",
     "build:dev": "webpack --config=./webpack.config",
-    "prebuild": "rm -rf dist",
     "build": "webpack --config=./webpack-dist.config",
     "analyse": "webpack --config=./webpack-dist.config --profile --json > stats.json",
     "start:build": "cross-env NODE_ENV=production URL=dev-espace.library.uq.edu.au webpack-dev-server --config=./webpack-dist.config --disable-host-check",
