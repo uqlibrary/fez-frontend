@@ -90,6 +90,9 @@
     .header {
       margin-bottom: 6px !important;
       border-bottom: 1px solid rgba($secondary-color,0.2);
+      .filetype {
+        width: 100px !important;
+      }
       .column {
         height: $text-line-height-normal !important;
         line-height: $text-line-height-normal !important;
