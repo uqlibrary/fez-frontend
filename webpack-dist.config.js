@@ -13,6 +13,31 @@ const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const WebpackStrip = require('strip-loader');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const RobotstxtPlugin = require('robotstxt-webpack-plugin').default;
+
+const options = {
+    policy: [
+        {
+            userAgent: "*",
+            crawlDelay: 10,
+            disallow: [
+                "/login.php",
+                "/stat_details.php",
+                "/stats.php",
+                "/oai.php",
+                "/history.php",
+                "/adv_search.php",
+                "/list.php",
+                "/list/",
+                "/collection/",
+                "/community/",
+                "/flviewer/",
+                "/records/search"
+            ],
+        }
+    ],
+    sitemap: "http://espace.library.uq.edu.au/sitemap/sitemap-index.xml"
+}
 
 // get branch name for current build, if running build locally CI_BRANCH is not set (it's set in codeship)
 const branch = process && process.env && process.env.CI_BRANCH ? process.env.CI_BRANCH : 'development';
@@ -124,7 +149,8 @@ const webpackConfig = {
         new BundleAnalyzerPlugin({
             analyzerMode: config.environment === 'production' ? 'disabled' : 'static',
             openAnalyzer: !process.env.CI_BRANCH
-        })
+        }),
+        new RobotstxtPlugin(options)
     ],
     module: {
         rules: [
