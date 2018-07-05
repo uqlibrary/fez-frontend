@@ -531,7 +531,7 @@ describe('Record action creators', () => {
                 await mockActionsStore.dispatch(recordActions.submitThesis(customInput, authorData));
             } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-                expect(e).toEqual('Submit Thesis: File upload failed.  (' + locale.global.errorMessages.generic + ')');
+                expect(e).toEqual('Submit Thesis: File upload failed.  (' + locale.global.errorMessages[500].message + ')');
             }
         });
 
@@ -557,7 +557,7 @@ describe('Record action creators', () => {
                 await mockActionsStore.dispatch(recordActions.submitThesis(customInput, authorData));
             } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-                expect(e).toEqual('Submit Thesis: Error occurred while saving record to eSpace.  (' + locale.global.errorMessages.generic + ')');
+                expect(e).toEqual('Submit Thesis: Error occurred while saving record to eSpace.  (' + locale.global.errorMessages[500].message + ')');
             }
         });
 
