@@ -16,16 +16,16 @@ export default class GenericSelectField extends Component {
         disabled: PropTypes.bool
     };
 
+    static contextTypes = {
+        selectFieldMobileOverrides: PropTypes.object
+    };
+
     static defaultProps = {
         itemsList: [],
         locale: {
             label: 'Select item',
             loading: 'loading...'
         }
-    };
-
-    static contextTypes = {
-        selectFieldMobileOverrides: PropTypes.object
     };
 
     constructor(props) {

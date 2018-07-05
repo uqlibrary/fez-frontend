@@ -45,14 +45,22 @@ export default class PublicationCitation extends PureComponent {
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
         hideTitle: PropTypes.bool,
-        showMetrics: PropTypes.bool
+        showMetrics: PropTypes.bool,
+        showSourceCountIcon: PropTypes.bool,
+        hideCountDiff: PropTypes.bool,
+        hideCountTotal: PropTypes.bool,
+        hideViewFullStatisticsLink: PropTypes.bool
     };
 
     static defaultProps = {
         showDefaultActions: false,
         showSources: false,
+        showSourceCountIcon: false,
         className: '',
-        hideTitle: false
+        hideTitle: false,
+        hideCountDiff: false,
+        hideCountTotal: false,
+        hideViewFullStatisticsLink: false
     };
 
     constructor(props) {
@@ -84,13 +92,9 @@ export default class PublicationCitation extends PureComponent {
         }
     };
 
-    viewRecord = () => {
-        this.props.actions.setRecordToView(this.props.publication);
-    }
-
     renderTitle = () => {
         return this.props.publication.rek_pid
-            ? (<Link to={routes.pathConfig.records.view(this.props.publication.rek_pid)} onClick={this.viewRecord}>{ReactHtmlParser(this.props.publication.rek_title)}</Link>)
+            ? (<Link to={routes.pathConfig.records.view(this.props.publication.rek_pid)}>{ReactHtmlParser(this.props.publication.rek_title)}</Link>)
             : (ReactHtmlParser(this.props.publication.rek_title));
     }
 
@@ -170,14 +174,14 @@ export default class PublicationCitation extends PureComponent {
 
                         {this.renderCitation(this.props.publication.rek_display_type)}
 
-                        <CitationCounts publication={this.props.publication} />
+                        <CitationCounts publication={this.props.publication} hideViewFullStatisticsLink={this.props.hideViewFullStatisticsLink}/>
 
                         {/* display publication source (eg from espace/pubmed/crossref/etc */}
                         {this.props.showSources && this.props.publication.sources && this.renderSources()}
                     </div>
                     {
                         this.props.showMetrics &&
-                        <div className="column is-narrow">
+                        <div className="column is-narrow trendingCount">
                             <ExternalLink
                                 className="trendingPubsCount"
                                 href={recordValue.citation_url}
@@ -185,12 +189,22 @@ export default class PublicationCitation extends PureComponent {
                                 aria-label={txt.linkWillOpenInNewWindow.replace('[destination]', txt.myTrendingPublications.sourceTitles[recordValue.source])}
                                 openInNewIcon={false}
                             >
-                                {recordValue.count}
+                                {
+                                    this.props.showSourceCountIcon &&
+                                    <div className={'count-icon-container'}>
+                                        <div className={`fez-icon ${recordValue.source} xxxlarge`} />
+                                        <div className={'count'}>{recordValue.count}</div>
+                                    </div>
+                                }
+                                {!this.props.showSourceCountIcon && !this.props.hideCountTotal && recordValue.count}
+                                {
+                                    !this.props.hideCountDiff &&
+                                    <span
+                                        className="trendingPubsDifference"
+                                        title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}>+{Math.round(recordValue.difference)}
+                                    </span>
+                                }
                             </ExternalLink>
-                            <span
-                                className="trendingPubsDifference"
-                                title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}>+{Math.round(recordValue.difference)}
-                            </span>
                         </div>
                     }
                 </div>

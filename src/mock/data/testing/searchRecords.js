@@ -1,3 +1,5 @@
+import stringToArrayBuffer from 'string-to-arraybuffer';
+
 export const espaceList = [
     {
         "currentSource": "espace",
@@ -448,3 +450,5 @@ export const expectedListCrafted = [
         fez_record_search_key_scopus_id: {rek_scopus_id: '2.s2.2323232323'}
     },
 ];
+
+export const exportSearchToExcel = stringToArrayBuffer(`xml file`);

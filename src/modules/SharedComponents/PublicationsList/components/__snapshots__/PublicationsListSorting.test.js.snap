@@ -6,6 +6,711 @@ exports[`PublicationsListSorting renders  component with empty paging data 1`] =
 />
 `;
 
+exports[`PublicationsListSorting renders  component with export dropdown for admin or author 1`] = `
+<div
+  className="publicationsListSorting columns is-gapless is-mobile"
+>
+  <div
+    className="column"
+  >
+    <SelectField
+      autoWidth={false}
+      disabled={false}
+      floatingLabelText="Sort results by"
+      fullWidth={true}
+      id="sortBy"
+      maxHeight={250}
+      multiple={false}
+      onChange={[Function]}
+      value="published_date"
+    >
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="0"
+        primaryText="Published date"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="published_date"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="1"
+        primaryText="Search relevance"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="score"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="2"
+        primaryText="Title"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="title"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="3"
+        primaryText="Created date"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="created_date"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="4"
+        primaryText="Updated date"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="updated_date"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="5"
+        primaryText="Altmetric score"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="altmetric_score"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="6"
+        primaryText="Scopus citation count"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="scopus_citation_count"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="7"
+        primaryText="Web of Science citation count"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="thomson_citation_count"
+      />
+    </SelectField>
+  </div>
+  <div
+    className="column is-narrow is-spacer is-hidden-mobile"
+  />
+  <div
+    className="column is-hidden-mobile"
+  >
+    <SelectField
+      autoWidth={false}
+      disabled={false}
+      floatingLabelText="Sort order"
+      fullWidth={true}
+      id="sortOrder"
+      maxHeight={250}
+      multiple={false}
+      onChange={[Function]}
+      value="Desc"
+    >
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="0"
+        primaryText="Desc"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="Desc"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="1"
+        primaryText="Asc"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="Asc"
+      />
+    </SelectField>
+  </div>
+  <div
+    className="column is-narrow is-spacer is-hidden-mobile"
+  />
+  <div
+    className="column is-hidden-mobile"
+  >
+    <SelectField
+      autoWidth={false}
+      disabled={false}
+      floatingLabelText="Records per page"
+      fullWidth={true}
+      id="pageSize"
+      maxHeight={250}
+      multiple={false}
+      onChange={[Function]}
+      value={20}
+    >
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="records-per-page-20"
+        primaryText={20}
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value={20}
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="records-per-page-50"
+        primaryText={50}
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value={50}
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="records-per-page-100"
+        primaryText={100}
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value={100}
+      />
+    </SelectField>
+  </div>
+  <div
+    className="column is-narrow is-spacer is-hidden-mobile is-hidden-tablet-only"
+  />
+  <div
+    className="column is-hidden-mobile is-hidden-tablet-only"
+  >
+    <ExportPublications
+      disabled={false}
+      onChange={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`PublicationsListSorting renders  component with export dropdown hidden 1`] = `
+<div
+  className="publicationsListSorting columns is-gapless is-mobile"
+>
+  <div
+    className="column"
+  >
+    <SelectField
+      autoWidth={false}
+      disabled={false}
+      floatingLabelText="Sort results by"
+      fullWidth={true}
+      id="sortBy"
+      maxHeight={250}
+      multiple={false}
+      onChange={[Function]}
+      value="published_date"
+    >
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="0"
+        primaryText="Published date"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="published_date"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="1"
+        primaryText="Search relevance"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="score"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="2"
+        primaryText="Title"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="title"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="3"
+        primaryText="Created date"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="created_date"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="4"
+        primaryText="Updated date"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="updated_date"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="5"
+        primaryText="Altmetric score"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="altmetric_score"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="6"
+        primaryText="Scopus citation count"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="scopus_citation_count"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="7"
+        primaryText="Web of Science citation count"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="thomson_citation_count"
+      />
+    </SelectField>
+  </div>
+  <div
+    className="column is-narrow is-spacer is-hidden-mobile"
+  />
+  <div
+    className="column is-hidden-mobile"
+  >
+    <SelectField
+      autoWidth={false}
+      disabled={false}
+      floatingLabelText="Sort order"
+      fullWidth={true}
+      id="sortOrder"
+      maxHeight={250}
+      multiple={false}
+      onChange={[Function]}
+      value="Desc"
+    >
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="0"
+        primaryText="Desc"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="Desc"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="1"
+        primaryText="Asc"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="Asc"
+      />
+    </SelectField>
+  </div>
+  <div
+    className="column is-narrow is-spacer is-hidden-mobile"
+  />
+  <div
+    className="column is-hidden-mobile"
+  >
+    <SelectField
+      autoWidth={false}
+      disabled={false}
+      floatingLabelText="Records per page"
+      fullWidth={true}
+      id="pageSize"
+      maxHeight={250}
+      multiple={false}
+      onChange={[Function]}
+      value={20}
+    >
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="records-per-page-20"
+        primaryText={20}
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value={20}
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="records-per-page-50"
+        primaryText={50}
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value={50}
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="records-per-page-100"
+        primaryText={100}
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value={100}
+      />
+    </SelectField>
+  </div>
+</div>
+`;
+
 exports[`PublicationsListSorting renders  component with non-empty paging data 1`] = `
 <div
   className="publicationsListSorting columns is-gapless is-mobile"
@@ -191,7 +896,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         focusState="none"
         insetChildren={false}
         key="7"
-        primaryText="Thompson citation count"
+        primaryText="Web of Science citation count"
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -294,6 +999,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="records-per-page-20"
         primaryText={20}
         targetOrigin={
           Object {
@@ -315,6 +1021,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="records-per-page-50"
         primaryText={50}
         targetOrigin={
           Object {
@@ -336,6 +1043,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="records-per-page-100"
         primaryText={100}
         targetOrigin={
           Object {
@@ -344,27 +1052,6 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
           }
         }
         value={100}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        primaryText={1000}
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={1000}
       />
     </SelectField>
   </div>

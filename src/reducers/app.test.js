@@ -20,4 +20,15 @@ describe('app reducer', () => {
         const test = appReducer(initialState, {type: 'INVALID_ACTION_TYPE'});
         expect(test).toEqual(initialState);
     });
+
+    it('returns the redirect location we are setting', () => {
+        const test = appReducer(initialState, {
+            type: actions.SET_REDIRECT_PATH,
+            payload: '/records/add/find'
+        });
+        expect(test).toEqual({
+            ...initialState,
+            redirectPath: '/records/add/find'
+        });
+    });
 });

@@ -1,5 +1,8 @@
 import React from 'react';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {pathConfig} from 'config/routes';
+import locale from 'locale/components';
+
 /*
 
 NOTE:
@@ -20,6 +23,9 @@ help: {
 
 export default {
     pages: {
+        index: {
+            title: 'eSpace'
+        },
         contact: {
             title: 'Contact UQ eSpace',
             children: (
@@ -44,23 +50,15 @@ export default {
                     </p>
                     <h3>About UQ eSpace</h3>
                     <p>
-                        UQ eSpace is the single authoritative source for the research outputs and research data of the
-                        staff and students of the University of Queensland and is the archival home of UQ Research
-                        Higher Degree digital theses. UQ eSpace raises the visibility and accessibility of UQ
-                        publications to the wider world and provides data for mandatory Government reporting
-                        requirements such as Excellence in Research for Australia (ERA), as well as for internal UQ
-                        systems, including Academic Portal and the DataHub. It operates as an institutional repository
-                        for open access publications, research datasets and other digitised materials created by staff
-                        of the University such as print materials, photographs, audio materials, videos, manuscripts and
-                        other original works. UQ eSpace provides metadata to UQ Researchers in order to raise the
-                        publication profile of researchers at UQ.
-                    </p>
-                    <p>
-                        The University of Queensland has implemented an Open Access for UQ Research Outputs policy that
-                        requires UQ researchers to make publications arising from their research openly available via UQ
-                        eSpace. It has also implemented a Research Data Management policy that sets out the requirements
-                        for University of Queensland researchers to ensure that their research data are managed
-                        according to legal, statutory, ethical and funding body requirements.
+                        The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility and accessibility of UQ’s scholarly research by:
+                        <ul>
+                            <li>Enhancing discovery of UQ research via search engines such as Google and Trove</li>
+                            <li>Allowing researchers to deposit publications, datasets and open access materials and to view publication metrics</li>
+                            <li>Maintaining a complete and accurate record of all UQ research publications and research data sets that feeds into central UQ systems including UQ Researchers and the Academic Portal</li>
+                            <li>Enabling government reporting such as Australian Research Council’s Excellence in Research for Australia and the Engagement and Impact Assessment</li>
+                            <li>Supporting the deposit of open access publications to make UQ research globally accessible</li>
+                            <li>Preserving and making digitised materials accessible to the world including HDR theses, photographs, audio materials, videos, manuscripts and other original works.</li>
+                        </ul>
                     </p>
                 </StandardCard>
             )
@@ -156,7 +154,7 @@ export default {
                 },
                 dashboardResearcherIds: {
                     researcherIsLinked: 'Your [resource] ID is [id] - Click to review',
-                    researcherIsNotLinked: 'You are not linked to [resource] - Click to amend',
+                    researcherIsNotLinked: 'You are not linked to [resource] - Click for more information',
                     orcidUrlPrefix: process.env.ORCID_URL ? `${process.env.ORCID_URL}/` : 'https://orcid.org/',
                     orcidLinkPrefix: 'orcid.org/',
                     orcidlinkLabel: 'Click to visit your ORCId profile',
@@ -200,30 +198,46 @@ export default {
             recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             text: (
                 <span>
-                    Add to this list by <a href="/records/possible">claiming a publication</a> or <a href="/records/add/find">adding a missing publication</a>.
+                    Add to this list by <a href={`${pathConfig.records.possible}`}>claiming a publication</a> or <a href={`${pathConfig.records.add.find}`}>adding a missing publication</a>.
                 </span>
             ),
             loadingMessage: 'Searching for your publications...',
             loadingPagingMessage: 'Retrieving your publications...',
+            exportPublicationsLoadingMessage: 'Exporting your publications...',
             noResultsFound: {
                 title: 'No publications found',
                 text: (
                     <div>
-                        We were unable to find any results. You may be able to <a href="/records/possible">claim
-                        publications we think may be yours</a> or <a href="/records/add/find">add a
+                        We were unable to find any results. You may be able to <a href={`${pathConfig.records.possible}`}>claim
+                        publications we think may be yours</a> or <a href={`${pathConfig.records.add.find}`}>add a
                         missing publication</a>
                     </div>
                 ),
             },
+            facetsFilter: {...locale.components.facetsFilter}
+        },
+        myDatasets: {
+            pageTitle: 'My research data',
+            recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
+            text: (
+                <span>
+                    Add to this list by <a href={`${pathConfig.dataset.add}`} target="_blank">adding a missing dataset</a>.
+                </span>
+            ),
+            loadingMessage: 'Searching for your datasets...',
+            loadingPagingMessage: 'Retrieving your datasets...',
+            noResultsFound: {
+                title: 'No datasets found',
+                text: (
+                    <div>
+                        We were unable to find any results. You may be able to <a href={`${pathConfig.dataset.add}`} target="_blank">add a missing dataset</a>.
+                    </div>
+                ),
+            },
             facetsFilter: {
-                title: 'Refine results',
-                // help: {
-                //     title: 'Refining your results',
-                //     text: 'Help about ....',
-                //     buttonLabel: 'Ok'
-                // },
-                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
-                renameFacetsList: {'Display type': 'Publication type'}
+                ...locale.components.facetsFilter,
+                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published', 'Display type'],
+                renameFacetsList: {}
             }
         },
         claimPublications: {
@@ -272,19 +286,10 @@ export default {
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             },
-            facetsFilter: {
-                title: 'Refine results',
-                // help: {
-                //     title: 'Refining your results',
-                //     text: 'Help about ....',
-                //     buttonLabel: 'Ok'
-                // },
-                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
-                renameFacetsList: {'Display type': 'Publication type'}
-            }
+            facetsFilter: {...locale.components.facetsFilter}
         },
         addRecord: {
-            title: 'Add a missing record to eSpace',
+            title: 'Add a missing publication to eSpace',
             stepper: [
                 {label: 'Search for your publication'},
                 {label: 'Search results'},
@@ -399,6 +404,27 @@ export default {
         },
         viewRecord: {
             loadingMessage: 'Loading record...'
+        },
+        searchRecords: {
+            title: 'eSpace search',
+            loadingMessage: 'Searching for publications...',
+            recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
+            loadingPagingMessage: 'Searching for publications...',
+            exportPublicationsLoadingMessage: 'Exporting search results...',
+            noResultsFound: {
+                title: 'No publications found',
+                text: (
+                    <div>
+                        We were unable to find any results.
+                    </div>
+                ),
+            },
+            facetsFilter: {...locale.components.facetsFilter},
+            errorAlert: {
+                type: 'error_outline',
+                title: 'Error',
+                message: (message) => message
+            },
         },
         masquerade: {
             title: 'Masquerade',

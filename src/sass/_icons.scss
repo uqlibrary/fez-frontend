@@ -82,6 +82,10 @@
     width: 24px;
     height: 24px;
   }
+  &.xxxlarge {
+    width: 70px;
+    height: 70px;
+  }
   &.dashboard {
     border-radius: 50% !important;
     -moz-border-radius: 50% !important;
@@ -95,5 +99,15 @@
 
   &.license .openExternalUrlIcon {
     display: none !important;
+  }
+}
+
+// Override search input clear button icon with material design icon
+input[type="search"] {
+  -webkit-appearance: textfield !important;
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    background-image: url(../../src/images/baseline-close-24px.svg);
+    background-size: cover;
   }
 }

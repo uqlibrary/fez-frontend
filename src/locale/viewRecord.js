@@ -223,9 +223,9 @@ export default {
             },
             'Department Technical Report': {},
             'Design': {
-                rek_date: 'Year available',
+                rek_date: 'Date',
                 rek_description: 'Project description',
-                fez_record_search_key_date_available: 'Date of completion',
+                fez_record_search_key_date_available: 'Year available',
                 fez_record_search_key_author: 'Designer(s)',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
                 fez_record_search_key_contributor: 'Consultant(s)'
@@ -240,6 +240,7 @@ export default {
             },
             'Image': {
                 fez_record_search_key_author: 'Creator',
+                fez_record_search_key_contributor: 'Contributor',
                 fez_record_search_key_rights: 'Rights',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
             },
@@ -581,36 +582,32 @@ export default {
                     order: 20
                 },
                 {
-                    field: 'fez_record_search_key_chapter_number',
+                    field: 'fez_record_search_key_start_page',
                     order: 21
                 },
                 {
-                    field: 'fez_record_search_key_start_page',
+                    field: 'fez_record_search_key_end_page',
                     order: 22
                 },
                 {
-                    field: 'fez_record_search_key_end_page',
+                    field: 'fez_record_search_key_total_pages',
                     order: 23
                 },
                 {
-                    field: 'fez_record_search_key_total_pages',
+                    field: 'fez_record_search_key_total_chapters',
                     order: 24
                 },
                 {
-                    field: 'fez_record_search_key_total_chapters',
+                    field: 'fez_record_search_key_language',
                     order: 25
                 },
                 {
-                    field: 'fez_record_search_key_language',
+                    field: 'fez_record_search_key_subject',
                     order: 26
                 },
                 {
-                    field: 'fez_record_search_key_subject',
-                    order: 27
-                },
-                {
                     field: 'fez_record_search_key_keywords',
-                    order: 28
+                    order: 27
                 }
             ],
             'Conference Paper': [

@@ -6,6 +6,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
 >
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="1"
     publication={
       Object {
@@ -857,10 +858,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="2"
     publication={
       Object {
@@ -1971,10 +1974,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="3"
     publication={
       Object {
@@ -2921,10 +2926,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="4"
     publication={
       Object {
@@ -3829,10 +3836,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="5"
     publication={
       Object {
@@ -4882,10 +4891,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="6"
     publication={
       Object {
@@ -6070,10 +6081,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="7"
     publication={
       Object {
@@ -6914,10 +6927,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="8"
     publication={
       Object {
@@ -7669,10 +7684,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="9"
     publication={
       Object {
@@ -8637,10 +8654,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="10"
     publication={
       Object {
@@ -10016,10 +10035,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="11"
     publication={
       Object {
@@ -11040,10 +11061,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="12"
     publication={
       Object {
@@ -11783,10 +11806,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="13"
     publication={
       Object {
@@ -12719,10 +12744,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="14"
     publication={
       Object {
@@ -13524,10 +13551,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="15"
     publication={
       Object {
@@ -14381,10 +14410,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="16"
     publication={
       Object {
@@ -15498,10 +15529,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="17"
     publication={
       Object {
@@ -16805,10 +16838,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="18"
     publication={
       Object {
@@ -17775,10 +17810,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="19"
     publication={
       Object {
@@ -18399,10 +18436,12 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
+    hideCountDiff={false}
     key="20"
     publication={
       Object {
@@ -19516,6 +19555,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     }
     showDefaultActions={false}
     showMetrics={false}
+    showSourceCountIcon={false}
     showSources={false}
   />
 </div>

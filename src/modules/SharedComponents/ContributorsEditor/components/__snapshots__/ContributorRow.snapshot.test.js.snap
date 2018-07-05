@@ -4,6 +4,7 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
 <div
   className="contributorsRow datalist datalist-row "
   id={0}
+  key="0"
 >
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -129,6 +130,7 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
 <div
   className="contributorsRow datalist datalist-row "
   id={0}
+  key="0"
 >
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -242,6 +244,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
 <div
   className="contributorsRow datalist datalist-row "
   id={0}
+  key="0"
 >
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -355,6 +358,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
 <div
   className="contributorsRow datalist datalist-row "
   id={0}
+  key="0"
 >
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -502,6 +506,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
 <div
   className="contributorsRow datalist datalist-row selected"
   id={0}
+  key="0"
 >
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -625,6 +630,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
 <div
   className="contributorsRow datalist datalist-row "
   id={0}
+  key="0"
 >
   <ConfirmDialogBox
     hideCancelButton={false}

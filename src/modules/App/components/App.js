@@ -6,6 +6,8 @@ import {locale} from 'locale';
 
 // application components
 import AppBar from 'material-ui/AppBar';
+import IconButton from 'material-ui/IconButton';
+
 import {AppLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {MenuDrawer} from 'modules/SharedComponents/Toolbox/MenuDrawer';
@@ -15,9 +17,9 @@ import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import AppAlertContainer from '../containers/AppAlert';
 import {Meta} from 'modules/SharedComponents/Meta';
 import {OfflineSnackbar} from 'modules/SharedComponents/OfflineSnackbar';
+import {SearchComponent} from 'modules/SharedComponents/SearchComponent';
 
 import * as pages from './pages';
-import IconButton from 'material-ui/IconButton';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
 export default class App extends PureComponent {
@@ -52,7 +54,11 @@ export default class App extends PureComponent {
                 style: !this.state.isMobile ? {width: '100%'} : {},
                 autoWidth: !this.state.isMobile,
                 fullWidth: this.state.isMobile,
-                menuItemStyle: this.state.isMobile ? {whiteSpace: 'normal', lineHeight: '18px', paddingBottom: '8px'} : {},
+                menuItemStyle: this.state.isMobile ? {
+                    whiteSpace: 'normal',
+                    lineHeight: '18px',
+                    paddingBottom: '8px'
+                } : {},
             }
         };
     }
@@ -82,7 +88,7 @@ export default class App extends PureComponent {
     redirectUserToLogin = (isAuthorizedUser = false, redirectToCurrentLocation = false) => () => {
         const redirectUrl = isAuthorizedUser ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
         const returnUrl = redirectToCurrentLocation || !isAuthorizedUser ? window.location.href : APP_URL;
-        window.location.assign(`${redirectUrl}?return=${window.btoa(returnUrl)}`);
+        window.location.assign(`${redirectUrl}?url=${window.btoa(returnUrl)}`);
     };
 
     redirectToOrcid = () => {
@@ -94,6 +100,13 @@ export default class App extends PureComponent {
         }
     };
 
+    isPublicPage = (menuItems) => (
+        menuItems
+            .filter(menuItem => this.props.location.pathname === menuItem.linkTo && menuItem.public)
+            .length > 0
+        || (new RegExp(routes.pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname))
+    );
+
     render() {
         // display loader while user account is loading
         if (this.props.accountLoading) {
@@ -101,8 +114,8 @@ export default class App extends PureComponent {
                 <div className="layout-fill">
                     <AppLoader
                         title={locale.global.title}
-                        logoImage={locale.global.logo}
-                        logoText={locale.global.title}/>
+                        logoImage={locale.global.logo.image}
+                        logoText={locale.global.logo.label}/>
                 </div>
             );
         }
@@ -111,12 +124,16 @@ export default class App extends PureComponent {
         const isAuthorLoading = this.props.accountLoading || this.props.accountAuthorLoading;
         const isOrcidRequired = this.props.author && !this.props.author.aut_orcid_id
             && this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
-        const isHdrStudent = this.props.author && this.props.author.aut_student_username;
+        const isHdrStudent = !isAuthorLoading && !!this.props.account && !!this.props.author
+            && this.props.account.class.indexOf('IS_CURRENT') >= 0
+            && this.props.account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
+
         const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent);
-        const isPublicPage = menuItems.filter((menuItem) =>
-            (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
+        const isPublicPage = this.isPublicPage(menuItems);
         const isThesisSubmissionPage = this.props.location.pathname === routes.pathConfig.hdrSubmission ||
             this.props.location.pathname === routes.pathConfig.sbsSubmission;
+        const isSearchPage = this.props.location.pathname === routes.pathConfig.records.search ||
+            this.props.location.pathname === routes.pathConfig.records.search;
 
         const showMenu = !isThesisSubmissionPage;
         const titleStyle = showMenu && this.state.docked ? {paddingLeft: 320} : {};
@@ -129,7 +146,7 @@ export default class App extends PureComponent {
         }
 
         let userStatusAlert = null;
-        if(!this.props.accountLoading && !this.props.account) {
+        if (!this.props.accountLoading && !this.props.account && !isPublicPage) {
             // user is not logged in
             userStatusAlert = {
                 ...locale.global.loginAlert,
@@ -160,32 +177,43 @@ export default class App extends PureComponent {
         });
         return (
             <div className="layout-fill align-stretch">
-                <Meta routesConfig={routesConfig} />
+                <Meta routesConfig={routesConfig}/>
                 <AppBar
                     className="AppBar align-center"
                     showMenuIconButton={showMenu && !this.state.docked}
                     style={{height: 75}}
                     iconStyleLeft={{marginTop: 0}}
-                    title={locale.global.title}
+                    title={locale.global.appTitle}
                     titleStyle={titleStyle}
                     onLeftIconButtonClick={this.toggleDrawer}
                     iconElementLeft={
-                        <IconButton
-                            tooltip={locale.global.mainNavButton.tooltip}
-                            tooltipPosition="bottom-right"
-                            hoveredStyle={appBarButtonStyles}
-                            tabIndex={(this.state.docked || !this.state.menuDrawerOpen) ? 1 : -1} >
-                            <NavigationMenu />
-                        </IconButton>
+                        this.state.docked || !this.state.menuDrawerOpen ?
+                            <IconButton
+                                tooltip={locale.global.mainNavButton.tooltip}
+                                tooltipPosition="bottom-right"
+                                hoveredStyle={appBarButtonStyles}
+                                className="main-menu-button">
+                                <NavigationMenu/>
+                            </IconButton>
+                            :
+                            <div className="menuHidden" />
                     }
                     iconElementRight={
-                        <div style={{marginTop: '-10px'}}>
-                            <AuthButton
-                                isAuthorizedUser={isAuthorizedUser}
-                                hoveredStyle={appBarButtonStyles}
-                                onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
-                                signInTooltipText={locale.global.authentication.signInText}
-                                signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''} />
+                        <div className="columns is-gapless appbar-right-columns is-mobile">
+                            <div className="column search-column">
+                                {
+                                    !isThesisSubmissionPage && !isSearchPage &&
+                                    <SearchComponent isInHeader showPrefixIcon showMobileSearchButton />
+                                }
+                            </div>
+                            <div className="column is-narrow auth-button-column">
+                                <AuthButton
+                                    isAuthorizedUser={isAuthorizedUser}
+                                    hoveredStyle={appBarButtonStyles}
+                                    onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
+                                    signInTooltipText={locale.global.authentication.signInText}
+                                    signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''}/>
+                            </div>
                         </div>
                     }
                 />
@@ -196,8 +224,9 @@ export default class App extends PureComponent {
                         drawerOpen={this.state.docked || this.state.menuDrawerOpen}
                         docked={this.state.docked}
                         history={this.props.history}
-                        logoImage={locale.global.logo}
-                        logoText={locale.global.title}
+                        logoImage={locale.global.logo.image}
+                        logoText={locale.global.logo.label}
+                        logoLink={locale.global.logo.link}
                         onToggleDrawer={this.toggleDrawer}
                         isMobile={this.state.isMobile}
                         locale={{
@@ -215,7 +244,7 @@ export default class App extends PureComponent {
                             </div>
                         </div>
                     }
-                    <AppAlertContainer />
+                    <AppAlertContainer/>
                     {
                         isAuthorLoading &&
                         <div className="isLoading is-centered">
@@ -235,7 +264,7 @@ export default class App extends PureComponent {
                     }
                 </div>
                 <HelpDrawer/>
-                <OfflineSnackbar />
+                <OfflineSnackbar/>
             </div>
         );
     }

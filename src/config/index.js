@@ -20,3 +20,4 @@ export {publicationTypes} from './general';
 export * as routes from './routes';
 export * as openAccessConfig from './openAccess';
 export {viewRecordsConfig} from './viewRecord';
+export {trendingPublicationsConfig} from './trendingPublications';

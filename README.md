@@ -18,7 +18,7 @@ UQ's branding for Fez is UQ eSpace.
 ## Technology
 - Code: `React (~0.16), Javascript (ES2015 - Babel), Immutable, SASS`
 - State: `Redux, ReduxForm`
-- Design: `Google Material Design - Material UI`
+- Design: `Google Material Design` - [Material UI](https://v0.material-ui.com/#/components/app-bar)
 - Build and dev tools: `Webpack`
 - Unit tests: `Jest`
 - E2E tests: TBA
@@ -29,8 +29,10 @@ This project is using `npm` for dependency management.  Make sure `npm` is insta
 - `npm install`
 - `npm run start` - The website is now running on `http://localhost:3000/` on dev api (requires additional setup of uqlibrary/api project)
 - `npm run start:mock` - The website is now running on `http://localhost:3000/` on mock data
+- `npm run start:url` - The website is now running on `http://dev-espace.library.uq.edu.au:3000` using staging as a backend (add `dev-espace.library.uq.edu.au` to your /etc/hosts)
 - for Hot Reloading to work in IntelliJ products, turn "safe write" off in the settings
-- `npm run start:build` will run production build version on `http://dev-espace.library.uq.edu.au:9000/` and `http://localhost:9000` (add `dev-espace.library.uq.edu.au` to your /etc/hosts)
+- to specify a session token use SESSION_COOKIE_NAME env var .ie SESSION_COOKIE_NAME='mysessiontoken' npm run start:url
+- `npm run start:build` will run production build version on `http://dev-espace.library.uq.edu.au:9000/` and `http://localhost:9000`
 - `npm run start:build:e2e` will run production build version on `http://localhost:9000` with mock data (async loading is not working since chuncks are not saved, navigate directly to required routes)
 
 Mock data is provided for all pages and actions under `src/mock/`.
@@ -75,7 +77,7 @@ to keep initial load to a minimum following optimisation has been added to the p
    - publicationForm.js locale is loaded only when PublicationForm component is loaded
    - other locale files are not too big, all bundled into one for now
 - webpack plugins:
-   
+
   - uglify/tree shake:
 
 ```
@@ -91,21 +93,21 @@ new webpack.DefinePlugin({
   ...
   })
 ```
- 
+
   - remove momentjs locale:
 
-```  
+```
 new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
-```  
+```
 
 #### Optimisation Guidelines
 
 - do not use functional components
 - try to simplify props
-- component should extend React.PureComponent if props are simple 
+- component should extend React.PureComponent if props are simple
 - component should extend React.Component, shouldComponentUpdate() should be implemented if props have objects
 - import explicit and specific components (do not import all):
-   - *DO NOT* `import {Button} from 'material-ui';` 
+   - *DO NOT* `import {Button} from 'material-ui';`
    - *DO* `import {Button} from 'material-ui/Button';`
 - any set of components which is not required in the initial load, eg PublicationForm, FixForm, ClaimForm etc, should lazy loaded using `<Async>`
 ```
@@ -113,7 +115,7 @@ const PublicationsList = (componentProps) => (<Async load={import('modules/Share
 ...
 <PublicationsList {...props} />
 ```
-- make sure to check BundleAnalyzerPlugin output locally by running `npm run build` or `npm run analyse`: 
+- make sure to check BundleAnalyzerPlugin output locally by running `npm run build` or `npm run analyse`:
   - main-###.js file should not exceed 1Mb
   - main-###.js should not include any non-essential libraries
 
@@ -158,10 +160,10 @@ in as that user. Usernames can be found in the `src/mock/data/accounts.js` file.
 - user with expired token: http://localhost:3000/?user=uqexpired
 
 ## Deployment
-Application deployment is 100% automated using Codeship, and is hosted in S3. 
+Application deployment is 100% automated using Codeship, and is hosted in S3.
 All deployment configuration (S3 bucket access keys, post deployment cache invalidation configuration) is stored within Codeship.
 Deployment pipelines are setup for branches: "master", "staging, "production" and any branch starting with "feature-".
-
+- Master branch is always deployed to staging/production
 - Deployments to production are hosted on https://espace.library.uq.edu.au/
 - Deployments to staging are hosted on https://fez-staging.library.uq.edu.au/
 - All other branches are deployed on https://development.library.uq.edu/espace/`branchName`/.

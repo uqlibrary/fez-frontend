@@ -1020,7 +1020,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -1187,7 +1187,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -1354,7 +1354,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -2231,7 +2231,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -2398,7 +2398,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -2565,7 +2565,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -2732,7 +2732,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -3585,7 +3585,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -3752,7 +3752,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -3919,7 +3919,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -4784,7 +4784,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -4951,7 +4951,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -5118,7 +5118,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -5995,7 +5995,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -6162,7 +6162,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -6329,7 +6329,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -6496,7 +6496,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -7191,14 +7191,12 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   openAccessStatusId={453693}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div>
-                                                    <span
-                                                      aria-label="DOI - Open access after 24th December 2020"
-                                                      className="fez-icon openAccessEmbargoed large"
-                                                      role="img"
-                                                      title="DOI - Open access after 24th December 2020"
-                                                    />
-                                                  </div>
+                                                  <span
+                                                    aria-label="DOI - Open access after 24th December 2020"
+                                                    className="fez-icon openAccessEmbargoed large"
+                                                    role="img"
+                                                    title="DOI - Open access after 24th December 2020"
+                                                  />
                                                 </OpenAccessIcon>
                                               </td>
                                             </TableRowColumn>
@@ -7363,7 +7361,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -7530,7 +7528,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>
@@ -7697,7 +7695,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   isOpenAccess={false}
                                                   showEmbargoText={false}
                                                 >
-                                                  <div
+                                                  <span
                                                     className="noOaIcon"
                                                   />
                                                 </OpenAccessIcon>

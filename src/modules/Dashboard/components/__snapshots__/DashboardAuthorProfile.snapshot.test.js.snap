@@ -5,8 +5,19 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+      },
     }
   }
 >
@@ -52,7 +63,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
         }
       }
     >
-      <DashboardProfile
+      <DashboardAuthorProfile
         author={
           Object {
             "aut_created_date": null,
@@ -296,23 +307,23 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                   >
                     <ExternalLink
                       className="researcherIDlink"
-                      href="https://app.library.uq.edu.au/#/id"
+                      href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier"
                       openInNewIcon={false}
                       rel="noopener noreferrer"
                       target="_blank"
-                      title="You are not linked to Publons - Click to amend"
+                      title="You are not linked to Publons - Click for more information"
                     >
                       <a
                         className="researcherIDlink externalLinkfalse"
-                        href="https://app.library.uq.edu.au/#/id"
+                        href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier"
                         rel="noopener noreferrer"
                         tabIndex="0"
                         target="_blank"
-                        title="You are not linked to Publons - Click to amend"
+                        title="You are not linked to Publons - Click for more information"
                       >
                         <div
                           className="fez-icon publons dashboard"
-                          title="You are not linked to Publons - Click to amend"
+                          title="You are not linked to Publons - Click for more information"
                         />
                       </a>
                     </ExternalLink>
@@ -447,41 +458,17 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
             <div
               className="column is-narrow is-hidden-tablet-only authorCount"
             >
-              <DashboardArticleCount
-                articleCount={357}
-                articleFirstYear={1975}
-                articleLastYear={2018}
-              >
-                <div
-                  className="authorCounter is-centered"
-                >
-                  <div>
-                    <div
-                      className="noOfArticles"
-                    >
-                      357
-                    </div>
-                    <div
-                      className="articlesFrom"
-                    >
-                      eSpace articles from
-                    </div>
-                    <div
-                      className="dateRange"
-                    >
-                      1975
-                      <span>
-                         to 
-                      </span>
-                      2018
-                    </div>
-                  </div>
-                </div>
-              </DashboardArticleCount>
+              <Connect(DashboardArticleCount)>
+                <DashboardArticleCount>
+                  <div
+                    className="authorCounter is-centered"
+                  />
+                </DashboardArticleCount>
+              </Connect(DashboardArticleCount)>
             </div>
           </div>
         </div>
-      </DashboardProfile>
+      </DashboardAuthorProfile>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -492,8 +479,19 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+      },
     }
   }
 >
@@ -539,7 +537,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
         }
       }
     >
-      <DashboardProfile
+      <DashboardAuthorProfile
         author={
           Object {
             "aut_created_date": null,
@@ -934,41 +932,17 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
             <div
               className="column is-narrow is-hidden-tablet-only authorCount"
             >
-              <DashboardArticleCount
-                articleCount={357}
-                articleFirstYear={1975}
-                articleLastYear={2018}
-              >
-                <div
-                  className="authorCounter is-centered"
-                >
-                  <div>
-                    <div
-                      className="noOfArticles"
-                    >
-                      357
-                    </div>
-                    <div
-                      className="articlesFrom"
-                    >
-                      eSpace articles from
-                    </div>
-                    <div
-                      className="dateRange"
-                    >
-                      1975
-                      <span>
-                         to 
-                      </span>
-                      2018
-                    </div>
-                  </div>
-                </div>
-              </DashboardArticleCount>
+              <Connect(DashboardArticleCount)>
+                <DashboardArticleCount>
+                  <div
+                    className="authorCounter is-centered"
+                  />
+                </DashboardArticleCount>
+              </Connect(DashboardArticleCount)>
             </div>
           </div>
         </div>
-      </DashboardProfile>
+      </DashboardAuthorProfile>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -979,8 +953,19 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+      },
     }
   }
 >
@@ -1026,7 +1011,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
         }
       }
     >
-      <DashboardProfile
+      <DashboardAuthorProfile
         author={
           Object {
             "aut_created_date": null,
@@ -1421,41 +1406,17 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
             <div
               className="column is-narrow is-hidden-tablet-only authorCount"
             >
-              <DashboardArticleCount
-                articleCount={357}
-                articleFirstYear={1975}
-                articleLastYear={2018}
-              >
-                <div
-                  className="authorCounter is-centered"
-                >
-                  <div>
-                    <div
-                      className="noOfArticles"
-                    >
-                      357
-                    </div>
-                    <div
-                      className="articlesFrom"
-                    >
-                      eSpace articles from
-                    </div>
-                    <div
-                      className="dateRange"
-                    >
-                      1975
-                      <span>
-                         to 
-                      </span>
-                      2018
-                    </div>
-                  </div>
-                </div>
-              </DashboardArticleCount>
+              <Connect(DashboardArticleCount)>
+                <DashboardArticleCount>
+                  <div
+                    className="authorCounter is-centered"
+                  />
+                </DashboardArticleCount>
+              </Connect(DashboardArticleCount)>
             </div>
           </div>
         </div>
-      </DashboardProfile>
+      </DashboardAuthorProfile>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -1466,8 +1427,19 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+      },
     }
   }
 >
@@ -1513,7 +1485,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
         }
       }
     >
-      <DashboardProfile
+      <DashboardAuthorProfile
         author={
           Object {
             "aut_created_date": null,
@@ -1908,41 +1880,17 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
             <div
               className="column is-narrow is-hidden-tablet-only authorCount"
             >
-              <DashboardArticleCount
-                articleCount={357}
-                articleFirstYear={1975}
-                articleLastYear={2018}
-              >
-                <div
-                  className="authorCounter is-centered"
-                >
-                  <div>
-                    <div
-                      className="noOfArticles"
-                    >
-                      357
-                    </div>
-                    <div
-                      className="articlesFrom"
-                    >
-                      eSpace articles from
-                    </div>
-                    <div
-                      className="dateRange"
-                    >
-                      1975
-                      <span>
-                         to 
-                      </span>
-                      2018
-                    </div>
-                  </div>
-                </div>
-              </DashboardArticleCount>
+              <Connect(DashboardArticleCount)>
+                <DashboardArticleCount>
+                  <div
+                    className="authorCounter is-centered"
+                  />
+                </DashboardArticleCount>
+              </Connect(DashboardArticleCount)>
             </div>
           </div>
         </div>
-      </DashboardProfile>
+      </DashboardAuthorProfile>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -1953,8 +1901,19 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+      },
     }
   }
 >
@@ -2000,7 +1959,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
         }
       }
     >
-      <DashboardProfile
+      <DashboardAuthorProfile
         author={
           Object {
             "aut_created_date": null,
@@ -2395,41 +2354,17 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
             <div
               className="column is-narrow is-hidden-tablet-only authorCount"
             >
-              <DashboardArticleCount
-                articleCount={357}
-                articleFirstYear={1975}
-                articleLastYear={2018}
-              >
-                <div
-                  className="authorCounter is-centered"
-                >
-                  <div>
-                    <div
-                      className="noOfArticles"
-                    >
-                      357
-                    </div>
-                    <div
-                      className="articlesFrom"
-                    >
-                      eSpace articles from
-                    </div>
-                    <div
-                      className="dateRange"
-                    >
-                      1975
-                      <span>
-                         to 
-                      </span>
-                      2018
-                    </div>
-                  </div>
-                </div>
-              </DashboardArticleCount>
+              <Connect(DashboardArticleCount)>
+                <DashboardArticleCount>
+                  <div
+                    className="authorCounter is-centered"
+                  />
+                </DashboardArticleCount>
+              </Connect(DashboardArticleCount)>
             </div>
           </div>
         </div>
-      </DashboardProfile>
+      </DashboardAuthorProfile>
     </Router>
   </MemoryRouter>
 </Provider>

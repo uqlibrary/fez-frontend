@@ -1,5 +1,7 @@
 import {routes} from 'config';
 
+const prefixFileName = (prefix, fileName, extension) => `${prefix}_${fileName.substr(0, fileName.lastIndexOf('.'))}.${extension}`;
+
 export const viewRecordsConfig = {
     genericDataEmail: 'data@library.uq.edu.au',
     licenseLinks: {
@@ -67,14 +69,16 @@ export const viewRecordsConfig = {
         'Book': 'YYYY',
         'Book Chapter': 'YYYY',
         'Conference Paper': 'YYYY',
-        'Data Collection': 'YYYY',
-        'Design': 'YYYY'
+        'Data Collection': 'YYYY'
     },
     files: {
         blacklist: {
             namePrefixRegex: '^(FezACML|stream|web|thumbnail|preview|presmd)',
             descriptionKeywordsRegex: '(ERA |HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections|staffdata)'
-        }
+        },
+        thumbnailFileName: (fileName) => prefixFileName('thumbnail', fileName, 'jpg'),
+        previewFileName: (fileName) => prefixFileName('preview', fileName, 'jpg'),
+        webFileName: (fileName) => prefixFileName('web', fileName, 'jpg'),
     },
     metaTags: [
         {

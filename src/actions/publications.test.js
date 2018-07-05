@@ -1,7 +1,15 @@
+jest.mock('./exportPublications');
+
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as publicationsActions from './publications';
 import * as mockData from 'mock/data';
+import {exportPublications} from './exportPublications'
+import {exportFormatToExtension} from '../config/general';
+
+beforeEach(() => {
+    exportPublications.mockClear();
+});
 
 describe('Publications actions', () => {
     // extend expect to check actions
@@ -139,12 +147,12 @@ describe('Publications actions', () => {
 
         it('dispatches expected actions on successful request', async () => {
             mockApi
-                .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API().apiUrl)
+                .onGet(repositories.routes.AUTHOR_TRENDING_PUBLICATIONS_API().apiUrl)
                 .reply(200, mockData.trendingPublications);
 
             const expectedActions = [
                 actions.TRENDING_PUBLICATIONS_LOADING,
-                `${actions.TRENDING_PUBLICATIONS_LOADED}@scopus`,
+                // `${actions.TRENDING_PUBLICATIONS_LOADED}@scopus`,
                 `${actions.TRENDING_PUBLICATIONS_LOADED}@thomson`,
                 `${actions.TRENDING_PUBLICATIONS_LOADED}@altmetric`,
             ];
@@ -194,6 +202,70 @@ describe('Publications actions', () => {
 
             await mockActionsStore.dispatch(publicationsActions.searchTrendingPublications());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('searchTopCitedPublications()', () => {
+        it('dispatches expected actions on successful request', async () => {
+            mockApi
+                .onGet(repositories.routes.TRENDING_PUBLICATIONS_API().apiUrl)
+                .reply(200, mockData.trendingPublications);
+
+            const expectedActions = [
+                actions.TOP_CITED_PUBLICATIONS_LOADING,
+                // `${actions.TOP_CITED_PUBLICATIONS_LOADED}@scopus`,
+                `${actions.TOP_CITED_PUBLICATIONS_LOADED}@thomson`,
+                `${actions.TOP_CITED_PUBLICATIONS_LOADED}@altmetric`,
+            ];
+
+            await mockActionsStore.dispatch(publicationsActions.searchTopCitedPublications());
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions if api fails', async () => {
+            mockApi
+                .onAny()
+                .reply(500, {});
+
+            const expectedActions = [
+                actions.TOP_CITED_PUBLICATIONS_LOADING,
+                actions.TOP_CITED_PUBLICATIONS_FAILED,
+            ];
+
+            await mockActionsStore.dispatch(publicationsActions.searchTopCitedPublications());
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions if api return 0 publications', async () => {
+            mockApi
+                .onAny()
+                .reply(200, {total: 0, data: [], filters: []});
+
+            const expectedActions = [
+                actions.TOP_CITED_PUBLICATIONS_LOADING,
+                actions.TOP_CITED_PUBLICATIONS_LOADED,
+            ];
+
+            await mockActionsStore.dispatch(publicationsActions.searchTopCitedPublications());
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('exportAuthorPublications()', () => {
+        it('calls exportPublications with expected params', async () => {
+
+            const exportPublicationsFormat = Object.keys(exportFormatToExtension)[0];
+            const testRequest = {
+                exportPublicationsFormat,
+                page: 1,
+                pageSize: 20,
+                sortBy: 'published_date',
+                sortDirection: 'Desc',
+                activeFacets: {filters: {}, ranges: {}}
+            };
+
+            publicationsActions.exportAuthorPublications(testRequest);
+            expect(exportPublications).toHaveBeenCalledWith(repositories.routes.CURRENT_USER_RECORDS_API(testRequest, 'export'));
         });
     });
 });

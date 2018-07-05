@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index page should render placeholders 1`] = `
+<StandardPage
+  className="page-index"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <withRouter(Connect(TopCitedPublications)) />
+    </div>
+    <div
+      className="column is-4"
+    >
+      <WhatIsEspace />
+      <Connect(NewsFeed) />
+    </div>
+  </div>
+</StandardPage>
+`;

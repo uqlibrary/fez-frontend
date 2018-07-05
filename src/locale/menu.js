@@ -1,5 +1,8 @@
 export default {
     menu: {
+        index: {
+            primaryText: 'Home',
+        },
         myDashboard: {
             primaryText: 'My dashboard',
             // secondaryText is set to user's email
@@ -8,7 +11,7 @@ export default {
             primaryText: 'My research'
         },
         myDatasets: {
-            primaryText: 'My research data collections'
+            primaryText: 'My research data'
         },
         authorStatistics: {
             primaryText: 'Author statistics'
@@ -17,17 +20,17 @@ export default {
             primaryText: 'Claim possible publications'
         },
         addMissingRecord: {
-            primaryText: 'Add a missing record'
+            primaryText: 'Add a missing publication'
         },
         addDataset: {
-            primaryText: 'Add a missing data collection'
+            primaryText: 'Add a missing dataset'
         },
         masquerade: {
             primaryText: 'Masquerade',
             secondaryText: 'as another user'
         },
-        browse: {
-            primaryText: 'Browse eSpace',
+        search: {
+            primaryText: 'Search eSpace',
             secondaryText: ''
         },
         contact: {
@@ -39,6 +42,13 @@ export default {
         },
         help: {
             primaryText: 'Help'
+        }
+    },
+    footer: {
+        cricos: {
+            prefix: 'CRICOS Provider No: ',
+            number: '00025B',
+            link: 'http://www.uq.edu.au/about/cricos-link'
         }
     }
 };

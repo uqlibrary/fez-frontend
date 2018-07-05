@@ -10,6 +10,7 @@ import ReactHtmlParser from 'react-html-parser';
 import ViewRecordTableRow from './ViewRecordTableRow';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
+import {Link} from 'react-router-dom';
 
 export default class AdditionalInformation extends Component {
     static propTypes = {
@@ -27,7 +28,7 @@ export default class AdditionalInformation extends Component {
     }
 
     renderLink = (link, value) => {
-        return <a href={link}>{value}</a>;
+        return <Link to={link}>{value}</Link>;
     }
 
     renderList = (list, subkey, getLink) => {
@@ -39,7 +40,7 @@ export default class AdditionalInformation extends Component {
                             {(() => {
                                 const data = this.getData(item, subkey);
                                 if (getLink) {
-                                    return this.renderLink(getLink(item[subkey]), data);
+                                    return this.renderLink(getLink(item[subkey], data), data);
                                 } else {
                                     return data;
                                 }
@@ -86,16 +87,17 @@ export default class AdditionalInformation extends Component {
             case 'rek_publisher': return this.renderLink(routes.pathConfig.list.publisher(data), data);
             case 'rek_oa_status': return !!data ? this.renderLink(routes.pathConfig.list.openAccessStatus(object[subkey]), data) : '';
             case 'rek_herdc_code': return this.renderLink(routes.pathConfig.list.subject(object[subkey]), data);
-            case 'rek_herdc_status': return this.renderLink(routes.pathConfig.list.herdcStatus(object[subkey]), data);
-            case 'rek_ands_collection_type': return this.renderLink(routes.pathConfig.list.collectionType(object[subkey]), data);
-            case 'rek_access_conditions': return this.renderLink(routes.pathConfig.list.accessCondition(object[subkey]), data);
+            case 'rek_herdc_status': return this.renderLink(routes.pathConfig.list.herdcStatus(object[`${subkey}_lookup`]), data);
+            case 'rek_ands_collection_type': return !!data && data || '';
+            case 'rek_access_conditions': return !!data && data || '';
             case 'rek_series': return this.renderLink(routes.pathConfig.list.series(object[subkey]), object[subkey]);
             case 'rek_license': return this.renderLicense(object[subkey], data);
             case 'rek_org_unit_name': return this.renderLink(routes.pathConfig.list.orgUnitName(data), data);
-            case 'rek_institutional_status': return this.renderLink(routes.pathConfig.list.institutionalStatus(object[subkey]), data);
+            case 'rek_institutional_status': return this.renderLink(routes.pathConfig.list.institutionalStatus(object[`${subkey}_lookup`]), data);
             case 'rek_book_title': return this.renderLink(routes.pathConfig.list.bookTitle(object[subkey]), data);
             case 'rek_job_number': return this.renderLink(routes.pathConfig.list.jobNumber(object[subkey]), data);
             case 'rek_conference_name': return this.renderLink(routes.pathConfig.list.conferenceName(object[subkey]), data);
+            case 'rek_proceedings_title': return this.renderLink(routes.pathConfig.list.proceedingsTitle(object[subkey]), data);
             default: return data;
         }
     }
@@ -116,7 +118,7 @@ export default class AdditionalInformation extends Component {
     }
 
     renderLicense = (cvoId, lookup) => {
-        const licenseLookup = this.renderLink(routes.pathConfig.list.license(cvoId), lookup);
+        const licenseLookup = this.renderLink(routes.pathConfig.list.license(lookup), lookup);
         const licenseLink =  viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
         const uqLicenseLinkText = licenseLink && licenseLink.className.indexOf('uq') === 0 ? locale.viewRecord.sections.additionalInformation.licenseLinkText : null;
 
@@ -124,16 +126,14 @@ export default class AdditionalInformation extends Component {
             <span>
                 {licenseLookup}
                 {
-                    licenseLink && !uqLicenseLinkText &&
-                     <div>
-                         <ExternalLink href={licenseLink.url} openInNewIcon={false}>
-                             <div className={`fez-icon license ${licenseLink.className}`} />
-                         </ExternalLink>
-                     </div>
-                }
-                {
-                    licenseLink && uqLicenseLinkText &&
-                    <div><ExternalLink href={licenseLink.url}>{uqLicenseLinkText}</ExternalLink></div>
+                    licenseLink &&
+                    <div>
+                        <ExternalLink href={licenseLink.url} openInNewIcon={!!uqLicenseLinkText}>
+                            {
+                                uqLicenseLinkText || <div className={`fez-icon license ${licenseLink.className}`} />
+                            }
+                        </ExternalLink>
+                    </div>
                 }
             </span>
         );
@@ -163,7 +163,7 @@ export default class AdditionalInformation extends Component {
         }
         return (
             <PublicationMap
-                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                googleMapURL={process.env.GOOGLE_MAPS_URL}
                 loadingElement={<div style={{height: '100%'}}/>}
                 containerElement={<div style={{height: '400px'}}/>}
                 mapElement={<div style={{height: '100%'}}/>}

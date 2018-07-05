@@ -1,6 +1,7 @@
 import MyRecords from './MyRecords';
 import {myRecordsList} from 'mock/data';
 import {routes} from 'config';
+import {locale} from 'locale';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -19,8 +20,10 @@ function setup(testProps, isShallow = true) {
         accountLoading: false,
         publicationsListPagingData: {},
         loadingPublicationsList: false,
+        exportPublicationsLoading: false,
         publicationsList: [],
         publicationsListFacets: {},
+        localePages: locale.pages.myResearch,
         ...testProps
     };
     return getElement(MyRecords, props, isShallow);
@@ -44,6 +47,11 @@ describe('MyRecords test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('renders loading screen while export publications loading', () => {
+        const wrapper = setup({ publicationsList: [1, 2, 2], exportPublicationsLoading: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('renders no results', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -63,13 +71,13 @@ describe('MyRecords test', () => {
             publicationsListPagingData: {"total": 147, "per_page": 20, "current_page": 1, "from": 1,"to": 20},
             publicationsListFacets: {
                 "Display type": {
-                "doc_count_error_upper_bound": 0,
-                "sum_other_doc_count": 3,
-                "buckets": [{"key": 179, "doc_count": 95}, {"key": 130, "doc_count": 34}, {
-                    "key": 177,
-                    "doc_count": 2
-                }, {"key": 183, "doc_count": 2}, {"key": 174, "doc_count": 1}]
-            },
+                    "doc_count_error_upper_bound": 0,
+                    "sum_other_doc_count": 3,
+                    "buckets": [{"key": 179, "doc_count": 95}, {"key": 130, "doc_count": 34}, {
+                        "key": 177,
+                        "doc_count": 2
+                    }, {"key": 183, "doc_count": 2}, {"key": 174, "doc_count": 1}]
+                },
                 "Keywords": {
                     "doc_count_error_upper_bound": 0,
                     "sum_other_doc_count": 641,
@@ -90,7 +98,6 @@ describe('MyRecords test', () => {
         const wrapper = setup({location: {state: {activeFacets: {filters: {}, ranges: {Year: {from: 2000, to: 2010}}}}}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-
 
     it('state is updated by sub components', () => {
         const testAction = jest.fn();
@@ -132,7 +139,7 @@ describe('MyRecords test', () => {
 
     it('gets publications when user clicks back and state is set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}});
+        const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}, thisUrl: routes.pathConfig.records.mine});
 
         wrapper.instance().componentWillReceiveProps({
             history: {action: 'POP'},
@@ -146,7 +153,7 @@ describe('MyRecords test', () => {
 
     it('gets publications when user clicks back and state is not set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}});
+        const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}, thisUrl: routes.pathConfig.records.mine});
         wrapper.instance().componentWillReceiveProps({history: { action: 'POP'}, location: {pathname: routes.pathConfig.records.mine, state: null}});
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().page).toEqual(1);

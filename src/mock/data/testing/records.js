@@ -11952,3 +11952,619 @@ export const dataCollectionWithFoRCodes = {
     rek_scopus_doc_type_lookup: null,
     rek_pubmed_doc_type_lookup: null
 };
+
+export const conferencePaperWithProceedingsTitle = {
+    rek_pid: 'UQ:277856',
+    rek_title_xsdmf_id: 10605,
+    rek_title: 'Retrograde trafficking at the presynaptic nerve terminal using bacterial toxins',
+    rek_description_xsdmf_id: null,
+    rek_description: null,
+    rek_display_type_xsdmf_id: 3673,
+    rek_display_type: 130,
+    rek_status_xsdmf_id: 3680,
+    rek_status: 2,
+    rek_date_xsdmf_id: 4041,
+    rek_date: '2012-01-01T00:00:00Z',
+    rek_object_type_xsdmf_id: 3674,
+    rek_object_type: 3,
+    rek_depositor_xsdmf_id: 7578,
+    rek_depositor: 8524,
+    rek_created_date_xsdmf_id: 3677,
+    rek_created_date: '2012-07-23T16:46:47Z',
+    rek_updated_date_xsdmf_id: 3678,
+    rek_updated_date: '2017-10-16T04:33:32Z',
+    rek_file_downloads: 0,
+    rek_citation: '<a class="author_id_link" title="Browse by Author ID for Martin, Sally" href="/list/author_id/745/">Martin, Sally</a>, <a class="author_id_link" title="Browse by Author ID for Harper, Callista B." href="/list/author_id/80925/">Harper, Callista B.</a> and <a class="author_id_link" title="Browse by Author ID for Meunier, Frederic A." href="/list/author_id/2746/">Meunier, Frederic A.</a> (<span class="citation_date">2012</span>). <a class="citation_title" title="Click to view Conference Paper: Retrograde trafficking at the presynaptic nerve terminal using bacterial toxins" href="/view/UQ:277856">Retrograde trafficking at the presynaptic nerve terminal using bacterial toxins</a>. In: <span class="citation_proceedings_title">17th World Congress of the International Society on Toxinology &amp; Venom Week 2012, 4th International Scientific Symposium on All Things Venomous, 17th World Congress of the International Society on Toxinology &amp; Venom Week 2012, 4th International Scientific Symposium on All Things Venomous</span>. <i><span class="citation_conference_name">17th World Congress of the International-Society-on-Toxinology (IST)/Venom Week/4th International Scientific Symposium on All Things Venomous</span></i>, <span class="citation_conference_location">Honolulu, Hawaii, United States</span>, (<span class="citation_start_page">160</span>-<span class="citation_end_page">160</span>). <span class="citation_conference_dates">8-13 July 2012</span>. doi:<span class="citation_doi">10.1016/j.toxicon.2012.04.130</span>',
+    rek_genre_xsdmf_id: 7203,
+    rek_genre: 'Conference Paper',
+    rek_genre_type_xsdmf_id: null,
+    rek_genre_type: 'Toxicon',
+    rek_formatted_title_xsdmf_id: null,
+    rek_formatted_title: null,
+    rek_formatted_abstract_xsdmf_id: null,
+    rek_formatted_abstract: null,
+    rek_depositor_affiliation_xsdmf_id: 11881,
+    rek_depositor_affiliation: 1017,
+    rek_thomson_citation_count: 0,
+    rek_thomson_citation_count_xsdmf_id: null,
+    rek_subtype_xsdmf_id: 12548,
+    rek_subtype: 'Published abstract',
+    rek_scopus_citation_count: null,
+    rek_herdc_notes_xsdmf_id: null,
+    rek_herdc_notes: null,
+    rek_scopus_doc_type_xsdmf_id: null,
+    rek_scopus_doc_type: null,
+    rek_wok_doc_type_xsdmf_id: 12551,
+    rek_wok_doc_type: 'MC',
+    rek_pubmed_doc_type_xsdmf_id: null,
+    rek_pubmed_doc_type: null,
+    rek_security_inherited: 1,
+    rek_altmetric_score: 0,
+    rek_altmetric_score_xsdmf_id: null,
+    rek_altmetric_id: 0,
+    rek_altmetric_id_xsdmf_id: null,
+    rek_copyright_xsdmf_id: 3679,
+    rek_copyright: 'on',
+    fez_record_search_key_article_number: null,
+    fez_record_search_key_assigned_group_id: [],
+    fez_record_search_key_assigned_user_id: [],
+    fez_record_search_key_author: [
+      {
+        rek_author_id: 28803863,
+        rek_author_pid: 'UQ:277856',
+        rek_author_xsdmf_id: null,
+        rek_author: 'Martin, Sally',
+        rek_author_order: 1
+      },
+      {
+        rek_author_id: 28803864,
+        rek_author_pid: 'UQ:277856',
+        rek_author_xsdmf_id: null,
+        rek_author: 'Harper, Callista B.',
+        rek_author_order: 2
+      },
+      {
+        rek_author_id: 28803865,
+        rek_author_pid: 'UQ:277856',
+        rek_author_xsdmf_id: null,
+        rek_author: 'Meunier, Frederic A.',
+        rek_author_order: 3
+      }
+    ],
+    fez_record_search_key_author_affiliation_country: [
+      {
+        rek_author_affiliation_country_id: 140994,
+        rek_author_affiliation_country_pid: 'UQ:277856',
+        rek_author_affiliation_country_xsdmf_id: 0,
+        rek_author_affiliation_country_order: 1,
+        rek_author_affiliation_country: 'Australia'
+      },
+      {
+        rek_author_affiliation_country_id: 140995,
+        rek_author_affiliation_country_pid: 'UQ:277856',
+        rek_author_affiliation_country_xsdmf_id: 0,
+        rek_author_affiliation_country_order: 2,
+        rek_author_affiliation_country: 'Australia'
+      },
+      {
+        rek_author_affiliation_country_id: 140996,
+        rek_author_affiliation_country_pid: 'UQ:277856',
+        rek_author_affiliation_country_xsdmf_id: 0,
+        rek_author_affiliation_country_order: 3,
+        rek_author_affiliation_country: 'Australia'
+      }
+    ],
+    fez_record_search_key_author_affiliation_full_address: [
+      {
+        rek_author_affiliation_full_address_id: 190836,
+        rek_author_affiliation_full_address_pid: 'UQ:277856',
+        rek_author_affiliation_full_address_xsdmf_id: 0,
+        rek_author_affiliation_full_address_order: 1,
+        rek_author_affiliation_full_address: 'Univ Queensland, Queensland Brain Inst, Brisbane, Qld, Australia'
+      },
+      {
+        rek_author_affiliation_full_address_id: 190837,
+        rek_author_affiliation_full_address_pid: 'UQ:277856',
+        rek_author_affiliation_full_address_xsdmf_id: 0,
+        rek_author_affiliation_full_address_order: 2,
+        rek_author_affiliation_full_address: 'Univ Queensland, Queensland Brain Inst, Brisbane, Qld, Australia'
+      },
+      {
+        rek_author_affiliation_full_address_id: 190838,
+        rek_author_affiliation_full_address_pid: 'UQ:277856',
+        rek_author_affiliation_full_address_xsdmf_id: 0,
+        rek_author_affiliation_full_address_order: 3,
+        rek_author_affiliation_full_address: 'Univ Queensland, Queensland Brain Inst, Brisbane, Qld, Australia'
+      }
+    ],
+    fez_record_search_key_author_affiliation_id: [],
+    fez_record_search_key_author_affiliation_name: [
+      {
+        rek_author_affiliation_name_id: 141942,
+        rek_author_affiliation_name_pid: 'UQ:277856',
+        rek_author_affiliation_name_xsdmf_id: 0,
+        rek_author_affiliation_name_order: 1,
+        rek_author_affiliation_name: 'University of Queensland'
+      },
+      {
+        rek_author_affiliation_name_id: 141943,
+        rek_author_affiliation_name_pid: 'UQ:277856',
+        rek_author_affiliation_name_xsdmf_id: 0,
+        rek_author_affiliation_name_order: 2,
+        rek_author_affiliation_name: 'University of Queensland'
+      },
+      {
+        rek_author_affiliation_name_id: 141944,
+        rek_author_affiliation_name_pid: 'UQ:277856',
+        rek_author_affiliation_name_xsdmf_id: 0,
+        rek_author_affiliation_name_order: 3,
+        rek_author_affiliation_name: 'University of Queensland'
+      }
+    ],
+    fez_record_search_key_author_id: [
+      {
+        rek_author_id_id: 28178838,
+        rek_author_id_pid: 'UQ:277856',
+        rek_author_id_xsdmf_id: null,
+        rek_author_id: 745,
+        rek_author_id_order: 1,
+        rek_author_id_lookup: 'Martin, Sally'
+      },
+      {
+        rek_author_id_id: 28178839,
+        rek_author_id_pid: 'UQ:277856',
+        rek_author_id_xsdmf_id: null,
+        rek_author_id: 80925,
+        rek_author_id_order: 2,
+        rek_author_id_lookup: 'Harper, Callista'
+      },
+      {
+        rek_author_id_id: 28178840,
+        rek_author_id_pid: 'UQ:277856',
+        rek_author_id_xsdmf_id: null,
+        rek_author_id: 2746,
+        rek_author_id_order: 3,
+        rek_author_id_lookup: 'Meunier, Frederic A.'
+      }
+    ],
+    fez_record_search_key_biosis_id: null,
+    fez_record_search_key_chapter_number: null,
+    fez_record_search_key_conference_dates: {
+      rek_conference_dates_id: 1002197,
+      rek_conference_dates_pid: 'UQ:277856',
+      rek_conference_dates_xsdmf_id: null,
+      rek_conference_dates: '8-13 July 2012'
+    },
+    fez_record_search_key_conference_id: null,
+    fez_record_search_key_conference_location: {
+      rek_conference_location_id: 1012517,
+      rek_conference_location_pid: 'UQ:277856',
+      rek_conference_location_xsdmf_id: null,
+      rek_conference_location: 'Honolulu, Hawaii, United States'
+    },
+    fez_record_search_key_conference_name: {
+      rek_conference_name_id: 997100,
+      rek_conference_name_pid: 'UQ:277856',
+      rek_conference_name_xsdmf_id: null,
+      rek_conference_name: '17th World Congress of the International-Society-on-Toxinology (IST)/Venom Week/4th International Scientific Symposium on All Things Venomous'
+    },
+    fez_record_search_key_contributor: [],
+    fez_record_search_key_contributor_id: [],
+    fez_record_search_key_convener: null,
+    fez_record_search_key_corresponding_country: [
+      {
+        rek_corresponding_country_id: 125496,
+        rek_corresponding_country_pid: 'UQ:277856',
+        rek_corresponding_country_xsdmf_id: 0,
+        rek_corresponding_country_order: 1,
+        rek_corresponding_country: 'Australia'
+      }
+    ],
+    fez_record_search_key_corresponding_email: [
+      {
+        rek_corresponding_email_id: 26881,
+        rek_corresponding_email_pid: 'UQ:277856',
+        rek_corresponding_email_xsdmf_id: 0,
+        rek_corresponding_email_order: 1,
+        rek_corresponding_email: 's.martin@uq.edu.au'
+      }
+    ],
+    fez_record_search_key_corresponding_name: [],
+    fez_record_search_key_corresponding_organisation: [
+      {
+        rek_corresponding_organisation_id: 126624,
+        rek_corresponding_organisation_pid: 'UQ:277856',
+        rek_corresponding_organisation_xsdmf_id: 0,
+        rek_corresponding_organisation_order: 1,
+        rek_corresponding_organisation: 'University of Queensland'
+      }
+    ],
+    fez_record_search_key_datastream_policy: null,
+    fez_record_search_key_date_available: {
+      rek_date_available_id: 994549,
+      rek_date_available_pid: 'UQ:277856',
+      rek_date_available_xsdmf_id: null,
+      rek_date_available: '2012-08-01T00:00:00Z'
+    },
+    fez_record_search_key_doi: {
+      rek_doi_id: 1514306,
+      rek_doi_pid: 'UQ:277856',
+      rek_doi_xsdmf_id: null,
+      rek_doi: '10.1016/j.toxicon.2012.04.130'
+    },
+    fez_record_search_key_end_page: {
+      rek_end_page_id: 5490726,
+      rek_end_page_pid: 'UQ:277856',
+      rek_end_page_xsdmf_id: null,
+      rek_end_page: '160'
+    },
+    fez_record_search_key_file_attachment_access_condition: [],
+    fez_record_search_key_file_attachment_embargo_date: [],
+    fez_record_search_key_file_attachment_name: [],
+    fez_record_search_key_grant_acronym: [],
+    fez_record_search_key_grant_agency: [],
+    fez_record_search_key_grant_agency_id: [],
+    fez_record_search_key_grant_id: [],
+    fez_record_search_key_grant_text: [],
+    fez_record_search_key_herdc_code: {
+      rek_herdc_code_id: 4644563,
+      rek_herdc_code_pid: 'UQ:277856',
+      rek_herdc_code_xsdmf_id: null,
+      rek_herdc_code: 450018,
+      rek_herdc_code_lookup: 'EX'
+    },
+    fez_record_search_key_herdc_status: {
+      rek_herdc_status_id: 3558387,
+      rek_herdc_status_pid: 'UQ:277856',
+      rek_herdc_status_xsdmf_id: null,
+      rek_herdc_status: 453220,
+      rek_herdc_status_lookup: 'Provisional Code'
+    },
+    fez_record_search_key_institutional_status: {
+      rek_institutional_status_id: 3220326,
+      rek_institutional_status_pid: 'UQ:277856',
+      rek_institutional_status_xsdmf_id: null,
+      rek_institutional_status: 453223,
+      rek_institutional_status_lookup: 'UQ'
+    },
+    fez_record_search_key_isbn: [],
+    fez_record_search_key_isderivationof: [],
+    fez_record_search_key_isi_loc: {
+      rek_isi_loc_id: 3884228,
+      rek_isi_loc_pid: 'UQ:277856',
+      rek_isi_loc_xsdmf_id: null,
+      rek_isi_loc: '000305721800131'
+    },
+    fez_record_search_key_ismemberof: [
+      {
+        rek_ismemberof_id: 11486381,
+        rek_ismemberof_pid: 'UQ:277856',
+        rek_ismemberof_xsdmf_id: null,
+        rek_ismemberof: 'UQ:23912',
+        rek_ismemberof_order: 1,
+        rek_ismemberof_lookup: 'Queensland Brain Institute Publications'
+      }
+    ],
+    fez_record_search_key_issn: [
+      {
+        rek_issn_id: 5079774,
+        rek_issn_pid: 'UQ:277856',
+        rek_issn_xsdmf_id: null,
+        rek_issn: '0041-0101',
+        rek_issn_order: 1,
+        fez_journal_issns: [
+          {
+            jni_id: 4624,
+            jni_jnl_id: 2793,
+            jni_issn: '0041-0101',
+            jni_issn_order: 1,
+            fez_journal: {
+              jnl_id: 2793,
+              jnl_journal_name: 'Toxicon',
+              jnl_era_id: 14870,
+              jnl_era_year: 2010,
+              jnl_created_date: '2010-11-19 00:00:00',
+              jnl_updated_date: '2010-11-19 00:00:00',
+              jnl_rank: 'B',
+              jnl_foreign_name: null
+            }
+          },
+          {
+            jni_id: 49849,
+            jni_jnl_id: 30140,
+            jni_issn: '0041-0101',
+            jni_issn_order: 1,
+            fez_journal: {
+              jnl_id: 30140,
+              jnl_journal_name: 'Toxicon',
+              jnl_era_id: 14870,
+              jnl_era_year: 2012,
+              jnl_created_date: '2011-10-28 00:00:00',
+              jnl_updated_date: '2011-10-28 00:00:00',
+              jnl_rank: null,
+              jnl_foreign_name: ''
+            }
+          },
+          {
+            jni_id: 77616,
+            jni_jnl_id: 47489,
+            jni_issn: '0041-0101',
+            jni_issn_order: 1,
+            fez_journal: {
+              jnl_id: 47489,
+              jnl_journal_name: 'Toxicon',
+              jnl_era_id: 14870,
+              jnl_era_year: 2015,
+              jnl_created_date: '2014-07-16 00:00:00',
+              jnl_updated_date: '2014-07-16 00:00:00',
+              jnl_rank: null,
+              jnl_foreign_name: ''
+            }
+          },
+          {
+            jni_id: 165246,
+            jni_jnl_id: 100349,
+            jni_issn: '0041-0101',
+            jni_issn_order: 1,
+            fez_journal: {
+              jnl_id: 100349,
+              jnl_journal_name: 'Toxicon',
+              jnl_era_id: 14870,
+              jnl_era_year: 2018,
+              jnl_created_date: '2017-09-06 00:00:00',
+              jnl_updated_date: '2017-09-06 00:00:00',
+              jnl_rank: null,
+              jnl_foreign_name: ''
+            }
+          }
+        ],
+        fez_sherpa_romeo: {
+          srm_id: 5320,
+          srm_issn: '0041-0101',
+          srm_journal_name: 'Toxicon',
+          srm_colour: 'green'
+        },
+        rek_issn_lookup: 'green'
+      },
+      {
+        rek_issn_id: 5079775,
+        rek_issn_pid: 'UQ:277856',
+        rek_issn_xsdmf_id: null,
+        rek_issn: '1879-3150',
+        rek_issn_order: 2,
+        fez_journal_issns: [
+          {
+            jni_id: 4625,
+            jni_jnl_id: 2793,
+            jni_issn: '1879-3150',
+            jni_issn_order: 2,
+            fez_journal: {
+              jnl_id: 2793,
+              jnl_journal_name: 'Toxicon',
+              jnl_era_id: 14870,
+              jnl_era_year: 2010,
+              jnl_created_date: '2010-11-19 00:00:00',
+              jnl_updated_date: '2010-11-19 00:00:00',
+              jnl_rank: 'B',
+              jnl_foreign_name: null
+            }
+          },
+          {
+            jni_id: 49850,
+            jni_jnl_id: 30140,
+            jni_issn: '1879-3150',
+            jni_issn_order: 2,
+            fez_journal: {
+              jnl_id: 30140,
+              jnl_journal_name: 'Toxicon',
+              jnl_era_id: 14870,
+              jnl_era_year: 2012,
+              jnl_created_date: '2011-10-28 00:00:00',
+              jnl_updated_date: '2011-10-28 00:00:00',
+              jnl_rank: null,
+              jnl_foreign_name: ''
+            }
+          },
+          {
+            jni_id: 77617,
+            jni_jnl_id: 47489,
+            jni_issn: '1879-3150',
+            jni_issn_order: 2,
+            fez_journal: {
+              jnl_id: 47489,
+              jnl_journal_name: 'Toxicon',
+              jnl_era_id: 14870,
+              jnl_era_year: 2015,
+              jnl_created_date: '2014-07-16 00:00:00',
+              jnl_updated_date: '2014-07-16 00:00:00',
+              jnl_rank: null,
+              jnl_foreign_name: ''
+            }
+          },
+          {
+            jni_id: 165247,
+            jni_jnl_id: 100349,
+            jni_issn: '1879-3150',
+            jni_issn_order: 2,
+            fez_journal: {
+              jnl_id: 100349,
+              jnl_journal_name: 'Toxicon',
+              jnl_era_id: 14870,
+              jnl_era_year: 2018,
+              jnl_created_date: '2017-09-06 00:00:00',
+              jnl_updated_date: '2017-09-06 00:00:00',
+              jnl_rank: null,
+              jnl_foreign_name: ''
+            }
+          }
+        ],
+        fez_sherpa_romeo: {
+          srm_id: 5321,
+          srm_issn: '1879-3150',
+          srm_journal_name: 'Toxicon',
+          srm_colour: 'green'
+        },
+        rek_issn_lookup: 'green'
+      }
+    ],
+    fez_record_search_key_issue_number: {
+      rek_issue_number_id: 4390957,
+      rek_issue_number_pid: 'UQ:277856',
+      rek_issue_number_xsdmf_id: null,
+      rek_issue_number: '2'
+    },
+    fez_record_search_key_journal_name: {
+      rek_journal_name_id: 5039513,
+      rek_journal_name_pid: 'UQ:277856',
+      rek_journal_name_xsdmf_id: null,
+      rek_journal_name: 'Toxicon'
+    },
+    fez_record_search_key_keywords: [
+      {
+        rek_keywords_id: 29097354,
+        rek_keywords_pid: 'UQ:277856',
+        rek_keywords_xsdmf_id: null,
+        rek_keywords: 'Trafficking',
+        rek_keywords_order: 1
+      },
+      {
+        rek_keywords_id: 29097355,
+        rek_keywords_pid: 'UQ:277856',
+        rek_keywords_xsdmf_id: null,
+        rek_keywords: 'Bacterial toxins',
+        rek_keywords_order: 2
+      },
+      {
+        rek_keywords_id: 29097356,
+        rek_keywords_pid: 'UQ:277856',
+        rek_keywords_xsdmf_id: null,
+        rek_keywords: 'Neurons',
+        rek_keywords_order: 3
+      }
+    ],
+    fez_record_search_key_language: [
+      {
+        rek_language_id: 5209130,
+        rek_language_pid: 'UQ:277856',
+        rek_language_xsdmf_id: null,
+        rek_language: 'eng',
+        rek_language_order: 1
+      }
+    ],
+    fez_record_search_key_language_of_journal_name: [],
+    fez_record_search_key_language_of_proceedings_title: [],
+    fez_record_search_key_language_of_title: [],
+    fez_record_search_key_link: [],
+    fez_record_search_key_link_description: [],
+    fez_record_search_key_native_script_conference_name: null,
+    fez_record_search_key_native_script_journal_name: null,
+    fez_record_search_key_native_script_proceedings_title: null,
+    fez_record_search_key_native_script_title: null,
+    fez_record_search_key_notes: null,
+    fez_record_search_key_oa_embargo_days: null,
+    fez_record_search_key_oa_notes: null,
+    fez_record_search_key_oa_status: {
+      rek_oa_status_id: 425765,
+      rek_oa_status_pid: 'UQ:277856',
+      rek_oa_status_xsdmf_id: null,
+      rek_oa_status: 453692,
+      rek_oa_status_lookup: 'Not yet assessed'
+    },
+    fez_record_search_key_place_of_publication: {
+      rek_place_of_publication_id: 4155977,
+      rek_place_of_publication_pid: 'UQ:277856',
+      rek_place_of_publication_xsdmf_id: null,
+      rek_place_of_publication: 'Kidlington, Oxford, United Kingdom'
+    },
+    fez_record_search_key_proceedings_title: {
+      rek_proceedings_title_id: 902428,
+      rek_proceedings_title_pid: 'UQ:277856',
+      rek_proceedings_title_xsdmf_id: null,
+      rek_proceedings_title: '17th World Congress of the International Society on Toxinology & Venom Week 2012, 4th International Scientific Symposium on All Things Venomous, 17th World Congress of the International Society on Toxinology & Venom Week 2012, 4th International Scientific Symposium on All Things Venomous'
+    },
+    fez_record_search_key_publisher: {
+      rek_publisher_id: 4418362,
+      rek_publisher_pid: 'UQ:277856',
+      rek_publisher_xsdmf_id: null,
+      rek_publisher: 'Pergamon'
+    },
+    fez_record_search_key_pubmed_id: null,
+    fez_record_search_key_refereed: {
+      rek_refereed_id: 2661665,
+      rek_refereed_pid: 'UQ:277856',
+      rek_refereed_xsdmf_id: null,
+      rek_refereed: 1
+    },
+    fez_record_search_key_refereed_source: {
+      rek_refereed_source_id: 1165580,
+      rek_refereed_source_pid: 'UQ:277856',
+      rek_refereed_source_xsdmf_id: null,
+      rek_refereed_source: '453635',
+      rek_refereed_source_lookup: 'Ulrichs'
+    },
+    fez_record_search_key_retracted: null,
+    fez_record_search_key_roman_script_conference_name: null,
+    fez_record_search_key_roman_script_journal_name: null,
+    fez_record_search_key_roman_script_proceedings_title: null,
+    fez_record_search_key_roman_script_title: null,
+    fez_record_search_key_scopus_id: null,
+    fez_record_search_key_series: null,
+    fez_record_search_key_start_page: {
+      rek_start_page_id: 5560895,
+      rek_start_page_pid: 'UQ:277856',
+      rek_start_page_xsdmf_id: null,
+      rek_start_page: '160'
+    },
+    fez_record_search_key_subject: [],
+    fez_record_search_key_total_chapters: null,
+    fez_record_search_key_total_pages: {
+      rek_total_pages_id: 5467415,
+      rek_total_pages_pid: 'UQ:277856',
+      rek_total_pages_xsdmf_id: null,
+      rek_total_pages: '1'
+    },
+    fez_record_search_key_translated_conference_name: null,
+    fez_record_search_key_translated_journal_name: null,
+    fez_record_search_key_translated_proceedings_title: null,
+    fez_record_search_key_translated_title: null,
+    fez_record_search_key_volume_number: {
+      rek_volume_number_id: 5097264,
+      rek_volume_number_pid: 'UQ:277856',
+      rek_volume_number_xsdmf_id: null,
+      rek_volume_number: '60'
+    },
+    fez_record_search_key_wok_doc_types: [],
+    fez_record_search_key_zoorec_id: null,
+    fez_datastream_info: [],
+    fez_matched_journals: [
+      {
+        mtj_pid: 'UQ:277856',
+        mtj_jnl_id: 2793,
+        mtj_status: 'M'
+      },
+      {
+        mtj_pid: 'UQ:277856',
+        mtj_jnl_id: 30140,
+        mtj_status: 'M'
+      },
+      {
+        mtj_pid: 'UQ:277856',
+        mtj_jnl_id: 47489,
+        mtj_status: 'A'
+      },
+      {
+        mtj_pid: 'UQ:277856',
+        mtj_jnl_id: 100349,
+        mtj_status: 'A'
+      }
+    ],
+    fez_record_search_key_has_datasets: [],
+    fez_record_search_key_has_related_datasets: [],
+    fez_record_search_key_has_derivations: [],
+    rek_status_lookup: 'Published',
+    rek_object_type_lookup: 'Record',
+    rek_wok_doc_type_lookup: null,
+    rek_display_type_lookup: 'Conference Paper',
+    rek_scopus_doc_type_lookup: null,
+    rek_pubmed_doc_type_lookup: null
+};

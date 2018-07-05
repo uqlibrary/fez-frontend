@@ -8,6 +8,7 @@ import * as Partials from './partials';
 export default class CitationCounts extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
+        hideViewFullStatisticsLink: PropTypes.bool
     };
 
     getTitle = (title) => (locale.components.publicationCitation.linkWillOpenInNewWindow.replace('[destination]', title));
@@ -15,7 +16,7 @@ export default class CitationCounts extends PureComponent {
     render() {
         const txt = locale.components.publicationCitation.citationCounts;
         const {sources} = locale.global;
-        const {publication} = this.props;
+        const {publication, hideViewFullStatisticsLink} = this.props;
         const counts = {
             wos: publication.rek_thomson_citation_count ? publication.rek_thomson_citation_count : null,
             scopus: publication.rek_scopus_citation_count ? publication.rek_scopus_citation_count : null,
@@ -68,7 +69,7 @@ export default class CitationCounts extends PureComponent {
                 </div>
                 <div className="column is-narrow">
                     {
-                        !!publication.rek_pid && (counts.wos || counts.scopus) &&
+                        !!publication.rek_pid && (counts.wos || counts.scopus) && !hideViewFullStatisticsLink &&
                         <ExternalLink href={`https://app.library.uq.edu.au/#/authors/view/${publication.rek_pid}`} title={publication.rek_title}>
                             {txt.statsLabel}
                         </ExternalLink>

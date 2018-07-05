@@ -22,6 +22,7 @@ export default {
         editorRequired: (<span>Please <b>provide a list of editors/contributors</b> of the publication and <b>select an editor/contributor or author/creator</b> as you</span>),
         supervisorRequired: 'Please provide a list of supervisors',
         googleScholarId: 'Please provide a valid 12 character Google Scholar ID',
+        advancedSearchSelectionRequired: 'Please select a field to search'
     },
     validationErrorsSummary: {
         rek_title: 'Title is required',

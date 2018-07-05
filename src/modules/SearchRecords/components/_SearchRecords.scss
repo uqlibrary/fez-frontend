@@ -1,0 +1,20 @@
+@import '../../../sass/variables';
+
+.search-component {
+  .search-body {
+    & > div {
+      padding-bottom: 0 !important;
+      margin-bottom: -18px !important;
+      .card-header {
+        display: none;
+      }
+    }
+    div.body-1 {
+      padding-bottom: 1px !important;
+    }
+    .search-field {
+      //border: 1px solid green;
+      margin-top: -12px !important;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import {locale} from 'locale';
+import {trendingPublicationsConfig} from 'config';
 
 /**
  * Returns the data for graph - count of unique publication types
@@ -31,7 +31,8 @@ export function getPublicationsPerType(data, keepPublicationTypes) {
             .reduce((init, item) => {
                 return init + item[1];
             }, 0);
-        topCounts.push(['Other', otherCounts]);
+        const legendToDisplay = publicationTypesCount.slice(keepPublicationTypes).map(item => item[0]).join(', ');
+        topCounts.push(['Other', otherCounts, legendToDisplay]);
         return topCounts;
     }
 }
@@ -86,10 +87,11 @@ export function getPublicationsPerYearSeries(data, topPublicationTypes) {
     const series = [];
 
     // construct final data structure
-    Object.keys(fields).map(publicationType => {
+    Object.keys(fields).map((publicationType, index) => {
         series.push({
             name: publicationType,
-            data: fields[publicationType]
+            data: fields[publicationType],
+            ...(!!topPublicationTypes[index][2] && {extraInfoForLegend: topPublicationTypes[index][2]} || {})
         });
     });
 
@@ -115,28 +117,56 @@ export function getPublicationsStats(years, data) {
     };
 }
 
-export const transformTrendingPublicationsMetricsData = ({data, filters: {metrics}}) => {
-    if (!!metrics) {
-        const metricsOrder = Object.keys(metrics).length > 1
-            ? Object.keys(metrics).sort((metric1, metric2) => {
-                return locale.components.myTrendingPublications.metrics[metric1].order - locale.components.myTrendingPublications.metrics[metric2].order;
-            })
-            : Object.keys(metrics);
+export function getAuthorArticleCount(total, data) {
+    return {
+        articleCount: !!total && total || null,
+        articleFirstYear: !!data && !!data.min_date_year_t && data.min_date_year_t.value_as_string || null,
+        articleLastYear: !!data && !!data.max_date_year_t && data.max_date_year_t.value_as_string || null,
+    };
+}
 
-        return metricsOrder
-            .filter(metric => Object.keys(metrics).indexOf(metric) > -1)
-            .map(key => {
-                const values = metrics[key].map(metricItem => {
-                    const publication = data.filter(publication => publication.rek_pid === metricItem.rek_pid)[0];
-                    const metricData = {source: key, ...metricItem};
-                    return {
-                        ...publication,
-                        metricData
-                    };
-                });
-                return {key, values};
-            });
-    } else {
-        return data;
-    }
+function getData(object, path) {
+    return path.split('.').reduce((o, k) => {
+        return o && o[k];
+    }, object);
+}
+
+export const transformTrendingPublicationsMetricsData = ({data}, recordsToDisplayPerSource) => {
+    const sources = trendingPublicationsConfig.sources;
+
+    const trendingPublications = Object.entries(sources).map(([key, config]) => {
+        const values = data.map(publication => {
+            const count = getData(publication, config.metricDataPath.count);
+            const difference = getData(publication, config.metricDataPath.difference);
+            if (count && difference) {
+                const metricData = {
+                    source: key,
+                    count: count,
+                    difference: getData(publication, config.metricDataPath.difference),
+                    citation_url: getData(publication, config.metricDataPath.citation_url)
+                };
+
+                return {
+                    ...publication,
+                    metricData
+                };
+            } else {
+                return null;
+            }
+        }).filter(value => value);
+
+        // Sort top publications for each source in descening order and return asking number of records
+        const recordsToDisplay = values
+            .sort((publication1, publication2) => {
+                const difference1 = getData(publication1, config.metricDataPath.difference);
+                const difference2 = getData(publication2, config.metricDataPath.difference);
+                return difference2 - difference1;
+            })
+            .slice(0, recordsToDisplayPerSource);
+
+        return {key, values: recordsToDisplay};
+    });
+
+    // filter out sources which doesn't have trending publications
+    return trendingPublications.filter(trendingPublicationsPerSource => trendingPublicationsPerSource.values.length > 0);
 };

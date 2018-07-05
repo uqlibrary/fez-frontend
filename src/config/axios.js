@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import {setupCache} from 'axios-cache-adapter';
-import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME} from './general';
+import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME, SESSION_USER_GROUP_COOKIE_NAME} from './general';
 import {store} from 'config/store';
 import {logout} from 'actions/account';
 import {locale} from 'locale';
@@ -40,7 +40,16 @@ export const generateCancelToken = () => {
     return CancelToken.source();
 };
 
-api.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
+// If there is a local cookie available, then set the api headers for x-uql-token
+if(!!Cookies.get(SESSION_COOKIE_NAME) && !!Cookies.get(SESSION_USER_GROUP_COOKIE_NAME)) {
+    api.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
+}
+
+// allow us to safely force a given SESSION_COOKIE_NAME during development
+if (process.env.NODE_ENV === 'development' && !!process.env.SESSION_COOKIE_NAME) {
+    api.defaults.headers.common[TOKEN_NAME] = process.env.SESSION_COOKIE_NAME;
+}
+
 api.isCancel = axios.isCancel; // needed for cancelling requests and the instance created does not have this method
 
 let isGet = null;
@@ -55,23 +64,22 @@ api.interceptors.response.use(response => {
     }
     return Promise.resolve(response.data);
 }, error => {
-    let errorMessage = locale.global.errorMessages.generic;
-
     if (error.response && error.response.status === 403) {
-        errorMessage = locale.global.errorMessages.sessionExpired;
         if (process.env.NODE_ENV === 'test') {
             global.mockActionsStore.dispatch(logout());
         } else {
             store.dispatch(logout());
         }
-    } else if (error.response && error.response.status === 404) {
-        errorMessage = locale.global.errorMessages.notFound;
     }
 
-    const errorDetails = {
-        status: error.response ? error.response.status : null,
-        message: errorMessage
-    };
+    let errorMessage = null;
+    if (!!error.response && !!error.response.status) {
+        errorMessage = locale.global.errorMessages[error.response.status];
+    }
 
-    return Promise.reject(errorDetails);
+    if (!!errorMessage) {
+        return Promise.reject({...errorMessage});
+    } else {
+        return Promise.reject(error);
+    }
 });

@@ -79,11 +79,26 @@ mock
         else if (config.params.source === 'pubmed' && config.params.id) return [200, mockData.externalPubMedSearchResultsList];
     })
     .onGet(routes.CURRENT_USER_RECORDS_API({}).apiUrl).reply(config => {
-        // ACADEMIC_PUBLICATIONS_STATS_API
+        // AUTHOR_PUBLICATIONS_STATS_ONLY_API
         if (config.params.rule === 'mine' && !!config.params['filters[stats_only]']) {
             return [200, mockData.currentAuthorStats];
         }
-        // CURRENT_USER_RECORDS_API
+        // CURRENT_USER_RECORDS_API - myDataset
+        else if (config.params.rule === 'mine' && config.params['filters[facets][Display+type]'] === 371) {
+            const totalRecords = mockData.MyDatasetList.data.length;
+            const fromRecord = 1;
+            const toRecord = 2;
+                return [
+                    200,
+                    // {total: 0, data: []}
+                    {
+                        ...mockData.MyDatasetList,
+                        current_page: config.params.page,
+                        data: mockData.MyDatasetList.data.slice(fromRecord, totalRecords > toRecord ? toRecord : totalRecords)
+                    }
+                ];
+        }
+        // CURRENT_USER_RECORDS_API - myResearch
         else if (config.params.rule === 'mine') {
             const totalRecords = mockData.myRecordsList.data.length;
             const fromRecord = 5 * (config.params.page - 1);
@@ -91,7 +106,11 @@ mock
             return [
                 200,
                 // {total: 0, data: []}
-                {...mockData.myRecordsList, current_page: config.params.page, data: mockData.myRecordsList.data.slice(fromRecord, totalRecords > toRecord ? toRecord : totalRecords)}
+                {
+                    ...mockData.myRecordsList,
+                    current_page: config.params.page,
+                    data: mockData.myRecordsList.data.slice(fromRecord, totalRecords > toRecord ? toRecord : totalRecords)
+                }
             ];
         }
         // POSSIBLE_RECORDS_API
@@ -103,33 +122,41 @@ mock
         else if (config.params.rule === 'lookup') {
             return [200, mockData.searchKeyList[config.params.search_key]];
         }
-        // ACADEMIC_STATS_PUBLICATIONS_TRENDING_API
-        else if (config.params.rule === 'trending') {
-            return [
-                200,
-                // {total: 0, data: [], filters: []}
-                mockData.trendingPublications
-            ];
-        }
         // SEARCH_INTERNAL_RECORDS_API
-        else if (config.params.id || config.params.doi || config.params.title) {
+        else if (config.params.id || config.params.doi || config.params.title || config.params.all || config.params.rek_title) {
+            // return [200, mockData.internalTitleSearchListNoResults];
             return [200, mockData.internalTitleSearchList];
         }
         return [404, ['Request not found']];
     })
+    .onGet(routes.AUTHOR_TRENDING_PUBLICATIONS_API().apiUrl)
+    // .reply(500, {})
+    .reply(200, mockData.trendingPublications)
+    .onGet(routes.TRENDING_PUBLICATIONS_API().apiUrl)
+    // .reply(500, {})
+    .reply(200, mockData.trendingPublications)
     .onGet(routes.GET_ACML_QUICK_TEMPLATES_API().apiUrl)
     .reply(200, mockData.quickTemplates)
     .onGet(routes.AUTHORS_SEARCH_API({query: '.*'}).apiUrl)
     .reply(200, mockData.authorsSearch)
     .onGet(routes.GET_PUBLICATION_TYPES_API().apiUrl)
     .reply(200, mockData.recordsTypeList)
+    .onGet(routes.GET_NEWS_API().apiUrl)
+    .reply(200, mockData.newsFeed)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
     .reply(config => {
         if (config.url.indexOf('UQ:164935') >= 0) {
             return [200, {data: {...mockData.recordWithMap}}];
         }
+        if (config.url.indexOf('UQ:107683') >= 0) {
+            return [200, {data: {...mockData.recordWithTiffAndThumbnail}}];
+        }
+        if (config.url.indexOf('UQ:290371') >= 0) {
+            return [200, {data: {...mockData.recordWithoutAuthorIds}}];
+        }
         return [200, {data: {...mockData.record}}];
     })
+    // .reply(401, '')
     // .reply(500, ['ERROR in EXISTING_RECORD_API'])
     .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({id: '.*'}).apiUrl)))
     .reply((config) => {

@@ -499,9 +499,9 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             "successTitle": "Success",
             "validation": Object {
               "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
-              "fileName": "File(s) ([fileNames]) have invalid file name",
-              "folder": "Invalid files ([fileNames])",
-              "maxFileSize": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+              "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+              "notFiles": "Invalid files ([fileNames])",
+              "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
               "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
             },
           }
@@ -1015,9 +1015,9 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             "successTitle": "Success",
             "validation": Object {
               "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
-              "fileName": "File(s) ([fileNames]) have invalid file name",
-              "folder": "Invalid files ([fileNames])",
-              "maxFileSize": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+              "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+              "notFiles": "Invalid files ([fileNames])",
+              "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
               "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
             },
           }

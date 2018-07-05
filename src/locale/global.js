@@ -1,4 +1,7 @@
+import React from 'react';
 import {APP_URL} from 'config';
+import {pathConfig} from 'config/routes';
+
 /*
 
 NOTE:
@@ -20,7 +23,18 @@ help: {
 export default {
     global: {
         title: `UQ eSpace ${process.env.TITLE_SUFFIX || ''}`,
-        logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
+        appTitle: (
+            <a href={`${pathConfig.index}`}
+                className="appTitle"
+                title="Click to return to the eSpace home page">
+                UQ eSpace {process.env.TITLE_SUFFIX || ''}
+            </a>
+        ),
+        logo: {
+            image: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
+            label: 'University of Queensland',
+            link: 'http://www.uq.edu.au'
+        },
         loading: 'Loading...',
         loadingUserAccount: 'Loading user account...',
         mainNavButton: {
@@ -42,9 +56,23 @@ export default {
             actionButtonLabel: 'Click to login'
         },
         errorMessages: {
+            401: {
+                message: 'You are not authorised to access the requested information. Please contact eSpace administrators or try again later.',
+                status: 401
+            },
+            403: {
+                message: 'Your session expired, please login to continue.',
+                status: 403
+            },
+            404: {
+                message: 'The requested page could not be found.',
+                status: 404
+            },
+            500: {
+                message: 'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+                status: 500
+            },
             generic: 'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
-            notFound: 'The requested page could not be found.',
-            sessionExpired: 'Your session expired, please login to continue.'
         },
         notRegisteredAuthorAlert: {
             title: 'You are not registered in UQ eSpace as an author',

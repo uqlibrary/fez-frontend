@@ -1,1732 +1,1735 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
-<AuthorsCitationView
-  className=""
-  idSearchKey={
+<Provider
+  store={
     Object {
-      "idKey": "fez_record_search_key_author_id",
-      "idOrder": "rek_author_id_order",
-      "idSubkey": "rek_author_id",
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
     }
   }
-  initialNumberOfAuthors={10}
-  publication={
-    Object {
-      "fez_record_search_key_author": Array [
-        Object {
-          "rek_author": "Pedroso, Marcelo Monteiro",
-          "rek_author_id": null,
-          "rek_author_order": 1,
-          "rek_author_pid": "UQ:678742",
-        },
-      ],
-    }
-  }
-  searchKey={
-    Object {
-      "key": "fez_record_search_key_author",
-      "order": "rek_author_order",
-      "subkey": "rek_author",
-    }
-  }
-  showLink={false}
-  suffix=" "
-  thresholdNumberOfAuthors={3}
 >
-  <span
-    className=""
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
   >
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_1"
-      prefix=""
-      suffix=""
-      value="Pedroso, Marcelo Monteiro"
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
     >
-      <span
-        className="citationAuthor"
+      <AuthorsCitationView
+        className=""
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_author_id",
+            "idOrder": "rek_author_id_order",
+            "idSubkey": "rek_author_id",
+          }
+        }
+        initialNumberOfAuthors={10}
+        publication={
+          Object {
+            "fez_record_search_key_author": Array [
+              Object {
+                "rek_author": "Pedroso, Marcelo Monteiro",
+                "rek_author_id": null,
+                "rek_author_order": 1,
+                "rek_author_pid": "UQ:678742",
+              },
+            ],
+          }
+        }
+        searchKey={
+          Object {
+            "key": "fez_record_search_key_author",
+            "order": "rek_author_order",
+            "subkey": "rek_author",
+          }
+        }
+        showLink={false}
+        suffix=" "
+        thresholdNumberOfAuthors={3}
       >
-        Pedroso, Marcelo Monteiro
-      </span>
-    </CitationView>
-     
-  </span>
-</AuthorsCitationView>
+        <span
+          className=""
+        >
+          <CitationView
+            className="citationAuthor"
+            key="citationAuthor_1"
+            prefix=""
+            suffix=""
+            value="Pedroso, Marcelo Monteiro"
+          >
+            <span
+              className="citationAuthor"
+            >
+              Pedroso, Marcelo Monteiro
+            </span>
+          </CitationView>
+           
+        </span>
+      </AuthorsCitationView>
+    </Router>
+  </MemoryRouter>
+</Provider>
 `;
 
 exports[`AuthorsCitationView test  should render component with 2 authors 1`] = `
-<AuthorsCitationView
-  className=""
-  idSearchKey={
+<Provider
+  store={
     Object {
-      "idKey": "fez_record_search_key_author_id",
-      "idOrder": "rek_author_id_order",
-      "idSubkey": "rek_author_id",
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
     }
   }
-  initialNumberOfAuthors={10}
-  publication={
-    Object {
-      "fez_record_search_key_author": Array [
-        Object {
-          "rek_author": "Pedroso, Marcelo Monteiro",
-          "rek_author_id": null,
-          "rek_author_order": 1,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Smith, J",
-          "rek_author_id": null,
-          "rek_author_order": 2,
-          "rek_author_pid": "UQ:678742",
-        },
-      ],
-    }
-  }
-  searchKey={
-    Object {
-      "key": "fez_record_search_key_author",
-      "order": "rek_author_order",
-      "subkey": "rek_author",
-    }
-  }
-  showLink={false}
-  suffix=" "
-  thresholdNumberOfAuthors={3}
 >
-  <span
-    className=""
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
   >
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_1"
-      prefix=""
-      suffix=""
-      value="Pedroso, Marcelo Monteiro"
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
     >
-      <span
-        className="citationAuthor"
+      <AuthorsCitationView
+        className=""
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_author_id",
+            "idOrder": "rek_author_id_order",
+            "idSubkey": "rek_author_id",
+          }
+        }
+        initialNumberOfAuthors={10}
+        publication={
+          Object {
+            "fez_record_search_key_author": Array [
+              Object {
+                "rek_author": "Pedroso, Marcelo Monteiro",
+                "rek_author_id": null,
+                "rek_author_order": 1,
+                "rek_author_pid": "UQ:678742",
+              },
+              Object {
+                "rek_author": "Smith, J",
+                "rek_author_id": null,
+                "rek_author_order": 2,
+                "rek_author_pid": "UQ:678742",
+              },
+            ],
+          }
+        }
+        searchKey={
+          Object {
+            "key": "fez_record_search_key_author",
+            "order": "rek_author_order",
+            "subkey": "rek_author",
+          }
+        }
+        showLink={false}
+        suffix=" "
+        thresholdNumberOfAuthors={3}
       >
-        Pedroso, Marcelo Monteiro
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_2"
-      prefix=" and "
-      suffix=""
-      value="Smith, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-         and 
-        Smith, J
-      </span>
-    </CitationView>
-     
-  </span>
-</AuthorsCitationView>
+        <span
+          className=""
+        >
+          <CitationView
+            className="citationAuthor"
+            key="citationAuthor_1"
+            prefix=""
+            suffix=""
+            value="Pedroso, Marcelo Monteiro"
+          >
+            <span
+              className="citationAuthor"
+            >
+              Pedroso, Marcelo Monteiro
+            </span>
+          </CitationView>
+          <CitationView
+            className="citationAuthor"
+            key="citationAuthor_2"
+            prefix=" and "
+            suffix=""
+            value="Smith, J"
+          >
+            <span
+              className="citationAuthor"
+            >
+               and 
+              Smith, J
+            </span>
+          </CitationView>
+           
+        </span>
+      </AuthorsCitationView>
+    </Router>
+  </MemoryRouter>
+</Provider>
 `;
 
 exports[`AuthorsCitationView test  should render component with 2 authors for publication view page 1`] = `
-<AuthorsCitationView
-  className=""
-  idSearchKey={
+<Provider
+  store={
     Object {
-      "idKey": "fez_record_search_key_author_id",
-      "idOrder": "rek_author_id_order",
-      "idSubkey": "rek_author_id",
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
     }
   }
-  initialNumberOfAuthors={10}
-  publication={
-    Object {
-      "fez_record_search_key_author": Array [
-        Object {
-          "rek_author": "Pedroso, Marcelo Monteiro",
-          "rek_author_id": null,
-          "rek_author_order": 1,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Smith, J",
-          "rek_author_id": null,
-          "rek_author_order": 2,
-          "rek_author_pid": "UQ:678742",
-        },
-      ],
-      "fez_record_search_key_author_id": Array [
-        Object {
-          "rek_author_id": 1,
-          "rek_author_id_id": null,
-          "rek_author_id_order": 1,
-        },
-        Object {
-          "rek_author_id": 2,
-          "rek_author_id_id": null,
-          "rek_author_id_order": 2,
-        },
-      ],
-    }
-  }
-  searchKey={
-    Object {
-      "key": "fez_record_search_key_author",
-      "order": "rek_author_order",
-      "subkey": "rek_author",
-    }
-  }
-  showLink={true}
-  suffix=" "
-  thresholdNumberOfAuthors={3}
 >
-  <span
-    className=""
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
   >
-    <a
-      className="authorIdLink"
-      href="https://fez-staging.library.uq.edu.au/list/author_id/1"
-      key="citationAuthor_1"
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
     >
-      <CitationView
-        className="citationAuthor"
-        key="citationAuthor_1"
-        prefix=""
-        suffix=""
-        value="Pedroso, Marcelo Monteiro"
+      <AuthorsCitationView
+        className=""
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_author_id",
+            "idOrder": "rek_author_id_order",
+            "idSubkey": "rek_author_id",
+          }
+        }
+        initialNumberOfAuthors={10}
+        publication={
+          Object {
+            "fez_record_search_key_author": Array [
+              Object {
+                "rek_author": "Pedroso, Marcelo Monteiro",
+                "rek_author_id": null,
+                "rek_author_order": 1,
+                "rek_author_pid": "UQ:678742",
+              },
+              Object {
+                "rek_author": "Smith, J",
+                "rek_author_id": null,
+                "rek_author_order": 2,
+                "rek_author_pid": "UQ:678742",
+              },
+            ],
+            "fez_record_search_key_author_id": Array [
+              Object {
+                "rek_author_id": 1,
+                "rek_author_id_id": null,
+                "rek_author_id_order": 1,
+              },
+              Object {
+                "rek_author_id": 2,
+                "rek_author_id_id": null,
+                "rek_author_id_order": 2,
+              },
+            ],
+          }
+        }
+        searchKey={
+          Object {
+            "key": "fez_record_search_key_author",
+            "order": "rek_author_order",
+            "subkey": "rek_author",
+          }
+        }
+        showLink={true}
+        suffix=" "
+        thresholdNumberOfAuthors={3}
       >
         <span
-          className="citationAuthor"
+          className=""
         >
-          Pedroso, Marcelo Monteiro
+          <Link
+            className="authorIdLink"
+            key="citationAuthor_1"
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1&searchQueryParams%5Ball%5D=Pedroso%2C+Marcelo+Monteiro"
+          >
+            <a
+              className="authorIdLink"
+              href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1&searchQueryParams%5Ball%5D=Pedroso%2C+Marcelo+Monteiro"
+              onClick={[Function]}
+            >
+              <CitationView
+                className="citationAuthor"
+                key="citationAuthor_1"
+                prefix=""
+                suffix=""
+                value="Pedroso, Marcelo Monteiro"
+              >
+                <span
+                  className="citationAuthor"
+                >
+                  Pedroso, Marcelo Monteiro
+                </span>
+              </CitationView>
+            </a>
+          </Link>
+          <Link
+            className="authorIdLink"
+            key="citationAuthor_2"
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=2&searchQueryParams%5Ball%5D=Smith%2C+J"
+          >
+            <a
+              className="authorIdLink"
+              href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=2&searchQueryParams%5Ball%5D=Smith%2C+J"
+              onClick={[Function]}
+            >
+              <CitationView
+                className="citationAuthor"
+                key="citationAuthor_2"
+                prefix=", "
+                suffix=""
+                value="Smith, J"
+              >
+                <span
+                  className="citationAuthor"
+                >
+                  , 
+                  Smith, J
+                </span>
+              </CitationView>
+            </a>
+          </Link>
+           
         </span>
-      </CitationView>
-    </a>
-    <a
-      className="authorIdLink"
-      href="https://fez-staging.library.uq.edu.au/list/author_id/2"
-      key="citationAuthor_2"
+      </AuthorsCitationView>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
+
+exports[`AuthorsCitationView test  should render component with 2 authors for publication view page if author ids not supplied 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
     >
-      <CitationView
-        className="citationAuthor"
-        key="citationAuthor_2"
-        prefix=", "
-        suffix=""
-        value="Smith, J"
+      <AuthorsCitationView
+        className=""
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_author_id",
+            "idOrder": "rek_author_id_order",
+            "idSubkey": "rek_author_id",
+          }
+        }
+        initialNumberOfAuthors={10}
+        publication={
+          Object {
+            "fez_record_search_key_author": Array [
+              Object {
+                "rek_author": "Pedroso, Marcelo Monteiro",
+                "rek_author_id": null,
+                "rek_author_order": 1,
+                "rek_author_pid": "UQ:678742",
+              },
+              Object {
+                "rek_author": "Smith, J",
+                "rek_author_id": null,
+                "rek_author_order": 2,
+                "rek_author_pid": "UQ:678742",
+              },
+            ],
+          }
+        }
+        searchKey={
+          Object {
+            "key": "fez_record_search_key_author",
+            "order": "rek_author_order",
+            "subkey": "rek_author",
+          }
+        }
+        showLink={true}
+        suffix=" "
+        thresholdNumberOfAuthors={3}
       >
         <span
-          className="citationAuthor"
+          className=""
         >
-          , 
-          Smith, J
+          <Link
+            className="authorNameLink"
+            key="citationAuthor_1"
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pedroso%2C+Marcelo+Monteiro"
+          >
+            <a
+              className="authorNameLink"
+              href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pedroso%2C+Marcelo+Monteiro"
+              onClick={[Function]}
+            >
+              <CitationView
+                className="citationAuthor"
+                key="citationAuthor_1"
+                prefix=""
+                suffix=""
+                value="Pedroso, Marcelo Monteiro"
+              >
+                <span
+                  className="citationAuthor"
+                >
+                  Pedroso, Marcelo Monteiro
+                </span>
+              </CitationView>
+            </a>
+          </Link>
+          <Link
+            className="authorNameLink"
+            key="citationAuthor_2"
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Smith%2C+J"
+          >
+            <a
+              className="authorNameLink"
+              href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Smith%2C+J"
+              onClick={[Function]}
+            >
+              <CitationView
+                className="citationAuthor"
+                key="citationAuthor_2"
+                prefix=", "
+                suffix=""
+                value="Smith, J"
+              >
+                <span
+                  className="citationAuthor"
+                >
+                  , 
+                  Smith, J
+                </span>
+              </CitationView>
+            </a>
+          </Link>
+           
         </span>
-      </CitationView>
-    </a>
-     
-  </span>
-</AuthorsCitationView>
+      </AuthorsCitationView>
+    </Router>
+  </MemoryRouter>
+</Provider>
 `;
 
 exports[`AuthorsCitationView test  should render component with 3 authors 1`] = `
-<AuthorsCitationView
-  className=""
-  idSearchKey={
+<Provider
+  store={
     Object {
-      "idKey": "fez_record_search_key_author_id",
-      "idOrder": "rek_author_id_order",
-      "idSubkey": "rek_author_id",
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
     }
   }
-  initialNumberOfAuthors={10}
-  publication={
-    Object {
-      "fez_record_search_key_author": Array [
-        Object {
-          "rek_author": "Pedroso, Marcelo Monteiro",
-          "rek_author_id": null,
-          "rek_author_order": 1,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Smith, J",
-          "rek_author_id": null,
-          "rek_author_order": 2,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 3,
-          "rek_author_pid": "UQ:678742",
-        },
-      ],
-    }
-  }
-  searchKey={
-    Object {
-      "key": "fez_record_search_key_author",
-      "order": "rek_author_order",
-      "subkey": "rek_author",
-    }
-  }
-  showLink={false}
-  suffix=" "
-  thresholdNumberOfAuthors={3}
 >
-  <span
-    className=""
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
   >
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_1"
-      prefix=""
-      suffix=", "
-      value="Pedroso, Marcelo Monteiro"
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
     >
-      <span
-        className="citationAuthor"
+      <AuthorsCitationView
+        className=""
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_author_id",
+            "idOrder": "rek_author_id_order",
+            "idSubkey": "rek_author_id",
+          }
+        }
+        initialNumberOfAuthors={10}
+        publication={
+          Object {
+            "fez_record_search_key_author": Array [
+              Object {
+                "rek_author": "Pedroso, Marcelo Monteiro",
+                "rek_author_id": null,
+                "rek_author_order": 1,
+                "rek_author_pid": "UQ:678742",
+              },
+              Object {
+                "rek_author": "Smith, J",
+                "rek_author_id": null,
+                "rek_author_order": 2,
+                "rek_author_pid": "UQ:678742",
+              },
+              Object {
+                "rek_author": "Andersen, J",
+                "rek_author_id": null,
+                "rek_author_order": 3,
+                "rek_author_pid": "UQ:678742",
+              },
+            ],
+          }
+        }
+        searchKey={
+          Object {
+            "key": "fez_record_search_key_author",
+            "order": "rek_author_order",
+            "subkey": "rek_author",
+          }
+        }
+        showLink={false}
+        suffix=" "
+        thresholdNumberOfAuthors={3}
       >
-        Pedroso, Marcelo Monteiro
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_2"
-      prefix=""
-      suffix=""
-      value="Smith, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Smith, J
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_3"
-      prefix=" and "
-      suffix=""
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-         and 
-        Andersen, J
-      </span>
-    </CitationView>
-     
-  </span>
-</AuthorsCitationView>
+        <span
+          className=""
+        >
+          <CitationView
+            className="citationAuthor"
+            key="citationAuthor_1"
+            prefix=""
+            suffix=", "
+            value="Pedroso, Marcelo Monteiro"
+          >
+            <span
+              className="citationAuthor"
+            >
+              Pedroso, Marcelo Monteiro
+              , 
+            </span>
+          </CitationView>
+          <CitationView
+            className="citationAuthor"
+            key="citationAuthor_2"
+            prefix=""
+            suffix=""
+            value="Smith, J"
+          >
+            <span
+              className="citationAuthor"
+            >
+              Smith, J
+            </span>
+          </CitationView>
+          <CitationView
+            className="citationAuthor"
+            key="citationAuthor_3"
+            prefix=" and "
+            suffix=""
+            value="Andersen, J"
+          >
+            <span
+              className="citationAuthor"
+            >
+               and 
+              Andersen, J
+            </span>
+          </CitationView>
+           
+        </span>
+      </AuthorsCitationView>
+    </Router>
+  </MemoryRouter>
+</Provider>
 `;
 
 exports[`AuthorsCitationView test  should render component with 3 authors for publication view page 1`] = `
-<AuthorsCitationView
-  className=""
-  idSearchKey={
+<Provider
+  store={
     Object {
-      "idKey": "fez_record_search_key_author_id",
-      "idOrder": "rek_author_id_order",
-      "idSubkey": "rek_author_id",
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
     }
   }
-  initialNumberOfAuthors={10}
-  publication={
-    Object {
-      "fez_record_search_key_author": Array [
-        Object {
-          "rek_author": "Pedroso, Marcelo Monteiro",
-          "rek_author_id": null,
-          "rek_author_order": 1,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Smith, J",
-          "rek_author_id": null,
-          "rek_author_order": 2,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Smith, J",
-          "rek_author_id": null,
-          "rek_author_order": 3,
-          "rek_author_pid": "UQ:678742",
-        },
-      ],
-      "fez_record_search_key_author_id": Array [
-        Object {
-          "rek_author_id": 1,
-          "rek_author_id_id": null,
-          "rek_author_id_order": 1,
-        },
-        Object {
-          "rek_author_id": 2,
-          "rek_author_id_id": null,
-          "rek_author_id_order": 2,
-        },
-        Object {
-          "rek_author_id": 3,
-          "rek_author_id_id": null,
-          "rek_author_id_order": 3,
-        },
-      ],
-    }
-  }
-  searchKey={
-    Object {
-      "key": "fez_record_search_key_author",
-      "order": "rek_author_order",
-      "subkey": "rek_author",
-    }
-  }
-  showLink={true}
-  suffix=" "
-  thresholdNumberOfAuthors={3}
 >
-  <span
-    className=""
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
   >
-    <a
-      className="authorIdLink"
-      href="https://fez-staging.library.uq.edu.au/list/author_id/1"
-      key="citationAuthor_1"
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
     >
-      <CitationView
-        className="citationAuthor"
-        key="citationAuthor_1"
-        prefix=""
-        suffix=", "
-        value="Pedroso, Marcelo Monteiro"
+      <AuthorsCitationView
+        className=""
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_author_id",
+            "idOrder": "rek_author_id_order",
+            "idSubkey": "rek_author_id",
+          }
+        }
+        initialNumberOfAuthors={10}
+        publication={
+          Object {
+            "fez_record_search_key_author": Array [
+              Object {
+                "rek_author": "Pedroso, Marcelo Monteiro",
+                "rek_author_id": null,
+                "rek_author_order": 1,
+                "rek_author_pid": "UQ:678742",
+              },
+              Object {
+                "rek_author": "Smith, J",
+                "rek_author_id": null,
+                "rek_author_order": 2,
+                "rek_author_pid": "UQ:678742",
+              },
+              Object {
+                "rek_author": "Smith, J",
+                "rek_author_id": null,
+                "rek_author_order": 3,
+                "rek_author_pid": "UQ:678742",
+              },
+            ],
+            "fez_record_search_key_author_id": Array [
+              Object {
+                "rek_author_id": 1,
+                "rek_author_id_id": null,
+                "rek_author_id_order": 1,
+              },
+              Object {
+                "rek_author_id": 2,
+                "rek_author_id_id": null,
+                "rek_author_id_order": 2,
+              },
+              Object {
+                "rek_author_id": 3,
+                "rek_author_id_id": null,
+                "rek_author_id_order": 3,
+              },
+            ],
+          }
+        }
+        searchKey={
+          Object {
+            "key": "fez_record_search_key_author",
+            "order": "rek_author_order",
+            "subkey": "rek_author",
+          }
+        }
+        showLink={true}
+        suffix=" "
+        thresholdNumberOfAuthors={3}
       >
         <span
-          className="citationAuthor"
+          className=""
         >
-          Pedroso, Marcelo Monteiro
-          , 
+          <Link
+            className="authorIdLink"
+            key="citationAuthor_1"
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1&searchQueryParams%5Ball%5D=Pedroso%2C+Marcelo+Monteiro"
+          >
+            <a
+              className="authorIdLink"
+              href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1&searchQueryParams%5Ball%5D=Pedroso%2C+Marcelo+Monteiro"
+              onClick={[Function]}
+            >
+              <CitationView
+                className="citationAuthor"
+                key="citationAuthor_1"
+                prefix=""
+                suffix=", "
+                value="Pedroso, Marcelo Monteiro"
+              >
+                <span
+                  className="citationAuthor"
+                >
+                  Pedroso, Marcelo Monteiro
+                  , 
+                </span>
+              </CitationView>
+            </a>
+          </Link>
+          <Link
+            className="authorIdLink"
+            key="citationAuthor_2"
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=2&searchQueryParams%5Ball%5D=Smith%2C+J"
+          >
+            <a
+              className="authorIdLink"
+              href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=2&searchQueryParams%5Ball%5D=Smith%2C+J"
+              onClick={[Function]}
+            >
+              <CitationView
+                className="citationAuthor"
+                key="citationAuthor_2"
+                prefix=""
+                suffix=""
+                value="Smith, J"
+              >
+                <span
+                  className="citationAuthor"
+                >
+                  Smith, J
+                </span>
+              </CitationView>
+            </a>
+          </Link>
+          <Link
+            className="authorIdLink"
+            key="citationAuthor_3"
+            replace={false}
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=3&searchQueryParams%5Ball%5D=Smith%2C+J"
+          >
+            <a
+              className="authorIdLink"
+              href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=3&searchQueryParams%5Ball%5D=Smith%2C+J"
+              onClick={[Function]}
+            >
+              <CitationView
+                className="citationAuthor"
+                key="citationAuthor_3"
+                prefix=", "
+                suffix=""
+                value="Smith, J"
+              >
+                <span
+                  className="citationAuthor"
+                >
+                  , 
+                  Smith, J
+                </span>
+              </CitationView>
+            </a>
+          </Link>
+           
         </span>
-      </CitationView>
-    </a>
-    <a
-      className="authorIdLink"
-      href="https://fez-staging.library.uq.edu.au/list/author_id/2"
-      key="citationAuthor_2"
-    >
-      <CitationView
-        className="citationAuthor"
-        key="citationAuthor_2"
-        prefix=""
-        suffix=""
-        value="Smith, J"
-      >
-        <span
-          className="citationAuthor"
-        >
-          Smith, J
-        </span>
-      </CitationView>
-    </a>
-    <a
-      className="authorIdLink"
-      href="https://fez-staging.library.uq.edu.au/list/author_id/3"
-      key="citationAuthor_3"
-    >
-      <CitationView
-        className="citationAuthor"
-        key="citationAuthor_3"
-        prefix=", "
-        suffix=""
-        value="Smith, J"
-      >
-        <span
-          className="citationAuthor"
-        >
-          , 
-          Smith, J
-        </span>
-      </CitationView>
-    </a>
-     
-  </span>
-</AuthorsCitationView>
+      </AuthorsCitationView>
+    </Router>
+  </MemoryRouter>
+</Provider>
 `;
 
 exports[`AuthorsCitationView test  should render component with 3 authors with prefix/suffix 1`] = `
-<AuthorsCitationView
-  className=""
-  idSearchKey={
+<Provider
+  store={
     Object {
-      "idKey": "fez_record_search_key_author_id",
-      "idOrder": "rek_author_id_order",
-      "idSubkey": "rek_author_id",
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
     }
   }
-  initialNumberOfAuthors={10}
-  prefix="Authored by: "
-  publication={
-    Object {
-      "fez_record_search_key_author": Array [
-        Object {
-          "rek_author": "Pedroso, Marcelo Monteiro",
-          "rek_author_id": null,
-          "rek_author_order": 1,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Smith, J",
-          "rek_author_id": null,
-          "rek_author_order": 2,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 3,
-          "rek_author_pid": "UQ:678742",
-        },
-      ],
-    }
-  }
-  searchKey={
-    Object {
-      "key": "fez_record_search_key_author",
-      "order": "rek_author_order",
-      "subkey": "rek_author",
-    }
-  }
-  showLink={false}
-  suffix=" people."
-  thresholdNumberOfAuthors={3}
 >
-  <span
-    className=""
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
   >
-    Authored by: 
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_1"
-      prefix=""
-      suffix=", "
-      value="Pedroso, Marcelo Monteiro"
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
     >
-      <span
-        className="citationAuthor"
+      <AuthorsCitationView
+        className=""
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_author_id",
+            "idOrder": "rek_author_id_order",
+            "idSubkey": "rek_author_id",
+          }
+        }
+        initialNumberOfAuthors={10}
+        prefix="Authored by: "
+        publication={
+          Object {
+            "fez_record_search_key_author": Array [
+              Object {
+                "rek_author": "Pedroso, Marcelo Monteiro",
+                "rek_author_id": null,
+                "rek_author_order": 1,
+                "rek_author_pid": "UQ:678742",
+              },
+              Object {
+                "rek_author": "Smith, J",
+                "rek_author_id": null,
+                "rek_author_order": 2,
+                "rek_author_pid": "UQ:678742",
+              },
+              Object {
+                "rek_author": "Andersen, J",
+                "rek_author_id": null,
+                "rek_author_order": 3,
+                "rek_author_pid": "UQ:678742",
+              },
+            ],
+          }
+        }
+        searchKey={
+          Object {
+            "key": "fez_record_search_key_author",
+            "order": "rek_author_order",
+            "subkey": "rek_author",
+          }
+        }
+        showLink={false}
+        suffix=" people."
+        thresholdNumberOfAuthors={3}
       >
-        Pedroso, Marcelo Monteiro
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_2"
-      prefix=""
-      suffix=""
-      value="Smith, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Smith, J
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_3"
-      prefix=" and "
-      suffix=""
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-         and 
-        Andersen, J
-      </span>
-    </CitationView>
-     people.
-  </span>
-</AuthorsCitationView>
+        <span
+          className=""
+        >
+          Authored by: 
+          <CitationView
+            className="citationAuthor"
+            key="citationAuthor_1"
+            prefix=""
+            suffix=", "
+            value="Pedroso, Marcelo Monteiro"
+          >
+            <span
+              className="citationAuthor"
+            >
+              Pedroso, Marcelo Monteiro
+              , 
+            </span>
+          </CitationView>
+          <CitationView
+            className="citationAuthor"
+            key="citationAuthor_2"
+            prefix=""
+            suffix=""
+            value="Smith, J"
+          >
+            <span
+              className="citationAuthor"
+            >
+              Smith, J
+            </span>
+          </CitationView>
+          <CitationView
+            className="citationAuthor"
+            key="citationAuthor_3"
+            prefix=" and "
+            suffix=""
+            value="Andersen, J"
+          >
+            <span
+              className="citationAuthor"
+            >
+               and 
+              Andersen, J
+            </span>
+          </CitationView>
+           people.
+        </span>
+      </AuthorsCitationView>
+    </Router>
+  </MemoryRouter>
+</Provider>
 `;
 
 exports[`AuthorsCitationView test  should render component with 3 authors with prefix/suffix without changing original data structure 1`] = `
-<AuthorsCitationView
-  className=""
-  idSearchKey={
+<Provider
+  store={
     Object {
-      "idKey": "fez_record_search_key_author_id",
-      "idOrder": "rek_author_id_order",
-      "idSubkey": "rek_author_id",
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
     }
   }
-  initialNumberOfAuthors={10}
-  prefix="Authored by: "
-  publication={
-    Object {
-      "fez_record_search_key_author": Array [
-        Object {
-          "rek_author": "Pedroso, Marcelo Monteiro",
-          "rek_author_id": null,
-          "rek_author_order": 3,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Smith, J",
-          "rek_author_id": null,
-          "rek_author_order": 1,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 2,
-          "rek_author_pid": "UQ:678742",
-        },
-      ],
-    }
-  }
-  searchKey={
-    Object {
-      "key": "fez_record_search_key_author",
-      "order": "rek_author_order",
-      "subkey": "rek_author",
-    }
-  }
-  showLink={false}
-  suffix=" people."
-  thresholdNumberOfAuthors={3}
 >
-  <span
-    className=""
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
   >
-    Authored by: 
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_1"
-      prefix=""
-      suffix=", "
-      value="Smith, J"
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
     >
-      <span
-        className="citationAuthor"
+      <AuthorsCitationView
+        className=""
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_author_id",
+            "idOrder": "rek_author_id_order",
+            "idSubkey": "rek_author_id",
+          }
+        }
+        initialNumberOfAuthors={10}
+        prefix="Authored by: "
+        publication={
+          Object {
+            "fez_record_search_key_author": Array [
+              Object {
+                "rek_author": "Pedroso, Marcelo Monteiro",
+                "rek_author_id": null,
+                "rek_author_order": 3,
+                "rek_author_pid": "UQ:678742",
+              },
+              Object {
+                "rek_author": "Smith, J",
+                "rek_author_id": null,
+                "rek_author_order": 1,
+                "rek_author_pid": "UQ:678742",
+              },
+              Object {
+                "rek_author": "Andersen, J",
+                "rek_author_id": null,
+                "rek_author_order": 2,
+                "rek_author_pid": "UQ:678742",
+              },
+            ],
+          }
+        }
+        searchKey={
+          Object {
+            "key": "fez_record_search_key_author",
+            "order": "rek_author_order",
+            "subkey": "rek_author",
+          }
+        }
+        showLink={false}
+        suffix=" people."
+        thresholdNumberOfAuthors={3}
       >
-        Smith, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_2"
-      prefix=""
-      suffix=""
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_3"
-      prefix=" and "
-      suffix=""
-      value="Pedroso, Marcelo Monteiro"
-    >
-      <span
-        className="citationAuthor"
-      >
-         and 
-        Pedroso, Marcelo Monteiro
-      </span>
-    </CitationView>
-     people.
-  </span>
-</AuthorsCitationView>
+        <span
+          className=""
+        >
+          Authored by: 
+          <CitationView
+            className="citationAuthor"
+            key="citationAuthor_1"
+            prefix=""
+            suffix=", "
+            value="Smith, J"
+          >
+            <span
+              className="citationAuthor"
+            >
+              Smith, J
+              , 
+            </span>
+          </CitationView>
+          <CitationView
+            className="citationAuthor"
+            key="citationAuthor_2"
+            prefix=""
+            suffix=""
+            value="Andersen, J"
+          >
+            <span
+              className="citationAuthor"
+            >
+              Andersen, J
+            </span>
+          </CitationView>
+          <CitationView
+            className="citationAuthor"
+            key="citationAuthor_3"
+            prefix=" and "
+            suffix=""
+            value="Pedroso, Marcelo Monteiro"
+          >
+            <span
+              className="citationAuthor"
+            >
+               and 
+              Pedroso, Marcelo Monteiro
+            </span>
+          </CitationView>
+           people.
+        </span>
+      </AuthorsCitationView>
+    </Router>
+  </MemoryRouter>
+</Provider>
 `;
 
 exports[`AuthorsCitationView test  should render component with 10 authors (8 initial number and threshold 2) 1`] = `
-<AuthorsCitationView
+<span
   className=""
-  idSearchKey={
-    Object {
-      "idKey": "fez_record_search_key_author_id",
-      "idOrder": "rek_author_id_order",
-      "idSubkey": "rek_author_id",
-    }
-  }
-  initialNumberOfAuthors={8}
-  prefix="Authored by: "
-  publication={
-    Object {
-      "fez_record_search_key_author": Array [
-        Object {
-          "rek_author": "Pedroso, Marcelo Monteiro",
-          "rek_author_id": null,
-          "rek_author_order": 1,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Smith, J",
-          "rek_author_id": null,
-          "rek_author_order": 2,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 3,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 4,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 5,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 6,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 7,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 8,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 9,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 10,
-          "rek_author_pid": "UQ:678742",
-        },
-      ],
-    }
-  }
-  searchKey={
-    Object {
-      "key": "fez_record_search_key_author",
-      "order": "rek_author_order",
-      "subkey": "rek_author",
-    }
-  }
-  showLink={false}
-  suffix=" people."
-  thresholdNumberOfAuthors={2}
 >
-  <span
-    className=""
-  >
-    Authored by: 
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_1"
-      prefix=""
-      suffix=", "
-      value="Pedroso, Marcelo Monteiro"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Pedroso, Marcelo Monteiro
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_2"
-      prefix=""
-      suffix=", "
-      value="Smith, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Smith, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_3"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_4"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_5"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_6"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_7"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_8"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_9"
-      prefix=""
-      suffix=""
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_10"
-      prefix=" and "
-      suffix=""
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-         and 
-        Andersen, J
-      </span>
-    </CitationView>
-     people.
-  </span>
-</AuthorsCitationView>
+  Authored by: 
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_1"
+    prefix=""
+    suffix=", "
+    value="Pedroso, Marcelo Monteiro"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_2"
+    prefix=""
+    suffix=", "
+    value="Smith, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_3"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_4"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_5"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_6"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_7"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_8"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_9"
+    prefix=""
+    suffix=""
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_10"
+    prefix=" and "
+    suffix=""
+    value="Andersen, J"
+  />
+   people.
+</span>
 `;
 
 exports[`AuthorsCitationView test  should render component with 10 authors and show more link 1`] = `
-<AuthorsCitationView
+<span
   className=""
-  idSearchKey={
-    Object {
-      "idKey": "fez_record_search_key_author_id",
-      "idOrder": "rek_author_id_order",
-      "idSubkey": "rek_author_id",
-    }
-  }
-  initialNumberOfAuthors={10}
-  prefix="Authored by: "
-  publication={
-    Object {
-      "fez_record_search_key_author": Array [
-        Object {
-          "rek_author": "Pedroso, Marcelo Monteiro",
-          "rek_author_id": null,
-          "rek_author_order": 1,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Smith, J",
-          "rek_author_id": null,
-          "rek_author_order": 2,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 3,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 4,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 5,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 6,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 7,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 8,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 9,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 10,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 11,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 12,
-          "rek_author_pid": "UQ:678742",
-        },
-      ],
-    }
-  }
-  searchKey={
-    Object {
-      "key": "fez_record_search_key_author",
-      "order": "rek_author_order",
-      "subkey": "rek_author",
-    }
-  }
-  showLink={false}
-  suffix=" people."
-  thresholdNumberOfAuthors={0}
 >
-  <span
-    className=""
-  >
-    Authored by: 
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_1"
-      prefix=""
-      suffix=", "
-      value="Pedroso, Marcelo Monteiro"
+  Authored by: 
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_1"
+    prefix=""
+    suffix=", "
+    value="Pedroso, Marcelo Monteiro"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_2"
+    prefix=""
+    suffix=", "
+    value="Smith, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_3"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_4"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_5"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_6"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_7"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_8"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_9"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_10"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <span>
+     
+    <a
+      className="citationShowMoreAuthors"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      title="Click to show 2 more authors"
     >
-      <span
-        className="citationAuthor"
-      >
-        Pedroso, Marcelo Monteiro
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_2"
-      prefix=""
-      suffix=", "
-      value="Smith, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Smith, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_3"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_4"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_5"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_6"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_7"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_8"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_9"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_10"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <span>
-       
-      <a
-        className="citationShowMoreAuthors"
-        href="#"
-        onClick={[Function]}
-        onKeyPress={[Function]}
-        title="Click to show 2 more authors"
-      >
-        Show 2 more...
-      </a>
-    </span>
-     people.
+      Show 2 more...
+    </a>
   </span>
-</AuthorsCitationView>
+   people.
+</span>
 `;
 
 exports[`AuthorsCitationView test  should render component with 10 authors and show more link 2`] = `
-<AuthorsCitationView
+<span
   className=""
-  idSearchKey={
-    Object {
-      "idKey": "fez_record_search_key_author_id",
-      "idOrder": "rek_author_id_order",
-      "idSubkey": "rek_author_id",
-    }
-  }
-  initialNumberOfAuthors={10}
-  prefix="Authored by: "
-  publication={
-    Object {
-      "fez_record_search_key_author": Array [
-        Object {
-          "rek_author": "Pedroso, Marcelo Monteiro",
-          "rek_author_id": null,
-          "rek_author_order": 1,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Smith, J",
-          "rek_author_id": null,
-          "rek_author_order": 2,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 3,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 4,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 5,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 6,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 7,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 8,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 9,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 10,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 11,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 12,
-          "rek_author_pid": "UQ:678742",
-        },
-      ],
-    }
-  }
-  searchKey={
-    Object {
-      "key": "fez_record_search_key_author",
-      "order": "rek_author_order",
-      "subkey": "rek_author",
-    }
-  }
-  showLink={false}
-  suffix=" people."
-  thresholdNumberOfAuthors={0}
 >
-  <span
-    className=""
-  >
-    Authored by: 
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_1"
-      prefix=""
-      suffix=", "
-      value="Pedroso, Marcelo Monteiro"
+  Authored by: 
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_1"
+    prefix=""
+    suffix=", "
+    value="Pedroso, Marcelo Monteiro"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_2"
+    prefix=""
+    suffix=", "
+    value="Smith, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_3"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_4"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_5"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_6"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_7"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_8"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_9"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_10"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_11"
+    prefix=""
+    suffix=""
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_12"
+    prefix=" and "
+    suffix=""
+    value="Andersen, J"
+  />
+  <span>
+     
+    <a
+      className="citationShowMoreAuthors"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      title="Show less authors"
     >
-      <span
-        className="citationAuthor"
-      >
-        Pedroso, Marcelo Monteiro
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_2"
-      prefix=""
-      suffix=", "
-      value="Smith, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Smith, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_3"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_4"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_5"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_6"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_7"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_8"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_9"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_10"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_11"
-      prefix=""
-      suffix=""
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_12"
-      prefix=" and "
-      suffix=""
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-         and 
-        Andersen, J
-      </span>
-    </CitationView>
-    <span>
-       
-      <a
-        className="citationShowMoreAuthors"
-        href="#"
-        onClick={[Function]}
-        onKeyPress={[Function]}
-        title="Show less authors"
-      >
-        Show less
-      </a>
-    </span>
-     people.
+      Show less
+    </a>
   </span>
-</AuthorsCitationView>
+   people.
+</span>
 `;
 
 exports[`AuthorsCitationView test  should render component with exactly 10 authors 1`] = `
-<AuthorsCitationView
+<span
   className=""
-  idSearchKey={
-    Object {
-      "idKey": "fez_record_search_key_author_id",
-      "idOrder": "rek_author_id_order",
-      "idSubkey": "rek_author_id",
-    }
-  }
-  initialNumberOfAuthors={10}
-  prefix="Authored by: "
-  publication={
-    Object {
-      "fez_record_search_key_author": Array [
-        Object {
-          "rek_author": "Pedroso, Marcelo Monteiro",
-          "rek_author_id": null,
-          "rek_author_order": 1,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Smith, J",
-          "rek_author_id": null,
-          "rek_author_order": 2,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 3,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 4,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 5,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 6,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 7,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 8,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 9,
-          "rek_author_pid": "UQ:678742",
-        },
-        Object {
-          "rek_author": "Andersen, J",
-          "rek_author_id": null,
-          "rek_author_order": 10,
-          "rek_author_pid": "UQ:678742",
-        },
-      ],
-    }
-  }
-  searchKey={
-    Object {
-      "key": "fez_record_search_key_author",
-      "order": "rek_author_order",
-      "subkey": "rek_author",
-    }
-  }
-  showLink={false}
-  suffix=" people."
-  thresholdNumberOfAuthors={3}
 >
-  <span
-    className=""
-  >
-    Authored by: 
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_1"
-      prefix=""
-      suffix=", "
-      value="Pedroso, Marcelo Monteiro"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Pedroso, Marcelo Monteiro
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_2"
-      prefix=""
-      suffix=", "
-      value="Smith, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Smith, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_3"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_4"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_5"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_6"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_7"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_8"
-      prefix=""
-      suffix=", "
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-        , 
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_9"
-      prefix=""
-      suffix=""
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-        Andersen, J
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationAuthor"
-      key="citationAuthor_10"
-      prefix=" and "
-      suffix=""
-      value="Andersen, J"
-    >
-      <span
-        className="citationAuthor"
-      >
-         and 
-        Andersen, J
-      </span>
-    </CitationView>
-     people.
-  </span>
-</AuthorsCitationView>
+  Authored by: 
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_1"
+    prefix=""
+    suffix=", "
+    value="Pedroso, Marcelo Monteiro"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_2"
+    prefix=""
+    suffix=", "
+    value="Smith, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_3"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_4"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_5"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_6"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_7"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_8"
+    prefix=""
+    suffix=", "
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_9"
+    prefix=""
+    suffix=""
+    value="Andersen, J"
+  />
+  <CitationView
+    className="citationAuthor"
+    key="citationAuthor_10"
+    prefix=" and "
+    suffix=""
+    value="Andersen, J"
+  />
+   people.
+</span>
 `;
 
 exports[`AuthorsCitationView test  should render component with no authors 1`] = `
-<AuthorsCitationView
-  className=""
-  idSearchKey={
+<Provider
+  store={
     Object {
-      "idKey": "fez_record_search_key_author_id",
-      "idOrder": "rek_author_id_order",
-      "idSubkey": "rek_author_id",
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
     }
   }
-  initialNumberOfAuthors={10}
-  publication={Object {}}
-  searchKey={
-    Object {
-      "key": "fez_record_search_key_author",
-      "order": "rek_author_order",
-      "subkey": "rek_author",
-    }
-  }
-  showLink={false}
-  suffix=" "
-  thresholdNumberOfAuthors={3}
 >
-  <span
-    className=" empty"
-  />
-</AuthorsCitationView>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <AuthorsCitationView
+        className=""
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_author_id",
+            "idOrder": "rek_author_id_order",
+            "idSubkey": "rek_author_id",
+          }
+        }
+        initialNumberOfAuthors={10}
+        publication={Object {}}
+        searchKey={
+          Object {
+            "key": "fez_record_search_key_author",
+            "order": "rek_author_order",
+            "subkey": "rek_author",
+          }
+        }
+        showLink={false}
+        suffix=" "
+        thresholdNumberOfAuthors={3}
+      >
+        <span
+          className=" empty"
+        />
+      </AuthorsCitationView>
+    </Router>
+  </MemoryRouter>
+</Provider>
 `;
 
 exports[`AuthorsCitationView test  should set class on component with no authors 1`] = `
-<AuthorsCitationView
-  className="myClass"
-  idSearchKey={
+<Provider
+  store={
     Object {
-      "idKey": "fez_record_search_key_author_id",
-      "idOrder": "rek_author_id_order",
-      "idSubkey": "rek_author_id",
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
     }
   }
-  initialNumberOfAuthors={10}
-  publication={Object {}}
-  searchKey={
-    Object {
-      "key": "fez_record_search_key_author",
-      "order": "rek_author_order",
-      "subkey": "rek_author",
-    }
-  }
-  showLink={false}
-  suffix=" "
-  thresholdNumberOfAuthors={3}
 >
-  <span
-    className="myClass empty"
-  />
-</AuthorsCitationView>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <AuthorsCitationView
+        className="myClass"
+        idSearchKey={
+          Object {
+            "idKey": "fez_record_search_key_author_id",
+            "idOrder": "rek_author_id_order",
+            "idSubkey": "rek_author_id",
+          }
+        }
+        initialNumberOfAuthors={10}
+        publication={Object {}}
+        searchKey={
+          Object {
+            "key": "fez_record_search_key_author",
+            "order": "rek_author_order",
+            "subkey": "rek_author",
+          }
+        }
+        showLink={false}
+        suffix=" "
+        thresholdNumberOfAuthors={3}
+      >
+        <span
+          className="myClass empty"
+        />
+      </AuthorsCitationView>
+    </Router>
+  </MemoryRouter>
+</Provider>
 `;

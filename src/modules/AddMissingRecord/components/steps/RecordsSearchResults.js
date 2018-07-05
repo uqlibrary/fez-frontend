@@ -26,7 +26,7 @@ import {locale} from 'locale';
 export default class RecordsSearchResults extends PureComponent {
     static propTypes = {
         publicationsList: PropTypes.array,
-        loadingSearch: PropTypes.bool,
+        searchLoading: PropTypes.bool,
         loadingPublicationSources: PropTypes.object,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object,
@@ -52,7 +52,49 @@ export default class RecordsSearchResults extends PureComponent {
 
     _claimPublication = (item) => {
         this.props.actions.setClaimPublication(item);
+        this.props.actions.setRedirectPath(routes.pathConfig.records.add.find);
         this.props.history.push(routes.pathConfig.records.claim);
+    };
+
+    getUnclaimablePublicationsList = (publicationsList) => {
+        return publicationsList
+            .filter(item => {
+                if (
+                    // If the item doesnt have a pid
+                    !item.rek_pid ||
+                    // If not all of the authors have been assigned by count
+                    item.fez_record_search_key_author_id.length !== item.fez_record_search_key_author.length ||
+                    // If the item has had contributors assigned, but have unclaimed/unassigned ie. id = 0 or null
+                    (
+                        item.fez_record_search_key_contributor_id.length > 0 &&
+                        item.fez_record_search_key_contributor_id
+                            .reduce((total, item) => (
+                                total ||
+                                item.rek_contributor_id === 0 ||
+                                item.rek_contributor_id === null
+                            ), false)
+                    ) ||
+                    // If the item has had authors assigned, but have unclaimed/unassigned ie. id = 0 or null
+                    (
+                        item.fez_record_search_key_author_id.length > 0 &&
+                        item.fez_record_search_key_author_id
+                            .reduce((total, item) => (
+                                total ||
+                                item.rek_author_id === 0 ||
+                                item.rek_author_id === null
+                            ), false)
+                    ) ||
+                    // If there are no authors, and not all of the contributors have been assigned by count
+                    // Edge case for edited book, where there were no authors but had contributors
+                    (
+                        item.fez_record_search_key_author.length === 0 &&
+                        (item.fez_record_search_key_contributor_id.length !== item.fez_record_search_key_contributor.length)
+                    )
+                ) return false;
+
+                return true;
+            })
+            .map(item => (item.rek_pid));
     };
 
     render() {
@@ -65,21 +107,7 @@ export default class RecordsSearchResults extends PureComponent {
             }
         ];
 
-        const unclaimablePublicationsList = this.props.publicationsList
-            .filter(item => {
-                // If the item doesnt have a pid
-                if (!item.rek_pid) return false;
-                // If not all of the authors have been assigned by count
-                if (item.fez_record_search_key_author_id.length !== item.fez_record_search_key_author.length) return false;
-                // If there are no authors, and not all of the contributors have been assigned by count
-                if (item.fez_record_search_key_author.length === 0 &&
-                    (item.fez_record_search_key_contributor_id.length !== item.fez_record_search_key_contributor.length)) return false;
-                // If the item has had contributors or authors assigned, but have unclaimed/unassigned ie. id = 0
-                if (item.fez_record_search_key_contributor_id.length > 0 && item.fez_record_search_key_contributor_id.reduce((total, item)=>(total || item.rek_contributor_id === 0))) return false;
-                return (item.fez_record_search_key_author_id.length > 0 && item.fez_record_search_key_author_id.reduce((total, item)=>(total || item.rek_author_id === 0), false));
-            })
-            .map(item => (item.rek_pid));
-
+        const unclaimablePublicationsList = this.getUnclaimablePublicationsList(this.props.publicationsList);
         const unclaimable = [
             {
                 label: searchResultsTxt.unclaimable,
@@ -99,7 +127,7 @@ export default class RecordsSearchResults extends PureComponent {
                 {/* Search results */}
                 <div className="column">
                     {
-                        this.props.loadingSearch &&
+                        this.props.searchLoading &&
                         <div className="is-centered"><InlineLoader message={searchResultsTxt.loadingMessage}/></div>
                     }
                     {
@@ -124,14 +152,14 @@ export default class RecordsSearchResults extends PureComponent {
                         </StandardCard>
                     }
                     {
-                        !this.props.loadingSearch && this.props.publicationsList.length === 0 &&
+                        !this.props.searchLoading && this.props.publicationsList.length === 0 &&
                         <StandardCard {...searchResultsTxt.noResultsFound}>
                             {searchResultsTxt.noResultsFound.text}
                         </StandardCard>
                     }
 
                     {
-                        !this.props.loadingSearch &&
+                        !this.props.searchLoading &&
                         <div className="columns action-buttons">
                             <div className="column is-hidden-mobile"/>
                             <div className="column is-narrow-desktop">

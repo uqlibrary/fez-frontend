@@ -58,6 +58,7 @@ describe('Files Component ', () => {
         expect(shallow(wrapper.instance().renderFileIcon('UQ:1', 'video/quicktime'))).toMatchSnapshot();
         expect(shallow(wrapper.instance().renderFileIcon('UQ:1', 'audio/mp3'))).toMatchSnapshot();
         expect(shallow(wrapper.instance().renderFileIcon('UQ:1', 'app/pdf'))).toMatchSnapshot();
+        expect(shallow(wrapper.instance().renderFileIcon('UQ:1', 'image/jpg', 'test.tiff', 'thumbnail_test.jpg', 'preview_test.jpg', true))).toMatchSnapshot();
     });
 
     it('should set state on showPreview', () => {
@@ -145,5 +146,136 @@ describe('Files Component ', () => {
         expect(wrapper.state().preview.previewMediaUrl).toEqual(null);
         expect(wrapper.state().preview.mediaUrl).toEqual(null);
         expect(wrapper.state().preview.mimeType).toEqual(null);
+    });
+
+    it('should not calculate OA of files if search key not present', () => {
+        const publicationEmbargoOAFile = {
+            rek_created_date: '2019-12-01T00:00:00Z',
+            rek_pid: 'pid:111',
+            fez_datastream_info: [
+                {
+                    "dsi_pid": "UQ:357538",
+                    "dsi_dsid": "UQ357538_OA.pdf",
+                    "dsi_embargo_date": "2021-12-01",
+                    "dsi_open_access": null,
+                    "dsi_label": "Full text (open access)",
+                    "dsi_mimetype": "application\/pdf",
+                    "dsi_copyright": null,
+                    "dsi_state": "A",
+                    "dsi_size": 1526884
+                }],
+        };
+        const wrapper = setup({});
+        expect(wrapper.instance().getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[0].dsi_embargo_date))
+            .toEqual({"embargoDate": null, "isOpenAccess": false, "openAccessStatusId": null});
+    });
+
+    it('should correctly get dataStream item for thumbnail and preview images', () => {
+        const thumbnailFileName = 'thumbnail_AL_LH_01.jpg';
+        const previewFileName = 'preview_AL_LH_01.jpg';
+        const fez_datastream_info = [
+            {
+                "dsi_pid": "UQ:107683",
+                "dsi_dsid": "AL_LH_01.tif",
+                "dsi_embargo_date": null,
+                "dsi_open_access": 1,
+                "dsi_label": "",
+                "dsi_mimetype": "image/tiff",
+                "dsi_copyright": null,
+                "dsi_state": "A",
+                "dsi_size": 27932352
+            },
+            {
+                "dsi_pid": "UQ:107683",
+                "dsi_dsid": "FezACML_AL_LH_01.tif.xml",
+                "dsi_embargo_date": null,
+                "dsi_open_access": null,
+                "dsi_label": "FezACML security for datastream - AL_LH_01.tif",
+                "dsi_mimetype": "text/xml",
+                "dsi_copyright": null,
+                "dsi_state": "A",
+                "dsi_size": 64
+            },
+            {
+                "dsi_pid": "UQ:107683",
+                "dsi_dsid": "FezACML_UQ_107683.xml",
+                "dsi_embargo_date": null,
+                "dsi_open_access": null,
+                "dsi_label": "FezACML security for PID - UQ:107683",
+                "dsi_mimetype": "text/xml",
+                "dsi_copyright": null,
+                "dsi_state": "A",
+                "dsi_size": 3633
+            },
+            {
+                "dsi_pid": "UQ:107683",
+                "dsi_dsid": "presmd_AL_LH_01.xml",
+                "dsi_embargo_date": null,
+                "dsi_open_access": null,
+                "dsi_label": "",
+                "dsi_mimetype": "application/xml",
+                "dsi_copyright": null,
+                "dsi_state": "A",
+                "dsi_size": 239623
+            },
+            {
+                "dsi_pid": "UQ:107683",
+                "dsi_dsid": "preview_AL_LH_01.jpg",
+                "dsi_embargo_date": null,
+                "dsi_open_access": null,
+                "dsi_label": "",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_copyright": null,
+                "dsi_state": "A",
+                "dsi_size": 95360
+            },
+            {
+                "dsi_pid": "UQ:107683",
+                "dsi_dsid": "thumbnail_AL_LH_01.jpg",
+                "dsi_embargo_date": null,
+                "dsi_open_access": null,
+                "dsi_label": "",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_copyright": null,
+                "dsi_state": "A",
+                "dsi_size": 3912
+            },
+            {
+                "dsi_pid": "UQ:107683",
+                "dsi_dsid": "web_AL_LH_01.jpg",
+                "dsi_embargo_date": null,
+                "dsi_open_access": null,
+                "dsi_label": "",
+                "dsi_mimetype": "image/jpeg",
+                "dsi_copyright": null,
+                "dsi_state": "A",
+                "dsi_size": 163244
+            }
+        ];
+
+        const wrapper = setup({});
+        expect(wrapper.instance().searchByKey(fez_datastream_info, 'dsi_dsid', thumbnailFileName)).toEqual({
+            "dsi_pid": "UQ:107683",
+            "dsi_dsid": "thumbnail_AL_LH_01.jpg",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "",
+            "dsi_mimetype": "image/jpeg",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 3912
+        });
+
+        expect(wrapper.instance().searchByKey(fez_datastream_info, 'dsi_dsid', previewFileName)).toEqual({
+            "dsi_pid": "UQ:107683",
+            "dsi_dsid": "preview_AL_LH_01.jpg",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "",
+            "dsi_mimetype": "image/jpeg",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 95360
+        });
     });
 });

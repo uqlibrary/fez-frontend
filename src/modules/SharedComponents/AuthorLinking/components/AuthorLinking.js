@@ -5,10 +5,6 @@ import AuthorItem from './AuthorItem';
 import Infinite from 'react-infinite';
 
 export default class AuthorLinking extends PureComponent {
-    static contextTypes = {
-        isMobile: PropTypes.bool
-    };
-
     static propTypes = {
         searchKey: PropTypes.object.isRequired,
         authorList: PropTypes.array,
@@ -18,6 +14,10 @@ export default class AuthorLinking extends PureComponent {
         onChange: PropTypes.func,
         disabled: PropTypes.bool,
         className: PropTypes.string
+    };
+
+    static contextTypes = {
+        isMobile: PropTypes.bool
     };
 
     static defaultProps = {
@@ -79,6 +79,7 @@ export default class AuthorLinking extends PureComponent {
         const authors = authorList.map((author, index) => {
             const linked = (
                 linkedAuthorIdList.length > 0 &&
+                !!linkedAuthorIdList[index] &&
                 linkedAuthorIdList[index][this.props.searchKey.value] !== null &&
                 linkedAuthorIdList[index][this.props.searchKey.value] !== 0
             );
