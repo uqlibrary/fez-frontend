@@ -79,137 +79,8 @@
 
   // Components ------------------------------------------------
 
-  // Files
-  //.files {
-  //  td {
-  //    border: 1px solid red !important;
-  //  }
-  //  margin-bottom: 3px !important;
-  //  .fileIcon {
-  //    svg {
-  //      fill: lighten($secondary-color, 33%) !important;
-  //      width: 32px !important;
-  //      height: 32px !important;
-  //      padding: 8px 6px 0 0 !important;
-  //    }
-  //    .fileThumbnail {
-  //      cursor: pointer;
-  //      img {
-  //        @include tablet {
-  //          max-width: 150px;
-  //          max-height: 100px;
-  //        }
-  //        @include mobile {
-  //          max-width: 50px;
-  //          max-height: 50px;
-  //        }
-  //      }
-  //    }
-  //  }
-  //  .fileInfo {
-  //    border: 1px solid green!important;
-  //    overflow: hidden !important;
-  //    text-overflow: ellipsis !important;
-  //    overflow-wrap: break-word !important;
-  //    word-break: break-all !important;
-  //    white-space: nowrap !important;
-  //    display: flex;
-  //    align-items: center;
-  //    width: 100%;
-  //    a {
-  //      overflow: hidden !important;
-  //      text-overflow: ellipsis !important;
-  //      overflow-wrap: break-word !important;
-  //      word-break: break-all !important;
-  //      white-space: nowrap !important;
-  //    }
-  //  }
-  //  // columns widths
-  //  .filetype {
-  //    overflow: auto !important;
-  //    white-space: nowrap !important;
-  //    @include tablet {
-  //      width: 150px;
-  //      height: 100px;
-  //    }
-  //    @include mobile {
-  //      width: 50px !important;
-  //      height: 50px !important;
-  //    }
-  //  }
-  //  .filename {
-  //    line-height: 48px !important;
-  //    &:hover {
-  //      cursor: pointer;
-  //    }
-  //    @include tablet {
-  //     width: 50% !important;
-  //    }
-  //    @include mobile {
-  //      width: 100% !important;
-  //    }
-  //  }
-  //  .description {
-  //    white-space: normal !important;
-  //    @include tablet {
-  //      width: 50% !important;
-  //    }
-  //  }
-  //  .oa {
-  //    text-align: right !important;
-  //    @include tablet {
-  //      width: 200px !important;
-  //    }
-  //    @include mobile {
-  //      width: 24px !important;
-  //    }
-  //  }
-  //  .size {
-  //    text-align: right !important;
-  //    width: 10% !important;
-  //  }
-  //  .fileDetails {
-  //    width: 100%;
-  //    overflow: hidden !important;
-  //    text-overflow: ellipsis !important;
-  //    overflow-wrap: break-word !important;
-  //    word-break: break-all !important;
-  //    white-space: nowrap !important;
-  //    .fileIcon {
-  //      img, svg {
-  //        color: lighten($secondary-color, 25%) !important;
-  //        margin: auto 6px !important;
-  //      }
-  //    }
-  //    .fileInfo {
-  //      .fileName {
-  //      }
-  //    }
-  //    .audioWrapper {
-  //      overflow: hidden;
-  //      .audioButton {
-  //        transform: scale(0.75);
-  //        svg {
-  //          //width: 12px !important;
-  //          //height: 12px !important;
-  //          fill: $secondary-color !important;
-  //        }
-  //      }
-  //      .audioPlayer {
-  //        margin-top: 8px;
-  //        width: 100px;
-  //        overflow: hidden;
-  //
-  //      }
-  //    }
-  //  }
-  //}
-
   // File
   .files {
-    //.column {
-    //  border: 1px dashed red !important;
-    //}
     > .columns {
       margin-bottom: 3px !important;
       padding-bottom: 3px !important;
@@ -251,14 +122,15 @@
         }
         &:hover {
           overflow: visible;
-          width: 80px !important;
-          height: 60px !important;
+          width: 150px !important;
+          height: 150px !important;
           z-index: 999 !important;
           position: relative !important;
           background-image: none !important;
           img {
             opacity: 1 !important;
-            //max-width: 100% !important;
+            max-width: 100% !important;
+            max-height: 100% !important;
             box-shadow: 5px 5px 10px rgba(0,0,0,0.75) !important;
           }
         }
@@ -275,7 +147,7 @@
     }
     .fileIcon {
       width: 80px;
-      height: 60px;
+      height: 80px;
       svg {
         fill: rgba($secondary-color,0.33) !important;
         width: 60px !important;
