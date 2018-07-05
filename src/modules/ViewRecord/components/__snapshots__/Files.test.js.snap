@@ -571,26 +571,34 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <div
-        className="thumbnail"
-        style={
-          Object {
-            "backgroundImage": "url(https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg)",
-          }
-        }
-      >
-        <img
-          alt="thumbnail_test.jpg"
-          onError={[Function]}
-          src="https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
-        />
-      </div>,
+      "children": <img
+        alt="thumbnail_test.jpg"
+        onError={[Function]}
+        src="https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
+      />,
       "className": "fileThumbnail",
       "onClick": [Function],
       "onKeyPress": [Function],
+      "title": "test",
     },
     "ref": null,
     "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "alt": "thumbnail_test.jpg",
+        "onError": [Function],
+        "src": "https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": "img",
+    },
+    "type": "a",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
@@ -600,10 +608,10 @@ ShallowWrapper {
           onError={[Function]}
           src="https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
         />,
-        "className": "thumbnail",
-        "style": Object {
-          "backgroundImage": "url(https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg)",
-        },
+        "className": "fileThumbnail",
+        "onClick": [Function],
+        "onKeyPress": [Function],
+        "title": "test",
       },
       "ref": null,
       "rendered": Object {
@@ -618,66 +626,6 @@ ShallowWrapper {
         "ref": null,
         "rendered": null,
         "type": "img",
-      },
-      "type": "div",
-    },
-    "type": "a",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <div
-          className="thumbnail"
-          style={
-            Object {
-              "backgroundImage": "url(https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg)",
-            }
-          }
-        >
-          <img
-            alt="thumbnail_test.jpg"
-            onError={[Function]}
-            src="https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
-          />
-        </div>,
-        "className": "fileThumbnail",
-        "onClick": [Function],
-        "onKeyPress": [Function],
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <img
-            alt="thumbnail_test.jpg"
-            onError={[Function]}
-            src="https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
-          />,
-          "className": "thumbnail",
-          "style": Object {
-            "backgroundImage": "url(https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg)",
-          },
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "alt": "thumbnail_test.jpg",
-            "onError": [Function],
-            "src": "https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "img",
-        },
-        "type": "div",
       },
       "type": "a",
     },

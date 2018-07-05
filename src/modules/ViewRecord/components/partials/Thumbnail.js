@@ -36,12 +36,11 @@ class Thumbnail extends PureComponent {
             <a
                 onClick={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
                 onKeyPress={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
+                title="test"
                 className={'fileThumbnail'} >
                 {
                     !this.state.thumbnailError ?
-                        <div className="thumbnail" style={{backgroundImage: `url(${thumbnailMediaUrl})`}} >
-                            <img src={thumbnailMediaUrl} alt={thumbnailFileName} onError={this.imageError}/>
-                        </div>
+                        <img src={thumbnailMediaUrl} alt={thumbnailFileName} onError={this.imageError}/>
                         : <BrokenImage />
                 }
             </a>
