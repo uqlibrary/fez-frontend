@@ -4135,8 +4135,52 @@ export const record = {
             "rek_author_id": 410,
             "rek_author_id_order": 18
         }],
-    "fez_record_search_key_contributor": [],
-    "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_contributor": [
+        {
+            "rek_contributor_id": 3075920,
+            "rek_contributor_pid": "UQ:363131",
+            "rek_contributor_xsdmf_id": 16730,
+            "rek_contributor": "Ameur, Redha",
+            "rek_contributor_order": 1
+        },
+        {
+            "rek_contributor_id": 3075921,
+            "rek_contributor_pid": "UQ:363131",
+            "rek_contributor_xsdmf_id": 16730,
+            "rek_contributor": "Ozmettin, Ozlem",
+            "rek_contributor_order": 2
+        },
+        {
+            "rek_contributor_id": 3075922,
+            "rek_contributor_pid": "UQ:363131",
+            "rek_contributor_xsdmf_id": 16730,
+            "rek_contributor": "Ulgezer, Melike",
+            "rek_contributor_order": 3
+        }
+    ],
+    "fez_record_search_key_contributor_id": [
+        {
+            "rek_contributor_id_id": 2293526,
+            "rek_contributor_id_pid": "UQ:363131",
+            "rek_contributor_id_xsdmf_id": 16725,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 1
+        },
+        {
+            "rek_contributor_id_id": 2293527,
+            "rek_contributor_id_pid": "UQ:363131",
+            "rek_contributor_id_xsdmf_id": 16725,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 2
+        },
+        {
+            "rek_contributor_id_id": 2293528,
+            "rek_contributor_id_pid": "UQ:363131",
+            "rek_contributor_id_xsdmf_id": 16725,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 3
+        }
+    ],
     "fez_record_search_key_contact_details_email": [
         {
             "rek_contact_details_email_id": 4672,

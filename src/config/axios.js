@@ -60,25 +60,22 @@ api.interceptors.response.use(response => {
     }
     return Promise.resolve(response.data);
 }, error => {
-    let errorMessage = locale.global.errorMessages.generic;
-
     if (error.response && error.response.status === 403) {
-        errorMessage = locale.global.errorMessages.sessionExpired;
         if (process.env.NODE_ENV === 'test') {
             global.mockActionsStore.dispatch(logout());
         } else {
             store.dispatch(logout());
         }
-    } else if (error.response && error.response.status === 404) {
-        errorMessage = locale.global.errorMessages.notFound;
-    } else if (error.response && error.response.status === 401) {
-        errorMessage = locale.global.errorMessages.notAuthorised;
     }
 
-    const errorDetails = {
-        status: error.response ? error.response.status : null,
-        message: errorMessage
-    };
+    let errorMessage = null;
+    if (!!error.response && !!error.response.status) {
+        errorMessage = locale.global.errorMessages[error.response.status];
+    }
 
-    return Promise.reject(errorDetails);
+    if (!!errorMessage) {
+        return Promise.reject({...errorMessage});
+    } else {
+        return Promise.reject(error);
+    }
 });

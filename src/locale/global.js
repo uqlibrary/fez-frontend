@@ -56,10 +56,23 @@ export default {
             actionButtonLabel: 'Click to login'
         },
         errorMessages: {
+            401: {
+                message: 'You are not authorised to access the requested information. Please contact eSpace administrators or try again later.',
+                status: 401
+            },
+            403: {
+                message: 'Your session expired, please login to continue.',
+                status: 403
+            },
+            404: {
+                message: 'The requested page could not be found.',
+                status: 404
+            },
+            500: {
+                message: 'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+                status: 500
+            },
             generic: 'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
-            notFound: 'The requested page could not be found.',
-            sessionExpired: 'Your session expired, please login to continue.',
-            notAuthorised: 'You are not authorised to access the requested information. Please contact eSpace administrators or try again later.'
         },
         notRegisteredAuthorAlert: {
             title: 'You are not registered in UQ eSpace as an author',
