@@ -2,13 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AuthorsCitationView from './AuthorsCitationView';
 
-const EditorsCitationView = ({publication, prefix = ' edited by ', suffix = '. ', showLink = false, initialNumberOfEditors = 10}) => {
+const EditorsCitationView = ({publication, prefix = ' edited by ', suffix = '. ', separator = ', ', showLink = false, initialNumberOfEditors = 10}) => {
+    console.log('separator:' + separator + ':');
     return (
         <AuthorsCitationView
             publication={publication}
             className="citationEditors"
             prefix={prefix}
             suffix={suffix}
+            separator={separator}
             searchKey={{
                 key: 'fez_record_search_key_contributor',
                 subkey: 'rek_contributor',
@@ -29,6 +31,7 @@ EditorsCitationView.propTypes = {
     publication: PropTypes.object.isRequired,
     prefix: PropTypes.string,
     suffix: PropTypes.string,
+    separator: PropTypes.string,
     initialNumberOfEditors: PropTypes.number,
     showLink: PropTypes.bool
 };

@@ -703,6 +703,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
@@ -1545,6 +1546,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
@@ -1729,6 +1731,7 @@ exports[`WorkingPaperCitation renders  component with empty publication 1`] = `
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}

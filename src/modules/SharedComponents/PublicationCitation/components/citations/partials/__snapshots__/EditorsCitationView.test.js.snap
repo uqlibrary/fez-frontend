@@ -23,6 +23,7 @@ exports[`EditorsCitationView test  should render component with no contributors 
         "subkey": "rek_contributor",
       }
     }
+    separator=", "
     showLink={false}
     suffix=". "
     thresholdNumberOfAuthors={3}
@@ -79,6 +80,7 @@ exports[`EditorsCitationView test  should render component with one contributor 
         "subkey": "rek_contributor",
       }
     }
+    separator=", "
     showLink={false}
     suffix=". "
     thresholdNumberOfAuthors={3}
@@ -175,6 +177,7 @@ exports[`EditorsCitationView test  should render component with three contributo
         "subkey": "rek_contributor",
       }
     }
+    separator=", "
     showLink={false}
     suffix=". "
     thresholdNumberOfAuthors={3}
@@ -287,6 +290,7 @@ exports[`EditorsCitationView test  should render component with two contributors
         "subkey": "rek_contributor",
       }
     }
+    separator=", "
     showLink={false}
     suffix=". "
     thresholdNumberOfAuthors={3}
