@@ -645,6 +645,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
@@ -1593,6 +1594,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
             "subkey": "rek_contributor",
           }
         }
+        separator=", "
         showLink={false}
         suffix=" ed."
         thresholdNumberOfAuthors={3}
@@ -1792,6 +1794,7 @@ exports[`BookCitation renders  component with empty publication 1`] = `
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
@@ -2655,6 +2658,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
             "subkey": "rek_contributor",
           }
         }
+        separator=", "
         showLink={false}
         suffix=" ed."
         thresholdNumberOfAuthors={3}
