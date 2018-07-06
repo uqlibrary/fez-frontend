@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import AuthorsCitationView from './AuthorsCitationView';
 
 const EditorsCitationView = ({publication, prefix = ' edited by ', suffix = '. ', separator = ', ', showLink = false, initialNumberOfEditors = 10}) => {
-    console.log('separator:' + separator + ':');
     return (
         <AuthorsCitationView
             publication={publication}
