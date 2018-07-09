@@ -166,6 +166,12 @@ export default {
                 playAudio: 'Click to play audio file [fileName]',
                 pauseAudio: 'Click to pause audio file [fileName]'
             }
-        }
+        },
+        sessionExpiredConfirmation: {
+            confirmationTitle: 'Session Expired',
+            confirmationMessage: 'Your session has expired and you will now be redirected to the login page and then redeposit your thesis.',
+            cancelButtonLabel: 'Cancel',
+            confirmButtonLabel: 'Redirect to login'
+        },
     }
 };

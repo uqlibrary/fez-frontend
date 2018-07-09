@@ -6,7 +6,8 @@ export const initialState = {
     authorDetails: null,
     accountLoading: true,
     accountAuthorLoading: true,
-    accountAuthorDetailsLoading: true
+    accountAuthorDetailsLoading: true,
+    isSessionExpired: null
 };
 
 export const initSavingState = {
@@ -92,6 +93,11 @@ const handlers = {
         ...state,
         authorDetails: null,
         accountAuthorDetailsLoading: true
+    }),
+
+    [actions.CURRENT_ACCOUNT_SESSION_EXPIRED]: (state) => ({
+        ...state,
+        isSessionExpired: true
     })
 };
 

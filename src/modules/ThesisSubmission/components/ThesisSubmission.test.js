@@ -111,11 +111,4 @@ describe('ThesisSubmission test', () => {
         wrapper.instance().openDepositConfirmation();
         expect(testMethod).toHaveBeenCalled();
     });
-
-    it('should check if session is expired before submission', async () => {
-        const testCheckSession = jest.fn(() => Promise.reject());
-        const wrapper = setup({actions: {checkSession: testCheckSession}});
-        await wrapper.instance().deposit();
-        expect(testCheckSession).toHaveBeenCalled();
-    });
 });

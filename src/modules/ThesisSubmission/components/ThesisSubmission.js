@@ -43,9 +43,7 @@ export default class ThesisSubmission extends Component {
     }
 
     deposit = () => {
-        this.props.actions.checkSession()
-            .then(() => this.openDepositConfirmation())
-            .catch(() => this.openSessionExpiredConfirmation());
+        this.props.actions.checkSession();
     }
 
     cancelSubmit = () => {
@@ -60,16 +58,8 @@ export default class ThesisSubmission extends Component {
         this.depositConfirmationBox.showConfirmation();
     };
 
-    openSessionExpiredConfirmation = () => {
-        this.sessionExpiredConfirmationBox.showConfirmation();
-    };
-
     setDepositConfirmation = (ref) => {
         this.depositConfirmationBox = ref;
-    };
-
-    setSessionExpiredConfirmation = (ref) => {
-        this.sessionExpiredConfirmationBox = ref;
     };
 
     render() {
@@ -120,12 +110,6 @@ export default class ThesisSubmission extends Component {
                         onRef={this.setDepositConfirmation}
                         onAction={this.props.handleSubmit}
                         locale={formLocale.thesisSubmission.depositConfirmation}
-                    />
-
-                    <ConfirmDialogBox
-                        onRef={this.setSessionExpiredConfirmation}
-                        onAction={this.props.actions.logout}
-                        locale={formLocale.thesisSubmission.sessionExpiredConfirmation}
                     />
 
                     <StandardCard title={txt.information.title} help={txt.information.help}>

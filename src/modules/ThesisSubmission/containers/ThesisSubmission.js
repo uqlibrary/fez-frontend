@@ -10,8 +10,23 @@ import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscard
 
 const FORM_NAME = 'ThesisSubmission';
 
+let locallyStoredValues = null;
+if (!!window.localStorage && window.localStorage.getItem('form') !== null) {
+    const locallyStoredForm = Immutable.Map(JSON.parse(localStorage.getItem('form')));
+
+    /* eslint-disable no-unused-vars */
+    /**
+     * RHD student has to upload the files again
+     */
+    const {files, ...rest} = !!locallyStoredForm.get(FORM_NAME) && locallyStoredForm.get(FORM_NAME).values || Immutable.Map({});
+    /* eslint-enable */
+
+    locallyStoredValues = rest;
+
+    window.localStorage.removeItem('form');
+}
+
 const onSubmit = (values, dispatch, props) => {
-    // dispatch(checkSession());
     return dispatch(submitThesis({...values.toJS()}, props.author))
         .then(() => {
             // console.log(record);
@@ -54,7 +69,7 @@ const mapStateToProps = (state, props) => {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
-        initialValues: initialValues,
+        initialValues: locallyStoredValues || initialValues,
         author: currentAuthor,
         isHdrThesis: props.isHdrThesis,
         fileAccessId: props.isHdrThesis ? general.HDR_THESIS_DEFAULT_VALUES.fileAccessId : general.SBS_THESIS_DEFAULT_VALUES.fileAccessId

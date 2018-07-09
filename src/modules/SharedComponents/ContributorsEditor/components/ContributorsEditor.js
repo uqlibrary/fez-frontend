@@ -32,7 +32,7 @@ export class ContributorsEditor extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            contributors: props.input && props.input.name && props.input.value ? props.input.value : [],
+            contributors: props.input && props.input.name && props.input.value ? props.input.value.toJS() : [],
             isCurrentAuthorSelected: false,
             errorMessage: ''
         };

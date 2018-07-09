@@ -186,6 +186,7 @@ mock
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
     .reply(200, {data: {rek_pid: 'UQ:1111111'}}); // TODO: add actual record to data return!!!
     // .reply(500, {message: 'error - failed NEW_RECORD_API'});
+    // .reply(403, {message: 'Session expired'});
 
 mock
     .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
