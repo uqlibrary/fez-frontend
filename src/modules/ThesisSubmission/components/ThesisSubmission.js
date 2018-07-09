@@ -44,7 +44,10 @@ export default class ThesisSubmission extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.isSessionValid) {
+        if (
+            nextProps.isSessionValid &&
+            !nextProps.submitting
+        ) {
             this.openDepositConfirmation();
         }
     }
