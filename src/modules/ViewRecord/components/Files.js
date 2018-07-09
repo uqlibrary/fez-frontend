@@ -42,6 +42,7 @@ export default class Files extends Component {
                 mediaUrl: this.getUrl(pid, downloadableFileName || fileName),
                 previewMediaUrl: this.getUrl(pid, previewFileName || fileName),
                 thumbnailMediaUrl: this.getUrl(pid, thumbnailFileName),
+                fileName: downloadableFileName || fileName,
                 thumbnailFileName,
                 onClick: this.showPreview
             };
