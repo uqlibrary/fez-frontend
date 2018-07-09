@@ -32,9 +32,9 @@ mockSessionApi
     .onGet(routes.CURRENT_ACCOUNT_API().apiUrl).reply(config => {
     // mock account response
     if (user === 's2222222') {
-        return [403, {}];
-    } else if (mockData.accounts[user]) {
         return [200, mockData.accounts[user]];
+    } else if (mockData.accounts[user]) {
+        return [403, {}];
     }
     return [404, {}];
 });

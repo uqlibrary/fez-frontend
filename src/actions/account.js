@@ -74,16 +74,10 @@ export function logout() {
     };
 }
 
-export function sessionExpired() {
-    return dispatch => {
-        dispatch({type: actions.CURRENT_ACCOUNT_SESSION_EXPIRED});
-    };
-}
-
 export function checkSession() {
     return (dispatch) => {
         return sessionApi.get(routes.CURRENT_ACCOUNT_API().apiUrl)
-            .then(() => {})
+            .then(() => Promise.resolve())
             .catch(() => {
                 dispatch({type: actions.CURRENT_ACCOUNT_SESSION_EXPIRED});
             });
