@@ -171,7 +171,7 @@ export default class MyRecords extends PureComponent {
                 <div className="columns">
                     {
                         // no results to display
-                        !this.props.loadingPublicationsList && this.props.publicationsList.length === 0 &&
+                        !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length === 0 &&
                         <div className="column">
                             <StandardCard {...txt.noResultsFound}>
                                 {txt.noResultsFound.text}
