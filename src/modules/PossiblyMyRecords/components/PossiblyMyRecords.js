@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 // forms & custom components
-import {PublicationsList, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
+import {PublicationsList, PublicationsListPaging, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
 
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
@@ -20,6 +20,7 @@ export default class PossiblyMyRecords extends PureComponent {
         publicationsClaimedInProgress: PropTypes.array,
         loadingPossiblePublicationsList: PropTypes.bool,
         possiblePublicationsFacets: PropTypes.object,
+        possiblePublicationsPagingData: PropTypes.object,
 
         accountLoading: PropTypes.bool,
 
@@ -38,6 +39,10 @@ export default class PossiblyMyRecords extends PureComponent {
         super(props);
 
         this.initState = {
+            page: 1,
+            pageSize: 20,
+            sortBy: locale.components.sorting.sortBy[0].value,
+            sortDirection: locale.components.sorting.sortDirection[0],
             activeFacets: {
                 filters: {},
                 ranges: {}
@@ -55,7 +60,7 @@ export default class PossiblyMyRecords extends PureComponent {
 
     componentDidMount() {
         if (!this.props.accountLoading) {
-            this.props.actions.searchPossiblyYourPublications({facets: this.state.activeFacets});
+            this.props.actions.searchPossiblyYourPublications({...this.state});
         }
     }
 
@@ -66,7 +71,7 @@ export default class PossiblyMyRecords extends PureComponent {
             && newProps.location.pathname === routes.pathConfig.records.possible) {
             this.setState({...(!!newProps.location.state ? newProps.location.state : this.initState)}, () => {
                 // only will be called when user clicks back on my records page
-                this.props.actions.searchPossiblyYourPublications({facets: this.state.activeFacets});
+                this.props.actions.searchPossiblyYourPublications({...this.state});
             });
         }
         // set forever-true flag if user has publications
@@ -84,12 +89,9 @@ export default class PossiblyMyRecords extends PureComponent {
         this.props.history.push({
             pathname: `${routes.pathConfig.records.possible}`,
             search: `?ts=${Date.now()}`,
-            state: {
-                activeFacets: this.state.activeFacets,
-                hasPublications: this.state.hasPublications
-            }
+            state: {...this.state}
         });
-        this.props.actions.searchPossiblyYourPublications({facets: this.state.activeFacets});
+        this.props.actions.searchPossiblyYourPublications({...this.state});
     };
 
     _hidePublication = () => {
@@ -111,7 +113,10 @@ export default class PossiblyMyRecords extends PureComponent {
     };
 
     _facetsChanged = (activeFacets) => {
-        this.setState({activeFacets: {...activeFacets}}, this.pushPageHistory);
+        this.setState({
+            activeFacets: {...activeFacets},
+            page: 1
+        }, this.pushPageHistory);
     };
 
     _setHideConfirmationBox = (ref) => (this.hideConfirmationBox = ref);
@@ -120,9 +125,17 @@ export default class PossiblyMyRecords extends PureComponent {
         return hasFailed ? (<Alert {...{...alertLocale, message: alertLocale.message ? alertLocale.message(error) : error}} />) : null;
     };
 
+    pageChanged = (page) => {
+        this.setState(
+            {
+                page: page
+            }, this.pushPageHistory
+        );
+    };
+
     render() {
         if (this.props.accountLoading) return null;
-
+        const pagingData = this.props.possiblePublicationsPagingData;
         const txt = locale.pages.claimPublications;
         const inProgress = [
             {
@@ -178,21 +191,33 @@ export default class PossiblyMyRecords extends PureComponent {
                             <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
                                 {
                                     this.props.loadingPossiblePublicationsList &&
-                                    <div className="is-centered"><InlineLoader message={txt.facetSearchMessage}/></div>
+                                    <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
                                 }
                                 {
                                     !this.props.loadingPossiblePublicationsList && this.props.possiblePublicationsList.length > 0 &&
                                     <div>
-                                        {
-                                            txt.searchResults.text
-                                                .replace('[resultsCount]', this.props.possiblePublicationsList.length)
-                                                .replace('[totalCount]', this.props.possibleCounts)
-                                        }
+                                        <p>
+                                            {
+                                                txt.searchResults.text
+                                                    .replace('[resultsCount]', this.props.possiblePublicationsList.length)
+                                                    .replace('[totalCount]', this.props.possibleCounts)
+                                            }
+                                        </p>
+                                        <PublicationsListPaging
+                                            loading={this.props.loadingPossiblePublicationsList}
+                                            pagingData={pagingData}
+                                            onPageChanged={this.pageChanged}
+                                            disabled={this.props.loadingPossiblePublicationsList} />
                                         <PublicationsList
                                             publicationsList={this.props.possiblePublicationsList}
                                             publicationsListSubset={this.props.publicationsClaimedInProgress}
                                             subsetCustomActions={inProgress}
                                             customActions={actions} />
+                                        <PublicationsListPaging
+                                            loading={this.props.loadingPossiblePublicationsList}
+                                            pagingData={pagingData}
+                                            onPageChanged={this.pageChanged}
+                                            disabled={this.props.loadingPossiblePublicationsList} />
                                     </div>
                                 }
                             </StandardCard>
