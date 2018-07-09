@@ -5,7 +5,7 @@ exports[`Thumbnail Component  should render component and display thumbnail 1`] 
   className="fileThumbnail"
   onClick={[Function]}
   onKeyPress={[Function]}
-  title="test"
+  title="Click to open a preview of /test/mediaUrl"
 >
   <img
     alt="thumbnail.jpg"
@@ -79,7 +79,7 @@ exports[`Thumbnail Component  should run onClick function on click 1`] = `
           className="fileThumbnail"
           onClick={[Function]}
           onKeyPress={[Function]}
-          title="test"
+          title="Click to open a preview of /test/mediaUrl"
         >
           <img
             alt="thumbnail.jpg"
@@ -157,7 +157,7 @@ exports[`Thumbnail Component  should run onFileSelect function on key press 1`] 
           className="fileThumbnail"
           onClick={[Function]}
           onKeyPress={[Function]}
-          title="test"
+          title="Click to open a preview of /test/mediaUrl"
         >
           <img
             alt="thumbnail.jpg"
@@ -176,7 +176,7 @@ exports[`Thumbnail Component  should show a broken thumbnail icon when the thumb
   className="fileThumbnail"
   onClick={[Function]}
   onKeyPress={[Function]}
-  title="test"
+  title="Click to open a preview of /test/mediaUrl"
 >
   <ImageBrokenImage />
 </a>

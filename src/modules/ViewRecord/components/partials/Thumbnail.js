@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import BrokenImage from 'material-ui/svg-icons/image/broken-image';
+import {locale} from 'locale';
 
 class Thumbnail extends PureComponent {
     static propTypes = {
@@ -31,12 +32,13 @@ class Thumbnail extends PureComponent {
     };
 
     render() {
+        const txt = locale.pages.viewRecord;
         const {mediaUrl, thumbnailMediaUrl, thumbnailFileName, previewMediaUrl, mimeType} = this.props;
         return (
             <a
                 onClick={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
                 onKeyPress={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
-                title="test"
+                title={mediaUrl && txt.thumbnailTitle.replace('[image]', mediaUrl) || null}
                 className={'fileThumbnail'} >
                 {
                     !this.state.thumbnailError ?
