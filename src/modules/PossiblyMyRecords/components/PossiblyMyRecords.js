@@ -13,6 +13,7 @@ import {StandardRighthandCard} from 'modules/SharedComponents/Toolbox/StandardRi
 
 import {routes} from 'config';
 import {locale} from 'locale';
+import {general} from 'config';
 
 export default class PossiblyMyRecords extends PureComponent {
     static propTypes = {
@@ -48,7 +49,6 @@ export default class PossiblyMyRecords extends PureComponent {
                 ranges: {}
             }
         };
-
         this.state = {
             // check if user has publications, once true always true
             // facets filtering might return no results, but facets should still be visible
@@ -112,11 +112,30 @@ export default class PossiblyMyRecords extends PureComponent {
         this.props.actions.setClaimPublication(item);
     };
 
+    getMyDatasetFacets = (activeFilters) => {
+        // on a 'my research data' page, we dont want the presence of 'Display type' to decide 'facet changed'
+        const displayType = 'Display type';
+        const localFilters = Object.assign({}, activeFilters);
+        if (Object.keys(localFilters).length > 0 &&
+            localFilters.hasOwnProperty(displayType) &&
+            localFilters[displayType] === general.PUBLICATION_TYPE_DATA_COLLECTION) {
+            delete localFilters[displayType];
+        }
+        return localFilters;
+    }
+
     _facetsChanged = (activeFacets) => {
-        this.setState({
-            activeFacets: {...activeFacets},
-            page: 1
-        }, this.pushPageHistory);
+        if (this.props.location.pathname === routes.pathConfig.dataset.mine) {
+            this.setState({
+                activeFacets: this.getMyDatasetFacets(activeFacets),
+                page: 1
+            }, this.pushPageHistory);
+        } else {
+            this.setState({
+                activeFacets: activeFacets,
+                page: 1
+            }, this.pushPageHistory);
+        }
     };
 
     _setHideConfirmationBox = (ref) => (this.hideConfirmationBox = ref);
