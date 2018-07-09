@@ -31,7 +31,8 @@ export default class ThesisSubmission extends Component {
         isHdrThesis: PropTypes.bool, // HDR thesis if true or SBS thesis if false
         disableSubmit: PropTypes.bool,
         fileAccessId: PropTypes.number,
-        actions: PropTypes.object
+        actions: PropTypes.object,
+        isSessionValid: PropTypes.bool
     };
 
     static contextTypes = {
@@ -42,11 +43,14 @@ export default class ThesisSubmission extends Component {
         super(props);
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.isSessionValid) {
+            this.openDepositConfirmation();
+        }
+    }
+
     deposit = () => {
-        this.props.actions.checkSession()
-            .then(() => {
-                this.openDepositConfirmation();
-            });
+        this.props.actions.checkSession();
     }
 
     cancelSubmit = () => {

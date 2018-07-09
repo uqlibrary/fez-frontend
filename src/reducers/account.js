@@ -98,7 +98,12 @@ const handlers = {
     [actions.CURRENT_ACCOUNT_SESSION_EXPIRED]: (state) => ({
         ...state,
         isSessionExpired: true
-    })
+    }),
+
+    [actions.CURRENT_ACCOUNT_SESSION_VALID]: (state) => ({
+        ...state,
+        isSessionExpired: false
+    }),
 };
 
 export default function accountReducer(state = initialState, action) {

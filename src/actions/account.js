@@ -77,7 +77,9 @@ export function logout() {
 export function checkSession() {
     return (dispatch) => {
         return sessionApi.get(routes.CURRENT_ACCOUNT_API().apiUrl)
-            .then(() => Promise.resolve())
+            .then(() => {
+                dispatch({type: actions.CURRENT_ACCOUNT_SESSION_VALID});
+            })
             .catch(() => {
                 dispatch({type: actions.CURRENT_ACCOUNT_SESSION_EXPIRED});
             });

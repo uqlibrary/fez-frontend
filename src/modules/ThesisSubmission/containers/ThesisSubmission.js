@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import {reduxForm, getFormValues, SubmissionError, getFormSyncErrors} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import ThesisSubmission from '../components/ThesisSubmission';
-import {submitThesis, checkSession, logout} from 'actions';
+import {submitThesis, checkSession} from 'actions';
 import {general} from 'config';
 import {bindActionCreators} from 'redux';
 
@@ -50,6 +50,8 @@ let ThesisSubmissionContainer = reduxForm({
 
 const mapStateToProps = (state, props) => {
     const currentAuthor = state && state.get('accountReducer') ? state.get('accountReducer').author : null;
+    const isSessionValid = state && state.get('accountReducer') ? state.get('accountReducer').isSessionExpired === false : null;
+
     const today = new Date();
     const initialValues = {
         rek_date: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
@@ -72,12 +74,13 @@ const mapStateToProps = (state, props) => {
         initialValues: locallyStoredValues || initialValues,
         author: currentAuthor,
         isHdrThesis: props.isHdrThesis,
-        fileAccessId: props.isHdrThesis ? general.HDR_THESIS_DEFAULT_VALUES.fileAccessId : general.SBS_THESIS_DEFAULT_VALUES.fileAccessId
+        fileAccessId: props.isHdrThesis ? general.HDR_THESIS_DEFAULT_VALUES.fileAccessId : general.SBS_THESIS_DEFAULT_VALUES.fileAccessId,
+        isSessionValid
     };
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    actions: bindActionCreators({logout, checkSession}, dispatch)
+    actions: bindActionCreators({checkSession}, dispatch)
 });
 
 ThesisSubmissionContainer = connect(mapStateToProps, mapDispatchToProps)(ThesisSubmissionContainer);
