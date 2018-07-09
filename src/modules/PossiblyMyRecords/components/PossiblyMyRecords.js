@@ -10,10 +10,8 @@ import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import {StandardRighthandCard} from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
-
 import {routes} from 'config';
 import {locale} from 'locale';
-import {general} from 'config';
 
 export default class PossiblyMyRecords extends PureComponent {
     static propTypes = {
