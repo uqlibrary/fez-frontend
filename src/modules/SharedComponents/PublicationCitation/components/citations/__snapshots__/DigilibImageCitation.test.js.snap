@@ -613,6 +613,7 @@ exports[`DigilibImageCitation renders  component with a mock espace record 1`] =
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
@@ -720,6 +721,7 @@ exports[`DigilibImageCitation renders  component with empty publication 1`] = `
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}

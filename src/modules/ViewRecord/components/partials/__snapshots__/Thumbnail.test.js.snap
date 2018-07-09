@@ -5,6 +5,7 @@ exports[`Thumbnail Component  should render component and display thumbnail 1`] 
   className="fileThumbnail"
   onClick={[Function]}
   onKeyPress={[Function]}
+  title="Click to open a preview of /test/mediaUrl"
 >
   <img
     alt="thumbnail.jpg"
@@ -78,6 +79,7 @@ exports[`Thumbnail Component  should run onClick function on click 1`] = `
           className="fileThumbnail"
           onClick={[Function]}
           onKeyPress={[Function]}
+          title="Click to open a preview of /test/mediaUrl"
         >
           <img
             alt="thumbnail.jpg"
@@ -155,6 +157,7 @@ exports[`Thumbnail Component  should run onFileSelect function on key press 1`] 
           className="fileThumbnail"
           onClick={[Function]}
           onKeyPress={[Function]}
+          title="Click to open a preview of /test/mediaUrl"
         >
           <img
             alt="thumbnail.jpg"
@@ -166,4 +169,15 @@ exports[`Thumbnail Component  should run onFileSelect function on key press 1`] 
     </Router>
   </MemoryRouter>
 </Provider>
+`;
+
+exports[`Thumbnail Component  should show a broken thumbnail icon when the thumbnail wont load. 1`] = `
+<a
+  className="fileThumbnail"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  title="Click to open a preview of /test/mediaUrl"
+>
+  <ImageBrokenImage />
+</a>
 `;

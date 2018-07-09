@@ -1032,6 +1032,7 @@ exports[`Additional Information Component  should render component with audio do
                                                 "subkey": "rek_author",
                                               }
                                             }
+                                            separator=", "
                                             showLink={true}
                                             suffix=" "
                                             thresholdNumberOfAuthors={3}
@@ -1527,6 +1528,7 @@ exports[`Additional Information Component  should render component with audio do
                                                       "subkey": "rek_author",
                                                     }
                                                   }
+                                                  separator=", "
                                                   showLink={true}
                                                   suffix=" "
                                                   thresholdNumberOfAuthors={3}
@@ -3495,6 +3497,7 @@ exports[`Additional Information Component  should render component with book 1`]
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -3879,6 +3882,7 @@ exports[`Additional Information Component  should render component with book 1`]
                 "rek_wok_doc_type": null,
               }
             }
+            separator=""
             showLink={true}
             suffix=""
           />
@@ -4354,6 +4358,7 @@ exports[`Additional Information Component  should render component with book cha
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -4882,6 +4887,7 @@ exports[`Additional Information Component  should render component with book cha
                 "rek_wok_doc_type": "@",
               }
             }
+            separator=""
             showLink={true}
             suffix=""
           />
@@ -5751,6 +5757,7 @@ exports[`Additional Information Component  should render component with conferen
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -7022,6 +7029,7 @@ exports[`Additional Information Component  should render component with conferen
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
+            separator=""
             showLink={true}
             suffix=""
           />
@@ -7523,6 +7531,7 @@ exports[`Additional Information Component  should render component with conferen
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
+            separator=""
             showLink={true}
             suffix=""
           />
@@ -8170,6 +8179,7 @@ exports[`Additional Information Component  should render component with creative
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -9112,6 +9122,7 @@ exports[`Additional Information Component  should render component with data col
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
+            separator=""
             showLink={true}
             suffix=""
           />
@@ -9904,6 +9915,7 @@ exports[`Additional Information Component  should render component with data col
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -11066,6 +11078,7 @@ exports[`Additional Information Component  should render component with data col
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
+            separator=""
             showLink={true}
             suffix=""
           />
@@ -11605,6 +11618,7 @@ exports[`Additional Information Component  should render component with data col
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -12340,6 +12354,7 @@ exports[`Additional Information Component  should render component with design d
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -12844,6 +12859,7 @@ exports[`Additional Information Component  should render component with design d
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
+            separator=""
             showLink={true}
             suffix=""
           />
@@ -13336,6 +13352,7 @@ exports[`Additional Information Component  should render component with digilib 
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -14067,6 +14084,7 @@ exports[`Additional Information Component  should render component with generic 
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -14549,6 +14567,7 @@ exports[`Additional Information Component  should render component with generic 
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
+            separator=""
             showLink={true}
             suffix=""
           />
@@ -15016,6 +15035,7 @@ exports[`Additional Information Component  should render component with journal 
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
+            separator=""
             showLink={true}
             suffix=""
           />
@@ -17552,6 +17572,7 @@ exports[`Additional Information Component  should render component with journal 
                                                 "subkey": "rek_author",
                                               }
                                             }
+                                            separator=", "
                                             showLink={true}
                                             suffix=" "
                                             thresholdNumberOfAuthors={3}
@@ -18739,6 +18760,7 @@ exports[`Additional Information Component  should render component with journal 
                                                       "subkey": "rek_author",
                                                     }
                                                   }
+                                                  separator=", "
                                                   showLink={true}
                                                   suffix=" "
                                                   thresholdNumberOfAuthors={3}
@@ -23834,6 +23856,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -24342,6 +24365,7 @@ exports[`Additional Information Component  should render component with manuscri
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
+            separator=""
             showLink={true}
             suffix=""
           />
@@ -25572,6 +25596,7 @@ exports[`Additional Information Component  should render component with newspape
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -27098,6 +27123,7 @@ exports[`Additional Information Component  should render component with patent 1
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -27733,6 +27759,7 @@ exports[`Additional Information Component  should render component with preprint
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -28515,6 +28542,7 @@ exports[`Additional Information Component  should render component with proceedi
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -29659,6 +29687,7 @@ exports[`Additional Information Component  should render component with referenc
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -29986,6 +30015,7 @@ exports[`Additional Information Component  should render component with referenc
                 "rek_wok_doc_type_xsdmf_id": null,
               }
             }
+            separator=""
             showLink={true}
             suffix=""
           />
@@ -30435,6 +30465,7 @@ exports[`Additional Information Component  should render component with research
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -30843,6 +30874,7 @@ exports[`Additional Information Component  should render component with thesis 1
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -31302,6 +31334,7 @@ exports[`Additional Information Component  should render component with video do
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -31769,6 +31802,7 @@ exports[`Additional Information Component  should render component with working 
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}
@@ -32283,6 +32317,7 @@ exports[`Additional Information Component  should render oa status value link in
                 "subkey": "rek_author",
               }
             }
+            separator=", "
             showLink={true}
             suffix=" "
             thresholdNumberOfAuthors={3}

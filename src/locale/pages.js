@@ -403,7 +403,8 @@ export default {
             submit: 'Submit'
         },
         viewRecord: {
-            loadingMessage: 'Loading record...'
+            loadingMessage: 'Loading record...',
+            thumbnailTitle: 'Click to open a preview of [image]'
         },
         searchRecords: {
             title: 'eSpace search',

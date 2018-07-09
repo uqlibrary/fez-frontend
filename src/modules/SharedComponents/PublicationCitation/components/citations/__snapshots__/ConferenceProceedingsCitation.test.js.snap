@@ -1278,6 +1278,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
             "subkey": "rek_contributor",
           }
         }
+        separator=", "
         showLink={false}
         suffix=" ed. "
         thresholdNumberOfAuthors={3}
@@ -2713,6 +2714,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
             "subkey": "rek_contributor",
           }
         }
+        separator=", "
         showLink={false}
         suffix=" ed. "
         thresholdNumberOfAuthors={3}
@@ -2918,6 +2920,7 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
             "subkey": "rek_contributor",
           }
         }
+        separator=", "
         showLink={false}
         suffix=" ed. "
         thresholdNumberOfAuthors={3}

@@ -81,6 +81,7 @@ exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
             "subkey": "rek_author",
           }
         }
+        separator=", "
         showLink={false}
         suffix=" "
         thresholdNumberOfAuthors={3}
@@ -196,6 +197,7 @@ exports[`AuthorsCitationView test  should render component with 2 authors 1`] = 
             "subkey": "rek_author",
           }
         }
+        separator=", "
         showLink={false}
         suffix=" "
         thresholdNumberOfAuthors={3}
@@ -337,6 +339,7 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
             "subkey": "rek_author",
           }
         }
+        separator=", "
         showLink={true}
         suffix=" "
         thresholdNumberOfAuthors={3}
@@ -492,6 +495,7 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
             "subkey": "rek_author",
           }
         }
+        separator=", "
         showLink={true}
         suffix=" "
         thresholdNumberOfAuthors={3}
@@ -653,6 +657,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors 1`] = 
             "subkey": "rek_author",
           }
         }
+        separator=", "
         showLink={false}
         suffix=" "
         thresholdNumberOfAuthors={3}
@@ -819,6 +824,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
             "subkey": "rek_author",
           }
         }
+        separator=", "
         showLink={true}
         suffix=" "
         thresholdNumberOfAuthors={3}
@@ -1008,6 +1014,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
             "subkey": "rek_author",
           }
         }
+        separator=", "
         showLink={false}
         suffix=" people."
         thresholdNumberOfAuthors={3}
@@ -1159,6 +1166,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
             "subkey": "rek_author",
           }
         }
+        separator=", "
         showLink={false}
         suffix=" people."
         thresholdNumberOfAuthors={3}
@@ -1638,6 +1646,7 @@ exports[`AuthorsCitationView test  should render component with no authors 1`] =
             "subkey": "rek_author",
           }
         }
+        separator=", "
         showLink={false}
         suffix=" "
         thresholdNumberOfAuthors={3}
@@ -1721,6 +1730,7 @@ exports[`AuthorsCitationView test  should set class on component with no authors
             "subkey": "rek_author",
           }
         }
+        separator=", "
         showLink={false}
         suffix=" "
         thresholdNumberOfAuthors={3}

@@ -1559,6 +1559,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=""
       thresholdNumberOfAuthors={3}
@@ -3282,6 +3283,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=""
       thresholdNumberOfAuthors={3}
@@ -5001,6 +5003,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=""
       thresholdNumberOfAuthors={3}
@@ -6648,6 +6651,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=""
       thresholdNumberOfAuthors={3}
@@ -8301,6 +8305,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=""
       thresholdNumberOfAuthors={3}
@@ -10010,6 +10015,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=""
       thresholdNumberOfAuthors={3}
@@ -11705,6 +11711,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=""
       thresholdNumberOfAuthors={3}
@@ -11916,6 +11923,7 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=""
       thresholdNumberOfAuthors={3}
