@@ -33,7 +33,7 @@ export function putUploadFile(pid, file, dispatch) {
             if (fileUploadActions) {
                 dispatch(fileUploadActions.notifyUploadFailed(file.name));
             }
-            return Promise.reject(new Error(error.message));
+            return Promise.reject(error);
         });
 }
 

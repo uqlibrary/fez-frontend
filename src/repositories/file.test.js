@@ -38,7 +38,7 @@ describe('File repository tests ', () => {
             'FILE_UPLOADED_FAILED@a.txt'
         ];
 
-        await expect(putUploadFile('PID:111111', {name: 'a.txt'}, mockActionsStore.dispatch)).rejects.toEqual(new Error(locale.global.errorMessages.generic));
+        await expect(putUploadFile('PID:111111', {name: 'a.txt'}, mockActionsStore.dispatch)).rejects.toEqual(locale.global.errorMessages[500]);
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 });

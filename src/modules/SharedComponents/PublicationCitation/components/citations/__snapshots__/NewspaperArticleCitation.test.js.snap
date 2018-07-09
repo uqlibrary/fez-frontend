@@ -739,6 +739,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
@@ -1630,6 +1631,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
@@ -1829,6 +1831,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
