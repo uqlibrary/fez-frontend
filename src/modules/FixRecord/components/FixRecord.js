@@ -18,7 +18,7 @@ import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {validation, routes} from 'config';
-import {default as pagesLocale} from 'locale/pages'
+import {default as pagesLocale} from 'locale/pages';
 import {default as formsLocale} from 'locale/forms';
 
 export default class FixRecord extends PureComponent {
