@@ -41,7 +41,7 @@ class Thumbnail extends PureComponent {
         if (fileName && (mimeType.indexOf('video') >= 0 || mimeType.indexOf('octet-stream') >= 0)) {
             return (
                 !this.state.thumbnailError ?
-                    <ExternalLink href={mediaUrl} title={fileName} className={'fileThumbnail'} openInNewIcon={false}>
+                    <ExternalLink href={mediaUrl} title={fileName} download={fileName} className={'fileThumbnail'} openInNewIcon={false}>
                         <img src={thumbnailMediaUrl} alt={thumbnailFileName} onError={this.imageError}/>
                     </ExternalLink>
                     : <BrokenImage />
