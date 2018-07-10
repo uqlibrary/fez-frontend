@@ -39,8 +39,8 @@ export default class FileName extends PureComponent {
         const {pid, fileName, allowDownload, mimeType, mediaUrl, previewMediaUrl} = this.props;
 
         return (
-            <div className="columns is-gapless is-mobile fileDetails">
-                <div className="column fileInfo">
+            <div className="columns is-gapless is-mobile fileDetails is-vcentered">
+                <div className="column fileInfo is-vcentered">
                     {
                         allowDownload && !this.canShowPreview(mimeType) &&
                         <ExternalLink href={mediaUrl} title={fileName} className={'fileName'} openInNewIcon>
@@ -63,7 +63,7 @@ export default class FileName extends PureComponent {
                 </div>
                 {
                     allowDownload && this.isAudio(this.props.mimeType) &&
-                    <div className="column is-narrow audioWrapper is-hidden-mobile">
+                    <div className="column is-narrow audioWrapper is-hidden-mobile is-vcentered">
                         <AudioPlayer pid={pid} fileName={fileName} mimeType={mimeType} />
                     </div>
                 }
