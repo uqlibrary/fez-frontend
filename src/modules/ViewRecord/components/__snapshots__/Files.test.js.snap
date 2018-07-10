@@ -44,6 +44,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           className="column filetype fileIcon is-narrow is-vcentered"
         >
           <Thumbnail
+            fileName="web_image.jpg"
             mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
@@ -62,6 +63,7 @@ exports[`Files Component  should not render cultural message 1`] = `
             fileName="image.jpg"
             icon={
               <Thumbnail
+                fileName="web_image.jpg"
                 mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
@@ -153,6 +155,7 @@ exports[`Files Component  should render component 1`] = `
           className="column filetype fileIcon is-narrow is-vcentered"
         >
           <Thumbnail
+            fileName="web_image.jpg"
             mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
@@ -171,6 +174,7 @@ exports[`Files Component  should render component 1`] = `
             fileName="image.jpg"
             icon={
               <Thumbnail
+                fileName="web_image.jpg"
                 mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
@@ -270,6 +274,7 @@ exports[`Files Component  should render cultural message 1`] = `
           className="column filetype fileIcon is-narrow is-vcentered"
         >
           <Thumbnail
+            fileName="web_image.jpg"
             mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
@@ -288,6 +293,7 @@ exports[`Files Component  should render cultural message 1`] = `
             fileName="image.jpg"
             icon={
               <Thumbnail
+                fileName="web_image.jpg"
                 mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
@@ -552,6 +558,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Thumbnail
+    fileName="test.tiff"
     mediaUrl="https://espace.library.uq.edu.au/view/UQ:1/test.tiff"
     mimeType="image/jpg"
     onClick={[Function]}

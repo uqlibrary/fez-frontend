@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
+import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
 import BrokenImage from 'material-ui/svg-icons/image/broken-image';
 import {locale} from 'locale';
 
@@ -9,6 +10,7 @@ class Thumbnail extends PureComponent {
         previewMediaUrl: PropTypes.string.isRequired,
         thumbnailMediaUrl: PropTypes.string.isRequired,
         thumbnailFileName: PropTypes.string.isRequired,
+        fileName: PropTypes.string,
         mimeType: PropTypes.string.isRequired,
         onClick: PropTypes.func
     };
@@ -33,7 +35,19 @@ class Thumbnail extends PureComponent {
 
     render() {
         const txt = locale.pages.viewRecord;
-        const {mediaUrl, thumbnailMediaUrl, thumbnailFileName, previewMediaUrl, mimeType} = this.props;
+        const {mediaUrl, thumbnailMediaUrl, thumbnailFileName, previewMediaUrl, fileName, mimeType} = this.props;
+
+        // TODO revert once videos are transcoded to open format #158519502
+        if (fileName && (mimeType.indexOf('video') >= 0 || mimeType.indexOf('octet-stream') >= 0)) {
+            return (
+                !this.state.thumbnailError ?
+                    <ExternalLink href={mediaUrl} title={fileName} className={'fileThumbnail'} openInNewIcon={false}>
+                        <img src={thumbnailMediaUrl} alt={thumbnailFileName} onError={this.imageError}/>
+                    </ExternalLink>
+                    : <BrokenImage />
+            );
+        }
+
         return (
             <a
                 onClick={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}

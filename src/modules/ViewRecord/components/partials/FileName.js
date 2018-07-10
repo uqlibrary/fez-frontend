@@ -27,7 +27,9 @@ export default class FileName extends PureComponent {
     }
 
     canShowPreview = (mimeType) => {
-        return (this.isImage(mimeType) || this.isVideo(mimeType));
+        return this.isImage(mimeType);
+        // TODO revert once videos are transcoded to open format #158519502
+        // return (this.isImage(mimeType) || this.isVideo(mimeType));
     }
 
     showPreview = (mediaUrl, previewMediaUrl, mimeType) => (e) => {
