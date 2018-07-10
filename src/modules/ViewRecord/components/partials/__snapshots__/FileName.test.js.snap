@@ -69,6 +69,7 @@ exports[`File Name Component  should display file name link 1`] = `
           >
             <ExternalLink
               className="fileName"
+              download="test.jpg"
               href="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
               openInNewIcon={true}
               rel="noopener noreferrer"
@@ -77,6 +78,7 @@ exports[`File Name Component  should display file name link 1`] = `
             >
               <a
                 className="fileName externalLink showIcon"
+                download="test.jpg"
                 href="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
                 rel="noopener noreferrer"
                 tabIndex="0"
@@ -163,6 +165,7 @@ exports[`File Name Component  should render audio player 1`] = `
           >
             <ExternalLink
               className="fileName"
+              download="test.mp3"
               href="https://espace.library.uq.edu.au/view/UQ:676287/test.mp3"
               openInNewIcon={true}
               rel="noopener noreferrer"
@@ -171,6 +174,7 @@ exports[`File Name Component  should render audio player 1`] = `
             >
               <a
                 className="fileName externalLink showIcon"
+                download="test.mp3"
                 href="https://espace.library.uq.edu.au/view/UQ:676287/test.mp3"
                 rel="noopener noreferrer"
                 tabIndex="0"
