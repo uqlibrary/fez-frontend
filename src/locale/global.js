@@ -169,7 +169,7 @@ export default {
         },
         sessionExpiredConfirmation: {
             confirmationTitle: 'Session Expired',
-            confirmationMessage: 'Your session has expired and you will now be redirected to the login page and then redeposit your thesis.',
+            confirmationMessage: 'Your session has expired and you will now be redirected to the login page.  Please re-login and upload your files again then redeposit your thesis.',
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: 'Redirect to login'
         },

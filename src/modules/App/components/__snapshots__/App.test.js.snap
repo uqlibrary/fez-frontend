@@ -324,7 +324,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         Object {
           "cancelButtonLabel": "Cancel",
           "confirmButtonLabel": "Redirect to login",
-          "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
+          "confirmationMessage": "Your session has expired and you will now be redirected to the login page.  Please re-login and upload your files again then redeposit your thesis.",
           "confirmationTitle": "Session Expired",
         }
       }
@@ -867,7 +867,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         Object {
           "cancelButtonLabel": "Cancel",
           "confirmButtonLabel": "Redirect to login",
-          "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
+          "confirmationMessage": "Your session has expired and you will now be redirected to the login page.  Please re-login and upload your files again then redeposit your thesis.",
           "confirmationTitle": "Session Expired",
         }
       }
@@ -1257,7 +1257,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         Object {
           "cancelButtonLabel": "Cancel",
           "confirmButtonLabel": "Redirect to login",
-          "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
+          "confirmationMessage": "Your session has expired and you will now be redirected to the login page.  Please re-login and upload your files again then redeposit your thesis.",
           "confirmationTitle": "Session Expired",
         }
       }
@@ -1656,7 +1656,7 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "cancelButtonLabel": "Cancel",
           "confirmButtonLabel": "Redirect to login",
-          "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
+          "confirmationMessage": "Your session has expired and you will now be redirected to the login page.  Please re-login and upload your files again then redeposit your thesis.",
           "confirmationTitle": "Session Expired",
         }
       }
@@ -2183,7 +2183,7 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "cancelButtonLabel": "Cancel",
           "confirmButtonLabel": "Redirect to login",
-          "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
+          "confirmationMessage": "Your session has expired and you will now be redirected to the login page.  Please re-login and upload your files again then redeposit your thesis.",
           "confirmationTitle": "Session Expired",
         }
       }
@@ -2646,7 +2646,7 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "cancelButtonLabel": "Cancel",
           "confirmButtonLabel": "Redirect to login",
-          "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
+          "confirmationMessage": "Your session has expired and you will now be redirected to the login page.  Please re-login and upload your files again then redeposit your thesis.",
           "confirmationTitle": "Session Expired",
         }
       }
@@ -3173,7 +3173,7 @@ exports[`Application component should render application with routing for the us
         Object {
           "cancelButtonLabel": "Cancel",
           "confirmButtonLabel": "Redirect to login",
-          "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
+          "confirmationMessage": "Your session has expired and you will now be redirected to the login page.  Please re-login and upload your files again then redeposit your thesis.",
           "confirmationTitle": "Session Expired",
         }
       }
@@ -3367,7 +3367,7 @@ exports[`Application component should render for anon user 1`] = `
         Object {
           "cancelButtonLabel": "Cancel",
           "confirmButtonLabel": "Redirect to login",
-          "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
+          "confirmationMessage": "Your session has expired and you will now be redirected to the login page.  Please re-login and upload your files again then redeposit your thesis.",
           "confirmationTitle": "Session Expired",
         }
       }
@@ -3563,7 +3563,7 @@ exports[`Application component should render thesis submission for HDR without m
         Object {
           "cancelButtonLabel": "Cancel",
           "confirmButtonLabel": "Redirect to login",
-          "confirmationMessage": "Your session has expired and you will now be redirected to the login page and then redeposit your thesis.",
+          "confirmationMessage": "Your session has expired and you will now be redirected to the login page.  Please re-login and upload your files again then redeposit your thesis.",
           "confirmationTitle": "Session Expired",
         }
       }
