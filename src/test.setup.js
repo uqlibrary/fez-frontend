@@ -16,7 +16,6 @@ import configureMockStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
 import {api} from 'config';
 
-
 const setupStoreForActions = () => {
     const middlewares = [thunk];
     const mockStore = configureMockStore(middlewares);

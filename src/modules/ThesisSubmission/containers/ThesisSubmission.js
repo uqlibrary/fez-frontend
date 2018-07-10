@@ -7,24 +7,9 @@ import {general} from 'config';
 import {bindActionCreators} from 'redux';
 
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+import {reloadReducerFromLocalStorage} from 'modules/SharedComponents/ReloadReducerFromLocalStorage';
 
 const FORM_NAME = 'ThesisSubmission';
-
-let locallyStoredValues = null;
-if (!!window.localStorage && window.localStorage.getItem('form') !== null) {
-    const locallyStoredForm = Immutable.Map(JSON.parse(localStorage.getItem('form')));
-
-    /* eslint-disable no-unused-vars */
-    /**
-     * RHD student has to upload the files again
-     */
-    const {files, ...rest} = !!locallyStoredForm.get(FORM_NAME) && locallyStoredForm.get(FORM_NAME).values || Immutable.Map({});
-    /* eslint-enable */
-
-    locallyStoredValues = rest;
-
-    window.localStorage.removeItem('form');
-}
 
 const onSubmit = (values, dispatch, props) => {
     return dispatch(submitThesis({...values.toJS()}, props.author))
@@ -52,6 +37,9 @@ const mapStateToProps = (state, props) => {
     const currentAuthor = state && state.get('accountReducer') ? state.get('accountReducer').author : null;
     const isSessionValid = state && state.get('accountReducer') ? state.get('accountReducer').isSessionExpired === false : null;
 
+    // eslint-disable-next-line no-unused-vars
+    const {files, ...locallyStoredValues} = !!props.locallyStoredReducer && !!props.locallyStoredReducer.get(FORM_NAME) && props.locallyStoredReducer.get(FORM_NAME).values;
+
     const today = new Date();
     const initialValues = {
         rek_date: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
@@ -71,7 +59,7 @@ const mapStateToProps = (state, props) => {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
-        initialValues: locallyStoredValues || initialValues,
+        initialValues: Object.keys(locallyStoredValues).length > 0 && locallyStoredValues || initialValues,
         author: currentAuthor,
         isHdrThesis: props.isHdrThesis,
         fileAccessId: props.isHdrThesis ? general.HDR_THESIS_DEFAULT_VALUES.fileAccessId : general.SBS_THESIS_DEFAULT_VALUES.fileAccessId,
@@ -85,4 +73,4 @@ const mapDispatchToProps = (dispatch) => ({
 
 ThesisSubmissionContainer = connect(mapStateToProps, mapDispatchToProps)(ThesisSubmissionContainer);
 
-export default ThesisSubmissionContainer;
+export default reloadReducerFromLocalStorage('form')(ThesisSubmissionContainer);
