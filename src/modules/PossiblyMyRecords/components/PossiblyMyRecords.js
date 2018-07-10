@@ -1,8 +1,8 @@
-import React, {PureComponent} from 'react';
+import React, {Fragment, PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 // forms & custom components
-import {PublicationsList, PublicationsListPaging, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
+import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
 
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
@@ -117,6 +117,24 @@ export default class PossiblyMyRecords extends PureComponent {
         }, this.pushPageHistory);
     };
 
+    sortByChanged = (sortBy, sortDirection) => {
+        this.setState(
+            {
+                sortBy: sortBy,
+                sortDirection: sortDirection
+            }, this.pushPageHistory
+        );
+    };
+
+    pageSizeChanged = (pageSize) => {
+        this.setState(
+            {
+                pageSize: pageSize,
+                page: 1
+            }, this.pushPageHistory
+        );
+    };
+
     _setHideConfirmationBox = (ref) => (this.hideConfirmationBox = ref);
 
     getAlert = (hasFailed = false, error = null, alertLocale) => {
@@ -133,6 +151,7 @@ export default class PossiblyMyRecords extends PureComponent {
 
     render() {
         if (this.props.accountLoading) return null;
+        const totalPossiblePubs = this.props.possibleCounts;
         const pagingData = this.props.possiblePublicationsPagingData;
         const txt = locale.pages.claimPublications;
         const inProgress = [
@@ -198,24 +217,42 @@ export default class PossiblyMyRecords extends PureComponent {
                                             {
                                                 txt.searchResults.text
                                                     .replace('[resultsCount]', this.props.possiblePublicationsList.length)
-                                                    .replace('[totalCount]', this.props.possibleCounts)
+                                                    .replace('[totalCount]', totalPossiblePubs)
                                             }
                                         </p>
-                                        <PublicationsListPaging
-                                            loading={this.props.loadingPossiblePublicationsList}
-                                            pagingData={pagingData}
-                                            onPageChanged={this.pageChanged}
-                                            disabled={this.props.loadingPossiblePublicationsList} />
+                                        {
+                                            totalPossiblePubs > this.initState.pageSize &&
+                                                <Fragment>
+                                                    <PublicationsListSorting
+                                                        initPageLength={this.initState.pageSize}
+                                                        sortBy={this.state.sortBy}
+                                                        sortDirection={this.state.sortDirection}
+                                                        pageSize={this.state.pageSize}
+                                                        pagingData={pagingData}
+                                                        onSortByChanged={this.sortByChanged}
+                                                        onPageSizeChanged={this.pageSizeChanged}
+                                                        onExportPublications={this.handleExportPublications}
+                                                        disabled={this.props.loadingPossiblePublicationsList}/>
+                                                    <PublicationsListPaging
+                                                        loading={this.props.loadingPossiblePublicationsList}
+                                                        pagingData={pagingData}
+                                                        onPageChanged={this.pageChanged}
+                                                        disabled={this.props.loadingPossiblePublicationsList} />
+                                                </Fragment>
+                                        }
                                         <PublicationsList
                                             publicationsList={this.props.possiblePublicationsList}
                                             publicationsListSubset={this.props.publicationsClaimedInProgress}
                                             subsetCustomActions={inProgress}
                                             customActions={actions} />
-                                        <PublicationsListPaging
-                                            loading={this.props.loadingPossiblePublicationsList}
-                                            pagingData={pagingData}
-                                            onPageChanged={this.pageChanged}
-                                            disabled={this.props.loadingPossiblePublicationsList} />
+                                        {
+                                            totalPossiblePubs > this.initState.pageSize &&
+                                            <PublicationsListPaging
+                                                loading={this.props.loadingPossiblePublicationsList}
+                                                pagingData={pagingData}
+                                                onPageChanged={this.pageChanged}
+                                                disabled={this.props.loadingPossiblePublicationsList}/>
+                                        }
                                     </div>
                                 }
                             </StandardCard>

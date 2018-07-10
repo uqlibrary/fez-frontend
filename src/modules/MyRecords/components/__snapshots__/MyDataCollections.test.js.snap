@@ -72,6 +72,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
         </span>
         <PublicationsListSorting
           canUseExport={true}
+          initPageLength={20}
           onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
@@ -163,6 +164,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
         </span>
         <PublicationsListSorting
           canUseExport={true}
+          initPageLength={20}
           onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
@@ -363,6 +365,7 @@ exports[`myDatasets test renders loading screen while loading publications while
         <PublicationsListSorting
           canUseExport={true}
           disabled={true}
+          initPageLength={20}
           onExportPublications={[Function]}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}

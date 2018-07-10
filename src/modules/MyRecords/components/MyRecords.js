@@ -194,6 +194,7 @@ export default class MyRecords extends PureComponent {
                                 }
                                 {txt.text}
                                 <PublicationsListSorting
+                                    initPageLength={this.initState.pageSize}
                                     sortBy={this.state.sortBy}
                                     sortDirection={this.state.sortDirection}
                                     pageSize={this.state.pageSize}
