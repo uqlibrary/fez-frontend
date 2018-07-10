@@ -1,4 +1,4 @@
-import * as actions from '../actions/actionTypes';
+import * as actions from 'actions/actionTypes';
 import searchKeysReducer from './searchKeys';
 
 describe('searchKeys reducer', () => {

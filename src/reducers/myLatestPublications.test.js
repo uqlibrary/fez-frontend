@@ -1,4 +1,4 @@
-import * as actions from '../actions/actionTypes';
+import * as actions from 'actions/actionTypes';
 import myLatestPublicationsReducer from './myLatestPublications';
 import {latestPubsPayload} from 'mock/data/testing/latestPublications';
 

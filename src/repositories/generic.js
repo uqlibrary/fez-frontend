@@ -1,4 +1,4 @@
-import {api} from '../config';
+import {api} from 'config';
 
 /**
  * Send a put request

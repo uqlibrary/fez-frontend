@@ -8,7 +8,7 @@ import DoiCitationView from 'modules/SharedComponents/PublicationCitation/compon
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 
-import {locale} from 'locale';
+import locale from 'locale/viewRecord';
 import {openAccessConfig} from 'config';
 
 export default class Links extends PureComponent {

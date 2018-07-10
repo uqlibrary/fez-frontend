@@ -5,7 +5,7 @@ import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
-import {locale} from 'locale';
+import locale from 'locale/pages';
 import Files from './Files';
 import PublicationDetails from './PublicationDetails';
 import AdditionalInformation from './AdditionalInformation';

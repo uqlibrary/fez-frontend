@@ -1,4 +1,4 @@
-import * as actions from '../actions/actionTypes';
+import * as actions from 'actions/actionTypes';
 import viewRecordReducer from './viewRecord';
 import {initialState} from './viewRecord';
 

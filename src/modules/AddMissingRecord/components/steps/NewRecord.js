@@ -8,7 +8,7 @@ import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 
 // forms & custom components
 import {validation, routes} from 'config';
-import {locale} from 'locale';
+import locale from 'locale/pages';
 
 export default class NewRecord extends PureComponent {
     static propTypes = {
@@ -22,10 +22,6 @@ export default class NewRecord extends PureComponent {
     static defaultProps = {
         rawSearchQuery: '',
     };
-
-    constructor(props) {
-        super(props);
-    }
 
     _recordSaved = () => {
         // show record save successfully confirmation box
