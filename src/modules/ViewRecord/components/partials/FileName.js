@@ -45,7 +45,7 @@ export default class FileName extends PureComponent {
                 <div className="column fileInfo is-vcentered">
                     {
                         allowDownload && !this.canShowPreview(mimeType) &&
-                        <ExternalLink href={mediaUrl} title={fileName} download={fileName} className={'fileName'} openInNewIcon>
+                        <ExternalLink href={mediaUrl} title={fileName} className={'fileName'} openInNewIcon>
                             {fileName}
                         </ExternalLink>
                     }
