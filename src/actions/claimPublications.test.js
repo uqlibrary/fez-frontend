@@ -83,9 +83,11 @@ describe('Claim publication actions tests ', () => {
                 .reply(200, {data: {...mockData.possibleUnclaimedList}});
 
             const expectedActions = [
+                actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING,
                 actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING,
                 actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED,
-                actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED
+                actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED,
+                actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADED
             ];
 
             await mockActionsStore.dispatch(claimActions.searchPossiblyYourPublications(testParams));
@@ -164,11 +166,13 @@ describe('Claim publication actions tests ', () => {
                 .reply(200, {});
 
             const expectedActions = [
-                actions.HIDE_PUBLICATIONS_LOADING,
-                actions.HIDE_PUBLICATIONS_LOADED,
-                actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING,
-                actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED,
-                actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED
+                    actions.HIDE_PUBLICATIONS_LOADING,
+                    actions.HIDE_PUBLICATIONS_LOADED,
+                    actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING,
+                    actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING,
+                    actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED,
+                    actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED,
+                    actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADED
             ];
 
             await mockActionsStore.dispatch(claimActions.hideRecord({record: testRecord, ...testFacets}));

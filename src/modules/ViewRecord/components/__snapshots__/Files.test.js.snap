@@ -44,12 +44,13 @@ exports[`Files Component  should not render cultural message 1`] = `
           className="column filetype fileIcon is-narrow is-vcentered"
         >
           <Thumbnail
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            fileName="web_image.jpg"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
-            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
             thumbnailFileName="thumbnail_image.jpg"
-            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
           />
         </div>
         <div
@@ -62,15 +63,16 @@ exports[`Files Component  should not render cultural message 1`] = `
             fileName="image.jpg"
             icon={
               <Thumbnail
-                mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+                fileName="web_image.jpg"
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
-                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
                 thumbnailFileName="thumbnail_image.jpg"
-                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
               />
             }
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -81,7 +83,7 @@ exports[`Files Component  should not render cultural message 1`] = `
               }
             }
             pid="UQ:676287"
-            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
             thumbnailFileName="thumbnail_image.jpg"
           />
         </div>
@@ -153,12 +155,13 @@ exports[`Files Component  should render component 1`] = `
           className="column filetype fileIcon is-narrow is-vcentered"
         >
           <Thumbnail
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            fileName="web_image.jpg"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
-            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
             thumbnailFileName="thumbnail_image.jpg"
-            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
           />
         </div>
         <div
@@ -171,15 +174,16 @@ exports[`Files Component  should render component 1`] = `
             fileName="image.jpg"
             icon={
               <Thumbnail
-                mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+                fileName="web_image.jpg"
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
-                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
                 thumbnailFileName="thumbnail_image.jpg"
-                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
               />
             }
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -190,7 +194,7 @@ exports[`Files Component  should render component 1`] = `
               }
             }
             pid="UQ:676287"
-            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
             thumbnailFileName="thumbnail_image.jpg"
           />
         </div>
@@ -270,12 +274,13 @@ exports[`Files Component  should render cultural message 1`] = `
           className="column filetype fileIcon is-narrow is-vcentered"
         >
           <Thumbnail
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            fileName="web_image.jpg"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
-            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
             thumbnailFileName="thumbnail_image.jpg"
-            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+            thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
           />
         </div>
         <div
@@ -288,15 +293,16 @@ exports[`Files Component  should render cultural message 1`] = `
             fileName="image.jpg"
             icon={
               <Thumbnail
-                mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+                fileName="web_image.jpg"
+                mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
-                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+                previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
                 thumbnailFileName="thumbnail_image.jpg"
-                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+                thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
               />
             }
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/web_image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -307,7 +313,7 @@ exports[`Files Component  should render cultural message 1`] = `
               }
             }
             pid="UQ:676287"
-            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
             thumbnailFileName="thumbnail_image.jpg"
           />
         </div>
@@ -552,12 +558,13 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Thumbnail
-    mediaUrl="http://localhost/view/UQ:1/test.tiff"
+    fileName="test.tiff"
+    mediaUrl="https://espace.library.uq.edu.au/view/UQ:1/test.tiff"
     mimeType="image/jpg"
     onClick={[Function]}
-    previewMediaUrl="http://localhost/view/UQ:1/preview_test.jpg"
+    previewMediaUrl="https://espace.library.uq.edu.au/view/UQ:1/preview_test.jpg"
     thumbnailFileName="thumbnail_test.jpg"
-    thumbnailMediaUrl="http://localhost/view/UQ:1/thumbnail_test.jpg"
+    thumbnailMediaUrl="https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -574,12 +581,12 @@ ShallowWrapper {
       "children": <img
         alt="thumbnail_test.jpg"
         onError={[Function]}
-        src="http://localhost/view/UQ:1/thumbnail_test.jpg"
+        src="https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
       />,
       "className": "fileThumbnail",
       "onClick": [Function],
       "onKeyPress": [Function],
-      "title": "Click to open a preview of http://localhost/view/UQ:1/test.tiff",
+      "title": "Click to open a preview of https://espace.library.uq.edu.au/view/UQ:1/test.tiff",
     },
     "ref": null,
     "rendered": Object {
@@ -589,7 +596,7 @@ ShallowWrapper {
       "props": Object {
         "alt": "thumbnail_test.jpg",
         "onError": [Function],
-        "src": "http://localhost/view/UQ:1/thumbnail_test.jpg",
+        "src": "https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg",
       },
       "ref": null,
       "rendered": null,
@@ -606,12 +613,12 @@ ShallowWrapper {
         "children": <img
           alt="thumbnail_test.jpg"
           onError={[Function]}
-          src="http://localhost/view/UQ:1/thumbnail_test.jpg"
+          src="https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
         />,
         "className": "fileThumbnail",
         "onClick": [Function],
         "onKeyPress": [Function],
-        "title": "Click to open a preview of http://localhost/view/UQ:1/test.tiff",
+        "title": "Click to open a preview of https://espace.library.uq.edu.au/view/UQ:1/test.tiff",
       },
       "ref": null,
       "rendered": Object {
@@ -621,7 +628,7 @@ ShallowWrapper {
         "props": Object {
           "alt": "thumbnail_test.jpg",
           "onError": [Function],
-          "src": "http://localhost/view/UQ:1/thumbnail_test.jpg",
+          "src": "https://espace.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg",
         },
         "ref": null,
         "rendered": null,
