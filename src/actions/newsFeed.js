@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
-import * as routes from 'repositories/routes';
+import {GET_NEWS_API} from 'repositories/routes';
 
 /**
  * Load a list of news from fez
@@ -9,7 +9,7 @@ import * as routes from 'repositories/routes';
 export function loadNewsFeed() {
     return dispatch => {
         dispatch({type: actions.NEWS_LOADING});
-        return get(routes.GET_NEWS_API())
+        return get(GET_NEWS_API())
             .then(response => {
                 dispatch({
                     type: actions.NEWS_LOADED,

@@ -18,7 +18,8 @@ import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {validation, routes} from 'config';
-import {locale} from 'locale';
+import {default as pagesLocale} from 'locale/pages';
+import {default as formsLocale} from 'locale/forms';
 
 export default class FixRecord extends PureComponent {
     static propTypes = {
@@ -117,9 +118,9 @@ export default class FixRecord extends PureComponent {
             return <div />;
         }
 
-        const txt = locale.pages.fixRecord;
-        const txtFixForm = locale.forms.fixPublicationForm;
-        const txtUnclaimForm = locale.forms.unclaimPublicationForm;
+        const txt = pagesLocale.pages.fixRecord;
+        const txtFixForm = formsLocale.forms.fixPublicationForm;
+        const txtUnclaimForm = formsLocale.forms.unclaimPublicationForm;
 
         if(this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
             return (

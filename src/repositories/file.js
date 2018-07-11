@@ -1,6 +1,6 @@
 import {generateCancelToken} from 'config';
 import * as fileUploadActions from 'modules/SharedComponents/Toolbox/FileUploader/actions';
-import * as routes from './routes';
+import {FILE_UPLOAD_API} from './routes';
 import {get, put} from './generic';
 import Raven from 'raven-js';
 
@@ -12,7 +12,7 @@ import Raven from 'raven-js';
  * @returns {Promise}
  */
 export function putUploadFile(pid, file, dispatch) {
-    return get(routes.FILE_UPLOAD_API({pid: pid, fileName: file.name}))
+    return get(FILE_UPLOAD_API({pid: pid, fileName: file.name}))
         .then(uploadUrl => {
             const options = {
                 headers: {

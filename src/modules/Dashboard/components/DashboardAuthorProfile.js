@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
-import {locale} from 'locale';
+import locale from 'locale/pages';
 import DashboardAuthorDetails from './DashboardAuthorDetails';
 import DashboardArticleCount from '../containers/DashboardArticleCount';
 import DashboardResearcherIds from './DashboardResearcherIds';

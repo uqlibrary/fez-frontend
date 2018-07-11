@@ -1,4 +1,4 @@
-import * as actions from '../actions/actionTypes';
+import * as actions from 'actions/actionTypes';
 import claimPublicationReducer from './claimPublication';
 
 describe('claimPublication reducer', () => {

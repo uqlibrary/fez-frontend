@@ -1,6 +1,6 @@
-import * as actions from '../actions/actionTypes';
+import * as actions from 'actions/actionTypes';
 import searchRecordsReducer, {deduplicateResults, getEspaceDuplicatePublicationsByIdExceptLastItem, getIdCountHash, getDuplicateList} from './searchRecords';
-import * as records from '../mock/data/testing/searchRecords';
+import * as records from 'mock/data/testing/searchRecords';
 
 const initialSearchSources = {
     loadingPublicationSources: {

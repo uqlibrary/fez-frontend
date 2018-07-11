@@ -1,4 +1,4 @@
-import * as actions from '../actions/actionTypes';
+import * as actions from 'actions/actionTypes';
 import createRecordReducer from './createRecord';
 
 describe('createRecord reducer', () => {

@@ -4,7 +4,7 @@ import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 
 import {get, post, patch} from 'repositories/generic';
 import * as routes from 'repositories/routes';
-import * as repositories from 'repositories';
+import {putUploadFiles} from 'repositories';
 
 /**
  * Search publications from eSpace which are matched to currently logged in username
@@ -235,7 +235,7 @@ export function claimPublication(data) {
                 return null;
             })
             // try to upload files
-            .then(() => hasFilesToUpload ? repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null)
+            .then(() => hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null)
             // patch record with files if file upload has succeeded
             .then(() => hasFilesToUpload ? patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchFilesRecordRequest) : null)
             // send comments as an issue request

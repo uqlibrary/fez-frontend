@@ -1,4 +1,4 @@
-import * as actions from 'actions/actionTypes';
+import {loadPublicationsListActions, loadPublicationActions} from 'actions/actionTypes';
 import {openAccessConfig, viewRecordsConfig} from 'config';
 import moment from 'moment';
 
@@ -79,7 +79,7 @@ export const enhancePublication = (record) => {
 };
 
 const publicationEnhancer = () => next => action => {
-    if (actions.loadPublicationsListActions.test(action.type) && !!action.payload.data) {
+    if (loadPublicationsListActions.test(action.type) && !!action.payload.data) {
         const enhancedPublications = action.payload.data.map(publication => ({
             ...enhancePublication(publication)
         }));
@@ -92,7 +92,7 @@ const publicationEnhancer = () => next => action => {
             }
         };
         return next(enhancedAction);
-    } else if (actions.loadPublicationActions.test(action.type)) {
+    } else if (loadPublicationActions.test(action.type)) {
         const enhancedAction = {
             type: action.type,
             payload: {

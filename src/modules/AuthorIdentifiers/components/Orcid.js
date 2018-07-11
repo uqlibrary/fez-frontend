@@ -9,7 +9,7 @@ import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 
-import {locale} from 'locale';
+import locale from 'locale/pages';
 import {routes, ORCID_CLIENT_ID, ORCID_AUTHORIZATION_URL} from 'config';
 
 export default class Orcid extends Component {

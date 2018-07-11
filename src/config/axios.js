@@ -4,7 +4,7 @@ import {setupCache} from 'axios-cache-adapter';
 import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME, SESSION_USER_GROUP_COOKIE_NAME} from './general';
 import {store} from 'config/store';
 import {logout} from 'actions/account';
-import {locale} from 'locale';
+import locale from 'locale/global';
 
 export const cache = setupCache({
     maxAge: 15 * 60 * 1000,

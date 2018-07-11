@@ -5,7 +5,7 @@ import * as repositories from 'repositories';
 import * as publicationsActions from './publications';
 import * as mockData from 'mock/data';
 import {exportPublications} from './exportPublications'
-import {exportFormatToExtension} from '../config/general';
+import {exportFormatToExtension} from 'config/general';
 
 beforeEach(() => {
     exportPublications.mockClear();
