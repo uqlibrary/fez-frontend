@@ -73,4 +73,4 @@ const mapDispatchToProps = (dispatch) => ({
 
 ThesisSubmissionContainer = connect(mapStateToProps, mapDispatchToProps)(ThesisSubmissionContainer);
 
-export default reloadReducerFromLocalStorage('form')(ThesisSubmissionContainer);
+export default reloadReducerFromLocalStorage()(ThesisSubmissionContainer);

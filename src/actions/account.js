@@ -77,7 +77,7 @@ export function logout() {
 /**
  * @param string reducerToSave
  */
-export function checkSession(reducerToSave) {
+export function checkSession(reducerToSave = 'form') {
     return (dispatch) => {
         return sessionApi.get(CURRENT_ACCOUNT_API().apiUrl)
             .then(() => {
