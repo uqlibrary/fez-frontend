@@ -1,8 +1,8 @@
 import * as transformers from './transformers';
 import * as actions from './actionTypes';
 import {get, patch, post} from 'repositories/generic';
-import * as routes from 'repositories/routes';
-import * as repositories from 'repositories';
+import {EXISTING_RECORD_API, RECORDS_ISSUES_API, HIDE_POSSIBLE_RECORD_API} from 'repositories/routes';
+import {putUploadFiles} from 'repositories';
 
 /**
  * Load publication
@@ -13,7 +13,7 @@ export function loadRecordToFix(pid) {
     return dispatch => {
         dispatch({type: actions.FIX_RECORD_LOADING});
 
-        return get(routes.EXISTING_RECORD_API({pid: pid}))
+        return get(EXISTING_RECORD_API({pid: pid}))
             .then(response => {
                 dispatch({
                     type: actions.FIX_RECORD_LOADED,
@@ -113,9 +113,9 @@ export function fixRecord(data) {
         const createIssueRequest = transformers.getFixIssueRequest(data);
 
         return Promise.resolve([])
-            .then(()=> (hasFilesToUpload ? repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null))
-            .then(()=> (hasFilesToUpload || data.rek_link ? patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest) : null))
-            .then(()=> (post(routes.RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest)))
+            .then(()=> (hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null))
+            .then(()=> (hasFilesToUpload || data.rek_link ? patch(EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest) : null))
+            .then(()=> (post(RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest)))
             .then(responses => {
                 dispatch({
                     type: actions.FIX_RECORD_SUCCESS,
@@ -178,8 +178,8 @@ export function unclaimRecord(data) {
             ...transformers.unclaimRecordContributorsIdSearchKey(data.publication.fez_record_search_key_contributor_id, data.author.aut_id)
         };
 
-        return patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest)
-            .then(() => (post(routes.HIDE_POSSIBLE_RECORD_API(), {pid: data.publication.rek_pid, type: 'H'})))
+        return patch(EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest)
+            .then(() => (post(HIDE_POSSIBLE_RECORD_API(), {pid: data.publication.rek_pid, type: 'H'})))
             .then(response => {
                 dispatch({
                     type: actions.FIX_RECORD_UNCLAIM_SUCCESS,

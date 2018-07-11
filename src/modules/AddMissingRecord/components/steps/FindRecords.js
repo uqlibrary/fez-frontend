@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 // forms & custom components
 import {PublicationSearchForm} from 'modules/SharedComponents/PublicationSearchForm';
-import {routes} from 'config';
-import {locale} from 'locale';
+import {pathConfig} from 'config/routes';
+import locale from 'locale/pages';
 
 export default class FindRecords extends PureComponent {
     static propTypes = {
@@ -12,17 +12,13 @@ export default class FindRecords extends PureComponent {
         history: PropTypes.object.isRequired
     };
 
-    constructor(props) {
-        super(props);
-    }
-
     _performSearch = (values) => {
         this.props.actions.searchPublications(values.get('searchQuery'));
-        this.props.history.push(routes.pathConfig.records.add.results);
+        this.props.history.push(pathConfig.records.add.results);
     };
 
     _handleSkipSearch = () => {
-        this.props.history.push(routes.pathConfig.records.add.new);
+        this.props.history.push(pathConfig.records.add.new);
     };
 
     render() {

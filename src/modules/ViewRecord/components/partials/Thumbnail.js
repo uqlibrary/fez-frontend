@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
 import BrokenImage from 'material-ui/svg-icons/image/broken-image';
-import {locale} from 'locale';
+import locale from 'locale/pages';
 
 class Thumbnail extends PureComponent {
     static propTypes = {

@@ -1,4 +1,5 @@
-import {locale} from 'locale';
+import locale from 'locale/global';
+import templates from 'locale/templates';
 
 const moment = require('moment');
 
@@ -17,7 +18,7 @@ const getIssuesRequest = (text) => ({issue: text});
 /* getFixIssueRequest - returns fix record issue request object
 * @returns {Object} issue request
 */
-export const getFixIssueRequest = pipe(getIssueValues, locale.issues.fixRecord, getIssuesRequest);
+export const getFixIssueRequest = pipe(getIssueValues, templates.issues.fixRecord, getIssuesRequest);
 
 
 /* getRecordLinkSearchKey - returns link object formatted for record request

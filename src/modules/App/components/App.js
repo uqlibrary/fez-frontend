@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
 import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
-import {locale} from 'locale';
+import locale from 'locale/global';
 
 // application components
 import AppBar from 'material-ui/AppBar';

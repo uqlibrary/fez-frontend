@@ -1,4 +1,4 @@
-import {hindexResponse, currentAuthorStats} from '../mock/data/academicStats';
+import {hindexResponse, currentAuthorStats} from 'mock/data/academicStats';
 
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';

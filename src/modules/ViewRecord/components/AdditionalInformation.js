@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {locale} from 'locale';
+import locale from 'locale/viewRecord';
 import {viewRecordsConfig, routes} from 'config';
 import {Table, TableBody} from 'material-ui/Table';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';

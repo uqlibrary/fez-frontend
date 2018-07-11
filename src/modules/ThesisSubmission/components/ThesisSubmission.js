@@ -19,7 +19,7 @@ import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
 
 import {validation} from 'config';
-import {locale} from 'locale';
+import locale from 'locale/components';
 import {default as formLocale} from 'locale/publicationForm';
 import {RichEditorField} from 'modules/SharedComponents/RichEditor';
 import {thesisSubmissionSubtypes} from 'config/general';

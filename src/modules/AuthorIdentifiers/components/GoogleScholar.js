@@ -8,7 +8,7 @@ import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 
-import {locale} from 'locale';
+import locale from 'locale/pages';
 import {routes, validation} from 'config';
 
 export default class GoogleScholar extends PureComponent {

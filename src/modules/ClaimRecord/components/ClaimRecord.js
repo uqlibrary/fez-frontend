@@ -16,7 +16,7 @@ import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPr
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {AuthorLinkingField, ContributorLinkingField} from 'modules/SharedComponents/AuthorLinking';
 import {validation, routes} from 'config';
-import {locale} from 'locale';
+import locale from 'locale/forms';
 
 export default class ClaimRecord extends PureComponent {
     static propTypes = {
@@ -28,10 +28,6 @@ export default class ClaimRecord extends PureComponent {
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired
     };
-
-    constructor(props) {
-        super(props);
-    }
 
     componentWillMount() {
         const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
