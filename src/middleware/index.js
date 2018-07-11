@@ -1,2 +1,2 @@
 export {default as publicationEnhancer} from './publicationEnhancer';
-export {default as formDataSaverOnSessionExpired} from './formDataSaverOnSessionExpired';
+export {default as saveReducerOnSessionExpired} from './saveReducerOnSessionExpired';

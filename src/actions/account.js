@@ -74,14 +74,20 @@ export function logout() {
     };
 }
 
-export function checkSession() {
+/**
+ * @param string reducerToSave
+ */
+export function checkSession(reducerToSave) {
     return (dispatch) => {
         return sessionApi.get(CURRENT_ACCOUNT_API().apiUrl)
             .then(() => {
                 dispatch({type: actions.CURRENT_ACCOUNT_SESSION_VALID});
             })
             .catch(() => {
-                dispatch({type: actions.CURRENT_ACCOUNT_SESSION_EXPIRED});
+                dispatch({
+                    type: actions.CURRENT_ACCOUNT_SESSION_EXPIRED,
+                    payload: reducerToSave
+                });
             });
     };
 }

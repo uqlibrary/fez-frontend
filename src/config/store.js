@@ -7,7 +7,7 @@ import Immutable from 'immutable';
 import thunk from 'redux-thunk';
 
 import {publicationEnhancer} from 'middleware';
-import {formDataSaverOnSessionExpired} from 'middleware';
+import {saveReducerOnSessionExpired} from 'middleware';
 
 
 export const history = process.env.USE_MOCK || process.env.BRANCH === 'production' || process.env.BRANCH === 'staging'
@@ -25,7 +25,7 @@ const getStore = () => {
                 routerMiddleware(history),
                 thunk,
                 publicationEnhancer,
-                formDataSaverOnSessionExpired
+                saveReducerOnSessionExpired
             ),
         ),
     );
