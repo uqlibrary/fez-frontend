@@ -1,4 +1,4 @@
-import * as actions from '../actions/actionTypes';
+import * as actions from 'actions/actionTypes';
 import fixRecordReducer from './fixRecord';
 import {initialState} from './fixRecord';
 

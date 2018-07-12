@@ -263,10 +263,15 @@ describe('Backend routes method', () => {
             {
                 values: {facets: {}},
                 expected: {
-                    apiUrl: 'records/search',
+                    apiUrl: "records/search",
                     options: {
                         params: {
-                            rule: 'possible'
+                            export_to: "",
+                            order_by: "desc",
+                            page: 1,
+                            per_page: 20,
+                            rule: "possible",
+                            sort: "published_date"
                         }
                     }
                 }
@@ -278,7 +283,12 @@ describe('Backend routes method', () => {
                     apiUrl: 'records/search',
                     options: {
                         params: {
-                            rule: 'possible',
+                            export_to: "",
+                            order_by: "desc",
+                            page: 1,
+                            per_page: 20,
+                            rule: "possible",
+                            sort: "published_date",
                             ['filters[facets][one]']: 'one facet',
                             ['filters[facets][two]']: 'two facets'
                         }

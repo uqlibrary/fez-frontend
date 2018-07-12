@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {locale} from 'locale';
+import locale from 'locale/viewRecord';
 import {viewRecordsConfig, routes} from 'config';
 import {Table, TableBody} from 'material-ui/Table';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -147,7 +147,7 @@ export default class AdditionalInformation extends Component {
 
     renderContributors = (publication) => {
         return (
-            <EditorsCitationView key="additional-information-editors" publication={publication} prefix={' '} suffix={''} initialNumberOfEditors={publication.fez_record_search_key_contributor.length} showLink />
+            <EditorsCitationView key="additional-information-editors" publication={publication} prefix={' '} suffix={''} separator={''} initialNumberOfEditors={publication.fez_record_search_key_contributor.length} showLink />
         );
     }
 

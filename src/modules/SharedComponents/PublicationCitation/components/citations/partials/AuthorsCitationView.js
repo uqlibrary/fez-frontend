@@ -13,6 +13,7 @@ export default class AuthorsCitationView extends PureComponent {
         className: PropTypes.string,
         prefix: PropTypes.string,
         suffix: PropTypes.string,
+        separator: PropTypes.string,
         initialNumberOfAuthors: PropTypes.number,
         thresholdNumberOfAuthors: PropTypes.number,
         showLink: PropTypes.bool
@@ -20,6 +21,7 @@ export default class AuthorsCitationView extends PureComponent {
 
     static defaultProps = {
         suffix: ' ',
+        separator: ', ',
         searchKey: {
             key: 'fez_record_search_key_author',
             subkey: 'rek_author',
@@ -82,10 +84,14 @@ export default class AuthorsCitationView extends PureComponent {
         return id;
     }
 
-    renderAuthors = (authors, showLink) => {
+    renderAuthors = (authors, separator, showLink) => {
         return authors.map((author, index) => {
-            const prefix = authors.length > 1 && index === authors.length - 1 ? (showLink && ', ' || ' and ') : '';
-            const suffix = authors.length > 2 && index < authors.length - 2 ? ', ' : '';
+            let prefix = '';
+            if (authors.length > 1 && index === authors.length - 1) {
+                prefix = showLink ? separator : ' and ';
+            }
+            const suffix = authors.length > 2 && index < authors.length - 2 ? separator : '';
+
             const key = `citationAuthor_${index + 1}`;
             const element = (
                 <CitationView
@@ -115,7 +121,7 @@ export default class AuthorsCitationView extends PureComponent {
 
     render() {
         const {showMoreLabel, showMoreTitle, showLessTitle, showLessLabel} = locale.components.publicationCitation.citationAuthors;
-        const {className, prefix, suffix, initialNumberOfAuthors, showLink} = this.props;
+        const {className, prefix, suffix, separator, initialNumberOfAuthors, showLink} = this.props;
         const {authors, hasMoreAuthors, toggleShowMoreLink} = this.state;
 
         if (authors.length === 0) return (<span className={`${className || ''} empty`} />);
@@ -124,7 +130,7 @@ export default class AuthorsCitationView extends PureComponent {
             <span className={className || ''}>
                 {prefix}
                 {
-                    this.renderAuthors(authors, showLink)
+                    this.renderAuthors(authors, separator, showLink)
                         .slice(0, hasMoreAuthors && toggleShowMoreLink
                             ? initialNumberOfAuthors
                             : authors.length)

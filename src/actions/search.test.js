@@ -3,9 +3,9 @@ jest.mock('./exportPublications');
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as searchActions from './search';
-import * as mockData from "../mock/data";
+import * as mockData from "mock/data";
 import {exportPublications} from "./exportPublications";
-import {exportFormatToExtension} from '../config/general';
+import {exportFormatToExtension} from 'config/general';
 
 beforeEach(() => {
     exportPublications.mockClear();

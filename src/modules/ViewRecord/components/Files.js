@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
-import {Table, TableBody, TableRowColumn, TableHeader, TableRow, TableHeaderColumn} from 'material-ui/Table';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 
@@ -43,6 +42,7 @@ export default class Files extends Component {
                 mediaUrl: this.getUrl(pid, downloadableFileName || fileName),
                 previewMediaUrl: this.getUrl(pid, previewFileName || fileName),
                 thumbnailMediaUrl: this.getUrl(pid, thumbnailFileName),
+                fileName: downloadableFileName || fileName,
                 thumbnailFileName,
                 onClick: this.showPreview
             };
@@ -172,49 +172,45 @@ export default class Files extends Component {
                             message={publication.fez_record_search_key_advisory_statement.rek_advisory_statement || locale.viewRecord.sections.files.culturalSensitivityStatement}
                             dismissAction={this.props.setHideCulturalSensitivityStatement}/>
                     }
-                    <Table selectable={false} className="files horizontal" ref="files">
-                        <TableHeader adjustForCheckbox={false} displaySelectAll={false} className="header">
-                            <TableRow>
-                                <TableHeaderColumn className="filetype" />
-                                <TableHeaderColumn className="filename">
-                                    {locale.viewRecord.sections.files.fileName}
-                                </TableHeaderColumn>
-                                <TableHeaderColumn className="description is-hidden-mobile">
-                                    {locale.viewRecord.sections.files.description}
-                                </TableHeaderColumn>
-                                <TableHeaderColumn className="align-right is-hidden-mobile is-hidden-tablet-only size">
-                                    {locale.viewRecord.sections.files.size}
-                                </TableHeaderColumn>
-                                <TableHeaderColumn className="oa align-right"/>
-                            </TableRow>
-                        </TableHeader>
-                        <TableBody displayRowCheckbox={false} className="data">
-                            {
-                                fileData.map((item, index) => (
-                                    <TableRow selectable className="file" key={`file-${index}`}>
-                                        <TableRowColumn className="filetype fileIcon">
-                                            {item.icon}
-                                        </TableRowColumn>
-                                        <TableRowColumn className="filename">
-                                            <FileName
-                                                {...item}
-                                                onFileSelect={this.showPreview}
-                                            />
-                                        </TableRowColumn>
-                                        <TableRowColumn className="is-hidden-mobile description">
-                                            {item.description}
-                                        </TableRowColumn>
-                                        <TableRowColumn className="align-right is-hidden-mobile is-hidden-tablet-only size" >
-                                            {item.calculatedSize}
-                                        </TableRowColumn>
-                                        <TableRowColumn className="oa align-right">
-                                            <OpenAccessIcon {...item.openAccessStatus} />
-                                        </TableRowColumn>
-                                    </TableRow>
-                                ))
-                            }
-                        </TableBody>
-                    </Table>
+                    <div className="files" ref="files">
+                        <div className="header columns is-gapless is-vcentered is-mobile">
+                            <div className="column filetype fileIcon is-narrow is-vcentered" />
+                            <div className="column filename is-3-desktop is-4-tablet is-vcentered">
+                                {locale.viewRecord.sections.files.fileName}
+                            </div>
+                            <div className="column description is-hidden-mobile is-vcentered">
+                                {locale.viewRecord.sections.files.description}
+                            </div>
+                            <div className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered">
+                                {locale.viewRecord.sections.files.size}
+                            </div>
+                            <div className="column oa align-right is-2 is-vcentered is-hidden-mobile" />
+                        </div>
+                        {
+                            fileData.map((item, index) => (
+                                <div className="data columns is-gapless is-vcentered is-mobile" key={`file-${index}`}>
+                                    <div className="column filetype fileIcon is-narrow is-vcentered">
+                                        {item.icon}
+                                    </div>
+                                    <div className="column filename is-3-desktop is-4-tablet is-vcentered">
+                                        <FileName
+                                            {...item}
+                                            onFileSelect={this.showPreview}
+                                        />
+                                    </div>
+                                    <div className="column description is-hidden-mobile is-vcentered">
+                                        {item.description}
+                                    </div>
+                                    <div className="column size is-hidden-mobile is-hidden-tablet-only is-1 is-vcentered">
+                                        {item.calculatedSize}
+                                    </div>
+                                    <div className="column oa is-2 is-hidden-mobile is-vcentered">
+                                        <OpenAccessIcon {...item.openAccessStatus} />
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
                 </StandardCard>
                 {
                     this.state.preview.mediaUrl && this.state.preview.mimeType &&

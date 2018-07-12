@@ -37,4 +37,12 @@ describe('Thumbnail Component ', () => {
         element.simulate('keyPress');
         expect(onClick).toHaveBeenCalledTimes(1);
     });
+
+    it('should show a broken thumbnail icon when the thumbnail wont load.', () => {
+        const onClick = jest.fn();
+        const wrapper = setup({});
+        wrapper.instance().setState({thumbnailError: true});
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

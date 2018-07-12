@@ -147,7 +147,9 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
         title="Possibly your publications"
       >
         <div>
-          3 out of 5 potential match(es) displayed. Select any item to claim it as your work.
+          <p>
+            3 out of 5 potential match(es) displayed. Select any item to claim it as your work.
+          </p>
           <PublicationsList
             customActions={
               Array [

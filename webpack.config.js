@@ -4,6 +4,7 @@ const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const InjectPreloader = require('preloader-html-webpack-plugin');
 
 const port = 3000;
 const url = process.env.URL || 'localhost';
@@ -127,6 +128,7 @@ module.exports = {
             format: `  building webpack... [:bar] ${chalk.green.bold(':percent')} (It took :elapsed seconds to build)\n`,
             clear: false,
         }),
+        new InjectPreloader(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.NamedModulesPlugin(),

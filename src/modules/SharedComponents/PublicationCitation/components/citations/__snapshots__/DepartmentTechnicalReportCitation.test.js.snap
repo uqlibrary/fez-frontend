@@ -473,6 +473,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
@@ -1071,6 +1072,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}
@@ -1237,6 +1239,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
           "subkey": "rek_author",
         }
       }
+      separator=", "
       showLink={false}
       suffix=" "
       thresholdNumberOfAuthors={3}

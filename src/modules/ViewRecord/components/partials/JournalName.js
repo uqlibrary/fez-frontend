@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {locale} from 'locale';
+import {default as globalLocale} from 'locale/global';
+import {default as viewRecordLocale} from 'locale/viewRecord';
 import {pathConfig} from 'config/routes';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import {Link} from 'react-router-dom';
@@ -9,10 +10,6 @@ export default class JournalName extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired
     };
-
-    constructor(props) {
-        super(props);
-    }
 
     // fez_journal_issns returns era data
     getERAYears = (issns = []) => {
@@ -44,10 +41,10 @@ export default class JournalName extends PureComponent {
         let sherpaRomeoElement = <span/>;
         if (sherpaRomeoData) {
             const sherpaRomeoColor = sherpaRomeoData.color;
-            const sherpaRomeoLink = locale.global.sherpaRomeoLink.externalUrl.replace('[issn]', sherpaRomeoData.issn);
+            const sherpaRomeoLink = globalLocale.global.sherpaRomeoLink.externalUrl.replace('[issn]', sherpaRomeoData.issn);
             sherpaRomeoElement =
-                (<span> <ExternalLink href={sherpaRomeoLink} aria-label={locale.global.sherpaRomeoLink.ariaLabel}>
-                    <span className={`sherpaRomeo${sherpaRomeoColor[0].toUpperCase() + sherpaRomeoColor.slice(1)}`}>{locale.viewRecord.linkTexts.journalOpenAccessPolicyLink}</span>
+                (<span> <ExternalLink href={sherpaRomeoLink} aria-label={globalLocale.global.sherpaRomeoLink.ariaLabel}>
+                    <span className={`sherpaRomeo${sherpaRomeoColor[0].toUpperCase() + sherpaRomeoColor.slice(1)}`}>{viewRecordLocale.viewRecord.linkTexts.journalOpenAccessPolicyLink}</span>
                 </ExternalLink></span>);
         }
 
@@ -56,7 +53,7 @@ export default class JournalName extends PureComponent {
 
     renderJournalName = (journalName, issns) => {
         const eraYears = this.getERAYears(issns);
-        const eraJournalListedText = eraYears && eraYears.length > 0 ? locale.viewRecord.linkTexts.eraJournalListed.replace('[year]', eraYears.join(', ')) : '';
+        const eraJournalListedText = eraYears && eraYears.length > 0 ? viewRecordLocale.viewRecord.linkTexts.eraJournalListed.replace('[year]', eraYears.join(', ')) : '';
         return (
             <React.Fragment>
                 <Link to={pathConfig.list.journalName(journalName)}>

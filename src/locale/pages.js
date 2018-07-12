@@ -243,7 +243,6 @@ export default {
         claimPublications: {
             title: 'Claim possible publications',
             loadingMessage: 'Searching for possibly your publications...',
-            facetSearchMessage: 'Applying filters...',
             noResultsFound: {
                 title: 'No matching publications found',
                 text: (
@@ -403,7 +402,8 @@ export default {
             submit: 'Submit'
         },
         viewRecord: {
-            loadingMessage: 'Loading record...'
+            loadingMessage: 'Loading record...',
+            thumbnailTitle: 'Click to open a preview of [image]'
         },
         searchRecords: {
             title: 'eSpace search',

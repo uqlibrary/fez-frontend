@@ -1,6 +1,6 @@
-import * as actions from '../actions/actionTypes';
+import * as actions from 'actions/actionTypes';
 import newsFeedReducer, {initialState} from './newsFeed';
-import * as newsFeedData from '../mock/data/newsFeed';
+import * as newsFeedData from 'mock/data/newsFeed';
 
 describe('NewsFeed reducer', () => {
     it('should return loading state', () => {

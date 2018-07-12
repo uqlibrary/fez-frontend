@@ -4,21 +4,27 @@ import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 
 import {get, post, patch} from 'repositories/generic';
 import * as routes from 'repositories/routes';
-import * as repositories from 'repositories';
+import {putUploadFiles} from 'repositories';
 
 /**
  * Search publications from eSpace which are matched to currently logged in username
  * @param {object} activeFacets - optional list of facets
  * @returns {action}
  */
-export function searchPossiblyYourPublications({facets = {}}) {
+export function searchPossiblyYourPublications({activeFacets = {}, page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc'}) {
     return dispatch => {
-        if (Object.keys(facets).length === 0) {
+        if (Object.keys(activeFacets).length === 0) {
             dispatch({type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING});
         }
 
-        dispatch({type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: facets});
-        return get(routes.POSSIBLE_RECORDS_API({facets: facets}))
+        dispatch({type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: activeFacets});
+        return get(routes.POSSIBLE_RECORDS_API({
+            facets: activeFacets,
+            page: page,
+            pageSize: pageSize,
+            sortBy: sortBy,
+            sortDirection: sortDirection,
+        }))
             .then(response => {
                 dispatch({
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED,
@@ -30,7 +36,7 @@ export function searchPossiblyYourPublications({facets = {}}) {
                     payload: response.filters && response.filters.facets ? response.filters.facets : {}
                 });
 
-                if (Object.keys(facets).length === 0) {
+                if (Object.keys(activeFacets).length === 0) {
                     // only update total count if there's no filtering
                     dispatch({
                         type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADED,
@@ -229,7 +235,7 @@ export function claimPublication(data) {
                 return null;
             })
             // try to upload files
-            .then(() => hasFilesToUpload ? repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null)
+            .then(() => hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null)
             // patch record with files if file upload has succeeded
             .then(() => hasFilesToUpload ? patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchFilesRecordRequest) : null)
             // send comments as an issue request
