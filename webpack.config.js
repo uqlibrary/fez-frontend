@@ -181,4 +181,7 @@ module.exports = {
             'custom_modules'
         ]
     },
+    optimization: {
+        splitChunks: true
+    }
 };
