@@ -7,7 +7,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="1"
+    key="0ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network2017-08-07T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [
@@ -864,7 +864,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="2"
+    key="1Flux of signalling endosomes undergoing axonal retrograde transport is encoded by presynaptic activity and TrkB2016-09-30T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -1980,7 +1980,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="3"
+    key="2Extracellular vesicles secreted by highly metastatic clonal variants of osteosarcoma preferentially localize to the lungs and induce metastatic behaviour in poorly metastatic clones2016-06-02T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -2932,7 +2932,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="4"
+    key="3Botulinum neurotoxin type-A enters a non-recycling pool of synaptic vesicles2016-01-25T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -3842,7 +3842,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="5"
+    key="4A mutant tat protein inhibits HIV-1 reverse transcription by targeting the reverse transcription complex2015-05-01T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [
@@ -4897,7 +4897,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="6"
+    key="5Control of autophagosome axonal retrograde flux by presynaptic activity unveiled using botulinum neurotoxin type A2015-04-15T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [
@@ -6087,7 +6087,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="7"
+    key="6Activity-driven relaxation of the cortical actomyosin II network synchronizes Munc18-1-dependent neurosecretory vesicle docking2015-02-25T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [
@@ -6933,7 +6933,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="8"
+    key="7An acto-myosin II constricting ring initiates the fission of activity-dependent bulk endosomes in neurosecretory cells2015-01-28T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [
@@ -7690,7 +7690,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="9"
+    key="8Increased polyubiquitination and proteasomal degradation of a Munc18-1 disease-linked mutant causes temperature-sensitive defect in exocytosis2014-10-09T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -8660,7 +8660,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="10"
+    key="9Caveolin-1 is necessary for hepatic oxidative lipid metabolism: evidence for crosstalk between caveolin-1 and bile acid signaling2013-07-25T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [
@@ -10041,7 +10041,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="11"
+    key="10The Munc18-1 domain 3a loop is essential for neuroexocytosis but not for syntaxin-1A transport to the plasma membrane2013-06-01T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [
@@ -11067,7 +11067,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="12"
+    key="11Inhibition of PIKfyve by YM-201636 Dysregulates Autophagy and Leads to Apoptosis-Independent Neuronal Cell Death2013-03-01T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [
@@ -11812,7 +11812,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="13"
+    key="12Myosin VI small insert isoform maintains exocytosis by tethering secretory granules to the cortical actin2013-02-01T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [
@@ -12750,7 +12750,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="14"
+    key="13Secretagogue stimulation of neurosecretory cells elicits filopodial extensions uncovering new functional release sites2013-01-01T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [
@@ -13557,7 +13557,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="15"
+    key="14Caveolin-1 deficiency leads to increased susceptibility to cell death and fibrosis in white adipose tissue: characterization of a lipodystrophic model2012-09-26T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [
@@ -14416,7 +14416,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="16"
+    key="15Co-regulation of cell polarization and migration by caveolar proteins PTRF/cavin-1 and caveolin-12012-08-13T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [
@@ -15535,7 +15535,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="17"
+    key="16Caveolin-1 orchestrates the balance between glucose and lipid-dependent energy metabolism: Implications for liver regeneration2012-05-01T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [
@@ -16844,7 +16844,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="18"
+    key="17Postlipolytic insulin-dependent remodeling of micro lipid droplets in adipocytes2012-03-15T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [
@@ -17816,7 +17816,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="19"
+    key="18Retrograde trafficking at the presynaptic nerve terminal using bacterial toxins2012-01-01T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -18442,7 +18442,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
   <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     hideCountDiff={false}
-    key="20"
+    key="19Dynamin inhibition blocks botulinum neurotoxin type A endocytosis in neurons and delays botulism2011-10-01T00:00:00Z"
     publication={
       Object {
         "fez_datastream_info": Array [

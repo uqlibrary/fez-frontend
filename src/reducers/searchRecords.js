@@ -104,8 +104,10 @@ export const deduplicateResults = (list) => {
                                 itemWithNewSources.sources = [...currentItemSources];
                                 return [itemWithNewSources];
                             } else {
-                                currentItemSources.push(item.sources[0]);
-                                currentItem.sources = [...currentItemSources];
+                                if (!currentItemSources.includes(item.sources[0])) { // de-dupe sources
+                                    currentItemSources.push(item.sources[0]);
+                                    currentItem.sources = [...currentItemSources];
+                                }
                                 return [{...currentItem}];
                             }
                         }
@@ -156,7 +158,7 @@ const handlers = {
     [actions.SEARCH_LOADING]: (state, action) => {
         const rawSearchQuery = action.payload;
         return {
-            ...state,
+            ...initialState,
             publicationsList: [],
             publicationsListPagingData: {},
             rawSearchQuery: rawSearchQuery,
@@ -230,11 +232,12 @@ const handlers = {
         return {
             ...state,
             searchLoading: true,
-            publicationsList:
-                deduplicateResults([
+            publicationsList: action.payload.data && action.payload.data.length > 0 && action.payload.data[0].currentSource
+                ? deduplicateResults([
                     ...state.publicationsList,
                     ...action.payload.data
-                ]),
+                ])
+                : state.publicationsList,
             ...loadingPublicationSources
         };
     }
