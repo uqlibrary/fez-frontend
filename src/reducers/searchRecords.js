@@ -100,7 +100,7 @@ export const deduplicateResults = (list) => {
 
                             // prevent duplicate sources
                             if (!currentItemSources.some((source) => {
-                                 return source.source === item.sources[0].source;
+                                return source.source === item.sources[0].source;
                             })) {
                                 currentItemSources.push(item.sources[0]);
                             }
@@ -237,10 +237,7 @@ const handlers = {
             ...state,
             searchLoading: true,
             publicationsList: action.payload.data && action.payload.data.length > 0 && action.payload.data[0].currentSource
-                ? deduplicateResults([
-                    ...state.publicationsList,
-                    ...action.payload.data
-                ])
+                ? deduplicateResults(state.publicationsList, action.payload.data)
                 : state.publicationsList,
             ...loadingPublicationSources
         };
