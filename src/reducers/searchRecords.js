@@ -98,16 +98,19 @@ export const deduplicateResults = (list) => {
                                 ); // returns the lowest valued priority source this record has
                             const itemPriority = locale.global.sources[item.sources[0].source].priority; // items current source priority
 
-                            if (itemPriority < currentItemPriority) {
+                            // prevent duplicate sources
+                            if (!currentItemSources.some((source) => {
+                                 return source.source === item.sources[0].source;
+                            })) {
                                 currentItemSources.push(item.sources[0]);
+                            }
+
+                            if (itemPriority < currentItemPriority) {
                                 const itemWithNewSources = {...item};
                                 itemWithNewSources.sources = [...currentItemSources];
                                 return [itemWithNewSources];
                             } else {
-                                if (!currentItemSources.includes(item.sources[0])) { // de-dupe sources
-                                    currentItemSources.push(item.sources[0]);
-                                    currentItem.sources = [...currentItemSources];
-                                }
+                                currentItem.sources = [...currentItemSources];
                                 return [{...currentItem}];
                             }
                         }
@@ -158,7 +161,8 @@ const handlers = {
     [actions.SEARCH_LOADING]: (state, action) => {
         const rawSearchQuery = action.payload;
         return {
-            ...initialState,
+            ...state,
+            ...initialSearchSources,
             publicationsList: [],
             publicationsListPagingData: {},
             rawSearchQuery: rawSearchQuery,
