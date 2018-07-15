@@ -29,21 +29,27 @@ const PublicationMap = withScriptjs(withGoogleMap((props) => {
         bounds.extend(new window.google.maps.LatLng(coord.lat, coord.lng));
     });
 
-    return (
-        <GoogleMap
-            defaultZoom={geoCoords.length === 1 ? pointZoom : polygonZoom}
-            defaultCenter={defaultCenter}
-            ref={(map) => {map && bounds && geoCoords.length > 1 && map.fitBounds(bounds);}}>
-            {
-                geoCoords.length > 1 &&
-                <Polygon paths={geoCoords} options={styles} />
-            }
-            {
-                geoCoords.length === 1 &&
-                <Marker position={geoCoords[0]} />
-            }
-        </GoogleMap>
-    );
+    if(!!window.google.maps) {
+        return (
+            <GoogleMap
+                defaultZoom={geoCoords.length === 1 ? pointZoom : polygonZoom}
+                defaultCenter={defaultCenter}
+                ref={(map) => {
+                    map && bounds && geoCoords.length > 1 && map.fitBounds(bounds);
+                }}>
+                {
+                    geoCoords.length > 1 &&
+                    <Polygon paths={geoCoords} options={styles}/>
+                }
+                {
+                    geoCoords.length === 1 &&
+                    <Marker position={geoCoords[0]}/>
+                }
+            </GoogleMap>
+        );
+    } else {
+        return <div className="googleMap empty noAPI"/>;
+    }
 }));
 
 export default PublicationMap;
