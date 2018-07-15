@@ -182,6 +182,14 @@ module.exports = {
         ]
     },
     optimization: {
-        splitChunks: true
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    test: /[\\/]node_modles[\\/]/,
+                    name: 'vendor',
+                    chunks: 'all'
+                }
+            }
+        }
     }
 };
