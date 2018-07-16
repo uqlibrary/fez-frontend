@@ -1,5 +1,6 @@
 import React from 'react';
 import {withScriptjs, withGoogleMap, GoogleMap, Polygon, Marker} from 'react-google-maps/lib';
+import {GOOGLE_MAPS_API_URL} from 'config';
 
 const PublicationMap = withScriptjs(withGoogleMap((props) => {
     const styles = {
@@ -23,33 +24,28 @@ const PublicationMap = withScriptjs(withGoogleMap((props) => {
     const defaultCenter = {lng: (maxLngPoint + minLngPoint) / 2, lat: (minLatPoint + maxLatPoint) / 2};
     const pointZoom = 7;
     const polygonZoom = 13;
-
     const bounds = new window.google.maps.LatLngBounds();
     geoCoords.map((coord) => {
         bounds.extend(new window.google.maps.LatLng(coord.lat, coord.lng));
     });
 
-    if(!!window.google.maps) {
-        return (
-            <GoogleMap
-                defaultZoom={geoCoords.length === 1 ? pointZoom : polygonZoom}
-                defaultCenter={defaultCenter}
-                ref={(map) => {
-                    map && bounds && geoCoords.length > 1 && map.fitBounds(bounds);
-                }}>
-                {
-                    geoCoords.length > 1 &&
-                    <Polygon paths={geoCoords} options={styles}/>
-                }
-                {
-                    geoCoords.length === 1 &&
-                    <Marker position={geoCoords[0]}/>
-                }
-            </GoogleMap>
-        );
-    } else {
-        return <div className="googleMap empty noAPI"/>;
-    }
+    return (
+        <GoogleMap
+            googleMapURL={GOOGLE_MAPS_API_URL}
+            loadingElement={<div className="googleMap loading" />}
+            defaultZoom={geoCoords.length === 1 ? pointZoom : polygonZoom}
+            defaultCenter={defaultCenter}
+            ref={(map) => {map && bounds && geoCoords.length > 1 && map.fitBounds(bounds);}}>
+            {
+                geoCoords.length > 1 &&
+                <Polygon paths={geoCoords} options={styles} />
+            }
+            {
+                geoCoords.length === 1 &&
+                <Marker position={geoCoords[0]} />
+            }
+        </GoogleMap>
+    );
 }));
 
 export default PublicationMap;

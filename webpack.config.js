@@ -158,7 +158,6 @@ module.exports = {
             'process.env.ORCID_URL': JSON.stringify(orcidUrl),
             'process.env.ORCID_CLIENT_ID': JSON.stringify(orcidClientId),
             'process.env.TITLE_SUFFIX': JSON.stringify('LOCAL'),
-            'process.env.GOOGLE_MAPS_URL': JSON.stringify('https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places'),
             'process.env.ENABLE_LOG': JSON.stringify(!!process.env.CI_BRANCH && process.env.NODE_ENV !== 'test'),
             'process.env.BRANCH': JSON.stringify('development'),
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
