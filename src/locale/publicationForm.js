@@ -1138,6 +1138,12 @@ export default {
             cancelButtonLabel: 'No, continue editing',
             confirmButtonLabel: 'Yes, deposit thesis'
         },
+        sessionExpiredConfirmation: {
+            confirmationTitle: 'Session Expired',
+            confirmationMessage: 'Your session has expired and you will now be redirected to the login page and then redeposit your thesis.',
+            cancelButtonLabel: 'Cancel',
+            confirmButtonLabel: 'Redirect to login'
+        },
         depositFailedMessage: () => ('Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.')
     }
 };

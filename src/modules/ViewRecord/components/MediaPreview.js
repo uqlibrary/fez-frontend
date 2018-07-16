@@ -1,6 +1,6 @@
 import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
-import {locale} from 'locale';
+import locale from 'locale/viewRecord';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import RaisedButton from 'material-ui/RaisedButton';
 

@@ -4,7 +4,7 @@ import {setupCache} from 'axios-cache-adapter';
 import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME, SESSION_USER_GROUP_COOKIE_NAME} from './general';
 import {store} from 'config/store';
 import {logout} from 'actions/account';
-import {locale} from 'locale';
+import locale from 'locale/global';
 
 export const cache = setupCache({
     maxAge: 15 * 60 * 1000,
@@ -27,6 +27,10 @@ export const cache = setupCache({
 export const api = axios.create({
     baseURL: API_URL,
     adapter: process.env.NODE_ENV === 'test' ? undefined : cache.adapter
+});
+
+export const sessionApi = axios.create({
+    baseURL: API_URL,
 });
 
 // need to generate a new token for each request otherwise if you try a new request with the old token,

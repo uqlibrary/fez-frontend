@@ -1,6 +1,6 @@
-import * as actions from '../actions/actionTypes';
+import * as actions from 'actions/actionTypes';
 import exportPublicationsReducer from './exportPublications';
-import {exportFormatToExtension} from '../config/general';
+import {exportFormatToExtension} from 'config/general';
 
 export const initialState = {
     exportPublicationsLoading: false,

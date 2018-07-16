@@ -1,8 +1,8 @@
 import * as actions from './actionTypes';
 import {get, patch} from 'repositories/generic';
-import * as routes from 'repositories/routes';
+import {AUTHORS_SEARCH_API, AUTHOR_API, AUTHOR_ORCID_DETAILS_API} from 'repositories/routes';
 import {pathConfig} from 'config/routes';
-import * as transformers from './transformers';
+import {getAuthorIdentifierOrcidPatchRequest} from './transformers';
 
 /**
  * Returns the authors list based on a query, filtered locally by filterBy function
@@ -14,7 +14,7 @@ export function searchAuthors(query, filterBy) {
     return dispatch => {
         dispatch({type: actions.AUTHORS_LOADING});
 
-        return get(routes.AUTHORS_SEARCH_API({query: query}))
+        return get(AUTHORS_SEARCH_API({query: query}))
             .then(response => {
                 const data = response.data.map((item) => {
                     item.displayName = item.aut_title + ' ' + item.aut_display_name +
@@ -47,7 +47,7 @@ export function updateCurrentAuthor(authorId, data) {
     return dispatch => {
         dispatch({type: actions.CURRENT_AUTHOR_SAVING});
 
-        return patch(routes.AUTHOR_API({authorId}), data)
+        return patch(AUTHOR_API({authorId}), data)
             .then((response) => {
                 dispatch({
                     type: actions.CURRENT_AUTHOR_SAVED,
@@ -88,7 +88,7 @@ export function linkAuthorOrcidId(userId, authorId, orcidCode) {
         };
 
         // get ORCID id for current user
-        return get(routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}))
+        return get(AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}))
             .then((response) => {
                 orcidId = response.orcid;
 
@@ -98,8 +98,8 @@ export function linkAuthorOrcidId(userId, authorId, orcidCode) {
                 }
 
                 // patch author record with corresponding ORCID id
-                const authorPatchRequest = transformers.getAuthorIdentifierOrcidPatchRequest(authorId, orcidId, response);
-                return patch(routes.AUTHOR_API({authorId}), authorPatchRequest);
+                const authorPatchRequest = getAuthorIdentifierOrcidPatchRequest(authorId, orcidId, response);
+                return patch(AUTHOR_API({authorId}), authorPatchRequest);
             })
             .then((response) => {
                 // author details saved successfully

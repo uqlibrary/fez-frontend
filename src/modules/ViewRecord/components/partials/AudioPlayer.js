@@ -4,7 +4,7 @@ import {pathConfig} from 'config/routes';
 import PlayArrow from 'material-ui/svg-icons/av/play-arrow';
 import Pause from 'material-ui/svg-icons/av/pause';
 import IconButton from 'material-ui/IconButton';
-import {locale} from 'locale';
+import locale from 'locale/global';
 
 export default class AudioPlayer extends Component {
     static propTypes = {

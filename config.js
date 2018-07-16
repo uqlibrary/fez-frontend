@@ -15,7 +15,6 @@ const deployment = {
         publicPath: '',
         orcidUrl: 'https://sandbox.orcid.org',
         orcidClientId: 'APP-OXX6M6MBQ77GUVWX',
-        googleMaps: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCD6bOdtlpxFXCj3vrhZkdeSS27HZha7U4&v=3.exp&libraries=geometry,drawing,places'
     },
     staging: {
         url: () => ('https://fez-staging.library.uq.edu.au/'),
@@ -32,7 +31,6 @@ const deployment = {
         publicPath: '/',
         orcidUrl: 'https://sandbox.orcid.org',
         orcidClientId: 'APP-OXX6M6MBQ77GUVWX',
-        googleMaps: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCD6bOdtlpxFXCj3vrhZkdeSS27HZha7U4&v=3.exp&libraries=geometry,drawing,places'
     },
     production: {
         url: () => ('https://espace.library.uq.edu.au/'),
@@ -49,7 +47,6 @@ const deployment = {
         publicPath: '/',
         orcidUrl: 'https://orcid.org',
         orcidClientId: 'APP-UIQ1ZTKAU17ZGZSC',
-        googleMaps: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCD6bOdtlpxFXCj3vrhZkdeSS27HZha7U4&v=3.exp&libraries=geometry,drawing,places'
     }
 };
 

@@ -10,7 +10,7 @@ import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import {StandardRighthandCard} from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
-import {routes} from 'config';
+import {pathConfig} from 'config/routes';
 import {locale} from 'locale';
 
 export default class PossiblyMyRecords extends PureComponent {
@@ -66,7 +66,7 @@ export default class PossiblyMyRecords extends PureComponent {
         // handle browser back button - set state from location/dispatch action for this state
         if (this.props.location !== newProps.location
             && newProps.history.action === 'POP'
-            && newProps.location.pathname === routes.pathConfig.records.possible) {
+            && newProps.location.pathname === pathConfig.records.possible) {
             this.setState({...(!!newProps.location.state ? newProps.location.state : this.initState)}, () => {
                 // only will be called when user clicks back on my records page
                 this.props.actions.searchPossiblyYourPublications({...this.state});
@@ -85,7 +85,7 @@ export default class PossiblyMyRecords extends PureComponent {
 
     pushPageHistory = () => {
         this.props.history.push({
-            pathname: `${routes.pathConfig.records.possible}`,
+            pathname: `${pathConfig.records.possible}`,
             search: `?ts=${Date.now()}`,
             state: {...this.state}
         });
@@ -106,7 +106,7 @@ export default class PossiblyMyRecords extends PureComponent {
     };
 
     _claimPublication = (item) => {
-        this.props.history.push(routes.pathConfig.records.claim);
+        this.props.history.push(pathConfig.records.claim);
         this.props.actions.setClaimPublication(item);
     };
 

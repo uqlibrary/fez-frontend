@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
-import {locale} from 'locale';
-import {routes} from 'config';
+import locale from 'locale/pages';
+import {pathConfig} from 'config/routes';
 
 const DashboardResearcherIds = ({values, authenticated, history}) => {
     const txt = locale.pages.dashboard.header.dashboardResearcherIds;
@@ -19,8 +19,8 @@ const DashboardResearcherIds = ({values, authenticated, history}) => {
             scopus: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier',
             researcher: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier',
             google_scholar: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcher-identifier',
-            // google_scholar: routes.pathConfig.authorIdentifiers.googleScholar.link,
-            orcid: routes.pathConfig.authorIdentifiers.orcid.link
+            // google_scholar: pathConfig.authorIdentifiers.googleScholar.link,
+            orcid: pathConfig.authorIdentifiers.orcid.link
         }
     };
     const navigateToRoute = (event, item) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {locale} from 'locale';
+import locale from 'locale/validationErrors';
 
 // Min Length
 export const maxLength = max => value => value && value.length > max ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;

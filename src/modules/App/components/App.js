@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
 import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
-import {locale} from 'locale';
+import locale from 'locale/global';
 
 // application components
 import AppBar from 'material-ui/AppBar';
@@ -18,7 +18,7 @@ import AppAlertContainer from '../containers/AppAlert';
 import {Meta} from 'modules/SharedComponents/Meta';
 import {OfflineSnackbar} from 'modules/SharedComponents/OfflineSnackbar';
 import {SearchComponent} from 'modules/SharedComponents/SearchComponent';
-
+import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import * as pages from './pages';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
@@ -28,6 +28,7 @@ export default class App extends PureComponent {
         author: PropTypes.object,
         accountLoading: PropTypes.bool,
         accountAuthorLoading: PropTypes.bool,
+        isSessionExpired: PropTypes.bool,
         actions: PropTypes.object,
         location: PropTypes.object,
         history: PropTypes.object.isRequired
@@ -69,6 +70,12 @@ export default class App extends PureComponent {
         this.state.mediaQuery.addListener(this.handleResize);
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.isSessionExpired) {
+            this.sessionExpiredConfirmationBox.showConfirmation();
+        }
+    }
+
     componentWillUnmount() {
         this.state.mediaQuery.removeListener(this.handleResize);
     }
@@ -106,6 +113,10 @@ export default class App extends PureComponent {
             .length > 0
         || (new RegExp(routes.pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname))
     );
+
+    setSessionExpiredConfirmation = (ref) => {
+        this.sessionExpiredConfirmationBox = ref;
+    };
 
     render() {
         // display loader while user account is loading
@@ -236,6 +247,12 @@ export default class App extends PureComponent {
                         }}/>
                 }
                 <div className="content-container" style={containerStyle}>
+                    <ConfirmDialogBox
+                        hideCancelButton
+                        onRef={this.setSessionExpiredConfirmation}
+                        onAction={this.props.actions.logout}
+                        locale={locale.global.sessionExpiredConfirmation}
+                    />
                     {
                         userStatusAlert &&
                         <div className="layout-fill dashAlert">

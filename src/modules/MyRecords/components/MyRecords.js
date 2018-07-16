@@ -7,7 +7,7 @@ import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 
 import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
-import {locale} from 'locale';
+import locale from 'locale/components';
 import {routes, general} from 'config';
 
 export default class MyRecords extends PureComponent {

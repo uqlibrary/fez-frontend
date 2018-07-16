@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
-import * as routes from 'repositories/routes';
+import {EXISTING_RECORD_API} from 'repositories/routes';
 
 /**
  * Load publication
@@ -11,7 +11,7 @@ export function loadRecordToView(pid) {
     return dispatch => {
         dispatch({type: actions.VIEW_RECORD_LOADING});
 
-        return get(routes.EXISTING_RECORD_API({pid: pid}))
+        return get(EXISTING_RECORD_API({pid: pid}))
             .then(response => {
                 dispatch({
                     type: actions.VIEW_RECORD_LOADED,

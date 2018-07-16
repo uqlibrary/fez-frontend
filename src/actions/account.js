@@ -1,7 +1,8 @@
 import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
-import * as routes from 'repositories/routes';
+import {CURRENT_ACCOUNT_API, CURRENT_AUTHOR_API, AUTHOR_DETAILS_API} from 'repositories/routes';
 import Raven from 'raven-js';
+import {sessionApi} from 'config';
 
 /**
  * Loads the user's account and author details into the application
@@ -14,7 +15,7 @@ export function loadCurrentAccount() {
         let currentAuthor = null;
 
         // load UQL account (based on token)
-        return get(routes.CURRENT_ACCOUNT_API())
+        return get(CURRENT_ACCOUNT_API())
             .then(account => {
                 if (account.hasOwnProperty('hasSession') && account.hasSession === true) {
                     if(process.env.ENABLE_LOG) Raven.setUserContext({id: account.id});
@@ -32,7 +33,7 @@ export function loadCurrentAccount() {
 
                 // load current author details (based on token)
                 dispatch({type: actions.CURRENT_AUTHOR_LOADING});
-                return get(routes.CURRENT_AUTHOR_API());
+                return get(CURRENT_AUTHOR_API());
             })
             .then(currentAuthorResponse => {
                 // TODO: to be decommissioned when author/details will become a part of author api
@@ -44,7 +45,7 @@ export function loadCurrentAccount() {
 
                 // load repository author details
                 dispatch({type: actions.CURRENT_AUTHOR_DETAILS_LOADING});
-                return get(routes.AUTHOR_DETAILS_API({userId: currentAuthor.aut_org_username || currentAuthor.aut_student_username}));
+                return get(AUTHOR_DETAILS_API({userId: currentAuthor.aut_org_username || currentAuthor.aut_student_username}));
             })
             .then(authorDetailsResponse => {
                 dispatch({
@@ -70,5 +71,23 @@ export function loadCurrentAccount() {
 export function logout() {
     return dispatch => {
         dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
+    };
+}
+
+/**
+ * @param string reducerToSave
+ */
+export function checkSession(reducerToSave = 'form') {
+    return (dispatch) => {
+        return sessionApi.get(CURRENT_ACCOUNT_API().apiUrl)
+            .then(() => {
+                dispatch({type: actions.CURRENT_ACCOUNT_SESSION_VALID});
+            })
+            .catch(() => {
+                dispatch({
+                    type: actions.CURRENT_ACCOUNT_SESSION_EXPIRED,
+                    payload: reducerToSave
+                });
+            });
     };
 }

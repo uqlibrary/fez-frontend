@@ -1,4 +1,4 @@
-import {accounts, currentAuthor, authorDetails} from '../mock/data/account';
+import {accounts, currentAuthor, authorDetails} from 'mock/data/account';
 
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';

@@ -1,14 +1,14 @@
-import {locale} from 'locale';
+import locale from 'locale/global';
 import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
-import * as routes from 'repositories/routes';
+import {SEARCH_INTERNAL_RECORDS_API, SEARCH_EXTERNAL_RECORDS_API, SEARCH_KEY_LOOKUP_API} from 'repositories/routes';
 import {exportPublications} from './exportPublications';
 
 function getSearch(source, searchQuery) {
     if (source === locale.global.sources.espace.id) {
-        return get(routes.SEARCH_INTERNAL_RECORDS_API({searchQuery: searchQuery, pageSize: 5, sortBy: 'score'}));
+        return get(SEARCH_INTERNAL_RECORDS_API({searchQuery: searchQuery, pageSize: 5, sortBy: 'score'}));
     } else {
-        return get(routes.SEARCH_EXTERNAL_RECORDS_API({source: source, searchQuery: searchQuery}));
+        return get(SEARCH_EXTERNAL_RECORDS_API({source: source, searchQuery: searchQuery}));
     }
 }
 
@@ -97,7 +97,7 @@ export function loadSearchKeyList(searchKey, searchQuery) {
     return dispatch => {
         dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`, payload: searchKey});
 
-        return get(routes.SEARCH_KEY_LOOKUP_API({searchQuery: searchQuery, searchKey: searchKey}))
+        return get(SEARCH_KEY_LOOKUP_API({searchQuery: searchQuery, searchKey: searchKey}))
             .then((response) => {
                 dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`, payload: response.data});
             }, (error) => {
@@ -128,7 +128,7 @@ export function searchEspacePublications(searchParams) {
 
         dispatch({type: actions.SEARCH_LOADING, payload: ''});
 
-        return get(routes.SEARCH_INTERNAL_RECORDS_API({...searchParams, facets: searchParams.activeFacets || {}}))
+        return get(SEARCH_INTERNAL_RECORDS_API({...searchParams, facets: searchParams.activeFacets || {}}))
             .then(response => {
                 dispatch({
                     type: actions.SEARCH_LOADED,
@@ -152,7 +152,7 @@ export function searchEspacePublications(searchParams) {
  * @returns {action}
  */
 export function exportEspacePublications({exportPublicationsFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}, searchQueryParams = {}}) {
-    return exportPublications(routes.SEARCH_INTERNAL_RECORDS_API(
+    return exportPublications(SEARCH_INTERNAL_RECORDS_API(
         {
             exportPublicationsFormat: exportPublicationsFormat,
             page: page,

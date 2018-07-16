@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
-import * as routes from 'repositories/routes';
+import {GET_ACML_QUICK_TEMPLATES_API} from 'repositories/routes';
 
 /**
  * Load a list of file access types from fez, eg open access, embargo, etc
@@ -9,7 +9,7 @@ import * as routes from 'repositories/routes';
 export function loadAcmlQuickTemplates() {
     return dispatch => {
         dispatch({type: actions.ACML_QUICK_TEMPLATES_LOADING});
-        return get(routes.GET_ACML_QUICK_TEMPLATES_API())
+        return get(GET_ACML_QUICK_TEMPLATES_API())
             .then(accessTypes => {
                 dispatch({
                     type: actions.ACML_QUICK_TEMPLATES_LOADED,

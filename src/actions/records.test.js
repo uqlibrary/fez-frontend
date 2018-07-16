@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as recordActions from './records';
-import * as mockData from "../mock/data";
+import * as mockData from "mock/data";
 import {locale} from 'locale';
 
 describe('Record action creators', () => {

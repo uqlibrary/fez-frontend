@@ -1,6 +1,6 @@
 import {post, patch} from 'repositories/generic';
-import * as routes from 'repositories/routes';
-import {putUploadFiles} from '../repositories';
+import {NEW_RECORD_API, EXISTING_RECORD_API, RECORDS_ISSUES_API} from 'repositories/routes';
+import {putUploadFiles} from 'repositories';
 import * as transformers from './transformers';
 import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 import * as actions from './actionTypes';
@@ -41,15 +41,15 @@ export function createNewRecord(data) {
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
         const recordPatch = hasFilesToUpload ? {...transformers.getRecordFileAttachmentSearchKey(data.files.queue)} : null;
 
-        return post(routes.NEW_RECORD_API(), recordRequest)
+        return post(NEW_RECORD_API(), recordRequest)
             .then(response => {
                 // save new record response
                 newRecord = response.data;
                 return response;
             })
             .then(() =>(hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
-            .then(() => (hasFilesToUpload ? patch(routes.EXISTING_RECORD_API({pid: newRecord.rek_pid}), recordPatch) : newRecord))
-            .then(() => (data.comments ? post(routes.RECORDS_ISSUES_API({pid: newRecord.rek_pid}), {issue: 'Notes from creator of the new record: ' +  data.comments}) : newRecord))
+            .then(() => (hasFilesToUpload ? patch(EXISTING_RECORD_API({pid: newRecord.rek_pid}), recordPatch) : newRecord))
+            .then(() => (data.comments ? post(RECORDS_ISSUES_API({pid: newRecord.rek_pid}), {issue: 'Notes from creator of the new record: ' +  data.comments}) : newRecord))
             .then((response) => {
                 dispatch({
                     type: actions.CREATE_RECORD_SUCCESS,
@@ -126,7 +126,7 @@ export function submitThesis(data, author) {
         return putUploadFiles(`UQ:${author.aut_student_username}`, data.files.queue, dispatch)
             .then((response) => {
                 fileUploadSucceeded = !!response;
-                return post(routes.NEW_RECORD_API(), recordRequest);
+                return post(NEW_RECORD_API(), recordRequest);
             })
             .then(response => {
                 // if(process.env.ENABLE_LOG) Raven.captureException('THESIS CREATED', {message: 'Thesis created successfully'});
