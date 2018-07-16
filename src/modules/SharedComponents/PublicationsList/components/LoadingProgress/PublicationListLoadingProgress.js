@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import {PropTypes} from 'prop-types';
 import LinearProgress from 'material-ui/LinearProgress';
 import CircularProgress from 'material-ui/CircularProgress';
-import {locale} from 'locale';
+import locale from 'locale/pages';
 
 export default class PublicationListLoadingProgress extends PureComponent {
     static propTypes = {
