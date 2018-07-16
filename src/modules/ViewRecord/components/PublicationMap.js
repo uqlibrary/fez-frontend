@@ -1,6 +1,5 @@
 import React from 'react';
 import {withScriptjs, withGoogleMap, GoogleMap, Polygon, Marker} from 'react-google-maps/lib';
-import {GOOGLE_MAPS_API_URL} from 'config';
 
 const PublicationMap = withScriptjs(withGoogleMap((props) => {
     const styles = {
@@ -31,8 +30,6 @@ const PublicationMap = withScriptjs(withGoogleMap((props) => {
 
     return (
         <GoogleMap
-            googleMapURL={GOOGLE_MAPS_API_URL}
-            loadingElement={<div className="googleMap loading" />}
             defaultZoom={geoCoords.length === 1 ? pointZoom : polygonZoom}
             defaultCenter={defaultCenter}
             ref={(map) => {map && bounds && geoCoords.length > 1 && map.fitBounds(bounds);}}>
