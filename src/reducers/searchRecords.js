@@ -98,13 +98,18 @@ export const deduplicateResults = (list) => {
                                 ); // returns the lowest valued priority source this record has
                             const itemPriority = locale.global.sources[item.sources[0].source].priority; // items current source priority
 
-                            if (itemPriority < currentItemPriority) {
+                            // prevent duplicate sources
+                            if (!currentItemSources.some((source) => {
+                                return source.source === item.sources[0].source;
+                            })) {
                                 currentItemSources.push(item.sources[0]);
+                            }
+
+                            if (itemPriority < currentItemPriority) {
                                 const itemWithNewSources = {...item};
                                 itemWithNewSources.sources = [...currentItemSources];
                                 return [itemWithNewSources];
                             } else {
-                                currentItemSources.push(item.sources[0]);
                                 currentItem.sources = [...currentItemSources];
                                 return [{...currentItem}];
                             }
@@ -157,6 +162,7 @@ const handlers = {
         const rawSearchQuery = action.payload;
         return {
             ...state,
+            ...initialSearchSources,
             publicationsList: [],
             publicationsListPagingData: {},
             rawSearchQuery: rawSearchQuery,
@@ -230,11 +236,12 @@ const handlers = {
         return {
             ...state,
             searchLoading: true,
-            publicationsList:
-                deduplicateResults([
+            publicationsList: action.payload.data && action.payload.data.length > 0 && action.payload.data[0].currentSource
+                ? deduplicateResults([
                     ...state.publicationsList,
                     ...action.payload.data
-                ]),
+                ])
+                : state.publicationsList,
             ...loadingPublicationSources
         };
     }

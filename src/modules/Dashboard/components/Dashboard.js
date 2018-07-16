@@ -15,8 +15,8 @@ import {MyLatestPublications} from 'modules/SharedComponents/MyLatestPublication
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import {PublicationStats} from 'modules/SharedComponents/PublicationStats';
 
-import {routes} from 'config';
-import {locale} from 'locale';
+import {pathConfig} from 'config/routes';
+import locale from 'locale/pages';
 
 class Dashboard extends PureComponent {
     static propTypes = {
@@ -60,11 +60,11 @@ class Dashboard extends PureComponent {
         }
     }
     _claimYourPublications = () => {
-        this.props.history.push(routes.pathConfig.records.possible);
+        this.props.history.push(pathConfig.records.possible);
     };
 
     _addPublication = () => {
-        this.props.history.push(routes.pathConfig.records.add.find);
+        this.props.history.push(pathConfig.records.add.find);
     };
 
     render() {

@@ -10,6 +10,7 @@ export default class PublicationsListSorting extends PureComponent {
         sortBy: PropTypes.string,
         sortDirection: PropTypes.string,
         pageSize: PropTypes.number,
+        initPageLength: PropTypes.number,
         onPageSizeChanged: PropTypes.func,
         onSortByChanged: PropTypes.func,
         pagingData: PropTypes.shape({
@@ -81,6 +82,13 @@ export default class PublicationsListSorting extends PureComponent {
             );
         }
         const txt = locale.components.sorting;
+        const pageLength = txt.recordsPerPage;
+        if(this.props.initPageLength &&
+            (pageLength.indexOf(this.props.initPageLength) === -1)
+        ) {
+            pageLength.push(this.props.initPageLength);
+            pageLength.sort((a, b) => a - b);
+        }
         return (
             <div className="publicationsListSorting columns is-gapless is-mobile">
                 <div className="column">
@@ -131,7 +139,7 @@ export default class PublicationsListSorting extends PureComponent {
                         onChange={this.pageSizeChanged}
                         floatingLabelText={txt.pageSize}>
                         {
-                            txt.recordsPerPage.map(number => {
+                            pageLength.map(number => {
                                 return (<MenuItem key={`records-per-page-${number}`} value={number} primaryText={number} />);
                             })
                         }

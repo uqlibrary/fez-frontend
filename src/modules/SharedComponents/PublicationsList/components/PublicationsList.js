@@ -26,14 +26,10 @@ export default class PublicationsList extends PureComponent {
         hideCountDiff: false
     };
 
-    constructor(props) {
-        super(props);
-    }
-
     renderPublicationCitation(index, publication) {
         return (
             <PublicationCitation
-                key={index + 1}
+                key={index + publication.rek_title + publication.rek_date}
                 publication={publication}
                 customActions={!publication.rek_pid || this.props.publicationsListSubset.indexOf(publication.rek_pid) === -1 ? this.props.customActions : this.props.subsetCustomActions}
                 showSources={this.props.showSources}

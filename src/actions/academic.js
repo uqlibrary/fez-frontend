@@ -1,14 +1,14 @@
 import * as transformer from './academicDataTransformers';
 import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
-import * as routes from 'repositories/routes';
+import {ACADEMIC_STATS_PUBLICATION_HINDEX_API, AUTHOR_PUBLICATIONS_STATS_ONLY_API} from 'repositories/routes';
 
 export function loadAuthorPublicationsStats(userName) {
     return dispatch => {
         dispatch({type: actions.AUTHOR_PUBLICATIONS_STATS_LOADING});
         let statsData = null;
         let publicationTotalCount = null;
-        return get(routes.AUTHOR_PUBLICATIONS_STATS_ONLY_API({}))
+        return get(AUTHOR_PUBLICATIONS_STATS_ONLY_API({}))
             .then(response => {
                 let data = [];
                 let topPublicationTypes = [];
@@ -40,7 +40,7 @@ export function loadAuthorPublicationsStats(userName) {
                     }
                 });
 
-                return get(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: userName}));
+                return get(ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: userName}));
             })
             .then(response => {
                 if (response && response.hindex_scopus && statsData && statsData.scopus_citation_count_i) {

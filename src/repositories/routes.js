@@ -120,8 +120,8 @@ export const RECORDS_ISSUES_API = ({pid}) => (
 );
 
 // search/list records apis
-export const POSSIBLE_RECORDS_API = ({facets = {}}) => (
-    {apiUrl: 'records/search', options: {params: {rule: 'possible', ...getFacetsParams(facets)}}}
+export const POSSIBLE_RECORDS_API = (values) => (
+    {apiUrl: 'records/search', options: {params: {rule: 'possible', ...getStandardSearchParams(values)}}}
 );
 export const HIDE_POSSIBLE_RECORD_API = () => (
     {apiUrl: 'records/search', options: {params: {rule: 'possible'}}}

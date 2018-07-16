@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
-import * as routes from 'repositories/routes';
+import {VOCABULARIES_API} from 'repositories/routes';
 
 /**
  * Fetches the controlled vocabularies list
@@ -11,7 +11,7 @@ export function loadVocabulariesList(id) {
         dispatch({
             type: `${actions.VOCABULARIES_LOADING}@${id}`
         });
-        return get(routes.VOCABULARIES_API({id: id}))
+        return get(VOCABULARIES_API({id: id}))
             .then(result => {
                 dispatch({
                     type: `${actions.VOCABULARIES_LOADED}@${id}`,

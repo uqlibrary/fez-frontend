@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {locale} from 'locale';
+import locale from 'locale/components';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';

@@ -23,7 +23,6 @@ const PublicationMap = withScriptjs(withGoogleMap((props) => {
     const defaultCenter = {lng: (maxLngPoint + minLngPoint) / 2, lat: (minLatPoint + maxLatPoint) / 2};
     const pointZoom = 7;
     const polygonZoom = 13;
-
     const bounds = new window.google.maps.LatLngBounds();
     geoCoords.map((coord) => {
         bounds.extend(new window.google.maps.LatLng(coord.lat, coord.lng));

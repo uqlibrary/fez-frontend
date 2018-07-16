@@ -7,7 +7,7 @@ import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 
 import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
-import {locale} from 'locale';
+import locale from 'locale/components';
 import {routes, general} from 'config';
 
 export default class MyRecords extends PureComponent {
@@ -171,7 +171,7 @@ export default class MyRecords extends PureComponent {
                 <div className="columns">
                     {
                         // no results to display
-                        !this.props.loadingPublicationsList && this.props.publicationsList.length === 0 &&
+                        !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length === 0 &&
                         <div className="column">
                             <StandardCard {...txt.noResultsFound}>
                                 {txt.noResultsFound.text}
@@ -194,6 +194,7 @@ export default class MyRecords extends PureComponent {
                                 }
                                 {txt.text}
                                 <PublicationsListSorting
+                                    initPageLength={this.initState.pageSize}
                                     sortBy={this.state.sortBy}
                                     sortDirection={this.state.sortDirection}
                                     pageSize={this.state.pageSize}
