@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import {reduxForm, getFormValues, SubmissionError, getFormSyncErrors} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import ThesisSubmission from '../components/ThesisSubmission';
-import {submitThesis, checkSession} from 'actions';
+import {submitThesis, checkSession, clearSessionExpiredFlag} from 'actions';
 import {general} from 'config';
 import {bindActionCreators} from 'redux';
 
@@ -68,7 +68,7 @@ const mapStateToProps = (state, props) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    actions: bindActionCreators({checkSession}, dispatch)
+    actions: bindActionCreators({checkSession, clearSessionExpiredFlag}, dispatch)
 });
 
 ThesisSubmissionContainer = connect(mapStateToProps, mapDispatchToProps)(ThesisSubmissionContainer);

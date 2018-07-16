@@ -91,3 +91,9 @@ export function checkSession(reducerToSave = 'form') {
             });
     };
 }
+
+export function clearSessionExpiredFlag() {
+    return dispatch => {
+        dispatch({type: actions.CLEAR_CURRENT_ACCOUNT_SESSION_FLAG});
+    };
+}
