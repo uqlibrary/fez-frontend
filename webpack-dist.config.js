@@ -141,10 +141,6 @@ const webpackConfig = {
         new UglifyJsPlugin({
             sourceMap: true
         }),
-        // new webpack.optimize.CommonsChunkPlugin({
-        //     name: 'vendor',
-        //     minChunks: Infinity
-        // }),
         new BundleAnalyzerPlugin({
             analyzerMode: config.environment === 'production' ? 'disabled' : 'static',
             openAnalyzer: !process.env.CI_BRANCH
