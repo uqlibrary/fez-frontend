@@ -153,7 +153,6 @@ const webpackConfig = {
     ],
     optimization: {
         splitChunks: {
-            chunks: 'all',
             cacheGroups: {
                 commons: {
                     chunks: 'all'
