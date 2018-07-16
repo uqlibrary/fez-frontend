@@ -104,6 +104,11 @@ const handlers = {
         ...state,
         isSessionExpired: false
     }),
+
+    [actions.CLEAR_CURRENT_ACCOUNT_SESSION_FLAG]: (state) => ({
+        ...state,
+        isSessionExpired: null
+    }),
 };
 
 export default function accountReducer(state = initialState, action) {
