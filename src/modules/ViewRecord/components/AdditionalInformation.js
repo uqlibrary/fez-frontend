@@ -11,6 +11,8 @@ import ViewRecordTableRow from './ViewRecordTableRow';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import {Link} from 'react-router-dom';
+import {GOOGLE_MAPS_API_URL} from 'config/general';
+
 
 export default class AdditionalInformation extends Component {
     static propTypes = {
@@ -163,8 +165,8 @@ export default class AdditionalInformation extends Component {
         }
         return (
             <PublicationMap
-                googleMapURL={process.env.GOOGLE_MAPS_URL}
-                loadingElement={<div style={{height: '100%'}}/>}
+                googleMapURL={GOOGLE_MAPS_API_URL}
+                loadingElement={<div className="googleMap loading" />}
                 containerElement={<div style={{height: '400px'}}/>}
                 mapElement={<div style={{height: '100%'}}/>}
                 coordinates={coordinatesList[0].rek_geographic_area}

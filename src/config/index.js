@@ -9,7 +9,8 @@ export {
     ORCID_CLIENT_ID,
     ORCID_AUTHORIZATION_URL,
     FACET_TYPE_FILTER,
-    FACET_TYPE_RANGE
+    FACET_TYPE_RANGE,
+    GOOGLE_MAPS_API_URL
 } from './general';
 
 export {api, generateCancelToken, cache, sessionApi} from './axios';
