@@ -66,6 +66,7 @@ export default class ThesisSubmission extends Component {
 
     openDepositConfirmation = () => {
         this.depositConfirmationBox.showConfirmation();
+        this.props.actions.clearSessionExpiredFlag();
     };
 
     setDepositConfirmation = (ref) => {

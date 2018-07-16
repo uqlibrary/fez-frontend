@@ -148,4 +148,28 @@ describe('account reducer', () => {
             author: {...testAuthor}
         })
     });
+
+    it('set current user session expired to true', () => {
+        const test = accountReducer(emptyState, {type: 'CURRENT_ACCOUNT_SESSION_EXPIRED'});
+        expect(test).toEqual({
+            ...emptyState,
+            isSessionExpired: true
+        });
+    });
+
+    it('set current user session expired to false', () => {
+        const test = accountReducer(emptyState, {type: 'CURRENT_ACCOUNT_SESSION_VALID'});
+        expect(test).toEqual({
+            ...emptyState,
+            isSessionExpired: false
+        });
+    });
+
+    it('set current user session expired to null', () => {
+        const test = accountReducer(emptyState, {type: 'CLEAR_CURRENT_ACCOUNT_SESSION_FLAG'});
+        expect(test).toEqual({
+            ...emptyState,
+            isSessionExpired: null
+        });
+    });
 });

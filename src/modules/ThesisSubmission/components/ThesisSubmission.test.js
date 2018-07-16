@@ -13,7 +13,8 @@ function setup(testProps, isShallow = true) {
         fileAccessId: testProps.fileAccessId || 3, // PropTypes.number
         actions: {
             logout: jest.fn(),
-            checkSession: jest.fn()
+            checkSession: jest.fn(),
+            clearSessionExpiredFlag: jest.fn()
         },
         ...testProps,
     };
