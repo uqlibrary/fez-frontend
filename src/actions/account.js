@@ -2,6 +2,7 @@ import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
 import {CURRENT_ACCOUNT_API, CURRENT_AUTHOR_API, AUTHOR_DETAILS_API} from 'repositories/routes';
 import Raven from 'raven-js';
+import {sessionApi} from 'config';
 
 /**
  * Loads the user's account and author details into the application
@@ -70,5 +71,23 @@ export function loadCurrentAccount() {
 export function logout() {
     return dispatch => {
         dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
+    };
+}
+
+/**
+ * @param string reducerToSave
+ */
+export function checkSession(reducerToSave = 'form') {
+    return (dispatch) => {
+        return sessionApi.get(CURRENT_ACCOUNT_API().apiUrl)
+            .then(() => {
+                dispatch({type: actions.CURRENT_ACCOUNT_SESSION_VALID});
+            })
+            .catch(() => {
+                dispatch({
+                    type: actions.CURRENT_ACCOUNT_SESSION_EXPIRED,
+                    payload: reducerToSave
+                });
+            });
     };
 }

@@ -28,7 +28,7 @@ export default class RichEditor extends PureComponent {
                     height: this.props.height,
                     pasteFilter: 'semantic-content'
                 },
-                this.props.value
+                !!this.props.value && this.props.value.get('htmlText') || null
             );
 
             if (this.editorInstance) {

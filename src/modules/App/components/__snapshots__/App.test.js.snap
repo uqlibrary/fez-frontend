@@ -318,6 +318,18 @@ exports[`Application component should render alert if user is not fez author 1`]
     className="content-container"
     style={Object {}}
   >
+    <ConfirmDialogBox
+      hideCancelButton={true}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Redirect to login",
+          "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
+          "confirmationTitle": "Session Expired",
+        }
+      }
+      onRef={[Function]}
+    />
     <div
       className="layout-fill dashAlert"
     >
@@ -849,6 +861,18 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     className="content-container"
     style={Object {}}
   >
+    <ConfirmDialogBox
+      hideCancelButton={true}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Redirect to login",
+          "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
+          "confirmationTitle": "Session Expired",
+        }
+      }
+      onRef={[Function]}
+    />
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -1227,6 +1251,18 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     className="content-container"
     style={Object {}}
   >
+    <ConfirmDialogBox
+      hideCancelButton={true}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Redirect to login",
+          "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
+          "confirmationTitle": "Session Expired",
+        }
+      }
+      onRef={[Function]}
+    />
     <div
       className="layout-fill dashAlert"
     >
@@ -1614,6 +1650,18 @@ exports[`Application component should render app for account with fez author wit
     className="content-container"
     style={Object {}}
   >
+    <ConfirmDialogBox
+      hideCancelButton={true}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Redirect to login",
+          "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
+          "confirmationTitle": "Session Expired",
+        }
+      }
+      onRef={[Function]}
+    />
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -2129,6 +2177,18 @@ exports[`Application component should render app for account with fez author wit
     className="content-container"
     style={Object {}}
   >
+    <ConfirmDialogBox
+      hideCancelButton={true}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Redirect to login",
+          "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
+          "confirmationTitle": "Session Expired",
+        }
+      }
+      onRef={[Function]}
+    />
     <div
       className="layout-fill dashAlert"
     >
@@ -2580,6 +2640,18 @@ exports[`Application component should render app for account with fez author wit
     className="content-container"
     style={Object {}}
   >
+    <ConfirmDialogBox
+      hideCancelButton={true}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Redirect to login",
+          "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
+          "confirmationTitle": "Session Expired",
+        }
+      }
+      onRef={[Function]}
+    />
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -3095,6 +3167,18 @@ exports[`Application component should render application with routing for the us
     className="content-container"
     style={Object {}}
   >
+    <ConfirmDialogBox
+      hideCancelButton={true}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Redirect to login",
+          "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
+          "confirmationTitle": "Session Expired",
+        }
+      }
+      onRef={[Function]}
+    />
     <Connect(AppAlert) />
     <div
       className="isLoading is-centered"
@@ -3277,24 +3361,18 @@ exports[`Application component should render for anon user 1`] = `
     className="content-container"
     style={Object {}}
   >
-    <div
-      className="layout-fill dashAlert"
-    >
-      <div
-        className="layout-card"
-      >
-        <Alert
-          action={[Function]}
-          actionButtonLabel="Click to login"
-          allowDismiss={false}
-          dismissTitle="Click to dismiss this alert"
-          message="Login to UQ eSpace for full search results and more services."
-          showLoader={false}
-          title="You are not logged in"
-          type="info_outline"
-        />
-      </div>
-    </div>
+    <ConfirmDialogBox
+      hideCancelButton={true}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Redirect to login",
+          "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
+          "confirmationTitle": "Session Expired",
+        }
+      }
+      onRef={[Function]}
+    />
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -3479,6 +3557,18 @@ exports[`Application component should render thesis submission for HDR without m
     className="content-container"
     style={Object {}}
   >
+    <ConfirmDialogBox
+      hideCancelButton={true}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Redirect to login",
+          "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
+          "confirmationTitle": "Session Expired",
+        }
+      }
+      onRef={[Function]}
+    />
     <Connect(AppAlert) />
     <Switch>
       <Route
