@@ -138,9 +138,6 @@ const webpackConfig = {
         //     }
         // }),
         new InjectPreloader(),
-        new UglifyJsPlugin({
-            sourceMap: true
-        }),
         new BundleAnalyzerPlugin({
             analyzerMode: config.environment === 'production' ? 'disabled' : 'static',
             openAnalyzer: !process.env.CI_BRANCH
@@ -154,7 +151,12 @@ const webpackConfig = {
                     chunks: 'all'
                 }
             }
-        }
+        },
+        minimizer: [
+            new UglifyJsPlugin({
+                sourceMap: true
+            })
+        ]
     },
     module: {
         rules: [
