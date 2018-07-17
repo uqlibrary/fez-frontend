@@ -2,10 +2,9 @@ jest.dontMock('./CitationCounts');
 import CitationCounts from './CitationCounts';
 import {myRecordsList} from 'mock/data';
 
-function setup(testProps, isShallow = true) {
-    // build full props list required by the component
+function setup(testProps, isShallow = false) {
     const props = {
-        publication: {}, // : PropTypes.object.isRequired,
+        publication: testProps.publication || {},
         ...testProps
     };
     return getElement(CitationCounts, props, isShallow);
