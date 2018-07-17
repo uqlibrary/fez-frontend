@@ -154,7 +154,8 @@ const webpackConfig = {
         },
         minimizer: [
             new UglifyJsPlugin({
-                sourceMap: true
+                sourceMap: true,
+                parallel: true
             })
         ]
     },
