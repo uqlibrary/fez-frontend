@@ -4,14 +4,19 @@ import {default as formLocale} from 'locale/publicationForm';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps,
         formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
-        submitting: testProps.submitting || false,
-        submitSucceeded: testProps.submitSucceeded || false,
-        invalid: testProps.invalid || false,
-        pristine: testProps.pristine || false,
-        isHdrThesis: testProps.isHdrThesis || false,
-        fileAccessId: testProps.fileAccessId || 3
+        submitting: testProps.submitting || false, // : PropTypes.bool
+        submitSucceeded: testProps.submitSucceeded || false, // : PropTypes.bool
+        invalid: testProps.invalid || false, // : PropTypes.bool
+        pristine: testProps.pristine || false, // : PropTypes.bool
+        isHdrThesis: testProps.isHdrThesis || false, // : PropTypes.bool
+        fileAccessId: testProps.fileAccessId || 3, // PropTypes.number
+        actions: {
+            logout: jest.fn(),
+            checkSession: jest.fn(),
+            clearSessionExpiredFlag: jest.fn()
+        },
+        ...testProps,
     };
 
     return getElement(ThesisSubmission, props, isShallow);
@@ -107,5 +112,4 @@ describe('ThesisSubmission test', () => {
         wrapper.instance().openDepositConfirmation();
         expect(testMethod).toHaveBeenCalled();
     });
-
 });

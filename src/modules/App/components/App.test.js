@@ -59,7 +59,7 @@ describe('Application component', () => {
     });
 
     it('should render for anon user', () => {
-        const wrapper = setup({});
+        const wrapper = setup({location: {pathname: '/'}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

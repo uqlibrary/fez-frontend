@@ -29,6 +29,10 @@ export const api = axios.create({
     adapter: process.env.NODE_ENV === 'test' ? undefined : cache.adapter
 });
 
+export const sessionApi = axios.create({
+    baseURL: API_URL,
+});
+
 // need to generate a new token for each request otherwise if you try a new request with the old token,
 // axios will appear to cancel your request automatically
 export const generateCancelToken = () => {

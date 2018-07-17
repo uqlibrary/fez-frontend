@@ -17,7 +17,8 @@ export default class ListsEditor extends Component {
         hideReorder: PropTypes.bool,
         distinctOnly: PropTypes.bool,
         errorText: PropTypes.string,
-        remindToAdd: PropTypes.bool
+        remindToAdd: PropTypes.bool,
+        input: PropTypes.object
     };
 
     static defaultProps = {
@@ -34,7 +35,7 @@ export default class ListsEditor extends Component {
         super(props);
 
         this.state = {
-            itemList: []
+            itemList: props.input && props.input.name && props.input.value ? props.input.value.toJS().map(item => item[props.searchKey.value]) : []
         };
     }
 

@@ -15,7 +15,6 @@ import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
 import {api} from 'config';
-// import GoogleClient from 'jest-googleapi-mock';
 
 const setupStoreForActions = () => {
     const middlewares = [thunk];

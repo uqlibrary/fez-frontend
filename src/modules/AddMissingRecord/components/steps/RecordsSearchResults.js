@@ -20,8 +20,8 @@ const PublicationListLoadingProgress = (componentProps) => (
         componentProps={componentProps} />
 );
 
-import {routes} from 'config';
-import {locale} from 'locale';
+import {pathConfig} from 'config/routes';
+import locale from 'locale/pages';
 
 export default class RecordsSearchResults extends PureComponent {
     static propTypes = {
@@ -38,22 +38,18 @@ export default class RecordsSearchResults extends PureComponent {
         loadingPublicationSources: {}
     };
 
-    constructor(props) {
-        super(props);
-    }
-
     _showNewRecordForm = () => {
-        this.props.history.push(routes.pathConfig.records.add.new);
+        this.props.history.push(pathConfig.records.add.new);
     };
 
     _cancelWorkflow = () => {
-        this.props.history.push(routes.pathConfig.records.add.find);
+        this.props.history.push(pathConfig.records.add.find);
     };
 
     _claimPublication = (item) => {
         this.props.actions.setClaimPublication(item);
-        this.props.actions.setRedirectPath(routes.pathConfig.records.add.find);
-        this.props.history.push(routes.pathConfig.records.claim);
+        this.props.actions.setRedirectPath(pathConfig.records.add.find);
+        this.props.history.push(pathConfig.records.claim);
     };
 
     getUnclaimablePublicationsList = (publicationsList) => {
