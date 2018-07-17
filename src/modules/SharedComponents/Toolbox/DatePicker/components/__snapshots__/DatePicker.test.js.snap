@@ -19,7 +19,7 @@ exports[`Component DatePicker should render as expected 1`] = `
     onChange={[Function]}
     openToYearSelection={false}
     style={Object {}}
-    value={2018-07-17T00:56:46.360Z}
+    value={2018-07-17T02:46:36.535Z}
   />
 </div>
 `;
