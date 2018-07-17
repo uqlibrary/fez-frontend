@@ -24,6 +24,7 @@ const PublicationMap = withScriptjs(withGoogleMap((props) => {
     const pointZoom = 7;
     const polygonZoom = 13;
     const bounds = new window.google.maps.LatLngBounds();
+    console.log('bounds', bounds);
     geoCoords.map((coord) => {
         bounds.extend(new window.google.maps.LatLng(coord.lat, coord.lng));
     });

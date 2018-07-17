@@ -1,27 +1,23 @@
-import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import FreeTextForm from './FreeTextForm';
 
-function setup({onAdd, isValid, disabled}){
-
+function setup(testProps, isShallow = true) {
     const props = {
-        onAdd: onAdd || jest.fn(), // : PropTypes.func.isRequired,
-        isValid: isValid || jest.fn(() => ('')), // PropTypes.func,
-        disabled // : PropTypes.bool
-        //locale, // : PropTypes.object,
+        ...testProps,
+        onAdd: testProps.onAdd || jest.fn(),
+        isValid: testProps.isValid || jest.fn(() => ('')),
+        disabled: testProps.disabled || false
     };
-    return shallow(<FreeTextForm {...props} />);
+    return getElement(FreeTextForm, props, isShallow);
 }
 
 describe('FreeTextForm tests ', () => {
     it('rendering active form', () => {
-        const wrapper = setup({ });
+        const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('rendering disabled form', () => {
-        const wrapper = setup({ disabled: true });
+        const wrapper = setup({disabled: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

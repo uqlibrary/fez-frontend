@@ -1,9 +1,5 @@
-jest.dontMock('./PublicationsListSorting');
-
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import PublicationsListSorting from './PublicationsListSorting';
-import {exportFormatToExtension} from '../../../../config/general';
+import {exportFormatToExtension} from 'config/general';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -26,10 +22,6 @@ function setup(testProps, isShallow = true) {
 
     return getElement(PublicationsListSorting, props, isShallow);
 }
-
-beforeAll(() => {
-
-});
 
 describe('PublicationsListSorting renders ', () => {
     it('component with empty paging data', () => {

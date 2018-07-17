@@ -8,17 +8,13 @@ window.CKEDITOR = {
     })
 };
 
-jest.mock('ckeditor', () => ({
-}));
+jest.mock('ckeditor', () => ({}));
 
 function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
-        // value: PropTypes.any,
-        // className: PropTypes.string,
         onChange: testProps.onChange || jest.fn(), // PropTypes.func.isRequired,
         disabled: testProps.disabled || false,
-        // height: PropTypes.number
     };
 
     return getElement(RichEditor, props, isShallow);

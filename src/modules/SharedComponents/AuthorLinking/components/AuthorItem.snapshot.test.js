@@ -1,56 +1,51 @@
-jest.dontMock('./AuthorItem');
-
-import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import AuthorItem from './AuthorItem';
 
-function setup({author, index}, boolProps, onAuthorSelected){
+function setup(testProps, isShallow = true) {
+    // build full props list required by the component
     const props = {
-        author: author || {rek_author: 'Test user'},
-        index: index || 0,
-        ...boolProps,
-        onAuthorSelected: onAuthorSelected || undefined,
-        type: 'author'
+        author: testProps.author || {rek_author: 'Test user'},
+        index: testProps.index || 0,
+        onAuthorSelected: testProps.onAuthorSelected || undefined,
+        type: 'author',
+        ...testProps
     };
-
-    return shallow(<AuthorItem {...props} />);
+    return getElement(AuthorItem, props, isShallow);
 }
 
 describe('AuthorItem renders ', () => {
     it('should be unselected and able to select author', () => {
-        const wrapper = setup({}, {linked: false});
+        const wrapper = setup({linked: false});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should be selected', () => {
-        const wrapper = setup({}, {selected: true, linked: false});
+        const wrapper = setup({selected: true, linked: false});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should be disabled', () => {
-        const wrapper = setup({}, {disabled: true});
+        const wrapper = setup({disabled: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should be linked and disabled', () => {
-        const wrapper = setup({}, {disabled: true, linked: false});
+        const wrapper = setup({disabled: true, linked: false});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should be selected and disabled', () => {
-        const wrapper = setup({}, {disabled: true, selected: true, linked: false});
+        const wrapper = setup({disabled: true, selected: true, linked: false});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should be linked', () => {
-        const wrapper = setup({}, {linked: true});
+        const wrapper = setup({linked: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should call onAuthorSelected', () => {
         const onAuthorSelected = jest.fn();
-        const wrapper = setup({}, {linked: false}, onAuthorSelected);
+        const wrapper = setup({linked: false, onAuthorSelected: onAuthorSelected});
         wrapper.instance()._selectAuthor();
         expect(onAuthorSelected).toHaveBeenCalled();
     })

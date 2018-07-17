@@ -1,0 +1,25 @@
+import Masquerade from './Masquerade';
+
+function setup(testProps, isShallow = true) {
+    const props = {
+        ...testProps,
+        author: testProps.author || null,
+        actions: testProps.actions || {
+
+        },
+        history: testProps.history || {
+            push: jest.fn()
+        }
+    };
+    return getElement(Masquerade, props, isShallow);
+}
+
+describe('Component Masquerade', () => {
+
+    it('Should render form as expected', () => {
+       const props = {};
+       const wrapper = setup({...props});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+});
