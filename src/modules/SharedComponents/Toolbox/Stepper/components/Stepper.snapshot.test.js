@@ -6,9 +6,10 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('Add record stepper tests', () => {
-    it('should render steps and activate step 2', () => {
+
+    it('should render steps and activate step 1', () => {
         const values = {
-            activeStep: 1,
+            activeStep: 0,
             steps: [
                 {label: 'Step 1'},
                 {label: 'Step 2'},
@@ -19,9 +20,9 @@ describe('Add record stepper tests', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render steps and activate step 1', () => {
+    it('should render steps and activate step 2', () => {
         const values = {
-            activeStep: 0,
+            activeStep: 1,
             steps: [
                 {label: 'Step 1'},
                 {label: 'Step 2'},
@@ -43,5 +44,21 @@ describe('Add record stepper tests', () => {
         };
         const wrapper = setup(values);
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render steps and activate step 3', () => {
+        const values = {
+            activeStep: 0,
+            steps: [
+                {label: 'Step 1'},
+                {label: 'Step 2'},
+                {label: 'Step 3'}
+            ]
+        };
+        const wrapper = setup(values);
+        const shouldUpdate = wrapper.instance().shouldComponentUpdate({...values, activeStep: 1});
+        expect(shouldUpdate).toBe(true);
+        const shouldUpdate2 = wrapper.instance().shouldComponentUpdate({...values, activeStep: 0});
+        expect(shouldUpdate2).toBe(false);
     });
 });

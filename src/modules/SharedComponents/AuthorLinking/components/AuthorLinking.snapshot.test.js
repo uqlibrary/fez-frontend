@@ -1,8 +1,3 @@
-jest.dontMock('./AuthorLinking');
-
-import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import AuthorLinking from './AuthorLinking';
 
 const contributorProps = {

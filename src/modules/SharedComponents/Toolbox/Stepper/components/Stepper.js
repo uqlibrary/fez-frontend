@@ -9,6 +9,8 @@ export default class CustomStepper extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
+        console.log('nextProps.activeStep', nextProps.activeStep);
+        console.log('this.props.activeStep', this.props.activeStep);
         return nextProps.activeStep !== this.props.activeStep
         || nextProps.steps !== this.props.steps;
     }

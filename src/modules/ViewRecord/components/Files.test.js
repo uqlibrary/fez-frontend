@@ -1,8 +1,5 @@
 import {journalArticle} from 'mock/data/testing/records';
 import files from "./Files";
-import PropTypes from "prop-types";
-
-const moment = require('moment');
 
 function setup(testProps, isShallow = true){
     const props = {
