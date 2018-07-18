@@ -6,7 +6,6 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const autoprefixer = require('autoprefixer');
 // const OfflinePlugin = require('offline-plugin'); // turn off for staging while co-existing with legacy
 const InjectPreloader = require('preloader-html-webpack-plugin');
 const chalk = require('chalk');
