@@ -13,4 +13,4 @@ Disallow: /community/
 Disallow: /flviewer/
 Disallow: /records/search
 
-Sitemap: http://espace.library.uq.edu.au/sitemap/sitemap-index.xml
+Sitemap: https://espace.library.uq.edu.au/sitemap/sitemap-index.xml
