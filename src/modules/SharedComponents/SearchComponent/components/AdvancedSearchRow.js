@@ -1,13 +1,11 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
 import Close from 'material-ui/svg-icons/navigation/close';
 import {locale} from 'locale';
-import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
-
+import AdvancedSearchRowInput from './AdvancedSearchRowInput';
 
 export default class AdvancedSearchRow extends PureComponent {
     static propTypes = {
@@ -35,18 +33,6 @@ export default class AdvancedSearchRow extends PureComponent {
         // If the input value is empty and select value = 0 then show an error
         if (this.props.searchField === '0' && !this.props.value) {
             return locale.validationErrors.advancedSearchSelectionRequired;
-        }
-        return null;
-    };
-
-    searchTextValidationMessage = (value) => {
-        if (value.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
-            return locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH);
-        }
-        // Check if the searchField has a minLength, and apply the validation
-        const txt = locale.components.searchComponent.advancedSearch;
-        if(txt.fieldTypes[this.props.searchField].minLength && value.trim().length < txt.fieldTypes[this.props.searchField].minLength) {
-            return locale.validationErrors.minLength.replace('[min]', txt.fieldTypes[this.props.searchField].minLength);
         }
         return null;
     };
@@ -81,18 +67,20 @@ export default class AdvancedSearchRow extends PureComponent {
                         : <div className="column is-narrow spacer" />
                 }
                 <div className={`column input ${(this.props.rowIndex === 0) ? 'is-12-mobile' : 'is-11-mobile'}`}>
-                    <TextField
-                        type="search"
-                        name={`textSearchField${this.props.rowIndex}`}
-                        id="searchField"
-                        fullWidth
-                        hintText={txt.fieldTypes[this.props.searchField].hint}
-                        aria-label={txt.fieldTypes[this.props.searchField].hint}
-                        value={this.props.value}
-                        onChange={this._handleTextChange}
-                        errorText={this.searchTextValidationMessage(this.props.value)}
-                        disabled={this.props.searchField === '0'}
-                    />
+                    <AdvancedSearchRowInput {...this.props} inputField={txt.fieldTypes[this.props.searchField]}>
+                        {
+                            (InputComponent, inputProps) => (<InputComponent
+                                type="search"
+                                name={`searchField${this.props.rowIndex}`}
+                                id="searchField"
+                                fullWidth
+                                value={this.props.value}
+                                onChange={this._handleTextChange}
+                                disabled={this.props.searchField === '0'}
+                                {...inputProps}
+                            />)
+                        }
+                    </AdvancedSearchRowInput>
                 </div>
                 {
                     this.props.rowIndex !== 0 &&

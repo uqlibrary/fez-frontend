@@ -818,20 +818,31 @@ export default {
                     '0': {
                         title: 'Select a field',
                         combiner: null,
-                        hint: 'Select a field to search on'
+                        type: 'TextField',
+                        hint: 'Select a field to search on',
+                        validation: []
                     },
                     'all': {
                         title: 'Any field',
                         combiner: 'contains',
                         type: 'TextField',
-                        hint: 'Add some text to search all fields with'
+                        hint: 'Add some text to search all fields with',
+                        validation: ['maxLength500']
                     },
                     'title': {
                         title: 'Title',
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a title to search',
-                        minLength: 10
+                        validation: ['maxLength500', 'minLength10'],
+                        minLength: 10   // Kept to check overall advanced search component is valid or not
+                    },
+                    'rek_pid': {
+                        title: 'PID',
+                        combiner: 'is',
+                        type: 'TextField',
+                        hint: 'Add a PID to search',
+                        validation: []
                     }
                 },
                 openAccess: {

@@ -51,20 +51,4 @@ describe('AdvancedSearchRow', () => {
         wrapper.instance()._deleteRow();
         expect(testFn).toHaveBeenCalledWith(3);
     });
-
-    it('searchTextValidationMessage() should return a message for being too long', () => {
-        const wrapper = setup({});
-        wrapper.setState({searchText: 'this is way too long'});
-        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
-        wrapper.update();
-        expect(wrapper.instance().searchTextValidationMessage(wrapper.state().searchText)).toEqual('Must be 5 characters or less');
-    });
-
-    it('searchTextValidationMessage() should return false for being fine', () => {
-        const wrapper = setup({});
-        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 20;
-        wrapper.setState({searchText: 'this is fine'});
-        wrapper.update();
-        expect(wrapper.instance().searchTextValidationMessage(wrapper.state().searchText)).toEqual(null);
-    });
 });

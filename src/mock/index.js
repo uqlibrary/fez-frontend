@@ -127,6 +127,11 @@ mock
             // return [200, mockData.internalTitleSearchListNoResults];
             return [200, mockData.internalTitleSearchList];
         }
+        // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams}
+        else if (config.params.key.id || config.params.key.doi || config.params.key.title || config.params.key.all || config.params.key.rek_title) {
+            // return [200, mockData.internalTitleSearchListNoResults];
+            return [200, mockData.internalTitleSearchList];
+        }
         return [404, ['Request not found']];
     })
     .onGet(routes.AUTHOR_TRENDING_PUBLICATIONS_API().apiUrl)

@@ -144,7 +144,7 @@ export const SEARCH_INTERNAL_RECORDS_API = (values, route = 'search') => {
             params: {
                 ...getSearchType(values.searchQuery),
                 ...getStandardSearchParams(values),
-                ...values.searchQueryParams
+                ...(values.searchMode === 'advanced' ? {key: values.searchQueryParams} : values.searchQueryParams)
             }
         }
     };
