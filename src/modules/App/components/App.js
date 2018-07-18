@@ -43,7 +43,7 @@ export default class App extends PureComponent {
         this.state = {
             menuDrawerOpen: false,
             docked: false,
-            mediaQuery: window.matchMedia('(min-width: 1280px)'),
+            mediaQuery: window.matchMedia('(min-width: 1200px)'),
             isMobile: window.matchMedia('(max-width: 720px)').matches,
         };
     }
@@ -119,7 +119,6 @@ export default class App extends PureComponent {
     };
 
     render() {
-        // display loader while user account is loading
         if (this.props.accountLoading) {
             return (
                 <div className="layout-fill">

@@ -30,9 +30,18 @@ export class ContributorsEditor extends PureComponent {
     };
 
     constructor(props) {
+        const contributors = () => {
+            if (props.input && props.input.name && props.input.value) {
+                if(props.input.value.isIterable()) {
+                    return props.input.value.toJS();
+                }
+                return props.input.value;
+            }
+            return [];
+        };
         super(props);
         this.state = {
-            contributors: props.input && props.input.name && props.input.value ? props.input.value.toJS() : [],
+            contributors: contributors(),
             isCurrentAuthorSelected: false,
             errorMessage: ''
         };

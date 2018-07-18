@@ -12,6 +12,7 @@
 @import 'muifixes';
 
 html, body {
+  overflow: hidden;
   padding: 0;
   margin: 0;
   position: relative;
@@ -64,21 +65,21 @@ html, body {
 // The container which houses content
 .content-container {
   width: 100%;
+  height: calc(100% - 75px);
+  overflow-y: auto;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding-top: 99px;
-  @include mobile {
-    padding-top: 86px !important;
-  }
+  margin-top: 75px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 
   .body-1 {
-    padding: 0 24px 24px 24px !important;
+    padding: 12px 24px 24px 24px !important;
   }
   > *:first-child {
     margin: 0;
     width: 100%;
     max-height: 100%;
-    height: 100%;
   }
 }
