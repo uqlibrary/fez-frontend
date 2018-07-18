@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function StandardPage({title, className, children}) {
     return (
-        <div className={`${className}`}>
+        <div className={`${className || ''} pageContent`}>
             {title &&
                 <h1 className="pageTitle">{title}</h1>
             }

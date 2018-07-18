@@ -1,10 +1,5 @@
 @import './variables';
 
-// Force scrollbar to appear to stop media queries causing loops
-html {
-  overflow-y: scroll;
-}
-
 // An MUI override to make form labels WCAG AA compliant
 label {
   color: $label-color !important;
