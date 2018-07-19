@@ -20,6 +20,9 @@ const options = {
         {
             userAgent: "*",
             crawlDelay: 10,
+            allow: [
+                "/data/*?*Signature=*&Key-Pair-Id=*"
+            ],
             disallow: [
                 "/login.php",
                 "/stat_details.php",
@@ -32,11 +35,13 @@ const options = {
                 "/collection/",
                 "/community/",
                 "/flviewer/",
-                "/records/search"
+                "/records/search",
+                "/documentation/",
+                "/data/"
             ],
         }
     ],
-    sitemap: "http://espace.library.uq.edu.au/sitemap/sitemap-index.xml"
+    sitemap: "https://espace.library.uq.edu.au/sitemap/sitemap-index.xml"
 }
 
 // get branch name for current build, if running build locally CI_BRANCH is not set (it's set in codeship)
