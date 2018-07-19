@@ -834,7 +834,7 @@ export default {
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a title to search',
-                        validation: ['isValidPublicationTitle'],
+                        validation: ['maxLength500', 'minLength10'],
                         minLength: 10   // Kept to check overall advanced search component is valid or not
                     },
                     'rek_pid': {

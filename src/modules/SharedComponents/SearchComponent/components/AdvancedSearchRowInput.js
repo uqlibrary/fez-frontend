@@ -5,7 +5,7 @@ import * as validationRules from 'config/validation';
 
 class AdvancedSearchRowInput extends PureComponent {
     static propTypes = {
-        children: PropTypes.func,
+        children: PropTypes.func.isRequired,
         value: PropTypes.any,
         inputField: PropTypes.shape({
             type: PropTypes.string.isRequired,

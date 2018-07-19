@@ -37,6 +37,17 @@ export default class AdvancedSearchRow extends PureComponent {
         return null;
     };
 
+    renderInputComponentAndProps = () => (InputComponent, inputProps) => (<InputComponent
+        type="search"
+        name={`searchField${this.props.rowIndex}`}
+        id="searchField"
+        fullWidth
+        value={this.props.value}
+        onChange={this._handleTextChange}
+        disabled={this.props.searchField === '0'}
+        {...inputProps}
+    />);
+
     render() {
         const txt = locale.components.searchComponent.advancedSearch;
         return (
@@ -69,16 +80,7 @@ export default class AdvancedSearchRow extends PureComponent {
                 <div className={`column input ${(this.props.rowIndex === 0) ? 'is-12-mobile' : 'is-11-mobile'}`}>
                     <AdvancedSearchRowInput {...this.props} inputField={txt.fieldTypes[this.props.searchField]}>
                         {
-                            (InputComponent, inputProps) => (<InputComponent
-                                type="search"
-                                name={`searchField${this.props.rowIndex}`}
-                                id="searchField"
-                                fullWidth
-                                value={this.props.value}
-                                onChange={this._handleTextChange}
-                                disabled={this.props.searchField === '0'}
-                                {...inputProps}
-                            />)
+                            this.renderInputComponentAndProps()
                         }
                     </AdvancedSearchRowInput>
                 </div>
