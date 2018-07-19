@@ -829,12 +829,12 @@ export default {
                         hint: 'Add some text to search all fields with',
                         validation: ['maxLength500']
                     },
-                    'title': {
+                    'rek_title': {
                         title: 'Title',
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a title to search',
-                        validation: ['maxLength500', 'minLength10'],
+                        validation: ['isValidPublicationTitle'],
                         minLength: 10   // Kept to check overall advanced search component is valid or not
                     },
                     'rek_pid': {

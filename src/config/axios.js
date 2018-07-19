@@ -5,6 +5,7 @@ import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME, SESSION_USER_GROUP_COOKIE_NAME
 import {store} from 'config/store';
 import {logout} from 'actions/account';
 import locale from 'locale/global';
+import param from 'can-param';
 
 export const cache = setupCache({
     maxAge: 15 * 60 * 1000,
@@ -55,6 +56,11 @@ api.isCancel = axios.isCancel; // needed for cancelling requests and the instanc
 let isGet = null;
 api.interceptors.request.use(request => {
     isGet = request.method === 'get';
+    if (request.url.includes('records/search') && !!request.params && !!request.params.mode && request.params.mode === 'advanced') {
+        request.paramsSerializer = (params) => {
+            return param(params);
+        };
+    }
     return request;
 });
 
