@@ -834,7 +834,7 @@ export default {
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a title to search',
-                        validation: ['maxLength500', 'minLength10'],
+                        validation: ['maxLength255', 'minLength10'],
                         minLength: 10   // Kept to check overall advanced search component is valid or not
                     },
                     'rek_pid': {
@@ -843,6 +843,13 @@ export default {
                         type: 'TextField',
                         hint: 'Add a PID to search',
                         validation: []
+                    },
+                    'rek_author': {
+                        title: 'Author Name',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add an author name to search',
+                        validation: ['maxLength255']
                     }
                 },
                 openAccess: {
