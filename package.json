@@ -79,6 +79,7 @@
     "js-cookie": "^2.2.0",
     "load-script": "^1.0.0",
     "material-ui": "0.20.1",
+    "mockdate": "^2.0.2",
     "moment": "^2.22.1",
     "moment-timezone": "^0.5.16",
     "prop-types": "^15.6.0",

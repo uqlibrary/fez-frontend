@@ -1,12 +1,8 @@
-jest.dontMock('./PartialDateField');
-
-import {shallow} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import PartialDateField from './PartialDateField';
 
-function setup(props) {
-    return shallow(<PartialDateField {...props} />);
+function setup(testProps, isShallow = true) {
+    const props = {...testProps};
+    return getElement(PartialDateField, props, isShallow);
 }
 
 describe('Redux-form Field PartialDateField snapshots tests', () => {

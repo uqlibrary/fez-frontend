@@ -1,12 +1,9 @@
-jest.dontMock('../components/Alert');
-
-import {shallow} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import Alert from '../components/Alert';
 
-function setup({...props}) {
-    return shallow(<Alert {...props} />);
+function setup(testProps, isShallow = true) {
+    // build full props list required by the component
+    const props = {...testProps};
+    return getElement(Alert, props, isShallow);
 }
 
 describe('Alert snapshots test', () => {

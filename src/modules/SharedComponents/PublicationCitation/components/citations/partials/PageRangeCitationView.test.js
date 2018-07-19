@@ -1,36 +1,14 @@
-jest.dontMock('./PageRangeCitationView');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import PageRangeCitationView from './PageRangeCitationView';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-
 import {conferencePaper} from 'mock/data/testing/records';
 
-function setup({publication, isShallow = false}) {
+function setup(testProps, isShallow = true) {
+    // build full props list required by the component
     const props = {
-        publication: publication || {}, // : PropTypes.object.isRequired,
+        ...testProps,
+        publication: testProps.publication || {}
     };
-
-    if (isShallow) {
-        return shallow(<PageRangeCitationView {...props} />);
-    }
-
-    return mount(<PageRangeCitationView {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+    return getElement(PageRangeCitationView, props, isShallow);
 }
-
-beforeAll(() => {
-    
-});
 
 describe('PageRangeCitationView test ', () => {
     it('should render nothing if search key not found', () => {

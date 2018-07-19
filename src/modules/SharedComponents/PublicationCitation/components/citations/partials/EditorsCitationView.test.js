@@ -1,36 +1,12 @@
-jest.dontMock('./EditorsCitationView');
-jest.dontMock('./AuthorsCitationView');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import EditorsCitationView from './EditorsCitationView';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
 
-
-function setup({publication, isShallow = false}) {
+function setup(testProps, isShallow = true) {
     const props = {
-        publication: publication || {}, // : PropTypes.object.isRequired,
+        ...testProps,
+        publication: testProps.publication || {},
     };
-
-    if(isShallow) {
-        return shallow(<EditorsCitationView {...props} />);
-    }
-
-    return mount(<EditorsCitationView {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+    return getElement(EditorsCitationView, props, isShallow);
 }
-
-beforeAll(() => {
-    
-});
 
 describe('EditorsCitationView test ', () => {
     it('should render component with no contributors', () => {

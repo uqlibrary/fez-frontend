@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`NavigationDialogBox component should not render 1`] = `<span />`;
+
 exports[`NavigationDialogBox component should render 1`] = `
 <NavigationDialogBox
   txt={
@@ -11,5 +13,136 @@ exports[`NavigationDialogBox component should render 1`] = `
     }
   }
   when={true}
-/>
+>
+  <withRouter(NavigationPrompt)
+    when={true}
+  >
+    <Route>
+      <NavigationPrompt
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "testKey",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+        location={
+          Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          }
+        }
+        match={
+          Object {
+            "isExact": true,
+            "params": Object {},
+            "path": "/",
+            "url": "/",
+          }
+        }
+        when={true}
+      >
+        <div>
+          <ConfirmDialogBox
+            hideCancelButton={false}
+            locale={
+              Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure?",
+                "confirmationTitle": "Confirmation",
+              }
+            }
+            onAction={[Function]}
+            onCancelAction={[Function]}
+            onRef={[Function]}
+          >
+            <Dialog
+              actions={
+                Array [
+                  <div
+                    className="columns dialog-actions ConfirmDialogBox-actions"
+                  >
+                    <div
+                      className="column is-hidden-mobile"
+                    />
+                    <div
+                      className="column is-narrow"
+                    >
+                      <RaisedButton
+                        className="ConfirmDialogBox-actions-cancel"
+                        disabled={false}
+                        fullWidth={true}
+                        label="No"
+                        labelPosition="after"
+                        onClick={[Function]}
+                        primary={false}
+                        secondary={false}
+                      />
+                    </div>
+                    <div
+                      className="column is-narrow"
+                    >
+                      <RaisedButton
+                        className="ConfirmDialogBox-actions-confirm"
+                        disabled={false}
+                        fullWidth={true}
+                        keyboardFocused={true}
+                        label="Yes"
+                        labelPosition="after"
+                        onClick={[Function]}
+                        primary={false}
+                        secondary={true}
+                      />
+                    </div>
+                    <div
+                      className="is-clearfix"
+                    />
+                  </div>,
+                ]
+              }
+              autoDetectWindowHeight={true}
+              autoScrollBodyContent={false}
+              modal={true}
+              open={false}
+              repositionOnUpdate={true}
+              title="Confirmation"
+            >
+              <RenderToLayer
+                open={true}
+                render={[Function]}
+                useLayerForClickAway={false}
+              />
+            </Dialog>
+          </ConfirmDialogBox>
+        </div>
+      </NavigationPrompt>
+    </Route>
+  </withRouter(NavigationPrompt)>
+</NavigationDialogBox>
 `;
