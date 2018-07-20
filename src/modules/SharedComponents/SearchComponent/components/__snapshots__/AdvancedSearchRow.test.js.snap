@@ -139,7 +139,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         focusState="none"
         insetChildren={false}
         key="rek_contributor"
-        primaryText="Editor/Contributor Name"
+        primaryText="Editor/Contributor"
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -213,6 +213,28 @@ exports[`AdvancedSearchRow should render default view 1`] = `
           }
         }
         value="rek_conference_name"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_book_title"
+        primaryText="Book Title"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_book_title"
       />
     </SelectField>
   </div>
@@ -382,7 +404,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
         focusState="none"
         insetChildren={false}
         key="rek_contributor"
-        primaryText="Editor/Contributor Name"
+        primaryText="Editor/Contributor"
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -456,6 +478,28 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           }
         }
         value="rek_conference_name"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_book_title"
+        primaryText="Book Title"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_book_title"
       />
     </SelectField>
   </div>
@@ -636,7 +680,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         focusState="none"
         insetChildren={false}
         key="rek_contributor"
-        primaryText="Editor/Contributor Name"
+        primaryText="Editor/Contributor"
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -710,6 +754,28 @@ exports[`AdvancedSearchRow should render search field row with select field and 
           }
         }
         value="rek_conference_name"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_book_title"
+        primaryText="Book Title"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_book_title"
       />
     </SelectField>
   </div>
