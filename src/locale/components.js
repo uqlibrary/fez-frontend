@@ -857,6 +857,13 @@ export default {
                         type: 'TextField',
                         hint: 'Add an editor/contributor name to search',
                         validation: ['maxLength255']
+                    },
+                    'rek_series': {
+                        title: 'Series',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add an series name to search',
+                        validation: ['maxLength500']
                     }
                 },
                 openAccess: {
