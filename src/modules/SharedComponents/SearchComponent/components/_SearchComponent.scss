@@ -205,7 +205,7 @@
     }
     .column.combiner {
       overflow: hidden;
-      min-width: 76px !important;
+      //min-width: 76px !important;
       @include mobile {
         text-align: right !important;
         margin: 0 0 0 12px !important;

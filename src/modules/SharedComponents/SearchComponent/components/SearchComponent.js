@@ -56,6 +56,7 @@ export default class SearchComponent extends PureComponent {
                 fieldRows: this.getFieldRowsFromSearchQuery(props.searchQueryParams),
                 isMinimised: props.isAdvancedSearchMinimised,
                 isOpenAccess: props.isOpenAccessInAdvancedMode || false,
+                docTypes: this.getDocTypesFromSearchQuery(props.searchQueryParams) || []
             }
         };
     }
@@ -70,7 +71,8 @@ export default class SearchComponent extends PureComponent {
                 advancedSearch: {
                     fieldRows: this.getFieldRowsFromSearchQuery(nextProps.searchQueryParams),
                     isMinimised: nextProps.isAdvancedSearchMinimised || false,
-                    isOpenAccess: nextProps.isOpenAccessInAdvancedMode || false
+                    isOpenAccess: nextProps.isOpenAccessInAdvancedMode || false,
+                    docTypes: this.getDocTypesFromSearchQuery(nextProps.searchQueryParams) || []
                 }
             });
         }
@@ -83,10 +85,24 @@ export default class SearchComponent extends PureComponent {
                 value: ''
             }];
         } else {
-            return Object.keys(searchQueryParams).map(key => ({
-                searchField: key,
-                value: searchQueryParams[key]
-            }));
+            return Object.keys(searchQueryParams)
+                .filter((item) => {
+                    return item !== 'rek_doc_type';
+                })
+                .map(key => ({
+                    searchField: key,
+                    value: searchQueryParams[key]
+                }));
+        }
+    };
+
+    getDocTypesFromSearchQuery = (searchQueryParams) => {
+        if (!searchQueryParams
+            || !searchQueryParams.rek_doc_type
+            || searchQueryParams.rek_doc_type.some(isNaN)) {
+            return [];
+        } else {
+            return searchQueryParams.rek_doc_type.map(item => parseInt(item, 10));
         }
     };
 
@@ -164,6 +180,16 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
+    _updateDocTypeValues = (docTypeValues) => {
+        // Update the state with new values
+        this.setState({
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                docTypes: docTypeValues
+            }
+        });
+    };
+
     _addAdvancedSearchRow = () => {
         this.setState({
             advancedSearch: {
@@ -195,6 +221,7 @@ export default class SearchComponent extends PureComponent {
         this.setState({
             advancedSearch: {
                 isOpenAccess: false,
+                docTypes: [],
                 fieldRows: [{
                     searchField: '0',
                     value: ''
@@ -221,19 +248,20 @@ export default class SearchComponent extends PureComponent {
             .reduce((searchQueries, item) => (
                 {...searchQueries, [item.searchField]: item.value}
             ), {});
-
+        const docTypeParams = this.state.advancedSearch.docTypes;
         const {activeFacets} = defaultQueryParams;
-
         const searchQuery = {
             ...defaultQueryParams,
-            searchQueryParams,
+            searchQueryParams: {
+                ...searchQueryParams,
+                rek_doc_type: docTypeParams
+            },
             searchMode: locale.components.searchComponent.advancedSearch.mode,
             activeFacets: {
                 ...activeFacets,
                 ...(this.state.advancedSearch.isOpenAccess ? {showOpenAccessOnly: true} : {})
             }
         };
-
         this.handleSearch(searchQuery);
     };
 
@@ -264,6 +292,8 @@ export default class SearchComponent extends PureComponent {
                         onToggleSearchMode={this._toggleSearchMode}
                         onToggleMinimise={this._toggleMinimise}
                         onToggleOpenAccess={this._toggleOpenAccess}
+                        updateDocTypeValues={this._updateDocTypeValues}
+                        docTypes={this.state.advancedSearch.docTypes}
                         onAdvancedSearchRowAdd={this._addAdvancedSearchRow}
                         onAdvancedSearchRowRemove={this._removeAdvancedSearchRow}
                         onAdvancedSearchReset={this._resetAdvancedSearch}

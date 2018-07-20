@@ -850,6 +850,13 @@ export default {
                         type: 'TextField',
                         hint: 'Add an author name to search',
                         validation: ['maxLength255']
+                    },
+                    'rek_doc_type': {
+                        title: 'Document type',
+                        combiner: 'is one of a',
+                        type: null,
+                        hint: 'Select document types to search',
+                        validation: []
                     }
                 },
                 openAccess: {
@@ -858,6 +865,9 @@ export default {
                         <span> AND is <span className="value">open access / full text.</span></span>
                     ),
                     ariaLabel: 'Check to search for publications with are only open access / full text'
+                },
+                documentType: {
+                    title: 'Document type'
                 },
                 addField: {
                     title: 'Add another field',

@@ -3,6 +3,7 @@
 exports[`SearchComponent should add one row for advanced search 1`] = `
 <React.Fragment>
   <AdvancedSearchComponent
+    docTypes={Array []}
     fieldRows={
       Array [
         Object {
@@ -21,6 +22,7 @@ exports[`SearchComponent should add one row for advanced search 1`] = `
     onToggleMinimise={[Function]}
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
+    updateDocTypeValues={[Function]}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -33,6 +35,7 @@ exports[`SearchComponent should add one row for advanced search 1`] = `
 exports[`SearchComponent should add one row for advanced search 2`] = `
 <React.Fragment>
   <AdvancedSearchComponent
+    docTypes={Array []}
     fieldRows={
       Array [
         Object {
@@ -55,6 +58,7 @@ exports[`SearchComponent should add one row for advanced search 2`] = `
     onToggleMinimise={[Function]}
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
+    updateDocTypeValues={[Function]}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -133,6 +137,7 @@ exports[`SearchComponent should handle simple search text change 1`] = `
 exports[`SearchComponent should remove one row from advanced search 1`] = `
 <React.Fragment>
   <AdvancedSearchComponent
+    docTypes={Array []}
     fieldRows={
       Array [
         Object {
@@ -142,6 +147,10 @@ exports[`SearchComponent should remove one row from advanced search 1`] = `
         Object {
           "searchField": "rek_title",
           "value": "remove rek title field",
+        },
+        Object {
+          "searchField": "docTypes",
+          "value": Array [],
         },
       ]
     }
@@ -155,6 +164,7 @@ exports[`SearchComponent should remove one row from advanced search 1`] = `
     onToggleMinimise={[Function]}
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
+    updateDocTypeValues={[Function]}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -167,11 +177,16 @@ exports[`SearchComponent should remove one row from advanced search 1`] = `
 exports[`SearchComponent should remove one row from advanced search 2`] = `
 <React.Fragment>
   <AdvancedSearchComponent
+    docTypes={Array []}
     fieldRows={
       Array [
         Object {
           "searchField": "all",
           "value": "i feel lucky",
+        },
+        Object {
+          "searchField": "docTypes",
+          "value": Array [],
         },
       ]
     }
@@ -185,6 +200,7 @@ exports[`SearchComponent should remove one row from advanced search 2`] = `
     onToggleMinimise={[Function]}
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
+    updateDocTypeValues={[Function]}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -219,6 +235,7 @@ exports[`SearchComponent should render default view 1`] = `
 exports[`SearchComponent should render default view with advanced search 1`] = `
 <React.Fragment>
   <AdvancedSearchComponent
+    docTypes={Array []}
     fieldRows={
       Array [
         Object {
@@ -237,6 +254,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
     onToggleMinimise={[Function]}
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
+    updateDocTypeValues={[Function]}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -293,6 +311,7 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
 exports[`SearchComponent should reset advanced search 1`] = `
 <React.Fragment>
   <AdvancedSearchComponent
+    docTypes={Array []}
     fieldRows={
       Array [
         Object {
@@ -315,6 +334,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
     onToggleMinimise={[Function]}
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
+    updateDocTypeValues={[Function]}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -327,6 +347,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
 exports[`SearchComponent should reset advanced search 2`] = `
 <React.Fragment>
   <AdvancedSearchComponent
+    docTypes={Array []}
     fieldRows={
       Array [
         Object {
@@ -345,6 +366,7 @@ exports[`SearchComponent should reset advanced search 2`] = `
     onToggleMinimise={[Function]}
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
+    updateDocTypeValues={[Function]}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -357,6 +379,7 @@ exports[`SearchComponent should reset advanced search 2`] = `
 exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
 <React.Fragment>
   <AdvancedSearchComponent
+    docTypes={Array []}
     fieldRows={
       Array [
         Object {
@@ -375,6 +398,7 @@ exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
     onToggleMinimise={[Function]}
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
+    updateDocTypeValues={[Function]}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -387,6 +411,7 @@ exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
 exports[`SearchComponent should toggle advanced search to minimised view 2`] = `
 <React.Fragment>
   <AdvancedSearchComponent
+    docTypes={Array []}
     fieldRows={
       Array [
         Object {
@@ -405,6 +430,7 @@ exports[`SearchComponent should toggle advanced search to minimised view 2`] = `
     onToggleMinimise={[Function]}
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
+    updateDocTypeValues={[Function]}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -417,6 +443,7 @@ exports[`SearchComponent should toggle advanced search to minimised view 2`] = `
 exports[`SearchComponent should toggle open access for advanced search 1`] = `
 <React.Fragment>
   <AdvancedSearchComponent
+    docTypes={Array []}
     fieldRows={
       Array [
         Object {
@@ -435,6 +462,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
     onToggleMinimise={[Function]}
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
+    updateDocTypeValues={[Function]}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -447,6 +475,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
 exports[`SearchComponent should toggle open access for advanced search 2`] = `
 <React.Fragment>
   <AdvancedSearchComponent
+    docTypes={Array []}
     fieldRows={
       Array [
         Object {
@@ -465,6 +494,7 @@ exports[`SearchComponent should toggle open access for advanced search 2`] = `
     onToggleMinimise={[Function]}
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
+    updateDocTypeValues={[Function]}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -499,6 +529,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
 exports[`SearchComponent should toggle search to minimised view of advanced search 2`] = `
 <React.Fragment>
   <AdvancedSearchComponent
+    docTypes={Array []}
     fieldRows={
       Array [
         Object {
@@ -517,6 +548,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
     onToggleMinimise={[Function]}
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
+    updateDocTypeValues={[Function]}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -529,6 +561,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
 exports[`SearchComponent should update advanced search row on search text changed 1`] = `
 <React.Fragment>
   <AdvancedSearchComponent
+    docTypes={Array []}
     fieldRows={
       Array [
         Object {
@@ -547,6 +580,7 @@ exports[`SearchComponent should update advanced search row on search text change
     onToggleMinimise={[Function]}
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
+    updateDocTypeValues={[Function]}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -559,6 +593,7 @@ exports[`SearchComponent should update advanced search row on search text change
 exports[`SearchComponent should update advanced search row on search text changed 2`] = `
 <React.Fragment>
   <AdvancedSearchComponent
+    docTypes={Array []}
     fieldRows={
       Array [
         Object {
@@ -577,6 +612,7 @@ exports[`SearchComponent should update advanced search row on search text change
     onToggleMinimise={[Function]}
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
+    updateDocTypeValues={[Function]}
   />
   <Snackbar
     autoHideDuration={5000}

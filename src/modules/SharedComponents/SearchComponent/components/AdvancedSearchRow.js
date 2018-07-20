@@ -52,7 +52,7 @@ export default class AdvancedSearchRow extends PureComponent {
         const txt = locale.components.searchComponent.advancedSearch;
         return (
             <div className="columns is-gapless is-mobile is-multiline advancedSearchRow">
-                <div className="column is-3-tablet">
+                <div className="column is-4-tablet">
                     <SelectField
                         value={this.props.searchField}
                         onChange={this._handleSearchFieldChange}
