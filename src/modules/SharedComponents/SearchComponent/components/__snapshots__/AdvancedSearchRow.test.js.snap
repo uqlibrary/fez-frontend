@@ -72,7 +72,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="title"
+        key="rek_title"
         primaryText="Title"
         targetOrigin={
           Object {
@@ -80,7 +80,29 @@ exports[`AdvancedSearchRow should render default view 1`] = `
             "vertical": "top",
           }
         }
-        value="title"
+        value="rek_title"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_pid"
+        primaryText="PID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_pid"
       />
     </SelectField>
   </div>
@@ -90,20 +112,21 @@ exports[`AdvancedSearchRow should render default view 1`] = `
   <div
     className="column input is-12-mobile"
   >
-    <TextField
-      aria-label="Select a field to search on"
-      disabled={true}
-      errorText={null}
-      floatingLabelFixed={false}
-      fullWidth={true}
-      hintText="Select a field to search on"
-      id="searchField"
-      multiLine={false}
-      name="textSearchField0"
-      onChange={[Function]}
-      rows={1}
-      type="search"
-      underlineShow={true}
+    <AdvancedSearchRowInput
+      disabledFields={Array []}
+      inputField={
+        Object {
+          "combiner": null,
+          "hint": "Select a field to search on",
+          "title": "Select a field",
+          "type": "TextField",
+          "validation": Array [],
+        }
+      }
+      onSearchRowChange={[MockFunction]}
+      onSearchRowDelete={[MockFunction]}
+      rowIndex={0}
+      searchField="0"
       value=""
     />
   </div>
@@ -182,7 +205,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="title"
+        key="rek_title"
         primaryText="Title"
         targetOrigin={
           Object {
@@ -190,7 +213,29 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
             "vertical": "top",
           }
         }
-        value="title"
+        value="rek_title"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_pid"
+        primaryText="PID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_pid"
       />
     </SelectField>
   </div>
@@ -204,20 +249,28 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
   <div
     className="column input is-12-mobile"
   >
-    <TextField
-      aria-label="Add some text to search all fields with"
-      disabled={false}
-      errorText={null}
-      floatingLabelFixed={false}
-      fullWidth={true}
-      hintText="Add some text to search all fields with"
-      id="searchField"
-      multiLine={false}
-      name="textSearchField0"
-      onChange={[Function]}
-      rows={1}
-      type="search"
-      underlineShow={true}
+    <AdvancedSearchRowInput
+      disabledFields={
+        Array [
+          "all",
+          0,
+        ]
+      }
+      inputField={
+        Object {
+          "combiner": "contains",
+          "hint": "Add some text to search all fields with",
+          "title": "Any field",
+          "type": "TextField",
+          "validation": Array [
+            "maxLength500",
+          ],
+        }
+      }
+      onSearchRowChange={[MockFunction]}
+      onSearchRowDelete={[MockFunction]}
+      rowIndex={0}
+      searchField="all"
       value="i feel lucky"
     />
   </div>
@@ -296,7 +349,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="title"
+        key="rek_title"
         primaryText="Title"
         targetOrigin={
           Object {
@@ -304,7 +357,29 @@ exports[`AdvancedSearchRow should render search field row with select field and 
             "vertical": "top",
           }
         }
-        value="title"
+        value="rek_title"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_pid"
+        primaryText="PID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_pid"
       />
     </SelectField>
   </div>
@@ -318,20 +393,23 @@ exports[`AdvancedSearchRow should render search field row with select field and 
   <div
     className="column input is-12-mobile"
   >
-    <TextField
-      aria-label="Add some text to search all fields with"
-      disabled={false}
-      errorText={null}
-      floatingLabelFixed={false}
-      fullWidth={true}
-      hintText="Add some text to search all fields with"
-      id="searchField"
-      multiLine={false}
-      name="textSearchField0"
-      onChange={[Function]}
-      rows={1}
-      type="search"
-      underlineShow={true}
+    <AdvancedSearchRowInput
+      disabledFields={Array []}
+      inputField={
+        Object {
+          "combiner": "contains",
+          "hint": "Add some text to search all fields with",
+          "title": "Any field",
+          "type": "TextField",
+          "validation": Array [
+            "maxLength500",
+          ],
+        }
+      }
+      onSearchRowChange={[MockFunction]}
+      onSearchRowDelete={[MockFunction]}
+      rowIndex={0}
+      searchField="all"
       value="i feel lucky"
     />
   </div>

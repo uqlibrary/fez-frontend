@@ -9,8 +9,11 @@ export const maxLength1000 = maxLength(1000);
 export const maxLength2000 = maxLength(2000); // URL's must be under 2000 characters
 
 // Max Length
-export const minLength = min => value => value && value.trim().length < min ? locale.validationErrors.minLength.replace('[min]', min) : undefined;
+export const minLength = min => value => (value !== null || value !== undefined) && value.trim().length < min ? locale.validationErrors.minLength.replace('[min]', min) : undefined;
 export const minLength10 = minLength(10);
+
+// Public Search Validation rules
+export const maxLength500 = maxLength(500);
 
 // TODO: fix validation, make it generic etc....
 export const isValidDOIValue = value => {

@@ -9,7 +9,6 @@ import AdvancedSearchRow from './AdvancedSearchRow';
 import Checkbox from 'material-ui/Checkbox';
 import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
 
-
 import {locale} from 'locale';
 
 export default class AdvancedSearchComponent extends PureComponent {
