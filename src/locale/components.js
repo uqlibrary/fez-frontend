@@ -884,7 +884,8 @@ export default {
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a book title to search',
-                        validation: ['maxLength500'],
+                        validation: ['maxLength500']
+                    },
                     'rek_doc_type': {
                         title: 'Publication type',
                         combiner: 'is one of',
