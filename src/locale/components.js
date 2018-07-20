@@ -834,7 +834,7 @@ export default {
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a title to search',
-                        validation: ['maxLength255', 'minLength10'],
+                        validation: ['required', 'maxLength255', 'minLength10'],
                         minLength: 10   // Kept to check overall advanced search component is valid or not
                     },
                     'rek_pid': {
@@ -842,49 +842,49 @@ export default {
                         combiner: 'is',
                         type: 'TextField',
                         hint: 'Add a PID to search',
-                        validation: []
+                        validation: ['required']
                     },
                     'rek_author': {
                         title: 'Author Name',
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add an author name to search',
-                        validation: ['maxLength255']
+                        validation: ['required', 'maxLength255']
                     },
                     'rek_contributor': {
                         title: 'Editor/Contributor',
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add an editor/contributor name to search',
-                        validation: ['maxLength255']
+                        validation: ['required', 'maxLength255']
                     },
                     'rek_series': {
                         title: 'Series',
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a series name to search',
-                        validation: ['maxLength500']
+                        validation: ['required', 'maxLength500']
                     },
                     'rek_journal_name': {
                         title: 'Journal Name',
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a journal name to search',
-                        validation: ['maxLength500']
+                        validation: ['required', 'maxLength500']
                     },
                     'rek_conference_name': {
                         title: 'Conference Name',
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a conference name to search',
-                        validation: ['maxLength500']
+                        validation: ['required', 'maxLength500']
                     },
                     'rek_book_title': {
                         title: 'Book Title',
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a book title to search',
-                        validation: ['maxLength500']
+                        validation: ['required', 'maxLength500']
                     },
                     'rek_doc_type': {
                         title: 'Publication type',
@@ -892,6 +892,13 @@ export default {
                         type: null,
                         hint: 'Select document types to search',
                         validation: []
+                    },
+                    'rek_doi': {
+                        title: 'DOI',
+                        combiner: 'is',
+                        type: 'TextField',
+                        hint: 'Add a DOI to search',
+                        validation: ['required', 'doi']
                     }
                 },
                 openAccess: {
