@@ -878,6 +878,13 @@ export default {
                         type: 'TextField',
                         hint: 'Add a conference name to search',
                         validation: ['maxLength500']
+                    },
+                    'rek_book_title': {
+                        title: 'Book Title',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a book title to search',
+                        validation: ['maxLength500']
                     }
                 },
                 openAccess: {
