@@ -61,6 +61,7 @@ if(config.environment === 'development') {
 }
 
 const webpackConfig = {
+    mode: 'production',
     devtool: 'source-map',
     // The entry file. All your app roots from here.
     entry: {

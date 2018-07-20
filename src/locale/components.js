@@ -852,7 +852,7 @@ export default {
                         validation: ['maxLength255']
                     },
                     'rek_contributor': {
-                        title: 'Editor/Contributor Name',
+                        title: 'Editor/Contributor',
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add an editor/contributor name to search',
