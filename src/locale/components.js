@@ -871,6 +871,13 @@ export default {
                         type: 'TextField',
                         hint: 'Add a journal name to search',
                         validation: ['maxLength500']
+                    },
+                    'rek_conference_name': {
+                        title: 'Conference Name',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a conference name to search',
+                        validation: ['maxLength500']
                     }
                 },
                 openAccess: {
