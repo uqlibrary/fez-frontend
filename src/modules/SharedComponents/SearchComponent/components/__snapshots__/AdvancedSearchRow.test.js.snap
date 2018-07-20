@@ -170,6 +170,28 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         }
         value="rek_series"
       />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_journal_name"
+        primaryText="Journal Name"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_journal_name"
+      />
     </SelectField>
   </div>
   <div
@@ -368,6 +390,28 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           }
         }
         value="rek_series"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_journal_name"
+        primaryText="Journal Name"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_journal_name"
       />
     </SelectField>
   </div>
@@ -578,6 +622,28 @@ exports[`AdvancedSearchRow should render search field row with select field and 
           }
         }
         value="rek_series"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_journal_name"
+        primaryText="Journal Name"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_journal_name"
       />
     </SelectField>
   </div>

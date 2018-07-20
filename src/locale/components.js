@@ -862,7 +862,14 @@ export default {
                         title: 'Series',
                         combiner: 'contains',
                         type: 'TextField',
-                        hint: 'Add an series name to search',
+                        hint: 'Add a series name to search',
+                        validation: ['maxLength500']
+                    },
+                    'rek_journal_name': {
+                        title: 'Journal Name',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a journal name to search',
                         validation: ['maxLength500']
                     }
                 },
