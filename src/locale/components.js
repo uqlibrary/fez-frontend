@@ -852,8 +852,8 @@ export default {
                         validation: ['maxLength255']
                     },
                     'rek_doc_type': {
-                        title: 'Document type',
-                        combiner: 'is one of a',
+                        title: 'Publication type',
+                        combiner: 'is one of',
                         type: null,
                         hint: 'Select document types to search',
                         validation: []

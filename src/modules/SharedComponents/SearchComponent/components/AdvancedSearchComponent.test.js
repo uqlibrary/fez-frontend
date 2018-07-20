@@ -15,6 +15,7 @@ function setup(testProps, isShallow = true){
 }
 
 describe('AdvancedSearchComponent', () => {
+
     it('should render default view', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -144,6 +145,21 @@ describe('AdvancedSearchComponent', () => {
         };
         const wrapper = setup({...thisProps});
         expect(wrapper.instance().haveAllAdvancedSearchFieldsValidated(thisProps.fieldRows)).toBeFalsy();
+    });
+
+    it('should render advanced search docTypes with checked values based on props', () => {
+        const wrapper = setup({isOpenAccess: true, docTypes: [179, 202], fieldRows: [{value: 'i feel lucky', searchField: 'all'}]});
+        expect(toJson(wrapper.find('.advancedSearchPublicationType').dive())).toMatchSnapshot();
+    });
+
+    it('should render advanced search docTypes with checked values based on fixed invalid props', () => {
+        const wrapper = setup({isOpenAccess: true, docTypes: ["179", "202"], fieldRows: [{value: 'i feel lucky', searchField: 'all'}]});
+        expect(toJson(wrapper.find('.advancedSearchPublicationType').dive())).toMatchSnapshot();
+    });
+
+    it('should render advanced search with no valid checked docTypes based on invalid props', () => {
+        const wrapper = setup({isOpenAccess: true, docTypes: ['test', 202], fieldRows: [{value: 'i feel lucky', searchField: 'all'}]});
+        expect(toJson(wrapper.find('.advancedSearchPublicationType').dive())).toMatchSnapshot();
     });
 
 });

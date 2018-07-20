@@ -66,7 +66,7 @@ export default class AdvancedSearchComponent extends PureComponent {
             .map((item, index) => (
                 <span key={item.searchField}>
                     {index > 0 && <span className="and">  {item.value && 'AND'}</span>}
-                    <span className={`title ${index > 0 && ' lowercase'}`}> {item.value && txt[item.searchField] && txt[item.searchField].title}</span>
+                    <span className={`title ${index > 0 && ' is-lowercase'}`}> {item.value && txt[item.searchField] && txt[item.searchField].title}</span>
                     <span className="combiner"> {item.value && txt[item.searchField] && txt[item.searchField].combiner}</span>
                     <span className="value"> {item.value && item.value}</span>
                 </span>
@@ -84,7 +84,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                 <span className="and"> {searchFields.length > 0 && ' AND '}</span>
                 <span className="title">{txt.rek_doc_type.title}</span>
                 <span className="combiner"> {txt.rek_doc_type.combiner}</span>
-                <span className="value"> {docTypeList}</span>
+                <span className="value is-lowercase"> {docTypeList}</span>
             </span>
         ) || '';
 
@@ -165,7 +165,15 @@ export default class AdvancedSearchComponent extends PureComponent {
             ...this.publicationTypes.filter((item) => {
                 return item.hasFormComponent;
             }).map((item, index) => {
-                return <MenuItem value={item.id} primaryText={item.name} key={index + 1} disabled={!item.formComponent}/>;
+                return (
+                    <MenuItem
+                        checked={this.props.docTypes && this.props.docTypes.length > 0 && this.props.docTypes.indexOf(item.id) > -1}
+                        value={item.id}
+                        primaryText={item.name}
+                        key={index + 1}
+                        disabled={!item.formComponent}
+                    />
+                );
             })
         ];
         return (
@@ -213,7 +221,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                         </div>
                                         <div className="column is-4-desktop is-12-tablet is-12-mobile openAccessCheckbox">
                                             <div className="columns is-gapless is-multiline">
-                                                <div className="column is-12">
+                                                <div className="column is-12-mobile is-6-tablet is-12-desktop">
                                                     <Checkbox
                                                         className="advancedSearchOpenAccessCheckbox"
                                                         label={txt.advancedSearch.openAccess.title}
@@ -222,11 +230,13 @@ export default class AdvancedSearchComponent extends PureComponent {
                                                         onCheck={this._toggleOpenAccess}
                                                     />
                                                 </div>
-                                                <div className="column is-12">
+                                                <div className="column is-12-mobile is-6-tablet is-12-desktop">
                                                     <SelectField
-                                                        floatingLabelText="Document type"
+                                                        className="advancedSearchPublicationType"
+                                                        floatingLabelText={txt.advancedSearch.fieldTypes.rek_doc_type.title}
                                                         value={this.props.docTypes}
                                                         onChange={this._handleDocTypeChange}
+                                                        fullWidth
                                                         multiple >
                                                         {docTypeItems}
                                                     </SelectField>

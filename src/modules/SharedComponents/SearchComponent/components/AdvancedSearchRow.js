@@ -59,14 +59,16 @@ export default class AdvancedSearchRow extends PureComponent {
                         errorText={this.selectFieldValidation()}
                         fullWidth>
                         {
-                            Object.keys(txt.fieldTypes).map((item, index) => (
-                                <MenuItem
-                                    key={item}
-                                    value={item}
-                                    primaryText={txt.fieldTypes[item].title}
-                                    disabled={index === 0 || this.props.disabledFields.indexOf(item) > -1}
-                                />
-                            ))
+                            Object.keys(txt.fieldTypes)
+                                .filter(item => txt.fieldTypes[item].type !== null)
+                                .map((item, index) => (
+                                    <MenuItem
+                                        key={item}
+                                        value={item}
+                                        primaryText={txt.fieldTypes[item].title}
+                                        disabled={index === 0 || this.props.disabledFields.indexOf(item) > -1}
+                                    />
+                                ))
                         }
                     </SelectField>
                 </div>

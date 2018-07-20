@@ -126,28 +126,6 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         }
         value="rek_author"
       />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_doc_type"
-        primaryText="Document type"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_doc_type"
-      />
     </SelectField>
   </div>
   <div
@@ -302,28 +280,6 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           }
         }
         value="rek_author"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_doc_type"
-        primaryText="Document type"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_doc_type"
       />
     </SelectField>
   </div>
@@ -490,28 +446,6 @@ exports[`AdvancedSearchRow should render search field row with select field and 
           }
         }
         value="rek_author"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_doc_type"
-        primaryText="Document type"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_doc_type"
       />
     </SelectField>
   </div>
