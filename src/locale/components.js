@@ -851,6 +851,40 @@ export default {
                         hint: 'Add an author name to search',
                         validation: ['maxLength255']
                     },
+                    'rek_contributor': {
+                        title: 'Editor/Contributor',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add an editor/contributor name to search',
+                        validation: ['maxLength255']
+                    },
+                    'rek_series': {
+                        title: 'Series',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a series name to search',
+                        validation: ['maxLength500']
+                    },
+                    'rek_journal_name': {
+                        title: 'Journal Name',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a journal name to search',
+                        validation: ['maxLength500']
+                    },
+                    'rek_conference_name': {
+                        title: 'Conference Name',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a conference name to search',
+                        validation: ['maxLength500']
+                    },
+                    'rek_book_title': {
+                        title: 'Book Title',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a book title to search',
+                        validation: ['maxLength500'],
                     'rek_doc_type': {
                         title: 'Publication type',
                         combiner: 'is one of',
@@ -865,9 +899,6 @@ export default {
                         <span> AND is <span className="value">open access / full text.</span></span>
                     ),
                     ariaLabel: 'Check to search for publications with are only open access / full text'
-                },
-                documentType: {
-                    title: 'Document type'
                 },
                 addField: {
                     title: 'Add another field',
