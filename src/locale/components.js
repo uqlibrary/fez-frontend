@@ -850,6 +850,13 @@ export default {
                         type: 'TextField',
                         hint: 'Add an author name to search',
                         validation: ['maxLength255']
+                    },
+                    'rek_contributor': {
+                        title: 'Editor/Contributor Name',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add an editor/contributor name to search',
+                        validation: ['maxLength255']
                     }
                 },
                 openAccess: {
