@@ -4,16 +4,7 @@ import {authorsSearch} from 'mock/data';
 function setup(testProps, isShallow = true){
     const props = {
         ...testProps,
-        author: testProps.author || { aut_id: 1 }, // : PropTypes.object,
-        // showIdentifierLookup: PropTypes.bool,
-        // showContributorAssignment: PropTypes.bool,
-        // className: PropTypes.string,
-        // disabled: PropTypes.bool,
-        // meta: PropTypes.object,
-        // author: PropTypes.object,
-        // onChange: PropTypes.func,
-        // locale: PropTypes.object,
-        // input: PropTypes.object
+        author: testProps.author || { aut_id: 1 }
     };
     return getElement(ContributorsEditor, props, isShallow);
 }

@@ -1,17 +1,12 @@
-jest.dontMock('./DashboardArticleCount');
-
-import {shallow} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
+import DashboardArticleCount from './DashboardArticleCount';
 import {currentAuthorStats} from 'mock/data';
 
-import DashboardArticleCount from './DashboardArticleCount';
-
-function setup(testProps) {
+function setup(testProps, isShallow = true) {
+    // build full props list required by the component
     const props = {
-        ...testProps
+        ...testProps,
     };
-    return shallow(<DashboardArticleCount {...props} />);
+    return getElement(DashboardArticleCount, props, isShallow);
 }
 
 describe('Dashboard Article Count test', () => {

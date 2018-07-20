@@ -23,7 +23,6 @@ const defaultLocale = {
 };
 
 function setup(testProps, isShallow = true) {
-    // build full props list required by the component
     const props = {
         ...testProps,
         menuItems: testProps.menuItems || defaultMenuItems,
@@ -71,16 +70,6 @@ describe('Component MenuDrawer', () => {
             expect(testMethod).toHaveBeenCalled();
         });
     });
-
-    it('should skip navigation', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({drawerOpen: true, docked: true, history: {push: testMethod}});
-        // TODO: how to spy?
-        // const spy = jest.spyOn(wrapper.find('#afterMenuDrawer').getElement(), 'focus');
-        // wrapper.find('#skipNav').simulate('click');
-        // expect(spy).toHaveBeenCalled();
-    });
-
 
     it('should render CRICOS footer', () => {
         const testMethod = jest.fn();

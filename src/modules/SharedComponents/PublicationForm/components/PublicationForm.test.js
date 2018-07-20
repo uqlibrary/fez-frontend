@@ -1,6 +1,4 @@
-jest.dontMock('./PublicationForm');
 import PublicationForm from './PublicationForm';
-
 import Immutable from 'immutable';
 
 function setup(testProps, isShallow = true) {
@@ -18,10 +16,6 @@ function setup(testProps, isShallow = true) {
     };
     return getElement(PublicationForm, props, isShallow);
 }
-
-beforeAll(() => {
-
-});
 
 describe('Component PublicationForm', () => {
 

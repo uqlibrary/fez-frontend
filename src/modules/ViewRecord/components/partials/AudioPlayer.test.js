@@ -2,9 +2,6 @@ import React from 'react';
 import {journalArticle} from 'mock/data/testing/records';
 import AudioPlayer from './AudioPlayer';
 
-
-
-
 function setup(testProps, isShallow = true){
     const props = {
         ...testProps,

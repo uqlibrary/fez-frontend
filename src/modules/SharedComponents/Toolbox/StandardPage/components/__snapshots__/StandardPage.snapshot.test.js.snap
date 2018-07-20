@@ -2,7 +2,7 @@
 
 exports[`Snapshot tests for StandardPage component renders StandardPage with title 1`] = `
 <div
-  className=""
+  className=" pageContent"
 >
   <h1
     className="pageTitle"
@@ -17,7 +17,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with tit
 
 exports[`Snapshot tests for StandardPage component renders StandardPage without a title 1`] = `
 <div
-  className=""
+  className=" pageContent"
 >
   <div
     className="layout-card"

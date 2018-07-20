@@ -1,7 +1,3 @@
-jest.dontMock('./ExternalLink');
-
-
-
 import ExternalLink from './ExternalLink';
 
 function setup(testProps, isShallow = true) {
@@ -11,10 +7,6 @@ function setup(testProps, isShallow = true) {
     };
     return getElement(ExternalLink, props, isShallow);
 }
-
-beforeAll(() => {
-    
-});
 
 describe('ExternalLink test ', () => {
     it('should render component with open-in-new window icon class', () => {

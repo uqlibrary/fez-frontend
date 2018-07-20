@@ -1,5 +1,3 @@
-jest.dontMock('./DashboardAuthorProfile');
-
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import * as mock from 'mock/data';
 

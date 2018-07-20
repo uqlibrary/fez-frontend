@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
+import Immutable from 'immutable';
 import {connect} from 'react-redux';
 import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
@@ -32,7 +33,7 @@ export class ContributorsEditor extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            contributors: props.input && props.input.name && props.input.value ? props.input.value.toJS() : [],
+            contributors: this.getContributorsFromProps(props),
             isCurrentAuthorSelected: false,
             errorMessage: ''
         };
@@ -44,6 +45,14 @@ export class ContributorsEditor extends PureComponent {
             this.props.onChange(nextState.contributors);
         }
     }
+
+    getContributorsFromProps = (props) => {
+        if (props.input && props.input.name && props.input.value) {
+            return props.input.value instanceof Immutable.List ? props.input.value.toJS() : props.input.value;
+        }
+
+        return [];
+    };
 
     addContributor = (contributor) => {
         // only unique identifiers can be added

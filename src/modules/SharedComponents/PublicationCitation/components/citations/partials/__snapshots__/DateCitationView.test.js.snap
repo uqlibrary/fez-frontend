@@ -1,134 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DateCitationView test should render component with date : [July 1st, 2017] 1`] = `
-<DateCitationView
+<span
   className="citationDate"
-  date="2017-07-01T00:00:00Z"
-  format="MMMM Do[,] YYYY"
-  prefix="["
-  suffix="]"
 >
-  <span
-    className="citationDate"
-  >
-    [
-    July 1st, 2017
-    ]
-  </span>
-</DateCitationView>
+  [
+  July 1st, 2017
+  ]
+</span>
 `;
 
 exports[`DateCitationView test should render component with date : On the 1st day of June in 2017 1`] = `
-<DateCitationView
+<span
   className="citationDate"
-  date="2017-07-01T00:00:00Z"
-  format="[On the ]Do[ day of ]MMMM[ in ]YYYY"
-  prefix=""
-  suffix=""
 >
-  <span
-    className="citationDate"
-  >
-    On the 1st day of July in 2017
-  </span>
-</DateCitationView>
+  On the 1st day of July in 2017
+</span>
 `;
 
 exports[`DateCitationView test should render component with date in TZ format 1`] = `
-<DateCitationView
+<span
   className="citationDate"
-  date="2017-07-01T00:00:00Z"
-  format="YYYY"
-  prefix="("
-  suffix=")."
 >
-  <span
-    className="citationDate"
-  >
-    (
-    2017
-    ).
-  </span>
-</DateCitationView>
+  (
+  2017
+  ).
+</span>
 `;
 
 exports[`DateCitationView test should render component with date not in TZ format 1`] = `
-<DateCitationView
+<span
   className="citationDate"
-  date="2010-08-01 00:00:00"
-  format="YYYY"
-  prefix="("
-  suffix=")."
 >
-  <span
-    className="citationDate"
-  >
-    (
-    2010
-    ).
-  </span>
-</DateCitationView>
+  (
+  2010
+  ).
+</span>
 `;
 
 exports[`DateCitationView test should render component with default prefix and suffix : (1/6/2017). 1`] = `
-<DateCitationView
+<span
   className="citationDate"
-  date="2017-07-01T00:00:00Z"
-  format="YYYY"
-  prefix="("
-  suffix=")."
 >
-  <span
-    className="citationDate"
-  >
-    (
-    2017
-    ).
-  </span>
-</DateCitationView>
+  (
+  2017
+  ).
+</span>
 `;
 
 exports[`DateCitationView test should render component with just the year in brackets : (2017). 1`] = `
-<DateCitationView
+<span
   className="citationDate"
-  date="2017-07-01T00:00:00Z"
-  format="YYYY"
-  prefix="("
-  suffix=")."
 >
-  <span
-    className="citationDate"
-  >
-    (
-    2017
-    ).
-  </span>
-</DateCitationView>
+  (
+  2017
+  ).
+</span>
 `;
 
 exports[`DateCitationView test should render empty component with date invalid date format 1`] = `
-<DateCitationView
-  className="citationDate"
-  date="This is not a date"
-  format="YYYY"
-  prefix="("
-  suffix=")."
->
-  <span
-    className="citationDate empty"
-  />
-</DateCitationView>
+<span
+  className="citationDate empty"
+/>
 `;
 
 exports[`DateCitationView test should render empty component with no date 1`] = `
-<DateCitationView
-  className="citationDate"
-  format="YYYY"
-  prefix="("
-  suffix=")."
->
-  <span
-    className="citationDate empty"
-  />
-</DateCitationView>
+<span
+  className="citationDate empty"
+/>
 `;

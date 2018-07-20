@@ -1,8 +1,5 @@
 import {journalArticle} from 'mock/data/testing/records';
 import files from "./Files";
-import PropTypes from "prop-types";
-
-const moment = require('moment');
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -16,8 +13,13 @@ function setup(testProps, isShallow = true){
 
 describe('Files Component ', () => {
 
+    const MockDate = require('mockdate');
     beforeEach(() => {
-        Date.now = jest.genMockFunction().mockReturnValue('2020-01-01T00:00:00.000Z');
+        MockDate.set('2020-01-01T00:00:00.000Z', 10);
+    });
+
+    afterEach(() => {
+        MockDate.reset();
     });
 
     it('should render component', () => {

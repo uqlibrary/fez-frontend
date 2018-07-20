@@ -9,7 +9,13 @@
   .AppBar, div.possiblePublicationLure, div.authorCount, div.main-drawer, .alertWrapper {
     display: none !important;
   }
+  html, body {
+    height: auto !important;
+    overflow: visible;
+  }
   .content-container {
     padding: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
   }
 }

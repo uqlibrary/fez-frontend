@@ -1,11 +1,8 @@
-jest.dontMock('./PartialDateForm');
-
-import React from 'react';
-import {shallow} from 'enzyme';
 import PartialDateForm from './PartialDateForm';
 
-function setup(props) {
-    return shallow(<PartialDateForm {...props} />);
+function setup(testProps, isShallow = true) {
+    const props = {...testProps};
+    return getElement(PartialDateForm, props, isShallow);
 }
 
 describe('PartialDateForm unit tests', () => {

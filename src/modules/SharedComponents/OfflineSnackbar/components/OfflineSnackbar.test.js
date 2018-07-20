@@ -1,7 +1,4 @@
-jest.dontMock('../components/OfflineSnackbar');
-
 import OfflineSnackbar from './OfflineSnackbar';
-import React from 'react';
 
 function setup(testProps, isShallow = true) {
     const props = {

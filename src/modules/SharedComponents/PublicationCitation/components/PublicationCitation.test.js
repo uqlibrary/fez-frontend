@@ -5,10 +5,6 @@ function setup(testProps, isShallow = true){
     const props = {
         ...testProps,
         publication: testProps.publication || mockRecordToFix,
-        // showDefaultActions: PropTypes.bool,
-        // showSources: PropTypes.bool,
-        // customActions: PropTypes.array,
-        // className: PropTypes.string,
         history: testProps.history || {push: jest.fn()},
         actions: testProps.actions || {
             setFixRecord: jest.fn(),
