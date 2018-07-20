@@ -139,7 +139,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         focusState="none"
         insetChildren={false}
         key="rek_contributor"
-        primaryText="Editor/Contributor Name"
+        primaryText="Editor/Contributor"
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -382,7 +382,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
         focusState="none"
         insetChildren={false}
         key="rek_contributor"
-        primaryText="Editor/Contributor Name"
+        primaryText="Editor/Contributor"
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -636,7 +636,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         focusState="none"
         insetChildren={false}
         key="rek_contributor"
-        primaryText="Editor/Contributor Name"
+        primaryText="Editor/Contributor"
         targetOrigin={
           Object {
             "horizontal": "left",
