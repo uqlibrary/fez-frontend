@@ -6,9 +6,14 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
   disabled={false}
   floatingLabelFixed={false}
   floatingLabelText="Publication type"
-  fullWidth={true}
+  fullWidth={false}
   multiLine={false}
   rows={1}
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
   type="text"
   underlineShow={true}
 >
@@ -484,9 +489,14 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
   disabled={false}
   floatingLabelFixed={false}
   floatingLabelText="Publication type"
-  fullWidth={true}
+  fullWidth={false}
   multiLine={false}
   rows={1}
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
   type="text"
   underlineShow={true}
 >
@@ -1021,7 +1031,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
               className="columns is-gapless is-multiline"
             >
               <div
-                className="column is-12-mobile is-6-tablet is-12-desktop"
+                className="column is-11-mobile is-4-tablet is-12-desktop"
               >
                 <Checkbox
                   aria-label="Check to search for publications with are only open access / full text"
@@ -1034,16 +1044,21 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
                 />
               </div>
               <div
-                className="column is-12-mobile is-6-tablet is-12-desktop"
+                className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop"
               >
                 <SelectField
                   autoWidth={false}
                   className="advancedSearchPublicationType"
                   disabled={false}
                   floatingLabelText="Publication type"
-                  fullWidth={true}
+                  fullWidth={false}
                   multiple={true}
                   onChange={[Function]}
+                  style={
+                    Object {
+                      "width": "100%",
+                    }
+                  }
                 >
                   <MenuItem
                     anchorOrigin={
@@ -1586,9 +1601,14 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
   disabled={false}
   floatingLabelFixed={false}
   floatingLabelText="Publication type"
-  fullWidth={true}
+  fullWidth={false}
   multiLine={false}
   rows={1}
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
   type="text"
   underlineShow={true}
 >
@@ -2123,7 +2143,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
               className="columns is-gapless is-multiline"
             >
               <div
-                className="column is-12-mobile is-6-tablet is-12-desktop"
+                className="column is-11-mobile is-4-tablet is-12-desktop"
               >
                 <Checkbox
                   aria-label="Check to search for publications with are only open access / full text"
@@ -2136,16 +2156,21 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
                 />
               </div>
               <div
-                className="column is-12-mobile is-6-tablet is-12-desktop"
+                className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop"
               >
                 <SelectField
                   autoWidth={false}
                   className="advancedSearchPublicationType"
                   disabled={false}
                   floatingLabelText="Publication type"
-                  fullWidth={true}
+                  fullWidth={false}
                   multiple={true}
                   onChange={[Function]}
+                  style={
+                    Object {
+                      "width": "100%",
+                    }
+                  }
                 >
                   <MenuItem
                     anchorOrigin={
@@ -2711,7 +2736,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
               className="columns is-gapless is-multiline"
             >
               <div
-                className="column is-12-mobile is-6-tablet is-12-desktop"
+                className="column is-11-mobile is-4-tablet is-12-desktop"
               >
                 <Checkbox
                   aria-label="Check to search for publications with are only open access / full text"
@@ -2724,16 +2749,21 @@ exports[`AdvancedSearchComponent should render default view with open access che
                 />
               </div>
               <div
-                className="column is-12-mobile is-6-tablet is-12-desktop"
+                className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop"
               >
                 <SelectField
                   autoWidth={false}
                   className="advancedSearchPublicationType"
                   disabled={false}
                   floatingLabelText="Publication type"
-                  fullWidth={true}
+                  fullWidth={false}
                   multiple={true}
                   onChange={[Function]}
+                  style={
+                    Object {
+                      "width": "100%",
+                    }
+                  }
                 >
                   <MenuItem
                     anchorOrigin={
@@ -3355,7 +3385,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
               className="columns is-gapless is-multiline"
             >
               <div
-                className="column is-12-mobile is-6-tablet is-12-desktop"
+                className="column is-11-mobile is-4-tablet is-12-desktop"
               >
                 <Checkbox
                   aria-label="Check to search for publications with are only open access / full text"
@@ -3368,16 +3398,21 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
                 />
               </div>
               <div
-                className="column is-12-mobile is-6-tablet is-12-desktop"
+                className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop"
               >
                 <SelectField
                   autoWidth={false}
                   className="advancedSearchPublicationType"
                   disabled={false}
                   floatingLabelText="Publication type"
-                  fullWidth={true}
+                  fullWidth={false}
                   multiple={true}
                   onChange={[Function]}
+                  style={
+                    Object {
+                      "width": "100%",
+                    }
+                  }
                 >
                   <MenuItem
                     anchorOrigin={

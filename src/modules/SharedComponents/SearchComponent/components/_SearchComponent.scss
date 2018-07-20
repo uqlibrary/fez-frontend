@@ -186,6 +186,11 @@
       margin-top: 12px !important;
     }
   }
+  .advancedSearchPublicationType {
+    @include desktop {
+      margin-top: -12px;
+    }
+  }
   .actionButtons {
     .column {
       @include tablet {
