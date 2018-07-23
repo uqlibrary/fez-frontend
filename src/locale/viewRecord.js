@@ -854,48 +854,44 @@ export default {
                     order: 25
                 },
                 {
-                    field: 'fez_record_search_key_contributor',
+                    field: 'fez_record_search_key_volume_number',
                     order: 26
                 },
                 {
-                    field: 'fez_record_search_key_volume_number',
+                    field: 'fez_record_search_key_issue_number',
                     order: 27
                 },
                 {
-                    field: 'fez_record_search_key_issue_number',
+                    field: 'fez_record_search_key_start_page',
                     order: 28
                 },
                 {
-                    field: 'fez_record_search_key_start_page',
+                    field: 'fez_record_search_key_end_page',
                     order: 29
                 },
                 {
-                    field: 'fez_record_search_key_end_page',
+                    field: 'fez_record_search_key_total_pages',
                     order: 30
                 },
                 {
-                    field: 'fez_record_search_key_total_pages',
+                    field: 'fez_record_search_key_chapter_number',
                     order: 31
                 },
                 {
-                    field: 'fez_record_search_key_chapter_number',
+                    field: 'fez_record_search_key_total_chapters',
                     order: 32
                 },
                 {
-                    field: 'fez_record_search_key_total_chapters',
+                    field: 'fez_record_search_key_language',
                     order: 33
                 },
                 {
-                    field: 'fez_record_search_key_language',
+                    field: 'fez_record_search_key_subject',
                     order: 34
                 },
                 {
-                    field: 'fez_record_search_key_subject',
-                    order: 35
-                },
-                {
                     field: 'fez_record_search_key_keywords',
-                    order: 36
+                    order: 35
                 }
             ],
             'Creative Work': [
