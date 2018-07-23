@@ -150,6 +150,7 @@ const webpackConfig = {
     ],
     optimization: {
         splitChunks: {
+            automaticNameDelimiter: '-',
             cacheGroups: {
                 commons: {
                     chunks: 'all'
