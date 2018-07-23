@@ -1,21 +1,6 @@
-jest.dontMock('./ListEditor');
-
 import ListEditor from './ListEditor';
 
 function setup(testProps) {
-    // props
-    // formComponent: PropTypes.func.isRequired,
-    // inputField: PropTypes.func, // eg connected auto complete fields
-    // className: PropTypes.string,
-    // searchKey: PropTypes.object.isRequired,
-    // maxCount: PropTypes.number,
-    // isValid: PropTypes.func,
-    // disabled: PropTypes.bool,
-    // onChange: PropTypes.func,
-    // locale: PropTypes.object,
-    // hideReorder: PropTypes.bool,
-    // distinctOnly: PropTypes.bool,
-    // errorText: PropTypes.string
 
     const props = {
         ...testProps,
@@ -30,7 +15,6 @@ function setup(testProps) {
         distinctOnly: testProps.distinctOnly || false,
         errorText: testProps.errorText || ''
     };
-
     return getElement(ListEditor, props);
 }
 

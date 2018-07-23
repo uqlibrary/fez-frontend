@@ -1,40 +1,16 @@
-jest.dontMock('./CitationView');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import CitationView from './CitationView';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-
 import {researchReport} from 'mock/data/testing/records';
 
-
-function setup({prefix, suffix, className, value, isShallow = false}) {
+function setup(testProps, isShallow = true) {
     const props = {
-        prefix: prefix || ' ', // : PropTypes.string,
-        suffix: suffix || '.', // : PropTypes.string,
-        value: value,
-        className: className || '', // : PropTypes.string,
+        ...testProps,
+        prefix: testProps.prefix || ' ',
+        suffix: testProps.suffix || '.',
+        value: testProps.value,
+        className: testProps.className || ''
     };
-
-    if(isShallow) {
-        return shallow(<CitationView {...props}/>);
-    }
-
-    return mount(<CitationView {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+    return getElement(CitationView, props, isShallow);
 }
-
-beforeAll(() => {
-    
-});
 
 describe('CitationView test ', () => {
     it('should render component with empty span', () => {

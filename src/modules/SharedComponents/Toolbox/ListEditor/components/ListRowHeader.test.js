@@ -1,19 +1,12 @@
-jest.dontMock('./ListRowHeader');
-
-import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import ListRowHeader from './ListRowHeader';
 
-function setup({onDeleteAll, disabled}) {
-
+function setup(testProps, isShallow = true) {
     const props = {
-        onDeleteAll: onDeleteAll || jest.fn(), // : PropTypes.func.isRequired,
-        // locale, // : PropTypes.object,
-        disabled: disabled || false // : PropTypes.bool
+        ...testProps,
+        onDeleteAll: testProps.onDeleteAll || jest.fn(),
+        disabled: testProps.disabled || false
     };
-
-    return shallow(<ListRowHeader {...props} />);
+    return getElement(ListRowHeader, props, isShallow);
 }
 
 describe('ListRowHeader renders ', () => {

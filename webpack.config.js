@@ -180,4 +180,13 @@ module.exports = {
             'custom_modules'
         ]
     },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    chunks: 'all'
+                }
+            }
+        }
+    }
 };

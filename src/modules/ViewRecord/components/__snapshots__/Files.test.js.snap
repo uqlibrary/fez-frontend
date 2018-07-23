@@ -113,6 +113,38 @@ exports[`Files Component  should not render cultural message 1`] = `
 </section>
 `;
 
+exports[`Files Component  should render alert for video files and firefox 1`] = `
+<div
+  className="help_outline alertWrapper "
+>
+  <div
+    className="columns is-multiline is-mobile"
+  >
+    <div
+      className="column is-narrow alertIcon"
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        help_outline
+      </FontIcon>
+    </div>
+    <div
+      className="column alertText"
+    >
+      <div>
+        <b>
+          FireFox Users - 
+        </b>
+        Please RIGHT CLICK then select link SAVE AS option to save and play video files
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Files Component  should render component 1`] = `
 <section>
   <StandardCard

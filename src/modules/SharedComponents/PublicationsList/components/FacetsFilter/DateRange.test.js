@@ -12,9 +12,13 @@ function setup(testProps, isShallow = true) {
 
 describe('Date range ', () => {
 
+    const MockDate = require('mockdate');
     beforeEach(() => {
-        // Set a mock date for account API
-        Date.now = jest.genMockFunction().mockReturnValue('2016-01-01T00:00:00.000Z');
+        MockDate.set('2020-01-01T00:00:00.000Z', 10);
+    });
+
+    afterEach(() => {
+        MockDate.reset();
     });
 
     it('should render empty component', () => {

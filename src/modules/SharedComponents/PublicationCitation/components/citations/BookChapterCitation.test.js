@@ -1,37 +1,13 @@
-jest.dontMock('./BookChapterCitation');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import BookChapterCitation from './BookChapterCitation';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-
 import {bookChapter} from 'mock/data/testing/records';
 
-
-function setup({publication, isShallow = false}) {
+function setup(testProps, isShallow = false) {
     const props = {
-        publication: publication || {}, // : PropTypes.object.isRequired,
+        ...testProps,
+        publication: testProps.publication || {},
     };
-
-    if(isShallow) {
-        return shallow(<BookChapterCitation {...props} />);
-    }
-
-    return mount(<BookChapterCitation {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+    return getElement(BookChapterCitation, props, isShallow);
 }
-
-beforeAll(() => {
-    
-});
 
 describe('BookChapterCitation renders ', () => {
     it('component with empty publication', () => {

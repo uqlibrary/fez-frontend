@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component DatePicker should render as expected 1`] = `
+<div
+  style={
+    Object {
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <DatePicker
+    autoOk={false}
+    container="dialog"
+    disableYearSelection={false}
+    disabled={false}
+    firstDayOfWeek={1}
+    hideCalendarDate={false}
+    onChange={[Function]}
+    openToYearSelection={false}
+    style={Object {}}
+    value={2020-01-01T00:00:00.000Z}
+  />
+</div>
+`;

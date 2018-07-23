@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Masquerade Should render form as expected 1`] = `
+<StandardPage
+  className=""
+  title="Masquerade"
+>
+  <StandardCard
+    className=""
+    help={
+      Object {
+        "buttonLabel": "OK",
+        "text": <div>
+          Masquerade as another user...
+        </div>,
+        "title": "Masquerade",
+      }
+    }
+    title="Masquerade"
+  >
+    <div>
+      <div>
+        <strong>
+          WARNING!!
+        </strong>
+         Masquerading as a user you will effectively become the user you enter here, and changes you make will apply to their account!
+      </div>
+    </div>
+    <TextField
+      className="mui-long-labels-fix"
+      disabled={false}
+      floatingLabelFixed={false}
+      floatingLabelText="Username or student username"
+      fullWidth={true}
+      hintText="Username or student username"
+      id="userName"
+      multiLine={false}
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      rows={1}
+      type="text"
+      underlineShow={true}
+      value=""
+    />
+  </StandardCard>
+  <div
+    className="columns action-buttons"
+  >
+    <div
+      className="column is-hidden-mobile"
+    />
+    <div
+      className="column is-narrow-desktop"
+    >
+      <RaisedButton
+        disabled={false}
+        fullWidth={true}
+        label="Masquerade"
+        labelPosition="after"
+        onClick={[Function]}
+        primary={false}
+        secondary={true}
+      />
+    </div>
+  </div>
+</StandardPage>
+`;

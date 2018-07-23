@@ -1,45 +1,20 @@
-jest.dontMock('./PublicationsListPaging');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import PublicationsListPaging from './PublicationsListPaging';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
 
-
-function setup({onPageChanged, disabled, pagingData, isShallow = true}) {
-    const defaultPagingData = {
-        from: 0,
-        to: 0,
-        total: 0,
-        per_page: 20,
-        current_page: 1
-    };
-
+function setup(testProps, isShallow = true) {
     const props = {
-        pagingData: pagingData || defaultPagingData,
-        disabled: disabled || false,
-        onPageChanged: onPageChanged || jest.fn()
-    };
-
-    if(isShallow) {
-        return shallow(<PublicationsListPaging {...props} />);
-    }
-
-    return mount(<PublicationsListPaging {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
+        ...testProps,
+        pagingData: testProps.pagingData || {
+            from: testProps.from || 0,
+            to: testProps.to || 0,
+            total: testProps.total || 0,
+            per_page: testProps.per_page || 20,
+            current_page: testProps.current_page || 1
         },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+        disabled: testProps.disabled || false,
+        onPageChanged: testProps.onPageChanged || jest.fn()
+    };
+    return getElement(PublicationsListPaging, props, isShallow);
 }
-
-beforeAll(() => {
-
-});
 
 describe('PublicationsListPaging renders ', () => {
     it('component with empty paging data', () => {

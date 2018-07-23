@@ -162,7 +162,12 @@ export default class Files extends Component {
     render() {
         const {publication} = this.props;
         const fileData = this.getFileData(publication);
+        const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
         if (fileData.length === 0) return null;
+        let hasVideo = false;
+        fileData.map((item) => {
+            if(item.mimeType.indexOf('video') > -1) { hasVideo = true; }
+        });
         return (
             <section>
                 <StandardCard title={locale.viewRecord.sections.files.title}>
@@ -171,6 +176,13 @@ export default class Files extends Component {
                         <Alert allowDismiss type={'info'}
                             message={publication.fez_record_search_key_advisory_statement.rek_advisory_statement || locale.viewRecord.sections.files.culturalSensitivityStatement}
                             dismissAction={this.props.setHideCulturalSensitivityStatement}/>
+                    }
+                    {
+                        isFireFox && hasVideo &&
+                        <Alert allowDismiss type={locale.viewRecord.fireFoxAlert.type}
+                            title={locale.viewRecord.fireFoxAlert.title}
+                            message={locale.viewRecord.fireFoxAlert.message}
+                        />
                     }
                     <div className="files" ref="files">
                         <div className="header columns is-gapless is-vcentered is-mobile">

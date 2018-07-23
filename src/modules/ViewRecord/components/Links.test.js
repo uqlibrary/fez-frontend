@@ -81,8 +81,13 @@ describe('Component Links ', () => {
         calculateOpenAccess() { return calculateOpenAccess(this); }
     });
 
+    const MockDate = require('mockdate');
     beforeEach(() => {
-        Date.now = jest.genMockFunction().mockReturnValue('2020-01-01T00:00:00.000Z');
+        MockDate.set('2020-01-01T00:00:00.000Z', 10);
+    });
+
+    afterEach(() => {
+        MockDate.reset();
     });
 
     it('should not render component for empty publication', () => {
