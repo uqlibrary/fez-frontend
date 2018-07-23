@@ -1,26 +1,22 @@
-jest.dontMock('./PublicationStats');
-
-import {shallow} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import {formattedData} from 'mock/data/testing/publicationStats';
 import PublicationStats from './PublicationStats';
 
-function setup(publicationsStats) {
+function setup(testProps, isShallow = true) {
+    // build full props list required by the component
     const props = {
-        publicationsStats: publicationsStats
+        ...testProps,
     };
-    return shallow(<PublicationStats {...props} />);
+    return getElement(PublicationStats, props, isShallow);
 }
 
 describe('PublicationStats component', () => {
     it('should render statistics with table and data', () => {
-        const wrapper = setup(formattedData);
+        const wrapper = setup({publicationsStats: formattedData});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render an empty component', () => {
-        const wrapper = setup();
+        const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -41,7 +37,7 @@ describe('PublicationStats component', () => {
                 "years": "1992-2017"
             }
         };
-        const wrapper = setup(fakeData);
+        const wrapper = setup({publicationsStats: fakeData});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -62,7 +58,7 @@ describe('PublicationStats component', () => {
                 "years": "1992-2017"
             }
         };
-        const wrapper = setup(fakeData);
+        const wrapper = setup({publicationsStats: fakeData});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -83,7 +79,7 @@ describe('PublicationStats component', () => {
                 "years": "1992-2017"
             }
         };
-        const wrapper = setup(fakeData);
+        const wrapper = setup({publicationsStats: fakeData});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -104,7 +100,7 @@ describe('PublicationStats component', () => {
                 "years": "1992-2017"
             }
         };
-        const wrapper = setup(fakeData);
+        const wrapper = setup({publicationsStats: fakeData});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

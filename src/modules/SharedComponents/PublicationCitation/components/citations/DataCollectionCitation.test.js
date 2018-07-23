@@ -1,36 +1,13 @@
-jest.dontMock('./DataCollectionCitation');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import DataCollectionCitation from './DataCollectionCitation';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-
 import {dataCollection} from 'mock/data/testing/records';
 
-function setup({publication, isShallow = false}) {
+function setup(testProps, isShallow = false) {
     const props = {
-        publication: publication || {}, // : PropTypes.object.isRequired,
+        ...testProps,
+        publication: testProps.publication || {},
     };
-
-    if(isShallow) {
-        return shallow(<DataCollectionCitation {...props} />);
-    }
-
-    return mount(<DataCollectionCitation {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+    return getElement(DataCollectionCitation, props, isShallow);
 }
-
-beforeAll(() => {
-    
-});
 
 describe('DataCollectionCitation renders ', () => {
     it('component with empty publication', () => {

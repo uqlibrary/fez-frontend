@@ -1,14 +1,12 @@
-jest.dontMock('./DashboardAuthorDetails');
-
-import {shallow} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import DashboardAuthorDetails from './DashboardAuthorDetails';
 import {authorDetails} from 'mock/data';
 
-function setup({values}) {
-    const props = {values};
-    return shallow(<DashboardAuthorDetails {...props} />);
+function setup(testProps, isShallow = true) {
+    // build full props list required by the component
+    const props = {
+        ...testProps
+    };
+    return getElement(DashboardAuthorDetails, props, isShallow);
 }
 
 describe('Dashboard Author Details test', () => {

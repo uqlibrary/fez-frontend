@@ -1,39 +1,16 @@
-jest.dontMock('./CitationCountView');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import CitationCountView from './CitationCountView';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-
 import {researchReport} from 'mock/data/testing/records';
 
-function setup({source, count, link, title, isShallow = false}) {
+function setup(testProps, isShallow = true) {
     const props = {
-        source: source,
-        count: count,
-        link: link,
-        title: title
+        ...testProps,
+        source: testProps.source,
+        count: testProps.count,
+        link: testProps.link,
+        title: testProps.title
     };
-
-    if(isShallow) {
-        return shallow(<CitationCountView {...props} />);
-    }
-
-    return mount(<CitationCountView {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+    return getElement(CitationCountView, props, isShallow);
 }
-
-beforeAll(() => {
-    
-});
 
 describe('CitationCountView test ', () => {
     it('should render component with given count', () => {

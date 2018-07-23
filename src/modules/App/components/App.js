@@ -254,7 +254,7 @@ export default class App extends PureComponent {
                     />
                     {
                         userStatusAlert &&
-                        <div className="layout-fill dashAlert">
+                        <div className="dashAlert">
                             <div className="layout-card">
                                 <Alert {...userStatusAlert} />
                             </div>
