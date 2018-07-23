@@ -2,16 +2,7 @@ import GenericSelectField from './GenericSelectField';
 
 function setup(testProps, isShallow = true){
     const props = {
-        ...testProps,
-        // onChange: PropTypes.func,
-        // locale: PropTypes.object,
-        // itemsList: PropTypes.array,
-        // itemsLoading: PropTypes.bool,
-        // loadItemsList: PropTypes.func,
-        // selectedValue: PropTypes.any,
-        // parentItemsId: PropTypes.number,
-        // className: PropTypes.string,
-        // disabled: PropTypes.bool
+        ...testProps
     };
     return getElement(GenericSelectField, props, isShallow);
 }

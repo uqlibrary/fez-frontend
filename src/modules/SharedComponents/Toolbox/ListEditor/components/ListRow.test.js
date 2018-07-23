@@ -1,27 +1,19 @@
-jest.dontMock('./ListRow');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import ListRow from './ListRow';
 
-function setup({index, item,
-    canMoveUp, canMoveDown, onMoveUp, onMoveDown, onDelete, disabled}){
-
+function setup(testProps, isShallow = true) {
     const props = {
-        index: index || 0, // PropTypes.number.isRequired,
-        item: item || 'one', // PropTypes.object.isRequired,
-        canMoveUp: canMoveUp || false, // PropTypes.bool,
-        canMoveDown: canMoveDown || false, // PropTypes.bool,
-        onMoveUp, // PropTypes.func,
-        onMoveDown, // PropTypes.func,
-        onDelete, // PropTypes.func,
-        disabled: disabled || false // PropTypes.bool
+        ...testProps,
+        index: testProps.index || 0, // PropTypes.number.isRequired,
+        item: testProps.item || 'one', // PropTypes.object.isRequired,
+        canMoveUp: testProps.canMoveUp || false, // PropTypes.bool,
+        canMoveDown: testProps.canMoveDown || false, // PropTypes.bool,
+        onMoveUp: testProps.onMoveUp, // PropTypes.func,
+        onMoveDown: testProps.onMoveDown, // PropTypes.func,
+        onDelete: testProps.onDelete, // PropTypes.func,
+        disabled: testProps.disabled || false // PropTypes.bool
     };
-
-    return shallow(<ListRow {...props} />);
+    return getElement(ListRow, props, isShallow);
 }
-
 
 describe('ListRow renders ', () => {
     it('a row with index and item and delete button', () => {

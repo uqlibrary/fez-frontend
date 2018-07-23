@@ -1,13 +1,12 @@
-jest.dontMock('./PublicationListLoadingProgress');
-
-import {shallow} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import PublicationListLoadingProgress from './PublicationListLoadingProgress';
 
-function setup({loadingPublicationSources, mobile}) {
-    const props = {loadingPublicationSources, mobile};
-    return shallow(<PublicationListLoadingProgress {...props} />);
+function setup(testProps, isShallow = true) {
+    const props = {
+        ...testProps,
+        loadingPublicationSources: testProps.loadingPublicationSources || {},
+        mobile: testProps.mobile || false
+    };
+    return getElement(PublicationListLoadingProgress, props, isShallow);
 }
 
 describe('Search Dashboard test', () => {

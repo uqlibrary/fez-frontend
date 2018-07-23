@@ -331,7 +331,7 @@ exports[`Application component should render alert if user is not fez author 1`]
       onRef={[Function]}
     />
     <div
-      className="layout-fill dashAlert"
+      className="dashAlert"
     >
       <div
         className="layout-card"
@@ -1264,7 +1264,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       onRef={[Function]}
     />
     <div
-      className="layout-fill dashAlert"
+      className="dashAlert"
     >
       <div
         className="layout-card"
@@ -2190,7 +2190,7 @@ exports[`Application component should render app for account with fez author wit
       onRef={[Function]}
     />
     <div
-      className="layout-fill dashAlert"
+      className="dashAlert"
     >
       <div
         className="layout-card"

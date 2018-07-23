@@ -11,7 +11,7 @@ const AppAlert = ({appAlert}) => {
     if (!appAlert) return null;
 
     return (
-        <div className="layout-fill dashAlert">
+        <div className="dashAlert">
             <div className="layout-card">
                 <Alert {...appAlert} />
             </div>

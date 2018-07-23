@@ -1,9 +1,15 @@
 import publicationEnhancer, {calculateOpenAccess} from './publicationEnhancer';
 import {LATEST_PUBLICATIONS_LOADED, VIEW_RECORD_LOADED} from "actions/actionTypes";
+
 describe('publication enhancer', () => {
 
+    const MockDate = require('mockdate');
     beforeEach(() => {
-        Date.now = jest.genMockFunction().mockReturnValue('2020-01-01T00:00:00.000Z');
+        MockDate.set('2020-01-01T00:00:00.000Z', 10);
+    });
+
+    afterEach(() => {
+        MockDate.reset();
     });
 
     it('should add a method to a publication to calculate open access', () => {
