@@ -76,9 +76,32 @@ to keep initial load to a minimum following optimisation has been added to the p
 - Locale package is split into smaller chunks to avoid loading it all at once:
    - publicationForm.js locale is loaded only when PublicationForm component is loaded
    - other locale files are not too big, all bundled into one for now
-- webpack plugins:
 
-  - uglify/tree shake:
+### Webpack
+
+##### version: 4
+##### webpack plugins:
+  - SplitChunksPlugin
+  ```
+  optimization: {
+        splitChunks: {
+            automaticNameDelimiter: '-',
+            cacheGroups: {
+                commons: {
+                    chunks: 'all'
+                }
+            }
+        },
+        minimizer: [
+            new UglifyJsPlugin({
+                sourceMap: true,
+                parallel: true
+            })
+        ]
+    },
+  ```
+
+  - uglify/tree shake: used with split chunks built-in plugin in webpack 4
 
 ```
 new UglifyJsPlugin({sourceMap: true})
@@ -99,6 +122,8 @@ new webpack.DefinePlugin({
 ```
 new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
 ```
+##### Gotchas:
+  - Because FE is served from cloudFront, add a behaviour to serve css/js filename patterns.  E.g. behaviours have been added for `main-*` and `commons-*` files.
 
 #### Optimisation Guidelines
 
