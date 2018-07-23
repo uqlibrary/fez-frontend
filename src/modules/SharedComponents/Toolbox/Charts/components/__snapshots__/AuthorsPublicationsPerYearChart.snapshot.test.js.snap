@@ -1,60 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AuthorsPublicationsPerYearChart  should render empty chart component 1`] = `
-<AuthorsPublicationsPerYearChart
-  categories={Array []}
-  series={Array []}
-  yAxisTitle="title"
->
-  <Chart
-    chartOptions={
-      Object {
-        "chart": Object {
-          "height": 320,
-          "type": "column",
+<Chart
+  chartOptions={
+    Object {
+      "chart": Object {
+        "height": 320,
+        "type": "column",
+      },
+      "legend": Object {
+        "align": "right",
+        "floating": true,
+        "labelFormatter": [Function],
+        "layout": "vertical",
+        "shadow": false,
+        "verticalAlign": "top",
+        "x": -30,
+        "y": -10,
+      },
+      "plotOptions": Object {
+        "column": Object {
+          "stacking": "normal",
         },
-        "legend": Object {
-          "align": "right",
-          "floating": true,
-          "labelFormatter": [Function],
-          "layout": "vertical",
-          "shadow": false,
-          "verticalAlign": "top",
-          "x": -30,
-          "y": -10,
+      },
+      "series": Array [],
+      "title": Object {
+        "text": null,
+      },
+      "xAxis": Object {
+        "categories": Array [],
+        "labels": Object {
+          "rotation": -45,
+          "y": 18,
         },
-        "plotOptions": Object {
-          "column": Object {
-            "stacking": "normal",
-          },
+      },
+      "yAxis": Object {
+        "min": 0,
+        "stackLabels": Object {
+          "enabled": true,
         },
-        "series": Array [],
         "title": Object {
-          "text": null,
+          "text": "title",
         },
-        "xAxis": Object {
-          "categories": Array [],
-          "labels": Object {
-            "rotation": -45,
-            "y": 18,
-          },
-        },
-        "yAxis": Object {
-          "min": 0,
-          "stackLabels": Object {
-            "enabled": true,
-          },
-          "title": Object {
-            "text": "title",
-          },
-        },
-      }
+      },
     }
-    className=" authors-publications-per-year-chart"
-  >
-    <div
-      className=" authors-publications-per-year-chart"
-    />
-  </Chart>
-</AuthorsPublicationsPerYearChart>
+  }
+  className=" authors-publications-per-year-chart"
+/>
 `;

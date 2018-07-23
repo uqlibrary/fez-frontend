@@ -18,14 +18,16 @@ function setup(testProps, isShallow = true) {
 
 describe('Component FileUploader', () => {
     let getMockFile;
+    const MockDate = require('mockdate');
     beforeEach(() => {
-        // Set a mock date for account API
-        // Date.now = jest.genMockFunction().mockReturnValue('2016-01-01T00:00:00.000Z');
-
+        MockDate.set('2020-01-01T00:00:00.000Z', 10);
         const _File = window.File;
         const FILE = (data = [''], name) => new _File(data, name, {lastModified: 12345678912});
         window.File = jest.fn((data, name) => FILE(data, name));
         getMockFile = (name) => ({fileData: new File([''], name), name: name, size: 0});
+    });
+    afterEach(() => {
+        MockDate.reset();
     });
 
     it('should render default component', () => {

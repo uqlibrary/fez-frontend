@@ -121,7 +121,8 @@ describe('Validation method', () => {
         expect(validation.isValidAuthorLink(authorLinkValid)).toEqual('');
         expect(validation.isValidAuthorLink('Invalid data')).toEqual(locale.validationErrors.authorLinking);
         expect(validation.isValidContributorLink(contributorLinkValid)).toEqual('');
-        expect(validation.isValidContributorLink('Invalid data')).toEqual(locale.validationErrors.contributorLinking);
+        expect(validation.isValidContributorLink('Invalid data')).toEqual('');
+        expect(validation.isValidContributorLink('Invalid data', true)).toEqual(locale.validationErrors.contributorLinking);
     });
 
     it('should validate google scholar id', () => {

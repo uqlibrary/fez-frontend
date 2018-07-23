@@ -174,21 +174,17 @@ export function claimPublication(data) {
     }
 
     const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
-
     return dispatch => {
         dispatch({type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING});
 
         let recordAuthorsIdSearchKeys = {};
         let recordContributorsIdSearchKeys = {};
 
-        if ((data.publication.fez_record_search_key_author && data.publication.fez_record_search_key_author.length === 1)
-            || (data.authorLinking && data.authorLinking.authors)) {
+        if (data.authorLinking && data.authorLinking.authors) {
             recordAuthorsIdSearchKeys = transformers.getRecordAuthorsIdSearchKey(data.authorLinking ? data.authorLinking.authors : null, data.author.aut_id);
         }
 
-        // If there is only 1 contributor on the record, or we're sending some contributor data to patch the record, form the data
-        if ((data.publication.fez_record_search_key_contributor && data.publication.fez_record_search_key_contributor.length === 1)
-            || (data.contributorLinking && data.contributorLinking.authors)) {
+        if (data.contributorLinking && data.contributorLinking.valid && data.contributorLinking.authors) {
             recordContributorsIdSearchKeys = transformers.getRecordContributorsIdSearchKey(data.contributorLinking ? data.contributorLinking.authors : null, data.author.aut_id);
         }
 

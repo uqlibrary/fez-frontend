@@ -118,7 +118,7 @@ describe('Component ClaimRecord ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render claim form, author linking component should not be rendered if there\'s only one author on a publication', () => {
+    it('should render claim form, author linking component should be rendered even if there\'s only one author on a publication', () => {
         const testArticle = {
             ...journalArticle,
             rek_pid: null,
@@ -140,7 +140,76 @@ describe('Component ClaimRecord ', () => {
             )
         });
 
-        expect(wrapper.find('Field').length).toEqual(3);
+        expect(wrapper.find('Field').length).toEqual(4);
+        expect(wrapper.find('RaisedButton').length).toEqual(2);
+        expect(wrapper.find('Alert').length).toEqual(0);
+        expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render claim form, contributor linking component should be rendered even if there\'s only one contributor on a publication', () => {
+        const testArticle = {
+            ...journalArticle,
+            rek_pid: null,
+            fez_record_search_key_author: [],
+            fez_record_search_key_author_id: [],
+            fez_record_search_key_contributor_id: [],
+            fez_record_search_key_contributor: [{
+                "rek_contributor_id": null,
+                "rek_contributor_pid": "UQ:10000",
+                "rek_contributor": "Smith, J",
+                "rek_contributor_order": 1
+            }]
+        };
+
+        const wrapper = setup({
+            initialValues: Immutable.Map(
+                {
+                    publication: Immutable.Map(testArticle),
+                    author: Immutable.Map({aut_id: 410})
+                }
+            )
+        });
+
+        expect(wrapper.find('Field').length).toEqual(4);
+        expect(wrapper.find('RaisedButton').length).toEqual(2);
+        expect(wrapper.find('Alert').length).toEqual(0);
+        expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render claim form, author linking component and contributor linking component should be rendered even if there are only one author and one contributor on a publication', () => {
+        const testArticle = {
+            ...journalArticle,
+            rek_pid: null,
+            fez_record_search_key_author_id: [],
+            fez_record_search_key_author: [{
+                "rek_author_id": null,
+                "rek_author_pid": "UQ:10000",
+                "rek_author": "Smith, J",
+                "rek_author_order": 1
+            }],
+            fez_record_search_key_contributor_id: [],
+            fez_record_search_key_contributor: [{
+                "rek_contributor_id": null,
+                "rek_contributor_pid": "UQ:10000",
+                "rek_contributor": "Smith, J",
+                "rek_contributor_order": 1
+            }]
+        };
+
+        const wrapper = setup({
+            initialValues: Immutable.Map(
+                {
+                    publication: Immutable.Map(testArticle),
+                    author: Immutable.Map({aut_id: 410})
+                }
+            )
+        });
+
+        expect(wrapper.find('Field').length).toEqual(5);
         expect(wrapper.find('RaisedButton').length).toEqual(2);
         expect(wrapper.find('Alert').length).toEqual(0);
         expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);

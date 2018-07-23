@@ -1,38 +1,15 @@
-jest.dontMock('./PageCitationView');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import PageCitationView from './PageCitationView';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-
 import {conferencePaper} from 'mock/data/testing/records';
 
-function setup({publication, searchKey, className, isShallow = false}) {
+function setup(testProps, isShallow = true) {
     const props = {
-        publication: publication || {}, // : PropTypes.object.isRequired,
-        searchKey: searchKey,
-        className: className
+        ...testProps,
+        publication: testProps.publication || {},
+        searchKey: testProps.searchKey,
+        className: testProps.className
     };
-
-    if (isShallow) {
-        return shallow(<PageCitationView {...props} />);
-    }
-
-    return mount(<PageCitationView {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+    return getElement(PageCitationView, props, isShallow);
 }
-
-beforeAll(() => {
-
-});
 
 describe('PageCitationView test ', () => {
     it('should render component with a mock espace record', () => {

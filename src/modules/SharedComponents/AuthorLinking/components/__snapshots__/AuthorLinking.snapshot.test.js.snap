@@ -1189,7 +1189,7 @@ exports[`ContributorLinking should be disabled 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="author"
+          type="contributor"
         />
         <AuthorItem
           author={
@@ -1223,7 +1223,7 @@ exports[`ContributorLinking should be disabled 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="author"
+          type="contributor"
         />
         <AuthorItem
           author={
@@ -1257,7 +1257,7 @@ exports[`ContributorLinking should be disabled 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="author"
+          type="contributor"
         />
       </div>
       <div
@@ -1296,7 +1296,7 @@ exports[`ContributorLinking should be disabled 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="author"
+          type="contributor"
         />
       </div>
     </Infinite>
@@ -1359,7 +1359,7 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="author"
+          type="contributor"
         />
         <AuthorItem
           author={
@@ -1393,7 +1393,7 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="author"
+          type="contributor"
         />
         <AuthorItem
           author={
@@ -1427,7 +1427,7 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="author"
+          type="contributor"
         />
       </div>
       <div
@@ -1466,7 +1466,7 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="author"
+          type="contributor"
         />
       </div>
     </Infinite>
@@ -1509,7 +1509,7 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           disabled={false}
           index={0}
           key="0"
-          linked={true}
+          linked={false}
           locale={
             Object {
               "ordinalData": Array [
@@ -1529,7 +1529,7 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="author"
+          type="contributor"
         />
         <AuthorItem
           author={
@@ -1543,7 +1543,7 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           disabled={false}
           index={1}
           key="1"
-          linked={true}
+          linked={false}
           locale={
             Object {
               "ordinalData": Array [
@@ -1563,7 +1563,7 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="author"
+          type="contributor"
         />
         <AuthorItem
           author={
@@ -1597,7 +1597,7 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="author"
+          type="contributor"
         />
       </div>
       <div
@@ -1616,7 +1616,7 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           disabled={false}
           index={3}
           key="3"
-          linked={true}
+          linked={false}
           locale={
             Object {
               "ordinalData": Array [
@@ -1636,7 +1636,7 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="author"
+          type="contributor"
         />
       </div>
     </Infinite>

@@ -1,7 +1,6 @@
 import {putUploadFile} from './file';
 import * as repositories from 'repositories';
 import {locale} from 'locale';
-// import * as mockData from 'mock/data';
 
 describe('File repository tests ', () => {
     // extend expect to check actions

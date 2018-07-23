@@ -1,39 +1,16 @@
-jest.dontMock('./DateCitationView');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import DateCitationView from './DateCitationView';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
 
-
-
-function setup({date, format, prefix, suffix, isShallow = false}) {
+function setup(testProps, isShallow = true) {
+    // build full props list required by the component
     const props = {
-        date: date,
-        format: format,
-        prefix: prefix,
-        suffix: suffix
+        ...testProps,
+        date: testProps.date,
+        format: testProps.format,
+        prefix: testProps.prefix,
+        suffix: testProps.suffix
     };
-
-    if(isShallow) {
-        return shallow(<DateCitationView {...props} />);
-    }
-
-    return mount(<DateCitationView {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+    return getElement(DateCitationView, props, isShallow);
 }
-
-beforeAll(() => {
-
-});
 
 describe('DateCitationView test', () => {
     it('should render empty component with no date', () => {

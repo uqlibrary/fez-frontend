@@ -1,16 +1,8 @@
-/* eslint-disable */
-
-import React from 'react';
-import {shallow, mount} from 'enzyme';
-import toJson from 'enzyme-to-json';
-
 import AuthorsPublicationTypesCountChart from './AuthorsPublicationTypesCountChart';
 
-function setup(testProps, isShallow = false) {
-    if (isShallow)
-        return shallow(<AuthorsPublicationTypesCountChart {...testProps} />);
-
-    return mount(<AuthorsPublicationTypesCountChart {...testProps} />);
+function setup(testProps, isShallow = true) {
+    const props = {...testProps};
+    return getElement(AuthorsPublicationTypesCountChart, props, isShallow);
 }
 
 

@@ -1,15 +1,10 @@
-jest.dontMock('./TextField');
-
-import {shallow} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import TextField from './TextField';
-
 import filterProps from '../../helpers/_filterProps';
 
-function setup(props) {
+function setup(testProps, isShallow = true) {
+    const props = {...testProps};
     const consolidatedProps = filterProps(props, TextField.propTypes);
-    return shallow(<TextField {...consolidatedProps} />);
+    return getElement(TextField, consolidatedProps, isShallow);
 }
 
 describe('TextFieldWrapper snapshots tests', () => {

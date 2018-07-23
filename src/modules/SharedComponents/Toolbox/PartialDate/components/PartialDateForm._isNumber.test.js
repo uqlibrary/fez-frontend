@@ -1,6 +1,3 @@
-jest.dontMock('./PartialDateForm');
-
-import React from 'react';
 import PartialDateForm from './PartialDateForm';
 
 const locale = {
