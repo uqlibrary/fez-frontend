@@ -6,7 +6,6 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const autoprefixer = require('autoprefixer');
 // const OfflinePlugin = require('offline-plugin'); // turn off for staging while co-existing with legacy
 const InjectPreloader = require('preloader-html-webpack-plugin');
 const chalk = require('chalk');
@@ -66,7 +65,7 @@ const webpackConfig = {
     // The entry file. All your app roots from here.
     entry: {
         main: resolve(__dirname, './src/index.js'),
-        vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'redux-form', 'moment', 'babel-polyfill']
+        vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'redux-form', 'moment']
     },
     // Where you want the output to go
     output: {
@@ -144,19 +143,27 @@ const webpackConfig = {
         //     }
         // }),
         new InjectPreloader(),
-        new UglifyJsPlugin({
-            sourceMap: true
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            minChunks: Infinity
-        }),
         new BundleAnalyzerPlugin({
             analyzerMode: config.environment === 'production' ? 'disabled' : 'static',
             openAnalyzer: !process.env.CI_BRANCH
         }),
         new RobotstxtPlugin(options)
     ],
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    chunks: 'all'
+                }
+            }
+        },
+        minimizer: [
+            new UglifyJsPlugin({
+                sourceMap: true,
+                parallel: true
+            })
+        ]
+    },
     module: {
         rules: [
             {

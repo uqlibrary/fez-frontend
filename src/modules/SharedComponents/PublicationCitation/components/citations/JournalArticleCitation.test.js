@@ -1,36 +1,13 @@
-jest.dontMock('./JournalArticleCitation');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import JournalArticleCitation from './JournalArticleCitation';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-
 import {journalArticle} from 'mock/data/testing/records';
 
-function setup({publication, isShallow = false}) {
+function setup(testProps, isShallow = false) {
     const props = {
-        publication: publication || {}, // : PropTypes.object.isRequired,
+        ...testProps,
+        publication: testProps.publication || {},
     };
-
-    if(isShallow) {
-        return shallow(<JournalArticleCitation {...props} />);
-    }
-
-    return mount(<JournalArticleCitation {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+    return getElement(JournalArticleCitation, props, isShallow);
 }
-
-beforeAll(() => {
-
-});
 
 describe('JournalArticleCitation renders ', () => {
     it('component with empty publication', () => {

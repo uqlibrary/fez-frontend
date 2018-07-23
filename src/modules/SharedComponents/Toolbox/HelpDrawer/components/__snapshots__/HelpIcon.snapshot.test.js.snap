@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HelpIcon snapshots tests renders menu 1`] = `
+exports[`HelpIcon snapshots tests renders help icon 1`] = `
 <IconButton
   disableTouchRipple={false}
   disabled={false}
   iconStyle={Object {}}
   onClick={[Function]}
-  tooltip="Click for more information"
+  tooltip="This is a tooltip"
   tooltipPosition="bottom-left"
   touch={false}
 >

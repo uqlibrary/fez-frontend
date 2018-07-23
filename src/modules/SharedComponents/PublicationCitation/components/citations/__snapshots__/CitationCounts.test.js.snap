@@ -1,160 +1,1641 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CitationCounts should not render View full statistics link on public pages for anonymous user 1`] = `
-<div
-  className="citationCounts columns is-gapless is-marginless is-multiline"
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
+    }
+  }
 >
-  <div
-    className="column is-narrow-tablet is-12-mobile citationIcons"
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
   >
-    <CitationCountView
-      count={1}
-      link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
-      source="wos"
-      title="Full citation in Web of science will open in a new window"
-    />
-    <CitationCountView
-      count={1}
-      link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
-      source="scopus"
-      title="Full citation in Scopus will open in a new window"
-    />
-    <CitationCountView
-      count={1}
-      link="http://www.altmetric.com/details.php?citation_id=12345"
-      source="altmetric"
-      title="Full citation in Altmetric will open in a new window"
-    />
-    <CitationCountView
-      count={1}
-      link="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
-      source="google"
-      title="Full citation in Google scholar will open in a new window"
-    />
-    <OpenAccessIcon
-      embargoDate={null}
-      isOpenAccess={false}
-      showEmbargoText={false}
-    />
-  </div>
-  <div
-    className="column is-narrow"
-  />
-  <div
-    className="column is-hidden-mobile"
-  />
-</div>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <CitationCounts
+        hideViewFullStatisticsLink={true}
+        publication={
+          Object {
+            "fez_record_search_key_isi_loc": Object {
+              "rek_isi_loc": 12345,
+            },
+            "fez_record_search_key_oa_embargo_days": Object {
+              "rek_oa_embargo_days": 0,
+            },
+            "fez_record_search_key_oa_status": Object {
+              "rek_oa_status": 453693,
+            },
+            "fez_record_search_key_scopus_id": Object {
+              "rek_scopus_id": 12345,
+            },
+            "rek_altmetric_id": 12345,
+            "rek_altmetric_score": 1,
+            "rek_created_date": "2019-12-25T00:00:00Z",
+            "rek_gs_citation_count": 1,
+            "rek_pid": "pid:111",
+            "rek_scopus_citation_count": 1,
+            "rek_thomson_citation_count": 1,
+            "rek_title": "This is test title",
+          }
+        }
+      >
+        <div
+          className="citationCounts columns is-gapless is-marginless is-multiline"
+        >
+          <div
+            className="column is-narrow-tablet is-12-mobile citationIcons"
+          >
+            <CitationCountView
+              count={1}
+              link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+              source="wos"
+              title="Full citation in Web of science will open in a new window"
+            >
+              <div
+                className="citationCount"
+              >
+                <ExternalLink
+                  aria-label="Full citation in Web of science will open in a new window"
+                  className="wosCitationCount"
+                  href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+                  openInNewIcon={false}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Full citation in Web of science will open in a new window"
+                >
+                  <a
+                    aria-label="Full citation in Web of science will open in a new window"
+                    className="wosCitationCount externalLinkfalse"
+                    href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+                    rel="noopener noreferrer"
+                    tabIndex="0"
+                    target="_blank"
+                    title="Full citation in Web of science will open in a new window"
+                  >
+                    <div
+                      className="fez-icon wos large"
+                    />
+                    <span
+                      className="citationCountNumber"
+                    >
+                      1
+                    </span>
+                  </a>
+                </ExternalLink>
+              </div>
+            </CitationCountView>
+            <CitationCountView
+              count={1}
+              link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+              source="scopus"
+              title="Full citation in Scopus will open in a new window"
+            >
+              <div
+                className="citationCount"
+              >
+                <ExternalLink
+                  aria-label="Full citation in Scopus will open in a new window"
+                  className="scopusCitationCount"
+                  href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+                  openInNewIcon={false}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Full citation in Scopus will open in a new window"
+                >
+                  <a
+                    aria-label="Full citation in Scopus will open in a new window"
+                    className="scopusCitationCount externalLinkfalse"
+                    href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+                    rel="noopener noreferrer"
+                    tabIndex="0"
+                    target="_blank"
+                    title="Full citation in Scopus will open in a new window"
+                  >
+                    <div
+                      className="fez-icon scopus large"
+                    />
+                    <span
+                      className="citationCountNumber"
+                    >
+                      1
+                    </span>
+                  </a>
+                </ExternalLink>
+              </div>
+            </CitationCountView>
+            <CitationCountView
+              count={1}
+              link="http://www.altmetric.com/details.php?citation_id=12345"
+              source="altmetric"
+              title="Full citation in Altmetric will open in a new window"
+            >
+              <div
+                className="citationCount"
+              >
+                <ExternalLink
+                  aria-label="Full citation in Altmetric will open in a new window"
+                  className="altmetricCitationCount"
+                  href="http://www.altmetric.com/details.php?citation_id=12345"
+                  openInNewIcon={false}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Full citation in Altmetric will open in a new window"
+                >
+                  <a
+                    aria-label="Full citation in Altmetric will open in a new window"
+                    className="altmetricCitationCount externalLinkfalse"
+                    href="http://www.altmetric.com/details.php?citation_id=12345"
+                    rel="noopener noreferrer"
+                    tabIndex="0"
+                    target="_blank"
+                    title="Full citation in Altmetric will open in a new window"
+                  >
+                    <div
+                      className="fez-icon altmetric large"
+                    />
+                    <span
+                      className="citationCountNumber"
+                    >
+                      1
+                    </span>
+                  </a>
+                </ExternalLink>
+              </div>
+            </CitationCountView>
+            <CitationCountView
+              count={1}
+              link="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
+              source="google"
+              title="Full citation in Google scholar will open in a new window"
+            >
+              <div
+                className="citationCount"
+              >
+                <ExternalLink
+                  aria-label="Full citation in Google scholar will open in a new window"
+                  className="googleCitationCount"
+                  href="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
+                  openInNewIcon={false}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Full citation in Google scholar will open in a new window"
+                >
+                  <a
+                    aria-label="Full citation in Google scholar will open in a new window"
+                    className="googleCitationCount externalLinkfalse"
+                    href="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
+                    rel="noopener noreferrer"
+                    tabIndex="0"
+                    target="_blank"
+                    title="Full citation in Google scholar will open in a new window"
+                  >
+                    <div
+                      className="fez-icon google large"
+                    />
+                    <span
+                      className="citationCountNumber"
+                    >
+                      1
+                    </span>
+                  </a>
+                </ExternalLink>
+              </div>
+            </CitationCountView>
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={false}
+              showEmbargoText={false}
+            >
+              <span
+                className="noOaIcon"
+              />
+            </OpenAccessIcon>
+          </div>
+          <div
+            className="column is-narrow"
+          />
+          <div
+            className="column is-hidden-mobile"
+          />
+        </div>
+      </CitationCounts>
+    </Router>
+  </MemoryRouter>
+</Provider>
 `;
 
 exports[`CitationCounts should render component with a mock record metrics 1`] = `
-<div
-  className="citationCounts columns is-gapless is-marginless is-multiline"
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
+    }
+  }
 >
-  <div
-    className="column is-narrow-tablet is-12-mobile citationIcons"
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
   >
-    <CitationCountView
-      count={1}
-      link="http://www.altmetric.com/details.php?citation_id=23535331"
-      source="altmetric"
-      title="Full citation in Altmetric will open in a new window"
-    />
-    <CitationCountView
-      count={null}
-      link="https://scholar.google.com/scholar?q=intitle:[id]ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
-      source="google"
-      title="Full citation in Google scholar will open in a new window"
-    />
-    <OpenAccessIcon
-      embargoDate={null}
-      isOpenAccess={false}
-      showEmbargoText={false}
-    />
-  </div>
-  <div
-    className="column is-narrow"
-  />
-  <div
-    className="column is-hidden-mobile"
-  />
-</div>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <CitationCounts
+        publication={
+          Object {
+            "fez_datastream_info": Array [
+              Object {
+                "dsi_copyright": null,
+                "dsi_dsid": "FezACML_UQ_678728.xml",
+                "dsi_embargo_date": null,
+                "dsi_label": "FezACML security for PID - UQ:678728",
+                "dsi_mimetype": "text/xml",
+                "dsi_open_access": null,
+                "dsi_pid": "UQ:678728",
+                "dsi_size": 3660,
+                "dsi_state": "A",
+              },
+            ],
+            "fez_matched_journals": Array [
+              Object {
+                "mtj_jnl_id": 2528,
+                "mtj_pid": "UQ:678728",
+                "mtj_status": "A",
+              },
+              Object {
+                "mtj_jnl_id": 29907,
+                "mtj_pid": "UQ:678728",
+                "mtj_status": "A",
+              },
+              Object {
+                "mtj_jnl_id": 47227,
+                "mtj_pid": "UQ:678728",
+                "mtj_status": "A",
+              },
+              Object {
+                "mtj_jnl_id": 100120,
+                "mtj_pid": "UQ:678728",
+                "mtj_status": "A",
+              },
+            ],
+            "fez_record_search_key_article_number": null,
+            "fez_record_search_key_assigned_group_id": Array [],
+            "fez_record_search_key_assigned_user_id": Array [],
+            "fez_record_search_key_author": Array [
+              Object {
+                "rek_author": "Tomatis, Vanesa M.",
+                "rek_author_id": 30322336,
+                "rek_author_order": 1,
+                "rek_author_pid": "UQ:678728",
+                "rek_author_xsdmf_id": null,
+              },
+              Object {
+                "rek_author": "Josh, Peter",
+                "rek_author_id": 30322337,
+                "rek_author_order": 2,
+                "rek_author_pid": "UQ:678728",
+                "rek_author_xsdmf_id": null,
+              },
+              Object {
+                "rek_author": "Papadopulos, Andreas",
+                "rek_author_id": 30322338,
+                "rek_author_order": 3,
+                "rek_author_pid": "UQ:678728",
+                "rek_author_xsdmf_id": null,
+              },
+              Object {
+                "rek_author": "Gormal, Rachel S.",
+                "rek_author_id": 30322339,
+                "rek_author_order": 4,
+                "rek_author_pid": "UQ:678728",
+                "rek_author_xsdmf_id": null,
+              },
+              Object {
+                "rek_author": "Lanoue, Vanessa",
+                "rek_author_id": 30322340,
+                "rek_author_order": 5,
+                "rek_author_pid": "UQ:678728",
+                "rek_author_xsdmf_id": null,
+              },
+              Object {
+                "rek_author": "Martin, Sally",
+                "rek_author_id": 30322341,
+                "rek_author_order": 6,
+                "rek_author_pid": "UQ:678728",
+                "rek_author_xsdmf_id": null,
+              },
+              Object {
+                "rek_author": "Meunier, Frédéric A.",
+                "rek_author_id": 30322342,
+                "rek_author_order": 7,
+                "rek_author_pid": "UQ:678728",
+                "rek_author_xsdmf_id": null,
+              },
+            ],
+            "fez_record_search_key_author_affiliation_country": Array [
+              Object {
+                "rek_author_affiliation_country": "aus",
+                "rek_author_affiliation_country_id": 349769,
+                "rek_author_affiliation_country_order": 1,
+                "rek_author_affiliation_country_pid": "UQ:678728",
+                "rek_author_affiliation_country_xsdmf_id": 0,
+              },
+              Object {
+                "rek_author_affiliation_country": "aus",
+                "rek_author_affiliation_country_id": 349770,
+                "rek_author_affiliation_country_order": 2,
+                "rek_author_affiliation_country_pid": "UQ:678728",
+                "rek_author_affiliation_country_xsdmf_id": 0,
+              },
+              Object {
+                "rek_author_affiliation_country": "aus",
+                "rek_author_affiliation_country_id": 349771,
+                "rek_author_affiliation_country_order": 3,
+                "rek_author_affiliation_country_pid": "UQ:678728",
+                "rek_author_affiliation_country_xsdmf_id": 0,
+              },
+              Object {
+                "rek_author_affiliation_country": "aus",
+                "rek_author_affiliation_country_id": 349772,
+                "rek_author_affiliation_country_order": 4,
+                "rek_author_affiliation_country_pid": "UQ:678728",
+                "rek_author_affiliation_country_xsdmf_id": 0,
+              },
+              Object {
+                "rek_author_affiliation_country": "aus",
+                "rek_author_affiliation_country_id": 349773,
+                "rek_author_affiliation_country_order": 5,
+                "rek_author_affiliation_country_pid": "UQ:678728",
+                "rek_author_affiliation_country_xsdmf_id": 0,
+              },
+              Object {
+                "rek_author_affiliation_country": "aus",
+                "rek_author_affiliation_country_id": 349774,
+                "rek_author_affiliation_country_order": 6,
+                "rek_author_affiliation_country_pid": "UQ:678728",
+                "rek_author_affiliation_country_xsdmf_id": 0,
+              },
+              Object {
+                "rek_author_affiliation_country": "aus",
+                "rek_author_affiliation_country_id": 349775,
+                "rek_author_affiliation_country_order": 7,
+                "rek_author_affiliation_country_pid": "UQ:678728",
+                "rek_author_affiliation_country_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_author_affiliation_full_address": Array [
+              Object {
+                "rek_author_affiliation_full_address": "Queensland",
+                "rek_author_affiliation_full_address_id": 382478,
+                "rek_author_affiliation_full_address_order": 1,
+                "rek_author_affiliation_full_address_pid": "UQ:678728",
+                "rek_author_affiliation_full_address_xsdmf_id": 0,
+              },
+              Object {
+                "rek_author_affiliation_full_address": "Brisbane,Queensland",
+                "rek_author_affiliation_full_address_id": 382479,
+                "rek_author_affiliation_full_address_order": 2,
+                "rek_author_affiliation_full_address_pid": "UQ:678728",
+                "rek_author_affiliation_full_address_xsdmf_id": 0,
+              },
+              Object {
+                "rek_author_affiliation_full_address": "Queensland",
+                "rek_author_affiliation_full_address_id": 382480,
+                "rek_author_affiliation_full_address_order": 3,
+                "rek_author_affiliation_full_address_pid": "UQ:678728",
+                "rek_author_affiliation_full_address_xsdmf_id": 0,
+              },
+              Object {
+                "rek_author_affiliation_full_address": "Queensland",
+                "rek_author_affiliation_full_address_id": 382481,
+                "rek_author_affiliation_full_address_order": 4,
+                "rek_author_affiliation_full_address_pid": "UQ:678728",
+                "rek_author_affiliation_full_address_xsdmf_id": 0,
+              },
+              Object {
+                "rek_author_affiliation_full_address": "Queensland",
+                "rek_author_affiliation_full_address_id": 382482,
+                "rek_author_affiliation_full_address_order": 5,
+                "rek_author_affiliation_full_address_pid": "UQ:678728",
+                "rek_author_affiliation_full_address_xsdmf_id": 0,
+              },
+              Object {
+                "rek_author_affiliation_full_address": "Queensland",
+                "rek_author_affiliation_full_address_id": 382483,
+                "rek_author_affiliation_full_address_order": 6,
+                "rek_author_affiliation_full_address_pid": "UQ:678728",
+                "rek_author_affiliation_full_address_xsdmf_id": 0,
+              },
+              Object {
+                "rek_author_affiliation_full_address": "Queensland",
+                "rek_author_affiliation_full_address_id": 382484,
+                "rek_author_affiliation_full_address_order": 7,
+                "rek_author_affiliation_full_address_pid": "UQ:678728",
+                "rek_author_affiliation_full_address_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_author_affiliation_id": Array [],
+            "fez_record_search_key_author_affiliation_name": Array [
+              Object {
+                "rek_author_affiliation_name": "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
+                "rek_author_affiliation_name_id": 350555,
+                "rek_author_affiliation_name_order": 1,
+                "rek_author_affiliation_name_pid": "UQ:678728",
+                "rek_author_affiliation_name_xsdmf_id": 0,
+              },
+              Object {
+                "rek_author_affiliation_name": "Queensland Brain Institute,The University of Queensland",
+                "rek_author_affiliation_name_id": 350556,
+                "rek_author_affiliation_name_order": 2,
+                "rek_author_affiliation_name_pid": "UQ:678728",
+                "rek_author_affiliation_name_xsdmf_id": 0,
+              },
+              Object {
+                "rek_author_affiliation_name": "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
+                "rek_author_affiliation_name_id": 350557,
+                "rek_author_affiliation_name_order": 3,
+                "rek_author_affiliation_name_pid": "UQ:678728",
+                "rek_author_affiliation_name_xsdmf_id": 0,
+              },
+              Object {
+                "rek_author_affiliation_name": "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
+                "rek_author_affiliation_name_id": 350558,
+                "rek_author_affiliation_name_order": 4,
+                "rek_author_affiliation_name_pid": "UQ:678728",
+                "rek_author_affiliation_name_xsdmf_id": 0,
+              },
+              Object {
+                "rek_author_affiliation_name": "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
+                "rek_author_affiliation_name_id": 350559,
+                "rek_author_affiliation_name_order": 5,
+                "rek_author_affiliation_name_pid": "UQ:678728",
+                "rek_author_affiliation_name_xsdmf_id": 0,
+              },
+              Object {
+                "rek_author_affiliation_name": "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
+                "rek_author_affiliation_name_id": 350560,
+                "rek_author_affiliation_name_order": 6,
+                "rek_author_affiliation_name_pid": "UQ:678728",
+                "rek_author_affiliation_name_xsdmf_id": 0,
+              },
+              Object {
+                "rek_author_affiliation_name": "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
+                "rek_author_affiliation_name_id": 350561,
+                "rek_author_affiliation_name_order": 7,
+                "rek_author_affiliation_name_pid": "UQ:678728",
+                "rek_author_affiliation_name_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_author_id": Array [
+              Object {
+                "rek_author_id": 410,
+                "rek_author_id_id": 29597409,
+                "rek_author_id_lookup": "Vanesa Tomatis",
+                "rek_author_id_order": 1,
+                "rek_author_id_pid": "UQ:678728",
+                "rek_author_id_xsdmf_id": null,
+              },
+              Object {
+                "rek_author_id": 91082,
+                "rek_author_id_id": 29597410,
+                "rek_author_id_lookup": "Peter Josh",
+                "rek_author_id_order": 2,
+                "rek_author_id_pid": "UQ:678728",
+                "rek_author_id_xsdmf_id": null,
+              },
+              Object {
+                "rek_author_id": 89985,
+                "rek_author_id_id": 29597411,
+                "rek_author_id_lookup": "Andreas Papadopulos",
+                "rek_author_id_order": 3,
+                "rek_author_id_pid": "UQ:678728",
+                "rek_author_id_xsdmf_id": null,
+              },
+              Object {
+                "rek_author_id": 10992,
+                "rek_author_id_id": 29597412,
+                "rek_author_id_lookup": "Rachel Sarah Gormal",
+                "rek_author_id_order": 4,
+                "rek_author_id_pid": "UQ:678728",
+                "rek_author_id_xsdmf_id": null,
+              },
+              Object {
+                "rek_author_id": 727162,
+                "rek_author_id_id": 29597413,
+                "rek_author_id_lookup": "Lanoue, Vanessa",
+                "rek_author_id_order": 5,
+                "rek_author_id_pid": "UQ:678728",
+                "rek_author_id_xsdmf_id": null,
+              },
+              Object {
+                "rek_author_id": 745,
+                "rek_author_id_id": 29597414,
+                "rek_author_id_lookup": "Martin, Sally",
+                "rek_author_id_order": 6,
+                "rek_author_id_pid": "UQ:678728",
+                "rek_author_id_xsdmf_id": null,
+              },
+              Object {
+                "rek_author_id": 2746,
+                "rek_author_id_id": 29597415,
+                "rek_author_id_lookup": "Meunier, Frederic A.",
+                "rek_author_id_order": 7,
+                "rek_author_id_pid": "UQ:678728",
+                "rek_author_id_xsdmf_id": null,
+              },
+            ],
+            "fez_record_search_key_biosis_id": null,
+            "fez_record_search_key_contributor": Array [],
+            "fez_record_search_key_contributor_id": Array [],
+            "fez_record_search_key_corresponding_country": Array [
+              Object {
+                "rek_corresponding_country": "aus",
+                "rek_corresponding_country_id": 286607,
+                "rek_corresponding_country_order": 1,
+                "rek_corresponding_country_pid": "UQ:678728",
+                "rek_corresponding_country_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_corresponding_email": Array [
+              Object {
+                "rek_corresponding_email": "f.meunier@uq.edu.au",
+                "rek_corresponding_email_id": 64300,
+                "rek_corresponding_email_order": 1,
+                "rek_corresponding_email_pid": "UQ:678728",
+                "rek_corresponding_email_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_corresponding_name": Array [
+              Object {
+                "rek_corresponding_name": "Meunier F.A.",
+                "rek_corresponding_name_id": 57197,
+                "rek_corresponding_name_order": 1,
+                "rek_corresponding_name_pid": "UQ:678728",
+                "rek_corresponding_name_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_corresponding_organisation": Array [],
+            "fez_record_search_key_datastream_policy": null,
+            "fez_record_search_key_date_available": null,
+            "fez_record_search_key_doi": Object {
+              "rek_doi": "10.1016/j.mcn.2017.07.005",
+              "rek_doi_id": 1697136,
+              "rek_doi_pid": "UQ:678728",
+              "rek_doi_xsdmf_id": null,
+            },
+            "fez_record_search_key_end_page": Object {
+              "rek_end_page": "111",
+              "rek_end_page_id": 5737773,
+              "rek_end_page_pid": "UQ:678728",
+              "rek_end_page_xsdmf_id": null,
+            },
+            "fez_record_search_key_file_attachment_access_condition": Array [],
+            "fez_record_search_key_file_attachment_embargo_date": Array [],
+            "fez_record_search_key_file_attachment_name": Array [
+              Object {
+                "rek_file_attachment_name": "FezACML_UQ_678728.xml",
+                "rek_file_attachment_name_id": 4295469,
+                "rek_file_attachment_name_order": 1,
+                "rek_file_attachment_name_pid": "UQ:678728",
+                "rek_file_attachment_name_xsdmf_id": null,
+              },
+            ],
+            "fez_record_search_key_grant_acronym": Array [
+              Object {
+                "rek_grant_acronym": "NHMRC",
+                "rek_grant_acronym_id": 8492,
+                "rek_grant_acronym_order": 1,
+                "rek_grant_acronym_pid": "UQ:678728",
+                "rek_grant_acronym_xsdmf_id": 0,
+              },
+              Object {
+                "rek_grant_acronym": "ARC",
+                "rek_grant_acronym_id": 8493,
+                "rek_grant_acronym_order": 2,
+                "rek_grant_acronym_pid": "UQ:678728",
+                "rek_grant_acronym_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_grant_agency": Array [
+              Object {
+                "rek_grant_agency": "National Health and Medical Research Council",
+                "rek_grant_agency_id": 95185,
+                "rek_grant_agency_order": 1,
+                "rek_grant_agency_pid": "UQ:678728",
+                "rek_grant_agency_xsdmf_id": 0,
+              },
+              Object {
+                "rek_grant_agency": "Australian Research Council",
+                "rek_grant_agency_id": 95186,
+                "rek_grant_agency_order": 2,
+                "rek_grant_agency_pid": "UQ:678728",
+                "rek_grant_agency_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_grant_agency_id": Array [],
+            "fez_record_search_key_grant_id": Array [
+              Object {
+                "rek_grant_id": "APP1058769",
+                "rek_grant_id_id": 45417,
+                "rek_grant_id_order": 1,
+                "rek_grant_id_pid": "UQ:678728",
+                "rek_grant_id_xsdmf_id": 0,
+              },
+              Object {
+                "rek_grant_id": "LE130100078",
+                "rek_grant_id_id": 45418,
+                "rek_grant_id_order": 2,
+                "rek_grant_id_pid": "UQ:678728",
+                "rek_grant_id_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_grant_text": Array [
+              Object {
+                "rek_grant_text": "This work was supported by a project grant from the National Health and Medical Research Council (NHMRC) of Australia (APP1058769) to F.A.M. and an Australian Research Council LIEF grant (LE130100078). F.A.M. is a NHMRC Senior Research Fellow (APP569596). P.J. was supported by a National Health and Medical Research Council (NHMRC) of Australia (APP1062846).",
+                "rek_grant_text_id": 1255,
+                "rek_grant_text_order": 1,
+                "rek_grant_text_pid": "UQ:678728",
+                "rek_grant_text_xsdmf_id": 0,
+              },
+            ],
+            "fez_record_search_key_has_datasets": Array [],
+            "fez_record_search_key_has_derivations": Array [],
+            "fez_record_search_key_has_related_datasets": Array [],
+            "fez_record_search_key_herdc_code": Object {
+              "rek_herdc_code": 450009,
+              "rek_herdc_code_id": 4915580,
+              "rek_herdc_code_lookup": "C1",
+              "rek_herdc_code_pid": "UQ:678728",
+              "rek_herdc_code_xsdmf_id": null,
+            },
+            "fez_record_search_key_herdc_status": Object {
+              "rek_herdc_status": 453220,
+              "rek_herdc_status_id": 3780824,
+              "rek_herdc_status_lookup": "Provisional Code",
+              "rek_herdc_status_pid": "UQ:678728",
+              "rek_herdc_status_xsdmf_id": null,
+            },
+            "fez_record_search_key_institutional_status": Object {
+              "rek_institutional_status": 453223,
+              "rek_institutional_status_id": 3421888,
+              "rek_institutional_status_lookup": "UQ",
+              "rek_institutional_status_pid": "UQ:678728",
+              "rek_institutional_status_xsdmf_id": null,
+            },
+            "fez_record_search_key_isbn": Array [],
+            "fez_record_search_key_isderivationof": Array [],
+            "fez_record_search_key_isi_loc": null,
+            "fez_record_search_key_ismemberof": Array [
+              Object {
+                "rek_ismemberof": "UQ:23912",
+                "rek_ismemberof_id": 12101274,
+                "rek_ismemberof_lookup": "Queensland Brain Institute Publications",
+                "rek_ismemberof_order": 1,
+                "rek_ismemberof_pid": "UQ:678728",
+                "rek_ismemberof_xsdmf_id": null,
+              },
+              Object {
+                "rek_ismemberof": "UQ:218311",
+                "rek_ismemberof_id": 12101275,
+                "rek_ismemberof_lookup": "HERDC Pre-Audit",
+                "rek_ismemberof_order": 2,
+                "rek_ismemberof_pid": "UQ:678728",
+                "rek_ismemberof_xsdmf_id": null,
+              },
+            ],
+            "fez_record_search_key_issn": Array [
+              Object {
+                "fez_journal_issns": Array [
+                  Object {
+                    "fez_journal": Object {
+                      "jnl_created_date": "2010-11-19 00:00:00",
+                      "jnl_era_id": 14527,
+                      "jnl_era_year": 2010,
+                      "jnl_foreign_name": null,
+                      "jnl_id": 2528,
+                      "jnl_journal_name": "Molecular and Cellular Neuroscience",
+                      "jnl_rank": "A",
+                      "jnl_updated_date": "2010-11-19 00:00:00",
+                    },
+                    "jni_id": 4100,
+                    "jni_issn": "1044-7431",
+                    "jni_issn_order": 1,
+                    "jni_jnl_id": 2528,
+                  },
+                  Object {
+                    "fez_journal": Object {
+                      "jnl_created_date": "2011-10-28 00:00:00",
+                      "jnl_era_id": 14527,
+                      "jnl_era_year": 2012,
+                      "jnl_foreign_name": "",
+                      "jnl_id": 29907,
+                      "jnl_journal_name": "Molecular and Cellular Neuroscience",
+                      "jnl_rank": null,
+                      "jnl_updated_date": "2011-10-28 00:00:00",
+                    },
+                    "jni_id": 49388,
+                    "jni_issn": "1044-7431",
+                    "jni_issn_order": 1,
+                    "jni_jnl_id": 29907,
+                  },
+                  Object {
+                    "fez_journal": Object {
+                      "jnl_created_date": "2014-07-16 00:00:00",
+                      "jnl_era_id": 14527,
+                      "jnl_era_year": 2015,
+                      "jnl_foreign_name": "",
+                      "jnl_id": 47227,
+                      "jnl_journal_name": "Molecular and Cellular Neuroscience",
+                      "jnl_rank": null,
+                      "jnl_updated_date": "2014-07-16 00:00:00",
+                    },
+                    "jni_id": 77092,
+                    "jni_issn": "1044-7431",
+                    "jni_issn_order": 1,
+                    "jni_jnl_id": 47227,
+                  },
+                  Object {
+                    "fez_journal": Object {
+                      "jnl_created_date": "2017-09-06 00:00:00",
+                      "jnl_era_id": 14527,
+                      "jnl_era_year": 2018,
+                      "jnl_foreign_name": "",
+                      "jnl_id": 100120,
+                      "jnl_journal_name": "Molecular and Cellular Neuroscience",
+                      "jnl_rank": null,
+                      "jnl_updated_date": "2017-09-06 00:00:00",
+                    },
+                    "jni_id": 164788,
+                    "jni_issn": "1044-7431",
+                    "jni_issn_order": 1,
+                    "jni_jnl_id": 100120,
+                  },
+                ],
+                "fez_sherpa_romeo": Object {
+                  "srm_colour": "green",
+                  "srm_id": 4796,
+                  "srm_issn": "1044-7431",
+                  "srm_journal_name": "Molecular and Cellular Neuroscience",
+                },
+                "rek_issn": "1044-7431",
+                "rek_issn_id": 5384819,
+                "rek_issn_lookup": "green",
+                "rek_issn_order": 1,
+                "rek_issn_pid": "UQ:678728",
+                "rek_issn_xsdmf_id": null,
+              },
+              Object {
+                "fez_journal_issns": Array [
+                  Object {
+                    "fez_journal": Object {
+                      "jnl_created_date": "2010-11-19 00:00:00",
+                      "jnl_era_id": 14527,
+                      "jnl_era_year": 2010,
+                      "jnl_foreign_name": null,
+                      "jnl_id": 2528,
+                      "jnl_journal_name": "Molecular and Cellular Neuroscience",
+                      "jnl_rank": "A",
+                      "jnl_updated_date": "2010-11-19 00:00:00",
+                    },
+                    "jni_id": 4101,
+                    "jni_issn": "1095-9327",
+                    "jni_issn_order": 2,
+                    "jni_jnl_id": 2528,
+                  },
+                  Object {
+                    "fez_journal": Object {
+                      "jnl_created_date": "2011-10-28 00:00:00",
+                      "jnl_era_id": 14527,
+                      "jnl_era_year": 2012,
+                      "jnl_foreign_name": "",
+                      "jnl_id": 29907,
+                      "jnl_journal_name": "Molecular and Cellular Neuroscience",
+                      "jnl_rank": null,
+                      "jnl_updated_date": "2011-10-28 00:00:00",
+                    },
+                    "jni_id": 49389,
+                    "jni_issn": "1095-9327",
+                    "jni_issn_order": 2,
+                    "jni_jnl_id": 29907,
+                  },
+                  Object {
+                    "fez_journal": Object {
+                      "jnl_created_date": "2014-07-16 00:00:00",
+                      "jnl_era_id": 14527,
+                      "jnl_era_year": 2015,
+                      "jnl_foreign_name": "",
+                      "jnl_id": 47227,
+                      "jnl_journal_name": "Molecular and Cellular Neuroscience",
+                      "jnl_rank": null,
+                      "jnl_updated_date": "2014-07-16 00:00:00",
+                    },
+                    "jni_id": 77093,
+                    "jni_issn": "1095-9327",
+                    "jni_issn_order": 2,
+                    "jni_jnl_id": 47227,
+                  },
+                  Object {
+                    "fez_journal": Object {
+                      "jnl_created_date": "2017-09-06 00:00:00",
+                      "jnl_era_id": 14527,
+                      "jnl_era_year": 2018,
+                      "jnl_foreign_name": "",
+                      "jnl_id": 100120,
+                      "jnl_journal_name": "Molecular and Cellular Neuroscience",
+                      "jnl_rank": null,
+                      "jnl_updated_date": "2017-09-06 00:00:00",
+                    },
+                    "jni_id": 164789,
+                    "jni_issn": "1095-9327",
+                    "jni_issn_order": 2,
+                    "jni_jnl_id": 100120,
+                  },
+                ],
+                "fez_sherpa_romeo": Object {
+                  "srm_colour": "green",
+                  "srm_id": 4797,
+                  "srm_issn": "1095-9327",
+                  "srm_journal_name": "Molecular and Cellular Neuroscience",
+                },
+                "rek_issn": "1095-9327",
+                "rek_issn_id": 5384820,
+                "rek_issn_lookup": "green",
+                "rek_issn_order": 2,
+                "rek_issn_pid": "UQ:678728",
+                "rek_issn_xsdmf_id": null,
+              },
+            ],
+            "fez_record_search_key_issue_number": null,
+            "fez_record_search_key_journal_name": Object {
+              "rek_journal_name": "Molecular and Cellular Neuroscience",
+              "rek_journal_name_id": 5258977,
+              "rek_journal_name_pid": "UQ:678728",
+              "rek_journal_name_xsdmf_id": null,
+            },
+            "fez_record_search_key_keywords": Array [
+              Object {
+                "rek_keywords": "Myosin VI",
+                "rek_keywords_id": 30311331,
+                "rek_keywords_order": 1,
+                "rek_keywords_pid": "UQ:678728",
+                "rek_keywords_xsdmf_id": null,
+              },
+              Object {
+                "rek_keywords": "ENA/VASP proteins",
+                "rek_keywords_id": 30311332,
+                "rek_keywords_order": 2,
+                "rek_keywords_pid": "UQ:678728",
+                "rek_keywords_xsdmf_id": null,
+              },
+              Object {
+                "rek_keywords": "Mena",
+                "rek_keywords_id": 30311333,
+                "rek_keywords_order": 3,
+                "rek_keywords_pid": "UQ:678728",
+                "rek_keywords_xsdmf_id": null,
+              },
+              Object {
+                "rek_keywords": "Secretory granules",
+                "rek_keywords_id": 30311334,
+                "rek_keywords_order": 4,
+                "rek_keywords_pid": "UQ:678728",
+                "rek_keywords_xsdmf_id": null,
+              },
+              Object {
+                "rek_keywords": "Tethering",
+                "rek_keywords_id": 30311335,
+                "rek_keywords_order": 5,
+                "rek_keywords_pid": "UQ:678728",
+                "rek_keywords_xsdmf_id": null,
+              },
+              Object {
+                "rek_keywords": "Cortical actin network",
+                "rek_keywords_id": 30311336,
+                "rek_keywords_order": 6,
+                "rek_keywords_pid": "UQ:678728",
+                "rek_keywords_xsdmf_id": null,
+              },
+            ],
+            "fez_record_search_key_language": Array [
+              Object {
+                "rek_language": "eng",
+                "rek_language_id": 5519027,
+                "rek_language_order": 1,
+                "rek_language_pid": "UQ:678728",
+                "rek_language_xsdmf_id": null,
+              },
+            ],
+            "fez_record_search_key_language_of_journal_name": Array [],
+            "fez_record_search_key_language_of_title": Array [],
+            "fez_record_search_key_link": Array [],
+            "fez_record_search_key_link_description": Array [],
+            "fez_record_search_key_native_script_journal_name": null,
+            "fez_record_search_key_native_script_title": null,
+            "fez_record_search_key_notes": null,
+            "fez_record_search_key_oa_embargo_days": Object {
+              "rek_oa_embargo_days": 0,
+            },
+            "fez_record_search_key_oa_notes": null,
+            "fez_record_search_key_oa_status": Object {
+              "rek_oa_status": 453692,
+              "rek_oa_status_id": 383328,
+              "rek_oa_status_lookup": "Not yet assessed",
+              "rek_oa_status_pid": "UQ:678728",
+              "rek_oa_status_xsdmf_id": null,
+            },
+            "fez_record_search_key_place_of_publication": Object {
+              "rek_place_of_publication": "Maryland Heights, MO, United States",
+              "rek_place_of_publication_id": 4357841,
+              "rek_place_of_publication_pid": "UQ:678728",
+              "rek_place_of_publication_xsdmf_id": null,
+            },
+            "fez_record_search_key_publisher": Object {
+              "rek_publisher": "Academic Press",
+              "rek_publisher_id": 4651930,
+              "rek_publisher_pid": "UQ:678728",
+              "rek_publisher_xsdmf_id": null,
+            },
+            "fez_record_search_key_pubmed_central_id": null,
+            "fez_record_search_key_pubmed_id": null,
+            "fez_record_search_key_refereed": Object {
+              "rek_refereed": 0,
+              "rek_refereed_id": 2623985,
+              "rek_refereed_pid": "UQ:678728",
+              "rek_refereed_xsdmf_id": null,
+            },
+            "fez_record_search_key_refereed_source": Object {
+              "rek_refereed_source": "453635",
+              "rek_refereed_source_id": 1451396,
+              "rek_refereed_source_lookup": "Ulrichs",
+              "rek_refereed_source_pid": "UQ:678728",
+              "rek_refereed_source_xsdmf_id": null,
+            },
+            "fez_record_search_key_retracted": Object {
+              "rek_retracted": 0,
+              "rek_retracted_id": 21123,
+              "rek_retracted_pid": "UQ:678728",
+              "rek_retracted_xsdmf_id": null,
+            },
+            "fez_record_search_key_roman_script_journal_name": null,
+            "fez_record_search_key_roman_script_title": null,
+            "fez_record_search_key_scopus_id": Object {
+              "rek_scopus_id": "2-s2.0-85026774540",
+              "rek_scopus_id_id": 2543373,
+              "rek_scopus_id_pid": "UQ:678728",
+              "rek_scopus_id_xsdmf_id": null,
+            },
+            "fez_record_search_key_start_page": Object {
+              "rek_start_page": "100",
+              "rek_start_page_id": 5811053,
+              "rek_start_page_pid": "UQ:678728",
+              "rek_start_page_xsdmf_id": null,
+            },
+            "fez_record_search_key_subject": Array [
+              Object {
+                "rek_subject": 453298,
+                "rek_subject_id": 9524877,
+                "rek_subject_lookup": "1312 Molecular Biology",
+                "rek_subject_order": 1,
+                "rek_subject_pid": "UQ:678728",
+                "rek_subject_xsdmf_id": null,
+              },
+              Object {
+                "rek_subject": 453471,
+                "rek_subject_id": 9524878,
+                "rek_subject_lookup": "2804 Cellular and Molecular Neuroscience",
+                "rek_subject_order": 2,
+                "rek_subject_pid": "UQ:678728",
+                "rek_subject_xsdmf_id": null,
+              },
+              Object {
+                "rek_subject": 453293,
+                "rek_subject_id": 9524879,
+                "rek_subject_lookup": "1307 Cell Biology",
+                "rek_subject_order": 3,
+                "rek_subject_pid": "UQ:678728",
+                "rek_subject_xsdmf_id": null,
+              },
+            ],
+            "fez_record_search_key_total_pages": Object {
+              "rek_total_pages": "12",
+              "rek_total_pages_id": 5770116,
+              "rek_total_pages_pid": "UQ:678728",
+              "rek_total_pages_xsdmf_id": null,
+            },
+            "fez_record_search_key_translated_journal_name": null,
+            "fez_record_search_key_translated_title": null,
+            "fez_record_search_key_volume_number": Object {
+              "rek_volume_number": "84",
+              "rek_volume_number_id": 5323129,
+              "rek_volume_number_pid": "UQ:678728",
+              "rek_volume_number_xsdmf_id": null,
+            },
+            "fez_record_search_key_wok_doc_types": Array [],
+            "fez_record_search_key_zoorec_id": null,
+            "rek_altmetric_id": 23535331,
+            "rek_altmetric_id_xsdmf_id": null,
+            "rek_altmetric_score": 1,
+            "rek_altmetric_score_xsdmf_id": null,
+            "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Tomatis, Vanesa M.\\" href=\\"/list/author_id/84876/\\">Tomatis, Vanesa M.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Josh, Peter\\" href=\\"/list/author_id/91082/\\">Josh, Peter</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Papadopulos, Andreas\\" href=\\"/list/author_id/89985/\\">Papadopulos, Andreas</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Gormal, Rachel S.\\" href=\\"/list/author_id/10992/\\">Gormal, Rachel S.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Lanoue, Vanessa\\" href=\\"/list/author_id/727162/\\">Lanoue, Vanessa</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Martin, Sally\\" href=\\"/list/author_id/745/\\">Martin, Sally</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Meunier, Frédéric A.\\" href=\\"/list/author_id/2746/\\">Meunier, Frédéric A.</a> (<span class=\\"citation_date\\">2017</span>) <a class=\\"citation_title\\" title=\\"Click to view Journal Article: ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network\\" href=\\"/view/UQ:678728\\">ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network</a>. <i><span class=\\"citation_journal_name\\">Molecular and Cellular Neuroscience</span></i>, <i></i>  . doi:<span class=\\"citation_doi\\">10.1016/j.mcn.2017.07.005</span>",
+            "rek_copyright": "on",
+            "rek_copyright_xsdmf_id": 3679,
+            "rek_created_date": "2019-12-25T00:00:00Z",
+            "rek_created_date_xsdmf_id": 3677,
+            "rek_date": "2017-08-07T00:00:00Z",
+            "rek_date_xsdmf_id": 6386,
+            "rek_depositor": 48432,
+            "rek_depositor_affiliation": 1017,
+            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_xsdmf_id": 7578,
+            "rek_description": "In neurosecretory cells, myosin VI associated with secretory granules (SGs) mediates their activity-dependent recruitment to the cortical actin network and is necessary to sustain exocytosis. The mechanism by which myosin VI interacts with SGs is unknown. Using a myosin VI pull-down assay and mass spectrometry we identified Mena, a member of the ENA/VASP family, as a myosin VI binding partner in PC12 cells, and confirmed that Mena colocalized with myosin VI on SGs. Using a knock-sideways approach to inactivate the ENA/VASP family members by mitochondrial relocation, we revealed a concomitant redistribution of myosin VI. This was ensued by a reduction in the association of myosin VI with SGs, a decreased SG mobility and density in proximity to the plasma membrane as well as decreased evoked exocytosis. These data demonstrate that ENA/VASP proteins regulate SG exocytosis through modulating the activity of myosin VI.",
+            "rek_description_xsdmf_id": 11441,
+            "rek_display_type": 179,
+            "rek_display_type_lookup": "Journal Article",
+            "rek_display_type_xsdmf_id": 3673,
+            "rek_file_downloads": 0,
+            "rek_formatted_abstract": null,
+            "rek_formatted_abstract_xsdmf_id": null,
+            "rek_formatted_title": null,
+            "rek_formatted_title_xsdmf_id": null,
+            "rek_genre": "Journal Article",
+            "rek_genre_type": "Article (original research)",
+            "rek_genre_type_xsdmf_id": null,
+            "rek_genre_xsdmf_id": 7207,
+            "rek_herdc_notes": null,
+            "rek_herdc_notes_xsdmf_id": null,
+            "rek_object_type": 3,
+            "rek_object_type_lookup": "Record",
+            "rek_object_type_xsdmf_id": 3674,
+            "rek_pid": "UQ:67abc8",
+            "rek_pubmed_doc_type": null,
+            "rek_pubmed_doc_type_lookup": null,
+            "rek_pubmed_doc_type_xsdmf_id": null,
+            "rek_scopus_citation_count": 0,
+            "rek_scopus_doc_type": "ip",
+            "rek_scopus_doc_type_lookup": null,
+            "rek_scopus_doc_type_xsdmf_id": 12550,
+            "rek_security_inherited": 1,
+            "rek_status": 2,
+            "rek_status_lookup": "Published",
+            "rek_status_xsdmf_id": 3680,
+            "rek_subtype": "Article (original research)",
+            "rek_subtype_xsdmf_id": 12379,
+            "rek_thomson_citation_count": null,
+            "rek_thomson_citation_count_xsdmf_id": null,
+            "rek_title": "ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network",
+            "rek_title_xsdmf_id": 10588,
+            "rek_updated_date": "2018-01-19T16:27:39Z",
+            "rek_updated_date_xsdmf_id": 3678,
+            "rek_wok_doc_type": null,
+            "rek_wok_doc_type_lookup": null,
+            "rek_wok_doc_type_xsdmf_id": null,
+          }
+        }
+      >
+        <div
+          className="citationCounts columns is-gapless is-marginless is-multiline"
+        >
+          <div
+            className="column is-narrow-tablet is-12-mobile citationIcons"
+          >
+            <CitationCountView
+              count={1}
+              link="http://www.altmetric.com/details.php?citation_id=23535331"
+              source="altmetric"
+              title="Full citation in Altmetric will open in a new window"
+            >
+              <div
+                className="citationCount"
+              >
+                <ExternalLink
+                  aria-label="Full citation in Altmetric will open in a new window"
+                  className="altmetricCitationCount"
+                  href="http://www.altmetric.com/details.php?citation_id=23535331"
+                  openInNewIcon={false}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Full citation in Altmetric will open in a new window"
+                >
+                  <a
+                    aria-label="Full citation in Altmetric will open in a new window"
+                    className="altmetricCitationCount externalLinkfalse"
+                    href="http://www.altmetric.com/details.php?citation_id=23535331"
+                    rel="noopener noreferrer"
+                    tabIndex="0"
+                    target="_blank"
+                    title="Full citation in Altmetric will open in a new window"
+                  >
+                    <div
+                      className="fez-icon altmetric large"
+                    />
+                    <span
+                      className="citationCountNumber"
+                    >
+                      1
+                    </span>
+                  </a>
+                </ExternalLink>
+              </div>
+            </CitationCountView>
+            <CitationCountView
+              count={null}
+              link="https://scholar.google.com/scholar?q=intitle:[id]ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
+              source="google"
+              title="Full citation in Google scholar will open in a new window"
+            >
+              <div
+                className="citationCount"
+              >
+                <ExternalLink
+                  aria-label="Full citation in Google scholar will open in a new window"
+                  className="googleCitationCount"
+                  href="https://scholar.google.com/scholar?q=intitle:[id]ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
+                  openInNewIcon={false}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Full citation in Google scholar will open in a new window"
+                >
+                  <a
+                    aria-label="Full citation in Google scholar will open in a new window"
+                    className="googleCitationCount externalLinkfalse"
+                    href="https://scholar.google.com/scholar?q=intitle:[id]ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
+                    rel="noopener noreferrer"
+                    tabIndex="0"
+                    target="_blank"
+                    title="Full citation in Google scholar will open in a new window"
+                  >
+                    <div
+                      className="fez-icon google large"
+                    />
+                    <span
+                      className="citationCountNumber"
+                    />
+                  </a>
+                </ExternalLink>
+              </div>
+            </CitationCountView>
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={false}
+              showEmbargoText={false}
+            >
+              <span
+                className="noOaIcon"
+              />
+            </OpenAccessIcon>
+          </div>
+          <div
+            className="column is-narrow"
+          />
+          <div
+            className="column is-hidden-mobile"
+          />
+        </div>
+      </CitationCounts>
+    </Router>
+  </MemoryRouter>
+</Provider>
 `;
 
 exports[`CitationCounts should render component with all metrics 1`] = `
-<div
-  className="citationCounts columns is-gapless is-marginless is-multiline"
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
+    }
+  }
 >
-  <div
-    className="column is-narrow-tablet is-12-mobile citationIcons"
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
   >
-    <CitationCountView
-      count={1}
-      link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
-      source="wos"
-      title="Full citation in Web of science will open in a new window"
-    />
-    <CitationCountView
-      count={1}
-      link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
-      source="scopus"
-      title="Full citation in Scopus will open in a new window"
-    />
-    <CitationCountView
-      count={1}
-      link="http://www.altmetric.com/details.php?citation_id=12345"
-      source="altmetric"
-      title="Full citation in Altmetric will open in a new window"
-    />
-    <CitationCountView
-      count={1}
-      link="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
-      source="google"
-      title="Full citation in Google scholar will open in a new window"
-    />
-    <OpenAccessIcon
-      embargoDate={null}
-      isOpenAccess={false}
-      showEmbargoText={false}
-    />
-  </div>
-  <div
-    className="column is-narrow"
-  >
-    <ExternalLink
-      className=""
-      href="https://app.library.uq.edu.au/#/authors/view/pid:111"
-      openInNewIcon={true}
-      rel="noopener noreferrer"
-      target="_blank"
-      title="This is test title"
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
     >
-      View full statistics
-    </ExternalLink>
-  </div>
-  <div
-    className="column is-hidden-mobile"
-  />
-</div>
+      <CitationCounts
+        publication={
+          Object {
+            "fez_record_search_key_isi_loc": Object {
+              "rek_isi_loc": 12345,
+            },
+            "fez_record_search_key_oa_embargo_days": Object {
+              "rek_oa_embargo_days": 0,
+            },
+            "fez_record_search_key_oa_status": Object {
+              "rek_oa_status": 453693,
+            },
+            "fez_record_search_key_scopus_id": Object {
+              "rek_scopus_id": 12345,
+            },
+            "rek_altmetric_id": 12345,
+            "rek_altmetric_score": 1,
+            "rek_created_date": "2019-12-25T00:00:00Z",
+            "rek_gs_citation_count": 1,
+            "rek_pid": "pid:111",
+            "rek_scopus_citation_count": 1,
+            "rek_thomson_citation_count": 1,
+            "rek_title": "This is test title",
+          }
+        }
+      >
+        <div
+          className="citationCounts columns is-gapless is-marginless is-multiline"
+        >
+          <div
+            className="column is-narrow-tablet is-12-mobile citationIcons"
+          >
+            <CitationCountView
+              count={1}
+              link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+              source="wos"
+              title="Full citation in Web of science will open in a new window"
+            >
+              <div
+                className="citationCount"
+              >
+                <ExternalLink
+                  aria-label="Full citation in Web of science will open in a new window"
+                  className="wosCitationCount"
+                  href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+                  openInNewIcon={false}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Full citation in Web of science will open in a new window"
+                >
+                  <a
+                    aria-label="Full citation in Web of science will open in a new window"
+                    className="wosCitationCount externalLinkfalse"
+                    href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+                    rel="noopener noreferrer"
+                    tabIndex="0"
+                    target="_blank"
+                    title="Full citation in Web of science will open in a new window"
+                  >
+                    <div
+                      className="fez-icon wos large"
+                    />
+                    <span
+                      className="citationCountNumber"
+                    >
+                      1
+                    </span>
+                  </a>
+                </ExternalLink>
+              </div>
+            </CitationCountView>
+            <CitationCountView
+              count={1}
+              link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+              source="scopus"
+              title="Full citation in Scopus will open in a new window"
+            >
+              <div
+                className="citationCount"
+              >
+                <ExternalLink
+                  aria-label="Full citation in Scopus will open in a new window"
+                  className="scopusCitationCount"
+                  href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+                  openInNewIcon={false}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Full citation in Scopus will open in a new window"
+                >
+                  <a
+                    aria-label="Full citation in Scopus will open in a new window"
+                    className="scopusCitationCount externalLinkfalse"
+                    href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+                    rel="noopener noreferrer"
+                    tabIndex="0"
+                    target="_blank"
+                    title="Full citation in Scopus will open in a new window"
+                  >
+                    <div
+                      className="fez-icon scopus large"
+                    />
+                    <span
+                      className="citationCountNumber"
+                    >
+                      1
+                    </span>
+                  </a>
+                </ExternalLink>
+              </div>
+            </CitationCountView>
+            <CitationCountView
+              count={1}
+              link="http://www.altmetric.com/details.php?citation_id=12345"
+              source="altmetric"
+              title="Full citation in Altmetric will open in a new window"
+            >
+              <div
+                className="citationCount"
+              >
+                <ExternalLink
+                  aria-label="Full citation in Altmetric will open in a new window"
+                  className="altmetricCitationCount"
+                  href="http://www.altmetric.com/details.php?citation_id=12345"
+                  openInNewIcon={false}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Full citation in Altmetric will open in a new window"
+                >
+                  <a
+                    aria-label="Full citation in Altmetric will open in a new window"
+                    className="altmetricCitationCount externalLinkfalse"
+                    href="http://www.altmetric.com/details.php?citation_id=12345"
+                    rel="noopener noreferrer"
+                    tabIndex="0"
+                    target="_blank"
+                    title="Full citation in Altmetric will open in a new window"
+                  >
+                    <div
+                      className="fez-icon altmetric large"
+                    />
+                    <span
+                      className="citationCountNumber"
+                    >
+                      1
+                    </span>
+                  </a>
+                </ExternalLink>
+              </div>
+            </CitationCountView>
+            <CitationCountView
+              count={1}
+              link="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
+              source="google"
+              title="Full citation in Google scholar will open in a new window"
+            >
+              <div
+                className="citationCount"
+              >
+                <ExternalLink
+                  aria-label="Full citation in Google scholar will open in a new window"
+                  className="googleCitationCount"
+                  href="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
+                  openInNewIcon={false}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Full citation in Google scholar will open in a new window"
+                >
+                  <a
+                    aria-label="Full citation in Google scholar will open in a new window"
+                    className="googleCitationCount externalLinkfalse"
+                    href="https://scholar.google.com/scholar?q=intitle:[id]This%20is%20test%20title"
+                    rel="noopener noreferrer"
+                    tabIndex="0"
+                    target="_blank"
+                    title="Full citation in Google scholar will open in a new window"
+                  >
+                    <div
+                      className="fez-icon google large"
+                    />
+                    <span
+                      className="citationCountNumber"
+                    >
+                      1
+                    </span>
+                  </a>
+                </ExternalLink>
+              </div>
+            </CitationCountView>
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={false}
+              showEmbargoText={false}
+            >
+              <span
+                className="noOaIcon"
+              />
+            </OpenAccessIcon>
+          </div>
+          <div
+            className="column is-narrow"
+          >
+            <ExternalLink
+              className=""
+              href="https://app.library.uq.edu.au/#/authors/view/pid:111"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="This is test title"
+            >
+              <a
+                className=" externalLink showIcon"
+                href="https://app.library.uq.edu.au/#/authors/view/pid:111"
+                rel="noopener noreferrer"
+                tabIndex="0"
+                target="_blank"
+                title="This is test title"
+              >
+                View full statistics
+              </a>
+            </ExternalLink>
+          </div>
+          <div
+            className="column is-hidden-mobile"
+          />
+        </div>
+      </CitationCounts>
+    </Router>
+  </MemoryRouter>
+</Provider>
 `;
 
 exports[`CitationCounts should render component with no metrics 1`] = `
-<div
-  className="citationCounts columns is-gapless is-marginless is-multiline"
+<Provider
+  store={
+    Object {
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
+    }
+  }
 >
-  <div
-    className="column is-narrow-tablet is-12-mobile citationIcons"
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "testKey",
+          "pathname": "/",
+        },
+      ]
+    }
   >
-    <OpenAccessIcon
-      embargoDate={null}
-      isOpenAccess={false}
-      showEmbargoText={false}
-    />
-  </div>
-  <div
-    className="column is-narrow"
-  />
-  <div
-    className="column is-hidden-mobile"
-  />
-</div>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <CitationCounts
+        publication={Object {}}
+      >
+        <div
+          className="citationCounts columns is-gapless is-marginless is-multiline"
+        >
+          <div
+            className="column is-narrow-tablet is-12-mobile citationIcons"
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={false}
+              showEmbargoText={false}
+            >
+              <span
+                className="noOaIcon"
+              />
+            </OpenAccessIcon>
+          </div>
+          <div
+            className="column is-narrow"
+          />
+          <div
+            className="column is-hidden-mobile"
+          />
+        </div>
+      </CitationCounts>
+    </Router>
+  </MemoryRouter>
+</Provider>
 `;

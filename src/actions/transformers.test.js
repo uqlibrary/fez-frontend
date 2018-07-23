@@ -36,8 +36,13 @@ describe('getRecordLinkSearchKey test ', () => {
 
 describe('getRecordFileAttachmentSearchKey test ', () => {
 
+    const MockDate = require('mockdate');
     beforeEach(() => {
-        Date.now = jest.genMockFunction().mockReturnValue('2018-01-01T00:00:00.000Z');
+        MockDate.set('2018-01-01T00:00:00.000Z', 10);
+    });
+
+    afterEach(() => {
+        MockDate.reset();
     });
 
     it('should return empty request object structure if no files are provided', () => {

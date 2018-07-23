@@ -1,37 +1,13 @@
-jest.dontMock('./AudioDocumentCitation');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import AudioDocumentCitation from './AudioDocumentCitation';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-
 import {audioDocument} from 'mock/data/testing/records';
 
-
-function setup({publication, isShallow = false}) {
+function setup(testProps, isShallow = false) {
     const props = {
-        publication: publication || {}, // : PropTypes.object.isRequired,
+        ...testProps,
+        publication: testProps.publication || {},
     };
-
-    if(isShallow) {
-        return shallow(<AudioDocumentCitation {...props} />);
-    }
-
-    return mount(<AudioDocumentCitation {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+    return getElement(AudioDocumentCitation, props, isShallow);
 }
-
-beforeAll(() => {
-
-});
 
 describe('AudioDocumentCitation renders ', () => {
     it('component with empty publication', () => {

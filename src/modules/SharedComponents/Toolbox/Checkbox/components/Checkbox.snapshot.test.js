@@ -1,15 +1,9 @@
-jest.dontMock('./Checkbox');
-
-import {shallow} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import Checkbox from './Checkbox';
-
 import filterProps from '../../helpers/_filterProps';
 
-function setup(props) {
-    const consolidatedProps = filterProps(props, Checkbox.propTypes);
-    return shallow(<Checkbox {...consolidatedProps} />);
+function setup(testProps, isShallow = true) {
+    const props = filterProps(testProps, Checkbox.propTypes);
+    return getElement(Checkbox, {...props}, isShallow);
 }
 
 describe('Checkbox snapshots tests', () => {

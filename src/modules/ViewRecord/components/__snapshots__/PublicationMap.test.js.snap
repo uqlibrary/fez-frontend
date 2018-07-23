@@ -54,7 +54,7 @@ exports[`Publication's map coordinates should render component with a marker 1`]
     >
       <withScriptjs(withGoogleMap(Component))
         coordinates="153.021781,-27.489337"
-        googleMapURL="http://google.com"
+        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD6bOdtlpxFXCj3vrhZkdeSS27HZha7U4&v=3.exp&libraries=geometry,drawing,places"
         loadingElement={<div />}
       >
         <div />
@@ -118,7 +118,7 @@ exports[`Publication's map coordinates should render component with a selected a
     >
       <withScriptjs(withGoogleMap(Component))
         coordinates="153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337"
-        googleMapURL="http://google.com"
+        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD6bOdtlpxFXCj3vrhZkdeSS27HZha7U4&v=3.exp&libraries=geometry,drawing,places"
         loadingElement={<div />}
       >
         <div />
@@ -182,7 +182,7 @@ exports[`Publication's map coordinates should render component with empty coordi
     >
       <withScriptjs(withGoogleMap(Component))
         coordinates=""
-        googleMapURL="http://google.com"
+        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD6bOdtlpxFXCj3vrhZkdeSS27HZha7U4&v=3.exp&libraries=geometry,drawing,places"
         loadingElement={<div />}
       >
         <div />

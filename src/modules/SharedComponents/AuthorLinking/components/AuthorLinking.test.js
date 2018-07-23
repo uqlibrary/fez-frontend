@@ -1,17 +1,15 @@
-jest.dontMock('./AuthorLinking');
-
-import React from 'react';
 import AuthorLinking from './AuthorLinking';
 
-function setup({searchKey, author, authorList, linkedAuthorIdList, disabled}){
+function setup(testProps, isShallow = true) {
     const props = {
-        searchKey: searchKey || {},
-        author: author || {aut_id: 410},
-        authorList: authorList || [],
-        linkedAuthorIdList: linkedAuthorIdList,
-        disabled: disabled || false
+        searchKey: testProps.searchKey || {},
+        author: testProps.author || {aut_id: 410},
+        authorList: testProps.authorList || [],
+        linkedAuthorIdList: testProps.linkedAuthorIdList,
+        disabled: testProps.disabled || false,
+        ...testProps
     };
-    return new AuthorLinking({...props});
+    return getElement(AuthorLinking, props, isShallow);
 }
 
 // Authors
@@ -43,7 +41,7 @@ const searchKey = {value: 'rek_author_id', order: 'rek_author_id_order', type: '
 describe('AuthorLinking', () => {
     it('should prepare output correctly with linked author ids provided where logged in author id not present', () => {
         const component = setup({});
-        const preparedOutput = component.prepareOutput(
+        const preparedOutput = component.instance().prepareOutput(
             {searchKey},
             {
                 selectedAuthor: {
@@ -71,7 +69,7 @@ describe('AuthorLinking', () => {
 
     it('should prepare output correctly with empty linked author id list', () => {
         const component = setup({});
-        const preparedOutput = component.prepareOutput(
+        const preparedOutput = component.instance().prepareOutput(
             {searchKey},
             {
                 selectedAuthor: {
@@ -81,7 +79,7 @@ describe('AuthorLinking', () => {
                     rek_author_id_order: 6
                 },
             },
-            authorList.map((author) => component.transformToAuthorOrderId(0, author, searchKey))
+            authorList.map((author) => component.instance().transformToAuthorOrderId(0, author, searchKey))
         );
 
         expect(preparedOutput).toEqual([
@@ -126,7 +124,7 @@ const contributorSearchKey = {value: 'rek_contributor_id', order: 'rek_contribut
 describe('ContributorLinking', () => {
     it('should prepare output correctly with linked contributor ids provided where logged in author id not present', () => {
         const component = setup({});
-        const preparedOutput = component.prepareOutput(
+        const preparedOutput = component.instance().prepareOutput(
             {searchKey: contributorSearchKey},
             {
                 selectedAuthor: {
@@ -154,7 +152,7 @@ describe('ContributorLinking', () => {
 
     it('should prepare output correctly with empty linked author id list', () => {
         const component = setup({});
-        const preparedOutput = component.prepareOutput(
+        const preparedOutput = component.instance().prepareOutput(
             {searchKey: contributorSearchKey},
             {
                 selectedAuthor: {
@@ -164,7 +162,7 @@ describe('ContributorLinking', () => {
                     rek_contributor_id_order: 6
                 },
             },
-            contributorList.map((author) => component.transformToAuthorOrderId(0, author, contributorSearchKey))
+            contributorList.map((author) => component.instance().transformToAuthorOrderId(0, author, contributorSearchKey))
         );
 
         expect(preparedOutput).toEqual([

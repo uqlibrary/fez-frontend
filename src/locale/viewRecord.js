@@ -1,5 +1,10 @@
 export default {
     viewRecord: {
+        fireFoxAlert: {
+            type: 'help_outline',
+            title: 'FireFox Users',
+            message: 'Please RIGHT CLICK then select link SAVE AS option to save and play video files'
+        },
         linkTexts: {
             journalOpenAccessPolicyLink: 'Check publisher\'s open access policy',
             eraJournalListed: '(ERA [year] Journal(s) Listed)'

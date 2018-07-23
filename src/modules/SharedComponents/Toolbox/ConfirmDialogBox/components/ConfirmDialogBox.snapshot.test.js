@@ -1,25 +1,20 @@
-jest.dontMock('./ConfirmDialogBox');
-
-import {shallow} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import ConfirmDialogBox from './ConfirmDialogBox';
 
-function setup({locale, hideCancelButton, cancelAction, action}) {
+function setup(testProps, isShallow = true) {
     const props = {
-        locale: locale || {
+        ...testProps,
+        locale: testProps.locale || {
             confirmationTitle: 'Confirmation',
             confirmationMessage: 'Are you sure?',
             cancelButtonLabel: 'No',
             confirmButtonLabel: 'Yes'
         },
-        onAction: action || jest.fn(),
-        onCancelAction: cancelAction || jest.fn(),
-        hideCancelButton: hideCancelButton || false,
+        onAction: testProps.action || jest.fn(),
+        onCancelAction: testProps.cancelAction || jest.fn(),
+        hideCancelButton: testProps.hideCancelButton || false,
         onRef: jest.fn()
     };
-
-    return shallow(<ConfirmDialogBox {...props} />);
+    return getElement(ConfirmDialogBox, props, isShallow);
 }
 
 describe('ConfirmDialogBox snapshots tests', () => {

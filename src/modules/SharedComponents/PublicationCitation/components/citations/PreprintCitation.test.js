@@ -1,36 +1,13 @@
-jest.dontMock('./PreprintCitation');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import PreprintCitation from './PreprintCitation';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-
 import {preprint} from 'mock/data/testing/records';
 
-function setup({publication, isShallow = false}) {
+function setup(testProps, isShallow = false) {
     const props = {
-        publication: publication || {}, // : PropTypes.object.isRequired,
+        ...testProps,
+        publication: testProps.publication || {},
     };
-
-    if(isShallow) {
-        return shallow(<PreprintCitation {...props} />);
-    }
-
-    return mount(<PreprintCitation {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+    return getElement(PreprintCitation, props, isShallow);
 }
-
-beforeAll(() => {
-    
-});
 
 describe('PreprintCitation renders ', () => {
     it('component with empty publication', () => {

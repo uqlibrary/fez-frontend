@@ -1,38 +1,13 @@
 import {departmentTechnicalReport} from "../../../../../mock/data/testing/records";
-
-jest.dontMock('./DepartmentTechnicalReportCitation');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import DepartmentTechnicalReportCitation from './DepartmentTechnicalReportCitation';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
 
-import {journalArticle} from 'mock/data/testing/records';
-
-function setup({publication, isShallow = false}) {
+function setup(testProps, isShallow = false) {
     const props = {
-        publication: publication || {}, // : PropTypes.object.isRequired,
+        ...testProps,
+        publication: testProps.publication || {},
     };
-
-    if(isShallow) {
-        return shallow(<DepartmentTechnicalReportCitation {...props} />);
-    }
-
-    return mount(<DepartmentTechnicalReportCitation {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+    return getElement(DepartmentTechnicalReportCitation, props, isShallow);
 }
-
-beforeAll(() => {
-
-});
 
 describe('DepartmentTechnicalReportCitation renders ', () => {
     it('component with empty publication', () => {

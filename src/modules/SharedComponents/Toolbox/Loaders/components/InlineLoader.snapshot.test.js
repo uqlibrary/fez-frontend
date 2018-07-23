@@ -1,18 +1,13 @@
-jest.dontMock('./InlineLoader');
-
-import {shallow} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import InlineLoader from './InlineLoader';
 
-function setup(message) {
-    const props = {message};
-    return shallow(<InlineLoader {...props} />);
+function setup(testProps, isShallow = true) {
+    const props = {...testProps};
+    return getElement(InlineLoader, props, isShallow);
 }
 
 describe('InlineLoader snapshots tests', () => {
     it('renders loader', () => {
-        const wrapper = setup('Waiting to load...');
+        const wrapper = setup({message: 'Waiting to load...'});
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });

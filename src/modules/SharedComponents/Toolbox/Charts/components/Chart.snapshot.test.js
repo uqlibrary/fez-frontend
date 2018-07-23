@@ -1,16 +1,9 @@
-/* eslint-disable */
-
-import React from 'react';
-import {shallow, mount} from 'enzyme';
-import toJson from 'enzyme-to-json';
-
 import Chart from './Chart';
 
-function setup(testProps, isShallow = false) {
-    if (isShallow)
-        return shallow(<Chart {...testProps} />);
-
-    return mount(<Chart {...testProps} />);
+function setup(testProps, isShallow = true) {
+    // build full props list required by the component
+    const props = {...testProps};
+    return getElement(Chart, props, isShallow);
 }
 
 describe('Chart snapshot tests', () => {
@@ -58,7 +51,6 @@ describe('Chart snapshot tests', () => {
                 series: [{"name":"Journal Article","data":[]},{"name":"Conference Paper","data":[]},{"name":"Book Chapter","data":[]},{"name":"Book","data":[]},{"name":"Other","data":[]}]
             },
         });
-
         expect(toJson(app)).toMatchSnapshot();
     });
 });
