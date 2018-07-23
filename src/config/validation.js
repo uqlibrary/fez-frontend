@@ -86,11 +86,11 @@ export const isValidIsbn = subject => {
 };
 
 export const isValidAuthorLink = (link) => {
-    return link.valid ? '' : locale.validationErrors.authorLinking;
+    return link && link.valid ? '' : locale.validationErrors.authorLinking;
 };
 
-export const isValidContributorLink = (link) => {
-    return link.valid ? '' : locale.validationErrors.contributorLinking;
+export const isValidContributorLink = (link, required = false) => {
+    return required && !(link && link.valid) ? locale.validationErrors.contributorLinking : '';
 };
 
 // Google Scholar ID
