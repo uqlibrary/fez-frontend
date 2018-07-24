@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import FontIcon from 'material-ui/FontIcon';
 import * as Partials from './partials';
 
 export default class BookCitation extends Component {
@@ -37,10 +36,6 @@ export default class BookCitation extends Component {
 
         return (
             <div className="citationContent citationBook">
-                <FontIcon className="material-icons citationIcon" data-place="left">
-                    format_quote
-                </FontIcon>
-
                 {/* {Author} */}
                 {
                     !record.isEditedBook &&
