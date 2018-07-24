@@ -899,6 +899,13 @@ export default {
                         type: 'TextField',
                         hint: 'Add a DOI to search',
                         validation: ['required', 'doi']
+                    },
+                    'rek_publisher': {
+                        title: 'Publisher',
+                        combiner: 'contains',
+                        type: 'PublisherLookup',
+                        hint: 'Add a publisher to search',
+                        validation: ['required']
                     }
                 },
                 openAccess: {

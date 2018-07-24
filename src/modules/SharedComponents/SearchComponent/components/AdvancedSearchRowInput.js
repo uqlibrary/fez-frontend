@@ -2,6 +2,7 @@ import {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import * as validationRules from 'config/validation';
+import {PublisherField} from './AutoCompleteFields/PublisherField';
 
 class AdvancedSearchRowInput extends PureComponent {
     static propTypes = {
@@ -43,6 +44,8 @@ class AdvancedSearchRowInput extends PureComponent {
         switch (this.props.inputField.type) {
             case 'TextField':
                 return TextField;
+            case 'PublisherLookup':
+                return PublisherField;
             default:
                 return TextField;
         }
@@ -56,6 +59,13 @@ class AdvancedSearchRowInput extends PureComponent {
                     'aria-label': this.props.inputField.hint,
                     'errorText': this.runValidationRules(this.props.value),
                     'autoComplete': 'off'
+                };
+            case 'PublisherLookup':
+                return {
+                    'hintText': this.props.inputField.hint,
+                    'aria-label': this.props.inputField.hint,
+                    'errorText': this.runValidationRules(this.props.value),
+                    'floatingLabelText': null
                 };
             default: return {};
         }
