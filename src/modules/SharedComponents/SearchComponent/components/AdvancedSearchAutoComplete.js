@@ -32,7 +32,6 @@ export class AdvancedSearchAutoComplete extends Component {
 
     constructor(props) {
         super(props);
-        console.log(props);
         this.bounce = null;
         this.state = {
             searchText: props.selectedValue
@@ -55,7 +54,6 @@ export class AdvancedSearchAutoComplete extends Component {
     };
 
     valueSelected = (value) => {
-        console.log(value);
         this.props.onChange(value);
     };
 
