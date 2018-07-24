@@ -75,7 +75,7 @@ export default class ClaimRecord extends PureComponent {
 
     _contributorValidation = (link) => {
         const publication = this.props.initialValues.get('publication').toJS();
-        return publication.fez_record_search_key_author_id && publication.fez_record_search_key_author_id.length > 0 ?
+        return publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 0 ?
             validation.isValidContributorLink(link) : validation.isValidContributorLink(link, true);
     }
 
