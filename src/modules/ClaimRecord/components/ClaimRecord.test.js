@@ -1,6 +1,6 @@
 import ClaimRecord from './ClaimRecord';
 import Immutable from 'immutable';
-import {journalArticle} from 'mock/data/testing/records';
+import {journalArticle, dataCollection} from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -118,6 +118,24 @@ describe('Component ClaimRecord ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render claim form, contributor linking component should not be rendered for Journal Article', () => {
+        const wrapper = setup({
+            initialValues: Immutable.Map(
+                {
+                    publication: Immutable.Map(journalArticle),
+                    author: Immutable.Map({aut_id: 410})
+                }
+            )
+        });
+
+        expect(wrapper.find('Field').length).toEqual(4);
+        expect(wrapper.find('RaisedButton').length).toEqual(2);
+        expect(wrapper.find('Alert').length).toEqual(0);
+        expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render claim form, author linking component should be rendered even if there\'s only one author on a publication', () => {
         const testArticle = {
             ...journalArticle,
@@ -150,7 +168,7 @@ describe('Component ClaimRecord ', () => {
 
     it('should render claim form, contributor linking component should be rendered even if there\'s only one contributor on a publication', () => {
         const testArticle = {
-            ...journalArticle,
+            ...dataCollection,
             rek_pid: null,
             fez_record_search_key_author: [],
             fez_record_search_key_author_id: [],
@@ -182,7 +200,7 @@ describe('Component ClaimRecord ', () => {
 
     it('should render claim form, author linking component and contributor linking component should be rendered even if there are only one author and one contributor on a publication', () => {
         const testArticle = {
-            ...journalArticle,
+            ...dataCollection,
             rek_pid: null,
             fez_record_search_key_author_id: [],
             fez_record_search_key_author: [{
