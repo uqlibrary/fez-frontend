@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import FontIcon from 'material-ui/FontIcon';
 import * as Partials from './partials';
 
 export default class VideoDocumentCitation extends Component {
@@ -24,10 +23,6 @@ export default class VideoDocumentCitation extends Component {
         // {Creator}{Year| (|).}<i>{Title| |.}</i>{Series| |.}
         return (
             <div className="citationContent citationVideo">
-                <FontIcon className="material-icons citationIcon" data-place="left">
-                    format_quote
-                </FontIcon>
-
                 {/* {Creator}*/}
                 <Partials.AuthorsCitationView publication={this.props.publication}/>
 
