@@ -12,10 +12,9 @@ import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBo
 import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
 import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 
-
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {AuthorLinkingField, ContributorLinkingField} from 'modules/SharedComponents/AuthorLinking';
-import {validation, routes} from 'config';
+import {validation, routes, claimRecordConfig} from 'config';
 import locale from 'locale/forms';
 
 export default class ClaimRecord extends PureComponent {
@@ -74,6 +73,12 @@ export default class ClaimRecord extends PureComponent {
         if(event) event.preventDefault();
     };
 
+    _contributorValidation = (link) => {
+        const publication = this.props.initialValues.get('publication').toJS();
+        return publication.fez_record_search_key_author_id && publication.fez_record_search_key_author_id.length > 0 ?
+            validation.isValidContributorLink(link) : validation.isValidContributorLink(link, true);
+    }
+
     render() {
         const txt = locale.forms.claimPublicationForm;
         const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
@@ -85,6 +90,7 @@ export default class ClaimRecord extends PureComponent {
             publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
         const contributorLinked = publication && author && publication.fez_record_search_key_contributor_id && publication.fez_record_search_key_contributor_id.length > 0 &&
             publication.fez_record_search_key_contributor_id.filter(contributorId => contributorId.rek_contributor_id === author.aut_id).length > 0;
+        const contributorClassName = publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 0 ? 'contributorsField' : 'requiredField';
 
         // if publication.sources is set, user is claiming from Add missing record page
         const fromAddRecord = !!publication.sources;
@@ -111,6 +117,7 @@ export default class ClaimRecord extends PureComponent {
         } else {
             alertProps = validation.getErrorAlertProps({...this.props, dirty: true, alertLocale: txt});
         }
+
         return (
             <StandardPage title={txt.title}>
                 <form onSubmit={this._handleDefaultSubmit}>
@@ -128,7 +135,7 @@ export default class ClaimRecord extends PureComponent {
                             <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
                             {
                                 publication.fez_record_search_key_author &&
-                                publication.fez_record_search_key_author.length > 1
+                                publication.fez_record_search_key_author.length > 0
                                 && !authorLinked &&
                                 <StandardCard
                                     title={txt.authorLinking.title}
@@ -147,17 +154,15 @@ export default class ClaimRecord extends PureComponent {
                                     />
                                 </StandardCard>
                             }
-                            {/* Show contributor linking only for records that don't have authors, eg Edited Books */}
                             {
-                                publication.fez_record_search_key_author &&
-                                publication.fez_record_search_key_author.length === 0 &&
+                                !claimRecordConfig.hideContributorLinking.includes(publication.rek_display_type) &&
                                 publication.fez_record_search_key_contributor &&
-                                publication.fez_record_search_key_contributor.length > 1 &&
+                                publication.fez_record_search_key_contributor.length > 0 &&
                                 !contributorLinked &&
                                 <StandardCard
                                     title={txt.contributorLinking.title}
                                     help={txt.contributorLinking.help}
-                                    className="requiredField">
+                                    className={contributorClassName}>
                                     <label htmlFor="contributorLinking">{txt.contributorLinking.text}</label>
                                     <Field
                                         name="contributorLinking"
@@ -166,8 +171,8 @@ export default class ClaimRecord extends PureComponent {
                                         authorList={publication.fez_record_search_key_contributor}
                                         linkedAuthorIdList={publication.fez_record_search_key_contributor_id}
                                         disabled={this.props.submitting}
-                                        className="requiredField"
-                                        validate={[validation.required, validation.isValidContributorLink]}
+                                        className={contributorClassName}
+                                        validate={this._contributorValidation}
                                     />
                                 </StandardCard>
                             }
