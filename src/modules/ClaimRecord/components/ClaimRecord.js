@@ -14,7 +14,7 @@ import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPr
 
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {AuthorLinkingField, ContributorLinkingField} from 'modules/SharedComponents/AuthorLinking';
-import {validation, routes} from 'config';
+import {validation, routes, claimRecordConfig} from 'config';
 import locale from 'locale/forms';
 
 export default class ClaimRecord extends PureComponent {
@@ -75,7 +75,7 @@ export default class ClaimRecord extends PureComponent {
 
     _contributorValidation = (link) => {
         const publication = this.props.initialValues.get('publication').toJS();
-        return publication.fez_record_search_key_author_id && publication.fez_record_search_key_author_id.length > 0 ?
+        return publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 0 ?
             validation.isValidContributorLink(link) : validation.isValidContributorLink(link, true);
     }
 
@@ -155,6 +155,7 @@ export default class ClaimRecord extends PureComponent {
                                 </StandardCard>
                             }
                             {
+                                !claimRecordConfig.hideContributorLinking.includes(publication.rek_display_type) &&
                                 publication.fez_record_search_key_contributor &&
                                 publication.fez_record_search_key_contributor.length > 0 &&
                                 !contributorLinked &&
