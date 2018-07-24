@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import FontIcon from 'material-ui/FontIcon';
 import * as Partials from './partials';
 
 export default class ResearchReportCitation extends Component {
@@ -30,10 +29,6 @@ export default class ResearchReportCitation extends Component {
         // {Author}{Year| (|).}<i>{Title of report| |.}</i>{Series| |.}{Place of Publication| |:}{Publisher| |.} {doi| doi:|}
         return (
             <div className="citationContent citationResearchReport">
-                <FontIcon className="material-icons citationIcon" data-place="left">
-                    format_quote
-                </FontIcon>
-
                 {/* authors list */}
                 <Partials.AuthorsCitationView publication={this.props.publication} />
 
