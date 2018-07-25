@@ -128,8 +128,10 @@ export default class Files extends Component {
     getFileData = (publication) => {
         const dataStreams = publication.fez_datastream_info;
         const {files} = viewRecordsConfig;
+        // check if the publication is a member of the blacklist collections, TODO: remove after security epic is done
+        const containBlacklistCollections = publication.fez_record_search_key_ismemberof.some(collection => files.blacklist.collections.includes(collection.rek_ismemberof));
 
-        return !!dataStreams && dataStreams.length > 0
+        return !containBlacklistCollections && !!dataStreams && dataStreams.length > 0
             ? dataStreams.filter(this.isFileValid).map(dataStream => {
                 const pid = publication.rek_pid;
                 const fileName = dataStream.dsi_dsid;
