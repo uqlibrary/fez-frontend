@@ -16,6 +16,7 @@ export default class CitationCountView extends PureComponent {
 
     render() {
         const {source, count, link, title} = this.props;
+        console.log(this.props);
         return (
             <div className="citationCount">
                 <ExternalLink
