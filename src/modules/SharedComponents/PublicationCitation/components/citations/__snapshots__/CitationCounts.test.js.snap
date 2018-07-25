@@ -73,7 +73,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
             "rek_created_date": "2019-12-25T00:00:00Z",
             "rek_gs_citation_count": 1,
             "rek_pid": "pid:111",
-            "rek_scopus_citation_count": 1,
+            "rek_scopus_citation_count": 0,
             "rek_thomson_citation_count": 1,
             "rek_title": "This is test title",
           }
@@ -125,7 +125,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
               </div>
             </CitationCountView>
             <CitationCountView
-              count={1}
+              count={0}
               link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
               source="scopus"
               title="Full citation in Scopus will open in a new window"
@@ -157,7 +157,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                     <span
                       className="citationCountNumber"
                     >
-                      1
+                      0
                     </span>
                   </a>
                 </ExternalLink>
@@ -1175,6 +1175,45 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
             className="column is-narrow-tablet is-12-mobile citationIcons"
           >
             <CitationCountView
+              count={0}
+              link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
+              source="scopus"
+              title="Full citation in Scopus will open in a new window"
+            >
+              <div
+                className="citationCount"
+              >
+                <ExternalLink
+                  aria-label="Full citation in Scopus will open in a new window"
+                  className="scopusCitationCount"
+                  href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
+                  openInNewIcon={false}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Full citation in Scopus will open in a new window"
+                >
+                  <a
+                    aria-label="Full citation in Scopus will open in a new window"
+                    className="scopusCitationCount externalLinkfalse"
+                    href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
+                    rel="noopener noreferrer"
+                    tabIndex="0"
+                    target="_blank"
+                    title="Full citation in Scopus will open in a new window"
+                  >
+                    <div
+                      className="fez-icon scopus large"
+                    />
+                    <span
+                      className="citationCountNumber"
+                    >
+                      0
+                    </span>
+                  </a>
+                </ExternalLink>
+              </div>
+            </CitationCountView>
+            <CitationCountView
               count={1}
               link="http://www.altmetric.com/details.php?citation_id=23535331"
               source="altmetric"
@@ -1262,7 +1301,27 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
           </div>
           <div
             className="column is-narrow"
-          />
+          >
+            <ExternalLink
+              className=""
+              href="https://app.library.uq.edu.au/#/authors/view/UQ:67abc8"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network"
+            >
+              <a
+                className=" externalLink showIcon"
+                href="https://app.library.uq.edu.au/#/authors/view/UQ:67abc8"
+                rel="noopener noreferrer"
+                tabIndex="0"
+                target="_blank"
+                title="ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network"
+              >
+                View full statistics
+              </a>
+            </ExternalLink>
+          </div>
           <div
             className="column is-hidden-mobile"
           />
@@ -1346,7 +1405,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
             "rek_gs_citation_count": 1,
             "rek_pid": "pid:111",
             "rek_scopus_citation_count": 1,
-            "rek_thomson_citation_count": 1,
+            "rek_thomson_citation_count": 0,
             "rek_title": "This is test title",
           }
         }
@@ -1358,7 +1417,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
             className="column is-narrow-tablet is-12-mobile citationIcons"
           >
             <CitationCountView
-              count={1}
+              count={0}
               link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
               source="wos"
               title="Full citation in Web of science will open in a new window"
@@ -1390,7 +1449,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                     <span
                       className="citationCountNumber"
                     >
-                      1
+                      0
                     </span>
                   </a>
                 </ExternalLink>
