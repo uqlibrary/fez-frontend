@@ -74,6 +74,7 @@ class Dashboard extends PureComponent {
             this.props.accountAuthorDetailsLoading ||
             this.props.loadingPublicationsStats
         );
+        const userHasPublications = this.props.authorDetails && this.props.authorDetails.espace && this.props.authorDetails.espace.doc_count > 0;
         const barChart = !loading && this.props.publicationsByYear && this.props.publicationsByYear.series.length > 0
             ? (
                 <StandardCard className="barChart" title={txt.publicationsByYearChart.title}>
@@ -184,7 +185,7 @@ class Dashboard extends PureComponent {
                     </div>
                 }
                 {
-                    !loading && (this.props.showLatestPublicationsTab || this.props.showTrendingPublicationsTab) &&
+                    !loading && userHasPublications && (this.props.showLatestPublicationsTab || this.props.showTrendingPublicationsTab) &&
                     <StandardCard className="card-paddingless">
                         <Tabs className="publicationTabs" inkBarStyle={{height: '4px', marginTop: '-4px'}}>
                             {

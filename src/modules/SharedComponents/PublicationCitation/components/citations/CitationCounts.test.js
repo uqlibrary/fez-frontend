@@ -34,7 +34,7 @@ describe('CitationCounts', () => {
             rek_created_date: '2019-12-25T00:00:00Z',
             rek_pid: 'pid:111',
             rek_title: 'This is test title',
-            rek_thomson_citation_count: 1,
+            rek_thomson_citation_count: 0,
             rek_scopus_citation_count: 1,
             rek_gs_citation_count: 1,
             rek_altmetric_score: 1,
@@ -63,7 +63,7 @@ describe('CitationCounts', () => {
             rek_pid: 'pid:111',
             rek_title: 'This is test title',
             rek_thomson_citation_count: 1,
-            rek_scopus_citation_count: 1,
+            rek_scopus_citation_count: 0,
             rek_gs_citation_count: 1,
             rek_altmetric_score: 1,
             fez_record_search_key_oa_status: {
