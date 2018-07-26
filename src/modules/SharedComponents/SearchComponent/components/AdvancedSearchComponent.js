@@ -7,7 +7,6 @@ import KeyboardArrowUp from 'material-ui/svg-icons/hardware/keyboard-arrow-up';
 import KeyboardArrowDown from 'material-ui/svg-icons/hardware/keyboard-arrow-down';
 import AdvancedSearchRow from './AdvancedSearchRow';
 import Checkbox from 'material-ui/Checkbox';
-import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
 import {publicationTypes} from 'config';
@@ -174,21 +173,6 @@ export default class AdvancedSearchComponent extends PureComponent {
             && this.props.fieldRows.length < Object.keys(txt.advancedSearch.fieldTypes).length - 1;
         const alreadyAddedFields = this.props.fieldRows.map(item => item.searchField);
         const searchQueryCaption = this.getAdvancedSearchCaption(this.props);
-        const docTypeItems = [
-            ...this.publicationTypes.filter((item) => {
-                return item.hasFormComponent;
-            }).map((item, index) => {
-                return (
-                    <MenuItem
-                        checked={this.props.docTypes && this.props.docTypes.length > 0 && this.props.docTypes.indexOf(item.id) > -1}
-                        value={item.id}
-                        primaryText={item.name}
-                        key={index + 1}
-                        disabled={!item.formComponent}
-                    />
-                );
-            })
-        ];
         return (
             <div className={`searchComponent ${this.props.className}`}>
                 <form id="advancedSearchForm" onSubmit={this._handleAdvancedSearch}>
