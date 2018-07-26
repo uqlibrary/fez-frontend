@@ -15,6 +15,8 @@ import {documentTypesLookup} from 'config/general';
 import {locale} from 'locale';
 import * as recordForms from '../../PublicationForm/components/Forms';
 
+import DocumentTypeField from './Fields/DocumentTypeField';
+
 export default class AdvancedSearchComponent extends PureComponent {
     static propTypes = {
         className: PropTypes.string,
@@ -242,15 +244,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                                     />
                                                 </div>
                                                 <div className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop">
-                                                    <SelectField
-                                                        className="advancedSearchPublicationType"
-                                                        floatingLabelText={txt.advancedSearch.fieldTypes.rek_display_type.title}
-                                                        value={this.props.docTypes}
-                                                        onChange={this._handleDocTypeChange}
-                                                        style={{width: '100%'}}
-                                                        multiple >
-                                                        {docTypeItems}
-                                                    </SelectField>
+                                                    <DocumentTypeField docTypes={this.props.docTypes} updateDocTypeValues={this.props.updateDocTypeValues} className="advancedSearchPublicationType"/>
                                                 </div>
                                             </div>
                                         </div>
