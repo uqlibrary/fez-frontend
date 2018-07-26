@@ -42,7 +42,7 @@ describe('AdvancedSearchRow', () => {
         const testFn = jest.fn();
         const wrapper = setup({rowIndex: 1, onSearchRowChange: testFn});
         wrapper.instance()._handleTextChange({}, 'i feel lucky');
-        expect(testFn).toHaveBeenCalledWith(1, {searchField: '0', value: 'i feel lucky'});
+        expect(testFn).toHaveBeenCalledWith(1, {searchField: '0', value: 'i feel lucky', label: ''});
     });
 
     it('should handle delete row', () => {

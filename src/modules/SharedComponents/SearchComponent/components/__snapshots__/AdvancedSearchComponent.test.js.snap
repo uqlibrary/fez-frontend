@@ -2129,6 +2129,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
                 ]
               }
               key="advanced-search-field-0"
+              label=""
               onSearchRowChange={[Function]}
               onSearchRowDelete={[Function]}
               rowIndex={0}
@@ -2722,6 +2723,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
                 ]
               }
               key="advanced-search-field-0"
+              label=""
               onSearchRowChange={[Function]}
               onSearchRowDelete={[Function]}
               rowIndex={0}
@@ -3371,6 +3373,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
                 ]
               }
               key="advanced-search-field-0"
+              label=""
               onSearchRowChange={[Function]}
               onSearchRowDelete={[Function]}
               rowIndex={0}

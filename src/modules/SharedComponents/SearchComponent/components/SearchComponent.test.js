@@ -128,13 +128,16 @@ describe('SearchComponent', () => {
                 {
                     searchField: 'all',
                     value: 'i feel lucky',
+                    label: ''
                 },
                 {
                     searchField: 'rek_title',
-                    value: 'global warming'
+                    value: 'global warming',
+                    label: ''
                 }
             ],
-            isOpenAccess: false
+            isOpenAccess: false,
+            docTypes: []
         };
 
         wrapper.update();
@@ -144,13 +147,13 @@ describe('SearchComponent', () => {
         expect(testMethod).toHaveBeenCalled();
         expect(testHistoryPushMehtod).toHaveBeenCalledWith({
             "pathname": "/records/search",
-            "search": "page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=i+feel+lucky&searchQueryParams%5Brek_title%5D=global+warming&searchQueryParams%5Brek_doc_type%5D=undefined&searchMode=advanced",
+            "search": "page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchMode=advanced",
             "state": {
                 "activeFacets": {"filters": {}, "ranges": {}},
                 "page": 1,
                 "pageSize": 20,
                 "searchMode": "advanced",
-                "searchQueryParams": {"all": "i feel lucky", "rek_doc_type": undefined, "rek_title": "global warming"},
+                "searchQueryParams": {"all": {"value": "i feel lucky", "label": ""}, "rek_doc_type": [], "rek_title": {"value": "global warming", "label": ""}},
                 "sortBy": "published_date",
                 "sortDirection": "Desc"
             }
@@ -201,7 +204,8 @@ describe('SearchComponent', () => {
             docTypes: [],
             fieldRows: [{
                 searchField: '0',
-                value: ''
+                value: '',
+                label: ''
             }],
             isOpenAccess: false,
             isMinimised: false
@@ -216,7 +220,8 @@ describe('SearchComponent', () => {
             docTypes: [],
             fieldRows: [{
                 searchField: '0',
-                value: ''
+                value: '',
+                label: ''
             }],
             isOpenAccess: false,
             isMinimised: true
@@ -242,7 +247,8 @@ describe('SearchComponent', () => {
             docTypes: [],
             fieldRows: [{
                 searchField: '0',
-                value: ''
+                value: '',
+                label: ''
             }],
             isOpenAccess: false,
             isMinimised: false
@@ -257,7 +263,8 @@ describe('SearchComponent', () => {
             docTypes: [],
             fieldRows: [{
                 searchField: '0',
-                value: ''
+                value: '',
+                label: ''
             }],
             isOpenAccess: true,
             isMinimised: false
@@ -300,7 +307,8 @@ describe('SearchComponent', () => {
             fieldRows: [
                 {
                     searchField: 'all',
-                    value: 'i feel lucky'
+                    value: 'i feel lucky',
+                    label: ''
                 }
             ],
             isOpenAccess: false,
@@ -319,7 +327,8 @@ describe('SearchComponent', () => {
             fieldRows: [
                 {
                     searchField: 'all',
-                    value: 'i feel lucky'
+                    value: 'i feel lucky',
+                    label: ''
                 },
                 {
                     searchField: '0',
@@ -334,8 +343,8 @@ describe('SearchComponent', () => {
     it('should remove one row from advanced search', () => {
         const wrapper = setup({
             searchQueryParams: {
-                all: 'i feel lucky',
-                rek_title: 'remove rek title field',
+                all: {value: 'i feel lucky', label: ''},
+                rek_title: {value: 'remove rek title field', label: ''},
                 docTypes: [],
             },
             isAdvancedSearch: true
@@ -346,15 +355,18 @@ describe('SearchComponent', () => {
             fieldRows: [
                 {
                     searchField: 'all',
-                    value: 'i feel lucky'
+                    value: 'i feel lucky',
+                    label: ''
                 },
                 {
                     searchField: 'rek_title',
-                    value: 'remove rek title field'
+                    value: 'remove rek title field',
+                    label: ''
                 },
                 {
                     searchField: "docTypes",
                     value: [],
+                    label: ''
                 },
 
     ],
@@ -372,11 +384,13 @@ describe('SearchComponent', () => {
             fieldRows: [
                 {
                     searchField: 'all',
-                    value: 'i feel lucky'
+                    value: 'i feel lucky',
+                    label: ''
                 },
                 {
                     searchField: "docTypes",
                     value: [],
+                    label: ''
                 },
             ],
             isOpenAccess: false,
@@ -389,7 +403,7 @@ describe('SearchComponent', () => {
     it('should update advanced search row on search text changed', () => {
         const wrapper = setup({
             searchQueryParams: {
-                all: 'i feel lucky'
+                all: {value: 'i feel lucky', label: ''}
             },
             isAdvancedSearch: true
         });
@@ -399,7 +413,8 @@ describe('SearchComponent', () => {
             fieldRows: [
                 {
                     searchField: 'all',
-                    value: 'i feel lucky'
+                    value: 'i feel lucky',
+                    label: ''
                 }
             ],
             isOpenAccess: false,
@@ -408,7 +423,7 @@ describe('SearchComponent', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance()._handleAdvancedSearchRowChange(0, {searchField: 'all', value: 'i feel more lucky'});
+        wrapper.instance()._handleAdvancedSearchRowChange(0, {searchField: 'all', value: 'i feel more lucky', label: ''});
         wrapper.update();
 
         expect(wrapper.state().advancedSearch).toEqual({
@@ -416,7 +431,8 @@ describe('SearchComponent', () => {
             fieldRows: [
                 {
                     searchField: 'all',
-                    value: 'i feel more lucky'
+                    value: 'i feel more lucky',
+                    label: ''
                 }
             ],
             isOpenAccess: false,
@@ -429,8 +445,8 @@ describe('SearchComponent', () => {
     it('should reset advanced search', () => {
         const wrapper = setup({
             searchQueryParams: {
-                all: 'i feel lucky',
-                rek_title: 'global warming'
+                all: {value: 'i feel lucky', label: ''},
+                rek_title: {value: 'global warming', label: ''}
             },
             isAdvancedSearch: true,
             isOpenAccessInAdvancedMode: true
@@ -441,11 +457,13 @@ describe('SearchComponent', () => {
             fieldRows: [
                 {
                     searchField: 'all',
-                    value: 'i feel lucky'
+                    value: 'i feel lucky',
+                    label: ''
                 },
                 {
                     searchField: 'rek_title',
-                    value: 'global warming'
+                    value: 'global warming',
+                    label: ''
                 }
             ],
             isOpenAccess: true,
@@ -476,14 +494,14 @@ describe('SearchComponent', () => {
             const wrapper = setup({});
             const fieldRows = wrapper.instance().getFieldRowsFromSearchQuery(undefined);
 
-            expect(fieldRows).toEqual([{searchField: '0', value: ''}]);
+            expect(fieldRows).toEqual([{searchField: '0', value: '', label: ''}]);
         });
 
         it('should get default field if search query params not set (empty object)', () => {
             const wrapper = setup({});
             const fieldRows = wrapper.instance().getFieldRowsFromSearchQuery({});
 
-            expect(fieldRows).toEqual([{searchField: '0', value: ''}]);
+            expect(fieldRows).toEqual([{searchField: '0', value: '', label: ''}]);
         });
 
         it('should get field rows from search query params', () => {
@@ -496,11 +514,13 @@ describe('SearchComponent', () => {
             expect(fieldRows).toEqual([
                 {
                     searchField: 'all',
-                    value: 'test'
+                    value: 'test',
+                    label: ''
                 },
                 {
                     searchField: 'rek_title',
-                    value: 'some title'
+                    value: 'some title',
+                    label: ''
                 }
             ]);
         });

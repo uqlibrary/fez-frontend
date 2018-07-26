@@ -280,6 +280,28 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         }
         value="rek_publisher"
       />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_author_id"
+        primaryText="Author ID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_author_id"
+      />
     </SelectField>
   </div>
   <div
@@ -588,6 +610,28 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           }
         }
         value="rek_publisher"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_author_id"
+        primaryText="Author ID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_author_id"
       />
     </SelectField>
   </div>
@@ -908,6 +952,28 @@ exports[`AdvancedSearchRow should render search field row with select field and 
           }
         }
         value="rek_publisher"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_author_id"
+        primaryText="Author ID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_author_id"
       />
     </SelectField>
   </div>

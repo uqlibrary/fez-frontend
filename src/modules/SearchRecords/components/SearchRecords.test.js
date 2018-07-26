@@ -6,7 +6,13 @@ function setup(testProps, isShallow = true) {
         publicationsList: [],
         searchLoading: false,
         exportPublicationsLoading: false,
-        actions: {exportEspacePublications: ()=>{}},
+        actions: {
+            exportEspacePublications: jest.fn(),
+            searchEspacePublications: jest.fn()
+        },
+        location: {
+            search: '?searchQueryParams%5Ball%5D=test'
+        },
         ...testProps,
     };
     return getElement(SearchRecords, props, isShallow);
@@ -128,14 +134,6 @@ describe('SearchRecords page', () => {
         wrapper.instance().componentWillReceiveProps({history: {action: 'POP'}, location: {pathname: routes.pathConfig.records.search, state: null}});
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().page).toEqual(1);
-    });
-
-    it('should not retrieve data from history if user navigates to next page', () => {
-        const testAction = jest.fn();
-        const wrapper = setup({actions: {searchEspacePublications: testAction}});
-
-        wrapper.instance().componentWillReceiveProps({history: {action: 'PUSH'}, location: {pathname: routes.pathConfig.records.search}});
-        expect(testAction).not.toHaveBeenCalled();
     });
 
     it('should set state and update history and search records when page size changed', () => {
