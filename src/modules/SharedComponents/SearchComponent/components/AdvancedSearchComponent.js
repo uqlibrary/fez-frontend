@@ -7,7 +7,6 @@ import KeyboardArrowUp from 'material-ui/svg-icons/hardware/keyboard-arrow-up';
 import KeyboardArrowDown from 'material-ui/svg-icons/hardware/keyboard-arrow-down';
 import AdvancedSearchRow from './AdvancedSearchRow';
 import Checkbox from 'material-ui/Checkbox';
-import MenuItem from 'material-ui/MenuItem';
 import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
 import {publicationTypes} from 'config';
 import {documentTypesLookup} from 'config/general';
@@ -162,10 +161,6 @@ export default class AdvancedSearchComponent extends PureComponent {
             this.props.onAdvancedSearchReset();
         }
     };
-
-    _handleDocTypeChange = (event, index, value) => {
-        this.props.updateDocTypeValues(value);
-    }
 
     render() {
         const txt = locale.components.searchComponent;
