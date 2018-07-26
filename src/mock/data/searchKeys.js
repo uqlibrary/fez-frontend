@@ -45,5 +45,47 @@ export const searchKeyList = {
         {"value": "Australian Food and Nutrition Monitoring Unit, Uni of Qld"},
         {"value": "Cambridge Uni. Press"},
         {"value": "Bond Uni, School of Humanities & Social Sciences"}
+    ]},
+    author: {"total":10,"data":[
+        {
+            "id": 78152,
+            "value": "Kisely, Steve"
+        },
+        {
+            "id": 0,
+            "value": "Segal, Steven"
+        },
+        {
+            "id": 0,
+            "value": "Stevenson, Freda K."
+        },
+        {
+            "id": 352995,
+            "value": "Stevenson, Philip G."
+        },
+        {
+            "id": 0,
+            "value": "Hooker, Steven P."
+        },
+        {
+            "id": 0,
+            "value": "Blair, Steven N."
+        },
+        {
+            "id": 0,
+            "value": "McGloughlin, Steven"
+        },
+        {
+            "id": 75121,
+            "value": "O'Donoghue, Steven"
+        },
+        {
+            "id": 0,
+            "value": "Weiss, Steven"
+        },
+        {
+            "id": 75875,
+            "value": "Wallis, Steven C."
+        }
     ]}
 };

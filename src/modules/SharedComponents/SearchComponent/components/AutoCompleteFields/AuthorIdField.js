@@ -4,7 +4,6 @@ import * as actions from 'actions';
 
 const mapStateToProps = (state, props) => {
     const category = 'author';
-    console.log(props);
     return {
         category: category,
         itemsList: state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]

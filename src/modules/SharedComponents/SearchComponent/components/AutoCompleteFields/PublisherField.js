@@ -8,9 +8,8 @@ const mapStateToProps = (state, props) => {
         category: category,
         itemsList: state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
             ? state.get('searchKeysReducer')[category].itemsList : [],
-        allowFreeText: true,
         onChange: (value) => {
-            props.onChange({}, value.value);
+            props.onChange({}, value.value, value.value);
         },
         async: true,
         dataSourceConfig: {text: 'value', value: 'value'},

@@ -906,6 +906,13 @@ export default {
                         type: 'PublisherLookup',
                         hint: 'Add a publisher to search',
                         validation: ['required']
+                    },
+                    'rek_author_id': {
+                        title: 'Author ID',
+                        combiner: 'is',
+                        type: 'AuthorIdLookup',
+                        hint: 'Add an author id to search',
+                        validation: ['required']
                     }
                 },
                 openAccess: {

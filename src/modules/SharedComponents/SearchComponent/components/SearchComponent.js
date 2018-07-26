@@ -27,6 +27,7 @@ export default class SearchComponent extends PureComponent {
         className: PropTypes.string,
         actions: PropTypes.object,
         history: PropTypes.object.isRequired,
+        location: PropTypes.object
     };
 
     static defaultProps = {
@@ -50,7 +51,11 @@ export default class SearchComponent extends PureComponent {
             snackbarMessage: '',
             isAdvancedSearch: props.isAdvancedSearch,
             simpleSearch: {
-                searchText: props.searchQueryParams && props.searchQueryParams.all || ''
+                searchText: (
+                    !!props.searchQueryParams.all
+                    && !!props.searchQueryParams.all.value
+                    && props.searchQueryParams.all.value
+                ) || props.searchQueryParams.all || ''
             },
             advancedSearch: {
                 fieldRows: this.getFieldRowsFromSearchQuery(props.searchQueryParams),
@@ -62,11 +67,19 @@ export default class SearchComponent extends PureComponent {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (!!nextProps.searchQueryParams) {
+        if (
+            Object.keys(nextProps.searchQueryParams).length !== Object.keys(this.props.searchQueryParams).length ||
+            nextProps.isAdvancedSearchMinimised !== this.props.isAdvancedSearchMinimised
+        ) {
             this.setState({
                 isAdvancedSearch: nextProps.isAdvancedSearch,
                 simpleSearch: {
-                    searchText: nextProps.searchQueryParams.all || ''
+                    searchText: (
+                        !!nextProps.searchQueryParams.all
+                        && !!nextProps.searchQueryParams.all.value
+                        && nextProps.searchQueryParams.all.value
+                    ) || nextProps.searchQueryParams.all || ''
+
                 },
                 advancedSearch: {
                     fieldRows: this.getFieldRowsFromSearchQuery(nextProps.searchQueryParams),
@@ -82,7 +95,8 @@ export default class SearchComponent extends PureComponent {
         if (!searchQueryParams || Object.keys(searchQueryParams).length === 0) {
             return [{
                 searchField: '0',
-                value: ''
+                value: '',
+                label: ''
             }];
         } else {
             return Object.keys(searchQueryParams)
@@ -91,7 +105,8 @@ export default class SearchComponent extends PureComponent {
                 })
                 .map(key => ({
                     searchField: key,
-                    value: searchQueryParams[key]
+                    value: searchQueryParams[key].value || searchQueryParams[key],
+                    label: searchQueryParams[key].label || ''
                 }));
         }
     };
@@ -106,9 +121,9 @@ export default class SearchComponent extends PureComponent {
         }
     };
 
-    handleSearch = (searchQuery) => {
+    handleSearch = (searchQuery, searchQueryApi = null) => {
         if (searchQuery && this.props.actions && this.props.actions.searchEspacePublications) {
-            this.props.actions.searchEspacePublications(searchQuery);
+            this.props.actions.searchEspacePublications(searchQueryApi || searchQuery);
 
             // navigate to search results page
             this.props.history.push({
@@ -244,12 +259,19 @@ export default class SearchComponent extends PureComponent {
     };
 
     _handleAdvancedSearch = () => {
-        const searchQueryParams = this.state.advancedSearch.fieldRows
-            .reduce((searchQueries, item) => (
-                {...searchQueries, [item.searchField]: item.value}
-            ), {});
-        const docTypeParams = this.state.advancedSearch.docTypes;
+        const searchQueryParams = this.getSearchQueryParams((item) => ({value: item.value, label: item.label}));
+        const searchQueryParamsForApi = this.getSearchQueryParams(item => item.value);
+
+        const searchQuery = this.getSearchQuery(searchQueryParams);
+        const searchQueryApi = this.getSearchQuery(searchQueryParamsForApi);
+
+        this.handleSearch(searchQuery, searchQueryApi);
+    };
+
+    getSearchQuery = (searchQueryParams) => {
         const {activeFacets} = defaultQueryParams;
+        const docTypeParams = this.state.advancedSearch.docTypes;
+
         const searchQuery = {
             ...defaultQueryParams,
             searchQueryParams: {
@@ -262,7 +284,15 @@ export default class SearchComponent extends PureComponent {
                 ...(this.state.advancedSearch.isOpenAccess ? {showOpenAccessOnly: true} : {})
             }
         };
-        this.handleSearch(searchQuery);
+
+        return searchQuery;
+    };
+
+    getSearchQueryParams = (valueCallback) => {
+        return this.state.advancedSearch.fieldRows
+            .reduce((searchQueries, item) => (
+                {...searchQueries, [item.searchField]: valueCallback(item)}
+            ), {});
     };
 
     render() {

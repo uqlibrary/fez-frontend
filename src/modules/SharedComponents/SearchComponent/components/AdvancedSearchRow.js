@@ -11,18 +11,19 @@ export default class AdvancedSearchRow extends PureComponent {
     static propTypes = {
         rowIndex: PropTypes.number,
         searchField: PropTypes.string,
-        value: PropTypes.string,
+        value: PropTypes.any,
+        label: PropTypes.string,
         disabledFields: PropTypes.array,
         onSearchRowChange: PropTypes.func,
         onSearchRowDelete: PropTypes.func,
     };
 
-    _handleTextChange = (event, value) => {
-        this.props.onSearchRowChange(this.props.rowIndex, {searchField: this.props.searchField, value});
+    _handleTextChange = (event, value, label = '') => {
+        this.props.onSearchRowChange(this.props.rowIndex, {searchField: this.props.searchField, value, label});
     };
 
     _handleSearchFieldChange = (event, index, searchField) => {
-        this.props.onSearchRowChange(this.props.rowIndex, {searchField, value: this.props.value});
+        this.props.onSearchRowChange(this.props.rowIndex, {searchField, value: this.props.value, label: this.props.label});
     };
 
     _deleteRow = () => {

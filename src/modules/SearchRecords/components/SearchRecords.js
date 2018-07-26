@@ -84,7 +84,7 @@ class SearchRecords extends PureComponent {
             });
         } else {
             this.setState({
-                ...newProps.searchQuery
+                ...this.parseSearchQueryStringFromUrl(newProps.location.search.substr(1))
             });
         }
     }
