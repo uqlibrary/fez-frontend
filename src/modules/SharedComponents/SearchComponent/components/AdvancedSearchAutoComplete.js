@@ -9,6 +9,7 @@ export class AdvancedSearchAutoComplete extends Component {
         itemsList: PropTypes.array,
         filter: PropTypes.func,
         itemsListLoading: PropTypes.bool,
+        multiple: PropTypes.bool,
         dataSourceConfig: PropTypes.object,
         selectedValue: PropTypes.any,
         category: PropTypes.any,
@@ -68,6 +69,7 @@ export class AdvancedSearchAutoComplete extends Component {
                 filter={!this.props.async ? this.props.filter || AutoComplete.caseInsensitiveFilter : () => (true)}
                 maxSearchResults={this.props.maxResults}
                 floatingLabelText={this.props.floatingLabelText}
+                multiple={this.props.multiple}
                 hintText={this.props.hintText}
                 dataSource={this.props.itemsList}
                 fullWidth

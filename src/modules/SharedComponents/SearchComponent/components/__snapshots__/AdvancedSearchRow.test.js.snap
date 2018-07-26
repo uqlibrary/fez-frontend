@@ -2,7 +2,7 @@
 
 exports[`AdvancedSearchRow should render default view 1`] = `
 <div
-  className="columns is-gapless is-mobile is-multiline advancedSearchRow"
+  className="columns is-gapless is-mobile advancedSearchRow"
 >
   <div
     className="column is-4-tablet"
@@ -280,6 +280,28 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         }
         value="rek_publisher"
       />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_collection"
+        primaryText="Collection"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_collection"
+      />
     </SelectField>
   </div>
   <div
@@ -287,6 +309,11 @@ exports[`AdvancedSearchRow should render default view 1`] = `
   />
   <div
     className="column input is-12-mobile"
+    style={
+      Object {
+        "overflow": "hidden !important",
+      }
+    }
   >
     <AdvancedSearchRowInput
       disabledFields={Array []}
@@ -311,7 +338,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
 
 exports[`AdvancedSearchRow should render search field row with given disabled options 1`] = `
 <div
-  className="columns is-gapless is-mobile is-multiline advancedSearchRow"
+  className="columns is-gapless is-mobile advancedSearchRow"
 >
   <div
     className="column is-4-tablet"
@@ -589,6 +616,28 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
         }
         value="rek_publisher"
       />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_collection"
+        primaryText="Collection"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_collection"
+      />
     </SelectField>
   </div>
   <div
@@ -600,6 +649,11 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
   </div>
   <div
     className="column input is-12-mobile"
+    style={
+      Object {
+        "overflow": "hidden !important",
+      }
+    }
   >
     <AdvancedSearchRowInput
       disabledFields={
@@ -615,6 +669,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           "title": "Any field",
           "type": "TextField",
           "validation": Array [
+            "required",
             "maxLength500",
           ],
         }
@@ -631,7 +686,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
 
 exports[`AdvancedSearchRow should render search field row with select field and search text 1`] = `
 <div
-  className="columns is-gapless is-mobile is-multiline advancedSearchRow"
+  className="columns is-gapless is-mobile advancedSearchRow"
 >
   <div
     className="column is-4-tablet"
@@ -909,6 +964,28 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         }
         value="rek_publisher"
       />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_collection"
+        primaryText="Collection"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_collection"
+      />
     </SelectField>
   </div>
   <div
@@ -920,6 +997,11 @@ exports[`AdvancedSearchRow should render search field row with select field and 
   </div>
   <div
     className="column input is-12-mobile"
+    style={
+      Object {
+        "overflow": "hidden !important",
+      }
+    }
   >
     <AdvancedSearchRowInput
       disabledFields={Array []}
@@ -930,6 +1012,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
           "title": "Any field",
           "type": "TextField",
           "validation": Array [
+            "required",
             "maxLength500",
           ],
         }

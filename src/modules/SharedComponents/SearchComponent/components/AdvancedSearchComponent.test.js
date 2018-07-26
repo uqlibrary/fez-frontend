@@ -120,7 +120,7 @@ describe('AdvancedSearchComponent', () => {
     it('haveAllAdvancedSearchFieldsValidated should return false for a fieldRow which is too short', () => {
         const thisProps = {
             "fieldRows": [
-                {"searchField": "rek_title", "value": "12345"},
+                {"searchField": "rek_title", "value": "123"},
             ]
         };
         const wrapper = setup({...thisProps});

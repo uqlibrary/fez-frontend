@@ -144,13 +144,13 @@ describe('SearchComponent', () => {
         expect(testMethod).toHaveBeenCalled();
         expect(testHistoryPushMehtod).toHaveBeenCalledWith({
             "pathname": "/records/search",
-            "search": "page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=i+feel+lucky&searchQueryParams%5Brek_title%5D=global+warming&searchQueryParams%5Brek_doc_type%5D=undefined&searchMode=advanced",
+            "search": "page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=i+feel+lucky&searchQueryParams%5Brek_title%5D=global+warming&searchQueryParams%5Brek_display_type%5D=undefined&searchMode=advanced",
             "state": {
                 "activeFacets": {"filters": {}, "ranges": {}},
                 "page": 1,
                 "pageSize": 20,
                 "searchMode": "advanced",
-                "searchQueryParams": {"all": "i feel lucky", "rek_doc_type": undefined, "rek_title": "global warming"},
+                "searchQueryParams": {"all": "i feel lucky", "rek_display_type": undefined, "rek_title": "global warming"},
                 "sortBy": "published_date",
                 "sortDirection": "Desc"
             }

@@ -827,7 +827,7 @@ export default {
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add some text to search all fields with',
-                        validation: ['maxLength500']
+                        validation: ['required', 'maxLength500']
                     },
                     'rek_title': {
                         title: 'Title',
@@ -886,7 +886,7 @@ export default {
                         hint: 'Add a book title to search',
                         validation: ['required', 'maxLength500']
                     },
-                    'rek_doc_type': {
+                    'rek_display_type': {
                         title: 'Publication type',
                         combiner: 'is one of',
                         type: null,
@@ -905,6 +905,13 @@ export default {
                         combiner: 'contains',
                         type: 'PublisherLookup',
                         hint: 'Add a publisher to search',
+                        validation: ['required']
+                    },
+                    'rek_collection': {
+                        title: 'Collection',
+                        combiner: 'is one of',
+                        type: 'CollectionLookup',
+                        hint: 'Add collections to search',
                         validation: ['required']
                     }
                 },

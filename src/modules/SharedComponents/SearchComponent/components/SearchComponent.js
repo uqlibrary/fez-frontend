@@ -87,7 +87,7 @@ export default class SearchComponent extends PureComponent {
         } else {
             return Object.keys(searchQueryParams)
                 .filter((item) => {
-                    return item !== 'rek_doc_type';
+                    return item !== 'rek_display_type';
                 })
                 .map(key => ({
                     searchField: key,
@@ -98,11 +98,11 @@ export default class SearchComponent extends PureComponent {
 
     getDocTypesFromSearchQuery = (searchQueryParams) => {
         if (!searchQueryParams
-            || !searchQueryParams.rek_doc_type
-            || searchQueryParams.rek_doc_type.some(isNaN)) {
+            || !searchQueryParams.rek_display_type
+            || searchQueryParams.rek_display_type.some(isNaN)) {
             return [];
         } else {
-            return searchQueryParams.rek_doc_type.map(item => parseInt(item, 10));
+            return searchQueryParams.rek_display_type.map(item => parseInt(item, 10));
         }
     };
 
@@ -254,7 +254,7 @@ export default class SearchComponent extends PureComponent {
             ...defaultQueryParams,
             searchQueryParams: {
                 ...searchQueryParams,
-                rek_doc_type: docTypeParams
+                rek_display_type: docTypeParams
             },
             searchMode: locale.components.searchComponent.advancedSearch.mode,
             activeFacets: {
@@ -306,6 +306,7 @@ export default class SearchComponent extends PureComponent {
                     autoHideDuration={5000}
                     message={this.state.snackbarMessage}
                 />
+                {JSON.stringify(this.state.advancedSearch.fi)}
             </React.Fragment>
         );
     }
