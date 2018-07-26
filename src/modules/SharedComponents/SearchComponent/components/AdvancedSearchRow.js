@@ -23,7 +23,7 @@ export default class AdvancedSearchRow extends PureComponent {
     };
 
     _handleSearchFieldChange = (event, index, searchField) => {
-        this.props.onSearchRowChange(this.props.rowIndex, {searchField, value: this.props.value, label: this.props.label});
+        this.props.onSearchRowChange(this.props.rowIndex, {searchField, value: '', label: ''});
     };
 
     _deleteRow = () => {
