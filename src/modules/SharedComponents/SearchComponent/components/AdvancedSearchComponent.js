@@ -64,7 +64,6 @@ export default class AdvancedSearchComponent extends PureComponent {
             .filter(item => item.searchField !== '0' && item.value !== '')
             .filter(item => item.searchField !== 'rek_display_type')
             .map((item, index) => {
-                console.log('Item in caption: ', item);
                 return (
                     <span key={item.searchField}>
                         {index > 0 && <span className="and">  {item.value && 'AND'}</span>}

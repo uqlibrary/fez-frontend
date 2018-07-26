@@ -21,7 +21,6 @@ export default class AdvancedSearchRow extends PureComponent {
     };
 
     _handleTextChange = (event, value) => {
-        console.log('This is the value at advanced search row:', value);
         this.props.onSearchRowChange(this.props.rowIndex, {searchField: this.props.searchField, value});
     };
 
