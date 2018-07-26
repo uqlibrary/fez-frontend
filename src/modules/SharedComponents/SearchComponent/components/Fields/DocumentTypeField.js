@@ -60,7 +60,7 @@ export default class DocumentTypeField extends PureComponent {
 
         return (
             <SelectField
-                floatingLabelText={txt.advancedSearch.fieldTypes.rek_doc_type.title}
+                floatingLabelText={txt.advancedSearch.fieldTypes.rek_display_type.title}
                 value={this.props.docTypes}
                 onChange={this._handleDocTypeChange}
                 multiple
