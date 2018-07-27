@@ -7,13 +7,15 @@ import KeyboardArrowUp from 'material-ui/svg-icons/hardware/keyboard-arrow-up';
 import KeyboardArrowDown from 'material-ui/svg-icons/hardware/keyboard-arrow-down';
 import AdvancedSearchRow from './AdvancedSearchRow';
 import Checkbox from 'material-ui/Checkbox';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
+// import SelectField from 'material-ui/SelectField';
+// import MenuItem from 'material-ui/MenuItem';
 import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
 import {publicationTypes} from 'config';
 import {documentTypesLookup} from 'config/general';
 import {locale} from 'locale';
 import * as recordForms from '../../PublicationForm/components/Forms';
+
+import DocumentTypeField from './Fields/DocumentTypeField';
 
 export default class AdvancedSearchComponent extends PureComponent {
     static propTypes = {
@@ -162,21 +164,6 @@ export default class AdvancedSearchComponent extends PureComponent {
             && this.props.fieldRows.length < Object.keys(txt.advancedSearch.fieldTypes).length - 1;
         const alreadyAddedFields = this.props.fieldRows.map(item => item.searchField);
         const searchQueryCaption = this.getAdvancedSearchCaption(this.props);
-        const docTypeItems = [
-            ...this.publicationTypes.filter((item) => {
-                return item.hasFormComponent;
-            }).map((item, index) => {
-                return (
-                    <MenuItem
-                        checked={this.props.docTypes && this.props.docTypes.length > 0 && this.props.docTypes.indexOf(item.id) > -1}
-                        value={item.id}
-                        primaryText={item.name}
-                        key={index + 1}
-                        disabled={!item.formComponent}
-                    />
-                );
-            })
-        ];
         return (
             <div className={`searchComponent ${this.props.className}`}>
                 <form id="advancedSearchForm" onSubmit={this._handleAdvancedSearch}>
@@ -232,15 +219,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                                     />
                                                 </div>
                                                 <div className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop">
-                                                    <SelectField
-                                                        className="advancedSearchPublicationType"
-                                                        floatingLabelText={txt.advancedSearch.fieldTypes.rek_doc_type.title}
-                                                        value={this.props.docTypes}
-                                                        onChange={this._handleDocTypeChange}
-                                                        style={{width: '100%'}}
-                                                        multiple >
-                                                        {docTypeItems}
-                                                    </SelectField>
+                                                    <DocumentTypeField docTypes={this.props.docTypes} updateDocTypeValues={this.props.updateDocTypeValues} className="advancedSearchPublicationType"/>
                                                 </div>
                                             </div>
                                         </div>

@@ -812,32 +812,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         <div
           className="citationContent citationDataCollection"
         >
-          <FontIcon
-            className="material-icons citationIcon"
-            data-place="left"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            <span
-              className="material-icons citationIcon"
-              data-place="left"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              style={
-                Object {
-                  "color": "rgba(0, 0, 0, 0.87)",
-                  "display": "inline-block",
-                  "fontSize": 24,
-                  "muiPrepared": true,
-                  "position": "relative",
-                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                  "userSelect": "none",
-                }
-              }
-            >
-              format_quote
-            </span>
-          </FontIcon>
           <AuthorsCitationView
             className="citationAuthors"
             idSearchKey={
@@ -2590,32 +2564,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <div
           className="citationContent citationDataCollection"
         >
-          <FontIcon
-            className="material-icons citationIcon"
-            data-place="left"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            <span
-              className="material-icons citationIcon"
-              data-place="left"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              style={
-                Object {
-                  "color": "rgba(0, 0, 0, 0.87)",
-                  "display": "inline-block",
-                  "fontSize": 24,
-                  "muiPrepared": true,
-                  "position": "relative",
-                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                  "userSelect": "none",
-                }
-              }
-            >
-              format_quote
-            </span>
-          </FontIcon>
           <AuthorsCitationView
             className="citationAuthors"
             idSearchKey={
@@ -4364,32 +4312,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <div
           className="citationContent citationDataCollection"
         >
-          <FontIcon
-            className="material-icons citationIcon"
-            data-place="left"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            <span
-              className="material-icons citationIcon"
-              data-place="left"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              style={
-                Object {
-                  "color": "rgba(0, 0, 0, 0.87)",
-                  "display": "inline-block",
-                  "fontSize": 24,
-                  "muiPrepared": true,
-                  "position": "relative",
-                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                  "userSelect": "none",
-                }
-              }
-            >
-              format_quote
-            </span>
-          </FontIcon>
           <AuthorsCitationView
             className="citationAuthors"
             idSearchKey={
@@ -6102,32 +6024,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <div
           className="citationContent citationDataCollection"
         >
-          <FontIcon
-            className="material-icons citationIcon"
-            data-place="left"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            <span
-              className="material-icons citationIcon"
-              data-place="left"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              style={
-                Object {
-                  "color": "rgba(0, 0, 0, 0.87)",
-                  "display": "inline-block",
-                  "fontSize": 24,
-                  "muiPrepared": true,
-                  "position": "relative",
-                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                  "userSelect": "none",
-                }
-              }
-            >
-              format_quote
-            </span>
-          </FontIcon>
           <AuthorsCitationView
             className="citationAuthors"
             idSearchKey={
@@ -7774,32 +7670,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <div
           className="citationContent citationDataCollection"
         >
-          <FontIcon
-            className="material-icons citationIcon"
-            data-place="left"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            <span
-              className="material-icons citationIcon"
-              data-place="left"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              style={
-                Object {
-                  "color": "rgba(0, 0, 0, 0.87)",
-                  "display": "inline-block",
-                  "fontSize": 24,
-                  "muiPrepared": true,
-                  "position": "relative",
-                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                  "userSelect": "none",
-                }
-              }
-            >
-              format_quote
-            </span>
-          </FontIcon>
           <AuthorsCitationView
             className="citationAuthors"
             idSearchKey={
@@ -9543,32 +9413,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <div
           className="citationContent citationDataCollection"
         >
-          <FontIcon
-            className="material-icons citationIcon"
-            data-place="left"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            <span
-              className="material-icons citationIcon"
-              data-place="left"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              style={
-                Object {
-                  "color": "rgba(0, 0, 0, 0.87)",
-                  "display": "inline-block",
-                  "fontSize": 24,
-                  "muiPrepared": true,
-                  "position": "relative",
-                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                  "userSelect": "none",
-                }
-              }
-            >
-              format_quote
-            </span>
-          </FontIcon>
           <AuthorsCitationView
             className="citationAuthors"
             idSearchKey={
@@ -11293,32 +11137,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         <div
           className="citationContent citationDataCollection"
         >
-          <FontIcon
-            className="material-icons citationIcon"
-            data-place="left"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            <span
-              className="material-icons citationIcon"
-              data-place="left"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              style={
-                Object {
-                  "color": "rgba(0, 0, 0, 0.87)",
-                  "display": "inline-block",
-                  "fontSize": 24,
-                  "muiPrepared": true,
-                  "position": "relative",
-                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                  "userSelect": "none",
-                }
-              }
-            >
-              format_quote
-            </span>
-          </FontIcon>
           <AuthorsCitationView
             className="citationAuthors"
             idSearchKey={
@@ -12308,32 +12126,6 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
         <div
           className="citationContent citationDataCollection"
         >
-          <FontIcon
-            className="material-icons citationIcon"
-            data-place="left"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            <span
-              className="material-icons citationIcon"
-              data-place="left"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              style={
-                Object {
-                  "color": "rgba(0, 0, 0, 0.87)",
-                  "display": "inline-block",
-                  "fontSize": 24,
-                  "muiPrepared": true,
-                  "position": "relative",
-                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                  "userSelect": "none",
-                }
-              }
-            >
-              format_quote
-            </span>
-          </FontIcon>
           <AuthorsCitationView
             className="citationAuthors"
             idSearchKey={
