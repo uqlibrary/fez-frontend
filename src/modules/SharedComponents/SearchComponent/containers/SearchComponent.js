@@ -5,18 +5,16 @@ import * as actions from 'actions';
 import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state) => {
-    const isAdvancedSearch = !!state.get('searchRecordsReducer') &&
-        !!state.get('searchRecordsReducer').searchQuery &&
-        !!state.get('searchRecordsReducer').searchQuery.searchMode &&
-        state.get('searchRecordsReducer').searchQuery.searchMode === 'advanced';
-    const isAdvancedSearchMinimised = isAdvancedSearch && !!state.get('searchRecordsReducer').publicationsList.length > 0;
+    const {searchQuery, publicationsList} = !!state && !!state.get('searchRecordsReducer') && state.get('searchRecordsReducer') || {};
+
+    const isAdvancedSearch = !!searchQuery && !!searchQuery.searchMode && searchQuery.searchMode === 'advanced';
+    const isAdvancedSearchMinimised = isAdvancedSearch && publicationsList.length > 0;
 
     return {
-        searchQueryParams: state && state.get('searchRecordsReducer') && state.get('searchRecordsReducer').searchQuery
-            && state.get('searchRecordsReducer').searchQuery.searchQueryParams || {},
+        searchQueryParams: !!searchQuery && searchQuery.searchQueryParams || {},
         isAdvancedSearch: isAdvancedSearch,
         isAdvancedSearchMinimised: isAdvancedSearchMinimised,
-        isOpenAccessInAdvancedMode: isAdvancedSearch && !!state.get('searchRecordsReducer').searchQuery.activeFacets.showOpenAccessOnly,
+        isOpenAccessInAdvancedMode: isAdvancedSearch && !!searchQuery && !!searchQuery.activeFacets.showOpenAccessOnly,
     };
 };
 
