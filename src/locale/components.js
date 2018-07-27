@@ -913,6 +913,13 @@ export default {
                         type: 'CollectionLookup',
                         hint: 'Add collections to search',
                         validation: ['required']
+                    },
+                    'rek_subtype': {
+                        title: 'Subtype',
+                        combiner: 'is',
+                        type: 'SubtypeLookup',
+                        hint: 'Select a publication subtype',
+                        validation: ['required']
                     }
                 },
                 openAccess: {

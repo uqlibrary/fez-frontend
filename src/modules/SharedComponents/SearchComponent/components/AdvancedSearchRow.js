@@ -82,7 +82,7 @@ export default class AdvancedSearchRow extends PureComponent {
                         </div>
                         : <div className="column is-narrow spacer" />
                 }
-                <div className={`column input ${(this.props.rowIndex === 0) ? 'is-12-mobile' : 'is-11-mobile'}`} style={{overflow: 'hidden !important'}}>
+                <div className={`column input ${(this.props.rowIndex === 0) ? 'is-12-mobile' : 'is-11-mobile'}`}>
                     <AdvancedSearchRowInput {...this.props} inputField={txt.fieldTypes[this.props.searchField]} value={this.props.value}>
                         {
                             this.renderInputComponentAndProps()

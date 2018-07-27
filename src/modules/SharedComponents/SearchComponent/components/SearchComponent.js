@@ -182,6 +182,7 @@ export default class SearchComponent extends PureComponent {
 
     _updateDocTypeValues = (docTypeValues) => {
         // Update the state with new values
+        console.log('docTypeValues', docTypeValues);
         this.setState({
             advancedSearch: {
                 ...this.state.advancedSearch,
@@ -306,7 +307,7 @@ export default class SearchComponent extends PureComponent {
                     autoHideDuration={5000}
                     message={this.state.snackbarMessage}
                 />
-                {JSON.stringify(this.state.advancedSearch.fi)}
+                {/* {JSON.stringify(this.state.advancedSearch)} */}
             </React.Fragment>
         );
     }

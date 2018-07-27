@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import {publicationTypes} from 'config';
-// import {documentTypesLookup} from 'config/general';
 import MenuItem from 'material-ui/MenuItem';
 import {locale} from 'locale';
 import * as recordForms from '../../../PublicationForm/components/Forms';

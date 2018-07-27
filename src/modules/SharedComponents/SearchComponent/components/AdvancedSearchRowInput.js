@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import * as validationRules from 'config/validation';
 import {PublisherField} from './AutoCompleteFields/PublisherField';
-import {CollectionField} from './MultiSelectFields/CollectionField';
+import {CollectionField} from './Fields/CollectionField';
+import SubtypeField from './Fields/SubtypeField';
 
 class AdvancedSearchRowInput extends PureComponent {
     static propTypes = {
@@ -52,6 +53,8 @@ class AdvancedSearchRowInput extends PureComponent {
                 return PublisherField;
             case 'CollectionLookup':
                 return CollectionField;
+            case 'SubtypeLookup':
+                return SubtypeField;
             default:
                 return TextField;
         }
@@ -79,6 +82,13 @@ class AdvancedSearchRowInput extends PureComponent {
                     'aria-label': this.props.inputField.hint,
                     'errorText': this.runValidationRules(this.props.value),
                     'floatingLabelText': null
+                };
+            case 'SubtypeLookup':
+                return {
+                    'hintText': this.props.inputField.hint,
+                    'aria-label': this.props.inputField.hint,
+                    'errorText': this.runValidationRules(this.props.value),
+                    'floatingLabelText': null,
                 };
             default: return {};
         }

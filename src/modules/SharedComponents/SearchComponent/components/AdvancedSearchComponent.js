@@ -140,6 +140,7 @@ export default class AdvancedSearchComponent extends PureComponent {
     };
 
     _handleAdvancedSearchRowChange = (index, searchRow) => {
+        console.log('PING');
         this.props.onAdvancedSearchRowChange(index, searchRow);
     };
 
@@ -210,7 +211,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                                     ))
                                             }
                                         </div>
-                                        <div className="column is-4-desktop is-12-tablet is-12-mobile openAccessCheckbox">
+                                        <div className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox">
                                             <div className="columns is-gapless is-multiline">
                                                 <div className="column is-11-mobile is-4-tablet is-12-desktop">
                                                     <Checkbox
@@ -222,7 +223,11 @@ export default class AdvancedSearchComponent extends PureComponent {
                                                     />
                                                 </div>
                                                 <div className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop">
-                                                    <DocumentTypeField docTypes={this.props.docTypes} updateDocTypeValues={this.props.updateDocTypeValues} className="advancedSearchPublicationType"/>
+                                                    <DocumentTypeField
+                                                        docTypes={this.props.docTypes}
+                                                        updateDocTypeValues={this.props.updateDocTypeValues}
+                                                        className="advancedSearchPublicationType"
+                                                    />
                                                 </div>
                                             </div>
                                         </div>
@@ -255,7 +260,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             />
                                         </div>
                                         <div className="column is-hidden-mobile" />
-                                        <div className="column is-3-desktop is-3-tablet is-12-mobile">
+                                        <div className="column is-3-desktop is-4-tablet is-12-mobile">
                                             <RaisedButton
                                                 className="advancedSearchButton"
                                                 label={txt.searchButtonText}

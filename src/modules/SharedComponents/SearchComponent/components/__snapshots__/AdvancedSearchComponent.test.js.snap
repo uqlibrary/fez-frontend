@@ -969,7 +969,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
             />
           </div>
           <div
-            className="column is-4-desktop is-12-tablet is-12-mobile openAccessCheckbox"
+            className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
           >
             <div
               className="columns is-gapless is-multiline"
@@ -1067,7 +1067,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
             className="column is-hidden-mobile"
           />
           <div
-            className="column is-3-desktop is-3-tablet is-12-mobile"
+            className="column is-3-desktop is-4-tablet is-12-mobile"
           >
             <RaisedButton
               aria-label="Click to search eSpace"
@@ -1640,7 +1640,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
             />
           </div>
           <div
-            className="column is-4-desktop is-12-tablet is-12-mobile openAccessCheckbox"
+            className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
           >
             <div
               className="columns is-gapless is-multiline"
@@ -1738,7 +1738,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
             className="column is-hidden-mobile"
           />
           <div
-            className="column is-3-desktop is-3-tablet is-12-mobile"
+            className="column is-3-desktop is-4-tablet is-12-mobile"
           >
             <RaisedButton
               aria-label="Click to search eSpace"
@@ -1819,7 +1819,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
             />
           </div>
           <div
-            className="column is-4-desktop is-12-tablet is-12-mobile openAccessCheckbox"
+            className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
           >
             <div
               className="columns is-gapless is-multiline"
@@ -1917,7 +1917,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
             className="column is-hidden-mobile"
           />
           <div
-            className="column is-3-desktop is-3-tablet is-12-mobile"
+            className="column is-3-desktop is-4-tablet is-12-mobile"
           >
             <RaisedButton
               aria-label="Click to search eSpace"
@@ -2054,7 +2054,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
             />
           </div>
           <div
-            className="column is-4-desktop is-12-tablet is-12-mobile openAccessCheckbox"
+            className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
           >
             <div
               className="columns is-gapless is-multiline"
@@ -2152,7 +2152,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
             className="column is-hidden-mobile"
           />
           <div
-            className="column is-3-desktop is-3-tablet is-12-mobile"
+            className="column is-3-desktop is-4-tablet is-12-mobile"
           >
             <RaisedButton
               aria-label="Click to search eSpace"

@@ -22,8 +22,8 @@ export class AdvancedSearchMultiSelectField extends Component {
     };
 
     static defaultProps = {
-        floatingLabelText: 'Enter text',
-        hintText: 'Please type text',
+        floatingLabelText: '',
+        hintText: '',
         className: ''
     };
 
@@ -58,11 +58,11 @@ export class AdvancedSearchMultiSelectField extends Component {
             <SelectField
                 id="MultiSelectField"
                 disabled={this.props.disabled}
-                listStyle={{maxHeight: 200, overflow: 'auto'}}
                 floatingLabelText={this.props.floatingLabelText}
                 multiple={this.props.multiple}
                 value={this.props.value}
                 hintText={this.props.hintText}
+                fullWidth
                 style={{maxWidth: '100%'}}
                 onChange={this.valuesSelected}
                 className={this.props.className + ' mui-long-labels-fix'}
