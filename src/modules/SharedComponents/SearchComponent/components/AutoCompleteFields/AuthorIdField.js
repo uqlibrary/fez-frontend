@@ -14,7 +14,10 @@ const mapStateToProps = (state, props) => {
         async: true,
         dataSourceConfig: {text: 'value', value: 'id'},
         errorText: props.errorText,
-        selectedValue: !!props.label && props.label || !!props.value && props.value || ''
+        selectedValue: !!props.label && props.label || !!props.value && props.value || '',
+        filter: (searchText, key, item) => {
+            return item.id !== 0;
+        }
     };
 };
 

@@ -65,7 +65,7 @@ export class AdvancedSearchAutoComplete extends Component {
                 searchText={this.state.searchText}
                 disabled={this.props.disabled}
                 listStyle={{maxHeight: 200, overflow: 'auto'}}
-                filter={!this.props.async ? this.props.filter || AutoComplete.caseInsensitiveFilter : () => (true)}
+                filter={this.props.filter}
                 maxSearchResults={this.props.maxResults}
                 floatingLabelText={this.props.floatingLabelText}
                 hintText={this.props.hintText}
