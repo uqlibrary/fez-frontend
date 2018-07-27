@@ -121,9 +121,9 @@ export default class SearchComponent extends PureComponent {
         }
     };
 
-    handleSearch = (searchQuery, searchQueryApi = null) => {
+    handleSearch = (searchQuery) => {
         if (searchQuery && this.props.actions && this.props.actions.searchEspacePublications) {
-            this.props.actions.searchEspacePublications(searchQueryApi || searchQuery);
+            this.props.actions.searchEspacePublications(searchQuery);
 
             // navigate to search results page
             this.props.history.push({
@@ -259,13 +259,14 @@ export default class SearchComponent extends PureComponent {
     };
 
     _handleAdvancedSearch = () => {
-        const searchQueryParams = this.getSearchQueryParams((item) => ({value: item.value, label: item.label}));
-        const searchQueryParamsForApi = this.getSearchQueryParams(item => item.value);
-
+        const searchQueryParams = this.state.advancedSearch.fieldRows
+            .reduce((searchQueries, item) => {
+                const {searchField, ...rest} = item;
+                return {...searchQueries, [searchField]: rest};
+            }, {});
         const searchQuery = this.getSearchQuery(searchQueryParams);
-        const searchQueryApi = this.getSearchQuery(searchQueryParamsForApi);
 
-        this.handleSearch(searchQuery, searchQueryApi);
+        this.handleSearch(searchQuery);
     };
 
     getSearchQuery = (searchQueryParams) => {
