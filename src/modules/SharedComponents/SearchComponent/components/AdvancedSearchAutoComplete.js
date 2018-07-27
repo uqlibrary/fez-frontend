@@ -27,7 +27,8 @@ export class AdvancedSearchAutoComplete extends Component {
         floatingLabelText: 'Enter text',
         hintText: 'Please type text',
         debounceDelay: 150,
-        className: ''
+        className: '',
+        dataSourceConfig: {text: 'text', value: 'value'}
     };
 
     constructor(props) {
