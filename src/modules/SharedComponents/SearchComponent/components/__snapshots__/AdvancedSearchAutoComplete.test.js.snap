@@ -109,6 +109,12 @@ exports[`AdvancedSearchAutoComplete component should render with className set 1
     >
       <AdvancedSearchAutoComplete
         className="requiredField"
+        dataSourceConfig={
+          Object {
+            "text": "text",
+            "value": "value",
+          }
+        }
         debounceDelay={150}
         floatingLabelText="Enter text"
         hintText="Please type text"
@@ -1713,6 +1719,12 @@ exports[`AdvancedSearchAutoComplete component should render with disabled flag s
     >
       <AdvancedSearchAutoComplete
         className=""
+        dataSourceConfig={
+          Object {
+            "text": "text",
+            "value": "value",
+          }
+        }
         debounceDelay={150}
         disabled={true}
         floatingLabelText="Enter text"
