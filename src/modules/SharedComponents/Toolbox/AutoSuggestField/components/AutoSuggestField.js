@@ -36,7 +36,7 @@ export class AutoSuggestField extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            searchText: !!props.selectedValue && props.selectedValue.value,
+            searchText: !!props.selectedValue && props.selectedValue.value || '',
             selectedValue: !!props.selectedValue && props.selectedValue || {value: ''}
         };
         this.input = null;
