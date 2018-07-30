@@ -90,10 +90,12 @@ export class AutoSuggestField extends Component {
         }
     };
 
-    valueSelected = (value) => {
-        this.setState({
-            selectedValue: value
-        });
+    valueSelected = (value, index) => {
+        if (index >= 0 || this.props.allowFreeText) {
+            this.setState({
+                selectedValue: value
+            });
+        }
 
         // clean up input field
         if (!this.props.allowFreeText) {
