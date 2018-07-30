@@ -514,6 +514,7 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
         >
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -1118,6 +1119,7 @@ exports[`ManuscriptCitation renders  component with empty publication 1`] = `
         >
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",

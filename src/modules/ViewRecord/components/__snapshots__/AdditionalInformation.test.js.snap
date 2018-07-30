@@ -646,6 +646,7 @@ exports[`Additional Information Component  should render component with audio do
                                         data={
                                           <AuthorsCitationView
                                             className="citationAuthors"
+                                            getLink={[Function]}
                                             idSearchKey={
                                               Object {
                                                 "idKey": "fez_record_search_key_author_id",
@@ -1141,6 +1142,7 @@ exports[`Additional Information Component  should render component with audio do
                                               >
                                                 <AuthorsCitationView
                                                   className="citationAuthors"
+                                                  getLink={[Function]}
                                                   idSearchKey={
                                                     Object {
                                                       "idKey": "fez_record_search_key_author_id",
@@ -1540,11 +1542,11 @@ exports[`Additional Information Component  should render component with audio do
                                                       className="authorNameLink"
                                                       key="citationAuthor_1"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Shutter%2C+Leigh"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Shutter%2C+Leigh&searchMode=advanced"
                                                     >
                                                       <a
                                                         className="authorNameLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Shutter%2C+Leigh"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Shutter%2C+Leigh&searchMode=advanced"
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -1567,11 +1569,11 @@ exports[`Additional Information Component  should render component with audio do
                                                       className="authorNameLink"
                                                       key="citationAuthor_2"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Arthurs%2C+Andy"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Arthurs%2C+Andy&searchMode=advanced"
                                                     >
                                                       <a
                                                         className="authorNameLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Arthurs%2C+Andy"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Arthurs%2C+Andy&searchMode=advanced"
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -1594,11 +1596,11 @@ exports[`Additional Information Component  should render component with audio do
                                                       className="authorIdLink"
                                                       key="citationAuthor_3"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=486&searchQueryParams%5Ball%5D=Bamford%2C+Greg"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=486&activeFacets%5Bfilters%5D%5BAuthor+(lookup)%5D=Bamford%2C+Greg"
                                                     >
                                                       <a
                                                         className="authorIdLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=486&searchQueryParams%5Ball%5D=Bamford%2C+Greg"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=486&activeFacets%5Bfilters%5D%5BAuthor+(lookup)%5D=Bamford%2C+Greg"
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -1621,11 +1623,11 @@ exports[`Additional Information Component  should render component with audio do
                                                       className="authorNameLink"
                                                       key="citationAuthor_4"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=McColl%2C+Mary+Rose"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_author%5D=McColl%2C+Mary+Rose&searchMode=advanced"
                                                     >
                                                       <a
                                                         className="authorNameLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=McColl%2C+Mary+Rose"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_author%5D=McColl%2C+Mary+Rose&searchMode=advanced"
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -1647,11 +1649,11 @@ exports[`Additional Information Component  should render component with audio do
                                                       className="authorIdLink"
                                                       key="citationAuthor_5"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=146&searchQueryParams%5Ball%5D=Skinner%2C+Peter+R."
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=146&activeFacets%5Bfilters%5D%5BAuthor+(lookup)%5D=Skinner%2C+Peter+R."
                                                     >
                                                       <a
                                                         className="authorIdLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=146&searchQueryParams%5Ball%5D=Skinner%2C+Peter+R."
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=146&activeFacets%5Bfilters%5D%5BAuthor+(lookup)%5D=Skinner%2C+Peter+R."
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -1795,7 +1797,7 @@ exports[`Additional Information Component  should render component with audio do
                                         data={
                                           <Link
                                             replace={false}
-                                            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology"
+                                            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology&searchMode=advanced"
                                           >
                                             Centre for Subtropical Design, Queensland University of Technology
                                           </Link>
@@ -1903,10 +1905,10 @@ exports[`Additional Information Component  should render component with audio do
                                               >
                                                 <Link
                                                   replace={false}
-                                                  to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology"
+                                                  to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology&searchMode=advanced"
                                                 >
                                                   <a
-                                                    href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology"
+                                                    href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology&searchMode=advanced"
                                                     onClick={[Function]}
                                                   >
                                                     Centre for Subtropical Design, Queensland University of Technology
@@ -2179,7 +2181,7 @@ exports[`Additional Information Component  should render component with audio do
                                         data={
                                           <Link
                                             replace={false}
-                                            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D="
+                                            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_series%5D=undefined&searchMode=advanced"
                                           />
                                         }
                                         heading="Series"
@@ -2285,10 +2287,10 @@ exports[`Additional Information Component  should render component with audio do
                                               >
                                                 <Link
                                                   replace={false}
-                                                  to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D="
+                                                  to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_series%5D=undefined&searchMode=advanced"
                                                 >
                                                   <a
-                                                    href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D="
+                                                    href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_series%5D=undefined&searchMode=advanced"
                                                     onClick={[Function]}
                                                   />
                                                 </Link>
@@ -2700,7 +2702,7 @@ exports[`Additional Information Component  should render component with audio do
                                             <li>
                                               <Link
                                                 replace={false}
-                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453663&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=Conversation&searchQueryParams%5Ball%5D=Conversation"
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453663&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=Conversation"
                                               >
                                                 Conversation
                                               </Link>
@@ -2816,10 +2818,10 @@ exports[`Additional Information Component  should render component with audio do
                                                   >
                                                     <Link
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453663&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=Conversation&searchQueryParams%5Ball%5D=Conversation"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453663&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=Conversation"
                                                     >
                                                       <a
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453663&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=Conversation&searchQueryParams%5Ball%5D=Conversation"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453663&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=Conversation"
                                                         onClick={[Function]}
                                                       >
                                                         Conversation
@@ -2838,7 +2840,7 @@ exports[`Additional Information Component  should render component with audio do
                                             <li>
                                               <Link
                                                 replace={false}
-                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310199&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310199&searchQueryParams%5Ball%5D=310199"
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310199&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310199"
                                               >
                                                 310199
                                               </Link>
@@ -2846,7 +2848,7 @@ exports[`Additional Information Component  should render component with audio do
                                             <li>
                                               <Link
                                                 replace={false}
-                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450019&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450019&searchQueryParams%5Ball%5D=450019"
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450019&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450019"
                                               >
                                                 450019
                                               </Link>
@@ -2854,7 +2856,7 @@ exports[`Additional Information Component  should render component with audio do
                                             <li>
                                               <Link
                                                 replace={false}
-                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450776&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450776&searchQueryParams%5Ball%5D=450776"
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450776&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450776"
                                               >
                                                 450776
                                               </Link>
@@ -2970,10 +2972,10 @@ exports[`Additional Information Component  should render component with audio do
                                                   >
                                                     <Link
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310199&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310199&searchQueryParams%5Ball%5D=310199"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310199&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310199"
                                                     >
                                                       <a
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310199&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310199&searchQueryParams%5Ball%5D=310199"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310199&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310199"
                                                         onClick={[Function]}
                                                       >
                                                         310199
@@ -2985,10 +2987,10 @@ exports[`Additional Information Component  should render component with audio do
                                                   >
                                                     <Link
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450019&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450019&searchQueryParams%5Ball%5D=450019"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450019&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450019"
                                                     >
                                                       <a
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450019&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450019&searchQueryParams%5Ball%5D=450019"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450019&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450019"
                                                         onClick={[Function]}
                                                       >
                                                         450019
@@ -3000,10 +3002,10 @@ exports[`Additional Information Component  should render component with audio do
                                                   >
                                                     <Link
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450776&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450776&searchQueryParams%5Ball%5D=450776"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450776&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450776"
                                                     >
                                                       <a
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450776&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450776&searchQueryParams%5Ball%5D=450776"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450776&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450776"
                                                         onClick={[Function]}
                                                       >
                                                         450776
@@ -3184,6 +3186,7 @@ exports[`Additional Information Component  should render component with book 1`]
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -3524,7 +3527,7 @@ exports[`Additional Information Component  should render component with book 1`]
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Psychology+Press"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Psychology+Press&searchMode=advanced"
           >
             Psychology Press
           </Link>
@@ -3554,7 +3557,7 @@ exports[`Additional Information Component  should render component with book 1`]
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Clinical+Psychology%3A+A+Modular+Course"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_series%5D=Clinical+Psychology%3A+A+Modular+Course&searchMode=advanced"
           >
             Clinical Psychology: A Modular Course
           </Link>
@@ -3927,6 +3930,7 @@ exports[`Additional Information Component  should render component with book cha
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -4380,7 +4384,7 @@ exports[`Additional Information Component  should render component with book cha
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Non-coding+RNA+and+the+Reproductive+System"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_book_title%5D=Non-coding+RNA+and+the+Reproductive+System&searchMode=advanced"
           >
             Non-coding RNA and the Reproductive System
           </Link>
@@ -4397,7 +4401,7 @@ exports[`Additional Information Component  should render component with book cha
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Springer+New+York"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Springer+New+York&searchMode=advanced"
           >
             Springer New York
           </Link>
@@ -4436,7 +4440,7 @@ exports[`Additional Information Component  should render component with book cha
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Advances+in+Experimental+Medicine+and+Biology"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_series%5D=Advances+in+Experimental+Medicine+and+Biology&searchMode=advanced"
           >
             Advances in Experimental Medicine and Biology
           </Link>
@@ -4942,7 +4946,7 @@ exports[`Additional Information Component  should render component with book cha
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453239&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=453239&searchQueryParams%5Ball%5D=453239"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453239&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=453239"
               >
                 453239
               </Link>
@@ -4950,7 +4954,7 @@ exports[`Additional Information Component  should render component with book cha
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453253&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=453253&searchQueryParams%5Ball%5D=453253"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=453253&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=453253"
               >
                 453253
               </Link>
@@ -4966,7 +4970,7 @@ exports[`Additional Information Component  should render component with book cha
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Breast+cancer"
               >
                 Breast cancer
               </Link>
@@ -4974,7 +4978,7 @@ exports[`Additional Information Component  should render component with book cha
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=EMT"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=EMT"
               >
                 EMT
               </Link>
@@ -4982,7 +4986,7 @@ exports[`Additional Information Component  should render component with book cha
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Epithelial+cell+differentiation"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Epithelial+cell+differentiation"
               >
                 Epithelial cell differentiation
               </Link>
@@ -4990,7 +4994,7 @@ exports[`Additional Information Component  should render component with book cha
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Epithelial-stromal+interactions"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Epithelial-stromal+interactions"
               >
                 Epithelial-stromal interactions
               </Link>
@@ -4998,7 +5002,7 @@ exports[`Additional Information Component  should render component with book cha
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hormonal+regulation"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hormonal+regulation"
               >
                 Hormonal regulation
               </Link>
@@ -5006,7 +5010,7 @@ exports[`Additional Information Component  should render component with book cha
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signalling+pathways"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Signalling+pathways"
               >
                 Signalling pathways
               </Link>
@@ -5057,6 +5061,7 @@ exports[`Additional Information Component  should render component with conferen
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -5779,7 +5784,7 @@ exports[`Additional Information Component  should render component with conferen
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Australasian+Professional+Society+on+Alcohol+and+other+Drugs+Conference+2014"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_conference_name%5D=Australasian+Professional+Society+on+Alcohol+and+other+Drugs+Conference+2014&searchMode=advanced"
           >
             Australasian Professional Society on Alcohol and other Drugs Conference 2014
           </Link>
@@ -6499,7 +6504,7 @@ exports[`Additional Information Component  should render component with conferen
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Wiley-Blackwell+Publishing"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Wiley-Blackwell+Publishing&searchMode=advanced"
           >
             Wiley-Blackwell Publishing
           </Link>
@@ -7041,7 +7046,7 @@ exports[`Additional Information Component  should render component with conferen
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=International+Meeting+on+Measurements+and+Hydraulics+of+Sewers+IMMHS'08%2C+Summer+School+GEMCEA%2FLCPC"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_conference_name%5D=International+Meeting+on+Measurements+and+Hydraulics+of+Sewers+IMMHS'08%2C+Summer+School+GEMCEA%2FLCPC&searchMode=advanced"
           >
             International Meeting on Measurements and Hydraulics of Sewers IMMHS'08, Summer School GEMCEA/LCPC
           </Link>
@@ -7084,7 +7089,7 @@ exports[`Additional Information Component  should render component with conferen
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Department+of+Civil+Engineering+at+The+University+of+Queensland"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Department+of+Civil+Engineering+at+The+University+of+Queensland&searchMode=advanced"
           >
             Department of Civil Engineering at The University of Queensland
           </Link>
@@ -7150,7 +7155,7 @@ exports[`Additional Information Component  should render component with conferen
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290000&searchQueryParams%5Ball%5D=290000"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290000"
               >
                 290000
               </Link>
@@ -7158,7 +7163,7 @@ exports[`Additional Information Component  should render component with conferen
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290800&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290800&searchQueryParams%5Ball%5D=290800"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290800&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290800"
               >
                 290800
               </Link>
@@ -7166,7 +7171,7 @@ exports[`Additional Information Component  should render component with conferen
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290802&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290802&searchQueryParams%5Ball%5D=290802"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=290802&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290802"
               >
                 290802
               </Link>
@@ -7174,7 +7179,7 @@ exports[`Additional Information Component  should render component with conferen
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=291104&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=291104&searchQueryParams%5Ball%5D=291104"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=291104&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=291104"
               >
                 291104
               </Link>
@@ -7190,7 +7195,7 @@ exports[`Additional Information Component  should render component with conferen
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sewers"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Sewers"
               >
                 Sewers
               </Link>
@@ -7198,7 +7203,7 @@ exports[`Additional Information Component  should render component with conferen
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Measurements"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Measurements"
               >
                 Measurements
               </Link>
@@ -7206,7 +7211,7 @@ exports[`Additional Information Component  should render component with conferen
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hydraulics"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hydraulics"
               >
                 Hydraulics
               </Link>
@@ -7214,7 +7219,7 @@ exports[`Additional Information Component  should render component with conferen
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Open+channel+flows"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Open+channel+flows"
               >
                 Open channel flows
               </Link>
@@ -7222,7 +7227,7 @@ exports[`Additional Information Component  should render component with conferen
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sediments"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Sediments"
               >
                 Sediments
               </Link>
@@ -7230,7 +7235,7 @@ exports[`Additional Information Component  should render component with conferen
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Turbidity"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Turbidity"
               >
                 Turbidity
               </Link>
@@ -7238,7 +7243,7 @@ exports[`Additional Information Component  should render component with conferen
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hydrodynamics"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hydrodynamics"
               >
                 Hydrodynamics
               </Link>
@@ -7246,7 +7251,7 @@ exports[`Additional Information Component  should render component with conferen
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sedimentation"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Sedimentation"
               >
                 Sedimentation
               </Link>
@@ -7254,7 +7259,7 @@ exports[`Additional Information Component  should render component with conferen
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=design"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=design"
               >
                 design
               </Link>
@@ -7262,7 +7267,7 @@ exports[`Additional Information Component  should render component with conferen
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=operation"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=operation"
               >
                 operation
               </Link>
@@ -7270,7 +7275,7 @@ exports[`Additional Information Component  should render component with conferen
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=rehabilitation"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=rehabilitation"
               >
                 rehabilitation
               </Link>
@@ -7278,7 +7283,7 @@ exports[`Additional Information Component  should render component with conferen
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=urban+environment"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=urban+environment"
               >
                 urban environment
               </Link>
@@ -7343,6 +7348,7 @@ exports[`Additional Information Component  should render component with creative
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -7790,7 +7796,7 @@ exports[`Additional Information Component  should render component with creative
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Architecture%2C+The+University+of+Queensland"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=School+of+Architecture%2C+The+University+of+Queensland&searchMode=advanced"
           >
             School of Architecture, The University of Queensland
           </Link>
@@ -7822,7 +7828,7 @@ exports[`Additional Information Component  should render component with creative
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452674&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452674&searchQueryParams%5Ball%5D=452674"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452674&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452674"
               >
                 452674
               </Link>
@@ -7830,7 +7836,7 @@ exports[`Additional Information Component  should render component with creative
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452677&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452677&searchQueryParams%5Ball%5D=452677"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452677&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452677"
               >
                 452677
               </Link>
@@ -7857,7 +7863,7 @@ exports[`Additional Information Component  should render component with creative
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Original+Creative+Works+-+Design%2FArchitectural+work"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Original+Creative+Works+-+Design%2FArchitectural+work"
               >
                 Original Creative Works - Design/Architectural work
               </Link>
@@ -8724,6 +8730,7 @@ exports[`Additional Information Component  should render component with data col
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -9571,7 +9578,7 @@ exports[`Additional Information Component  should render component with data col
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452086&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452086&searchQueryParams%5Ball%5D=452086"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452086&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452086"
               >
                 452086
               </Link>
@@ -9579,7 +9586,7 @@ exports[`Additional Information Component  should render component with data col
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452109&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452109&searchQueryParams%5Ball%5D=452109"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452109&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452109"
               >
                 452109
               </Link>
@@ -9712,7 +9719,7 @@ exports[`Additional Information Component  should render component with data col
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Isolates"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Isolates"
               >
                 Isolates
               </Link>
@@ -9720,7 +9727,7 @@ exports[`Additional Information Component  should render component with data col
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Single+cells"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Single+cells"
               >
                 Single cells
               </Link>
@@ -9728,7 +9735,7 @@ exports[`Additional Information Component  should render component with data col
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Metagenomic+data"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Metagenomic+data"
               >
                 Metagenomic data
               </Link>
@@ -9736,7 +9743,7 @@ exports[`Additional Information Component  should render component with data col
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Genome+quality"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Genome+quality"
               >
                 Genome quality
               </Link>
@@ -9744,7 +9751,7 @@ exports[`Additional Information Component  should render component with data col
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=CheckM"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=CheckM"
               >
                 CheckM
               </Link>
@@ -9793,7 +9800,7 @@ exports[`Additional Information Component  should render component with data col
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451600&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=970106+Expanding+Knowledge+in+the+Biological+Sciences&searchQueryParams%5Ball%5D=970106+Expanding+Knowledge+in+the+Biological+Sciences"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451600&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=970106+Expanding+Knowledge+in+the+Biological+Sciences"
               >
                 970106 Expanding Knowledge in the Biological Sciences
               </Link>
@@ -9812,7 +9819,7 @@ exports[`Additional Information Component  should render component with data col
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Cold+Spring+Harbor+Laboratory+Press"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Cold+Spring+Harbor+Laboratory+Press&searchMode=advanced"
           >
             Cold Spring Harbor Laboratory Press
           </Link>
@@ -10676,6 +10683,7 @@ exports[`Additional Information Component  should render component with data col
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -11260,7 +11268,7 @@ exports[`Additional Information Component  should render component with data col
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452067&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0602+Ecology&searchQueryParams%5Ball%5D=0602+Ecology"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452067&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0602+Ecology"
               >
                 0602 Ecology
               </Link>
@@ -11268,7 +11276,7 @@ exports[`Additional Information Component  should render component with data col
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452018&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=040699+Physical+Geography+and+Environmental+Geoscience+not+elsewhere+classified&searchQueryParams%5Ball%5D=040699+Physical+Geography+and+Environmental+Geoscience+not+elsewhere+classified"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452018&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=040699+Physical+Geography+and+Environmental+Geoscience+not+elsewhere+classified"
               >
                 040699 Physical Geography and Environmental Geoscience not elsewhere classified
               </Link>
@@ -11276,7 +11284,7 @@ exports[`Additional Information Component  should render component with data col
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452028&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0502+Environmental+Science+and+Management&searchQueryParams%5Ball%5D=0502+Environmental+Science+and+Management"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452028&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0502+Environmental+Science+and+Management"
               >
                 0502 Environmental Science and Management
               </Link>
@@ -11349,7 +11357,7 @@ exports[`Additional Information Component  should render component with data col
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Habitat+Mapping"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Habitat+Mapping"
               >
                 Habitat Mapping
               </Link>
@@ -11357,7 +11365,7 @@ exports[`Additional Information Component  should render component with data col
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Remote+Sensing"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Remote+Sensing"
               >
                 Remote Sensing
               </Link>
@@ -11365,7 +11373,7 @@ exports[`Additional Information Component  should render component with data col
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Kubulau"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Kubulau"
               >
                 Kubulau
               </Link>
@@ -11373,7 +11381,7 @@ exports[`Additional Information Component  should render component with data col
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Environmental+Management"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Environmental+Management"
               >
                 Environmental Management
               </Link>
@@ -11425,7 +11433,7 @@ exports[`Additional Information Component  should render component with data col
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pangaea"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Pangaea&searchMode=advanced"
           >
             Pangaea
           </Link>
@@ -11498,6 +11506,7 @@ exports[`Additional Information Component  should render component with design d
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -12444,7 +12453,7 @@ exports[`Additional Information Component  should render component with design d
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310000&searchQueryParams%5Ball%5D=310000"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=310000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310000"
               >
                 310000
               </Link>
@@ -12452,7 +12461,7 @@ exports[`Additional Information Component  should render component with design d
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450025&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450025&searchQueryParams%5Ball%5D=450025"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450025&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450025"
               >
                 450025
               </Link>
@@ -12460,7 +12469,7 @@ exports[`Additional Information Component  should render component with design d
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452674&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452674&searchQueryParams%5Ball%5D=452674"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452674&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452674"
               >
                 452674
               </Link>
@@ -12468,7 +12477,7 @@ exports[`Additional Information Component  should render component with design d
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452675&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452675&searchQueryParams%5Ball%5D=452675"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452675&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452675"
               >
                 452675
               </Link>
@@ -12484,7 +12493,7 @@ exports[`Additional Information Component  should render component with design d
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Architecture"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Architecture"
               >
                 Architecture
               </Link>
@@ -12492,7 +12501,7 @@ exports[`Additional Information Component  should render component with design d
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Landscape+design"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Landscape+design"
               >
                 Landscape design
               </Link>
@@ -12500,7 +12509,7 @@ exports[`Additional Information Component  should render component with design d
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Restoration"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Restoration"
               >
                 Restoration
               </Link>
@@ -12508,7 +12517,7 @@ exports[`Additional Information Component  should render component with design d
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Interior+and+Environmental+Design"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Interior+and+Environmental+Design"
               >
                 Interior and Environmental Design
               </Link>
@@ -12516,7 +12525,7 @@ exports[`Additional Information Component  should render component with design d
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Original+Creative+Works+-+Design%2FArchitectural+work"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Original+Creative+Works+-+Design%2FArchitectural+work"
               >
                 Original Creative Works - Design/Architectural work
               </Link>
@@ -12614,7 +12623,7 @@ exports[`Additional Information Component  should render component with digilib 
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=The+University+of+Queensland+Library"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=The+University+of+Queensland+Library&searchMode=advanced"
           >
             The University of Queensland Library
           </Link>
@@ -12626,6 +12635,7 @@ exports[`Additional Information Component  should render component with digilib 
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -13072,7 +13082,7 @@ exports[`Additional Information Component  should render component with generic 
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Partial+Differential+Equations+(PDEs)"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Partial+Differential+Equations+(PDEs)"
               >
                 Partial Differential Equations (PDEs)
               </Link>
@@ -13080,7 +13090,7 @@ exports[`Additional Information Component  should render component with generic 
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Parabolic"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Parabolic"
               >
                 Parabolic
               </Link>
@@ -13088,7 +13098,7 @@ exports[`Additional Information Component  should render component with generic 
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hyperbolic"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hyperbolic"
               >
                 Hyperbolic
               </Link>
@@ -13096,7 +13106,7 @@ exports[`Additional Information Component  should render component with generic 
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Finite+difference"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Finite+difference"
               >
                 Finite difference
               </Link>
@@ -13104,7 +13114,7 @@ exports[`Additional Information Component  should render component with generic 
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Spectral+method"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Spectral+method"
               >
                 Spectral method
               </Link>
@@ -13112,7 +13122,7 @@ exports[`Additional Information Component  should render component with generic 
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Finite+element+method"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Finite+element+method"
               >
                 Finite element method
               </Link>
@@ -13120,7 +13130,7 @@ exports[`Additional Information Component  should render component with generic 
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Iterative+methods"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Iterative+methods"
               >
                 Iterative methods
               </Link>
@@ -13128,7 +13138,7 @@ exports[`Additional Information Component  should render component with generic 
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Nonlinear+Partial+Differential+Equations"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Nonlinear+Partial+Differential+Equations"
               >
                 Nonlinear Partial Differential Equations
               </Link>
@@ -13157,7 +13167,7 @@ exports[`Additional Information Component  should render component with generic 
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451825&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=451825&searchQueryParams%5Ball%5D=451825"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451825&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=451825"
               >
                 451825
               </Link>
@@ -13171,6 +13181,7 @@ exports[`Additional Information Component  should render component with generic 
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -14665,7 +14676,7 @@ exports[`Additional Information Component  should render component with journal 
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Betriebswirtschaftlicher+Verlag+T.+Gabler"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Betriebswirtschaftlicher+Verlag+T.+Gabler&searchMode=advanced"
           >
             Betriebswirtschaftlicher Verlag T. Gabler
           </Link>
@@ -14690,7 +14701,7 @@ exports[`Additional Information Component  should render component with journal 
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452815&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452815&searchQueryParams%5Ball%5D=452815"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452815&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452815"
               >
                 452815
               </Link>
@@ -14706,7 +14717,7 @@ exports[`Additional Information Component  should render component with journal 
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Knowledge"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Knowledge"
               >
                 Knowledge
               </Link>
@@ -14714,7 +14725,7 @@ exports[`Additional Information Component  should render component with journal 
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Multinational+corporations"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Multinational+corporations"
               >
                 Multinational corporations
               </Link>
@@ -16065,6 +16076,7 @@ exports[`Additional Information Component  should render component with journal 
                                         data={
                                           <AuthorsCitationView
                                             className="citationAuthors"
+                                            getLink={[Function]}
                                             idSearchKey={
                                               Object {
                                                 "idKey": "fez_record_search_key_author_id",
@@ -17252,6 +17264,7 @@ exports[`Additional Information Component  should render component with journal 
                                               >
                                                 <AuthorsCitationView
                                                   className="citationAuthors"
+                                                  getLink={[Function]}
                                                   idSearchKey={
                                                     Object {
                                                       "idKey": "fez_record_search_key_author_id",
@@ -18343,11 +18356,11 @@ exports[`Additional Information Component  should render component with journal 
                                                       className="authorIdLink"
                                                       key="citationAuthor_1"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=88893&searchQueryParams%5Ball%5D=Azimi%2C+Iman"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=88893&activeFacets%5Bfilters%5D%5BAuthor+(lookup)%5D=Azimi%2C+Iman"
                                                     >
                                                       <a
                                                         className="authorIdLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=88893&searchQueryParams%5Ball%5D=Azimi%2C+Iman"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=88893&activeFacets%5Bfilters%5D%5BAuthor+(lookup)%5D=Azimi%2C+Iman"
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -18370,11 +18383,11 @@ exports[`Additional Information Component  should render component with journal 
                                                       className="authorNameLink"
                                                       key="citationAuthor_2"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Milevskiy%2C+Michael+J.+G."
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Milevskiy%2C+Michael+J.+G.&searchMode=advanced"
                                                     >
                                                       <a
                                                         className="authorNameLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Milevskiy%2C+Michael+J.+G."
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Milevskiy%2C+Michael+J.+G.&searchMode=advanced"
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -18397,11 +18410,11 @@ exports[`Additional Information Component  should render component with journal 
                                                       className="authorIdLink"
                                                       key="citationAuthor_3"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1706239&searchQueryParams%5Ball%5D=Kaemmerer%2C+Elke"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1706239&activeFacets%5Bfilters%5D%5BAuthor+(lookup)%5D=Kaemmerer%2C+Elke"
                                                     >
                                                       <a
                                                         className="authorIdLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1706239&searchQueryParams%5Ball%5D=Kaemmerer%2C+Elke"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1706239&activeFacets%5Bfilters%5D%5BAuthor+(lookup)%5D=Kaemmerer%2C+Elke"
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -18424,11 +18437,11 @@ exports[`Additional Information Component  should render component with journal 
                                                       className="authorIdLink"
                                                       key="citationAuthor_4"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=97626&searchQueryParams%5Ball%5D=Turner%2C+Dane"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=97626&activeFacets%5Bfilters%5D%5BAuthor+(lookup)%5D=Turner%2C+Dane"
                                                     >
                                                       <a
                                                         className="authorIdLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=97626&searchQueryParams%5Ball%5D=Turner%2C+Dane"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=97626&activeFacets%5Bfilters%5D%5BAuthor+(lookup)%5D=Turner%2C+Dane"
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -18451,11 +18464,11 @@ exports[`Additional Information Component  should render component with journal 
                                                       className="authorIdLink"
                                                       key="citationAuthor_5"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=95450&searchQueryParams%5Ball%5D=Yapa%2C+Kunsala+T.+D.+S."
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=95450&activeFacets%5Bfilters%5D%5BAuthor+(lookup)%5D=Yapa%2C+Kunsala+T.+D.+S."
                                                     >
                                                       <a
                                                         className="authorIdLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=95450&searchQueryParams%5Ball%5D=Yapa%2C+Kunsala+T.+D.+S."
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=95450&activeFacets%5Bfilters%5D%5BAuthor+(lookup)%5D=Yapa%2C+Kunsala+T.+D.+S."
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -18478,11 +18491,11 @@ exports[`Additional Information Component  should render component with journal 
                                                       className="authorIdLink"
                                                       key="citationAuthor_6"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1671&searchQueryParams%5Ball%5D=Brown%2C+Melissa+A."
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1671&activeFacets%5Bfilters%5D%5BAuthor+(lookup)%5D=Brown%2C+Melissa+A."
                                                     >
                                                       <a
                                                         className="authorIdLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1671&searchQueryParams%5Ball%5D=Brown%2C+Melissa+A."
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=1671&activeFacets%5Bfilters%5D%5BAuthor+(lookup)%5D=Brown%2C+Melissa+A."
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -18505,11 +18518,11 @@ exports[`Additional Information Component  should render component with journal 
                                                       className="authorNameLink"
                                                       key="citationAuthor_7"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Thompson%2C+Erik+W."
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Thompson%2C+Erik+W.&searchMode=advanced"
                                                     >
                                                       <a
                                                         className="authorNameLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Thompson%2C+Erik+W."
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_author%5D=Thompson%2C+Erik+W.&searchMode=advanced"
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -18532,11 +18545,11 @@ exports[`Additional Information Component  should render component with journal 
                                                       className="authorIdLink"
                                                       key="citationAuthor_8"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=973&searchQueryParams%5Ball%5D=Roberts-Thomson%2C+Sarah+J."
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=973&activeFacets%5Bfilters%5D%5BAuthor+(lookup)%5D=Roberts-Thomson%2C+Sarah+J."
                                                     >
                                                       <a
                                                         className="authorIdLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=973&searchQueryParams%5Ball%5D=Roberts-Thomson%2C+Sarah+J."
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=973&activeFacets%5Bfilters%5D%5BAuthor+(lookup)%5D=Roberts-Thomson%2C+Sarah+J."
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -18558,11 +18571,11 @@ exports[`Additional Information Component  should render component with journal 
                                                       className="authorIdLink"
                                                       key="citationAuthor_9"
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=972&searchQueryParams%5Ball%5D=Monteith%2C+Gregory+R."
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=972&activeFacets%5Bfilters%5D%5BAuthor+(lookup)%5D=Monteith%2C+Gregory+R."
                                                     >
                                                       <a
                                                         className="authorIdLink"
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=972&searchQueryParams%5Ball%5D=Monteith%2C+Gregory+R."
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BAuthor%5D=972&activeFacets%5Bfilters%5D%5BAuthor+(lookup)%5D=Monteith%2C+Gregory+R."
                                                         onClick={[Function]}
                                                       >
                                                         <CitationView
@@ -20939,10 +20952,10 @@ exports[`Additional Information Component  should render component with journal 
                                                   <span>
                                                     <Link
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BJournal+name%5D=Journal+of+Cell+Science&searchQueryParams%5Ball%5D=Journal+of+Cell+Science"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BJournal+name%5D=Journal+of+Cell+Science"
                                                     >
                                                       <a
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BJournal+name%5D=Journal+of+Cell+Science&searchQueryParams%5Ball%5D=Journal+of+Cell+Science"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BJournal+name%5D=Journal+of+Cell+Science"
                                                         onClick={[Function]}
                                                       >
                                                         <span>
@@ -22274,7 +22287,7 @@ exports[`Additional Information Component  should render component with journal 
                                         data={
                                           <Link
                                             replace={false}
-                                            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Company+of+Biologists"
+                                            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Company+of+Biologists&searchMode=advanced"
                                           >
                                             Company of Biologists
                                           </Link>
@@ -22382,10 +22395,10 @@ exports[`Additional Information Component  should render component with journal 
                                               >
                                                 <Link
                                                   replace={false}
-                                                  to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Company+of+Biologists"
+                                                  to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Company+of+Biologists&searchMode=advanced"
                                                 >
                                                   <a
-                                                    href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Company+of+Biologists"
+                                                    href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Company+of+Biologists&searchMode=advanced"
                                                     onClick={[Function]}
                                                   >
                                                     Company of Biologists
@@ -22525,7 +22538,7 @@ exports[`Additional Information Component  should render component with journal 
                                             <li>
                                               <Link
                                                 replace={false}
-                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Akt"
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Akt"
                                               >
                                                 Akt
                                               </Link>
@@ -22533,7 +22546,7 @@ exports[`Additional Information Component  should render component with journal 
                                             <li>
                                               <Link
                                                 replace={false}
-                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Breast+cancer"
                                               >
                                                 Breast cancer
                                               </Link>
@@ -22541,7 +22554,7 @@ exports[`Additional Information Component  should render component with journal 
                                             <li>
                                               <Link
                                                 replace={false}
-                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Ca2%2B"
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Ca2%2B"
                                               >
                                                 Ca2+
                                               </Link>
@@ -22549,7 +22562,7 @@ exports[`Additional Information Component  should render component with journal 
                                             <li>
                                               <Link
                                                 replace={false}
-                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hypoxia"
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hypoxia"
                                               >
                                                 Hypoxia
                                               </Link>
@@ -22557,7 +22570,7 @@ exports[`Additional Information Component  should render component with journal 
                                             <li>
                                               <Link
                                                 replace={false}
-                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=PTEN"
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=PTEN"
                                               >
                                                 PTEN
                                               </Link>
@@ -22565,7 +22578,7 @@ exports[`Additional Information Component  should render component with journal 
                                             <li>
                                               <Link
                                                 replace={false}
-                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signal+transduction"
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Signal+transduction"
                                               >
                                                 Signal transduction
                                               </Link>
@@ -22573,7 +22586,7 @@ exports[`Additional Information Component  should render component with journal 
                                             <li>
                                               <Link
                                                 replace={false}
-                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=TRPC1"
+                                                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=TRPC1"
                                               >
                                                 TRPC1
                                               </Link>
@@ -22689,10 +22702,10 @@ exports[`Additional Information Component  should render component with journal 
                                                   >
                                                     <Link
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Akt"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Akt"
                                                     >
                                                       <a
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Akt"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Akt"
                                                         onClick={[Function]}
                                                       >
                                                         Akt
@@ -22704,10 +22717,10 @@ exports[`Additional Information Component  should render component with journal 
                                                   >
                                                     <Link
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Breast+cancer"
                                                     >
                                                       <a
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Breast+cancer"
                                                         onClick={[Function]}
                                                       >
                                                         Breast cancer
@@ -22719,10 +22732,10 @@ exports[`Additional Information Component  should render component with journal 
                                                   >
                                                     <Link
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Ca2%2B"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Ca2%2B"
                                                     >
                                                       <a
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Ca2%2B"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Ca2%2B"
                                                         onClick={[Function]}
                                                       >
                                                         Ca2+
@@ -22734,10 +22747,10 @@ exports[`Additional Information Component  should render component with journal 
                                                   >
                                                     <Link
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hypoxia"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hypoxia"
                                                     >
                                                       <a
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hypoxia"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hypoxia"
                                                         onClick={[Function]}
                                                       >
                                                         Hypoxia
@@ -22749,10 +22762,10 @@ exports[`Additional Information Component  should render component with journal 
                                                   >
                                                     <Link
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=PTEN"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=PTEN"
                                                     >
                                                       <a
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=PTEN"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=PTEN"
                                                         onClick={[Function]}
                                                       >
                                                         PTEN
@@ -22764,10 +22777,10 @@ exports[`Additional Information Component  should render component with journal 
                                                   >
                                                     <Link
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signal+transduction"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Signal+transduction"
                                                     >
                                                       <a
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signal+transduction"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Signal+transduction"
                                                         onClick={[Function]}
                                                       >
                                                         Signal transduction
@@ -22779,10 +22792,10 @@ exports[`Additional Information Component  should render component with journal 
                                                   >
                                                     <Link
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=TRPC1"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=TRPC1"
                                                     >
                                                       <a
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=TRPC1"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=TRPC1"
                                                         onClick={[Function]}
                                                       >
                                                         TRPC1
@@ -22957,6 +22970,7 @@ exports[`Additional Information Component  should render component with manuscri
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -23948,7 +23962,7 @@ exports[`Additional Information Component  should render component with manuscri
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Father+Edward+Leo+Hayes+Collection%2C+UQFL2"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_series%5D=Father+Edward+Leo+Hayes+Collection%2C+UQFL2&searchMode=advanced"
           >
             Father Edward Leo Hayes Collection, UQFL2
           </Link>
@@ -23993,7 +24007,7 @@ exports[`Additional Information Component  should render component with manuscri
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hayes%2C+Edward+Leo%2C+1889-1967+--+Archives"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hayes%2C+Edward+Leo%2C+1889-1967+--+Archives"
               >
                 Hayes, Edward Leo, 1889-1967 -- Archives
               </Link>
@@ -24001,7 +24015,7 @@ exports[`Additional Information Component  should render component with manuscri
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hayes%2C+Edward+Leo%2C+1889-1967+--+Manuscripts"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hayes%2C+Edward+Leo%2C+1889-1967+--+Manuscripts"
               >
                 Hayes, Edward Leo, 1889-1967 -- Manuscripts
               </Link>
@@ -24009,7 +24023,7 @@ exports[`Additional Information Component  should render component with manuscri
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Astley%2C+Thea%2C+1925-2004+--+Correspondence"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Astley%2C+Thea%2C+1925-2004+--+Correspondence"
               >
                 Astley, Thea, 1925-2004 -- Correspondence
               </Link>
@@ -24017,7 +24031,7 @@ exports[`Additional Information Component  should render component with manuscri
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Grano%2C+Paul%2C+1894-1975+--+Correspondence"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Grano%2C+Paul%2C+1894-1975+--+Correspondence"
               >
                 Grano, Paul, 1894-1975 -- Correspondence
               </Link>
@@ -24025,7 +24039,7 @@ exports[`Additional Information Component  should render component with manuscri
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Authors%2C+Australian+--+20th+century"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Authors%2C+Australian+--+20th+century"
               >
                 Authors, Australian -- 20th century
               </Link>
@@ -24089,6 +24103,7 @@ exports[`Additional Information Component  should render component with newspape
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -26341,7 +26356,7 @@ exports[`Additional Information Component  should render component with newspape
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Company+of+Biologists"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Company+of+Biologists&searchMode=advanced"
           >
             Company of Biologists
           </Link>
@@ -26366,7 +26381,7 @@ exports[`Additional Information Component  should render component with newspape
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Akt"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Akt"
               >
                 Akt
               </Link>
@@ -26374,7 +26389,7 @@ exports[`Additional Information Component  should render component with newspape
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Breast+cancer"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Breast+cancer"
               >
                 Breast cancer
               </Link>
@@ -26382,7 +26397,7 @@ exports[`Additional Information Component  should render component with newspape
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Ca2%2B"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Ca2%2B"
               >
                 Ca2+
               </Link>
@@ -26390,7 +26405,7 @@ exports[`Additional Information Component  should render component with newspape
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Hypoxia"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hypoxia"
               >
                 Hypoxia
               </Link>
@@ -26398,7 +26413,7 @@ exports[`Additional Information Component  should render component with newspape
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=PTEN"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=PTEN"
               >
                 PTEN
               </Link>
@@ -26406,7 +26421,7 @@ exports[`Additional Information Component  should render component with newspape
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Signal+transduction"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Signal+transduction"
               >
                 Signal transduction
               </Link>
@@ -26414,7 +26429,7 @@ exports[`Additional Information Component  should render component with newspape
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=TRPC1"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=TRPC1"
               >
                 TRPC1
               </Link>
@@ -26465,6 +26480,7 @@ exports[`Additional Information Component  should render component with patent 1
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -26729,7 +26745,7 @@ exports[`Additional Information Component  should render component with patent 1
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=GC+Corporation"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=GC+Corporation&searchMode=advanced"
           >
             GC Corporation
           </Link>
@@ -26764,7 +26780,7 @@ exports[`Additional Information Component  should render component with patent 1
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=270802&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=270802&searchQueryParams%5Ball%5D=270802"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=270802&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=270802"
               >
                 270802
               </Link>
@@ -26772,7 +26788,7 @@ exports[`Additional Information Component  should render component with patent 1
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=270300&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=270300&searchQueryParams%5Ball%5D=270300"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=270300&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=270300"
               >
                 270300
               </Link>
@@ -26780,7 +26796,7 @@ exports[`Additional Information Component  should render component with patent 1
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=320800&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=320800&searchQueryParams%5Ball%5D=320800"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=320800&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=320800"
               >
                 320800
               </Link>
@@ -26846,7 +26862,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Algorithmic+complexity"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Algorithmic+complexity"
               >
                 Algorithmic complexity
               </Link>
@@ -26854,7 +26870,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=cross-entropy"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=cross-entropy"
               >
                 cross-entropy
               </Link>
@@ -26862,7 +26878,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=GI%2FG%2F1+queue"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=GI%2FG%2F1+queue"
               >
                 GI/G/1 queue
               </Link>
@@ -26870,7 +26886,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=importance+sampling"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=importance+sampling"
               >
                 importance sampling
               </Link>
@@ -26878,7 +26894,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=maximum+likelihood"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=maximum+likelihood"
               >
                 maximum likelihood
               </Link>
@@ -26886,7 +26902,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pareto+distribution"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Pareto+distribution"
               >
                 Pareto distribution
               </Link>
@@ -26894,7 +26910,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pollaczek-Khintchine+formula"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Pollaczek-Khintchine+formula"
               >
                 Pollaczek-Khintchine formula
               </Link>
@@ -26902,7 +26918,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=random+walk"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=random+walk"
               >
                 random walk
               </Link>
@@ -26910,7 +26926,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=rare+event"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=rare+event"
               >
                 rare event
               </Link>
@@ -26918,7 +26934,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=subexponential+distribution"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=subexponential+distribution"
               >
                 subexponential distribution
               </Link>
@@ -26926,7 +26942,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Weibull+distribution"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Weibull+distribution"
               >
                 Weibull distribution
               </Link>
@@ -26955,7 +26971,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=280210&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=280210&searchQueryParams%5Ball%5D=280210"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=280210&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=280210"
               >
                 280210
               </Link>
@@ -26963,7 +26979,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=230203&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=230203&searchQueryParams%5Ball%5D=230203"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=230203&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=230203"
               >
                 230203
               </Link>
@@ -26971,7 +26987,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=230117&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=230117&searchQueryParams%5Ball%5D=230117"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=230117&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=230117"
               >
                 230117
               </Link>
@@ -26985,6 +27001,7 @@ exports[`Additional Information Component  should render component with preprint
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -27350,7 +27367,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Algorithmic+complexity"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Algorithmic+complexity"
               >
                 Algorithmic complexity
               </Link>
@@ -27358,7 +27375,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=cross-entropy"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=cross-entropy"
               >
                 cross-entropy
               </Link>
@@ -27366,7 +27383,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=GI%2FG%2F1+queue"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=GI%2FG%2F1+queue"
               >
                 GI/G/1 queue
               </Link>
@@ -27374,7 +27391,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=importance+sampling"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=importance+sampling"
               >
                 importance sampling
               </Link>
@@ -27382,7 +27399,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=maximum+likelihood"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=maximum+likelihood"
               >
                 maximum likelihood
               </Link>
@@ -27390,7 +27407,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pareto+distribution"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Pareto+distribution"
               >
                 Pareto distribution
               </Link>
@@ -27398,7 +27415,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pollaczek-Khintchine+formula"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Pollaczek-Khintchine+formula"
               >
                 Pollaczek-Khintchine formula
               </Link>
@@ -27406,7 +27423,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=random+walk"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=random+walk"
               >
                 random walk
               </Link>
@@ -27414,7 +27431,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=rare+event"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=rare+event"
               >
                 rare event
               </Link>
@@ -27422,7 +27439,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=subexponential+distribution"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=subexponential+distribution"
               >
                 subexponential distribution
               </Link>
@@ -27430,7 +27447,7 @@ exports[`Additional Information Component  should render component with preprint
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Weibull+distribution"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Weibull+distribution"
               >
                 Weibull distribution
               </Link>
@@ -27481,6 +27498,7 @@ exports[`Additional Information Component  should render component with proceedi
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -28135,7 +28153,7 @@ exports[`Additional Information Component  should render component with proceedi
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=17th+World+Congress+of+the+International-Society-on-Toxinology+(IST)%2FVenom+Week%2F4th+International+Scientific+Symposium+on+All+Things+Venomous"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_conference_name%5D=17th+World+Congress+of+the+International-Society-on-Toxinology+(IST)%2FVenom+Week%2F4th+International+Scientific+Symposium+on+All+Things+Venomous&searchMode=advanced"
           >
             17th World Congress of the International-Society-on-Toxinology (IST)/Venom Week/4th International Scientific Symposium on All Things Venomous
           </Link>
@@ -28799,7 +28817,7 @@ exports[`Additional Information Component  should render component with proceedi
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Pergamon"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Pergamon&searchMode=advanced"
           >
             Pergamon
           </Link>
@@ -28846,7 +28864,7 @@ exports[`Additional Information Component  should render component with proceedi
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Ball%5D="
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5BshowOpenAccessOnly%5D=false"
           >
             Not yet assessed
           </Link>
@@ -28910,7 +28928,7 @@ exports[`Additional Information Component  should render component with proceedi
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Trafficking"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Trafficking"
               >
                 Trafficking
               </Link>
@@ -28918,7 +28936,7 @@ exports[`Additional Information Component  should render component with proceedi
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Bacterial+toxins"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Bacterial+toxins"
               >
                 Bacterial toxins
               </Link>
@@ -28926,7 +28944,7 @@ exports[`Additional Information Component  should render component with proceedi
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Neurons"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Neurons"
               >
                 Neurons
               </Link>
@@ -28968,6 +28986,7 @@ exports[`Additional Information Component  should render component with referenc
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -29285,7 +29304,7 @@ exports[`Additional Information Component  should render component with referenc
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Routledge"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=Routledge&searchMode=advanced"
           >
             Routledge
           </Link>
@@ -29640,7 +29659,7 @@ exports[`Additional Information Component  should render component with referenc
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=430102&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=430102+History+-+Asian&searchQueryParams%5Ball%5D=430102+History+-+Asian"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=430102&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=430102+History+-+Asian"
               >
                 430102 History - Asian
               </Link>
@@ -29648,7 +29667,7 @@ exports[`Additional Information Component  should render component with referenc
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=420212&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=420212+Japanese&searchQueryParams%5Ball%5D=420212+Japanese"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=420212&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=420212+Japanese"
               >
                 420212 Japanese
               </Link>
@@ -29656,7 +29675,7 @@ exports[`Additional Information Component  should render component with referenc
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450647&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=751001+Languages+and+literature&searchQueryParams%5Ball%5D=751001+Languages+and+literature"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450647&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=751001+Languages+and+literature"
               >
                 751001 Languages and literature
               </Link>
@@ -29664,7 +29683,7 @@ exports[`Additional Information Component  should render component with referenc
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450041&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=M&searchQueryParams%5Ball%5D=M"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=450041&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=M"
               >
                 M
               </Link>
@@ -29680,7 +29699,7 @@ exports[`Additional Information Component  should render component with referenc
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Japanese+culture"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Japanese+culture"
               >
                 Japanese culture
               </Link>
@@ -29688,7 +29707,7 @@ exports[`Additional Information Component  should render component with referenc
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Popular+culture+-+Japan+-+Encyclopedias"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Popular+culture+-+Japan+-+Encyclopedias"
               >
                 Popular culture - Japan - Encyclopedias
               </Link>
@@ -29696,7 +29715,7 @@ exports[`Additional Information Component  should render component with referenc
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Japan+-+Civilization+-+1945-+-+Encyclopedia"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Japan+-+Civilization+-+1945-+-+Encyclopedia"
               >
                 Japan - Civilization - 1945- - Encyclopedia
               </Link>
@@ -29747,6 +29766,7 @@ exports[`Additional Information Component  should render component with research
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -30085,7 +30105,7 @@ exports[`Additional Information Component  should render component with research
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=UQ"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=UQ&searchMode=advanced"
           >
             UQ
           </Link>
@@ -30153,6 +30173,7 @@ exports[`Additional Information Component  should render component with thesis 1
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -30467,7 +30488,7 @@ exports[`Additional Information Component  should render component with thesis 1
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Natural+and+Rural+Systems"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_org_unit_name%5D=School+of+Natural+and+Rural+Systems&searchMode=advanced"
           >
             School of Natural and Rural Systems
           </Link>
@@ -30526,7 +30547,7 @@ exports[`Additional Information Component  should render component with thesis 1
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=300000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=300000&searchQueryParams%5Ball%5D=300000"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=300000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=300000"
               >
                 300000
               </Link>
@@ -30542,7 +30563,7 @@ exports[`Additional Information Component  should render component with thesis 1
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business"
               >
                 Sustainable development; graziers; farmers; agriculture; land management; business
               </Link>
@@ -30602,6 +30623,7 @@ exports[`Additional Information Component  should render component with video do
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -30940,7 +30962,7 @@ exports[`Additional Information Component  should render component with video do
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=SEG+Special+Publication+Video+Series"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_series%5D=SEG+Special+Publication+Video+Series&searchMode=advanced"
           >
             SEG Special Publication Video Series
           </Link>
@@ -30980,7 +31002,7 @@ exports[`Additional Information Component  should render component with video do
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451986&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=451986&searchQueryParams%5Ball%5D=451986"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=451986&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=451986"
               >
                 451986
               </Link>
@@ -31031,6 +31053,7 @@ exports[`Additional Information Component  should render component with working 
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -31395,7 +31418,7 @@ exports[`Additional Information Component  should render component with working 
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Economics"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_org_unit_name%5D=School+of+Economics&searchMode=advanced"
           >
             School of Economics
           </Link>
@@ -31417,7 +31440,7 @@ exports[`Additional Information Component  should render component with working 
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Working+papers+on+Social+Economics%2C+Policy+and+Development"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_series%5D=Working+papers+on+Social+Economics%2C+Policy+and+Development&searchMode=advanced"
           >
             Working papers on Social Economics, Policy and Development
           </Link>
@@ -31447,7 +31470,7 @@ exports[`Additional Information Component  should render component with working 
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Economics"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D=School+of+Economics&searchMode=advanced"
           >
             School of Economics
           </Link>
@@ -31487,7 +31510,7 @@ exports[`Additional Information Component  should render component with working 
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452775&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452775&searchQueryParams%5Ball%5D=452775"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452775&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452775"
               >
                 452775
               </Link>
@@ -31495,7 +31518,7 @@ exports[`Additional Information Component  should render component with working 
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452784&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452784&searchQueryParams%5Ball%5D=452784"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=452784&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452784"
               >
                 452784
               </Link>
@@ -31511,7 +31534,7 @@ exports[`Additional Information Component  should render component with working 
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=European+Union"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=European+Union"
               >
                 European Union
               </Link>
@@ -31519,7 +31542,7 @@ exports[`Additional Information Component  should render component with working 
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Education"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Education"
               >
                 Education
               </Link>
@@ -31527,7 +31550,7 @@ exports[`Additional Information Component  should render component with working 
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Employment"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Employment"
               >
                 Employment
               </Link>
@@ -31535,7 +31558,7 @@ exports[`Additional Information Component  should render component with working 
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Social+inclusion"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Social+inclusion"
               >
                 Social inclusion
               </Link>
@@ -31595,6 +31618,7 @@ exports[`Additional Information Component  should render oa status value link in
         data={
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -31910,7 +31934,7 @@ exports[`Additional Information Component  should render oa status value link in
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=School+of+Natural+and+Rural+Systems"
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_org_unit_name%5D=School+of+Natural+and+Rural+Systems&searchMode=advanced"
           >
             School of Natural and Rural Systems
           </Link>
@@ -31945,7 +31969,7 @@ exports[`Additional Information Component  should render oa status value link in
         data={
           <Link
             replace={false}
-            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5BshowOpenAccessOnly%5D=true&searchQueryParams%5Ball%5D="
+            to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5BshowOpenAccessOnly%5D=true"
           >
             File (Author Post-print)
           </Link>
@@ -31976,7 +32000,7 @@ exports[`Additional Information Component  should render oa status value link in
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=300000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=300000&searchQueryParams%5Ball%5D=300000"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject%5D=300000&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=300000"
               >
                 300000
               </Link>
@@ -31992,7 +32016,7 @@ exports[`Additional Information Component  should render oa status value link in
             <li>
               <Link
                 replace={false}
-                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business"
+                to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business"
               >
                 Sustainable development; graziers; farmers; agriculture; land management; business
               </Link>

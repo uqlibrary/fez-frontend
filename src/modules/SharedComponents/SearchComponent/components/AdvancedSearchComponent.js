@@ -55,8 +55,8 @@ export default class AdvancedSearchComponent extends PureComponent {
             .map((item, index) => (
                 <span key={item.searchField}>
                     {index > 0 && <span className="and">  {item.value && 'AND'}</span>}
-                    <span className={`title ${index > 0 && ' lowercase'}`}> {item.value && txt[item.searchField].title}</span>
-                    <span className="combiner"> {item.value && txt[item.searchField].combiner}</span>
+                    <span className={`title ${index > 0 && ' lowercase'}`}> {item.value && txt[item.searchField] && txt[item.searchField].title}</span>
+                    <span className="combiner"> {item.value && txt[item.searchField] && txt[item.searchField].combiner}</span>
                     <span className="value"> {item.value}</span>
                 </span>
             ));
@@ -71,9 +71,9 @@ export default class AdvancedSearchComponent extends PureComponent {
         const fieldTypes = locale.components.searchComponent.advancedSearch.fieldTypes;
         return fieldRows.filter(item => item.searchField === '0' || item.value === ''
             // Check if the locale specifies a minLength for this field and check it not shorter
-            || (!!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length)
+            || (!!fieldTypes[item.searchField] && !!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length)
             // Check if this field is exceeding the maxLength
-            || (MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length)
+            || (item.value && MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length)
         ).length === 0;
     };
 

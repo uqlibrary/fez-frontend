@@ -42,6 +42,12 @@ export const getStandardSearchParams = ({exportPublicationsFormat = '', page = 1
     };
 };
 
+export const getOpenAccessSearchParams = ({facets = {}}) => {
+    return {
+        ...(!!facets.showOpenAccessOnly ? {rek_oa_status: openAccessConfig.openAccessIds} : {})
+    };
+};
+
 /**
  * getSearchType - based on data provided returns query string attribute
  * @param {string} pid/pubmed/string title to search
@@ -138,13 +144,26 @@ export const SEARCH_INTERNAL_RECORDS_API = (values, route = 'search') => {
     // values = {searchQuery (text value - title search, doi or pubmed id)
     // searchQueryParams = {} (search parameters, eg title, author etc)
     // page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}
+    const searchQueryParams = {
+        ...values.searchQueryParams,
+        ...getOpenAccessSearchParams(values)
+    };
+
+    let advancedSearchQueryParams = null;
+    if (values.searchMode === 'advanced') {
+        advancedSearchQueryParams = {
+            mode: 'advanced',   // mode to let axios request interceptor to know for serialising query params
+            key: {...searchQueryParams}
+        };
+    }
+
     return {
         apiUrl: `records/${route}`,
         options: {
             params: {
                 ...getSearchType(values.searchQuery),
                 ...getStandardSearchParams(values),
-                ...values.searchQueryParams
+                ...(advancedSearchQueryParams || searchQueryParams)
             }
         }
     };

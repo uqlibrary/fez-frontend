@@ -818,20 +818,93 @@ export default {
                     '0': {
                         title: 'Select a field',
                         combiner: null,
-                        hint: 'Select a field to search on'
+                        hint: 'Select a field to search on',
+                        validation: []
                     },
                     'all': {
                         title: 'Any field',
                         combiner: 'contains',
                         type: 'TextField',
-                        hint: 'Add some text to search all fields with'
+                        hint: 'Add some text to search all fields with',
+                        validation: ['maxLength500']
                     },
-                    'title': {
+                    'rek_title': {
                         title: 'Title',
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a title to search',
-                        minLength: 10
+                        validation: ['required', 'maxLength255', 'minLength10'],
+                        minLength: 10   // Kept to check overall advanced search component is valid or not
+                    },
+                    'rek_pid': {
+                        title: 'PID',
+                        combiner: 'is',
+                        type: 'TextField',
+                        hint: 'Add a PID to search',
+                        validation: ['required']
+                    },
+                    'rek_author': {
+                        title: 'Author Name',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add an author name to search',
+                        validation: ['required', 'maxLength255']
+                    },
+                    'rek_contributor': {
+                        title: 'Editor/Contributor',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add an editor/contributor name to search',
+                        validation: ['required', 'maxLength255']
+                    },
+                    'rek_series': {
+                        title: 'Series',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a series name to search',
+                        validation: ['required', 'maxLength500']
+                    },
+                    'rek_journal_name': {
+                        title: 'Journal Name',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a journal name to search',
+                        validation: ['required', 'maxLength500']
+                    },
+                    'rek_conference_name': {
+                        title: 'Conference Name',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a conference name to search',
+                        validation: ['required', 'maxLength500']
+                    },
+                    'rek_book_title': {
+                        title: 'Book Title',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a book title to search',
+                        validation: ['required', 'maxLength500']
+                    },
+                    'rek_doc_type': {
+                        title: 'Publication type',
+                        combiner: 'is one of',
+                        type: null,
+                        hint: 'Select document types to search',
+                        validation: []
+                    },
+                    'rek_doi': {
+                        title: 'DOI',
+                        combiner: 'is',
+                        type: 'TextField',
+                        hint: 'Add a DOI to search',
+                        validation: ['required', 'doi']
+                    },
+                    'rek_publisher': {
+                        title: 'Publisher',
+                        combiner: 'contains',
+                        type: 'PublisherLookup',
+                        hint: 'Add a publisher to search',
+                        validation: ['required']
                     }
                 },
                 openAccess: {
