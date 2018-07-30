@@ -3,16 +3,17 @@ import {connect} from 'react-redux';
 import * as actions from 'actions';
 
 const mapStateToProps = (state, props) => {
-    const category = 'report_number';
+    const category = 'publisher';
     return {
         category: category,
         itemsList: state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
             ? state.get('searchKeysReducer')[category].itemsList : [],
         allowFreeText: true,
-        onChange: props.input.onChange,
+        onChange: (item) => {console.log(item); props.onChange(item);},
         async: true,
-        errorText: props.meta ? props.meta.error : null,
-        selectedValue: props.input ? {value: props.input.value} : null
+        dataSourceConfig: {text: 'value', value: 'value'},
+        errorText: props.errorText,
+        selectedValue: !!props.value && {value: props.value} || ''
     };
 };
 
@@ -22,5 +23,5 @@ const mapDispatchToProps = (dispatch) => (
     }
 );
 
-export const ReportNumberField = connect(mapStateToProps, mapDispatchToProps)(AutoSuggestField);
+export const PublisherField = connect(mapStateToProps, mapDispatchToProps)(AutoSuggestField);
 

@@ -12,7 +12,7 @@ const mapStateToProps = (state, props) => {
         onChange: props.input.onChange,
         async: true,
         errorText: props.meta ? props.meta.error : null,
-        selectedValue: props.input ? props.input.value : null
+        selectedValue: props.input ? {value: props.input.value} : null
     };
 };
 

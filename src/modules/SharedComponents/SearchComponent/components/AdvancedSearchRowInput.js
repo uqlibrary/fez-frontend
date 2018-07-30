@@ -2,14 +2,14 @@ import {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import * as validationRules from 'config/validation';
-import {PublisherField} from './AutoCompleteFields/PublisherField';
-import {AuthorIdField} from './AutoCompleteFields/AuthorIdField';
+import {AuthorIdField, PublisherField, OrgUnitNameField} from 'modules/SharedComponents/LookupFields';
 
 class AdvancedSearchRowInput extends PureComponent {
     static propTypes = {
         children: PropTypes.func.isRequired,
         value: PropTypes.any,
         label: PropTypes.string,
+        onChange: PropTypes.func,
         inputField: PropTypes.shape({
             type: PropTypes.string.isRequired,
             validation: PropTypes.array.isRequired,
@@ -50,28 +50,43 @@ class AdvancedSearchRowInput extends PureComponent {
                 return PublisherField;
             case 'AuthorIdLookup':
                 return AuthorIdField;
+            case 'OrgUnitLookup':
+                return OrgUnitNameField;
             default:
                 return TextField;
         }
     };
 
     getInputProps = () => {
+        const defaultProps = {
+            'hintText': this.props.inputField.hint,
+            'aria-label': this.props.inputField.hint,
+            'errorText': this.runValidationRules(this.props.value)
+        };
+
+        const lookupDefaultProps = {
+            ...defaultProps,
+            'floatingLabelText': null,
+            'value': this.props.label || this.props.value,
+        };
+
         switch (this.props.inputField.type) {
             case 'TextField':
                 return {
-                    'hintText': this.props.inputField.hint,
-                    'aria-label': this.props.inputField.hint,
-                    'errorText': this.runValidationRules(this.props.value),
-                    'autoComplete': 'off'
+                    ...defaultProps,
+                    'autoComplete': 'off',
+                    'onChange': (event, value) => this.props.onChange(value)
                 };
             case 'PublisherLookup':
+            case 'OrgUnitLookup':
+                return {
+                    ...lookupDefaultProps,
+                    'onChange': (item) => this.props.onChange(item.value, item.value)
+                };
             case 'AuthorIdLookup':
                 return {
-                    'hintText': this.props.inputField.hint,
-                    'aria-label': this.props.inputField.hint,
-                    'errorText': this.runValidationRules(this.props.value),
-                    'floatingLabelText': null,
-                    'value': this.props.label || this.props.value
+                    ...lookupDefaultProps,
+                    'onChange': (item) => this.props.onChange(item.id, item.text)
                 };
             default: return {};
         }

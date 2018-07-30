@@ -18,7 +18,7 @@ export default class AdvancedSearchRow extends PureComponent {
         onSearchRowDelete: PropTypes.func,
     };
 
-    _handleTextChange = (event, value, label = '') => {
+    _handleTextChange = (value, label = '') => {
         this.props.onSearchRowChange(this.props.rowIndex, {searchField: this.props.searchField, value, label});
     };
 
@@ -44,7 +44,6 @@ export default class AdvancedSearchRow extends PureComponent {
         id="searchField"
         fullWidth
         value={this.props.value}
-        onChange={this._handleTextChange}
         disabled={this.props.searchField === '0'}
         {...inputProps}
     />);
@@ -81,7 +80,11 @@ export default class AdvancedSearchRow extends PureComponent {
                         : <div className="column is-narrow spacer" />
                 }
                 <div className={`column input ${(this.props.rowIndex === 0) ? 'is-12-mobile' : 'is-11-mobile'}`}>
-                    <AdvancedSearchRowInput {...this.props} inputField={txt.fieldTypes[this.props.searchField]}>
+                    <AdvancedSearchRowInput
+                        {...this.props}
+                        onChange={this._handleTextChange}
+                        inputField={txt.fieldTypes[this.props.searchField]}
+                    >
                         {
                             this.renderInputComponentAndProps()
                         }

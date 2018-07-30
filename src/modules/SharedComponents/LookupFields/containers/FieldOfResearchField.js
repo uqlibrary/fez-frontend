@@ -15,7 +15,7 @@ const mapStateToProps = (state, props) => {
         itemsList: state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId]
             ? state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId].itemsKeyValueList : [],
         dataSourceConfig: { text: 'value', value: 'key'},
-        selectedValue: props.input ? props.input.value : null,
+        selectedValue: props.input ? {value: props.input.value} : null,
         maxResults: props.maxResults,
         filter: props.filter || null
     };
