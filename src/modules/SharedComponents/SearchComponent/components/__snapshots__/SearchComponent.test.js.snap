@@ -7,6 +7,7 @@ exports[`SearchComponent should add one row for advanced search 1`] = `
     fieldRows={
       Array [
         Object {
+          "label": "",
           "searchField": "all",
           "value": "i feel lucky",
         },
@@ -39,6 +40,7 @@ exports[`SearchComponent should add one row for advanced search 2`] = `
     fieldRows={
       Array [
         Object {
+          "label": "",
           "searchField": "all",
           "value": "i feel lucky",
         },
@@ -141,14 +143,17 @@ exports[`SearchComponent should remove one row from advanced search 1`] = `
     fieldRows={
       Array [
         Object {
+          "label": "",
           "searchField": "all",
           "value": "i feel lucky",
         },
         Object {
+          "label": "",
           "searchField": "rek_title",
           "value": "remove rek title field",
         },
         Object {
+          "label": "",
           "searchField": "docTypes",
           "value": Array [],
         },
@@ -181,10 +186,12 @@ exports[`SearchComponent should remove one row from advanced search 2`] = `
     fieldRows={
       Array [
         Object {
+          "label": "",
           "searchField": "all",
           "value": "i feel lucky",
         },
         Object {
+          "label": "",
           "searchField": "docTypes",
           "value": Array [],
         },
@@ -239,6 +246,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
     fieldRows={
       Array [
         Object {
+          "label": "",
           "searchField": "0",
           "value": "",
         },
@@ -315,10 +323,12 @@ exports[`SearchComponent should reset advanced search 1`] = `
     fieldRows={
       Array [
         Object {
+          "label": "",
           "searchField": "all",
           "value": "i feel lucky",
         },
         Object {
+          "label": "",
           "searchField": "rek_title",
           "value": "global warming",
         },
@@ -383,6 +393,7 @@ exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
     fieldRows={
       Array [
         Object {
+          "label": "",
           "searchField": "0",
           "value": "",
         },
@@ -415,6 +426,7 @@ exports[`SearchComponent should toggle advanced search to minimised view 2`] = `
     fieldRows={
       Array [
         Object {
+          "label": "",
           "searchField": "0",
           "value": "",
         },
@@ -447,6 +459,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
     fieldRows={
       Array [
         Object {
+          "label": "",
           "searchField": "0",
           "value": "",
         },
@@ -479,6 +492,7 @@ exports[`SearchComponent should toggle open access for advanced search 2`] = `
     fieldRows={
       Array [
         Object {
+          "label": "",
           "searchField": "0",
           "value": "",
         },
@@ -533,6 +547,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
     fieldRows={
       Array [
         Object {
+          "label": "",
           "searchField": "all",
           "value": "i feel very lucky",
         },
@@ -565,6 +580,7 @@ exports[`SearchComponent should update advanced search row on search text change
     fieldRows={
       Array [
         Object {
+          "label": "",
           "searchField": "all",
           "value": "i feel lucky",
         },
@@ -597,6 +613,7 @@ exports[`SearchComponent should update advanced search row on search text change
     fieldRows={
       Array [
         Object {
+          "label": "",
           "searchField": "all",
           "value": "i feel more lucky",
         },

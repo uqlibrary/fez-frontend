@@ -42,7 +42,8 @@ export default class AdvancedSearchComponent extends PureComponent {
     static defaultProps = {
         fieldRows: [{
             searchField: '0',
-            value: ''
+            value: '',
+            label: ''
         }],
         isMinimised: false,
         isOpenAccess: false,
@@ -102,7 +103,7 @@ export default class AdvancedSearchComponent extends PureComponent {
             // Check if the locale specifies a minLength for this field and check it not shorter
             || (!!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length)
             // Check if this field is exceeding the maxLength
-            || (MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length)
+            || (fieldTypes[item.searchField].type === 'TextField' && MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length)
         ).length === 0;
     };
 

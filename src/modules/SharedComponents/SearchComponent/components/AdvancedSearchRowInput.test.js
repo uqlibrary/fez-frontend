@@ -33,11 +33,13 @@ describe('AdvancedSearchRowInput', () => {
                 'aria-label': 'Field hint',
                 'autoComplete': 'off',
                 'errorText': undefined,
-                'hintText': 'Field hint'
+                'hintText': 'Field hint',
+                'onChange': inputProps.onChange
             });
         });
         setup({
-            children: childrenFn
+            children: childrenFn,
+            onChange: jest.fn()
         });
         expect(childrenFn).toHaveBeenCalled();
     });
@@ -49,7 +51,8 @@ describe('AdvancedSearchRowInput', () => {
                 'aria-label': 'This is hint for text input',
                 'autoComplete': 'off',
                 'errorText': 'Must be at least 10 characters',
-                'hintText': 'This is hint for text input'
+                'hintText': 'This is hint for text input',
+                'onChange': inputProps.onChange
             });
         });
         setup({
@@ -59,7 +62,8 @@ describe('AdvancedSearchRowInput', () => {
                 hint: 'This is hint for text input',
                 validation: ['minLength10']
             },
-            value: 'Test'
+            value: 'Test',
+            onChange: jest.fn()
         });
         expect(childrenFn).toHaveBeenCalled();
     })
