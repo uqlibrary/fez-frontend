@@ -54,7 +54,7 @@ export default class AdvancedSearchRow extends PureComponent {
     render() {
         const txt = locale.components.searchComponent.advancedSearch;
         return (
-            <div className="columns is-gapless is-mobile advancedSearchRow">
+            <div className="columns is-gapless is-multiline is-mobile advancedSearchRow">
                 <div className="column is-4-tablet">
                     <SelectField
                         value={this.props.searchField}
@@ -82,7 +82,7 @@ export default class AdvancedSearchRow extends PureComponent {
                         </div>
                         : <div className="column is-narrow spacer" />
                 }
-                <div className={`column input ${(this.props.rowIndex === 0) ? 'is-12-mobile' : 'is-11-mobile'}`}>
+                <div className="column input is-11-mobile" >
                     <AdvancedSearchRowInput {...this.props} inputField={txt.fieldTypes[this.props.searchField]} value={this.props.value}>
                         {
                             this.renderInputComponentAndProps()

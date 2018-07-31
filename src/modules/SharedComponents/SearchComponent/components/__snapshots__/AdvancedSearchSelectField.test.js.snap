@@ -1,0 +1,280 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component AdvancedSearchSelectField should render as expected 1`] = `
+<SelectField
+  autoWidth={false}
+  disabled={false}
+  floatingLabelText={null}
+  fullWidth={true}
+  hintText="Select collections"
+  menuItemStyle={
+    Object {
+      "lineHeight": "24px",
+      "paddingBottom": "4px",
+      "paddingTop": "4px",
+      "whiteSpace": "normal",
+    }
+  }
+  multiple={true}
+  onChange={[Function]}
+  value={
+    Array [
+      "UQ:120743",
+    ]
+  }
+>
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={true}
+    className="advancedsearchselectfield menuitem"
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="1"
+    primaryText="16th Australasian Fluid Mechanics Conference"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value="UQ:120743"
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    className="advancedsearchselectfield menuitem"
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="2"
+    primaryText="2004 Higher Education Research Data Collection"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value="UQ:217410"
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    className="advancedsearchselectfield menuitem"
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="3"
+    primaryText="2005 Higher Education Research Data Collection"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value="UQ:217419"
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    className="advancedsearchselectfield menuitem"
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="4"
+    primaryText="2006 Higher Education Research Data Collection"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value="UQ:217422"
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    className="advancedsearchselectfield menuitem"
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="5"
+    primaryText="2007 Higher Education Research Data Collection"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value="UQ:217423"
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    className="advancedsearchselectfield menuitem"
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="6"
+    primaryText="2008 Higher Education Research Data Collection"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value="UQ:23835"
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    className="advancedsearchselectfield menuitem"
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="7"
+    primaryText="2009 Higher Education Research Data Collection"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value="UQ:138536"
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    className="advancedsearchselectfield menuitem"
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="8"
+    primaryText="2010 Higher Education Research Data Collection"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value="UQ:174061"
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    className="advancedsearchselectfield menuitem"
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="9"
+    primaryText="2012 University of Queensland Bachelor of Arts Review"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value="UQ:276026"
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    className="advancedsearchselectfield menuitem"
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="10"
+    primaryText="5th Australasian Congress on Applied Mechanics"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value="UQ:131735"
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    className="advancedsearchselectfield menuitem"
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="11"
+    primaryText="6th International Conference of Animal Health Information Specialists (ICAHIS) 2009"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value="UQ:290441"
+  />
+</SelectField>
+`;

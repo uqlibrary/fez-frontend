@@ -1,4 +1,4 @@
-import {AdvancedSearchMultiSelectField} from '../AdvancedSearchMultiSelectField';
+import {AdvancedSearchSelectField} from '../AdvancedSearchSelectField';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
 import {bindActionCreators} from 'redux';
@@ -26,5 +26,5 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export const CollectionsField = connect(mapStateToProps, mapDispatchToProps)(AdvancedSearchMultiSelectField);
+export const CollectionsField = connect(mapStateToProps, mapDispatchToProps)(AdvancedSearchSelectField);
 

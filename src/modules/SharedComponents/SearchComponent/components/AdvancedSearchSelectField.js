@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 
-export class AdvancedSearchMultiSelectField extends Component {
+export class AdvancedSearchSelectField extends Component {
     static propTypes = {
         onChange: PropTypes.func,
         itemsList: PropTypes.array,
@@ -28,7 +28,7 @@ export class AdvancedSearchMultiSelectField extends Component {
         itemsList: [],
         floatingLabelText: '',
         hintText: '',
-        className: '',
+        className: 'advancedsearchselectfield menuitem',
         value: []
     };
 
@@ -64,7 +64,7 @@ export class AdvancedSearchMultiSelectField extends Component {
         const children = this.props.itemsList.map((item, index) => {
             return (
                 <MenuItem
-                    className={'menuitem'}
+                    className={this.props.className}
                     checked={this.props.value.length > 0 && this.state.value.indexOf(item.value) > -1}
                     value={item.value}
                     primaryText={item.text || item.value}

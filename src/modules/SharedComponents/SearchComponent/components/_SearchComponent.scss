@@ -180,7 +180,7 @@
   }
   .advancedSearchOpenAccessCheckbox {
     @include tablet-only {
-      margin-top: 18px !important;
+      margin-top: 42px !important;
     }
     @include mobile {
       margin-top: 12px !important;
@@ -213,6 +213,7 @@
       //min-width: 76px !important;
       @include mobile {
         text-align: right !important;
+        padding-right: 12px !important;
         margin: 0 0 0 12px !important;
       }
       span {
@@ -231,12 +232,23 @@
     }
     .column.input {
       overflow-x: hidden !important;
-      max-width: 100%;
-      width: 100px;
-      &>div>div:nth-of-type(1){
-        max-width: 100% !important;
-        text-overflow: ellipsis !important;
-        white-space: nowrap !important;
+      @include desktop {
+        max-width: 100%;
+        width: 100px;
+        & > div > div:nth-of-type(1) {
+          max-width: 100% !important;
+          text-overflow: ellipsis !important;
+          white-space: nowrap !important;
+        }
+      }
+      @include tablet {
+        max-width: 100%;
+        width: 100px;
+        & > div > div:nth-of-type(1) {
+          max-width: 100% !important;
+          text-overflow: ellipsis !important;
+          white-space: nowrap !important;
+        }
       }
       @include mobile {
         margin-top: -12px !important;
