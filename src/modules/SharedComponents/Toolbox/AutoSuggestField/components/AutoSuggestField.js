@@ -91,10 +91,10 @@ export class AutoSuggestField extends Component {
     };
 
     valueSelected = (value, index) => {
-        if (index >= 0 || this.props.allowFreeText) {
-            this.setState({
-                selectedValue: value
-            });
+        if (index >= 0) {
+            this.updateSelectedValue(this.props.itemsList[index]);
+        } else if (this.props.allowFreeText) {
+            this.updateSelectedValue(value);
         }
 
         // clean up input field
