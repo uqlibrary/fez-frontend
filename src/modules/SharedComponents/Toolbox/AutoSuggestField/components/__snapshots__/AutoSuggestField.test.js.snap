@@ -46,6 +46,7 @@ exports[`AutoSuggestField component should render 1`] = `
   onUpdateInput={[Function]}
   open={false}
   openOnFocus={false}
+  searchText=""
   targetOrigin={
     Object {
       "horizontal": "left",
@@ -125,13 +126,10 @@ exports[`AutoSuggestField component should render autosuggest field and call act
           }
         }
         maxResults={7}
-        onChange={
-          [MockFunction] {
-            "calls": Array [
-              Array [
-                undefined,
-              ],
-            ],
+        onChange={[MockFunction]}
+        selectedValue={
+          Object {
+            "value": "",
           }
         }
       >
@@ -180,6 +178,7 @@ exports[`AutoSuggestField component should render autosuggest field and call act
           onUpdateInput={[Function]}
           open={false}
           openOnFocus={false}
+          searchText=""
           targetOrigin={
             Object {
               "horizontal": "left",
@@ -1746,13 +1745,10 @@ exports[`AutoSuggestField component should render with className set 1`] = `
           }
         }
         maxResults={7}
-        onChange={
-          [MockFunction] {
-            "calls": Array [
-              Array [
-                undefined,
-              ],
-            ],
+        onChange={[MockFunction]}
+        selectedValue={
+          Object {
+            "value": "",
           }
         }
       >
@@ -1801,6 +1797,7 @@ exports[`AutoSuggestField component should render with className set 1`] = `
           onUpdateInput={[Function]}
           open={false}
           openOnFocus={false}
+          searchText=""
           targetOrigin={
             Object {
               "horizontal": "left",
@@ -3368,13 +3365,10 @@ exports[`AutoSuggestField component should render with disabled flag set to true
           }
         }
         maxResults={7}
-        onChange={
-          [MockFunction] {
-            "calls": Array [
-              Array [
-                undefined,
-              ],
-            ],
+        onChange={[MockFunction]}
+        selectedValue={
+          Object {
+            "value": "",
           }
         }
       >
@@ -3424,6 +3418,7 @@ exports[`AutoSuggestField component should render with disabled flag set to true
           onUpdateInput={[Function]}
           open={false}
           openOnFocus={false}
+          searchText=""
           targetOrigin={
             Object {
               "horizontal": "left",

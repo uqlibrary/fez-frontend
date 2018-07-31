@@ -165,11 +165,21 @@ export const AUTHOR_PUBLICATIONS_STATS_ONLY_API = (values) => (
 );
 export const TRENDING_PUBLICATIONS_API = () => ({apiUrl: 'records/trending'});
 
-export const SEARCH_INTERNAL_RECORDS_API = (values, route = 'search') => {
-    // values = {searchQuery (text value - title search, doi or pubmed id)
+export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
+    // query = {searchQuery (text value - title search, doi or pubmed id)
     // searchQueryParams = {} (search parameters, eg title, author etc)
     // page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}
-    const searchQueryParams = {
+    let {searchQueryParams} = query;
+
+    // convert {value, label} from advanced search to value string from api
+    const searchQueryParamsWithoutLabels = !!searchQueryParams && Object.keys(searchQueryParams).reduce((result, key) => {
+        const {value} = searchQueryParams[key];
+        return !!value && {...result, [key]: value} || {...result, [key]: searchQueryParams[key]};
+    }, {});
+
+    const values = {...query, searchQueryParams: searchQueryParamsWithoutLabels};
+
+    searchQueryParams = {
         ...values.searchQueryParams,
         ...getOpenAccessSearchParams(values)
     };

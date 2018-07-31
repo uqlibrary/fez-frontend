@@ -895,14 +895,14 @@ export default {
                     },
                     'rek_doi': {
                         title: 'DOI',
-                        combiner: 'is',
+                        combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a DOI to search',
                         validation: ['required', 'doi']
                     },
                     'rek_publisher': {
                         title: 'Publisher',
-                        combiner: 'contains',
+                        combiner: 'is',
                         type: 'PublisherLookup',
                         hint: 'Add a publisher to search',
                         validation: ['required']
@@ -928,7 +928,20 @@ export default {
                         title: 'Thesis type',
                         combiner: 'is',
                         type: 'ThesisTypeLookup',
-                        hint: 'Select a Thesis type',
+                        hint: 'Select a Thesis type'
+                    },
+                    'rek_author_id': {
+                        title: 'Author ID',
+                        combiner: 'is',
+                        type: 'AuthorIdLookup',
+                        hint: 'Add an author id to search',
+                        validation: ['required']
+                    },
+                    'rek_org_unit_name': {
+                        title: 'School, Centre or Institute',
+                        combiner: 'is',
+                        type: 'OrgUnitLookup',
+                        hint: 'Add a school, centre or institute to search',
                         validation: ['required']
                     }
                 },

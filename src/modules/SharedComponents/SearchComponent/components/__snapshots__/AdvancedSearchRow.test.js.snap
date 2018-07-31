@@ -346,13 +346,57 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         }
         value="rek_genre_type"
       />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_author_id"
+        primaryText="Author ID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_author_id"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_org_unit_name"
+        primaryText="School, Centre or Institute"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_org_unit_name"
+      />
     </SelectField>
   </div>
   <div
     className="column is-narrow spacer"
   />
   <div
-    className="column input is-11-mobile"
+    className="column input is-12-mobile"
   >
     <AdvancedSearchRowInput
       disabledFields={Array []}
@@ -365,6 +409,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
           "validation": Array [],
         }
       }
+      onChange={[Function]}
       onSearchRowChange={[MockFunction]}
       onSearchRowDelete={[MockFunction]}
       rowIndex={0}
@@ -721,6 +766,50 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
         }
         value="rek_genre_type"
       />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_author_id"
+        primaryText="Author ID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_author_id"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_org_unit_name"
+        primaryText="School, Centre or Institute"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_org_unit_name"
+      />
     </SelectField>
   </div>
   <div
@@ -731,7 +820,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
     </span>
   </div>
   <div
-    className="column input is-11-mobile"
+    className="column input is-12-mobile"
   >
     <AdvancedSearchRowInput
       disabledFields={
@@ -752,6 +841,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           ],
         }
       }
+      onChange={[Function]}
       onSearchRowChange={[MockFunction]}
       onSearchRowDelete={[MockFunction]}
       rowIndex={0}
@@ -1108,6 +1198,50 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         }
         value="rek_genre_type"
       />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_author_id"
+        primaryText="Author ID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_author_id"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_org_unit_name"
+        primaryText="School, Centre or Institute"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_org_unit_name"
+      />
     </SelectField>
   </div>
   <div
@@ -1118,7 +1252,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
     </span>
   </div>
   <div
-    className="column input is-11-mobile"
+    className="column input is-12-mobile"
   >
     <AdvancedSearchRowInput
       disabledFields={Array []}
@@ -1134,6 +1268,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
           ],
         }
       }
+      onChange={[Function]}
       onSearchRowChange={[MockFunction]}
       onSearchRowDelete={[MockFunction]}
       rowIndex={0}

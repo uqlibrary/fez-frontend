@@ -37,14 +37,14 @@ describe('AutoSuggestField component', () => {
 
     it('should not set selected value if free text is not allowed', () => {
         let wrapper = setup({allowFreeText: false});
-        expect(wrapper.state.selectedValue).toBeFalsy();
+        expect(wrapper.state().selectedValue).toEqual({value: ''});
         const testValue = 'School of Math';
         wrapper.instance().valueSelected(testValue);
-        expect(wrapper.state().selectedValue).toBeFalsy();
+        expect(wrapper.state().selectedValue).toEqual({value: ''});
         wrapper = setup({allowFreeText: true});
-        expect(wrapper.state.selectedValue).toBeFalsy();
+        expect(wrapper.state().selectedValue).toEqual({value: ''});
         wrapper.instance().valueSelected(testValue);
-        expect(wrapper.state().selectedValue).toBeTruthy();
+        expect(wrapper.state().selectedValue).toEqual('School of Math');
     });
 
     it('should update autosuggest field value to empty if user deletes value from the field', () => {
@@ -53,10 +53,10 @@ describe('AutoSuggestField component', () => {
         wrapper.instance().textUpdated('Institution');
         wrapper.update();
 
-        expect(onChangeTestFn).toHaveBeenCalledWith('Institution');
+        expect(onChangeTestFn).toHaveBeenCalledWith({value: 'Institution'});
 
         wrapper.instance().textUpdated('');
         wrapper.update();
-        expect(onChangeTestFn).toHaveBeenCalledWith('');
+        expect(onChangeTestFn).toHaveBeenCalledWith({value: ''});
     });
 });

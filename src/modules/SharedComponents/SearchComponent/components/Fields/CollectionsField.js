@@ -26,5 +26,5 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export const CollectionsField = connect(mapStateToProps, mapDispatchToProps)(AdvancedSearchSelectField);
-
+const CollectionsField = connect(mapStateToProps, mapDispatchToProps)(AdvancedSearchSelectField);
+export default CollectionsField;

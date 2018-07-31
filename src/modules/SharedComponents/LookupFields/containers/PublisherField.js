@@ -1,4 +1,4 @@
-import {AdvancedSearchAutoComplete} from '../AdvancedSearchAutoComplete';
+import {AutoSuggestField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
 
@@ -9,13 +9,11 @@ const mapStateToProps = (state, props) => {
         itemsList: state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
             ? state.get('searchKeysReducer')[category].itemsList : [],
         allowFreeText: true,
-        onChange: (value) => {
-            props.onChange({}, value.value);
-        },
+        onChange: (item) => {console.log(item); props.onChange(item);},
         async: true,
         dataSourceConfig: {text: 'value', value: 'value'},
         errorText: props.errorText,
-        selectedValue: !!props.value && props.value || ''
+        selectedValue: !!props.value && {value: props.value} || ''
     };
 };
 
@@ -25,5 +23,5 @@ const mapDispatchToProps = (dispatch) => (
     }
 );
 
-export const PublisherField = connect(mapStateToProps, mapDispatchToProps)(AdvancedSearchAutoComplete);
+export const PublisherField = connect(mapStateToProps, mapDispatchToProps)(AutoSuggestField);
 

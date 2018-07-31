@@ -4,7 +4,7 @@ import MenuItem from 'material-ui/MenuItem';
 import PropTypes from 'prop-types';
 import SelectField from 'material-ui/SelectField';
 
-export default class ThesisTypeField extends PureComponent {
+export class ThesisTypeField extends PureComponent {
     static propTypes = {
         value: PropTypes.any,
         floatingLabelText: PropTypes.string,

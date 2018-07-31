@@ -18,17 +18,17 @@ export default class CitationCounts extends PureComponent {
         const {sources} = locale.global;
         const {publication, hideViewFullStatisticsLink} = this.props;
         const counts = {
-            wos: publication.rek_thomson_citation_count ? publication.rek_thomson_citation_count : null,
-            scopus: publication.rek_scopus_citation_count ? publication.rek_scopus_citation_count : null,
-            google: publication.rek_gs_citation_count ? publication.rek_gs_citation_count : null,
-            altmetric: publication.rek_altmetric_score ? publication.rek_altmetric_score : null
+            wos: publication.hasOwnProperty('rek_thomson_citation_count') ? publication.rek_thomson_citation_count : null,
+            scopus: publication.hasOwnProperty('rek_scopus_citation_count') ? publication.rek_scopus_citation_count : null,
+            google: publication.hasOwnProperty('rek_gs_citation_count') ? publication.rek_gs_citation_count : null,
+            altmetric: publication.hasOwnProperty('rek_altmetric_score') ? publication.rek_altmetric_score : null
         };
 
         return (
             <div className="citationCounts columns is-gapless is-marginless is-multiline">
                 <div className="column is-narrow-tablet is-12-mobile citationIcons">
                     {
-                        !!counts.wos && counts.wos > 0 && !!publication.fez_record_search_key_isi_loc
+                        counts.wos !== null && !!publication.fez_record_search_key_isi_loc
                         && !!publication.fez_record_search_key_isi_loc.rek_isi_loc &&
                         <Partials.CitationCountView
                             source="wos"
@@ -38,8 +38,8 @@ export default class CitationCounts extends PureComponent {
                         />
                     }
                     {
-                        !!counts.scopus && counts.scopus > 0
-                        && !!publication.fez_record_search_key_scopus_id && !!publication.fez_record_search_key_scopus_id.rek_scopus_id &&
+                        counts.scopus !== null && !!publication.fez_record_search_key_scopus_id
+                        && !!publication.fez_record_search_key_scopus_id.rek_scopus_id &&
                         <Partials.CitationCountView
                             source="scopus"
                             count={counts.scopus}
@@ -69,7 +69,7 @@ export default class CitationCounts extends PureComponent {
                 </div>
                 <div className="column is-narrow">
                     {
-                        !!publication.rek_pid && (counts.wos || counts.scopus) && !hideViewFullStatisticsLink &&
+                        !!publication.rek_pid && (counts.wos !== null || counts.scopus !== null) && !hideViewFullStatisticsLink &&
                         <ExternalLink href={`https://app.library.uq.edu.au/#/authors/view/${publication.rek_pid}`} title={publication.rek_title}>
                             {txt.statsLabel}
                         </ExternalLink>

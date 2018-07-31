@@ -74,5 +74,47 @@ export const searchKeyList = {
             {value: 'UQ:408041', text: "Admin Only - UQCCR"},
             {value: 'UQ:677356', text: "Admin Only - UQ Diamantina Institute"},
         ]
-    }
+    },
+    author: {"total":10,"data":[
+        {
+            "id": 78152,
+            "value": "Kisely, Steve"
+        },
+        {
+            "id": 0,
+            "value": "Segal, Steven"
+        },
+        {
+            "id": 0,
+            "value": "Stevenson, Freda K."
+        },
+        {
+            "id": 352995,
+            "value": "Stevenson, Philip G."
+        },
+        {
+            "id": 0,
+            "value": "Hooker, Steven P."
+        },
+        {
+            "id": 0,
+            "value": "Blair, Steven N."
+        },
+        {
+            "id": 0,
+            "value": "McGloughlin, Steven"
+        },
+        {
+            "id": 75121,
+            "value": "O'Donoghue, Steven"
+        },
+        {
+            "id": 0,
+            "value": "Weiss, Steven"
+        },
+        {
+            "id": 75875,
+            "value": "Wallis, Steven C."
+        }
+    ]}
 };
