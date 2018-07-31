@@ -380,6 +380,28 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="rek_contributor_id"
+        primaryText="Contributor ID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_contributor_id"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
         key="rek_org_unit_name"
         primaryText="School, Centre or Institute"
         targetOrigin={
@@ -787,6 +809,28 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           }
         }
         value="rek_author_id"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_contributor_id"
+        primaryText="Contributor ID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_contributor_id"
       />
       <MenuItem
         anchorOrigin={
@@ -1219,6 +1263,28 @@ exports[`AdvancedSearchRow should render search field row with select field and 
           }
         }
         value="rek_author_id"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_contributor_id"
+        primaryText="Contributor ID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_contributor_id"
       />
       <MenuItem
         anchorOrigin={

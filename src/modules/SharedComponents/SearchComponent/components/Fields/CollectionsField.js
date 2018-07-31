@@ -10,9 +10,7 @@ const mapStateToProps = (state, props) => {
     return {
         itemsList: translatedItemList || [],
         value: props.value || [],
-        onChange: (value) => {
-            props.onChange({}, value);
-        },
+        onChange: props.onChange,
         itemsLoading: state.get('collectionsReducer').itemsLoading || false,
         itemsLoadingError: state.get('collectionsReducer').itemsLoadingError || false,
         async: true,

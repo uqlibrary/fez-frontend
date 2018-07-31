@@ -2,7 +2,7 @@ import {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import * as validationRules from 'config/validation';
-import {SubtypeField, ThesisTypeField, CollectionsField} from './Fields/CollectionsField';
+import {SubTypeField, ThesisTypeField, CollectionsField} from './Fields';
 import {AuthorIdField, PublisherField, OrgUnitNameField} from 'modules/SharedComponents/LookupFields';
 
 class AdvancedSearchRowInput extends PureComponent {
@@ -10,7 +10,8 @@ class AdvancedSearchRowInput extends PureComponent {
         children: PropTypes.func.isRequired,
         value: PropTypes.oneOfType([
             PropTypes.string,
-            PropTypes.array
+            PropTypes.array,
+            PropTypes.number
         ]),
         label: PropTypes.string,
         onChange: PropTypes.func,
@@ -55,8 +56,8 @@ class AdvancedSearchRowInput extends PureComponent {
                 return TextField;
             case 'PublisherLookup':
                 return PublisherField;
-            case 'SubtypeLookup':
-                return SubtypeField;
+            case 'SubTypeLookup':
+                return SubTypeField;
             case 'ThesisTypeLookup':
                 return ThesisTypeField;
             case 'CollectionsLookup':
@@ -85,7 +86,8 @@ class AdvancedSearchRowInput extends PureComponent {
 
         const selectDefaultProps = {
             ...defaultProps,
-            'floatingLabelText': null
+            'floatingLabelText': null,
+            'onChange': this.props.onChange
         };
 
         switch (this.props.inputField.type) {
@@ -106,17 +108,18 @@ class AdvancedSearchRowInput extends PureComponent {
                     ...lookupDefaultProps,
                     'onChange': (item) => this.props.onChange(item.id, item.text)
                 };
-            case 'SubtypeLookup':
+            case 'SubTypeLookup':
             case 'ThesisTypeLookup':
                 return {
-                    ...selectDefaultProps
+                    ...selectDefaultProps,
+                    onChange: (item) => this.props.onChange(item, item)
                 };
             case 'CollectionsLookup':
                 return {
                     ...selectDefaultProps,
                     'loadingHint': this.props.inputField.loadingHint,
                     'errorHint': this.props.inputField.errorHint,
-                    'multiple': this.props.inputField.multiple,
+                    'multiple': this.props.inputField.multiple
                 };
             default: return {};
         }

@@ -920,7 +920,7 @@ export default {
                     'rek_subtype': {
                         title: 'Subtype',
                         combiner: 'is',
-                        type: 'SubtypeLookup',
+                        type: 'SubTypeLookup',
                         hint: 'Select a publication subtype',
                         validation: ['required']
                     },
@@ -928,13 +928,21 @@ export default {
                         title: 'Thesis type',
                         combiner: 'is',
                         type: 'ThesisTypeLookup',
-                        hint: 'Select a Thesis type'
+                        hint: 'Select a Thesis type',
+                        validation: ['required']
                     },
                     'rek_author_id': {
                         title: 'Author ID',
                         combiner: 'is',
                         type: 'AuthorIdLookup',
                         hint: 'Add an author id to search',
+                        validation: ['required']
+                    },
+                    'rek_contributor_id': {
+                        title: 'Contributor ID',
+                        combiner: 'is',
+                        type: 'AuthorIdLookup',
+                        hint: 'Add an contributor id to search',
                         validation: ['required']
                     },
                     'rek_org_unit_name': {

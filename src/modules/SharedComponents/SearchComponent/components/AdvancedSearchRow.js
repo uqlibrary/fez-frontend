@@ -13,7 +13,8 @@ export default class AdvancedSearchRow extends PureComponent {
         searchField: PropTypes.string,
         value: PropTypes.oneOfType([
             PropTypes.string,
-            PropTypes.array
+            PropTypes.array,
+            PropTypes.number
         ]),
         label: PropTypes.string,
         disabledFields: PropTypes.array,
