@@ -246,7 +246,7 @@ describe('Backend routes method', () => {
                     options: {
                         params: {
                             lookup_value: 'title search',
-                            rule: 'lookup',
+                            rule: 'lookup_old',
                             search_key: 'series'
                         }
                     }
