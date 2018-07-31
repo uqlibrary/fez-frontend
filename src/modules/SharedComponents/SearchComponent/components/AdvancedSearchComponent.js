@@ -80,7 +80,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                 );
             });
 
-        // Document types
+        // Document types caption
         const docTypeList =  docTypes && docTypes.map((item, index) => (
             <span key={index}>
                 {index !== 0 && (index + 1 === docTypes.length) && ' or '}
@@ -96,6 +96,7 @@ export default class AdvancedSearchComponent extends PureComponent {
             </span>
         ) || '';
 
+        // Open Access caption
         const openAccessText = isOpenAccess
             ? locale.components.searchComponent.advancedSearch.openAccess.captionText
             : searchFields.length > 0 && '.' || null;
@@ -140,7 +141,6 @@ export default class AdvancedSearchComponent extends PureComponent {
     };
 
     _handleAdvancedSearchRowChange = (index, searchRow) => {
-        console.log('PING');
         this.props.onAdvancedSearchRowChange(index, searchRow);
     };
 

@@ -14,19 +14,8 @@ export default class DocumentTypeField extends PureComponent {
     };
 
     static defaultProps = {
-        fieldRows: [{
-            searchField: '0',
-            value: ''
-        }],
-        isMinimised: false,
-        isOpenAccess: false,
-
-        onToggleSearchMode: () => {},
-        onToggleMinimise: () => {},
-        onToggleOpenAccess: () => {},
-        onAdvancedSearchRowAdd: () => {},
-        onAdvancedSearchRowRemove: () => {},
-        onAdvancedSearchReset: () => {}
+        value: [],
+        className: 'displaytype menuitem'
     };
 
     constructor(props) {
@@ -46,7 +35,6 @@ export default class DocumentTypeField extends PureComponent {
             }).map((item, index) => {
                 return (
                     <MenuItem
-                        className={this.props.className}
                         checked={this.props.docTypes && this.props.docTypes.length > 0 && this.props.docTypes.indexOf(item.id) > -1}
                         value={item.id}
                         primaryText={item.name}

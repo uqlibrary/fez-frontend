@@ -6,32 +6,40 @@ import MenuItem from 'material-ui/MenuItem';
 export class AdvancedSearchMultiSelectField extends Component {
     static propTypes = {
         onChange: PropTypes.func,
-        async: PropTypes.bool,
         itemsList: PropTypes.array,
-        itemsListLoading: PropTypes.bool,
+        itemsLoading: PropTypes.bool,
+        itemsLoadingError: PropTypes.bool,
         multiple: PropTypes.bool,
         disabled: PropTypes.bool,
         className: PropTypes.string,
         floatingLabelText: PropTypes.string,
         hintText: PropTypes.string,
+        loadingHint: PropTypes.string,
+        errorHint: PropTypes.string,
         errorText: PropTypes.string,
         value: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.array
-        ])
+        ]),
+        loadSuggestions: PropTypes.func
     };
 
     static defaultProps = {
+        itemsList: [],
         floatingLabelText: '',
         hintText: '',
-        className: ''
+        className: '',
+        value: []
     };
 
     constructor(props) {
         super(props);
         this.state = {
-            value: props.value
+            value: props.value || []
         };
+    }
+    componentDidMount() {
+        this.props.loadSuggestions();
     }
 
     valuesSelected = (event, index, values) => {
@@ -42,13 +50,24 @@ export class AdvancedSearchMultiSelectField extends Component {
         });
     };
 
+    hintText = () => {
+        if(this.props.itemsLoadingError) {
+            return this.props.errorHint;
+        } else if(this.props.itemsLoading) {
+            return this.props.loadingHint;
+        } else {
+            return this.props.hintText;
+        }
+    };
+
     render() {
         const children = this.props.itemsList.map((item, index) => {
             return (
                 <MenuItem
-                    checked={this.props.value.length > 0 && this.props.value.indexOf(item.value) > -1}
+                    className={'menuitem'}
+                    checked={this.props.value.length > 0 && this.state.value.indexOf(item.value) > -1}
                     value={item.value}
-                    primaryText={item.value}
+                    primaryText={item.text || item.value}
                     key={index + 1}
                     disabled={this.props.disabled}
                 />
@@ -56,17 +75,15 @@ export class AdvancedSearchMultiSelectField extends Component {
         });
         return (
             <SelectField
-                id="MultiSelectField"
-                disabled={this.props.disabled}
+                disabled={this.props.itemsLoading || (!this.props.itemsLoading && this.props.itemsLoadingError)}
                 floatingLabelText={this.props.floatingLabelText}
                 multiple={this.props.multiple}
                 value={this.props.value}
-                hintText={this.props.hintText}
+                hintText={this.hintText()}
                 fullWidth
-                style={{maxWidth: '100%'}}
                 onChange={this.valuesSelected}
-                className={this.props.className + ' mui-long-labels-fix'}
-                errorText={this.props.errorText}
+                errorText={!this.props.itemsLoading && this.props.errorText}
+                menuItemStyle={{whiteSpace: 'normal', lineHeight: '24px', paddingTop: '4px', paddingBottom: '4px'}}
             >
                 {children}
             </SelectField>

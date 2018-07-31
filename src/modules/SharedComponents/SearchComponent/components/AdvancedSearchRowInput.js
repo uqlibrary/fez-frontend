@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import * as validationRules from 'config/validation';
 import {PublisherField} from './AutoCompleteFields/PublisherField';
-import {CollectionField} from './Fields/CollectionField';
 import SubtypeField from './Fields/SubtypeField';
+import ThesisTypeField from './Fields/ThesisTypeField';
+import {CollectionsField} from './Fields/CollectionsField';
 
 class AdvancedSearchRowInput extends PureComponent {
     static propTypes = {
@@ -16,8 +17,11 @@ class AdvancedSearchRowInput extends PureComponent {
         inputField: PropTypes.shape({
             type: PropTypes.string.isRequired,
             validation: PropTypes.array.isRequired,
-            hint: PropTypes.string
-        }).isRequired
+            hint: PropTypes.string,
+            multiple: PropTypes.bool,
+            errorHint: PropTypes.string,
+            loadingHint: PropTypes.string,
+        })
     };
 
     constructor(props) {
@@ -51,10 +55,12 @@ class AdvancedSearchRowInput extends PureComponent {
                 return TextField;
             case 'PublisherLookup':
                 return PublisherField;
-            case 'CollectionLookup':
-                return CollectionField;
             case 'SubtypeLookup':
                 return SubtypeField;
+            case 'ThesisTypeLookup':
+                return ThesisTypeField;
+            case 'CollectionsLookup':
+                return CollectionsField;
             default:
                 return TextField;
         }
@@ -76,16 +82,26 @@ class AdvancedSearchRowInput extends PureComponent {
                     'errorText': this.runValidationRules(this.props.value),
                     'floatingLabelText': null
                 };
-            case 'CollectionLookup':
+            case 'SubtypeLookup':
                 return {
                     'hintText': this.props.inputField.hint,
                     'aria-label': this.props.inputField.hint,
                     'errorText': this.runValidationRules(this.props.value),
-                    'floatingLabelText': null
+                    'floatingLabelText': null,
                 };
-            case 'SubtypeLookup':
+            case 'ThesisTypeLookup':
                 return {
                     'hintText': this.props.inputField.hint,
+                    'aria-label': this.props.inputField.hint,
+                    'errorText': this.runValidationRules(this.props.value),
+                    'floatingLabelText': null,
+                };
+            case 'CollectionsLookup':
+                return {
+                    'hintText': this.props.inputField.hint,
+                    'loadingHint': this.props.inputField.loadingHint,
+                    'errorHint': this.props.inputField.errorHint,
+                    'multiple': this.props.inputField.multiple,
                     'aria-label': this.props.inputField.hint,
                     'errorText': this.runValidationRules(this.props.value),
                     'floatingLabelText': null,

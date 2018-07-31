@@ -202,8 +202,6 @@
     }
   }
   .advancedSearchRow {
-    width: 100% !important;
-    overflow: hidden !important;
     @include desktop {
       margin-bottom: -12px !important;
     }
@@ -232,16 +230,20 @@
       }
     }
     .column.input {
-      overflow: hidden !important;
+      overflow-x: hidden !important;
+      max-width: 100%;
+      width: 100px;
       &>div>div:nth-of-type(1){
-        width: 100% !important;
+        max-width: 100% !important;
         text-overflow: ellipsis !important;
         white-space: nowrap !important;
-        overflow: hidden !important;
       }
       @include mobile {
         margin-top: -12px !important;
       }
+    }
+    .selectField {
+      max-width: 100% !important;
     }
 
     // Override search box X
@@ -269,7 +271,7 @@
   }
 }
 
-span.menuitem.subtype {
+span.menuitem {
   svg {
     top: 0px !important;
   }

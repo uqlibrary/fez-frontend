@@ -1,10 +1,10 @@
 import React, {PureComponent} from 'react';
-import {publicationSubtypes} from 'config/general';
+import {thesisSubtypes} from 'config/general';
 import MenuItem from 'material-ui/MenuItem';
 import PropTypes from 'prop-types';
 import SelectField from 'material-ui/SelectField';
 
-export default class SubTypeField extends PureComponent {
+export default class ThesisTypeField extends PureComponent {
     static propTypes = {
         value: PropTypes.any,
         floatingLabelText: PropTypes.string,
@@ -17,7 +17,7 @@ export default class SubTypeField extends PureComponent {
 
     static defaultProps = {
         value: '',
-        className: 'subtype menuitem'
+        className: 'thesistype menuitem'
     };
 
     constructor(props) {
@@ -28,6 +28,7 @@ export default class SubTypeField extends PureComponent {
     }
 
     _handleValueChange = (event, index, value) => {
+        console.log(value);
         this.setState({
             value: value
         }, () => {
@@ -36,7 +37,7 @@ export default class SubTypeField extends PureComponent {
     };
 
     render() {
-        const subtypeItems = publicationSubtypes.map((item, index) => {
+        const ThesisTypeItems = thesisSubtypes.map((item, index) => {
             return (
                 <MenuItem
                     className={this.props.className}
@@ -61,7 +62,7 @@ export default class SubTypeField extends PureComponent {
                 maxHeight={300}
                 menuItemStyle={{whiteSpace: 'normal', lineHeight: '24px', paddingTop: '4px', paddingBottom: '4px'}}
             >
-                {subtypeItems}
+                {ThesisTypeItems}
             </SelectField>
         );
     }

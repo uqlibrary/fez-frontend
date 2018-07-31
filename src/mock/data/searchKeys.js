@@ -45,5 +45,34 @@ export const searchKeyList = {
         {"value": "Australian Food and Nutrition Monitoring Unit, Uni of Qld"},
         {"value": "Cambridge Uni. Press"},
         {"value": "Bond Uni, School of Humanities & Social Sciences"}
-    ]}
+    ]},
+    collection: {
+        "total": 20, "data": [
+            {value: 'UQ:120743', text: "16th Australasian Fluid Mechanics Conference"},
+            {value: 'UQ:217410', text: "2004 Higher Education Research Data Collection"},
+            {value: 'UQ:217419', text: "2005 Higher Education Research Data Collection"},
+            {value: 'UQ:217422', text: "2006 Higher Education Research Data Collection"},
+            {value: 'UQ:217423', text: "2007 Higher Education Research Data Collection"},
+            {value: 'UQ:23835', text: "2008 Higher Education Research Data Collection"},
+            {value: 'UQ:138536', text: "2009 Higher Education Research Data Collection"},
+            {value: 'UQ:174061', text: "2010 Higher Education Research Data Collection"},
+            {value: 'UQ:276026', text: "2012 University of Queensland Bachelor of Arts Review"},
+            {value: 'UQ:131735', text: "5th Australasian Congress on Applied Mechanics"},
+            {value: 'UQ:290441', text: "6th International Conference of Animal Health Information Specialists (ICAHIS) 2009"},
+            {value: 'UQ:318429', text: "7th International Conference of Animal Health Information Specialists (ICAHIS) 2013"},
+            {value: 'UQ:11398', text: "Aboriginal and Torres Strait Islander Studies Unit Publications"},
+            {value: 'UQ:11404', text: "Aboriginal Environments Research Centre Publications"},
+            {value: 'UQ:131375', text: "Adaptive Interactive Profit Expectations"},
+            {value: 'UQ:677352', text: "Admin Only - Centre for Health Services Research"},
+            {value: 'UQ:292807', text: "Admin only - CHRC"},
+            {value: 'UQ:599496', text: "Admin Only - Ochsner Clinical School"},
+            {value: 'UQ:599489', text: "Admin Only - Rural Clinical School"},
+            {value: 'UQ:677353', text: "Admin Only - School of Biomedical Sciences"},
+            {value: 'UQ:599487', text: "Admin Only - School of Clinical Medicine"},
+            {value: 'UQ:273541', text: "Admin Only - School of Medicine"},
+            {value: 'UQ:677355', text: "Admin Only - School of Public Health"},
+            {value: 'UQ:408041', text: "Admin Only - UQCCR"},
+            {value: 'UQ:677356', text: "Admin Only - UQ Diamantina Institute"},
+        ]
+    }
 };

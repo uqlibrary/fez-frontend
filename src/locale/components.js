@@ -907,11 +907,14 @@ export default {
                         hint: 'Add a publisher to search',
                         validation: ['required']
                     },
-                    'rek_collection': {
+                    'rek_ismemberof': {
                         title: 'Collection',
                         combiner: 'is one of',
-                        type: 'CollectionLookup',
-                        hint: 'Add collections to search',
+                        type: 'CollectionsLookup',
+                        hint: 'Select collections',
+                        loadingHint: 'Loading collections',
+                        errorHint: 'There has been an error loading collections',
+                        multiple: true,
                         validation: ['required']
                     },
                     'rek_subtype': {
@@ -919,6 +922,13 @@ export default {
                         combiner: 'is',
                         type: 'SubtypeLookup',
                         hint: 'Select a publication subtype',
+                        validation: ['required']
+                    },
+                    'rek_genre_type': {
+                        title: 'Thesis type',
+                        combiner: 'is',
+                        type: 'ThesisTypeLookup',
+                        hint: 'Select a Thesis type',
                         validation: ['required']
                     }
                 },

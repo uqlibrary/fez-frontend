@@ -23,7 +23,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -46,7 +45,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -69,7 +67,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -92,7 +89,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -115,7 +111,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -138,7 +133,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -161,7 +155,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -184,7 +177,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -207,7 +199,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -230,7 +221,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -253,7 +243,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -276,7 +265,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -299,7 +287,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -322,7 +309,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -345,7 +331,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -368,7 +353,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -391,7 +375,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -414,7 +397,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -437,7 +419,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -478,7 +459,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -501,7 +481,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -524,7 +503,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -547,7 +525,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -570,7 +547,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -593,7 +569,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -616,7 +591,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -639,7 +613,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -662,7 +635,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={true}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -685,7 +657,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -708,7 +679,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={true}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -731,7 +701,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -754,7 +723,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -777,7 +745,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -800,7 +767,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -823,7 +789,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -846,7 +811,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -869,7 +833,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -892,7 +855,6 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -992,22 +954,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
               >
                 <DocumentTypeField
                   className="advancedSearchPublicationType"
-                  fieldRows={
-                    Array [
-                      Object {
-                        "searchField": "0",
-                        "value": "",
-                      },
-                    ]
-                  }
-                  isMinimised={false}
-                  isOpenAccess={false}
-                  onAdvancedSearchReset={[Function]}
-                  onAdvancedSearchRowAdd={[Function]}
-                  onAdvancedSearchRowRemove={[Function]}
-                  onToggleMinimise={[Function]}
-                  onToggleOpenAccess={[Function]}
-                  onToggleSearchMode={[Function]}
+                  value={Array []}
                 />
               </div>
             </div>
@@ -1149,7 +1096,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1172,7 +1118,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1195,7 +1140,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1218,7 +1162,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1241,7 +1184,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1264,7 +1206,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1287,7 +1228,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1310,7 +1250,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1333,7 +1272,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={true}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1356,7 +1294,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1379,7 +1316,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1402,7 +1338,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1425,7 +1360,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1448,7 +1382,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1471,7 +1404,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1494,7 +1426,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1517,7 +1448,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1540,7 +1470,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1563,7 +1492,6 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     checked={false}
-    className="advancedSearchPublicationType"
     desktop={false}
     disabled={false}
     focusState="none"
@@ -1663,22 +1591,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
               >
                 <DocumentTypeField
                   className="advancedSearchPublicationType"
-                  fieldRows={
-                    Array [
-                      Object {
-                        "searchField": "0",
-                        "value": "",
-                      },
-                    ]
-                  }
-                  isMinimised={false}
-                  isOpenAccess={false}
-                  onAdvancedSearchReset={[Function]}
-                  onAdvancedSearchRowAdd={[Function]}
-                  onAdvancedSearchRowRemove={[Function]}
-                  onToggleMinimise={[Function]}
-                  onToggleOpenAccess={[Function]}
-                  onToggleSearchMode={[Function]}
+                  value={Array []}
                 />
               </div>
             </div>
@@ -1842,22 +1755,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
               >
                 <DocumentTypeField
                   className="advancedSearchPublicationType"
-                  fieldRows={
-                    Array [
-                      Object {
-                        "searchField": "0",
-                        "value": "",
-                      },
-                    ]
-                  }
-                  isMinimised={false}
-                  isOpenAccess={false}
-                  onAdvancedSearchReset={[Function]}
-                  onAdvancedSearchRowAdd={[Function]}
-                  onAdvancedSearchRowRemove={[Function]}
-                  onToggleMinimise={[Function]}
-                  onToggleOpenAccess={[Function]}
-                  onToggleSearchMode={[Function]}
+                  value={Array []}
                 />
               </div>
             </div>
@@ -2077,22 +1975,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
               >
                 <DocumentTypeField
                   className="advancedSearchPublicationType"
-                  fieldRows={
-                    Array [
-                      Object {
-                        "searchField": "0",
-                        "value": "",
-                      },
-                    ]
-                  }
-                  isMinimised={false}
-                  isOpenAccess={false}
-                  onAdvancedSearchReset={[Function]}
-                  onAdvancedSearchRowAdd={[Function]}
-                  onAdvancedSearchRowRemove={[Function]}
-                  onToggleMinimise={[Function]}
-                  onToggleOpenAccess={[Function]}
-                  onToggleSearchMode={[Function]}
+                  value={Array []}
                 />
               </div>
             </div>
