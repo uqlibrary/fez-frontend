@@ -151,17 +151,9 @@ export function searchEspacePublications(searchParams) {
  * @param {string} format
  * @returns {action}
  */
-export function exportEspacePublications({exportPublicationsFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}, searchQueryParams = {}}) {
+export function exportEspacePublications(searchParams) {
     return exportPublications(SEARCH_INTERNAL_RECORDS_API(
-        {
-            exportPublicationsFormat: exportPublicationsFormat,
-            page: page,
-            pageSize: pageSize,
-            sortBy: sortBy,
-            sortDirection: sortDirection,
-            facets: activeFacets,
-            searchQueryParams: searchQueryParams
-        },
+        {...searchParams, facets: searchParams.activeFacets || {}},
         'export'
     ));
 }
