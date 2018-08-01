@@ -2,9 +2,12 @@ import {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import * as validationRules from 'config/validation';
-import {SubTypeField, ThesisTypeField, CollectionsField} from './Fields';
+import {CollectionsField} from './Fields';
 import {AuthorIdField, PublisherField, OrgUnitNameField} from 'modules/SharedComponents/LookupFields';
+import {GenericSelectField} from 'modules/SharedComponents/GenericSelectField';
 
+import {thesisSubtypes} from 'config/general';
+import {publicationSubtypes} from 'config/general';
 class AdvancedSearchRowInput extends PureComponent {
     static propTypes = {
         children: PropTypes.func.isRequired,
@@ -57,9 +60,8 @@ class AdvancedSearchRowInput extends PureComponent {
             case 'PublisherLookup':
                 return PublisherField;
             case 'SubTypeLookup':
-                return SubTypeField;
             case 'ThesisTypeLookup':
-                return ThesisTypeField;
+                return GenericSelectField;
             case 'CollectionsLookup':
                 return CollectionsField;
             case 'AuthorIdLookup':
@@ -90,6 +92,14 @@ class AdvancedSearchRowInput extends PureComponent {
             'onChange': this.props.onChange
         };
 
+        const staticSelectDefaultProps = {
+            ...selectDefaultProps,
+            locale: {label: null},
+            selectedValue: this.props.value,
+            fullWidth: true,
+            onChange: (item) => this.props.onChange(item, item)
+        };
+
         switch (this.props.inputField.type) {
             case 'TextField':
                 return {
@@ -109,10 +119,16 @@ class AdvancedSearchRowInput extends PureComponent {
                     'onChange': (item) => this.props.onChange(item.id, item.text)
                 };
             case 'SubTypeLookup':
+                return {
+                    ...staticSelectDefaultProps,
+                    itemsList: publicationSubtypes,
+                    menuItemClassName: 'subtype menuitem',
+                };
             case 'ThesisTypeLookup':
                 return {
-                    ...selectDefaultProps,
-                    onChange: (item) => this.props.onChange(item, item)
+                    ...staticSelectDefaultProps,
+                    itemsList: thesisSubtypes,
+                    menuItemClassName: 'thesistype menuitem',
                 };
             case 'CollectionsLookup':
                 return {
