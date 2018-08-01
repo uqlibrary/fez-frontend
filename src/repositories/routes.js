@@ -213,7 +213,7 @@ export const SEARCH_KEY_LOOKUP_API = ({searchKey, searchQuery}) => (
         apiUrl: 'records/search',
         options: {
             params: {
-                rule: 'lookup_old',
+                rule: 'lookup',
                 search_key: searchKey,
                 lookup_value: searchQuery
             }
