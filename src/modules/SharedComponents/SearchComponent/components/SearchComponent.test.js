@@ -153,7 +153,7 @@ describe('SearchComponent', () => {
                 "page": 1,
                 "pageSize": 20,
                 "searchMode": "advanced",
-                "searchQueryParams": {"all": {"value": "i feel lucky", "label": ""}, "rek_doc_type": [], "rek_title": {"value": "global warming", "label": ""}},
+                "searchQueryParams": {"all": {"value": "i feel lucky", "label": ""}, "rek_display_type": [], "rek_title": {"value": "global warming", "label": ""}},
                 "sortBy": "published_date",
                 "sortDirection": "Desc"
             }

@@ -11,7 +11,11 @@ export default class AdvancedSearchRow extends PureComponent {
     static propTypes = {
         rowIndex: PropTypes.number,
         searchField: PropTypes.string,
-        value: PropTypes.any,
+        value: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.array,
+            PropTypes.number
+        ]),
         label: PropTypes.string,
         disabledFields: PropTypes.array,
         onSearchRowChange: PropTypes.func,
@@ -51,7 +55,7 @@ export default class AdvancedSearchRow extends PureComponent {
     render() {
         const txt = locale.components.searchComponent.advancedSearch;
         return (
-            <div className="columns is-gapless is-mobile is-multiline advancedSearchRow">
+            <div className="columns is-gapless is-multiline is-mobile advancedSearchRow">
                 <div className="column is-4-tablet">
                     <SelectField
                         value={this.props.searchField}

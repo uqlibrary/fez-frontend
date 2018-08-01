@@ -276,6 +276,32 @@ export const documentTypesLookup = {
     272: 'Reference entry'
 };
 
+export const publicationSubtypes = [
+    'Research book (original research)',
+    'Textbook',
+    'Edited book',
+    'Reference work, encyclopaedia, manual or handbook',
+    'Research book chapter (original research)',
+    'Critical review of research, literature review, critical commentary',
+    'Chapter in textbook',
+    'Chapter in reference work, encyclopaedia, manual or handbook',
+    'Introduction, foreword, editorial or appendix',
+    'Conference paper',
+    'Fully published paper',
+    'Published abstract',
+    'Poster',
+    'Oral presentation',
+    'Article (original research)',
+    'Critical review of research, literature review, critical commentary',
+    'Letter to editor, brief commentary or brief communication',
+    'Correction/erratum',
+    'Review of book, film, TV, video, software, performance, music etc',
+    'Editorial',
+    'Discussion - responses, round table/panel discussions, Q&A, reply',
+    'Creative work',
+    'Other',
+];
+
 export const QuickTemplates = {
     UQ_STAFF_STUDENTS_VIEW: 1,
     UQ_STAFF_STUDENTS_PRINTERY_VIEW: 6,

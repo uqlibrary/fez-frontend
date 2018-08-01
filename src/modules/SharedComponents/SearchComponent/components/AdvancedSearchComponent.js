@@ -7,8 +7,6 @@ import KeyboardArrowUp from 'material-ui/svg-icons/hardware/keyboard-arrow-up';
 import KeyboardArrowDown from 'material-ui/svg-icons/hardware/keyboard-arrow-down';
 import AdvancedSearchRow from './AdvancedSearchRow';
 import Checkbox from 'material-ui/Checkbox';
-// import SelectField from 'material-ui/SelectField';
-// import MenuItem from 'material-ui/MenuItem';
 import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
 import {publicationTypes} from 'config';
 import {documentTypesLookup} from 'config/general';
@@ -65,17 +63,25 @@ export default class AdvancedSearchComponent extends PureComponent {
         const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
         const searchFields = fieldRows
             .filter(item => item.searchField !== '0' && item.value !== '')
-            .filter(item => item.searchField !== 'rek_doc_type')
-            .map((item, index) => (
-                <span key={item.searchField}>
-                    {index > 0 && <span className="and">  {item.value && 'AND'}</span>}
-                    <span className={`title ${index > 0 && ' is-lowercase'}`}> {item.value && txt[item.searchField] && txt[item.searchField].title}</span>
-                    <span className="combiner"> {item.value && txt[item.searchField] && txt[item.searchField].combiner}</span>
-                    <span className="value"> {item.value && item.value}</span>
-                </span>
-            ));
+            .filter(item => item.searchField !== 'rek_display_type')
+            .map((item, index) => {
+                return (
+                    <span key={item.searchField}>
+                        {index > 0 && <span className="and">  {item.value && 'AND'}</span>}
+                        <span
+                            className={`title ${index > 0 && ' is-lowercase'}`}> {item.value && txt[item.searchField] && txt[item.searchField].title} </span>
+                        <span
+                            className="combiner"> {item.value && txt[item.searchField] && txt[item.searchField].combiner} </span>
+                        <span className="value">
+                            {
+                                Array.isArray(item.value) ? item.value.join(', ') : item.value
+                            }
+                        </span>
+                    </span>
+                );
+            });
 
-        // // TODO: write up the caption for document types with lookups
+        // Document types caption
         const docTypeList =  docTypes && docTypes.map((item, index) => (
             <span key={index}>
                 {index !== 0 && (index + 1 === docTypes.length) && ' or '}
@@ -85,12 +91,13 @@ export default class AdvancedSearchComponent extends PureComponent {
         const docTypeText = docTypes && docTypes.length > 0 && (
             <span>
                 <span className="and"> {searchFields.length > 0 && ' AND '}</span>
-                <span className="title">{txt.rek_doc_type.title}</span>
-                <span className="combiner"> {txt.rek_doc_type.combiner}</span>
+                <span className="title">{txt.rek_display_type.title}</span>
+                <span className="combiner"> {txt.rek_display_type.combiner}</span>
                 <span className="value is-lowercase"> {docTypeList}</span>
             </span>
         ) || '';
 
+        // Open Access caption
         const openAccessText = isOpenAccess
             ? locale.components.searchComponent.advancedSearch.openAccess.captionText
             : searchFields.length > 0 && '.' || null;
@@ -101,9 +108,12 @@ export default class AdvancedSearchComponent extends PureComponent {
         const fieldTypes = locale.components.searchComponent.advancedSearch.fieldTypes;
         return fieldRows.filter(item => item.searchField === '0' || item.value === ''
             // Check if the locale specifies a minLength for this field and check it not shorter
+            || (item.value && (fieldTypes[item.searchField].type === 'TextField') && !!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length)
+            // Check if this field is a string exceeding the maxLength
+            || (fieldTypes[item.searchField].type === 'TextField') && MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length
+            // Check if the value is an array, and not empty
+            || (fieldTypes[item.searchField].type === 'CollectionLookup') && item.value.length === 0
             || (!!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length)
-            // Check if this field is exceeding the maxLength
-            || (fieldTypes[item.searchField].type === 'TextField' && MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length)
         ).length === 0;
     };
 
@@ -154,10 +164,6 @@ export default class AdvancedSearchComponent extends PureComponent {
         }
     };
 
-    _handleDocTypeChange = (event, index, value) => {
-        this.props.updateDocTypeValues(value);
-    }
-
     render() {
         const txt = locale.components.searchComponent;
         const canAddAnotherField = this.haveAllAdvancedSearchFieldsValidated(this.props.fieldRows)
@@ -207,7 +213,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                                     ))
                                             }
                                         </div>
-                                        <div className="column is-4-desktop is-12-tablet is-12-mobile openAccessCheckbox">
+                                        <div className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox">
                                             <div className="columns is-gapless is-multiline">
                                                 <div className="column is-11-mobile is-4-tablet is-12-desktop">
                                                     <Checkbox
@@ -219,7 +225,11 @@ export default class AdvancedSearchComponent extends PureComponent {
                                                     />
                                                 </div>
                                                 <div className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop">
-                                                    <DocumentTypeField docTypes={this.props.docTypes} updateDocTypeValues={this.props.updateDocTypeValues} className="advancedSearchPublicationType"/>
+                                                    <DocumentTypeField
+                                                        docTypes={this.props.docTypes}
+                                                        updateDocTypeValues={this.props.updateDocTypeValues}
+                                                        className="advancedSearchPublicationType"
+                                                    />
                                                 </div>
                                             </div>
                                         </div>
@@ -252,7 +262,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             />
                                         </div>
                                         <div className="column is-hidden-mobile" />
-                                        <div className="column is-3-desktop is-3-tablet is-12-mobile">
+                                        <div className="column is-3-desktop is-4-tablet is-12-mobile">
                                             <RaisedButton
                                                 className="advancedSearchButton"
                                                 label={txt.searchButtonText}

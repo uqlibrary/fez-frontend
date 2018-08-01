@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import {publicationTypes} from 'config';
-// import {documentTypesLookup} from 'config/general';
 import MenuItem from 'material-ui/MenuItem';
 import {locale} from 'locale';
 import * as recordForms from '../../../PublicationForm/components/Forms';
@@ -15,19 +14,8 @@ export default class DocumentTypeField extends PureComponent {
     };
 
     static defaultProps = {
-        fieldRows: [{
-            searchField: '0',
-            value: ''
-        }],
-        isMinimised: false,
-        isOpenAccess: false,
-
-        onToggleSearchMode: () => {},
-        onToggleMinimise: () => {},
-        onToggleOpenAccess: () => {},
-        onAdvancedSearchRowAdd: () => {},
-        onAdvancedSearchRowRemove: () => {},
-        onAdvancedSearchReset: () => {}
+        value: [],
+        className: 'displaytype menuitem'
     };
 
     constructor(props) {
@@ -47,7 +35,6 @@ export default class DocumentTypeField extends PureComponent {
             }).map((item, index) => {
                 return (
                     <MenuItem
-                        className={this.props.className}
                         checked={this.props.docTypes && this.props.docTypes.length > 0 && this.props.docTypes.indexOf(item.id) > -1}
                         value={item.id}
                         primaryText={item.name}
@@ -60,7 +47,7 @@ export default class DocumentTypeField extends PureComponent {
 
         return (
             <SelectField
-                floatingLabelText={txt.advancedSearch.fieldTypes.rek_doc_type.title}
+                floatingLabelText={txt.advancedSearch.fieldTypes.rek_display_type.title}
                 value={this.props.docTypes}
                 onChange={this._handleDocTypeChange}
                 multiple
