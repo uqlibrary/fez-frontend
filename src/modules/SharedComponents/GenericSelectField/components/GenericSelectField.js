@@ -13,7 +13,9 @@ export default class GenericSelectField extends Component {
         selectedValue: PropTypes.any,
         parentItemsId: PropTypes.number,
         className: PropTypes.string,
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        menuItemClassName: PropTypes.string,
+        fullWidth: PropTypes.bool
     };
 
     static contextTypes = {
@@ -25,7 +27,9 @@ export default class GenericSelectField extends Component {
         locale: {
             label: 'Select item',
             loading: 'loading...'
-        }
+        },
+        menuItemClassName: '',
+        fullWidth: false
     };
 
     constructor(props) {
@@ -64,9 +68,14 @@ export default class GenericSelectField extends Component {
 
     render() {
         const renderMenuItems = this.props.itemsList.map((item, index) => {
-            return <MenuItem value={item} primaryText={item} key={`select_field_${index}`}/>;
+            return (<MenuItem
+                className={this.props.menuItemClassName}
+                value={item}
+                primaryText={item}
+                key={`select_field_${index}`}
+            />);
         });
-        const loadingIndicationText = `${this.props.locale.label} ${this.props.itemsLoading ? this.props.locale.loading : ''}`;
+        const loadingIndicationText = !!this.props.locale.label && `${this.props.locale.label} ${this.props.itemsLoading ? this.props.locale.loading : ''}` || null;
         return (
             <SelectField
                 id="selectedValue"
@@ -78,7 +87,9 @@ export default class GenericSelectField extends Component {
                 onChange={this._itemSelected}
                 disabled={this.props.disabled || this.props.itemsLoading}
                 dropDownMenuProps={{animated: false}}
-                floatingLabelText={loadingIndicationText}>
+                floatingLabelText={loadingIndicationText}
+                fullWidth={this.props.fullWidth}
+            >
                 {renderMenuItems}
             </SelectField>
         );

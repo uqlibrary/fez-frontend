@@ -15,4 +15,5 @@ export myTrendingPublicationsReducer from './myTrendingPublications';
 export myLatestPublicationsReducer from './myLatestPublications';
 export topCitedPublicationsReducer from './topCitedPublications';
 export newsFeedReducer from './newsFeed';
+export collectionsReducer from './searchCollections';
 

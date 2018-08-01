@@ -26,6 +26,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
       }
     }
     checked={false}
+    className=""
     desktop={false}
     disabled={false}
     focusState="none"
@@ -48,6 +49,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
       }
     }
     checked={false}
+    className=""
     desktop={false}
     disabled={false}
     focusState="none"
@@ -70,6 +72,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
       }
     }
     checked={false}
+    className=""
     desktop={false}
     disabled={false}
     focusState="none"
@@ -131,6 +134,7 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
       }
     }
     checked={false}
+    className=""
     desktop={false}
     disabled={false}
     focusState="none"

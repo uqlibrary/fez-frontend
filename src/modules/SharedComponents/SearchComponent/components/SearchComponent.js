@@ -27,6 +27,7 @@ export default class SearchComponent extends PureComponent {
         className: PropTypes.string,
         actions: PropTypes.object,
         history: PropTypes.object.isRequired,
+        location: PropTypes.object
     };
 
     static defaultProps = {
@@ -50,27 +51,41 @@ export default class SearchComponent extends PureComponent {
             snackbarMessage: '',
             isAdvancedSearch: props.isAdvancedSearch,
             simpleSearch: {
-                searchText: props.searchQueryParams && props.searchQueryParams.all || ''
+                searchText: (
+                    !!props.searchQueryParams.all
+                    && !!props.searchQueryParams.all.value
+                    && props.searchQueryParams.all.value
+                ) || props.searchQueryParams.all || ''
             },
             advancedSearch: {
                 fieldRows: this.getFieldRowsFromSearchQuery(props.searchQueryParams),
                 isMinimised: props.isAdvancedSearchMinimised,
                 isOpenAccess: props.isOpenAccessInAdvancedMode || false,
+                docTypes: this.getDocTypesFromSearchQuery(props.searchQueryParams) || []
             }
         };
     }
 
     componentWillReceiveProps(nextProps) {
-        if (!!nextProps.searchQueryParams) {
+        if (
+            Object.keys(nextProps.searchQueryParams).length !== Object.keys(this.props.searchQueryParams).length ||
+            nextProps.isAdvancedSearchMinimised !== this.props.isAdvancedSearchMinimised
+        ) {
             this.setState({
                 isAdvancedSearch: nextProps.isAdvancedSearch,
                 simpleSearch: {
-                    searchText: nextProps.searchQueryParams.all || ''
+                    searchText: (
+                        !!nextProps.searchQueryParams.all
+                        && !!nextProps.searchQueryParams.all.value
+                        && nextProps.searchQueryParams.all.value
+                    ) || nextProps.searchQueryParams.all || ''
+
                 },
                 advancedSearch: {
                     fieldRows: this.getFieldRowsFromSearchQuery(nextProps.searchQueryParams),
                     isMinimised: nextProps.isAdvancedSearchMinimised || false,
-                    isOpenAccess: nextProps.isOpenAccessInAdvancedMode || false
+                    isOpenAccess: nextProps.isOpenAccessInAdvancedMode || false,
+                    docTypes: this.getDocTypesFromSearchQuery(nextProps.searchQueryParams) || []
                 }
             });
         }
@@ -80,13 +95,29 @@ export default class SearchComponent extends PureComponent {
         if (!searchQueryParams || Object.keys(searchQueryParams).length === 0) {
             return [{
                 searchField: '0',
-                value: ''
+                value: '',
+                label: ''
             }];
         } else {
-            return Object.keys(searchQueryParams).map(key => ({
-                searchField: key,
-                value: searchQueryParams[key]
-            }));
+            return Object.keys(searchQueryParams)
+                .filter((item) => {
+                    return item !== 'rek_display_type';
+                })
+                .map(key => ({
+                    searchField: key,
+                    value: searchQueryParams[key].value || searchQueryParams[key],
+                    label: searchQueryParams[key].label || ''
+                }));
+        }
+    };
+
+    getDocTypesFromSearchQuery = (searchQueryParams) => {
+        if (!searchQueryParams
+            || !searchQueryParams.rek_display_type
+            || searchQueryParams.rek_display_type.some(isNaN)) {
+            return [];
+        } else {
+            return searchQueryParams.rek_display_type.map(item => parseInt(item, 10));
         }
     };
 
@@ -164,6 +195,16 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
+    _updateDocTypeValues = (docTypeValues) => {
+        // Update the state with new values
+        this.setState({
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                docTypes: docTypeValues
+            }
+        });
+    };
+
     _addAdvancedSearchRow = () => {
         this.setState({
             advancedSearch: {
@@ -195,6 +236,7 @@ export default class SearchComponent extends PureComponent {
         this.setState({
             advancedSearch: {
                 isOpenAccess: false,
+                docTypes: [],
                 fieldRows: [{
                     searchField: '0',
                     value: ''
@@ -218,15 +260,25 @@ export default class SearchComponent extends PureComponent {
 
     _handleAdvancedSearch = () => {
         const searchQueryParams = this.state.advancedSearch.fieldRows
-            .reduce((searchQueries, item) => (
-                {...searchQueries, [item.searchField]: item.value}
-            ), {});
+            .reduce((searchQueries, item) => {
+                const {searchField, ...rest} = item;
+                return {...searchQueries, [searchField]: rest};
+            }, {});
+        const searchQuery = this.getSearchQuery(searchQueryParams);
 
+        this.handleSearch(searchQuery);
+    };
+
+    getSearchQuery = (searchQueryParams) => {
         const {activeFacets} = defaultQueryParams;
+        const docTypeParams = this.state.advancedSearch.docTypes;
 
         const searchQuery = {
             ...defaultQueryParams,
-            searchQueryParams,
+            searchQueryParams: {
+                ...searchQueryParams,
+                rek_display_type: docTypeParams
+            },
             searchMode: locale.components.searchComponent.advancedSearch.mode,
             activeFacets: {
                 ...activeFacets,
@@ -234,7 +286,14 @@ export default class SearchComponent extends PureComponent {
             }
         };
 
-        this.handleSearch(searchQuery);
+        return searchQuery;
+    };
+
+    getSearchQueryParams = (valueCallback) => {
+        return this.state.advancedSearch.fieldRows
+            .reduce((searchQueries, item) => (
+                {...searchQueries, [item.searchField]: valueCallback(item)}
+            ), {});
     };
 
     render() {
@@ -264,6 +323,8 @@ export default class SearchComponent extends PureComponent {
                         onToggleSearchMode={this._toggleSearchMode}
                         onToggleMinimise={this._toggleMinimise}
                         onToggleOpenAccess={this._toggleOpenAccess}
+                        updateDocTypeValues={this._updateDocTypeValues}
+                        docTypes={this.state.advancedSearch.docTypes}
                         onAdvancedSearchRowAdd={this._addAdvancedSearchRow}
                         onAdvancedSearchRowRemove={this._removeAdvancedSearchRow}
                         onAdvancedSearchReset={this._resetAdvancedSearch}
@@ -276,6 +337,7 @@ export default class SearchComponent extends PureComponent {
                     autoHideDuration={5000}
                     message={this.state.snackbarMessage}
                 />
+                {/* {JSON.stringify(this.state.advancedSearch)} */}
             </React.Fragment>
         );
     }

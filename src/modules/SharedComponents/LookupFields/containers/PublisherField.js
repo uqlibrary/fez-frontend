@@ -3,17 +3,17 @@ import {connect} from 'react-redux';
 import * as actions from 'actions';
 
 const mapStateToProps = (state, props) => {
-    const category = 'org_unit_name';
+    const category = 'publisher';
     return {
         category: category,
         itemsList: state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
             ? state.get('searchKeysReducer')[category].itemsList : [],
         allowFreeText: true,
-        onChange: !!props.input && ((item) => props.input.onChange(item.value)) || props.onChange,
+        onChange: (item) => {console.log(item); props.onChange(item);},
         async: true,
         dataSourceConfig: {text: 'value', value: 'value'},
-        errorText: !!props.meta && props.meta.error || !!props.errorText && props.errorText || null,
-        selectedValue: !!props.input && props.input.value || !!props.value && {value: props.value} || ''
+        errorText: props.errorText,
+        selectedValue: !!props.value && {value: props.value} || ''
     };
 };
 
@@ -23,5 +23,5 @@ const mapDispatchToProps = (dispatch) => (
     }
 );
 
-export const OrgUnitNameField = connect(mapStateToProps, mapDispatchToProps)(AutoSuggestField);
+export const PublisherField = connect(mapStateToProps, mapDispatchToProps)(AutoSuggestField);
 

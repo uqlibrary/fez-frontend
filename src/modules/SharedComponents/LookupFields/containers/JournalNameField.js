@@ -13,7 +13,7 @@ const mapStateToProps = (state, props) => {
         dataSourceConfig: { text: 'value', value: 'value'},
         async: true,
         errorText: props.meta ? props.meta.error : null,
-        selectedValue: props.input ? props.input.value : null
+        selectedValue: props.input ? {value: props.input.value} : null
     };
 };
 

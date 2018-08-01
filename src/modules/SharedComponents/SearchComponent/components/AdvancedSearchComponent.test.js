@@ -15,6 +15,7 @@ function setup(testProps, isShallow = true){
 }
 
 describe('AdvancedSearchComponent', () => {
+
     it('should render default view', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -119,7 +120,7 @@ describe('AdvancedSearchComponent', () => {
     it('haveAllAdvancedSearchFieldsValidated should return false for a fieldRow which is too short', () => {
         const thisProps = {
             "fieldRows": [
-                {"searchField": "title", "value": "12345"},
+                {"searchField": "rek_title", "value": "123"},
             ]
         };
         const wrapper = setup({...thisProps});
@@ -129,7 +130,7 @@ describe('AdvancedSearchComponent', () => {
     it('haveAllAdvancedSearchFieldsValidated should return true for a fieldRow which is longer than minLength', () => {
         const thisProps = {
             "fieldRows": [
-                {"searchField": "title", "value": "1234567890ABC"},
+                {"searchField": "rek_title", "value": "1234567890ABC"},
             ]
         };
         const wrapper = setup({...thisProps});
@@ -139,11 +140,26 @@ describe('AdvancedSearchComponent', () => {
     it('haveAllAdvancedSearchFieldsValidated should return false for a fieldRow which is longer than max length', () => {
         const thisProps = {
             "fieldRows": [
-                {"searchField": "title", "value": "OuuCJZb8JA35CrCl1wjx5WzgN2eAMBGryy72EGw7hB98P5P1SRwBDlHz2c1sej4YMIuzwPi3ewpAPiUp65sgJrL0BIVhr3S1ESxLpPfDlzgMSosPIT5Eq3WytsehVd8T8n5hy4akLPYQ1HTWYbSzvifjw79rbuMdvLGmXWS36ljaluN6v3sg8gtwUi5owNsuEIPiaOquVkV1k8nqdDx1npntW9fTX0B84UvnzemXIWySCoeiIsZVNmjdonoC3SYT2dDIddraqgShz256k1ZC56P9M6Zgs9FpmeFUHwEuXHBxcWLmxGfsxpJhNuFNKnELD2rhWYq3RXkDm67FyYwDX9V8IpMBNfAZi8Bb57VFvFbuGqQo56D99mkTA7SfRoVcbd3mMkSDQdowH8Bpni2EFPdC1aKcsWGxPPIS4Cr93PVFJFp9X2zSvXGDQ0WRLzINYFUahICxwIkclTK4uc9N3c3Czmy06mchh8aMlHDaplncul8TOLV8J"},
+                {"searchField": "rek_title", "value": "OuuCJZb8JA35CrCl1wjx5WzgN2eAMBGryy72EGw7hB98P5P1SRwBDlHz2c1sej4YMIuzwPi3ewpAPiUp65sgJrL0BIVhr3S1ESxLpPfDlzgMSosPIT5Eq3WytsehVd8T8n5hy4akLPYQ1HTWYbSzvifjw79rbuMdvLGmXWS36ljaluN6v3sg8gtwUi5owNsuEIPiaOquVkV1k8nqdDx1npntW9fTX0B84UvnzemXIWySCoeiIsZVNmjdonoC3SYT2dDIddraqgShz256k1ZC56P9M6Zgs9FpmeFUHwEuXHBxcWLmxGfsxpJhNuFNKnELD2rhWYq3RXkDm67FyYwDX9V8IpMBNfAZi8Bb57VFvFbuGqQo56D99mkTA7SfRoVcbd3mMkSDQdowH8Bpni2EFPdC1aKcsWGxPPIS4Cr93PVFJFp9X2zSvXGDQ0WRLzINYFUahICxwIkclTK4uc9N3c3Czmy06mchh8aMlHDaplncul8TOLV8J"},
             ]
         };
         const wrapper = setup({...thisProps});
         expect(wrapper.instance().haveAllAdvancedSearchFieldsValidated(thisProps.fieldRows)).toBeFalsy();
+    });
+
+    it('should render advanced search docTypes with checked values based on props', () => {
+        const wrapper = setup({isOpenAccess: true, docTypes: [179, 202], fieldRows: [{value: 'i feel lucky', searchField: 'all'}]});
+        expect(toJson(wrapper.find('.advancedSearchPublicationType').dive())).toMatchSnapshot();
+    });
+
+    it('should render advanced search docTypes with checked values based on fixed invalid props', () => {
+        const wrapper = setup({isOpenAccess: true, docTypes: ["179", "202"], fieldRows: [{value: 'i feel lucky', searchField: 'all'}]});
+        expect(toJson(wrapper.find('.advancedSearchPublicationType').dive())).toMatchSnapshot();
+    });
+
+    it('should render advanced search with no valid checked docTypes based on invalid props', () => {
+        const wrapper = setup({isOpenAccess: true, docTypes: ['test', 202], fieldRows: [{value: 'i feel lucky', searchField: 'all'}]});
+        expect(toJson(wrapper.find('.advancedSearchPublicationType').dive())).toMatchSnapshot();
     });
 
 });
