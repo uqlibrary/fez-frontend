@@ -15,6 +15,7 @@ const orcidUrl = 'https://sandbox.orcid.org';
 const orcidClientId = 'APP-OXX6M6MBQ77GUVWX';
 
 module.exports = {
+    mode: 'development',
     context: path.resolve(__dirname),
     devtool: 'source-map',
     entry: [

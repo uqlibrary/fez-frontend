@@ -226,14 +226,32 @@ describe('Backend routes method', () => {
                     page: 2,
                     per_page: 30,
                     sort: 'score',
-                    ['filters[facets][one]']: 'one facet',
-                    "rek_oa_status": [453693, 453694, 453695, 453696, 453697, 453954]
+                    ['filters[facets][one]']: 'one facet'
                 }
             }
         ];
 
         testCases.map(item => {
             expect(routes.getStandardSearchParams({...item.values})).toEqual(item.expected);
+        });
+    });
+
+    it('should return parameters for search query string from getOpenAccessSearchParams method', () => {
+        const testCases = [
+            {
+                values: {page: 2, pageSize: 30, sortBy: 'score', sortDirection:'asc', facets : { filters: {one: 'one facet'}}},
+                expected: {}
+            },
+            {
+                values: {page: 2, pageSize: 30, sortBy: 'score', sortDirection:'asc', facets : { showOpenAccessOnly: true, filters: {one: 'one facet'}}},
+                expected: {
+                    "rek_oa_status": [453693, 453694, 453695, 453696, 453697, 453954]
+                }
+            }
+        ];
+
+        testCases.map(item => {
+            expect(routes.getOpenAccessSearchParams({...item.values})).toEqual(item.expected);
         });
     });
 

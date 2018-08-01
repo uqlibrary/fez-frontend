@@ -818,6 +818,7 @@ export default {
                     '0': {
                         title: 'Select a field',
                         combiner: null,
+                        type: 'TextField',
                         hint: 'Select a field to search on',
                         validation: []
                     },
@@ -826,7 +827,7 @@ export default {
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add some text to search all fields with',
-                        validation: ['maxLength500']
+                        validation: ['required', 'maxLength500']
                     },
                     'rek_title': {
                         title: 'Title',
@@ -885,7 +886,7 @@ export default {
                         hint: 'Add a book title to search',
                         validation: ['required', 'maxLength500']
                     },
-                    'rek_doc_type': {
+                    'rek_display_type': {
                         title: 'Publication type',
                         combiner: 'is one of',
                         type: null,
@@ -894,16 +895,61 @@ export default {
                     },
                     'rek_doi': {
                         title: 'DOI',
-                        combiner: 'is',
+                        combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a DOI to search',
                         validation: ['required', 'doi']
                     },
                     'rek_publisher': {
                         title: 'Publisher',
-                        combiner: 'contains',
+                        combiner: 'is',
                         type: 'PublisherLookup',
                         hint: 'Add a publisher to search',
+                        validation: ['required']
+                    },
+                    'rek_ismemberof': {
+                        title: 'Collection',
+                        combiner: 'is one of',
+                        type: 'CollectionsLookup',
+                        hint: 'Select collections',
+                        loadingHint: 'Loading collections',
+                        errorHint: 'There has been an error loading collections',
+                        multiple: true,
+                        validation: ['required']
+                    },
+                    'rek_subtype': {
+                        title: 'Subtype',
+                        combiner: 'is',
+                        type: 'SubTypeLookup',
+                        hint: 'Select a publication subtype',
+                        validation: ['required']
+                    },
+                    'rek_genre_type': {
+                        title: 'Thesis type',
+                        combiner: 'is',
+                        type: 'ThesisTypeLookup',
+                        hint: 'Select a Thesis type',
+                        validation: ['required']
+                    },
+                    'rek_author_id': {
+                        title: 'Author ID',
+                        combiner: 'is',
+                        type: 'AuthorIdLookup',
+                        hint: 'Add an author id to search',
+                        validation: ['required']
+                    },
+                    'rek_contributor_id': {
+                        title: 'Contributor ID',
+                        combiner: 'is',
+                        type: 'AuthorIdLookup',
+                        hint: 'Add an contributor id to search',
+                        validation: ['required']
+                    },
+                    'rek_org_unit_name': {
+                        title: 'School, Centre or Institute',
+                        combiner: 'is',
+                        type: 'OrgUnitLookup',
+                        hint: 'Add a school, centre or institute to search',
                         validation: ['required']
                     }
                 },

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdvancedSearchRowInput should render default view 1`] = `""`;
+
+exports[`AdvancedSearchRowInput should render given children function 1`] = `"Testing"`;

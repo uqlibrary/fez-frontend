@@ -13,6 +13,22 @@ function getSearch(source, searchQuery) {
 }
 
 /**
+ * loadCollectionsList - returns records for a list of all collections in eSpace
+ * @returns {Promise}
+ */
+export function collectionsList() {
+    return dispatch => {
+        dispatch({type: `${actions.SEARCH_COLLECTION_LOADING}`});
+        return get(SEARCH_INTERNAL_RECORDS_API({searchMode: 'advanced', searchQueryParams: {rek_object_type: 2}, pageSize: 999, sortBy: 'title', sortDirection: 'asc'}))
+            .then((response) => {
+                dispatch({type: `${actions.SEARCH_COLLECTION_LOADED}`, payload: response.data});
+            }, (error) => {
+                dispatch({type: `${actions.SEARCH_COLLECTION_FAILED}`, payload: error.message});
+            });
+    };
+}
+
+/**
  * createSearchPromise - returns a promise for search in a specific source
  * @param source
  * @param queryString
@@ -151,17 +167,9 @@ export function searchEspacePublications(searchParams) {
  * @param {string} format
  * @returns {action}
  */
-export function exportEspacePublications({exportPublicationsFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}, searchQueryParams = {}}) {
+export function exportEspacePublications(searchParams) {
     return exportPublications(SEARCH_INTERNAL_RECORDS_API(
-        {
-            exportPublicationsFormat: exportPublicationsFormat,
-            page: page,
-            pageSize: pageSize,
-            sortBy: sortBy,
-            sortDirection: sortDirection,
-            facets: activeFacets,
-            searchQueryParams: searchQueryParams
-        },
+        {...searchParams, facets: searchParams.activeFacets || {}},
         'export'
     ));
 }
