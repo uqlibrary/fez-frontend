@@ -248,10 +248,6 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         disabled={false}
         focusState="none"
         insetChildren={false}
-<<<<<<< HEAD
-        key="rek_doc_type"
-        primaryText="Publication type"
-=======
         key="rek_doi"
         primaryText="DOI"
         targetOrigin={
@@ -674,18 +670,13 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
         insetChildren={false}
         key="rek_book_title"
         primaryText="Book Title"
->>>>>>> master
         targetOrigin={
           Object {
             "horizontal": "left",
             "vertical": "top",
           }
         }
-<<<<<<< HEAD
-        value="rek_doc_type"
-=======
         value="rek_book_title"
->>>>>>> master
       />
       <MenuItem
         anchorOrigin={
@@ -730,8 +721,6 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           }
         }
         value="rek_publisher"
-<<<<<<< HEAD
-=======
       />
       <MenuItem
         anchorOrigin={
@@ -864,7 +853,6 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           }
         }
         value="rek_org_unit_name"
->>>>>>> master
       />
     </SelectField>
   </div>
@@ -955,11 +943,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         }
         checked={false}
         desktop={false}
-<<<<<<< HEAD
-        disabled={true}
-=======
         disabled={false}
->>>>>>> master
         focusState="none"
         insetChildren={false}
         key="all"
@@ -982,7 +966,6 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         checked={false}
         desktop={false}
         disabled={false}
-<<<<<<< HEAD
         focusState="none"
         insetChildren={false}
         key="rek_title"
@@ -1095,214 +1078,6 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="rek_journal_name"
-        primaryText="Journal Name"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_journal_name"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_conference_name"
-        primaryText="Conference Name"
-=======
-        focusState="none"
-        insetChildren={false}
-        key="rek_title"
-        primaryText="Title"
->>>>>>> master
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-<<<<<<< HEAD
-        value="rek_conference_name"
-=======
-        value="rek_title"
->>>>>>> master
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-<<<<<<< HEAD
-        key="rek_book_title"
-        primaryText="Book Title"
-=======
-        key="rek_pid"
-        primaryText="PID"
->>>>>>> master
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-<<<<<<< HEAD
-        value="rek_book_title"
-=======
-        value="rek_pid"
->>>>>>> master
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-<<<<<<< HEAD
-        key="rek_doc_type"
-        primaryText="Publication type"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_doc_type"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_doi"
-        primaryText="DOI"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_doi"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_publisher"
-        primaryText="Publisher"
-=======
-        key="rek_author"
-        primaryText="Author Name"
->>>>>>> master
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-<<<<<<< HEAD
-        value="rek_publisher"
-=======
-        value="rek_author"
->>>>>>> master
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_contributor"
-        primaryText="Editor/Contributor"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_contributor"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_series"
-        primaryText="Series"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_series"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-<<<<<<< HEAD
-        key="rek_title"
-        primaryText="Title"
-=======
         key="rek_journal_name"
         primaryText="Journal Name"
         targetOrigin={
@@ -1525,238 +1300,13 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         insetChildren={false}
         key="rek_org_unit_name"
         primaryText="School, Centre or Institute"
->>>>>>> master
         targetOrigin={
           Object {
             "horizontal": "left",
             "vertical": "top",
           }
         }
-<<<<<<< HEAD
-        value="rek_title"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_pid"
-        primaryText="PID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_pid"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_author"
-        primaryText="Author Name"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_author"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_contributor"
-        primaryText="Editor/Contributor"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_contributor"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_series"
-        primaryText="Series"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_series"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_journal_name"
-        primaryText="Journal Name"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_journal_name"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_conference_name"
-        primaryText="Conference Name"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_conference_name"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_book_title"
-        primaryText="Book Title"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_book_title"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_doc_type"
-        primaryText="Publication type"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_doc_type"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_doi"
-        primaryText="DOI"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_doi"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_publisher"
-        primaryText="Publisher"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_publisher"
-=======
         value="rek_org_unit_name"
->>>>>>> master
       />
     </SelectField>
   </div>
