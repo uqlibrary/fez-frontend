@@ -35,14 +35,14 @@ describe('AdvancedSearchRow', () => {
         const testFn = jest.fn();
         const wrapper = setup({rowIndex: 1, onSearchRowChange: testFn});
         wrapper.instance()._handleSearchFieldChange({}, 2, 'rek_title');
-        expect(testFn).toHaveBeenCalledWith(1, {searchField: 'rek_title', value: ''});
+        expect(testFn).toHaveBeenCalledWith(1, {searchField: 'rek_title', value: '', label: ''});
     });
 
     it('should handle search field text change', () => {
         const testFn = jest.fn();
         const wrapper = setup({rowIndex: 1, onSearchRowChange: testFn});
-        wrapper.instance()._handleTextChange({}, 'i feel lucky');
-        expect(testFn).toHaveBeenCalledWith(1, {searchField: '0', value: 'i feel lucky'});
+        wrapper.instance()._handleTextChange('i feel lucky');
+        expect(testFn).toHaveBeenCalledWith(1, {searchField: '0', value: 'i feel lucky', label: ''});
     });
 
     it('should handle delete row', () => {
@@ -50,21 +50,5 @@ describe('AdvancedSearchRow', () => {
         const wrapper = setup({rowIndex: 3, onSearchRowDelete: testFn});
         wrapper.instance()._deleteRow();
         expect(testFn).toHaveBeenCalledWith(3);
-    });
-
-    it('searchTextValidationMessage() should return a message for being too long', () => {
-        const wrapper = setup({});
-        wrapper.setState({searchText: 'this is way too long'});
-        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
-        wrapper.update();
-        expect(wrapper.instance().searchTextValidationMessage(wrapper.state().searchText)).toEqual('Must be 5 characters or less');
-    });
-
-    it('searchTextValidationMessage() should return false for being fine', () => {
-        const wrapper = setup({});
-        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 20;
-        wrapper.setState({searchText: 'this is fine'});
-        wrapper.update();
-        expect(wrapper.instance().searchTextValidationMessage(wrapper.state().searchText)).toEqual(null);
     });
 });

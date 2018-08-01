@@ -29,15 +29,17 @@ export class AutoSuggestField extends Component {
         floatingLabelText: 'Enter text',
         hintText: 'Please type text',
         debounceDelay: 150,
-        className: ''
+        className: '',
+        selectedValue: {value: ''}
     };
 
     constructor(props) {
         super(props);
         this.state = {
-            searchText: props.selectedValue,
-            selectedValue: null
+            searchText: !!props.selectedValue && props.selectedValue.value || '',
+            selectedValue: !!props.selectedValue && props.selectedValue || {value: ''}
         };
+        this.input = null;
         this.bounce = null;
     }
 
@@ -45,48 +47,47 @@ export class AutoSuggestField extends Component {
         if (!this.props.async && this.props.loadSuggestions) {
             this.props.loadSuggestions(this.props.category);
         }
-        if (this.props.selectedValue !== null) {
-            this.updateSelectedValue(this.props.selectedValue);
-        }
     }
 
     componentWillReceiveProps(newProps) {
-        if (newProps.selectedValue !== this.props.selectedValue) {
+        if (newProps.selectedValue.value !== this.props.selectedValue.value) {
             this.setState({
                 selectedValue: newProps.selectedValue,
-                searchText: newProps.selectedValue
+                searchText: newProps.selectedValue.value
             });
         }
     }
 
     componentWillUpdate(nextProps, nextState) {
-        if (this.props.onChange && nextState.selectedValue !== this.state.selectedValue) {
+        if (this.props.onChange && nextState.selectedValue.value !== this.state.selectedValue.value) {
             this.props.onChange(nextState.selectedValue);
         }
     }
 
+    trimLeadingSpaces = (text) => text.replace(/^\s+/g, '');
+
     updateSelectedValue = (value) => {
         this.setState({
-            selectedValue: value,
+            selectedValue: {value},
         }, () => {
-            if (this.props.async && this.props.loadSuggestions && this.state.selectedValue
-                && this.state.selectedValue.trim().length > 0) {
+            if (this.props.async && this.props.loadSuggestions && this.state.selectedValue.value
+                && this.state.selectedValue.value.trim().length > 0) {
                 if (this.bounce) {
                     clearTimeout(this.bounce);
                 }
                 this.bounce = setTimeout(this.props.loadSuggestions, this.props.debounceDelay,
-                    this.props.category, this.state.selectedValue);
+                    this.props.category, this.state.selectedValue.value.trim());
             }
         });
     };
 
     textUpdated = (searchText) => {
         this.setState({
-            searchText: searchText.trim()
+            searchText: this.trimLeadingSpaces(searchText)
         });
 
         if (this.props.allowFreeText) {
-            this.updateSelectedValue(searchText.trim());
+            this.updateSelectedValue(this.trimLeadingSpaces(searchText));
         }
     };
 
@@ -104,24 +105,21 @@ export class AutoSuggestField extends Component {
             });
         }
         // refocus on the field after selection
-        if(this.state.input) {
-            this.state.input.focus();
+        if(this.input) {
+            this.input.focus();
         }
     };
 
-    setAutoCompleteInput = (input) => (
-        this.setState({input})
-    );
 
     render() {
         return (
             <AutoComplete
                 id="textField"
-                ref={this.setAutoCompleteInput}
+                ref={(input) => (this.input = input)}
                 searchText={this.state.searchText}
                 disabled={this.props.disabled}
                 listStyle={{maxHeight: 200, overflow: 'auto'}}
-                filter={!this.props.async ? this.props.filter || AutoComplete.caseInsensitiveFilter : () => (true)}
+                filter={this.props.filter || this.props.async && AutoComplete.caseInsensitiveFilter || (() => true)}
                 maxSearchResults={this.props.maxResults}
                 floatingLabelText={this.props.floatingLabelText}
                 hintText={this.props.hintText}

@@ -8,15 +8,19 @@ import KeyboardArrowDown from 'material-ui/svg-icons/hardware/keyboard-arrow-dow
 import AdvancedSearchRow from './AdvancedSearchRow';
 import Checkbox from 'material-ui/Checkbox';
 import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
-
-
+import {publicationTypes} from 'config';
+import {documentTypesLookup} from 'config/general';
 import {locale} from 'locale';
+import * as recordForms from '../../PublicationForm/components/Forms';
+
+import DocumentTypeField from './Fields/DocumentTypeField';
 
 export default class AdvancedSearchComponent extends PureComponent {
     static propTypes = {
         className: PropTypes.string,
 
         fieldRows: PropTypes.array,
+        docTypes: PropTypes.array,
         isOpenAccess: PropTypes.bool,
         isMinimised: PropTypes.bool,
 
@@ -27,6 +31,7 @@ export default class AdvancedSearchComponent extends PureComponent {
         onAdvancedSearchRowAdd: PropTypes.func,
         onAdvancedSearchRowRemove: PropTypes.func,
         onAdvancedSearchReset: PropTypes.func,
+        updateDocTypeValues: PropTypes.func,
 
         onAdvancedSearchRowChange: PropTypes.func.isRequired,
         onSearch: PropTypes.func.isRequired,
@@ -35,7 +40,8 @@ export default class AdvancedSearchComponent extends PureComponent {
     static defaultProps = {
         fieldRows: [{
             searchField: '0',
-            value: ''
+            value: '',
+            label: ''
         }],
         isMinimised: false,
         isOpenAccess: false,
@@ -48,32 +54,66 @@ export default class AdvancedSearchComponent extends PureComponent {
         onAdvancedSearchReset: () => {}
     };
 
-    getAdvancedSearchCaption = ({fieldRows, isOpenAccess}) => {
+    constructor(props) {
+        super(props);
+        this.publicationTypes = publicationTypes({...recordForms});
+    }
+
+    getAdvancedSearchCaption = ({fieldRows, isOpenAccess, docTypes}) => {
         const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
         const searchFields = fieldRows
             .filter(item => item.searchField !== '0' && item.value !== '')
-            .map((item, index) => (
-                <span key={item.searchField}>
-                    {index > 0 && <span className="and">  {item.value && 'AND'}</span>}
-                    <span className={`title ${index > 0 && ' lowercase'}`}> {item.value && txt[item.searchField].title}</span>
-                    <span className="combiner"> {item.value && txt[item.searchField].combiner}</span>
-                    <span className="value"> {item.value}</span>
-                </span>
-            ));
+            .filter(item => item.searchField !== 'rek_display_type')
+            .map((item, index) => {
+                return (
+                    <span key={item.searchField}>
+                        {index > 0 && <span className="and">  {item.value && 'AND'}</span>}
+                        <span
+                            className={`title ${index > 0 && ' is-lowercase'}`}> {item.value && txt[item.searchField] && txt[item.searchField].title} </span>
+                        <span
+                            className="combiner"> {item.value && txt[item.searchField] && txt[item.searchField].combiner} </span>
+                        <span className="value">
+                            {
+                                Array.isArray(item.value) ? item.value.join(', ') : item.value
+                            }
+                        </span>
+                    </span>
+                );
+            });
 
+        // Document types caption
+        const docTypeList =  docTypes && docTypes.map((item, index) => (
+            <span key={index}>
+                {index !== 0 && (index + 1 === docTypes.length) && ' or '}
+                {documentTypesLookup[item] || ''}
+                {(index + 1 !== docTypes.length) && ', '}
+            </span>));
+        const docTypeText = docTypes && docTypes.length > 0 && (
+            <span>
+                <span className="and"> {searchFields.length > 0 && ' AND '}</span>
+                <span className="title">{txt.rek_display_type.title}</span>
+                <span className="combiner"> {txt.rek_display_type.combiner}</span>
+                <span className="value is-lowercase"> {docTypeList}</span>
+            </span>
+        ) || '';
+
+        // Open Access caption
         const openAccessText = isOpenAccess
             ? locale.components.searchComponent.advancedSearch.openAccess.captionText
             : searchFields.length > 0 && '.' || null;
-        return (searchFields.length > 0 || !!isOpenAccess) && <Fragment>{searchFields}{openAccessText}</Fragment> || null;
+        return (searchFields.length > 0 || !!isOpenAccess || docTypeText) && <Fragment>{searchFields}{docTypeText}{openAccessText}</Fragment> || null;
     };
 
     haveAllAdvancedSearchFieldsValidated = (fieldRows) => {
         const fieldTypes = locale.components.searchComponent.advancedSearch.fieldTypes;
         return fieldRows.filter(item => item.searchField === '0' || item.value === ''
             // Check if the locale specifies a minLength for this field and check it not shorter
+            || (item.value && (fieldTypes[item.searchField].type === 'TextField') && !!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length)
+            // Check if this field is a string exceeding the maxLength
+            || (fieldTypes[item.searchField].type === 'TextField') && MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length
+            // Check if the value is an array, and not empty
+            || (fieldTypes[item.searchField].type === 'CollectionLookup') && item.value.length === 0
             || (!!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length)
-            // Check if this field is exceeding the maxLength
-            || (MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length)
         ).length === 0;
     };
 
@@ -127,7 +167,7 @@ export default class AdvancedSearchComponent extends PureComponent {
     render() {
         const txt = locale.components.searchComponent;
         const canAddAnotherField = this.haveAllAdvancedSearchFieldsValidated(this.props.fieldRows)
-             && this.props.fieldRows.length < Object.keys(txt.advancedSearch.fieldTypes).length - 1;
+            && this.props.fieldRows.length < Object.keys(txt.advancedSearch.fieldTypes).length - 1;
         const alreadyAddedFields = this.props.fieldRows.map(item => item.searchField);
         const searchQueryCaption = this.getAdvancedSearchCaption(this.props);
         return (
@@ -157,26 +197,41 @@ export default class AdvancedSearchComponent extends PureComponent {
                                     <div className="columns is-multiline is-mobile">
                                         <div className="column fields is-11-mobile is-11-tablet-only">
                                             {
-                                                this.props.fieldRows.map((item, index) => (
-                                                    <AdvancedSearchRow
-                                                        key={`advanced-search-field-${item.searchField}`}
-                                                        rowIndex={index}
-                                                        disabledFields={alreadyAddedFields}
-                                                        onSearchRowChange={this._handleAdvancedSearchRowChange}
-                                                        onSearchRowDelete={this._removeAdvancedSearchRow}
-                                                        {...item}
-                                                    />
-                                                ))
+                                                this.props.fieldRows
+                                                    .filter((item) => {
+                                                        return item.searchField && txt.advancedSearch.fieldTypes[item.searchField].type !== null;
+                                                    })
+                                                    .map((item, index) => (
+                                                        <AdvancedSearchRow
+                                                            key={`advanced-search-field-${item.searchField}`}
+                                                            rowIndex={index}
+                                                            disabledFields={alreadyAddedFields}
+                                                            onSearchRowChange={this._handleAdvancedSearchRowChange}
+                                                            onSearchRowDelete={this._removeAdvancedSearchRow}
+                                                            {...item}
+                                                        />
+                                                    ))
                                             }
                                         </div>
                                         <div className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox">
-                                            <Checkbox
-                                                className="advancedSearchOpenAccessCheckbox"
-                                                label={txt.advancedSearch.openAccess.title}
-                                                aria-label={txt.advancedSearch.openAccess.ariaLabel}
-                                                checked={this.props.isOpenAccess}
-                                                onCheck={this._toggleOpenAccess}
-                                            />
+                                            <div className="columns is-gapless is-multiline">
+                                                <div className="column is-11-mobile is-4-tablet is-12-desktop">
+                                                    <Checkbox
+                                                        className="advancedSearchOpenAccessCheckbox"
+                                                        label={txt.advancedSearch.openAccess.title}
+                                                        aria-label={txt.advancedSearch.openAccess.ariaLabel}
+                                                        checked={this.props.isOpenAccess}
+                                                        onCheck={this._toggleOpenAccess}
+                                                    />
+                                                </div>
+                                                <div className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop">
+                                                    <DocumentTypeField
+                                                        docTypes={this.props.docTypes}
+                                                        updateDocTypeValues={this.props.updateDocTypeValues}
+                                                        className="advancedSearchPublicationType"
+                                                    />
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="columns is-gapless is-mobile is-multiline actionButtons">
@@ -207,7 +262,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             />
                                         </div>
                                         <div className="column is-hidden-mobile" />
-                                        <div className="column is-3-desktop is-3-tablet is-12-mobile">
+                                        <div className="column is-3-desktop is-4-tablet is-12-mobile">
                                             <RaisedButton
                                                 className="advancedSearchButton"
                                                 label={txt.searchButtonText}
