@@ -1,41 +1,0 @@
-https://fez-staging.library.uq.edu.au/list/?cat=quick_filter& 
- form_name=adv_search& 
- search_keys[0]=& 
- search_keys[core_2]=& 
- search_keys[core_28]=& 
- search_keys[core_3]=& 
- search_keys[core_26]_name=& 
- search_keys[core_26]=& 
- search_keys[core_5]=& 
- search_keys[core_11][multiple_type]=any& 
- search_keys[core_14][filter_enabled]=0& 
- datepicker[core_14][start]=& 
- datepicker[core_14][end]=& 
- search_keys[core_10][multiple_type]=any& 
- search_keys[core_17][filter_enabled]=0& 
- datepicker[core_17][start]=& 
- datepicker[core_17][end]=& 
- search_keys[core_18][filter_enabled]=0& 
- datepicker[core_18][start]=& 
- datepicker[core_18][end]=& 
- search_keys[core_8][multiple_type]=any& 
- search_keys[core_20]_name=& 
- search_keys[core_20]=& 
- search_keys[core_29]=& 
- search_keys[core_30]=& 
- search_keys[core_31]_name=& 
- search_keys[core_31]=& 
- search_keys[core_33]=& 
- search_keys[core_34]=& 
- search_keys[core_36]=& 
- search_keys[core_37]=& 
- search_keys[core_70]=& 
- search_keys[UQ_27]=& 
- search_keys[UQ_28]=& 
- search_keys[UQ_1]=& 
- search_keys[UQ_8]=& 
- search_keys[UQ_18]=Other& 
- search_keys[UQ_56]=& 
- search_keys[core_75]=& 
- operator= AND & 
- search_button=Search
