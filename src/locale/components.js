@@ -942,8 +942,8 @@ export default {
                     'rek_contributor_id': {
                         title: 'Contributor ID',
                         combiner: 'is',
-                        type: 'AuthorIdLookup',
-                        hint: 'Add an contributor id to search',
+                        type: 'ContributorIdLookup',
+                        hint: 'Add a contributor id to search',
                         validation: ['required']
                     },
                     'rek_org_unit_name': {

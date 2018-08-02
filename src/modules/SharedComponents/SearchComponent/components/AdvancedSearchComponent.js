@@ -123,7 +123,7 @@ export default class AdvancedSearchComponent extends PureComponent {
             // Check if the locale specifies a minLength for this field and check it not shorter
             || (item.value && (fieldTypes[item.searchField].type === 'TextField') && !!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length)
             // Check if this field is a string exceeding the maxLength
-            || (fieldTypes[item.searchField].type === 'TextField') && MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length
+            || (fieldTypes[item.searchField].type === 'TextField') && item.value.length > 0 && MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length
             // Check if the value is an array, and not empty
             || (fieldTypes[item.searchField].type === 'CollectionLookup') && item.value.length === 0
             || (!!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length))
