@@ -6,6 +6,14 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
   disabled={false}
   floatingLabelText="Publication type"
   fullWidth={true}
+  menuItemStyle={
+    Object {
+      "lineHeight": "24px",
+      "paddingBottom": "4px",
+      "paddingTop": "4px",
+      "whiteSpace": "normal",
+    }
+  }
   multiple={true}
   onChange={[Function]}
   value={
@@ -442,6 +450,14 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
   disabled={false}
   floatingLabelText="Publication type"
   fullWidth={true}
+  menuItemStyle={
+    Object {
+      "lineHeight": "24px",
+      "paddingBottom": "4px",
+      "paddingTop": "4px",
+      "whiteSpace": "normal",
+    }
+  }
   multiple={true}
   onChange={[Function]}
   value={
@@ -934,36 +950,53 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
             className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
           >
             <div
-              className="columns is-gapless is-multiline"
+              className="columns is-gapless is-mobile is-multiline sidebar"
             >
               <div
-                className="column is-11-mobile is-4-tablet is-12-desktop"
+                className="column is-11-mobile is-narrow-tablet is-12-desktop"
+                style={
+                  Object {
+                    "marginRight": 12,
+                    "minWidth": 166,
+                  }
+                }
               >
                 <Checkbox
                   aria-label="Check to search for publications with are only open access / full text"
                   checked={true}
                   className="advancedSearchOpenAccessCheckbox"
                   disabled={false}
-                  label="Open access/Full text"
+                  label="Open access"
                   labelPosition="right"
                   onCheck={[Function]}
                 />
               </div>
               <div
-                className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop"
+                className="column is-11-mobile is-12-desktop"
+                style={
+                  Object {
+                    "marginRight": 12,
+                  }
+                }
               >
                 <DocumentTypeField
                   className="advancedSearchPublicationType"
+                  disabled={false}
                   value={Array []}
                 />
               </div>
               <div
-                className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop"
+                className="column is-11-mobile is-12-desktop"
               >
                 <PublicationYearRangeField
-                  className="publicationyearrange menuitem"
-                  yearEnd={2020}
-                  yearStart={1550}
+                  className="advancedSearchYearFilter"
+                  disabled={false}
+                  yearFilter={
+                    Object {
+                      "from": null,
+                      "to": null,
+                    }
+                  }
                 />
               </div>
             </div>
@@ -1088,6 +1121,14 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
   disabled={false}
   floatingLabelText="Publication type"
   fullWidth={true}
+  menuItemStyle={
+    Object {
+      "lineHeight": "24px",
+      "paddingBottom": "4px",
+      "paddingTop": "4px",
+      "whiteSpace": "normal",
+    }
+  }
   multiple={true}
   onChange={[Function]}
   value={
@@ -1581,36 +1622,53 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
             className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
           >
             <div
-              className="columns is-gapless is-multiline"
+              className="columns is-gapless is-mobile is-multiline sidebar"
             >
               <div
-                className="column is-11-mobile is-4-tablet is-12-desktop"
+                className="column is-11-mobile is-narrow-tablet is-12-desktop"
+                style={
+                  Object {
+                    "marginRight": 12,
+                    "minWidth": 166,
+                  }
+                }
               >
                 <Checkbox
                   aria-label="Check to search for publications with are only open access / full text"
                   checked={false}
                   className="advancedSearchOpenAccessCheckbox"
                   disabled={false}
-                  label="Open access/Full text"
+                  label="Open access"
                   labelPosition="right"
                   onCheck={[Function]}
                 />
               </div>
               <div
-                className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop"
+                className="column is-11-mobile is-12-desktop"
+                style={
+                  Object {
+                    "marginRight": 12,
+                  }
+                }
               >
                 <DocumentTypeField
                   className="advancedSearchPublicationType"
+                  disabled={false}
                   value={Array []}
                 />
               </div>
               <div
-                className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop"
+                className="column is-11-mobile is-12-desktop"
               >
                 <PublicationYearRangeField
-                  className="publicationyearrange menuitem"
-                  yearEnd={2020}
-                  yearStart={1550}
+                  className="advancedSearchYearFilter"
+                  disabled={false}
+                  yearFilter={
+                    Object {
+                      "from": null,
+                      "to": null,
+                    }
+                  }
                 />
               </div>
             </div>
@@ -1624,7 +1682,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
           >
             <RaisedButton
               aria-label="Click to add another advanced search field"
-              disabled={false}
+              disabled={true}
               fullWidth={true}
               label="Add another field"
               labelPosition="after"
@@ -1675,7 +1733,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
             <RaisedButton
               aria-label="Click to search eSpace"
               className="advancedSearchButton"
-              disabled={false}
+              disabled={true}
               fullWidth={true}
               label="Search"
               labelPosition="after"
@@ -1755,36 +1813,53 @@ exports[`AdvancedSearchComponent should render default view with open access che
             className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
           >
             <div
-              className="columns is-gapless is-multiline"
+              className="columns is-gapless is-mobile is-multiline sidebar"
             >
               <div
-                className="column is-11-mobile is-4-tablet is-12-desktop"
+                className="column is-11-mobile is-narrow-tablet is-12-desktop"
+                style={
+                  Object {
+                    "marginRight": 12,
+                    "minWidth": 166,
+                  }
+                }
               >
                 <Checkbox
                   aria-label="Check to search for publications with are only open access / full text"
                   checked={true}
                   className="advancedSearchOpenAccessCheckbox"
                   disabled={false}
-                  label="Open access/Full text"
+                  label="Open access"
                   labelPosition="right"
                   onCheck={[Function]}
                 />
               </div>
               <div
-                className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop"
+                className="column is-11-mobile is-12-desktop"
+                style={
+                  Object {
+                    "marginRight": 12,
+                  }
+                }
               >
                 <DocumentTypeField
                   className="advancedSearchPublicationType"
+                  disabled={false}
                   value={Array []}
                 />
               </div>
               <div
-                className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop"
+                className="column is-11-mobile is-12-desktop"
               >
                 <PublicationYearRangeField
-                  className="publicationyearrange menuitem"
-                  yearEnd={2020}
-                  yearStart={1550}
+                  className="advancedSearchYearFilter"
+                  disabled={false}
+                  yearFilter={
+                    Object {
+                      "from": null,
+                      "to": null,
+                    }
+                  }
                 />
               </div>
             </div>
@@ -1798,7 +1873,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
           >
             <RaisedButton
               aria-label="Click to add another advanced search field"
-              disabled={false}
+              disabled={true}
               fullWidth={true}
               label="Add another field"
               labelPosition="after"
@@ -1849,7 +1924,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
             <RaisedButton
               aria-label="Click to search eSpace"
               className="advancedSearchButton"
-              disabled={false}
+              disabled={true}
               fullWidth={true}
               label="Search"
               labelPosition="after"
@@ -1985,36 +2060,53 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
             className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox"
           >
             <div
-              className="columns is-gapless is-multiline"
+              className="columns is-gapless is-mobile is-multiline sidebar"
             >
               <div
-                className="column is-11-mobile is-4-tablet is-12-desktop"
+                className="column is-11-mobile is-narrow-tablet is-12-desktop"
+                style={
+                  Object {
+                    "marginRight": 12,
+                    "minWidth": 166,
+                  }
+                }
               >
                 <Checkbox
                   aria-label="Check to search for publications with are only open access / full text"
                   checked={false}
                   className="advancedSearchOpenAccessCheckbox"
                   disabled={false}
-                  label="Open access/Full text"
+                  label="Open access"
                   labelPosition="right"
                   onCheck={[Function]}
                 />
               </div>
               <div
-                className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop"
+                className="column is-11-mobile is-12-desktop"
+                style={
+                  Object {
+                    "marginRight": 12,
+                  }
+                }
               >
                 <DocumentTypeField
                   className="advancedSearchPublicationType"
+                  disabled={false}
                   value={Array []}
                 />
               </div>
               <div
-                className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop"
+                className="column is-11-mobile is-12-desktop"
               >
                 <PublicationYearRangeField
-                  className="publicationyearrange menuitem"
-                  yearEnd={2020}
-                  yearStart={1550}
+                  className="advancedSearchYearFilter"
+                  disabled={false}
+                  yearFilter={
+                    Object {
+                      "from": null,
+                      "to": null,
+                    }
+                  }
                 />
               </div>
             </div>
@@ -2028,7 +2120,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
           >
             <RaisedButton
               aria-label="Click to add another advanced search field"
-              disabled={false}
+              disabled={true}
               fullWidth={true}
               label="Add another field"
               labelPosition="after"
@@ -2079,7 +2171,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
             <RaisedButton
               aria-label="Click to search eSpace"
               className="advancedSearchButton"
-              disabled={false}
+              disabled={true}
               fullWidth={true}
               label="Search"
               labelPosition="after"

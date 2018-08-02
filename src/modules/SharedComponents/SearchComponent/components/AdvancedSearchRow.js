@@ -61,7 +61,9 @@ export default class AdvancedSearchRow extends PureComponent {
                         value={this.props.searchField}
                         onChange={this._handleSearchFieldChange}
                         errorText={this.selectFieldValidation()}
-                        fullWidth>
+                        menuItemStyle={{whiteSpace: 'normal', lineHeight: '24px', paddingTop: '4px', paddingBottom: '4px'}}
+                        fullWidth
+                    >
                         {
                             Object.keys(txt.fieldTypes)
                                 .filter(item => txt.fieldTypes[item].type !== null)

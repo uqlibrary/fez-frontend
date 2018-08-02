@@ -7,7 +7,8 @@ export default class PublicationYearRangeField extends PureComponent {
     static propTypes = {
         yearFilter: PropTypes.object,
         updateYearRangeFilter: PropTypes.func,
-        className: PropTypes.string
+        className: PropTypes.string,
+        disabled: PropTypes.bool
     };
 
     static defaultProps = {
@@ -15,7 +16,8 @@ export default class PublicationYearRangeField extends PureComponent {
         yearFilter: {
             from: null,
             to: null
-        }
+        },
+        disabled: false
     };
 
     setValue = (key) => (event) => {
@@ -44,16 +46,17 @@ export default class PublicationYearRangeField extends PureComponent {
 
     render() {
         return (
-            <div className="columns is-gapless is-mobile">
+            <div className="columns is-gapless is-mobile ">
                 <div className="column">
                     <TextField
                         fullWidth
-                        value={this.props.yearFilter.from}
+                        value={this.props.yearFilter.from ? `${this.props.yearFilter.from}` : ''}
                         floatingLabelText={'Published year range'}
                         floatingLabelFixed
                         onChange={this.setValue('from')}
                         errorText={this.isValidText()}
                         hintText="Start year"
+                        disabled={this.props.disabled}
                     />
                 </div>
                 <div className="column is-narrow">
@@ -69,12 +72,13 @@ export default class PublicationYearRangeField extends PureComponent {
                 <div className="column" >
                     <TextField
                         fullWidth
-                        value={this.props.yearFilter.to}
+                        value={this.props.yearFilter.to ? `${this.props.yearFilter.to}` : ''}
                         floatingLabelText={' '}
                         floatingLabelFixed
                         onChange={this.setValue('to')}
                         errorText={this.isValidText() && ' '}
                         hintText="End year"
+                        disabled={this.props.disabled}
                     />
                 </div>
             </div>

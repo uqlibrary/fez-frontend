@@ -26,6 +26,7 @@ export default class AdvancedSearchComponent extends PureComponent {
         activeFacets: PropTypes.object,
         isOpenAccess: PropTypes.bool,
         isMinimised: PropTypes.bool,
+        isLoading: PropTypes.bool,
 
         // Event handlers
         onToggleSearchMode: PropTypes.func,
@@ -114,11 +115,10 @@ export default class AdvancedSearchComponent extends PureComponent {
 
     haveAllAdvancedSearchFieldsValidated = (fieldRows) => {
         const fieldTypes = locale.components.searchComponent.advancedSearch.fieldTypes;
-        return fieldRows.filter(item =>
-            item.searchField !== '0' && item.searchField !== 'all' && item.value === ''
         return !((this.props.yearFilter.from > this.props.yearFilter.to)
             || (this.props.yearFilter.from && !this.props.yearFilter.to) || (!this.props.yearFilter.from && this.props.yearFilter.to)
             || (this.props.yearFilter.from > 9999) || (this.props.yearFilter.to > 9999))
+            && !this.props.isLoading
             && (fieldRows.filter(item => item.searchField === '0' || item.value === ''
             // Check if the locale specifies a minLength for this field and check it not shorter
             || (item.value && (fieldTypes[item.searchField].type === 'TextField') && !!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length)
@@ -227,27 +227,31 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             }
                                         </div>
                                         <div className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox">
-                                            <div className="columns is-gapless is-multiline">
-                                                <div className="column is-11-mobile is-4-tablet is-12-desktop">
+                                            <div className="columns is-gapless is-mobile is-multiline sidebar">
+                                                <div className="column is-11-mobile is-narrow-tablet is-12-desktop" style={{minWidth: 166, marginRight: 12}}>
                                                     <Checkbox
                                                         className="advancedSearchOpenAccessCheckbox"
                                                         label={txt.advancedSearch.openAccess.title}
                                                         aria-label={txt.advancedSearch.openAccess.ariaLabel}
                                                         checked={this.props.isOpenAccess}
                                                         onCheck={this._toggleOpenAccess}
+                                                        disabled={this.props.isLoading}
                                                     />
                                                 </div>
-                                                <div className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop">
+                                                <div className="column is-11-mobile is-12-desktop" style={{marginRight: 12}}>
                                                     <DocumentTypeField
                                                         docTypes={this.props.docTypes}
                                                         updateDocTypeValues={this.props.updateDocTypeValues}
                                                         className="advancedSearchPublicationType"
+                                                        disabled={this.props.isLoading}
                                                     />
                                                 </div>
-                                                <div className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop">
+                                                <div className="column is-11-mobile is-12-desktop">
                                                     <PublicationYearRangeField
+                                                        className="advancedSearchYearFilter"
                                                         yearFilter={this.props.yearFilter}
                                                         updateYearRangeFilter={this.props.updateYearRangeFilter}
+                                                        disabled={this.props.isLoading}
                                                     />
                                                 </div>
                                             </div>

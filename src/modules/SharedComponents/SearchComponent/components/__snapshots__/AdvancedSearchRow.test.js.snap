@@ -12,6 +12,14 @@ exports[`AdvancedSearchRow should render default view 1`] = `
       disabled={false}
       errorText="Please select a field to search"
       fullWidth={true}
+      menuItemStyle={
+        Object {
+          "lineHeight": "24px",
+          "paddingBottom": "4px",
+          "paddingTop": "4px",
+          "whiteSpace": "normal",
+        }
+      }
       multiple={false}
       onChange={[Function]}
       value="0"
@@ -314,28 +322,6 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="rek_subtype"
-        primaryText="Subtype"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_subtype"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
         key="rek_genre_type"
         primaryText="Thesis type"
         targetOrigin={
@@ -454,6 +440,14 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
       disabled={false}
       errorText={null}
       fullWidth={true}
+      menuItemStyle={
+        Object {
+          "lineHeight": "24px",
+          "paddingBottom": "4px",
+          "paddingTop": "4px",
+          "whiteSpace": "normal",
+        }
+      }
       multiple={false}
       onChange={[Function]}
       value="all"
@@ -743,28 +737,6 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           }
         }
         value="rek_ismemberof"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_subtype"
-        primaryText="Subtype"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_subtype"
       />
       <MenuItem
         anchorOrigin={
@@ -907,6 +879,14 @@ exports[`AdvancedSearchRow should render search field row with select field and 
       disabled={false}
       errorText={null}
       fullWidth={true}
+      menuItemStyle={
+        Object {
+          "lineHeight": "24px",
+          "paddingBottom": "4px",
+          "paddingTop": "4px",
+          "whiteSpace": "normal",
+        }
+      }
       multiple={false}
       onChange={[Function]}
       value="all"
@@ -1196,28 +1176,6 @@ exports[`AdvancedSearchRow should render search field row with select field and 
           }
         }
         value="rek_ismemberof"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_subtype"
-        primaryText="Subtype"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_subtype"
       />
       <MenuItem
         anchorOrigin={

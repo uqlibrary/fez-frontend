@@ -15,6 +15,7 @@ export default class SearchComponent extends PureComponent {
         searchQueryParams: PropTypes.object,
         activeFacets: PropTypes.any,
         facetsChanged: PropTypes.func,
+        searchLoading: PropTypes.bool,
 
         showSearchButton: PropTypes.bool,
         showMobileSearchButton: PropTypes.bool,
@@ -68,7 +69,7 @@ export default class SearchComponent extends PureComponent {
                 isMinimised: props.isAdvancedSearchMinimised,
                 isOpenAccess: props.isOpenAccessInAdvancedMode || false,
                 docTypes: this.getDocTypesFromSearchQuery(props.searchQueryParams),
-                yearFilter: this.getYearRangeFromSearchQuery(this.props.activeFacets)
+                yearFilter: this.getYearRangeFromSearchQuery(props.activeFacets)
             }
         };
     }
@@ -258,19 +259,21 @@ export default class SearchComponent extends PureComponent {
     };
 
     _resetAdvancedSearch = () => {
+        if(this.props.activeFacets.ranges['Year published']) {
+            this.props.facetsChanged({filters: {}, ranges: {}});
+        }
         this.setState({
             advancedSearch: {
                 isOpenAccess: false,
                 docTypes: [],
-                yearFilter: {},
+                yearFilter: {
+                    from: null,
+                    to: null
+                },
                 fieldRows: [{
                     searchField: '0',
                     value: ''
                 }]
-            }
-        }, () => {
-            if(this.props.activeFacets.ranges['Year published']) {
-                this.props.facetsChanged({filters: {}, ranges: {}});
             }
         });
     };
@@ -360,6 +363,7 @@ export default class SearchComponent extends PureComponent {
                         onAdvancedSearchReset={this._resetAdvancedSearch}
                         onAdvancedSearchRowChange={this._handleAdvancedSearchRowChange}
                         onSearch={this._handleAdvancedSearch}
+                        isLoading={this.props.searchLoading}
                     />
                 }
                 <Snackbar

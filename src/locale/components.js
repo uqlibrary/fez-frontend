@@ -916,13 +916,14 @@ export default {
                         multiple: true,
                         validation: ['required']
                     },
-                    'rek_subtype': {
-                        title: 'Subtype',
-                        combiner: 'is',
-                        type: 'SubTypeLookup',
-                        hint: 'Select a publication subtype',
-                        validation: ['required']
-                    },
+                    // Removed per AH
+                    // 'rek_subtype': {
+                    //     title: 'Subtype',
+                    //     combiner: 'is',
+                    //     type: 'SubTypeLookup',
+                    //     hint: 'Select a publication subtype',
+                    //     validation: ['required']
+                    // },
                     'rek_genre_type': {
                         title: 'Thesis type',
                         combiner: 'is',
@@ -961,7 +962,7 @@ export default {
                     }
                 },
                 openAccess: {
-                    title: 'Open access/Full text',
+                    title: 'Open access',
                     captionText: (
                         <span> AND is <span className="value">open access / full text.</span></span>
                     ),

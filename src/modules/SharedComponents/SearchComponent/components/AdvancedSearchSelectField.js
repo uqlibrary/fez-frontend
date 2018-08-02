@@ -28,7 +28,7 @@ export class AdvancedSearchSelectField extends Component {
         itemsList: [],
         floatingLabelText: '',
         hintText: '',
-        className: 'advancedsearchselectfield menuitem',
+        className: 'selectfield menuitem',
         value: []
     };
 

@@ -555,7 +555,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
         },
       ]
     }
-    isMinimised={true}
+    isMinimised={false}
     isOpenAccess={false}
     onAdvancedSearchReset={[Function]}
     onAdvancedSearchRowAdd={[Function]}
