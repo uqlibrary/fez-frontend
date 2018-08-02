@@ -15,7 +15,8 @@ export default class PublicationYearRangeField extends PureComponent {
         className: 'publicationyearrange menuitem',
         yearFilter: {
             from: null,
-            to: null
+            to: null,
+            valid: true
         },
         disabled: false
     };
@@ -27,21 +28,24 @@ export default class PublicationYearRangeField extends PureComponent {
             delete this.props.yearFilter[key];
             this.props.updateYearRangeFilter({
                 ...this.props.yearFilter,
+                invalid: !this.isValidText()
             });
         } else {
             intValue = parseInt(intValue, 10);
             this.props.updateYearRangeFilter({
                 ...this.props.yearFilter,
-                [key]: intValue,
+                [key]: parseInt(intValue, 10),
+                invalid: !this.isValidText()
             });
         }
     };
 
     isValidText = () => {
-        return (this.props.yearFilter.from > this.props.yearFilter.to)
-        || (this.props.yearFilter.from && !this.props.yearFilter.to) || (!this.props.yearFilter.from && this.props.yearFilter.to)
-        || (this.props.yearFilter.from > 9999) || (this.props.yearFilter.to > 9999)
-            ? locale.components.searchComponent.advancedSearch.fieldTypes.facet_year_range.invalidText : undefined;
+        const from = parseInt(this.props.yearFilter.from, 10);
+        const to = parseInt(this.props.yearFilter.to, 10);
+        console.log((from > to) || (from > 0 && !to) || (!from && to > 0) || (from > 9999) || (to > 9999));
+        return (from > to) || (from > 0 && !to) || (!from && to > 0) || (from > 9999) || (to > 9999)
+            ? locale.components.searchComponent.advancedSearch.fieldTypes.facet_year_range.invalidText : null;
     };
 
     render() {

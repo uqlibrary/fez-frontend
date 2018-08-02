@@ -51,6 +51,7 @@ export default class AdvancedSearchComponent extends PureComponent {
         yearFilter: {
             from: null,
             to: null,
+            invalid: true
         },
         isMinimised: false,
         isOpenAccess: false,
@@ -114,20 +115,16 @@ export default class AdvancedSearchComponent extends PureComponent {
     };
 
     haveAllAdvancedSearchFieldsValidated = (fieldRows) => {
+        console.log(this.props);
         const fieldTypes = locale.components.searchComponent.advancedSearch.fieldTypes;
-        return !((this.props.yearFilter.from > this.props.yearFilter.to)
-            || (this.props.yearFilter.from && !this.props.yearFilter.to) || (!this.props.yearFilter.from && this.props.yearFilter.to)
-            || (this.props.yearFilter.from > 9999) || (this.props.yearFilter.to > 9999))
-            && !this.props.isLoading
-            && (fieldRows.filter(item => item.searchField === '0' || item.value === ''
-            // Check if the locale specifies a minLength for this field and check it not shorter
-            || (item.value && (fieldTypes[item.searchField].type === 'TextField') && !!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length)
+        return !this.props.isLoading && !this.props.yearFilter.invalid
+            && fieldRows.filter(item =>
+                item.searchField !== '0' && item.searchField !== 'all' && item.value === ''
             // Check if this field is a string exceeding the maxLength
             || (fieldTypes[item.searchField].type === 'TextField') && item.value.length > 0 && MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length
             // Check if the value is an array, and not empty
             || (fieldTypes[item.searchField].type === 'CollectionLookup') && item.value.length === 0
-            || (!!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length))
-                .length === 0);
+            ).length === 0;
     };
 
     _handleAdvancedSearch = (event) => {
