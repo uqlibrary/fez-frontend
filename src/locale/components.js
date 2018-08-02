@@ -929,6 +929,7 @@ export default {
                         combiner: 'is',
                         type: 'ThesisTypeLookup',
                         hint: 'Select a Thesis type',
+                        multiple: true,
                         validation: ['required']
                     },
                     'rek_author_id': {
@@ -951,6 +952,13 @@ export default {
                         type: 'OrgUnitLookup',
                         hint: 'Add a school, centre or institute to search',
                         validation: ['required']
+                    },
+                    'facet_year_range': {
+                        title: 'Published year range',
+                        type: null,
+                        fromHint: 'Year from',
+                        toHint: 'Year to',
+                        invalidText: 'Invalid year range'
                     }
                 },
                 openAccess: {

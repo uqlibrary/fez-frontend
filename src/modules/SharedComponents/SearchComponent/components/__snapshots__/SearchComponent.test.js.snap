@@ -263,6 +263,8 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
     updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -564,6 +566,8 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
     updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
   />
   <Snackbar
     autoHideDuration={5000}

@@ -14,6 +14,7 @@ import {locale} from 'locale';
 import * as recordForms from '../../PublicationForm/components/Forms';
 
 import DocumentTypeField from './Fields/DocumentTypeField';
+import PublicationYearRangeField from './Fields/PublicationYearRangeField';
 
 export default class AdvancedSearchComponent extends PureComponent {
     static propTypes = {
@@ -21,6 +22,8 @@ export default class AdvancedSearchComponent extends PureComponent {
 
         fieldRows: PropTypes.array,
         docTypes: PropTypes.array,
+        yearFilter: PropTypes.object,
+        activeFacets: PropTypes.object,
         isOpenAccess: PropTypes.bool,
         isMinimised: PropTypes.bool,
 
@@ -32,6 +35,7 @@ export default class AdvancedSearchComponent extends PureComponent {
         onAdvancedSearchRowRemove: PropTypes.func,
         onAdvancedSearchReset: PropTypes.func,
         updateDocTypeValues: PropTypes.func,
+        updateYearRangeFilter: PropTypes.func,
 
         onAdvancedSearchRowChange: PropTypes.func.isRequired,
         onSearch: PropTypes.func.isRequired,
@@ -43,6 +47,10 @@ export default class AdvancedSearchComponent extends PureComponent {
             value: '',
             label: ''
         }],
+        yearFilter: {
+            from: null,
+            to: null,
+        },
         isMinimised: false,
         isOpenAccess: false,
 
@@ -106,15 +114,18 @@ export default class AdvancedSearchComponent extends PureComponent {
 
     haveAllAdvancedSearchFieldsValidated = (fieldRows) => {
         const fieldTypes = locale.components.searchComponent.advancedSearch.fieldTypes;
-        return fieldRows.filter(item => item.searchField === '0' || item.value === ''
+        return !((this.props.yearFilter.from > this.props.yearFilter.to)
+            || (this.props.yearFilter.from && !this.props.yearFilter.to) || (!this.props.yearFilter.from && this.props.yearFilter.to)
+            || (this.props.yearFilter.from > 9999) || (this.props.yearFilter.to > 9999))
+            && (fieldRows.filter(item => item.searchField === '0' || item.value === ''
             // Check if the locale specifies a minLength for this field and check it not shorter
             || (item.value && (fieldTypes[item.searchField].type === 'TextField') && !!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length)
             // Check if this field is a string exceeding the maxLength
             || (fieldTypes[item.searchField].type === 'TextField') && MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length
             // Check if the value is an array, and not empty
             || (fieldTypes[item.searchField].type === 'CollectionLookup') && item.value.length === 0
-            || (!!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length)
-        ).length === 0;
+            || (!!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length))
+                .length === 0);
     };
 
     _handleAdvancedSearch = (event) => {
@@ -229,6 +240,12 @@ export default class AdvancedSearchComponent extends PureComponent {
                                                         docTypes={this.props.docTypes}
                                                         updateDocTypeValues={this.props.updateDocTypeValues}
                                                         className="advancedSearchPublicationType"
+                                                    />
+                                                </div>
+                                                <div className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop">
+                                                    <PublicationYearRangeField
+                                                        yearFilter={this.props.yearFilter}
+                                                        updateYearRangeFilter={this.props.updateYearRangeFilter}
                                                     />
                                                 </div>
                                             </div>

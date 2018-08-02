@@ -957,6 +957,15 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
                   value={Array []}
                 />
               </div>
+              <div
+                className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop"
+              >
+                <PublicationYearRangeField
+                  className="publicationyearrange menuitem"
+                  yearEnd={2020}
+                  yearStart={1550}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -1595,6 +1604,15 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
                   value={Array []}
                 />
               </div>
+              <div
+                className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop"
+              >
+                <PublicationYearRangeField
+                  className="publicationyearrange menuitem"
+                  yearEnd={2020}
+                  yearStart={1550}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -1758,6 +1776,15 @@ exports[`AdvancedSearchComponent should render default view with open access che
                 <DocumentTypeField
                   className="advancedSearchPublicationType"
                   value={Array []}
+                />
+              </div>
+              <div
+                className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop"
+              >
+                <PublicationYearRangeField
+                  className="publicationyearrange menuitem"
+                  yearEnd={2020}
+                  yearStart={1550}
                 />
               </div>
             </div>
@@ -1979,6 +2006,15 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
                 <DocumentTypeField
                   className="advancedSearchPublicationType"
                   value={Array []}
+                />
+              </div>
+              <div
+                className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop"
+              >
+                <PublicationYearRangeField
+                  className="publicationyearrange menuitem"
+                  yearEnd={2020}
+                  yearStart={1550}
                 />
               </div>
             </div>
