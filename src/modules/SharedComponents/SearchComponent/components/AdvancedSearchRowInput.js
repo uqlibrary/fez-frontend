@@ -2,8 +2,8 @@ import {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import * as validationRules from 'config/validation';
-import {SubTypeField, ThesisTypeField, CollectionsField} from './Fields';
 import {AuthorIdField, PublisherField, OrgUnitNameField} from 'modules/SharedComponents/LookupFields';
+import {PublicationSubtypeField, ThesisSubtypeField, CollectionsSelectField} from 'modules/SharedComponents/PublicationSubtype';
 
 class AdvancedSearchRowInput extends PureComponent {
     static propTypes = {
@@ -57,11 +57,11 @@ class AdvancedSearchRowInput extends PureComponent {
             case 'PublisherLookup':
                 return PublisherField;
             case 'SubTypeLookup':
-                return SubTypeField;
+                return PublicationSubtypeField;
             case 'ThesisTypeLookup':
-                return ThesisTypeField;
+                return ThesisSubtypeField;
             case 'CollectionsLookup':
-                return CollectionsField;
+                return CollectionsSelectField;
             case 'AuthorIdLookup':
                 return AuthorIdField;
             case 'OrgUnitLookup':
@@ -75,19 +75,21 @@ class AdvancedSearchRowInput extends PureComponent {
         const defaultProps = {
             'hintText': this.props.inputField.hint,
             'aria-label': this.props.inputField.hint,
-            'errorText': this.runValidationRules(this.props.value)
+            'errorText': this.runValidationRules(this.props.value),
+            'floatingLabelText': null
         };
 
         const lookupDefaultProps = {
             ...defaultProps,
-            'floatingLabelText': null,
             'value': this.props.label || this.props.value,
         };
 
         const selectDefaultProps = {
             ...defaultProps,
-            'floatingLabelText': null,
-            'onChange': this.props.onChange
+            'locale': {label: null},
+            'selectedValue': this.props.value,
+            'fullWidth': true,
+            'onChange': (item) => this.props.onChange(item, item)
         };
 
         switch (this.props.inputField.type) {
@@ -109,17 +111,23 @@ class AdvancedSearchRowInput extends PureComponent {
                     'onChange': (item) => this.props.onChange(item.id, item.text)
                 };
             case 'SubTypeLookup':
+                return {
+                    ...selectDefaultProps,
+                    'menuItemClassName': 'subtype menuitem'
+                };
             case 'ThesisTypeLookup':
                 return {
                     ...selectDefaultProps,
-                    onChange: (item) => this.props.onChange(item, item)
+                    'menuItemClassName': 'thesistype menuitem'
                 };
             case 'CollectionsLookup':
                 return {
                     ...selectDefaultProps,
                     'loadingHint': this.props.inputField.loadingHint,
                     'errorHint': this.props.inputField.errorHint,
-                    'multiple': this.props.inputField.multiple
+                    'multiple': this.props.inputField.multiple,
+                    'menuItemClassName': 'advancedsearchselectfield menuitem',
+                    'onChange': this.props.onChange
                 };
             default: return {};
         }

@@ -827,15 +827,14 @@ export default {
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add some text to search all fields with',
-                        validation: ['required', 'maxLength500']
+                        validation: ['maxLength500']
                     },
                     'rek_title': {
                         title: 'Title',
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a title to search',
-                        validation: ['required', 'maxLength255', 'minLength10'],
-                        minLength: 10   // Kept to check overall advanced search component is valid or not
+                        validation: ['required', 'maxLength255']
                     },
                     'rek_pid': {
                         title: 'PID',
