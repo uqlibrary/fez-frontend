@@ -3,6 +3,10 @@ import * as constants from 'config/general';
 
 function setup(testProps, isShallow = true){
     const props = {
+        isLoading: false,
+        yearFilter: {
+            invalid: false
+        },
         className: 'advanced-search',
 
         onAdvancedSearchRowChange: jest.fn(),

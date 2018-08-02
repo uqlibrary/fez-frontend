@@ -993,8 +993,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
                   disabled={false}
                   yearFilter={
                     Object {
-                      "from": null,
-                      "to": null,
+                      "invalid": false,
                     }
                   }
                 />
@@ -1665,8 +1664,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
                   disabled={false}
                   yearFilter={
                     Object {
-                      "from": null,
-                      "to": null,
+                      "invalid": false,
                     }
                   }
                 />
@@ -1733,7 +1731,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
             <RaisedButton
               aria-label="Click to search eSpace"
               className="advancedSearchButton"
-              disabled={true}
+              disabled={false}
               fullWidth={true}
               label="Search"
               labelPosition="after"
@@ -1856,8 +1854,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
                   disabled={false}
                   yearFilter={
                     Object {
-                      "from": null,
-                      "to": null,
+                      "invalid": false,
                     }
                   }
                 />
@@ -1924,7 +1921,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
             <RaisedButton
               aria-label="Click to search eSpace"
               className="advancedSearchButton"
-              disabled={true}
+              disabled={false}
               fullWidth={true}
               label="Search"
               labelPosition="after"
@@ -2103,8 +2100,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
                   disabled={false}
                   yearFilter={
                     Object {
-                      "from": null,
-                      "to": null,
+                      "invalid": false,
                     }
                   }
                 />
@@ -2171,7 +2167,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
             <RaisedButton
               aria-label="Click to search eSpace"
               className="advancedSearchButton"
-              disabled={true}
+              disabled={false}
               fullWidth={true}
               label="Search"
               labelPosition="after"

@@ -1,6 +1,6 @@
 import SearchComponent from './SearchComponent';
 
-function setup(testProps, isShallow = true){
+function setup(testProps, isShallow = true) {
     const props = {
         searchQueryParams: {},
 
@@ -82,7 +82,10 @@ describe('SearchComponent', () => {
     it('should submit search for given search query params', () => {
         const testMethod = jest.fn();
         const testHistoryPushMehtod = jest.fn();
-        const wrapper = setup({actions: {searchEspacePublications: testMethod}, history: {push: testHistoryPushMehtod}});
+        const wrapper = setup({
+            actions: {searchEspacePublications: testMethod},
+            history: {push: testHistoryPushMehtod}
+        });
 
         const searchQuery = {
             page: 1,
@@ -121,7 +124,10 @@ describe('SearchComponent', () => {
     it('should handle advanced search', () => {
         const testMethod = jest.fn();
         const testHistoryPushMehtod = jest.fn();
-        const wrapper = setup({actions: {searchEspacePublications: testMethod}, history: {push: testHistoryPushMehtod}});
+        const wrapper = setup({
+            actions: {searchEspacePublications: testMethod},
+            history: {push: testHistoryPushMehtod}
+        });
 
         wrapper.state().advancedSearch = {
             fieldRows: [
@@ -137,7 +143,12 @@ describe('SearchComponent', () => {
                 }
             ],
             isOpenAccess: false,
-            docTypes: []
+            docTypes: [],
+            yearFilter: {
+                from: null,
+                to: null,
+                invalid: false
+            }
         };
 
         wrapper.update();
@@ -153,7 +164,11 @@ describe('SearchComponent', () => {
                 "page": 1,
                 "pageSize": 20,
                 "searchMode": "advanced",
-                "searchQueryParams": {"all": {"value": "i feel lucky", "label": ""}, "rek_display_type": [], "rek_title": {"value": "global warming", "label": ""}},
+                "searchQueryParams": {
+                    "all": {"value": "i feel lucky", "label": ""},
+                    "rek_display_type": [],
+                    "rek_title": {"value": "global warming", "label": ""}
+                },
                 "sortBy": "published_date",
                 "sortDirection": "Desc"
             }
@@ -163,7 +178,10 @@ describe('SearchComponent', () => {
     it('should handle simple search', () => {
         const testMethod = jest.fn();
         const testHistoryPushMehtod = jest.fn();
-        const wrapper = setup({actions: {searchEspacePublications: testMethod}, history: {push: testHistoryPushMehtod}});
+        const wrapper = setup({
+            actions: {searchEspacePublications: testMethod},
+            history: {push: testHistoryPushMehtod}
+        });
 
         wrapper.state().simpleSearch = {
             searchText: 'i feel lucky'
@@ -208,7 +226,8 @@ describe('SearchComponent', () => {
                 label: ''
             }],
             isOpenAccess: false,
-            isMinimised: false
+            isMinimised: false,
+            yearFilter: {}
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -224,7 +243,8 @@ describe('SearchComponent', () => {
                 label: ''
             }],
             isOpenAccess: false,
-            isMinimised: true
+            isMinimised: true,
+            yearFilter: {}
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -251,7 +271,8 @@ describe('SearchComponent', () => {
                 label: ''
             }],
             isOpenAccess: false,
-            isMinimised: false
+            isMinimised: false,
+            yearFilter: {}
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -267,7 +288,8 @@ describe('SearchComponent', () => {
                 label: ''
             }],
             isOpenAccess: true,
-            isMinimised: false
+            isMinimised: false,
+            yearFilter: {}
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -303,16 +325,11 @@ describe('SearchComponent', () => {
         });
 
         expect(wrapper.state().advancedSearch).toEqual({
-            docTypes: [],
-            fieldRows: [
-                {
-                    searchField: 'all',
-                    value: 'i feel lucky',
-                    label: ''
-                }
-            ],
-            isOpenAccess: false,
-            isMinimised: false
+            "docTypes": [],
+            "fieldRows": [{"label": "", "searchField": "all", "value": "i feel lucky"}],
+            "isMinimised": false,
+            "isOpenAccess": false,
+            "yearFilter": {}
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -336,7 +353,8 @@ describe('SearchComponent', () => {
                 }
             ],
             isOpenAccess: false,
-            isMinimised: false
+            isMinimised: false,
+            yearFilter: {}
         });
     });
 
@@ -351,27 +369,15 @@ describe('SearchComponent', () => {
         });
 
         expect(wrapper.state().advancedSearch).toEqual({
-            docTypes: [],
-            fieldRows: [
-                {
-                    searchField: 'all',
-                    value: 'i feel lucky',
-                    label: ''
-                },
-                {
-                    searchField: 'rek_title',
-                    value: 'remove rek title field',
-                    label: ''
-                },
-                {
-                    searchField: "docTypes",
-                    value: [],
-                    label: ''
-                },
-
-    ],
-            isOpenAccess: false,
-            isMinimised: false
+            "docTypes": [],
+            "fieldRows": [{"label": "", "searchField": "all", "value": "i feel lucky"}, {
+                "label": "",
+                "searchField": "rek_title",
+                "value": "remove rek title field"
+            }, {"label": "", "searchField": "docTypes", "value": []}],
+            "isMinimised": false,
+            "isOpenAccess": false,
+            "yearFilter": {}
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -394,7 +400,8 @@ describe('SearchComponent', () => {
                 },
             ],
             isOpenAccess: false,
-            isMinimised: false
+            isMinimised: false,
+            yearFilter: {}
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -409,21 +416,20 @@ describe('SearchComponent', () => {
         });
 
         expect(wrapper.state().advancedSearch).toEqual({
-            docTypes: [],
-            fieldRows: [
-                {
-                    searchField: 'all',
-                    value: 'i feel lucky',
-                    label: ''
-                }
-            ],
-            isOpenAccess: false,
-            isMinimised: false
+            "docTypes": [],
+            "fieldRows": [{"label": "", "searchField": "all", "value": "i feel lucky"}],
+            "isMinimised": false,
+            "isOpenAccess": false,
+            "yearFilter": {}
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance()._handleAdvancedSearchRowChange(0, {searchField: 'all', value: 'i feel more lucky', label: ''});
+        wrapper.instance()._handleAdvancedSearchRowChange(0, {
+            searchField: 'all',
+            value: 'i feel more lucky',
+            label: ''
+        });
         wrapper.update();
 
         expect(wrapper.state().advancedSearch).toEqual({
@@ -436,7 +442,8 @@ describe('SearchComponent', () => {
                 }
             ],
             isOpenAccess: false,
-            isMinimised: false
+            isMinimised: false,
+            yearFilter: {}
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -448,6 +455,7 @@ describe('SearchComponent', () => {
                 all: {value: 'i feel lucky', label: ''},
                 rek_title: {value: 'global warming', label: ''}
             },
+            activeFacets: {filters: {}, ranges: {}},
             isAdvancedSearch: true,
             isOpenAccessInAdvancedMode: true
         });
@@ -467,7 +475,8 @@ describe('SearchComponent', () => {
                 }
             ],
             isOpenAccess: true,
-            isMinimised: false
+            isMinimised: false,
+            yearFilter: {}
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -476,14 +485,10 @@ describe('SearchComponent', () => {
         wrapper.update();
 
         expect(wrapper.state().advancedSearch).toEqual({
-            docTypes: [],
-            fieldRows: [
-                {
-                    searchField: '0',
-                    value: ''
-                }
-            ],
-            isOpenAccess: false
+            "docTypes": [],
+            "fieldRows": [{"searchField": "0", "value": ""}],
+            "isOpenAccess": false,
+            "yearFilter": {"from": null, "to": null}
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();

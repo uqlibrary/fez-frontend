@@ -24,6 +24,8 @@ exports[`SearchComponent should add one row for advanced search 1`] = `
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
     updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -61,6 +63,8 @@ exports[`SearchComponent should add one row for advanced search 2`] = `
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
     updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -170,6 +174,8 @@ exports[`SearchComponent should remove one row from advanced search 1`] = `
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
     updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -208,6 +214,8 @@ exports[`SearchComponent should remove one row from advanced search 2`] = `
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
     updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -347,6 +355,8 @@ exports[`SearchComponent should reset advanced search 1`] = `
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
     updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -379,6 +389,13 @@ exports[`SearchComponent should reset advanced search 2`] = `
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
     updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={
+      Object {
+        "from": null,
+        "to": null,
+      }
+    }
   />
   <Snackbar
     autoHideDuration={5000}
@@ -412,6 +429,8 @@ exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
     updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -445,6 +464,8 @@ exports[`SearchComponent should toggle advanced search to minimised view 2`] = `
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
     updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -478,6 +499,8 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
     updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -511,6 +534,8 @@ exports[`SearchComponent should toggle open access for advanced search 2`] = `
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
     updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -601,6 +626,8 @@ exports[`SearchComponent should update advanced search row on search text change
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
     updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
   />
   <Snackbar
     autoHideDuration={5000}
@@ -634,6 +661,8 @@ exports[`SearchComponent should update advanced search row on search text change
     onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
     updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
   />
   <Snackbar
     autoHideDuration={5000}
