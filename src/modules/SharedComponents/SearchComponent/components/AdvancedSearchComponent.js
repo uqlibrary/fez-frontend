@@ -115,7 +115,6 @@ export default class AdvancedSearchComponent extends PureComponent {
     };
 
     haveAllAdvancedSearchFieldsValidated = (fieldRows) => {
-        console.log(this.props);
         const fieldTypes = locale.components.searchComponent.advancedSearch.fieldTypes;
         return !this.props.isLoading && !this.props.yearFilter.invalid
             && fieldRows.filter(item =>

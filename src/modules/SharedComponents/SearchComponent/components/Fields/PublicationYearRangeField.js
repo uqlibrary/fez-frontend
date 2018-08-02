@@ -43,7 +43,6 @@ export default class PublicationYearRangeField extends PureComponent {
     isValidText = () => {
         const from = parseInt(this.props.yearFilter.from, 10);
         const to = parseInt(this.props.yearFilter.to, 10);
-        console.log((from > to) || (from > 0 && !to) || (!from && to > 0) || (from > 9999) || (to > 9999));
         return (from > to) || (from > 0 && !to) || (!from && to > 0) || (from > 9999) || (to > 9999)
             ? locale.components.searchComponent.advancedSearch.fieldTypes.facet_year_range.invalidText : null;
     };
