@@ -174,7 +174,7 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
     // convert {value, label} from advanced search to value string from api
     const searchQueryParamsWithoutLabels = !!searchQueryParams && Object.keys(searchQueryParams).reduce((result, key) => {
         const {value} = searchQueryParams[key];
-        return !!value && {...result, [key]: value} || {...result, [key]: searchQueryParams[key]};
+        return (key === 'all' || !!value) && {...result, [key]: value} || {...result, [key]: searchQueryParams[key]};
     }, {});
 
     const values = {...query, searchQueryParams: searchQueryParamsWithoutLabels};

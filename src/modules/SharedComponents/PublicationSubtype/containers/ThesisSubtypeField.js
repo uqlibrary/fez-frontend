@@ -7,7 +7,7 @@ const mapStateToProps = (state, props) => {
     return {
         itemsList: props.itemsList || thesisSubtypes,
         itemsLoading: false,
-        selectedValue: props.input ? props.input.value : null
+        selectedValue: props.input ? props.input.value : props.value
     };
 };
 
@@ -18,5 +18,5 @@ const mapDispatchToProps = () => {
 const ThesisSubtypeList = connect(mapStateToProps, mapDispatchToProps)(GenericSelectField);
 
 export default function ThesisSubtypeField(fieldProps) {
-    return (<ThesisSubtypeList onChange={ fieldProps.input.onChange } { ...fieldProps } />);
+    return (<ThesisSubtypeList onChange={ !!fieldProps.input && fieldProps.input.onChange || !!fieldProps.onChange && fieldProps.onChange } { ...fieldProps } />);
 }
