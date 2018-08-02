@@ -12,7 +12,6 @@ import {publicationTypes} from 'config';
 import {documentTypesLookup} from 'config/general';
 import {locale} from 'locale';
 import * as recordForms from '../../PublicationForm/components/Forms';
-
 import DocumentTypeField from './Fields/DocumentTypeField';
 
 export default class AdvancedSearchComponent extends PureComponent {
@@ -164,8 +163,9 @@ export default class AdvancedSearchComponent extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent;
+        const lastFieldAdded = [...this.props.fieldRows].pop();
         const canAddAnotherField = this.haveAllAdvancedSearchFieldsValidated(this.props.fieldRows)
-            && this.props.fieldRows.length < Object.keys(txt.advancedSearch.fieldTypes).length - 1;
+            && lastFieldAdded.searchField !== '0';
         const alreadyAddedFields = this.props.fieldRows.map(item => item.searchField);
         const searchQueryCaption = this.getAdvancedSearchCaption(this.props);
         return (
