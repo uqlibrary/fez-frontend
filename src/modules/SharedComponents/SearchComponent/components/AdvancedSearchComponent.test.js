@@ -124,7 +124,7 @@ describe('AdvancedSearchComponent', () => {
             ]
         };
         const wrapper = setup({...thisProps});
-        expect(wrapper.instance().haveAllAdvancedSearchFieldsValidated(thisProps.fieldRows)).toBeFalsy();
+        expect(wrapper.instance().haveAllAdvancedSearchFieldsValidated(thisProps.fieldRows)).toBeTruthy();
     });
 
     it('haveAllAdvancedSearchFieldsValidated should return true for a fieldRow which is longer than minLength', () => {
