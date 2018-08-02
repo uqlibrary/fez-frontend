@@ -11,8 +11,17 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
   }
   floatingLabelText="Select item loading..."
   fullWidth={false}
+  hintText={null}
   id="selectedValue"
   maxHeight={250}
+  menuItemStyle={
+    Object {
+      "lineHeight": "24px",
+      "paddingBottom": "4px",
+      "paddingTop": "4px",
+      "whiteSpace": "normal",
+    }
+  }
   multiple={false}
   name="selectedValue"
   onChange={[Function]}
@@ -101,8 +110,17 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
   }
   floatingLabelText="Select item "
   fullWidth={false}
+  hintText={null}
   id="selectedValue"
   maxHeight={250}
+  menuItemStyle={
+    Object {
+      "lineHeight": "24px",
+      "paddingBottom": "4px",
+      "paddingTop": "4px",
+      "whiteSpace": "normal",
+    }
+  }
   multiple={false}
   name="selectedValue"
   onChange={[Function]}
@@ -120,8 +138,17 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
   }
   floatingLabelText="Select item "
   fullWidth={false}
+  hintText={null}
   id="selectedValue"
   maxHeight={250}
+  menuItemStyle={
+    Object {
+      "lineHeight": "24px",
+      "paddingBottom": "4px",
+      "paddingTop": "4px",
+      "whiteSpace": "normal",
+    }
+  }
   multiple={false}
   name="selectedValue"
   onChange={[Function]}

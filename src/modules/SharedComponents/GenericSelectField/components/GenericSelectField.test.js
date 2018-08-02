@@ -34,11 +34,6 @@ describe('GenericSelectField ', () => {
                 setup({loadItemsList: testLoadItemListFn, parentItemsId: 1234});
                 expect(testLoadItemListFn).toHaveBeenCalledWith(1234);
             });
-
-            it('sets state.selectedValue to Item 2', () => {
-                const wrapper = setup({itemsList: ['Item 1', 'Item 2', 'Item 3'], selectedValue: 'Item 2'});
-                expect(wrapper.state().selectedValue).toBe('Item 2');
-            });
         });
 
         it('componentWillUpdate', () => {

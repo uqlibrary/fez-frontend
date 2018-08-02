@@ -2,12 +2,9 @@ import {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import * as validationRules from 'config/validation';
-import {CollectionsField} from './Fields';
 import {AuthorIdField, PublisherField, OrgUnitNameField} from 'modules/SharedComponents/LookupFields';
-import {GenericSelectField} from 'modules/SharedComponents/GenericSelectField';
+import {PublicationSubtypeField, ThesisSubtypeField, CollectionsSelectField} from 'modules/SharedComponents/PublicationSubtype';
 
-import {thesisSubtypes} from 'config/general';
-import {publicationSubtypes} from 'config/general';
 class AdvancedSearchRowInput extends PureComponent {
     static propTypes = {
         children: PropTypes.func.isRequired,
@@ -60,10 +57,11 @@ class AdvancedSearchRowInput extends PureComponent {
             case 'PublisherLookup':
                 return PublisherField;
             case 'SubTypeLookup':
+                return PublicationSubtypeField;
             case 'ThesisTypeLookup':
-                return GenericSelectField;
+                return ThesisSubtypeField;
             case 'CollectionsLookup':
-                return CollectionsField;
+                return CollectionsSelectField;
             case 'AuthorIdLookup':
                 return AuthorIdField;
             case 'OrgUnitLookup':
@@ -77,27 +75,21 @@ class AdvancedSearchRowInput extends PureComponent {
         const defaultProps = {
             'hintText': this.props.inputField.hint,
             'aria-label': this.props.inputField.hint,
-            'errorText': this.runValidationRules(this.props.value)
+            'errorText': this.runValidationRules(this.props.value),
+            'floatingLabelText': null
         };
 
         const lookupDefaultProps = {
             ...defaultProps,
-            'floatingLabelText': null,
             'value': this.props.label || this.props.value,
         };
 
         const selectDefaultProps = {
             ...defaultProps,
-            'floatingLabelText': null,
-            'onChange': this.props.onChange
-        };
-
-        const staticSelectDefaultProps = {
-            ...selectDefaultProps,
-            locale: {label: null},
-            selectedValue: this.props.value,
-            fullWidth: true,
-            onChange: (item) => this.props.onChange(item, item)
+            'locale': {label: null},
+            'selectedValue': this.props.value,
+            'fullWidth': true,
+            'onChange': (item) => this.props.onChange(item, item)
         };
 
         switch (this.props.inputField.type) {
@@ -120,22 +112,22 @@ class AdvancedSearchRowInput extends PureComponent {
                 };
             case 'SubTypeLookup':
                 return {
-                    ...staticSelectDefaultProps,
-                    itemsList: publicationSubtypes,
-                    menuItemClassName: 'subtype menuitem',
+                    ...selectDefaultProps,
+                    'menuItemClassName': 'subtype menuitem'
                 };
             case 'ThesisTypeLookup':
                 return {
-                    ...staticSelectDefaultProps,
-                    itemsList: thesisSubtypes,
-                    menuItemClassName: 'thesistype menuitem',
+                    ...selectDefaultProps,
+                    'menuItemClassName': 'thesistype menuitem'
                 };
             case 'CollectionsLookup':
                 return {
                     ...selectDefaultProps,
                     'loadingHint': this.props.inputField.loadingHint,
                     'errorHint': this.props.inputField.errorHint,
-                    'multiple': this.props.inputField.multiple
+                    'multiple': this.props.inputField.multiple,
+                    'menuItemClassName': 'advancedsearchselectfield menuitem',
+                    'onChange': this.props.onChange
                 };
             default: return {};
         }
