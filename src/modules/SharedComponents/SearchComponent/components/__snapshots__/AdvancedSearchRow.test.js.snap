@@ -880,7 +880,6 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           "title": "Any field",
           "type": "TextField",
           "validation": Array [
-            "required",
             "maxLength500",
           ],
         }
@@ -1329,7 +1328,6 @@ exports[`AdvancedSearchRow should render search field row with select field and 
           "title": "Any field",
           "type": "TextField",
           "validation": Array [
-            "required",
             "maxLength500",
           ],
         }

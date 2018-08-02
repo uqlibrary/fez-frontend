@@ -92,21 +92,23 @@ export default class SearchComponent extends PureComponent {
     }
 
     getFieldRowsFromSearchQuery = (searchQueryParams) => {
-        if (!searchQueryParams || Object.keys(searchQueryParams).length === 0) {
+        const fieldRows = !!searchQueryParams && Object.keys(searchQueryParams)
+            .filter((item) => {
+                return item !== 'rek_display_type';
+            }) || [];
+
+        if (fieldRows.length === 0) {
             return [{
                 searchField: '0',
                 value: '',
                 label: ''
             }];
         } else {
-            return Object.keys(searchQueryParams)
-                .filter((item) => {
-                    return item !== 'rek_display_type';
-                })
+            return fieldRows
                 .map(key => ({
                     searchField: key,
-                    value: searchQueryParams[key].value || searchQueryParams[key],
-                    label: searchQueryParams[key].label || ''
+                    value: searchQueryParams[key].hasOwnProperty('value') ? searchQueryParams[key].value : searchQueryParams[key],
+                    label: searchQueryParams[key].hasOwnProperty('label') ? searchQueryParams[key].label : ''
                 }));
         }
     };
@@ -260,12 +262,12 @@ export default class SearchComponent extends PureComponent {
 
     _handleAdvancedSearch = () => {
         const searchQueryParams = this.state.advancedSearch.fieldRows
+            .filter(item => item.searchField !== '0')
             .reduce((searchQueries, item) => {
                 const {searchField, ...rest} = item;
                 return {...searchQueries, [searchField]: rest};
             }, {});
         const searchQuery = this.getSearchQuery(searchQueryParams);
-
         this.handleSearch(searchQuery);
     };
 
