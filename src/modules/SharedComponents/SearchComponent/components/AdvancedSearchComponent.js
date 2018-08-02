@@ -109,7 +109,7 @@ export default class AdvancedSearchComponent extends PureComponent {
         return fieldRows.filter(item =>
             item.searchField !== '0' && item.searchField !== 'all' && item.value === ''
             // Check if this field is a string exceeding the maxLength
-            || (fieldTypes[item.searchField].type === 'TextField') && MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length
+            || (fieldTypes[item.searchField].type === 'TextField') && item.value.length > 0 && MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length
             // Check if the value is an array, and not empty
             || (fieldTypes[item.searchField].type === 'CollectionLookup') && item.value.length === 0
         ).length === 0;

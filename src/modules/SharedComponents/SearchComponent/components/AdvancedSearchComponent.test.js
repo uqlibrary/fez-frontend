@@ -147,6 +147,17 @@ describe('AdvancedSearchComponent', () => {
         expect(wrapper.instance().haveAllAdvancedSearchFieldsValidated(thisProps.fieldRows)).toBeFalsy();
     });
 
+    it('haveAllAdvancedSearchFieldsValidated should allow all field to be empty and empty field', () => {
+        const thisProps = {
+            "fieldRows": [
+                {"searchField": "all", "value": ""},
+                {"searchField": "0", "value": ""},
+            ]
+        };
+        const wrapper = setup({...thisProps});
+        expect(wrapper.instance().haveAllAdvancedSearchFieldsValidated(thisProps.fieldRows)).toBeTruthy();
+    });
+
     it('should render advanced search docTypes with checked values based on props', () => {
         const wrapper = setup({isOpenAccess: true, docTypes: [179, 202], fieldRows: [{value: 'i feel lucky', searchField: 'all'}]});
         expect(toJson(wrapper.find('.advancedSearchPublicationType').dive())).toMatchSnapshot();
