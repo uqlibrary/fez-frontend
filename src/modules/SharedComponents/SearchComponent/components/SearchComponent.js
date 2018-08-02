@@ -92,12 +92,12 @@ export default class SearchComponent extends PureComponent {
     }
 
     getFieldRowsFromSearchQuery = (searchQueryParams) => {
-        const fieldRows = Object.keys(searchQueryParams)
+        const fieldRows = !!searchQueryParams && Object.keys(searchQueryParams)
             .filter((item) => {
                 return item !== 'rek_display_type';
-            });
+            }) || [];
 
-        if (!searchQueryParams || fieldRows.length === 0) {
+        if (fieldRows.length === 0) {
             return [{
                 searchField: '0',
                 value: '',
