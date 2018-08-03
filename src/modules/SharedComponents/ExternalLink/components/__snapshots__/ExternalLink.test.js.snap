@@ -20,6 +20,5 @@ exports[`ExternalLink test  should render component without open-in-new window i
   tabIndex="0"
   target="_blank"
   text="Google"
-  title={false}
 />
 `;
