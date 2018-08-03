@@ -2,7 +2,6 @@ import React, {PureComponent} from 'react';
 import {publicationTypes} from 'config';
 import MenuItem from 'material-ui/MenuItem';
 import {locale} from 'locale';
-import * as recordForms from '../../../PublicationForm/components/Forms';
 import PropTypes from 'prop-types';
 import SelectField from 'material-ui/SelectField';
 
@@ -20,7 +19,7 @@ export default class DocumentTypeField extends PureComponent {
 
     constructor(props) {
         super(props);
-        this.publicationTypes = publicationTypes({...recordForms});
+        this.publicationTypes = publicationTypes();
     }
 
     _handleDocTypeChange = (event, index, value) => {
