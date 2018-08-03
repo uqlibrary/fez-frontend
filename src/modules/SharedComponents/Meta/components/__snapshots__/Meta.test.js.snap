@@ -2342,11 +2342,7 @@ exports[`Meta Component  should render title only 1`] = `
   encodeSpecialCharacters={true}
 >
   <title>
-    UQ eSpace 
+    Index page - UQ eSpace 
   </title>
-  <link
-    href="http://purl.org/DC/elements/1.0/"
-    rel="schema.DC"
-  />
 </HelmetWrapper>
 `;
