@@ -392,8 +392,8 @@ exports[`SearchComponent should reset advanced search 2`] = `
     updateYearRangeFilter={[Function]}
     yearFilter={
       Object {
-        "from": null,
-        "to": null,
+        "from": 0,
+        "to": 0,
       }
     }
   />
@@ -592,7 +592,12 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
     onToggleSearchMode={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
-    yearFilter={Object {}}
+    yearFilter={
+      Object {
+        "from": undefined,
+        "to": undefined,
+      }
+    }
   />
   <Snackbar
     autoHideDuration={5000}

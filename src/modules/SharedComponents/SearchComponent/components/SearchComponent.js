@@ -69,7 +69,7 @@ export default class SearchComponent extends PureComponent {
                 isMinimised: props.isAdvancedSearchMinimised,
                 isOpenAccess: props.isOpenAccessInAdvancedMode || false,
                 docTypes: this.getDocTypesFromSearchQuery(props.searchQueryParams),
-                yearFilter: this.getYearRangeFromSearchQuery(props.activeFacets)
+                yearFilter: this.getYearRangeFromActiveFacets(props.activeFacets) || {}
             }
         };
     }
@@ -94,7 +94,10 @@ export default class SearchComponent extends PureComponent {
                     isMinimised: this.context.isMobile && nextProps.isAdvancedSearchMinimised || false,
                     isOpenAccess: nextProps.isOpenAccessInAdvancedMode || false,
                     docTypes: this.getDocTypesFromSearchQuery(nextProps.searchQueryParams) || [],
-                    yearFilter: this.getYearRangeFromSearchQuery(this.props.activeFacets) || {}
+                    yearFilter: {
+                        from: this.state.advancedSearch.yearFilter.from,
+                        to: this.state.advancedSearch.yearFilter.to,
+                    }
                 }
             });
         }
@@ -132,7 +135,7 @@ export default class SearchComponent extends PureComponent {
         }
     };
 
-    getYearRangeFromSearchQuery = (activeFacets) => {
+    getYearRangeFromActiveFacets = (activeFacets) => {
         if(activeFacets && activeFacets.ranges && activeFacets.ranges['Year published']) {
             return {from: activeFacets.ranges['Year published'].from, to: activeFacets.ranges['Year published'].to};
         } else {
@@ -261,16 +264,13 @@ export default class SearchComponent extends PureComponent {
     };
 
     _resetAdvancedSearch = () => {
-        if(this.props.activeFacets.ranges['Year published']) {
-            this.props.facetsChanged({filters: {}, ranges: {}});
-        }
         this.setState({
             advancedSearch: {
                 isOpenAccess: false,
                 docTypes: [],
                 yearFilter: {
-                    from: null,
-                    to: null
+                    from: 0,
+                    to: 0
                 },
                 fieldRows: [{
                     searchField: '0',
@@ -373,7 +373,6 @@ export default class SearchComponent extends PureComponent {
                     autoHideDuration={5000}
                     message={this.state.snackbarMessage}
                 />
-                {/* {JSON.stringify(this.state.advancedSearch)} */}
             </React.Fragment>
         );
     }

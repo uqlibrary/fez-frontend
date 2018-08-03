@@ -24,20 +24,12 @@ export default class PublicationYearRangeField extends PureComponent {
     setValue = (key) => (event) => {
         const value = event.target.value.toString();
         let intValue = value.replace(/\D/g, '');
-        if(isNaN(intValue) || !intValue || intValue === null) {
-            delete this.props.yearFilter[key];
-            this.props.updateYearRangeFilter({
-                ...this.props.yearFilter,
-                invalid: !this.isValidText()
-            });
-        } else {
-            intValue = parseInt(intValue, 10);
-            this.props.updateYearRangeFilter({
-                ...this.props.yearFilter,
-                [key]: parseInt(intValue, 10),
-                invalid: !this.isValidText()
-            });
-        }
+        intValue = parseInt(intValue, 10);
+        this.props.updateYearRangeFilter({
+            ...this.props.yearFilter,
+            [key]: isNaN(intValue) ? 0 : intValue,
+            invalid: !this.isValidText()
+        });
     };
 
     isValidText = () => {

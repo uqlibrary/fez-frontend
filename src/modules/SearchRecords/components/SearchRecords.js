@@ -207,6 +207,7 @@ class SearchRecords extends PureComponent {
                         showAdvancedSearchButton activeFacets={this.state.activeFacets}
                         facetsChanged={this.facetsChanged}
                         searchLoading={this.props.searchLoading}
+                        clearSearchQuery={this.props.actions.clearSearchQuery}
                     />
                 </StandardCard>
                 {

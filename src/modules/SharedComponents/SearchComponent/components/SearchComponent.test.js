@@ -488,7 +488,7 @@ describe('SearchComponent', () => {
             "docTypes": [],
             "fieldRows": [{"searchField": "0", "value": ""}],
             "isOpenAccess": false,
-            "yearFilter": {"from": null, "to": null}
+            "yearFilter": {"from": 0, "to": 0}
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
