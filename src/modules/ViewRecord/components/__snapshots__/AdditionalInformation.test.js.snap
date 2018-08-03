@@ -2682,7 +2682,6 @@ exports[`Additional Information Component  should render component with audio do
                                                         rel="noopener noreferrer"
                                                         tabIndex="0"
                                                         target="_blank"
-                                                        title={false}
                                                       >
                                                         <div
                                                           className="fez-icon license cc-by-nc-nd"

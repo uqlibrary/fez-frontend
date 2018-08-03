@@ -40,5 +40,5 @@ const mapDispatchToProps = (dispatch) => (
     }
 );
 
-export const AuthorIdField = connect(mapStateToProps, mapDispatchToProps)(AutoSuggestField);
+export const ContributorIdField = connect(mapStateToProps, mapDispatchToProps)(AutoSuggestField);
 
