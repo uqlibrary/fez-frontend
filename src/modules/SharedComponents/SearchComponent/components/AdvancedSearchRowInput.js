@@ -108,6 +108,7 @@ class AdvancedSearchRowInput extends PureComponent {
                     'onChange': (item) => this.props.onChange(item.value, item.value)
                 };
             case 'AuthorIdLookup':
+            case 'ContributorIdLookup':
                 return {
                     ...lookupDefaultProps,
                     'onChange': (item) => this.props.onChange(item.id, item.text)
