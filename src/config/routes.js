@@ -86,7 +86,7 @@ export const pathConfig = {
             searchQuery: {'rek_journal_name': journalName},
             activeFacets: {
                 filters: {
-                    'Journal Name': journalName
+                    'Journal name': journalName
                 }
             }
         }),
@@ -94,7 +94,6 @@ export const pathConfig = {
         collection: (collectionId) => getSearchUrl({searchQuery: {'rek_ismemberof': collectionId}}),
         contributor: (contributor) => getSearchUrl({searchQuery: {'rek_contributor': contributor}}),
         conferenceName: (conferenceName) => getSearchUrl({searchQuery: {'rek_conference_name': conferenceName}}),
-        journalName: (journalName) => getSearchUrl({searchQuery: {'rek_journal_name': journalName}}),
         orgUnitName: (orgUnitName) => getSearchUrl({searchQuery: {'rek_org_unit_name': orgUnitName}}),
         publisher: (publisher) => getSearchUrl({searchQuery: {'rek_publisher': publisher}}),
         series: (series) => getSearchUrl({searchQuery: {'rek_series': series}}),

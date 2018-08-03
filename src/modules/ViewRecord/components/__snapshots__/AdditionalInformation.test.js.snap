@@ -20951,10 +20951,10 @@ exports[`Additional Information Component  should render component with journal 
                                                   <span>
                                                     <Link
                                                       replace={false}
-                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D=Journal+of+Cell+Science&searchMode=advanced"
+                                                      to="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BJournal+name%5D=Journal+of+Cell+Science&searchQueryParams%5Brek_journal_name%5D=Journal+of+Cell+Science&searchMode=advanced"
                                                     >
                                                       <a
-                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D=Journal+of+Cell+Science&searchMode=advanced"
+                                                        href="/records/search?page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BJournal+name%5D=Journal+of+Cell+Science&searchQueryParams%5Brek_journal_name%5D=Journal+of+Cell+Science&searchMode=advanced"
                                                         onClick={[Function]}
                                                       >
                                                         <span>
