@@ -82,6 +82,14 @@ export const pathConfig = {
                 showOpenAccessOnly: openAccessIds.indexOf(openAccessStatusId) >= 0
             }
         }),
+        journalName: (journalName) => getSearchUrl({
+            searchQuery: {'rek_journal_name': journalName},
+            activeFacets: {
+                filters: {
+                    'Journal Name': journalName
+                }
+            }
+        }),
         bookTitle: (bookTitle) => getSearchUrl({searchQuery: {'rek_book_title': bookTitle}}),
         collection: (collectionId) => getSearchUrl({searchQuery: {'rek_ismemberof': collectionId}}),
         contributor: (contributor) => getSearchUrl({searchQuery: {'rek_contributor': contributor}}),
