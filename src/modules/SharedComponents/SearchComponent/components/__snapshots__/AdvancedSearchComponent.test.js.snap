@@ -160,6 +160,28 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     focusState="none"
     insetChildren={false}
     key="7"
+    primaryText="Data Collection"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={371}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="8"
     primaryText="Department Technical Report"
     targetOrigin={
       Object {
@@ -181,7 +203,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="8"
+    key="9"
     primaryText="Design"
     targetOrigin={
       Object {
@@ -203,7 +225,29 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="9"
+    key="10"
+    primaryText="Digilib Image"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={228}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="11"
     primaryText="Generic Document"
     targetOrigin={
       Object {
@@ -225,7 +269,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="10"
+    key="12"
     primaryText="Image"
     targetOrigin={
       Object {
@@ -247,7 +291,29 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="11"
+    key="13"
+    primaryText="Journal"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={294}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="14"
     primaryText="Journal Article"
     targetOrigin={
       Object {
@@ -269,7 +335,29 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="12"
+    key="15"
+    primaryText="Manuscript"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={374}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="16"
     primaryText="Newspaper Article"
     targetOrigin={
       Object {
@@ -291,7 +379,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="13"
+    key="17"
     primaryText="Patent"
     targetOrigin={
       Object {
@@ -313,7 +401,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="14"
+    key="18"
     primaryText="Preprint"
     targetOrigin={
       Object {
@@ -335,7 +423,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="15"
+    key="19"
     primaryText="Research Report"
     targetOrigin={
       Object {
@@ -357,7 +445,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="16"
+    key="20"
     primaryText="Seminar Paper"
     targetOrigin={
       Object {
@@ -379,7 +467,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="17"
+    key="21"
     primaryText="Thesis"
     targetOrigin={
       Object {
@@ -401,7 +489,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="18"
+    key="22"
     primaryText="Video Document"
     targetOrigin={
       Object {
@@ -423,7 +511,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="19"
+    key="23"
     primaryText="Working Paper"
     targetOrigin={
       Object {
@@ -432,6 +520,28 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     value={183}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="24"
+    primaryText="Reference Entry"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={272}
   />
 </SelectField>
 `;
@@ -596,6 +706,28 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     focusState="none"
     insetChildren={false}
     key="7"
+    primaryText="Data Collection"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={371}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="8"
     primaryText="Department Technical Report"
     targetOrigin={
       Object {
@@ -617,7 +749,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="8"
+    key="9"
     primaryText="Design"
     targetOrigin={
       Object {
@@ -634,12 +766,34 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
         "vertical": "top",
       }
     }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="10"
+    primaryText="Digilib Image"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={228}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
     checked={true}
     desktop={false}
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="9"
+    key="11"
     primaryText="Generic Document"
     targetOrigin={
       Object {
@@ -661,7 +815,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="10"
+    key="12"
     primaryText="Image"
     targetOrigin={
       Object {
@@ -678,12 +832,34 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
         "vertical": "top",
       }
     }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="13"
+    primaryText="Journal"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={294}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
     checked={true}
     desktop={false}
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="11"
+    key="14"
     primaryText="Journal Article"
     targetOrigin={
       Object {
@@ -705,7 +881,29 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="12"
+    key="15"
+    primaryText="Manuscript"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={374}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="16"
     primaryText="Newspaper Article"
     targetOrigin={
       Object {
@@ -727,7 +925,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="13"
+    key="17"
     primaryText="Patent"
     targetOrigin={
       Object {
@@ -749,7 +947,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="14"
+    key="18"
     primaryText="Preprint"
     targetOrigin={
       Object {
@@ -771,7 +969,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="15"
+    key="19"
     primaryText="Research Report"
     targetOrigin={
       Object {
@@ -793,7 +991,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="16"
+    key="20"
     primaryText="Seminar Paper"
     targetOrigin={
       Object {
@@ -815,7 +1013,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="17"
+    key="21"
     primaryText="Thesis"
     targetOrigin={
       Object {
@@ -837,7 +1035,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="18"
+    key="22"
     primaryText="Video Document"
     targetOrigin={
       Object {
@@ -859,7 +1057,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="19"
+    key="23"
     primaryText="Working Paper"
     targetOrigin={
       Object {
@@ -868,6 +1066,28 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       }
     }
     value={183}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="24"
+    primaryText="Reference Entry"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={272}
   />
 </SelectField>
 `;
@@ -1233,6 +1453,28 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
     focusState="none"
     insetChildren={false}
     key="7"
+    primaryText="Data Collection"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={371}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="8"
     primaryText="Department Technical Report"
     targetOrigin={
       Object {
@@ -1254,7 +1496,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="8"
+    key="9"
     primaryText="Design"
     targetOrigin={
       Object {
@@ -1271,12 +1513,34 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
         "vertical": "top",
       }
     }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="10"
+    primaryText="Digilib Image"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={228}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
     checked={true}
     desktop={false}
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="9"
+    key="11"
     primaryText="Generic Document"
     targetOrigin={
       Object {
@@ -1298,7 +1562,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="10"
+    key="12"
     primaryText="Image"
     targetOrigin={
       Object {
@@ -1320,7 +1584,29 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="11"
+    key="13"
+    primaryText="Journal"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={294}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="14"
     primaryText="Journal Article"
     targetOrigin={
       Object {
@@ -1342,7 +1628,29 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="12"
+    key="15"
+    primaryText="Manuscript"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={374}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="16"
     primaryText="Newspaper Article"
     targetOrigin={
       Object {
@@ -1364,7 +1672,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="13"
+    key="17"
     primaryText="Patent"
     targetOrigin={
       Object {
@@ -1386,7 +1694,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="14"
+    key="18"
     primaryText="Preprint"
     targetOrigin={
       Object {
@@ -1408,7 +1716,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="15"
+    key="19"
     primaryText="Research Report"
     targetOrigin={
       Object {
@@ -1430,7 +1738,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="16"
+    key="20"
     primaryText="Seminar Paper"
     targetOrigin={
       Object {
@@ -1452,7 +1760,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="17"
+    key="21"
     primaryText="Thesis"
     targetOrigin={
       Object {
@@ -1474,7 +1782,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="18"
+    key="22"
     primaryText="Video Document"
     targetOrigin={
       Object {
@@ -1496,7 +1804,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
     disabled={false}
     focusState="none"
     insetChildren={false}
-    key="19"
+    key="23"
     primaryText="Working Paper"
     targetOrigin={
       Object {
@@ -1505,6 +1813,28 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       }
     }
     value={183}
+  />
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={false}
+    focusState="none"
+    insetChildren={false}
+    key="24"
+    primaryText="Reference Entry"
+    targetOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "top",
+      }
+    }
+    value={272}
   />
 </SelectField>
 `;
