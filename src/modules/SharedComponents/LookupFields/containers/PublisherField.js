@@ -9,7 +9,6 @@ const mapStateToProps = (state, props) => {
         itemsList: state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
             ? state.get('searchKeysReducer')[category].itemsList : [],
         allowFreeText: true,
-        onChange: (item) => {console.log(item); props.onChange(item);},
         async: true,
         dataSourceConfig: {text: 'value', value: 'value'},
         errorText: props.errorText,
