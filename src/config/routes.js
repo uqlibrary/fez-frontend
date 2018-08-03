@@ -7,7 +7,7 @@ import {openAccessIds} from 'config/openAccess';
 const fullPath = process.env.BRANCH === 'production' ? 'https://espace.library.uq.edu.au' : 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 
-const getSearchUrl = ({searchQuery, activeFacets = {}}) => {
+const getSearchUrl = ({searchQuery = {all: ''}, activeFacets = {}}) => {
     const params = {
         ...defaultQueryParams,
         searchQueryParams: {
@@ -19,7 +19,7 @@ const getSearchUrl = ({searchQuery, activeFacets = {}}) => {
         }
     };
 
-    if (searchQuery && !searchQuery.all) {
+    if (searchQuery && !searchQuery.hasOwnProperty('all')) {
         params.searchMode = 'advanced';
     }
 
@@ -56,14 +56,12 @@ export const pathConfig = {
     },
     // TODO: review institutional status and herdc status links when we start administrative epic
     list: {
-        author: (author, authorId) => authorId ? getSearchUrl({
-            activeFacets: {
-                filters: {
-                    'Author': authorId,
-                    'Author (lookup)': author
-                }
+        author: (author, authorId) => getSearchUrl({
+            searchQuery: {
+                'rek_author': author,
+                'rek_author_id': authorId
             }
-        }) : getSearchUrl({searchQuery: {'rek_author': author}}),
+        }),
         subject: (subjectId, subject) => getSearchUrl({
             activeFacets: {
                 filters: {
@@ -84,24 +82,11 @@ export const pathConfig = {
                 showOpenAccessOnly: openAccessIds.indexOf(openAccessStatusId) >= 0
             }
         }),
-        journalName: (journalName) => getSearchUrl({
-            activeFacets: {
-                filters: {
-                    'Journal name': journalName
-                }
-            }
-        }),
-        collection: (collectionId, collection) => getSearchUrl({
-            activeFacets: {
-                filters: {
-                    'Collection': collectionId,
-                    'Collection (lookup)': collection
-                }
-            }
-        }),
         bookTitle: (bookTitle) => getSearchUrl({searchQuery: {'rek_book_title': bookTitle}}),
+        collection: (collectionId) => getSearchUrl({searchQuery: {'rek_ismemberof': collectionId}}),
         contributor: (contributor) => getSearchUrl({searchQuery: {'rek_contributor': contributor}}),
         conferenceName: (conferenceName) => getSearchUrl({searchQuery: {'rek_conference_name': conferenceName}}),
+        journalName: (journalName) => getSearchUrl({searchQuery: {'rek_journal_name': journalName}}),
         orgUnitName: (orgUnitName) => getSearchUrl({searchQuery: {'rek_org_unit_name': orgUnitName}}),
         publisher: (publisher) => getSearchUrl({searchQuery: {'rek_publisher': publisher}}),
         series: (series) => getSearchUrl({searchQuery: {'rek_series': series}}),
