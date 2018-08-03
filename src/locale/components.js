@@ -957,6 +957,8 @@ export default {
                         title: 'Published year range',
                         type: null,
                         fromHint: 'Year from',
+                        fromAria: 'Enter a year to search from',
+                        toAria: 'Enter a year to search to',
                         toHint: 'Year to',
                         invalidText: 'Invalid year range'
                     }

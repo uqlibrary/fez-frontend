@@ -6,7 +6,7 @@ import locale from 'locale/components';
 export default class PublicationYearRangeField extends PureComponent {
     static propTypes = {
         yearFilter: PropTypes.object,
-        updateYearRangeFilter: PropTypes.func,
+        updateYearRangeFilter: PropTypes.func.isRequired,
         className: PropTypes.string,
         disabled: PropTypes.bool
     };
@@ -48,17 +48,20 @@ export default class PublicationYearRangeField extends PureComponent {
     };
 
     render() {
+        const txt = locale.components.searchComponent.advancedSearch.fieldTypes.facet_year_range;
         return (
             <div className="columns is-gapless is-mobile ">
                 <div className="column">
                     <TextField
+                        id={'to'}
                         fullWidth
                         value={this.props.yearFilter.from ? `${this.props.yearFilter.from}` : ''}
-                        floatingLabelText={'Published year range'}
+                        floatingLabelText={txt.title}
                         floatingLabelFixed
                         onChange={this.setValue('from')}
                         errorText={this.isValidText()}
-                        hintText="Start year"
+                        hintText={txt.fromHint}
+                        aria-label={txt.fromAria}
                         disabled={this.props.disabled}
                     />
                 </div>
@@ -74,13 +77,15 @@ export default class PublicationYearRangeField extends PureComponent {
                 </div>
                 <div className="column" >
                     <TextField
+                        id={'from'}
                         fullWidth
                         value={this.props.yearFilter.to ? `${this.props.yearFilter.to}` : ''}
                         floatingLabelText={' '}
                         floatingLabelFixed
                         onChange={this.setValue('to')}
                         errorText={this.isValidText() && ' '}
-                        hintText="End year"
+                        hintText={txt.toHint}
+                        aria-label={txt.toAria}
                         disabled={this.props.disabled}
                     />
                 </div>
