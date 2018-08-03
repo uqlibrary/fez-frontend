@@ -3,7 +3,7 @@ import Meta from '../components/Meta';
 import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state) => {
-    const publication = !!state.get('viewRecordReducer') && state.get('viewRecordReducer').recordToView;
+    const publication = !!state.get('viewRecordReducer') && state.get('viewRecordReducer').recordToView || {};
     return {
         publication: publication
     };

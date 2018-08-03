@@ -12,7 +12,6 @@ import {publicationTypes} from 'config';
 import {documentTypesLookup} from 'config/general';
 import {locale} from 'locale';
 import * as recordForms from '../../PublicationForm/components/Forms';
-
 import DocumentTypeField from './Fields/DocumentTypeField';
 
 export default class AdvancedSearchComponent extends PureComponent {
@@ -106,14 +105,12 @@ export default class AdvancedSearchComponent extends PureComponent {
 
     haveAllAdvancedSearchFieldsValidated = (fieldRows) => {
         const fieldTypes = locale.components.searchComponent.advancedSearch.fieldTypes;
-        return fieldRows.filter(item => item.searchField === '0' || item.value === ''
-            // Check if the locale specifies a minLength for this field and check it not shorter
-            || (item.value && (fieldTypes[item.searchField].type === 'TextField') && !!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length)
+        return fieldRows.filter(item =>
+            item.searchField !== '0' && item.searchField !== 'all' && item.value === ''
             // Check if this field is a string exceeding the maxLength
-            || (fieldTypes[item.searchField].type === 'TextField') && MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length
+            || (fieldTypes[item.searchField].type === 'TextField') && item.value.length > 0 && MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length
             // Check if the value is an array, and not empty
             || (fieldTypes[item.searchField].type === 'CollectionLookup') && item.value.length === 0
-            || (!!fieldTypes[item.searchField].minLength && fieldTypes[item.searchField].minLength > item.value.trim().length)
         ).length === 0;
     };
 
@@ -166,8 +163,9 @@ export default class AdvancedSearchComponent extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent;
+        const lastFieldAdded = [...this.props.fieldRows].pop();
         const canAddAnotherField = this.haveAllAdvancedSearchFieldsValidated(this.props.fieldRows)
-            && this.props.fieldRows.length < Object.keys(txt.advancedSearch.fieldTypes).length - 1;
+            && lastFieldAdded.searchField !== '0';
         const alreadyAddedFields = this.props.fieldRows.map(item => item.searchField);
         const searchQueryCaption = this.getAdvancedSearchCaption(this.props);
         return (

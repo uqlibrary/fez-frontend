@@ -33,6 +33,7 @@ describe('AdvancedSearchRowInput', () => {
                 'aria-label': 'Field hint',
                 'autoComplete': 'off',
                 'errorText': undefined,
+                'floatingLabelText': null,
                 'hintText': 'Field hint',
                 'onChange': inputProps.onChange
             });
@@ -51,6 +52,7 @@ describe('AdvancedSearchRowInput', () => {
                 'aria-label': 'This is hint for text input',
                 'autoComplete': 'off',
                 'errorText': 'Must be at least 10 characters',
+                'floatingLabelText': null,
                 'hintText': 'This is hint for text input',
                 'onChange': inputProps.onChange
             });
