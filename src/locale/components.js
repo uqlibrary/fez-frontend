@@ -816,13 +816,19 @@ export default {
                 },
                 fieldTypes: {
                     '0': {
+                        order: 0,
                         title: 'Select a field',
                         combiner: null,
                         type: 'TextField',
                         hint: 'Select a field to search on',
                         validation: []
                     },
+                    'divider1': {
+                        order: 0.5,
+                        type: 'divider'
+                    },
                     'all': {
+                        order: 1,
                         title: 'Any field',
                         combiner: 'contains',
                         type: 'TextField',
@@ -830,13 +836,19 @@ export default {
                         validation: ['maxLength500']
                     },
                     'rek_title': {
+                        order: 2,
                         title: 'Title',
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a title to search',
                         validation: ['required', 'maxLength255']
                     },
+                    'divider2': {
+                        order: 3.5,
+                        type: 'divider'
+                    },
                     'rek_pid': {
+                        order: 3,
                         title: 'PID',
                         combiner: 'is',
                         type: 'TextField',
@@ -844,6 +856,7 @@ export default {
                         validation: ['required']
                     },
                     'rek_author': {
+                        order: 4,
                         title: 'Author Name',
                         combiner: 'contains',
                         type: 'TextField',
@@ -851,6 +864,7 @@ export default {
                         validation: ['required', 'maxLength255']
                     },
                     'rek_contributor': {
+                        order: 5,
                         title: 'Editor/Contributor',
                         combiner: 'contains',
                         type: 'TextField',
@@ -858,6 +872,7 @@ export default {
                         validation: ['required', 'maxLength255']
                     },
                     'rek_series': {
+                        order: 6,
                         title: 'Series',
                         combiner: 'contains',
                         type: 'TextField',
@@ -865,6 +880,7 @@ export default {
                         validation: ['required', 'maxLength500']
                     },
                     'rek_journal_name': {
+                        order: 7,
                         title: 'Journal Name',
                         combiner: 'contains',
                         type: 'TextField',
@@ -872,6 +888,7 @@ export default {
                         validation: ['required', 'maxLength500']
                     },
                     'rek_conference_name': {
+                        order: 8,
                         title: 'Conference Name',
                         combiner: 'contains',
                         type: 'TextField',
@@ -879,6 +896,7 @@ export default {
                         validation: ['required', 'maxLength500']
                     },
                     'rek_book_title': {
+                        order: 9,
                         title: 'Book Title',
                         combiner: 'contains',
                         type: 'TextField',
@@ -886,6 +904,7 @@ export default {
                         validation: ['required', 'maxLength500']
                     },
                     'rek_display_type': {
+                        order: 10,
                         title: 'Publication type',
                         combiner: 'is one of',
                         type: null,
@@ -893,6 +912,7 @@ export default {
                         validation: []
                     },
                     'rek_doi': {
+                        order: 11,
                         title: 'DOI',
                         combiner: 'contains',
                         type: 'TextField',
@@ -900,6 +920,7 @@ export default {
                         validation: ['required', 'doi']
                     },
                     'rek_publisher': {
+                        order: 12,
                         title: 'Publisher',
                         combiner: 'is',
                         type: 'PublisherLookup',
@@ -907,6 +928,7 @@ export default {
                         validation: ['required']
                     },
                     'rek_ismemberof': {
+                        order: 13,
                         title: 'Collection',
                         combiner: 'is one of',
                         type: 'CollectionsLookup',
@@ -925,6 +947,7 @@ export default {
                     //     validation: ['required']
                     // },
                     'rek_genre_type': {
+                        order: 14,
                         title: 'Thesis type',
                         combiner: 'is',
                         type: 'ThesisTypeLookup',
@@ -933,6 +956,7 @@ export default {
                         validation: ['required']
                     },
                     'rek_author_id': {
+                        order: 15,
                         title: 'Author ID',
                         combiner: 'is',
                         type: 'AuthorIdLookup',
@@ -940,6 +964,7 @@ export default {
                         validation: ['required']
                     },
                     'rek_contributor_id': {
+                        order: 16,
                         title: 'Contributor ID',
                         combiner: 'is',
                         type: 'ContributorIdLookup',
@@ -947,6 +972,7 @@ export default {
                         validation: ['required']
                     },
                     'rek_org_unit_name': {
+                        order: 17,
                         title: 'School, Centre or Institute',
                         combiner: 'is',
                         type: 'OrgUnitLookup',
@@ -954,6 +980,7 @@ export default {
                         validation: ['required']
                     },
                     'facet_year_range': {
+                        order: 18,
                         title: 'Published year range',
                         type: null,
                         fromHint: 'Year from',

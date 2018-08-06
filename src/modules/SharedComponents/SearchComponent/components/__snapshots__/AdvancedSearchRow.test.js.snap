@@ -46,6 +46,10 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         }
         value="0"
       />
+      <Divider
+        inset={false}
+        key="1"
+      />
       <MenuItem
         anchorOrigin={
           Object {
@@ -111,6 +115,10 @@ exports[`AdvancedSearchRow should render default view 1`] = `
           }
         }
         value="rek_pid"
+      />
+      <Divider
+        inset={false}
+        key="5"
       />
       <MenuItem
         anchorOrigin={
@@ -412,6 +420,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         Object {
           "combiner": null,
           "hint": "Select a field to search on",
+          "order": 0,
           "title": "Select a field",
           "type": "TextField",
           "validation": Array [],
@@ -473,6 +482,10 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           }
         }
         value="0"
+      />
+      <Divider
+        inset={false}
+        key="1"
       />
       <MenuItem
         anchorOrigin={
@@ -539,6 +552,10 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           }
         }
         value="rek_pid"
+      />
+      <Divider
+        inset={false}
+        key="5"
       />
       <MenuItem
         anchorOrigin={
@@ -849,6 +866,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
         Object {
           "combiner": "contains",
           "hint": "Add some text to search all fields with",
+          "order": 1,
           "title": "Any field",
           "type": "TextField",
           "validation": Array [
@@ -912,6 +930,10 @@ exports[`AdvancedSearchRow should render search field row with select field and 
           }
         }
         value="0"
+      />
+      <Divider
+        inset={false}
+        key="1"
       />
       <MenuItem
         anchorOrigin={
@@ -978,6 +1000,10 @@ exports[`AdvancedSearchRow should render search field row with select field and 
           }
         }
         value="rek_pid"
+      />
+      <Divider
+        inset={false}
+        key="5"
       />
       <MenuItem
         anchorOrigin={
@@ -1283,6 +1309,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         Object {
           "combiner": "contains",
           "hint": "Add some text to search all fields with",
+          "order": 1,
           "title": "Any field",
           "type": "TextField",
           "validation": Array [
