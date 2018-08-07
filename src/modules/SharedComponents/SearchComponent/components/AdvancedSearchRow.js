@@ -17,7 +17,7 @@ export default class AdvancedSearchRow extends PureComponent {
             PropTypes.array,
             PropTypes.number
         ]),
-        label: PropTypes.string,
+        label: PropTypes.any,
         disabledFields: PropTypes.array,
         onSearchRowChange: PropTypes.func,
         onSearchRowDelete: PropTypes.func,

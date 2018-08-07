@@ -921,7 +921,7 @@ export default {
                     'rek_genre_type': {
                         order: 14,
                         title: 'Thesis type',
-                        combiner: 'is',
+                        combiner: 'is one of',
                         type: 'ThesisTypeLookup',
                         hint: 'Select a Thesis type',
                         multiple: true,
