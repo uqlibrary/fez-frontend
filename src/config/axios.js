@@ -5,7 +5,7 @@ import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME, SESSION_USER_GROUP_COOKIE_NAME
 import {store} from 'config/store';
 import {logout} from 'actions/account';
 import locale from 'locale/global';
-import Raven from "raven-js";
+import Raven from 'raven-js';
 
 export const cache = setupCache({
     maxAge: 15 * 60 * 1000,
