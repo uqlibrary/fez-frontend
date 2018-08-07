@@ -488,7 +488,7 @@ exports[`SearchRecords page should show available filters or selected filters if
           excludeFacetsList={
             Array [
               "Scopus document type",
-              "Subtype",
+              "Genre",
               "Year published",
             ]
           }
@@ -509,6 +509,7 @@ exports[`SearchRecords page should show available filters or selected filters if
           renameFacetsList={
             Object {
               "Display type": "Publication type",
+              "Subtype": "Publication subtype",
             }
           }
           showOpenAccessFilter={true}

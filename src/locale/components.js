@@ -16,8 +16,8 @@ export default {
                 displayTitle: 'Open access status',
                 activeFilter: 'Show only open access records'
             },
-            excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
-            renameFacetsList: {'Display type': 'Publication type'},
+            excludeFacetsList: ['Scopus document type', 'Genre', 'Year published'],
+            renameFacetsList: {'Display type': 'Publication type', 'Subtype': 'Publication subtype'},
             lookupFacetsList: {
                 'Author': 'Author (lookup)',
                 'Collection': 'Collection (lookup)',
