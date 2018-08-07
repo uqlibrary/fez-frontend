@@ -12,6 +12,14 @@ exports[`AdvancedSearchRow should render default view 1`] = `
       disabled={false}
       errorText="Please select a field to search"
       fullWidth={true}
+      menuItemStyle={
+        Object {
+          "lineHeight": "24px",
+          "paddingBottom": "4px",
+          "paddingTop": "4px",
+          "whiteSpace": "normal",
+        }
+      }
       multiple={false}
       onChange={[Function]}
       value="0"
@@ -37,6 +45,10 @@ exports[`AdvancedSearchRow should render default view 1`] = `
           }
         }
         value="0"
+      />
+      <Divider
+        inset={false}
+        key="1"
       />
       <MenuItem
         anchorOrigin={
@@ -94,28 +106,6 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="rek_pid"
-        primaryText="PID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_pid"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
         key="rek_author"
         primaryText="Author Name"
         targetOrigin={
@@ -138,6 +128,28 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="rek_author_id"
+        primaryText="Author ID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_author_id"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
         key="rek_contributor"
         primaryText="Editor/Contributor"
         targetOrigin={
@@ -147,6 +159,94 @@ exports[`AdvancedSearchRow should render default view 1`] = `
           }
         }
         value="rek_contributor"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_contributor_id"
+        primaryText="Contributor ID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_contributor_id"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_ismemberof"
+        primaryText="Collection"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_ismemberof"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_doi"
+        primaryText="DOI"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_doi"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_pid"
+        primaryText="PID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_pid"
       />
       <MenuItem
         anchorOrigin={
@@ -226,50 +326,6 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="rek_book_title"
-        primaryText="Book Title"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_book_title"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_doi"
-        primaryText="DOI"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_doi"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
         key="rek_publisher"
         primaryText="Publisher"
         targetOrigin={
@@ -292,50 +348,6 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="rek_ismemberof"
-        primaryText="Collection"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_ismemberof"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_subtype"
-        primaryText="Subtype"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_subtype"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
         key="rek_genre_type"
         primaryText="Thesis type"
         targetOrigin={
@@ -345,50 +357,6 @@ exports[`AdvancedSearchRow should render default view 1`] = `
           }
         }
         value="rek_genre_type"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_author_id"
-        primaryText="Author ID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_author_id"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_contributor_id"
-        primaryText="Contributor ID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_contributor_id"
       />
       <MenuItem
         anchorOrigin={
@@ -426,6 +394,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         Object {
           "combiner": null,
           "hint": "Select a field to search on",
+          "order": 0,
           "title": "Select a field",
           "type": "TextField",
           "validation": Array [],
@@ -454,6 +423,14 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
       disabled={false}
       errorText={null}
       fullWidth={true}
+      menuItemStyle={
+        Object {
+          "lineHeight": "24px",
+          "paddingBottom": "4px",
+          "paddingTop": "4px",
+          "whiteSpace": "normal",
+        }
+      }
       multiple={false}
       onChange={[Function]}
       value="all"
@@ -479,6 +456,10 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           }
         }
         value="0"
+      />
+      <Divider
+        inset={false}
+        key="1"
       />
       <MenuItem
         anchorOrigin={
@@ -536,28 +517,6 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="rek_pid"
-        primaryText="PID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_pid"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
         key="rek_author"
         primaryText="Author Name"
         targetOrigin={
@@ -580,6 +539,28 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="rek_author_id"
+        primaryText="Author ID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_author_id"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
         key="rek_contributor"
         primaryText="Editor/Contributor"
         targetOrigin={
@@ -589,6 +570,94 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           }
         }
         value="rek_contributor"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_contributor_id"
+        primaryText="Contributor ID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_contributor_id"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_ismemberof"
+        primaryText="Collection"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_ismemberof"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_doi"
+        primaryText="DOI"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_doi"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_pid"
+        primaryText="PID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_pid"
       />
       <MenuItem
         anchorOrigin={
@@ -668,50 +737,6 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="rek_book_title"
-        primaryText="Book Title"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_book_title"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_doi"
-        primaryText="DOI"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_doi"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
         key="rek_publisher"
         primaryText="Publisher"
         targetOrigin={
@@ -734,50 +759,6 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="rek_ismemberof"
-        primaryText="Collection"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_ismemberof"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_subtype"
-        primaryText="Subtype"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_subtype"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
         key="rek_genre_type"
         primaryText="Thesis type"
         targetOrigin={
@@ -787,50 +768,6 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           }
         }
         value="rek_genre_type"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_author_id"
-        primaryText="Author ID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_author_id"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_contributor_id"
-        primaryText="Contributor ID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_contributor_id"
       />
       <MenuItem
         anchorOrigin={
@@ -877,6 +814,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
         Object {
           "combiner": "contains",
           "hint": "Add some text to search all fields with",
+          "order": 1,
           "title": "Any field",
           "type": "TextField",
           "validation": Array [
@@ -907,6 +845,14 @@ exports[`AdvancedSearchRow should render search field row with select field and 
       disabled={false}
       errorText={null}
       fullWidth={true}
+      menuItemStyle={
+        Object {
+          "lineHeight": "24px",
+          "paddingBottom": "4px",
+          "paddingTop": "4px",
+          "whiteSpace": "normal",
+        }
+      }
       multiple={false}
       onChange={[Function]}
       value="all"
@@ -932,6 +878,10 @@ exports[`AdvancedSearchRow should render search field row with select field and 
           }
         }
         value="0"
+      />
+      <Divider
+        inset={false}
+        key="1"
       />
       <MenuItem
         anchorOrigin={
@@ -989,28 +939,6 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="rek_pid"
-        primaryText="PID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_pid"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
         key="rek_author"
         primaryText="Author Name"
         targetOrigin={
@@ -1033,6 +961,28 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="rek_author_id"
+        primaryText="Author ID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_author_id"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
         key="rek_contributor"
         primaryText="Editor/Contributor"
         targetOrigin={
@@ -1042,6 +992,94 @@ exports[`AdvancedSearchRow should render search field row with select field and 
           }
         }
         value="rek_contributor"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_contributor_id"
+        primaryText="Contributor ID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_contributor_id"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_ismemberof"
+        primaryText="Collection"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_ismemberof"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_doi"
+        primaryText="DOI"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_doi"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        key="rek_pid"
+        primaryText="PID"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_pid"
       />
       <MenuItem
         anchorOrigin={
@@ -1121,50 +1159,6 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="rek_book_title"
-        primaryText="Book Title"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_book_title"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_doi"
-        primaryText="DOI"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_doi"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
         key="rek_publisher"
         primaryText="Publisher"
         targetOrigin={
@@ -1187,50 +1181,6 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="rek_ismemberof"
-        primaryText="Collection"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_ismemberof"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_subtype"
-        primaryText="Subtype"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_subtype"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
         key="rek_genre_type"
         primaryText="Thesis type"
         targetOrigin={
@@ -1240,50 +1190,6 @@ exports[`AdvancedSearchRow should render search field row with select field and 
           }
         }
         value="rek_genre_type"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_author_id"
-        primaryText="Author ID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_author_id"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="rek_contributor_id"
-        primaryText="Contributor ID"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value="rek_contributor_id"
       />
       <MenuItem
         anchorOrigin={
@@ -1325,6 +1231,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         Object {
           "combiner": "contains",
           "hint": "Add some text to search all fields with",
+          "order": 1,
           "title": "Any field",
           "type": "TextField",
           "validation": Array [

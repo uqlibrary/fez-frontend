@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
+import Divider from 'material-ui/Divider';
 import IconButton from 'material-ui/IconButton';
 import Close from 'material-ui/svg-icons/navigation/close';
 import {locale} from 'locale';
@@ -61,18 +62,26 @@ export default class AdvancedSearchRow extends PureComponent {
                         value={this.props.searchField}
                         onChange={this._handleSearchFieldChange}
                         errorText={this.selectFieldValidation()}
-                        fullWidth>
+                        menuItemStyle={{whiteSpace: 'normal', lineHeight: '24px', paddingTop: '4px', paddingBottom: '4px'}}
+                        fullWidth
+                    >
                         {
                             Object.keys(txt.fieldTypes)
                                 .filter(item => txt.fieldTypes[item].type !== null)
-                                .map((item, index) => (
-                                    <MenuItem
-                                        key={item}
-                                        value={item}
-                                        primaryText={txt.fieldTypes[item].title}
-                                        disabled={index === 0 || this.props.disabledFields.indexOf(item) > -1}
-                                    />
-                                ))
+                                .sort((item1, item2) => txt.fieldTypes[item1].order - txt.fieldTypes[item2].order)
+                                .map((item, index) => {
+                                    if(txt.fieldTypes[item].type === 'divider') {
+                                        return <Divider key={index} />;
+                                    }
+                                    return  (
+                                        <MenuItem
+                                            key={item}
+                                            value={item}
+                                            primaryText={txt.fieldTypes[item].title}
+                                            disabled={index === 0 || this.props.disabledFields.indexOf(item) > -1}
+                                        />
+                                    );
+                                })
                         }
                     </SelectField>
                 </div>

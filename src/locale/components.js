@@ -16,8 +16,8 @@ export default {
                 displayTitle: 'Open access status',
                 activeFilter: 'Show only open access records'
             },
-            excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
-            renameFacetsList: {'Display type': 'Publication type'},
+            excludeFacetsList: ['Scopus document type', 'Genre', 'Year published'],
+            renameFacetsList: {'Display type': 'Publication type', 'Subtype': 'Publication subtype'},
             lookupFacetsList: {
                 'Author': 'Author (lookup)',
                 'Collection': 'Collection (lookup)',
@@ -816,13 +816,19 @@ export default {
                 },
                 fieldTypes: {
                     '0': {
+                        order: 0,
                         title: 'Select a field',
                         combiner: null,
                         type: 'TextField',
                         hint: 'Select a field to search on',
                         validation: []
                     },
+                    'divider1': {
+                        order: 0.5,
+                        type: 'divider'
+                    },
                     'all': {
+                        order: 1,
                         title: 'Any field',
                         combiner: 'contains',
                         type: 'TextField',
@@ -830,83 +836,79 @@ export default {
                         validation: ['maxLength500']
                     },
                     'rek_title': {
+                        order: 2,
                         title: 'Title',
                         combiner: 'contains',
                         type: 'TextField',
-                        hint: 'Add a title to search',
+                        hint: 'Add a title',
                         validation: ['required', 'maxLength255']
                     },
                     'rek_pid': {
+                        order: 9,
                         title: 'PID',
                         combiner: 'is',
                         type: 'TextField',
-                        hint: 'Add a PID to search',
+                        hint: 'Add a PID',
                         validation: ['required']
                     },
                     'rek_author': {
+                        order: 3,
                         title: 'Author Name',
                         combiner: 'contains',
                         type: 'TextField',
-                        hint: 'Add an author name to search',
+                        hint: 'Add an author name',
                         validation: ['required', 'maxLength255']
                     },
                     'rek_contributor': {
+                        order: 5,
                         title: 'Editor/Contributor',
                         combiner: 'contains',
                         type: 'TextField',
-                        hint: 'Add an editor/contributor name to search',
+                        hint: 'Add an editor/contributor name',
                         validation: ['required', 'maxLength255']
                     },
                     'rek_series': {
+                        order: 10,
                         title: 'Series',
                         combiner: 'contains',
                         type: 'TextField',
-                        hint: 'Add a series name to search',
+                        hint: 'Add a series name',
                         validation: ['required', 'maxLength500']
                     },
                     'rek_journal_name': {
+                        order: 11,
                         title: 'Journal Name',
                         combiner: 'contains',
                         type: 'TextField',
-                        hint: 'Add a journal name to search',
+                        hint: 'Add a journal name',
                         validation: ['required', 'maxLength500']
                     },
                     'rek_conference_name': {
+                        order: 12,
                         title: 'Conference Name',
                         combiner: 'contains',
                         type: 'TextField',
-                        hint: 'Add a conference name to search',
+                        hint: 'Add a conference name',
                         validation: ['required', 'maxLength500']
-                    },
-                    'rek_book_title': {
-                        title: 'Book Title',
-                        combiner: 'contains',
-                        type: 'TextField',
-                        hint: 'Add a book title to search',
-                        validation: ['required', 'maxLength500']
-                    },
-                    'rek_display_type': {
-                        title: 'Publication type',
-                        combiner: 'is one of',
-                        type: null,
-                        hint: 'Select document types to search',
-                        validation: []
                     },
                     'rek_doi': {
+                        order: 8,
                         title: 'DOI',
                         combiner: 'contains',
                         type: 'TextField',
-                        hint: 'Add a DOI to search',
+                        hint: 'Add a DOI',
                         validation: ['required', 'doi']
                     },
                     'rek_publisher': {
+                        order: 13,
                         title: 'Publisher',
                         combiner: 'is',
                         type: 'PublisherLookup',
-                        hint: 'Add a publisher to search',
+                        hint: 'Add a publisher',
                         validation: ['required']
                     },
                     'rek_ismemberof': {
+                        order: 7,
                         title: 'Collection',
                         combiner: 'is one of',
                         type: 'CollectionsLookup',
@@ -916,44 +918,61 @@ export default {
                         multiple: true,
                         validation: ['required']
                     },
-                    'rek_subtype': {
-                        title: 'Subtype',
-                        combiner: 'is',
-                        type: 'SubTypeLookup',
-                        hint: 'Select a publication subtype',
-                        validation: ['required']
-                    },
                     'rek_genre_type': {
+                        order: 14,
                         title: 'Thesis type',
                         combiner: 'is',
                         type: 'ThesisTypeLookup',
                         hint: 'Select a Thesis type',
+                        multiple: true,
                         validation: ['required']
                     },
                     'rek_author_id': {
+                        order: 4,
                         title: 'Author ID',
                         combiner: 'is',
                         type: 'AuthorIdLookup',
-                        hint: 'Add an author id to search',
+                        hint: 'Add an author id',
                         validation: ['required']
                     },
                     'rek_contributor_id': {
+                        order: 6,
                         title: 'Contributor ID',
                         combiner: 'is',
                         type: 'ContributorIdLookup',
-                        hint: 'Add a contributor id to search',
+                        hint: 'Add a contributor id',
                         validation: ['required']
                     },
                     'rek_org_unit_name': {
+                        order: 15,
                         title: 'School, Centre or Institute',
                         combiner: 'is',
                         type: 'OrgUnitLookup',
-                        hint: 'Add a school, centre or institute to search',
+                        hint: 'Add a school, centre or institute',
                         validation: ['required']
+                    },
+                    'rek_display_type': {
+                        order: 20,
+                        title: 'Publication type',
+                        combiner: 'is one of',
+                        type: null,
+                        hint: 'Select document types',
+                        floatingLabelText: 'Test',
+                        validation: []
+                    },
+                    'facet_year_range': {
+                        order: 21,
+                        title: 'Published year range',
+                        type: null,
+                        fromHint: 'Year from',
+                        fromAria: 'Enter a year to search from',
+                        toAria: 'Enter a year to search to',
+                        toHint: 'Year to',
+                        invalidText: 'Invalid year range'
                     }
                 },
                 openAccess: {
-                    title: 'Open access/Full text',
+                    title: 'Open access',
                     captionText: (
                         <span> AND is <span className="value">open access / full text.</span></span>
                     ),

@@ -13,6 +13,7 @@ import {documentTypesLookup} from 'config/general';
 import {locale} from 'locale';
 import * as recordForms from '../../PublicationForm/components/Forms';
 import DocumentTypeField from './Fields/DocumentTypeField';
+import PublicationYearRangeField from './Fields/PublicationYearRangeField';
 
 export default class AdvancedSearchComponent extends PureComponent {
     static propTypes = {
@@ -20,8 +21,11 @@ export default class AdvancedSearchComponent extends PureComponent {
 
         fieldRows: PropTypes.array,
         docTypes: PropTypes.array,
+        yearFilter: PropTypes.object,
+        activeFacets: PropTypes.object,
         isOpenAccess: PropTypes.bool,
         isMinimised: PropTypes.bool,
+        isLoading: PropTypes.bool,
 
         // Event handlers
         onToggleSearchMode: PropTypes.func,
@@ -31,6 +35,7 @@ export default class AdvancedSearchComponent extends PureComponent {
         onAdvancedSearchRowRemove: PropTypes.func,
         onAdvancedSearchReset: PropTypes.func,
         updateDocTypeValues: PropTypes.func,
+        updateYearRangeFilter: PropTypes.func,
 
         onAdvancedSearchRowChange: PropTypes.func.isRequired,
         onSearch: PropTypes.func.isRequired,
@@ -42,6 +47,11 @@ export default class AdvancedSearchComponent extends PureComponent {
             value: '',
             label: ''
         }],
+        yearFilter: {
+            from: null,
+            to: null,
+            invalid: true
+        },
         isMinimised: false,
         isOpenAccess: false,
 
@@ -105,13 +115,14 @@ export default class AdvancedSearchComponent extends PureComponent {
 
     haveAllAdvancedSearchFieldsValidated = (fieldRows) => {
         const fieldTypes = locale.components.searchComponent.advancedSearch.fieldTypes;
-        return fieldRows.filter(item =>
-            item.searchField !== '0' && item.searchField !== 'all' && item.value === ''
+        return !this.props.isLoading && !this.props.yearFilter.invalid
+            && fieldRows.filter(item =>
+                item.searchField !== '0' && item.searchField !== 'all' && item.value === ''
             // Check if this field is a string exceeding the maxLength
             || (fieldTypes[item.searchField].type === 'TextField') && item.value.length > 0 && MAX_PUBLIC_SEARCH_TEXT_LENGTH < item.value.trim().length
             // Check if the value is an array, and not empty
             || (fieldTypes[item.searchField].type === 'CollectionLookup') && item.value.length === 0
-        ).length === 0;
+            ).length === 0;
     };
 
     _handleAdvancedSearch = (event) => {
@@ -212,21 +223,31 @@ export default class AdvancedSearchComponent extends PureComponent {
                                             }
                                         </div>
                                         <div className="column is-3-desktop is-12-tablet is-12-mobile openAccessCheckbox">
-                                            <div className="columns is-gapless is-multiline">
-                                                <div className="column is-11-mobile is-4-tablet is-12-desktop">
+                                            <div className="columns is-gapless is-mobile is-multiline sidebar">
+                                                <div className="column is-11-mobile is-narrow-tablet is-12-desktop" style={{minWidth: 166, marginRight: 12}}>
                                                     <Checkbox
                                                         className="advancedSearchOpenAccessCheckbox"
                                                         label={txt.advancedSearch.openAccess.title}
                                                         aria-label={txt.advancedSearch.openAccess.ariaLabel}
                                                         checked={this.props.isOpenAccess}
                                                         onCheck={this._toggleOpenAccess}
+                                                        disabled={this.props.isLoading}
                                                     />
                                                 </div>
-                                                <div className="column is-pulled-right-tablet is-11-mobile is-7-tablet is-12-desktop">
+                                                <div className="column is-11-mobile is-12-desktop" style={{marginRight: 12}}>
                                                     <DocumentTypeField
                                                         docTypes={this.props.docTypes}
                                                         updateDocTypeValues={this.props.updateDocTypeValues}
                                                         className="advancedSearchPublicationType"
+                                                        disabled={this.props.isLoading}
+                                                    />
+                                                </div>
+                                                <div className="column is-11-mobile is-12-desktop">
+                                                    <PublicationYearRangeField
+                                                        className="advancedSearchYearFilter"
+                                                        yearFilter={this.props.yearFilter}
+                                                        updateYearRangeFilter={this.props.updateYearRangeFilter}
+                                                        disabled={this.props.isLoading}
                                                     />
                                                 </div>
                                             </div>

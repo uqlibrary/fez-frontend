@@ -13,6 +13,9 @@ import AdvancedSearchComponent from './AdvancedSearchComponent';
 export default class SearchComponent extends PureComponent {
     static propTypes = {
         searchQueryParams: PropTypes.object,
+        activeFacets: PropTypes.any,
+        facetsChanged: PropTypes.func,
+        searchLoading: PropTypes.bool,
 
         showSearchButton: PropTypes.bool,
         showMobileSearchButton: PropTypes.bool,
@@ -28,6 +31,10 @@ export default class SearchComponent extends PureComponent {
         actions: PropTypes.object,
         history: PropTypes.object.isRequired,
         location: PropTypes.object
+    };
+
+    static contextTypes = {
+        isMobile: PropTypes.bool
     };
 
     static defaultProps = {
@@ -61,7 +68,8 @@ export default class SearchComponent extends PureComponent {
                 fieldRows: this.getFieldRowsFromSearchQuery(props.searchQueryParams),
                 isMinimised: props.isAdvancedSearchMinimised,
                 isOpenAccess: props.isOpenAccessInAdvancedMode || false,
-                docTypes: this.getDocTypesFromSearchQuery(props.searchQueryParams) || []
+                docTypes: this.getDocTypesFromSearchQuery(props.searchQueryParams),
+                yearFilter: this.getYearRangeFromActiveFacets(props.activeFacets) || {}
             }
         };
     }
@@ -83,9 +91,13 @@ export default class SearchComponent extends PureComponent {
                 },
                 advancedSearch: {
                     fieldRows: this.getFieldRowsFromSearchQuery(nextProps.searchQueryParams),
-                    isMinimised: nextProps.isAdvancedSearchMinimised || false,
+                    isMinimised: this.context.isMobile && nextProps.isAdvancedSearchMinimised || false,
                     isOpenAccess: nextProps.isOpenAccessInAdvancedMode || false,
-                    docTypes: this.getDocTypesFromSearchQuery(nextProps.searchQueryParams) || []
+                    docTypes: this.getDocTypesFromSearchQuery(nextProps.searchQueryParams) || [],
+                    yearFilter: {
+                        from: this.state.advancedSearch.yearFilter.from,
+                        to: this.state.advancedSearch.yearFilter.to,
+                    }
                 }
             });
         }
@@ -120,6 +132,14 @@ export default class SearchComponent extends PureComponent {
             return [];
         } else {
             return searchQueryParams.rek_display_type.map(item => parseInt(item, 10));
+        }
+    };
+
+    getYearRangeFromActiveFacets = (activeFacets) => {
+        if(activeFacets && activeFacets.ranges && activeFacets.ranges['Year published']) {
+            return {from: activeFacets.ranges['Year published'].from, to: activeFacets.ranges['Year published'].to};
+        } else {
+            return {};
         }
     };
 
@@ -207,6 +227,15 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
+    _updateYearRangeFilter = (yearRange) => {
+        this.setState({
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                yearFilter: yearRange
+            }
+        });
+    };
+
     _addAdvancedSearchRow = () => {
         this.setState({
             advancedSearch: {
@@ -239,6 +268,10 @@ export default class SearchComponent extends PureComponent {
             advancedSearch: {
                 isOpenAccess: false,
                 docTypes: [],
+                yearFilter: {
+                    from: 0,
+                    to: 0
+                },
                 fieldRows: [{
                     searchField: '0',
                     value: ''
@@ -284,18 +317,16 @@ export default class SearchComponent extends PureComponent {
             searchMode: locale.components.searchComponent.advancedSearch.mode,
             activeFacets: {
                 ...activeFacets,
+                ranges: this.state.advancedSearch.yearFilter.from && this.state.advancedSearch.yearFilter.to
+                    ? {'Year published': {
+                        from: this.state.advancedSearch.yearFilter.from,
+                        to: this.state.advancedSearch.yearFilter.to
+                    }}
+                    : {},
                 ...(this.state.advancedSearch.isOpenAccess ? {showOpenAccessOnly: true} : {})
             }
         };
-
         return searchQuery;
-    };
-
-    getSearchQueryParams = (valueCallback) => {
-        return this.state.advancedSearch.fieldRows
-            .reduce((searchQueries, item) => (
-                {...searchQueries, [item.searchField]: valueCallback(item)}
-            ), {});
     };
 
     render() {
@@ -327,11 +358,14 @@ export default class SearchComponent extends PureComponent {
                         onToggleOpenAccess={this._toggleOpenAccess}
                         updateDocTypeValues={this._updateDocTypeValues}
                         docTypes={this.state.advancedSearch.docTypes}
+                        updateYearRangeFilter={this._updateYearRangeFilter}
+                        yearFilter={this.state.advancedSearch.yearFilter}
                         onAdvancedSearchRowAdd={this._addAdvancedSearchRow}
                         onAdvancedSearchRowRemove={this._removeAdvancedSearchRow}
                         onAdvancedSearchReset={this._resetAdvancedSearch}
                         onAdvancedSearchRowChange={this._handleAdvancedSearchRowChange}
                         onSearch={this._handleAdvancedSearch}
+                        isLoading={this.props.searchLoading}
                     />
                 }
                 <Snackbar
@@ -339,7 +373,6 @@ export default class SearchComponent extends PureComponent {
                     autoHideDuration={5000}
                     message={this.state.snackbarMessage}
                 />
-                {/* {JSON.stringify(this.state.advancedSearch)} */}
             </React.Fragment>
         );
     }

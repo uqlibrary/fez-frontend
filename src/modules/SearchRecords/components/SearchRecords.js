@@ -202,7 +202,13 @@ class SearchRecords extends PureComponent {
         return (
             <StandardPage className="page-search-records">
                 <StandardCard className="searchComponent">
-                    <SearchComponent className="search-body" showAdvancedSearchButton />
+                    <SearchComponent
+                        className="search-body"
+                        showAdvancedSearchButton activeFacets={this.state.activeFacets}
+                        facetsChanged={this.facetsChanged}
+                        searchLoading={this.props.searchLoading}
+                        clearSearchQuery={this.props.actions.clearSearchQuery}
+                    />
                 </StandardCard>
                 {
                     // first time loading search results

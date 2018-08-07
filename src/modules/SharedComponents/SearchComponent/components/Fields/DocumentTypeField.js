@@ -9,11 +9,13 @@ export default class DocumentTypeField extends PureComponent {
     static propTypes = {
         docTypes: PropTypes.array,
         updateDocTypeValues: PropTypes.func,
-        className: PropTypes.string
+        className: PropTypes.string,
+        disabled: PropTypes.bool
     };
 
     static defaultProps = {
         value: [],
+        disabled: false,
         className: 'displaytype menuitem'
     };
 
@@ -44,10 +46,14 @@ export default class DocumentTypeField extends PureComponent {
         return (
             <SelectField
                 floatingLabelText={txt.advancedSearch.fieldTypes.rek_display_type.title}
+                floatingLabelFixed
+                hintText={txt.advancedSearch.fieldTypes.rek_display_type.hint}
                 value={this.props.docTypes}
                 onChange={this._handleDocTypeChange}
                 multiple
                 fullWidth
+                menuItemStyle={{whiteSpace: 'normal', lineHeight: '24px', paddingTop: '4px', paddingBottom: '4px'}}
+                disabled={this.props.disabled}
             >
                 {docTypeItems}
             </SelectField>
