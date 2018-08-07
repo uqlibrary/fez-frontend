@@ -271,6 +271,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
         >
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -893,6 +894,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
         >
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",
@@ -1304,6 +1306,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
         >
           <AuthorsCitationView
             className="citationAuthors"
+            getLink={[Function]}
             idSearchKey={
               Object {
                 "idKey": "fez_record_search_key_author_id",

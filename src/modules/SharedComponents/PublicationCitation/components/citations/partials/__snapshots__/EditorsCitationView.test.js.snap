@@ -3,6 +3,7 @@
 exports[`EditorsCitationView test  should render component with no contributors 1`] = `
 <AuthorsCitationView
   className="citationEditors"
+  getLink={[Function]}
   idSearchKey={
     Object {
       "idKey": "fez_record_search_key_contributor_id",
@@ -30,6 +31,7 @@ exports[`EditorsCitationView test  should render component with no contributors 
 exports[`EditorsCitationView test  should render component with one contributor 1`] = `
 <AuthorsCitationView
   className="citationEditors"
+  getLink={[Function]}
   idSearchKey={
     Object {
       "idKey": "fez_record_search_key_contributor_id",
@@ -68,6 +70,7 @@ exports[`EditorsCitationView test  should render component with one contributor 
 exports[`EditorsCitationView test  should render component with three contributors 1`] = `
 <AuthorsCitationView
   className="citationEditors"
+  getLink={[Function]}
   idSearchKey={
     Object {
       "idKey": "fez_record_search_key_contributor_id",
@@ -118,6 +121,7 @@ exports[`EditorsCitationView test  should render component with three contributo
 exports[`EditorsCitationView test  should render component with two contributors 1`] = `
 <AuthorsCitationView
   className="citationEditors"
+  getLink={[Function]}
   idSearchKey={
     Object {
       "idKey": "fez_record_search_key_contributor_id",

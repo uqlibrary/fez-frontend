@@ -89,7 +89,7 @@ describe('AdvancedSearchComponent', () => {
         expect(testMethod).toHaveBeenCalled();
     });
 
-    it('should handle changes in advnced search row', () => {
+    it('should handle changes in advanced search row', () => {
         const testMethod = jest.fn();
         const wrapper = setup({onAdvancedSearchRowChange: testMethod});
 
