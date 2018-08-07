@@ -4,8 +4,10 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
 <SelectField
   autoWidth={false}
   disabled={false}
+  floatingLabelFixed={true}
   floatingLabelText="Publication type"
   fullWidth={true}
+  hintText="Select document types"
   menuItemStyle={
     Object {
       "lineHeight": "24px",
@@ -558,8 +560,10 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
 <SelectField
   autoWidth={false}
   disabled={false}
+  floatingLabelFixed={true}
   floatingLabelText="Publication type"
   fullWidth={true}
+  hintText="Select document types"
   menuItemStyle={
     Object {
       "lineHeight": "24px",
@@ -1338,8 +1342,10 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
 <SelectField
   autoWidth={false}
   disabled={false}
+  floatingLabelFixed={true}
   floatingLabelText="Publication type"
   fullWidth={true}
+  hintText="Select document types"
   menuItemStyle={
     Object {
       "lineHeight": "24px",
