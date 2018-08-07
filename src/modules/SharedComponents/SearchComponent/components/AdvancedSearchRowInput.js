@@ -13,7 +13,7 @@ class AdvancedSearchRowInput extends PureComponent {
             PropTypes.array,
             PropTypes.number
         ]),
-        label: PropTypes.string,
+        label: PropTypes.any,
         onChange: PropTypes.func,
         inputField: PropTypes.shape({
             type: PropTypes.string.isRequired,
@@ -121,6 +121,7 @@ class AdvancedSearchRowInput extends PureComponent {
             case 'ThesisTypeLookup':
                 return {
                     ...selectDefaultProps,
+                    'multiple': this.props.inputField.multiple,
                     'menuItemClassName': 'thesistype menuitem'
                 };
             case 'CollectionsLookup':

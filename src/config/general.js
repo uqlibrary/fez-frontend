@@ -311,18 +311,18 @@ export const QuickTemplates = {
 };
 
 export const thesisSubtypes = [
-    'B.A. Thesis',
-    'B.Sc Thesis',
-    'Bachelor\'s Thesis',
-    'Higher Doctorate',
-    'Honours Thesis',
-    'M.A. Thesis',
-    'M.Sc Thesis',
-    'Master\'s Thesis',
-    'MPhil Thesis',
-    'Other',
-    'PhD Thesis',
-    'Professional Doctorate'
+    {value: 'B.A. Thesis', label: 'B.A. Thesis'},
+    {value: 'B.Sc Thesis', label: 'B.Sc Thesis'},
+    {value: 'Bachelor\'s Thesis', label: 'Bachelor\'s Thesis'},
+    {value: 'Higher Doctorate', label: 'Higher Doctorate'},
+    {value: 'Honours Thesis', label: 'Honours Thesis'},
+    {value: 'M.A. Thesis', label: 'M.A. Thesis'},
+    {value: 'M.Sc Thesis', label: 'M.Sc Thesis'},
+    {value: 'Master\'s Thesis', label: 'Master\'s Thesis'},
+    {value: 'MPhil Thesis', label: 'MPhil Thesis'},
+    {value: 'Other', label: 'Other'},
+    {value: 'PhD Thesis', label: 'PhD Thesis'},
+    {value: 'Professional Doctorate', label: 'Professional Doctorate'}
 ];
 
 export const thesisSubmissionSubtypes = [
