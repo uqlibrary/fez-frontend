@@ -45,12 +45,12 @@ exports[`Files Component  should not render cultural message 1`] = `
         >
           <Thumbnail
             fileName="web_image.jpg"
-            mediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
-            previewMediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             thumbnailFileName="thumbnail_image.jpg"
-            thumbnailMediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
           />
         </div>
         <div
@@ -64,15 +64,15 @@ exports[`Files Component  should not render cultural message 1`] = `
             icon={
               <Thumbnail
                 fileName="web_image.jpg"
-                mediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+                mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
-                previewMediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
                 thumbnailFileName="thumbnail_image.jpg"
-                thumbnailMediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
               />
             }
-            mediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -83,7 +83,7 @@ exports[`Files Component  should not render cultural message 1`] = `
               }
             }
             pid="UQ:676287"
-            previewMediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             thumbnailFileName="thumbnail_image.jpg"
           />
         </div>
@@ -188,12 +188,12 @@ exports[`Files Component  should render component 1`] = `
         >
           <Thumbnail
             fileName="web_image.jpg"
-            mediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
-            previewMediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             thumbnailFileName="thumbnail_image.jpg"
-            thumbnailMediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
           />
         </div>
         <div
@@ -207,15 +207,15 @@ exports[`Files Component  should render component 1`] = `
             icon={
               <Thumbnail
                 fileName="web_image.jpg"
-                mediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+                mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
-                previewMediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
                 thumbnailFileName="thumbnail_image.jpg"
-                thumbnailMediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
               />
             }
-            mediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -226,7 +226,7 @@ exports[`Files Component  should render component 1`] = `
               }
             }
             pid="UQ:676287"
-            previewMediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             thumbnailFileName="thumbnail_image.jpg"
           />
         </div>
@@ -307,12 +307,12 @@ exports[`Files Component  should render cultural message 1`] = `
         >
           <Thumbnail
             fileName="web_image.jpg"
-            mediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
-            previewMediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             thumbnailFileName="thumbnail_image.jpg"
-            thumbnailMediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
           />
         </div>
         <div
@@ -326,15 +326,15 @@ exports[`Files Component  should render cultural message 1`] = `
             icon={
               <Thumbnail
                 fileName="web_image.jpg"
-                mediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+                mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
-                previewMediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
                 thumbnailFileName="thumbnail_image.jpg"
-                thumbnailMediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
               />
             }
-            mediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -345,7 +345,7 @@ exports[`Files Component  should render cultural message 1`] = `
               }
             }
             pid="UQ:676287"
-            previewMediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:676287/preview_image.jpg"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             thumbnailFileName="thumbnail_image.jpg"
           />
         </div>
@@ -591,12 +591,12 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Thumbnail
     fileName="test.tiff"
-    mediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:1/test.tiff"
+    mediaUrl="http://localhost/view/UQ:1/test.tiff"
     mimeType="image/jpg"
     onClick={[Function]}
-    previewMediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:1/preview_test.jpg"
+    previewMediaUrl="http://localhost/view/UQ:1/preview_test.jpg"
     thumbnailFileName="thumbnail_test.jpg"
-    thumbnailMediaUrl="https://fez-staging.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
+    thumbnailMediaUrl="http://localhost/view/UQ:1/thumbnail_test.jpg"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -613,12 +613,12 @@ ShallowWrapper {
       "children": <img
         alt="thumbnail_test.jpg"
         onError={[Function]}
-        src="https://fez-staging.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
+        src="http://localhost/view/UQ:1/thumbnail_test.jpg"
       />,
       "className": "fileThumbnail",
       "onClick": [Function],
       "onKeyPress": [Function],
-      "title": "Click to open a preview of https://fez-staging.library.uq.edu.au/view/UQ:1/test.tiff",
+      "title": "Click to open a preview of http://localhost/view/UQ:1/test.tiff",
     },
     "ref": null,
     "rendered": Object {
@@ -628,7 +628,7 @@ ShallowWrapper {
       "props": Object {
         "alt": "thumbnail_test.jpg",
         "onError": [Function],
-        "src": "https://fez-staging.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg",
+        "src": "http://localhost/view/UQ:1/thumbnail_test.jpg",
       },
       "ref": null,
       "rendered": null,
@@ -645,12 +645,12 @@ ShallowWrapper {
         "children": <img
           alt="thumbnail_test.jpg"
           onError={[Function]}
-          src="https://fez-staging.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg"
+          src="http://localhost/view/UQ:1/thumbnail_test.jpg"
         />,
         "className": "fileThumbnail",
         "onClick": [Function],
         "onKeyPress": [Function],
-        "title": "Click to open a preview of https://fez-staging.library.uq.edu.au/view/UQ:1/test.tiff",
+        "title": "Click to open a preview of http://localhost/view/UQ:1/test.tiff",
       },
       "ref": null,
       "rendered": Object {
@@ -660,7 +660,7 @@ ShallowWrapper {
         "props": Object {
           "alt": "thumbnail_test.jpg",
           "onError": [Function],
-          "src": "https://fez-staging.library.uq.edu.au/view/UQ:1/thumbnail_test.jpg",
+          "src": "http://localhost/view/UQ:1/thumbnail_test.jpg",
         },
         "ref": null,
         "rendered": null,

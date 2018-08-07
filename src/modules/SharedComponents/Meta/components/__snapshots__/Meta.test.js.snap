@@ -13,7 +13,7 @@ exports[`Meta Component  should render component with audio document 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:151787"
+    content="http://localhost/view/UQ:151787"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -114,7 +114,7 @@ exports[`Meta Component  should render component with book 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:295866"
+    content="http://localhost/view/UQ:295866"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -220,7 +220,7 @@ exports[`Meta Component  should render component with book chapter 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:376215"
+    content="http://localhost/view/UQ:376215"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -376,7 +376,7 @@ exports[`Meta Component  should render component with conference paper 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:347818"
+    content="http://localhost/view/UQ:347818"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -552,7 +552,7 @@ exports[`Meta Component  should render component with conference proceedings 1`]
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:159544"
+    content="http://localhost/view/UQ:159544"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -578,7 +578,7 @@ exports[`Meta Component  should render component with conference proceedings 1`]
     name="DC.Subject"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:159544/ch7008.pdf"
+    content="http://localhost/view/UQ:159544/ch7008.pdf"
     key="citation_pdf_url-5"
     name="citation_pdf_url"
   />
@@ -743,7 +743,7 @@ exports[`Meta Component  should render component with creative work 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:177836"
+    content="http://localhost/view/UQ:177836"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -759,27 +759,27 @@ exports[`Meta Component  should render component with creative work 1`] = `
     name="DC.Subject"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/HCA10UQ177836.pdf"
+    content="http://localhost/view/UQ:177836/HCA10UQ177836.pdf"
     key="citation_pdf_url-3"
     name="citation_pdf_url"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/HCA12UQ177836_plans.pdf"
+    content="http://localhost/view/UQ:177836/HCA12UQ177836_plans.pdf"
     key="citation_pdf_url-4"
     name="citation_pdf_url"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/HCA12UQ177836_project_description_.pdf"
+    content="http://localhost/view/UQ:177836/HCA12UQ177836_project_description_.pdf"
     key="citation_pdf_url-5"
     name="citation_pdf_url"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/HCA12UQ177836_report.pdf"
+    content="http://localhost/view/UQ:177836/HCA12UQ177836_report.pdf"
     key="citation_pdf_url-6"
     name="citation_pdf_url"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:177836/UQ177836.pdf"
+    content="http://localhost/view/UQ:177836/UQ177836.pdf"
     key="citation_pdf_url-7"
     name="citation_pdf_url"
   />
@@ -859,7 +859,7 @@ exports[`Meta Component  should render component with data collection 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:407731"
+    content="http://localhost/view/UQ:407731"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -985,7 +985,7 @@ exports[`Meta Component  should render component with design document 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:162308"
+    content="http://localhost/view/UQ:162308"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -1121,7 +1121,7 @@ exports[`Meta Component  should render component with digilib image 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:151598"
+    content="http://localhost/view/UQ:151598"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -1182,7 +1182,7 @@ exports[`Meta Component  should render component with generic document 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:239427"
+    content="http://localhost/view/UQ:239427"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -1193,7 +1193,7 @@ exports[`Meta Component  should render component with generic document 1`] = `
     name="DC.Subject"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:239427/Lectures_Book.pdf"
+    content="http://localhost/view/UQ:239427/Lectures_Book.pdf"
     key="citation_pdf_url-2"
     name="citation_pdf_url"
   />
@@ -1268,7 +1268,7 @@ exports[`Meta Component  should render component with image 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:164935"
+    content="http://localhost/view/UQ:164935"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -1329,7 +1329,7 @@ exports[`Meta Component  should render component with journal 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:186337"
+    content="http://localhost/view/UQ:186337"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -1420,13 +1420,13 @@ exports[`Meta Component  should render component with manuscript 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:677394"
+    content="http://localhost/view/UQ:677394"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:677394/UQFL2_i3255_copyright_permission.pdf"
+    content="http://localhost/view/UQ:677394/UQFL2_i3255_copyright_permission.pdf"
     key="citation_pdf_url-1"
     name="citation_pdf_url"
   />
@@ -1506,7 +1506,7 @@ exports[`Meta Component  should render component with newspaper 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:184230"
+    content="http://localhost/view/UQ:184230"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -1632,7 +1632,7 @@ exports[`Meta Component  should render component with patent 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:288545"
+    content="http://localhost/view/UQ:288545"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -1738,7 +1738,7 @@ exports[`Meta Component  should render component with preprint 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:10457"
+    content="http://localhost/view/UQ:10457"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -1759,7 +1759,7 @@ exports[`Meta Component  should render component with preprint 1`] = `
     name="DC.Subject"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:10457/dpk_akrfinal.pdf"
+    content="http://localhost/view/UQ:10457/dpk_akrfinal.pdf"
     key="citation_pdf_url-4"
     name="citation_pdf_url"
   />
@@ -1834,7 +1834,7 @@ exports[`Meta Component  should render component with reference entry 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:120546"
+    content="http://localhost/view/UQ:120546"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -2000,7 +2000,7 @@ exports[`Meta Component  should render component with research report 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:684901"
+    content="http://localhost/view/UQ:684901"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -2086,7 +2086,7 @@ exports[`Meta Component  should render component with thesis 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:170415"
+    content="http://localhost/view/UQ:170415"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -2097,7 +2097,7 @@ exports[`Meta Component  should render component with thesis 1`] = `
     name="DC.Subject"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:170415/dpk_akrfinal.pdf"
+    content="http://localhost/view/UQ:170415/dpk_akrfinal.pdf"
     key="citation_pdf_url-2"
     name="citation_pdf_url"
   />
@@ -2162,7 +2162,7 @@ exports[`Meta Component  should render component with video document 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:161756"
+    content="http://localhost/view/UQ:161756"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -2233,7 +2233,7 @@ exports[`Meta Component  should render component with working paper 1`] = `
     rel="schema.DC"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:176145"
+    content="http://localhost/view/UQ:176145"
     key="DC.Identifier-0"
     name="DC.Identifier"
     scheme="URI"
@@ -2249,7 +2249,7 @@ exports[`Meta Component  should render component with working paper 1`] = `
     name="DC.Subject"
   />
   <meta
-    content="https://fez-staging.library.uq.edu.au/view/UQ:176145/wp46.pdf"
+    content="http://localhost/view/UQ:176145/wp46.pdf"
     key="citation_pdf_url-3"
     name="citation_pdf_url"
   />
