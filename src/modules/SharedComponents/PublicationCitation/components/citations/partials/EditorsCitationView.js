@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AuthorsCitationView from './AuthorsCitationView';
+import {pathConfig} from 'config/routes';
 
 const EditorsCitationView = ({publication, prefix = ' edited by ', suffix = '. ', separator = ', ', showLink = false, initialNumberOfEditors = 10}) => {
     return (
@@ -22,6 +23,7 @@ const EditorsCitationView = ({publication, prefix = ' edited by ', suffix = '. '
             }}
             initialNumberOfAuthors={initialNumberOfEditors}
             showLink={showLink}
+            getLink={pathConfig.list.contributor}
         />
     );
 };

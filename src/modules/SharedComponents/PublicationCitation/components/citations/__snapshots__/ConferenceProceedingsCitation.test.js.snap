@@ -879,6 +879,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
           >
             <AuthorsCitationView
               className="citationEditors"
+              getLink={[Function]}
               idSearchKey={
                 Object {
                   "idKey": "fez_record_search_key_contributor_id",
@@ -2340,6 +2341,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
           >
             <AuthorsCitationView
               className="citationEditors"
+              getLink={[Function]}
               idSearchKey={
                 Object {
                   "idKey": "fez_record_search_key_contributor_id",
@@ -2984,6 +2986,7 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
           >
             <AuthorsCitationView
               className="citationEditors"
+              getLink={[Function]}
               idSearchKey={
                 Object {
                   "idKey": "fez_record_search_key_contributor_id",
