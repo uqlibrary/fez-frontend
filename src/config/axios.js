@@ -81,13 +81,10 @@ api.interceptors.response.use(response => {
     }
 
     if (!!errorMessage) {
-        Raven.captureException(error, {extra: {error: specificError, message: errorMessage}});
         return Promise.reject({...errorMessage});
     } else {
         if (error.response) {
             specificError = 'Data: ' + error.response.data + ' Status: ' + error.response.status + ' Headers: ' + error.response.headers;
-        } else if (error.request) {
-            specificError = 'Request: ' + error.request;
         } else {
             specificError = 'Something happened in setting up the request that triggered an Error: ' + error.message;
         }
