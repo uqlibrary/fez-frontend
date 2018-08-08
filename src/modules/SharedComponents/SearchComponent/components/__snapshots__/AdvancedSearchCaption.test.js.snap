@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component AdvancedSearchCaption should render as expected 1`] = `
+<div
+  className="undefined searchQueryCaption"
+>
+  <span
+    key="0"
+  >
+    <span
+      className="and"
+    >
+       
+    </span>
+    <span
+      className="title"
+    >
+      Any field
+       
+    </span>
+    <span
+      className="combiner"
+    >
+       
+      contains
+       
+    </span>
+    <span
+      className="value"
+    >
+       
+      anything
+    </span>
+  </span>
+  <span
+    key="1"
+  >
+    <span
+      className="and"
+    >
+       
+       AND 
+    </span>
+    <span
+      className="title"
+    >
+      Collection
+       
+    </span>
+    <span
+      className="combiner"
+    >
+       
+      is one of
+       
+    </span>
+    <span
+      className="value"
+    >
+       
+      <span>
+        <span
+          key="0"
+        >
+          UQ:120743
+        </span>
+        <span
+          key="1"
+        >
+          , 
+          UQ:217419
+        </span>
+        <span
+          key="2"
+        >
+           or 
+          UQ:217422
+        </span>
+      </span>
+    </span>
+  </span>
+  <span
+    key="2"
+  >
+    <span
+      className="and"
+    >
+       
+       AND 
+    </span>
+    <span
+      className="title"
+    >
+      Author ID
+       
+    </span>
+    <span
+      className="combiner"
+    >
+       
+      is
+       
+    </span>
+    <span
+      className="value"
+    >
+       
+      570
+    </span>
+  </span>
+  <span
+    key="3"
+  >
+    <span
+      className="and"
+    >
+       
+       AND 
+    </span>
+    <span
+      className="title"
+    >
+      Publication type
+       
+    </span>
+    <span
+      className="combiner"
+    >
+       
+      is one of
+       
+    </span>
+    <span
+      className="value"
+    >
+       
+      <span
+        key="0"
+      >
+        Audio document
+      </span>
+      <span
+        key="1"
+      >
+         or 
+        Book
+      </span>
+    </span>
+  </span>
+  <span
+    key="4"
+  >
+    <span
+      className="and"
+    >
+       
+       AND 
+    </span>
+    <span
+      className="title"
+    >
+      Published
+       
+    </span>
+    <span
+      className="combiner"
+    >
+       
+      between
+       
+    </span>
+    <span
+      className="value"
+    >
+       
+      1991 and 2012
+    </span>
+  </span>
+  <span
+    key="5"
+  >
+    <span
+      className="and"
+    >
+       
+       AND 
+    </span>
+    <span
+      className="title"
+    >
+       
+    </span>
+    <span
+      className="combiner"
+    >
+       
+      is
+       
+    </span>
+    <span
+      className="value"
+    >
+       
+      <span
+        className="value"
+      >
+        open access/full text
+      </span>
+    </span>
+  </span>
+</div>
+`;

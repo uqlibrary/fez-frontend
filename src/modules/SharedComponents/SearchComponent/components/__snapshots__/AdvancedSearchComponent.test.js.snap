@@ -1296,43 +1296,33 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
           </div>
         </div>
       </React.Fragment>
-      <div
-        className="searchQueryCaption"
-      >
-        <React.Fragment>
-          <span
-            key="all"
-          >
-            <span
-              className="title false"
-            >
-               
-              Any field
-               
-            </span>
-            <span
-              className="combiner"
-            >
-               
-              contains
-               
-            </span>
-            <span
-              className="value"
-            >
-              i feel lucky
-            </span>
-          </span>
-          <span>
-             AND is 
-            <span
-              className="value"
-            >
-              open access / full text.
-            </span>
-          </span>
-        </React.Fragment>
-      </div>
+      <AdvancedSearchCaption
+        className="advanced-search"
+        fieldRows={
+          Array [
+            Object {
+              "searchField": "all",
+              "value": "i feel lucky",
+            },
+          ]
+        }
+        isLoading={false}
+        isMinimised={false}
+        isOpenAccess={true}
+        onAdvancedSearchReset={[Function]}
+        onAdvancedSearchRowAdd={[Function]}
+        onAdvancedSearchRowChange={[MockFunction]}
+        onAdvancedSearchRowRemove={[Function]}
+        onSearch={[MockFunction]}
+        onToggleMinimise={[Function]}
+        onToggleOpenAccess={[Function]}
+        onToggleSearchMode={[Function]}
+        yearFilter={
+          Object {
+            "invalid": false,
+          }
+        }
+      />
     </div>
   </form>
 </div>
@@ -2079,6 +2069,34 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
           </div>
         </div>
       </React.Fragment>
+      <AdvancedSearchCaption
+        className="advanced-search"
+        fieldRows={
+          Array [
+            Object {
+              "label": "",
+              "searchField": "0",
+              "value": "",
+            },
+          ]
+        }
+        isLoading={false}
+        isMinimised={false}
+        isOpenAccess={false}
+        onAdvancedSearchReset={[Function]}
+        onAdvancedSearchRowAdd={[Function]}
+        onAdvancedSearchRowChange={[MockFunction]}
+        onAdvancedSearchRowRemove={[Function]}
+        onSearch={[MockFunction]}
+        onToggleMinimise={[Function]}
+        onToggleOpenAccess={[Function]}
+        onToggleSearchMode={[Function]}
+        yearFilter={
+          Object {
+            "invalid": false,
+          }
+        }
+      />
     </div>
   </form>
 </div>
@@ -2269,20 +2287,34 @@ exports[`AdvancedSearchComponent should render default view with open access che
           </div>
         </div>
       </React.Fragment>
-      <div
-        className="searchQueryCaption"
-      >
-        <React.Fragment>
-          <span>
-             AND is 
-            <span
-              className="value"
-            >
-              open access / full text.
-            </span>
-          </span>
-        </React.Fragment>
-      </div>
+      <AdvancedSearchCaption
+        className="advanced-search"
+        fieldRows={
+          Array [
+            Object {
+              "label": "",
+              "searchField": "0",
+              "value": "",
+            },
+          ]
+        }
+        isLoading={false}
+        isMinimised={false}
+        isOpenAccess={true}
+        onAdvancedSearchReset={[Function]}
+        onAdvancedSearchRowAdd={[Function]}
+        onAdvancedSearchRowChange={[MockFunction]}
+        onAdvancedSearchRowRemove={[Function]}
+        onSearch={[MockFunction]}
+        onToggleMinimise={[Function]}
+        onToggleOpenAccess={[Function]}
+        onToggleSearchMode={[Function]}
+        yearFilter={
+          Object {
+            "invalid": false,
+          }
+        }
+      />
     </div>
   </form>
 </div>
@@ -2325,6 +2357,34 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
           </IconButton>
         </div>
       </div>
+      <AdvancedSearchCaption
+        className="advanced-search"
+        fieldRows={
+          Array [
+            Object {
+              "label": "",
+              "searchField": "0",
+              "value": "",
+            },
+          ]
+        }
+        isLoading={false}
+        isMinimised={true}
+        isOpenAccess={false}
+        onAdvancedSearchReset={[Function]}
+        onAdvancedSearchRowAdd={[Function]}
+        onAdvancedSearchRowChange={[MockFunction]}
+        onAdvancedSearchRowRemove={[Function]}
+        onSearch={[MockFunction]}
+        onToggleMinimise={[Function]}
+        onToggleOpenAccess={[Function]}
+        onToggleSearchMode={[Function]}
+        yearFilter={
+          Object {
+            "invalid": false,
+          }
+        }
+      />
     </div>
   </form>
 </div>
@@ -2515,6 +2575,34 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
           </div>
         </div>
       </React.Fragment>
+      <AdvancedSearchCaption
+        className="advanced-search"
+        fieldRows={
+          Array [
+            Object {
+              "label": "",
+              "searchField": "0",
+              "value": "",
+            },
+          ]
+        }
+        isLoading={false}
+        isMinimised={false}
+        isOpenAccess={false}
+        onAdvancedSearchReset={[Function]}
+        onAdvancedSearchRowAdd={[Function]}
+        onAdvancedSearchRowChange={[MockFunction]}
+        onAdvancedSearchRowRemove={[Function]}
+        onSearch={[MockFunction]}
+        onToggleMinimise={[MockFunction]}
+        onToggleOpenAccess={[Function]}
+        onToggleSearchMode={[Function]}
+        yearFilter={
+          Object {
+            "invalid": false,
+          }
+        }
+      />
     </div>
   </form>
 </div>

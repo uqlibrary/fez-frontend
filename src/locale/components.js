@@ -964,6 +964,7 @@ export default {
                         order: 21,
                         title: 'Published year range',
                         type: null,
+                        combiner: 'between',
                         fromHint: 'Year from',
                         fromAria: 'Enter a year to search from',
                         toAria: 'Enter a year to search to',

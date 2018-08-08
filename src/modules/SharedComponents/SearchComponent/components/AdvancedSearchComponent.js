@@ -9,11 +9,11 @@ import AdvancedSearchRow from './AdvancedSearchRow';
 import Checkbox from 'material-ui/Checkbox';
 import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
 import {publicationTypes} from 'config';
-import {documentTypesLookup} from 'config/general';
 import {locale} from 'locale';
 import * as recordForms from '../../PublicationForm/components/Forms';
 import DocumentTypeField from './Fields/DocumentTypeField';
 import PublicationYearRangeField from './Fields/PublicationYearRangeField';
+import AdvancedSearchCaption from './AdvancedSearchCaption';
 
 export default class AdvancedSearchComponent extends PureComponent {
     static propTypes = {
@@ -67,51 +67,6 @@ export default class AdvancedSearchComponent extends PureComponent {
         super(props);
         this.publicationTypes = publicationTypes({...recordForms});
     }
-
-    getAdvancedSearchCaption = ({fieldRows, isOpenAccess, docTypes}) => {
-        const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
-        const searchFields = fieldRows
-            .filter(item => item.searchField !== '0' && item.value !== '')
-            .filter(item => item.searchField !== 'rek_display_type')
-            .map((item, index) => {
-                return (
-                    <span key={item.searchField}>
-                        {index > 0 && <span className="and">  {item.value && 'AND'}</span>}
-                        <span
-                            className={`title ${index > 0 && ' is-lowercase'}`}> {item.value && txt[item.searchField] && txt[item.searchField].title} </span>
-                        <span
-                            className="combiner"> {item.value && txt[item.searchField] && txt[item.searchField].combiner} </span>
-                        <span className="value">
-                            {
-                                Array.isArray(item.value) ? item.value.join(', ') : item.value
-                            }
-                        </span>
-                    </span>
-                );
-            });
-
-        // Document types caption
-        const docTypeList =  docTypes && docTypes.map((item, index) => (
-            <span key={index}>
-                {index !== 0 && (index + 1 === docTypes.length) && ' or '}
-                {documentTypesLookup[item] || ''}
-                {(index + 1 !== docTypes.length) && ', '}
-            </span>));
-        const docTypeText = docTypes && docTypes.length > 0 && (
-            <span>
-                <span className="and"> {searchFields.length > 0 && ' AND '}</span>
-                <span className="title">{txt.rek_display_type.title}</span>
-                <span className="combiner"> {txt.rek_display_type.combiner}</span>
-                <span className="value is-lowercase"> {docTypeList}</span>
-            </span>
-        ) || '';
-
-        // Open Access caption
-        const openAccessText = isOpenAccess
-            ? locale.components.searchComponent.advancedSearch.openAccess.captionText
-            : searchFields.length > 0 && '.' || null;
-        return (searchFields.length > 0 || !!isOpenAccess || docTypeText) && <Fragment>{searchFields}{docTypeText}{openAccessText}</Fragment> || null;
-    };
 
     haveAllAdvancedSearchFieldsValidated = (fieldRows) => {
         const fieldTypes = locale.components.searchComponent.advancedSearch.fieldTypes;
@@ -178,7 +133,6 @@ export default class AdvancedSearchComponent extends PureComponent {
         const canAddAnotherField = this.haveAllAdvancedSearchFieldsValidated(this.props.fieldRows)
             && lastFieldAdded.searchField !== '0';
         const alreadyAddedFields = this.props.fieldRows.map(item => item.searchField);
-        const searchQueryCaption = this.getAdvancedSearchCaption(this.props);
         return (
             <div className={`searchComponent ${this.props.className}`}>
                 <form id="advancedSearchForm" onSubmit={this._handleAdvancedSearch}>
@@ -296,12 +250,7 @@ export default class AdvancedSearchComponent extends PureComponent {
                                     </div>
                                 </Fragment>
                         }
-                        {
-                            !!searchQueryCaption &&
-                            <div className="searchQueryCaption">
-                                {searchQueryCaption}
-                            </div>
-                        }
+                        <AdvancedSearchCaption {...this.props} />
                     </div>
                 </form>
             </div>
