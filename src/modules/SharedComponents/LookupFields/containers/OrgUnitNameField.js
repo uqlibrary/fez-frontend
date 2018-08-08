@@ -17,9 +17,18 @@ const mapStateToProps = (state, props) => {
     };
 };
 
-const mapDispatchToProps = (dispatch) => (
+const mapDispatchToProps = (dispatch, props) => (
     {
-        loadSuggestions: (searchKey, searchQuery = ' ') => dispatch(actions.loadSearchKeyList(searchKey, searchQuery))
+        loadSuggestions: (searchKey, searchQuery = ' ') => dispatch(actions.loadSearchKeyList(searchKey, searchQuery)),
+        onChange: (value) => {
+            if (!!props.input) {
+                props.input.onChange(value.value);
+            } else if (typeof value === 'string') {
+                props.onChange({value});
+            } else {
+                props.onChange(value);
+            }
+        }
     }
 );
 

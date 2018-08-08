@@ -86,8 +86,9 @@ export default class SearchComponent extends PureComponent {
                         !!nextProps.searchQueryParams.all
                         && !!nextProps.searchQueryParams.all.value
                         && nextProps.searchQueryParams.all.value
-                    ) || nextProps.searchQueryParams.all || ''
-
+                    )
+                    || (typeof nextProps.searchQueryParams.all === 'string') && nextProps.searchQueryParams.all
+                    || ''
                 },
                 advancedSearch: {
                     fieldRows: this.getFieldRowsFromSearchQuery(nextProps.searchQueryParams),
@@ -357,9 +358,7 @@ export default class SearchComponent extends PureComponent {
                         onToggleMinimise={this._toggleMinimise}
                         onToggleOpenAccess={this._toggleOpenAccess}
                         updateDocTypeValues={this._updateDocTypeValues}
-                        docTypes={this.state.advancedSearch.docTypes}
                         updateYearRangeFilter={this._updateYearRangeFilter}
-                        yearFilter={this.state.advancedSearch.yearFilter}
                         onAdvancedSearchRowAdd={this._addAdvancedSearchRow}
                         onAdvancedSearchRowRemove={this._removeAdvancedSearchRow}
                         onAdvancedSearchReset={this._resetAdvancedSearch}
