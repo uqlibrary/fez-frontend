@@ -2,8 +2,6 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {documentTypesLookup} from 'config/general';
 import {locale} from 'locale';
-// import {publicationTypes} from "../../../../../config";
-// import * as recordForms from "../../PublicationForm/components/Forms";
 
 export default class AdvancedSearchCaption extends PureComponent {
     static propTypes = {
