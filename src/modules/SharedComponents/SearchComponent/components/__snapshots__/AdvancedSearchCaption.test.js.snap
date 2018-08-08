@@ -58,25 +58,7 @@ exports[`Component AdvancedSearchCaption should render as expected 1`] = `
       className="value"
     >
        
-      <span>
-        <span
-          key="0"
-        >
-          UQ:120743
-        </span>
-        <span
-          key="1"
-        >
-          , 
-          UQ:217419
-        </span>
-        <span
-          key="2"
-        >
-           or 
-          UQ:217422
-        </span>
-      </span>
+      UQ:120743, UQ:217419 or UQ:217422
     </span>
   </span>
   <span
@@ -134,50 +116,11 @@ exports[`Component AdvancedSearchCaption should render as expected 1`] = `
       className="value"
     >
        
-      <span
-        key="0"
-      >
-        Audio document
-      </span>
-      <span
-        key="1"
-      >
-         or 
-        Book
-      </span>
+      Audio document or Book
     </span>
   </span>
   <span
     key="4"
-  >
-    <span
-      className="and"
-    >
-       
-       AND 
-    </span>
-    <span
-      className="title"
-    >
-      Published
-       
-    </span>
-    <span
-      className="combiner"
-    >
-       
-      between
-       
-    </span>
-    <span
-      className="value"
-    >
-       
-      1991 and 2012
-    </span>
-  </span>
-  <span
-    key="5"
   >
     <span
       className="and"
@@ -206,6 +149,35 @@ exports[`Component AdvancedSearchCaption should render as expected 1`] = `
       >
         open access/full text
       </span>
+    </span>
+  </span>
+  <span
+    key="5"
+  >
+    <span
+      className="and"
+    >
+       
+       AND 
+    </span>
+    <span
+      className="title"
+    >
+      Published
+       
+    </span>
+    <span
+      className="combiner"
+    >
+       
+      between
+       
+    </span>
+    <span
+      className="value"
+    >
+       
+      1991 to 2012
     </span>
   </span>
 </div>

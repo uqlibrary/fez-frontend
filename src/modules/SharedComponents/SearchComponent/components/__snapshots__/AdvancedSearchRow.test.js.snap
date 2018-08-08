@@ -812,6 +812,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
       }
       inputField={
         Object {
+          "captionValue": "anything",
           "combiner": "contains",
           "hint": "Add some text to search all fields with",
           "order": 1,
@@ -1229,6 +1230,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
       disabledFields={Array []}
       inputField={
         Object {
+          "captionValue": "anything",
           "combiner": "contains",
           "hint": "Add some text to search all fields with",
           "order": 1,

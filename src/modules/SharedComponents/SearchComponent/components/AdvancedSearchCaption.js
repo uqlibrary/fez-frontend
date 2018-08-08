@@ -2,6 +2,8 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {documentTypesLookup} from 'config/general';
 import {locale} from 'locale';
+// import {publicationTypes} from "../../../../../config";
+// import * as recordForms from "../../PublicationForm/components/Forms";
 
 export default class AdvancedSearchCaption extends PureComponent {
     static propTypes = {
@@ -26,10 +28,85 @@ export default class AdvancedSearchCaption extends PureComponent {
         isOpenAccess: false,
     };
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            captionData: []
+        };
+    }
+
+    componentDidMount() {
+        this.updateStateData(this.props);
+    }
+
+    componentWillReceiveProps(nextProps) {
+        this.updateStateData(nextProps);
+    }
+
+    getCleanValue = (item) => {
+        // Receives an object in format {title: string, combiner: string, value: string||array}
+        if(Array.isArray(item.value)) {
+            const values = [...item.value];
+            const lastValue = values.pop();
+            return {...item, value: values.length > 0 ? `${values.join(', ')} or ${lastValue}` : lastValue};
+        }
+        if(item.title === 'Any field' && item.value === '') {
+            return {...item, value: 'anything'};
+        } else {
+            return item;
+        }
+    };
+
+    getSearchFieldData = (fieldRows) => {
+        const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
+        return fieldRows
+            .filter((item) => item.searchField !== 'rek_display_type')
+            .map((item) => (
+                this.getCleanValue({
+                    title: txt[item.searchField].title,
+                    combiner: txt[item.searchField].combiner,
+                    value: item.value
+                })
+            ));
+    };
+
+    getDocTypeData = (docTypes) => {
+        const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
+        const converteddocTypes = docTypes.map((item) => documentTypesLookup[item]);
+        const lastItem = converteddocTypes.pop();
+        const docsString = converteddocTypes.length > 0 ? converteddocTypes.join(', ') + ' or ' + lastItem : lastItem;
+        return this.getCleanValue({
+            title: txt.rek_display_type.title,
+            combiner: txt.rek_display_type.combiner,
+            value: docsString
+        });
+    };
+
+    getOpenAccessData = (isOpenAccess) => {
+        const txt = locale.components.searchComponent.advancedSearch.openAccess;
+        return isOpenAccess ? {title: '', combiner: txt.combiner, value: txt.captionText} : null;
+    };
+
+    getYearFilterData = (yearFilter) => {
+        const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
+        return yearFilter.from &&  yearFilter.to ? {title: txt.facet_year_range.captionTitle, combiner: txt.facet_year_range.combiner, value: yearFilter.from + ' to ' + yearFilter.to} : null;
+    };
+
+    updateStateData = (props) => {
+        this.setState({
+            captionData: [
+                ...this.getSearchFieldData(props.fieldRows),
+                this.getDocTypeData(props.docTypes),
+                this.getOpenAccessData(props.isOpenAccess),
+                this.getYearFilterData(props.yearFilter)
+            ]});
+    };
+
     renderCaptions = (items) => {
         return items
+            .filter((item) => item !== null) // Dont render nulls
             .filter((item) => item.title !== 'Select a field') // Dont render caption for select a field
-            .filter((item) => item.value !== '') // Dont render caption until it has a value
+            .filter((item) => !!item.value) // Dont render caption until it has a value
             .map((item, index) => {
                 return (
                     <span key={index}>
@@ -43,63 +120,9 @@ export default class AdvancedSearchCaption extends PureComponent {
     };
 
     render() {
-        const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
-        const {fieldRows, docTypes, isOpenAccess, yearFilter}  = this.props;
-        const allCaptions = [];
-
-        // All general searchFields
-        let flattenedArrayValue = null;
-        fieldRows.filter(item => item.searchField !== 'rek_display_type')
-            .map((item) => {
-                // If the value is an array of objects, lets make it read nicely
-                if(Array.isArray(item.value)) {
-                    flattenedArrayValue = (
-                        <span>
-                            {item.value.map((value, index) => {
-                                if (index === 0) {
-                                    return <span key={index}>{value}</span>;
-                                } else if (index + 1 !== item.value.length) {
-                                    return <span key={index}>, {value}</span>;
-                                } else {
-                                    return <span key={index}> or {value}</span>;
-                                }
-                            })}
-                        </span>
-                    );
-                }
-                if(item.searchField === 'all' && item.value === '') {
-                    allCaptions.push({title: txt[item.searchField].title, combiner: txt[item.searchField].combiner, value: 'anything'});
-                } else {
-                    allCaptions.push({title: txt[item.searchField].title, combiner: txt[item.searchField].combiner, value: Array.isArray(item.value) ? flattenedArrayValue : item.value});
-                }
-            });
-
-        // Document types caption
-        const docTypeList =  docTypes && docTypes.map((item, index) => {
-            if(index === 0) {
-                return <span key={index}>{documentTypesLookup[item]}</span>;
-            }else if(index + 1 !== docTypes.length) {
-                return <span key={index}>, {documentTypesLookup[item]}</span>;
-            } else {
-                return <span key={index}> or {documentTypesLookup[item]}</span>;
-            }
-        });
-        docTypeList.length !== 0 && allCaptions.push({title: txt.rek_display_type.title, combiner: txt.rek_display_type.combiner, value: docTypeList});
-
-        // Year range caption
-        if(yearFilter.from && yearFilter.to && !yearFilter.invalid) {
-            const yearRange = yearFilter.from + ' and ' + yearFilter.to;
-            allCaptions.push({title: 'Published', combiner: txt.facet_year_range.combiner, value: yearRange});
-        }
-
-        // Open Access caption
-        if(isOpenAccess) {
-            allCaptions.push({title: '', combiner: 'is', value: (<span className="value">open access/full text</span>)});
-        }
-
         return (
             <div className={`${this.props.className} searchQueryCaption`}>
-                {this.renderCaptions(allCaptions)}
+                {this.renderCaptions(this.state.captionData)}
             </div>
         );
     }
