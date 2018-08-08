@@ -29,7 +29,7 @@ const mapStateToProps = (state, props) => {
         errorText: props.errorText,
         selectedValue: !!props.label && {value: props.label} || !!props.value && {value: props.value} || '',
         filter: (searchText, key, item) => {
-            return item.id !== 0;
+            return !!item.id && item.id !== 0;
         }
     };
 };
