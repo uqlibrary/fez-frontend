@@ -200,6 +200,7 @@ export default class App extends PureComponent {
                         this.state.docked || !this.state.menuDrawerOpen ?
                             <IconButton
                                 tooltip={locale.global.mainNavButton.tooltip}
+                                aria-label={locale.global.mainNavButton.aria}
                                 tooltipPosition="bottom-right"
                                 hoveredStyle={appBarButtonStyles}
                                 className="main-menu-button">
@@ -222,7 +223,8 @@ export default class App extends PureComponent {
                                     hoveredStyle={appBarButtonStyles}
                                     onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
                                     signInTooltipText={locale.global.authentication.signInText}
-                                    signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''}/>
+                                    signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''}
+                                    ariaLabel={isAuthorizedUser ? locale.global.authentication.ariaOut : locale.global.authentication.ariaIn}/>
                             </div>
                         </div>
                     }

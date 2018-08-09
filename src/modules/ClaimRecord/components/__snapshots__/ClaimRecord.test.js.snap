@@ -1027,6 +1027,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             "confirmationTitle": "Cancel claiming a publication",
           }
         }
+        when={true}
       />
       <StandardCard
         className=""
@@ -1034,6 +1035,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
       >
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Type edits/changes/comments here"
           fullWidth={true}
           multiLine={true}
@@ -1043,6 +1045,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         />
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Link (URL)"
           fullWidth={true}
           name="rek_link"
@@ -1060,6 +1063,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
       >
         <Field
           component={[Function]}
+          disabled={false}
           name="files"
           requireOpenAccessStatus={true}
           validate={
@@ -1834,6 +1838,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             "confirmationTitle": "Cancel claiming a publication",
           }
         }
+        when={true}
       />
       <StandardCard
         className="requiredField"
@@ -1857,6 +1862,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           }
           className="requiredField"
           component={[Function]}
+          disabled={false}
           linkedAuthorIdList={Array []}
           loggedInAuthor={
             Object {
@@ -1894,6 +1900,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           }
           className="contributorsField"
           component={[Function]}
+          disabled={false}
           linkedAuthorIdList={Array []}
           loggedInAuthor={
             Object {
@@ -1910,6 +1917,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       >
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Type edits/changes/comments here"
           fullWidth={true}
           multiLine={true}
@@ -1919,6 +1927,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         />
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Link (URL)"
           fullWidth={true}
           name="rek_link"
@@ -1936,6 +1945,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       >
         <Field
           component={[Function]}
+          disabled={false}
           name="files"
           requireOpenAccessStatus={true}
           validate={
@@ -2995,6 +3005,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             "confirmationTitle": "Cancel claiming a publication",
           }
         }
+        when={true}
       />
       <StandardCard
         className="requiredField"
@@ -3018,6 +3029,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           }
           className="requiredField"
           component={[Function]}
+          disabled={false}
           linkedAuthorIdList={Array []}
           loggedInAuthor={
             Object {
@@ -3039,6 +3051,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       >
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Type edits/changes/comments here"
           fullWidth={true}
           multiLine={true}
@@ -3048,6 +3061,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         />
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Link (URL)"
           fullWidth={true}
           name="rek_link"
@@ -3065,6 +3079,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       >
         <Field
           component={[Function]}
+          disabled={false}
           name="files"
           requireOpenAccessStatus={true}
           validate={
@@ -3832,6 +3847,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             "confirmationTitle": "Cancel claiming a publication",
           }
         }
+        when={true}
       />
       <StandardCard
         className="requiredField"
@@ -3855,6 +3871,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
           }
           className="requiredField"
           component={[Function]}
+          disabled={false}
           linkedAuthorIdList={Array []}
           loggedInAuthor={
             Object {
@@ -3871,6 +3888,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
       >
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Type edits/changes/comments here"
           fullWidth={true}
           multiLine={true}
@@ -3880,6 +3898,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         />
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Link (URL)"
           fullWidth={true}
           name="rek_link"
@@ -3897,6 +3916,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
       >
         <Field
           component={[Function]}
+          disabled={false}
           name="files"
           requireOpenAccessStatus={true}
           validate={
@@ -5059,6 +5079,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             "confirmationTitle": "Cancel claiming a publication",
           }
         }
+        when={true}
       />
       <StandardCard
         className="requiredField"
@@ -5130,6 +5151,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
           }
           className="requiredField"
           component={[Function]}
+          disabled={false}
           linkedAuthorIdList={
             Array [
               Object {
@@ -5208,6 +5230,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
       >
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Type edits/changes/comments here"
           fullWidth={true}
           multiLine={true}
@@ -5217,6 +5240,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         />
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Link (URL)"
           fullWidth={true}
           name="rek_link"
@@ -5234,6 +5258,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
       >
         <Field
           component={[Function]}
+          disabled={false}
           name="files"
           requireOpenAccessStatus={true}
           validate={
@@ -6396,6 +6421,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             "confirmationTitle": "Cancel claiming a publication",
           }
         }
+        when={true}
       />
       <StandardCard
         className="requiredField"
@@ -6467,6 +6493,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           }
           className="requiredField"
           component={[Function]}
+          disabled={false}
           linkedAuthorIdList={
             Array [
               Object {
@@ -6545,6 +6572,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
       >
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Type edits/changes/comments here"
           fullWidth={true}
           multiLine={true}
@@ -6554,6 +6582,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         />
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Link (URL)"
           fullWidth={true}
           name="rek_link"
@@ -6571,6 +6600,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
       >
         <Field
           component={[Function]}
+          disabled={false}
           name="files"
           requireOpenAccessStatus={true}
           validate={
@@ -7733,6 +7763,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             "confirmationTitle": "Cancel claiming a publication",
           }
         }
+        when={true}
       />
       <StandardCard
         className="requiredField"
@@ -7804,6 +7835,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
           }
           className="requiredField"
           component={[Function]}
+          disabled={false}
           linkedAuthorIdList={
             Array [
               Object {
@@ -7882,6 +7914,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
       >
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Type edits/changes/comments here"
           fullWidth={true}
           multiLine={true}
@@ -7891,6 +7924,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         />
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Link (URL)"
           fullWidth={true}
           name="rek_link"
@@ -7908,6 +7942,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
       >
         <Field
           component={[Function]}
+          disabled={false}
           name="files"
           requireOpenAccessStatus={true}
           validate={
@@ -9142,6 +9177,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
           }
           className="requiredField"
           component={[Function]}
+          disabled={false}
           linkedAuthorIdList={
             Array [
               Object {
@@ -9220,6 +9256,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
       >
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Type edits/changes/comments here"
           fullWidth={true}
           multiLine={true}
@@ -9229,6 +9266,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
         />
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Link (URL)"
           fullWidth={true}
           name="rek_link"
@@ -9246,6 +9284,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
       >
         <Field
           component={[Function]}
+          disabled={false}
           name="files"
           requireOpenAccessStatus={true}
           validate={
@@ -11447,6 +11486,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             "confirmationTitle": "Cancel claiming a publication",
           }
         }
+        when={true}
       />
       <StandardCard
         className="requiredField"
@@ -11518,6 +11558,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
           }
           className="requiredField"
           component={[Function]}
+          disabled={false}
           linkedAuthorIdList={
             Array [
               Object {
@@ -11596,6 +11637,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
       >
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Type edits/changes/comments here"
           fullWidth={true}
           multiLine={true}
@@ -11605,6 +11647,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
         />
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Link (URL)"
           fullWidth={true}
           name="rek_link"
@@ -11622,6 +11665,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
       >
         <Field
           component={[Function]}
+          disabled={false}
           name="files"
           requireOpenAccessStatus={true}
           validate={
@@ -12784,6 +12828,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
             "confirmationTitle": "Cancel claiming a publication",
           }
         }
+        when={true}
       />
       <StandardCard
         className="requiredField"
@@ -12855,6 +12900,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
           }
           className="requiredField"
           component={[Function]}
+          disabled={false}
           linkedAuthorIdList={
             Array [
               Object {
@@ -12933,6 +12979,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
       >
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Type edits/changes/comments here"
           fullWidth={true}
           multiLine={true}
@@ -12942,6 +12989,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
         />
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Link (URL)"
           fullWidth={true}
           name="rek_link"
@@ -12959,6 +13007,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
       >
         <Field
           component={[Function]}
+          disabled={false}
           name="files"
           requireOpenAccessStatus={true}
           validate={

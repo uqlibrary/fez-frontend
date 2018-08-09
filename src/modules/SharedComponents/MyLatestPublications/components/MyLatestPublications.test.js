@@ -3,6 +3,7 @@ import MyLatestPublications from './MyLatestPublications';
 
 function setup(testProps, isShallow = true){
     const props = {
+        history: {},
         actions: {
             searchLatestPublications: jest.fn()
         },

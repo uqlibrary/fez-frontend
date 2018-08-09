@@ -13,6 +13,7 @@ function setup(testProps, isShallow = true) {
         location: {
             search: '?searchQueryParams%5Ball%5D=test'
         },
+        history: {},
         ...testProps,
     };
     return getElement(SearchRecords, props, isShallow);

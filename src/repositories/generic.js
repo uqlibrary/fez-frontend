@@ -9,7 +9,6 @@ import {api} from 'config';
  * @returns {Promise}
  */
 export function put({apiUrl, options = {}}, data, config = {}) {
-    console.log('PUT: ' + apiUrl);
     return api.put(apiUrl, data, {...config, ...options});
 }
 
@@ -22,7 +21,6 @@ export function put({apiUrl, options = {}}, data, config = {}) {
  * @returns {Promise}
  */
 export function post({apiUrl, options = {}}, data, config = {}) {
-    console.log('POST: ' + apiUrl);
     return api.post(apiUrl, data, {...config, ...options});
 }
 
@@ -35,7 +33,6 @@ export function post({apiUrl, options = {}}, data, config = {}) {
  * @returns {Promise}
  */
 export function patch({apiUrl, options = {}}, data, config = {}) {
-    console.log('PATCH: ' + apiUrl);
     return api.patch(apiUrl, data, {...config, ...options});
 }
 

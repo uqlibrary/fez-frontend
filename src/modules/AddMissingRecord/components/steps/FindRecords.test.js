@@ -2,7 +2,11 @@ import FindRecords from './FindRecords';
 import Immutable from 'immutable';
 
 function setup(testProps, isShallow = true) {
-    return getElement(FindRecords, testProps, isShallow);
+    const props = {
+        history: {},
+        ...testProps
+    };
+    return getElement(FindRecords, props, isShallow);
 }
 
 describe('Search record', () => {

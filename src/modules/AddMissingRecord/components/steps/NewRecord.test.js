@@ -1,7 +1,12 @@
 import NewRecord from './NewRecord';
 
 function setup(testProps, isShallow = true) {
-    return getElement(NewRecord, testProps, isShallow);
+    const props = {
+        history: {},
+        actions: {},
+        ...testProps
+    };
+    return getElement(NewRecord, props, isShallow);
 }
 
 describe('Add new record', () => {
@@ -75,7 +80,7 @@ describe('Add new record', () => {
             history: {},
             newRecordFileUploadingError: false,
             rawSearchQuery: 'This is a test'
-        }, false);
+        });
         expect(toJson(wrapper.find('ConfirmDialogBox'))).toMatchSnapshot();
     });
 

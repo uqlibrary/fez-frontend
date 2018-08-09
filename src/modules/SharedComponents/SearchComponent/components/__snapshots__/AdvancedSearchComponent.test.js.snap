@@ -2,6 +2,7 @@
 
 exports[`AdvancedSearchComponent should render advanced search docTypes with checked values based on fixed invalid props 1`] = `
 <SelectField
+  aria-label="Select multiple publications types to search on"
   autoWidth={false}
   disabled={false}
   floatingLabelFixed={true}
@@ -558,6 +559,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
 
 exports[`AdvancedSearchComponent should render advanced search docTypes with checked values based on props 1`] = `
 <SelectField
+  aria-label="Select multiple publications types to search on"
   autoWidth={false}
   disabled={false}
   floatingLabelFixed={true}
@@ -1215,6 +1217,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
                 <PublicationYearRangeField
                   className="advancedSearchYearFilter"
                   disabled={false}
+                  updateYearRangeFilter={[MockFunction]}
                   yearFilter={
                     Object {
                       "invalid": false,
@@ -1317,6 +1320,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
         onToggleMinimise={[Function]}
         onToggleOpenAccess={[Function]}
         onToggleSearchMode={[Function]}
+        updateYearRangeFilter={[MockFunction]}
         yearFilter={
           Object {
             "invalid": false,
@@ -1330,6 +1334,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
 
 exports[`AdvancedSearchComponent should render advanced search with no valid checked docTypes based on invalid props 1`] = `
 <SelectField
+  aria-label="Select multiple publications types to search on"
   autoWidth={false}
   disabled={false}
   floatingLabelFixed={true}
@@ -1988,6 +1993,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
                 <PublicationYearRangeField
                   className="advancedSearchYearFilter"
                   disabled={false}
+                  updateYearRangeFilter={[MockFunction]}
                   yearFilter={
                     Object {
                       "invalid": false,
@@ -2091,6 +2097,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
         onToggleMinimise={[Function]}
         onToggleOpenAccess={[Function]}
         onToggleSearchMode={[Function]}
+        updateYearRangeFilter={[MockFunction]}
         yearFilter={
           Object {
             "invalid": false,
@@ -2206,6 +2213,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
                 <PublicationYearRangeField
                   className="advancedSearchYearFilter"
                   disabled={false}
+                  updateYearRangeFilter={[MockFunction]}
                   yearFilter={
                     Object {
                       "invalid": false,
@@ -2309,6 +2317,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
         onToggleMinimise={[Function]}
         onToggleOpenAccess={[Function]}
         onToggleSearchMode={[Function]}
+        updateYearRangeFilter={[MockFunction]}
         yearFilter={
           Object {
             "invalid": false,
@@ -2379,6 +2388,7 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
         onToggleMinimise={[Function]}
         onToggleOpenAccess={[Function]}
         onToggleSearchMode={[Function]}
+        updateYearRangeFilter={[MockFunction]}
         yearFilter={
           Object {
             "invalid": false,
@@ -2494,6 +2504,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
                 <PublicationYearRangeField
                   className="advancedSearchYearFilter"
                   disabled={false}
+                  updateYearRangeFilter={[MockFunction]}
                   yearFilter={
                     Object {
                       "invalid": false,
@@ -2597,6 +2608,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
         onToggleMinimise={[MockFunction]}
         onToggleOpenAccess={[Function]}
         onToggleSearchMode={[Function]}
+        updateYearRangeFilter={[MockFunction]}
         yearFilter={
           Object {
             "invalid": false,

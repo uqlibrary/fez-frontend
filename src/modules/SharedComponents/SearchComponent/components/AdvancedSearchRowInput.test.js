@@ -30,7 +30,7 @@ describe('AdvancedSearchRowInput', () => {
         const childrenFn = jest.fn((InputComponent, inputProps) => {
             expect(InputComponent.defaultProps.type).toEqual('text');
             expect(inputProps).toEqual({
-                'aria-label': 'Field hint',
+                'aria-label': undefined,
                 'autoComplete': 'off',
                 'errorText': undefined,
                 'floatingLabelText': null,
@@ -49,7 +49,7 @@ describe('AdvancedSearchRowInput', () => {
         const childrenFn = jest.fn((InputComponent, inputProps) => {
             expect(InputComponent.defaultProps.type).toEqual('text');
             expect(inputProps).toEqual({
-                'aria-label': 'This is hint for text input',
+                'aria-label': undefined,
                 'autoComplete': 'off',
                 'errorText': 'Must be at least 10 characters',
                 'floatingLabelText': null,

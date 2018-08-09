@@ -4,7 +4,46 @@ import {journalArticle, dataCollection} from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps,
+        "array": {
+            insert: jest.fn(),
+            move: jest.fn(),
+            pop: jest.fn(),
+            push: jest.fn(),
+            remove: jest.fn(),
+            removeAll: jest.fn(),
+            shift: jest.fn(),
+            splice: jest.fn(),
+            swap: jest.fn(),
+            unshift: jest.fn(),
+        },
+        autofill: jest.fn(),
+        blur: jest.fn(),
+        change: jest.fn(),
+        clearAsyncError: jest.fn(),
+        "anyTouched": true,
+        "asyncValidating": false,
+        asyncValidate: jest.fn(),
+        clearFields: jest.fn(),
+        clearSubmitErrors: jest.fn(),
+        destroy: jest.fn(),
+        dispatch: jest.fn(),
+        initialize: jest.fn(),
+        reset: jest.fn(),
+        resetSection: jest.fn(),
+        touch: jest.fn(),
+        submit: jest.fn(),
+        untouch: jest.fn(),
+        clearSubmit: jest.fn(),
+        "dirty": true,
+        "form": "form",
+        "initialized": false,
+        "invalid": false,
+        "submitFailed": false,
+        "submitSucceeded": false,
+        "valid": true,
+        pure: true,
+        pristine: true,
+        submitting: false,
         initialValues:  testProps.initialValues || Immutable.Map({
             publication: Immutable.Map(journalArticle),
             author: Immutable.Map({aut_id: 410})
@@ -16,6 +55,7 @@ function setup(testProps, isShallow = true) {
             go: jest.fn()
         },
         publicationToClaimFileUploadingError: testProps.publicationToClaimFileUploadingError || false,
+        ...testProps,
     };
     return getElement(ClaimRecord, props, isShallow);
 }

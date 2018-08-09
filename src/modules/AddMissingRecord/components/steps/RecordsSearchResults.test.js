@@ -1,7 +1,11 @@
 import RecordsSearchResults from './RecordsSearchResults';
 
 function setup(testProps, isShallow = true) {
-    return getElement(RecordsSearchResults, testProps, isShallow);
+    const props = {
+        history: {},
+        ...testProps
+    };
+    return getElement(RecordsSearchResults, props, isShallow);
 }
 
 describe('Search record results', () => {

@@ -19,7 +19,8 @@ export default class GenericSelectField extends Component {
         autoWidth: PropTypes.bool,
         errorText: PropTypes.string,
         hintText: PropTypes.string,
-        multiple: PropTypes.bool
+        multiple: PropTypes.bool,
+        ariaLabel: PropTypes.string
     };
 
     static contextTypes = {
@@ -86,6 +87,7 @@ export default class GenericSelectField extends Component {
                 dropDownMenuProps={{animated: false}}
                 hintText={this.props.hintText}
                 floatingLabelText={loadingIndicationText}
+                aria-label={this.props.ariaLabel}
                 fullWidth={this.props.fullWidth}
                 autoWidth={this.props.autoWidth}
                 errorText={this.props.errorText}

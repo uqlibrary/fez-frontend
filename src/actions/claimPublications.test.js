@@ -1,7 +1,7 @@
 import * as claimActions  from './claimPublications';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
-import * as mockData from 'mock/data';
+import {possibleUnclaimedList} from 'mock/data';
 
 describe('Claim publication actions tests ', () => {
     // extend expect to check actions
@@ -41,7 +41,7 @@ describe('Claim publication actions tests ', () => {
 
         mockApi
             .onAny()
-            .reply(200, {data: {...mockData.possibleUnclaimedList}});
+            .reply(200, {data: {...possibleUnclaimedList}});
 
         const expectedActions = [
             actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING,
@@ -62,7 +62,7 @@ describe('Claim publication actions tests ', () => {
 
             mockApi
                 .onAny()
-                .reply(200, {data: {...mockData.possibleUnclaimedList}});
+                .reply(200, {data: {...possibleUnclaimedList}});
 
             const expectedActions = [
                 actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING,
@@ -80,7 +80,7 @@ describe('Claim publication actions tests ', () => {
             const testParams = {facets: {facetOne:"Facet"}};
             mockApi
                 .onAny()
-                .reply(200, {data: {...mockData.possibleUnclaimedList}});
+                .reply(200, {data: {...possibleUnclaimedList}});
 
             const expectedActions = [
                 actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING,
@@ -185,7 +185,7 @@ describe('Claim publication actions tests ', () => {
 
             mockApi
                 .onGet(repositories.routes.POSSIBLE_RECORDS_API({facets: {}}).apiUrl)
-                .reply(200, mockData.possibleUnclaimedList)
+                .reply(200, possibleUnclaimedList)
                 .onAny()
                 .reply(403, {});
 
@@ -205,7 +205,7 @@ describe('Claim publication actions tests ', () => {
 
             mockApi
                 .onGet(repositories.routes.POSSIBLE_RECORDS_API({facets: {}}).apiUrl)
-                .reply(200, mockData.possibleUnclaimedList)
+                .reply(200, possibleUnclaimedList)
                 .onAny()
                 .reply(500, {});
 
@@ -234,7 +234,7 @@ describe('Claim publication actions tests ', () => {
 
     describe('claimPublication()', () => {
         const testClaimRequest = {
-            publication: {...mockData.possibleUnclaimedList.data[0]},
+            publication: {...possibleUnclaimedList.data[0]},
             author: {
                 "aut_id": 1671
             }
