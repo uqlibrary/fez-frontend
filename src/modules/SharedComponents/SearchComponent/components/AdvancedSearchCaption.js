@@ -29,16 +29,14 @@ export default class AdvancedSearchCaption extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            captionData: []
+            captionData: this.updateStateData(props)
         };
     }
 
-    componentDidMount() {
-        this.updateStateData(this.props);
-    }
-
     componentWillReceiveProps(nextProps) {
-        this.updateStateData(nextProps);
+        this.setState({
+            captionData: this.updateStateData(nextProps)
+        });
     }
 
     getCleanValue = (item) => {
@@ -72,7 +70,7 @@ export default class AdvancedSearchCaption extends PureComponent {
         const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
         const converteddocTypes = docTypes.map((item) => documentTypesLookup[item]);
         const lastItem = converteddocTypes.pop();
-        const docsString = converteddocTypes.length > 0 ? converteddocTypes.join(', ') + ' or ' + lastItem : lastItem;
+        const docsString = converteddocTypes.length > 0 ? `${converteddocTypes.join(', ')} or ${lastItem}` : lastItem;
         return this.getCleanValue({
             title: txt.rek_display_type.title,
             combiner: txt.rek_display_type.combiner,
@@ -91,16 +89,16 @@ export default class AdvancedSearchCaption extends PureComponent {
     };
 
     updateStateData = (props) => {
-        this.setState({
-            captionData: [
-                ...this.getSearchFieldData(props.fieldRows),
-                this.getDocTypeData(props.docTypes),
-                this.getOpenAccessData(props.isOpenAccess),
-                this.getYearFilterData(props.yearFilter)
-            ]});
+        return [
+            ...this.getSearchFieldData(props.fieldRows),
+            this.getDocTypeData(props.docTypes),
+            this.getOpenAccessData(props.isOpenAccess),
+            this.getYearFilterData(props.yearFilter)
+        ];
     };
 
     renderCaptions = (items) => {
+        console.log('items', JSON.stringify(items));
         return items
             .filter((item) => item !== null) // Dont render nulls
             .filter((item) => item.title !== 'Select a field') // Dont render caption for select a field
@@ -118,6 +116,7 @@ export default class AdvancedSearchCaption extends PureComponent {
     };
 
     render() {
+        console.log('props', JSON.stringify(this.props));
         return (
             <div className={`${this.props.className} searchQueryCaption`}>
                 {this.renderCaptions(this.state.captionData)}
