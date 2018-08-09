@@ -13,6 +13,7 @@ exports[`Component PublicationForm should render component initialised with just
         "confirmationTitle": "Abandon workflow",
       }
     }
+    when={true}
   />
   <StandardCard
     className=""
@@ -575,6 +576,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
         "confirmationTitle": "Abandon workflow",
       }
     }
+    when={true}
   />
   <StandardCard
     className=""
@@ -1153,6 +1155,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
         fullWidth={true}
         label="Submit for approval"
         labelPosition="after"
+        onClick={[MockFunction]}
         primary={false}
         secondary={true}
       />
@@ -1174,6 +1177,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
         "confirmationTitle": "Abandon workflow",
       }
     }
+    when={true}
   />
   <StandardCard
     className=""
@@ -1751,6 +1755,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
         fullWidth={true}
         label="Submit for approval"
         labelPosition="after"
+        onClick={[MockFunction]}
         primary={false}
         secondary={true}
       />
@@ -1772,6 +1777,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
         "confirmationTitle": "Abandon workflow",
       }
     }
+    when={true}
   />
   <StandardCard
     className=""
@@ -2350,6 +2356,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
         fullWidth={true}
         label="Submit for approval"
         labelPosition="after"
+        onClick={[MockFunction]}
         primary={false}
         secondary={true}
       />
@@ -2371,6 +2378,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
         "confirmationTitle": "Abandon workflow",
       }
     }
+    when={true}
   />
   <StandardCard
     className=""
@@ -2948,6 +2956,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
         fullWidth={true}
         label="Submit for approval"
         labelPosition="after"
+        onClick={[MockFunction]}
         primary={false}
         secondary={true}
       />
@@ -2969,6 +2978,7 @@ exports[`Component PublicationForm should render component with all fields disab
         "confirmationTitle": "Abandon workflow",
       }
     }
+    when={true}
   />
   <StandardCard
     className=""

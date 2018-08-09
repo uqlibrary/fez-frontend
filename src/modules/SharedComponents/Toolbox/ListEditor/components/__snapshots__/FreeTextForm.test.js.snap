@@ -116,6 +116,7 @@ exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
       className="is-mui-spacing-button"
       disabled={true}
       fullWidth={true}
+      label="Add"
       labelPosition="after"
       onClick={[Function]}
       primary={true}

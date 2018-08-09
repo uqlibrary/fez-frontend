@@ -11,7 +11,7 @@ function setup(testProps, isShallow = true){
 
         onAdvancedSearchRowChange: jest.fn(),
         onSearch: jest.fn(),
-
+        updateYearRangeFilter: jest.fn(),
         ...testProps
     };
 

@@ -5,8 +5,12 @@ exports[`PublicationSearchForm renders  component 1`] = `
   className=""
   title="Search for your publication"
 >
-  <div />
-  <form>
+  <div>
+    Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.
+  </div>
+  <form
+    onSubmit={[MockFunction]}
+  >
     <div
       className="columns"
     >
@@ -35,7 +39,9 @@ exports[`PublicationSearchForm renders  component 1`] = `
           className="is-mui-spacing-button"
           disabled={false}
           fullWidth={true}
+          label="Search"
           labelPosition="after"
+          onClick={[MockFunction]}
           primary={false}
           secondary={true}
         />
