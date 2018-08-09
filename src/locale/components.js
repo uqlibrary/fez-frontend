@@ -814,6 +814,8 @@ export default {
                     show: 'Show advanced search',
                     hide: 'Hide advanced search'
                 },
+                selectAria: 'Click to select a field to search from the list - [current_selection] currently selected',
+                deleteAria: 'Click to delete this search row',
                 fieldTypes: {
                     '0': {
                         order: 0,
@@ -821,7 +823,8 @@ export default {
                         combiner: null,
                         type: 'TextField',
                         hint: 'Select a field to search on',
-                        validation: []
+                        validation: [],
+                        ariaLabel: 'Select a field to search on'
                     },
                     'divider1': {
                         order: 0.5,
@@ -834,7 +837,8 @@ export default {
                         type: 'TextField',
                         hint: 'Add some text to search all fields with',
                         captionValue: 'anything',
-                        validation: ['maxLength500']
+                        validation: ['maxLength500'],
+                        ariaLabel: 'Type a value to search all fields for'
                     },
                     'rek_title': {
                         order: 2,
@@ -842,7 +846,8 @@ export default {
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a title',
-                        validation: ['required', 'maxLength255']
+                        validation: ['required', 'maxLength255'],
+                        ariaLabel: 'Type a title to search for'
                     },
                     'rek_pid': {
                         order: 9,
@@ -850,7 +855,8 @@ export default {
                         combiner: 'is',
                         type: 'TextField',
                         hint: 'Add a PID',
-                        validation: ['required']
+                        validation: ['required'],
+                        ariaLabel: 'Type a PID to search for'
                     },
                     'rek_author': {
                         order: 3,
@@ -858,7 +864,8 @@ export default {
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add an author name',
-                        validation: ['required', 'maxLength255']
+                        validation: ['required', 'maxLength255'],
+                        ariaLabel: 'Type an author name to search for'
                     },
                     'rek_contributor': {
                         order: 5,
@@ -866,7 +873,8 @@ export default {
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add an editor/contributor name',
-                        validation: ['required', 'maxLength255']
+                        validation: ['required', 'maxLength255'],
+                        ariaLabel: 'Type a contributor name to search for'
                     },
                     'rek_series': {
                         order: 10,
@@ -874,7 +882,8 @@ export default {
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a series name',
-                        validation: ['required', 'maxLength500']
+                        validation: ['required', 'maxLength500'],
+                        ariaLabel: 'Type a series name to search for'
                     },
                     'rek_journal_name': {
                         order: 11,
@@ -882,7 +891,8 @@ export default {
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a journal name',
-                        validation: ['required', 'maxLength500']
+                        validation: ['required', 'maxLength500'],
+                        ariaLabel: 'Type a journal name to search for'
                     },
                     'rek_conference_name': {
                         order: 12,
@@ -890,7 +900,8 @@ export default {
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a conference name',
-                        validation: ['required', 'maxLength500']
+                        validation: ['required', 'maxLength500'],
+                        ariaLabel: 'Type a conference name to search for'
                     },
                     'rek_doi': {
                         order: 8,
@@ -898,7 +909,8 @@ export default {
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a DOI',
-                        validation: ['required', 'doi']
+                        validation: ['required', 'doi'],
+                        ariaLabel: 'Type a DOI to search for'
                     },
                     'rek_publisher': {
                         order: 13,
@@ -906,7 +918,8 @@ export default {
                         combiner: 'is',
                         type: 'PublisherLookup',
                         hint: 'Add a publisher',
-                        validation: ['required']
+                        validation: ['required'],
+                        ariaLabel: 'Type a publisher to search for'
                     },
                     'rek_ismemberof': {
                         order: 7,
@@ -917,7 +930,8 @@ export default {
                         loadingHint: 'Loading collections',
                         errorHint: 'There has been an error loading collections',
                         multiple: true,
-                        validation: ['required']
+                        validation: ['required'],
+                        ariaLabel: 'Select multiple collections to search for'
                     },
                     'rek_genre_type': {
                         order: 14,
@@ -926,7 +940,8 @@ export default {
                         type: 'ThesisTypeLookup',
                         hint: 'Select a Thesis type',
                         multiple: true,
-                        validation: ['required']
+                        validation: ['required'],
+                        ariaLabel: 'Select multiple thesis types to search for'
                     },
                     'rek_author_id': {
                         order: 4,
@@ -934,7 +949,8 @@ export default {
                         combiner: 'is',
                         type: 'AuthorIdLookup',
                         hint: 'Add an author id',
-                        validation: ['required']
+                        validation: ['required'],
+                        ariaLabel: 'Begin typing an author ID to select an author from the list'
                     },
                     'rek_contributor_id': {
                         order: 6,
@@ -942,7 +958,8 @@ export default {
                         combiner: 'is',
                         type: 'ContributorIdLookup',
                         hint: 'Add a contributor id',
-                        validation: ['required']
+                        validation: ['required'],
+                        ariaLabel: 'Begin typing an contributor ID to select an author from the list'
                     },
                     'rek_org_unit_name': {
                         order: 15,
@@ -950,7 +967,8 @@ export default {
                         combiner: 'is',
                         type: 'OrgUnitLookup',
                         hint: 'Add a school, centre or institute',
-                        validation: ['required']
+                        validation: ['required'],
+                        ariaLabel: 'Begin typing an school, centre or institute name to select an author from the list'
                     },
                     'rek_display_type': {
                         order: 20,
@@ -959,7 +977,8 @@ export default {
                         type: null,
                         hint: 'Select document types',
                         floatingLabelText: 'Test',
-                        validation: []
+                        validation: [],
+                        ariaLabel: 'Select multiple publications types to search on'
                     },
                     'facet_year_range': {
                         order: 21,
@@ -971,7 +990,8 @@ export default {
                         fromAria: 'Enter a year to search from',
                         toAria: 'Enter a year to search to',
                         toHint: 'Year to',
-                        invalidText: 'Invalid year range'
+                        invalidText: 'Invalid year range',
+                        ariaLabel: 'Add valid year ranges to search between'
                     }
                 },
                 openAccess: {
@@ -1017,3 +1037,4 @@ export default {
         }
     }
 };
+

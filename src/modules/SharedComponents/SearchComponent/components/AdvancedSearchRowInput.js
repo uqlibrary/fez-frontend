@@ -22,6 +22,7 @@ class AdvancedSearchRowInput extends PureComponent {
             multiple: PropTypes.bool,
             errorHint: PropTypes.string,
             loadingHint: PropTypes.string,
+            ariaLabel: PropTypes.string
         })
     };
 
@@ -76,14 +77,15 @@ class AdvancedSearchRowInput extends PureComponent {
     getInputProps = () => {
         const defaultProps = {
             'hintText': this.props.inputField.hint,
-            'aria-label': this.props.inputField.hint,
+            'aria-label': this.props.inputField.ariaLabel,
             'errorText': this.runValidationRules(this.props.value),
-            'floatingLabelText': null
+            'floatingLabelText': null,
         };
 
         const lookupDefaultProps = {
             ...defaultProps,
             'value': this.props.label || this.props.value,
+            'aria-label': this.props.inputField.ariaLabel,
         };
 
         const selectDefaultProps = {
@@ -91,7 +93,8 @@ class AdvancedSearchRowInput extends PureComponent {
             'locale': {label: null},
             'selectedValue': this.props.value,
             'fullWidth': true,
-            'onChange': (item) => this.props.onChange(item, item)
+            'onChange': (item) => this.props.onChange(item, item),
+            'aria-label': this.props.inputField.ariaLabel,
         };
 
         switch (this.props.inputField.type) {
@@ -99,7 +102,7 @@ class AdvancedSearchRowInput extends PureComponent {
                 return {
                     ...defaultProps,
                     'autoComplete': 'off',
-                    'onChange': (event, value) => this.props.onChange(value)
+                    'onChange': (event, value) => this.props.onChange(value),
                 };
             case 'PublisherLookup':
             case 'OrgUnitLookup':

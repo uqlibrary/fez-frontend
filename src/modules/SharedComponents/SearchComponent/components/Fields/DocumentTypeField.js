@@ -48,6 +48,7 @@ export default class DocumentTypeField extends PureComponent {
                 floatingLabelText={txt.advancedSearch.fieldTypes.rek_display_type.title}
                 floatingLabelFixed
                 hintText={txt.advancedSearch.fieldTypes.rek_display_type.hint}
+                aria-label={txt.advancedSearch.fieldTypes.rek_display_type.ariaLabel}
                 value={this.props.docTypes}
                 onChange={this._handleDocTypeChange}
                 multiple

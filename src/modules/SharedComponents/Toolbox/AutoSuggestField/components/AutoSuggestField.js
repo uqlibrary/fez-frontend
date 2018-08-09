@@ -20,7 +20,8 @@ export class AutoSuggestField extends Component {
         allowFreeText: PropTypes.bool,
         floatingLabelText: PropTypes.string,
         hintText: PropTypes.string,
-        errorText: PropTypes.string
+        errorText: PropTypes.string,
+        'aria-label': PropTypes.string
     };
 
     static defaultProps = {
@@ -123,6 +124,7 @@ export class AutoSuggestField extends Component {
                 maxSearchResults={this.props.maxResults}
                 floatingLabelText={this.props.floatingLabelText}
                 hintText={this.props.hintText}
+                aria-label={this.props['aria-label']}
                 dataSource={this.props.itemsList}
                 fullWidth
                 onUpdateInput={this.textUpdated}
