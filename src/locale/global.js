@@ -39,11 +39,14 @@ export default {
         loadingUserAccount: 'Loading user account...',
         mainNavButton: {
             tooltip: 'Main navigation',
+            aria: 'Click to open the main navigation',
             closeMenuLabel: 'Close menu'
         },
         authentication: {
             signInText: 'Log in',
-            signOutText: 'Log out'
+            signOutText: 'Log out',
+            ariaIn: 'Click to log in to eSpace',
+            ariaOut: 'Click to log out of eSpace'
         },
         skipNav: {
             title: 'Skip Navigation',
