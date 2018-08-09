@@ -98,7 +98,6 @@ export default class AdvancedSearchCaption extends PureComponent {
     };
 
     renderCaptions = (items) => {
-        console.log('items', JSON.stringify(items));
         return items
             .filter((item) => item !== null) // Dont render nulls
             .filter((item) => item.title !== 'Select a field') // Dont render caption for select a field
@@ -116,7 +115,6 @@ export default class AdvancedSearchCaption extends PureComponent {
     };
 
     render() {
-        console.log('props', JSON.stringify(this.props));
         return (
             <div className={`${this.props.className} searchQueryCaption`}>
                 {this.renderCaptions(this.state.captionData)}
