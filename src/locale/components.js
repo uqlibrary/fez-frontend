@@ -833,6 +833,7 @@ export default {
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add some text to search all fields with',
+                        captionValue: 'anything',
                         validation: ['maxLength500']
                     },
                     'rek_title': {
@@ -963,7 +964,9 @@ export default {
                     'facet_year_range': {
                         order: 21,
                         title: 'Published year range',
+                        captionTitle: 'Published',
                         type: null,
+                        combiner: 'between',
                         fromHint: 'Year from',
                         fromAria: 'Enter a year to search from',
                         toAria: 'Enter a year to search to',
@@ -973,8 +976,9 @@ export default {
                 },
                 openAccess: {
                     title: 'Open access',
+                    combiner: 'is',
                     captionText: (
-                        <span> AND is <span className="value">open access / full text.</span></span>
+                        <span className="value">open access/full text</span>
                     ),
                     ariaLabel: 'Check to search for publications with are only open access / full text'
                 },
