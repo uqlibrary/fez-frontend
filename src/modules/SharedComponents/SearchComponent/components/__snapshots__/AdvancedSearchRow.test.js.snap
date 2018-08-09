@@ -8,6 +8,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
     className="column is-4-tablet"
   >
     <SelectField
+      aria-label="Click to select a field to search from the list - Select a field currently selected"
       autoWidth={false}
       disabled={false}
       errorText="Please select a field to search"
@@ -392,6 +393,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
       disabledFields={Array []}
       inputField={
         Object {
+          "ariaLabel": "Select a field to search on",
           "combiner": null,
           "hint": "Select a field to search on",
           "order": 0,
@@ -419,6 +421,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
     className="column is-4-tablet"
   >
     <SelectField
+      aria-label="Click to select a field to search from the list - Any field currently selected"
       autoWidth={false}
       disabled={false}
       errorText={null}
@@ -812,6 +815,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
       }
       inputField={
         Object {
+          "ariaLabel": "Type a value to search all fields for",
           "captionValue": "anything",
           "combiner": "contains",
           "hint": "Add some text to search all fields with",
@@ -842,6 +846,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
     className="column is-4-tablet"
   >
     <SelectField
+      aria-label="Click to select a field to search from the list - Any field currently selected"
       autoWidth={false}
       disabled={false}
       errorText={null}
@@ -1230,6 +1235,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
       disabledFields={Array []}
       inputField={
         Object {
+          "ariaLabel": "Type a value to search all fields for",
           "captionValue": "anything",
           "combiner": "contains",
           "hint": "Add some text to search all fields with",

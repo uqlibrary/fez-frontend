@@ -62,6 +62,7 @@ export default class AdvancedSearchRow extends PureComponent {
                         value={this.props.searchField}
                         onChange={this._handleSearchFieldChange}
                         errorText={this.selectFieldValidation()}
+                        aria-label={txt.selectAria.replace('[current_selection]', txt.fieldTypes[this.props.searchField].title)}
                         menuItemStyle={{whiteSpace: 'normal', lineHeight: '24px', paddingTop: '4px', paddingBottom: '4px'}}
                         fullWidth
                     >
@@ -107,6 +108,7 @@ export default class AdvancedSearchRow extends PureComponent {
                     this.props.rowIndex !== 0 &&
                     <div className="column is-1-mobile is-narrow-tablet">
                         <IconButton
+                            aria-label={txt.deleteAria}
                             className="deleteFieldButton"
                             onClick={this._deleteRow}
                         >

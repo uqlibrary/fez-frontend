@@ -11,6 +11,7 @@ function setup(testProps, isShallow = true) {
         },
         filesInQueue: [],
         // locale: locale,
+        fileNameRestrictions: /.+/,
         ...testProps
     };
     return getElement(FileUploader, props, isShallow);

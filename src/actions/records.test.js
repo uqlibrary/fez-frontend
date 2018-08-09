@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as recordActions from './records';
-import * as mockData from "mock/data";
+import {record} from "mock/data";
 import {locale} from 'locale';
 
 describe('Record action creators', () => {
@@ -51,9 +51,9 @@ describe('Record action creators', () => {
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...mockData.record}})
+                .reply(200, {data: {...record}})
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, {data: {...mockData.record}});
+                .reply(200, {data: {...record}});
 
 
             const expectedActions = [
@@ -106,9 +106,9 @@ describe('Record action creators', () => {
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...mockData.record}})
+                .reply(200, {data: {...record}})
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, {data: {...mockData.record}})
+                .reply(200, {data: {...record}})
                 .onGet(repositories.routes.FILE_UPLOAD_API({pid: pidRequest.pid, fileName: "test.txt"}).apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
                 .onPut('s3-ap-southeast-2.amazonaws.com', {"name": "test.txt"})
@@ -167,9 +167,9 @@ describe('Record action creators', () => {
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...mockData.record}})
+                .reply(200, {data: {...record}})
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, {data: {...mockData.record}})
+                .reply(200, {data: {...record}})
                 .onGet(repositories.routes.FILE_UPLOAD_API({pid: pidRequest.pid, fileName: "test.txt"}).apiUrl)
                 .reply(500)
                 .onPut('s3-ap-southeast-2.amazonaws.com', {"name": "test.txt"})
@@ -273,7 +273,7 @@ describe('Record action creators', () => {
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...mockData.record}})
+                .reply(200, {data: {...record}})
                 .onGet(repositories.routes.FILE_UPLOAD_API({pid: testPid, fileName: "test.txt"}).apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
                 .onPut('s3-ap-southeast-2.amazonaws.com', {"name": "test.txt"})
@@ -325,7 +325,7 @@ describe('Record action creators', () => {
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...mockData.record}})
+                .reply(200, {data: {...record}})
                 .onPatch(repositories.routes.RECORDS_ISSUES_API(pidRequest).apiUrl)
                 .reply(200, {data: {}});
 
@@ -372,7 +372,7 @@ describe('Record action creators', () => {
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...mockData.record}})
+                .reply(200, {data: {...record}})
                 .onPatch(repositories.routes.RECORDS_ISSUES_API(pidRequest).apiUrl)
                 .reply(500);
 

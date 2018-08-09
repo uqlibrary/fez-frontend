@@ -2,10 +2,15 @@ import FreeTextForm from './FreeTextForm';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps,
         onAdd: testProps.onAdd || jest.fn(),
         isValid: testProps.isValid || jest.fn(() => ('')),
-        disabled: testProps.disabled || false
+        disabled: testProps.disabled || false,
+        locale: {
+            inputFieldLabel: 'Item name',
+            inputFieldHint: 'Please type the item name',
+            addButtonLabel: 'Add'
+        },
+        ...testProps
     };
     return getElement(FreeTextForm, props, isShallow);
 }
@@ -48,7 +53,7 @@ describe('FreeTextForm tests ', () => {
     it('rendering reminder to add input', () => {
         const isValid = jest.fn(() => false);
         const wrapper = setup({});
-        wrapper.setProps({isValid: isValid, locale: {remindToAdd: 'reminder text'}, remindToAdd: true});
+        wrapper.setProps({isValid: isValid, locale: {remindToAdd: 'reminder text',addButtonLabel: 'Add'}, remindToAdd: true});
         wrapper.setState({itemName: 'one'});
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();

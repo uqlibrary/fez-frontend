@@ -410,6 +410,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
       <Field
         className="requiredField"
         component={[Function]}
+        disabled={false}
         floatingLabelText="Select an action"
         name="fixAction"
         onChange={[Function]}
@@ -475,6 +476,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
             "confirmationTitle": "Cancel request",
           }
         }
+        when={true}
       />
       <ConfirmDialogBox
         hideCancelButton={false}
@@ -505,6 +507,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
       >
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Describe the problem with this record, eg record is a duplicate, or suggested changes"
           fullWidth={true}
           multiLine={true}
@@ -514,6 +517,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
         />
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Link (URL)"
           fullWidth={true}
           name="rek_link"
@@ -534,6 +538,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
         </div>
         <Field
           component={[Function]}
+          disabled={false}
           name="files"
           requireOpenAccessStatus={true}
           validate={
@@ -1011,6 +1016,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
       <Field
         className="requiredField"
         component={[Function]}
+        disabled={false}
         floatingLabelText="Select an action"
         name="fixAction"
         onChange={[Function]}
@@ -1500,6 +1506,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
       <Field
         className="requiredField"
         component={[Function]}
+        disabled={false}
         floatingLabelText="Select an action"
         name="fixAction"
         onChange={[Function]}
@@ -1565,6 +1572,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
             "confirmationTitle": "Cancel request",
           }
         }
+        when={true}
       />
       <ConfirmDialogBox
         hideCancelButton={false}
@@ -1603,6 +1611,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
       >
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Describe the problem with this record, eg record is a duplicate, or suggested changes"
           fullWidth={true}
           multiLine={true}
@@ -1612,6 +1621,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
         />
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Link (URL)"
           fullWidth={true}
           name="rek_link"
@@ -1632,6 +1642,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
         </div>
         <Field
           component={[Function]}
+          disabled={false}
           name="files"
           requireOpenAccessStatus={true}
           validate={
@@ -2089,6 +2100,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
       <Field
         className="requiredField"
         component={[Function]}
+        disabled={false}
         floatingLabelText="Select an action"
         name="fixAction"
         onChange={[Function]}
@@ -2154,6 +2166,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
             "confirmationTitle": "Cancel request",
           }
         }
+        when={true}
       />
       <ConfirmDialogBox
         hideCancelButton={false}
@@ -2184,6 +2197,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
       >
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Describe the problem with this record, eg record is a duplicate, or suggested changes"
           fullWidth={true}
           multiLine={true}
@@ -2193,6 +2207,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
         />
         <Field
           component={[Function]}
+          disabled={false}
           floatingLabelText="Link (URL)"
           fullWidth={true}
           name="rek_link"
@@ -2213,6 +2228,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
         </div>
         <Field
           component={[Function]}
+          disabled={false}
           name="files"
           requireOpenAccessStatus={true}
           validate={
@@ -2670,6 +2686,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
       <Field
         className="requiredField"
         component={[Function]}
+        disabled={false}
         floatingLabelText="Select an action"
         name="fixAction"
         onChange={[Function]}

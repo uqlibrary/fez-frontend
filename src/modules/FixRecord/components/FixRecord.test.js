@@ -4,7 +4,46 @@ import Immutable from 'immutable';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps,
+        "array": {
+            insert: jest.fn(),
+            move: jest.fn(),
+            pop: jest.fn(),
+            push: jest.fn(),
+            remove: jest.fn(),
+            removeAll: jest.fn(),
+            shift: jest.fn(),
+            splice: jest.fn(),
+            swap: jest.fn(),
+            unshift: jest.fn(),
+        },
+        autofill: jest.fn(),
+        blur: jest.fn(),
+        change: jest.fn(),
+        clearAsyncError: jest.fn(),
+        "anyTouched": true,
+        "asyncValidating": false,
+        asyncValidate: jest.fn(),
+        clearFields: jest.fn(),
+        clearSubmitErrors: jest.fn(),
+        destroy: jest.fn(),
+        dispatch: jest.fn(),
+        initialize: jest.fn(),
+        reset: jest.fn(),
+        resetSection: jest.fn(),
+        touch: jest.fn(),
+        submit: jest.fn(),
+        untouch: jest.fn(),
+        clearSubmit: jest.fn(),
+        "dirty": true,
+        "form": "form",
+        "initialized": false,
+        "submitFailed": false,
+        "valid": true,
+        pure: true,
+        pristine: true,
+        submitting: false,
+        invalid: false,
+        submitSucceeded: false,
         recordToFix: testProps.recordToFix,
         loadingRecordToFix: testProps.loadingRecordToFix || false,
 
@@ -21,7 +60,8 @@ function setup(testProps, isShallow = true) {
         history: testProps.history || {go: jest.fn()},
         match: testProps.match || {},
 
-        publicationToFixFileUploadingError: testProps.publicationToFixFileUploadingError || false
+        publicationToFixFileUploadingError: testProps.publicationToFixFileUploadingError || false,
+        ...testProps,
     };
     return getElement(FixRecord, props, isShallow);
 }

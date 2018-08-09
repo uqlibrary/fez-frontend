@@ -1,15 +1,59 @@
 import PublicationSearchForm from './PublicationSearchForm';
 import {locale} from 'locale';
 
+
 function setup(testProps, isShallow = true) {
     const props = {
+        "array": {
+            insert: jest.fn(),
+            move: jest.fn(),
+            pop: jest.fn(),
+            push: jest.fn(),
+            remove: jest.fn(),
+            removeAll: jest.fn(),
+            shift: jest.fn(),
+            splice: jest.fn(),
+            swap: jest.fn(),
+            unshift: jest.fn(),
+        },
+        autofill: jest.fn(),
+        blur: jest.fn(),
+        change: jest.fn(),
+        clearAsyncError: jest.fn(),
+        "anyTouched": true,
+        "asyncValidating": false,
+        asyncValidate: jest.fn(),
+        clearFields: jest.fn(),
+        clearSubmitErrors: jest.fn(),
+        destroy: jest.fn(),
+        dispatch: jest.fn(),
+        handleSubmit: jest.fn(),
+        initialize: jest.fn(),
+        reset: jest.fn(),
+        resetSection: jest.fn(),
+        touch: jest.fn(),
+        submit: jest.fn(),
+        untouch: jest.fn(),
+        clearSubmit: jest.fn(),
+        "dirty": true,
+        "form": "PublicationSearchForm",
+        "initialized": false,
+        "invalid": false,
+        "pristine": false,
+        "submitting": false,
+        "submitFailed": false,
+        "submitSucceeded": false,
+        "valid": true,
+        "locale": {
+            "title": "Search for your publication",
+            "text": "Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.",
+            "fieldLabels": {"search": "Enter DOI, Pubmed Id or Title"},
+            "submit": "Search",
+            "skip": "Skip search"
+        },
+        "formValues": {"searchQuery": "testing things"},
+        "pure": true,
         ...testProps,
-        locale: {
-            title: 'Search for your publication',
-            fieldLabels: {
-                search: 'Enter DOI, Pubmed Id or Title'
-            }
-        }
     };
     return getElement(PublicationSearchForm, props, isShallow);
 }

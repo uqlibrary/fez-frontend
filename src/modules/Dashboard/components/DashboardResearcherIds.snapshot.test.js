@@ -10,6 +10,7 @@ function setup(testProps, isShallow = true) {
 describe('Dashboard Rsearcher IDs test', () => {
     it('Render the authors Researcher IDs as expected for a UQ researcher', () => {
         const values = {
+            history: {},
             values: {},
             authenticated: {}
         };

@@ -4,10 +4,11 @@ import IconButton from 'material-ui/IconButton';
 import SocialPersonOutline from 'material-ui/svg-icons/social/person-outline';
 import SocialPerson from 'material-ui/svg-icons/social/person';
 
-const AuthButton = ({isAuthorizedUser, signOutTooltipText = 'Log out', signInTooltipText = 'Log in', hoveredStyle, onClick}) => {
+const AuthButton = ({ariaLabel, isAuthorizedUser, signOutTooltipText = 'Log out', signInTooltipText = 'Log in', hoveredStyle, onClick}) => {
     return (
         <div className="auth-button-wrapper">
             <IconButton
+                aria-label={ariaLabel}
                 tooltipPosition="bottom-left"
                 onClick={onClick}
                 hoveredStyle={hoveredStyle}
@@ -22,6 +23,7 @@ const AuthButton = ({isAuthorizedUser, signOutTooltipText = 'Log out', signInToo
 AuthButton.propTypes = {
     isAuthorizedUser: PropTypes.bool.isRequired,
     signOutTooltipText: PropTypes.string,
+    ariaLabel: PropTypes.string,
     signInTooltipText: PropTypes.string,
     hoveredStyle: PropTypes.object,
     onClick: PropTypes.func
