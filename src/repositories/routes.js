@@ -175,7 +175,7 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
     const searchQueryParamsWithoutLabels = query.searchMode === 'advanced' && !!searchQueryParams && Object.keys(searchQueryParams).reduce((result, key) => {
         const {value} = searchQueryParams[key];
         return (
-            (key === 'rek_pid' && value.indexOf('UQ:') !== 0) && {...result, [key]: `UQ:${value}`}
+            (key === 'rek_pid' && value.toLowerCase().indexOf('uq:') !== 0) && {...result, [key]: `UQ:${value}`}
             || (key === 'all' || !!value) && {...result, [key]: value}
             || {...result, [key]: searchQueryParams[key]}
         );
