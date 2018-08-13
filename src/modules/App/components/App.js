@@ -26,6 +26,9 @@ import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBo
 import * as pages from './pages';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
+// MUI1
+import Tooltip from '@material-ui/core/Tooltip';
+
 export default class App extends PureComponent {
     static propTypes = {
         account: PropTypes.object,
@@ -196,21 +199,20 @@ export default class App extends PureComponent {
                     color={'primary'}
                     position={'fixed'}>
                     <Toolbar>
-
                         {/* Menu Button */}
                         {this.state.docked || !this.state.menuDrawerOpen &&
-                            <IconButton
-                                aria-label={locale.global.mainNavButton.aria}
-                                style={{marginLeft: '-12px', marginRight: '24px'}}>
-                                <NavigationMenu color={'white'}/>
-                            </IconButton>
+                            <Tooltip title={locale.global.mainNavButton.tooltip}>
+                                <IconButton
+                                    aria-label={locale.global.mainNavButton.aria}
+                                    style={{marginLeft: '-12px', marginRight: '24px'}}>
+                                    <NavigationMenu color={'white'}/>
+                                </IconButton>
+                            </Tooltip>
                         }
-
                         {/* Title */}
                         <Typography variant="title" style={{flexGrow: 1}}>
                             {locale.global.appTitle}
                         </Typography>
-
                         {/* Search */}
                         {!isThesisSubmissionPage && !isSearchPage &&
                             <div style={{minWidth: '400px', marginRight: 12}}>
@@ -224,45 +226,6 @@ export default class App extends PureComponent {
                             signInTooltipText={locale.global.authentication.signInText}
                             signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''}
                             ariaLabel={isAuthorizedUser ? locale.global.authentication.ariaOut : locale.global.authentication.ariaIn} />
-
-                        {/* // showMenuIconButton={showMenu && !this.state.docked}*/}
-                        {/* // style={{height: 75}}*/}
-                        {/* // iconStyleLeft={{marginTop: 0}}*/}
-                        {/* // title={locale.global.appTitle}*/}
-                        {/* // titleStyle={titleStyle}*/}
-                        {/* // onLeftIconButtonClick={this.toggleDrawer}*/}
-                        {/* // iconElementLeft={*/}
-                        {/* //     this.state.docked || !this.state.menuDrawerOpen ?*/}
-                        {/* //         <IconButton*/}
-                        {/* //             tooltip={locale.global.mainNavButton.tooltip}*/}
-                        {/* //             aria-label={locale.global.mainNavButton.aria}*/}
-                        {/* //             tooltipPosition="bottom-right"*/}
-                        {/* //             hoveredStyle={appBarButtonStyles}*/}
-                        {/* //             className="main-menu-button">*/}
-                        {/* //             <NavigationMenu/>*/}
-                        {/* //         </IconButton>*/}
-                        {/* //         :*/}
-                        {/* //         <div className="menuHidden" />*/}
-                        {/* // }*/}
-                        {/* // iconElementRight={*/}
-                        {/* //     <div className="columns is-gapless appbar-right-columns is-mobile">*/}
-                        {/* //         <div className="column search-column">*/}
-                        {/* //             {*/}
-                        {/* //                 !isThesisSubmissionPage && !isSearchPage &&*/}
-                        {/* //                 <SearchComponent isInHeader showPrefixIcon showMobileSearchButton />*/}
-                        {/* //             }*/}
-                        {/* //         </div>*/}
-                        {/* //         <div className="column is-narrow auth-button-column">*/}
-                        {/* //             <AuthButton*/}
-                        {/* //                 isAuthorizedUser={isAuthorizedUser}*/}
-                        {/* //                 hoveredStyle={appBarButtonStyles}*/}
-                        {/* //                 onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}*/}
-                        {/* //                 signInTooltipText={locale.global.authentication.signInText}*/}
-                        {/* //                 signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''}*/}
-                        {/* //                 ariaLabel={isAuthorizedUser ? locale.global.authentication.ariaOut : locale.global.authentication.ariaIn}/>*/}
-                        {/* //         </div>*/}
-                        {/* //     </div>*/}
-                        {/* // }*/}
                     </Toolbar>
                 </AppBar>
                 {
