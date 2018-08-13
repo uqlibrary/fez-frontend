@@ -5,8 +5,12 @@ import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
 import locale from 'locale/global';
 
 // application components
-import AppBar from 'material-ui/AppBar';
-import IconButton from 'material-ui/IconButton';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+// import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+// import MenuIcon from '@material-ui/icons/Menu';
 
 import {AppLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
@@ -146,9 +150,8 @@ export default class App extends PureComponent {
             this.props.location.pathname === routes.pathConfig.records.search;
 
         const showMenu = !isThesisSubmissionPage;
-        const titleStyle = showMenu && this.state.docked ? {paddingLeft: 320} : {};
+        // const titleStyle = showMenu && this.state.docked ? {paddingLeft: 320} : {};
         const containerStyle = showMenu && this.state.docked ? {paddingLeft: 340} : {};
-        const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
 
         if (!isAuthorizedUser && isThesisSubmissionPage) {
             this.redirectUserToLogin()();
@@ -190,45 +193,78 @@ export default class App extends PureComponent {
                 <Meta routesConfig={routesConfig}/>
                 <AppBar
                     className="AppBar align-center"
-                    showMenuIconButton={showMenu && !this.state.docked}
-                    style={{height: 75}}
-                    iconStyleLeft={{marginTop: 0}}
-                    title={locale.global.appTitle}
-                    titleStyle={titleStyle}
-                    onLeftIconButtonClick={this.toggleDrawer}
-                    iconElementLeft={
-                        this.state.docked || !this.state.menuDrawerOpen ?
+                    color={'primary'}
+                    position={'fixed'}>
+                    <Toolbar>
+
+                        {/* Menu Button */}
+                        {this.state.docked || !this.state.menuDrawerOpen &&
                             <IconButton
-                                tooltip={locale.global.mainNavButton.tooltip}
                                 aria-label={locale.global.mainNavButton.aria}
-                                tooltipPosition="bottom-right"
-                                hoveredStyle={appBarButtonStyles}
-                                className="main-menu-button">
-                                <NavigationMenu/>
+                                style={{marginLeft: '-12px', marginRight: '24px'}}>
+                                <NavigationMenu color={'white'}/>
                             </IconButton>
-                            :
-                            <div className="menuHidden" />
-                    }
-                    iconElementRight={
-                        <div className="columns is-gapless appbar-right-columns is-mobile">
-                            <div className="column search-column">
-                                {
-                                    !isThesisSubmissionPage && !isSearchPage &&
-                                    <SearchComponent isInHeader showPrefixIcon showMobileSearchButton />
-                                }
+                        }
+
+                        {/* Title */}
+                        <Typography variant="title" style={{flexGrow: 1}}>
+                            {locale.global.appTitle}
+                        </Typography>
+
+                        {/* Search */}
+                        {!isThesisSubmissionPage && !isSearchPage &&
+                            <div style={{minWidth: '400px', marginRight: 12}}>
+                                <SearchComponent isInHeader showPrefixIcon showMobileSearchButton/>
                             </div>
-                            <div className="column is-narrow auth-button-column">
-                                <AuthButton
-                                    isAuthorizedUser={isAuthorizedUser}
-                                    hoveredStyle={appBarButtonStyles}
-                                    onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
-                                    signInTooltipText={locale.global.authentication.signInText}
-                                    signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''}
-                                    ariaLabel={isAuthorizedUser ? locale.global.authentication.ariaOut : locale.global.authentication.ariaIn}/>
-                            </div>
-                        </div>
-                    }
-                />
+                        }
+
+                        <AuthButton
+                            isAuthorizedUser={isAuthorizedUser}
+                            onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
+                            signInTooltipText={locale.global.authentication.signInText}
+                            signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''}
+                            ariaLabel={isAuthorizedUser ? locale.global.authentication.ariaOut : locale.global.authentication.ariaIn} />
+
+                        {/* // showMenuIconButton={showMenu && !this.state.docked}*/}
+                        {/* // style={{height: 75}}*/}
+                        {/* // iconStyleLeft={{marginTop: 0}}*/}
+                        {/* // title={locale.global.appTitle}*/}
+                        {/* // titleStyle={titleStyle}*/}
+                        {/* // onLeftIconButtonClick={this.toggleDrawer}*/}
+                        {/* // iconElementLeft={*/}
+                        {/* //     this.state.docked || !this.state.menuDrawerOpen ?*/}
+                        {/* //         <IconButton*/}
+                        {/* //             tooltip={locale.global.mainNavButton.tooltip}*/}
+                        {/* //             aria-label={locale.global.mainNavButton.aria}*/}
+                        {/* //             tooltipPosition="bottom-right"*/}
+                        {/* //             hoveredStyle={appBarButtonStyles}*/}
+                        {/* //             className="main-menu-button">*/}
+                        {/* //             <NavigationMenu/>*/}
+                        {/* //         </IconButton>*/}
+                        {/* //         :*/}
+                        {/* //         <div className="menuHidden" />*/}
+                        {/* // }*/}
+                        {/* // iconElementRight={*/}
+                        {/* //     <div className="columns is-gapless appbar-right-columns is-mobile">*/}
+                        {/* //         <div className="column search-column">*/}
+                        {/* //             {*/}
+                        {/* //                 !isThesisSubmissionPage && !isSearchPage &&*/}
+                        {/* //                 <SearchComponent isInHeader showPrefixIcon showMobileSearchButton />*/}
+                        {/* //             }*/}
+                        {/* //         </div>*/}
+                        {/* //         <div className="column is-narrow auth-button-column">*/}
+                        {/* //             <AuthButton*/}
+                        {/* //                 isAuthorizedUser={isAuthorizedUser}*/}
+                        {/* //                 hoveredStyle={appBarButtonStyles}*/}
+                        {/* //                 onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}*/}
+                        {/* //                 signInTooltipText={locale.global.authentication.signInText}*/}
+                        {/* //                 signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''}*/}
+                        {/* //                 ariaLabel={isAuthorizedUser ? locale.global.authentication.ariaOut : locale.global.authentication.ariaIn}/>*/}
+                        {/* //         </div>*/}
+                        {/* //     </div>*/}
+                        {/* // }*/}
+                    </Toolbar>
+                </AppBar>
                 {
                     showMenu &&
                     <MenuDrawer

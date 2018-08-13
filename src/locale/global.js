@@ -26,7 +26,9 @@ export default {
         appTitle: (
             <a href={`${pathConfig.index}`}
                 className="appTitle"
-                title="Click to return to the eSpace home page">
+                title="Click to return to the eSpace home page"
+                style={{color: '#FFFFFF'}}
+            >
                 UQ eSpace {process.env.TITLE_SUFFIX || ''}
             </a>
         ),
