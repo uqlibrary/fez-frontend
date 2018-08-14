@@ -13,6 +13,7 @@ function setup(testProps, isShallow = true) {
         isAdvancedSearch: false,
         isAdvancedSearchMinimised: false,
         isOpenAccessInAdvancedMode: false,
+        updateFacetExcludesFromSearchFields: jest.fn(),
 
         history: {
             push: jest.fn()
@@ -90,7 +91,7 @@ describe('SearchComponent', () => {
         const searchQuery = {
             page: 1,
             pageSize: 20,
-            sortBy: 'published_date',
+            sortBy: 'score',
             sortDirection: 'Desc',
             searchQueryParams: {
                 all: 'i feel lucky'
@@ -107,7 +108,7 @@ describe('SearchComponent', () => {
         expect(testMethod).toHaveBeenCalled();
         expect(testHistoryPushMehtod).toHaveBeenCalledWith({
             pathname: '/records/search',
-            search: 'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D=i+feel+lucky',
+            search: 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=i+feel+lucky',
             state: {
                 activeFacets: {filters: {}, ranges: {}},
                 page: 1,
@@ -115,7 +116,7 @@ describe('SearchComponent', () => {
                 searchQueryParams: {
                     all: 'i feel lucky',
                 },
-                sortBy: 'published_date',
+                sortBy: 'score',
                 sortDirection: 'Desc'
             }
         });
@@ -158,7 +159,7 @@ describe('SearchComponent', () => {
         expect(testMethod).toHaveBeenCalled();
         expect(testHistoryPushMehtod).toHaveBeenCalledWith({
             "pathname": "/records/search",
-            "search": "page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchMode=advanced",
+            "search": "page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchMode=advanced",
             "state": {
                 "activeFacets": {"filters": {}, "ranges": {}},
                 "page": 1,
@@ -169,7 +170,7 @@ describe('SearchComponent', () => {
                     "rek_display_type": [],
                     "rek_title": {"value": "global warming", "label": ""}
                 },
-                "sortBy": "published_date",
+                "sortBy": "score",
                 "sortDirection": "Desc"
             }
         });
@@ -194,7 +195,7 @@ describe('SearchComponent', () => {
         expect(testMethod).toHaveBeenCalled();
         expect(testHistoryPushMehtod).toHaveBeenCalledWith({
             pathname: '/records/search',
-            search: 'searchQueryParams%5Ball%5D=i+feel+lucky&page=1&pageSize=20&sortBy=published_date&sortDirection=Desc',
+            search: 'searchQueryParams%5Ball%5D=i+feel+lucky&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
             state: {
                 activeFacets: {filters: {}, ranges: {}},
                 page: 1,
@@ -202,7 +203,7 @@ describe('SearchComponent', () => {
                 searchQueryParams: {
                     all: 'i feel lucky'
                 },
-                sortBy: 'published_date',
+                sortBy: 'score',
                 sortDirection: 'Desc'
             }
         });

@@ -107,6 +107,28 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="rek_book_title"
+        primaryText="Boot title for chapters"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_book_title"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
         key="rek_author"
         primaryText="Author Name"
         targetOrigin={
@@ -284,7 +306,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         focusState="none"
         insetChildren={false}
         key="rek_journal_name"
-        primaryText="Journal Name"
+        primaryText="Journal name"
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -396,6 +418,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
           "ariaLabel": "Select a field to search on",
           "combiner": null,
           "hint": "Select a field to search on",
+          "map": "",
           "order": 0,
           "title": "Select a field",
           "type": "TextField",
@@ -520,6 +543,28 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="rek_book_title"
+        primaryText="Boot title for chapters"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_book_title"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
         key="rek_author"
         primaryText="Author Name"
         targetOrigin={
@@ -697,7 +742,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
         focusState="none"
         insetChildren={false}
         key="rek_journal_name"
-        primaryText="Journal Name"
+        primaryText="Journal name"
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -819,6 +864,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           "captionValue": "anything",
           "combiner": "contains",
           "hint": "Add some text to search all fields with",
+          "map": "",
           "order": 1,
           "title": "Any field",
           "type": "TextField",
@@ -945,6 +991,28 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="rek_book_title"
+        primaryText="Boot title for chapters"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value="rek_book_title"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
         key="rek_author"
         primaryText="Author Name"
         targetOrigin={
@@ -1122,7 +1190,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         focusState="none"
         insetChildren={false}
         key="rek_journal_name"
-        primaryText="Journal Name"
+        primaryText="Journal name"
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -1239,6 +1307,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
           "captionValue": "anything",
           "combiner": "contains",
           "hint": "Add some text to search all fields with",
+          "map": "",
           "order": 1,
           "title": "Any field",
           "type": "TextField",

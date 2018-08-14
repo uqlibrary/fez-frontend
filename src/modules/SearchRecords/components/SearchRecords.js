@@ -47,7 +47,8 @@ class SearchRecords extends PureComponent {
             activeFacets: {
                 filters: {},
                 ranges: {}
-            }
+            },
+            advancedSearchFields: []
         };
 
         if (!!props.location && props.location.search.indexOf('?') >= 0) {
@@ -192,13 +193,29 @@ class SearchRecords extends PureComponent {
         this.props.actions.exportEspacePublications({...exportFormat, ...this.state});
     };
 
+    handleFacetExcludesFromSearchFields = (searchFields) => {
+        const excludesFromLocale = locale.pages.searchRecords.facetsFilter.excludeFacetsList;
+        // Iterate the searchfields and add their map from locale into the excluded facets array
+        if(searchFields) {
+            const importedFacetExcludes = [];
+            Object.keys(searchFields).map((key) => {
+                const facetToHide = locale.components.searchComponent.advancedSearch.fieldTypes[searchFields[key].searchField].map;
+                if(facetToHide) {
+                    importedFacetExcludes.push(facetToHide);
+                }
+            });
+            this.setState({
+                advancedSearchFields: excludesFromLocale.concat(importedFacetExcludes)
+            });
+        }
+    };
+
     render() {
         const txt = locale.pages.searchRecords;
         const pagingData = this.props.publicationsListPagingData;
         const isLoadingOrExporting = this.props.searchLoading || this.props.exportPublicationsLoading;
         const hasSearchParams = !!this.props.searchQuery && this.props.searchQuery.constructor === Object && Object.keys(this.props.searchQuery).length > 0;
         const alertProps = this.props.searchLoadingError && {...txt.errorAlert, message: txt.errorAlert.message(locale.global.errorMessages.generic)};
-
         return (
             <StandardPage className="page-search-records">
                 <StandardCard className="searchComponent">
@@ -208,6 +225,7 @@ class SearchRecords extends PureComponent {
                         facetsChanged={this.facetsChanged}
                         searchLoading={this.props.searchLoading}
                         clearSearchQuery={this.props.actions.clearSearchQuery}
+                        updateFacetExcludesFromSearchFields={this.handleFacetExcludesFromSearchFields}
                     />
                 </StandardCard>
                 {
@@ -293,7 +311,7 @@ class SearchRecords extends PureComponent {
                                         onFacetsChanged={this.facetsChanged}
                                         activeFacets={this.state.activeFacets}
                                         disabled={isLoadingOrExporting}
-                                        excludeFacetsList={txt.facetsFilter.excludeFacetsList}
+                                        excludeFacetsList={this.state.advancedSearchFields}
                                         renameFacetsList={txt.facetsFilter.renameFacetsList}
                                         lookupFacetsList={txt.facetsFilter.lookupFacetsList}
                                         showOpenAccessFilter/>
