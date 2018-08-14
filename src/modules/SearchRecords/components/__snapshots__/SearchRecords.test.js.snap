@@ -98,7 +98,7 @@ exports[`SearchRecords page should render loading screen while export publicatio
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}
-          sortBy="published_date"
+          sortBy="score"
           sortDirection="Desc"
         />
         <PublicationsListPaging
@@ -170,7 +170,7 @@ exports[`SearchRecords page should render loading screen while loading publicati
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
           pageSize={20}
-          sortBy="published_date"
+          sortBy="score"
           sortDirection="Desc"
         />
         <PublicationsListPaging

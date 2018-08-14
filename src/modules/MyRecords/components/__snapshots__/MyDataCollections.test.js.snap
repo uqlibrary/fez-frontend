@@ -86,7 +86,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
               "total": 2,
             }
           }
-          sortBy="published_date"
+          sortBy="score"
           sortDirection="Desc"
         />
         <PublicationsListPaging
@@ -178,7 +178,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
               "total": 2,
             }
           }
-          sortBy="published_date"
+          sortBy="score"
           sortDirection="Desc"
         />
         <PublicationsListPaging
@@ -371,7 +371,7 @@ exports[`myDatasets test renders loading screen while loading publications while
           onSortByChanged={[Function]}
           pageSize={20}
           pagingData={Object {}}
-          sortBy="published_date"
+          sortBy="score"
           sortDirection="Desc"
         />
         <PublicationsListPaging

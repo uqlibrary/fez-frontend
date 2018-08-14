@@ -22,7 +22,7 @@ exports[`PublicationsListSorting renders  component with export dropdown for adm
       maxHeight={250}
       multiple={false}
       onChange={[Function]}
-      value="published_date"
+      value="score"
     >
       <MenuItem
         anchorOrigin={
@@ -380,7 +380,7 @@ exports[`PublicationsListSorting renders  component with export dropdown hidden 
       maxHeight={250}
       multiple={false}
       onChange={[Function]}
-      value="published_date"
+      value="score"
     >
       <MenuItem
         anchorOrigin={
@@ -727,7 +727,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
       maxHeight={250}
       multiple={false}
       onChange={[Function]}
-      value="published_date"
+      value="score"
     >
       <MenuItem
         anchorOrigin={
