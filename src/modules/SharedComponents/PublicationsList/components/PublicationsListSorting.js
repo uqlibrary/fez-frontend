@@ -29,7 +29,7 @@ export default class PublicationsListSorting extends PureComponent {
         super(props);
 
         this.state = {
-            sortBy: props.sortBy || locale.components.sorting.sortBy[0].value,
+            sortBy: props.sortBy || locale.components.sorting.sortBy[1].value,
             sortDirection: props.sortDirection || locale.components.sorting.sortDirection[0],
             pageSize: props.pageSize || props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20,
         };

@@ -42,7 +42,7 @@ class SearchRecords extends PureComponent {
         this.initState = {
             page: 1,
             pageSize: 20,
-            sortBy: locale.components.sorting.sortBy[0].value,
+            sortBy: locale.components.sorting.sortBy[1].value,
             sortDirection: locale.components.sorting.sortDirection[0],
             activeFacets: {
                 filters: {},
@@ -131,7 +131,7 @@ class SearchRecords extends PureComponent {
         providedSearchQuery.sortBy = locale.components.sorting.sortBy
             .map(sortBy => sortBy.value)
             .indexOf(providedSearchQuery.sortBy) < 0
-            ? locale.components.sorting.sortBy[0].value
+            ? locale.components.sorting.sortBy[1].value
             : providedSearchQuery.sortBy;
 
         return providedSearchQuery;

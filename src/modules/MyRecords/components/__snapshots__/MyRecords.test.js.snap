@@ -146,7 +146,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
               "total": 147,
             }
           }
-          sortBy="published_date"
+          sortBy="score"
           sortDirection="Desc"
         />
         <PublicationsListPaging
@@ -248,7 +248,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
               "total": 147,
             }
           }
-          sortBy="published_date"
+          sortBy="score"
           sortDirection="Desc"
         />
         <PublicationsListPaging
@@ -435,7 +435,7 @@ exports[`MyRecords test renders loading screen while export publications loading
           onSortByChanged={[Function]}
           pageSize={20}
           pagingData={Object {}}
-          sortBy="published_date"
+          sortBy="score"
           sortDirection="Desc"
         />
         <PublicationsListPaging
@@ -521,7 +521,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
           onSortByChanged={[Function]}
           pageSize={20}
           pagingData={Object {}}
-          sortBy="published_date"
+          sortBy="score"
           sortDirection="Desc"
         />
         <PublicationsListPaging
