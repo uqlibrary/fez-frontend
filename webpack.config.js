@@ -56,7 +56,8 @@ module.exports = {
                 test: /\.js$/,
                 exclude: [
                     /node_modules/,
-                    /custom_modules/
+                    /custom_modules/,
+                    '/src/mock/'
                 ],
                 enforce: 'pre',
                 use: 'eslint-loader'
@@ -65,7 +66,8 @@ module.exports = {
                 test: /\.js?$/,
                 exclude: [
                     /node_modules/,
-                    /custom_modules/
+                    /custom_modules/,
+                    '/src/mock/'
                 ],
                 include: [
                     path.resolve(__dirname, 'src')
