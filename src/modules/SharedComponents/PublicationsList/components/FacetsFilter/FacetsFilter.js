@@ -233,15 +233,18 @@ export default class FacetsFilter extends PureComponent {
                             );
                         })
                     }
-                    <DateRange
-                        itemClassName="dateRange facetsCategory"
-                        subitemClassName="dateRange facetsLink"
-                        {...(this.state.activeFacets.ranges[yearPublishedCategory] ? {open: true} : {})}
-                        value={this.state.activeFacets.ranges.hasOwnProperty(yearPublishedCategory) ? this.state.activeFacets.ranges[yearPublishedCategory] : {}}
-                        disabled={this.props.disabled}
-                        onChange={this._handleYearPublishedRangeFacet(yearPublishedCategory)}
-                        locale={yearPublishedFacet}
-                    />
+                    {
+                        this.props.excludeFacetsList.indexOf('Published year range') === -1 &&
+                        <DateRange
+                            itemClassName="dateRange facetsCategory"
+                            subitemClassName="dateRange facetsLink"
+                            {...(this.state.activeFacets.ranges[yearPublishedCategory] ? {open: true} : {})}
+                            value={this.state.activeFacets.ranges.hasOwnProperty(yearPublishedCategory) ? this.state.activeFacets.ranges[yearPublishedCategory] : {}}
+                            disabled={this.props.disabled}
+                            onChange={this._handleYearPublishedRangeFacet(yearPublishedCategory)}
+                            locale={yearPublishedFacet}
+                        />
+                    }
                     {
                         this.props.showOpenAccessFilter &&
                         <OpenAccessFilter

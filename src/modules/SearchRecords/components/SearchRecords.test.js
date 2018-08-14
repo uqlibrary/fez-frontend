@@ -451,7 +451,7 @@ describe('SearchRecords page', () => {
     it('should handle set excluded facets correctly from searchfields sent from searchComponent', () => {
         const wrapper = setup();
         const test = [{"searchField":"rek_title","value":"Test","label":""},{"searchField":"rek_author","value":"Ky Lane","label":""}];
-        const result = ["Scopus document type", "Genre", "Year published", "Title", "Author"];
+        const result = ["Scopus document type", "Genre", "Year published", "Published year range", "Title", "Author"];
         wrapper.instance().handleFacetExcludesFromSearchFields(test);
         expect(wrapper.instance().state.advancedSearchFields).toEqual(result)
     });
