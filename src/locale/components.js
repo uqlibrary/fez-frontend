@@ -819,7 +819,7 @@ export default {
                 fieldTypes: {
                     '0': {
                         order: 0, // order of appearance in adv search field list
-                        map: '', // map refers to its real world lookup name
+                        map: '', // map refers to its real world lookup name to match Facets
                         title: 'Select a field',
                         combiner: null,
                         type: 'TextField',
@@ -851,6 +851,16 @@ export default {
                         hint: 'Add a title',
                         validation: ['required', 'maxLength255'],
                         ariaLabel: 'Type a title to search for'
+                    },
+                    'rek_book_title': {
+                        order: 2.5,
+                        map: 'Book title',
+                        title: 'Boot title for chapters',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add a book title',
+                        validation: ['required', 'maxLength255'],
+                        ariaLabel: 'Type a book title to search for'
                     },
                     'rek_pid': {
                         order: 9,
