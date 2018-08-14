@@ -1,7 +1,7 @@
 import locale from 'locale/global';
 import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
-import {SEARCH_INTERNAL_RECORDS_API, SEARCH_EXTERNAL_RECORDS_API, SEARCH_KEY_LOOKUP_API} from 'repositories/routes';
+import {SEARCH_INTERNAL_RECORDS_API, SEARCH_EXTERNAL_RECORDS_API, SEARCH_KEY_LOOKUP_API, SEARCH_AUTHOR_LOOKUP_API} from 'repositories/routes';
 import {exportPublications} from './exportPublications';
 
 function getSearch(source, searchQuery) {
@@ -103,6 +103,14 @@ export function searchPublications(searchQuery) {
     };
 }
 
+export function getSearchLookupApi(searchQuery, searchKey) {
+    if (searchKey === 'author') {
+        return SEARCH_AUTHOR_LOOKUP_API({searchQuery: searchQuery});
+    } else {
+        return SEARCH_KEY_LOOKUP_API({searchQuery: searchQuery, searchKey: searchKey});
+    }
+}
+
 /**
  * Get a list of values based on search key and value, eg for auto suggest controls
  * @param string - search key, eg 'series'
@@ -113,7 +121,7 @@ export function loadSearchKeyList(searchKey, searchQuery) {
     return dispatch => {
         dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`, payload: searchKey});
 
-        return get(SEARCH_KEY_LOOKUP_API({searchQuery: searchQuery, searchKey: searchKey}))
+        return get(getSearchLookupApi(searchQuery, searchKey))
             .then((response) => {
                 dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`, payload: response.data});
             }, (error) => {

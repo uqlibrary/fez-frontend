@@ -225,3 +225,13 @@ export const SEARCH_KEY_LOOKUP_API = ({searchKey, searchQuery}) => (
         }
     }
 );
+
+export const SEARCH_AUTHOR_LOOKUP_API = ({searchQuery}) => ({
+    apiUrl: 'fez-authors/search',
+    options: {
+        params: {
+            rule: 'lookup',
+            lookup_value: searchQuery
+        }
+    }
+});
