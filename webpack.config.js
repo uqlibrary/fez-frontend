@@ -56,21 +56,20 @@ module.exports = {
                 test: /\.js$/,
                 exclude: [
                     /node_modules/,
-                    /custom_modules/,
-                    '/src/mock/'
+                    /custom_modules/
                 ],
                 enforce: 'pre',
                 use: 'eslint-loader'
             },
             {
                 test: /\.js?$/,
+                include: [
+                    path.resolve(__dirname, 'src')
+                ],
                 exclude: [
                     /node_modules/,
                     /custom_modules/,
-                    '/src/mock/'
-                ],
-                include: [
-                    path.resolve(__dirname, 'src')
+                    "/src/mock"
                 ],
                 use: [
                     'babel-loader',
