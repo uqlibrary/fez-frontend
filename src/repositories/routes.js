@@ -231,7 +231,7 @@ export const SEARCH_AUTHOR_LOOKUP_API = ({searchQuery}) => ({
     options: {
         params: {
             rule: 'lookup',
-            lookup_value: searchQuery
+            query: searchQuery
         }
     }
 });
