@@ -67,7 +67,7 @@ export function searchTopCitedPublications(recordsPerSource = 20) {
  * @param {string} author user name
  * @returns {action}
  */
-export function searchAuthorPublications({page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
+export function searchAuthorPublications({page = 1, pageSize = 20, sortBy = 'score', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
     return dispatch => {
         dispatch({type: actions.AUTHOR_PUBLICATIONS_LOADING});
 
@@ -134,7 +134,7 @@ export function searchTrendingPublications(recordsPerSource = 5) {
  * @param {string} format
  * @returns {action}
  */
-export function exportAuthorPublications({exportPublicationsFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
+export function exportAuthorPublications({exportPublicationsFormat = '', page = 1, pageSize = 20, sortBy = 'score', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
     return exportPublications(routes.CURRENT_USER_RECORDS_API(
         {
             exportPublicationsFormat: exportPublicationsFormat,

@@ -128,7 +128,7 @@ export function loadSearchKeyList(searchKey, searchQuery) {
  * {
  *  title: '',
  *  ...any other search parameters for advanced search...,
- *  page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc',
+ *  page = 1, pageSize = 20, sortBy = 'score', sortDirection = 'Desc',
  *  activeFacets = {filters: {}, ranges: {}}
  * }
  *

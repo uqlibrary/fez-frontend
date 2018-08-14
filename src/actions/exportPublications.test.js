@@ -32,7 +32,7 @@ describe('Export publications actions', () => {
             userName: 'uqresearcher',
             page: 1,
             pageSize: 20,
-            sortBy: 'published_date',
+            sortBy: 'score',
             sortDirection: 'desc',
             facets: {},
         });
