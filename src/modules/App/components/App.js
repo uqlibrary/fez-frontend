@@ -204,14 +204,14 @@ export default class App extends PureComponent {
                             <Tooltip title={locale.global.mainNavButton.tooltip}>
                                 <IconButton
                                     aria-label={locale.global.mainNavButton.aria}
-                                    style={{marginLeft: '-12px', marginRight: '24px'}}
-                                    onClick={this.toggleDrawer}
-                                >
+                                    style={{marginLeft: '-12px', marginRight: '12px'}}
+                                    onClick={this.toggleDrawer} >
                                     <NavigationMenu color={'white'}/>
                                 </IconButton>
                             </Tooltip>
                         }
                         {/* Title */}
+                        <img src={'/src/images/uq-logo-white-minimal.svg'} style={{height: 75, marginRight: 12}} />
                         <Typography variant="title" style={{flexGrow: 1}}>
                             {locale.global.appTitle}
                         </Typography>

@@ -176,7 +176,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           style={
             Object {
               "marginLeft": "-12px",
-              "marginRight": "24px",
+              "marginRight": "12px",
             }
           }
         >
@@ -185,6 +185,15 @@ exports[`Application component should render alert if user is not fez author 1`]
           />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
+      <img
+        src="/src/images/uq-logo-white-minimal.svg"
+        style={
+          Object {
+            "height": 75,
+            "marginRight": 12,
+          }
+        }
+      />
       <WithStyles(Typography)
         style={
           Object {
@@ -710,7 +719,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           style={
             Object {
               "marginLeft": "-12px",
-              "marginRight": "24px",
+              "marginRight": "12px",
             }
           }
         >
@@ -719,6 +728,15 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
+      <img
+        src="/src/images/uq-logo-white-minimal.svg"
+        style={
+          Object {
+            "height": 75,
+            "marginRight": 12,
+          }
+        }
+      />
       <WithStyles(Typography)
         style={
           Object {
@@ -1115,7 +1133,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           style={
             Object {
               "marginLeft": "-12px",
-              "marginRight": "24px",
+              "marginRight": "12px",
             }
           }
         >
@@ -1124,6 +1142,15 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
+      <img
+        src="/src/images/uq-logo-white-minimal.svg"
+        style={
+          Object {
+            "height": 75,
+            "marginRight": 12,
+          }
+        }
+      />
       <WithStyles(Typography)
         style={
           Object {
@@ -1481,7 +1508,7 @@ exports[`Application component should render app for account with fez author wit
           style={
             Object {
               "marginLeft": "-12px",
-              "marginRight": "24px",
+              "marginRight": "12px",
             }
           }
         >
@@ -1490,6 +1517,15 @@ exports[`Application component should render app for account with fez author wit
           />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
+      <img
+        src="/src/images/uq-logo-white-minimal.svg"
+        style={
+          Object {
+            "height": 75,
+            "marginRight": 12,
+          }
+        }
+      />
       <WithStyles(Typography)
         style={
           Object {
@@ -1999,7 +2035,7 @@ exports[`Application component should render app for account with fez author wit
           style={
             Object {
               "marginLeft": "-12px",
-              "marginRight": "24px",
+              "marginRight": "12px",
             }
           }
         >
@@ -2008,6 +2044,15 @@ exports[`Application component should render app for account with fez author wit
           />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
+      <img
+        src="/src/images/uq-logo-white-minimal.svg"
+        style={
+          Object {
+            "height": 75,
+            "marginRight": 12,
+          }
+        }
+      />
       <WithStyles(Typography)
         style={
           Object {
@@ -2535,7 +2580,7 @@ exports[`Application component should render app for account with fez author wit
           style={
             Object {
               "marginLeft": "-12px",
-              "marginRight": "24px",
+              "marginRight": "12px",
             }
           }
         >
@@ -2544,6 +2589,15 @@ exports[`Application component should render app for account with fez author wit
           />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
+      <img
+        src="/src/images/uq-logo-white-minimal.svg"
+        style={
+          Object {
+            "height": 75,
+            "marginRight": 12,
+          }
+        }
+      />
       <WithStyles(Typography)
         style={
           Object {
@@ -2963,7 +3017,7 @@ exports[`Application component should render application with routing for the us
           style={
             Object {
               "marginLeft": "-12px",
-              "marginRight": "24px",
+              "marginRight": "12px",
             }
           }
         >
@@ -2972,6 +3026,15 @@ exports[`Application component should render application with routing for the us
           />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
+      <img
+        src="/src/images/uq-logo-white-minimal.svg"
+        style={
+          Object {
+            "height": 75,
+            "marginRight": 12,
+          }
+        }
+      />
       <WithStyles(Typography)
         style={
           Object {
@@ -3181,7 +3244,7 @@ exports[`Application component should render for anon user 1`] = `
           style={
             Object {
               "marginLeft": "-12px",
-              "marginRight": "24px",
+              "marginRight": "12px",
             }
           }
         >
@@ -3190,6 +3253,15 @@ exports[`Application component should render for anon user 1`] = `
           />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
+      <img
+        src="/src/images/uq-logo-white-minimal.svg"
+        style={
+          Object {
+            "height": 75,
+            "marginRight": 12,
+          }
+        }
+      />
       <WithStyles(Typography)
         style={
           Object {
@@ -3417,7 +3489,7 @@ exports[`Application component should render thesis submission for HDR without m
           style={
             Object {
               "marginLeft": "-12px",
-              "marginRight": "24px",
+              "marginRight": "12px",
             }
           }
         >
@@ -3426,6 +3498,15 @@ exports[`Application component should render thesis submission for HDR without m
           />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
+      <img
+        src="/src/images/uq-logo-white-minimal.svg"
+        style={
+          Object {
+            "height": 75,
+            "marginRight": 12,
+          }
+        }
+      />
       <WithStyles(Typography)
         style={
           Object {
