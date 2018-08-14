@@ -242,7 +242,7 @@ describe('SearchRecords page', () => {
         expect(result).toEqual({
             page: '1',
             pageSize: 20,
-            sortBy: 'score',
+            sortBy: 'published_date',
             sortDirection: 'Desc',
             searchQueryParams: {
                 title: 'sometestdata'
@@ -258,7 +258,7 @@ describe('SearchRecords page', () => {
         expect(result).toEqual({
             page: '1',
             pageSize: 20,
-            sortBy: 'score',
+            sortBy: 'published_date',
             sortDirection: 'Desc',
             searchQueryParams: {
                 title: 'some test data'
@@ -281,7 +281,7 @@ describe('SearchRecords page', () => {
         expect(result).toEqual({
             page: '2',
             pageSize: 50,
-            sortBy: 'score',
+            sortBy: 'published_date',
             sortDirection: 'Desc',
             searchQueryParams: {
                 title: 'some test data'
@@ -304,7 +304,7 @@ describe('SearchRecords page', () => {
         expect(result).toEqual({
             page: '1',
             pageSize: 20,
-            sortBy: 'score',
+            sortBy: 'published_date',
             sortDirection: 'Desc',
             searchQueryParams: {
                 title: 'some test data'
@@ -330,7 +330,7 @@ describe('SearchRecords page', () => {
         expect(result).toEqual({
             page: '1',
             pageSize: 20,
-            sortBy: 'score',
+            sortBy: 'published_date',
             sortDirection: 'Desc',
             searchQueryParams: {
                 title: 'some test data'
@@ -356,7 +356,7 @@ describe('SearchRecords page', () => {
         expect(result).toEqual({
             page: '1',
             pageSize: 20,
-            sortBy: 'score',
+            sortBy: 'published_date',
             sortDirection: 'Desc',
             searchQueryParams: {
                 title: 'some test data'
@@ -377,12 +377,12 @@ describe('SearchRecords page', () => {
     it('should correctly parse search query string from location search and reset sortBy if not in valid values', () => {
         const wrapper = setup({});
 
-        const result = wrapper.instance().parseSearchQueryStringFromUrl('page=1&pageSize=100&sortBy=publication_date&sortDirection=Asc&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data');
+        const result = wrapper.instance().parseSearchQueryStringFromUrl('page=1&pageSize=100&sortBy=published_date&sortDirection=Asc&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data');
 
         expect(result).toEqual({
             page: '1',
             pageSize: 100,
-            sortBy: 'score',
+            sortBy: 'published_date',
             sortDirection: 'Asc',
             searchQueryParams: {
                 title: 'some test data'

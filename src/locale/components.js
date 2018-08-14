@@ -768,7 +768,7 @@ export default {
             sortLabel: 'Sort results by',
             sortDirectionLabel: 'Sort order',
             sortBy: [
-                {value: 'score', label: 'Published date'},
+                {value: 'published_date', label: 'Published date'},
                 {value: 'score', label: 'Search relevance'},
                 {value: 'title', label: 'Title'},
                 {value: 'created_date', label: 'Created date'},
