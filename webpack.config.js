@@ -68,8 +68,7 @@ module.exports = {
                 ],
                 exclude: [
                     /node_modules/,
-                    /custom_modules/,
-                    "/src/mock"
+                    /custom_modules/
                 ],
                 use: [
                     'babel-loader',
