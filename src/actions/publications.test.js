@@ -77,7 +77,7 @@ describe('Publications actions', () => {
                 userName: 'uqresearcher',
                 page: 1,
                 pageSize: 20,
-                sortBy: 'published_date',
+                sortBy: 'score',
                 sortDirection: 'desc',
                 facets: {},
             };
@@ -100,7 +100,7 @@ describe('Publications actions', () => {
                 userName: 'uqresearcher',
                 page: 1,
                 pageSize: 20,
-                sortBy: 'published_date',
+                sortBy: 'score',
                 sortDirection: 'desc',
                 facets: {},
             };
@@ -124,7 +124,7 @@ describe('Publications actions', () => {
                 userName: 'uqresearcher',
                 page: 1,
                 pageSize: 20,
-                sortBy: 'published_date',
+                sortBy: 'score',
                 sortDirection: 'desc',
                 facets: {},
             };
@@ -259,7 +259,7 @@ describe('Publications actions', () => {
                 exportPublicationsFormat,
                 page: 1,
                 pageSize: 20,
-                sortBy: 'published_date',
+                sortBy: 'score',
                 sortDirection: 'Desc',
                 activeFacets: {filters: {}, ranges: {}}
             };

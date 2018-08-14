@@ -124,7 +124,7 @@ describe('Backend routes method', () => {
                             page: 1,
                             per_page: 20,
                             rule: 'mine',
-                            sort: 'published_date'
+                            sort: 'score'
                         }
                     }
                 }
@@ -165,7 +165,7 @@ describe('Backend routes method', () => {
                             order_by: 'desc',
                             page: 1,
                             per_page: 20,
-                            sort: 'published_date',
+                            sort: 'score',
                             title: 'title search'
                         }
                     }
@@ -204,7 +204,7 @@ describe('Backend routes method', () => {
                     order_by: 'desc',
                     page: 1,
                     per_page: 20,
-                    sort: 'published_date'
+                    sort: 'score'
                 }
             },
             {
@@ -290,7 +290,7 @@ describe('Backend routes method', () => {
                             page: 1,
                             per_page: 20,
                             rule: "possible",
-                            sort: "published_date"
+                            sort: "score"
                         }
                     }
                 }
@@ -307,7 +307,7 @@ describe('Backend routes method', () => {
                             page: 1,
                             per_page: 20,
                             rule: "possible",
-                            sort: "published_date",
+                            sort: "score",
                             ['filters[facets][one]']: 'one facet',
                             ['filters[facets][two]']: 'two facets'
                         }
@@ -369,7 +369,7 @@ describe('Backend routes method', () => {
                     "page": 1,
                     "per_page": 20,
                     "rule": "mine",
-                    "sort": "published_date"
+                    "sort": "score"
                 }
             }
         });
