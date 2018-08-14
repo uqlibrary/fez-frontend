@@ -27,7 +27,7 @@ export const getFacetsParams = (facets) => {
     return facetsParam;
 };
 
-export const getStandardSearchParams = ({exportPublicationsFormat = '', page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}) => {
+export const getStandardSearchParams = ({exportPublicationsFormat = '', page = 1, pageSize = 20, sortBy = 'score', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}) => {
     const unknownAuthors = withUnknownAuthors >= 0 ? {with_unknown_authors: withUnknownAuthors} : {};
 
     return {
@@ -168,7 +168,7 @@ export const TRENDING_PUBLICATIONS_API = () => ({apiUrl: 'records/trending'});
 export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
     // query = {searchQuery (text value - title search, doi or pubmed id)
     // searchQueryParams = {} (search parameters, eg title, author etc)
-    // page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}
+    // page = 1, pageSize = 20, sortBy = 'score', sortDirection = 'desc', facets = {}}
     let {searchQueryParams} = query;
 
     // convert {value, label} from advanced search to value string from api

@@ -242,7 +242,7 @@ describe('SearchRecords page', () => {
         expect(result).toEqual({
             page: '1',
             pageSize: 20,
-            sortBy: 'published_date',
+            sortBy: 'score',
             sortDirection: 'Desc',
             searchQueryParams: {
                 title: 'sometestdata'
@@ -258,7 +258,7 @@ describe('SearchRecords page', () => {
         expect(result).toEqual({
             page: '1',
             pageSize: 20,
-            sortBy: 'published_date',
+            sortBy: 'score',
             sortDirection: 'Desc',
             searchQueryParams: {
                 title: 'some test data'
@@ -281,7 +281,7 @@ describe('SearchRecords page', () => {
         expect(result).toEqual({
             page: '2',
             pageSize: 50,
-            sortBy: 'published_date',
+            sortBy: 'score',
             sortDirection: 'Desc',
             searchQueryParams: {
                 title: 'some test data'
@@ -304,7 +304,7 @@ describe('SearchRecords page', () => {
         expect(result).toEqual({
             page: '1',
             pageSize: 20,
-            sortBy: 'published_date',
+            sortBy: 'score',
             sortDirection: 'Desc',
             searchQueryParams: {
                 title: 'some test data'
@@ -330,7 +330,7 @@ describe('SearchRecords page', () => {
         expect(result).toEqual({
             page: '1',
             pageSize: 20,
-            sortBy: 'published_date',
+            sortBy: 'score',
             sortDirection: 'Desc',
             searchQueryParams: {
                 title: 'some test data'
@@ -356,7 +356,7 @@ describe('SearchRecords page', () => {
         expect(result).toEqual({
             page: '1',
             pageSize: 20,
-            sortBy: 'published_date',
+            sortBy: 'score',
             sortDirection: 'Desc',
             searchQueryParams: {
                 title: 'some test data'
@@ -382,7 +382,7 @@ describe('SearchRecords page', () => {
         expect(result).toEqual({
             page: '1',
             pageSize: 100,
-            sortBy: 'published_date',
+            sortBy: 'score',
             sortDirection: 'Asc',
             searchQueryParams: {
                 title: 'some test data'
@@ -415,7 +415,7 @@ describe('SearchRecords page', () => {
         const searchQuery = {
             page: '1',
             pageSize: 20,
-            sortBy: 'published_date',
+            sortBy: 'score',
             sortDirection: 'Desc',
             searchQueryParams: {
                 title: 'some test data'
