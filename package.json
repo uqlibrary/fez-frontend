@@ -38,7 +38,6 @@
     "favicons-webpack-plugin": "0.0.9",
     "file-loader": "1.1.11",
     "html-webpack-plugin": "3.2.0",
-    "jest": "^22.4.2",
     "jest-cli": "^22.4.2",
     "jest-localstorage-mock": "^2.2.0",
     "jsdom": "11.10.0",
@@ -64,6 +63,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^1.5.0",
+    "@material-ui/icons": "^2.0.2",
     "@material/animation": "0.34.0",
     "axios": "^0.18.0",
     "axios-cache-adapter": "^2.0.0",

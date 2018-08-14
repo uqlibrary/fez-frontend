@@ -8,9 +8,8 @@ import locale from 'locale/global';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-// import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-// import MenuIcon from '@material-ui/icons/Menu';
+import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
 import {AppLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
@@ -24,7 +23,6 @@ import {OfflineSnackbar} from 'modules/SharedComponents/OfflineSnackbar';
 import {SearchComponent} from 'modules/SharedComponents/SearchComponent';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import * as pages from './pages';
-import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
 // MUI1
 import Tooltip from '@material-ui/core/Tooltip';
