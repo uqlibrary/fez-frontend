@@ -22,7 +22,7 @@ exports[`PublicationsListSorting renders  component with export dropdown for adm
       maxHeight={250}
       multiple={false}
       onChange={[Function]}
-      value="score"
+      value="published_date"
     >
       <MenuItem
         anchorOrigin={
@@ -44,7 +44,7 @@ exports[`PublicationsListSorting renders  component with export dropdown for adm
             "vertical": "top",
           }
         }
-        value="score"
+        value="published_date"
       />
       <MenuItem
         anchorOrigin={
@@ -380,7 +380,7 @@ exports[`PublicationsListSorting renders  component with export dropdown hidden 
       maxHeight={250}
       multiple={false}
       onChange={[Function]}
-      value="score"
+      value="published_date"
     >
       <MenuItem
         anchorOrigin={
@@ -402,7 +402,7 @@ exports[`PublicationsListSorting renders  component with export dropdown hidden 
             "vertical": "top",
           }
         }
-        value="score"
+        value="published_date"
       />
       <MenuItem
         anchorOrigin={
@@ -727,7 +727,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
       maxHeight={250}
       multiple={false}
       onChange={[Function]}
-      value="score"
+      value="published_date"
     >
       <MenuItem
         anchorOrigin={
@@ -749,7 +749,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
             "vertical": "top",
           }
         }
-        value="score"
+        value="published_date"
       />
       <MenuItem
         anchorOrigin={
