@@ -818,7 +818,8 @@ export default {
                 deleteAria: 'Click to delete this search row',
                 fieldTypes: {
                     '0': {
-                        order: 0,
+                        order: 0, // order of appearance in adv search field list
+                        map: '', // map refers to its real world lookup name
                         title: 'Select a field',
                         combiner: null,
                         type: 'TextField',
@@ -832,6 +833,7 @@ export default {
                     },
                     'all': {
                         order: 1,
+                        map: '',
                         title: 'Any field',
                         combiner: 'contains',
                         type: 'TextField',
@@ -842,6 +844,7 @@ export default {
                     },
                     'rek_title': {
                         order: 2,
+                        map: 'Title',
                         title: 'Title',
                         combiner: 'contains',
                         type: 'TextField',
@@ -851,6 +854,7 @@ export default {
                     },
                     'rek_pid': {
                         order: 9,
+                        map: 'PID',
                         title: 'PID',
                         combiner: 'is',
                         type: 'TextField',
@@ -860,6 +864,7 @@ export default {
                     },
                     'rek_author': {
                         order: 3,
+                        map: 'Author',
                         title: 'Author Name',
                         combiner: 'contains',
                         type: 'TextField',
@@ -869,6 +874,7 @@ export default {
                     },
                     'rek_contributor': {
                         order: 5,
+                        map: 'Contributor',
                         title: 'Editor/Contributor',
                         combiner: 'contains',
                         type: 'TextField',
@@ -878,6 +884,7 @@ export default {
                     },
                     'rek_series': {
                         order: 10,
+                        map: 'Series',
                         title: 'Series',
                         combiner: 'contains',
                         type: 'TextField',
@@ -887,7 +894,8 @@ export default {
                     },
                     'rek_journal_name': {
                         order: 11,
-                        title: 'Journal Name',
+                        map: 'Journal name',
+                        title: 'Journal name',
                         combiner: 'contains',
                         type: 'TextField',
                         hint: 'Add a journal name',
@@ -896,6 +904,7 @@ export default {
                     },
                     'rek_conference_name': {
                         order: 12,
+                        map: 'Conference name',
                         title: 'Conference Name',
                         combiner: 'contains',
                         type: 'TextField',
@@ -905,6 +914,7 @@ export default {
                     },
                     'rek_doi': {
                         order: 8,
+                        map: '',
                         title: 'DOI',
                         combiner: 'contains',
                         type: 'TextField',
@@ -914,6 +924,7 @@ export default {
                     },
                     'rek_publisher': {
                         order: 13,
+                        map: 'Publisher',
                         title: 'Publisher',
                         combiner: 'is',
                         type: 'PublisherLookup',
@@ -923,6 +934,7 @@ export default {
                     },
                     'rek_ismemberof': {
                         order: 7,
+                        map: 'Collection',
                         title: 'Collection',
                         combiner: 'is one of',
                         type: 'CollectionsLookup',
@@ -935,6 +947,7 @@ export default {
                     },
                     'rek_genre_type': {
                         order: 14,
+                        map: 'Genre',
                         title: 'Thesis type',
                         combiner: 'is one of',
                         type: 'ThesisTypeLookup',
@@ -945,6 +958,7 @@ export default {
                     },
                     'rek_author_id': {
                         order: 4,
+                        map: 'Author Id',
                         title: 'Author ID',
                         combiner: 'is',
                         type: 'AuthorIdLookup',
@@ -954,6 +968,7 @@ export default {
                     },
                     'rek_contributor_id': {
                         order: 6,
+                        map: 'Contributor Id',
                         title: 'Contributor ID',
                         combiner: 'is',
                         type: 'ContributorIdLookup',
@@ -963,6 +978,7 @@ export default {
                     },
                     'rek_org_unit_name': {
                         order: 15,
+                        map: '',
                         title: 'School, Centre or Institute',
                         combiner: 'is',
                         type: 'OrgUnitLookup',
@@ -972,6 +988,7 @@ export default {
                     },
                     'rek_display_type': {
                         order: 20,
+                        map: 'Publication type',
                         title: 'Publication type',
                         combiner: 'is one of',
                         type: null,
@@ -982,6 +999,7 @@ export default {
                     },
                     'facet_year_range': {
                         order: 21,
+                        map: '',
                         title: 'Published year range',
                         captionTitle: 'Published',
                         type: null,

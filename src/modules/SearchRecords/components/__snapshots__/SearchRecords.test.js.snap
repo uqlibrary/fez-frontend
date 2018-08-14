@@ -18,6 +18,7 @@ exports[`SearchRecords page renders error alert if error occurs during search 1`
       facetsChanged={[Function]}
       searchLoading={false}
       showAdvancedSearchButton={true}
+      updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
   <Alert
@@ -49,6 +50,7 @@ exports[`SearchRecords page renders loading screen while export publications loa
       facetsChanged={[Function]}
       searchLoading={false}
       showAdvancedSearchButton={true}
+      updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
   <div
@@ -75,6 +77,7 @@ exports[`SearchRecords page should render loading screen while export publicatio
       facetsChanged={[Function]}
       searchLoading={false}
       showAdvancedSearchButton={true}
+      updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
   <div
@@ -139,6 +142,7 @@ exports[`SearchRecords page should render loading screen while loading publicati
       facetsChanged={[Function]}
       searchLoading={true}
       showAdvancedSearchButton={true}
+      updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
   <div
@@ -210,6 +214,7 @@ exports[`SearchRecords page should render loading screen while loading search re
       facetsChanged={[Function]}
       searchLoading={true}
       showAdvancedSearchButton={true}
+      updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
   <div
@@ -243,6 +248,7 @@ exports[`SearchRecords page should render no results 1`] = `
       facetsChanged={[Function]}
       searchLoading={false}
       showAdvancedSearchButton={true}
+      updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
   <div
@@ -287,6 +293,7 @@ exports[`SearchRecords page should render placeholders 1`] = `
       facetsChanged={[Function]}
       searchLoading={false}
       showAdvancedSearchButton={true}
+      updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
   <div
@@ -312,6 +319,7 @@ exports[`SearchRecords page should show available filters or selected filters if
       facetsChanged={[Function]}
       searchLoading={false}
       showAdvancedSearchButton={true}
+      updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
   <div
@@ -357,6 +365,7 @@ exports[`SearchRecords page should show available filters or selected filters if
       facetsChanged={[Function]}
       searchLoading={false}
       showAdvancedSearchButton={true}
+      updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
   <div
@@ -405,6 +414,7 @@ exports[`SearchRecords page should show available filters or selected filters if
       facetsChanged={[Function]}
       searchLoading={false}
       showAdvancedSearchButton={true}
+      updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
   <div
@@ -449,6 +459,7 @@ exports[`SearchRecords page should show available filters or selected filters if
       facetsChanged={[Function]}
       searchLoading={false}
       showAdvancedSearchButton={true}
+      updateFacetExcludesFromSearchFields={[Function]}
     />
   </StandardCard>
   <div
@@ -485,13 +496,7 @@ exports[`SearchRecords page should show available filters or selected filters if
             }
           }
           disabled={false}
-          excludeFacetsList={
-            Array [
-              "Scopus document type",
-              "Genre",
-              "Year published",
-            ]
-          }
+          excludeFacetsList={Array []}
           facetsData={
             Object {
               "Another facet": 2,

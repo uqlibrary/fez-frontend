@@ -429,7 +429,8 @@ describe('SearchRecords page', () => {
                     }
                 },
                 showOpenAccessOnly: false
-            }
+            },
+            advancedSearchFields: []
         };
 
         const wrapper = setup({
@@ -445,5 +446,13 @@ describe('SearchRecords page', () => {
             ...searchQuery,
             exportPublicationsFormat: 'excel'
         });
+    });
+
+    it('should handle set excluded facets correctly from searchfields sent from searchComponent', () => {
+        const wrapper = setup();
+        const test = [{"searchField":"rek_title","value":"Test","label":""},{"searchField":"rek_author","value":"Ky Lane","label":""}];
+        const result = ["Scopus document type", "Genre", "Year published", "Title", "Author"];
+        wrapper.instance().handleFacetExcludesFromSearchFields(test);
+        expect(wrapper.instance().state.advancedSearchFields).toEqual(result)
     });
 });

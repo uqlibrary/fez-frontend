@@ -13,6 +13,7 @@ function setup(testProps, isShallow = true) {
         isAdvancedSearch: false,
         isAdvancedSearchMinimised: false,
         isOpenAccessInAdvancedMode: false,
+        updateFacetExcludesFromSearchFields: jest.fn(),
 
         history: {
             push: jest.fn()
