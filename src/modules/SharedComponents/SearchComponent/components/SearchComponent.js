@@ -15,6 +15,7 @@ export default class SearchComponent extends PureComponent {
         searchQueryParams: PropTypes.object,
         activeFacets: PropTypes.any,
         facetsChanged: PropTypes.func,
+        updateFacetExcludesFromSearchFields: PropTypes.func,
         searchLoading: PropTypes.bool,
 
         showSearchButton: PropTypes.bool,
@@ -100,6 +101,9 @@ export default class SearchComponent extends PureComponent {
                         to: this.state.advancedSearch.yearFilter.to,
                     }
                 }
+            }, () => {
+                // Update the excluded facets in SearchRecords to hide from facetFilter
+                this.props.updateFacetExcludesFromSearchFields(this.state.advancedSearch.fieldRows);
             });
         }
     }

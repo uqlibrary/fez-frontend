@@ -419,7 +419,9 @@ export default {
                     </div>
                 ),
             },
-            facetsFilter: {...locale.components.facetsFilter},
+            facetsFilter: {
+                ...locale.components.facetsFilter,
+                excludeFacetsList: ['Scopus document type', 'Genre', 'Year published', 'Published year range']},
             errorAlert: {
                 type: 'error_outline',
                 title: 'Error',

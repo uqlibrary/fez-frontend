@@ -11,7 +11,7 @@ import {putUploadFiles} from 'repositories';
  * @param {object} activeFacets - optional list of facets
  * @returns {action}
  */
-export function searchPossiblyYourPublications({activeFacets = {}, page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'Desc'}) {
+export function searchPossiblyYourPublications({activeFacets = {}, page = 1, pageSize = 20, sortBy = 'score', sortDirection = 'Desc'}) {
     return dispatch => {
         if (Object.keys(activeFacets).length === 0) {
             dispatch({type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING});

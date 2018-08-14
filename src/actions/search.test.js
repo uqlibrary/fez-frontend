@@ -254,7 +254,7 @@ describe('Search action creators', () => {
                 exportPublicationsFormat,
                 page: 1,
                 pageSize: 20,
-                sortBy: 'published_date',
+                sortBy: 'score',
                 sortDirection: 'Desc',
                 activeFacets: {filters: {}, ranges: {}}
             };
