@@ -5,12 +5,6 @@ import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
 import locale from 'locale/global';
 
 // application components
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
-
 import {AppLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {MenuDrawer} from 'modules/SharedComponents/Toolbox/MenuDrawer';
@@ -26,6 +20,12 @@ import * as pages from './pages';
 
 // MUI1
 import Tooltip from '@material-ui/core/Tooltip';
+import Fade from '@material-ui/core/Fade';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import Menu from '@material-ui/icons/Menu';
 
 export default class App extends PureComponent {
     static propTypes = {
@@ -199,12 +199,12 @@ export default class App extends PureComponent {
                     <Toolbar>
                         {/* Menu Button */}
                         {this.state.docked || !this.state.menuDrawerOpen &&
-                            <Tooltip title={locale.global.mainNavButton.tooltip}>
+                            <Tooltip title={locale.global.mainNavButton.tooltip} placement="bottom-end"  TransitionComponent={Fade} TransitionProps={{ timeout: 300 }}>
                                 <IconButton
                                     aria-label={locale.global.mainNavButton.aria}
                                     style={{marginLeft: '-12px', marginRight: '12px'}}
                                     onClick={this.toggleDrawer} >
-                                    <NavigationMenu color={'white'}/>
+                                    <Menu style={{color: 'white'}}/>
                                 </IconButton>
                             </Tooltip>
                         }
@@ -219,7 +219,6 @@ export default class App extends PureComponent {
                                 <SearchComponent isInHeader showPrefixIcon showMobileSearchButton/>
                             </div>
                         }
-
                         <AuthButton
                             isAuthorizedUser={isAuthorizedUser}
                             onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}

@@ -168,6 +168,13 @@ exports[`Application component should render alert if user is not fez author 1`]
   >
     <WithStyles(Toolbar)>
       <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
+          Object {
+            "timeout": 300,
+          }
+        }
+        placement="bottom-end"
         title="Main navigation"
       >
         <WithStyles(IconButton)
@@ -180,8 +187,12 @@ exports[`Application component should render alert if user is not fez author 1`]
             }
           }
         >
-          <NavigationMenu
-            color="white"
+          <pure(Menu)
+            style={
+              Object {
+                "color": "white",
+              }
+            }
           />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
@@ -711,6 +722,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
   >
     <WithStyles(Toolbar)>
       <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
+          Object {
+            "timeout": 300,
+          }
+        }
+        placement="bottom-end"
         title="Main navigation"
       >
         <WithStyles(IconButton)
@@ -723,8 +741,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             }
           }
         >
-          <NavigationMenu
-            color="white"
+          <pure(Menu)
+            style={
+              Object {
+                "color": "white",
+              }
+            }
           />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
@@ -1125,6 +1147,13 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
   >
     <WithStyles(Toolbar)>
       <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
+          Object {
+            "timeout": 300,
+          }
+        }
+        placement="bottom-end"
         title="Main navigation"
       >
         <WithStyles(IconButton)
@@ -1137,8 +1166,12 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
             }
           }
         >
-          <NavigationMenu
-            color="white"
+          <pure(Menu)
+            style={
+              Object {
+                "color": "white",
+              }
+            }
           />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
@@ -1500,6 +1533,13 @@ exports[`Application component should render app for account with fez author wit
   >
     <WithStyles(Toolbar)>
       <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
+          Object {
+            "timeout": 300,
+          }
+        }
+        placement="bottom-end"
         title="Main navigation"
       >
         <WithStyles(IconButton)
@@ -1512,8 +1552,12 @@ exports[`Application component should render app for account with fez author wit
             }
           }
         >
-          <NavigationMenu
-            color="white"
+          <pure(Menu)
+            style={
+              Object {
+                "color": "white",
+              }
+            }
           />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
@@ -2027,6 +2071,13 @@ exports[`Application component should render app for account with fez author wit
   >
     <WithStyles(Toolbar)>
       <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
+          Object {
+            "timeout": 300,
+          }
+        }
+        placement="bottom-end"
         title="Main navigation"
       >
         <WithStyles(IconButton)
@@ -2039,8 +2090,12 @@ exports[`Application component should render app for account with fez author wit
             }
           }
         >
-          <NavigationMenu
-            color="white"
+          <pure(Menu)
+            style={
+              Object {
+                "color": "white",
+              }
+            }
           />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
@@ -2572,6 +2627,13 @@ exports[`Application component should render app for account with fez author wit
   >
     <WithStyles(Toolbar)>
       <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
+          Object {
+            "timeout": 300,
+          }
+        }
+        placement="bottom-end"
         title="Main navigation"
       >
         <WithStyles(IconButton)
@@ -2584,8 +2646,12 @@ exports[`Application component should render app for account with fez author wit
             }
           }
         >
-          <NavigationMenu
-            color="white"
+          <pure(Menu)
+            style={
+              Object {
+                "color": "white",
+              }
+            }
           />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
@@ -3009,6 +3075,13 @@ exports[`Application component should render application with routing for the us
   >
     <WithStyles(Toolbar)>
       <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
+          Object {
+            "timeout": 300,
+          }
+        }
+        placement="bottom-end"
         title="Main navigation"
       >
         <WithStyles(IconButton)
@@ -3021,8 +3094,12 @@ exports[`Application component should render application with routing for the us
             }
           }
         >
-          <NavigationMenu
-            color="white"
+          <pure(Menu)
+            style={
+              Object {
+                "color": "white",
+              }
+            }
           />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
@@ -3236,6 +3313,13 @@ exports[`Application component should render for anon user 1`] = `
   >
     <WithStyles(Toolbar)>
       <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
+          Object {
+            "timeout": 300,
+          }
+        }
+        placement="bottom-end"
         title="Main navigation"
       >
         <WithStyles(IconButton)
@@ -3248,8 +3332,12 @@ exports[`Application component should render for anon user 1`] = `
             }
           }
         >
-          <NavigationMenu
-            color="white"
+          <pure(Menu)
+            style={
+              Object {
+                "color": "white",
+              }
+            }
           />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>
@@ -3481,6 +3569,13 @@ exports[`Application component should render thesis submission for HDR without m
   >
     <WithStyles(Toolbar)>
       <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
+          Object {
+            "timeout": 300,
+          }
+        }
+        placement="bottom-end"
         title="Main navigation"
       >
         <WithStyles(IconButton)
@@ -3493,8 +3588,12 @@ exports[`Application component should render thesis submission for HDR without m
             }
           }
         >
-          <NavigationMenu
-            color="white"
+          <pure(Menu)
+            style={
+              Object {
+                "color": "white",
+              }
+            }
           />
         </WithStyles(IconButton)>
       </WithStyles(Tooltip)>

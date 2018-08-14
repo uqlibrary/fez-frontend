@@ -47,7 +47,9 @@ export const mui1theme = createMuiTheme({
             main: '#2377CB',
             dark: '#005EA5'
         },
-        white: '#FFFFFF'
+        white: {
+            main: '#FFFFFF'
+        }
     },
     typography: {
         fontWeightLight: 100,

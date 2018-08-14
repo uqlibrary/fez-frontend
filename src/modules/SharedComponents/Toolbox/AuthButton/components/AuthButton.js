@@ -4,17 +4,17 @@ import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import Person from '@material-ui/icons/Person';
 import PersonOutline from '@material-ui/icons/PersonOutline';
+import Fade from '@material-ui/core/Fade';
 
-const AuthButton = ({ariaLabel, isAuthorizedUser, signOutTooltipText = 'Log out', signInTooltipText = 'Log in', hoveredStyle, onClick}) => {
+const AuthButton = ({ariaLabel, isAuthorizedUser, signOutTooltipText = 'Log out', signInTooltipText = 'Log in', onClick}) => {
     return (
         <div className="auth-button-wrapper">
-            <Tooltip title={isAuthorizedUser ? signOutTooltipText : signInTooltipText}>
+            <Tooltip title={isAuthorizedUser ? signOutTooltipText : signInTooltipText} placement="bottom-start" TransitionComponent={Fade} TransitionProps={{ timeout: 300 }}>
                 <IconButton
                     aria-label={ariaLabel}
                     onClick={onClick}
-                    hoveredStyle={hoveredStyle}
                     className={isAuthorizedUser ? 'log-out-button' : 'log-in-button'}>
-                    {isAuthorizedUser ? <Person/> : <PersonOutline/>}
+                    {isAuthorizedUser ? <Person style={{color: 'white'}} /> : <PersonOutline style={{color: 'white'}} />}
                 </IconButton>
             </Tooltip>
         </div>
