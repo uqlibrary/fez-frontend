@@ -2,7 +2,7 @@ import {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import * as validationRules from 'config/validation';
-import {AuthorIdField, ContributorIdField, PublisherField, OrgUnitNameField} from 'modules/SharedComponents/LookupFields';
+import {AuthorIdField, PublisherField, OrgUnitNameField} from 'modules/SharedComponents/LookupFields';
 import {PublicationSubtypeField, ThesisSubtypeField, CollectionsSelectField} from 'modules/SharedComponents/PublicationSubtype';
 
 class AdvancedSearchRowInput extends PureComponent {
@@ -64,9 +64,8 @@ class AdvancedSearchRowInput extends PureComponent {
             case 'CollectionsLookup':
                 return CollectionsSelectField;
             case 'AuthorIdLookup':
-                return AuthorIdField;
             case 'ContributorIdLookup':
-                return ContributorIdField;
+                return AuthorIdField;
             case 'OrgUnitLookup':
                 return OrgUnitNameField;
             default:
