@@ -167,19 +167,24 @@ exports[`Application component should render alert if user is not fez author 1`]
     position="fixed"
   >
     <WithStyles(Toolbar)>
-      <WithStyles(IconButton)
-        aria-label="Click to open the main navigation"
-        style={
-          Object {
-            "marginLeft": "-12px",
-            "marginRight": "24px",
-          }
-        }
+      <WithStyles(Tooltip)
+        title="Main navigation"
       >
-        <NavigationMenu
-          color="white"
-        />
-      </WithStyles(IconButton)>
+        <WithStyles(IconButton)
+          aria-label="Click to open the main navigation"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "-12px",
+              "marginRight": "24px",
+            }
+          }
+        >
+          <NavigationMenu
+            color="white"
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
       <WithStyles(Typography)
         style={
           Object {
@@ -696,19 +701,24 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     position="fixed"
   >
     <WithStyles(Toolbar)>
-      <WithStyles(IconButton)
-        aria-label="Click to open the main navigation"
-        style={
-          Object {
-            "marginLeft": "-12px",
-            "marginRight": "24px",
-          }
-        }
+      <WithStyles(Tooltip)
+        title="Main navigation"
       >
-        <NavigationMenu
-          color="white"
-        />
-      </WithStyles(IconButton)>
+        <WithStyles(IconButton)
+          aria-label="Click to open the main navigation"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "-12px",
+              "marginRight": "24px",
+            }
+          }
+        >
+          <NavigationMenu
+            color="white"
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
       <WithStyles(Typography)
         style={
           Object {
@@ -1096,19 +1106,24 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     position="fixed"
   >
     <WithStyles(Toolbar)>
-      <WithStyles(IconButton)
-        aria-label="Click to open the main navigation"
-        style={
-          Object {
-            "marginLeft": "-12px",
-            "marginRight": "24px",
-          }
-        }
+      <WithStyles(Tooltip)
+        title="Main navigation"
       >
-        <NavigationMenu
-          color="white"
-        />
-      </WithStyles(IconButton)>
+        <WithStyles(IconButton)
+          aria-label="Click to open the main navigation"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "-12px",
+              "marginRight": "24px",
+            }
+          }
+        >
+          <NavigationMenu
+            color="white"
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
       <WithStyles(Typography)
         style={
           Object {
@@ -1457,19 +1472,24 @@ exports[`Application component should render app for account with fez author wit
     position="fixed"
   >
     <WithStyles(Toolbar)>
-      <WithStyles(IconButton)
-        aria-label="Click to open the main navigation"
-        style={
-          Object {
-            "marginLeft": "-12px",
-            "marginRight": "24px",
-          }
-        }
+      <WithStyles(Tooltip)
+        title="Main navigation"
       >
-        <NavigationMenu
-          color="white"
-        />
-      </WithStyles(IconButton)>
+        <WithStyles(IconButton)
+          aria-label="Click to open the main navigation"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "-12px",
+              "marginRight": "24px",
+            }
+          }
+        >
+          <NavigationMenu
+            color="white"
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
       <WithStyles(Typography)
         style={
           Object {
@@ -1970,19 +1990,24 @@ exports[`Application component should render app for account with fez author wit
     position="fixed"
   >
     <WithStyles(Toolbar)>
-      <WithStyles(IconButton)
-        aria-label="Click to open the main navigation"
-        style={
-          Object {
-            "marginLeft": "-12px",
-            "marginRight": "24px",
-          }
-        }
+      <WithStyles(Tooltip)
+        title="Main navigation"
       >
-        <NavigationMenu
-          color="white"
-        />
-      </WithStyles(IconButton)>
+        <WithStyles(IconButton)
+          aria-label="Click to open the main navigation"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "-12px",
+              "marginRight": "24px",
+            }
+          }
+        >
+          <NavigationMenu
+            color="white"
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
       <WithStyles(Typography)
         style={
           Object {
@@ -2501,19 +2526,24 @@ exports[`Application component should render app for account with fez author wit
     position="fixed"
   >
     <WithStyles(Toolbar)>
-      <WithStyles(IconButton)
-        aria-label="Click to open the main navigation"
-        style={
-          Object {
-            "marginLeft": "-12px",
-            "marginRight": "24px",
-          }
-        }
+      <WithStyles(Tooltip)
+        title="Main navigation"
       >
-        <NavigationMenu
-          color="white"
-        />
-      </WithStyles(IconButton)>
+        <WithStyles(IconButton)
+          aria-label="Click to open the main navigation"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "-12px",
+              "marginRight": "24px",
+            }
+          }
+        >
+          <NavigationMenu
+            color="white"
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
       <WithStyles(Typography)
         style={
           Object {
@@ -2924,19 +2954,24 @@ exports[`Application component should render application with routing for the us
     position="fixed"
   >
     <WithStyles(Toolbar)>
-      <WithStyles(IconButton)
-        aria-label="Click to open the main navigation"
-        style={
-          Object {
-            "marginLeft": "-12px",
-            "marginRight": "24px",
-          }
-        }
+      <WithStyles(Tooltip)
+        title="Main navigation"
       >
-        <NavigationMenu
-          color="white"
-        />
-      </WithStyles(IconButton)>
+        <WithStyles(IconButton)
+          aria-label="Click to open the main navigation"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "-12px",
+              "marginRight": "24px",
+            }
+          }
+        >
+          <NavigationMenu
+            color="white"
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
       <WithStyles(Typography)
         style={
           Object {
@@ -3137,19 +3172,24 @@ exports[`Application component should render for anon user 1`] = `
     position="fixed"
   >
     <WithStyles(Toolbar)>
-      <WithStyles(IconButton)
-        aria-label="Click to open the main navigation"
-        style={
-          Object {
-            "marginLeft": "-12px",
-            "marginRight": "24px",
-          }
-        }
+      <WithStyles(Tooltip)
+        title="Main navigation"
       >
-        <NavigationMenu
-          color="white"
-        />
-      </WithStyles(IconButton)>
+        <WithStyles(IconButton)
+          aria-label="Click to open the main navigation"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "-12px",
+              "marginRight": "24px",
+            }
+          }
+        >
+          <NavigationMenu
+            color="white"
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
       <WithStyles(Typography)
         style={
           Object {
@@ -3368,19 +3408,24 @@ exports[`Application component should render thesis submission for HDR without m
     position="fixed"
   >
     <WithStyles(Toolbar)>
-      <WithStyles(IconButton)
-        aria-label="Click to open the main navigation"
-        style={
-          Object {
-            "marginLeft": "-12px",
-            "marginRight": "24px",
-          }
-        }
+      <WithStyles(Tooltip)
+        title="Main navigation"
       >
-        <NavigationMenu
-          color="white"
-        />
-      </WithStyles(IconButton)>
+        <WithStyles(IconButton)
+          aria-label="Click to open the main navigation"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "-12px",
+              "marginRight": "24px",
+            }
+          }
+        >
+          <NavigationMenu
+            color="white"
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
       <WithStyles(Typography)
         style={
           Object {

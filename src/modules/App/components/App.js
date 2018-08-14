@@ -204,7 +204,9 @@ export default class App extends PureComponent {
                             <Tooltip title={locale.global.mainNavButton.tooltip}>
                                 <IconButton
                                     aria-label={locale.global.mainNavButton.aria}
-                                    style={{marginLeft: '-12px', marginRight: '24px'}}>
+                                    style={{marginLeft: '-12px', marginRight: '24px'}}
+                                    onClick={this.toggleDrawer}
+                                >
                                     <NavigationMenu color={'white'}/>
                                 </IconButton>
                             </Tooltip>
