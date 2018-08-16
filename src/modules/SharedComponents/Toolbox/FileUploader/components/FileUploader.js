@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React, {PureComponent, Fragment} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {clearFileUpload} from '../actions';
@@ -10,6 +10,8 @@ import FileUploadRow from './FileUploadRow';
 import {Alert} from '../../Alert';
 
 import * as config from '../config';
+
+import Typography from '@material-ui/core/Typography';
 
 const moment = require('moment');
 
@@ -303,8 +305,8 @@ export class FileUploader extends PureComponent {
         });
 
         return (
-            <div>
-                <h4 className="sub-title">{instructionsDisplay}</h4>
+            <Fragment>
+                <Typography variant="body1" gutterBottom>{instructionsDisplay}</Typography>
                 <FileUploadDropzone
                     locale={this.props.locale}
                     maxSize={this.calculateMaxFileSize()}
@@ -344,7 +346,7 @@ export class FileUploader extends PureComponent {
                         }
                     </div>
                 }
-            </div>
+            </Fragment>
         );
     }
 }

@@ -37,4 +37,14 @@ describe('Component FileUploadRowStatus', () => {
         const wrapper = setup({disabled: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render for edge browser if file is being uploaded but no progress data', () => {
+        const wrapper = setup({progress: 0, isUploadInProgress: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render if file uploaded successfully but later other file failed', () => {
+        const wrapper = setup({progress: 100, isUploadInProgress: false});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

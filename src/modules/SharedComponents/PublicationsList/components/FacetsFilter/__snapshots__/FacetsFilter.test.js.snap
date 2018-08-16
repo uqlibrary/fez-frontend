@@ -411,8 +411,8 @@ exports[`FacetsFilter  components for mock data 1`] = `
     <DateRange
       defaultValue={
         Object {
-          "from": 2008,
-          "to": 2023,
+          "from": 2007,
+          "to": 2022,
         }
       }
       itemClassName="dateRange facetsCategory"
@@ -866,8 +866,8 @@ exports[`FacetsFilter  components for mock data 2`] = `
     <DateRange
       defaultValue={
         Object {
-          "from": 2008,
-          "to": 2023,
+          "from": 2007,
+          "to": 2022,
         }
       }
       itemClassName="dateRange facetsCategory"
@@ -1306,8 +1306,8 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
     <DateRange
       defaultValue={
         Object {
-          "from": 2008,
-          "to": 2023,
+          "from": 2007,
+          "to": 2022,
         }
       }
       itemClassName="dateRange facetsCategory"
@@ -1762,8 +1762,8 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
     <DateRange
       defaultValue={
         Object {
-          "from": 2008,
-          "to": 2023,
+          "from": 2007,
+          "to": 2022,
         }
       }
       itemClassName="dateRange facetsCategory"
@@ -2214,8 +2214,8 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
     <DateRange
       defaultValue={
         Object {
-          "from": 2008,
-          "to": 2023,
+          "from": 2007,
+          "to": 2022,
         }
       }
       disabled={true}
@@ -2599,8 +2599,8 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
     <DateRange
       defaultValue={
         Object {
-          "from": 2008,
-          "to": 2023,
+          "from": 2007,
+          "to": 2022,
         }
       }
       itemClassName="dateRange facetsCategory"
@@ -3037,8 +3037,8 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
     <DateRange
       defaultValue={
         Object {
-          "from": 2008,
-          "to": 2023,
+          "from": 2007,
+          "to": 2022,
         }
       }
       itemClassName="dateRange facetsCategory"

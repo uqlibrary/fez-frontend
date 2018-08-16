@@ -2,15 +2,13 @@ import {FileUploadRow} from './FileUploadRow';
 
 function setup(testProps, isShallow = true) {
     const props = {
+        index: 0,
+        uploadedFile: {name: 'a.txt', size: 100},
+        requireOpenAccessStatus: true,
+        onDelete: jest.fn(),
+        onAccessConditionChange: jest.fn(),
+        onEmbargoDateChange: jest.fn(),
         ...testProps,
-        index: testProps.index || 0,
-        uploadedFile: testProps.uploadedFile || {name: 'a.txt', size: 100},
-        requireOpenAccessStatus: testProps.requireOpenAccessStatus || false,
-        onDelete: testProps.onDelete || jest.fn(),
-        onAccessConditionChange: testProps.onAccessConditionChange || jest.fn(),
-        onEmbargoDateChange: testProps.onEmbargoDateChange || jest.fn(),
-        progress: testProps.progress || 0,
-        isUploadInProgress: testProps.isUploadInProgress || false
     };
 
     return getElement(FileUploadRow, props, isShallow);
@@ -23,30 +21,6 @@ describe('FileUploadRow', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it('renders with uploaded file with some progress', () => {
-        const wrapper = setup({progress: 50, isUploadInProgress: true});
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
-    });
-
-    it('renders for edge browser if file is being uploaded but no progress data', () => {
-        const wrapper = setup({progress: 0, isUploadInProgress: true});
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
-    });
-
-    it('renders with file upload success', () => {
-        const wrapper = setup({progress: 100, isUploadInProgress: true});
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
-    });
-
-    it('renders if file uploaded successfully but later other file failed', () => {
-        const wrapper = setup({progress: 100, isUploadInProgress: false});
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
-    });
-    
     it('call prop to update file metadata with closed access', () => {
         const testFunction = jest.fn();
         const file = new File([""], 'a.txt');

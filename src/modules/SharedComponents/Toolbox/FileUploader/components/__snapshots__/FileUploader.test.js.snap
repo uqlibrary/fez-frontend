@@ -1,12 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component FileUploader should accept terms and condition and reset back to not accepted state if access condition changed back to closed access 1`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -68,25 +69,11 @@ exports[`Component FileUploader should accept terms and condition and reset back
   <div
     className="metadata-container"
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
+    <WithTheme(WithWidth(WithStyles(FileUploadRowHeader)))
       onDeleteAll={[Function]}
       requireOpenAccessStatus={true}
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={0}
@@ -115,16 +102,17 @@ exports[`Component FileUploader should accept terms and condition and reset back
       }
     />
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should accept terms and condition and reset back to not accepted state if access condition changed back to closed access 2`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -186,25 +174,11 @@ exports[`Component FileUploader should accept terms and condition and reset back
   <div
     className="metadata-container"
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
+    <WithTheme(WithWidth(WithStyles(FileUploadRowHeader)))
       onDeleteAll={[Function]}
       requireOpenAccessStatus={true}
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={0}
@@ -246,16 +220,17 @@ exports[`Component FileUploader should accept terms and condition and reset back
       />
     </div>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should accept terms and condition and reset back to not accepted state if access condition changed back to closed access 3`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -317,25 +292,11 @@ exports[`Component FileUploader should accept terms and condition and reset back
   <div
     className="metadata-container"
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
+    <WithTheme(WithWidth(WithStyles(FileUploadRowHeader)))
       onDeleteAll={[Function]}
       requireOpenAccessStatus={true}
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={0}
@@ -377,16 +338,17 @@ exports[`Component FileUploader should accept terms and condition and reset back
       />
     </div>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should accept terms and condition and reset back to not accepted state if access condition changed back to closed access 4`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -448,25 +410,11 @@ exports[`Component FileUploader should accept terms and condition and reset back
   <div
     className="metadata-container"
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
+    <WithTheme(WithWidth(WithStyles(FileUploadRowHeader)))
       onDeleteAll={[Function]}
       requireOpenAccessStatus={true}
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={0}
@@ -497,16 +445,17 @@ exports[`Component FileUploader should accept terms and condition and reset back
       }
     />
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should not reset file access or embargo date info when second lot of files dropped 1`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -569,25 +518,11 @@ exports[`Component FileUploader should not reset file access or embargo date inf
   <div
     className="metadata-container"
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
+    <WithTheme(WithWidth(WithStyles(FileUploadRowHeader)))
       onDeleteAll={[Function]}
       requireOpenAccessStatus={false}
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={0}
@@ -615,7 +550,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         }
       }
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={1}
@@ -644,16 +579,17 @@ exports[`Component FileUploader should not reset file access or embargo date inf
       }
     />
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should not reset file access or embargo date info when second lot of files dropped 2`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -716,25 +652,11 @@ exports[`Component FileUploader should not reset file access or embargo date inf
   <div
     className="metadata-container"
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
+    <WithTheme(WithWidth(WithStyles(FileUploadRowHeader)))
       onDeleteAll={[Function]}
       requireOpenAccessStatus={false}
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={0}
@@ -764,7 +686,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         }
       }
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={1}
@@ -793,16 +715,17 @@ exports[`Component FileUploader should not reset file access or embargo date inf
       }
     />
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should not reset file access or embargo date info when second lot of files dropped 3`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -865,25 +788,11 @@ exports[`Component FileUploader should not reset file access or embargo date inf
   <div
     className="metadata-container"
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
+    <WithTheme(WithWidth(WithStyles(FileUploadRowHeader)))
       onDeleteAll={[Function]}
       requireOpenAccessStatus={false}
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={0}
@@ -913,7 +822,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         }
       }
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={1}
@@ -944,16 +853,17 @@ exports[`Component FileUploader should not reset file access or embargo date inf
       }
     />
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should not reset file access or embargo date info when second lot of files dropped 4`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -1018,25 +928,11 @@ exports[`Component FileUploader should not reset file access or embargo date inf
   <div
     className="metadata-container"
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
+    <WithTheme(WithWidth(WithStyles(FileUploadRowHeader)))
       onDeleteAll={[Function]}
       requireOpenAccessStatus={false}
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={2}
       index={0}
@@ -1066,7 +962,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         }
       }
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={2}
       index={1}
@@ -1096,7 +992,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         }
       }
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={2}
       index={2}
@@ -1124,7 +1020,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         }
       }
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={2}
       index={3}
@@ -1153,16 +1049,17 @@ exports[`Component FileUploader should not reset file access or embargo date inf
       }
     />
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render default component 1`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -1209,16 +1106,17 @@ exports[`Component FileUploader should render default component 1`] = `
     maxSize={1000}
     onDrop={[Function]}
   />
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render disabled component 1`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     disabled={true}
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
@@ -1266,16 +1164,17 @@ exports[`Component FileUploader should render disabled component 1`] = `
     maxSize={1000}
     onDrop={[Function]}
   />
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files 1`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -1322,16 +1221,17 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
     maxSize={1000}
     onDrop={[Function]}
   />
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files 2`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -1394,25 +1294,11 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
   <div
     className="metadata-container"
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
+    <WithTheme(WithWidth(WithStyles(FileUploadRowHeader)))
       onDeleteAll={[Function]}
       requireOpenAccessStatus={false}
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={0}
@@ -1440,7 +1326,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
         }
       }
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={1}
@@ -1469,16 +1355,17 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
       }
     />
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files 3`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -1540,25 +1427,11 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
   <div
     className="metadata-container"
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
+    <WithTheme(WithWidth(WithStyles(FileUploadRowHeader)))
       onDeleteAll={[Function]}
       requireOpenAccessStatus={false}
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={0}
@@ -1587,16 +1460,17 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
       }
     />
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files 4`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -1643,16 +1517,17 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
     maxSize={1000}
     onDrop={[Function]}
   />
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files with access condition dropdown based on quick template Id and require open access 1`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -1699,16 +1574,17 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files with access condition dropdown based on quick template Id and require open access 2`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -1771,25 +1647,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
   <div
     className="metadata-container"
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
+    <WithTheme(WithWidth(WithStyles(FileUploadRowHeader)))
       onDeleteAll={[Function]}
       requireOpenAccessStatus={false}
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       defaultAccessCondition={3}
       fileSizeUnit="K"
       focusOnIndex={0}
@@ -1819,7 +1681,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         }
       }
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       defaultAccessCondition={3}
       fileSizeUnit="K"
       focusOnIndex={0}
@@ -1850,16 +1712,17 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       }
     />
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files with access required 1`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -1906,16 +1769,17 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files with access required 2`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -1978,25 +1842,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
   <div
     className="metadata-container"
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
+    <WithTheme(WithWidth(WithStyles(FileUploadRowHeader)))
       onDeleteAll={[Function]}
       requireOpenAccessStatus={true}
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={0}
@@ -2024,7 +1874,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         }
       }
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={1}
@@ -2053,16 +1903,17 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       }
     />
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files with access required 3`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -2125,25 +1976,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
   <div
     className="metadata-container"
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
+    <WithTheme(WithWidth(WithStyles(FileUploadRowHeader)))
       onDeleteAll={[Function]}
       requireOpenAccessStatus={true}
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={0}
@@ -2173,7 +2010,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         }
       }
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={1}
@@ -2202,16 +2039,17 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       }
     />
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files with access required 4`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -2274,25 +2112,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
   <div
     className="metadata-container"
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
+    <WithTheme(WithWidth(WithStyles(FileUploadRowHeader)))
       onDeleteAll={[Function]}
       requireOpenAccessStatus={true}
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={0}
@@ -2322,7 +2146,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         }
       }
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={1}
@@ -2362,16 +2186,17 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       />
     </div>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files with access required 5`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -2434,25 +2259,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
   <div
     className="metadata-container"
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
+    <WithTheme(WithWidth(WithStyles(FileUploadRowHeader)))
       onDeleteAll={[Function]}
       requireOpenAccessStatus={true}
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={0}
@@ -2482,7 +2293,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         }
       }
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       fileSizeUnit="K"
       focusOnIndex={0}
       index={1}
@@ -2522,16 +2333,17 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       />
     </div>
   </div>
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files with default access condition based on quick template Id 1`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -2578,16 +2390,17 @@ exports[`Component FileUploader should render rows for uploaded files with defau
     maxSize={1000}
     onDrop={[Function]}
   />
-</div>
+</React.Fragment>
 `;
 
 exports[`Component FileUploader should render rows for uploaded files with default access condition based on quick template Id 2`] = `
-<div>
-  <h4
-    className="sub-title"
+<React.Fragment>
+  <WithStyles(Typography)
+    gutterBottom={true}
+    variant="body1"
   >
     You may add up to 5 files (max 1KB each)
-  </h4>
+  </WithStyles(Typography)>
   <FileUploadDropzone
     fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
@@ -2650,25 +2463,11 @@ exports[`Component FileUploader should render rows for uploaded files with defau
   <div
     className="metadata-container"
   >
-    <FileUploadRowHeader
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
+    <WithTheme(WithWidth(WithStyles(FileUploadRowHeader)))
       onDeleteAll={[Function]}
       requireOpenAccessStatus={false}
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       defaultAccessCondition={3}
       fileSizeUnit="K"
       focusOnIndex={0}
@@ -2698,7 +2497,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
         }
       }
     />
-    <Connect(FileUploadRow)
+    <WithTheme(WithWidth(FileUploadRow))
       defaultAccessCondition={3}
       fileSizeUnit="K"
       focusOnIndex={0}
@@ -2729,5 +2528,5 @@ exports[`Component FileUploader should render rows for uploaded files with defau
       }
     />
   </div>
-</div>
+</React.Fragment>
 `;
