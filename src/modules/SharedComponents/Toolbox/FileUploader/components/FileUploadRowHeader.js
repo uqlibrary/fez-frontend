@@ -1,15 +1,18 @@
-import React, {PureComponent} from 'react';
+import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
-import FontIcon from 'material-ui/FontIcon';
-import IconButton from 'material-ui/IconButton';
 import {ConfirmDialogBox} from '../../ConfirmDialogBox';
 
-export default class FileUploadRowHeader extends PureComponent {
+import {Grid, Typography, withWidth, Hidden, IconButton, Tooltip} from '@material-ui/core';
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import {withStyles} from '@material-ui/core/styles';
+
+export class FileUploadRowHeader extends PureComponent {
     static propTypes = {
         onDeleteAll: PropTypes.func.isRequired,
         locale: PropTypes.object,
         requireOpenAccessStatus: PropTypes.bool,
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        classes: PropTypes.object
     };
 
     static defaultProps = {
@@ -33,32 +36,41 @@ export default class FileUploadRowHeader extends PureComponent {
 
     render() {
         const {filenameColumn, fileAccessColumn, embargoDateColumn, deleteAllFiles, deleteAllFilesConfirmation} = this.props.locale;
-
         return (
-            <div className="columns is-gapless is-mobile uploadedFileHeader datalist datalist-header headers is-hidden-mobile">
-                <ConfirmDialogBox
-                    onRef={ref => (this.confirmationBox = ref)}
-                    onAction={this.props.onDeleteAll}
-                    locale={deleteAllFilesConfirmation}/>
-                <div className="column datalist-title is-6-desktop is-5-tablet is-12-mobile header">
-                    {filenameColumn}
-                </div>
-                <div className="column datalist-title is-3-desktop is-4-tablet is-12-mobile header">
-                    {
-                        this.props.requireOpenAccessStatus && fileAccessColumn
-                    }
-                </div>
-                <div className="column datalist-title is-2-desktop is-2-tablet is-12-mobile header">
-                    {
-                        this.props.requireOpenAccessStatus && embargoDateColumn
-                    }
-                </div>
-                <div className="column is-narrow buttons datalist-buttons is-1-desktop is-1-tablet is-12-mobile header is-centered is-vcentered">
-                    <IconButton tooltip={deleteAllFiles} onClick={this._showConfirmation} disabled={this.props.disabled}>
-                        <FontIcon className="material-icons">delete_forever</FontIcon>
-                    </IconButton>
-                </div>
-            </div>
+            <Hidden only={['xs']}>
+                <Fragment>
+                    <ConfirmDialogBox
+                        onRef={ref => (this.confirmationBox = ref)}
+                        onAction={this.props.onDeleteAll}
+                        locale={deleteAllFilesConfirmation}
+                    />
+                    <Grid container direction="row" alignItems="center">
+                        <Grid item md={6} sm={5}>
+                            <Typography variant="caption" gutterBottom>{filenameColumn}</Typography>
+                        </Grid>
+                        <Grid item md={3} sm={4}>
+                            <Typography variant="caption" gutterBottom>{this.props.requireOpenAccessStatus && fileAccessColumn}</Typography>
+                        </Grid>
+                        <Grid item md={2} sm={2}>
+                            <Typography variant="caption" gutterBottom>{this.props.requireOpenAccessStatus && embargoDateColumn}</Typography>
+                        </Grid>
+                        <Grid item xs={1} className={this.props.classes.icon}>
+                            <Tooltip title={deleteAllFiles}>
+                                <IconButton onClick={this._showConfirmation} disabled={this.props.disabled}>
+                                    <DeleteForeverIcon/>
+                                </IconButton>
+                            </Tooltip>
+                        </Grid>
+                    </Grid>
+                </Fragment>
+            </Hidden>
         );
     }
 }
+const styles = () => ({
+    icon: {
+        textAlign: 'center'
+    }
+});
+
+export default withWidth()(withStyles(styles)(FileUploadRowHeader));
