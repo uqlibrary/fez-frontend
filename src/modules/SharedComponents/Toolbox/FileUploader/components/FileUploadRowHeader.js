@@ -1,4 +1,4 @@
-import React, {PureComponent, Fragment} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {ConfirmDialogBox} from '../../ConfirmDialogBox';
 
@@ -38,31 +38,29 @@ export class FileUploadRowHeader extends PureComponent {
         const {filenameColumn, fileAccessColumn, embargoDateColumn, deleteAllFiles, deleteAllFilesConfirmation} = this.props.locale;
         return (
             <Hidden only={['xs']}>
-                <Fragment>
-                    <ConfirmDialogBox
-                        onRef={ref => (this.confirmationBox = ref)}
-                        onAction={this.props.onDeleteAll}
-                        locale={deleteAllFilesConfirmation}
-                    />
-                    <Grid container direction="row" alignItems="center">
-                        <Grid item md={6} sm={5}>
-                            <Typography variant="caption" gutterBottom>{filenameColumn}</Typography>
-                        </Grid>
-                        <Grid item md={3} sm={4}>
-                            <Typography variant="caption" gutterBottom>{this.props.requireOpenAccessStatus && fileAccessColumn}</Typography>
-                        </Grid>
-                        <Grid item md={2} sm={2}>
-                            <Typography variant="caption" gutterBottom>{this.props.requireOpenAccessStatus && embargoDateColumn}</Typography>
-                        </Grid>
-                        <Grid item xs={1} className={this.props.classes.icon}>
-                            <Tooltip title={deleteAllFiles}>
-                                <IconButton onClick={this._showConfirmation} disabled={this.props.disabled}>
-                                    <DeleteForeverIcon/>
-                                </IconButton>
-                            </Tooltip>
-                        </Grid>
+                <ConfirmDialogBox
+                    onRef={ref => (this.confirmationBox = ref)}
+                    onAction={this.props.onDeleteAll}
+                    locale={deleteAllFilesConfirmation}
+                />
+                <Grid container direction="row" alignItems="center" spacing={8}>
+                    <Grid item md={6} sm={5}>
+                        <Typography variant="caption" gutterBottom>{filenameColumn}</Typography>
                     </Grid>
-                </Fragment>
+                    <Grid item md={3} sm={4}>
+                        <Typography variant="caption" gutterBottom>{this.props.requireOpenAccessStatus && fileAccessColumn}</Typography>
+                    </Grid>
+                    <Grid item md={2} sm={2}>
+                        <Typography variant="caption" gutterBottom>{this.props.requireOpenAccessStatus && embargoDateColumn}</Typography>
+                    </Grid>
+                    <Grid item xs={1} className={this.props.classes.icon}>
+                        <Tooltip title={deleteAllFiles}>
+                            <IconButton onClick={this._showConfirmation} disabled={this.props.disabled}>
+                                <DeleteForeverIcon/>
+                            </IconButton>
+                        </Tooltip>
+                    </Grid>
+                </Grid>
             </Hidden>
         );
     }

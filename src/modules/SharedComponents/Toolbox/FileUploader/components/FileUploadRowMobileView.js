@@ -41,7 +41,7 @@ export class FileUploadRowMobileView extends PureComponent {
         const {index, requireOpenAccessStatus, disabled, accessConditionId, embargoDate, name, size} = this.props;
 
         return (
-            <Grid container className={this.props.classes.root} direction="column">
+            <Grid container className={this.props.classes.root} direction="column" spacing={8}>
                 <Grid item xs={12}>
                     <Grid container direction="row" alignItems="center">
                         <Grid item xs={1}>

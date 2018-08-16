@@ -481,6 +481,7 @@ exports[`Component FileUploadRowHeader should render confirmation on delete all 
                     alignItems="center"
                     container={true}
                     direction="row"
+                    spacing={8}
                   >
                     <Grid
                       alignContent="stretch"
@@ -594,14 +595,14 @@ exports[`Component FileUploadRowHeader should render confirmation on delete all 
                       lg={false}
                       md={false}
                       sm={false}
-                      spacing={0}
+                      spacing={8}
                       wrap="wrap"
                       xl={false}
                       xs={false}
                       zeroMinWidth={false}
                     >
                       <div
-                        className="MuiGrid-container-1 MuiGrid-align-items-xs-center-9"
+                        className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23 MuiGrid-align-items-xs-center-9"
                       >
                         <WithStyles(Grid)
                           item={true}
@@ -2544,6 +2545,7 @@ exports[`Component FileUploadRowHeader should render confirmation on delete all 
                     alignItems="center"
                     container={true}
                     direction="row"
+                    spacing={8}
                   >
                     <Grid
                       alignContent="stretch"
@@ -2657,14 +2659,14 @@ exports[`Component FileUploadRowHeader should render confirmation on delete all 
                       lg={false}
                       md={false}
                       sm={false}
-                      spacing={0}
+                      spacing={8}
                       wrap="wrap"
                       xl={false}
                       xs={false}
                       zeroMinWidth={false}
                     >
                       <div
-                        className="MuiGrid-container-1 MuiGrid-align-items-xs-center-9"
+                        className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23 MuiGrid-align-items-xs-center-9"
                       >
                         <WithStyles(Grid)
                           item={true}
@@ -4145,82 +4147,81 @@ exports[`Component FileUploadRowHeader should render with access condition and e
   xsDown={false}
   xsUp={false}
 >
-  <React.Fragment>
-    <ConfirmDialogBox
-      hideCancelButton={false}
-      locale={
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all files?",
+        "confirmationTitle": "Delete all",
+      }
+    }
+    onAction={[MockFunction]}
+    onRef={[Function]}
+  />
+  <WithStyles(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={8}
+  >
+    <WithStyles(Grid)
+      item={true}
+      md={6}
+      sm={5}
+    >
+      <WithStyles(Typography)
+        gutterBottom={true}
+        variant="caption"
+      >
+        Filename
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={4}
+    >
+      <WithStyles(Typography)
+        gutterBottom={true}
+        variant="caption"
+      >
+        Access conditions
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={2}
+      sm={2}
+    >
+      <WithStyles(Typography)
+        gutterBottom={true}
+        variant="caption"
+      >
+        Embargo release date
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      className={
         Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure you want to delete all files?",
-          "confirmationTitle": "Delete all",
+          "textAlign": "center",
         }
       }
-      onAction={[MockFunction]}
-      onRef={[Function]}
-    />
-    <WithStyles(Grid)
-      alignItems="center"
-      container={true}
-      direction="row"
+      item={true}
+      xs={1}
     >
-      <WithStyles(Grid)
-        item={true}
-        md={6}
-        sm={5}
+      <WithStyles(Tooltip)
+        title="Remove all files from the upload queue"
       >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="caption"
+        <WithStyles(IconButton)
+          onClick={[Function]}
         >
-          Filename
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
-      >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="caption"
-        >
-          Access conditions
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={2}
-        sm={2}
-      >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="caption"
-        >
-          Embargo release date
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        className={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        item={true}
-        xs={1}
-      >
-        <WithStyles(Tooltip)
-          title="Remove all files from the upload queue"
-        >
-          <WithStyles(IconButton)
-            onClick={[Function]}
-          >
-            <pure(DeleteForever) />
-          </WithStyles(IconButton)>
-        </WithStyles(Tooltip)>
-      </WithStyles(Grid)>
+          <pure(DeleteForever) />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
     </WithStyles(Grid)>
-  </React.Fragment>
+  </WithStyles(Grid)>
 </Hidden>
 `;
 
@@ -4243,78 +4244,77 @@ exports[`Component FileUploadRowHeader should render with default setup 1`] = `
   xsDown={false}
   xsUp={false}
 >
-  <React.Fragment>
-    <ConfirmDialogBox
-      hideCancelButton={false}
-      locale={
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all files?",
+        "confirmationTitle": "Delete all",
+      }
+    }
+    onAction={[MockFunction]}
+    onRef={[Function]}
+  />
+  <WithStyles(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={8}
+  >
+    <WithStyles(Grid)
+      item={true}
+      md={6}
+      sm={5}
+    >
+      <WithStyles(Typography)
+        gutterBottom={true}
+        variant="caption"
+      >
+        File name
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={4}
+    >
+      <WithStyles(Typography)
+        gutterBottom={true}
+        variant="caption"
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={2}
+      sm={2}
+    >
+      <WithStyles(Typography)
+        gutterBottom={true}
+        variant="caption"
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      className={
         Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure you want to delete all files?",
-          "confirmationTitle": "Delete all",
+          "textAlign": "center",
         }
       }
-      onAction={[MockFunction]}
-      onRef={[Function]}
-    />
-    <WithStyles(Grid)
-      alignItems="center"
-      container={true}
-      direction="row"
+      item={true}
+      xs={1}
     >
-      <WithStyles(Grid)
-        item={true}
-        md={6}
-        sm={5}
+      <WithStyles(Tooltip)
+        title="Remove all files from the upload queue"
       >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="caption"
+        <WithStyles(IconButton)
+          onClick={[Function]}
         >
-          File name
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
-      >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="caption"
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={2}
-        sm={2}
-      >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="caption"
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        className={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        item={true}
-        xs={1}
-      >
-        <WithStyles(Tooltip)
-          title="Remove all files from the upload queue"
-        >
-          <WithStyles(IconButton)
-            onClick={[Function]}
-          >
-            <pure(DeleteForever) />
-          </WithStyles(IconButton)>
-        </WithStyles(Tooltip)>
-      </WithStyles(Grid)>
+          <pure(DeleteForever) />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
     </WithStyles(Grid)>
-  </React.Fragment>
+  </WithStyles(Grid)>
 </Hidden>
 `;
 
@@ -4337,81 +4337,80 @@ exports[`Component FileUploadRowHeader should render without access condition ev
   xsDown={false}
   xsUp={false}
 >
-  <React.Fragment>
-    <ConfirmDialogBox
-      hideCancelButton={false}
-      locale={
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all files?",
+        "confirmationTitle": "Delete all",
+      }
+    }
+    onAction={[MockFunction]}
+    onRef={[Function]}
+  />
+  <WithStyles(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={8}
+  >
+    <WithStyles(Grid)
+      item={true}
+      md={6}
+      sm={5}
+    >
+      <WithStyles(Typography)
+        gutterBottom={true}
+        variant="caption"
+      >
+        Filename
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      sm={4}
+    >
+      <WithStyles(Typography)
+        gutterBottom={true}
+        variant="caption"
+      >
+        Access conditions
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={2}
+      sm={2}
+    >
+      <WithStyles(Typography)
+        gutterBottom={true}
+        variant="caption"
+      >
+        Embargo release date
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      className={
         Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure you want to delete all files?",
-          "confirmationTitle": "Delete all",
+          "textAlign": "center",
         }
       }
-      onAction={[MockFunction]}
-      onRef={[Function]}
-    />
-    <WithStyles(Grid)
-      alignItems="center"
-      container={true}
-      direction="row"
+      item={true}
+      xs={1}
     >
-      <WithStyles(Grid)
-        item={true}
-        md={6}
-        sm={5}
+      <WithStyles(Tooltip)
+        title="Remove all files from the upload queue"
       >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="caption"
+        <WithStyles(IconButton)
+          onClick={[Function]}
         >
-          Filename
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={3}
-        sm={4}
-      >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="caption"
-        >
-          Access conditions
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={2}
-        sm={2}
-      >
-        <WithStyles(Typography)
-          gutterBottom={true}
-          variant="caption"
-        >
-          Embargo release date
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        className={
-          Object {
-            "textAlign": "center",
-          }
-        }
-        item={true}
-        xs={1}
-      >
-        <WithStyles(Tooltip)
-          title="Remove all files from the upload queue"
-        >
-          <WithStyles(IconButton)
-            onClick={[Function]}
-          >
-            <pure(DeleteForever) />
-          </WithStyles(IconButton)>
-        </WithStyles(Tooltip)>
-      </WithStyles(Grid)>
+          <pure(DeleteForever) />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
     </WithStyles(Grid)>
-  </React.Fragment>
+  </WithStyles(Grid)>
 </Hidden>
 `;

@@ -37,7 +37,7 @@ export class FileUploadRowDefaultView extends PureComponent {
         const {disabled, index, requireOpenAccessStatus, accessConditionId, embargoDate, name, size} = this.props;
 
         return (
-            <Grid container direction="row" alignItems="center">
+            <Grid container direction="row" alignItems="center" spacing={8}>
                 <Grid item md={6} sm={5}>
                     <Typography variant="body1" gutterBottom noWrap>
                         {name} ({size})

@@ -35,7 +35,7 @@ export default class FileUploadAccessSelector extends PureComponent {
         ));
 
         return (
-            <FormControl {...(!value ? {error: true} : {})}>
+            <FormControl {...(!value ? {error: true} : {})} fullWidth>
                 <Select
                     className="selectField requiredField"
                     onChange={this._onChange}
