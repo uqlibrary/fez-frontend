@@ -108,7 +108,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
         focusState="none"
         insetChildren={false}
         key="rek_book_title"
-        primaryText="Boot title for chapters"
+        primaryText="Book title for chapters"
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -544,7 +544,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
         focusState="none"
         insetChildren={false}
         key="rek_book_title"
-        primaryText="Boot title for chapters"
+        primaryText="Book title for chapters"
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -992,7 +992,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
         focusState="none"
         insetChildren={false}
         key="rek_book_title"
-        primaryText="Boot title for chapters"
+        primaryText="Book title for chapters"
         targetOrigin={
           Object {
             "horizontal": "left",
