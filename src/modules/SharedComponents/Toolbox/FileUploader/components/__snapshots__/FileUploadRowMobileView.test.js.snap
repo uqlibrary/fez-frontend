@@ -14,6 +14,7 @@ exports[`Component FileUploadRowMobileView should not render access selector or 
       alignItems="center"
       container={true}
       direction="row"
+      spacing={8}
     >
       <WithStyles(Grid)
         item={true}
@@ -61,6 +62,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
       alignItems="center"
       container={true}
       direction="row"
+      spacing={8}
     >
       <WithStyles(Grid)
         item={true}
@@ -100,6 +102,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
         alignItems="center"
         container={true}
         direction="row"
+        spacing={8}
       >
         <WithStyles(Grid)
           item={true}
@@ -143,6 +146,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
         alignItems="center"
         container={true}
         direction="row"
+        spacing={8}
       >
         <WithStyles(Grid)
           item={true}
@@ -197,6 +201,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
       alignItems="center"
       container={true}
       direction="row"
+      spacing={8}
     >
       <WithStyles(Grid)
         item={true}
@@ -236,6 +241,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
         alignItems="center"
         container={true}
         direction="row"
+        spacing={8}
       >
         <WithStyles(Grid)
           item={true}
@@ -279,6 +285,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
         alignItems="center"
         container={true}
         direction="row"
+        spacing={8}
       >
         <WithStyles(Grid)
           item={true}
@@ -333,6 +340,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
       alignItems="center"
       container={true}
       direction="row"
+      spacing={8}
     >
       <WithStyles(Grid)
         item={true}
@@ -372,6 +380,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
         alignItems="center"
         container={true}
         direction="row"
+        spacing={8}
       >
         <WithStyles(Grid)
           item={true}
@@ -415,6 +424,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
         alignItems="center"
         container={true}
         direction="row"
+        spacing={8}
       >
         <WithStyles(Grid)
           item={true}

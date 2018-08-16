@@ -43,7 +43,7 @@ export class FileUploadRowMobileView extends PureComponent {
         return (
             <Grid container className={this.props.classes.root} direction="column" spacing={8}>
                 <Grid item xs={12}>
-                    <Grid container direction="row" alignItems="center">
+                    <Grid container direction="row" alignItems="center" spacing={8}>
                         <Grid item xs={1}>
                             <Attachment/>
                         </Grid>
@@ -61,7 +61,7 @@ export class FileUploadRowMobileView extends PureComponent {
                     requireOpenAccessStatus &&
                     <Fragment>
                         <Grid item xs={12}>
-                            <Grid container direction="row" alignItems="center">
+                            <Grid container direction="row" alignItems="center" spacing={8}>
                                 <Grid item xs={1}>
                                     <LockOutlined/>
                                 </Grid>
@@ -79,7 +79,7 @@ export class FileUploadRowMobileView extends PureComponent {
                             </Grid>
                         </Grid>
                         <Grid item xs={12}>
-                            <Grid container direction="row" alignItems="center">
+                            <Grid container direction="row" alignItems="center" spacing={8}>
                                 <Grid item xs={1}>
                                     <CalendarTodayOutlined/>
                                 </Grid>
@@ -114,7 +114,8 @@ export class FileUploadRowMobileView extends PureComponent {
 
 const styles = () => ({
     root: {
-        marginBottom: '16px'
+        marginBottom: '16px',
+        borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
     }
 });
 
