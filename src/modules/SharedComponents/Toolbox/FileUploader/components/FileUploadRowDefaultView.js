@@ -71,7 +71,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                     </Fragment>
                 }
                 <Grid item xs={1} className={this.props.classes.icon}>
-                    <FileUploadRowStatus disabled={this.props.disabled} onDelete={this.props.onDelete} />
+                    <FileUploadRowStatus disabled={this.props.disabled} onDelete={this.props.onDelete} name={name} />
                 </Grid>
             </Grid>
         );

@@ -10,7 +10,8 @@ export class FileUploadRowStatus extends PureComponent {
         isUploadInProgress: PropTypes.bool,
         disabled: PropTypes.bool,
         onDelete: PropTypes.func.isRequired,
-        locale: PropTypes.object
+        locale: PropTypes.object,
+        name: PropTypes.string
     };
 
     static defaultProps = {
