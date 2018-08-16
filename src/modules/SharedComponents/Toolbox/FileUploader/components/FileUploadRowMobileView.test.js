@@ -1,4 +1,4 @@
-import FileUploadRowMobileView from './FileUploadRowMobileView';
+import {FileUploadRowMobileView} from './FileUploadRowMobileView';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -9,6 +9,11 @@ function setup(testProps, isShallow = true) {
         embargoDate: '01/01/2017',
         requireOpenAccessStatus: true,
         disabled: false,
+        classes: {
+            icon: {
+                textAlign: 'center'
+            }
+        },
         onDelete: jest.fn(),
         onEmbargoDateChange: jest.fn(),
         onAccessConditionChange: jest.fn(),

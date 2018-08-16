@@ -9,8 +9,9 @@ import * as config from '../config';
 
 import {Grid, Typography} from '@material-ui/core';
 import {Attachment, CalendarTodayOutlined, LockOutlined} from '@material-ui/icons';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class FileUploadRowMobileView extends PureComponent {
+export class FileUploadRowMobileView extends PureComponent {
     static propTypes = {
         index: PropTypes.number.isRequired,
         name: PropTypes.string,
@@ -20,6 +21,7 @@ export default class FileUploadRowMobileView extends PureComponent {
         requireOpenAccessStatus: PropTypes.bool.isRequired,
         disabled: PropTypes.bool,
         locale: PropTypes.object,
+        classes: PropTypes.object,
         onDelete: PropTypes.func.isRequired,
         onEmbargoDateChange: PropTypes.func.isRequired,
         onAccessConditionChange: PropTypes.func.isRequired
@@ -39,7 +41,7 @@ export default class FileUploadRowMobileView extends PureComponent {
         const {index, requireOpenAccessStatus, disabled, accessConditionId, embargoDate, name, size} = this.props;
 
         return (
-            <Grid container direction="column">
+            <Grid container className={this.props.classes.root} direction="column">
                 <Grid item xs={12}>
                     <Grid container direction="row" alignItems="center">
                         <Grid item xs={1}>
@@ -109,3 +111,11 @@ export default class FileUploadRowMobileView extends PureComponent {
         );
     }
 }
+
+const styles = () => ({
+    root: {
+        marginBottom: '16px'
+    }
+});
+
+export default withStyles(styles)(FileUploadRowMobileView);

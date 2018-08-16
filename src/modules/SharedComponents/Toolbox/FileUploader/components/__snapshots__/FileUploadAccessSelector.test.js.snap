@@ -140,15 +140,23 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                         "autoWidth": false,
                         "children": Array [
                           <WithStyles(MenuItem)
-                            value={9}
+                            disabled={true}
+                            value=""
                           >
-                            Open Access
+                            Select access conditions
                           </WithStyles(MenuItem)>,
-                          <WithStyles(MenuItem)
-                            value={8}
-                          >
-                            Closed Access
-                          </WithStyles(MenuItem)>,
+                          Array [
+                            <WithStyles(MenuItem)
+                              value={9}
+                            >
+                              Open Access
+                            </WithStyles(MenuItem)>,
+                            <WithStyles(MenuItem)
+                              value={8}
+                            >
+                              Closed Access
+                            </WithStyles(MenuItem)>,
+                          ],
                         ],
                         "classes": Object {
                           "disabled": "MuiSelect-disabled-8",
@@ -202,15 +210,23 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                           "autoWidth": false,
                           "children": Array [
                             <WithStyles(MenuItem)
-                              value={9}
+                              disabled={true}
+                              value=""
                             >
-                              Open Access
+                              Select access conditions
                             </WithStyles(MenuItem)>,
-                            <WithStyles(MenuItem)
-                              value={8}
-                            >
-                              Closed Access
-                            </WithStyles(MenuItem)>,
+                            Array [
+                              <WithStyles(MenuItem)
+                                value={9}
+                              >
+                                Open Access
+                              </WithStyles(MenuItem)>,
+                              <WithStyles(MenuItem)
+                                value={8}
+                              >
+                                Closed Access
+                              </WithStyles(MenuItem)>,
+                            ],
                           ],
                           "classes": Object {
                             "disabled": "MuiSelect-disabled-8",
@@ -278,13 +294,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                               role="button"
                               tabIndex={null}
                             >
-                              <span
-                                dangerouslySetInnerHTML={
-                                  Object {
-                                    "__html": "&#8203;",
-                                  }
-                                }
-                              />
+                              Select access conditions
                             </div>
                             <input
                               id="access-condition"
@@ -927,15 +937,23 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                         "autoWidth": false,
                         "children": Array [
                           <WithStyles(MenuItem)
-                            value={9}
+                            disabled={true}
+                            value=""
                           >
-                            Open Access
+                            Select access conditions
                           </WithStyles(MenuItem)>,
-                          <WithStyles(MenuItem)
-                            value={8}
-                          >
-                            Closed Access
-                          </WithStyles(MenuItem)>,
+                          Array [
+                            <WithStyles(MenuItem)
+                              value={9}
+                            >
+                              Open Access
+                            </WithStyles(MenuItem)>,
+                            <WithStyles(MenuItem)
+                              value={8}
+                            >
+                              Closed Access
+                            </WithStyles(MenuItem)>,
+                          ],
                         ],
                         "classes": Object {
                           "disabled": "MuiSelect-disabled-8",
@@ -989,15 +1007,23 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                           "autoWidth": false,
                           "children": Array [
                             <WithStyles(MenuItem)
-                              value={9}
+                              disabled={true}
+                              value=""
                             >
-                              Open Access
+                              Select access conditions
                             </WithStyles(MenuItem)>,
-                            <WithStyles(MenuItem)
-                              value={8}
-                            >
-                              Closed Access
-                            </WithStyles(MenuItem)>,
+                            Array [
+                              <WithStyles(MenuItem)
+                                value={9}
+                              >
+                                Open Access
+                              </WithStyles(MenuItem)>,
+                              <WithStyles(MenuItem)
+                                value={8}
+                              >
+                                Closed Access
+                              </WithStyles(MenuItem)>,
+                            ],
                           ],
                           "classes": Object {
                             "disabled": "MuiSelect-disabled-8",
@@ -1571,6 +1597,12 @@ exports[`Component FileUploadAccessSelector should render with default setup 1`]
     value=""
   >
     <WithStyles(MenuItem)
+      disabled={true}
+      value=""
+    >
+      Select access conditions
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
       key="access_option_key_0"
       value={9}
     >
@@ -1603,6 +1635,12 @@ exports[`Component FileUploadAccessSelector should render with value 1`] = `
     onChange={[Function]}
     value={1}
   >
+    <WithStyles(MenuItem)
+      disabled={true}
+      value=""
+    >
+      Select access conditions
+    </WithStyles(MenuItem)>
     <WithStyles(MenuItem)
       key="access_option_key_0"
       value={9}

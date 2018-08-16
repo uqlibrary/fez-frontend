@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
+import {Grid} from '@material-ui/core';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
 
 export default class FileUploadDropzone extends PureComponent {
@@ -153,9 +154,9 @@ export default class FileUploadDropzone extends PureComponent {
     render() {
         const {maxSize, disabled, locale} = this.props;
         return (
-            <div>
-                <div className="columns">
-                    <div className="column"  tabIndex="0" onKeyPress={this._onKeyPress}>
+            <Grid container>
+                <Grid item xs={12}>
+                    <div tabIndex="0" onKeyPress={this._onKeyPress}>
                         <Dropzone
                             ref={(ref) => {this.dropzoneRef = ref;}}
                             maxSize={maxSize}
@@ -163,12 +164,13 @@ export default class FileUploadDropzone extends PureComponent {
                             style={{padding: '0px'}}
                             disabled={disabled}
                             disableClick={disabled}
-                            disablePreview>
+                            disablePreview
+                        >
                             <FileUploadDropzoneStaticContent locale={locale}/>
                         </Dropzone>
                     </div>
-                </div>
-            </div>
+                </Grid>
+            </Grid>
         );
     }
 }

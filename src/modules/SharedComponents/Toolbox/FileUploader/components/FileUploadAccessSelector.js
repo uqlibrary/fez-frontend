@@ -28,7 +28,7 @@ export default class FileUploadAccessSelector extends PureComponent {
     };
 
     render() {
-        const {accessSelectOptionsText, errorMessage} = this.props.locale;
+        const {accessSelectOptionsText, errorMessage, initialValue} = this.props.locale;
         const {value, disabled} = this.props;
         const accessOptions = [OPEN_ACCESS_ID, CLOSED_ACCESS_ID].map((access, index) => (
             <MenuItem value={parseInt(access, 10)} key={`access_option_key_${index}`}>{accessSelectOptionsText[access]}</MenuItem>
@@ -44,6 +44,7 @@ export default class FileUploadAccessSelector extends PureComponent {
                     displayEmpty
                     input={<Input name="accessCondition" id="access-condition"/>}
                 >
+                    <MenuItem value="" disabled>{initialValue}</MenuItem>
                     {accessOptions}
                 </Select>
                 {
