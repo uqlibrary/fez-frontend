@@ -12,7 +12,7 @@ describe('Component FileUploadAccessSelector', () => {
         const wrapper = setup({...props});
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance()._onChange({}, 0, 2);
+        wrapper.instance()._onChange({target: {value: 2}});
         wrapper.update();
 
         expect(onChangeTestFn).toHaveBeenCalledWith(2);
@@ -24,7 +24,7 @@ describe('Component FileUploadAccessSelector', () => {
         const wrapper = setup({...props});
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance()._onChange({}, 0, 2);
+        wrapper.instance()._onChange({target: {value: 2}});
         wrapper.update();
 
         expect(onChangeTestFn).toHaveBeenCalledWith(2);
